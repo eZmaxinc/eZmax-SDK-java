@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.0.0
-  - Build date: 2020-06-13T06:21:22.678Z[GMT]
+  - Build date: 2020-06-13T06:28:28.140Z[GMT]
 
 TODO Api description
 
