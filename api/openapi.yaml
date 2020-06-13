@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: support@ezmax.ca
+    name: Ian Lord
+    url: https://www.ezmax.ca/en/contact
+  description: TODO Api description
+  license:
+    name: MIT2
+    url: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+  termsOfService: https://www.ezmax.ca/TODO
+  title: eZmax API Definition
+  version: 1.0.0
+  x-restgeninfo: {}
+servers:
+- description: The server endpoint where to send your API requests.
+  url: https://{sInfrastructureenvironmenttypeDescription}.api.appcluster01.{sInfrastructureregionCode}.ezmax.com/rest
+  variables:
+    sInfrastructureenvironmenttypeDescription:
+      default: prod
+      description: The environment on on which to call the API. Should always be "prod"
+        unless instructed otherwise by support.
+      enum:
+      - prod
+      - stg
+      - qa
+      - dev
+    sInfrastructureregionCode:
+      default: ca-central-1
+      description: The region where your services are hosted.
+      enum:
+      - ca-central-1
+      - local
+security:
+- Authorization: []
+tags:
+- name: activesession
+paths:
+  /1/object/activesession/getCurrent:
+    get:
+      description: Todo Description
+      operationId: getCurrent
+      responses:
+        "200":
+          content:
+            application/json: {}
+          description: OK
+      security:
+      - Authorization: []
+      summary: Get Current Activesession
+      tags:
+      - activesession
+      x-accepts: application/json
+components:
+  schemas: {}
+  securitySchemes:
+    Authorization:
+      description: TODO API Key Description
+      in: header
+      name: Authorization
+      type: apiKey
+
