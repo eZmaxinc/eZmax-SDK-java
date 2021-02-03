@@ -1,16 +1,27 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
   contact:
-    email: support@ezmax.ca
-    name: Ian Lord
+    email: support-api@ezmax.ca
+    name: API Support department
     url: https://www.ezmax.ca/en/contact
-  description: TODO Api description
+  description: |-
+    This API expose all the functionnalities for the eZmax and eZsign application.
+
+    We provide SDKs for customers. They are generated using OpenAPI codegen, we encourage customers to use them as we also provide samples for them.
+
+    You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like Swagger Codegen, OpenAPI codegen or any commercial generators.
+
+    If you need helping understanding how to use this API, don't waste too much time looking for it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like bad documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
   license:
-    name: MIT2
-    url: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+    name: MIT License
+    url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.0
+  version: 1.0.27
+  x-logo:
+    url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
+    backgroundColor: '#fafafa'
+    altText: eZmax Logo
   x-restgeninfo: {}
 servers:
 - description: The server endpoint where to send your API requests.
@@ -34,29 +45,4047 @@ servers:
 security:
 - Authorization: []
 tags:
-- name: activesession
+- description: Activesession contains detail about the currently executing api request.
+  name: Object_Activesession
+  x-displayName: Activesession
+- description: Apikey contains detail about an api key used to access the API
+  name: Object_Apikey
+  x-displayName: Apikey
+- description: Ezsigndocument contains detail about a document to sign
+  name: Object_Ezsigndocument
+  x-displayName: Ezsigndocument
+- description: Ezsignfolder contains detail about the container containing signers,
+    documents to sign, etc. Sometimes referred as "Envelopes" in competitor products
+  name: Object_Ezsignfolder
+  x-displayName: Ezsignfolder
+- description: Ezsignfoldersignerassociation contains detail about the signers that
+    will be invited to sign the documents. Signers can be users from the system or
+    persons outside of the system.
+  name: Object_Ezsignfoldersignerassociation
+  x-displayName: Ezsignfoldersignerassociation
+- description: Ezsignsignature contains detail about a specific signature block on
+    a page of a Ezsigndocument
+  name: Object_Ezsignsignature
+  x-displayName: Ezsignsignature
+- description: Franchisebroker contains detail about a brokerage in the franchise
+    administration module
+  name: Object_Franchisebroker
+  x-displayName: Franchisebroker
+- description: Franchiseoffice contains detail about a brokerage's office in the franchise
+    administration module
+  name: Object_Franchiseoffice
+  x-displayName: Franchiseoffice
+- description: Franchisereferalincome contains detail about a referal income in the
+    franchise administration module
+  name: Object_Franchisereferalincome
+  x-displayName: Franchisereferalincome
+- description: Period contains detail about accounting periods
+  name: Object_Period
+  x-displayName: Period
+- description: User contains detail about the users in the system
+  name: Object_User
+  x-displayName: User
+- description: User module contains actions that can be called to interract with users
+  name: Module_User
+  x-displayName: User
 paths:
   /1/object/activesession/getCurrent:
     get:
-      description: Todo Description
-      operationId: getCurrent
+      description: Retrieve the details about the current activesession
+      operationId: Activesession_GetCurrent_V1
       responses:
         "200":
           content:
-            application/json: {}
+            application/json:
+              schema:
+                $ref: '#/components/schemas/activesession-getCurrent-v1-Response'
           description: OK
       security:
       - Authorization: []
       summary: Get Current Activesession
       tags:
-      - activesession
+      - Object_Activesession
+      x-accepts: application/json
+  /1/object/ezsigndocument:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsigndocument_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}:
+    delete:
+      operationId: Ezsigndocument_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+    get:
+      operationId: Ezsigndocument_GetObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+    put:
+      operationId: Ezsigndocument_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Modify an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren:
+    get:
+      operationId: Ezsigndocument_GetObject_GetChildren_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's children IDs
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /1/object/ezsignfolder:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfolder_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}:
+    delete:
+      operationId: Ezsignfolder_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfolder
+        explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
+    get:
+      operationId: Ezsignfolder_GetObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfolder
+        explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
+    put:
+      operationId: Ezsignfolder_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfolder
+        explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Modify an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren:
+    get:
+      operationId: Ezsignfolder_GetObject_GetChildren_V1
+      parameters:
+      - description: The unique ID of the Ezsignfolder
+        explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's children IDs
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfoldersignerassociation_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
+    delete:
+      operationId: Ezsignfoldersignerassociation_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfoldersignerassociation
+        explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-accepts: application/json
+    get:
+      operationId: Ezsignfoldersignerassociation_GetObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfoldersignerassociation
+        explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-accepts: application/json
+    put:
+      operationId: Ezsignfoldersignerassociation_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignfoldersignerassociation
+        explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfoldersignerassociation-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Modify an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren:
+    get:
+      operationId: Ezsignfoldersignerassociation_GetObject_GetChildren_V1
+      parameters:
+      - description: The unique ID of the Ezsignfoldersignerassociation
+        explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfoldersignerassociation's children IDs
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
+    post:
+      operationId: Ezsignfolder_Send_V1
+      parameters:
+      - description: The unique ID of the Ezsignfolder
+        explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-send-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-send-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Send the Ezsignfolder to the signatories for signature
+      tags:
+      - Object_Ezsignfolder
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignsignature_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature/{pkiEzsignsignatureID}:
+    delete:
+      operationId: Ezsignsignature_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignature
+        explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-accepts: application/json
+    get:
+      operationId: Ezsignsignature_GetObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignature
+        explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-accepts: application/json
+    put:
+      operationId: Ezsignsignature_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignature
+        explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignature-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Modify an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren:
+    get:
+      operationId: Ezsignsignature_GetObject_GetChildren_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignature
+        explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignature's children IDs
+      tags:
+      - Object_Ezsignsignature
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}:
+    get:
+      description: |-
+        This endpoint returns URLs to different files that can be downloaded during the signing process.
+
+        These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+      operationId: Ezsigndocument_GetDownloadUrl_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      - description: |
+          The type of document to retrieve.
+
+          1. **Initial** Is the initial document before any signature were applied.
+          2. **Signed** Is the final document once all signatures were applied.
+          3. **Proofdocument** Is the evidence report.
+          4. **Proof** Is the complete evidence archive including all of the above and more.
+        explode: false
+        in: path
+        name: eDocumentType
+        required: true
+        schema:
+          enum:
+          - Initial
+          - Signed
+          - Proof
+          - Proofdocument
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getDownloadUrl-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve a URL to download documents.
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
+    get:
+      description: |-
+        This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.
+
+        The signer Login type must be configured as In-Person.
+      operationId: Ezsignfoldersignerassociation_GetInPersonLoginUrl_V1
+      parameters:
+      - description: The unique ID of the Ezsignfoldersignerassociation
+        explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve a Login Url to allow In-Person signing
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-accepts: application/json
+  /1/object/franchisereferalincome:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Franchisereferalincome_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Franchisereferalincome
+      tags:
+      - Object_Franchisereferalincome
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/franchisebroker/getAutocomplete/{sSelector}:
+    get:
+      description: Get the list of Franchisebrokers to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchisebroker_GetAutocomplete_V1
+      parameters:
+      - description: The type of Franchisebrokers to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter on the option value
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchisebrokers and IDs
+      tags:
+      - Object_Franchisebroker
+      x-accepts: application/json
+  /1/object/period/getAutocomplete/{sSelector}:
+    get:
+      description: Get the list of Periods to be used in a dropdown or autocomplete
+        control.
+      operationId: Period_GetAutocomplete_V1
+      parameters:
+      - description: The types of Periods to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - ActiveNormal
+          - ActiveNormalAndEndOfYear
+          - AllNormal
+          - AllNormalAndEndOfYear
+          type: string
+        style: simple
+      - description: Allow to filter on the option value
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Periods and IDs
+      tags:
+      - Object_Period
+      x-accepts: application/json
+  /1/object/franchiseoffice/getAutocomplete/{sSelector}:
+    get:
+      description: Get the list of Franchiseoffices to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchiseoffice_GetAutocomplete_V1
+      parameters:
+      - description: The type of Franchiseoffices to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter on the option value
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchiseoffices and IDs
+      tags:
+      - Object_Franchiseoffice
+      x-accepts: application/json
+  /1/module/user/createezsignuser:
+    post:
+      description: |-
+        The endpoint allows to initiate the creation or a user of type Ezsignuser.
+
+        The user will be created only once the email verification process will be completed
+      operationId: User_CreateEzsignuser_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/user-createEzsignuser-v1-Request'
+              type: array
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user-createEzsignuser-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new User of type Ezsignuser
+      tags:
+      - Module_User
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
+    post:
+      description: |-
+        This endpoint applies a predefined template to the ezsign document.
+        This allows to automatically apply all the form and signature fields on a document in a single step.
+
+        The document must not already have fields otherwise an error will be returned.
+      operationId: Ezsigndocument_ApplyEzsigntemplate_V1
+      parameters:
+      - description: The unique ID of the Ezsigndocument
+        explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Apply an Ezsign Template to the Ezsigndocument.
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/apikey:
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Apikey_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/apikey-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Apikey
+      tags:
+      - Object_Apikey
+      x-contentType: application/json
       x-accepts: application/json
 components:
-  schemas: {}
+  responses:
+    Response-Error-404:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error'
+      description: The element you are trying to work on does not exist
+    Response-Error-422:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error'
+      description: The syntax of the request is valid but the request cannot be completed.
+        Look for detail in body.
+  schemas:
+    activesession-getCurrent-v1-Response-mPayload:
+      description: Payload for the /1/object/activesession/getCurrent API Request
+      example:
+        a_RegisteredModules:
+        - a_RegisteredModules
+        - a_RegisteredModules
+        sCustomerCode: sCustomerCode
+        fkiLanguageID: 2
+        a_Permissions:
+        - 0
+        - 0
+        sDepartmentNameX: sDepartmentNameX
+        eActivesessionSessiontype: Normal
+        sCompanyNameX: sCompanyNameX
+      properties:
+        sCustomerCode:
+          description: The customer code specific to the client in which the API request
+            is being made
+          type: string
+        eActivesessionSessiontype:
+          description: The type of session used for the API request call
+          enum:
+          - Normal
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sCompanyNameX:
+          description: The name of the active Company in the current language
+          type: string
+        sDepartmentNameX:
+          description: The name of the active Department in the current language
+          type: string
+        a_RegisteredModules:
+          description: |-
+            An Array of Registered modules.
+
+            These are the modules that are Licensed to be used by the User or the API Key.
+          items:
+            type: string
+          type: array
+        a_Permissions:
+          description: An array of permissions granted to the user or api key
+          items:
+            type: integer
+          type: array
+      required:
+      - a_Permissions
+      - a_RegisteredModules
+      - eActivesessionSessiontype
+      - fkiLanguageID
+      - sCompanyNameX
+      - sCustomerCode
+      - sDepartmentNameX
+      type: object
+    ezsigndocument-editObject-v1-Request:
+      description: Request for the /1/object/ezsigndocument/editObject API Request
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-Request'
+      type: object
+    ezsigndocument-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/createObject API Request
+      example:
+        mPayload:
+          a_pkiEzsigndocumentID:
+          - 95
+          - 96
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/deleteObject API Request
+      type: object
+    ezsigndocument-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/editObject API Request
+      type: object
+    ezsigndocument-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/getDownloadUrl API Request
+      example: {}
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument-createObject-v1-Request:
+      description: Request for the /1/object/ezsigndocument/createObject API Request
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-Request'
+        objEzsigndocumentCompound:
+          $ref: '#/components/schemas/ezsigndocument-RequestCompound'
+      type: object
+    ezsignfolder-editObject-v1-Request:
+      description: Request for the /1/object/ezsignfolder/editObject API Request
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-Request'
+      type: object
+    activesession-getCurrent-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/activesession/getCurrent API Request
+      example:
+        mPayload:
+          a_RegisteredModules:
+          - a_RegisteredModules
+          - a_RegisteredModules
+          sCustomerCode: sCustomerCode
+          fkiLanguageID: 2
+          a_Permissions:
+          - 0
+          - 0
+          sDepartmentNameX: sDepartmentNameX
+          eActivesessionSessiontype: Normal
+          sCompanyNameX: sCompanyNameX
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/activesession-getCurrent-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfolder-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/createObject API Request
+      example:
+        mPayload:
+          a_pkiEzsignfolderID:
+          - 95
+          - 96
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfolder-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/deleteObject API Request
+      type: object
+    ezsignfolder-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/editObject API Request
+      type: object
+    ezsignfolder-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/getObject API Request
+      example: {}
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldersignerassociation-editObject-v1-Request:
+      description: Request for the /1/object/ezsignfoldersignerassociation/editObject
+        API Request
+      properties:
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+      type: object
+    ezsignfoldersignerassociation-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/createObject
+        API Request
+      example:
+        mPayload:
+          a_pkiEzsignfoldersignerassociationID:
+          - 95
+          - 96
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldersignerassociation-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/deleteObject
+        API Request
+      type: object
+    ezsignfoldersignerassociation-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/editObject
+        API Request
+      type: object
+    ezsignfoldersignerassociation-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/getObject
+        API Request
+      example:
+        mPayload: '{}'
+      properties:
+        mPayload:
+          description: Payload for the /1/object/ezsignfoldersignerassociation/getObject
+            API Request
+          type: object
+      required:
+      - mPayload
+      type: object
+    Common-Response:
+      description: All API response will inherit this based Response
+      properties:
+        objDebugPayload:
+          $ref: '#/components/schemas/Common-Response-objDebugPayload'
+        objDebug:
+          $ref: '#/components/schemas/Common-Response-objDebug'
+      type: object
+    Common-Response-Error:
+      description: Generic Error Message
+      properties:
+        sErrorMessage:
+          description: More detail about the error
+          type: string
+      required:
+      - sErrorMessage
+      type: object
+    Common-Response-objDebug:
+      description: This is a generic debug object that is returned by all API requests
+      example:
+        sMemoryUsage: 11,923MB
+        sRunTime: 0.6084s
+        iSQLSelects: 3
+        iSQLQueries: 6
+        a_objQuery:
+        - sQuery: SELECT * FROM table
+          fDuration: 1.0E-4
+        - sQuery: SELECT * FROM table
+          fDuration: 1.0E-4
+      properties:
+        sMemoryUsage:
+          description: The peak memory allocated during the API request execution.
+            Formatted as a human readable string
+          type: string
+        sRunTime:
+          description: The total server execution time of the API request execution.
+            Formatted as a human readable string
+          type: string
+        iSQLSelects:
+          description: The number of SQL SELECT queries that were sent to the database
+            server during the API request execution
+          type: integer
+        iSQLQueries:
+          description: The number of SQL INSERT/UPDATE/DELETE queries that were sent
+            to the database server during the API request execution
+          type: integer
+        a_objSQLQuery:
+          description: An array of the SQL Queries that were executed during the API
+            request execution
+          items:
+            $ref: '#/components/schemas/Common-Response-objSQLQuery'
+          type: array
+      required:
+      - a_objSQLQuery
+      - iSQLQueries
+      - iSQLSelects
+      - sMemoryUsage
+      - sRunTime
+      type: object
+    Common-Response-objDebugPayload:
+      description: This is a debug object containing debugging information on the
+        actual function
+      example:
+        iVersionMin: 1
+        iVersionMax: 2
+        a_RequiredPermissions:
+        - 45
+        - 61
+      properties:
+        iVersionMin:
+          description: The minimum version of the function that can be called
+          type: integer
+        iVersionMax:
+          description: The maximum version of the function that can be called
+          type: integer
+        a_RequiredPermissions:
+          description: |-
+            An array of permissions required to access this function.
+
+            If the value "0" is present in the array, anyone can call this function.
+
+            You must have one of the permission to access the function. You don't need to have all of them.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_RequiredPermissions
+      - iVersionMax
+      - iVersionMin
+      type: object
+    Common-Response-objSQLQuery:
+      description: Definition of objSQLQuery Object
+      example:
+        sQuery: SELECT * FROM table
+        fDuration: 1.0E-4
+      properties:
+        sQuery:
+          description: The SQL Query
+          type: string
+        fDuration:
+          description: Execution time of the SQL Query in seconds
+          format: float
+          type: number
+      required:
+      - fDuration
+      - sQuery
+      type: object
+    ezsignfolder-createObject-v1-Request:
+      description: Request for the /1/object/ezsignfolder/createObject API Request
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-Request'
+        objEzsignfolderCompound:
+          $ref: '#/components/schemas/ezsignfolder-RequestCompound'
+      type: object
+    ezsignfolder-Request:
+      description: An Ezsignfolder Object
+      example:
+        fkiEzsignfoldertypeID: 1
+        sEzsignfolderDescription: Test eZsign Folder
+        tEzsignfolderNote: An extra notes we can add to the ezsign folder
+        fkiEzsigntsarequirementID: 1
+        eEzsignfolderSendreminderfrequency: Daily
+      properties:
+        fkiEzsignfoldertypeID:
+          description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can\
+            \ be queried by the API and is also visible in the admin interface.\r\n\
+            \r\nThere are two types of Ezsignfoldertype. **User** and **Shared**.\
+            \ **User** can only be seen by the user who created the folder or its\
+            \ assistants. Access to **Shared** folders are configurable for access\
+            \ and email delivery. You should typically choose a **Shared** type here."
+          example: 5
+          type: integer
+        fkiEzsigntsarequirementID:
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
+          example: 92
+          maximum: 3
+          minimum: 1
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsign Folder
+          maxLength: 75
+          minLength: 1
+          type: string
+        tEzsignfolderNote:
+          description: Somes extra notes about the eZsign Folder
+          type: string
+        eEzsignfolderSendreminderfrequency:
+          $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
+      required:
+      - eEzsignfolderSendreminderfrequency
+      - fkiEzsignfoldertypeID
+      - fkiEzsigntsarequirementID
+      - sEzsignfolderDescription
+      - tEzsignfolderNote
+      type: object
+    ezsignfoldersignerassociation-createObject-v1-Request:
+      description: Request for the /1/object/ezsignfoldersignerassociation/createObject
+        API Request
+      properties:
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+        objEzsignfoldersignerassociationCompound:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestCompound'
+      type: object
+    Common-Format-DateTime:
+      description: |-
+        Represent a Date Time.
+        The timezone is the one configured in the User's profile.
+      example: 2020-12-31 23:59:59
+      type: string
+    ezsigndocument-Request:
+      description: An Ezsigndocument Object
+      example:
+        sEzsigndocumentName: Important contract
+        sEzsigndocumentFilename: Important Contract.pdf
+        fkiLanguageID: 2
+        eEzsigndocumentSource: Base64
+        eEzsigndocumentFormat: Pdf
+        sEzsigndocumentBase64: JVBERi0xLjENCiXCpcKxw6sNCg0KMSAwIG9iag0KICA8PCAvVHlwZSAvQ2F0YWxvZw0KICAgICAvUGFnZXMgMiAwIFINCiAgPj4NCmVuZG9iag0KDQoyIDAgb2JqDQogIDw8IC9UeXBlIC9QYWdlcw0KICAgICAvS2lkcyBbMyAwIFJdDQogICAgIC9Db3VudCAxDQogICAgIC9NZWRpYUJveCBbMCAwIDMwMCAxNDRdDQogID4+DQplbmRvYmoNCg0KMyAwIG9iag0KICA8PCAgL1R5cGUgL1BhZ2UNCiAgICAgIC9QYXJlbnQgMiAwIFINCiAgICAgIC9SZXNvdXJjZXMNCiAgICAgICA8PCAvRm9udA0KICAgICAgICAgICA8PCAvRjENCiAgICAgICAgICAgICAgIDw8IC9UeXBlIC9Gb250DQogICAgICAgICAgICAgICAgICAvU3VidHlwZSAvVHlwZTENCiAgICAgICAgICAgICAgICAgIC9CYXNlRm9udCAvVGltZXMtUm9tYW4NCiAgICAgICAgICAgICAgID4+DQogICAgICAgICAgID4+DQogICAgICAgPj4NCiAgICAgIC9Db250ZW50cyA0IDAgUg0KICA+Pg0KZW5kb2JqDQoNCjQgMCBvYmoNCiAgPDwgL0xlbmd0aCA1NSA+Pg0Kc3RyZWFtDQogIEJUDQogICAgL0YxIDE4IFRmDQogICAgMCAwIFRkDQogICAgKEhlbGxvIFdvcmxkKSBUag0KICBFVA0KZW5kc3RyZWFtDQplbmRvYmoNCg0KeHJlZg0KMCA1DQowMDAwMDAwMDAwIDY1NTM1IGYgDQowMDAwMDAwMDE4IDAwMDAwIG4gDQowMDAwMDAwMDc3IDAwMDAwIG4gDQowMDAwMDAwMTc4IDAwMDAwIG4gDQowMDAwMDAwNDU3IDAwMDAwIG4gDQp0cmFpbGVyDQogIDw8ICAvUm9vdCAxIDAgUg0KICAgICAgL1NpemUgNQ0KICA+Pg0Kc3RhcnR4cmVmDQo1NjUNCiUlRU9G
+        fkiEzsignfolderID: 1
+        dtEzsigndocumentDuedate: 2020-12-31 23:59:59
+      properties:
+        eEzsigndocumentSource:
+          description: Indicates where to look for the document binary content.
+          enum:
+          - Base64
+          type: string
+        eEzsigndocumentFormat:
+          description: Indicates the format of the document.
+          enum:
+          - Pdf
+          type: string
+        sEzsigndocumentBase64:
+          description: |-
+            The Base64 encoded binary content of the document.
+
+            This field is Required when eEzsigndocumentSource = Base64.
+          format: byte
+          type: string
+        fkiEzsignfolderID:
+          description: |-
+            A reference to a valid Ezsignfolder.
+
+            That value is returned after a successful Ezsignfolder Creation.
+          minimum: 1
+          type: integer
+        dtEzsigndocumentDuedate:
+          description: |-
+            Represent a Date Time.
+            The timezone is the one configured in the User's profile.
+          example: 2020-12-31 23:59:59
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEzsigndocumentFilename:
+          description: The actual file name that will be used when downloading or
+            attaching to an email.
+          type: string
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          type: string
+      required:
+      - dtEzsigndocumentDuedate
+      - eEzsigndocumentFormat
+      - eEzsigndocumentSource
+      - fkiEzsignfolderID
+      - fkiLanguageID
+      - sEzsigndocumentFilename
+      - sEzsigndocumentName
+      type: object
+    ezsignfoldersignerassociation-Request:
+      description: An Ezsignfoldersignerassociation Object
+      example:
+        fkiUserID: 48
+        fkiEzsignfolderID: 85
+      properties:
+        fkiUserID:
+          description: |-
+            A reference to a valid User.
+
+            This is only used if the signatory will be a user from the system.
+          minimum: 1
+          type: integer
+        fkiEzsignfolderID:
+          description: |-
+            A reference to a valid Ezsignfolder.
+
+            That value is returned after a successful Ezsignfolder Creation.
+          minimum: 1
+          type: integer
+      required:
+      - fkiEzsignfolderID
+      type: object
+    ezsignsigner-Request:
+      description: An Ezsignsigner Object
+      example:
+        fkiTaxassignmentID: 1
+        fkiSecretquestionID: 5
+        eEzsignsignerLogintype: PasswordQuestion
+        sEzsignsignerSecretanswer: This Is My Secret Answer
+      properties:
+        fkiTaxassignmentID:
+          description: |-
+            The unique ID of the Taxassignment.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No tax|
+            |2|GST|
+            |3|HST (ON)|
+            |4|HST (NB)|
+            |5|HST (NS)|
+            |6|HST (NL)|
+            |7|HST (PE)|
+            |8|GST + QST (QC)|
+            |9|GST + QST (QC) Non-Recoverable|
+            |10|GST + PST (BC)|
+            |11|GST + PST (SK)|
+            |12|GST + RST (MB)|
+            |13|GST + PST (BC) Non-Recoverable|
+            |14|GST + PST (SK) Non-Recoverable|
+            |15|GST + RST (MB) Non-Recoverable|
+          example: 1
+          maximum: 15
+          minimum: 1
+          type: integer
+        fkiSecretquestionID:
+          description: |-
+            The unique ID of the Secretquestion.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|The name of the hospital in which you were born|
+            |2|The name of your grade school|
+            |3|The last name of your favorite teacher|
+            |4|Your favorite sports team|
+            |5|Your favorite TV show|
+            |6|Your favorite movie|
+            |7|The name of the street on which you grew up|
+            |8|The name of your first employer|
+            |9|Your first car|
+            |10|Your favorite food|
+            |11|The name of your first pet|
+            |12|Favorite musician/band|
+            |13|What instrument you play|
+            |14|Your father's middle name|
+            |15|Your mother's maiden name|
+            |16|Name of your eldest child|
+            |17|Your spouse's middle name|
+            |18|Favorite restaurant|
+            |19|Childhood nickname|
+            |20|Favorite vacation destination|
+            |21|Your boat's name|
+            |22|Date of Birth (YYYY-MM-DD)|
+          example: 7
+          type: integer
+        eEzsignsignerLogintype:
+          description: |-
+            The method the Ezsignsigner will authenticate to the signing platform.
+
+            1. **Password** means the Ezsignsigner will receive a secure link by email.
+            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
+            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
+            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
+            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+          enum:
+          - Password
+          - PasswordPhone
+          - PasswordQuestion
+          - InPersonPhone
+          - InPerson
+          type: string
+        sEzsignsignerSecretanswer:
+          description: The predefined answer to the secret question the Ezsignsigner
+            will need to provide to successfully authenticate.
+          type: string
+      required:
+      - eEzsignsignerLogintype
+      - fkiTaxassignmentID
+      type: object
+    ezsignfolder-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder-Request'
+      description: An Ezsignfolder Object and children to create a complete structure
+      example:
+        fkiEzsignfoldertypeID: 1
+        sEzsignfolderDescription: Test eZsign Folder
+        tEzsignfolderNote: An extra notes we can add to the ezsign folder
+        fkiEzsigntsarequirementID: 1
+        eEzsignfolderSendreminderfrequency: Daily
+      properties:
+        a_Ezsignfoldersignerassociation:
+          description: An array of signers that will be invited to sign the Ezsigndocuments
+          items:
+            $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+          type: array
+      required:
+      - a_Ezsignfoldersignerassociation
+      type: object
+    ezsignsigner-RequestCompound-Contact:
+      description: A Ezsignsigner->Contact Object and children to create a complete
+        structure
+      example:
+        sContactFirstname: John
+        sContactLastname: Doe
+        fkiLanguageID: 1
+        sEmailAddress: johh.doe@domain.com
+        sPhoneNumber: "5149901516"
+        sPhoneNumberCell: "5149901516"
+      properties:
+        sContactFirstname:
+          description: The first name of the Contact
+          type: string
+        sContactLastname:
+          description: The last name of the Contact
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEmailAddress:
+          description: The email address of the contact. Must be filled if email authentification
+            was requested
+          type: string
+        sPhoneNumber:
+          description: |-
+            The Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+        sPhoneNumberCell:
+          description: |-
+            The Cell Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+      required:
+      - fkiLanguageID
+      - sContactFirstname
+      - sContactLastname
+      type: object
+    ezsignsigner-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsigner-Request'
+      description: An Ezsignsigner Object and children to create a complete structure
+      properties:
+        objContact:
+          $ref: '#/components/schemas/ezsignsigner-RequestCompound-Contact'
+      required:
+      - objContact
+      type: object
+    ezsignfoldersignerassociation-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+      description: An Ezsignfoldersignerassociation Object and children to create
+        a complete structure
+      properties:
+        objEzsignsigner:
+          $ref: '#/components/schemas/ezsignsigner-RequestCompound'
+      type: object
+    ezsigndocument-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument-Request'
+      description: An Ezsigndocument Object and children to create a complete structure
+      example:
+        sEzsigndocumentName: Important contract
+        sEzsigndocumentFilename: Important Contract.pdf
+        fkiEzsignfolderID: 1
+        dtEzsigndocumentDuedate: 2020-12-31 23:59:59
+        fkiLanguageID: 2
+      type: object
+    ezsignfolder-send-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+        API Request
+      type: object
+    ezsignfolder-send-v1-Request:
+      description: Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+        API Request
+      example: |-
+        Hi John,
+
+        This is the document I need you to sign.
+
+        Could you sign it before monday please.
+
+        Best Regards.
+
+        Mary
+      properties:
+        tExtraMessage:
+          description: |-
+            A custom text message that will be added to the email sent to signatories inviting them to sign.
+
+            You can send an empty string and only the generic message will be sent.
+          type: string
+      required:
+      - tExtraMessage
+      type: object
+    ezsignsignature-editObject-v1-Request:
+      description: Request for the /1/object/ezsignsignature/editObject API Request
+      properties:
+        objEzsignsignature:
+          $ref: '#/components/schemas/ezsignsignature-Request'
+      type: object
+    ezsignsignature-getObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignsignature/getObject API Request
+      type: object
+    ezsignsignature-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/createObject API Request
+      example:
+        mPayload:
+          a_pkiEzsignsignatureID:
+          - 95
+          - 96
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignsignature-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/deleteObject API Request
+      type: object
+    ezsignsignature-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/editObject API Request
+      type: object
+    ezsignsignature-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/getObject API Request
+      example:
+        mPayload: '{}'
+      properties:
+        mPayload:
+          description: Payload for the /1/object/ezsignsignature/getObject API Request
+          type: object
+      required:
+      - mPayload
+      type: object
+    ezsignsignature-createObject-v1-Request:
+      description: Request for the /1/object/ezsignsignature/createObject API Request
+      properties:
+        objEzsignsignature:
+          $ref: '#/components/schemas/ezsignsignature-Request'
+        objEzsignsignatureCompound:
+          $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+      type: object
+    ezsignsignature-Request:
+      description: An Ezsignsignature Object
+      example:
+        fkiEzsigndocumentID: 48
+        fkiEzsignfoldersignerassociationID: 77
+        iEzsignpagePagenumber: 3
+        iEzsignsignatureX: 200
+        iEzsignsignatureY: 300
+        iEzsignsignatureStep: 1
+        eEzsignsignatureType: Name
+      properties:
+        fkiEzsignfoldersignerassociationID:
+          description: |
+            A reference to a valid Ezsignfoldersignerassociation.
+
+            That value is returned after a successful Ezsignfoldersignerassociation Creation.
+          type: integer
+        iEzsignpagePagenumber:
+          description: The page number in the document where to apply the signature
+          type: integer
+        iEzsignsignatureX:
+          description: |-
+            The X coordinate (Horizontal) where to put the signature block on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+          type: integer
+        iEzsignsignatureY:
+          description: |-
+            The Y coordinate (Vertical) where to put the signature block on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+          type: integer
+        iEzsignsignatureStep:
+          description: |-
+            The step when the Ezsignsigner will be invited to sign.
+
+            For example, if you say iEzsignsignatureStep=2, that block of signature will be available for signature only after ALL the signatures in step 1 are completed.
+          type: integer
+        eEzsignsignatureType:
+          description: |-
+            The type of signature required.
+
+            1. **Acknowledgement** is for an acknowledgment of receipt.
+            2. **Handwritten** is for a handwritten kind of signature where users needs to "draw" their signature on screen.
+            3. **Initials** is a simple "click to add initials" block.
+            4. **Name** is a simple "Click to sign" block. This is the most common block of signature.
+          enum:
+          - Acknowledgement
+          - Handwritten
+          - Initials
+          - Name
+          type: string
+        fkiEzsigndocumentID:
+          description: |-
+            A reference to a valid Ezsigndocument.
+
+            That value is returned after a successful Ezsigndocumentation Creation.
+          type: integer
+      required:
+      - eEzsignsignatureType
+      - fkiEzsigndocumentID
+      - fkiEzsignfoldersignerassociationID
+      - iEzsignpagePagenumber
+      - iEzsignsignatureStep
+      - iEzsignsignatureX
+      - iEzsignsignatureY
+      type: object
+    ezsignsignature-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignature-Request'
+      description: An Ezsignsignature Object and children to create a complete structure
+      example:
+        fkiEzsigndocumentID: 48
+        fkiEzsignfoldersignerassociationID: 77
+        iEzsignpagePagenumber: 3
+        iEzsignsignatureX: 200
+        iEzsignsignatureY: 300
+        iEzsignsignatureStep: 1
+        eEzsignsignatureType: Name
+      type: object
+    Common-Webhook:
+      description: This is the base Webhook object
+      example:
+        objWebhook:
+          pkiWebhookID: 23
+          eWebhookModule: Module
+          eWebhookEzsignevent: Event
+          pksCustomerCode: ezmax
+          sWebhookUrl: https://www.yourdomain.com/yourpath
+          sWebhookEmailfailed: hostmaster@yourdomain.com
+        a_objAttempt:
+        - dtAttemptStart: 2020-12-31 23:58:58
+          sAttemptResult: 'Error: Server returned HTTP status code 500'
+          iAttemptDuration: 5
+        - dtAttemptStart: 2020-12-31 23:59:59
+          sAttemptResult: Success
+          iAttemptDuration: 0
+      properties:
+        objWebhook:
+          $ref: '#/components/schemas/webhook-Response'
+        a_objAttempt:
+          description: |-
+            An array containing details of previous attempts that were made to deliver the message.
+            The array is empty if it's the first attempt.
+          items:
+            $ref: '#/components/schemas/attempt-Response'
+          type: array
+      required:
+      - a_objAttempt
+      - objWebhook
+      type: object
+    Webhook-Ezsign-DocumentCompleted:
+      allOf:
+      - $ref: '#/components/schemas/Webhook_Ezsign_DocumentCompleted_allOf'
+      - $ref: '#/components/schemas/Common-Webhook'
+      description: This is the base Webhook object
+      type: object
+    Webhook-Ezsign-FolderCompleted:
+      allOf:
+      - $ref: '#/components/schemas/Webhook_Ezsign_FolderCompleted_allOf'
+      - $ref: '#/components/schemas/Common-Webhook'
+      description: This is the base Webhook object
+      type: object
+    webhook-Response:
+      description: A webhook object
+      properties:
+        pkiWebhookID:
+          description: The Webhook ID. This value is visible in the admin interface.
+          type: integer
+        eWebhookModule:
+          description: The Module generating the Event.
+          enum:
+          - Ezsign
+          - Management
+          type: string
+        eWebhookEzsignevent:
+          description: This Ezsign Event. This property will be set only if the Module
+            is "Ezsign".
+          enum:
+          - DocumentCompleted
+          - FolderCompleted
+          type: string
+        pksCustomerCode:
+          description: The Customer Code in which the event was generated
+          type: string
+        sWebhookUrl:
+          description: The url being called
+          type: string
+        sWebhookEmailfailed:
+          description: The email that will receive the webhook in case all attempts
+            fail.
+          type: string
+        eWebhookManagementevent:
+          description: This Management Event. This property will be set only if the
+            Module is "Management".
+          enum:
+          - UserCreated
+          type: string
+      required:
+      - eWebhookModule
+      - pkiWebhookID
+      - pksCustomerCode
+      - sWebhookEmailfailed
+      - sWebhookUrl
+      type: object
+    attempt-Response:
+      description: An Attempt object
+      example:
+        dtAttemptStart: 2020-12-31 23:59:59
+        sAttemptResult: Success
+        iAttemptDuration: 1
+      properties:
+        dtAttemptStart:
+          description: |-
+            Represent a Date Time.
+            The timezone is the one configured in the User's profile.
+          example: 2020-12-31 23:59:59
+          type: string
+        sAttemptResult:
+          description: The Success or Failure message of the attempt when we tried
+            to call the URL to deliver the webhook event.
+          type: string
+        iAttemptDuration:
+          description: The number of second it took to process the webhook or get
+            an error
+          type: integer
+      required:
+      - dtAttemptStart
+      - iAttemptDuration
+      - sAttemptResult
+      type: object
+    ezsignfolder-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder-Response'
+      description: An Ezsignfolder Object and children to create a complete structure
+      example:
+        pkiEzsignfolderID: 13
+        fkiEzsignfoldertypeID: 1
+        sEzsignfolderDescription: Test eZsign Folder
+        tEzsignfolderNote: An extra notes we can add to the ezsign folder
+        fkiEzsigntsarequirementID: 1
+        eEzsignfolderSendreminderfrequency: Daily
+      type: object
+    ezsigndocument-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_Response_allOf'
+      description: An Ezsigndocument Object
+      type: object
+    ezsigndocument-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument-Response'
+      description: An Ezsigndocument Object and children to create a complete structure
+      example:
+        pkiEzsigndocumentID: 66
+        sEzsigndocumentName: Important contract
+        sEzsigndocumentFilename: Important Contract.pdf
+        fkiEzsignfolderID: 1
+        dtEzsigndocumentDuedate: 2020-12-31 23:59:59
+        fkiLanguageID: 2
+      type: object
+    Common-Audit:
+      description: |+
+        Gives informations about the user that created the object and the last user to have modified it.
+
+        If the object was never modified after creation, both Created and Modified informations will be the same.
+
+        Apikey details will only be provided if the changes were made by an API key.
+
+      example:
+        fkiUserIDCreated: 35
+        fkiUserIDModified: 35
+        fkiApikeyIDCreated: 1
+        fkiApikeyIDModified: 1
+        dtCreatedDate: 2020-12-31 23:59:59
+        dtModifiedDate: 2020-12-31 23:59:59
+      properties:
+        fkiUserIDCreated:
+          description: The id of the User that created the object.
+          type: integer
+        fkiUserIDModified:
+          description: The id of the User that made the last modification on the object.
+          type: integer
+        fkiApikeyIDCreated:
+          description: The id of the API Key that created the object.
+          type: integer
+        fkiApikeyIDModified:
+          description: The id of the API Key that made the last modification on the
+            object.
+          type: integer
+        dtCreatedDate:
+          description: |-
+            Represent a Date Time.
+            The timezone is the one configured in the User's profile.
+          example: 2020-12-31 23:59:59
+          type: string
+        dtModifiedDate:
+          description: |-
+            Represent a Date Time.
+            The timezone is the one configured in the User's profile.
+          example: 2020-12-31 23:59:59
+          type: string
+      required:
+      - dtCreatedDate
+      - dtModifiedDate
+      - fkiUserIDCreated
+      - fkiUserIDModified
+      type: object
+    ezsignfoldersignerassociation-getObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfoldersignerassociation/getObject
+        API Request
+      type: object
+    ezsignfolder-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder-Response'
+      description: Payload for the /1/object/ezsignfolder/getObject API Request
+      type: object
+    Field-dtEzsigndocumentDuedate:
+      description: The maximum date and time at which the document can be signed.
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-pkiEzsignfolderID:
+      description: The unique ID of the Ezsignfolder
+      example: 33
+      type: integer
+    Field-sEzsigndocumentFilename:
+      description: The actual file name that will be used when downloading or attaching
+        to an email.
+      example: Contract123.pdf
+      type: string
+    Field-sEzsigndocumentName:
+      description: The name of the document that will be presented to Ezsignfoldersignerassociations
+      example: 'Contract #123'
+      type: string
+    Field-pkiEzsignfoldertypeID:
+      description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be\
+        \ queried by the API and is also visible in the admin interface.\r\n\r\nThere\
+        \ are two types of Ezsignfoldertype. **User** and **Shared**. **User** can\
+        \ only be seen by the user who created the folder or its assistants. Access\
+        \ to **Shared** folders are configurable for access and email delivery. You\
+        \ should typically choose a **Shared** type here."
+      example: 5
+      type: integer
+    ezsigndocument-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument-Response'
+      description: Payload for the /1/object/ezsigndocument/getObject API Request
+      type: object
+    Field-eEzsigndocumentStep:
+      description: The signature step of the Ezsigndocument.
+      enum:
+      - Unsent
+      - Unsigned
+      - PartiallySigned
+      - Completed
+      example: Completed
+      type: string
+    Field-dtEzsigndocumentFirstsend:
+      description: The date and time when the Ezsigndocument was first sent.
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-dtEzsigndocumentLastsend:
+      description: The date and time when the Ezsigndocument was sent the last time.
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-iEzsigndocumentOrder:
+      description: The order in which the Ezsigndocument will be presented to the
+        signatory in the Ezsignfolder.
+      example: 1
+      title: Root Type for Field-iEzsigndocumentOrder
+      type: integer
+    Field-iEzsigndocumentPagetotal:
+      description: The number of pages in the Ezsigndocument.
+      example: 4
+      title: Root Type for Field-iEzsigndocumentPagetotal
+      type: integer
+    Field-iEzsigndocumentSignaturesigned:
+      description: The number of signatures that were signed in the document.
+      example: 3
+      title: Root Type for Field-iEzsigndocumentSignaturesigned
+      type: integer
+    Field-iEzsigndocumentSignaturetotal:
+      description: The number of total signatures that were requested in the Ezsigndocument.
+      example: 4
+      format: int32
+      title: Root Type for Field-iEzsigndocumentSignaturetotal
+      type: integer
+    Field-sEzsignfolderDescription:
+      description: The description of the Ezsign Folder
+      example: Test eZsign Folder
+      type: string
+    Field-tEzsignfolderNote:
+      description: Somes extra notes about the eZsign Folder
+      example: An extra notes we can add to the ezsign folder
+      type: string
+    Field-dtEzsignfolderSentdate:
+      description: The date and time at which the Ezsign folder was sent the last
+        time.
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-dtEzsignfolderClose:
+      description: The date and time at which the folder was closed. Either by applying
+        the last signature or by completing it prematurely.
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-eEzsignfolderSendreminderfrequency:
+      description: Frequency at which reminders will be sent to signers that haven't
+        signed the documents
+      enum:
+      - None
+      - Daily
+      - Weekly
+      example: None
+      type: string
+    Field-eEzsignfolderStep:
+      description: The signature step of the Ezsignfolder.
+      enum:
+      - Unsent
+      - Sent
+      - PartiallySigned
+      - Expired
+      - Signed
+      - Completed
+      - Archived
+      example: Completed
+      type: string
+    Field-sEzsigndocumentMD5initial:
+      description: MD5 Hash of the initial PDF Document before signatures were applied
+        to it.
+      example: 012345678901234567890123456789AB
+      type: string
+    Field-sEzsigndocumentMD5signed:
+      description: MD5 Hash of the final PDF Document after all signatures were applied
+        to it.
+      example: 012345678901234567890123456789AB
+      type: string
+    ezsigndocument-getDownloadUrl-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
+        API Request
+      example:
+        mPayload:
+          sDownloadUrl: http://www.example.com/document.pdf
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getDownloadUrl-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument-getDownloadUrl-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
+        API Request
+      example:
+        sDownloadUrl: http://www.example.com/document.pdf
+      properties:
+        sDownloadUrl:
+          description: |-
+            The Url to the requested document.
+
+            Url will expire after 5 minutes.
+          type: string
+      required:
+      - sDownloadUrl
+      type: object
+    ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
+        API Request
+      example:
+        mPayload:
+          sLoginUrl: sLoginUrl
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
+        API Request
+      example:
+        sLoginUrl: sLoginUrl
+      properties:
+        sLoginUrl:
+          description: "The Url to login to the signing application.\r\n\r\nUrl will\
+            \ expire after 30 minutes.\r\n"
+          type: string
+      required:
+      - sLoginUrl
+      type: object
+    franchisereferalincome-createObject-v1-Request:
+      description: Request for the /1/object/franchisereferalincome/createObject API
+        Request
+      properties:
+        objFranchisereferalincome:
+          $ref: '#/components/schemas/franchisereferalincome-Request'
+        objFranchisereferalincomeCompound:
+          $ref: '#/components/schemas/franchisereferalincome-RequestCompound'
+      type: object
+    franchisereferalincome-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/franchisereferalincome/createObject
+        API Request
+      example:
+        mPayload:
+          a_pkiFranchisereferalincomeID:
+          - 95
+          - 96
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    Field-pkiFranchisebrokerID:
+      description: The unique ID of the Franchisebroker
+      example: 61
+      type: integer
+    Field-pkiPeriodID:
+      description: The unique ID of the Period
+      example: 21
+      type: integer
+    Field-pkiFranchisereferalincomeprogramID:
+      description: The unique ID of the Franchisereferalincomeprogram
+      example: 51
+      type: integer
+    Field-dFranchisereferalincomeLoan:
+      description: The loan amount
+      example: "500275.62"
+      type: string
+    Field-dFranchisereferalincomeFranchiseamount:
+      description: The amount that will be given to the franchise
+      example: "275.00"
+      type: string
+    Field-dFranchisereferalincomeFranchisoramount:
+      description: The amount that will be kept by the franchisor
+      example: "385.00"
+      type: string
+    Field-dFranchisereferalincomeAgentamount:
+      description: The amount that will be given to the agent
+      example: "800.00"
+      type: string
+    address-Request:
+      description: An Address Object
+      properties:
+        fkiAddresstypeID:
+          description: |-
+            The unique ID of the Addresstype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+            |3|Real Estate Invoice|
+            |4|Invoicing|
+            |5|Shipping|
+          example: 1
+          type: integer
+        sAddressCivic:
+          description: The Civic number.
+          example: "2540"
+          type: string
+        sAddressStreet:
+          description: The Street Name
+          example: Daniel-Johnson Blvd.
+          type: string
+        sAddressSuite:
+          description: The Suite or appartment number
+          example: "610"
+          type: string
+        sAddressCity:
+          description: The City name
+          example: Laval
+          type: string
+        fkiProvinceID:
+          description: |-
+            The unique ID of the Province.
+
+            Here are some common values (Complete list must be retrieved from API):
+
+            |Value|Description|
+            |-|-|
+            |1|(Canada) Alberta
+            |2|(Canada) British Columbia|
+            |3|(Canada) Manitoba|
+            |3|(Canada) Manitoba|
+            |4|(Canada) New Brunswick|
+            |5|(Canada) Newfoundland|
+            |6|(Canada) Northwest Territories|
+            |7|(Canada) Nova Scotia|
+            |8|(Canada) Nunavut|
+            |9|(Canada) Ontario|
+            |10|(Canada) Prince Edward Island|
+            |11|(Canada) Quebec|
+            |12|(Canada) Saskatchewan|
+            |13|(Canada) Yukon|
+            |14|(United-States) Alabama|
+            |15|(United-States) Alaska|
+            |16|(United-States) Arizona|
+            |17|(United-States) Arkansas|
+            |18|(United-States) California|
+            |19|(United-States) Colorado|
+            |20|(United-States) Connecticut|
+            |21|(United-States) Delaware|
+            |22|(United-States) District of Columbia|
+            |23|(United-States) Florida|
+            |24|(United-States) Georgia|
+            |25|(United-States) Hawaii|
+            |26|(United-States) Idaho|
+            |27|(United-States) Illinois|
+            |28|(United-States) Indiana|
+            |29|(United-States) Iowa|
+            |30|(United-States) Kansas|
+            |31|(United-States) Kentucky|
+            |32|(United-States) Louisiane|
+            |33|(United-States) Maine|
+            |34|(United-States) Maryland|
+            |35|(United-States) Massachusetts|
+            |36|(United-States) Michigan|
+            |37|(United-States) Minnesota|
+            |38|(United-States) Mississippi|
+            |39|(United-States) Missouri|
+            |40|(United-States) Montana|
+            |41|(United-States) Nebraska|
+            |42|(United-States) Nevada|
+            |43|(United-States) New Hampshire|
+            |44|(United-States) New Jersey|
+            |45|(United-States) New Mexico|
+            |46|(United-States) New York|
+            |47|(United-States) North Carolina|
+            |48|(United-States) North Dakota|
+            |49|(United-States) Ohio|
+            |50|(United-States) Oklahoma|
+            |51|(United-States) Oregon|
+            |52|(United-States) Pennsylvania|
+            |53|(United-States) Rhode Island|
+            |54|(United-States) South Carolina|
+            |55|(United-States) South Dakota|
+            |56|(United-States) Tennessee|
+            |57|(United-States) Texas|
+            |58|(United-States) Utah|
+            |60|(United-States) Vermont|
+            |59|(United-States) Virginia|
+            |61|(United-States) Washington|
+            |62|(United-States) West Virginia|
+            |63|(United-States) Wisconsin|
+            |64|(United-States) Wyoming|
+          example: 11
+          type: integer
+        fkiCountryID:
+          description: |-
+            The unique ID of the Country.
+
+            Here are some common values (Complete list must be retrieved from API):
+
+            |Value|Description|
+            |-|-|
+            |1|Canada|
+            |2|United-States|
+          example: 1
+          type: integer
+        sAddressZip:
+          description: |-
+            The Postal/Zip Code
+
+            The value must be entered without spaces
+          example: H7T2S3
+          type: string
+      required:
+      - fkiAddresstypeID
+      - fkiCountryID
+      - fkiProvinceID
+      - sAddressCity
+      - sAddressCivic
+      - sAddressStreet
+      - sAddressSuite
+      - sAddressZip
+      type: object
+    Field-sAddressZip:
+      description: |-
+        The Postal/Zip Code
+
+        The value must be entered without spaces
+      example: H7T2S3
+      type: string
+    Field-sAddressCivic:
+      description: The Civic number.
+      example: "2540"
+      type: string
+    Field-sAddressStreet:
+      description: The Street Name
+      example: Daniel-Johnson Blvd.
+      type: string
+    Field-sAddressSuite:
+      description: The Suite or appartment number
+      example: "610"
+      type: string
+    Field-sAddressCity:
+      description: The City name
+      example: Laval
+      type: string
+    Field-tFranchisereferalincomeComment:
+      description: A comment about the transaction
+      example: This is a comment
+      type: string
+    Field-dtFranchisereferalincomeDisbursed:
+      description: The date the amounts were disbursed
+      example: 2020-12-31
+      type: string
+    contact-Request:
+      description: A Contact Object
+      properties:
+        fkiContacttitleID:
+          description: |-
+            The unique ID of the Contacttitle.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Ms.|
+            |2|Mr.|
+            |4|(Blank)|
+            |5|Me (For Notaries)|
+          example: 2
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        sContactCompany:
+          description: The Company name of the contact
+          example: eZmax Solutions Inc.
+          type: string
+        dtContactBirthdate:
+          description: The Birth Date of the contact
+          example: 1980-01-01
+          type: string
+      required:
+      - fkiContacttitleID
+      - fkiLanguageID
+      - sContactCompany
+      - sContactFirstname
+      - sContactLastname
+      type: object
+    email-Request:
+      description: A Contact Object
+      properties:
+        fkiEmailtypeID:
+          description: |-
+            The unique ID of the Emailtype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+          example: 1
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+      required:
+      - fkiEmailtypeID
+      - sEmailAddress
+      type: object
+    Field-sEmailAddress:
+      description: The email address.
+      example: example@domain.com
+      type: string
+    contact-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/contact_RequestCompound_allOf'
+      - $ref: '#/components/schemas/contact-Request'
+      description: A Contact Object and children to create a complete structure
+      type: object
+    franchisereferalincome-Request:
+      description: An Franchisereferalincome Object
+      properties:
+        fkiFranchisebrokerID:
+          description: The unique ID of the Franchisebroker
+          example: 61
+          type: integer
+        fkiFranchisereferalincomeprogramID:
+          description: The unique ID of the Franchisereferalincomeprogram
+          example: 51
+          type: integer
+        fkiPeriodID:
+          description: The unique ID of the Period
+          example: 21
+          type: integer
+        dFranchisereferalincomeLoan:
+          description: The loan amount
+          example: "500275.62"
+          type: string
+        dFranchisereferalincomeFranchiseamount:
+          description: The amount that will be given to the franchise
+          example: "275.00"
+          type: string
+        dFranchisereferalincomeFranchisoramount:
+          description: The amount that will be kept by the franchisor
+          example: "385.00"
+          type: string
+        dFranchisereferalincomeAgentamount:
+          description: The amount that will be given to the agent
+          example: "800.00"
+          type: string
+        dtFranchisereferalincomeDisbursed:
+          description: The date the amounts were disbursed
+          example: 2020-12-31
+          type: string
+        tFranchisereferalincomeComment:
+          description: A comment about the transaction
+          example: This is a comment
+          type: string
+        fkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          type: integer
+        sFranchisereferalincomeRemoteid:
+          type: string
+      required:
+      - dFranchisereferalincomeAgentamount
+      - dFranchisereferalincomeFranchiseamount
+      - dFranchisereferalincomeFranchisoramount
+      - dFranchisereferalincomeLoan
+      - dtFranchisereferalincomeDisbursed
+      - fkiFranchisebrokerID
+      - fkiFranchiseofficeID
+      - fkiFranchisereferalincomeprogramID
+      - fkiPeriodID
+      - objAddress
+      - sFranchisereferalincomeRemoteid
+      - tFranchisereferalincomeComment
+      type: object
+    franchisereferalincome-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/franchisereferalincome-Request'
+      description: A Franchisereferalincome Object and children to create a complete
+        structure
+      properties:
+        objAddress:
+          $ref: '#/components/schemas/address-Request'
+        a_objContact:
+          items:
+            $ref: '#/components/schemas/contact-RequestCompound'
+          type: array
+      required:
+      - a_objContact
+      type: object
+    Field-pkiContacttitleID:
+      description: |-
+        The unique ID of the Contacttitle.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Ms.|
+        |2|Mr.|
+        |4|(Blank)|
+        |5|Me (For Notaries)|
+      example: 2
+      type: integer
+    Field-pkiAddresstypeID:
+      description: |-
+        The unique ID of the Addresstype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+        |3|Real Estate Invoice|
+        |4|Invoicing|
+        |5|Shipping|
+      example: 1
+      type: integer
+    Field-pkiCountryID:
+      description: |-
+        The unique ID of the Country.
+
+        Here are some common values (Complete list must be retrieved from API):
+
+        |Value|Description|
+        |-|-|
+        |1|Canada|
+        |2|United-States|
+      example: 1
+      type: integer
+    Field-pkiLanguageID:
+      description: |-
+        The unique ID of the Language.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|French|
+        |2|English|
+      example: 2
+      maximum: 2
+      minimum: 1
+      type: integer
+    Field-pkiProvinceID:
+      description: |-
+        The unique ID of the Province.
+
+        Here are some common values (Complete list must be retrieved from API):
+
+        |Value|Description|
+        |-|-|
+        |1|(Canada) Alberta
+        |2|(Canada) British Columbia|
+        |3|(Canada) Manitoba|
+        |3|(Canada) Manitoba|
+        |4|(Canada) New Brunswick|
+        |5|(Canada) Newfoundland|
+        |6|(Canada) Northwest Territories|
+        |7|(Canada) Nova Scotia|
+        |8|(Canada) Nunavut|
+        |9|(Canada) Ontario|
+        |10|(Canada) Prince Edward Island|
+        |11|(Canada) Quebec|
+        |12|(Canada) Saskatchewan|
+        |13|(Canada) Yukon|
+        |14|(United-States) Alabama|
+        |15|(United-States) Alaska|
+        |16|(United-States) Arizona|
+        |17|(United-States) Arkansas|
+        |18|(United-States) California|
+        |19|(United-States) Colorado|
+        |20|(United-States) Connecticut|
+        |21|(United-States) Delaware|
+        |22|(United-States) District of Columbia|
+        |23|(United-States) Florida|
+        |24|(United-States) Georgia|
+        |25|(United-States) Hawaii|
+        |26|(United-States) Idaho|
+        |27|(United-States) Illinois|
+        |28|(United-States) Indiana|
+        |29|(United-States) Iowa|
+        |30|(United-States) Kansas|
+        |31|(United-States) Kentucky|
+        |32|(United-States) Louisiane|
+        |33|(United-States) Maine|
+        |34|(United-States) Maryland|
+        |35|(United-States) Massachusetts|
+        |36|(United-States) Michigan|
+        |37|(United-States) Minnesota|
+        |38|(United-States) Mississippi|
+        |39|(United-States) Missouri|
+        |40|(United-States) Montana|
+        |41|(United-States) Nebraska|
+        |42|(United-States) Nevada|
+        |43|(United-States) New Hampshire|
+        |44|(United-States) New Jersey|
+        |45|(United-States) New Mexico|
+        |46|(United-States) New York|
+        |47|(United-States) North Carolina|
+        |48|(United-States) North Dakota|
+        |49|(United-States) Ohio|
+        |50|(United-States) Oklahoma|
+        |51|(United-States) Oregon|
+        |52|(United-States) Pennsylvania|
+        |53|(United-States) Rhode Island|
+        |54|(United-States) South Carolina|
+        |55|(United-States) South Dakota|
+        |56|(United-States) Tennessee|
+        |57|(United-States) Texas|
+        |58|(United-States) Utah|
+        |60|(United-States) Vermont|
+        |59|(United-States) Virginia|
+        |61|(United-States) Washington|
+        |62|(United-States) West Virginia|
+        |63|(United-States) Wisconsin|
+        |64|(United-States) Wyoming|
+      example: 11
+      type: integer
+    Field-pkiTaxassignmentID:
+      description: |-
+        The unique ID of the Taxassignment.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|No tax|
+        |2|GST|
+        |3|HST (ON)|
+        |4|HST (NB)|
+        |5|HST (NS)|
+        |6|HST (NL)|
+        |7|HST (PE)|
+        |8|GST + QST (QC)|
+        |9|GST + QST (QC) Non-Recoverable|
+        |10|GST + PST (BC)|
+        |11|GST + PST (SK)|
+        |12|GST + RST (MB)|
+        |13|GST + PST (BC) Non-Recoverable|
+        |14|GST + PST (SK) Non-Recoverable|
+        |15|GST + RST (MB) Non-Recoverable|
+      example: 1
+      maximum: 15
+      minimum: 1
+      type: integer
+    Field-pkiEmailtypeID:
+      description: |-
+        The unique ID of the Emailtype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+      example: 1
+      type: integer
+    Field-pkiEzsigntsarequirementID:
+      description: |-
+        The unique ID of the Ezsigntsarequirement.
+
+        Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+        |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+        |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
+      example: 92
+      maximum: 3
+      minimum: 1
+      type: integer
+    Field-pkiSecretquestionID:
+      description: |-
+        The unique ID of the Secretquestion.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|The name of the hospital in which you were born|
+        |2|The name of your grade school|
+        |3|The last name of your favorite teacher|
+        |4|Your favorite sports team|
+        |5|Your favorite TV show|
+        |6|Your favorite movie|
+        |7|The name of the street on which you grew up|
+        |8|The name of your first employer|
+        |9|Your first car|
+        |10|Your favorite food|
+        |11|The name of your first pet|
+        |12|Favorite musician/band|
+        |13|What instrument you play|
+        |14|Your father's middle name|
+        |15|Your mother's maiden name|
+        |16|Name of your eldest child|
+        |17|Your spouse's middle name|
+        |18|Favorite restaurant|
+        |19|Childhood nickname|
+        |20|Favorite vacation destination|
+        |21|Your boat's name|
+        |22|Date of Birth (YYYY-MM-DD)|
+      example: 7
+      type: integer
+    Field-sContactFirstname:
+      description: The First name of the contact
+      example: John
+      type: string
+    Field-sContactLastname:
+      description: The Last name of the contact
+      example: Doe
+      type: string
+    Field-sContactCompany:
+      description: The Company name of the contact
+      example: eZmax Solutions Inc.
+      type: string
+    Field-dtContactBirthdate:
+      description: The Birth Date of the contact
+      example: 1980-01-01
+      type: string
+    Field-tContactNote:
+      description: Some Notes about the contact
+      example: This is a note
+      type: string
+    Field-sPhoneRegion:
+      description: |-
+        The region of the phone number. (For a North America Number only)
+
+        The region is the "514" section in this sample phone number: (514) 990-1516 x123
+      example: "514"
+      type: string
+    Field-sPhoneExchange:
+      description: |-
+        The exchange of the phone number. (For a North America Number only)
+
+        The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
+      example: "990"
+      type: string
+    Field-sPhoneNumber:
+      description: |-
+        The number of the phone number. (For a North America Number only)
+
+        The number is the "1516" section in this sample phone number: (514) 990-1516 x123
+      example: "1516"
+      type: string
+    Field-sPhoneExtension:
+      description: |-
+        The extension of the phone number.
+
+        The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+        It can also be used with international phone numbers
+      example: "123"
+      type: string
+    Field-sPhoneInternational:
+      description: |-
+        The international phone number. (For phone numbers outside of North)
+
+        Do not specify the "011" part of the phone number used to dial an international phone number from North America.
+
+        For example for this sample phone number "+442071838750", you would send "442071838750" without the "+" sign.
+      example: "442071838750"
+      type: string
+    Field-ePhoneType:
+      description: |-
+        The type of phone number.
+
+        **Local** refers to a north American phone number. You would then need to specify sPhoneRegion, sPhoneExchange, sPhoneNumber.
+        **International** would be used for numbers outside of north america. You would then need to specify sPhoneInternational
+      enum:
+      - Local
+      - International
+      example: Local
+      type: string
+    Field-pkiPhonetypeID:
+      description: |-
+        The unique ID of the Phonetype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+        |3|Mobile|
+        |4|Fax|
+        |5|Pager|
+        |6|Toll Free|
+      example: 1
+      type: integer
+    phone-Request:
+      description: A Phone Object
+      properties:
+        fkiPhonetypeID:
+          description: |-
+            The unique ID of the Phonetype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+            |3|Mobile|
+            |4|Fax|
+            |5|Pager|
+            |6|Toll Free|
+          example: 1
+          type: integer
+        ePhoneType:
+          $ref: '#/components/schemas/Field-ePhoneType'
+        sPhoneRegion:
+          description: |-
+            The region of the phone number. (For a North America Number only)
+
+            The region is the "514" section in this sample phone number: (514) 990-1516 x123
+          example: "514"
+          type: string
+        sPhoneExchange:
+          description: |-
+            The exchange of the phone number. (For a North America Number only)
+
+            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
+          example: "990"
+          type: string
+        sPhoneNumber:
+          description: |-
+            The number of the phone number. (For a North America Number only)
+
+            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
+          example: "1516"
+          type: string
+        sPhoneInternational:
+          description: |-
+            The international phone number. (For phone numbers outside of North)
+
+            Do not specify the "011" part of the phone number used to dial an international phone number from North America.
+
+            For example for this sample phone number "+442071838750", you would send "442071838750" without the "+" sign.
+          example: "442071838750"
+          type: string
+        sPhoneExtension:
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
+          example: "123"
+          type: string
+      required:
+      - ePhoneType
+      - fkiPhonetypeID
+      type: object
+    Field-pkiWebsitetypeID:
+      description: |-
+        The unique ID of the Websitetype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Website|
+        |2|Twitter|
+        |3|Facebook|
+        |4|Survey|
+      example: 1
+      type: integer
+    Field-sWebsiteAddress:
+      description: The URL of the website.
+      example: https://www.domain.com
+      type: string
+    website-Request:
+      description: A Website Object
+      properties:
+        fkiWebsitetypeID:
+          description: |-
+            The unique ID of the Websitetype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Website|
+            |2|Twitter|
+            |3|Facebook|
+            |4|Survey|
+          example: 1
+          type: integer
+        sWebsiteAddress:
+          description: The URL of the website.
+          example: https://www.domain.com
+          type: string
+      required:
+      - fkiWebsitetypeID
+      - sWebsiteAddress
+      type: object
+    contactinformations-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/contactinformations-Request'
+      description: A Contactinformations Object and children to create a complete
+        structure
+      properties:
+        a_objAddress:
+          items:
+            $ref: '#/components/schemas/address-Request'
+          type: array
+        a_objPhone:
+          items:
+            $ref: '#/components/schemas/phone-Request'
+          type: array
+        a_objEmail:
+          items:
+            $ref: '#/components/schemas/email-Request'
+          type: array
+        a_objWebsite:
+          items:
+            $ref: '#/components/schemas/website-Request'
+          type: array
+      required:
+      - a_objAddress
+      - a_objEmail
+      - a_objPhone
+      - a_objWebsite
+      type: object
+    contactinformations-Request:
+      description: A Contactinformations Object
+      properties:
+        iAddressDefault:
+          description: |-
+            The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.
+
+            You can leave the value to 0 if the array is empty.
+          type: integer
+        iPhoneDefault:
+          description: |-
+            The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.
+
+            You can leave the value to 0 if the array is empty.
+          type: integer
+        iEmailDefault:
+          description: |-
+            The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.
+
+            You can leave the value to 0 if the array is empty.
+          type: integer
+        iWebsiteDefault:
+          description: |-
+            The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.
+
+            You can leave the value to 0 if the array is empty.
+          type: integer
+      required:
+      - iAddressDefault
+      - iEmailDefault
+      - iPhoneDefault
+      - iWebsiteDefault
+      type: object
+    Common-getAutocomplete-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/xxx/getAutocomplete API Request
+      example:
+        mPayload:
+        - id: id
+          group: group
+          option: option
+        - id: id
+          group: group
+          option: option
+      properties:
+        mPayload:
+          items:
+            $ref: '#/components/schemas/Common-getAutocomplete-v1-Response-mPayload'
+          type: array
+      required:
+      - mPayload
+      type: object
+    Common-getAutocomplete-v1-Response-mPayload:
+      description: Generic Autocomplete Response
+      example:
+        id: id
+        group: group
+        option: option
+      properties:
+        group:
+          description: The Category (ie group) for the dropdown or an empty string
+            if not categorized
+          type: string
+        id:
+          description: The Unique ID of the element
+          type: string
+        option:
+          description: The Description of the element
+          type: string
+      required:
+      - group
+      - id
+      - option
+      type: object
+    Field-pkiFranchiseofficeID:
+      description: The unique ID of the Franchisereoffice
+      example: 50
+      type: integer
+    Field-sFranchisereferalincomeRemoteid:
+      description: The internal ID
+      example: "12345"
+      type: string
+    user-createEzsignuser-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/module/user/createEzsignuser API Request
+      example:
+        mPayload:
+          a_sEmailAddressSuccess:
+          - someone@example.com
+          - someone2@example.com
+          a_sEmailAddressFailure:
+          - UserAlreadyExists@example.com
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/user-createEzsignuser-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    user-createEzsignuser-v1-Response-mPayload:
+      description: Payload for the /1/module/user/createEzsignuser API Request
+      example:
+        a_sEmailAddressSuccess:
+        - someone@example.com
+        - someone2@example.com
+        a_sEmailAddressFailure:
+        - UserAlreadyExists@example.com
+      properties:
+        a_sEmailAddressSuccess:
+          description: An array of email addresses that succeeded.
+          items:
+            type: string
+          type: array
+        a_sEmailAddressFailure:
+          description: An array of email addresses that failed.
+          items:
+            type: string
+          type: array
+      required:
+      - a_sEmailAddressFailure
+      - a_sEmailAddressSuccess
+      type: object
+    user-createEzsignuser-v1-Request:
+      description: Request for the /1/module/user/createEzsignuser API Request
+      properties:
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sUserFirstname:
+          description: The First name of the user
+          example: John
+          type: string
+        sUserLastname:
+          description: The Last name of the user
+          example: Doe
+          type: string
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sPhoneRegion:
+          description: |-
+            The region of the phone number. (For a North America Number only)
+
+            The region is the "514" section in this sample phone number: (514) 990-1516 x123
+          example: "514"
+          type: string
+        sPhoneExchange:
+          description: |-
+            The exchange of the phone number. (For a North America Number only)
+
+            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
+          example: "990"
+          type: string
+        sPhoneNumber:
+          description: |-
+            The number of the phone number. (For a North America Number only)
+
+            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
+          example: "1516"
+          type: string
+        sPhoneExtension:
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
+          example: "123"
+          type: string
+      required:
+      - fkiLanguageID
+      - sEmailAddress
+      - sPhoneExchange
+      - sPhoneNumber
+      - sPhoneRegion
+      - sUserFirstname
+      - sUserLastname
+      type: object
+    Field-sUserLastname:
+      description: The Last name of the user
+      example: Doe
+      type: string
+    Field-sUserFirstname:
+      description: The First name of the user
+      example: John
+      type: string
+    ezsigndocument-applyEzsigntemplate-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
+        API Request
+      type: object
+    Field-pkiEzsigntemplateID:
+      description: The unique ID of the Ezsigndocument
+      example: 36
+      type: integer
+    Field-pkiEzsigndocumentID:
+      description: The unique ID of the Ezsigntemplate
+      example: 97
+      type: integer
+    Field-sEzsigntemplatesigner:
+      description: The First name of the user
+      example: John
+      type: string
+    Field-pkiEzsignfoldersignerassociationID:
+      description: The unique ID of the Ezsignfoldersignerassociation
+      example: 20
+      type: integer
+    ezsigndocument-applyEzsigntemplate-v1-Request:
+      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
+        API Request
+      properties:
+        fkiEzsigntemplateID:
+          description: The unique ID of the Ezsigndocument
+          example: 36
+          type: integer
+        a_sEzsigntemplatesigner:
+          items:
+            $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
+          type: array
+        a_pkiEzsignfoldersignerassociationID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          type: array
+      required:
+      - a_pkiEzsignfoldersignerassociation
+      - a_pkiEzsignfoldersignerassociationID
+      - a_sEzsigntemplatesigner
+      - fkiEzsigntemplateID
+      type: object
+    Webhook-User-UserCreated:
+      allOf:
+      - $ref: '#/components/schemas/Webhook_User_UserCreated_allOf'
+      - $ref: '#/components/schemas/Common-Webhook'
+      description: This is the base Webhook object
+      type: object
+    Field-pkiUserID:
+      description: The unique ID of the User
+      example: 70
+      type: integer
+    ezsignfolder-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_Response_allOf'
+      description: An Ezsignfolder Object
+      type: object
+    user-Response:
+      allOf:
+      - $ref: '#/components/schemas/user_Response_allOf'
+      description: A User Object
+      type: object
+    Field-eUserType:
+      description: The user type of the User.
+      enum:
+      - AgentBroker
+      - Assistant
+      - Attendance
+      - Customer
+      - Employee
+      - Ezcom
+      - EzsignSigner
+      - EzsignUser
+      - FranchiseCustomerServer
+      - Normal
+      - RewardAdministration
+      - RewardMember
+      - RewardRepresentative
+      - RewardCustomer
+      - RewardDistributorServer
+      - Supplier
+      - VetrxCustomer
+      - Vetrxcustomergroup
+      - VetrxCustomerServer
+      - VetrxManufacturer
+      - VetrxVendor
+      example: RewardDistributorServer
+      type: string
+    Field-sUserLoginname:
+      description: The Login name of the User.
+      example: JohnDoe
+      type: string
+    apikey-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/apikey/createObject API Request
+      example:
+        mPayload:
+          a_objApikey:
+          - objAudit:
+              fkiUserIDCreated: 35
+              fkiUserIDModified: 35
+              fkiApikeyIDCreated: 1
+              fkiApikeyIDModified: 1
+              dtCreatedDate: 2020-12-31 23:59:59
+              dtModifiedDate: 2020-12-31 23:59:59
+            pkiApikeyID: 99
+            sComputedToken: sComputedToken
+            objApikeyDescription:
+              sApikeyDescription1: Projet X
+              sApikeyDescription2: Project X
+          - objAudit:
+              fkiUserIDCreated: 35
+              fkiUserIDModified: 35
+              fkiApikeyIDCreated: 1
+              fkiApikeyIDModified: 1
+              dtCreatedDate: 2020-12-31 23:59:59
+              dtModifiedDate: 2020-12-31 23:59:59
+            pkiApikeyID: 99
+            sComputedToken: sComputedToken
+            objApikeyDescription:
+              sApikeyDescription1: Projet X
+              sApikeyDescription2: Project X
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/apikey-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsigndocument/createObject API Request
+      example:
+        a_pkiEzsigndocumentID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsigndocumentID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsigndocumentID
+      type: object
+    ezsignfolder-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfolder/createObject API Request
+      example:
+        a_pkiEzsignfolderID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignfolderID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignfolderID
+      type: object
+    ezsignfoldersignerassociation-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfoldersignerassociation/createObject
+        API Request
+      example:
+        a_pkiEzsignfoldersignerassociationID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignfoldersignerassociationID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignfoldersignerassociationID
+      type: object
+    ezsignsignature-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignsignature/createObject API Request
+      example:
+        a_pkiEzsignsignatureID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignsignatureID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignsignatureID
+      type: object
+    franchisereferalincome-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/franchisereferalincome/createObject API
+        Request
+      example:
+        a_pkiFranchisereferalincomeID:
+        - 95
+        - 96
+      properties:
+        a_pkiFranchisereferalincomeID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiFranchisereferalincomeID
+      type: object
+    apikey-createObject-v1-Response-mPayload:
+      description: Payload for the /1/object/apikey/createObject API Request
+      example:
+        a_objApikey:
+        - objAudit:
+            fkiUserIDCreated: 35
+            fkiUserIDModified: 35
+            fkiApikeyIDCreated: 1
+            fkiApikeyIDModified: 1
+            dtCreatedDate: 2020-12-31 23:59:59
+            dtModifiedDate: 2020-12-31 23:59:59
+          pkiApikeyID: 99
+          sComputedToken: sComputedToken
+          objApikeyDescription:
+            sApikeyDescription1: Projet X
+            sApikeyDescription2: Project X
+        - objAudit:
+            fkiUserIDCreated: 35
+            fkiUserIDModified: 35
+            fkiApikeyIDCreated: 1
+            fkiApikeyIDModified: 1
+            dtCreatedDate: 2020-12-31 23:59:59
+            dtModifiedDate: 2020-12-31 23:59:59
+          pkiApikeyID: 99
+          sComputedToken: sComputedToken
+          objApikeyDescription:
+            sApikeyDescription1: Projet X
+            sApikeyDescription2: Project X
+      properties:
+        a_objApikey:
+          items:
+            $ref: '#/components/schemas/apikey-Response'
+          type: array
+      required:
+      - a_objApikey
+      type: object
+    apikey-createObject-v1-Request:
+      description: Request for the /1/object/apikey/createObject API Request
+      properties:
+        objApikey:
+          $ref: '#/components/schemas/apikey-Request'
+        objApikeyCompound:
+          $ref: '#/components/schemas/apikey-RequestCompound'
+      type: object
+    apikey-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/apikey-Request'
+      description: An Apikey Object and children to create a complete structure
+      type: object
+    apikey-Request:
+      description: An Apikey Object
+      properties:
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        objApikeyDescription:
+          $ref: '#/components/schemas/Multilingual-ApikeyDescription'
+      required:
+      - fkiUserID
+      - objApikeyDescription
+      type: object
+    Multilingual-ApikeyDescription:
+      description: |+
+        Description of the API Key
+
+      example:
+        sApikeyDescription1: Projet X
+        sApikeyDescription2: Project X
+      properties:
+        sApikeyDescription1:
+          description: Value in French
+          type: string
+        sApikeyDescription2:
+          description: Value in English
+          type: string
+      type: object
+    apikey-Response:
+      allOf:
+      - required:
+        - pkiApikeyID
+        type: object
+      description: An Apikey Object
+      example:
+        objAudit:
+          fkiUserIDCreated: 35
+          fkiUserIDModified: 35
+          fkiApikeyIDCreated: 1
+          fkiApikeyIDModified: 1
+          dtCreatedDate: 2020-12-31 23:59:59
+          dtModifiedDate: 2020-12-31 23:59:59
+        pkiApikeyID: 99
+        sComputedToken: sComputedToken
+        objApikeyDescription:
+          sApikeyDescription1: Projet X
+          sApikeyDescription2: Project X
+      properties:
+        objApikeyDescription:
+          $ref: '#/components/schemas/Multilingual-ApikeyDescription'
+        sComputedToken:
+          description: |-
+            The secret token for the API key.
+
+            This will be returned only on creation.
+          type: string
+        pkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          type: integer
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - objApikeyDescription
+      - objAudit
+      - pkiApikeyID
+      type: object
+    Field-pkiApikeyID:
+      description: The unique ID of the Apikey
+      example: 99
+      type: integer
+    Webhook_Ezsign_DocumentCompleted_allOf:
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-Response'
+      required:
+      - objEzsigndocument
+      type: object
+    Webhook_Ezsign_FolderCompleted_allOf:
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-Response'
+      required:
+      - objEzsignfolder
+      type: object
+    ezsigndocument_Response_allOf:
+      properties:
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        dtEzsigndocumentDuedate:
+          description: The maximum date and time at which the document can be signed.
+          example: 2020-12-31 23:59:59
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEzsigndocumentFilename:
+          description: The actual file name that will be used when downloading or
+            attaching to an email.
+          example: Contract123.pdf
+          type: string
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          example: 'Contract #123'
+          type: string
+        pkiEzsigndocumentID:
+          description: The unique ID of the Ezsigntemplate
+          example: 97
+          type: integer
+        eEzsigndocumentStep:
+          $ref: '#/components/schemas/Field-eEzsigndocumentStep'
+        dtEzsigndocumentFirstsend:
+          description: The date and time when the Ezsigndocument was first sent.
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsigndocumentLastsend:
+          description: The date and time when the Ezsigndocument was sent the last
+            time.
+          example: 2020-12-31 23:59:59
+          type: string
+        iEzsigndocumentOrder:
+          description: The order in which the Ezsigndocument will be presented to
+            the signatory in the Ezsignfolder.
+          example: 1
+          title: Root Type for Field-iEzsigndocumentOrder
+          type: integer
+        iEzsigndocumentPagetotal:
+          description: The number of pages in the Ezsigndocument.
+          example: 4
+          title: Root Type for Field-iEzsigndocumentPagetotal
+          type: integer
+        iEzsigndocumentSignaturesigned:
+          description: The number of signatures that were signed in the document.
+          example: 3
+          title: Root Type for Field-iEzsigndocumentSignaturesigned
+          type: integer
+        iEzsigndocumentSignaturetotal:
+          description: The number of total signatures that were requested in the Ezsigndocument.
+          example: 4
+          format: int32
+          title: Root Type for Field-iEzsigndocumentSignaturetotal
+          type: integer
+        sEzsigndocumentMD5initial:
+          description: MD5 Hash of the initial PDF Document before signatures were
+            applied to it.
+          example: 012345678901234567890123456789AB
+          type: string
+        sEzsigndocumentMD5signed:
+          description: MD5 Hash of the final PDF Document after all signatures were
+            applied to it.
+          example: 012345678901234567890123456789AB
+          type: string
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - dtEzsigndocumentDuedate
+      - dtEzsigndocumentFirstsend
+      - dtEzsigndocumentLastsend
+      - eEzsigndocumentStep
+      - fkiEzsignfolderID
+      - fkiLanguageID
+      - iEzsigndocumentOrder
+      - iEzsigndocumentPagetotal
+      - iEzsigndocumentSignaturesigned
+      - iEzsigndocumentSignaturetotal
+      - objAudit
+      - pkiEzsigndocumentID
+      - sEzsigndocumentFilename
+      - sEzsigndocumentMD5initial
+      - sEzsigndocumentMD5signed
+      - sEzsigndocumentName
+      type: object
+    contact_RequestCompound_allOf:
+      properties:
+        objContactinformations:
+          $ref: '#/components/schemas/contactinformations-RequestCompound'
+      required:
+      - objContactinformations
+      type: object
+    Webhook_User_UserCreated_allOf:
+      properties:
+        objUser:
+          $ref: '#/components/schemas/user-Response'
+      required:
+      - objUser
+      type: object
+    ezsignfolder_Response_allOf:
+      properties:
+        fkiEzsignfoldertypeID:
+          description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can\
+            \ be queried by the API and is also visible in the admin interface.\r\n\
+            \r\nThere are two types of Ezsignfoldertype. **User** and **Shared**.\
+            \ **User** can only be seen by the user who created the folder or its\
+            \ assistants. Access to **Shared** folders are configurable for access\
+            \ and email delivery. You should typically choose a **Shared** type here."
+          example: 5
+          type: integer
+        fkiEzsigntsarequirementID:
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
+          example: 92
+          maximum: 3
+          minimum: 1
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsign Folder
+          example: Test eZsign Folder
+          type: string
+        tEzsignfolderNote:
+          description: Somes extra notes about the eZsign Folder
+          example: An extra notes we can add to the ezsign folder
+          type: string
+        eEzsignfolderSendreminderfrequency:
+          $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        dtEzsignfolderSentdate:
+          description: The date and time at which the Ezsign folder was sent the last
+            time.
+          example: 2020-12-31 23:59:59
+          type: string
+        eEzsignfolderStep:
+          $ref: '#/components/schemas/Field-eEzsignfolderStep'
+        dtEzsignfolderClose:
+          description: The date and time at which the folder was closed. Either by
+            applying the last signature or by completing it prematurely.
+          example: 2020-12-31 23:59:59
+          type: string
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - dtEzsignfolderClose
+      - dtEzsignfolderSentdate
+      - eEzsignfolderSendreminderfrequency
+      - eEzsignfolderStep
+      - fkiEzsignfoldertypeID
+      - fkiEzsigntsarequirementID
+      - objAudit
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
+      - tEzsignfolderNote
+      type: object
+    user_Response_allOf:
+      properties:
+        pkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserType:
+          $ref: '#/components/schemas/Field-eUserType'
+        sUserFirstname:
+          description: The First name of the user
+          example: John
+          type: string
+        sUserLastname:
+          description: The Last name of the user
+          example: Doe
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - eUserType
+      - fkiLanguageID
+      - objAudit
+      - pkiUserID
+      - sUserFirstname
+      - sUserLastname
+      - sUserLoginname
+      type: object
   securitySchemes:
     Authorization:
-      description: TODO API Key Description
+      description: |-
+        There are 3 types of API Key that can be used to make requests to the API.
+
+        1. **API type key** which is static and not session based. It can be generated from the admin console. This is the most common type of authentication for "server to server" kind of integration. Never use this in a web based (client) application as the key could be leaked. This type of key begins with the letter **A**.
+
+        2. **Delegated type key** which has an expiration time. It is commonly used in mobile or web application where you cannot use an **API type key** that could be leaked. The application would query a server part that will generate a **Delegated type key** using an **API type key**. The **Delegated type key** could now be used by the mobile or web page application without leaking the **API type key**. This type of key begins with the letter **D**.
+
+        3. **User type key** which are session based and can be retrieved after a successful authentication. This type of key is reserved to specific situation where the other types of key are not desirable. This type of key begins with the letter **U**.
       in: header
       name: Authorization
       type: apiKey
+x-webhooks:
+  Webhook-Ezsign-DocumentCompleted:
+    post:
+      summary: Webhook Document Completed
+      description: This Webhook will be called when the last signature on an Ezsigndocument
+        is made.
+      operationId: Webhook_Ezsign_DocumentCompleted
+      tags:
+      - Object_Ezsigndocument
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook-Ezsign-DocumentCompleted'
+      responses:
+        "200":
+          description: Successful response, will not be retried
+  Webhook-Ezsign-FolderCompleted:
+    post:
+      summary: Webhook Folder Completed
+      description: This Webhook will be called when the last signature on the last
+        Ezsigndocument from the folder is made.
+      operationId: Webhook_Ezsign_FolderCompleted
+      tags:
+      - Object_Ezsignfolder
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook-Ezsign-FolderCompleted'
+      responses:
+        "200":
+          description: Successful response, will not be retried
+  Webhook-User-UserCreated:
+    post:
+      summary: Webhook User Created
+      description: This Webhook will be called when a user is created in the system.
+      operationId: Webhook_User_UserCreated
+      tags:
+      - Object_User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook-User-UserCreated'
+      responses:
+        "200":
+          description: Successful response, will not be retried
+x-tagGroups:
+- name: Object
+  tags:
+  - Object_Activesession
+  - Object_Apikey
+  - Object_Ezsigndocument
+  - Object_Ezsignfolder
+  - Object_Ezsignfoldersignerassociation
+  - Object_Ezsignsignature
+  - Object_Franchisebroker
+  - Object_Franchiseoffice
+  - Object_Franchisereferalincome
+  - Object_Period
+  - Object_User
+- name: Module
+  tags:
+  - Module_User
+- name: Report
+  tags: []
 
