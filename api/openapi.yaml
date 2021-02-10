@@ -17,7 +17,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.28
+  version: 1.0.29
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -45,6 +45,13 @@ servers:
 security:
 - Authorization: []
 tags:
+- description: Customer contains details about the customer code assigned to your
+    account
+  name: Global_Customer
+  x-displayName: Customer
+- description: User module contains actions that can be called to interract with users
+  name: Module_User
+  x-displayName: User
 - description: Activesession contains detail about the currently executing api request.
   name: Object_Activesession
   x-displayName: Activesession
@@ -84,9 +91,6 @@ tags:
   x-displayName: Period
 - description: User contains detail about the users in the system
   name: Object_User
-  x-displayName: User
-- description: User module contains actions that can be called to interract with users
-  name: Module_User
   x-displayName: User
 paths:
   /1/object/activesession/getCurrent:
@@ -244,7 +248,7 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren:
     get:
-      operationId: Ezsigndocument_GetObject_GetChildren_V1
+      operationId: Ezsigndocument_GetChildren_V1
       parameters:
       - description: The unique ID of the Ezsigndocument
         explode: false
@@ -405,7 +409,7 @@ paths:
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren:
     get:
-      operationId: Ezsignfolder_GetObject_GetChildren_V1
+      operationId: Ezsignfolder_GetChildren_V1
       parameters:
       - description: The unique ID of the Ezsignfolder
         explode: false
@@ -566,7 +570,7 @@ paths:
       x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren:
     get:
-      operationId: Ezsignfoldersignerassociation_GetObject_GetChildren_V1
+      operationId: Ezsignfoldersignerassociation_GetChildren_V1
       parameters:
       - description: The unique ID of the Ezsignfoldersignerassociation
         explode: false
@@ -772,7 +776,7 @@ paths:
       x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren:
     get:
-      operationId: Ezsignsignature_GetObject_GetChildren_V1
+      operationId: Ezsignsignature_GetChildren_V1
       parameters:
       - description: The unique ID of the Ezsignsignature
         explode: false
@@ -1155,6 +1159,63 @@ paths:
       - Object_Apikey
       x-contentType: application/json
       x-accepts: application/json
+  /1/customer/{pksCustomerCode}/endpoint:
+    get:
+      description: 'Retrieve the customer''s specific server endpoint where to send
+        requests. This will help locate the proper region (ie: sInfrastructureregionCode)
+        and the proper environment (ie: sInfrastructureenvironmenttypeDescription)
+        where the customer''s data is stored.'
+      operationId: Global_Customer_GetEndpoint_V1
+      parameters:
+      - description: The customer code assigned to your account
+        explode: false
+        in: path
+        name: pksCustomerCode
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: |-
+          The infrastructure product Code
+
+          If undefined, "appcluster01" is assumed
+        explode: true
+        in: query
+        name: sInfrastructureproductCode
+        required: false
+        schema:
+          enum:
+          - appcluster01
+          - ezsignuser
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/global-customer-getEndpoint-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - {}
+      summary: Get customer endpoint
+      tags:
+      - Global_Customer
+      x-accepts: application/json
+    servers:
+    - description: The server endpoint where to send your API requests.
+      url: https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com
+      variables:
+        sInfrastructureenvironmenttypeDescription:
+          default: prod
+          description: The environment on on which to call the API. Should always
+            be "prod" unless instructed otherwise by support.
 components:
   responses:
     Response-Error-404:
@@ -2224,11 +2285,6 @@ components:
     ezsignfoldersignerassociation-getObject-v1-Response-mPayload:
       description: Payload for the /1/object/ezsignfoldersignerassociation/getObject
         API Request
-      type: object
-    ezsignfolder-getObject-v1-Response-mPayload:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfolder-Response'
-      description: Payload for the /1/object/ezsignfolder/getObject API Request
       type: object
     Field-dtEzsigndocumentDuedate:
       description: The maximum date and time at which the document can be signed.
@@ -3768,6 +3824,22 @@ components:
       description: The unique ID of the Apikey
       example: 99
       type: integer
+    ezsignfolder-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder-Response'
+      description: Payload for the /1/object/ezsignfolder/getObject API Request
+      type: object
+    global-customer-getEndpoint-v1-Response:
+      description: Response for the /1/customer/{pksCustomerCode}/endpoint API Request
+      example:
+        sEndpointURL: https://prod.api.appcluster01.ca-central-1.ezmax.com/
+      properties:
+        sEndpointURL:
+          description: The endpoint's URL
+          type: string
+      required:
+      - sEndpointURL
+      type: object
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -4070,6 +4142,12 @@ x-webhooks:
         "200":
           description: Successful response, will not be retried
 x-tagGroups:
+- name: Global
+  tags:
+  - Global_Customer
+- name: Module
+  tags:
+  - Module_User
 - name: Object
   tags:
   - Object_Activesession
@@ -4083,9 +4161,6 @@ x-tagGroups:
   - Object_Franchisereferalincome
   - Object_Period
   - Object_User
-- name: Module
-  tags:
-  - Module_User
 - name: Report
   tags: []
 

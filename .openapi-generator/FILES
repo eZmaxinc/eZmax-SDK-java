@@ -95,6 +95,8 @@ docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
 docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
+docs/GlobalCustomerApi.md
+docs/GlobalCustomerGetEndpointV1Response.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -130,6 +132,7 @@ gradlew.bat
 pom.xml
 settings.gradle
 src/main/AndroidManifest.xml
+src/main/java/com/ezmax/api/GlobalCustomerApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
 src/main/java/com/ezmax/api/ObjectApikeyApi.java
@@ -231,6 +234,7 @@ src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1Response.j
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeRequest.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeRequestCompound.java
+src/main/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/com/ezmax/api/model/MultilingualApikeyDescription.java
 src/main/java/com/ezmax/api/model/PhoneRequest.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1Request.java
@@ -263,6 +267,7 @@ src/main/java/eZmaxAPI/auth/ApiKeyAuth.java
 src/main/java/eZmaxAPI/auth/Authentication.java
 src/main/java/eZmaxAPI/auth/HttpBasicAuth.java
 src/main/java/eZmaxAPI/auth/HttpBearerAuth.java
+src/test/java/com/ezmax/api/GlobalCustomerApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
 src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
@@ -364,6 +369,7 @@ src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseMP
 src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeRequestTest.java
+src/test/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1ResponseTest.java
 src/test/java/com/ezmax/api/model/MultilingualApikeyDescriptionTest.java
 src/test/java/com/ezmax/api/model/PhoneRequestTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1RequestTest.java

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 [**ezsignfolderEditObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV1) | **PUT** /1/object/ezsignfolder/{pkiEzsignfolderID} | Modify an existing Ezsignfolder
-[**ezsignfolderGetObjectGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
 [**ezsignfolderSendV1**](ObjectEzsignfolderApi.md#ezsignfolderSendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/send | Send the Ezsignfolder to the signatories for signature
 
@@ -220,9 +220,9 @@ Name | Type | Description  | Notes
 **200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
 
-<a name="ezsignfolderGetObjectGetChildrenV1"></a>
-# **ezsignfolderGetObjectGetChildrenV1**
-> ezsignfolderGetObjectGetChildrenV1(pkiEzsignfolderID)
+<a name="ezsignfolderGetChildrenV1"></a>
+# **ezsignfolderGetChildrenV1**
+> ezsignfolderGetChildrenV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s children IDs
 
@@ -250,9 +250,9 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     Integer pkiEzsignfolderID = 56; // Integer | The unique ID of the Ezsignfolder
     try {
-      apiInstance.ezsignfolderGetObjectGetChildrenV1(pkiEzsignfolderID);
+      apiInstance.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetObjectGetChildrenV1");
+      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetChildrenV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

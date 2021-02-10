@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**ezsignsignatureCreateObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV1) | **POST** /1/object/ezsignsignature | Create a new Ezsignsignature
 [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature
 [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Modify an existing Ezsignsignature
-[**ezsignsignatureGetObjectGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
+[**ezsignsignatureGetChildrenV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetChildrenV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren | Retrieve an existing Ezsignsignature&#39;s children IDs
 [**ezsignsignatureGetObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature
 
 
@@ -219,9 +219,9 @@ Name | Type | Description  | Notes
 **200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
 
-<a name="ezsignsignatureGetObjectGetChildrenV1"></a>
-# **ezsignsignatureGetObjectGetChildrenV1**
-> ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID)
+<a name="ezsignsignatureGetChildrenV1"></a>
+# **ezsignsignatureGetChildrenV1**
+> ezsignsignatureGetChildrenV1(pkiEzsignsignatureID)
 
 Retrieve an existing Ezsignsignature&#39;s children IDs
 
@@ -249,9 +249,9 @@ public class Example {
     ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
     Integer pkiEzsignsignatureID = 56; // Integer | The unique ID of the Ezsignsignature
     try {
-      apiInstance.ezsignsignatureGetObjectGetChildrenV1(pkiEzsignsignatureID);
+      apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectGetChildrenV1");
+      System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetChildrenV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
