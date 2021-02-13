@@ -1,16 +1,10 @@
 # ezmax-java
 
 eZmax API Definition
-- API version: 1.0.29
-  - Build date: 2021-02-10T19:51:01.665Z[GMT]
+- API version: 1.0.30
+  - Build date: 2021-02-13T04:40:25.285Z[GMT]
 
 This API expose all the functionnalities for the eZmax and eZsign application.
-
-We provide SDKs for customers. They are generated using OpenAPI codegen, we encourage customers to use them as we also provide samples for them.
-
-You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like Swagger Codegen, OpenAPI codegen or any commercial generators.
-
-If you need helping understanding how to use this API, don't waste too much time looking for it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like bad documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
 
   For more information, please visit [https://www.ezmax.ca/en/contact](https://www.ezmax.ca/en/contact)
 
@@ -47,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.0.29</version>
+  <version>1.0.30</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ezmax:ezmax-java:1.0.29"
+compile "com.ezmax:ezmax-java:1.0.30"
 ```
 
 ### Others
@@ -70,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.0.29.jar`
+* `target/ezmax-java-1.0.30.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -123,6 +117,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+*ModuleSsprApi* | [**ssprRemindUsernamesV1**](docs/ModuleSsprApi.md#ssprRemindUsernamesV1) | **POST** /1/module/sspr/remindUsernames | Remind of forgotten username(s)
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/ObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey

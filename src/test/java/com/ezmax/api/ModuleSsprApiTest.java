@@ -14,7 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.CommonResponseError;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -24,27 +24,25 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for ObjectPeriodApi
+ * API tests for ModuleSsprApi
  */
 @Ignore
-public class ObjectPeriodApiTest {
+public class ModuleSsprApiTest {
 
-    private final ObjectPeriodApi api = new ObjectPeriodApi();
+    private final ModuleSsprApi api = new ModuleSsprApi();
 
     
     /**
-     * Retrieve Periods and IDs
+     * Remind of forgotten username(s)
      *
-     * Get the list of Periods to be used in a dropdown or autocomplete control.
+     * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void periodGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String sQuery = null;
-        CommonGetAutocompleteV1Response response = api.periodGetAutocompleteV1(sSelector, sQuery);
+    public void ssprRemindUsernamesV1Test() throws ApiException {
+        api.ssprRemindUsernamesV1();
 
         // TODO: test validations
     }

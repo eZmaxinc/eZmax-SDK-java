@@ -4,27 +4,20 @@ info:
     email: support-api@ezmax.ca
     name: API Support department
     url: https://www.ezmax.ca/en/contact
-  description: |-
-    This API expose all the functionnalities for the eZmax and eZsign application.
-
-    We provide SDKs for customers. They are generated using OpenAPI codegen, we encourage customers to use them as we also provide samples for them.
-
-    You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like Swagger Codegen, OpenAPI codegen or any commercial generators.
-
-    If you need helping understanding how to use this API, don't waste too much time looking for it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like bad documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
+  description: This API expose all the functionnalities for the eZmax and eZsign application.
   license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.29
+  version: 1.0.30
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
     altText: eZmax Logo
   x-restgeninfo: {}
 servers:
-- description: The server endpoint where to send your API requests.
+- description: The server endpoint where to send your region specific API requests.
   url: https://{sInfrastructureenvironmenttypeDescription}.api.appcluster01.{sInfrastructureregionCode}.ezmax.com/rest
   variables:
     sInfrastructureenvironmenttypeDescription:
@@ -42,13 +35,218 @@ servers:
       enum:
       - ca-central-1
       - local
+- description: The server endpoint where to send your global API requests.
+  url: https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com/
+  variables:
+    sInfrastructureenvironmenttypeDescription:
+      default: prod
+      description: The environment on on which to call the API. Should always be "prod"
+        unless instructed otherwise by support.
+      enum:
+      - prod
+      - stg
+      - qa
+      - dev
 security:
 - Authorization: []
 tags:
+- description: |-
+    Except for a few functions that do not require authorization, most of the functions require an API key that is sent in the request headers. The header name is "Authorization". You can create one or many authorization in the eZmax's user module. Each API key can be enabled or disabled and you can restrict the API key's usage to specific IP(s) (Recommended). Each API Key can be configured to have specific permission(s) so we highly recommend to use the "Least privilege" principle.
+
+    There are 3 types of API Key that can be used to make requests to the API.
+
+    1. **API type key** which is static and not session based. It can be generated from the admin console. This is the most common type of authentication for "server to server" kind of integration. Never use this in a web based (client) application as the key could be leaked. This type of key begins with the letter **A**.
+
+    2. **Delegated type key** which has an expiration time. It is commonly used in mobile or web application where you cannot use an **API type key** that could be leaked. The application would query a server part that will generate a **Delegated type key** using an **API type key**. The **Delegated type key** could now be used by the mobile or web page application without leaking the **API type key**. This type of key begins with the letter **D**.
+
+    3. **User type key** which are session based and can be retrieved after a successful authentication. This type of key is reserved to specific situation where the other types of key are not desirable. This type of key begins with the letter **U**.
+  name: General_Authorization
+  x-displayName: Authorization
+- description: |-
+    We publish everything related to our API on github at this location: <a href="https://github.com/eZmaxinc" target="_blank">https://github.com/eZmaxinc</a>. You'll find git repos for the specification, documentation, SDKs and samples.
+
+    Documentation, SDKs and samples are provided in english only for easier maintenance, but we also have french speaking integrators that can help you out.
+
+    Most of our SDKs provide language specific documentation, but you'll find more details on this page about the general use of the API. Both the SDK's specific document (if you choose to use a SDK) and this documentation can be used in complementarity.
+
+    If you find any mistake or omission in the documentation, please notify us. We'll quickly fix the issue.
+
+    ## Onboarding
+    We highly recommend to schedule an online meeting with your technical team and an eZmax integrator. During this meeting, we go through requirements, business logic, configuration, api key generation, and we go through the list of functions you might need to implement to achieve your goals. Make sure you take this opportunity to speed up your integration project.
+
+    If you need help understanding how to use this API, don't waste too much time searching in it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like to waste time in documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
+
+    ## Open API
+    We highly believe in open standards and open source. We have adopted the Open API vision where all of the functionnalities of our applications are accessible with open source definition files. We use our own public API's to build our interfaces so you can do pretty much everything we can do. Open API has a rich toolset from editor, generators, mock servers, validators, etc. Learn more at <a href="https://www.openapis.org/" target="_blank">OpenAPI Initiative</a>
+
+    If you need  our Open API Spec file to use in your toolset, here is a direct link to it: <a href="https://raw.githubusercontent.com/eZmaxinc/eZmax-API/master/specs/ezmax.v1.0.json" target="_blank">ezmax.v1.0.json</a>
+
+    ## SDK
+    We provide SDKs for customers. They are generated using <a href="https://openapi-generator.tech/" target="_blank">OpenAPI Generator</a>, we encourage customers to use them as we also provide samples for them. You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like <a href="https://openapi-generator.tech/" target="_blank">OpenAPI Generator</a>, <a href="https://swagger.io/tools/swagger-codegen/" target="_blank">Swagger Codegen</a> or any commercial generators.
+
+    We try to make it as easy as possible for you to use our SDKs so we publish packages on NPM and Composer. If you don't find your favorite language supported or it we could make your like easier by automating package distribution, let us know !
+  name: General_Introduction
+  x-displayName: Introduction
+- description: "## Regional requests\nWhen you send your API requests, you'll need\
+    \ to send them in the proper region and proper environment where your customer\
+    \ data are stored. Based on your requirements (proximity and legislation), we\
+    \ will create your environment in one of our supported region's.\n\nThe general\
+    \ format of the URL where to send requests is:\nhttps://**{sInfrastructureenvironmenttypeDescription}**.api.appcluster01.**sInfrastructureregionCode}**.ezmax.com/rest/\n\
+    \nWhere \"**{sInfrastructureenvironmenttypeDescription}**\" and \"**{sInfrastructureregionCode}**\"\
+    \ need to be replaced with one of the values in the table below.\n\nOur SDKs have\
+    \ a default value of \"prod\" and \"ca-central-1\". You will need to call \"setHost\"\
+    \ to change the default value if needed.\n\nNote: You should always use \"prod\"\
+    \ for the environment unless otherwise instructed by eZmax's support.\n\n| sInfrastructureenvironmenttypeDescription\
+    \ | Description       |\n| ----------------------------------------- | -----------------\
+    \ |\n| prod                                      | Production        |\n| stg\
+    \                                       | Staging           |\n| qa          \
+    \                              | Quality Assurance |\n| dev                  \
+    \                     | Development       |\n\n| sInfrastructureregionCode | Description\
+    \                |\n| ------------------------- | -------------------------- |\n\
+    | af-south-1\t            | Africa (Cape Town)         |\n| ap-east-1\t      \
+    \          | Asia Pacific (Hong Kong)   |\n| ap-northeast-1\t        | Asia Pacific\
+    \ (Tokyo)       |\n| ap-northeast-2\t        | Asia Pacific (Seoul)       |\n\
+    | ap-northeast-3\t        | Asia Pacific (Osaka-Local) |\n| ap-south-1\t     \
+    \       | Asia Pacific (Mumbai)      |\n| ap-southeast-1\t        | Asia Pacific\
+    \ (Singapore)   |\n| ap-southeast-2\t        | Asia Pacific (Sydney)      |\n\
+    | ca-central-1\t            | Canada (Central)           |\n| eu-central-1\t \
+    \           | Europe (Frankfurt)         |\n| eu-north-1\t            | Europe\
+    \ (Stockholm)         |\n| eu-south-1\t            | Europe (Milan)          \
+    \   |\n| eu-west-1\t                | Europe (Ireland)           |\n| eu-west-2\t\
+    \                | Europe (London)            |\n| eu-west-3\t               \
+    \ | Europe (Paris)             |\n| sa-east-1\t                | South America\
+    \ (São Paulo)  |\n| us-east-1\t                | US East (N. Virginia)      |\n\
+    | us-east-2\t                | US East (Ohio)             |\n| us-west-1\t   \
+    \             | US West (N. California)    |\n| us-west-2\t                | US\
+    \ West (Oregon)           |\n\n## Global requests\nSome of the functions needs\
+    \ to be called on the global infrastructure instead of the regional servers. These\
+    \ functions are all located in the **Global** section of the documentation.\n\n\
+    The general format of the URL where to send requests is:\nhttps://**{sInfrastructureenvironmenttypeDescription}**.api.global.ezmax.com/\n\
+    \nWhere \"**{sInfrastructureenvironmenttypeDescription}**\" needs to be replaced\
+    \ with one of the values in the table below.\n\nOur SDKs have a default value\
+    \ of \"prod\". You will need to call \"setHost\" to change the default value if\
+    \ needed.\n\nNote: You should always use \"prod\" for the environment unless otherwise\
+    \ instructed by eZmax's support.\n\n| sInfrastructureenvironmenttypeDescription\
+    \ | Description       |\n| ----------------------------------------- | -----------------\
+    \ |\n| prod                                      | Production        |\n| stg\
+    \                                       | Staging           |\n| qa          \
+    \                              | Quality Assurance |\n| dev                  \
+    \                     | Development       |"
+  name: General_Servers
+  x-displayName: Servers
+- description: "We use standard HTTP Status Codes to return details about completed\
+    \ function calls.\r\n\r\nYou should always validate the HTTP response's status\
+    \ code before trying to read the content of the body. Our SDKs do this automatically.\
+    \ In each of the documented function, we document only the function's specific\
+    \ return code to facilitate the reading of the documentation. Even if a generic\
+    \ return code is not documented at the function's level, it could be returned\
+    \ by the API.\r\n\r\n### Generic return codes (Documented at the function's level)\r\
+    \n| HTTP Status Code | Meaning              | Detail |\r\n| ---------------- |\
+    \ -------------------- | ------ |\r\n| 200              | OK                 \
+    \  | The request completed successfully and valid data was returned in the body\
+    \ |\r\n| 201              | Created              | The request completed successfully.\
+    \ Some elements were created and details about the created items was returned\
+    \ in the body |\r\n| 204              | No Content           | The request completed\
+    \ successfully. There was no need to return any data in the body |\r\n| 404  \
+    \            | Not Found            | The request failed. The element on which\
+    \ you were trying to work does not exists. Look for detail about the error in\
+    \ the body |\r\n| 422              | Unprocessable entity | The request was syntactically\
+    \ valid but failed because of an interdependance condition. Look for detail about\
+    \ the error in the body |\r\n\r\n### Generic return codes (Undocumented at the\
+    \ function's level)\r\n| HTTP Status Code | Meaning               | Detail |\r\
+    \n| ---------------- | --------------------- | ------ |\r\n| 400             \
+    \ | Bad Request           | The request does not meet specifications. For example:\
+    \ an invalid type for a variable, a value that does not pass validation or a protocol\
+    \ violation. Look for details about the error in the response's body |\r\n| 401\
+    \              | Unauthorized          | The API Key is either not present, expired,\
+    \ invalid or inactive. It could also mean you are calling the API from an unauthorized\
+    \ IP address |\r\n| 403              | Forbidden             | The Provided API\
+    \ Key is valid, but it is not allowed to execute the request. Verify the Key's\
+    \ permissions |\r\n| 404              | Not Found             | Your request was\
+    \ sent to a URL that does not exist. Make sure you are calling the proper version\
+    \ number of the function and look for typos in the URL |\r\n| 405            \
+    \  | Method Not Allowed    | The URL is valid, but the Method is not allowed.\
+    \ For example, have you call a GET while the function expects a POST ? |\r\n|\
+    \ 429              | Too Many Requests     | Too many requests were received from\
+    \ your API Key/IP address. Make sure to optimize your requests or ask for a limit\
+    \ increase. For example, make a single request to create 100 objects instead of\
+    \ calling 100 requests each creating a single objet |\r\n| 500              |\
+    \ Internal Server Error | This should never happen. There is either a temporary\
+    \ problem that should resolve quickly or an error you should report to technical\
+    \ support. |\r\n| 503              | Service Unavailable   | This should never\
+    \ happen. There is either a temporary problem that should resolve quickly or an\
+    \ error you should report to technical support |\r\n\r\n### Custom return codes\
+    \ (Undocumented at the function's level)\r\nThese codes can only be generated\
+    \ for \"User type\" API Key. The \"API type\" and \"Delegated type\" keys will\
+    \ never return such codes. (See Authorization section for more information). Most\
+    \ users should not be concerned with these status codes.\r\n\r\n| HTTP Status\
+    \ Code | Meaning                          | Detail |\r\n| ---------------- | --------------------------------\
+    \ | ------ |\r\n| 351              | Phone Validation required        | (2FA)\
+    \ User needs to complete a Voice Call or SMS challenge           |\r\n| 352  \
+    \            | Question Validation required     | (2FA) User needs to complete\
+    \ a question/answer challenge             |\r\n| 353              | Clause Acceptance\
+    \ required       | User need to accept electronic signature terms and conditions\
+    \        |\r\n| 354              | Computer Validation required     | User's computer\
+    \ is not authorized                                    |\r\n| 355            \
+    \  | Password Change required         | User must change it's password       \
+    \                                |\r\n| 356              | Native Application\
+    \ Version Check | The user is not running the latest version of the native application\
+    \ |\r\n"
+  name: General_StatusCodes
+  x-displayName: Status Codes
+- description: |
+    ## Concept
+    A Webhook (also called a web callback or HTTP push API) is a way for your application to be notified of an event in real time.
+
+    For example, if you send a contract for signing and need to be notified as soon as it get signed.
+
+    You could program a loop to query the document status every 5 minutes for many days until you receive a response saying the document is signed. This is a bad approach as it will waste a lot of resources everytime you make a call to the API for no reason.
+
+    A better approach would be to configure a webhook in the eZmax's administration console to watch for a specific event. In this exemple, the event to monitor is "DocumentCompleted" from the module "Ezsign". This way, as soon as the document gets signed, a request will be made to YOUR server to let you know about the event that just happened.
+
+    When you configure eZmax to notify you of events, you must provide your server's URL and a fallback email address. The URL provided must use HTTPS for security reasons.
+
+    ### Types of Webhook:
+    Look for purple indicators with the word "EVENT" throughout the documentation to see currently available Webhooks events you can subscribe to. If you have a need for an event that is not available, please send a feature request to technical support.
+
+    ### Important:
+    - The event will be delivered using a POST request.
+    - Your server will need to reply with a HTTP Status Code 204 to let eZmax know you've accepted the message and we shall not try to deliver the message again. If the server does not respond with a 204 Code, the message will be sent over and over until all tries are exhausted.
+    - The 204 response must be returned in less than 30 seconds otherwise a timeout will occur and the event will be retried following the retry schedule.
+    - Make sure to secure your Webhook receiving URL to make sure someone does not send forged messages to your application. You can do this by providing a secure token in your URL, for example "?token=mysecuretoken1234", or by validating the webhook message's signature.
+
+    ### Testing
+    In eZmax's administration module, you'll find a "Test" button that you can use as many time as you need to test your server code easily with a sample event.
+
+    ## Retries
+    eZmax will attempt to deliver the event to your server instantly but will retry many times if your server does not respond successfully for some reason (see schedule below). After all attempts are exhausted, the event will be forwarded to the configured fallback email in the same format as the webhook. The email body will contain the JSON request in the same format as the webhook. This way, you'll be able to send the request to your server using <a href="https://www.postman.com/" target="_blank">Postman</a>, <a href="https://curl.se/" target="_blank">Curl</a> or similar tool.
+
+    ### Retry Delivery schedule
+    This is the approximate retry schedule. Since there is a 30 seconds timeout on each try, there could be a cumulative overhead up to 3½ minutes.
+
+    | Minutes after previous step | Minutes after event | Method |
+    | :-------------------------: | :-----------------: | ------ |
+    | N/A                         | 0                   | HTTPS  |
+    | 1                           | 1                   | HTTPS  |
+    | 5                           | 6                   | HTTPS  |
+    | 15                          | 21                  | HTTPS  |
+    | 15                          | 36                  | HTTPS  |
+    | 15                          | 51                  | HTTPS  |
+    | 15                          | 66                  | HTTPS  |
+    | 0                           | 66                  | Email  |
+
+    ### Failed attempt reporting
+    If you don't receive the event on the first attempt, there will be debugging information about each previous attempt in the body of the event. You'll be able to see the timestamp of each previous attempt and the return code returned by your server or a timeout indication if your server hasn't replied.
+  name: General_Webhooks
+  x-displayName: Webhooks
 - description: Customer contains details about the customer code assigned to your
     account
   name: Global_Customer
   x-displayName: Customer
+- description: Sspr module contains actions related to the Self Service Password Reset
+    portal
+  name: Module_Sspr
+  x-displayName: Sspr
 - description: User module contains actions that can be called to interract with users
   name: Module_User
   x-displayName: User
@@ -1216,6 +1414,47 @@ paths:
           default: prod
           description: The environment on on which to call the API. Should always
             be "prod" unless instructed otherwise by support.
+          enum:
+          - prod
+          - stg
+          - qa
+          - dev
+  /1/module/sspr/remindUsernames:
+    post:
+      description: This endpoint returns an email with the username(s) matching the
+        email address provided in case of forgotten username
+      operationId: Sspr_RemindUsernames_V1
+      responses:
+        "204":
+          description: |-
+            The request was accepted.
+
+            Do not misinterpret as "the email address has an account attached to it". It only means an email will be sent if (and only if) an account exists for that email address.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Remind of forgotten username(s)
+      tags:
+      - Module_Sspr
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -1231,6 +1470,15 @@ components:
             $ref: '#/components/schemas/Common-Response-Error'
       description: The syntax of the request is valid but the request cannot be completed.
         Look for detail in body.
+    Response-Error-403:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error'
+      description: You are not allowed to call this function
+    Response-Webhook-204:
+      description: The Webhook event notification was successfully received and processed
+        by the receiving web server.
   schemas:
     activesession-getCurrent-v1-Response-mPayload:
       description: Payload for the /1/object/activesession/getCurrent API Request
@@ -4082,14 +4330,6 @@ components:
       type: object
   securitySchemes:
     Authorization:
-      description: |-
-        There are 3 types of API Key that can be used to make requests to the API.
-
-        1. **API type key** which is static and not session based. It can be generated from the admin console. This is the most common type of authentication for "server to server" kind of integration. Never use this in a web based (client) application as the key could be leaked. This type of key begins with the letter **A**.
-
-        2. **Delegated type key** which has an expiration time. It is commonly used in mobile or web application where you cannot use an **API type key** that could be leaked. The application would query a server part that will generate a **Delegated type key** using an **API type key**. The **Delegated type key** could now be used by the mobile or web page application without leaking the **API type key**. This type of key begins with the letter **D**.
-
-        3. **User type key** which are session based and can be retrieved after a successful authentication. This type of key is reserved to specific situation where the other types of key are not desirable. This type of key begins with the letter **U**.
       in: header
       name: Authorization
       type: apiKey
@@ -4108,8 +4348,8 @@ x-webhooks:
             schema:
               $ref: '#/components/schemas/Webhook-Ezsign-DocumentCompleted'
       responses:
-        "200":
-          description: Successful response, will not be retried
+        "204":
+          $ref: '#/components/responses/Response-Webhook-204'
   Webhook-Ezsign-FolderCompleted:
     post:
       summary: Webhook Folder Completed
@@ -4124,8 +4364,8 @@ x-webhooks:
             schema:
               $ref: '#/components/schemas/Webhook-Ezsign-FolderCompleted'
       responses:
-        "200":
-          description: Successful response, will not be retried
+        "204":
+          $ref: '#/components/responses/Response-Webhook-204'
   Webhook-User-UserCreated:
     post:
       summary: Webhook User Created
@@ -4139,14 +4379,22 @@ x-webhooks:
             schema:
               $ref: '#/components/schemas/Webhook-User-UserCreated'
       responses:
-        "200":
-          description: Successful response, will not be retried
+        "204":
+          $ref: '#/components/responses/Response-Webhook-204'
 x-tagGroups:
+- name: General
+  tags:
+  - General_Introduction
+  - General_Servers
+  - General_Authorization
+  - General_StatusCodes
+  - General_Webhooks
 - name: Global
   tags:
   - Global_Customer
 - name: Module
   tags:
+  - Module_Sspr
   - Module_User
 - name: Object
   tags:

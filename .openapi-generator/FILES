@@ -97,6 +97,7 @@ docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -133,6 +134,7 @@ pom.xml
 settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/com/ezmax/api/GlobalCustomerApi.java
+src/main/java/com/ezmax/api/ModuleSsprApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
 src/main/java/com/ezmax/api/ObjectApikeyApi.java
@@ -268,6 +270,7 @@ src/main/java/eZmaxAPI/auth/Authentication.java
 src/main/java/eZmaxAPI/auth/HttpBasicAuth.java
 src/main/java/eZmaxAPI/auth/HttpBearerAuth.java
 src/test/java/com/ezmax/api/GlobalCustomerApiTest.java
+src/test/java/com/ezmax/api/ModuleSsprApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
 src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
