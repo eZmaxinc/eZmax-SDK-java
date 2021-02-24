@@ -36,8 +36,6 @@ docs/EzsigndocumentCreateObjectV1Request.md
 docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
-docs/EzsigndocumentEditObjectV1Request.md
-docs/EzsigndocumentEditObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
@@ -51,8 +49,6 @@ docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
-docs/EzsignfolderEditObjectV1Request.md
-docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
 docs/EzsignfolderRequest.md
@@ -66,8 +62,6 @@ docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationDeleteObjectV1Response.md
-docs/EzsignfoldersignerassociationEditObjectV1Request.md
-docs/EzsignfoldersignerassociationEditObjectV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.md
 docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
@@ -77,8 +71,6 @@ docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
-docs/EzsignsignatureEditObjectV1Request.md
-docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
@@ -111,6 +103,14 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/UNUSEDEzsigndocumentEditObjectV1Request.md
+docs/UNUSEDEzsigndocumentEditObjectV1Response.md
+docs/UNUSEDEzsignfolderEditObjectV1Request.md
+docs/UNUSEDEzsignfolderEditObjectV1Response.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
+docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
+docs/UNUSEDEzsignsignatureEditObjectV1Request.md
+docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseMPayload.md
@@ -177,8 +177,6 @@ src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1Response.java
-src/main/java/com/ezmax/api/model/EzsigndocumentEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/EzsigndocumentEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1Response.java
@@ -192,8 +190,6 @@ src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1Response.java
-src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderRequest.java
@@ -207,8 +203,6 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1Req
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationDeleteObjectV1Response.java
-src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Response.java
@@ -218,8 +212,6 @@ src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignsignatureDeleteObjectV1Response.java
-src/main/java/com/ezmax/api/model/EzsignsignatureEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/EzsignsignatureEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompound.java
@@ -239,6 +231,14 @@ src/main/java/com/ezmax/api/model/FranchisereferalincomeRequestCompound.java
 src/main/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/com/ezmax/api/model/MultilingualApikeyDescription.java
 src/main/java/com/ezmax/api/model/PhoneRequest.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Response.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Response.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1Request.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1Response.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseMPayload.java
@@ -313,8 +313,6 @@ src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/EzsigndocumentEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/EzsigndocumentEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayloadTest.java
@@ -328,8 +326,6 @@ src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderRequestCompoundTest.java
@@ -343,8 +339,6 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1Req
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationDeleteObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseTest.java
@@ -354,8 +348,6 @@ src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureDeleteObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/EzsignsignatureEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/EzsignsignatureEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestTest.java
@@ -375,6 +367,14 @@ src/test/java/com/ezmax/api/model/FranchisereferalincomeRequestTest.java
 src/test/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1ResponseTest.java
 src/test/java/com/ezmax/api/model/MultilingualApikeyDescriptionTest.java
 src/test/java/com/ezmax/api/model/PhoneRequestTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1RequestTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseTest.java

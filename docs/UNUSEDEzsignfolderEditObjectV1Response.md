@@ -1,8 +1,8 @@
 
 
-# EzsignfoldersignerassociationEditObjectV1Response
+# UNUSEDEzsignfolderEditObjectV1Response
 
-Response for the /1/object/ezsignfoldersignerassociation/editObject API Request
+Response for the /1/object/ezsignfolder/editObject API Request
 ## Properties
 
 Name | Type | Description | Notes

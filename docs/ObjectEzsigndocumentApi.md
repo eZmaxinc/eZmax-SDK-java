@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**ezsigndocumentApplyEzsigntemplateV1**](ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 [**ezsigndocumentCreateObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
 [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument
-[**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditObjectV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Modify an existing Ezsigndocument
 [**ezsigndocumentGetChildrenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetChildrenV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren | Retrieve an existing Ezsigndocument&#39;s children IDs
 [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents.
 [**ezsigndocumentGetObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetObjectV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Retrieve an existing Ezsigndocument
@@ -223,76 +222,6 @@ Name | Type | Description  | Notes
 **200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
-
-<a name="ezsigndocumentEditObjectV1"></a>
-# **ezsigndocumentEditObjectV1**
-> EzsigndocumentEditObjectV1Response ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request)
-
-Modify an existing Ezsigndocument
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsigndocumentApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
-    Integer pkiEzsigndocumentID = 56; // Integer | The unique ID of the Ezsigndocument
-    EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request = new EzsigndocumentEditObjectV1Request(); // EzsigndocumentEditObjectV1Request | 
-    try {
-      EzsigndocumentEditObjectV1Response result = apiInstance.ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentEditObjectV1");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pkiEzsigndocumentID** | **Integer**| The unique ID of the Ezsigndocument |
- **ezsigndocumentEditObjectV1Request** | [**EzsigndocumentEditObjectV1Request**](EzsigndocumentEditObjectV1Request.md)|  |
-
-### Return type
-
-[**EzsigndocumentEditObjectV1Response**](EzsigndocumentEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful response |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 
 <a name="ezsigndocumentGetChildrenV1"></a>
 # **ezsigndocumentGetChildrenV1**

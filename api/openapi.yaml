@@ -4,13 +4,13 @@ info:
     email: support-api@ezmax.ca
     name: API Support department
     url: https://www.ezmax.ca/en/contact
-  description: This API expose all the functionnalities for the eZmax and eZsign application.
+  description: This API expose all the functionnalities for the eZmax and eZsign applications.
   license:
     name: MIT License
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.30
+  version: 1.0.31
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -239,12 +239,79 @@ tags:
     If you don't receive the event on the first attempt, there will be debugging information about each previous attempt in the body of the event. You'll be able to see the timestamp of each previous attempt and the return code returned by your server or a timeout indication if your server hasn't replied.
   name: General_Webhooks
   x-displayName: Webhooks
+- description: "All notable changes to this project will be documented in this section.\n\
+    \nVersion numbers are using **MAJOR**.**MINOR**.**PATCH** numbering format for\
+    \ example 1.2.23\n\n**MAJOR** will be incremented only if there is an incompatible\
+    \ breaking change. New distinct documentation and specification files will be\
+    \ published.\n\n**MINOR** will be incremented only if a function becomes deprecated\
+    \ or deleted (after being deprecated in a previous version)\n\n**PATCH** will\
+    \ be incremented everytime changes and additions are released.\n\nYou can always\
+    \ safely update to newer **PATCH** version if you stay in the same **MAJOR**.**MINOR**\
+    \ prefix.\n\nYou can safely update to a newer **MINOR** version as long as you\
+    \ don't jump more than a version at a time. For example, let say there is a function\
+    \ named \"foo\" in version 1.0.23. We might deprecate this function in version\
+    \ 1.1.1 but you can continue using it. We might decide to remove it in version\
+    \ 1.2.1 so then you would have a breaking change if you try to update to version\
+    \ 1.2.1 without having fixed the issue with your deprecated \"foo\" function.\n\
+    \nFor each version, there will be the list of changes:\n* **Added** for new features.\n\
+    * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
+    \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
+    \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
+    ### [1.0.31] - 2021-\n#### Added\n- Changelog section in documentation\n\n####\
+    \ Removed \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID} that was documented\
+    \ but unimplemented\n- PUT /1/object/ezsignfolder/{pkiEzsignfolderID} that was\
+    \ documented but unimplemented\n- PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\
+    \ that was documented but unimplemented\n- PUT /1/object/ezsignsignature/{pkiEzsignsignatureID}\
+    \ that was documented but unimplemented\n\n### [1.0.30] - 2021-02-12\n#### Added\n\
+    - Added global endpoint in servers list\n- POST /1/module/sspr/remindUsernames\n\
+    - Introduction section in documentation\n- Servers section in documentation\n\
+    - Authorization section in documentation\n- Status Codes section in documentation\n\
+    - Webhooks section in documentation\n\n### [1.0.29] - 2021-02-10\n#### Added\n\
+    - GET /1/customer/{pksCustomerCode}/endpoint\n\n### [1.0.28] - 2021-02-04\n####\
+    \ Changed\n- Minor changes\n\n### [1.0.27] - 2021-02-03\n#### Changed\n- Minor\
+    \ changes\n\n### [1.0.26] - 2021-01-08\n#### Added\n- Added Audit objets to some\
+    \ responses\n\n### [1.0.25] - 2021-01-08\n#### Changed\n- Minor changes\n\n###\
+    \ [1.0.24] - 2021-01-07\n#### Added\n- POST /1/object/apikey\n\n### [1.0.23] -\
+    \ 2020-12-21\n#### Changed\n- Minor changes\n\n### [1.0.22] - 2020-12-21\n####\
+    \ Changed\n- Minor changes\n\n### [1.0.21] - 2020-12-21\n#### Added\n- WEBHOOK\
+    \ User-UserCreated\n\n### [1.0.20] - 2020-12-17\n#### Added\n- POST /1/module/user/createezsignuser\n\
+    - POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\n\
+    #### Changed\n- Reorganized Documentation Categories\n\n### [1.0.19] - 2020-12-01\n\
+    #### Changed\n- Minor changes\n\n### [1.0.18] - 2020-10-14\n#### Changed\n- Minor\
+    \ changes\n\n### [1.0.17] - 2020-09-30\n#### Changed\n- Minor changes\n\n### [1.0.16]\
+    \ - 2020-09-29\n#### Added\n- GET /1/object/franchisebroker/getAutocomplete/{sSelector}\n\
+    \n### [1.0.15] - 2020-09-28\n#### Removed \n- GET /1/object/period/getAutocomplete\n\
+    \n#### Added\n- GET /1/object/period/getAutocomplete/{sSelector}\n\n### [1.0.14]\
+    \ - 2020-09-28\n#### Added\n- GET /1/object/period/getAutocomplete\n\n### [1.0.13]\
+    \ - 2020-09-08\n#### Changed\n- Minor changes\n\n### [1.0.12] - 2020-09-08\n####\
+    \ Changed\n- Minor changes\n\n### [1.0.11] - 2020-09-04\n#### Added\n- POST /1/object/franchisereferalincome/\n\
+    \n### [1.0.10] - 2020-08-11\n#### Changed\n- Minor changes\n\n### [1.0.9] - 2020-08-06\n\
+    #### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}\n\
+    - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl\n\
+    \n### [1.0.8] - 2020-08-04\n#### Changed\n- Minor changes\n\n### [1.0.7] - 2020-07-29\n\
+    #### Changed\n- Minor changes\n\n### [1.0.6] - 2020-07-29\n#### Changed\n- Minor\
+    \ changes\n\n### [1.0.5] - 2020-07-29\n#### Added\n- WEBHOOK Ezsign-DocumentCompleted\n\
+    - WEBHOOK Ezsign-FolderCompleted\n\n### [1.0.4] - 2020-07-09\n#### Added\n- POST\
+    \ /1/object/ezsignsignature\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}\n\
+    - DELETE /1/object/ezsignsignature/{pkiEzsignsignatureID}\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren\n\
+    \n### [1.0.3] - 2020-07-08\n#### Changed\n- Documentation improvement\n\n### [1.0.2]\
+    \ - 2020-07-26\n#### Added\n- GET /1/object/activesession/getCurrent\n- POST /1/object/ezsignfoldersignerassociation\n\
+    - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
+    - DELETE /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
+    - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren\n\
+    - POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send\n\n### [1.0.1] - 2020-06-26\n\
+    #### Changed\n- Minor changes\n\n### [1.0.0] - 2020-06-26\n#### Added\n- Initial\
+    \ Release\n"
+  name: General_Changelog
+  x-displayName: Changelog
 - description: Customer contains details about the customer code assigned to your
     account
   name: Global_Customer
   x-displayName: Customer
-- description: Sspr module contains actions related to the Self Service Password Reset
-    portal
+- description: |-
+    Sspr module contains actions related to the Self Service Password Reset portal.
+
+    There is an option in the admin interface to disable the portal if you don't want your users to be able to reset their own password.
   name: Module_Sspr
   x-displayName: Sspr
 - description: User module contains actions that can be called to interract with users
@@ -407,43 +474,6 @@ paths:
       tags:
       - Object_Ezsigndocument
       x-accepts: application/json
-    put:
-      operationId: Ezsigndocument_EditObject_V1
-      parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsigndocument-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Modify an existing Ezsigndocument
-      tags:
-      - Object_Ezsigndocument
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren:
     get:
       operationId: Ezsigndocument_GetChildren_V1
@@ -568,43 +598,6 @@ paths:
       tags:
       - Object_Ezsignfolder
       x-accepts: application/json
-    put:
-      operationId: Ezsignfolder_EditObject_V1
-      parameters:
-      - description: The unique ID of the Ezsignfolder
-        explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfolder-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Modify an existing Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren:
     get:
       operationId: Ezsignfolder_GetChildren_V1
@@ -728,43 +721,6 @@ paths:
       summary: Retrieve an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-accepts: application/json
-    put:
-      operationId: Ezsignfoldersignerassociation_EditObject_V1
-      parameters:
-      - description: The unique ID of the Ezsignfoldersignerassociation
-        explode: false
-        in: path
-        name: pkiEzsignfoldersignerassociationID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfoldersignerassociation-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Modify an existing Ezsignfoldersignerassociation
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getChildren:
     get:
@@ -934,43 +890,6 @@ paths:
       summary: Retrieve an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-accepts: application/json
-    put:
-      operationId: Ezsignsignature_EditObject_V1
-      parameters:
-      - description: The unique ID of the Ezsignsignature
-        explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignsignature-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Modify an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}/getChildren:
     get:
@@ -1546,12 +1465,6 @@ components:
       - sCustomerCode
       - sDepartmentNameX
       type: object
-    ezsigndocument-editObject-v1-Request:
-      description: Request for the /1/object/ezsigndocument/editObject API Request
-      properties:
-        objEzsigndocument:
-          $ref: '#/components/schemas/ezsigndocument-Request'
-      type: object
     ezsigndocument-createObject-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
@@ -1572,11 +1485,6 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsigndocument/deleteObject API Request
       type: object
-    ezsigndocument-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsigndocument/editObject API Request
-      type: object
     ezsigndocument-getObject-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
@@ -1595,12 +1503,6 @@ components:
           $ref: '#/components/schemas/ezsigndocument-Request'
         objEzsigndocumentCompound:
           $ref: '#/components/schemas/ezsigndocument-RequestCompound'
-      type: object
-    ezsignfolder-editObject-v1-Request:
-      description: Request for the /1/object/ezsignfolder/editObject API Request
-      properties:
-        objEzsignfolder:
-          $ref: '#/components/schemas/ezsignfolder-Request'
       type: object
     activesession-getCurrent-v1-Response:
       allOf:
@@ -1645,11 +1547,6 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsignfolder/deleteObject API Request
       type: object
-    ezsignfolder-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfolder/editObject API Request
-      type: object
     ezsignfolder-getObject-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
@@ -1660,13 +1557,6 @@ components:
           $ref: '#/components/schemas/ezsignfolder-getObject-v1-Response-mPayload'
       required:
       - mPayload
-      type: object
-    ezsignfoldersignerassociation-editObject-v1-Request:
-      description: Request for the /1/object/ezsignfoldersignerassociation/editObject
-        API Request
-      properties:
-        objEzsignfoldersignerassociation:
-          $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
       type: object
     ezsignfoldersignerassociation-createObject-v1-Response:
       allOf:
@@ -1688,12 +1578,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsignfoldersignerassociation/deleteObject
-        API Request
-      type: object
-    ezsignfoldersignerassociation-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfoldersignerassociation/editObject
         API Request
       type: object
     ezsignfoldersignerassociation-getObject-v1-Response:
@@ -2208,12 +2092,6 @@ components:
       required:
       - tExtraMessage
       type: object
-    ezsignsignature-editObject-v1-Request:
-      description: Request for the /1/object/ezsignsignature/editObject API Request
-      properties:
-        objEzsignsignature:
-          $ref: '#/components/schemas/ezsignsignature-Request'
-      type: object
     ezsignsignature-getObject-v1-Response-mPayload:
       description: Payload for the /1/object/ezsignsignature/getObject API Request
       type: object
@@ -2236,11 +2114,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsignsignature/deleteObject API Request
-      type: object
-    ezsignsignature-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignsignature/editObject API Request
       type: object
     ezsignsignature-getObject-v1-Response:
       allOf:
@@ -4088,6 +3961,52 @@ components:
       required:
       - sEndpointURL
       type: object
+    UNUSED-ezsigndocument-editObject-v1-Request:
+      description: Request for the /1/object/ezsigndocument/editObject API Request
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-Request'
+      type: object
+    UNUSED-ezsigndocument-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/editObject API Request
+      type: object
+    UNUSED-ezsignfolder-editObject-v1-Request:
+      description: Request for the /1/object/ezsignfolder/editObject API Request
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-Request'
+      type: object
+    UNUSED-ezsignfolder-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/editObject API Request
+      type: object
+    UNUSED-ezsignfoldersignerassociation-editObject-v1-Request:
+      description: Request for the /1/object/ezsignfoldersignerassociation/editObject
+        API Request
+      properties:
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+      type: object
+    UNUSED-ezsignfoldersignerassociation-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldersignerassociation/editObject
+        API Request
+      type: object
+    UNUSED-ezsignsignature-editObject-v1-Request:
+      description: Request for the /1/object/ezsignsignature/editObject API Request
+      properties:
+        objEzsignsignature:
+          $ref: '#/components/schemas/ezsignsignature-Request'
+      type: object
+    UNUSED-ezsignsignature-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/editObject API Request
+      type: object
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -4389,6 +4308,7 @@ x-tagGroups:
   - General_Authorization
   - General_StatusCodes
   - General_Webhooks
+  - General_Changelog
 - name: Global
   tags:
   - Global_Customer
