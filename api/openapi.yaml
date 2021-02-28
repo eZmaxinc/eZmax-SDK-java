@@ -51,18 +51,6 @@ security:
 - Authorization: []
 tags:
 - description: |-
-    Except for a few functions that do not require authorization, most of the functions require an API key that is sent in the request headers. The header name is "Authorization". You can create one or many authorization in the eZmax's user module. Each API key can be enabled or disabled and you can restrict the API key's usage to specific IP(s) (Recommended). Each API Key can be configured to have specific permission(s) so we highly recommend to use the "Least privilege" principle.
-
-    There are 3 types of API Key that can be used to make requests to the API.
-
-    1. **API type key** which is static and not session based. It can be generated from the admin console. This is the most common type of authentication for "server to server" kind of integration. Never use this in a web based (client) application as the key could be leaked. This type of key begins with the letter **A**.
-
-    2. **Delegated type key** which has an expiration time. It is commonly used in mobile or web application where you cannot use an **API type key** that could be leaked. The application would query a server part that will generate a **Delegated type key** using an **API type key**. The **Delegated type key** could now be used by the mobile or web page application without leaking the **API type key**. This type of key begins with the letter **D**.
-
-    3. **User type key** which are session based and can be retrieved after a successful authentication. This type of key is reserved to specific situation where the other types of key are not desirable. This type of key begins with the letter **U**.
-  name: General_Authorization
-  x-displayName: Authorization
-- description: |-
     We publish everything related to our API on github at this location: <a href="https://github.com/eZmaxinc" target="_blank">https://github.com/eZmaxinc</a>. You'll find git repos for the specification, documentation, SDKs and samples.
 
     Documentation, SDKs and samples are provided in english only for easier maintenance, but we also have french speaking integrators that can help you out.
@@ -87,6 +75,134 @@ tags:
     We try to make it as easy as possible for you to use our SDKs so we publish packages on NPM and Composer. If you don't find your favorite language supported or it we could make your like easier by automating package distribution, let us know !
   name: General_Introduction
   x-displayName: Introduction
+- description: "## Authorization\n\nExcept for a few functions that do not require\
+    \ authorization, most of the functions require an API key that is sent in the\
+    \ request headers. The header name is \"Authorization\". \n\nThere are 4 types\
+    \ of API Key that can be used to make requests to the API.\n\n1. **API type key**\
+    \ which is static and not session based. It can be generated from the admin console.\
+    \ This is the most common type of authentication for \"server to server\" kind\
+    \ of integration. Never use this in a web based (client) application as the key\
+    \ could be leaked. This type of key begins with the letter **A**.\n\n2. **Delegated\
+    \ type key** which has an expiration time. It is commonly used in mobile or web\
+    \ application where you cannot use an **API type key** that could be leaked. The\
+    \ application would query a server part that will generate a **Delegated type\
+    \ key** using an **API type key**. The **Delegated type key** could now be used\
+    \ by the mobile or web page application without leaking the **API type key**.\
+    \ This type of key begins with the letter **D**.\n\n3. **User type key** which\
+    \ are session based and can be retrieved after a successful authentication. This\
+    \ type of key is reserved to specific situations where the other types of key\
+    \ are not desirable. This type of key begins with the letter **U**.\n\n4. **Special\
+    \ type key** which are for special cases where other types of keys cannot be used.\
+    \ This type of key is reserved to specific situations. This type of key begins\
+    \ with the letter **S**.\n\n## IP restriction\n\nEach API key can be restricted\
+    \ to specific IP addresse(s). This is an optional but recommended security feature\
+    \ you should put in place if all your requests will be coming from a specific\
+    \ range. You can configure the allowed ranges from the eZmax administration console.\n\
+    \n## Permissions\n\nEach API Key can be configured to have specific permission(s)\
+    \ so we highly recommend to use the \"Least privileges\" principle. For example,\
+    \ instead of allowing all permissions to an API Key, you should perhaps create\
+    \ an API Keys each for each of your application having just the specific permissions\
+    \ needed. You can configure the API Key's permission in eZmax's administration\
+    \ console.\n\n## Request Signing\n\nRequest Signing is a process of signing the\
+    \ request with a **Secret** that is not transmitted over the Wire. The signing\
+    \ process improves security in case your API Key is leaked or during a MITM attack\
+    \ (Man in the Middle). It will also prevent request manipulation or replay attack.\
+    \ Since all requests must use **https** these kinds of attacks are hard to conduct\
+    \ but sometimes customers might not be aware their underlying library does not\
+    \ verify SSL Certs validity or that their application can disclose their API key\
+    \ if it's not well secured. It takes a bit of effort to sign requests but it's\
+    \ highly recommended to do so.\n\nMandatory requirements of signing varies by\
+    \ used key type. For **API** type keys (most common type), you can configure if\
+    \ signing is mandatory or not in eZmax's administration console. **Delegated**,\
+    \ **User** and **Special** type keys must sign requests otherwise requests will\
+    \ fail.\n\n### How to sign a request\n\nTo apply a signature to your request you\
+    \ will need to send 3 additional HTTP Headers to the request:\n- Ezmax-Date\n\
+    - Ezmax-Fingerprint\n- Ezmax-Signature\n\n### Ezmax-Date\n\n**Ezmax-Date** Is\
+    \ the date/time when you send the request. It needs to be a <a href=\"https://en.wikipedia.org/wiki/ISO_8601\"\
+    \ target=\"_blank\">ISO 8601</a> formatted date/time. It's a format that supports\
+    \ timezones so you can either use your local timezone of GMT. Be aware certain\
+    \ implementation adds milliseconds to the formatted date which won't be accepted\
+    \ by the API (ex: Javascript's toISOString function).\n\nThere is a tolerance\
+    \ of ±5 minutes clock skew between the date/time you specify and the server's\
+    \ time so make sure your time is correct. Usage of a NTP server is recommended.\
+    \ Compute the date/time as close as possible to the actual sending of the request.\
+    \ For example, don't set the current time at the beginning of a long running script\
+    \ that sends 50 requests to the server with the same time/date as you might receive\
+    \ errors related to clock skew.\n\nExamples:\n- 2000-12-31T23:59:59Z\n- 2000-12-31T23:59:59-05:00\n\
+    \n### Ezmax-Fingerprint\n\n**Ezmax-Fingerprint** Is a fingerprint (aka hash) representing\
+    \ the request you are sending. Any alteration in any part of the request would\
+    \ produce a different fingerprint. The hash is computed using <a href=\"https://en.wikipedia.org/wiki/SHA-2\"\
+    \ target=\"_blank\">SHA256</a>. Most programming languages offer an implementation\
+    \ of SHA256. To make sure your implementation is producing expected values, try\
+    \ to hash the value \"foo\", it should produce the value \"2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae\"\
+    .\n\nTo compute the Fingerprint, you'll need to concatenate the **Method**, the\
+    \ **URL**, the **Body**, the **API Key** and the **Date**. All these values will\
+    \ need to be separated by a line Feed caracter (\\n). Make sure your **Method**\
+    \ is Uppercase (Shoud be \"GET\", not \"Get\" or \"get\"). Make sure your URL\
+    \ Scheme and Host or the **URL** are lowercase (Should be \"https://www.example.com\"\
+    , not \"HTTPS://WWW.EXAMPLE.COM\"). Also make sure the the URI part of the **URL**\
+    \ is properly URL encoded (Should be \"/Path%20with%20Spaces/?Key=Value%20with%20Spaces\"\
+    , not \"/Path with Spaces/?Key=Value with Spaces\". If the **Body** is empty (ex:\
+    \ GET request don't have a body), use an empty string.\n\nOnce the SHA256 hash\
+    \ is computed, prefix it with \"v1=\" which is future proofing version identifier.\n\
+    \nHere is an example implementation in PHP:\n\n    public static function getFingerprintV1\
+    \ ($sAuthorization, $dtDate, $sMethod, $sURL, $sBody = '') {\n        $sContentToHash\
+    \ = \"$sMethod\\n$sURL\\n$sBody\\n$sAuthorization\\n$dtDate\";\n        return\
+    \ 'v1='.hash('sha256', $sContentToHash);\n    }\n\nHere are two examples of what\
+    \ a GET and POST requests Fingerprints could look like. You can validate if your\
+    \ algorithm work by using these sample values and comparing them to the expected\
+    \ values. In the example below the litteral \"\\n\" should be replaced with a\
+    \ linefeed character.\n\n    GET\\n\n    https://prod.api.appcluster01.ca-central-1.ezmax.com/rest/1/object/activesession/getCurrent\\\
+    n\n    \\n\n    ThisIsMyAuthorizationKey\\n\n    2000-12-31T23:59:59Z\nExpected\
+    \ result for **Ezmax-Fingerprint** (GET): v1=8f6f3ed75edb6e2cbe777b4fda5cab1a6adaebadc758780eb82c3d49934f354a\n\
+    \n    POST\\n\n    https://prod.api.global.ezmax.com/1/module/sspr/sendUsernames\\\
+    n\n    {\"pksCustomerCode\": \"demo\",\"fkiLanguageID\": \"2\",\"eUserTypeSSPR\"\
+    : \"Native\",\"sEmailAddress\": \"example@domain.com\"}\\n\n    ThisIsMyAuthorizationKey\\\
+    n\n    2000-12-31T23:59:59Z\nExpected result for **Ezmax-Fingerprint** (POST):\
+    \ v1=6dbdbc26437f1216f9cd0068a4fc35c272a062b1f638c7557d497ebbf3702ded\n\n### Ezmax-Signature\n\
+    \n**Ezmax-Signature** Is the actual signature proving the request was generated\
+    \ by the key owner using its secret. The signature is computed using <a href=\"\
+    https://en.wikipedia.org/wiki/HMAC\" target=\"_blank\">HMAC</a> and <a href=\"\
+    https://en.wikipedia.org/wiki/SHA-2\" target=\"_blank\">SHA512/256</a>. Don't\
+    \ confuse **SHA256**, **SHA512** and **SHA512/256**, these are 3 distinct algorithms.\
+    \ Most programming languages offer an implementation of HMAC with SHA512/256.\
+    \ To make sure your implementation is producing expected values, try to hash the\
+    \ value \"foo\" with the key \"bar\", it should produce the value \"12af52e7e555f0813a143f49462423b0c37da6734ab1acb091c6069f010ce814\"\
+    .\n\nTo compute the Signature, you'll need to concatenate the **Ezmax-Fingerprint**,\
+    \ the **API Key** and the **Ezmax-Date**. The 3 values are concatenated WITHOUT\
+    \ separators. Then calculate the HMAC using SHA512/256 using your **Secret** as\
+    \ the key.\n\nOnce the HMAC-SHA512/256 hash is computed, prefix it with \"v1=\"\
+    \ which is future proofing version identifier.\n\nHere is an example implementation\
+    \ in PHP:\n\n    public static function getSignatureV1 ($sAuthorization, $dtDate,\
+    \ $sFingerprint, $sSecret) {\n        $sContentToSign = \"$sFingerprint$sAuthorization$dtDate\"\
+    ;\n        return 'v1='.hash_hmac('sha512/256', $sContentToSign, $sSecret);\n\
+    \    }\n\nHere are two examples of what the GET and POST requests Signature would\
+    \ be. You can validate if your algorithm work by using these sample values and\
+    \ comparing them to the expected values. For the below examples, we have used\
+    \ the same **API Key**, **Fingerprint** and **Date** as in the Fingerprint section\
+    \ above. The only new variable is the **Secret** which is \"ThisIsTheSecretAssociatedToTheAuthorizationKey\"\
+    \ for this example.\n\n    v1=8f6f3ed75edb6e2cbe777b4fda5cab1a6adaebadc758780eb82c3d49934f354aThisIsMyAuthorizationKey2000-12-31T23:59:59Z\n\
+    Expected result for **Ezmax-Signature** (GET): v1=3909792a7c950e8d2977fa389166c5cbd67807dada50a583cf83040894e717a4\n\
+    \n    v1=6dbdbc26437f1216f9cd0068a4fc35c272a062b1f638c7557d497ebbf3702dedThisIsMyAuthorizationKey2000-12-31T23:59:59Z\n\
+    Expected result for **Ezmax-Signature** (POST): v1=62219af85fb56038bdd24666a775a88e05bfcd44ff59ac5d3f25d39e4d63b9ac\n\
+    \n### Wrapping up the examples\n\nThe whole process was detailed above but here\
+    \ is summary of what your http headers should look like to sign these example\
+    \ requests considering the following common variables:\n\n| Variable      | Example\
+    \ value                                  |\n| ------------- | ----------------------------------------------\
+    \ |\n| Date          | 2000-12-31T23:59:59Z                           |\n| Authorization\
+    \ | ThisIsMyAuthorizationKey                       |\n| Secret        | ThisIsTheSecretAssociatedToTheAuthorizationKey\
+    \ |\n\nFor a GET request to https://prod.api.appcluster01.ca-central-1.ezmax.com/rest/1/object/activesession/getCurrent:\n\
+    \n    Authorization: ThisIsMyAuthorizationKey\n    Ezmax-Date: 2000-12-31T23:59:59Z\n\
+    \    Ezmax-Fingerprint: v1=8f6f3ed75edb6e2cbe777b4fda5cab1a6adaebadc758780eb82c3d49934f354a\n\
+    \    Ezmax-Signature: v1=3909792a7c950e8d2977fa389166c5cbd67807dada50a583cf83040894e717a4\n\
+    \nFor a POST request to https://prod.api.global.ezmax.com/1/module/sspr/sendUsernames\
+    \ with this body content = '{\"pksCustomerCode\": \"demo\",\"fkiLanguageID\":\
+    \ \"2\",\"eUserTypeSSPR\": \"Native\",\"sEmailAddress\": \"example@domain.com\"\
+    }' :\n\n    Authorization: ThisIsMyAuthorizationKey\n    Ezmax-Date: 2000-12-31T23:59:59Z\n\
+    \    Ezmax-Fingerprint: v1=6dbdbc26437f1216f9cd0068a4fc35c272a062b1f638c7557d497ebbf3702ded\n\
+    \    Ezmax-Signature: v1=62219af85fb56038bdd24666a775a88e05bfcd44ff59ac5d3f25d39e4d63b9ac"
+  name: General_Security
+  x-displayName: Security
 - description: "## Regional requests\nWhen you send your API requests, you'll need\
     \ to send them in the proper region and proper environment where your customer\
     \ data are stored. Based on your requirements (proximity and legislation), we\
@@ -147,19 +263,21 @@ tags:
     \ |\r\n| 201              | Created              | The request completed successfully.\
     \ Some elements were created and details about the created items was returned\
     \ in the body |\r\n| 204              | No Content           | The request completed\
-    \ successfully. There was no need to return any data in the body |\r\n| 404  \
-    \            | Not Found            | The request failed. The element on which\
-    \ you were trying to work does not exists. Look for detail about the error in\
-    \ the body |\r\n| 422              | Unprocessable entity | The request was syntactically\
-    \ valid but failed because of an interdependance condition. Look for detail about\
-    \ the error in the body |\r\n\r\n### Generic return codes (Undocumented at the\
-    \ function's level)\r\n| HTTP Status Code | Meaning               | Detail |\r\
-    \n| ---------------- | --------------------- | ------ |\r\n| 400             \
-    \ | Bad Request           | The request does not meet specifications. For example:\
-    \ an invalid type for a variable, a value that does not pass validation or a protocol\
-    \ violation. Look for details about the error in the response's body |\r\n| 401\
-    \              | Unauthorized          | The API Key is either not present, expired,\
-    \ invalid or inactive. It could also mean you are calling the API from an unauthorized\
+    \ successfully. There was no need to return any data in the body |\r\n| 403  \
+    \            | Forbidden            | The request is not allowed to be executed.\
+    \ Look for detail about the error in the body |\r\n| 404              | Not Found\
+    \            | The request failed. The element on which you were trying to work\
+    \ does not exists. Look for detail about the error in the body |\r\n| 422    \
+    \          | Unprocessable entity | The request was syntactically valid but failed\
+    \ because of an interdependance condition. Look for detail about the error in\
+    \ the body |\r\n\r\n### Generic return codes (Undocumented at the function's level)\r\
+    \n| HTTP Status Code | Meaning               | Detail |\r\n| ----------------\
+    \ | --------------------- | ------ |\r\n| 400              | Bad Request     \
+    \      | The request does not meet specifications. For example: an invalid type\
+    \ for a variable, a value that does not pass validation or a protocol violation.\
+    \ Look for details about the error in the response's body |\r\n| 401         \
+    \     | Unauthorized          | The API Key is either not present, expired, invalid\
+    \ or inactive. It could also mean you are calling the API from an unauthorized\
     \ IP address |\r\n| 403              | Forbidden             | The Provided API\
     \ Key is valid, but it is not allowed to execute the request. Verify the Key's\
     \ permissions |\r\n| 404              | Not Found             | Your request was\
@@ -177,9 +295,9 @@ tags:
     \ happen. There is either a temporary problem that should resolve quickly or an\
     \ error you should report to technical support |\r\n\r\n### Custom return codes\
     \ (Undocumented at the function's level)\r\nThese codes can only be generated\
-    \ for \"User type\" API Key. The \"API type\" and \"Delegated type\" keys will\
-    \ never return such codes. (See Authorization section for more information). Most\
-    \ users should not be concerned with these status codes.\r\n\r\n| HTTP Status\
+    \ for **User** type API Key. The **API**, **Delegated** and **Special** types\
+    \ keys will never return such codes. (See Authorization section for more information).\
+    \ Most users should not be concerned with these status codes.\r\n\r\n| HTTP Status\
     \ Code | Meaning                          | Detail |\r\n| ---------------- | --------------------------------\
     \ | ------ |\r\n| 351              | Phone Validation required        | (2FA)\
     \ User needs to complete a Voice Call or SMS challenge           |\r\n| 352  \
@@ -257,13 +375,18 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.31] - 2021-\n#### Added\n- Changelog section in documentation\n\n####\
-    \ Removed \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID} that was documented\
-    \ but unimplemented\n- PUT /1/object/ezsignfolder/{pkiEzsignfolderID} that was\
-    \ documented but unimplemented\n- PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\
+    ### [1.0.31] - 2021-02-28\n#### Added\n- Changelog section in documentation\n\
+    - Special type Authorization key\n- Security section in documentation\n- Request\
+    \ Signing section in documentation\n- POST /1/module/sspr/unlockAccountRequest\n\
+    - POST /1/module/sspr/unlockAccount\n- POST /1/module/sspr/resetPasswordRequest\n\
+    - POST /1/module/sspr/resetPassword\n- POST /1/module/sspr/validateToken\n\n####\
+    \ Changed\n- Authorization section moved under security section in documentation\n\
+    \n#### Removed \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID} that was\
+    \ documented but unimplemented\n- PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\
+    \ that was documented but unimplemented\n- PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\
     \ that was documented but unimplemented\n- PUT /1/object/ezsignsignature/{pkiEzsignsignatureID}\
     \ that was documented but unimplemented\n\n### [1.0.30] - 2021-02-12\n#### Added\n\
-    - Added global endpoint in servers list\n- POST /1/module/sspr/remindUsernames\n\
+    - Added global endpoint in servers list\n- POST /1/module/sspr/sendUsernames\n\
     - Introduction section in documentation\n- Servers section in documentation\n\
     - Authorization section in documentation\n- Status Codes section in documentation\n\
     - Webhooks section in documentation\n\n### [1.0.29] - 2021-02-10\n#### Added\n\
@@ -1325,24 +1448,17 @@ paths:
       tags:
       - Global_Customer
       x-accepts: application/json
-    servers:
-    - description: The server endpoint where to send your API requests.
-      url: https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com
-      variables:
-        sInfrastructureenvironmenttypeDescription:
-          default: prod
-          description: The environment on on which to call the API. Should always
-            be "prod" unless instructed otherwise by support.
-          enum:
-          - prod
-          - stg
-          - qa
-          - dev
-  /1/module/sspr/remindUsernames:
+  /1/module/sspr/sendUsernames:
     post:
       description: This endpoint returns an email with the username(s) matching the
         email address provided in case of forgotten username
-      operationId: Sspr_RemindUsernames_V1
+      operationId: Sspr_SendUsernames_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-sendUsernames-v1-Request'
+        required: true
       responses:
         "204":
           description: |-
@@ -1370,9 +1486,192 @@ paths:
             completed. Look for detail in body.
       security:
       - {}
-      summary: Remind of forgotten username(s)
+      summary: Send username(s)
       tags:
       - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/module/sspr/unlockAccountRequest:
+    post:
+      description: |-
+        This endpoint sends an email with a link to unlock the user account.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_UnlockAccountRequest_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-unlockAccountRequest-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: |-
+            The request was accepted.
+
+            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Unlock Account Request
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/module/sspr/unlockAccount:
+    post:
+      description: |-
+        This endpoint unlocks the user account.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_UnlockAccount_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-unlockAccount-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: The account was unlocked Successfully
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Unlock Account
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/module/sspr/resetPasswordRequest/:
+    post:
+      description: |-
+        This endpoint sends an email with a link to reset the user's password.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_ResetPasswordRequest_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-resetPasswordRequest-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: |-
+            The request was accepted.
+
+            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Reset Password Request
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/module/sspr/resetPassword:
+    post:
+      description: |-
+        This endpoint resets the user's password.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_ResetPassword_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-resetPassword-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: The password was reset Successfully
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Reset Password
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
       x-accepts: application/json
 components:
   responses:
@@ -4007,6 +4306,225 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsignsignature/editObject API Request
       type: object
+    Field-eUserTypeSSPR:
+      description: The user type of the User for SSPR
+      enum:
+      - EzsignUser
+      - Native
+      example: Native
+      type: string
+    sspr-sendUsernames-v1-Request:
+      description: Request for the /1/module/sspr/sendUsernames API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+      required:
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sEmailAddress
+      - sType
+      type: object
+    sspr-unlockAccountRequest-v1-Request:
+      description: Request for the /1/module/sspr/unlockAccountRequest API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+      required:
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sType
+      type: object
+    sspr-unlockAccount-v1-Request:
+      description: Request for the /1/module/sspr/unlockAccount API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        binUserSSPRtoken:
+          description: Hex Encoded Secret SSPR token
+          example: 012345678901234567890123456789AB
+          type: string
+      required:
+      - binUserSSPRtoken
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sType
+      type: object
+    sspr-resetPasswordRequest-v1-Request:
+      description: Request for the /1/module/sspr/resetPasswordRequest API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+      required:
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sType
+      type: object
+    sspr-resetPassword-v1-Request:
+      description: Request for the /1/module/sspr/resetPassword API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        binUserSSPRtoken:
+          description: Hex Encoded Secret SSPR token
+          example: 012345678901234567890123456789AB
+          type: string
+      required:
+      - binUserSSPRtoken
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sType
+      type: object
+    Field-binUserSSPRtoken:
+      description: Hex Encoded Secret SSPR token
+      example: 012345678901234567890123456789AB
+      type: string
+    Field-pksCustomerCode:
+      description: The customer code assigned to your account
+      example: demo
+      maxLength: 6
+      minLength: 2
+      type: string
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -4305,7 +4823,7 @@ x-tagGroups:
   tags:
   - General_Introduction
   - General_Servers
-  - General_Authorization
+  - General_Security
   - General_StatusCodes
   - General_Webhooks
   - General_Changelog

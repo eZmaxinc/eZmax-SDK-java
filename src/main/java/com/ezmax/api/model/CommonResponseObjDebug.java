@@ -31,7 +31,7 @@ import java.util.List;
  * This is a generic debug object that is returned by all API requests
  */
 @ApiModel(description = "This is a generic debug object that is returned by all API requests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T12:35:41.251Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-28T22:48:03.557Z[GMT]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)

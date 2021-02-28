@@ -28,7 +28,7 @@ import java.io.IOException;
  * Payload for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T12:35:41.251Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-28T22:48:03.557Z[GMT]")
 public class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_LOGIN_URL = "sLoginUrl";
   @SerializedName(SERIALIZED_NAME_S_LOGIN_URL)

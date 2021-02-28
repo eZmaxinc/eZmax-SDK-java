@@ -82,6 +82,7 @@ docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
+docs/FieldEUserTypeSSPR.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
 docs/FranchisereferalincomeCreateObjectV1ResponseMPayload.md
@@ -103,6 +104,11 @@ docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectPeriodApi.md
 docs/PhoneRequest.md
+docs/SsprResetPasswordRequestV1Request.md
+docs/SsprResetPasswordV1Request.md
+docs/SsprSendUsernamesV1Request.md
+docs/SsprUnlockAccountRequestV1Request.md
+docs/SsprUnlockAccountV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -223,6 +229,7 @@ src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderStep.java
 src/main/java/com/ezmax/api/model/FieldEPhoneType.java
 src/main/java/com/ezmax/api/model/FieldEUserType.java
+src/main/java/com/ezmax/api/model/FieldEUserTypeSSPR.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseMPayload.java
@@ -231,6 +238,11 @@ src/main/java/com/ezmax/api/model/FranchisereferalincomeRequestCompound.java
 src/main/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/com/ezmax/api/model/MultilingualApikeyDescription.java
 src/main/java/com/ezmax/api/model/PhoneRequest.java
+src/main/java/com/ezmax/api/model/SsprResetPasswordRequestV1Request.java
+src/main/java/com/ezmax/api/model/SsprResetPasswordV1Request.java
+src/main/java/com/ezmax/api/model/SsprSendUsernamesV1Request.java
+src/main/java/com/ezmax/api/model/SsprUnlockAccountRequestV1Request.java
+src/main/java/com/ezmax/api/model/SsprUnlockAccountV1Request.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Request.java
@@ -358,6 +370,7 @@ src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderStepTest.java
 src/test/java/com/ezmax/api/model/FieldEPhoneTypeTest.java
+src/test/java/com/ezmax/api/model/FieldEUserTypeSSPRTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseMPayloadTest.java
@@ -367,6 +380,11 @@ src/test/java/com/ezmax/api/model/FranchisereferalincomeRequestTest.java
 src/test/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1ResponseTest.java
 src/test/java/com/ezmax/api/model/MultilingualApikeyDescriptionTest.java
 src/test/java/com/ezmax/api/model/PhoneRequestTest.java
+src/test/java/com/ezmax/api/model/SsprResetPasswordRequestV1RequestTest.java
+src/test/java/com/ezmax/api/model/SsprResetPasswordV1RequestTest.java
+src/test/java/com/ezmax/api/model/SsprSendUsernamesV1RequestTest.java
+src/test/java/com/ezmax/api/model/SsprUnlockAccountRequestV1RequestTest.java
+src/test/java/com/ezmax/api/model/SsprUnlockAccountV1RequestTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1RequestTest.java

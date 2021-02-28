@@ -28,7 +28,7 @@ import java.io.IOException;
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T12:35:41.251Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-28T22:48:03.557Z[GMT]")
 public class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_DOWNLOAD_URL = "sDownloadUrl";
   @SerializedName(SERIALIZED_NAME_S_DOWNLOAD_URL)

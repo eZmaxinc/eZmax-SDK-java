@@ -15,6 +15,11 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.SsprResetPasswordRequestV1Request;
+import com.ezmax.api.model.SsprResetPasswordV1Request;
+import com.ezmax.api.model.SsprSendUsernamesV1Request;
+import com.ezmax.api.model.SsprUnlockAccountRequestV1Request;
+import com.ezmax.api.model.SsprUnlockAccountV1Request;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -33,7 +38,39 @@ public class ModuleSsprApiTest {
 
     
     /**
-     * Remind of forgotten username(s)
+     * Reset Password Request
+     *
+     * This endpoint sends an email with a link to reset the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ssprResetPasswordRequestV1Test() throws ApiException {
+        SsprResetPasswordRequestV1Request ssprResetPasswordRequestV1Request = null;
+        api.ssprResetPasswordRequestV1(ssprResetPasswordRequestV1Request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Reset Password
+     *
+     * This endpoint resets the user&#39;s password.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ssprResetPasswordV1Test() throws ApiException {
+        SsprResetPasswordV1Request ssprResetPasswordV1Request = null;
+        api.ssprResetPasswordV1(ssprResetPasswordV1Request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Send username(s)
      *
      * This endpoint returns an email with the username(s) matching the email address provided in case of forgotten username
      *
@@ -41,8 +78,41 @@ public class ModuleSsprApiTest {
      *          if the Api call fails
      */
     @Test
-    public void ssprRemindUsernamesV1Test() throws ApiException {
-        api.ssprRemindUsernamesV1();
+    public void ssprSendUsernamesV1Test() throws ApiException {
+        SsprSendUsernamesV1Request ssprSendUsernamesV1Request = null;
+        api.ssprSendUsernamesV1(ssprSendUsernamesV1Request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Unlock Account Request
+     *
+     * This endpoint sends an email with a link to unlock the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ssprUnlockAccountRequestV1Test() throws ApiException {
+        SsprUnlockAccountRequestV1Request ssprUnlockAccountRequestV1Request = null;
+        api.ssprUnlockAccountRequestV1(ssprUnlockAccountRequestV1Request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Unlock Account
+     *
+     * This endpoint unlocks the user account.  sEmailAddress must be set if eUserTypeSSPR &#x3D; EzsignUser  sUserLoginname must be set if eUserTypeSSPR &#x3D; Native
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ssprUnlockAccountV1Test() throws ApiException {
+        SsprUnlockAccountV1Request ssprUnlockAccountV1Request = null;
+        api.ssprUnlockAccountV1(ssprUnlockAccountV1Request);
 
         // TODO: test validations
     }
