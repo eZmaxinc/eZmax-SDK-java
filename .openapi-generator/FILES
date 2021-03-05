@@ -109,6 +109,7 @@ docs/SsprResetPasswordV1Request.md
 docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
+docs/SsprValidateTokenV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Request.md
 docs/UNUSEDEzsigndocumentEditObjectV1Response.md
 docs/UNUSEDEzsignfolderEditObjectV1Request.md
@@ -243,6 +244,7 @@ src/main/java/com/ezmax/api/model/SsprResetPasswordV1Request.java
 src/main/java/com/ezmax/api/model/SsprSendUsernamesV1Request.java
 src/main/java/com/ezmax/api/model/SsprUnlockAccountRequestV1Request.java
 src/main/java/com/ezmax/api/model/SsprUnlockAccountV1Request.java
+src/main/java/com/ezmax/api/model/SsprValidateTokenV1Request.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Request.java
@@ -385,6 +387,7 @@ src/test/java/com/ezmax/api/model/SsprResetPasswordV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprSendUsernamesV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprUnlockAccountRequestV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprUnlockAccountV1RequestTest.java
+src/test/java/com/ezmax/api/model/SsprValidateTokenV1RequestTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1RequestTest.java

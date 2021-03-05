@@ -28,17 +28,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for SsprResetPasswordV1Request
+ * Model tests for SsprValidateTokenV1Request
  */
-public class SsprResetPasswordV1RequestTest {
-    private final SsprResetPasswordV1Request model = new SsprResetPasswordV1Request();
+public class SsprValidateTokenV1RequestTest {
+    private final SsprValidateTokenV1Request model = new SsprValidateTokenV1Request();
 
     /**
-     * Model tests for SsprResetPasswordV1Request
+     * Model tests for SsprValidateTokenV1Request
      */
     @Test
-    public void testSsprResetPasswordV1Request() {
-        // TODO: test SsprResetPasswordV1Request
+    public void testSsprValidateTokenV1Request() {
+        // TODO: test SsprValidateTokenV1Request
     }
 
     /**
@@ -87,14 +87,6 @@ public class SsprResetPasswordV1RequestTest {
     @Test
     public void binUserSSPRtokenTest() {
         // TODO: test binUserSSPRtoken
-    }
-
-    /**
-     * Test the property 'sPassword'
-     */
-    @Test
-    public void sPasswordTest() {
-        // TODO: test sPassword
     }
 
 }

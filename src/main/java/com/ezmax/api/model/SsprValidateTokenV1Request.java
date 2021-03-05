@@ -26,11 +26,11 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Request for the /1/module/sspr/resetPassword API Request
+ * Request for the /1/module/sspr/validateToken API Request
  */
-@ApiModel(description = "Request for the /1/module/sspr/resetPassword API Request")
+@ApiModel(description = "Request for the /1/module/sspr/validateToken API Request")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-05T19:15:36.415Z[GMT]")
-public class SsprResetPasswordV1Request {
+public class SsprValidateTokenV1Request {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
   private String pksCustomerCode;
@@ -55,12 +55,8 @@ public class SsprResetPasswordV1Request {
   @SerializedName(SERIALIZED_NAME_BIN_USER_S_S_P_RTOKEN)
   private String binUserSSPRtoken;
 
-  public static final String SERIALIZED_NAME_S_PASSWORD = "sPassword";
-  @SerializedName(SERIALIZED_NAME_S_PASSWORD)
-  private String sPassword;
 
-
-  public SsprResetPasswordV1Request pksCustomerCode(String pksCustomerCode) {
+  public SsprValidateTokenV1Request pksCustomerCode(String pksCustomerCode) {
     
     this.pksCustomerCode = pksCustomerCode;
     return this;
@@ -82,7 +78,7 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request fkiLanguageID(Integer fkiLanguageID) {
+  public SsprValidateTokenV1Request fkiLanguageID(Integer fkiLanguageID) {
     
     this.fkiLanguageID = fkiLanguageID;
     return this;
@@ -106,7 +102,7 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request eUserTypeSSPR(FieldEUserTypeSSPR eUserTypeSSPR) {
+  public SsprValidateTokenV1Request eUserTypeSSPR(FieldEUserTypeSSPR eUserTypeSSPR) {
     
     this.eUserTypeSSPR = eUserTypeSSPR;
     return this;
@@ -128,7 +124,7 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request sEmailAddress(String sEmailAddress) {
+  public SsprValidateTokenV1Request sEmailAddress(String sEmailAddress) {
     
     this.sEmailAddress = sEmailAddress;
     return this;
@@ -151,7 +147,7 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request sUserLoginname(String sUserLoginname) {
+  public SsprValidateTokenV1Request sUserLoginname(String sUserLoginname) {
     
     this.sUserLoginname = sUserLoginname;
     return this;
@@ -174,7 +170,7 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request binUserSSPRtoken(String binUserSSPRtoken) {
+  public SsprValidateTokenV1Request binUserSSPRtoken(String binUserSSPRtoken) {
     
     this.binUserSSPRtoken = binUserSSPRtoken;
     return this;
@@ -196,28 +192,6 @@ public class SsprResetPasswordV1Request {
   }
 
 
-  public SsprResetPasswordV1Request sPassword(String sPassword) {
-    
-    this.sPassword = sPassword;
-    return this;
-  }
-
-   /**
-   * A Password.  Must meet complexity requirements
-   * @return sPassword
-  **/
-  @ApiModelProperty(example = "Qwerty1234!", required = true, value = "A Password.  Must meet complexity requirements")
-
-  public String getsPassword() {
-    return sPassword;
-  }
-
-
-  public void setsPassword(String sPassword) {
-    this.sPassword = sPassword;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -226,32 +200,30 @@ public class SsprResetPasswordV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SsprResetPasswordV1Request ssprResetPasswordV1Request = (SsprResetPasswordV1Request) o;
-    return Objects.equals(this.pksCustomerCode, ssprResetPasswordV1Request.pksCustomerCode) &&
-        Objects.equals(this.fkiLanguageID, ssprResetPasswordV1Request.fkiLanguageID) &&
-        Objects.equals(this.eUserTypeSSPR, ssprResetPasswordV1Request.eUserTypeSSPR) &&
-        Objects.equals(this.sEmailAddress, ssprResetPasswordV1Request.sEmailAddress) &&
-        Objects.equals(this.sUserLoginname, ssprResetPasswordV1Request.sUserLoginname) &&
-        Objects.equals(this.binUserSSPRtoken, ssprResetPasswordV1Request.binUserSSPRtoken) &&
-        Objects.equals(this.sPassword, ssprResetPasswordV1Request.sPassword);
+    SsprValidateTokenV1Request ssprValidateTokenV1Request = (SsprValidateTokenV1Request) o;
+    return Objects.equals(this.pksCustomerCode, ssprValidateTokenV1Request.pksCustomerCode) &&
+        Objects.equals(this.fkiLanguageID, ssprValidateTokenV1Request.fkiLanguageID) &&
+        Objects.equals(this.eUserTypeSSPR, ssprValidateTokenV1Request.eUserTypeSSPR) &&
+        Objects.equals(this.sEmailAddress, ssprValidateTokenV1Request.sEmailAddress) &&
+        Objects.equals(this.sUserLoginname, ssprValidateTokenV1Request.sUserLoginname) &&
+        Objects.equals(this.binUserSSPRtoken, ssprValidateTokenV1Request.binUserSSPRtoken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pksCustomerCode, fkiLanguageID, eUserTypeSSPR, sEmailAddress, sUserLoginname, binUserSSPRtoken, sPassword);
+    return Objects.hash(pksCustomerCode, fkiLanguageID, eUserTypeSSPR, sEmailAddress, sUserLoginname, binUserSSPRtoken);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SsprResetPasswordV1Request {\n");
+    sb.append("class SsprValidateTokenV1Request {\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    eUserTypeSSPR: ").append(toIndentedString(eUserTypeSSPR)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
     sb.append("    binUserSSPRtoken: ").append(toIndentedString(binUserSSPRtoken)).append("\n");
-    sb.append("    sPassword: ").append(toIndentedString(sPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }

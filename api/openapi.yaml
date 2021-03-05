@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.31
+  version: 1.0.32
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -309,7 +309,14 @@ tags:
     \  | Password Change required         | User must change it's password       \
     \                                |\r\n| 356              | Native Application\
     \ Version Check | The user is not running the latest version of the native application\
-    \ |\r\n"
+    \ |\r\n\r\n### Webhook delivery successful code\r\nThese codes will be considered\
+    \ as a succesful delivery when they are returned by your webpage during a Webhook\
+    \ delivery.\r\n\r\n| HTTP Status Code | Meaning              | Detail |\r\n| ----------------\
+    \ | -------------------- | ------ |\r\n| 202              | Accepted         \
+    \    | The request has been received but not yet acted upon. It is intended for\
+    \ cases where another process or server handles the request, or for batch processing.\
+    \ |\r\n| 204              | No Content           | The request completed successfully.\
+    \ There was no need to return any data in the body |\r\n"
   name: General_StatusCodes
   x-displayName: Status Codes
 - description: |
@@ -329,8 +336,8 @@ tags:
 
     ### Important:
     - The event will be delivered using a POST request.
-    - Your server will need to reply with a HTTP Status Code 204 to let eZmax know you've accepted the message and we shall not try to deliver the message again. If the server does not respond with a 204 Code, the message will be sent over and over until all tries are exhausted.
-    - The 204 response must be returned in less than 30 seconds otherwise a timeout will occur and the event will be retried following the retry schedule.
+    - Your server will need to reply with a HTTP Status Code 202 or 204 to let eZmax know you've accepted the message and we shall not try to deliver the message again. If the server does not respond with a 202 or 204 Code, the message will be sent over and over until all tries are exhausted.
+    - The 202 or 204 response must be returned in less than 30 seconds otherwise a timeout will occur and the event will be retried following the retry schedule.
     - Make sure to secure your Webhook receiving URL to make sure someone does not send forged messages to your application. You can do this by providing a secure token in your URL, for example "?token=mysecuretoken1234", or by validating the webhook message's signature.
 
     ### Testing
@@ -375,9 +382,15 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.31] - 2021-02-28\n#### Added\n- Changelog section in documentation\n\
-    - Special type Authorization key\n- Security section in documentation\n- Request\
-    \ Signing section in documentation\n- POST /1/module/sspr/unlockAccountRequest\n\
+    ### [1.0.32] - 2021-03-05\n#### Added\n- POST /1/module/sspr/validateToken\n-\
+    \ Webhooks successful codes in Status Codes documentation section\n- fkiUserID\
+    \ in the response of Activesession getCurrent\n- fkiApikeyID in the response of\
+    \ Activesession getCurrent\n\n#### Changed\n- Webhooks now consider an HTTP Code\
+    \ of 202 to be a successful delivery\n- Minor changes\n\n#### Removed\n- sEzsigndocumentFilename\
+    \ in the request of Create Ezsigndocument\n- sEzsigndocumentFilename in the response\
+    \ of Create Ezsigndocument\n\n### [1.0.31] - 2021-02-28\n#### Added\n- Changelog\
+    \ section in documentation\n- Special type Authorization key\n- Security section\
+    \ in documentation\n- Request Signing section in documentation\n- POST /1/module/sspr/unlockAccountRequest\n\
     - POST /1/module/sspr/unlockAccount\n- POST /1/module/sspr/resetPasswordRequest\n\
     - POST /1/module/sspr/resetPassword\n- POST /1/module/sspr/validateToken\n\n####\
     \ Changed\n- Authorization section moved under security section in documentation\n\
@@ -1673,6 +1686,50 @@ paths:
       - Module_Sspr
       x-contentType: application/json
       x-accepts: application/json
+  /1/module/sspr/validateToken:
+    post:
+      description: |-
+        This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_ValidateToken_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-validateToken-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: The token is valid
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Validate Token
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -1709,7 +1766,9 @@ components:
         a_Permissions:
         - 0
         - 0
+        fkiUserID: 70
         sDepartmentNameX: sDepartmentNameX
+        fkiApikeyID: 99
         eActivesessionSessiontype: Normal
         sCompanyNameX: sCompanyNameX
       properties:
@@ -1755,11 +1814,21 @@ components:
           items:
             type: integer
           type: array
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        fkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          type: integer
       required:
       - a_Permissions
       - a_RegisteredModules
       - eActivesessionSessiontype
+      - fkiApikeyID
       - fkiLanguageID
+      - fkiUserID
       - sCompanyNameX
       - sCustomerCode
       - sDepartmentNameX
@@ -1817,7 +1886,9 @@ components:
           a_Permissions:
           - 0
           - 0
+          fkiUserID: 70
           sDepartmentNameX: sDepartmentNameX
+          fkiApikeyID: 99
           eActivesessionSessiontype: Normal
           sCompanyNameX: sCompanyNameX
       properties:
@@ -2131,10 +2202,6 @@ components:
           maximum: 2
           minimum: 1
           type: integer
-        sEzsigndocumentFilename:
-          description: The actual file name that will be used when downloading or
-            attaching to an email.
-          type: string
         sEzsigndocumentName:
           description: The name of the document that will be presented to Ezsignfoldersignerassociations
           type: string
@@ -2144,7 +2211,6 @@ components:
       - eEzsigndocumentSource
       - fkiEzsignfolderID
       - fkiLanguageID
-      - sEzsigndocumentFilename
       - sEzsigndocumentName
       type: object
     ezsignfoldersignerassociation-Request:
@@ -2517,21 +2583,6 @@ components:
       type: object
     Common-Webhook:
       description: This is the base Webhook object
-      example:
-        objWebhook:
-          pkiWebhookID: 23
-          eWebhookModule: Module
-          eWebhookEzsignevent: Event
-          pksCustomerCode: ezmax
-          sWebhookUrl: https://www.yourdomain.com/yourpath
-          sWebhookEmailfailed: hostmaster@yourdomain.com
-        a_objAttempt:
-        - dtAttemptStart: 2020-12-31 23:58:58
-          sAttemptResult: 'Error: Server returned HTTP status code 500'
-          iAttemptDuration: 5
-        - dtAttemptStart: 2020-12-31 23:59:59
-          sAttemptResult: Success
-          iAttemptDuration: 0
       properties:
         objWebhook:
           $ref: '#/components/schemas/webhook-Response'
@@ -2578,7 +2629,10 @@ components:
           - FolderCompleted
           type: string
         pksCustomerCode:
-          description: The Customer Code in which the event was generated
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
           type: string
         sWebhookUrl:
           description: The url being called
@@ -2672,17 +2726,20 @@ components:
         dtModifiedDate: 2020-12-31 23:59:59
       properties:
         fkiUserIDCreated:
-          description: The id of the User that created the object.
+          description: The unique ID of the User
+          example: 70
           type: integer
         fkiUserIDModified:
-          description: The id of the User that made the last modification on the object.
+          description: The unique ID of the User
+          example: 70
           type: integer
         fkiApikeyIDCreated:
-          description: The id of the API Key that created the object.
+          description: The unique ID of the Apikey
+          example: 99
           type: integer
         fkiApikeyIDModified:
-          description: The id of the API Key that made the last modification on the
-            object.
+          description: The unique ID of the Apikey
+          example: 99
           type: integer
         dtCreatedDate:
           description: |-
@@ -2710,28 +2767,10 @@ components:
       description: The maximum date and time at which the document can be signed.
       example: 2020-12-31 23:59:59
       type: string
-    Field-pkiEzsignfolderID:
-      description: The unique ID of the Ezsignfolder
-      example: 33
-      type: integer
-    Field-sEzsigndocumentFilename:
-      description: The actual file name that will be used when downloading or attaching
-        to an email.
-      example: Contract123.pdf
-      type: string
     Field-sEzsigndocumentName:
       description: The name of the document that will be presented to Ezsignfoldersignerassociations
       example: 'Contract #123'
       type: string
-    Field-pkiEzsignfoldertypeID:
-      description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be\
-        \ queried by the API and is also visible in the admin interface.\r\n\r\nThere\
-        \ are two types of Ezsignfoldertype. **User** and **Shared**. **User** can\
-        \ only be seen by the user who created the folder or its assistants. Access\
-        \ to **Shared** folders are configurable for access and email delivery. You\
-        \ should typically choose a **Shared** type here."
-      example: 5
-      type: integer
     ezsigndocument-getObject-v1-Response-mPayload:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument-Response'
@@ -2906,18 +2945,6 @@ components:
       required:
       - mPayload
       type: object
-    Field-pkiFranchisebrokerID:
-      description: The unique ID of the Franchisebroker
-      example: 61
-      type: integer
-    Field-pkiPeriodID:
-      description: The unique ID of the Period
-      example: 21
-      type: integer
-    Field-pkiFranchisereferalincomeprogramID:
-      description: The unique ID of the Franchisereferalincomeprogram
-      example: 51
-      type: integer
     Field-dFranchisereferalincomeLoan:
       description: The loan amount
       example: "500275.62"
@@ -3264,223 +3291,6 @@ components:
       required:
       - a_objContact
       type: object
-    Field-pkiContacttitleID:
-      description: |-
-        The unique ID of the Contacttitle.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|Ms.|
-        |2|Mr.|
-        |4|(Blank)|
-        |5|Me (For Notaries)|
-      example: 2
-      type: integer
-    Field-pkiAddresstypeID:
-      description: |-
-        The unique ID of the Addresstype.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|Office|
-        |2|Home|
-        |3|Real Estate Invoice|
-        |4|Invoicing|
-        |5|Shipping|
-      example: 1
-      type: integer
-    Field-pkiCountryID:
-      description: |-
-        The unique ID of the Country.
-
-        Here are some common values (Complete list must be retrieved from API):
-
-        |Value|Description|
-        |-|-|
-        |1|Canada|
-        |2|United-States|
-      example: 1
-      type: integer
-    Field-pkiLanguageID:
-      description: |-
-        The unique ID of the Language.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|French|
-        |2|English|
-      example: 2
-      maximum: 2
-      minimum: 1
-      type: integer
-    Field-pkiProvinceID:
-      description: |-
-        The unique ID of the Province.
-
-        Here are some common values (Complete list must be retrieved from API):
-
-        |Value|Description|
-        |-|-|
-        |1|(Canada) Alberta
-        |2|(Canada) British Columbia|
-        |3|(Canada) Manitoba|
-        |3|(Canada) Manitoba|
-        |4|(Canada) New Brunswick|
-        |5|(Canada) Newfoundland|
-        |6|(Canada) Northwest Territories|
-        |7|(Canada) Nova Scotia|
-        |8|(Canada) Nunavut|
-        |9|(Canada) Ontario|
-        |10|(Canada) Prince Edward Island|
-        |11|(Canada) Quebec|
-        |12|(Canada) Saskatchewan|
-        |13|(Canada) Yukon|
-        |14|(United-States) Alabama|
-        |15|(United-States) Alaska|
-        |16|(United-States) Arizona|
-        |17|(United-States) Arkansas|
-        |18|(United-States) California|
-        |19|(United-States) Colorado|
-        |20|(United-States) Connecticut|
-        |21|(United-States) Delaware|
-        |22|(United-States) District of Columbia|
-        |23|(United-States) Florida|
-        |24|(United-States) Georgia|
-        |25|(United-States) Hawaii|
-        |26|(United-States) Idaho|
-        |27|(United-States) Illinois|
-        |28|(United-States) Indiana|
-        |29|(United-States) Iowa|
-        |30|(United-States) Kansas|
-        |31|(United-States) Kentucky|
-        |32|(United-States) Louisiane|
-        |33|(United-States) Maine|
-        |34|(United-States) Maryland|
-        |35|(United-States) Massachusetts|
-        |36|(United-States) Michigan|
-        |37|(United-States) Minnesota|
-        |38|(United-States) Mississippi|
-        |39|(United-States) Missouri|
-        |40|(United-States) Montana|
-        |41|(United-States) Nebraska|
-        |42|(United-States) Nevada|
-        |43|(United-States) New Hampshire|
-        |44|(United-States) New Jersey|
-        |45|(United-States) New Mexico|
-        |46|(United-States) New York|
-        |47|(United-States) North Carolina|
-        |48|(United-States) North Dakota|
-        |49|(United-States) Ohio|
-        |50|(United-States) Oklahoma|
-        |51|(United-States) Oregon|
-        |52|(United-States) Pennsylvania|
-        |53|(United-States) Rhode Island|
-        |54|(United-States) South Carolina|
-        |55|(United-States) South Dakota|
-        |56|(United-States) Tennessee|
-        |57|(United-States) Texas|
-        |58|(United-States) Utah|
-        |60|(United-States) Vermont|
-        |59|(United-States) Virginia|
-        |61|(United-States) Washington|
-        |62|(United-States) West Virginia|
-        |63|(United-States) Wisconsin|
-        |64|(United-States) Wyoming|
-      example: 11
-      type: integer
-    Field-pkiTaxassignmentID:
-      description: |-
-        The unique ID of the Taxassignment.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|No tax|
-        |2|GST|
-        |3|HST (ON)|
-        |4|HST (NB)|
-        |5|HST (NS)|
-        |6|HST (NL)|
-        |7|HST (PE)|
-        |8|GST + QST (QC)|
-        |9|GST + QST (QC) Non-Recoverable|
-        |10|GST + PST (BC)|
-        |11|GST + PST (SK)|
-        |12|GST + RST (MB)|
-        |13|GST + PST (BC) Non-Recoverable|
-        |14|GST + PST (SK) Non-Recoverable|
-        |15|GST + RST (MB) Non-Recoverable|
-      example: 1
-      maximum: 15
-      minimum: 1
-      type: integer
-    Field-pkiEmailtypeID:
-      description: |-
-        The unique ID of the Emailtype.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|Office|
-        |2|Home|
-      example: 1
-      type: integer
-    Field-pkiEzsigntsarequirementID:
-      description: |-
-        The unique ID of the Ezsigntsarequirement.
-
-        Determine if a Time Stamping Authority should add a timestamp on each of the signature.
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
-        |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
-        |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
-      example: 92
-      maximum: 3
-      minimum: 1
-      type: integer
-    Field-pkiSecretquestionID:
-      description: |-
-        The unique ID of the Secretquestion.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|The name of the hospital in which you were born|
-        |2|The name of your grade school|
-        |3|The last name of your favorite teacher|
-        |4|Your favorite sports team|
-        |5|Your favorite TV show|
-        |6|Your favorite movie|
-        |7|The name of the street on which you grew up|
-        |8|The name of your first employer|
-        |9|Your first car|
-        |10|Your favorite food|
-        |11|The name of your first pet|
-        |12|Favorite musician/band|
-        |13|What instrument you play|
-        |14|Your father's middle name|
-        |15|Your mother's maiden name|
-        |16|Name of your eldest child|
-        |17|Your spouse's middle name|
-        |18|Favorite restaurant|
-        |19|Childhood nickname|
-        |20|Favorite vacation destination|
-        |21|Your boat's name|
-        |22|Date of Birth (YYYY-MM-DD)|
-      example: 7
-      type: integer
     Field-sContactFirstname:
       description: The First name of the contact
       example: John
@@ -3551,22 +3361,6 @@ components:
       - International
       example: Local
       type: string
-    Field-pkiPhonetypeID:
-      description: |-
-        The unique ID of the Phonetype.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|Office|
-        |2|Home|
-        |3|Mobile|
-        |4|Fax|
-        |5|Pager|
-        |6|Toll Free|
-      example: 1
-      type: integer
     phone-Request:
       description: A Phone Object
       properties:
@@ -3631,20 +3425,6 @@ components:
       - ePhoneType
       - fkiPhonetypeID
       type: object
-    Field-pkiWebsitetypeID:
-      description: |-
-        The unique ID of the Websitetype.
-
-        Valid values:
-
-        |Value|Description|
-        |-|-|
-        |1|Website|
-        |2|Twitter|
-        |3|Facebook|
-        |4|Survey|
-      example: 1
-      type: integer
     Field-sWebsiteAddress:
       description: The URL of the website.
       example: https://www.domain.com
@@ -3777,10 +3557,6 @@ components:
       - id
       - option
       type: object
-    Field-pkiFranchiseofficeID:
-      description: The unique ID of the Franchisereoffice
-      example: 50
-      type: integer
     Field-sFranchisereferalincomeRemoteid:
       description: The internal ID
       example: "12345"
@@ -3907,22 +3683,10 @@ components:
       description: Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
         API Request
       type: object
-    Field-pkiEzsigntemplateID:
-      description: The unique ID of the Ezsigndocument
-      example: 36
-      type: integer
-    Field-pkiEzsigndocumentID:
-      description: The unique ID of the Ezsigntemplate
-      example: 97
-      type: integer
     Field-sEzsigntemplatesigner:
       description: The First name of the user
       example: John
       type: string
-    Field-pkiEzsignfoldersignerassociationID:
-      description: The unique ID of the Ezsignfoldersignerassociation
-      example: 20
-      type: integer
     ezsigndocument-applyEzsigntemplate-v1-Request:
       description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
         API Request
@@ -3951,10 +3715,6 @@ components:
       - $ref: '#/components/schemas/Common-Webhook'
       description: This is the base Webhook object
       type: object
-    Field-pkiUserID:
-      description: The unique ID of the User
-      example: 70
-      type: integer
     ezsignfolder-Response:
       allOf:
       - $ref: '#/components/schemas/ezsignfolder_Response_allOf'
@@ -4240,10 +4000,6 @@ components:
       - objAudit
       - pkiApikeyID
       type: object
-    Field-pkiApikeyID:
-      description: The unique ID of the Apikey
-      example: 99
-      type: integer
     ezsignfolder-getObject-v1-Response-mPayload:
       allOf:
       - $ref: '#/components/schemas/ezsignfolder-Response'
@@ -4313,8 +4069,18 @@ components:
       - Native
       example: Native
       type: string
-    sspr-sendUsernames-v1-Request:
-      description: Request for the /1/module/sspr/sendUsernames API Request
+    Field-binUserSSPRtoken:
+      description: Hex Encoded Secret SSPR token
+      example: 012345678901234567890123456789ab
+      type: string
+    Field-pksCustomerCode:
+      description: The customer code assigned to your account
+      example: demo
+      maxLength: 6
+      minLength: 2
+      type: string
+    sspr-validateToken-v1-Request:
+      description: Request for the /1/module/sspr/validateToken API Request
       properties:
         pksCustomerCode:
           description: The customer code assigned to your account
@@ -4342,12 +4108,19 @@ components:
           description: The email address.
           example: example@domain.com
           type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        binUserSSPRtoken:
+          description: Hex Encoded Secret SSPR token
+          example: 012345678901234567890123456789ab
+          type: string
       required:
+      - binUserSSPRtoken
       - eUserTypeSSPR
       - fkiLanguageID
       - pksCustomerCode
-      - sEmailAddress
-      - sType
       type: object
     sspr-unlockAccountRequest-v1-Request:
       description: Request for the /1/module/sspr/unlockAccountRequest API Request
@@ -4386,7 +4159,6 @@ components:
       - eUserTypeSSPR
       - fkiLanguageID
       - pksCustomerCode
-      - sType
       type: object
     sspr-unlockAccount-v1-Request:
       description: Request for the /1/module/sspr/unlockAccount API Request
@@ -4423,14 +4195,48 @@ components:
           type: string
         binUserSSPRtoken:
           description: Hex Encoded Secret SSPR token
-          example: 012345678901234567890123456789AB
+          example: 012345678901234567890123456789ab
           type: string
       required:
       - binUserSSPRtoken
       - eUserTypeSSPR
       - fkiLanguageID
       - pksCustomerCode
-      - sType
+      type: object
+    sspr-sendUsernames-v1-Request:
+      description: Request for the /1/module/sspr/sendUsernames API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eUserTypeSSPR:
+          $ref: '#/components/schemas/Field-eUserTypeSSPR'
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+      required:
+      - eUserTypeSSPR
+      - fkiLanguageID
+      - pksCustomerCode
+      - sEmailAddress
       type: object
     sspr-resetPasswordRequest-v1-Request:
       description: Request for the /1/module/sspr/resetPasswordRequest API Request
@@ -4469,7 +4275,6 @@ components:
       - eUserTypeSSPR
       - fkiLanguageID
       - pksCustomerCode
-      - sType
       type: object
     sspr-resetPassword-v1-Request:
       description: Request for the /1/module/sspr/resetPassword API Request
@@ -4506,25 +4311,325 @@ components:
           type: string
         binUserSSPRtoken:
           description: Hex Encoded Secret SSPR token
-          example: 012345678901234567890123456789AB
+          example: 012345678901234567890123456789ab
+          type: string
+        sPassword:
+          description: |-
+            A Password.
+
+            Must meet complexity requirements
+          example: Qwerty1234!
           type: string
       required:
       - binUserSSPRtoken
       - eUserTypeSSPR
       - fkiLanguageID
       - pksCustomerCode
-      - sType
+      - sPassword
       type: object
-    Field-binUserSSPRtoken:
-      description: Hex Encoded Secret SSPR token
-      example: 012345678901234567890123456789AB
+    Field-sPassword:
+      description: |-
+        A Password.
+
+        Must meet complexity requirements
+      example: Qwerty1234!
       type: string
-    Field-pksCustomerCode:
-      description: The customer code assigned to your account
-      example: demo
-      maxLength: 6
-      minLength: 2
-      type: string
+    Field-pkiUserID:
+      description: The unique ID of the User
+      example: 70
+      type: integer
+    Field-pkiLanguageID:
+      description: |-
+        The unique ID of the Language.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|French|
+        |2|English|
+      example: 2
+      maximum: 2
+      minimum: 1
+      type: integer
+    Field-pkiEzsigndocumentID:
+      description: The unique ID of the Ezsigntemplate
+      example: 97
+      type: integer
+    Field-pkiEzsignfoldertypeID:
+      description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be\
+        \ queried by the API and is also visible in the admin interface.\r\n\r\nThere\
+        \ are two types of Ezsignfoldertype. **User** and **Shared**. **User** can\
+        \ only be seen by the user who created the folder or its assistants. Access\
+        \ to **Shared** folders are configurable for access and email delivery. You\
+        \ should typically choose a **Shared** type here."
+      example: 5
+      type: integer
+    Field-pkiEzsigntsarequirementID:
+      description: |-
+        The unique ID of the Ezsigntsarequirement.
+
+        Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+        |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+        |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
+      example: 92
+      maximum: 3
+      minimum: 1
+      type: integer
+    Field-pkiEzsigntemplateID:
+      description: The unique ID of the Ezsigndocument
+      example: 36
+      type: integer
+    Field-pkiEzsignfoldersignerassociationID:
+      description: The unique ID of the Ezsignfoldersignerassociation
+      example: 20
+      type: integer
+    Field-pkiFranchisebrokerID:
+      description: The unique ID of the Franchisebroker
+      example: 61
+      type: integer
+    Field-pkiFranchisereferalincomeprogramID:
+      description: The unique ID of the Franchisereferalincomeprogram
+      example: 51
+      type: integer
+    Field-pkiPeriodID:
+      description: The unique ID of the Period
+      example: 21
+      type: integer
+    Field-pkiFranchiseofficeID:
+      description: The unique ID of the Franchisereoffice
+      example: 50
+      type: integer
+    Field-pkiAddresstypeID:
+      description: |-
+        The unique ID of the Addresstype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+        |3|Real Estate Invoice|
+        |4|Invoicing|
+        |5|Shipping|
+      example: 1
+      type: integer
+    Field-pkiProvinceID:
+      description: |-
+        The unique ID of the Province.
+
+        Here are some common values (Complete list must be retrieved from API):
+
+        |Value|Description|
+        |-|-|
+        |1|(Canada) Alberta
+        |2|(Canada) British Columbia|
+        |3|(Canada) Manitoba|
+        |3|(Canada) Manitoba|
+        |4|(Canada) New Brunswick|
+        |5|(Canada) Newfoundland|
+        |6|(Canada) Northwest Territories|
+        |7|(Canada) Nova Scotia|
+        |8|(Canada) Nunavut|
+        |9|(Canada) Ontario|
+        |10|(Canada) Prince Edward Island|
+        |11|(Canada) Quebec|
+        |12|(Canada) Saskatchewan|
+        |13|(Canada) Yukon|
+        |14|(United-States) Alabama|
+        |15|(United-States) Alaska|
+        |16|(United-States) Arizona|
+        |17|(United-States) Arkansas|
+        |18|(United-States) California|
+        |19|(United-States) Colorado|
+        |20|(United-States) Connecticut|
+        |21|(United-States) Delaware|
+        |22|(United-States) District of Columbia|
+        |23|(United-States) Florida|
+        |24|(United-States) Georgia|
+        |25|(United-States) Hawaii|
+        |26|(United-States) Idaho|
+        |27|(United-States) Illinois|
+        |28|(United-States) Indiana|
+        |29|(United-States) Iowa|
+        |30|(United-States) Kansas|
+        |31|(United-States) Kentucky|
+        |32|(United-States) Louisiane|
+        |33|(United-States) Maine|
+        |34|(United-States) Maryland|
+        |35|(United-States) Massachusetts|
+        |36|(United-States) Michigan|
+        |37|(United-States) Minnesota|
+        |38|(United-States) Mississippi|
+        |39|(United-States) Missouri|
+        |40|(United-States) Montana|
+        |41|(United-States) Nebraska|
+        |42|(United-States) Nevada|
+        |43|(United-States) New Hampshire|
+        |44|(United-States) New Jersey|
+        |45|(United-States) New Mexico|
+        |46|(United-States) New York|
+        |47|(United-States) North Carolina|
+        |48|(United-States) North Dakota|
+        |49|(United-States) Ohio|
+        |50|(United-States) Oklahoma|
+        |51|(United-States) Oregon|
+        |52|(United-States) Pennsylvania|
+        |53|(United-States) Rhode Island|
+        |54|(United-States) South Carolina|
+        |55|(United-States) South Dakota|
+        |56|(United-States) Tennessee|
+        |57|(United-States) Texas|
+        |58|(United-States) Utah|
+        |60|(United-States) Vermont|
+        |59|(United-States) Virginia|
+        |61|(United-States) Washington|
+        |62|(United-States) West Virginia|
+        |63|(United-States) Wisconsin|
+        |64|(United-States) Wyoming|
+      example: 11
+      type: integer
+    Field-pkiCountryID:
+      description: |-
+        The unique ID of the Country.
+
+        Here are some common values (Complete list must be retrieved from API):
+
+        |Value|Description|
+        |-|-|
+        |1|Canada|
+        |2|United-States|
+      example: 1
+      type: integer
+    Field-pkiContacttitleID:
+      description: |-
+        The unique ID of the Contacttitle.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Ms.|
+        |2|Mr.|
+        |4|(Blank)|
+        |5|Me (For Notaries)|
+      example: 2
+      type: integer
+    Field-pkiEmailtypeID:
+      description: |-
+        The unique ID of the Emailtype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+      example: 1
+      type: integer
+    Field-pkiWebsitetypeID:
+      description: |-
+        The unique ID of the Websitetype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Website|
+        |2|Twitter|
+        |3|Facebook|
+        |4|Survey|
+      example: 1
+      type: integer
+    Field-pkiApikeyID:
+      description: The unique ID of the Apikey
+      example: 99
+      type: integer
+    Field-pkiPhonetypeID:
+      description: |-
+        The unique ID of the Phonetype.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|Office|
+        |2|Home|
+        |3|Mobile|
+        |4|Fax|
+        |5|Pager|
+        |6|Toll Free|
+      example: 1
+      type: integer
+    Field-pkiSecretquestionID:
+      description: |-
+        The unique ID of the Secretquestion.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|The name of the hospital in which you were born|
+        |2|The name of your grade school|
+        |3|The last name of your favorite teacher|
+        |4|Your favorite sports team|
+        |5|Your favorite TV show|
+        |6|Your favorite movie|
+        |7|The name of the street on which you grew up|
+        |8|The name of your first employer|
+        |9|Your first car|
+        |10|Your favorite food|
+        |11|The name of your first pet|
+        |12|Favorite musician/band|
+        |13|What instrument you play|
+        |14|Your father's middle name|
+        |15|Your mother's maiden name|
+        |16|Name of your eldest child|
+        |17|Your spouse's middle name|
+        |18|Favorite restaurant|
+        |19|Childhood nickname|
+        |20|Favorite vacation destination|
+        |21|Your boat's name|
+        |22|Date of Birth (YYYY-MM-DD)|
+      example: 7
+      type: integer
+    Field-pkiTaxassignmentID:
+      description: |-
+        The unique ID of the Taxassignment.
+
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|No tax|
+        |2|GST|
+        |3|HST (ON)|
+        |4|HST (NB)|
+        |5|HST (NS)|
+        |6|HST (NL)|
+        |7|HST (PE)|
+        |8|GST + QST (QC)|
+        |9|GST + QST (QC) Non-Recoverable|
+        |10|GST + PST (BC)|
+        |11|GST + PST (SK)|
+        |12|GST + RST (MB)|
+        |13|GST + PST (BC) Non-Recoverable|
+        |14|GST + PST (SK) Non-Recoverable|
+        |15|GST + RST (MB) Non-Recoverable|
+      example: 1
+      maximum: 15
+      minimum: 1
+      type: integer
+    Field-pkiEzsignfolderID:
+      description: The unique ID of the Ezsignfolder
+      example: 33
+      type: integer
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -4563,11 +4668,6 @@ components:
           maximum: 2
           minimum: 1
           type: integer
-        sEzsigndocumentFilename:
-          description: The actual file name that will be used when downloading or
-            attaching to an email.
-          example: Contract123.pdf
-          type: string
         sEzsigndocumentName:
           description: The name of the document that will be presented to Ezsignfoldersignerassociations
           example: 'Contract #123'
@@ -4634,7 +4734,6 @@ components:
       - iEzsigndocumentSignaturetotal
       - objAudit
       - pkiEzsigndocumentID
-      - sEzsigndocumentFilename
       - sEzsigndocumentMD5initial
       - sEzsigndocumentMD5signed
       - sEzsigndocumentName
