@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.33
+  version: 1.0.35
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -382,10 +382,12 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.33] - 2021-03-14\n#### Added\n- (PHPSDK) Automatic request signing\n\
-    - (PHPSDK) Secret handling in configuration class\n- (AxiosSDK) Automatic request\
-    \ signing\n- (AxiosSDK) Secret handling in configuration class\n- (AxiosSDK) Published\
-    \ to NPM\n\n#### Fixed\n- Extra slash in /1/module/sspr/resetPasswordRequest\n\
+    ### [1.0.35] - 2021-03-14\n#### Changed\n- Minor changes (Version skip build system)\n\
+    \n### [1.0.34] - 2021-03-14\n#### Changed\n- Minor changes (Version skip build\
+    \ system)\n\n### [1.0.33] - 2021-03-14\n#### Added\n- (PHPSDK) Automatic request\
+    \ signing\n- (PHPSDK) Secret handling in configuration class\n- (AxiosSDK) Automatic\
+    \ request signing\n- (AxiosSDK) Secret handling in configuration class\n- (AxiosSDK)\
+    \ Published to NPM\n\n#### Fixed\n- Extra slash in /1/module/sspr/resetPasswordRequest\n\
     \n### [1.0.32] - 2021-03-05\n#### Added\n- POST /1/module/sspr/validateToken\n\
     - Webhooks successful codes in Status Codes documentation section\n- fkiUserID\
     \ in the response of Activesession getCurrent\n- fkiApikeyID in the response of\
