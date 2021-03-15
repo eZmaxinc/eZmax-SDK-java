@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.32
+  version: 1.0.33
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -382,8 +382,12 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.32] - 2021-03-05\n#### Added\n- POST /1/module/sspr/validateToken\n-\
-    \ Webhooks successful codes in Status Codes documentation section\n- fkiUserID\
+    ### [1.0.33] - 2021-03-14\n#### Added\n- (PHPSDK) Automatic request signing\n\
+    - (PHPSDK) Secret handling in configuration class\n- (AxiosSDK) Automatic request\
+    \ signing\n- (AxiosSDK) Secret handling in configuration class\n- (AxiosSDK) Published\
+    \ to NPM\n\n#### Fixed\n- Extra slash in /1/module/sspr/resetPasswordRequest\n\
+    \n### [1.0.32] - 2021-03-05\n#### Added\n- POST /1/module/sspr/validateToken\n\
+    - Webhooks successful codes in Status Codes documentation section\n- fkiUserID\
     \ in the response of Activesession getCurrent\n- fkiApikeyID in the response of\
     \ Activesession getCurrent\n\n#### Changed\n- Webhooks now consider an HTTP Code\
     \ of 202 to be a successful delivery\n- Minor changes\n\n#### Removed\n- sEzsigndocumentFilename\
@@ -1595,53 +1599,6 @@ paths:
       - Module_Sspr
       x-contentType: application/json
       x-accepts: application/json
-  /1/module/sspr/resetPasswordRequest/:
-    post:
-      description: |-
-        This endpoint sends an email with a link to reset the user's password.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_ResetPasswordRequest_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-resetPasswordRequest-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: |-
-            The request was accepted.
-
-            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Reset Password Request
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
   /1/module/sspr/resetPassword:
     post:
       description: |-
@@ -1689,7 +1646,7 @@ paths:
   /1/module/sspr/validateToken:
     post:
       description: |-
-        This endpoint validates if a Token is valid and not expired. If the token has less than an hour to its life, the TTL is reset to 1 hour.
+        This endpoint validates if a Token is valid and not expired.
 
         sEmailAddress must be set if eUserTypeSSPR = EzsignUser
 
@@ -1726,6 +1683,53 @@ paths:
       security:
       - {}
       summary: Validate Token
+      tags:
+      - Module_Sspr
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/module/sspr/resetPasswordRequest:
+    post:
+      description: |-
+        This endpoint sends an email with a link to reset the user's password.
+
+        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
+
+        sUserLoginname must be set if eUserTypeSSPR = Native
+      operationId: Sspr_ResetPasswordRequest_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/sspr-resetPasswordRequest-v1-Request'
+        required: true
+      responses:
+        "204":
+          description: |-
+            The request was accepted.
+
+            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: You are not allowed to call this function
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - {}
+      summary: Reset Password Request
       tags:
       - Module_Sspr
       x-contentType: application/json
@@ -4071,7 +4075,7 @@ components:
       type: string
     Field-binUserSSPRtoken:
       description: Hex Encoded Secret SSPR token
-      example: 012345678901234567890123456789ab
+      example: 012345678901234567890123456789012345678901234567890123456789abcd
       type: string
     Field-pksCustomerCode:
       description: The customer code assigned to your account
@@ -4114,7 +4118,7 @@ components:
           type: string
         binUserSSPRtoken:
           description: Hex Encoded Secret SSPR token
-          example: 012345678901234567890123456789ab
+          example: 012345678901234567890123456789012345678901234567890123456789abcd
           type: string
       required:
       - binUserSSPRtoken
@@ -4195,7 +4199,7 @@ components:
           type: string
         binUserSSPRtoken:
           description: Hex Encoded Secret SSPR token
-          example: 012345678901234567890123456789ab
+          example: 012345678901234567890123456789012345678901234567890123456789abcd
           type: string
       required:
       - binUserSSPRtoken
@@ -4311,7 +4315,7 @@ components:
           type: string
         binUserSSPRtoken:
           description: Hex Encoded Secret SSPR token
-          example: 012345678901234567890123456789ab
+          example: 012345678901234567890123456789012345678901234567890123456789abcd
           type: string
         sPassword:
           description: |-

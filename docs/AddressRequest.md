@@ -3,6 +3,7 @@
 # AddressRequest
 
 An Address Object
+
 ## Properties
 
 Name | Type | Description | Notes

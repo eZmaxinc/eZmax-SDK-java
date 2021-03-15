@@ -3,6 +3,7 @@
 # EmailRequest
 
 A Contact Object
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -3,6 +3,7 @@
 # GlobalCustomerGetEndpointV1Response
 
 Response for the /1/customer/{pksCustomerCode}/endpoint API Request
+
 ## Properties
 
 Name | Type | Description | Notes

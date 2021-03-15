@@ -3,6 +3,7 @@
 # FranchisereferalincomeRequest
 
 An Franchisereferalincome Object
+
 ## Properties
 
 Name | Type | Description | Notes

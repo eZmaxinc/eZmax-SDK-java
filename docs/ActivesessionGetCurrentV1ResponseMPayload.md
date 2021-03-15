@@ -3,6 +3,7 @@
 # ActivesessionGetCurrentV1ResponseMPayload
 
 Payload for the /1/object/activesession/getCurrent API Request
+
 ## Properties
 
 Name | Type | Description | Notes
