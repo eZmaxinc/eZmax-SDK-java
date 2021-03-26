@@ -3,7 +3,7 @@ apply plugin: 'eclipse'
 apply plugin: 'java'
 
 group = 'com.ezmax'
-version = '1.0.38'
+version = '1.0.39'
 
 buildscript {
     repositories {

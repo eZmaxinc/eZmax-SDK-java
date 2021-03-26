@@ -80,7 +80,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The request was accepted.  Do not misinterpret as \&quot;the account exists\&quot;. It only means an email will be sent if (and only if) an account exists. |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ssprResetPasswordV1"></a>
@@ -151,7 +150,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The password was reset Successfully |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ssprSendUsernamesV1"></a>
@@ -222,7 +220,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The request was accepted.  Do not misinterpret as \&quot;the email address has an account attached to it\&quot;. It only means an email will be sent if (and only if) an account exists for that email address. |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ssprUnlockAccountRequestV1"></a>
@@ -293,7 +290,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The request was accepted.  Do not misinterpret as \&quot;the account exists\&quot;. It only means an email will be sent if (and only if) an account exists. |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ssprUnlockAccountV1"></a>
@@ -364,7 +360,6 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The account was unlocked Successfully |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ssprValidateTokenV1"></a>
@@ -435,6 +430,5 @@ null (empty response body)
 |-------------|-------------|------------------|
 **204** | The token is valid |  -  |
 **403** | You are not allowed to call this function |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 

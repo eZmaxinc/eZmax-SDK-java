@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.38
+  version: 1.0.39
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -163,28 +163,28 @@ tags:
     \n**Ezmax-Signature** Is the actual signature proving the request was generated\
     \ by the key owner using its secret. The signature is computed using <a href=\"\
     https://en.wikipedia.org/wiki/HMAC\" target=\"_blank\">HMAC</a> and <a href=\"\
-    https://en.wikipedia.org/wiki/SHA-2\" target=\"_blank\">SHA512/256</a>. Don't\
-    \ confuse **SHA256**, **SHA512** and **SHA512/256**, these are 3 distinct algorithms.\
-    \ Most programming languages offer an implementation of HMAC with SHA512/256.\
-    \ To make sure your implementation is producing expected values, try to hash the\
-    \ value \"foo\" with the key \"bar\", it should produce the value \"12af52e7e555f0813a143f49462423b0c37da6734ab1acb091c6069f010ce814\"\
+    https://en.wikipedia.org/wiki/SHA-2\" target=\"_blank\">SHA256</a>. Don't confuse\
+    \ **SHA256 (aka SHA2-256)** and **SHA3-256**, these are 2 distinct algorithms.\
+    \ Most programming languages offer an implementation of HMAC with SHA256. To make\
+    \ sure your implementation is producing expected values, try to hash the value\
+    \ \"foo\" with the key \"bar\", it should produce the value \"147933218aaabc0b8b10a2b3a5c34684c8d94341bcf10a4736dc7270f7741851\"\
     .\n\nTo compute the Signature, you'll need to concatenate the **Ezmax-Fingerprint**,\
     \ the **API Key** and the **Ezmax-Date**. The 3 values are concatenated WITHOUT\
-    \ separators. Then calculate the HMAC using SHA512/256 using your **Secret** as\
-    \ the key.\n\nOnce the HMAC-SHA512/256 hash is computed, prefix it with \"v1=\"\
-    \ which is future proofing version identifier.\n\nHere is an example implementation\
+    \ separators. Then calculate the HMAC using SHA256 using your **Secret** as the\
+    \ key.\n\nOnce the HMAC-SHA256 hash is computed, prefix it with \"v1=\" which\
+    \ is future proofing version identifier.\n\nHere is an example implementation\
     \ in PHP:\n\n    public static function getSignatureV1 ($sAuthorization, $dtDate,\
     \ $sFingerprint, $sSecret) {\n        $sContentToSign = \"$sFingerprint$sAuthorization$dtDate\"\
-    ;\n        return 'v1='.hash_hmac('sha512/256', $sContentToSign, $sSecret);\n\
-    \    }\n\nHere are two examples of what the GET and POST requests Signature would\
-    \ be. You can validate if your algorithm work by using these sample values and\
-    \ comparing them to the expected values. For the below examples, we have used\
-    \ the same **API Key**, **Fingerprint** and **Date** as in the Fingerprint section\
-    \ above. The only new variable is the **Secret** which is \"ThisIsTheSecretAssociatedToTheAuthorizationKey\"\
+    ;\n        return 'v1='.hash_hmac('sha256', $sContentToSign, $sSecret);\n    }\n\
+    \nHere are two examples of what the GET and POST requests Signature would be.\
+    \ You can validate if your algorithm work by using these sample values and comparing\
+    \ them to the expected values. For the below examples, we have used the same **API\
+    \ Key**, **Fingerprint** and **Date** as in the Fingerprint section above. The\
+    \ only new variable is the **Secret** which is \"ThisIsTheSecretAssociatedToTheAuthorizationKey\"\
     \ for this example.\n\n    v1=8f6f3ed75edb6e2cbe777b4fda5cab1a6adaebadc758780eb82c3d49934f354aThisIsMyAuthorizationKey2000-12-31T23:59:59Z\n\
-    Expected result for **Ezmax-Signature** (GET): v1=3909792a7c950e8d2977fa389166c5cbd67807dada50a583cf83040894e717a4\n\
+    Expected result for **Ezmax-Signature** (GET): v1=3a95fde64d27527745bcb0dd91be8caf7917c6778197e22d1d56c87245f979f5\n\
     \n    v1=6dbdbc26437f1216f9cd0068a4fc35c272a062b1f638c7557d497ebbf3702dedThisIsMyAuthorizationKey2000-12-31T23:59:59Z\n\
-    Expected result for **Ezmax-Signature** (POST): v1=62219af85fb56038bdd24666a775a88e05bfcd44ff59ac5d3f25d39e4d63b9ac\n\
+    Expected result for **Ezmax-Signature** (POST): v1=71e05f01eaab704ec76a078a9a5c49abe9d5a490786e43b86156d281acda7cba\n\
     \n### Wrapping up the examples\n\nThe whole process was detailed above but here\
     \ is summary of what your http headers should look like to sign these example\
     \ requests considering the following common variables:\n\n| Variable      | Example\
@@ -194,13 +194,13 @@ tags:
     \ |\n\nFor a GET request to https://prod.api.appcluster01.ca-central-1.ezmax.com/rest/1/object/activesession/getCurrent:\n\
     \n    Authorization: ThisIsMyAuthorizationKey\n    Ezmax-Date: 2000-12-31T23:59:59Z\n\
     \    Ezmax-Fingerprint: v1=8f6f3ed75edb6e2cbe777b4fda5cab1a6adaebadc758780eb82c3d49934f354a\n\
-    \    Ezmax-Signature: v1=3909792a7c950e8d2977fa389166c5cbd67807dada50a583cf83040894e717a4\n\
+    \    Ezmax-Signature: v1=3a95fde64d27527745bcb0dd91be8caf7917c6778197e22d1d56c87245f979f5\n\
     \nFor a POST request to https://prod.api.global.ezmax.com/1/module/sspr/sendUsernames\
     \ with this body content = '{\"pksCustomerCode\": \"demo\",\"fkiLanguageID\":\
     \ \"2\",\"eUserTypeSSPR\": \"Native\",\"sEmailAddress\": \"example@domain.com\"\
     }' :\n\n    Authorization: ThisIsMyAuthorizationKey\n    Ezmax-Date: 2000-12-31T23:59:59Z\n\
     \    Ezmax-Fingerprint: v1=6dbdbc26437f1216f9cd0068a4fc35c272a062b1f638c7557d497ebbf3702ded\n\
-    \    Ezmax-Signature: v1=62219af85fb56038bdd24666a775a88e05bfcd44ff59ac5d3f25d39e4d63b9ac"
+    \    Ezmax-Signature: v1=71e05f01eaab704ec76a078a9a5c49abe9d5a490786e43b86156d281acda7cba"
   name: General_Security
   x-displayName: Security
 - description: "## Regional requests\nWhen you send your API requests, you'll need\
@@ -298,27 +298,85 @@ tags:
     \ for **User** type API Key. The **API**, **Delegated** and **Special** types\
     \ keys will never return such codes. (See Authorization section for more information).\
     \ Most users should not be concerned with these status codes.\r\n\r\n| HTTP Status\
-    \ Code | Meaning                          | Detail |\r\n| ---------------- | --------------------------------\
-    \ | ------ |\r\n| 351              | Phone Validation required        | (2FA)\
-    \ User needs to complete a Voice Call or SMS challenge           |\r\n| 352  \
-    \            | Question Validation required     | (2FA) User needs to complete\
-    \ a question/answer challenge             |\r\n| 353              | Clause Acceptance\
-    \ required       | User need to accept electronic signature terms and conditions\
-    \        |\r\n| 354              | Computer Validation required     | User's computer\
-    \ is not authorized                                    |\r\n| 355            \
-    \  | Password Change required         | User must change it's password       \
-    \                                |\r\n| 356              | Native Application\
-    \ Version Check | The user is not running the latest version of the native application\
-    \ |\r\n\r\n### Webhook delivery successful code\r\nThese codes will be considered\
-    \ as a succesful delivery when they are returned by your webpage during a Webhook\
-    \ delivery.\r\n\r\n| HTTP Status Code | Meaning              | Detail |\r\n| ----------------\
-    \ | -------------------- | ------ |\r\n| 202              | Accepted         \
-    \    | The request has been received but not yet acted upon. It is intended for\
-    \ cases where another process or server handles the request, or for batch processing.\
-    \ |\r\n| 204              | No Content           | The request completed successfully.\
-    \ There was no need to return any data in the body |\r\n"
+    \ Code | Meaning                          | Detail                           \
+    \                                    |\r\n| ---------------- | --------------------------------\
+    \ | -------------------------------------------------------------------- |\r\n\
+    | 350              | Authentication required          | User must authenticate\
+    \ because session is invalid                    |\r\n| 351              | Phone\
+    \ Validation required        | (2FA) User needs to complete a Voice Call or SMS\
+    \ challenge           |\r\n| 352              | Question Validation required \
+    \    | (2FA) User needs to complete a question/answer challenge             |\r\
+    \n| 353              | Clause Acceptance required       | User need to accept\
+    \ electronic signature terms and conditions        |\r\n| 354              | Computer\
+    \ Validation required     | User's computer is not authorized                \
+    \                    |\r\n| 355              | Password Change required      \
+    \   | User must change it's password                                       |\r\
+    \n| 356              | Native Application Version Check | The user is not running\
+    \ the latest version of the native application |\r\n\r\n### Webhook delivery successful\
+    \ code\r\nThese codes will be considered as a succesful delivery when they are\
+    \ returned by your webpage during a Webhook delivery.\r\n\r\n| HTTP Status Code\
+    \ | Meaning              | Detail |\r\n| ---------------- | --------------------\
+    \ | ------ |\r\n| 202              | Accepted             | The request has been\
+    \ received but not yet acted upon. It is intended for cases where another process\
+    \ or server handles the request, or for batch processing. |\r\n| 204         \
+    \     | No Content           | The request completed successfully. There was no\
+    \ need to return any data in the body |\r\n"
   name: General_StatusCodes
   x-displayName: Status Codes
+- description: "When the API returns an HTTP status code in the range 400-599, a JSON\
+    \ object will be returned with 2 properties:\r\n- eErrorCode\r\n- sErrorMessage\r\
+    \n\r\nWe highly suggest you use **eErrorCode** to do any error validation logic\
+    \ in your code or to create your own error message for your users. **sErrorMessage**\
+    \ has more detail for a human to read, but is intended for the developper and\
+    \ is always returned in english.\r\n\r\nHere is the complete list of **eErrorCode**\
+    \ you could receive for each HTTP status code and examples of situations where\
+    \ they could be returned.\r\n\r\n### HTTP 400 (Bad Request)\r\n| eErrorCode  \
+    \         | Examples                                                         \
+    \              |\r\n| -------------------- | ------------------------------------------------------------------------------\
+    \ |\r\n| BADREQUEST           | Unserializable JSON, invalid parameter, invalid\
+    \ signature, invalid fingerprint |\r\n| BADREQUEST_CLOCKSKEW | The time on the\
+    \ client computer is wrong                                       |\r\n\r\n###\
+    \ HTTP 401 (Unauthorized)\r\n| eErrorCode           | Examples               \
+    \                                            |\r\n| -------------------- | ------------------------------------------------------------------\
+    \ |\r\n| UNAUTHORIZED_BADAUTH | Invalid credentials during Authentication    \
+    \                      |\r\n| UNAUTHORIZED_REQUEST | The request is invalid (bad\
+    \ ip source, signature, invalid api key) |\r\n\r\n### HTTP 403 (Forbidden)\r\n\
+    | eErrorCode              | Examples                                         \
+    \   |\r\n| ----------------------- | ---------------------------------------------------\
+    \ |\r\n| FORBIDDEN               | Generic Forbidden                         \
+    \          |\r\n| FORBIDDEN_CONFIGURATION | A configured setting prevent access\
+    \ to the element  |\r\n| FORBIDDEN_MODULE        | Module is not activated   \
+    \                          |\r\n| FORBIDDEN_NOACCESS      | Not allowed to access\
+    \ the element                   |\r\n| FORBIDDEN_PERMISSION    | Missing a permission\
+    \ to access the route            |\r\n| FORBIDDEN_SUBSCRIPTION  | No subscription,\
+    \ for example to eZsign              |\r\n\r\n### HTTP 404 (Not Found)\r\n| eErrorCode\
+    \      | Examples                                    |\r\n| --------------- |\
+    \ ------------------------------------------- |\r\n| NOTFOUND        | Generic\
+    \ not found                           |\r\n| NOTFOUND_OBJECT | Object does not\
+    \ exist in database           |\r\n| NOTFOUND_ROUTE  | The route does not exist\
+    \ (url, API version) |\r\n\r\n### HTTP 405 (Method Not Allowed)\r\n| eErrorCode\
+    \       | Examples                                                           \
+    \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
+    \ |\r\n| METHODNOTALLOWED | The route is valid but the method is not allowed ex:\
+    \ POST on a GET only route |\r\n\r\n### HTTP 422 (Unprocessable entity)\r\n| eErrorCode\
+    \                            | Examples                                      \
+    \                         |\r\n| ------------------------------------- | ----------------------------------------------------------------------\
+    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted\
+    \                                          |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
+    \       | The request was valid, but no action was necessary                 \
+    \    |\r\n| UNPROCESSABLEENTITY_NOTREADY          | The element is not in a state\
+    \ that allows the action (Sending a document without signature, downloading an\
+    \ unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_INCOMPATIBLE  | The pdf document\
+    \ cannot be signed                                      |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
+    \      | The pdf document contains a password and cannot be signed           \
+    \   |\r\n| UNPROCESSABLEENTITY_PDF_XFA           | The pdf document contains XFA\
+    \ form and cannot be signed                |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH\
+    \ | The number of pages between the document and the template do not match |\r\
+    \n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples    \
+    \              |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
+    \ | Unhandled error on server |"
+  name: General_ErrorCodes
+  x-displayName: Error Codes
 - description: |
     ## Concept
     A Webhook (also called a web callback or HTTP push API) is a way for your application to be notified of an event in real time.
@@ -382,9 +440,13 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.38] - 2021-03-22\n#### Fixed\n- (CsharpSDK) Hyphens in Class Name\n\n\
-    - \n### [1.0.37] - 2021-03-18\n#### Added\n- (AxiosSDK) Published to NPM\n\n####\
-    \ Changed\n- (AxiosSDK) Minor changes\n\n### [1.0.33] - 2021-03-14\n#### Added\n\
+    ### [1.0.39] - 2021-03-26\n#### Added\n- (CsharpSDK) Automatic request signing\n\
+    - (CsharpSDK) Secret handling in configuration class\n- eErrorCode in Error model\n\
+    - Error Codes documentation section\n- Documentation for 350 Redirection code\
+    \ (Authentication)\n\n#### Changed\n- Signature algorithm now supports HMAC SHA256\n\
+    \n### [1.0.38] - 2021-03-22\n#### Fixed\n- (CsharpSDK) Hyphens in Class Name\n\
+    \n- \n### [1.0.37] - 2021-03-18\n#### Added\n- (AxiosSDK) Published to NPM\n\n\
+    #### Changed\n- (AxiosSDK) Minor changes\n\n### [1.0.33] - 2021-03-14\n#### Added\n\
     - (PHPSDK) Automatic request signing\n- (PHPSDK) Secret handling in configuration\
     \ class\n- (AxiosSDK) Automatic request signing\n- (AxiosSDK) Secret handling\
     \ in configuration class\n\n#### Fixed\n- Extra slash in /1/module/sspr/resetPasswordRequest\n\
@@ -454,6 +516,12 @@ tags:
     Sspr module contains actions related to the Self Service Password Reset portal.
 
     There is an option in the admin interface to disable the portal if you don't want your users to be able to reset their own password.
+
+    ### Generic return codes (Documented at the function's level)
+    | HTTP Status Code | eErrorCode           | Detail |
+    | ---------------- | -------------------- | ------ |
+    | 200              | OK                   | The request completed successfully and valid data was returned in the body |
+    | 201              | Created              | The request completed successfully. Some elements were created and details about the created items
   name: Module_Sspr
   x-displayName: Sspr
 - description: User module contains actions that can be called to interract with users
@@ -1490,12 +1558,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -1537,12 +1599,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -1581,12 +1637,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -1625,12 +1675,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -1669,12 +1713,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -1716,12 +1754,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: You are not allowed to call this function
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -4930,6 +4962,7 @@ x-tagGroups:
   - General_Servers
   - General_Security
   - General_StatusCodes
+  - General_ErrorCodes
   - General_Webhooks
   - General_Changelog
 - name: Global
