@@ -5,7 +5,7 @@
     <artifactId>ezmax-java</artifactId>
     <packaging>jar</packaging>
     <name>ezmax-java</name>
-    <version>1.0.39</version>
+    <version>1.0.40</version>
     <url>https://github.com/eZmaxinc/eZmax-SDK-java</url>
     <description>Ezmax API Java</description>
     <scm>
