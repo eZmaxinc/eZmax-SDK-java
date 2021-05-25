@@ -15,6 +15,9 @@ docs/ApikeyRequest.md
 docs/ApikeyRequestCompound.md
 docs/ApikeyResponse.md
 docs/AttemptResponse.md
+docs/AuthenticateAuthenticateV2Request.md
+docs/AuthenticateAuthenticateV2Response.md
+docs/AuthenticateAuthenticateV2ResponseMPayload.md
 docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
@@ -90,6 +93,7 @@ docs/FranchisereferalincomeRequest.md
 docs/FranchisereferalincomeRequestCompound.md
 docs/GlobalCustomerApi.md
 docs/GlobalCustomerGetEndpointV1Response.md
+docs/ModuleAuthenticateApi.md
 docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
@@ -141,6 +145,7 @@ pom.xml
 settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/com/ezmax/api/GlobalCustomerApi.java
+src/main/java/com/ezmax/api/ModuleAuthenticateApi.java
 src/main/java/com/ezmax/api/ModuleSsprApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
@@ -163,6 +168,9 @@ src/main/java/com/ezmax/api/model/ApikeyRequest.java
 src/main/java/com/ezmax/api/model/ApikeyRequestCompound.java
 src/main/java/com/ezmax/api/model/ApikeyResponse.java
 src/main/java/com/ezmax/api/model/AttemptResponse.java
+src/main/java/com/ezmax/api/model/AuthenticateAuthenticateV2Request.java
+src/main/java/com/ezmax/api/model/AuthenticateAuthenticateV2Response.java
+src/main/java/com/ezmax/api/model/AuthenticateAuthenticateV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CommonAudit.java
 src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1Response.java
 src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayload.java
@@ -284,6 +292,7 @@ src/main/java/eZmaxAPI/auth/Authentication.java
 src/main/java/eZmaxAPI/auth/HttpBasicAuth.java
 src/main/java/eZmaxAPI/auth/HttpBearerAuth.java
 src/test/java/com/ezmax/api/GlobalCustomerApiTest.java
+src/test/java/com/ezmax/api/ModuleAuthenticateApiTest.java
 src/test/java/com/ezmax/api/ModuleSsprApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
@@ -306,6 +315,9 @@ src/test/java/com/ezmax/api/model/ApikeyRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/ApikeyRequestTest.java
 src/test/java/com/ezmax/api/model/ApikeyResponseTest.java
 src/test/java/com/ezmax/api/model/AttemptResponseTest.java
+src/test/java/com/ezmax/api/model/AuthenticateAuthenticateV2RequestTest.java
+src/test/java/com/ezmax/api/model/AuthenticateAuthenticateV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/AuthenticateAuthenticateV2ResponseTest.java
 src/test/java/com/ezmax/api/model/CommonAuditTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseTest.java

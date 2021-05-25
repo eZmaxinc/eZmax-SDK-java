@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.42
+  version: 1.0.43
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -440,13 +440,15 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.42] - 2021-04-21\n#### Changed\n- (AxiosSDK) Minor changes\n- \n### [1.0.41]\
-    \ - 2021-04-21\n#### Changed\n- (AxiosSDK) Minor changes\n- \n### [1.0.40] - 2021-04-19\n\
-    #### Changed\n- (AxiosSDK) Minor changes\n\n### [1.0.39] - 2021-03-26\n#### Added\n\
-    - (CsharpSDK) Automatic request signing\n- (CsharpSDK) Secret handling in configuration\
-    \ class\n- eErrorCode in Error model\n- Error Codes documentation section\n- Documentation\
-    \ for 350 Redirection code (Authentication)\n\n#### Changed\n- Signature algorithm\
-    \ now supports HMAC SHA256\n\n### [1.0.38] - 2021-03-22\n#### Fixed\n- (CsharpSDK)\
+    ### [1.0.43] - 2021-05-25\n#### Added\n- (SDK) cpp-qt-client\n- POST /2/module/authenticate/authenticate/{eSessionType}\n\
+    \n#### Removed\n- (SDK) cpp-qt5-client\n\n### [1.0.42] - 2021-04-21\n#### Changed\n\
+    - (AxiosSDK) Minor changes\n\n### [1.0.41] - 2021-04-21\n#### Changed\n- (AxiosSDK)\
+    \ Minor changes\n\n### [1.0.40] - 2021-04-19\n#### Changed\n- (AxiosSDK) Minor\
+    \ changes\n\n### [1.0.39] - 2021-03-26\n#### Added\n- (CsharpSDK) Automatic request\
+    \ signing\n- (CsharpSDK) Secret handling in configuration class\n- eErrorCode\
+    \ in Error model\n- Error Codes documentation section\n- Documentation for 350\
+    \ Redirection code (Authentication)\n\n#### Changed\n- Signature algorithm now\
+    \ supports HMAC SHA256\n\n### [1.0.38] - 2021-03-22\n#### Fixed\n- (CsharpSDK)\
     \ Hyphens in Class Name\n\n- \n### [1.0.37] - 2021-03-18\n#### Added\n- (AxiosSDK)\
     \ Published to NPM\n\n#### Changed\n- (AxiosSDK) Minor changes\n\n### [1.0.33]\
     \ - 2021-03-14\n#### Added\n- (PHPSDK) Automatic request signing\n- (PHPSDK) Secret\
@@ -514,6 +516,10 @@ tags:
     account
   name: Global_Customer
   x-displayName: Customer
+- description: Authenticate contains details action related to authenticating users
+    to the platform
+  name: Module_Authenticate
+  x-displayName: Authenticate
 - description: |-
     Sspr module contains actions related to the Self Service Password Reset portal.
 
@@ -1770,6 +1776,46 @@ paths:
       - Module_Sspr
       x-contentType: application/json
       x-accepts: application/json
+  /2/module/authenticate/authenticate/ezsignuser/{eSessionType}:
+    post:
+      description: This endpoint authenticates a user.
+      operationId: Authenticate_Authenticate_V2
+      parameters:
+      - explode: false
+        in: path
+        name: eSessionType
+        required: true
+        schema:
+          enum:
+          - ezsignuser
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/authenticate-authenticate-v2-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authenticate-authenticate-v2-Response'
+          description: Successful response
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: Unauthorized
+      security:
+      - {}
+      summary: Authenticate a user
+      tags:
+      - Module_Authenticate
+      x-contentType: application/json
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -1794,6 +1840,12 @@ components:
     Response-Webhook-204:
       description: The Webhook event notification was successfully received and processed
         by the receiving web server.
+    Response-Error-401:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error'
+      description: Unauthorized
   schemas:
     activesession-getCurrent-v1-Response-mPayload:
       description: Payload for the /1/object/activesession/getCurrent API Request
@@ -2018,6 +2070,9 @@ components:
       properties:
         sErrorMessage:
           description: More detail about the error
+          type: string
+        eErrorCode:
+          description: The error code. See documentation for valid values
           type: string
       required:
       - sErrorMessage
@@ -4670,6 +4725,64 @@ components:
       description: The unique ID of the Ezsignfolder
       example: 33
       type: integer
+    authenticate-authenticate-v2-Request:
+      description: Request for the /2/module/authenticate/authenticate API Request
+      properties:
+        pksCustomerCode:
+          description: The customer code assigned to your account
+          example: demo
+          maxLength: 6
+          minLength: 2
+          type: string
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        sPassword:
+          description: |-
+            A Password.
+
+            Must meet complexity requirements
+          example: Qwerty1234!
+          type: string
+      required:
+      - pksCustomerCode
+      - sPassword
+      type: object
+    authenticate-authenticate-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/module/authenticate/authenticate API Request
+      example:
+        mPayload:
+          sAuthorization: sAuthorization
+          sSecret: sSecret
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/authenticate-authenticate-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    authenticate-authenticate-v2-Response-mPayload:
+      description: Payload for the /2/module/authenticate/authenticate API Request
+      example:
+        sAuthorization: sAuthorization
+        sSecret: sSecret
+      properties:
+        sAuthorization:
+          description: The Authorization key
+          type: string
+        sSecret:
+          description: The secret key
+          type: string
+      required:
+      - sAuthorization
+      - sSecret
+      type: object
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -4972,6 +5085,7 @@ x-tagGroups:
   - Global_Customer
 - name: Module
   tags:
+  - Module_Authenticate
   - Module_Sspr
   - Module_User
 - name: Object
