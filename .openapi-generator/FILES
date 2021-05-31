@@ -83,6 +83,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
 docs/FieldEUserTypeSSPR.md
@@ -236,6 +237,7 @@ src/main/java/com/ezmax/api/model/EzsignsignerRequestCompoundContact.java
 src/main/java/com/ezmax/api/model/FieldEEzsigndocumentStep.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderStep.java
+src/main/java/com/ezmax/api/model/FieldEEzsignsignatureType.java
 src/main/java/com/ezmax/api/model/FieldEPhoneType.java
 src/main/java/com/ezmax/api/model/FieldEUserType.java
 src/main/java/com/ezmax/api/model/FieldEUserTypeSSPR.java
@@ -383,6 +385,7 @@ src/test/java/com/ezmax/api/model/EzsignsignerRequestTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderStepTest.java
+src/test/java/com/ezmax/api/model/FieldEEzsignsignatureTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEPhoneTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeSSPRTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeTest.java

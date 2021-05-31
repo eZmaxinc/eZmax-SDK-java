@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.43
+  version: 1.0.44
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -440,7 +440,10 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.43] - 2021-05-25\n#### Added\n- (SDK) cpp-qt-client\n- POST /2/module/authenticate/authenticate/{eSessionType}\n\
+    ### [1.0.44] - 2021-05-31\n#### Added\n- Enum value \"City\" for Ezsignsignature\n\
+    - Password can be sent in encrypted form in authenticate method\n\n#### Fixed\n\
+    - (AxiosSDK) Fingerprint header on GET requests was sometimes invalid\n\n### [1.0.43]\
+    \ - 2021-05-25\n#### Added\n- (SDK) cpp-qt-client\n- POST /2/module/authenticate/authenticate/{eSessionType}\n\
     \n#### Removed\n- (SDK) cpp-qt5-client\n\n### [1.0.42] - 2021-04-21\n#### Changed\n\
     - (AxiosSDK) Minor changes\n\n### [1.0.41] - 2021-04-21\n#### Changed\n- (AxiosSDK)\
     \ Minor changes\n\n### [1.0.40] - 2021-04-19\n#### Changed\n- (AxiosSDK) Minor\
@@ -2598,61 +2601,42 @@ components:
       type: object
     ezsignsignature-Request:
       description: An Ezsignsignature Object
-      example:
-        fkiEzsigndocumentID: 48
-        fkiEzsignfoldersignerassociationID: 77
-        iEzsignpagePagenumber: 3
-        iEzsignsignatureX: 200
-        iEzsignsignatureY: 300
-        iEzsignsignatureStep: 1
-        eEzsignsignatureType: Name
       properties:
         fkiEzsignfoldersignerassociationID:
-          description: |
-            A reference to a valid Ezsignfoldersignerassociation.
-
-            That value is returned after a successful Ezsignfoldersignerassociation Creation.
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the document where to apply the signature
+          example: 1
+          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureX:
           description: |-
             The X coordinate (Horizontal) where to put the signature block on the page.
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+          example: 200
+          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureY:
           description: |-
             The Y coordinate (Vertical) where to put the signature block on the page.
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+          example: 300
+          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureStep:
-          description: |-
-            The step when the Ezsignsigner will be invited to sign.
-
-            For example, if you say iEzsignsignatureStep=2, that block of signature will be available for signature only after ALL the signatures in step 1 are completed.
+          description: The step when the Ezsignsigner will be invited to sign.
+          example: 1
+          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         eEzsignsignatureType:
-          description: |-
-            The type of signature required.
-
-            1. **Acknowledgement** is for an acknowledgment of receipt.
-            2. **Handwritten** is for a handwritten kind of signature where users needs to "draw" their signature on screen.
-            3. **Initials** is a simple "click to add initials" block.
-            4. **Name** is a simple "Click to sign" block. This is the most common block of signature.
-          enum:
-          - Acknowledgement
-          - Handwritten
-          - Initials
-          - Name
-          type: string
+          $ref: '#/components/schemas/Field-eEzsignsignatureType'
         fkiEzsigndocumentID:
-          description: |-
-            A reference to a valid Ezsigndocument.
-
-            That value is returned after a successful Ezsigndocumentation Creation.
+          description: The unique ID of the Ezsigntemplate
+          example: 97
           type: integer
       required:
       - eEzsignsignatureType
@@ -2667,14 +2651,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignsignature-Request'
       description: An Ezsignsignature Object and children to create a complete structure
-      example:
-        fkiEzsigndocumentID: 48
-        fkiEzsignfoldersignerassociationID: 77
-        iEzsignpagePagenumber: 3
-        iEzsignsignatureX: 200
-        iEzsignsignatureY: 300
-        iEzsignsignatureStep: 1
-        eEzsignsignatureType: Name
       type: object
     Common-Webhook:
       description: This is the base Webhook object
@@ -4749,9 +4725,15 @@ components:
             Must meet complexity requirements
           example: Qwerty1234!
           type: string
+        sPasswordEncrypted:
+          description: |-
+            A Password encrypted and encoded in Base64
+
+            Must meet complexity requirements
+          example: VGhpcyBpcyBhbiBlbmNyeXB0ZWQgcGFzc3dvcmQ=
+          type: string
       required:
       - pksCustomerCode
-      - sPassword
       type: object
     authenticate-authenticate-v2-Response:
       allOf:
@@ -4783,6 +4765,56 @@ components:
       - sAuthorization
       - sSecret
       type: object
+    Field-eEzsignsignatureType:
+      description: |-
+        The type of signature.
+
+        1. **Acknowledgement** is for an acknowledgment of receipt.
+        2. **City** is to request the city where the document is signed.
+        2. **Handwritten** is for a handwritten kind of signature where users needs to "draw" their signature on screen.
+        3. **Initials** is a simple "click to add initials" block.
+        4. **Name** is a simple "Click to sign" block. This is the most common block of signature.
+      enum:
+      - Acknowledgement
+      - City
+      - Handwritten
+      - Initials
+      - Name
+      example: Name
+      type: string
+    Field-iEzsignpagePagenumber:
+      description: The page number in the document where to apply the signature
+      example: 1
+      title: Root Type for Field-iEzsigndocumentOrder
+      type: integer
+    Field-iEzsignsignatureStep:
+      description: The step when the Ezsignsigner will be invited to sign.
+      example: 1
+      title: Root Type for Field-iEzsigndocumentOrder
+      type: integer
+    Field-iEzsignsignatureX:
+      description: |-
+        The X coordinate (Horizontal) where to put the signature block on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+      example: 200
+      title: Root Type for Field-iEzsigndocumentOrder
+      type: integer
+    Field-iEzsignsignatureY:
+      description: |-
+        The Y coordinate (Vertical) where to put the signature block on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+      example: 300
+      title: Root Type for Field-iEzsigndocumentOrder
+      type: integer
+    Field-sPasswordEncrypted:
+      description: |-
+        A Password encrypted and encoded in Base64
+
+        Must meet complexity requirements
+      example: VGhpcyBpcyBhbiBlbmNyeXB0ZWQgcGFzc3dvcmQ=
+      type: string
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:

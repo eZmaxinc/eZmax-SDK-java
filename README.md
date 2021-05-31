@@ -1,8 +1,8 @@
 # ezmax-java
 
 eZmax API Definition
-- API version: 1.0.43
-  - Build date: 2021-05-25T22:38:36.330572Z[Etc/UTC]
+- API version: 1.0.44
+  - Build date: 2021-05-31T17:14:26.574336Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.0.43</version>
+  <version>1.0.44</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ezmax:ezmax-java:1.0.43"
+compile "com.ezmax:ezmax-java:1.0.44"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.0.43.jar`
+* `target/ezmax-java-1.0.44.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -233,6 +233,7 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](docs/FieldEEzsignfolderStep.md)
+ - [FieldEEzsignsignatureType](docs/FieldEEzsignsignatureType.md)
  - [FieldEPhoneType](docs/FieldEPhoneType.md)
  - [FieldEUserType](docs/FieldEUserType.md)
  - [FieldEUserTypeSSPR](docs/FieldEUserTypeSSPR.md)

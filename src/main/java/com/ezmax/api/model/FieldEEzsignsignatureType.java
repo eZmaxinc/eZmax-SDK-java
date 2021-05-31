@@ -25,20 +25,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Frequency at which reminders will be sent to signers that haven&#39;t signed the documents
+ * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 2. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 3. **Initials** is a simple \&quot;click to add initials\&quot; block. 4. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature.
  */
-@JsonAdapter(FieldEEzsignfolderSendreminderfrequency.Adapter.class)
-public enum FieldEEzsignfolderSendreminderfrequency {
+@JsonAdapter(FieldEEzsignsignatureType.Adapter.class)
+public enum FieldEEzsignsignatureType {
   
-  NONE("None"),
+  ACKNOWLEDGEMENT("Acknowledgement"),
   
-  DAILY("Daily"),
+  CITY("City"),
   
-  WEEKLY("Weekly");
+  HANDWRITTEN("Handwritten"),
+  
+  INITIALS("Initials"),
+  
+  NAME("Name");
 
   private String value;
 
-  FieldEEzsignfolderSendreminderfrequency(String value) {
+  FieldEEzsignsignatureType(String value) {
     this.value = value;
   }
 
@@ -51,8 +55,8 @@ public enum FieldEEzsignfolderSendreminderfrequency {
     return String.valueOf(value);
   }
 
-  public static FieldEEzsignfolderSendreminderfrequency fromValue(String value) {
-    for (FieldEEzsignfolderSendreminderfrequency b : FieldEEzsignfolderSendreminderfrequency.values()) {
+  public static FieldEEzsignsignatureType fromValue(String value) {
+    for (FieldEEzsignsignatureType b : FieldEEzsignsignatureType.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -60,16 +64,16 @@ public enum FieldEEzsignfolderSendreminderfrequency {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<FieldEEzsignfolderSendreminderfrequency> {
+  public static class Adapter extends TypeAdapter<FieldEEzsignsignatureType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final FieldEEzsignfolderSendreminderfrequency enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final FieldEEzsignsignatureType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public FieldEEzsignfolderSendreminderfrequency read(final JsonReader jsonReader) throws IOException {
+    public FieldEEzsignsignatureType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return FieldEEzsignfolderSendreminderfrequency.fromValue(value);
+      return FieldEEzsignsignatureType.fromValue(value);
     }
   }
 }

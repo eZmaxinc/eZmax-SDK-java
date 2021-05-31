@@ -21,15 +21,15 @@ import org.junit.Test;
 
 
 /**
- * Model tests for FieldEEzsignfolderSendreminderfrequency
+ * Model tests for FieldEEzsignsignatureType
  */
-public class FieldEEzsignfolderSendreminderfrequencyTest {
+public class FieldEEzsignsignatureTypeTest {
     /**
-     * Model tests for FieldEEzsignfolderSendreminderfrequency
+     * Model tests for FieldEEzsignsignatureType
      */
     @Test
-    public void testFieldEEzsignfolderSendreminderfrequency() {
-        // TODO: test FieldEEzsignfolderSendreminderfrequency
+    public void testFieldEEzsignsignatureType() {
+        // TODO: test FieldEEzsignsignatureType
     }
 
 }
