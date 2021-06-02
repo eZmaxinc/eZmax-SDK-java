@@ -1,8 +1,8 @@
 # ezmax-java
 
 eZmax API Definition
-- API version: 1.0.44
-  - Build date: 2021-05-31T17:14:26.574336Z[Etc/UTC]
+- API version: 1.0.45
+  - Build date: 2021-06-02T20:48:09.039253Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.0.44</version>
+  <version>1.0.45</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ezmax:ezmax-java:1.0.44"
+compile "com.ezmax:ezmax-java:1.0.45"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.0.44.jar`
+* `target/ezmax-java-1.0.45.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

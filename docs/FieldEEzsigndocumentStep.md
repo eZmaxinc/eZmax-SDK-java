@@ -11,6 +11,10 @@
 
 * `PARTIALLYSIGNED` (value: `"PartiallySigned"`)
 
+* `DECLINEDTOSIGN` (value: `"DeclinedToSign"`)
+
+* `PREMATURELYENDED` (value: `"PrematurelyEnded"`)
+
 * `COMPLETED` (value: `"Completed"`)
 
 

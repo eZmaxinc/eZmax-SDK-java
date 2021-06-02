@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.44
+  version: 1.0.45
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -440,10 +440,12 @@ tags:
     * **Changed** for changes in existing functionality.\n* **Deprecated** for soon-to-be\
     \ removed features.\n* **Removed** for now removed features.\n* **Fixed** for\
     \ any bug fixes.\n* **Security** in case of vulnerabilities.\n\n## 1.0.X Releases\n\
-    ### [1.0.44] - 2021-05-31\n#### Added\n- Enum value \"City\" for Ezsignsignature\n\
-    - Password can be sent in encrypted form in authenticate method\n\n#### Fixed\n\
-    - (AxiosSDK) Fingerprint header on GET requests was sometimes invalid\n\n### [1.0.43]\
-    \ - 2021-05-25\n#### Added\n- (SDK) cpp-qt-client\n- POST /2/module/authenticate/authenticate/{eSessionType}\n\
+    ### [1.0.45] - 2021-06-02\n#### Added\n- Enum values \"DeclinedToSign\" and \"\
+    PrematurelyEnded\" to field eEzsigndocumentStep\n\n### [1.0.44] - 2021-05-31\n\
+    #### Added\n- Enum value \"City\" for Ezsignsignature\n- Password can be sent\
+    \ in encrypted form in authenticate method\n\n#### Fixed\n- (AxiosSDK) Fingerprint\
+    \ header on GET requests was sometimes invalid\n\n### [1.0.43] - 2021-05-25\n\
+    #### Added\n- (SDK) cpp-qt-client\n- POST /2/module/authenticate/authenticate/{eSessionType}\n\
     \n#### Removed\n- (SDK) cpp-qt5-client\n\n### [1.0.42] - 2021-04-21\n#### Changed\n\
     - (AxiosSDK) Minor changes\n\n### [1.0.41] - 2021-04-21\n#### Changed\n- (AxiosSDK)\
     \ Minor changes\n\n### [1.0.40] - 2021-04-19\n#### Changed\n- (AxiosSDK) Minor\
@@ -2853,6 +2855,8 @@ components:
       - Unsent
       - Unsigned
       - PartiallySigned
+      - DeclinedToSign
+      - PrematurelyEnded
       - Completed
       example: Completed
       type: string
