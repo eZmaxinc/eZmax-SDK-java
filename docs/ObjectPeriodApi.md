@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectPeriodApi apiInstance = new ObjectPeriodApi(defaultClient);
-    String sSelector = "sSelector_example"; // String | The types of Periods to return
+    String sSelector = "ActiveNormal"; // String | The types of Periods to return
     String sQuery = "sQuery_example"; // String | Allow to filter on the option value
     try {
       CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery);

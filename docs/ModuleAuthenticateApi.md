@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ModuleAuthenticateApi apiInstance = new ModuleAuthenticateApi(defaultClient);
-    String eSessionType = "eSessionType_example"; // String | 
+    String eSessionType = "ezsignuser"; // String | 
     AuthenticateAuthenticateV2Request authenticateAuthenticateV2Request = new AuthenticateAuthenticateV2Request(); // AuthenticateAuthenticateV2Request | 
     try {
       AuthenticateAuthenticateV2Response result = apiInstance.authenticateAuthenticateV2(eSessionType, authenticateAuthenticateV2Request);

@@ -38,7 +38,7 @@ public class Example {
 
     GlobalCustomerApi apiInstance = new GlobalCustomerApi(defaultClient);
     String pksCustomerCode = "pksCustomerCode_example"; // String | The customer code assigned to your account
-    String sInfrastructureproductCode = "sInfrastructureproductCode_example"; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
+    String sInfrastructureproductCode = "appcluster01"; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
     try {
       GlobalCustomerGetEndpointV1Response result = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
       System.out.println(result);

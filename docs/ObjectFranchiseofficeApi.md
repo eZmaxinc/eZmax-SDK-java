@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectFranchiseofficeApi apiInstance = new ObjectFranchiseofficeApi(defaultClient);
-    String sSelector = "sSelector_example"; // String | The type of Franchiseoffices to return
+    String sSelector = "Active"; // String | The type of Franchiseoffices to return
     String sQuery = "sQuery_example"; // String | Allow to filter on the option value
     try {
       CommonGetAutocompleteV1Response result = apiInstance.franchiseofficeGetAutocompleteV1(sSelector, sQuery);

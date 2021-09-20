@@ -8,7 +8,7 @@ A Franchisereferalincome Object and children to create a complete structure
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objAddress** | [**AddressRequest**](AddressRequest.md) |  |  [optional]
+**objAddress** | [**AddressRequest**](AddressRequest.md) |  | 
 **aObjContact** | [**List&lt;ContactRequestCompound&gt;**](ContactRequestCompound.md) |  | 
 **fkiFranchisebrokerID** | **Integer** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **Integer** | The unique ID of the Franchisereferalincomeprogram | 
