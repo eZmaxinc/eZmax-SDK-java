@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     GlobalCustomerApi apiInstance = new GlobalCustomerApi(defaultClient);
-    String pksCustomerCode = "pksCustomerCode_example"; // String | The customer code assigned to your account
+    String pksCustomerCode = "pksCustomerCode_example"; // String | 
     String sInfrastructureproductCode = "appcluster01"; // String | The infrastructure product Code  If undefined, \"appcluster01\" is assumed
     try {
       GlobalCustomerGetEndpointV1Response result = apiInstance.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
@@ -57,7 +57,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **String**| The customer code assigned to your account |
+ **pksCustomerCode** | **String**|  |
  **sInfrastructureproductCode** | **String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser]
 
 ### Return type

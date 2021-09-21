@@ -31,7 +31,7 @@ import java.io.IOException;
  * An Ezsigndocument Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:36:56.309774Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:54:47.408117Z[Etc/UTC]")
 public class EzsigndocumentResponseCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -195,11 +195,11 @@ public class EzsigndocumentResponseCompound {
   }
 
    /**
-   * The unique ID of the Ezsigntemplate
+   * The unique ID of the Ezsigndocument
    * @return pkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigntemplate")
+  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;

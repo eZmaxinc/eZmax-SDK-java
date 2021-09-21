@@ -108,7 +108,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi(defaultClient);
-    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | The unique ID of the Ezsignfoldersignerassociation
+    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | 
     try {
       EzsignfoldersignerassociationDeleteObjectV1Response result = apiInstance.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
       System.out.println(result);
@@ -127,7 +127,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  |
 
 ### Return type
 
@@ -179,7 +179,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi(defaultClient);
-    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | The unique ID of the Ezsignfoldersignerassociation
+    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | 
     try {
       apiInstance.ezsignfoldersignerassociationGetChildrenV1(pkiEzsignfoldersignerassociationID);
     } catch (ApiException e) {
@@ -197,7 +197,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  |
 
 ### Return type
 
@@ -247,7 +247,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi(defaultClient);
-    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | The unique ID of the Ezsignfoldersignerassociation
+    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | 
     try {
       EzsignfoldersignerassociationGetInPersonLoginUrlV1Response result = apiInstance.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID);
       System.out.println(result);
@@ -266,7 +266,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  |
 
 ### Return type
 
@@ -318,7 +318,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignfoldersignerassociationApi apiInstance = new ObjectEzsignfoldersignerassociationApi(defaultClient);
-    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | The unique ID of the Ezsignfoldersignerassociation
+    Integer pkiEzsignfoldersignerassociationID = 56; // Integer | 
     try {
       EzsignfoldersignerassociationGetObjectV1Response result = apiInstance.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID);
       System.out.println(result);
@@ -337,7 +337,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignfoldersignerassociationID** | **Integer**| The unique ID of the Ezsignfoldersignerassociation |
+ **pkiEzsignfoldersignerassociationID** | **Integer**|  |
 
 ### Return type
 

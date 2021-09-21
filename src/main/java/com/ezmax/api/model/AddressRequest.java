@@ -28,7 +28,7 @@ import java.io.IOException;
  * An Address Object
  */
 @ApiModel(description = "An Address Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:36:56.309774Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:54:47.408117Z[Etc/UTC]")
 public class AddressRequest {
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)

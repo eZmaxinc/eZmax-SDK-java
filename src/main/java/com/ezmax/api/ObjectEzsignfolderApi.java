@@ -34,6 +34,7 @@ import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
+import java.io.File;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -173,7 +174,7 @@ public class ObjectEzsignfolderApi {
     }
     /**
      * Build call for ezsignfolderDeleteObjectV1
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -233,7 +234,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Delete an existing Ezsignfolder
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return EzsignfolderDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -252,7 +253,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Delete an existing Ezsignfolder
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return ApiResponse&lt;EzsignfolderDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -272,7 +273,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Delete an existing Ezsignfolder (asynchronously)
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -293,7 +294,7 @@ public class ObjectEzsignfolderApi {
     }
     /**
      * Build call for ezsignfolderGetChildrenV1
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -351,7 +352,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -366,7 +367,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -383,7 +384,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder&#39;s children IDs (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -400,8 +401,128 @@ public class ObjectEzsignfolderApi {
         return localVarCall;
     }
     /**
+     * Build call for ezsignfolderGetFormsDataV1
+     * @param pkiEzsignfolderID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetFormsDataV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData"
+            .replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", localVarApiClient.escapeString(pkiEzsignfolderID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderGetFormsDataV1ValidateBeforeCall(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'pkiEzsignfolderID' is set
+        if (pkiEzsignfolderID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetFormsDataV1(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsignfolderGetFormsDataV1Call(pkiEzsignfolderID, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s forms data
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * @param pkiEzsignfolderID  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File ezsignfolderGetFormsDataV1(Integer pkiEzsignfolderID) throws ApiException {
+        ApiResponse<File> localVarResp = ezsignfolderGetFormsDataV1WithHttpInfo(pkiEzsignfolderID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s forms data
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * @param pkiEzsignfolderID  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> ezsignfolderGetFormsDataV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderGetFormsDataV1ValidateBeforeCall(pkiEzsignfolderID, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s forms data (asynchronously)
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * @param pkiEzsignfolderID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetFormsDataV1Async(Integer pkiEzsignfolderID, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderGetFormsDataV1ValidateBeforeCall(pkiEzsignfolderID, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for ezsignfolderGetObjectV1
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +581,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return EzsignfolderGetObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -478,7 +599,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @return ApiResponse&lt;EzsignfolderGetObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -497,7 +618,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Retrieve an existing Ezsignfolder (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -517,7 +638,7 @@ public class ObjectEzsignfolderApi {
     }
     /**
      * Build call for ezsignfolderSendV1
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -583,7 +704,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Send the Ezsignfolder to the signatories for signature
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
      * @return EzsignfolderSendV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -603,7 +724,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Send the Ezsignfolder to the signatories for signature
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
      * @return ApiResponse&lt;EzsignfolderSendV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -624,7 +745,7 @@ public class ObjectEzsignfolderApi {
     /**
      * Send the Ezsignfolder to the signatories for signature (asynchronously)
      * 
-     * @param pkiEzsignfolderID The unique ID of the Ezsignfolder (required)
+     * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

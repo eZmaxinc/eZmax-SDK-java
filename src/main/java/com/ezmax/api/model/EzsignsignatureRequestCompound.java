@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:36:56.309774Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:54:47.408117Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -91,11 +91,11 @@ public class EzsignsignatureRequestCompound {
   }
 
    /**
-   * The page number in the document where to apply the signature
+   * The page number in the Ezsigndocument
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The page number in the document where to apply the signature")
+  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigndocument")
 
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -206,11 +206,11 @@ public class EzsignsignatureRequestCompound {
   }
 
    /**
-   * The unique ID of the Ezsigntemplate
+   * The unique ID of the Ezsigndocument
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigntemplate")
+  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;

@@ -32,7 +32,7 @@ import java.io.IOException;
  * An Ezsignfolder Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:36:56.309774Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:54:47.408117Z[Etc/UTC]")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)

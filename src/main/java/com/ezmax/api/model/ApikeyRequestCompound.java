@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Apikey Object and children to create a complete structure
  */
 @ApiModel(description = "An Apikey Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:36:56.309774Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-21T19:54:47.408117Z[Etc/UTC]")
 public class ApikeyRequestCompound {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)

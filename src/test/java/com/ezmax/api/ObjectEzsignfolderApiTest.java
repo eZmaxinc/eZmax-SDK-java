@@ -21,6 +21,7 @@ import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
+import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -82,6 +83,22 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetChildrenV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         api.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s forms data
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetFormsDataV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        File response = api.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
 
         // TODO: test validations
     }

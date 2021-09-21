@@ -57,7 +57,7 @@ public class GlobalCustomerApi {
 
     /**
      * Build call for globalCustomerGetEndpointV1
-     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param pksCustomerCode  (required)
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -121,7 +121,7 @@ public class GlobalCustomerApi {
     /**
      * Get customer endpoint
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param pksCustomerCode  (required)
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
      * @return GlobalCustomerGetEndpointV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -140,7 +140,7 @@ public class GlobalCustomerApi {
     /**
      * Get customer endpoint
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param pksCustomerCode  (required)
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
      * @return ApiResponse&lt;GlobalCustomerGetEndpointV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -160,7 +160,7 @@ public class GlobalCustomerApi {
     /**
      * Get customer endpoint (asynchronously)
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
-     * @param pksCustomerCode The customer code assigned to your account (required)
+     * @param pksCustomerCode  (required)
      * @param sInfrastructureproductCode The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

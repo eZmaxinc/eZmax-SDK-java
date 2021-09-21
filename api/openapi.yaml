@@ -437,12 +437,14 @@ tags:
     \ 1.2.1 so then you would have a breaking change if you try to update to version\
     \ 1.2.1 without having fixed the issue with your deprecated \"foo\" function.\n\
     \nFor each version, there will be the list of changes:\n* **Early Adopters** for\
-    \ new features not yet considered officially in production.\n* **Added** for new\
-    \ features.\n* **Changed** for changes in existing functionality.\n* **Deprecated**\
-    \ for soon-to-be removed features.\n* **Removed** for now removed features.\n\
-    * **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\n\
-    ## 1.0.X Releases\n### [1.0.47] - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormsData\n\n#### Added\n\
+    \ new features not officially considered final and ready for production use.\n\
+    * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
+    * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
+    \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
+    \n## 1.0.X Releases\n### [1.0.48] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\n### [1.0.47]\
+    \ - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n\n#### Added\n\
     - Early Adopters mention in documentation for endpoints not ready to be used in\
     \ production\n\n#### Changed\n- Normalized internal definition of AllOf (Objects\
     \ vs additionnal properties)\n\n#### Fixed\n- (CsharpSDK) Requests don't have\
@@ -698,51 +700,6 @@ paths:
       - Object_Ezsignfoldersignerassociation
       x-contentType: application/json
       x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
-    post:
-      operationId: Ezsignfolder_Send_V1
-      parameters:
-      - description: The unique ID of the Ezsignfolder
-        explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfolder-send-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-send-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Send the Ezsignfolder to the signatories for signature
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/ezsignsignature:
     post:
       description: |-
@@ -773,109 +730,6 @@ paths:
       tags:
       - Object_Ezsignsignature
       x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}:
-    get:
-      description: |-
-        This endpoint returns URLs to different files that can be downloaded during the signing process.
-
-        These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
-      operationId: Ezsigndocument_GetDownloadUrl_V1
-      parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      - description: |
-          The type of document to retrieve.
-
-          1. **Initial** Is the initial document before any signature were applied.
-          2. **Signed** Is the final document once all signatures were applied.
-          3. **Proofdocument** Is the evidence report.
-          4. **Proof** Is the complete evidence archive including all of the above and more.
-        explode: false
-        in: path
-        name: eDocumentType
-        required: true
-        schema:
-          enum:
-          - Initial
-          - Signed
-          - Proof
-          - Proofdocument
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-getDownloadUrl-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve a URL to download documents.
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
-  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
-    get:
-      description: |-
-        This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.
-
-        The signer Login type must be configured as In-Person.
-      operationId: Ezsignfoldersignerassociation_GetInPersonLoginUrl_V1
-      parameters:
-      - description: The unique ID of the Ezsignfoldersignerassociation
-        explode: false
-        in: path
-        name: pkiEzsignfoldersignerassociationID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve a Login Url to allow In-Person signing
-      tags:
-      - Object_Ezsignfoldersignerassociation
       x-accepts: application/json
   /1/object/franchisereferalincome:
     post:
@@ -1053,56 +907,6 @@ paths:
       - Module_User
       x-contentType: application/json
       x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
-    post:
-      description: |-
-        This endpoint applies a predefined template to the ezsign document.
-        This allows to automatically apply all the form and signature fields on a document in a single step.
-
-        The document must not already have fields otherwise an error will be returned.
-      operationId: Ezsigndocument_ApplyEzsigntemplate_V1
-      parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Apply an Ezsign Template to the Ezsigndocument.
-      tags:
-      - Object_Ezsigndocument
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/apikey:
     post:
       description: |-
@@ -1133,55 +937,6 @@ paths:
       tags:
       - Object_Apikey
       x-contentType: application/json
-      x-accepts: application/json
-  /1/customer/{pksCustomerCode}/endpoint:
-    get:
-      description: 'Retrieve the customer''s specific server endpoint where to send
-        requests. This will help locate the proper region (ie: sInfrastructureregionCode)
-        and the proper environment (ie: sInfrastructureenvironmenttypeDescription)
-        where the customer''s data is stored.'
-      operationId: Global_Customer_GetEndpoint_V1
-      parameters:
-      - description: The customer code assigned to your account
-        explode: false
-        in: path
-        name: pksCustomerCode
-        required: true
-        schema:
-          type: string
-        style: simple
-      - description: |-
-          The infrastructure product Code
-
-          If undefined, "appcluster01" is assumed
-        explode: true
-        in: query
-        name: sInfrastructureproductCode
-        required: false
-        schema:
-          enum:
-          - appcluster01
-          - ezsignuser
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/global-customer-getEndpoint-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - {}
-      summary: Get customer endpoint
-      tags:
-      - Global_Customer
       x-accepts: application/json
   /1/module/sspr/sendUsernames:
     post:
@@ -1456,17 +1211,57 @@ paths:
       - Module_Authenticate
       x-contentType: application/json
       x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}:
-    delete:
-      operationId: Ezsigndocument_DeleteObject_V1
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsigndocument_GetEzsignpages_V1
       parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsigndocumentID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getEzsignpages-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's Ezsignpages
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}:
+    delete:
+      operationId: Ezsigndocument_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
         style: simple
       responses:
         "200":
@@ -1501,13 +1296,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetObject_V1
       parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsigndocumentID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
         style: simple
       responses:
         "200":
@@ -1528,6 +1322,185 @@ paths:
       tags:
       - Object_Ezsigndocument
       x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
+    post:
+      description: |-
+        This endpoint applies a predefined template to the ezsign document.
+        This allows to automatically apply all the form and signature fields on a document in a single step.
+
+        The document must not already have fields otherwise an error will be returned.
+      operationId: Ezsigndocument_ApplyEzsigntemplate_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Apply an Ezsign Template to the Ezsigndocument.
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsigndocument_GetChildren_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's children IDs
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}:
+    get:
+      description: |-
+        This endpoint returns URLs to different files that can be downloaded during the signing process.
+
+        These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+      operationId: Ezsigndocument_GetDownloadUrl_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      - description: |
+          The type of document to retrieve.
+
+          1. **Initial** Is the initial document before any signature were applied.
+          2. **Signed** Is the final document once all signatures were applied.
+          3. **Proofdocument** Is the evidence report.
+          4. **Proof** Is the complete evidence archive including all of the above and more.
+        explode: false
+        in: path
+        name: eDocumentType
+        required: true
+        schema:
+          enum:
+          - Initial
+          - Signed
+          - Proof
+          - Proofdocument
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getDownloadUrl-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve a URL to download documents.
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsigndocument_GetFormData_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/zip:
+              schema:
+                $ref: '#/components/schemas/File-Zip'
+            application/json: {}
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's Form Data
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
     post:
       description: |-
@@ -1536,13 +1509,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetWordsPositions_V1
       parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsigndocumentID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
         style: simple
       requestBody:
         content:
@@ -1577,90 +1549,16 @@ paths:
       - Object_Ezsigndocument
       x-contentType: application/json
       x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsigndocument_GetFormData_V1
-      parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      responses:
-        "200":
-          content:
-            application/zip:
-              schema:
-                format: binary
-                type: string
-            application/json: {}
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsigndocument's Form Data
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getChildren:
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsigndocument_GetChildren_V1
-      parameters:
-      - description: The unique ID of the Ezsigndocument
-        explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          type: integer
-        style: simple
-      responses:
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsigndocument's children IDs
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}:
     delete:
       operationId: Ezsignfolder_DeleteObject_V1
       parameters:
-      - description: The unique ID of the Ezsignfolder
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfolderID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
         style: simple
       responses:
         "200":
@@ -1695,13 +1593,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignfolder_GetObject_V1
       parameters:
-      - description: The unique ID of the Ezsignfolder
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfolderID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
         style: simple
       responses:
         "200":
@@ -1730,13 +1627,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignfolder_GetChildren_V1
       parameters:
-      - description: The unique ID of the Ezsignfolder
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfolderID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
         style: simple
       responses:
         "404":
@@ -1751,17 +1647,102 @@ paths:
       tags:
       - Object_Ezsignfolder
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsignfolder_GetFormsData_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/zip:
+              schema:
+                $ref: '#/components/schemas/File-Zip'
+            application/json: {}
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's forms data
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
+    post:
+      operationId: Ezsignfolder_Send_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-send-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-send-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Send the Ezsignfolder to the signatories for signature
+      tags:
+      - Object_Ezsignfolder
+      x-contentType: application/json
+      x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     delete:
       operationId: Ezsignfoldersignerassociation_DeleteObject_V1
       parameters:
-      - description: The unique ID of the Ezsignfoldersignerassociation
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfoldersignerassociationID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
         style: simple
       responses:
         "200":
@@ -1796,13 +1777,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignfoldersignerassociation_GetObject_V1
       parameters:
-      - description: The unique ID of the Ezsignfoldersignerassociation
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfoldersignerassociationID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
         style: simple
       responses:
         "200":
@@ -1831,13 +1811,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignfoldersignerassociation_GetChildren_V1
       parameters:
-      - description: The unique ID of the Ezsignfoldersignerassociation
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignfoldersignerassociationID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
         style: simple
       responses:
         "404":
@@ -1852,17 +1831,57 @@ paths:
       tags:
       - Object_Ezsignfoldersignerassociation
       x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
+    get:
+      description: |-
+        This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.
+
+        The signer Login type must be configured as In-Person.
+      operationId: Ezsignfoldersignerassociation_GetInPersonLoginUrl_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve a Login Url to allow In-Person signing
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}:
     delete:
       operationId: Ezsignsignature_DeleteObject_V1
       parameters:
-      - description: The unique ID of the Ezsignsignature
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignsignatureID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
         style: simple
       responses:
         "200":
@@ -1897,13 +1916,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignsignature_GetObject_V1
       parameters:
-      - description: The unique ID of the Ezsignsignature
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignsignatureID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
         style: simple
       responses:
         "200":
@@ -1932,13 +1950,12 @@ paths:
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignsignature_GetChildren_V1
       parameters:
-      - description: The unique ID of the Ezsignsignature
-        explode: false
+      - explode: false
         in: path
         name: pkiEzsignsignatureID
         required: true
         schema:
-          type: integer
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
         style: simple
       responses:
         "404":
@@ -1952,6 +1969,54 @@ paths:
       summary: Retrieve an existing Ezsignsignature's children IDs
       tags:
       - Object_Ezsignsignature
+      x-accepts: application/json
+  /1/customer/{pksCustomerCode}/endpoint:
+    get:
+      description: 'Retrieve the customer''s specific server endpoint where to send
+        requests. This will help locate the proper region (ie: sInfrastructureregionCode)
+        and the proper environment (ie: sInfrastructureenvironmenttypeDescription)
+        where the customer''s data is stored.'
+      operationId: Global_Customer_GetEndpoint_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pksCustomerCode
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pksCustomerCode'
+        style: simple
+      - description: |-
+          The infrastructure product Code
+
+          If undefined, "appcluster01" is assumed
+        explode: true
+        in: query
+        name: sInfrastructureproductCode
+        required: false
+        schema:
+          enum:
+          - appcluster01
+          - ezsignuser
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/global-customer-getEndpoint-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - {}
+      summary: Get customer endpoint
+      tags:
+      - Global_Customer
       x-accepts: application/json
 components:
   responses:
@@ -2643,9 +2708,8 @@ components:
           example: 20
           type: integer
         iEzsignpagePagenumber:
-          description: The page number in the document where to apply the signature
+          description: The page number in the Ezsigndocument
           example: 1
-          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureX:
           description: |-
@@ -2653,7 +2717,6 @@ components:
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
-          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureY:
           description: |-
@@ -2661,17 +2724,15 @@ components:
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
-          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         iEzsignsignatureStep:
           description: The step when the Ezsignsigner will be invited to sign.
           example: 1
-          title: Root Type for Field-iEzsigndocumentOrder
           type: integer
         eEzsignsignatureType:
           $ref: '#/components/schemas/Field-eEzsignsignatureType'
         fkiEzsigndocumentID:
-          description: The unique ID of the Ezsigntemplate
+          description: The unique ID of the Ezsigndocument
           example: 97
           type: integer
       required:
@@ -2800,9 +2861,94 @@ components:
         eEzsignfolderSendreminderfrequency: Daily
       type: object
     ezsigndocument-Response:
-      allOf:
-      - $ref: '#/components/schemas/ezsigndocument_Response_allOf'
       description: An Ezsigndocument Object
+      properties:
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        dtEzsigndocumentDuedate:
+          description: The maximum date and time at which the document can be signed.
+          example: 2020-12-31 23:59:59
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          example: 'Contract #123'
+          type: string
+        pkiEzsigndocumentID:
+          description: The unique ID of the Ezsigndocument
+          example: 97
+          type: integer
+        eEzsigndocumentStep:
+          $ref: '#/components/schemas/Field-eEzsigndocumentStep'
+        dtEzsigndocumentFirstsend:
+          description: The date and time when the Ezsigndocument was first sent.
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsigndocumentLastsend:
+          description: The date and time when the Ezsigndocument was sent the last
+            time.
+          example: 2020-12-31 23:59:59
+          type: string
+        iEzsigndocumentOrder:
+          description: The order in which the Ezsigndocument will be presented to
+            the signatory in the Ezsignfolder.
+          example: 1
+          type: integer
+        iEzsigndocumentPagetotal:
+          description: The number of pages in the Ezsigndocument.
+          example: 4
+          type: integer
+        iEzsigndocumentSignaturesigned:
+          description: The number of signatures that were signed in the document.
+          example: 3
+          type: integer
+        iEzsigndocumentSignaturetotal:
+          description: The number of total signatures that were requested in the Ezsigndocument.
+          example: 4
+          type: integer
+        sEzsigndocumentMD5initial:
+          description: MD5 Hash of the initial PDF Document before signatures were
+            applied to it.
+          example: 012345678901234567890123456789AB
+          type: string
+        sEzsigndocumentMD5signed:
+          description: MD5 Hash of the final PDF Document after all signatures were
+            applied to it.
+          example: 012345678901234567890123456789AB
+          type: string
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - dtEzsigndocumentDuedate
+      - dtEzsigndocumentFirstsend
+      - dtEzsigndocumentLastsend
+      - eEzsigndocumentStep
+      - fkiEzsignfolderID
+      - fkiLanguageID
+      - iEzsigndocumentOrder
+      - iEzsigndocumentPagetotal
+      - iEzsigndocumentSignaturesigned
+      - iEzsigndocumentSignaturetotal
+      - objAudit
+      - pkiEzsigndocumentID
+      - sEzsigndocumentMD5initial
+      - sEzsigndocumentMD5signed
+      - sEzsigndocumentName
       type: object
     ezsigndocument-ResponseCompound:
       allOf:
@@ -2902,28 +3048,6 @@ components:
       description: The date and time when the Ezsigndocument was sent the last time.
       example: 2020-12-31 23:59:59
       type: string
-    Field-iEzsigndocumentOrder:
-      description: The order in which the Ezsigndocument will be presented to the
-        signatory in the Ezsignfolder.
-      example: 1
-      title: Root Type for Field-iEzsigndocumentOrder
-      type: integer
-    Field-iEzsigndocumentPagetotal:
-      description: The number of pages in the Ezsigndocument.
-      example: 4
-      title: Root Type for Field-iEzsigndocumentPagetotal
-      type: integer
-    Field-iEzsigndocumentSignaturesigned:
-      description: The number of signatures that were signed in the document.
-      example: 3
-      title: Root Type for Field-iEzsigndocumentSignaturesigned
-      type: integer
-    Field-iEzsigndocumentSignaturetotal:
-      description: The number of total signatures that were requested in the Ezsigndocument.
-      example: 4
-      format: int32
-      title: Root Type for Field-iEzsigndocumentSignaturetotal
-      type: integer
     Field-sEzsignfolderDescription:
       description: The description of the Ezsign Folder
       example: Test eZsign Folder
@@ -4408,10 +4532,6 @@ components:
       maximum: 2
       minimum: 1
       type: integer
-    Field-pkiEzsigndocumentID:
-      description: The unique ID of the Ezsigntemplate
-      example: 97
-      type: integer
     Field-pkiEzsignfoldertypeID:
       description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be\
         \ queried by the API and is also visible in the admin interface.\r\n\r\nThere\
@@ -4756,32 +4876,6 @@ components:
       - Name
       example: Name
       type: string
-    Field-iEzsignpagePagenumber:
-      description: The page number in the document where to apply the signature
-      example: 1
-      title: Root Type for Field-iEzsigndocumentOrder
-      type: integer
-    Field-iEzsignsignatureStep:
-      description: The step when the Ezsignsigner will be invited to sign.
-      example: 1
-      title: Root Type for Field-iEzsigndocumentOrder
-      type: integer
-    Field-iEzsignsignatureX:
-      description: |-
-        The X coordinate (Horizontal) where to put the signature block on the page.
-
-        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
-      example: 200
-      title: Root Type for Field-iEzsigndocumentOrder
-      type: integer
-    Field-iEzsignsignatureY:
-      description: |-
-        The Y coordinate (Vertical) where to put the signature block on the page.
-
-        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
-      example: 300
-      title: Root Type for Field-iEzsigndocumentOrder
-      type: integer
     Field-sPasswordEncrypted:
       description: |-
         A Password encrypted and encoded in Base64
@@ -4869,6 +4963,138 @@ components:
       required:
       - a_sWords
       type: object
+    ezsigndocument-getEzsignpages-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getEzsignpages_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
+        API Request
+      type: object
+    ezsigndocument-getEzsignpages-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
+        API Request
+      properties:
+        a_objEzsignpage:
+          items:
+            $ref: '#/components/schemas/ezsignpage-Response'
+          type: array
+      required:
+      - a_objEzsignpage
+      type: object
+    Field-pkiEzsignpageID:
+      description: The unique ID of the Ezsignpage
+      example: 64
+      type: integer
+    Field-iEzsignpagePagenumber:
+      description: The page number in the Ezsigndocument
+      example: 1
+      type: integer
+    Field-iEzsigndocumentOrder:
+      description: The order in which the Ezsigndocument will be presented to the
+        signatory in the Ezsignfolder.
+      example: 1
+      type: integer
+    Field-iEzsigndocumentPagetotal:
+      description: The number of pages in the Ezsigndocument.
+      example: 4
+      type: integer
+    Field-iEzsigndocumentSignaturesigned:
+      description: The number of signatures that were signed in the document.
+      example: 3
+      type: integer
+    Field-iEzsigndocumentSignaturetotal:
+      description: The number of total signatures that were requested in the Ezsigndocument.
+      example: 4
+      type: integer
+    Field-iEzsignsignatureStep:
+      description: The step when the Ezsignsigner will be invited to sign.
+      example: 1
+      type: integer
+    Field-iEzsignsignatureX:
+      description: |-
+        The X coordinate (Horizontal) where to put the signature block on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use "200" for the X coordinate.
+      example: 200
+      type: integer
+    Field-iEzsignsignatureY:
+      description: |-
+        The Y coordinate (Vertical) where to put the signature block on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
+      example: 300
+      type: integer
+    Field-iEzsignpageWidthimage:
+      description: The Width of the page's image in pixels calculated at 100 DPI
+      example: 850
+      type: integer
+    Field-iEzsignpageHeightimage:
+      description: The Height of the page's image in pixels calculated at 100 DPI
+      example: 1100
+      type: integer
+    Field-iEzsignpageWidthpdf:
+      description: The Width of the page in points calculated at 72 DPI
+      example: 612
+      type: integer
+    Field-iEzsignpageHeightpdf:
+      description: The Height of the page in points calculated at 72 DPI
+      example: 792
+      type: integer
+    ezsignpage-Response:
+      description: An Ezsignpage Object
+      properties:
+        pkiEzsignpageID:
+          description: The unique ID of the Ezsignpage
+          example: 64
+          type: integer
+        iEzsignpageWidthimage:
+          description: The Width of the page's image in pixels calculated at 100 DPI
+          example: 850
+          type: integer
+        iEzsignpageHeightimage:
+          description: The Height of the page's image in pixels calculated at 100
+            DPI
+          example: 1100
+          type: integer
+        iEzsignpageWidthpdf:
+          description: The Width of the page in points calculated at 72 DPI
+          example: 612
+          type: integer
+        iEzsignpageHeightpdf:
+          description: The Height of the page in points calculated at 72 DPI
+          example: 792
+          type: integer
+        iEzsignpagePagenumber:
+          description: The page number in the Ezsigndocument
+          example: 1
+          type: integer
+        sImageUrl:
+          description: |-
+            The Url to the Ezsignpage's rasterized image.
+
+            Url will expire after 5 minutes.
+          type: string
+      required:
+      - iEzsignpageHeightimage
+      - iEzsignpageHeightpdf
+      - iEzsignpagePagenumber
+      - iEzsignpageWidthimage
+      - iEzsignpageWidthpdf
+      - pkiEzsignpageID
+      - sImageUrl
+      type: object
+    Field-pkiEzsigndocumentID:
+      description: The unique ID of the Ezsigndocument
+      example: 97
+      type: integer
+    Field-pkiEzsignsignatureID:
+      description: The unique ID of the Ezsignsignature
+      example: 49
+      type: integer
+    File-Zip:
+      description: A Zip compressed archive
+      format: binary
+      type: string
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -4963,100 +5189,6 @@ components:
           $ref: '#/components/schemas/ezsignfolder-Response'
       required:
       - objEzsignfolder
-      type: object
-    ezsigndocument_Response_allOf:
-      properties:
-        fkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        dtEzsigndocumentDuedate:
-          description: The maximum date and time at which the document can be signed.
-          example: 2020-12-31 23:59:59
-          type: string
-        fkiLanguageID:
-          description: |-
-            The unique ID of the Language.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|French|
-            |2|English|
-          example: 2
-          maximum: 2
-          minimum: 1
-          type: integer
-        sEzsigndocumentName:
-          description: The name of the document that will be presented to Ezsignfoldersignerassociations
-          example: 'Contract #123'
-          type: string
-        pkiEzsigndocumentID:
-          description: The unique ID of the Ezsigntemplate
-          example: 97
-          type: integer
-        eEzsigndocumentStep:
-          $ref: '#/components/schemas/Field-eEzsigndocumentStep'
-        dtEzsigndocumentFirstsend:
-          description: The date and time when the Ezsigndocument was first sent.
-          example: 2020-12-31 23:59:59
-          type: string
-        dtEzsigndocumentLastsend:
-          description: The date and time when the Ezsigndocument was sent the last
-            time.
-          example: 2020-12-31 23:59:59
-          type: string
-        iEzsigndocumentOrder:
-          description: The order in which the Ezsigndocument will be presented to
-            the signatory in the Ezsignfolder.
-          example: 1
-          title: Root Type for Field-iEzsigndocumentOrder
-          type: integer
-        iEzsigndocumentPagetotal:
-          description: The number of pages in the Ezsigndocument.
-          example: 4
-          title: Root Type for Field-iEzsigndocumentPagetotal
-          type: integer
-        iEzsigndocumentSignaturesigned:
-          description: The number of signatures that were signed in the document.
-          example: 3
-          title: Root Type for Field-iEzsigndocumentSignaturesigned
-          type: integer
-        iEzsigndocumentSignaturetotal:
-          description: The number of total signatures that were requested in the Ezsigndocument.
-          example: 4
-          format: int32
-          title: Root Type for Field-iEzsigndocumentSignaturetotal
-          type: integer
-        sEzsigndocumentMD5initial:
-          description: MD5 Hash of the initial PDF Document before signatures were
-            applied to it.
-          example: 012345678901234567890123456789AB
-          type: string
-        sEzsigndocumentMD5signed:
-          description: MD5 Hash of the final PDF Document after all signatures were
-            applied to it.
-          example: 012345678901234567890123456789AB
-          type: string
-        objAudit:
-          $ref: '#/components/schemas/Common-Audit'
-      required:
-      - dtEzsigndocumentDuedate
-      - dtEzsigndocumentFirstsend
-      - dtEzsigndocumentLastsend
-      - eEzsigndocumentStep
-      - fkiEzsignfolderID
-      - fkiLanguageID
-      - iEzsigndocumentOrder
-      - iEzsigndocumentPagetotal
-      - iEzsigndocumentSignaturesigned
-      - iEzsigndocumentSignaturetotal
-      - objAudit
-      - pkiEzsigndocumentID
-      - sEzsigndocumentMD5initial
-      - sEzsigndocumentMD5signed
-      - sEzsigndocumentName
       type: object
     ezsigndocument_getDownloadUrl_v1_Response_allOf:
       properties:
@@ -5162,6 +5294,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument_getEzsignpages_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getEzsignpages-v1-Response-mPayload'
       required:
       - mPayload
       type: object

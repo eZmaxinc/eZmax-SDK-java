@@ -172,7 +172,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     }
     /**
      * Build call for ezsignfoldersignerassociationDeleteObjectV1
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -232,7 +232,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Delete an existing Ezsignfoldersignerassociation
      * 
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return EzsignfoldersignerassociationDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -251,7 +251,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Delete an existing Ezsignfoldersignerassociation
      * 
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return ApiResponse&lt;EzsignfoldersignerassociationDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -271,7 +271,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Delete an existing Ezsignfoldersignerassociation (asynchronously)
      * 
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -292,7 +292,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     }
     /**
      * Build call for ezsignfoldersignerassociationGetChildrenV1
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -350,7 +350,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -365,7 +365,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -382,7 +382,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation&#39;s children IDs (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -400,7 +400,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     }
     /**
      * Build call for ezsignfoldersignerassociationGetInPersonLoginUrlV1
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -460,7 +460,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve a Login Url to allow In-Person signing
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -479,7 +479,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve a Login Url to allow In-Person signing
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return ApiResponse&lt;EzsignfoldersignerassociationGetInPersonLoginUrlV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -499,7 +499,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve a Login Url to allow In-Person signing (asynchronously)
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -520,7 +520,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     }
     /**
      * Build call for ezsignfoldersignerassociationGetObjectV1
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -579,7 +579,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return EzsignfoldersignerassociationGetObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -597,7 +597,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @return ApiResponse&lt;EzsignfoldersignerassociationGetObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -616,7 +616,7 @@ public class ObjectEzsignfoldersignerassociationApi {
     /**
      * Retrieve an existing Ezsignfoldersignerassociation (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignfoldersignerassociationID The unique ID of the Ezsignfoldersignerassociation (required)
+     * @param pkiEzsignfoldersignerassociationID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

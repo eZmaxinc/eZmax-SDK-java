@@ -171,7 +171,7 @@ public class ObjectEzsignsignatureApi {
     }
     /**
      * Build call for ezsignsignatureDeleteObjectV1
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -231,7 +231,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Delete an existing Ezsignsignature
      * 
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return EzsignsignatureDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -250,7 +250,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Delete an existing Ezsignsignature
      * 
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return ApiResponse&lt;EzsignsignatureDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -270,7 +270,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Delete an existing Ezsignsignature (asynchronously)
      * 
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -291,7 +291,7 @@ public class ObjectEzsignsignatureApi {
     }
     /**
      * Build call for ezsignsignatureGetChildrenV1
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -349,7 +349,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -364,7 +364,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature&#39;s children IDs
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -381,7 +381,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature&#39;s children IDs (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -399,7 +399,7 @@ public class ObjectEzsignsignatureApi {
     }
     /**
      * Build call for ezsignsignatureGetObjectV1
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -458,7 +458,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return EzsignsignatureGetObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -476,7 +476,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @return ApiResponse&lt;EzsignsignatureGetObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -495,7 +495,7 @@ public class ObjectEzsignsignatureApi {
     /**
      * Retrieve an existing Ezsignsignature (asynchronously)
      * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-     * @param pkiEzsignsignatureID The unique ID of the Ezsignsignature (required)
+     * @param pkiEzsignsignatureID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

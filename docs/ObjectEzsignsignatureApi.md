@@ -107,7 +107,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
-    Integer pkiEzsignsignatureID = 56; // Integer | The unique ID of the Ezsignsignature
+    Integer pkiEzsignsignatureID = 56; // Integer | 
     try {
       EzsignsignatureDeleteObjectV1Response result = apiInstance.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
       System.out.println(result);
@@ -126,7 +126,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **Integer**|  |
 
 ### Return type
 
@@ -178,7 +178,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
-    Integer pkiEzsignsignatureID = 56; // Integer | The unique ID of the Ezsignsignature
+    Integer pkiEzsignsignatureID = 56; // Integer | 
     try {
       apiInstance.ezsignsignatureGetChildrenV1(pkiEzsignsignatureID);
     } catch (ApiException e) {
@@ -196,7 +196,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **Integer**|  |
 
 ### Return type
 
@@ -246,7 +246,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
-    Integer pkiEzsignsignatureID = 56; // Integer | The unique ID of the Ezsignsignature
+    Integer pkiEzsignsignatureID = 56; // Integer | 
     try {
       EzsignsignatureGetObjectV1Response result = apiInstance.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
       System.out.println(result);
@@ -265,7 +265,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pkiEzsignsignatureID** | **Integer**| The unique ID of the Ezsignsignature |
+ **pkiEzsignsignatureID** | **Integer**|  |
 
 ### Return type
 

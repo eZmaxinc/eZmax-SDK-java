@@ -21,6 +21,7 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
@@ -120,6 +121,22 @@ public class ObjectEzsigndocumentApiTest {
         Integer pkiEzsigndocumentID = null;
         String eDocumentType = null;
         EzsigndocumentGetDownloadUrlV1Response response = api.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
+     *
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsignpagesV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetEzsignpagesV1Response response = api.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
 
         // TODO: test validations
     }

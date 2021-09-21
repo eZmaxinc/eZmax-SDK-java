@@ -48,6 +48,9 @@ docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
+docs/EzsigndocumentGetEzsignpagesV1Response.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseAllOf.md
+docs/EzsigndocumentGetEzsignpagesV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
@@ -58,7 +61,6 @@ docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
-docs/EzsigndocumentResponseAllOf.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
@@ -87,6 +89,7 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignpageResponse.md
 docs/EzsignsignatureCreateObjectV1Request.md
 docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
@@ -225,6 +228,9 @@ src/main/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1Response.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayload.java
@@ -235,7 +241,6 @@ src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseMPayl
 src/main/java/com/ezmax/api/model/EzsigndocumentRequest.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
-src/main/java/com/ezmax/api/model/EzsigndocumentResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
@@ -264,6 +269,7 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequest.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/com/ezmax/api/model/EzsignpageResponse.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseAllOf.java
@@ -396,6 +402,9 @@ src/test/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetEzsignpagesV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseTest.java
@@ -405,7 +414,6 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseMPayl
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java
-src/test/java/com/ezmax/api/model/EzsigndocumentResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1RequestTest.java
@@ -435,6 +443,7 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignpageResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseMPayloadTest.java
