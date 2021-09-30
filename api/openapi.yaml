@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.0.48
+  version: 1.1.0
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -267,7 +267,10 @@ tags:
     \            | Forbidden            | The request is not allowed to be executed.\
     \ Look for detail about the error in the body |\r\n| 404              | Not Found\
     \            | The request failed. The element on which you were trying to work\
-    \ does not exists. Look for detail about the error in the body |\r\n| 422    \
+    \ does not exists. Look for detail about the error in the body |\r\n| 406    \
+    \          | Not Acceptable       | The URL is valid, but the Accept header is\
+    \ not defined or invalid. For example, you set the header \"Accept: application/json\"\
+    \ but the function can only return \"Content-type: image/png\" |\r\n| 422    \
     \          | Unprocessable entity | The request was syntactically valid but failed\
     \ because of an interdependance condition. Look for detail about the error in\
     \ the body |\r\n\r\n### Generic return codes (Undocumented at the function's level)\r\
@@ -358,11 +361,16 @@ tags:
     \       | Examples                                                           \
     \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
     \ |\r\n| METHODNOTALLOWED | The route is valid but the method is not allowed ex:\
-    \ POST on a GET only route |\r\n\r\n### HTTP 422 (Unprocessable entity)\r\n| eErrorCode\
-    \                            | Examples                                      \
-    \                         |\r\n| ------------------------------------- | ----------------------------------------------------------------------\
-    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted\
-    \                                          |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
+    \ POST on a GET only route |\r\n\r\n### HTTP 406 (Not Acceptable)\r\n| eErrorCode\
+    \       | Examples                                                           \
+    \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
+    \ |\r\n| NOTACCEPTABLE    | The route is valid but the Accept header is not allowed\
+    \ ex: \"application/json\" vs \"image/png\" |\r\n\r\n### HTTP 422 (Unprocessable\
+    \ entity)\r\n| eErrorCode                            | Examples              \
+    \                                                 |\r\n| -------------------------------------\
+    \ | ---------------------------------------------------------------------- |\r\
+    \n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted    \
+    \                                      |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
     \       | The request was valid, but no action was necessary                 \
     \    |\r\n| UNPROCESSABLEENTITY_NOTREADY          | The element is not in a state\
     \ that allows the action (Sending a document without signature, downloading an\
@@ -441,9 +449,12 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.0.X Releases\n### [1.0.48] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\n### [1.0.47]\
-    \ - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
+    \n## 1.1.X Releases\n### [1.1.0] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
+    \ \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
+    - POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n- Status\
+    \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE added to documentation\n\
+    \n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
+    \n## 1.0.X Releases\n### [1.0.47] - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n\n#### Added\n\
     - Early Adopters mention in documentation for endpoints not ready to be used in\
     \ production\n\n#### Changed\n- Normalized internal definition of AllOf (Objects\
@@ -1213,10 +1224,6 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
     get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetEzsignpages_V1
       parameters:
       - explode: false
@@ -1324,7 +1331,10 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
     post:
+      deprecated: true
       description: |-
+        This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital "E" to normalize the nomenclature.
+
         This endpoint applies a predefined template to the ezsign document.
         This allows to automatically apply all the form and signature fields on a document in a single step.
 
@@ -1456,48 +1466,6 @@ paths:
       security:
       - Authorization: []
       summary: Retrieve a URL to download documents.
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsigndocument_GetFormData_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/zip:
-              schema:
-                $ref: '#/components/schemas/File-Zip'
-            application/json: {}
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsigndocument's Form Data
       tags:
       - Object_Ezsigndocument
       x-accepts: application/json
@@ -1644,48 +1612,6 @@ paths:
       security:
       - Authorization: []
       summary: Retrieve an existing Ezsignfolder's children IDs
-      tags:
-      - Object_Ezsignfolder
-      x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsignfolder_GetFormsData_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/zip:
-              schema:
-                $ref: '#/components/schemas/File-Zip'
-            application/json: {}
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignfolder's forms data
       tags:
       - Object_Ezsignfolder
       x-accepts: application/json
@@ -2018,6 +1944,167 @@ paths:
       tags:
       - Global_Customer
       x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsigndocument_GetFormData_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getFormData-v1-Response'
+            application/zip:
+              schema:
+                $ref: '#/components/schemas/File-Zip'
+            text/csv:
+              examples:
+                Example:
+                  value: |-
+                    sep=,
+                    "sEzsignformfieldgroupLabel.sEzsignformfieldLabel1","sEzsignformfieldgroupLabel.sEzsignformfieldLabel2","sEzsignformfieldgroupLabel.sEzsignformfieldLabel3","sEzsignformfieldgroupLabel.sEzsignformfieldLabel4"
+                    "sEzsignformfieldValue01","sEzsignformfieldValue02","sEzsignformfieldValue03","sEzsignformfieldValue04"
+                    "sEzsignformfieldValue11","sEzsignformfieldValue12","sEzsignformfieldValue13","sEzsignformfieldValue14"
+                    "sEzsignformfieldValue21","sEzsignformfieldValue22","sEzsignformfieldValue23","sEzsignformfieldValue24"
+              schema:
+                $ref: '#/components/schemas/File-Csv'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: Accept header is not defined or invalid.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's Form Data
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+  /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate:
+    post:
+      deprecated: false
+      description: |-
+        This endpoint applies a predefined template to the ezsign document.
+        This allows to automatically apply all the form and signature fields on a document in a single step.
+
+        The document must not already have fields otherwise an error will be returned.
+      operationId: Ezsigndocument_ApplyEzsigntemplate_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Apply an Ezsign Template to the Ezsigndocument.
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsignfolder_GetFormsData_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getFormsData-v1-Response'
+            application/zip:
+              schema:
+                $ref: '#/components/schemas/File-Zip'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: Accept header is not defined or invalid.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's forms data
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -2048,6 +2135,12 @@ components:
           schema:
             $ref: '#/components/schemas/Common-Response-Error'
       description: Unauthorized
+    Response-Error-406:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error'
+      description: Accept header is not defined or invalid.
   schemas:
     activesession-getCurrent-v1-Response-mPayload:
       description: Payload for the /1/object/activesession/getCurrent API Request
@@ -4899,28 +4992,6 @@ components:
       required:
       - a_sWords
       type: object
-    wordPosition-Response:
-      description: A Word Position Object
-      properties:
-        iPage:
-          description: The page where the word occurence was found
-          minimum: 1
-          type: integer
-        iX:
-          description: |-
-            The X coordinate (Horizontal) where the Word occurence was found.
-
-            Coordinate is calculated at 100dpi (dot per inch).
-          minimum: 0
-          type: integer
-        iY:
-          description: |-
-            The Y coordinate (Vertical) where the Word occurence was found.
-
-            Coordinate is calculated at 100dpi (dot per inch).
-          minimum: 0
-          type: integer
-      type: object
     ezsigndocument-getWordsPositions-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument_getWordsPositions_v1_Response_allOf'
@@ -4958,7 +5029,7 @@ components:
 
             They are returned with the sames words that was sent in the request.
           items:
-            $ref: '#/components/schemas/wordPosition-Response'
+            $ref: '#/components/schemas/Custom-WordPosition-Response'
           type: array
       required:
       - a_sWords
@@ -5095,6 +5166,227 @@ components:
       description: A Zip compressed archive
       format: binary
       type: string
+    File-Csv:
+      description: A Comma separated values text file
+      type: string
+    Field-dtCreatedDate:
+      description: The date and time at which the object was created
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-dtModifiedDate:
+      description: The date and time at which the object was last modified
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-sEzsignformfieldgroupLabel:
+      description: The Label for the Ezsignformfieldgroup
+      example: Allergies
+      type: string
+    Field-sEzsignformfieldLabel:
+      description: The Label for the Ezsignformfield
+      example: Peanuts
+      type: string
+    Field-sEzsignformfieldValue:
+      description: The Value for the Ezsignformfield
+      example: "Yes"
+      type: string
+    ezsigndocument-applyEzsigntemplate-v2-Request:
+      description: Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
+        API Request
+      properties:
+        fkiEzsigntemplateID:
+          description: The unique ID of the Ezsigndocument
+          example: 36
+          type: integer
+        a_sEzsigntemplatesigner:
+          items:
+            $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
+          type: array
+        a_pkiEzsignfoldersignerassociationID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          type: array
+      required:
+      - a_pkiEzsignfoldersignerassociation
+      - a_pkiEzsignfoldersignerassociationID
+      - a_sEzsigntemplatesigner
+      - fkiEzsigntemplateID
+      type: object
+    ezsigndocument-applyEzsigntemplate-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
+        API Request
+      type: object
+    ezsigndocument-getFormData-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getFormData_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
+        API Request
+      type: object
+    ezsignformfieldgroup-Response:
+      description: An Ezsignformfieldgroup Object
+      properties:
+        sEzsignformfieldgroupLabel:
+          description: The Label for the Ezsignformfieldgroup
+          example: Allergies
+          type: string
+      required:
+      - sEzsignformfieldgroupLabel
+      type: object
+    ezsignformfield-Response:
+      description: An Ezsignformfield Object
+      properties:
+        sEzsignformfieldLabel:
+          description: The Label for the Ezsignformfield
+          example: Peanuts
+          type: string
+        sEzsignformfieldValue:
+          description: The Value for the Ezsignformfield
+          example: "Yes"
+          type: string
+      required:
+      - sEzsignformfieldLabel
+      - sEzsignformfieldValue
+      type: object
+    ezsignformfield-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignformfield-Response'
+      description: An Ezsignformfield Object and children to create a complete structure
+      type: object
+    ezsigndocument-getFormData-v1-Response-mPayload:
+      allOf:
+      - type: object
+      - $ref: '#/components/schemas/Custom-FormDataDocument-Response'
+      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
+        API Request
+      type: object
+    Custom-WordPosition-Response:
+      description: A Word Position Object
+      properties:
+        iPage:
+          description: The page where the word occurence was found
+          minimum: 1
+          type: integer
+        iX:
+          description: |-
+            The X coordinate (Horizontal) where the Word occurence was found.
+
+            Coordinate is calculated at 100dpi (dot per inch).
+          minimum: 0
+          type: integer
+        iY:
+          description: |-
+            The Y coordinate (Vertical) where the Word occurence was found.
+
+            Coordinate is calculated at 100dpi (dot per inch).
+          minimum: 0
+          type: integer
+      type: object
+    ezsignformfieldgroup-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignformfieldgroup-Response'
+      - $ref: '#/components/schemas/ezsignformfieldgroup_ResponseCompound_allOf'
+      description: An Ezsignformfieldgroup Object and children to create a complete
+        structure
+      type: object
+    Custom-FormDataSigner-Response:
+      description: A form Data Signer Object
+      properties:
+        fkiEzsignfoldersignerassociationID:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        a_objEzsignformfieldgroupCompound:
+          description: This array contains the labels or each Form fields in the form
+            but WITHOUT the values
+          items:
+            $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
+          type: array
+          uniqueItems: false
+      required:
+      - a_objEzsignformfieldgroupCompound
+      - fkiEzsignfoldersignerassociationID
+      - sContactFirstname
+      - sContactLastname
+      type: object
+    ezsignfolder-getFormsData-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getFormsData_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getFormsData
+        API Request
+      type: object
+    ezsignfolder-getFormsData-v1-Response-mPayload:
+      allOf:
+      - type: object
+      - $ref: '#/components/schemas/Custom-FormDataFolder-Response'
+      description: Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
+        API Request
+      type: object
+    Custom-FormDataDocument-Response:
+      description: 'A form Data Document Object '
+      properties:
+        pkiEzsigndocumentID:
+          description: The unique ID of the Ezsigndocument
+          example: 97
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          example: 'Contract #123'
+          type: string
+        dtModifiedDate:
+          description: The date and time at which the object was last modified
+          example: 2020-12-31 23:59:59
+          type: string
+        a_objFormDataSigner:
+          items:
+            $ref: '#/components/schemas/Custom-FormDataSigner-Response'
+          type: array
+          uniqueItems: false
+      required:
+      - a_objFormDataSigner
+      - dtModifiedDate
+      - fkiEzsignfolderID
+      - pkiEzsigndocumentID
+      - sEzsigndocumentName
+      type: object
+    Custom-FormDataFolder-Response:
+      description: A form Data Folder Object
+      properties:
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsign Folder
+          example: Test eZsign Folder
+          type: string
+        a_objFormDataDocument:
+          items:
+            $ref: '#/components/schemas/Custom-FormDataDocument-Response'
+          type: array
+      required:
+      - a_objFormDataDocument
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -5301,6 +5593,29 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigndocument-getEzsignpages-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument_getFormData_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getFormData-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignformfieldgroup_ResponseCompound_allOf:
+      properties:
+        a_objEzsignformfield:
+          items:
+            $ref: '#/components/schemas/ezsignformfield-Response'
+          type: array
+      required:
+      - a_objEzsignformfield
+      type: object
+    ezsignfolder_getFormsData_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getFormsData-v1-Response-mPayload'
       required:
       - mPayload
       type: object

@@ -220,7 +220,7 @@ null (empty response body)
 
 <a name="ezsignfolderGetFormsDataV1"></a>
 # **ezsignfolderGetFormsDataV1**
-> File ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
+> EzsignfolderGetFormsDataV1Response ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder&#39;s forms data
 
@@ -250,7 +250,7 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     Integer pkiEzsignfolderID = 56; // Integer | 
     try {
-      File result = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
+      EzsignfolderGetFormsDataV1Response result = apiInstance.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetFormsDataV1");
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+[**EzsignfolderGetFormsDataV1Response**](EzsignfolderGetFormsDataV1Response.md)
 
 ### Authorization
 
@@ -280,13 +280,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/zip, application/json
+ - **Accept**: application/json, application/zip
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
+**406** | Accept header is not defined or invalid. |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ezsignfolderGetObjectV1"></a>
