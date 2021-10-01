@@ -43,11 +43,19 @@ public class EzsigndocumentGetWordsPositionsV1RequestTest {
     }
 
     /**
-     * Test the property 'aSWords'
+     * Test the property 'eGet'
      */
     @Test
-    public void aSWordsTest() {
-        // TODO: test aSWords
+    public void eGetTest() {
+        // TODO: test eGet
+    }
+
+    /**
+     * Test the property 'aSWord'
+     */
+    @Test
+    public void aSWordTest() {
+        // TODO: test aSWord
     }
 
 }

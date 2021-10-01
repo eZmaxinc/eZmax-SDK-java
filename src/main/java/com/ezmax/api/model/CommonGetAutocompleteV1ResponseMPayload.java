@@ -28,7 +28,7 @@ import java.io.IOException;
  * Generic Autocomplete Response
  */
 @ApiModel(description = "Generic Autocomplete Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-30T14:47:38.811503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
 public class CommonGetAutocompleteV1ResponseMPayload {
   public static final String SERIALIZED_NAME_GROUP = "group";
   @SerializedName(SERIALIZED_NAME_GROUP)

@@ -30,38 +30,115 @@ import java.util.List;
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-30T14:47:38.811503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
-  public static final String SERIALIZED_NAME_A_S_WORDS = "a_sWords";
-  @SerializedName(SERIALIZED_NAME_A_S_WORDS)
-  private List<String> aSWords = new ArrayList<String>();
-
-
-  public EzsigndocumentGetWordsPositionsV1Request aSWords(List<String> aSWords) {
+  /**
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+   */
+  @JsonAdapter(EGetEnum.Adapter.class)
+  public enum EGetEnum {
+    ALL("All"),
     
-    this.aSWords = aSWords;
-    return this;
+    WORDS("Words");
+
+    private String value;
+
+    EGetEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EGetEnum fromValue(String value) {
+      for (EGetEnum b : EGetEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EGetEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EGetEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EGetEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EGetEnum.fromValue(value);
+      }
+    }
   }
 
-  public EzsigndocumentGetWordsPositionsV1Request addASWordsItem(String aSWordsItem) {
-    this.aSWords.add(aSWordsItem);
+  public static final String SERIALIZED_NAME_E_GET = "eGet";
+  @SerializedName(SERIALIZED_NAME_E_GET)
+  private EGetEnum eGet;
+
+  public static final String SERIALIZED_NAME_A_S_WORD = "a_sWord";
+  @SerializedName(SERIALIZED_NAME_A_S_WORD)
+  private List<String> aSWord = null;
+
+
+  public EzsigndocumentGetWordsPositionsV1Request eGet(EGetEnum eGet) {
+    
+    this.eGet = eGet;
     return this;
   }
 
    /**
-   * Get aSWords
-   * @return aSWords
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+   * @return eGet
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.")
 
-  public List<String> getaSWords() {
-    return aSWords;
+  public EGetEnum geteGet() {
+    return eGet;
   }
 
 
-  public void setaSWords(List<String> aSWords) {
-    this.aSWords = aSWords;
+  public void seteGet(EGetEnum eGet) {
+    this.eGet = eGet;
+  }
+
+
+  public EzsigndocumentGetWordsPositionsV1Request aSWord(List<String> aSWord) {
+    
+    this.aSWord = aSWord;
+    return this;
+  }
+
+  public EzsigndocumentGetWordsPositionsV1Request addASWordItem(String aSWordItem) {
+    if (this.aSWord == null) {
+      this.aSWord = new ArrayList<String>();
+    }
+    this.aSWord.add(aSWordItem);
+    return this;
+  }
+
+   /**
+   * Array of words to find in the document
+   * @return aSWord
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Array of words to find in the document")
+
+  public List<String> getaSWord() {
+    return aSWord;
+  }
+
+
+  public void setaSWord(List<String> aSWord) {
+    this.aSWord = aSWord;
   }
 
 
@@ -74,19 +151,21 @@ public class EzsigndocumentGetWordsPositionsV1Request {
       return false;
     }
     EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = (EzsigndocumentGetWordsPositionsV1Request) o;
-    return Objects.equals(this.aSWords, ezsigndocumentGetWordsPositionsV1Request.aSWords);
+    return Objects.equals(this.eGet, ezsigndocumentGetWordsPositionsV1Request.eGet) &&
+        Objects.equals(this.aSWord, ezsigndocumentGetWordsPositionsV1Request.aSWord);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aSWords);
+    return Objects.hash(eGet, aSWord);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1Request {\n");
-    sb.append("    aSWords: ").append(toIndentedString(aSWords)).append("\n");
+    sb.append("    eGet: ").append(toIndentedString(eGet)).append("\n");
+    sb.append("    aSWord: ").append(toIndentedString(aSWord)).append("\n");
     sb.append("}");
     return sb.toString();
   }

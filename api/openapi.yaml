@@ -4976,63 +4976,12 @@ components:
         Must meet complexity requirements
       example: VGhpcyBpcyBhbiBlbmNyeXB0ZWQgcGFzc3dvcmQ=
       type: string
-    ezsigndocument-getWordsPositions-v1-Request:
-      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      example:
-        a_sWords:
-        - Your word 1
-        - Your word 2
-        - Your word 3
-      properties:
-        a_sWords:
-          items:
-            type: string
-          type: array
-      required:
-      - a_sWords
-      type: object
     ezsigndocument-getWordsPositions-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument_getWordsPositions_v1_Response_allOf'
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
-      type: object
-    ezsigndocument-getWordsPositions-v1-Response-mPayload:
-      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      example:
-        a_sWords:
-        - iPage: 1
-          iX: 70
-          iY: 0
-        - iPage: 2
-          iX: 20
-          iY: 40
-        Your Word 1:
-        - iPage: 1
-          iX: 70
-          iY: 0
-        - iPage: 2
-          iX: 20
-          iY: 40
-        Your Word 2:
-        - iPage: 2
-          iX: 20
-          iY: 40
-        Your Word 3: []
-      properties:
-        a_sWords:
-          description: |-
-            An array of words with an array of pages and positions X,Y
-
-            They are returned with the sames words that was sent in the request.
-          items:
-            $ref: '#/components/schemas/Custom-WordPosition-Response'
-          type: array
-      required:
-      - a_sWords
       type: object
     ezsigndocument-getEzsignpages-v1-Response:
       allOf:
@@ -5310,8 +5259,6 @@ components:
           example: Doe
           type: string
         a_objEzsignformfieldgroupCompound:
-          description: This array contains the labels or each Form fields in the form
-            but WITHOUT the values
           items:
             $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
           type: array
@@ -5386,6 +5333,38 @@ components:
       - a_objFormDataDocument
       - pkiEzsignfolderID
       - sEzsignfolderDescription
+      type: object
+    ezsigndocument-getWordsPositions-v1-Response-mPayload:
+      allOf:
+      - additionalProperties:
+          description: Each searched word will be a property and the value will be
+            an array of search results
+          items:
+            $ref: '#/components/schemas/Custom-WordPosition-Response'
+          type: array
+        type: object
+      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
+      type: object
+    ezsigndocument-getWordsPositions-v1-Request:
+      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
+      properties:
+        eGet:
+          description: Specify if you want to retrieve *All* words or specific *Words*
+            from the document. If you specify *Words*, you must send the list of words
+            to search in *a_sWord*.
+          enum:
+          - All
+          - Words
+          type: string
+        a_sWord:
+          description: Array of words to find in the document
+          items:
+            type: string
+          type: array
+      required:
+      - eSearchFor
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

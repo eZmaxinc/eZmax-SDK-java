@@ -16,55 +16,15 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CustomWordPositionResponse;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-09-30T14:47:38.811503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_S_WORDS = "a_sWords";
-  @SerializedName(SERIALIZED_NAME_A_S_WORDS)
-  private List<CustomWordPositionResponse> aSWords = new ArrayList<CustomWordPositionResponse>();
-
-
-  public EzsigndocumentGetWordsPositionsV1ResponseMPayload aSWords(List<CustomWordPositionResponse> aSWords) {
-    
-    this.aSWords = aSWords;
-    return this;
-  }
-
-  public EzsigndocumentGetWordsPositionsV1ResponseMPayload addASWordsItem(CustomWordPositionResponse aSWordsItem) {
-    this.aSWords.add(aSWordsItem);
-    return this;
-  }
-
-   /**
-   * An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.
-   * @return aSWords
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of words with an array of pages and positions X,Y  They are returned with the sames words that was sent in the request.")
-
-  public List<CustomWordPositionResponse> getaSWords() {
-    return aSWords;
-  }
-
-
-  public void setaSWords(List<CustomWordPositionResponse> aSWords) {
-    this.aSWords = aSWords;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -74,20 +34,18 @@ public class EzsigndocumentGetWordsPositionsV1ResponseMPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigndocumentGetWordsPositionsV1ResponseMPayload ezsigndocumentGetWordsPositionsV1ResponseMPayload = (EzsigndocumentGetWordsPositionsV1ResponseMPayload) o;
-    return Objects.equals(this.aSWords, ezsigndocumentGetWordsPositionsV1ResponseMPayload.aSWords);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aSWords);
+    return Objects.hash();
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1ResponseMPayload {\n");
-    sb.append("    aSWords: ").append(toIndentedString(aSWords)).append("\n");
     sb.append("}");
     return sb.toString();
   }
