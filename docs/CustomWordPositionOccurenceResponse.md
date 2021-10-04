@@ -1,6 +1,6 @@
 
 
-# CustomWordPositionResponse
+# CustomWordPositionOccurenceResponse
 
 A Word Position Object
 

@@ -40,7 +40,8 @@ docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataFolderResponse.md
 docs/CustomFormDataSignerResponse.md
-docs/CustomWordPositionResponse.md
+docs/CustomWordPositionOccurenceResponse.md
+docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
@@ -66,7 +67,6 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
-docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
@@ -236,7 +236,8 @@ src/main/java/com/ezmax/api/model/ContactinformationsRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/CustomFormDataDocumentResponse.java
 src/main/java/com/ezmax/api/model/CustomFormDataFolderResponse.java
 src/main/java/com/ezmax/api/model/CustomFormDataSignerResponse.java
-src/main/java/com/ezmax/api/model/CustomWordPositionResponse.java
+src/main/java/com/ezmax/api/model/CustomWordPositionOccurenceResponse.java
+src/main/java/com/ezmax/api/model/CustomWordPositionWordResponse.java
 src/main/java/com/ezmax/api/model/EmailRequest.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Response.java
@@ -262,7 +263,6 @@ src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
-src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequest.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
@@ -426,7 +426,8 @@ src/test/java/com/ezmax/api/model/ContactinformationsRequestTest.java
 src/test/java/com/ezmax/api/model/CustomFormDataDocumentResponseTest.java
 src/test/java/com/ezmax/api/model/CustomFormDataFolderResponseTest.java
 src/test/java/com/ezmax/api/model/CustomFormDataSignerResponseTest.java
-src/test/java/com/ezmax/api/model/CustomWordPositionResponseTest.java
+src/test/java/com/ezmax/api/model/CustomWordPositionOccurenceResponseTest.java
+src/test/java/com/ezmax/api/model/CustomWordPositionWordResponseTest.java
 src/test/java/com/ezmax/api/model/EmailRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1ResponseTest.java
@@ -451,7 +452,6 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayloadTest.
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTest.java
-src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java

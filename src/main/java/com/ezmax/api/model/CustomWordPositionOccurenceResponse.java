@@ -28,8 +28,8 @@ import java.io.IOException;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
-public class CustomWordPositionResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T18:24:39.920177Z[Etc/UTC]")
+public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
   private Integer iPage;
@@ -43,7 +43,7 @@ public class CustomWordPositionResponse {
   private Integer iY;
 
 
-  public CustomWordPositionResponse iPage(Integer iPage) {
+  public CustomWordPositionOccurenceResponse iPage(Integer iPage) {
     
     this.iPage = iPage;
     return this;
@@ -67,7 +67,7 @@ public class CustomWordPositionResponse {
   }
 
 
-  public CustomWordPositionResponse iX(Integer iX) {
+  public CustomWordPositionOccurenceResponse iX(Integer iX) {
     
     this.iX = iX;
     return this;
@@ -91,7 +91,7 @@ public class CustomWordPositionResponse {
   }
 
 
-  public CustomWordPositionResponse iY(Integer iY) {
+  public CustomWordPositionOccurenceResponse iY(Integer iY) {
     
     this.iY = iY;
     return this;
@@ -123,10 +123,10 @@ public class CustomWordPositionResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomWordPositionResponse customWordPositionResponse = (CustomWordPositionResponse) o;
-    return Objects.equals(this.iPage, customWordPositionResponse.iPage) &&
-        Objects.equals(this.iX, customWordPositionResponse.iX) &&
-        Objects.equals(this.iY, customWordPositionResponse.iY);
+    CustomWordPositionOccurenceResponse customWordPositionOccurenceResponse = (CustomWordPositionOccurenceResponse) o;
+    return Objects.equals(this.iPage, customWordPositionOccurenceResponse.iPage) &&
+        Objects.equals(this.iX, customWordPositionOccurenceResponse.iX) &&
+        Objects.equals(this.iY, customWordPositionOccurenceResponse.iY);
   }
 
   @Override
@@ -137,7 +137,7 @@ public class CustomWordPositionResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomWordPositionResponse {\n");
+    sb.append("class CustomWordPositionOccurenceResponse {\n");
     sb.append("    iPage: ").append(toIndentedString(iPage)).append("\n");
     sb.append("    iX: ").append(toIndentedString(iX)).append("\n");
     sb.append("    iY: ").append(toIndentedString(iY)).append("\n");

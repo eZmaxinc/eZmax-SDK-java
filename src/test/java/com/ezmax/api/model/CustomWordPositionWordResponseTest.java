@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CustomWordPositionWordResponse;
+import com.ezmax.api.model.CustomWordPositionOccurenceResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,25 +30,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for EzsigndocumentGetWordsPositionsV1ResponseAllOf
+ * Model tests for CustomWordPositionWordResponse
  */
-public class EzsigndocumentGetWordsPositionsV1ResponseAllOfTest {
-    private final EzsigndocumentGetWordsPositionsV1ResponseAllOf model = new EzsigndocumentGetWordsPositionsV1ResponseAllOf();
+public class CustomWordPositionWordResponseTest {
+    private final CustomWordPositionWordResponse model = new CustomWordPositionWordResponse();
 
     /**
-     * Model tests for EzsigndocumentGetWordsPositionsV1ResponseAllOf
+     * Model tests for CustomWordPositionWordResponse
      */
     @Test
-    public void testEzsigndocumentGetWordsPositionsV1ResponseAllOf() {
-        // TODO: test EzsigndocumentGetWordsPositionsV1ResponseAllOf
+    public void testCustomWordPositionWordResponse() {
+        // TODO: test CustomWordPositionWordResponse
     }
 
     /**
-     * Test the property 'mPayload'
+     * Test the property 'sWord'
      */
     @Test
-    public void mPayloadTest() {
-        // TODO: test mPayload
+    public void sWordTest() {
+        // TODO: test sWord
+    }
+
+    /**
+     * Test the property 'objWordPositionOccurence'
+     */
+    @Test
+    public void objWordPositionOccurenceTest() {
+        // TODO: test objWordPositionOccurence
     }
 
 }

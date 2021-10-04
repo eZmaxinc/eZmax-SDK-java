@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1ResponseMPayload;
+import com.ezmax.api.model.CustomWordPositionWordResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,36 +24,43 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * EzsigndocumentGetWordsPositionsV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T18:24:39.920177Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload;
+  private List<CustomWordPositionWordResponse> mPayload = new ArrayList<CustomWordPositionWordResponse>();
 
 
-  public EzsigndocumentGetWordsPositionsV1ResponseAllOf mPayload(EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload) {
+  public EzsigndocumentGetWordsPositionsV1ResponseAllOf mPayload(List<CustomWordPositionWordResponse> mPayload) {
     
     this.mPayload = mPayload;
     return this;
   }
 
+  public EzsigndocumentGetWordsPositionsV1ResponseAllOf addMPayloadItem(CustomWordPositionWordResponse mPayloadItem) {
+    this.mPayload.add(mPayloadItem);
+    return this;
+  }
+
    /**
-   * Get mPayload
+   * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
    * @return mPayload
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
 
-  public EzsigndocumentGetWordsPositionsV1ResponseMPayload getmPayload() {
+  public List<CustomWordPositionWordResponse> getmPayload() {
     return mPayload;
   }
 
 
-  public void setmPayload(EzsigndocumentGetWordsPositionsV1ResponseMPayload mPayload) {
+  public void setmPayload(List<CustomWordPositionWordResponse> mPayload) {
     this.mPayload = mPayload;
   }
 

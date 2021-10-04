@@ -32,7 +32,7 @@ import java.util.List;
  * This is the base Webhook object
  */
 @ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-01T21:35:34.408460Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T18:24:39.920177Z[Etc/UTC]")
 public class CommonWebhook {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)

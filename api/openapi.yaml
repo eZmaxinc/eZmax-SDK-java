@@ -5210,28 +5210,6 @@ components:
       description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
         API Request
       type: object
-    Custom-WordPosition-Response:
-      description: A Word Position Object
-      properties:
-        iPage:
-          description: The page where the word occurence was found
-          minimum: 1
-          type: integer
-        iX:
-          description: |-
-            The X coordinate (Horizontal) where the Word occurence was found.
-
-            Coordinate is calculated at 100dpi (dot per inch).
-          minimum: 0
-          type: integer
-        iY:
-          description: |-
-            The Y coordinate (Vertical) where the Word occurence was found.
-
-            Coordinate is calculated at 100dpi (dot per inch).
-          minimum: 0
-          type: integer
-      type: object
     ezsignformfieldgroup-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/ezsignformfieldgroup-Response'
@@ -5334,18 +5312,6 @@ components:
       - pkiEzsignfolderID
       - sEzsignfolderDescription
       type: object
-    ezsigndocument-getWordsPositions-v1-Response-mPayload:
-      allOf:
-      - additionalProperties:
-          description: Each searched word will be a property and the value will be
-            an array of search results
-          items:
-            $ref: '#/components/schemas/Custom-WordPosition-Response'
-          type: array
-        type: object
-      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      type: object
     ezsigndocument-getWordsPositions-v1-Request:
       description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
@@ -5365,6 +5331,49 @@ components:
           type: array
       required:
       - eSearchFor
+      type: object
+    ezsigndocument-getWordsPositions-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
+      items:
+        $ref: '#/components/schemas/Custom-WordPositionWord-Response'
+      type: array
+    Custom-WordPositionOccurence-Response:
+      description: A Word Position Object
+      properties:
+        iPage:
+          description: The page where the word occurence was found
+          minimum: 1
+          type: integer
+        iX:
+          description: |-
+            The X coordinate (Horizontal) where the Word occurence was found.
+
+            Coordinate is calculated at 100dpi (dot per inch).
+          minimum: 0
+          type: integer
+        iY:
+          description: |-
+            The Y coordinate (Vertical) where the Word occurence was found.
+
+            Coordinate is calculated at 100dpi (dot per inch).
+          minimum: 0
+          type: integer
+      type: object
+    Custom-WordPositionWord-Response:
+      description: A Word Position Object
+      properties:
+        sWord:
+          description: The searched word
+          type: string
+        objWordPositionOccurence:
+          description: The found occurences for the seached word
+          items:
+            $ref: '#/components/schemas/Custom-WordPositionOccurence-Response'
+          type: array
+      required:
+      - objWordPositionOccurence
+      - sWord
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -5564,7 +5573,11 @@ components:
     ezsigndocument_getWordsPositions_v1_Response_allOf:
       properties:
         mPayload:
-          $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Response-mPayload'
+          description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+            API Request
+          items:
+            $ref: '#/components/schemas/Custom-WordPositionWord-Response'
+          type: array
       required:
       - mPayload
       type: object

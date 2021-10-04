@@ -8,7 +8,7 @@ Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPosition
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetWordsPositionsV1ResponseMPayload**](EzsigndocumentGetWordsPositionsV1ResponseMPayload.md) |  | 
+**mPayload** | [**List&lt;CustomWordPositionWordResponse&gt;**](CustomWordPositionWordResponse.md) | Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request | 
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 

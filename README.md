@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.0
-  - Build date: 2021-10-01T21:35:34.408460Z[Etc/UTC]
+  - Build date: 2021-10-04T18:24:39.920177Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -195,7 +195,8 @@ Class | Method | HTTP request | Description
  - [CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
  - [CustomFormDataFolderResponse](docs/CustomFormDataFolderResponse.md)
  - [CustomFormDataSignerResponse](docs/CustomFormDataSignerResponse.md)
- - [CustomWordPositionResponse](docs/CustomWordPositionResponse.md)
+ - [CustomWordPositionOccurenceResponse](docs/CustomWordPositionOccurenceResponse.md)
+ - [CustomWordPositionWordResponse](docs/CustomWordPositionWordResponse.md)
  - [EmailRequest](docs/EmailRequest.md)
  - [EzsigndocumentApplyEzsigntemplateV1Request](docs/EzsigndocumentApplyEzsigntemplateV1Request.md)
  - [EzsigndocumentApplyEzsigntemplateV1Response](docs/EzsigndocumentApplyEzsigntemplateV1Response.md)
@@ -221,7 +222,6 @@ Class | Method | HTTP request | Description
  - [EzsigndocumentGetWordsPositionsV1Request](docs/EzsigndocumentGetWordsPositionsV1Request.md)
  - [EzsigndocumentGetWordsPositionsV1Response](docs/EzsigndocumentGetWordsPositionsV1Response.md)
  - [EzsigndocumentGetWordsPositionsV1ResponseAllOf](docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md)
- - [EzsigndocumentGetWordsPositionsV1ResponseMPayload](docs/EzsigndocumentGetWordsPositionsV1ResponseMPayload.md)
  - [EzsigndocumentRequest](docs/EzsigndocumentRequest.md)
  - [EzsigndocumentRequestCompound](docs/EzsigndocumentRequestCompound.md)
  - [EzsigndocumentResponse](docs/EzsigndocumentResponse.md)

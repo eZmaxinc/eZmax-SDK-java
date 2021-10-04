@@ -27,17 +27,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for CustomWordPositionResponse
+ * Model tests for CustomWordPositionOccurenceResponse
  */
-public class CustomWordPositionResponseTest {
-    private final CustomWordPositionResponse model = new CustomWordPositionResponse();
+public class CustomWordPositionOccurenceResponseTest {
+    private final CustomWordPositionOccurenceResponse model = new CustomWordPositionOccurenceResponse();
 
     /**
-     * Model tests for CustomWordPositionResponse
+     * Model tests for CustomWordPositionOccurenceResponse
      */
     @Test
-    public void testCustomWordPositionResponse() {
-        // TODO: test CustomWordPositionResponse
+    public void testCustomWordPositionOccurenceResponse() {
+        // TODO: test CustomWordPositionOccurenceResponse
     }
 
     /**
