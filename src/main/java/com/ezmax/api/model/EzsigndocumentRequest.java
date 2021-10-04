@@ -28,7 +28,7 @@ import java.io.IOException;
  * An Ezsigndocument Object
  */
 @ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T18:24:39.920177Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
 public class EzsigndocumentRequest {
   /**
    * Indicates where to look for the document binary content.

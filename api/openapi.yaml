@@ -4976,13 +4976,6 @@ components:
         Must meet complexity requirements
       example: VGhpcyBpcyBhbiBlbmNyeXB0ZWQgcGFzc3dvcmQ=
       type: string
-    ezsigndocument-getWordsPositions-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/ezsigndocument_getWordsPositions_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      type: object
     ezsigndocument-getEzsignpages-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument_getEzsignpages_v1_Response_allOf'
@@ -5366,14 +5359,21 @@ components:
         sWord:
           description: The searched word
           type: string
-        objWordPositionOccurence:
+        a_objWordPositionOccurence:
           description: The found occurences for the seached word
           items:
             $ref: '#/components/schemas/Custom-WordPositionOccurence-Response'
           type: array
       required:
-      - objWordPositionOccurence
+      - a_objWordPositionOccurence
       - sWord
+      type: object
+    ezsigndocument-getWordsPositions-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getWordsPositions_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -5570,17 +5570,6 @@ components:
       required:
       - mPayload
       type: object
-    ezsigndocument_getWordsPositions_v1_Response_allOf:
-      properties:
-        mPayload:
-          description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-            API Request
-          items:
-            $ref: '#/components/schemas/Custom-WordPositionWord-Response'
-          type: array
-      required:
-      - mPayload
-      type: object
     ezsigndocument_getEzsignpages_v1_Response_allOf:
       properties:
         mPayload:
@@ -5608,6 +5597,17 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignfolder-getFormsData-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument_getWordsPositions_v1_Response_allOf:
+      properties:
+        mPayload:
+          description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+            API Request
+          items:
+            $ref: '#/components/schemas/Custom-WordPositionWord-Response'
+          type: array
       required:
       - mPayload
       type: object

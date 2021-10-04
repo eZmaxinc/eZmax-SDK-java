@@ -31,15 +31,15 @@ import java.util.List;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T18:24:39.920177Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
   private String sWord;
 
-  public static final String SERIALIZED_NAME_OBJ_WORD_POSITION_OCCURENCE = "objWordPositionOccurence";
-  @SerializedName(SERIALIZED_NAME_OBJ_WORD_POSITION_OCCURENCE)
-  private List<CustomWordPositionOccurenceResponse> objWordPositionOccurence = new ArrayList<CustomWordPositionOccurenceResponse>();
+  public static final String SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE = "a_objWordPositionOccurence";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE)
+  private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = new ArrayList<CustomWordPositionOccurenceResponse>();
 
 
   public CustomWordPositionWordResponse sWord(String sWord) {
@@ -65,31 +65,31 @@ public class CustomWordPositionWordResponse {
   }
 
 
-  public CustomWordPositionWordResponse objWordPositionOccurence(List<CustomWordPositionOccurenceResponse> objWordPositionOccurence) {
+  public CustomWordPositionWordResponse aObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
     
-    this.objWordPositionOccurence = objWordPositionOccurence;
+    this.aObjWordPositionOccurence = aObjWordPositionOccurence;
     return this;
   }
 
-  public CustomWordPositionWordResponse addObjWordPositionOccurenceItem(CustomWordPositionOccurenceResponse objWordPositionOccurenceItem) {
-    this.objWordPositionOccurence.add(objWordPositionOccurenceItem);
+  public CustomWordPositionWordResponse addAObjWordPositionOccurenceItem(CustomWordPositionOccurenceResponse aObjWordPositionOccurenceItem) {
+    this.aObjWordPositionOccurence.add(aObjWordPositionOccurenceItem);
     return this;
   }
 
    /**
    * The found occurences for the seached word
-   * @return objWordPositionOccurence
+   * @return aObjWordPositionOccurence
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The found occurences for the seached word")
 
-  public List<CustomWordPositionOccurenceResponse> getObjWordPositionOccurence() {
-    return objWordPositionOccurence;
+  public List<CustomWordPositionOccurenceResponse> getaObjWordPositionOccurence() {
+    return aObjWordPositionOccurence;
   }
 
 
-  public void setObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> objWordPositionOccurence) {
-    this.objWordPositionOccurence = objWordPositionOccurence;
+  public void setaObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
+    this.aObjWordPositionOccurence = aObjWordPositionOccurence;
   }
 
 
@@ -103,12 +103,12 @@ public class CustomWordPositionWordResponse {
     }
     CustomWordPositionWordResponse customWordPositionWordResponse = (CustomWordPositionWordResponse) o;
     return Objects.equals(this.sWord, customWordPositionWordResponse.sWord) &&
-        Objects.equals(this.objWordPositionOccurence, customWordPositionWordResponse.objWordPositionOccurence);
+        Objects.equals(this.aObjWordPositionOccurence, customWordPositionWordResponse.aObjWordPositionOccurence);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sWord, objWordPositionOccurence);
+    return Objects.hash(sWord, aObjWordPositionOccurence);
   }
 
   @Override
@@ -116,7 +116,7 @@ public class CustomWordPositionWordResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomWordPositionWordResponse {\n");
     sb.append("    sWord: ").append(toIndentedString(sWord)).append("\n");
-    sb.append("    objWordPositionOccurence: ").append(toIndentedString(objWordPositionOccurence)).append("\n");
+    sb.append("    aObjWordPositionOccurence: ").append(toIndentedString(aObjWordPositionOccurence)).append("\n");
     sb.append("}");
     return sb.toString();
   }

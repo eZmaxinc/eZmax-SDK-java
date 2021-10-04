@@ -52,11 +52,11 @@ public class CustomWordPositionWordResponseTest {
     }
 
     /**
-     * Test the property 'objWordPositionOccurence'
+     * Test the property 'aObjWordPositionOccurence'
      */
     @Test
-    public void objWordPositionOccurenceTest() {
-        // TODO: test objWordPositionOccurence
+    public void aObjWordPositionOccurenceTest() {
+        // TODO: test aObjWordPositionOccurence
     }
 
 }
