@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * WebhookEzsignDocumentCompletedAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
 public class WebhookEzsignDocumentCompletedAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)

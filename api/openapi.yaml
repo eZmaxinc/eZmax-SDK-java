@@ -450,7 +450,7 @@ tags:
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
     \n## 1.1.X Releases\n### [1.1.0] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
-    \ \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
+    - GET /1/object/ezsignfoldertype/getList\n \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
     - POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n- Status\
     \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE added to documentation\n\
     \n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
@@ -578,6 +578,9 @@ tags:
     persons outside of the system.
   name: Object_Ezsignfoldersignerassociation
   x-displayName: Ezsignfoldersignerassociation
+- description: Ezsignfoldertype contains detail about the types of ezsign folders
+  name: Object_Ezsignfoldertype
+  x-displayName: Ezsignfoldertype
 - description: Ezsignsignature contains detail about a specific signature block on
     a page of a Ezsigndocument
   name: Object_Ezsignsignature
@@ -1986,6 +1989,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: The element you are trying to work on does not exist
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: Accept header is not defined or invalid.
         "422":
           content:
             application/json:
@@ -1993,12 +2002,6 @@ paths:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: The syntax of the request is valid but the request cannot be
             completed. Look for detail in body.
-        "406":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: Accept header is not defined or invalid.
       security:
       - Authorization: []
       summary: Retrieve an existing Ezsigndocument's Form Data
@@ -2104,6 +2107,26 @@ paths:
       summary: Retrieve an existing Ezsignfolder's forms data
       tags:
       - Object_Ezsignfolder
+      x-accepts: application/json
+  /1/object/ezsignfoldertype/getList:
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsignfoldertype_GetList_V1
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfoldertype list
+      tags:
+      - Object_Ezsignfoldertype
       x-accepts: application/json
 components:
   responses:
@@ -2411,12 +2434,7 @@ components:
         eEzsignfolderSendreminderfrequency: Daily
       properties:
         fkiEzsignfoldertypeID:
-          description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can\
-            \ be queried by the API and is also visible in the admin interface.\r\n\
-            \r\nThere are two types of Ezsignfoldertype. **User** and **Shared**.\
-            \ **User** can only be seen by the user who created the folder or its\
-            \ assistants. Access to **Shared** folders are configurable for access\
-            \ and email delivery. You should typically choose a **Shared** type here."
+          description: The unique ID of the Ezsignfoldertype.
           example: 5
           type: integer
         fkiEzsigntsarequirementID:
@@ -3962,12 +3980,7 @@ components:
       description: An Ezsignfolder Object
       properties:
         fkiEzsignfoldertypeID:
-          description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can\
-            \ be queried by the API and is also visible in the admin interface.\r\n\
-            \r\nThere are two types of Ezsignfoldertype. **User** and **Shared**.\
-            \ **User** can only be seen by the user who created the folder or its\
-            \ assistants. Access to **Shared** folders are configurable for access\
-            \ and email delivery. You should typically choose a **Shared** type here."
+          description: The unique ID of the Ezsignfoldertype.
           example: 5
           type: integer
         fkiEzsigntsarequirementID:
@@ -4626,12 +4639,7 @@ components:
       minimum: 1
       type: integer
     Field-pkiEzsignfoldertypeID:
-      description: "The unique ID of the Ezsignfoldertype.\r\n\r\nThis value can be\
-        \ queried by the API and is also visible in the admin interface.\r\n\r\nThere\
-        \ are two types of Ezsignfoldertype. **User** and **Shared**. **User** can\
-        \ only be seen by the user who created the folder or its assistants. Access\
-        \ to **Shared** folders are configurable for access and email delivery. You\
-        \ should typically choose a **Shared** type here."
+      description: The unique ID of the Ezsignfoldertype.
       example: 5
       type: integer
     Field-pkiEzsigntsarequirementID:
@@ -5305,26 +5313,6 @@ components:
       - pkiEzsignfolderID
       - sEzsignfolderDescription
       type: object
-    ezsigndocument-getWordsPositions-v1-Request:
-      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      properties:
-        eGet:
-          description: Specify if you want to retrieve *All* words or specific *Words*
-            from the document. If you specify *Words*, you must send the list of words
-            to search in *a_sWord*.
-          enum:
-          - All
-          - Words
-          type: string
-        a_sWord:
-          description: Array of words to find in the document
-          items:
-            type: string
-          type: array
-      required:
-      - eSearchFor
-      type: object
     ezsigndocument-getWordsPositions-v1-Response-mPayload:
       description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
@@ -5374,6 +5362,80 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
+      type: object
+    ezsignfoldertype-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfoldertype/getList API Request
+      type: object
+    ezsignfoldertype-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for the /1/object/ezsignfolder/getList API Request
+      type: object
+    Common-getList-v1-Response-mPayload:
+      description: Generic List Response
+      properties:
+        iRowReturned:
+          description: The number of rows returned
+          example: 100
+          type: integer
+        iRowFiltered:
+          description: The number of rows matching your filters (if any) or the total
+            number of rows
+          example: 533
+          type: integer
+      required:
+      - iRowFiltered
+      - iRowReturned
+      type: object
+    Field-sEzsignfoldertypeNameX:
+      description: The name of the Ezsignfoldertype in the language of the requester
+      example: Default
+      type: string
+    ezsignfoldertype-ListElement:
+      description: An Ezsignfoldertype List Element
+      properties:
+        pkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+      required:
+      - pkiEzsignfoldertypeID
+      - sEzsignfoldertypeNameX
+      type: object
+    ezsigndocument-getWordsPositions-v1-Request:
+      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
+      properties:
+        eGet:
+          description: Specify if you want to retrieve *All* words or specific *Words*
+            from the document. If you specify *Words*, you must send the list of words
+            to search for in *a_sWord*.
+          enum:
+          - All
+          - Words
+          type: string
+        bWordCaseSensitive:
+          description: |-
+            IF *true*, words will be searched case-sensitive and results will be returned case-sensitive.
+            IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+          type: boolean
+        a_sWord:
+          description: Array of words to find in the document
+          items:
+            type: string
+          type: array
+      required:
+      - bWordCaseSensitive
+      - eGet
+      - eSearchFor
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -5611,6 +5673,22 @@ components:
       required:
       - mPayload
       type: object
+    ezsignfoldertype_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldertype_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objEzsignfoldertype:
+          items:
+            $ref: '#/components/schemas/ezsignfoldertype-ListElement'
+          type: array
+      required:
+      - a_objEzsignfoldertype
+      type: object
   securitySchemes:
     Authorization:
       in: header
@@ -5689,6 +5767,7 @@ x-tagGroups:
   - Object_Ezsigndocument
   - Object_Ezsignfolder
   - Object_Ezsignfoldersignerassociation
+  - Object_Ezsignfoldertype
   - Object_Ezsignsignature
   - Object_Franchisebroker
   - Object_Franchiseoffice

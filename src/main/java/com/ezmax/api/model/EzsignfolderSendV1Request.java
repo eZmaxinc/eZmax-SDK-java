@@ -28,7 +28,7 @@ import java.io.IOException;
  * Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
 public class EzsignfolderSendV1Request {
   public static final String SERIALIZED_NAME_T_EXTRA_MESSAGE = "tExtraMessage";
   @SerializedName(SERIALIZED_NAME_T_EXTRA_MESSAGE)

@@ -30,10 +30,10 @@ import java.util.List;
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
-   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
    */
   @JsonAdapter(EGetEnum.Adapter.class)
   public enum EGetEnum {
@@ -83,6 +83,10 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   @SerializedName(SERIALIZED_NAME_E_GET)
   private EGetEnum eGet;
 
+  public static final String SERIALIZED_NAME_B_WORD_CASE_SENSITIVE = "bWordCaseSensitive";
+  @SerializedName(SERIALIZED_NAME_B_WORD_CASE_SENSITIVE)
+  private Boolean bWordCaseSensitive;
+
   public static final String SERIALIZED_NAME_A_S_WORD = "a_sWord";
   @SerializedName(SERIALIZED_NAME_A_S_WORD)
   private List<String> aSWord = null;
@@ -95,11 +99,11 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   }
 
    /**
-   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.
+   * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
    * @return eGet
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search in *a_sWord*.")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.")
 
   public EGetEnum geteGet() {
     return eGet;
@@ -108,6 +112,29 @@ public class EzsigndocumentGetWordsPositionsV1Request {
 
   public void seteGet(EGetEnum eGet) {
     this.eGet = eGet;
+  }
+
+
+  public EzsigndocumentGetWordsPositionsV1Request bWordCaseSensitive(Boolean bWordCaseSensitive) {
+    
+    this.bWordCaseSensitive = bWordCaseSensitive;
+    return this;
+  }
+
+   /**
+   * IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+   * @return bWordCaseSensitive
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.")
+
+  public Boolean getbWordCaseSensitive() {
+    return bWordCaseSensitive;
+  }
+
+
+  public void setbWordCaseSensitive(Boolean bWordCaseSensitive) {
+    this.bWordCaseSensitive = bWordCaseSensitive;
   }
 
 
@@ -152,12 +179,13 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     }
     EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = (EzsigndocumentGetWordsPositionsV1Request) o;
     return Objects.equals(this.eGet, ezsigndocumentGetWordsPositionsV1Request.eGet) &&
+        Objects.equals(this.bWordCaseSensitive, ezsigndocumentGetWordsPositionsV1Request.bWordCaseSensitive) &&
         Objects.equals(this.aSWord, ezsigndocumentGetWordsPositionsV1Request.aSWord);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eGet, aSWord);
+    return Objects.hash(eGet, bWordCaseSensitive, aSWord);
   }
 
   @Override
@@ -165,6 +193,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetWordsPositionsV1Request {\n");
     sb.append("    eGet: ").append(toIndentedString(eGet)).append("\n");
+    sb.append("    bWordCaseSensitive: ").append(toIndentedString(bWordCaseSensitive)).append("\n");
     sb.append("    aSWord: ").append(toIndentedString(aSWord)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -32,7 +32,7 @@ import java.io.IOException;
  * An Ezsignfolder Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -82,11 +82,11 @@ public class EzsignfolderResponseCompound {
   }
 
    /**
-   * The unique ID of the Ezsignfoldertype.    This value can be queried by the API and is also visible in the admin interface.    There are two types of Ezsignfoldertype. **User** and **Shared**. **User** can only be seen by the user who created the folder or its assistants. Access to **Shared** folders are configurable for access and email delivery. You should typically choose a **Shared** type here.
+   * The unique ID of the Ezsignfoldertype.
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.    This value can be queried by the API and is also visible in the admin interface.    There are two types of Ezsignfoldertype. **User** and **Shared**. **User** can only be seen by the user who created the folder or its assistants. Access to **Shared** folders are configurable for access and email delivery. You should typically choose a **Shared** type here.")
+  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;

@@ -51,6 +51,14 @@ public class EzsigndocumentGetWordsPositionsV1RequestTest {
     }
 
     /**
+     * Test the property 'bWordCaseSensitive'
+     */
+    @Test
+    public void bWordCaseSensitiveTest() {
+        // TODO: test bWordCaseSensitive
+    }
+
+    /**
      * Test the property 'aSWord'
      */
     @Test

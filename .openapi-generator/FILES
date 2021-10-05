@@ -25,6 +25,7 @@ docs/CommonAudit.md
 docs/CommonGetAutocompleteV1Response.md
 docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetAutocompleteV1ResponseMPayload.md
+docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
 docs/CommonResponseObjDebug.md
@@ -101,6 +102,11 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldertypeGetListV1Response.md
+docs/EzsignfoldertypeGetListV1ResponseAllOf.md
+docs/EzsignfoldertypeGetListV1ResponseMPayload.md
+docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
+docs/EzsignfoldertypeListElement.md
 docs/EzsignformfieldResponse.md
 docs/EzsignformfieldResponseCompound.md
 docs/EzsignformfieldgroupResponse.md
@@ -145,6 +151,7 @@ docs/ObjectApikeyApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
+docs/ObjectEzsignfoldertypeApi.md
 docs/ObjectEzsignsignatureApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
@@ -196,6 +203,7 @@ src/main/java/com/ezmax/api/ObjectApikeyApi.java
 src/main/java/com/ezmax/api/ObjectEzsigndocumentApi.java
 src/main/java/com/ezmax/api/ObjectEzsignfolderApi.java
 src/main/java/com/ezmax/api/ObjectEzsignfoldersignerassociationApi.java
+src/main/java/com/ezmax/api/ObjectEzsignfoldertypeApi.java
 src/main/java/com/ezmax/api/ObjectEzsignsignatureApi.java
 src/main/java/com/ezmax/api/ObjectFranchisebrokerApi.java
 src/main/java/com/ezmax/api/ObjectFranchiseofficeApi.java
@@ -221,6 +229,7 @@ src/main/java/com/ezmax/api/model/CommonAudit.java
 src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1Response.java
 src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/CommonGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CommonResponse.java
 src/main/java/com/ezmax/api/model/CommonResponseError.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebug.java
@@ -297,6 +306,11 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequest.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeListElement.java
 src/main/java/com/ezmax/api/model/EzsignformfieldResponse.java
 src/main/java/com/ezmax/api/model/EzsignformfieldResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupResponse.java
@@ -386,6 +400,7 @@ src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsigndocumentApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignfolderApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignfoldersignerassociationApiTest.java
+src/test/java/com/ezmax/api/ObjectEzsignfoldertypeApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignsignatureApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchisebrokerApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchiseofficeApiTest.java
@@ -411,6 +426,7 @@ src/test/java/com/ezmax/api/model/CommonAuditTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseTest.java
+src/test/java/com/ezmax/api/model/CommonGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonResponseErrorTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugTest.java
@@ -487,6 +503,11 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseMPayloadAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeListElementTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupResponseCompoundAllOfTest.java

@@ -31,7 +31,7 @@ import java.util.List;
  * A form Data Signer Object
  */
 @ApiModel(description = "A form Data Signer Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-04T20:19:14.364904Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
 public class CustomFormDataSignerResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
