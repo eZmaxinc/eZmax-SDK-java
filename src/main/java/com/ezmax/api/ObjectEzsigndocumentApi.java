@@ -934,7 +934,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 406 </td><td> Accept header is not defined or invalid. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
@@ -994,7 +994,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 406 </td><td> Accept header is not defined or invalid. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
@@ -1014,7 +1014,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 406 </td><td> Accept header is not defined or invalid. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
@@ -1036,7 +1036,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 406 </td><td> Accept header is not defined or invalid. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */

@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.0
-  - Build date: 2021-10-05T19:53:02.853066Z[Etc/UTC]
+  - Build date: 2021-10-07T04:54:07.055439Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -195,8 +195,8 @@ Class | Method | HTTP request | Description
  - [ContactinformationsRequestCompound](docs/ContactinformationsRequestCompound.md)
  - [ContactinformationsRequestCompoundAllOf](docs/ContactinformationsRequestCompoundAllOf.md)
  - [CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
- - [CustomFormDataFolderResponse](docs/CustomFormDataFolderResponse.md)
  - [CustomFormDataSignerResponse](docs/CustomFormDataSignerResponse.md)
+ - [CustomFormsDataFolderResponse](docs/CustomFormsDataFolderResponse.md)
  - [CustomWordPositionOccurenceResponse](docs/CustomWordPositionOccurenceResponse.md)
  - [CustomWordPositionWordResponse](docs/CustomWordPositionWordResponse.md)
  - [EmailRequest](docs/EmailRequest.md)
@@ -297,6 +297,7 @@ Class | Method | HTTP request | Description
  - [FranchisereferalincomeRequestCompound](docs/FranchisereferalincomeRequestCompound.md)
  - [FranchisereferalincomeRequestCompoundAllOf](docs/FranchisereferalincomeRequestCompoundAllOf.md)
  - [GlobalCustomerGetEndpointV1Response](docs/GlobalCustomerGetEndpointV1Response.md)
+ - [HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
  - [MultilingualApikeyDescription](docs/MultilingualApikeyDescription.md)
  - [PhoneRequest](docs/PhoneRequest.md)
  - [SsprResetPasswordRequestV1Request](docs/SsprResetPasswordRequestV1Request.md)

@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomFormDataDocumentResponse;
-import com.ezmax.api.model.CustomFormDataFolderResponse;
+import com.ezmax.api.model.CustomFormsDataFolderResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

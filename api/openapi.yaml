@@ -203,6 +203,86 @@ tags:
     \    Ezmax-Signature: v1=71e05f01eaab704ec76a078a9a5c49abe9d5a490786e43b86156d281acda7cba"
   name: General_Security
   x-displayName: Security
+- description: "## Variables\n\nWe use a custom type base naming convention for variables.\n\
+    \nEach variable name is composed of up to 6 indicators\n1. **Array** (Optional)\
+    \ *a_* when we are dealing with an array.\n2. **Key** (Optional) *pk* when we\
+    \ are dealing with a primary key or *fk* for foreign key.\n3. **Type** Will always\
+    \ be in lowercase and represent the type of the variable.\n4. **Table** The first\
+    \ letter in uppercase and the rest in lowercase and represents the table name\
+    \ from where the variable was retrieved.\n5. **Field** (Optional) The first letter\
+    \ is uppercase and the rest is lowercase and represents the field name.\n6. **Discriminator**\
+    \ (Optional) Will be present only when two identical fields are stored in the\
+    \ same table to differenciate one from the other. \n\nHere is a summary table\
+    \ explaining the convention.\n\n|  | Array | Key | Type | Table | Field | Discriminator\
+    \ |\n|---|---|---|---|---|---|---|\n| **Optional** | Yes | Yes | No | No | Yes\
+    \ | Yes |\n| **Naming** | Fixed | Fixed | Lowercase | First letter is uppercase\
+    \ and the rest is lowercase | First letter is uppercase and the rest is lowercase\
+    \ except for the Field *ID* wich is always uppercase | First letter is uppercase\
+    \ and the rest is lowercase |\n| **Values** | a_ | pk<br>fki | s (string)<br>t\
+    \ (text)<br>c (char)<br>sha (sha-1 string)<br>md5 (md5 string)<br>bin (binary\
+    \ string)<br>i (integer)<br>f (float)<br>d (decimal)<br>e (enum)<br>dt (date or\
+    \ datetime)<br>b (boolean)<br>obj (object) | Any | Any | Any |\n\nHere are examples\
+    \ of typical variables' names\n\n| Variable name | Array | key | Type | Table\
+    \ | Field | Discriminator | Explanation | Example |\n|---|---|---|---|---|---|---|---|---|\n\
+    | pkiContactID |  | pk | i | Contact | ID |  | Primary key of type integer for\
+    \ the field name *ID* in table *Contact* | 133 |\n| fkiContactID |  | fk | i |\
+    \ Contact | ID |  | Foreign key of type integer pointing to the field *pkiContactID*\
+    \ in table *Contact* | 133 |\n| fkiContactIDOwner |  | fk | i | Contact | ID |\
+    \ Owner | Foreign key of type integer pointing to the field *pkiContactID* in\
+    \ table *Contact* with a discriminator of *Owner* | 266 |\n| sContactFirstname\
+    \ |  |  | s | Contact | Firstname |  | String for the Field *Firstname* in table\
+    \ *Contact* | John |\n| dPurchaseTotal |  |  | d | Purchase | Total |  | Decimal\
+    \ number for the field *Total* in table *Purchase* | 2199.78 |\n| objEzsignfolder\
+    \ |  |  | obj | Esignfolder |  |  | Object of type *Ezsignfolder* | {\"pkiEzsignfolderID\"\
+    : 122, \"sEzsignfolderName\": \"Test\"} |\n| a_objEzsignfolder | a_ |  | obj |\
+    \ Ezsignfolder |  |  | Array of objects of type *Ezsignfolder* | [{\"pkiEzsignfolderID\"\
+    : 122, \"sEzsignfolderName\": \"Test\"}, {\"pkiEzsignfolderID\": 234, \"sEzsignfolderName\"\
+    : \"Test 2\"}] |\n| a_sContactFirstname | a_ |  | s | Contact | Firstname |  |\
+    \ An array of string for the fied *Firstname* in table *Contact* | ['John', 'Mary',\
+    \ 'Jane'] |\n| a_pkiContactIDOwner | a_ | pk | i | Contact | ID | Owner | An array\
+    \ of foreign keys of type integer pointing to the field *pkiContactID* in table\
+    \ *Contact* with a discriminator of *Owner* | [266, 277, 288] |\n\n## List filter\n\
+    \nEvery GetList Endpoint has a *sFilter* query parameter that can be used to filter\
+    \ the returned elements.\n\nThe sFilter parameter's syntax is not documented at\
+    \ the endpoint's level since it would be redundant. This section documents the\
+    \ syntax.\n\n* Every property returned by the endpoint can be used to build the\
+    \ *sFilter* string. Except for rare exceptions.\n* Each filter can be joined by\
+    \ the *and* operator\n* Not every property supports every operator. The list of\
+    \ valid operators is based on the variable type. For example, only strings support\
+    \ the *like* operator. You can refer to the *Variables* article in the *Conventions*\
+    \ section of the documentation to learn about variable types.\n* Variables of\
+    \ type *Enum* have predetermined list of filters which will be documented at the\
+    \ endpoint's level.\n* *sFilter*'s value must be url encoded.\n* String values\
+    \ need to be enclosed in single quotes\n\nValid operators for boolean values:\n\
+    \n| Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | bEzsigndocumentEzsignclause\
+    \ eq 1<br>bEzsigndocumentEzsignclause eq 0 |\n\nValid operators for integer values:\n\
+    \n| Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | iEzsigndocumentPagetotal\
+    \ eq 10 |\n| gt | Greater than | iEzsigndocumentPagetotal gt 10 |\n| gte | Greater\
+    \ than or equal to | iEzsigndocumentPagetotal gte 10 |\n| lt | Less than | iEzsigndocumentPagetotal\
+    \ lt 100 |\n| lte | Less than or equal to | iEzsigndocumentPagetotal lte 100 |\n\
+    \nValid operators for date and datetime values:\n\n| Operator | Description |\
+    \ Examples |\n|---|---|---|\n| eq | Equals | dtEzsigndocumentDuedate eq '2005-07-01\
+    \ 18:15:59'<br>dtEzsigndocumentDuedate eq '2005-07-01' |\n| gt | Greater than\
+    \ | dtEzsigndocumentDuedate gt '2001-01-01 00:00:00'<br>dtEzsigndocumentDuedate\
+    \ gt '2001-01-01' |\n| gte | Greater than or equal to | dtEzsigndocumentDuedate\
+    \ gte '2001-01-01 00:00:00'<br>dtEzsigndocumentDuedate gte '2001-01-01' |\n| lt\
+    \ | Less than | dtEzsigndocumentDuedate lt '2025-12-31 23:59:59'<br>dtEzsigndocumentDuedate\
+    \ lt '2025-12-31' |\n| lte | Less than or equal to | dtEzsigndocumentDuedate lte\
+    \ '2025-12-31 23:59:59'<br>dtEzsigndocumentDuedate lte '2025-12-31' |\n\nValid\
+    \ operators for string values:\n\n| Operator | Description | Examples |\n|---|---|---|\n\
+    | eq | Equals | sEzsigndocumentName  eq 'Test contract' |\n| like | Search for\
+    \ a partial string with *%* wildcard | sEzsigndocumentName  like 'Test contra%'<br>sEzsigndocumentName\
+    \  like '%contract'<br>sEzsigndocumentName  like '%con%' |\n\nValid operators\
+    \ for enum values (valid values are documented at the endpoint's level):\n\n|\
+    \ Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | eEzsigndocumentStep\
+    \ eq 'PartiallySigned' |\n\nExample of combining multiple filter together:\n\n\
+    sFilter=bEzsigndocumentEzsignclause eq 1 and iEzsigndocumentPagetotal gt 10 and\
+    \ iEzsigndocumentPagetotal lte 100 and dtEzsigndocumentDuedate gt '2001-01-01\
+    \ 00:00:00' and dtEzsigndocumentDuedate lte '2025-12-31 23:59:59' and sEzsigndocumentName\
+    \  like '%con%' and eEzsigndocumentStep eq 'PartiallySigned'\n\nSame example,\
+    \ but properly url encoded:\n\nsFilter=bEzsigndocumentEzsignclause%20eq%201%20and%20iEzsigndocumentPagetotal%20gt%2010%20and%20iEzsigndocumentPagetotal%20lte%20100%20and%20dtEzsigndocumentDuedate%20gt%20%272001-01-01%2000%3A00%3A00%27%20and%20dtEzsigndocumentDuedate%20lte%20%272025-12-31%2023%3A59%3A59%27%20and%20sEzsigndocumentName%20%20like%20%27%25con%25%27%20and%20eEzsigndocumentStep%20eq%20%27PartiallySigned%27"
+  name: General_Conventions
+  x-displayName: Conventions
 - description: "## Regional requests\nWhen you send your API requests, you'll need\
     \ to send them in the proper region and proper environment where your customer\
     \ data are stored. Based on your requirements (proximity and legislation), we\
@@ -268,8 +348,8 @@ tags:
     \ Look for detail about the error in the body |\r\n| 404              | Not Found\
     \            | The request failed. The element on which you were trying to work\
     \ does not exists. Look for detail about the error in the body |\r\n| 406    \
-    \          | Not Acceptable       | The URL is valid, but the Accept header is\
-    \ not defined or invalid. For example, you set the header \"Accept: application/json\"\
+    \          | Not Acceptable       | The URL is valid, but one of the Accept header\
+    \ is not defined or invalid. For example, you set the header \"Accept: application/json\"\
     \ but the function can only return \"Content-type: image/png\" |\r\n| 422    \
     \          | Unprocessable entity | The request was syntactically valid but failed\
     \ because of an interdependance condition. Look for detail about the error in\
@@ -288,11 +368,14 @@ tags:
     \ number of the function and look for typos in the URL |\r\n| 405            \
     \  | Method Not Allowed    | The URL is valid, but the Method is not allowed.\
     \ For example, have you call a GET while the function expects a POST ? |\r\n|\
-    \ 429              | Too Many Requests     | Too many requests were received from\
-    \ your API Key/IP address. Make sure to optimize your requests or ask for a limit\
-    \ increase. For example, make a single request to create 100 objects instead of\
-    \ calling 100 requests each creating a single objet |\r\n| 500              |\
-    \ Internal Server Error | This should never happen. There is either a temporary\
+    \ 406              | Not Acceptable       | The URL is valid, but one of the Accept\
+    \ header is not defined or invalid. For example, you set the header \"Accept:\
+    \ application/json\" but the function can only return \"Content-type: image/png\"\
+    \ |\r\n| 429              | Too Many Requests     | Too many requests were received\
+    \ from your API Key/IP address. Make sure to optimize your requests or ask for\
+    \ a limit increase. For example, make a single request to create 100 objects instead\
+    \ of calling 100 requests each creating a single objet |\r\n| 500            \
+    \  | Internal Server Error | This should never happen. There is either a temporary\
     \ problem that should resolve quickly or an error you should report to technical\
     \ support. |\r\n| 503              | Service Unavailable   | This should never\
     \ happen. There is either a temporary problem that should resolve quickly or an\
@@ -362,15 +445,16 @@ tags:
     \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
     \ |\r\n| METHODNOTALLOWED | The route is valid but the method is not allowed ex:\
     \ POST on a GET only route |\r\n\r\n### HTTP 406 (Not Acceptable)\r\n| eErrorCode\
-    \       | Examples                                                           \
-    \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
-    \ |\r\n| NOTACCEPTABLE    | The route is valid but the Accept header is not allowed\
-    \ ex: \"application/json\" vs \"image/png\" |\r\n\r\n### HTTP 422 (Unprocessable\
-    \ entity)\r\n| eErrorCode                            | Examples              \
-    \                                                 |\r\n| -------------------------------------\
-    \ | ---------------------------------------------------------------------- |\r\
-    \n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted    \
-    \                                      |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
+    \             | Examples                                                     \
+    \                                 |\r\n| ---------------------- | ---------------------------------------------------------------------------------------------\
+    \ |\r\n| NOTACCEPTABLE_CONTENT  | The route is valid but the Accept header is\
+    \ not allowed ex: \"application/json\" vs \"image/png\" |\r\n| NOTACCEPTABLE_LANGUAGE\
+    \ | The route is valid but the Accept-Language header is not allowed ex: \"en\"\
+    \ vs \"es\"             |\r\n\r\n### HTTP 422 (Unprocessable entity)\r\n| eErrorCode\
+    \                            | Examples                                      \
+    \                         |\r\n| ------------------------------------- | ----------------------------------------------------------------------\
+    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted\
+    \                                          |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
     \       | The request was valid, but no action was necessary                 \
     \    |\r\n| UNPROCESSABLEENTITY_NOTREADY          | The element is not in a state\
     \ that allows the action (Sending a document without signature, downloading an\
@@ -452,8 +536,10 @@ tags:
     \n## 1.1.X Releases\n### [1.1.0] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
     - GET /1/object/ezsignfoldertype/getList\n \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
     - POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n- Status\
-    \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE added to documentation\n\
-    \n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
+    \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE_CONTENT added to\
+    \ documentation\n- Error Code NOTACCEPTABLE_LANGUAGE added to documentation\n\
+    - Variables convention added to documentation\n- List Filter convention added\
+    \ to documentation\n\n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
     \n## 1.0.X Releases\n### [1.0.47] - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n\n#### Added\n\
     - Early Adopters mention in documentation for endpoints not ready to be used in\
@@ -1994,7 +2080,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
-          description: Accept header is not defined or invalid.
+          description: One of the accept header is not defined or invalid.
         "422":
           content:
             application/json:
@@ -2094,7 +2180,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
-          description: Accept header is not defined or invalid.
+          description: One of the accept header is not defined or invalid.
         "422":
           content:
             application/json:
@@ -2114,14 +2200,69 @@ paths:
         ## ⚠️EARLY ADOPTERS WARNING
 
         ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
       operationId: Ezsignfoldertype_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - sEzsignfoldertypeNameX
+          - sEzsignfoldertypeNameX desc
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
       responses:
         "200":
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
           description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: One of the accept header is not defined or invalid.
       security:
       - Authorization: []
       summary: Retrieve Ezsignfoldertype list
@@ -2163,7 +2304,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Common-Response-Error'
-      description: Accept header is not defined or invalid.
+      description: One of the accept header is not defined or invalid.
   schemas:
     activesession-getCurrent-v1-Response-mPayload:
       description: Payload for the /1/object/activesession/getCurrent API Request
@@ -5258,7 +5399,7 @@ components:
     ezsignfolder-getFormsData-v1-Response-mPayload:
       allOf:
       - type: object
-      - $ref: '#/components/schemas/Custom-FormDataFolder-Response'
+      - $ref: '#/components/schemas/Custom-FormsDataFolder-Response'
       description: Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
         API Request
       type: object
@@ -5292,26 +5433,6 @@ components:
       - fkiEzsignfolderID
       - pkiEzsigndocumentID
       - sEzsigndocumentName
-      type: object
-    Custom-FormDataFolder-Response:
-      description: A form Data Folder Object
-      properties:
-        pkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        sEzsignfolderDescription:
-          description: The description of the Ezsign Folder
-          example: Test eZsign Folder
-          type: string
-        a_objFormDataDocument:
-          items:
-            $ref: '#/components/schemas/Custom-FormDataDocument-Response'
-          type: array
-      required:
-      - a_objFormDataDocument
-      - pkiEzsignfolderID
-      - sEzsignfolderDescription
       type: object
     ezsigndocument-getWordsPositions-v1-Response-mPayload:
       description: Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
@@ -5437,6 +5558,58 @@ components:
       - eGet
       - eSearchFor
       type: object
+    Field-iRowOffset:
+      description: The starting element from where to start retrieving the results.
+        For example if you started at iRowOffset=0 and asked for iRowMax=100, to get
+        the next 100 results, you could specify iRowOffset=100&iRowMax=100,
+      example: 0
+      type: integer
+    Field-iRowMax:
+      description: The maximum numbers of results to be returned
+      example: 100
+      type: integer
+    File-Xlsx:
+      description: A Microsoft Excel File
+      format: binary
+      type: string
+    Custom-FormsDataFolder-Response:
+      description: A forms Data Folder Object
+      properties:
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsign Folder
+          example: Test eZsign Folder
+          type: string
+        a_objFormDataDocument:
+          items:
+            $ref: '#/components/schemas/Custom-FormDataDocument-Response'
+          type: array
+      required:
+      - a_objFormDataDocument
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
+      type: object
+    Header-Accept-Language:
+      description: |+
+        The language of the returned content.
+
+        1. **\*** (or header not defined) Default language
+        2. **en** English
+        2. **fr** French
+
+      enum:
+      - '*'
+      - en
+      - fr
+      type: string
+    Field-sFilter:
+      description: The filter to apply to the request to limit results.
+      example: bField1 eq 1 and iField2 gte 0 and iField2 lte 1000 and sField3 eq
+        'Other' and eField4 eq 'Paid' and sField5 like '%needle%'
+      type: string
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -5748,6 +5921,7 @@ x-tagGroups:
   - General_Introduction
   - General_Servers
   - General_Security
+  - General_Conventions
   - General_StatusCodes
   - General_ErrorCodes
   - General_Webhooks

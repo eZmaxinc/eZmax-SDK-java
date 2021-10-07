@@ -28,11 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A form Data Folder Object
+ * A forms Data Folder Object
  */
-@ApiModel(description = "A form Data Folder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-05T19:53:02.853066Z[Etc/UTC]")
-public class CustomFormDataFolderResponse {
+@ApiModel(description = "A forms Data Folder Object")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T04:54:07.055439Z[Etc/UTC]")
+public class CustomFormsDataFolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
   private Integer pkiEzsignfolderID;
@@ -46,7 +46,7 @@ public class CustomFormDataFolderResponse {
   private List<CustomFormDataDocumentResponse> aObjFormDataDocument = new ArrayList<CustomFormDataDocumentResponse>();
 
 
-  public CustomFormDataFolderResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
+  public CustomFormsDataFolderResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
     
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
@@ -69,7 +69,7 @@ public class CustomFormDataFolderResponse {
   }
 
 
-  public CustomFormDataFolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
+  public CustomFormsDataFolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
     
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
@@ -92,13 +92,13 @@ public class CustomFormDataFolderResponse {
   }
 
 
-  public CustomFormDataFolderResponse aObjFormDataDocument(List<CustomFormDataDocumentResponse> aObjFormDataDocument) {
+  public CustomFormsDataFolderResponse aObjFormDataDocument(List<CustomFormDataDocumentResponse> aObjFormDataDocument) {
     
     this.aObjFormDataDocument = aObjFormDataDocument;
     return this;
   }
 
-  public CustomFormDataFolderResponse addAObjFormDataDocumentItem(CustomFormDataDocumentResponse aObjFormDataDocumentItem) {
+  public CustomFormsDataFolderResponse addAObjFormDataDocumentItem(CustomFormDataDocumentResponse aObjFormDataDocumentItem) {
     this.aObjFormDataDocument.add(aObjFormDataDocumentItem);
     return this;
   }
@@ -128,10 +128,10 @@ public class CustomFormDataFolderResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomFormDataFolderResponse customFormDataFolderResponse = (CustomFormDataFolderResponse) o;
-    return Objects.equals(this.pkiEzsignfolderID, customFormDataFolderResponse.pkiEzsignfolderID) &&
-        Objects.equals(this.sEzsignfolderDescription, customFormDataFolderResponse.sEzsignfolderDescription) &&
-        Objects.equals(this.aObjFormDataDocument, customFormDataFolderResponse.aObjFormDataDocument);
+    CustomFormsDataFolderResponse customFormsDataFolderResponse = (CustomFormsDataFolderResponse) o;
+    return Objects.equals(this.pkiEzsignfolderID, customFormsDataFolderResponse.pkiEzsignfolderID) &&
+        Objects.equals(this.sEzsignfolderDescription, customFormsDataFolderResponse.sEzsignfolderDescription) &&
+        Objects.equals(this.aObjFormDataDocument, customFormsDataFolderResponse.aObjFormDataDocument);
   }
 
   @Override
@@ -142,7 +142,7 @@ public class CustomFormDataFolderResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomFormDataFolderResponse {\n");
+    sb.append("class CustomFormsDataFolderResponse {\n");
     sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    aObjFormDataDocument: ").append(toIndentedString(aObjFormDataDocument)).append("\n");

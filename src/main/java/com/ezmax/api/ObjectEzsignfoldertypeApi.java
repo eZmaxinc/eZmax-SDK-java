@@ -27,7 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -56,6 +58,11 @@ public class ObjectEzsignfoldertypeApi {
 
     /**
      * Build call for ezsignfoldertypeGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -63,9 +70,10 @@ public class ObjectEzsignfoldertypeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldertypeGetListV1Call(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldertypeGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -77,8 +85,28 @@ public class ObjectEzsignfoldertypeApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -96,50 +124,67 @@ public class ObjectEzsignfoldertypeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignfoldertypeGetListV1ValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignfoldertypeGetListV1ValidateBeforeCall(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1Call(_callback);
+        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
         return localVarCall;
 
     }
 
     /**
      * Retrieve Ezsignfoldertype list
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
      * @return EzsignfoldertypeGetListV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1() throws ApiException {
-        ApiResponse<EzsignfoldertypeGetListV1Response> localVarResp = ezsignfoldertypeGetListV1WithHttpInfo();
+    public EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        ApiResponse<EzsignfoldertypeGetListV1Response> localVarResp = ezsignfoldertypeGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         return localVarResp.getData();
     }
 
     /**
      * Retrieve Ezsignfoldertype list
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
      * @return ApiResponse&lt;EzsignfoldertypeGetListV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1WithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(null);
+    public ApiResponse<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
         Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Retrieve Ezsignfoldertype list (asynchronously)
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -147,11 +192,12 @@ public class ObjectEzsignfoldertypeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldertypeGetListV1Async(final ApiCallback<EzsignfoldertypeGetListV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldertypeGetListV1Async(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback<EzsignfoldertypeGetListV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
         Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

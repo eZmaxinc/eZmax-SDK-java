@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
-**406** | Accept header is not defined or invalid. |  -  |
+**406** | One of the accept header is not defined or invalid. |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
 <a name="ezsignfolderGetObjectV1"></a>

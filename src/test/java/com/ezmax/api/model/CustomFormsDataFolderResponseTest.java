@@ -30,17 +30,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for CustomFormDataFolderResponse
+ * Model tests for CustomFormsDataFolderResponse
  */
-public class CustomFormDataFolderResponseTest {
-    private final CustomFormDataFolderResponse model = new CustomFormDataFolderResponse();
+public class CustomFormsDataFolderResponseTest {
+    private final CustomFormsDataFolderResponse model = new CustomFormsDataFolderResponse();
 
     /**
-     * Model tests for CustomFormDataFolderResponse
+     * Model tests for CustomFormsDataFolderResponse
      */
     @Test
-    public void testCustomFormDataFolderResponse() {
-        // TODO: test CustomFormDataFolderResponse
+    public void testCustomFormsDataFolderResponse() {
+        // TODO: test CustomFormsDataFolderResponse
     }
 
     /**

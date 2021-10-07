@@ -14,7 +14,9 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -35,14 +37,19 @@ public class ObjectEzsignfoldertypeApiTest {
     /**
      * Retrieve Ezsignfoldertype list
      *
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void ezsignfoldertypeGetListV1Test() throws ApiException {
-        EzsignfoldertypeGetListV1Response response = api.ezsignfoldertypeGetListV1();
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        EzsignfoldertypeGetListV1Response response = api.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
 
         // TODO: test validations
     }
