@@ -28,7 +28,7 @@ import java.io.IOException;
  * An Ezsignpage Object
  */
 @ApiModel(description = "An Ezsignpage Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T04:54:07.055439Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
 public class EzsignpageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D = "pkiEzsignpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D)

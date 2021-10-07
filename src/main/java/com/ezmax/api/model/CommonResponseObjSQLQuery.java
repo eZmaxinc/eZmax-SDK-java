@@ -28,7 +28,7 @@ import java.io.IOException;
  * Definition of objSQLQuery Object
  */
 @ApiModel(description = "Definition of objSQLQuery Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T04:54:07.055439Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
 public class CommonResponseObjSQLQuery {
   public static final String SERIALIZED_NAME_S_QUERY = "sQuery";
   @SerializedName(SERIALIZED_NAME_S_QUERY)

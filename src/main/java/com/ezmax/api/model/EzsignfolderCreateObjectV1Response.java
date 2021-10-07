@@ -18,6 +18,7 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseAllOf;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -32,7 +33,7 @@ import java.io.IOException;
  * Response for the /1/object/ezsignfolder/createObject API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsignfolder/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T04:54:07.055439Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

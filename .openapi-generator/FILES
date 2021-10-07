@@ -74,6 +74,7 @@ docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
+docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetFormsDataV1Response.md
@@ -279,6 +280,7 @@ src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1Response.java
@@ -476,6 +478,7 @@ src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1ResponseTest.java

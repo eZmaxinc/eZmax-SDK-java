@@ -30,7 +30,7 @@ import java.io.IOException;
  * Request for the /1/object/ezsignsignature/createObject API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsignsignature/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T04:54:07.055439Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
 public class EzsignsignatureCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)

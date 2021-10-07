@@ -238,7 +238,7 @@ tags:
     \ Ezsignfolder |  |  | Array of objects of type *Ezsignfolder* | [{\"pkiEzsignfolderID\"\
     : 122, \"sEzsignfolderName\": \"Test\"}, {\"pkiEzsignfolderID\": 234, \"sEzsignfolderName\"\
     : \"Test 2\"}] |\n| a_sContactFirstname | a_ |  | s | Contact | Firstname |  |\
-    \ An array of string for the fied *Firstname* in table *Contact* | ['John', 'Mary',\
+    \ An array of string for the field *Firstname* in table *Contact* | ['John', 'Mary',\
     \ 'Jane'] |\n| a_pkiContactIDOwner | a_ | pk | i | Contact | ID | Owner | An array\
     \ of foreign keys of type integer pointing to the field *pkiContactID* in table\
     \ *Contact* with a discriminator of *Owner* | [266, 277, 288] |\n\n## List filter\n\
@@ -2400,21 +2400,6 @@ components:
       - $ref: '#/components/schemas/activesession_getCurrent_v1_Response_allOf'
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/activesession/getCurrent API Request
-      type: object
-    ezsignfolder-createObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfolder/createObject API Request
-      example:
-        mPayload:
-          a_pkiEzsignfolderID:
-          - 95
-          - 96
-      properties:
-        mPayload:
-          $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response-mPayload'
-      required:
-      - mPayload
       type: object
     ezsignfolder-deleteObject-v1-Response:
       allOf:
@@ -5610,6 +5595,12 @@ components:
       example: bField1 eq 1 and iField2 gte 0 and iField2 lte 1000 and sField3 eq
         'Other' and eField4 eq 'Paid' and sField5 like '%needle%'
       type: string
+    ezsignfolder-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_createObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/createObject API Request
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -5861,6 +5852,13 @@ components:
           type: array
       required:
       - a_objEzsignfoldertype
+      type: object
+    ezsignfolder_createObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
       type: object
   securitySchemes:
     Authorization:

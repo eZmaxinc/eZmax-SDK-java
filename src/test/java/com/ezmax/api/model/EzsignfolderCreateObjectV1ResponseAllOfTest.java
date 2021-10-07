@@ -13,10 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommonResponse;
-import com.ezmax.api.model.CommonResponseObjDebug;
-import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseAllOf;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -32,17 +28,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for EzsignfolderCreateObjectV1Response
+ * Model tests for EzsignfolderCreateObjectV1ResponseAllOf
  */
-public class EzsignfolderCreateObjectV1ResponseTest {
-    private final EzsignfolderCreateObjectV1Response model = new EzsignfolderCreateObjectV1Response();
+public class EzsignfolderCreateObjectV1ResponseAllOfTest {
+    private final EzsignfolderCreateObjectV1ResponseAllOf model = new EzsignfolderCreateObjectV1ResponseAllOf();
 
     /**
-     * Model tests for EzsignfolderCreateObjectV1Response
+     * Model tests for EzsignfolderCreateObjectV1ResponseAllOf
      */
     @Test
-    public void testEzsignfolderCreateObjectV1Response() {
-        // TODO: test EzsignfolderCreateObjectV1Response
+    public void testEzsignfolderCreateObjectV1ResponseAllOf() {
+        // TODO: test EzsignfolderCreateObjectV1ResponseAllOf
     }
 
     /**
@@ -51,22 +47,6 @@ public class EzsignfolderCreateObjectV1ResponseTest {
     @Test
     public void mPayloadTest() {
         // TODO: test mPayload
-    }
-
-    /**
-     * Test the property 'objDebugPayload'
-     */
-    @Test
-    public void objDebugPayloadTest() {
-        // TODO: test objDebugPayload
-    }
-
-    /**
-     * Test the property 'objDebug'
-     */
-    @Test
-    public void objDebugTest() {
-        // TODO: test objDebug
     }
 
 }

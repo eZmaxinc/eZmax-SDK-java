@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,36 +26,35 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+ * EzsignfolderCreateObjectV1ResponseAllOf
  */
-@ApiModel(description = "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
-public class EzsignfolderSendV1Request {
-  public static final String SERIALIZED_NAME_T_EXTRA_MESSAGE = "tExtraMessage";
-  @SerializedName(SERIALIZED_NAME_T_EXTRA_MESSAGE)
-  private String tExtraMessage;
+public class EzsignfolderCreateObjectV1ResponseAllOf {
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private EzsignfolderCreateObjectV1ResponseMPayload mPayload;
 
 
-  public EzsignfolderSendV1Request tExtraMessage(String tExtraMessage) {
+  public EzsignfolderCreateObjectV1ResponseAllOf mPayload(EzsignfolderCreateObjectV1ResponseMPayload mPayload) {
     
-    this.tExtraMessage = tExtraMessage;
+    this.mPayload = mPayload;
     return this;
   }
 
    /**
-   * A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.
-   * @return tExtraMessage
+   * Get mPayload
+   * @return mPayload
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent.")
+  @ApiModelProperty(required = true, value = "")
 
-  public String gettExtraMessage() {
-    return tExtraMessage;
+  public EzsignfolderCreateObjectV1ResponseMPayload getmPayload() {
+    return mPayload;
   }
 
 
-  public void settExtraMessage(String tExtraMessage) {
-    this.tExtraMessage = tExtraMessage;
+  public void setmPayload(EzsignfolderCreateObjectV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
   }
 
 
@@ -66,20 +66,20 @@ public class EzsignfolderSendV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignfolderSendV1Request ezsignfolderSendV1Request = (EzsignfolderSendV1Request) o;
-    return Objects.equals(this.tExtraMessage, ezsignfolderSendV1Request.tExtraMessage);
+    EzsignfolderCreateObjectV1ResponseAllOf ezsignfolderCreateObjectV1ResponseAllOf = (EzsignfolderCreateObjectV1ResponseAllOf) o;
+    return Objects.equals(this.mPayload, ezsignfolderCreateObjectV1ResponseAllOf.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tExtraMessage);
+    return Objects.hash(mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsignfolderSendV1Request {\n");
-    sb.append("    tExtraMessage: ").append(toIndentedString(tExtraMessage)).append("\n");
+    sb.append("class EzsignfolderCreateObjectV1ResponseAllOf {\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
   }
