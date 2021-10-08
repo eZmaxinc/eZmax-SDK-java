@@ -30,7 +30,7 @@ import java.io.IOException;
  * Request for the /1/object/franchisereferalincome/createObject API Request
  */
 @ApiModel(description = "Request for the /1/object/franchisereferalincome/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
 public class FranchisereferalincomeCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_FRANCHISEREFERALINCOME = "objFranchisereferalincome";
   @SerializedName(SERIALIZED_NAME_OBJ_FRANCHISEREFERALINCOME)

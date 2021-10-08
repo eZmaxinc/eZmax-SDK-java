@@ -30,7 +30,7 @@ import java.util.List;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)

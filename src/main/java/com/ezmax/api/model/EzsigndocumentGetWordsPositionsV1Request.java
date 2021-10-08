@@ -30,7 +30,7 @@ import java.util.List;
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.

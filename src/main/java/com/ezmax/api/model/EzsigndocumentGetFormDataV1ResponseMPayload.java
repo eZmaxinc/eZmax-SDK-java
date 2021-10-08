@@ -32,7 +32,7 @@ import java.util.List;
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
 public class EzsigndocumentGetFormDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
