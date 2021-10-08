@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.0
-  - Build date: 2021-10-07T13:47:23.802070Z[Etc/UTC]
+  - Build date: 2021-10-08T01:32:30.632233Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -184,8 +184,12 @@ Class | Method | HTTP request | Description
  - [CommonGetListV1ResponseMPayload](docs/CommonGetListV1ResponseMPayload.md)
  - [CommonResponse](docs/CommonResponse.md)
  - [CommonResponseError](docs/CommonResponseError.md)
+ - [CommonResponseFilter](docs/CommonResponseFilter.md)
+ - [CommonResponseGetList](docs/CommonResponseGetList.md)
  - [CommonResponseObjDebug](docs/CommonResponseObjDebug.md)
  - [CommonResponseObjDebugPayload](docs/CommonResponseObjDebugPayload.md)
+ - [CommonResponseObjDebugPayloadGetList](docs/CommonResponseObjDebugPayloadGetList.md)
+ - [CommonResponseObjDebugPayloadGetListAllOf](docs/CommonResponseObjDebugPayloadGetListAllOf.md)
  - [CommonResponseObjSQLQuery](docs/CommonResponseObjSQLQuery.md)
  - [CommonWebhook](docs/CommonWebhook.md)
  - [ContactRequest](docs/ContactRequest.md)
@@ -286,6 +290,7 @@ Class | Method | HTTP request | Description
  - [FieldEEzsigndocumentStep](docs/FieldEEzsigndocumentStep.md)
  - [FieldEEzsignfolderSendreminderfrequency](docs/FieldEEzsignfolderSendreminderfrequency.md)
  - [FieldEEzsignfolderStep](docs/FieldEEzsignfolderStep.md)
+ - [FieldEEzsignfoldertypePrivacylevel](docs/FieldEEzsignfoldertypePrivacylevel.md)
  - [FieldEEzsignsignatureType](docs/FieldEEzsignsignatureType.md)
  - [FieldEPhoneType](docs/FieldEPhoneType.md)
  - [FieldEUserType](docs/FieldEUserType.md)

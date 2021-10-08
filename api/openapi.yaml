@@ -540,7 +540,11 @@ tags:
     \ documentation\n- Error Code NOTACCEPTABLE_LANGUAGE added to documentation\n\
     - Variables convention added to documentation\n- List Filter convention added\
     \ to documentation\n\n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
-    \n## 1.0.X Releases\n### [1.0.47] - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
+    \ \n#### Removed\n- Support for typescript-angular\n- Support for typescript-aurelia\n\
+    - Support for typescript-fetch\n- Support for typescript-jquery\n- Support for\
+    \ typescript-node\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
+    \ was invalid when url parameters were used\n\n## 1.0.X Releases\n### [1.0.47]\
+    \ - 2021-09-20\n#### Early Adopters\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n\n#### Added\n\
     - Early Adopters mention in documentation for endpoints not ready to be used in\
     \ production\n\n#### Changed\n- Normalized internal definition of AllOf (Objects\
@@ -2215,8 +2219,14 @@ paths:
         required: false
         schema:
           enum:
-          - sEzsignfoldertypeNameX
-          - sEzsignfoldertypeNameX desc
+          - pkiEzsignfoldertypeID_ASC
+          - pkiEzsignfoldertypeID_DESC
+          - eEzsignfoldertypePrivacylevel_ASC
+          - eEzsignfoldertypePrivacylevel_DESC
+          - sEzsignfoldertypeNameX_ASC
+          - sEzsignfoldertypeNameX_DESC
+          - bEzsignfoldertypeIsactive_ASC
+          - bEzsignfoldertypeIsactive_DESC
           type: string
         style: form
       - explode: true
@@ -2493,37 +2503,6 @@ components:
       - iSQLSelects
       - sMemoryUsage
       - sRunTime
-      type: object
-    Common-Response-objDebugPayload:
-      description: This is a debug object containing debugging information on the
-        actual function
-      example:
-        iVersionMin: 1
-        iVersionMax: 2
-        a_RequiredPermissions:
-        - 45
-        - 61
-      properties:
-        iVersionMin:
-          description: The minimum version of the function that can be called
-          type: integer
-        iVersionMax:
-          description: The maximum version of the function that can be called
-          type: integer
-        a_RequiredPermissions:
-          description: |-
-            An array of permissions required to access this function.
-
-            If the value "0" is present in the array, anyone can call this function.
-
-            You must have one of the permission to access the function. You don't need to have all of them.
-          items:
-            type: integer
-          type: array
-      required:
-      - a_RequiredPermissions
-      - iVersionMax
-      - iVersionMin
       type: object
     Common-Response-objSQLQuery:
       description: Definition of objSQLQuery Object
@@ -5469,12 +5448,6 @@ components:
       description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
       type: object
-    ezsignfoldertype-getList-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfoldertype/getList API Request
-      type: object
     ezsignfoldertype-getList-v1-Response-mPayload:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_mPayload_allOf'
@@ -5501,48 +5474,6 @@ components:
       description: The name of the Ezsignfoldertype in the language of the requester
       example: Default
       type: string
-    ezsignfoldertype-ListElement:
-      description: An Ezsignfoldertype List Element
-      properties:
-        pkiEzsignfoldertypeID:
-          description: The unique ID of the Ezsignfoldertype.
-          example: 5
-          type: integer
-        sEzsignfoldertypeNameX:
-          description: The name of the Ezsignfoldertype in the language of the requester
-          example: Default
-          type: string
-      required:
-      - pkiEzsignfoldertypeID
-      - sEzsignfoldertypeNameX
-      type: object
-    ezsigndocument-getWordsPositions-v1-Request:
-      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
-        API Request
-      properties:
-        eGet:
-          description: Specify if you want to retrieve *All* words or specific *Words*
-            from the document. If you specify *Words*, you must send the list of words
-            to search for in *a_sWord*.
-          enum:
-          - All
-          - Words
-          type: string
-        bWordCaseSensitive:
-          description: |-
-            IF *true*, words will be searched case-sensitive and results will be returned case-sensitive.
-            IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
-          type: boolean
-        a_sWord:
-          description: Array of words to find in the document
-          items:
-            type: string
-          type: array
-      required:
-      - bWordCaseSensitive
-      - eGet
-      - eSearchFor
-      type: object
     Field-iRowOffset:
       description: The starting element from where to start retrieving the results.
         For example if you started at iRowOffset=0 and asked for iRowMax=100, to get
@@ -5600,6 +5531,145 @@ components:
       - $ref: '#/components/schemas/ezsignfolder_createObject_v1_Response_allOf'
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/ezsignfolder/createObject API Request
+      type: object
+    ezsigndocument-getWordsPositions-v1-Request:
+      description: Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
+        API Request
+      properties:
+        eGet:
+          description: Specify if you want to retrieve *All* words or specific *Words*
+            from the document. If you specify *Words*, you must send the list of words
+            to search for in *a_sWord*.
+          enum:
+          - All
+          - Words
+          type: string
+        bWordCaseSensitive:
+          description: |-
+            IF *true*, words will be searched case-sensitive and results will be returned case-sensitive.
+            IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
+          type: boolean
+        a_sWord:
+          description: Array of words to find in the document
+          items:
+            type: string
+          type: array
+      required:
+      - bWordCaseSensitive
+      - eGet
+      - eSearchFor
+      type: object
+    Field-eEzsignfoldertypePrivacylevel:
+      description: |-
+        The Privacy level of the Ezsignfolder type.
+
+        * **User** is for personal folders use and cannot be shared
+        * **Usergroup** is for shared folders and complex permission can be configured to control access
+      enum:
+      - User
+      - Usergroup
+      type: string
+    Field-bEzsignfoldertypeIsactive:
+      description: Whether the Ezsignfoldertype is active or not
+      type: boolean
+    ezsignfoldertype-ListElement:
+      description: An Ezsignfoldertype List Element
+      properties:
+        pkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        bEzsignfoldertypeIsactive:
+          description: Whether the Ezsignfoldertype is active or not
+          type: boolean
+      required:
+      - bEzsignfoldertypeIsactive
+      - eEzsignfoldertypePrivacylevel
+      - pkiEzsignfoldertypeID
+      - sEzsignfoldertypeNameX
+      type: object
+    Common-Response-objDebugPayload:
+      description: This is a debug object containing debugging information on the
+        actual function
+      properties:
+        iVersionMin:
+          description: The minimum version of the function that can be called
+          example: 1
+          type: integer
+        iVersionMax:
+          description: The maximum version of the function that can be called
+          example: 2
+          type: integer
+        a_RequiredPermission:
+          description: |-
+            An array of permissions required to access this function.
+
+            If the value "0" is present in the array, anyone can call this function.
+
+            You must have one of the permission to access the function. You don't need to have all of them.
+          items:
+            example: 117
+            type: integer
+          type: array
+      required:
+      - a_RequiredPermission
+      - iVersionMax
+      - iVersionMin
+      type: object
+    ezsignfoldertype-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for the /1/object/ezsignfoldertype/getList API Request
+      type: object
+    Common-Response_getList:
+      description: All API response will inherit this based Response
+      properties:
+        objDebugPayload:
+          $ref: '#/components/schemas/Common-Response-objDebugPayload_getList'
+        objDebug:
+          $ref: '#/components/schemas/Common-Response-objDebug'
+      type: object
+    Common-Response-objDebugPayload_getList:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response-objDebugPayload'
+      - $ref: '#/components/schemas/Common_Response_objDebugPayload_getList_allOf'
+      description: This is a debug object containing debugging information on the
+        actual function
+      type: object
+    Common-Response-Filter:
+      description: Definition of Filters for getList
+      properties:
+        a_AutoType:
+          additionalProperties:
+            description: The actual field name being filtered
+            type: string
+          description: List of filters that can be used in *sFilter* (Automatic types)
+          type: object
+        a_Enum:
+          additionalProperties:
+            additionalProperties:
+              description: Corresponding sql statement
+              type: string
+            description: List of valid enum values
+            type: object
+          description: List of filters that can be used in *sFilter* (Enum types)
+          type: object
+      type: object
+    Common-Response-FilterEnum:
+      additionalProperties:
+        additionalProperties:
+          description: Corresponding sql statement
+          type: string
+        description: List of valid enum values
+        type: object
+      description: List of filters that can be used in *sFilter* (Enum types)
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -5837,13 +5907,6 @@ components:
       required:
       - mPayload
       type: object
-    ezsignfoldertype_getList_v1_Response_allOf:
-      properties:
-        mPayload:
-          $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response-mPayload'
-      required:
-      - mPayload
-      type: object
     ezsignfoldertype_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignfoldertype:
@@ -5859,6 +5922,27 @@ components:
           $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response-mPayload'
       required:
       - mPayload
+      type: object
+    ezsignfoldertype_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    Common_Response_objDebugPayload_getList_allOf:
+      properties:
+        a_Filter:
+          $ref: '#/components/schemas/Common-Response-Filter'
+        a_OrderBy:
+          additionalProperties:
+            description: Corresponding sql statement
+            type: string
+          description: List of available values for *eOrderBy*
+          type: object
+      required:
+      - a_Filter
+      - a_OrderBy
       type: object
   securitySchemes:
     Authorization:

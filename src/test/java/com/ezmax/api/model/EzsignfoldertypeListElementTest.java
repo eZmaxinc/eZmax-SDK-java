@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,11 +50,27 @@ public class EzsignfoldertypeListElementTest {
     }
 
     /**
+     * Test the property 'eEzsignfoldertypePrivacylevel'
+     */
+    @Test
+    public void eEzsignfoldertypePrivacylevelTest() {
+        // TODO: test eEzsignfoldertypePrivacylevel
+    }
+
+    /**
      * Test the property 'sEzsignfoldertypeNameX'
      */
     @Test
     public void sEzsignfoldertypeNameXTest() {
         // TODO: test sEzsignfoldertypeNameX
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeIsactive'
+     */
+    @Test
+    public void bEzsignfoldertypeIsactiveTest() {
+        // TODO: test bEzsignfoldertypeIsactive
     }
 
 }

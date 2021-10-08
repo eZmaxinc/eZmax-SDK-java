@@ -59,11 +59,11 @@ public class CommonResponseObjDebugPayloadTest {
     }
 
     /**
-     * Test the property 'aRequiredPermissions'
+     * Test the property 'aRequiredPermission'
      */
     @Test
-    public void aRequiredPermissionsTest() {
-        // TODO: test aRequiredPermissions
+    public void aRequiredPermissionTest() {
+        // TODO: test aRequiredPermission
     }
 
 }

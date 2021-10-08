@@ -28,8 +28,12 @@ docs/CommonGetAutocompleteV1ResponseMPayload.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseFilter.md
+docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
 docs/CommonResponseObjDebugPayload.md
+docs/CommonResponseObjDebugPayloadGetList.md
+docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
@@ -130,6 +134,7 @@ docs/EzsignsignerRequestCompoundContact.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
+docs/FieldEEzsignfoldertypePrivacylevel.md
 docs/FieldEEzsignsignatureType.md
 docs/FieldEPhoneType.md
 docs/FieldEUserType.md
@@ -234,8 +239,12 @@ src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CommonGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CommonResponse.java
 src/main/java/com/ezmax/api/model/CommonResponseError.java
+src/main/java/com/ezmax/api/model/CommonResponseFilter.java
+src/main/java/com/ezmax/api/model/CommonResponseGetList.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebug.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayload.java
+src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetList.java
+src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetListAllOf.java
 src/main/java/com/ezmax/api/model/CommonResponseObjSQLQuery.java
 src/main/java/com/ezmax/api/model/CommonWebhook.java
 src/main/java/com/ezmax/api/model/ContactRequest.java
@@ -336,6 +345,7 @@ src/main/java/com/ezmax/api/model/EzsignsignerRequestCompoundContact.java
 src/main/java/com/ezmax/api/model/FieldEEzsigndocumentStep.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderStep.java
+src/main/java/com/ezmax/api/model/FieldEEzsignfoldertypePrivacylevel.java
 src/main/java/com/ezmax/api/model/FieldEEzsignsignatureType.java
 src/main/java/com/ezmax/api/model/FieldEPhoneType.java
 src/main/java/com/ezmax/api/model/FieldEUserType.java
@@ -432,6 +442,10 @@ src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseMPayloadTest.ja
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseTest.java
 src/test/java/com/ezmax/api/model/CommonGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonResponseErrorTest.java
+src/test/java/com/ezmax/api/model/CommonResponseFilterTest.java
+src/test/java/com/ezmax/api/model/CommonResponseGetListTest.java
+src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetListAllOfTest.java
+src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetListTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjSQLQueryTest.java
@@ -535,6 +549,7 @@ src/test/java/com/ezmax/api/model/EzsignsignerRequestTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderStepTest.java
+src/test/java/com/ezmax/api/model/FieldEEzsignfoldertypePrivacylevelTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignsignatureTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEPhoneTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeSSPRTest.java

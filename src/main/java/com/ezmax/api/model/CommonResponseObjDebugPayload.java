@@ -30,7 +30,7 @@ import java.util.List;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -40,9 +40,9 @@ public class CommonResponseObjDebugPayload {
   @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
   private Integer iVersionMax;
 
-  public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSIONS = "a_RequiredPermissions";
-  @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSIONS)
-  private List<Integer> aRequiredPermissions = new ArrayList<Integer>();
+  public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
+  @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
+  private List<Integer> aRequiredPermission = new ArrayList<Integer>();
 
 
   public CommonResponseObjDebugPayload iVersionMin(Integer iVersionMin) {
@@ -56,7 +56,7 @@ public class CommonResponseObjDebugPayload {
    * @return iVersionMin
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The minimum version of the function that can be called")
+  @ApiModelProperty(example = "1", required = true, value = "The minimum version of the function that can be called")
 
   public Integer getiVersionMin() {
     return iVersionMin;
@@ -79,7 +79,7 @@ public class CommonResponseObjDebugPayload {
    * @return iVersionMax
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The maximum version of the function that can be called")
+  @ApiModelProperty(example = "2", required = true, value = "The maximum version of the function that can be called")
 
   public Integer getiVersionMax() {
     return iVersionMax;
@@ -91,31 +91,31 @@ public class CommonResponseObjDebugPayload {
   }
 
 
-  public CommonResponseObjDebugPayload aRequiredPermissions(List<Integer> aRequiredPermissions) {
+  public CommonResponseObjDebugPayload aRequiredPermission(List<Integer> aRequiredPermission) {
     
-    this.aRequiredPermissions = aRequiredPermissions;
+    this.aRequiredPermission = aRequiredPermission;
     return this;
   }
 
-  public CommonResponseObjDebugPayload addARequiredPermissionsItem(Integer aRequiredPermissionsItem) {
-    this.aRequiredPermissions.add(aRequiredPermissionsItem);
+  public CommonResponseObjDebugPayload addARequiredPermissionItem(Integer aRequiredPermissionItem) {
+    this.aRequiredPermission.add(aRequiredPermissionItem);
     return this;
   }
 
    /**
    * An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.
-   * @return aRequiredPermissions
+   * @return aRequiredPermission
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.")
 
-  public List<Integer> getaRequiredPermissions() {
-    return aRequiredPermissions;
+  public List<Integer> getaRequiredPermission() {
+    return aRequiredPermission;
   }
 
 
-  public void setaRequiredPermissions(List<Integer> aRequiredPermissions) {
-    this.aRequiredPermissions = aRequiredPermissions;
+  public void setaRequiredPermission(List<Integer> aRequiredPermission) {
+    this.aRequiredPermission = aRequiredPermission;
   }
 
 
@@ -130,12 +130,12 @@ public class CommonResponseObjDebugPayload {
     CommonResponseObjDebugPayload commonResponseObjDebugPayload = (CommonResponseObjDebugPayload) o;
     return Objects.equals(this.iVersionMin, commonResponseObjDebugPayload.iVersionMin) &&
         Objects.equals(this.iVersionMax, commonResponseObjDebugPayload.iVersionMax) &&
-        Objects.equals(this.aRequiredPermissions, commonResponseObjDebugPayload.aRequiredPermissions);
+        Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayload.aRequiredPermission);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermissions);
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission);
   }
 
   @Override
@@ -144,7 +144,7 @@ public class CommonResponseObjDebugPayload {
     sb.append("class CommonResponseObjDebugPayload {\n");
     sb.append("    iVersionMin: ").append(toIndentedString(iVersionMin)).append("\n");
     sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
-    sb.append("    aRequiredPermissions: ").append(toIndentedString(aRequiredPermissions)).append("\n");
+    sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
     sb.append("}");
     return sb.toString();
   }

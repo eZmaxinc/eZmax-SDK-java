@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,15 +29,23 @@ import java.io.IOException;
  * An Ezsignfoldertype List Element
  */
 @ApiModel(description = "An Ezsignfoldertype List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-07T13:47:23.802070Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T01:32:30.632233Z[Etc/UTC]")
 public class EzsignfoldertypeListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
   private Integer pkiEzsignfoldertypeID;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
+  private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
   private String sEzsignfoldertypeNameX;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ISACTIVE = "bEzsignfoldertypeIsactive";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ISACTIVE)
+  private Boolean bEzsignfoldertypeIsactive;
 
 
   public EzsignfoldertypeListElement pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
@@ -59,6 +68,29 @@ public class EzsignfoldertypeListElement {
 
   public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
+  }
+
+
+  public EzsignfoldertypeListElement eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+    
+    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+    return this;
+  }
+
+   /**
+   * Get eEzsignfoldertypePrivacylevel
+   * @return eEzsignfoldertypePrivacylevel
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
+    return eEzsignfoldertypePrivacylevel;
+  }
+
+
+  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
@@ -85,6 +117,29 @@ public class EzsignfoldertypeListElement {
   }
 
 
+  public EzsignfoldertypeListElement bEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
+    
+    this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsignfoldertype is active or not
+   * @return bEzsignfoldertypeIsactive
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Whether the Ezsignfoldertype is active or not")
+
+  public Boolean getbEzsignfoldertypeIsactive() {
+    return bEzsignfoldertypeIsactive;
+  }
+
+
+  public void setbEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
+    this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -95,12 +150,14 @@ public class EzsignfoldertypeListElement {
     }
     EzsignfoldertypeListElement ezsignfoldertypeListElement = (EzsignfoldertypeListElement) o;
     return Objects.equals(this.pkiEzsignfoldertypeID, ezsignfoldertypeListElement.pkiEzsignfoldertypeID) &&
-        Objects.equals(this.sEzsignfoldertypeNameX, ezsignfoldertypeListElement.sEzsignfoldertypeNameX);
+        Objects.equals(this.eEzsignfoldertypePrivacylevel, ezsignfoldertypeListElement.eEzsignfoldertypePrivacylevel) &&
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsignfoldertypeListElement.sEzsignfoldertypeNameX) &&
+        Objects.equals(this.bEzsignfoldertypeIsactive, ezsignfoldertypeListElement.bEzsignfoldertypeIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, sEzsignfoldertypeNameX);
+    return Objects.hash(pkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, bEzsignfoldertypeIsactive);
   }
 
   @Override
@@ -108,7 +165,9 @@ public class EzsignfoldertypeListElement {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldertypeListElement {\n");
     sb.append("    pkiEzsignfoldertypeID: ").append(toIndentedString(pkiEzsignfoldertypeID)).append("\n");
+    sb.append("    eEzsignfoldertypePrivacylevel: ").append(toIndentedString(eEzsignfoldertypePrivacylevel)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
+    sb.append("    bEzsignfoldertypeIsactive: ").append(toIndentedString(bEzsignfoldertypeIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
   }

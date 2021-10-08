@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi(defaultClient);
-    String eOrderBy = "sEzsignfoldertypeNameX"; // String | Specify how you want the results to be sorted
+    String eOrderBy = "pkiEzsignfoldertypeID_ASC"; // String | Specify how you want the results to be sorted
     Integer iRowMax = 56; // Integer | 
     Integer iRowOffset = 56; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
@@ -60,7 +60,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: sEzsignfoldertypeNameX, sEzsignfoldertypeNameX desc]
+ **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfoldertypeID_ASC, pkiEzsignfoldertypeID_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, bEzsignfoldertypeIsactive_ASC, bEzsignfoldertypeIsactive_DESC]
  **iRowMax** | **Integer**|  | [optional]
  **iRowOffset** | **Integer**|  | [optional]
  **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
