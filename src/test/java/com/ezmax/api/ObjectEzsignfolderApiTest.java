@@ -19,9 +19,11 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
+import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -90,7 +92,7 @@ public class ObjectEzsignfolderApiTest {
     /**
      * Retrieve an existing Ezsignfolder&#39;s forms data
      *
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -99,6 +101,26 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetFormsDataV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderGetFormsDataV1Response response = api.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve Ezsignfolder list
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetListV1Test() throws ApiException {
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        EzsignfolderGetListV1Response response = api.ezsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
 
         // TODO: test validations
     }

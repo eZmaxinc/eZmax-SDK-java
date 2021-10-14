@@ -16,10 +16,10 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonGetAutocompleteV1ResponseAllOf;
-import com.ezmax.api.model.CommonGetAutocompleteV1ResponseMPayload;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.CustomAutocompleteElementResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -35,11 +35,11 @@ import java.util.List;
  * Response for the /1/object/xxx/getAutocomplete API Request
  */
 @ApiModel(description = "Response for the /1/object/xxx/getAutocomplete API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-14T04:58:32.762916Z[Etc/UTC]")
 public class CommonGetAutocompleteV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private List<CommonGetAutocompleteV1ResponseMPayload> mPayload = new ArrayList<CommonGetAutocompleteV1ResponseMPayload>();
+  private List<CustomAutocompleteElementResponse> mPayload = new ArrayList<CustomAutocompleteElementResponse>();
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -50,30 +50,30 @@ public class CommonGetAutocompleteV1Response {
   private CommonResponseObjDebug objDebug;
 
 
-  public CommonGetAutocompleteV1Response mPayload(List<CommonGetAutocompleteV1ResponseMPayload> mPayload) {
+  public CommonGetAutocompleteV1Response mPayload(List<CustomAutocompleteElementResponse> mPayload) {
     
     this.mPayload = mPayload;
     return this;
   }
 
-  public CommonGetAutocompleteV1Response addMPayloadItem(CommonGetAutocompleteV1ResponseMPayload mPayloadItem) {
+  public CommonGetAutocompleteV1Response addMPayloadItem(CustomAutocompleteElementResponse mPayloadItem) {
     this.mPayload.add(mPayloadItem);
     return this;
   }
 
    /**
-   * Get mPayload
+   * Generic Autocomplete Response
    * @return mPayload
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Generic Autocomplete Response")
 
-  public List<CommonGetAutocompleteV1ResponseMPayload> getmPayload() {
+  public List<CustomAutocompleteElementResponse> getmPayload() {
     return mPayload;
   }
 
 
-  public void setmPayload(List<CommonGetAutocompleteV1ResponseMPayload> mPayload) {
+  public void setmPayload(List<CustomAutocompleteElementResponse> mPayload) {
     this.mPayload = mPayload;
   }
 

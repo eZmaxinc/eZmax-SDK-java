@@ -57,7 +57,7 @@ public class ObjectFranchisebrokerApi {
     /**
      * Build call for franchisebrokerGetAutocompleteV1
      * @param sSelector The type of Franchisebrokers to return (required)
-     * @param sQuery Allow to filter on the option value (optional)
+     * @param sQuery Allow to filter the returned results (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -120,7 +120,7 @@ public class ObjectFranchisebrokerApi {
      * Retrieve Franchisebrokers and IDs
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return (required)
-     * @param sQuery Allow to filter on the option value (optional)
+     * @param sQuery Allow to filter the returned results (optional)
      * @return CommonGetAutocompleteV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,7 +138,7 @@ public class ObjectFranchisebrokerApi {
      * Retrieve Franchisebrokers and IDs
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return (required)
-     * @param sQuery Allow to filter on the option value (optional)
+     * @param sQuery Allow to filter the returned results (optional)
      * @return ApiResponse&lt;CommonGetAutocompleteV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,7 +157,7 @@ public class ObjectFranchisebrokerApi {
      * Retrieve Franchisebrokers and IDs (asynchronously)
      * Get the list of Franchisebrokers to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Franchisebrokers to return (required)
-     * @param sQuery Allow to filter on the option value (optional)
+     * @param sQuery Allow to filter the returned results (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

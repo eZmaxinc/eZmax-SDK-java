@@ -34,7 +34,6 @@ servers:
       description: The region where your services are hosted.
       enum:
       - ca-central-1
-      - local
 - description: The server endpoint where to send your global API requests.
   url: https://{sInfrastructureenvironmenttypeDescription}.api.global.ezmax.com/
   variables:
@@ -231,18 +230,20 @@ tags:
     \ Owner | Foreign key of type integer pointing to the field *pkiContactID* in\
     \ table *Contact* with a discriminator of *Owner* | 266 |\n| sContactFirstname\
     \ |  |  | s | Contact | Firstname |  | String for the Field *Firstname* in table\
-    \ *Contact* | John |\n| dPurchaseTotal |  |  | d | Purchase | Total |  | Decimal\
-    \ number for the field *Total* in table *Purchase* | 2199.78 |\n| objEzsignfolder\
-    \ |  |  | obj | Esignfolder |  |  | Object of type *Ezsignfolder* | {\"pkiEzsignfolderID\"\
-    : 122, \"sEzsignfolderName\": \"Test\"} |\n| a_objEzsignfolder | a_ |  | obj |\
-    \ Ezsignfolder |  |  | Array of objects of type *Ezsignfolder* | [{\"pkiEzsignfolderID\"\
-    : 122, \"sEzsignfolderName\": \"Test\"}, {\"pkiEzsignfolderID\": 234, \"sEzsignfolderName\"\
-    : \"Test 2\"}] |\n| a_sContactFirstname | a_ |  | s | Contact | Firstname |  |\
-    \ An array of string for the field *Firstname* in table *Contact* | ['John', 'Mary',\
-    \ 'Jane'] |\n| a_pkiContactIDOwner | a_ | pk | i | Contact | ID | Owner | An array\
-    \ of foreign keys of type integer pointing to the field *pkiContactID* in table\
-    \ *Contact* with a discriminator of *Owner* | [266, 277, 288] |\n\n## List filter\n\
-    \nEvery GetList Endpoint has a *sFilter* query parameter that can be used to filter\
+    \ *Contact* | John |\n| bPurchaseIspaid |  |  | b | Purchase | Ispaid |  | Boolean\
+    \ for the field Ispaid in table *Purchase* | true |\n| dPurchaseTotal |  |  |\
+    \ d | Purchase | Total |  | Decimal number for the field *Total* in table *Purchase*\
+    \ | 2199.78 |\n| objEzsignfolder |  |  | obj | Esignfolder |  |  | Object of type\
+    \ *Ezsignfolder* | {\"pkiEzsignfolderID\": 122, \"sEzsignfolderName\": \"Test\"\
+    } |\n| a_objEzsignfolder | a_ |  | obj | Ezsignfolder |  |  | Array of objects\
+    \ of type *Ezsignfolder* | [{\"pkiEzsignfolderID\": 122, \"sEzsignfolderName\"\
+    : \"Test\"}, {\"pkiEzsignfolderID\": 234, \"sEzsignfolderName\": \"Test 2\"}]\
+    \ |\n| a_sContactFirstname | a_ |  | s | Contact | Firstname |  | An array of\
+    \ string for the field *Firstname* in table *Contact* | ['John', 'Mary', 'Jane']\
+    \ |\n| a_pkiContactIDOwner | a_ | pk | i | Contact | ID | Owner | An array of\
+    \ foreign keys of type integer pointing to the field *pkiContactID* in table *Contact*\
+    \ with a discriminator of *Owner* | [266, 277, 288] |\n\n## List filter\n\nEvery\
+    \ GetList Endpoint has a *sFilter* query parameter that can be used to filter\
     \ the returned elements.\n\nThe sFilter parameter's syntax is not documented at\
     \ the endpoint's level since it would be redundant. This section documents the\
     \ syntax.\n\n* Every property returned by the endpoint can be used to build the\
@@ -255,32 +256,32 @@ tags:
     \ endpoint's level.\n* *sFilter*'s value must be url encoded.\n* String values\
     \ need to be enclosed in single quotes\n\nValid operators for boolean values:\n\
     \n| Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | bEzsigndocumentEzsignclause\
-    \ eq 1<br>bEzsigndocumentEzsignclause eq 0 |\n\nValid operators for integer values:\n\
-    \n| Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | iEzsigndocumentPagetotal\
-    \ eq 10 |\n| gt | Greater than | iEzsigndocumentPagetotal gt 10 |\n| gte | Greater\
-    \ than or equal to | iEzsigndocumentPagetotal gte 10 |\n| lt | Less than | iEzsigndocumentPagetotal\
-    \ lt 100 |\n| lte | Less than or equal to | iEzsigndocumentPagetotal lte 100 |\n\
-    \nValid operators for date and datetime values:\n\n| Operator | Description |\
-    \ Examples |\n|---|---|---|\n| eq | Equals | dtEzsigndocumentDuedate eq '2005-07-01\
-    \ 18:15:59'<br>dtEzsigndocumentDuedate eq '2005-07-01' |\n| gt | Greater than\
-    \ | dtEzsigndocumentDuedate gt '2001-01-01 00:00:00'<br>dtEzsigndocumentDuedate\
-    \ gt '2001-01-01' |\n| gte | Greater than or equal to | dtEzsigndocumentDuedate\
-    \ gte '2001-01-01 00:00:00'<br>dtEzsigndocumentDuedate gte '2001-01-01' |\n| lt\
-    \ | Less than | dtEzsigndocumentDuedate lt '2025-12-31 23:59:59'<br>dtEzsigndocumentDuedate\
-    \ lt '2025-12-31' |\n| lte | Less than or equal to | dtEzsigndocumentDuedate lte\
-    \ '2025-12-31 23:59:59'<br>dtEzsigndocumentDuedate lte '2025-12-31' |\n\nValid\
-    \ operators for string values:\n\n| Operator | Description | Examples |\n|---|---|---|\n\
-    | eq | Equals | sEzsigndocumentName  eq 'Test contract' |\n| like | Search for\
-    \ a partial string with *%* wildcard | sEzsigndocumentName  like 'Test contra%'<br>sEzsigndocumentName\
-    \  like '%contract'<br>sEzsigndocumentName  like '%con%' |\n\nValid operators\
-    \ for enum values (valid values are documented at the endpoint's level):\n\n|\
-    \ Operator | Description | Examples |\n|---|---|---|\n| eq | Equals | eEzsigndocumentStep\
-    \ eq 'PartiallySigned' |\n\nExample of combining multiple filter together:\n\n\
-    sFilter=bEzsigndocumentEzsignclause eq 1 and iEzsigndocumentPagetotal gt 10 and\
-    \ iEzsigndocumentPagetotal lte 100 and dtEzsigndocumentDuedate gt '2001-01-01\
-    \ 00:00:00' and dtEzsigndocumentDuedate lte '2025-12-31 23:59:59' and sEzsigndocumentName\
-    \  like '%con%' and eEzsigndocumentStep eq 'PartiallySigned'\n\nSame example,\
-    \ but properly url encoded:\n\nsFilter=bEzsigndocumentEzsignclause%20eq%201%20and%20iEzsigndocumentPagetotal%20gt%2010%20and%20iEzsigndocumentPagetotal%20lte%20100%20and%20dtEzsigndocumentDuedate%20gt%20%272001-01-01%2000%3A00%3A00%27%20and%20dtEzsigndocumentDuedate%20lte%20%272025-12-31%2023%3A59%3A59%27%20and%20sEzsigndocumentName%20%20like%20%27%25con%25%27%20and%20eEzsigndocumentStep%20eq%20%27PartiallySigned%27"
+    \ eq true<br>bEzsigndocumentEzsignclause eq false |\n\nValid operators for integer\
+    \ values:\n\n| Operator | Description | Examples |\n|---|---|---|\n| eq | Equals\
+    \ | iEzsigndocumentPagetotal eq 10 |\n| gt | Greater than | iEzsigndocumentPagetotal\
+    \ gt 10 |\n| gte | Greater than or equal to | iEzsigndocumentPagetotal gte 10\
+    \ |\n| lt | Less than | iEzsigndocumentPagetotal lt 100 |\n| lte | Less than or\
+    \ equal to | iEzsigndocumentPagetotal lte 100 |\n\nValid operators for date and\
+    \ datetime values:\n\n| Operator | Description | Examples |\n|---|---|---|\n|\
+    \ eq | Equals | dtEzsigndocumentDuedate eq '2005-07-01 18:15:59'<br>dtEzsigndocumentDuedate\
+    \ eq '2005-07-01' |\n| gt | Greater than | dtEzsigndocumentDuedate gt '2001-01-01\
+    \ 00:00:00'<br>dtEzsigndocumentDuedate gt '2001-01-01' |\n| gte | Greater than\
+    \ or equal to | dtEzsigndocumentDuedate gte '2001-01-01 00:00:00'<br>dtEzsigndocumentDuedate\
+    \ gte '2001-01-01' |\n| lt | Less than | dtEzsigndocumentDuedate lt '2025-12-31\
+    \ 23:59:59'<br>dtEzsigndocumentDuedate lt '2025-12-31' |\n| lte | Less than or\
+    \ equal to | dtEzsigndocumentDuedate lte '2025-12-31 23:59:59'<br>dtEzsigndocumentDuedate\
+    \ lte '2025-12-31' |\n\nValid operators for string values:\n\n| Operator | Description\
+    \ | Examples |\n|---|---|---|\n| eq | Equals | sEzsigndocumentName  eq 'Test contract'\
+    \ |\n| like | Search for a partial string with *%* wildcard | sEzsigndocumentName\
+    \  like 'Test contra%'<br>sEzsigndocumentName  like '%contract'<br>sEzsigndocumentName\
+    \  like '%con%' |\n\nValid operators for enum values (valid values are documented\
+    \ at the endpoint's level):\n\n| Operator | Description | Examples |\n|---|---|---|\n\
+    | eq | Equals | eEzsigndocumentStep eq 'PartiallySigned' |\n\nExample of combining\
+    \ multiple filter together:\n\nsFilter=bEzsigndocumentEzsignclause eq true and\
+    \ iEzsigndocumentPagetotal gt 10 and iEzsigndocumentPagetotal lte 100 and dtEzsigndocumentDuedate\
+    \ gt '2001-01-01 00:00:00' and dtEzsigndocumentDuedate lte '2025-12-31 23:59:59'\
+    \ and sEzsigndocumentName  like '%con%' and eEzsigndocumentStep eq 'PartiallySigned'\n\
+    \nSame example, but properly url encoded:\n\nsFilter=bEzsigndocumentEzsignclause%20eq%20true%20and%20iEzsigndocumentPagetotal%20gt%2010%20and%20iEzsigndocumentPagetotal%20lte%20100%20and%20dtEzsigndocumentDuedate%20gt%20%272001-01-01%2000%3A00%3A00%27%20and%20dtEzsigndocumentDuedate%20lte%20%272025-12-31%2023%3A59%3A59%27%20and%20sEzsigndocumentName%20%20like%20%27%25con%25%27%20and%20eEzsigndocumentStep%20eq%20%27PartiallySigned%27"
   name: General_Conventions
   x-displayName: Conventions
 - description: "## Regional requests\nWhen you send your API requests, you'll need\
@@ -533,9 +534,11 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.0] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
-    - GET /1/object/ezsignfoldertype/getList\n \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
-    - POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n- Status\
+    \n## 1.1.X Releases\n### [1.1.0] - 2021-09-\n#### Early Adopters\n- GET /1/object/ezsignfolder/getList/\n\
+    \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
+    - GET /1/object/ezsignfoldertype/getList\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n\
+    - POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n- Status\
     \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE_CONTENT added to\
     \ documentation\n- Error Code NOTACCEPTABLE_LANGUAGE added to documentation\n\
     - Variables convention added to documentation\n- List Filter convention added\
@@ -883,7 +886,7 @@ paths:
           - All
           type: string
         style: simple
-      - description: Allow to filter on the option value
+      - description: Allow to filter the returned results
         explode: true
         in: query
         name: sQuery
@@ -904,46 +907,6 @@ paths:
       tags:
       - Object_Franchisebroker
       x-accepts: application/json
-  /1/object/period/getAutocomplete/{sSelector}:
-    get:
-      description: Get the list of Periods to be used in a dropdown or autocomplete
-        control.
-      operationId: Period_GetAutocomplete_V1
-      parameters:
-      - description: The types of Periods to return
-        explode: false
-        in: path
-        name: sSelector
-        required: true
-        schema:
-          enum:
-          - ActiveNormal
-          - ActiveNormalAndEndOfYear
-          - AllNormal
-          - AllNormalAndEndOfYear
-          type: string
-        style: simple
-      - description: Allow to filter on the option value
-        explode: true
-        in: query
-        name: sQuery
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Retrieve Periods and IDs
-      tags:
-      - Object_Period
-      x-accepts: application/json
   /1/object/franchiseoffice/getAutocomplete/{sSelector}:
     get:
       description: Get the list of Franchiseoffices to be used in a dropdown or autocomplete
@@ -961,7 +924,7 @@ paths:
           - All
           type: string
         style: simple
-      - description: Allow to filter on the option value
+      - description: Allow to filter the returned results
         explode: true
         in: query
         name: sQuery
@@ -1564,10 +1527,6 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
     post:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetWordsPositions_V1
       parameters:
       - explode: false
@@ -2039,10 +1998,6 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
     get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetFormData_V1
       parameters:
       - explode: false
@@ -2150,10 +2105,6 @@ paths:
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
     get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsignfolder_GetFormsData_V1
       parameters:
       - explode: false
@@ -2201,10 +2152,6 @@ paths:
   /1/object/ezsignfoldertype/getList:
     get:
       description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-
         Enum values that can be filtered in query parameter *sFilter*:
 
         | Variable | Valid values |
@@ -2278,6 +2225,158 @@ paths:
       summary: Retrieve Ezsignfoldertype list
       tags:
       - Object_Ezsignfoldertype
+      x-accepts: application/json
+  /1/object/period/getAutocomplete/{sSelector}:
+    get:
+      description: Get the list of Periods to be used in a dropdown or autocomplete
+        control.
+      operationId: Period_GetAutocomplete_V1
+      parameters:
+      - description: The types of Periods to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - ActiveNormal
+          - ActiveNormalAndEndOfYear
+          - AllNormal
+          - AllNormalAndEndOfYear
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Periods and IDs
+      tags:
+      - Object_Period
+      x-accepts: application/json
+  /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/:
+    get:
+      description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezsignfoldertype_GetAutocomplete_V1
+      parameters:
+      - description: The type of Ezsignfoldertypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfoldertypes and IDs
+      tags:
+      - Object_Ezsignfoldertype
+      x-accepts: application/json
+  /1/object/ezsignfolder/getList:
+    get:
+      operationId: Ezsignfolder_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiEzsignfolderID_ASC
+          - pkiEzsignfolderID_DESC
+          - sEzsignfolderDescription
+          - sEzsignfolderDescription_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: One of the accept header is not defined or invalid.
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfolder list
+      tags:
+      - Object_Ezsignfolder
       x-accepts: application/json
 components:
   responses:
@@ -3916,24 +4015,6 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the /1/object/xxx/getAutocomplete API Request
       type: object
-    Common-getAutocomplete-v1-Response-mPayload:
-      description: Generic Autocomplete Response
-      properties:
-        group:
-          description: The Category (ie group) for the dropdown or an empty string
-            if not categorized
-          type: string
-        id:
-          description: The Unique ID of the element
-          type: string
-        option:
-          description: The Description of the element
-          type: string
-      required:
-      - group
-      - id
-      - option
-      type: object
     Field-sFranchisereferalincomeRemoteid:
       description: The internal ID
       example: "12345"
@@ -5448,12 +5529,6 @@ components:
       description: Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
         API Request
       type: object
-    ezsignfoldertype-getList-v1-Response-mPayload:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_mPayload_allOf'
-      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
-      description: Payload for the /1/object/ezsignfolder/getList API Request
-      type: object
     Common-getList-v1-Response-mPayload:
       description: Generic List Response
       properties:
@@ -5523,8 +5598,8 @@ components:
       type: string
     Field-sFilter:
       description: The filter to apply to the request to limit results.
-      example: bField1 eq 1 and iField2 gte 0 and iField2 lte 1000 and sField3 eq
-        'Other' and eField4 eq 'Paid' and sField5 like '%needle%'
+      example: bField1 eq true and iField2 gte 0 and iField2 lte 1000 and sField3
+        eq 'Other' and eField4 eq 'Paid' and sField5 like '%needle%'
       type: string
     ezsignfolder-createObject-v1-Response:
       allOf:
@@ -5572,28 +5647,6 @@ components:
     Field-bEzsignfoldertypeIsactive:
       description: Whether the Ezsignfoldertype is active or not
       type: boolean
-    ezsignfoldertype-ListElement:
-      description: An Ezsignfoldertype List Element
-      properties:
-        pkiEzsignfoldertypeID:
-          description: The unique ID of the Ezsignfoldertype.
-          example: 5
-          type: integer
-        eEzsignfoldertypePrivacylevel:
-          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
-        sEzsignfoldertypeNameX:
-          description: The name of the Ezsignfoldertype in the language of the requester
-          example: Default
-          type: string
-        bEzsignfoldertypeIsactive:
-          description: Whether the Ezsignfoldertype is active or not
-          type: boolean
-      required:
-      - bEzsignfoldertypeIsactive
-      - eEzsignfoldertypePrivacylevel
-      - pkiEzsignfoldertypeID
-      - sEzsignfoldertypeNameX
-      type: object
     Common-Response-objDebugPayload:
       description: This is a debug object containing debugging information on the
         actual function
@@ -5670,6 +5723,85 @@ components:
         description: List of valid enum values
         type: object
       description: List of filters that can be used in *sFilter* (Enum types)
+      type: object
+    Common-getAutocomplete-v1-Response-mPayload:
+      description: Generic Autocomplete Response
+      items:
+        $ref: '#/components/schemas/Custom-AutocompleteElement-Response'
+      type: array
+    Custom-AutocompleteElement-Response:
+      description: Generic Autocomplete Response
+      properties:
+        sCategory:
+          description: The Category for the dropdown or an empty string if not categorized
+          type: string
+        sLabel:
+          description: The Description of the element
+          type: string
+        mValue:
+          description: The Unique ID of the element
+          oneOf:
+          - type: integer
+          - type: string
+      required:
+      - mValue
+      - sCategory
+      - sLabel
+      type: object
+    ezsignfoldertype-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for the /1/object/ezsignfoldertype/getList API Request
+      type: object
+    ezsignfoldertype-ListElement:
+      description: An Ezsignfoldertype List Element
+      properties:
+        pkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        bEzsignfoldertypeIsactive:
+          description: Whether the Ezsignfoldertype is active or not
+          type: boolean
+      required:
+      - bEzsignfoldertypeIsactive
+      - eEzsignfoldertypePrivacylevel
+      - pkiEzsignfoldertypeID
+      - sEzsignfoldertypeNameX
+      type: object
+    ezsignfolder-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for the /1/object/ezsignfolder/getList API Request
+      type: object
+    ezsignfolder-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for the /1/object/ezsignfolder/getList API Request
+      type: object
+    ezsignfolder-ListElement:
+      description: An Ezsignfolder List Element
+      properties:
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsign Folder
+          example: Test eZsign Folder
+          type: string
+      required:
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -5832,8 +5964,9 @@ components:
     Common_getAutocomplete_v1_Response_allOf:
       properties:
         mPayload:
+          description: Generic Autocomplete Response
           items:
-            $ref: '#/components/schemas/Common-getAutocomplete-v1-Response-mPayload'
+            $ref: '#/components/schemas/Custom-AutocompleteElement-Response'
           type: array
       required:
       - mPayload
@@ -5907,15 +6040,6 @@ components:
       required:
       - mPayload
       type: object
-    ezsignfoldertype_getList_v1_Response_mPayload_allOf:
-      properties:
-        a_objEzsignfoldertype:
-          items:
-            $ref: '#/components/schemas/ezsignfoldertype-ListElement'
-          type: array
-      required:
-      - a_objEzsignfoldertype
-      type: object
     ezsignfolder_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -5943,6 +6067,31 @@ components:
       required:
       - a_Filter
       - a_OrderBy
+      type: object
+    ezsignfoldertype_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objEzsignfoldertype:
+          items:
+            $ref: '#/components/schemas/ezsignfoldertype-ListElement'
+          type: array
+      required:
+      - a_objEzsignfoldertype
+      type: object
+    ezsignfolder_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfolder_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objEzsignfolder:
+          items:
+            $ref: '#/components/schemas/ezsignfolder-ListElement'
+          type: array
+      required:
+      - a_objEzsignfolder
       type: object
   securitySchemes:
     Authorization:

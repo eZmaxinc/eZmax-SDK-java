@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommonGetAutocompleteV1ResponseMPayload;
+import com.ezmax.api.model.CustomAutocompleteElementResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

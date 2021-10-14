@@ -38,7 +38,7 @@ public class Example {
 
     ObjectFranchisebrokerApi apiInstance = new ObjectFranchisebrokerApi(defaultClient);
     String sSelector = "Active"; // String | The type of Franchisebrokers to return
-    String sQuery = "sQuery_example"; // String | Allow to filter on the option value
+    String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     try {
       CommonGetAutocompleteV1Response result = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery);
       System.out.println(result);
@@ -58,7 +58,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Franchisebrokers to return | [enum: Active, All]
- **sQuery** | **String**| Allow to filter on the option value | [optional]
+ **sQuery** | **String**| Allow to filter the returned results | [optional]
 
 ### Return type
 

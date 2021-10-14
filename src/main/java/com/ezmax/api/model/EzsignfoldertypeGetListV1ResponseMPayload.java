@@ -30,10 +30,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Payload for the /1/object/ezsignfolder/getList API Request
+ * Payload for the /1/object/ezsignfoldertype/getList API Request
  */
-@ApiModel(description = "Payload for the /1/object/ezsignfolder/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
+@ApiModel(description = "Payload for the /1/object/ezsignfoldertype/getList API Request")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-14T04:58:32.762916Z[Etc/UTC]")
 public class EzsignfoldertypeGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)

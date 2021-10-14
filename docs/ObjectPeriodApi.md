@@ -38,7 +38,7 @@ public class Example {
 
     ObjectPeriodApi apiInstance = new ObjectPeriodApi(defaultClient);
     String sSelector = "ActiveNormal"; // String | The types of Periods to return
-    String sQuery = "sQuery_example"; // String | Allow to filter on the option value
+    String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     try {
       CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery);
       System.out.println(result);
@@ -58,7 +58,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
- **sQuery** | **String**| Allow to filter on the option value | [optional]
+ **sQuery** | **String**| Allow to filter the returned results | [optional]
 
 ### Return type
 

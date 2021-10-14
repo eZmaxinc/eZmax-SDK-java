@@ -32,9 +32,11 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
+import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -462,7 +464,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve an existing Ezsignfolder&#39;s forms data
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignfolderID  (required)
      * @return EzsignfolderGetFormsDataV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -482,7 +484,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve an existing Ezsignfolder&#39;s forms data
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignfolderID  (required)
      * @return ApiResponse&lt;EzsignfolderGetFormsDataV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -503,7 +505,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve an existing Ezsignfolder&#39;s forms data (asynchronously)
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignfolderID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -521,6 +523,152 @@ public class ObjectEzsignfolderApi {
 
         okhttp3.Call localVarCall = ezsignfolderGetFormsDataV1ValidateBeforeCall(pkiEzsignfolderID, _callback);
         Type localVarReturnType = new TypeToken<EzsignfolderGetFormsDataV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfolderGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignfolder/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderGetListV1ValidateBeforeCall(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = ezsignfolderGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Retrieve Ezsignfolder list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return EzsignfolderGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfolderGetListV1Response ezsignfolderGetListV1(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        ApiResponse<EzsignfolderGetListV1Response> localVarResp = ezsignfolderGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Ezsignfolder list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;EzsignfolderGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfolderGetListV1Response> ezsignfolderGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<EzsignfolderGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Ezsignfolder list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> One of the accept header is not defined or invalid. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetListV1Async(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback<EzsignfolderGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

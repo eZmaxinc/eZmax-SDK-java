@@ -31,7 +31,7 @@ import java.io.IOException;
  * An Ezsignsigner Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsigner Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-08T16:07:47.023002Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-14T04:58:32.762916Z[Etc/UTC]")
 public class EzsignsignerRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)

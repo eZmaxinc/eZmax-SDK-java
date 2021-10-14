@@ -14,6 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -35,9 +36,27 @@ public class ObjectEzsignfoldertypeApiTest {
 
     
     /**
+     * Retrieve Ezsignfoldertypes and IDs
+     *
+     * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfoldertypeGetAutocompleteV1Test() throws ApiException {
+        String sSelector = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sQuery = null;
+        CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Retrieve Ezsignfoldertype list
      *
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.  Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      *
      * @throws ApiException
      *          if the Api call fails

@@ -27,41 +27,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for CommonGetAutocompleteV1ResponseMPayload
+ * Model tests for EzsignfolderListElement
  */
-public class CommonGetAutocompleteV1ResponseMPayloadTest {
-    private final CommonGetAutocompleteV1ResponseMPayload model = new CommonGetAutocompleteV1ResponseMPayload();
+public class EzsignfolderListElementTest {
+    private final EzsignfolderListElement model = new EzsignfolderListElement();
 
     /**
-     * Model tests for CommonGetAutocompleteV1ResponseMPayload
+     * Model tests for EzsignfolderListElement
      */
     @Test
-    public void testCommonGetAutocompleteV1ResponseMPayload() {
-        // TODO: test CommonGetAutocompleteV1ResponseMPayload
+    public void testEzsignfolderListElement() {
+        // TODO: test EzsignfolderListElement
     }
 
     /**
-     * Test the property 'group'
+     * Test the property 'pkiEzsignfolderID'
      */
     @Test
-    public void groupTest() {
-        // TODO: test group
+    public void pkiEzsignfolderIDTest() {
+        // TODO: test pkiEzsignfolderID
     }
 
     /**
-     * Test the property 'id'
+     * Test the property 'sEzsignfolderDescription'
      */
     @Test
-    public void idTest() {
-        // TODO: test id
-    }
-
-    /**
-     * Test the property 'option'
-     */
-    @Test
-    public void optionTest() {
-        // TODO: test option
+    public void sEzsignfolderDescriptionTest() {
+        // TODO: test sEzsignfolderDescription
     }
 
 }

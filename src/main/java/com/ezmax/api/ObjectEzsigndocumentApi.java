@@ -985,7 +985,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve an existing Ezsigndocument&#39;s Form Data
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @return EzsigndocumentGetFormDataV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1005,7 +1005,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve an existing Ezsigndocument&#39;s Form Data
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @return ApiResponse&lt;EzsigndocumentGetFormDataV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1026,7 +1026,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve an existing Ezsigndocument&#39;s Form Data (asynchronously)
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1230,7 +1230,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentGetWordsPositionsV1Request  (required)
      * @return EzsigndocumentGetWordsPositionsV1Response
@@ -1250,7 +1250,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentGetWordsPositionsV1Request  (required)
      * @return ApiResponse&lt;EzsigndocumentGetWordsPositionsV1Response&gt;
@@ -1271,7 +1271,7 @@ public class ObjectEzsigndocumentApi {
 
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument (asynchronously)
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentGetWordsPositionsV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
