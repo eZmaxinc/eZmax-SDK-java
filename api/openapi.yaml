@@ -378,17 +378,18 @@ tags:
     \ of calling 100 requests each creating a single objet |\r\n| 500            \
     \  | Internal Server Error | This should never happen. There is either a temporary\
     \ problem that should resolve quickly or an error you should report to technical\
-    \ support. |\r\n| 503              | Service Unavailable   | This should never\
-    \ happen. There is either a temporary problem that should resolve quickly or an\
-    \ error you should report to technical support |\r\n\r\n### Custom return codes\
-    \ (Undocumented at the function's level)\r\nThese codes can only be generated\
-    \ for **User** type API Key. The **API**, **Delegated** and **Special** types\
-    \ keys will never return such codes. (See Authorization section for more information).\
-    \ Most users should not be concerned with these status codes.\r\n\r\n| HTTP Status\
-    \ Code | Meaning                          | Detail                           \
-    \                                    |\r\n| ---------------- | --------------------------------\
-    \ | -------------------------------------------------------------------- |\r\n\
-    | 350              | Authentication required          | User must authenticate\
+    \ support. |\r\n| 501              | Not Implemented       | Endpoint not yet\
+    \ available in your region or environment |\r\n| 503              | Service Unavailable\
+    \   | This should never happen. There is either a temporary problem that should\
+    \ resolve quickly or an error you should report to technical support |\r\n\r\n\
+    ### Custom return codes (Undocumented at the function's level)\r\nThese codes\
+    \ can only be generated for **User** type API Key. The **API**, **Delegated**\
+    \ and **Special** types keys will never return such codes. (See Authorization\
+    \ section for more information). Most users should not be concerned with these\
+    \ status codes.\r\n\r\n| HTTP Status Code | Meaning                          |\
+    \ Detail                                                               |\r\n|\
+    \ ---------------- | -------------------------------- | --------------------------------------------------------------------\
+    \ |\r\n| 350              | Authentication required          | User must authenticate\
     \ because session is invalid                    |\r\n| 351              | Phone\
     \ Validation required        | (2FA) User needs to complete a Voice Call or SMS\
     \ challenge           |\r\n| 352              | Question Validation required \
@@ -467,7 +468,11 @@ tags:
     \ | The number of pages between the document and the template do not match |\r\
     \n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples    \
     \              |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
-    \ | Unhandled error on server |"
+    \ | Unhandled error on server |\r\n\r\n### HTTP 501 (Not Implemented)\r\n| eErrorCode\
+    \           | Examples                                                 |\r\n|\
+    \ -------------------- | --------------------------------------------------------\
+    \ |\r\n| ERROR_NOTIMPLEMENTED | Endpoint not yet available in your region or environment\
+    \ |"
   name: General_ErrorCodes
   x-displayName: Error Codes
 - description: |
@@ -539,8 +544,9 @@ tags:
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
     - GET /1/object/ezsignfoldertype/getList\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n\
     - POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n- Status\
-    \ Code 406 added to documentation\n- Error Code NOTACCEPTABLE_CONTENT added to\
-    \ documentation\n- Error Code NOTACCEPTABLE_LANGUAGE added to documentation\n\
+    \ Code 406 added to documentation\n- Status Code 501 added to documentation\n\
+    - Error Code NOTACCEPTABLE_CONTENT added to documentation\n- Error Code NOTACCEPTABLE_LANGUAGE\
+    \ added to documentation\n- Error Code ERROR_NOTIMPLEMENTED added to documentation\n\
     - Variables convention added to documentation\n- List Filter convention added\
     \ to documentation\n\n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
     \ \n#### Removed\n- Support for typescript-angular\n- Support for typescript-aurelia\n\
@@ -2266,7 +2272,7 @@ paths:
       tags:
       - Object_Period
       x-accepts: application/json
-  /1/object/ezsignfoldertype/getAutocomplete/{sSelector}/:
+  /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
     get:
       description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
         control.
@@ -2313,6 +2319,12 @@ paths:
       x-accepts: application/json
   /1/object/ezsignfolder/getList:
     get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eEzsignfolderStep | Unsent<br>Sent<br>PartiallySigned<br>Expired<br>Completed<br>Archived |
       operationId: Ezsignfolder_GetList_V1
       parameters:
       - description: Specify how you want the results to be sorted
@@ -2324,8 +2336,28 @@ paths:
           enum:
           - pkiEzsignfolderID_ASC
           - pkiEzsignfolderID_DESC
-          - sEzsignfolderDescription
+          - sEzsignfolderDescription_ASC
           - sEzsignfolderDescription_DESC
+          - dtCreatedDate_ASC
+          - dtCreatedDate_DESC
+          - fkiEzsignfoldertypeID_ASC
+          - fkiEzsignfoldertypeID_DESC
+          - sEzsignfoldertypeNameX_ASC
+          - sEzsignfoldertypeNameX_DESC
+          - eEzsignfolderStep_ASC
+          - eEzsignfolderStep_DESC
+          - dtEzsignfolderSentdate_ASC
+          - dtEzsignfolderSentdate_DESC
+          - dtDueDate_ASC
+          - dtDueDate_DESC
+          - iTotalDocument_ASC
+          - iTotalDocument_DESC
+          - iTotalDocumentEdm_ASC
+          - iTotalDocumentEdm_DESC
+          - iTotalSignature_ASC
+          - iTotalSignature_DESC
+          - iTotalSignatureSigned_ASC
+          - iTotalSignatureSigned_DESC
           type: string
         style: form
       - explode: true
@@ -3389,18 +3421,6 @@ components:
       - Daily
       - Weekly
       example: None
-      type: string
-    Field-eEzsignfolderStep:
-      description: The signature step of the Ezsignfolder.
-      enum:
-      - Unsent
-      - Sent
-      - PartiallySigned
-      - Expired
-      - Signed
-      - Completed
-      - Archived
-      example: Completed
       type: string
     Field-sEzsigndocumentMD5initial:
       description: MD5 Hash of the initial PDF Document before signatures were applied
@@ -5788,6 +5808,17 @@ components:
       - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
       description: Payload for the /1/object/ezsignfolder/getList API Request
       type: object
+    Field-eEzsignfolderStep:
+      description: The signature step of the Ezsignfolder.
+      enum:
+      - Unsent
+      - Sent
+      - PartiallySigned
+      - Expired
+      - Completed
+      - Archived
+      example: Completed
+      type: string
     ezsignfolder-ListElement:
       description: An Ezsignfolder List Element
       properties:
@@ -5795,13 +5826,62 @@ components:
           description: The unique ID of the Ezsignfolder
           example: 33
           type: integer
+        fkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
         sEzsignfolderDescription:
           description: The description of the Ezsign Folder
           example: Test eZsign Folder
           type: string
+        eEzsignfolderStep:
+          $ref: '#/components/schemas/Field-eEzsignfolderStep'
+        dtCreatedDate:
+          description: The date and time at which the object was created
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsignfolderSentdate:
+          oneOf:
+          - $ref: '#/components/schemas/Field-dtEzsignfolderSentdate'
+          - type: "null"
+        dtDueDate:
+          description: The date at which no more signature will be accepted on the
+            folder
+          oneOf:
+          - $ref: '#/components/schemas/Common-Format-DateTime'
+          - type: "null"
+        iTotalDocument:
+          description: The total number of Ezsigndocument in the folder
+          type: integer
+        iTotalDocumentEdm:
+          description: The total number of Ezsigndocument in the folder that were
+            saved in the edm system
+          type: integer
+        iTotalSignature:
+          description: The total number of signature blocks in all Ezsigndocuments
+            in the folder
+          type: integer
+        iTotalSignatureSigned:
+          description: The total number of already signed signature blocks in all
+            Ezsigndocuments in the folder
+          type: integer
       required:
+      - dtCreatedDate
+      - dtDueDate
+      - dtEzsignfolderSentdate
+      - eEzsignfolderStep
+      - fkiEzsignfoldertypeID
+      - iTotalDocument
+      - iTotalDocumentEdm
+      - iTotalSignature
+      - iTotalSignatureSigned
       - pkiEzsignfolderID
       - sEzsignfolderDescription
+      - sEzsignfoldertypeNameX
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

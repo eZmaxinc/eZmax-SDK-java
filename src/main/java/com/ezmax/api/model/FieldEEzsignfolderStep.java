@@ -38,8 +38,6 @@ public enum FieldEEzsignfolderStep {
   
   EXPIRED("Expired"),
   
-  SIGNED("Signed"),
-  
   COMPLETED("Completed"),
   
   ARCHIVED("Archived");

@@ -108,7 +108,7 @@ public class ObjectEzsignfolderApiTest {
     /**
      * Retrieve Ezsignfolder list
      *
-     * 
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived |
      *
      * @throws ApiException
      *          if the Api call fails

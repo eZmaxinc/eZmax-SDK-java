@@ -75,7 +75,7 @@ public class ObjectEzsignfoldertypeApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}/"
+        String localVarPath = "/1/object/ezsignfoldertype/getAutocomplete/{sSelector}"
             .replaceAll("\\{" + "sSelector" + "\\}", localVarApiClient.escapeString(sSelector.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();

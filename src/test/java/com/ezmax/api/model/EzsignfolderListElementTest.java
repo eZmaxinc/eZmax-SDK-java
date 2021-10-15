@@ -13,6 +13,8 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsignfolderStep;
+import com.ezmax.api.model.OneOfstringnull;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,11 +51,91 @@ public class EzsignfolderListElementTest {
     }
 
     /**
+     * Test the property 'fkiEzsignfoldertypeID'
+     */
+    @Test
+    public void fkiEzsignfoldertypeIDTest() {
+        // TODO: test fkiEzsignfoldertypeID
+    }
+
+    /**
+     * Test the property 'sEzsignfoldertypeNameX'
+     */
+    @Test
+    public void sEzsignfoldertypeNameXTest() {
+        // TODO: test sEzsignfoldertypeNameX
+    }
+
+    /**
      * Test the property 'sEzsignfolderDescription'
      */
     @Test
     public void sEzsignfolderDescriptionTest() {
         // TODO: test sEzsignfolderDescription
+    }
+
+    /**
+     * Test the property 'eEzsignfolderStep'
+     */
+    @Test
+    public void eEzsignfolderStepTest() {
+        // TODO: test eEzsignfolderStep
+    }
+
+    /**
+     * Test the property 'dtCreatedDate'
+     */
+    @Test
+    public void dtCreatedDateTest() {
+        // TODO: test dtCreatedDate
+    }
+
+    /**
+     * Test the property 'dtEzsignfolderSentdate'
+     */
+    @Test
+    public void dtEzsignfolderSentdateTest() {
+        // TODO: test dtEzsignfolderSentdate
+    }
+
+    /**
+     * Test the property 'dtDueDate'
+     */
+    @Test
+    public void dtDueDateTest() {
+        // TODO: test dtDueDate
+    }
+
+    /**
+     * Test the property 'iTotalDocument'
+     */
+    @Test
+    public void iTotalDocumentTest() {
+        // TODO: test iTotalDocument
+    }
+
+    /**
+     * Test the property 'iTotalDocumentEdm'
+     */
+    @Test
+    public void iTotalDocumentEdmTest() {
+        // TODO: test iTotalDocumentEdm
+    }
+
+    /**
+     * Test the property 'iTotalSignature'
+     */
+    @Test
+    public void iTotalSignatureTest() {
+        // TODO: test iTotalSignature
+    }
+
+    /**
+     * Test the property 'iTotalSignatureSigned'
+     */
+    @Test
+    public void iTotalSignatureSignedTest() {
+        // TODO: test iTotalSignatureSigned
     }
 
 }
