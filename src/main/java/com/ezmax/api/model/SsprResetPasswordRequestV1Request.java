@@ -29,7 +29,7 @@ import java.io.IOException;
  * Request for the /1/module/sspr/resetPasswordRequest API Request
  */
 @ApiModel(description = "Request for the /1/module/sspr/resetPasswordRequest API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T19:04:51.900051Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T20:53:26.683332Z[Etc/UTC]")
 public class SsprResetPasswordRequestV1Request {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
