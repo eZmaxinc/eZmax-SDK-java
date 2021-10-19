@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * EzsignsignerRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T19:04:51.900051Z[Etc/UTC]")
 public class EzsignsignerRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
