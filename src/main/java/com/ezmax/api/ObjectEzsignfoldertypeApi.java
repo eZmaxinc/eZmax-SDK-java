@@ -60,8 +60,8 @@ public class ObjectEzsignfoldertypeApi {
     /**
      * Build call for ezsignfoldertypeGetAutocompleteV1
      * @param sSelector The type of Ezsignfoldertypes to return (required)
-     * @param acceptLanguage  (optional)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -71,7 +71,7 @@ public class ObjectEzsignfoldertypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldertypeGetAutocompleteV1Call(String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldertypeGetAutocompleteV1Call(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -111,7 +111,7 @@ public class ObjectEzsignfoldertypeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'sSelector' is set
         if (sSelector == null) {
@@ -119,7 +119,7 @@ public class ObjectEzsignfoldertypeApi {
         }
         
 
-        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1Call(sSelector, acceptLanguage, sQuery, _callback);
+        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1Call(sSelector, sQuery, acceptLanguage, _callback);
         return localVarCall;
 
     }
@@ -128,8 +128,8 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertypes and IDs
      * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return (required)
-     * @param acceptLanguage  (optional)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @return CommonGetAutocompleteV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -138,8 +138,8 @@ public class ObjectEzsignfoldertypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery) throws ApiException {
-        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, acceptLanguage, sQuery);
+    public CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = ezsignfoldertypeGetAutocompleteV1WithHttpInfo(sSelector, sQuery, acceptLanguage);
         return localVarResp.getData();
     }
 
@@ -147,8 +147,8 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertypes and IDs
      * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return (required)
-     * @param acceptLanguage  (optional)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @return ApiResponse&lt;CommonGetAutocompleteV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,8 +157,8 @@ public class ObjectEzsignfoldertypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery) throws ApiException {
-        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, acceptLanguage, sQuery, null);
+    public ApiResponse<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, null);
         Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -167,8 +167,8 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertypes and IDs (asynchronously)
      * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Ezsignfoldertypes to return (required)
-     * @param acceptLanguage  (optional)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -178,9 +178,9 @@ public class ObjectEzsignfoldertypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldertypeGetAutocompleteV1Async(String sSelector, HeaderAcceptLanguage acceptLanguage, String sQuery, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldertypeGetAutocompleteV1Async(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, acceptLanguage, sQuery, _callback);
+        okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

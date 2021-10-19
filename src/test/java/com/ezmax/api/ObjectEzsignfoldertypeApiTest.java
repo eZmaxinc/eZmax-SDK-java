@@ -46,9 +46,9 @@ public class ObjectEzsignfoldertypeApiTest {
     @Test
     public void ezsignfoldertypeGetAutocompleteV1Test() throws ApiException {
         String sSelector = null;
-        HeaderAcceptLanguage acceptLanguage = null;
         String sQuery = null;
-        CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+        HeaderAcceptLanguage acceptLanguage = null;
+        CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
 
         // TODO: test validations
     }

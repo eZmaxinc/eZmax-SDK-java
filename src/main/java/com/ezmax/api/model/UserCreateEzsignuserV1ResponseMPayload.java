@@ -30,7 +30,7 @@ import java.util.List;
  * Payload for the /1/module/user/createEzsignuser API Request
  */
 @ApiModel(description = "Payload for the /1/module/user/createEzsignuser API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-15T03:03:32.068931Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
 public class UserCreateEzsignuserV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS = "a_sEmailAddressSuccess";
   @SerializedName(SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS)

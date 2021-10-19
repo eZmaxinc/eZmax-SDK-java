@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * EzsigndocumentGetDownloadUrlV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-15T03:03:32.068931Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
 public class EzsigndocumentGetDownloadUrlV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

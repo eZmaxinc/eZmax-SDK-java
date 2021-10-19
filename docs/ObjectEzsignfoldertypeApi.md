@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="ezsignfoldertypeGetAutocompleteV1"></a>
 # **ezsignfoldertypeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery)
+> CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Ezsignfoldertypes and IDs
 
@@ -39,10 +39,10 @@ public class Example {
 
     ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi(defaultClient);
     String sSelector = "Active"; // String | The type of Ezsignfoldertypes to return
-    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, acceptLanguage, sQuery);
+      CommonGetAutocompleteV1Response result = apiInstance.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeGetAutocompleteV1");
@@ -60,8 +60,8 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sSelector** | **String**| The type of Ezsignfoldertypes to return | [enum: Active, All]
- **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
  **sQuery** | **String**| Allow to filter the returned results | [optional]
+ **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr]
 
 ### Return type
 

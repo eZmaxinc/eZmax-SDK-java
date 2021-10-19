@@ -28,7 +28,7 @@ import java.io.IOException;
  * Request for the /1/module/user/createEzsignuser API Request
  */
 @ApiModel(description = "Request for the /1/module/user/createEzsignuser API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-15T03:03:32.068931Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)

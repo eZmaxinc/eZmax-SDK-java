@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Ezsigndocument Object
  */
 @ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-15T03:03:32.068931Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
 public class EzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)

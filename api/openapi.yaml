@@ -2272,54 +2272,13 @@ paths:
       tags:
       - Object_Period
       x-accepts: application/json
-  /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
-    get:
-      description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
-        control.
-      operationId: Ezsignfoldertype_GetAutocomplete_V1
-      parameters:
-      - description: The type of Ezsignfoldertypes to return
-        explode: false
-        in: path
-        name: sSelector
-        required: true
-        schema:
-          enum:
-          - Active
-          - All
-          type: string
-        style: simple
-      - explode: false
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          $ref: '#/components/schemas/Header-Accept-Language'
-        style: simple
-      - description: Allow to filter the returned results
-        explode: true
-        in: query
-        name: sQuery
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Retrieve Ezsignfoldertypes and IDs
-      tags:
-      - Object_Ezsignfoldertype
-      x-accepts: application/json
   /1/object/ezsignfolder/getList:
     get:
       description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
         Enum values that can be filtered in query parameter *sFilter*:
 
         | Variable | Valid values |
@@ -2409,6 +2368,51 @@ paths:
       summary: Retrieve Ezsignfolder list
       tags:
       - Object_Ezsignfolder
+      x-accepts: application/json
+  /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
+    get:
+      description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezsignfoldertype_GetAutocomplete_V1
+      parameters:
+      - description: The type of Ezsignfoldertypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfoldertypes and IDs
+      tags:
+      - Object_Ezsignfoldertype
       x-accepts: application/json
 components:
   responses:
@@ -5819,6 +5823,10 @@ components:
       - Archived
       example: Completed
       type: string
+    Custom-Null:
+      description: A custom type for null until OAS 3.1 support for null type
+      nullable: true
+      type: object
     ezsignfolder-ListElement:
       description: An Ezsignfolder List Element
       properties:
@@ -5847,13 +5855,13 @@ components:
         dtEzsignfolderSentdate:
           oneOf:
           - $ref: '#/components/schemas/Field-dtEzsignfolderSentdate'
-          - type: "null"
+          - $ref: '#/components/schemas/Custom-Null'
         dtDueDate:
           description: The date at which no more signature will be accepted on the
             folder
           oneOf:
           - $ref: '#/components/schemas/Common-Format-DateTime'
-          - type: "null"
+          - $ref: '#/components/schemas/Custom-Null'
         iTotalDocument:
           description: The total number of Ezsigndocument in the folder
           type: integer

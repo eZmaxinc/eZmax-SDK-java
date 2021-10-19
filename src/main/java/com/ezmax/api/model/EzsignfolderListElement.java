@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
-import com.ezmax.api.model.OneOfstringnull;
+import com.ezmax.api.model.OneOfstringobject;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Ezsignfolder List Element
  */
 @ApiModel(description = "An Ezsignfolder List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-15T03:03:32.068931Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-19T16:51:21.216553Z[Etc/UTC]")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -58,11 +58,11 @@ public class EzsignfolderListElement {
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE = "dtEzsignfolderSentdate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
-  private OneOfstringnull dtEzsignfolderSentdate;
+  private OneOfstringobject dtEzsignfolderSentdate;
 
   public static final String SERIALIZED_NAME_DT_DUE_DATE = "dtDueDate";
   @SerializedName(SERIALIZED_NAME_DT_DUE_DATE)
-  private OneOfstringnull dtDueDate;
+  private OneOfstringobject dtDueDate;
 
   public static final String SERIALIZED_NAME_I_TOTAL_DOCUMENT = "iTotalDocument";
   @SerializedName(SERIALIZED_NAME_I_TOTAL_DOCUMENT)
@@ -219,7 +219,7 @@ public class EzsignfolderListElement {
   }
 
 
-  public EzsignfolderListElement dtEzsignfolderSentdate(OneOfstringnull dtEzsignfolderSentdate) {
+  public EzsignfolderListElement dtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
     
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
     return this;
@@ -232,17 +232,17 @@ public class EzsignfolderListElement {
   @javax.annotation.Nullable
   @ApiModelProperty(required = true, value = "")
 
-  public OneOfstringnull getDtEzsignfolderSentdate() {
+  public OneOfstringobject getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
 
 
-  public void setDtEzsignfolderSentdate(OneOfstringnull dtEzsignfolderSentdate) {
+  public void setDtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
 
-  public EzsignfolderListElement dtDueDate(OneOfstringnull dtDueDate) {
+  public EzsignfolderListElement dtDueDate(OneOfstringobject dtDueDate) {
     
     this.dtDueDate = dtDueDate;
     return this;
@@ -255,12 +255,12 @@ public class EzsignfolderListElement {
   @javax.annotation.Nullable
   @ApiModelProperty(required = true, value = "The date at which no more signature will be accepted on the folder")
 
-  public OneOfstringnull getDtDueDate() {
+  public OneOfstringobject getDtDueDate() {
     return dtDueDate;
   }
 
 
-  public void setDtDueDate(OneOfstringnull dtDueDate) {
+  public void setDtDueDate(OneOfstringobject dtDueDate) {
     this.dtDueDate = dtDueDate;
   }
 
