@@ -28,23 +28,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Payload for the POST /1/module/list/listpresentation/{sListName} API Request
+ * Payload for the GET /1/module/list/listpresentation/{sListName} API Request
  */
-@ApiModel(description = "Payload for the POST /1/module/list/listpresentation/{sListName} API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T06:29:32.256156Z[Etc/UTC]")
-public class ListSaveListpresentationV1ResponseMPayload {
+@ApiModel(description = "Payload for the GET /1/module/list/listpresentation/{sListName} API Request")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
+public class ListGetListpresentationV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_LISTPRESENTATION = "a_objListpresentation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_LISTPRESENTATION)
   private List<ListpresentationRequest> aObjListpresentation = new ArrayList<ListpresentationRequest>();
 
 
-  public ListSaveListpresentationV1ResponseMPayload aObjListpresentation(List<ListpresentationRequest> aObjListpresentation) {
+  public ListGetListpresentationV1ResponseMPayload aObjListpresentation(List<ListpresentationRequest> aObjListpresentation) {
     
     this.aObjListpresentation = aObjListpresentation;
     return this;
   }
 
-  public ListSaveListpresentationV1ResponseMPayload addAObjListpresentationItem(ListpresentationRequest aObjListpresentationItem) {
+  public ListGetListpresentationV1ResponseMPayload addAObjListpresentationItem(ListpresentationRequest aObjListpresentationItem) {
     this.aObjListpresentation.add(aObjListpresentationItem);
     return this;
   }
@@ -74,8 +74,8 @@ public class ListSaveListpresentationV1ResponseMPayload {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListSaveListpresentationV1ResponseMPayload listSaveListpresentationV1ResponseMPayload = (ListSaveListpresentationV1ResponseMPayload) o;
-    return Objects.equals(this.aObjListpresentation, listSaveListpresentationV1ResponseMPayload.aObjListpresentation);
+    ListGetListpresentationV1ResponseMPayload listGetListpresentationV1ResponseMPayload = (ListGetListpresentationV1ResponseMPayload) o;
+    return Objects.equals(this.aObjListpresentation, listGetListpresentationV1ResponseMPayload.aObjListpresentation);
   }
 
   @Override
@@ -86,7 +86,7 @@ public class ListSaveListpresentationV1ResponseMPayload {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListSaveListpresentationV1ResponseMPayload {\n");
+    sb.append("class ListGetListpresentationV1ResponseMPayload {\n");
     sb.append("    aObjListpresentation: ").append(toIndentedString(aObjListpresentation)).append("\n");
     sb.append("}");
     return sb.toString();

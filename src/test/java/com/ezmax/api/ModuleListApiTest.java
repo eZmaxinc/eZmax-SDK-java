@@ -15,6 +15,7 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ListGetListpresentationV1Response;
 import com.ezmax.api.model.ListSaveListpresentationV1Request;
 import com.ezmax.api.model.ListSaveListpresentationV1Response;
 import org.junit.Test;
@@ -35,6 +36,22 @@ public class ModuleListApiTest {
 
     
     /**
+     * Get all Listpresentation for a specific list
+     *
+     * Retrive previously saved Listpresentation
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void listGetListpresentationV1Test() throws ApiException {
+        String sListName = null;
+        ListGetListpresentationV1Response response = api.listGetListpresentationV1(sListName);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Save all Listpresentation for a specific list
      *
      * Users can create many Listpresentations for lists in the system. They can customize orber by, filters, numbers of rows, etc.
@@ -43,10 +60,10 @@ public class ModuleListApiTest {
      *          if the Api call fails
      */
     @Test
-    public void listListpresentationV1Test() throws ApiException {
+    public void listSaveListpresentationV1Test() throws ApiException {
         String sListName = null;
         ListSaveListpresentationV1Request listSaveListpresentationV1Request = null;
-        ListSaveListpresentationV1Response response = api.listListpresentationV1(sListName, listSaveListpresentationV1Request);
+        ListSaveListpresentationV1Response response = api.listSaveListpresentationV1(sListName, listSaveListpresentationV1Request);
 
         // TODO: test validations
     }

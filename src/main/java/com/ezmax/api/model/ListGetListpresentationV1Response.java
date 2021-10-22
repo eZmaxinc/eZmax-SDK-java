@@ -18,8 +18,8 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsigndocumentGetObjectV1ResponseAllOf;
-import com.ezmax.api.model.EzsigndocumentGetObjectV1ResponseMPayload;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseAllOf;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,14 +30,14 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Response for the /1/object/ezsigndocument/getDownloadUrl API Request
+ * Response for the GET /1/module/list/listpresentation/{sListName} API Request
  */
-@ApiModel(description = "Response for the /1/object/ezsigndocument/getDownloadUrl API Request")
+@ApiModel(description = "Response for the GET /1/module/list/listpresentation/{sListName} API Request")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
-public class EzsigndocumentGetObjectV1Response {
+public class ListGetListpresentationV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private EzsigndocumentGetObjectV1ResponseMPayload mPayload;
+  private ListGetListpresentationV1ResponseMPayload mPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -48,7 +48,7 @@ public class EzsigndocumentGetObjectV1Response {
   private CommonResponseObjDebug objDebug;
 
 
-  public EzsigndocumentGetObjectV1Response mPayload(EzsigndocumentGetObjectV1ResponseMPayload mPayload) {
+  public ListGetListpresentationV1Response mPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
     
     this.mPayload = mPayload;
     return this;
@@ -61,17 +61,17 @@ public class EzsigndocumentGetObjectV1Response {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EzsigndocumentGetObjectV1ResponseMPayload getmPayload() {
+  public ListGetListpresentationV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
 
-  public void setmPayload(EzsigndocumentGetObjectV1ResponseMPayload mPayload) {
+  public void setmPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
 
-  public EzsigndocumentGetObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public ListGetListpresentationV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
     this.objDebugPayload = objDebugPayload;
     return this;
@@ -94,7 +94,7 @@ public class EzsigndocumentGetObjectV1Response {
   }
 
 
-  public EzsigndocumentGetObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public ListGetListpresentationV1Response objDebug(CommonResponseObjDebug objDebug) {
     
     this.objDebug = objDebug;
     return this;
@@ -125,10 +125,10 @@ public class EzsigndocumentGetObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1Response = (EzsigndocumentGetObjectV1Response) o;
-    return Objects.equals(this.mPayload, ezsigndocumentGetObjectV1Response.mPayload) &&
-        Objects.equals(this.objDebugPayload, ezsigndocumentGetObjectV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, ezsigndocumentGetObjectV1Response.objDebug);
+    ListGetListpresentationV1Response listGetListpresentationV1Response = (ListGetListpresentationV1Response) o;
+    return Objects.equals(this.mPayload, listGetListpresentationV1Response.mPayload) &&
+        Objects.equals(this.objDebugPayload, listGetListpresentationV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, listGetListpresentationV1Response.objDebug);
   }
 
   @Override
@@ -139,7 +139,7 @@ public class EzsigndocumentGetObjectV1Response {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsigndocumentGetObjectV1Response {\n");
+    sb.append("class ListGetListpresentationV1Response {\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");

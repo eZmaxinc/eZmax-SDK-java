@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ListGetListpresentationV1Response;
 import com.ezmax.api.model.ListSaveListpresentationV1Request;
 import com.ezmax.api.model.ListSaveListpresentationV1Response;
 
@@ -57,7 +58,123 @@ public class ModuleListApi {
     }
 
     /**
-     * Build call for listListpresentationV1
+     * Build call for listGetListpresentationV1
+     * @param sListName The list Name (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listGetListpresentationV1Call(String sListName, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/module/list/listpresentation/{sListName}"
+            .replaceAll("\\{" + "sListName" + "\\}", localVarApiClient.escapeString(sListName.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call listGetListpresentationV1ValidateBeforeCall(String sListName, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'sListName' is set
+        if (sListName == null) {
+            throw new ApiException("Missing the required parameter 'sListName' when calling listGetListpresentationV1(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = listGetListpresentationV1Call(sListName, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get all Listpresentation for a specific list
+     * Retrive previously saved Listpresentation
+     * @param sListName The list Name (required)
+     * @return ListGetListpresentationV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public ListGetListpresentationV1Response listGetListpresentationV1(String sListName) throws ApiException {
+        ApiResponse<ListGetListpresentationV1Response> localVarResp = listGetListpresentationV1WithHttpInfo(sListName);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get all Listpresentation for a specific list
+     * Retrive previously saved Listpresentation
+     * @param sListName The list Name (required)
+     * @return ApiResponse&lt;ListGetListpresentationV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ListGetListpresentationV1Response> listGetListpresentationV1WithHttpInfo(String sListName) throws ApiException {
+        okhttp3.Call localVarCall = listGetListpresentationV1ValidateBeforeCall(sListName, null);
+        Type localVarReturnType = new TypeToken<ListGetListpresentationV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get all Listpresentation for a specific list (asynchronously)
+     * Retrive previously saved Listpresentation
+     * @param sListName The list Name (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listGetListpresentationV1Async(String sListName, final ApiCallback<ListGetListpresentationV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = listGetListpresentationV1ValidateBeforeCall(sListName, _callback);
+        Type localVarReturnType = new TypeToken<ListGetListpresentationV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for listSaveListpresentationV1
      * @param sListName The list Name (required)
      * @param listSaveListpresentationV1Request  (required)
      * @param _callback Callback for upload/download progress
@@ -70,7 +187,7 @@ public class ModuleListApi {
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listListpresentationV1Call(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call listSaveListpresentationV1Call(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = listSaveListpresentationV1Request;
 
         // create path and map variables
@@ -102,20 +219,20 @@ public class ModuleListApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call listListpresentationV1ValidateBeforeCall(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call listSaveListpresentationV1ValidateBeforeCall(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'sListName' is set
         if (sListName == null) {
-            throw new ApiException("Missing the required parameter 'sListName' when calling listListpresentationV1(Async)");
+            throw new ApiException("Missing the required parameter 'sListName' when calling listSaveListpresentationV1(Async)");
         }
         
         // verify the required parameter 'listSaveListpresentationV1Request' is set
         if (listSaveListpresentationV1Request == null) {
-            throw new ApiException("Missing the required parameter 'listSaveListpresentationV1Request' when calling listListpresentationV1(Async)");
+            throw new ApiException("Missing the required parameter 'listSaveListpresentationV1Request' when calling listSaveListpresentationV1(Async)");
         }
         
 
-        okhttp3.Call localVarCall = listListpresentationV1Call(sListName, listSaveListpresentationV1Request, _callback);
+        okhttp3.Call localVarCall = listSaveListpresentationV1Call(sListName, listSaveListpresentationV1Request, _callback);
         return localVarCall;
 
     }
@@ -134,8 +251,8 @@ public class ModuleListApi {
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
      </table>
      */
-    public ListSaveListpresentationV1Response listListpresentationV1(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws ApiException {
-        ApiResponse<ListSaveListpresentationV1Response> localVarResp = listListpresentationV1WithHttpInfo(sListName, listSaveListpresentationV1Request);
+    public ListSaveListpresentationV1Response listSaveListpresentationV1(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws ApiException {
+        ApiResponse<ListSaveListpresentationV1Response> localVarResp = listSaveListpresentationV1WithHttpInfo(sListName, listSaveListpresentationV1Request);
         return localVarResp.getData();
     }
 
@@ -153,8 +270,8 @@ public class ModuleListApi {
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ListSaveListpresentationV1Response> listListpresentationV1WithHttpInfo(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws ApiException {
-        okhttp3.Call localVarCall = listListpresentationV1ValidateBeforeCall(sListName, listSaveListpresentationV1Request, null);
+    public ApiResponse<ListSaveListpresentationV1Response> listSaveListpresentationV1WithHttpInfo(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws ApiException {
+        okhttp3.Call localVarCall = listSaveListpresentationV1ValidateBeforeCall(sListName, listSaveListpresentationV1Request, null);
         Type localVarReturnType = new TypeToken<ListSaveListpresentationV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -174,9 +291,9 @@ public class ModuleListApi {
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listListpresentationV1Async(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback<ListSaveListpresentationV1Response> _callback) throws ApiException {
+    public okhttp3.Call listSaveListpresentationV1Async(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback<ListSaveListpresentationV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = listListpresentationV1ValidateBeforeCall(sListName, listSaveListpresentationV1Request, _callback);
+        okhttp3.Call localVarCall = listSaveListpresentationV1ValidateBeforeCall(sListName, listSaveListpresentationV1Request, _callback);
         Type localVarReturnType = new TypeToken<ListSaveListpresentationV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

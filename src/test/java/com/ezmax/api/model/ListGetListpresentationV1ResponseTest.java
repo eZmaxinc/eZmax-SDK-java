@@ -16,6 +16,8 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseAllOf;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,17 +32,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for ListSaveListpresentationV1Response
+ * Model tests for ListGetListpresentationV1Response
  */
-public class ListSaveListpresentationV1ResponseTest {
-    private final ListSaveListpresentationV1Response model = new ListSaveListpresentationV1Response();
+public class ListGetListpresentationV1ResponseTest {
+    private final ListGetListpresentationV1Response model = new ListGetListpresentationV1Response();
 
     /**
-     * Model tests for ListSaveListpresentationV1Response
+     * Model tests for ListGetListpresentationV1Response
      */
     @Test
-    public void testListSaveListpresentationV1Response() {
-        // TODO: test ListSaveListpresentationV1Response
+    public void testListGetListpresentationV1Response() {
+        // TODO: test ListGetListpresentationV1Response
+    }
+
+    /**
+     * Test the property 'mPayload'
+     */
+    @Test
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
     /**

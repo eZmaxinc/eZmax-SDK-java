@@ -30,17 +30,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for ListSaveListpresentationV1ResponseMPayload
+ * Model tests for ListGetListpresentationV1ResponseMPayload
  */
-public class ListSaveListpresentationV1ResponseMPayloadTest {
-    private final ListSaveListpresentationV1ResponseMPayload model = new ListSaveListpresentationV1ResponseMPayload();
+public class ListGetListpresentationV1ResponseMPayloadTest {
+    private final ListGetListpresentationV1ResponseMPayload model = new ListGetListpresentationV1ResponseMPayload();
 
     /**
-     * Model tests for ListSaveListpresentationV1ResponseMPayload
+     * Model tests for ListGetListpresentationV1ResponseMPayload
      */
     @Test
-    public void testListSaveListpresentationV1ResponseMPayload() {
-        // TODO: test ListSaveListpresentationV1ResponseMPayload
+    public void testListGetListpresentationV1ResponseMPayload() {
+        // TODO: test ListGetListpresentationV1ResponseMPayload
     }
 
     /**

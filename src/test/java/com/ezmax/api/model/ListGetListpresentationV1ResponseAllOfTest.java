@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.ListSaveListpresentationV1ResponseMPayload;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,17 +28,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for ListSaveListpresentationV1ResponseAllOf
+ * Model tests for ListGetListpresentationV1ResponseAllOf
  */
-public class ListSaveListpresentationV1ResponseAllOfTest {
-    private final ListSaveListpresentationV1ResponseAllOf model = new ListSaveListpresentationV1ResponseAllOf();
+public class ListGetListpresentationV1ResponseAllOfTest {
+    private final ListGetListpresentationV1ResponseAllOf model = new ListGetListpresentationV1ResponseAllOf();
 
     /**
-     * Model tests for ListSaveListpresentationV1ResponseAllOf
+     * Model tests for ListGetListpresentationV1ResponseAllOf
      */
     @Test
-    public void testListSaveListpresentationV1ResponseAllOf() {
-        // TODO: test ListSaveListpresentationV1ResponseAllOf
+    public void testListGetListpresentationV1ResponseAllOf() {
+        // TODO: test ListGetListpresentationV1ResponseAllOf
     }
 
     /**

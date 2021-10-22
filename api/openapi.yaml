@@ -2390,10 +2390,41 @@ paths:
       x-contentType: application/json
       x-accepts: application/json
   /1/module/list/listpresentation/{sListName}:
+    get:
+      description: Retrive previously saved Listpresentation
+      operationId: List_GetListpresentation_V1
+      parameters:
+      - description: The list Name
+        explode: false
+        in: path
+        name: sListName
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/list-getListpresentation-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Get all Listpresentation for a specific list
+      tags:
+      - Module_List
+      x-accepts: application/json
     post:
       description: Users can create many Listpresentations for lists in the system.
         They can customize orber by, filters, numbers of rows, etc.
-      operationId: List_Listpresentation_V1
+      operationId: List_SaveListpresentation_V1
       parameters:
       - description: The list Name
         explode: false
@@ -5854,21 +5885,10 @@ components:
       type: object
     list-saveListpresentation-v1-Response:
       allOf:
-      - $ref: '#/components/schemas/list_saveListpresentation_v1_Response_allOf'
+      - type: object
       - $ref: '#/components/schemas/Common-Response'
       description: Response for the POST /1/module/list/listpresentation/{sListName}
         API Request
-      type: object
-    list-saveListpresentation-v1-Response-mPayload:
-      description: Payload for the POST /1/module/list/listpresentation/{sListName}
-        API Request
-      properties:
-        a_objListpresentation:
-          items:
-            $ref: '#/components/schemas/listpresentation-Response'
-          type: array
-      required:
-      - a_objListpresentation
       type: object
     list-saveListpresentation-v1-Request:
       description: Request for the POST /1/module/list/listpresentation/{sListName}
@@ -5960,6 +5980,24 @@ components:
       type: object
     listpresentation-Response:
       $ref: '#/components/schemas/listpresentation-Request'
+    list-getListpresentation-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/list_getListpresentation_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the GET /1/module/list/listpresentation/{sListName}
+        API Request
+      type: object
+    list-getListpresentation-v1-Response-mPayload:
+      description: Payload for the GET /1/module/list/listpresentation/{sListName}
+        API Request
+      properties:
+        a_objListpresentation:
+          items:
+            $ref: '#/components/schemas/listpresentation-Response'
+          type: array
+      required:
+      - a_objListpresentation
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -6250,10 +6288,10 @@ components:
       required:
       - a_objEzsignfolder
       type: object
-    list_saveListpresentation_v1_Response_allOf:
+    list_getListpresentation_v1_Response_allOf:
       properties:
         mPayload:
-          $ref: '#/components/schemas/list-saveListpresentation-v1-Response-mPayload'
+          $ref: '#/components/schemas/list-getListpresentation-v1-Response-mPayload'
       required:
       - mPayload
       type: object

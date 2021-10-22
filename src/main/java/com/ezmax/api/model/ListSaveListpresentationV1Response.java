@@ -18,8 +18,6 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.ListSaveListpresentationV1ResponseAllOf;
-import com.ezmax.api.model.ListSaveListpresentationV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -33,12 +31,8 @@ import java.io.IOException;
  * Response for the POST /1/module/list/listpresentation/{sListName} API Request
  */
 @ApiModel(description = "Response for the POST /1/module/list/listpresentation/{sListName} API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T06:29:32.256156Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
 public class ListSaveListpresentationV1Response {
-  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
-  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private ListSaveListpresentationV1ResponseMPayload mPayload;
-
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -46,29 +40,6 @@ public class ListSaveListpresentationV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
-
-
-  public ListSaveListpresentationV1Response mPayload(ListSaveListpresentationV1ResponseMPayload mPayload) {
-    
-    this.mPayload = mPayload;
-    return this;
-  }
-
-   /**
-   * Get mPayload
-   * @return mPayload
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ListSaveListpresentationV1ResponseMPayload getmPayload() {
-    return mPayload;
-  }
-
-
-  public void setmPayload(ListSaveListpresentationV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
 
 
   public ListSaveListpresentationV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
@@ -126,21 +97,19 @@ public class ListSaveListpresentationV1Response {
       return false;
     }
     ListSaveListpresentationV1Response listSaveListpresentationV1Response = (ListSaveListpresentationV1Response) o;
-    return Objects.equals(this.mPayload, listSaveListpresentationV1Response.mPayload) &&
-        Objects.equals(this.objDebugPayload, listSaveListpresentationV1Response.objDebugPayload) &&
+    return Objects.equals(this.objDebugPayload, listSaveListpresentationV1Response.objDebugPayload) &&
         Objects.equals(this.objDebug, listSaveListpresentationV1Response.objDebug);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, objDebugPayload, objDebug);
+    return Objects.hash(objDebugPayload, objDebug);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListSaveListpresentationV1Response {\n");
-    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("}");

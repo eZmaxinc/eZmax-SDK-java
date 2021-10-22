@@ -1,8 +1,8 @@
 
 
-# ListSaveListpresentationV1ResponseMPayload
+# ListGetListpresentationV1ResponseMPayload
 
-Payload for the POST /1/module/list/listpresentation/{sListName} API Request
+Payload for the GET /1/module/list/listpresentation/{sListName} API Request
 
 ## Properties
 

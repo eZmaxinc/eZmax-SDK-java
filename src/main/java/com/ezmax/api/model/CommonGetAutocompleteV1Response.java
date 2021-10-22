@@ -35,7 +35,7 @@ import java.util.List;
  * Response for the /1/object/xxx/getAutocomplete API Request
  */
 @ApiModel(description = "Response for the /1/object/xxx/getAutocomplete API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T06:29:32.256156Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
 public class CommonGetAutocompleteV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

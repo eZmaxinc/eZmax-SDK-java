@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.ListSaveListpresentationV1ResponseMPayload;
+import com.ezmax.api.model.ListGetListpresentationV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -26,16 +26,16 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ListSaveListpresentationV1ResponseAllOf
+ * ListGetListpresentationV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T06:29:32.256156Z[Etc/UTC]")
-public class ListSaveListpresentationV1ResponseAllOf {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
+public class ListGetListpresentationV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private ListSaveListpresentationV1ResponseMPayload mPayload;
+  private ListGetListpresentationV1ResponseMPayload mPayload;
 
 
-  public ListSaveListpresentationV1ResponseAllOf mPayload(ListSaveListpresentationV1ResponseMPayload mPayload) {
+  public ListGetListpresentationV1ResponseAllOf mPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
     
     this.mPayload = mPayload;
     return this;
@@ -48,12 +48,12 @@ public class ListSaveListpresentationV1ResponseAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public ListSaveListpresentationV1ResponseMPayload getmPayload() {
+  public ListGetListpresentationV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
 
-  public void setmPayload(ListSaveListpresentationV1ResponseMPayload mPayload) {
+  public void setmPayload(ListGetListpresentationV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -66,8 +66,8 @@ public class ListSaveListpresentationV1ResponseAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ListSaveListpresentationV1ResponseAllOf listSaveListpresentationV1ResponseAllOf = (ListSaveListpresentationV1ResponseAllOf) o;
-    return Objects.equals(this.mPayload, listSaveListpresentationV1ResponseAllOf.mPayload);
+    ListGetListpresentationV1ResponseAllOf listGetListpresentationV1ResponseAllOf = (ListGetListpresentationV1ResponseAllOf) o;
+    return Objects.equals(this.mPayload, listGetListpresentationV1ResponseAllOf.mPayload);
   }
 
   @Override
@@ -78,7 +78,7 @@ public class ListSaveListpresentationV1ResponseAllOf {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ListSaveListpresentationV1ResponseAllOf {\n");
+    sb.append("class ListGetListpresentationV1ResponseAllOf {\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
