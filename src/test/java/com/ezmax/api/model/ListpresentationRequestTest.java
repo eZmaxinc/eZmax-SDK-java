@@ -90,4 +90,12 @@ public class ListpresentationRequestTest {
         // TODO: test iListpresentationRowOffset
     }
 
+    /**
+     * Test the property 'bListpresentationDefault'
+     */
+    @Test
+    public void bListpresentationDefaultTest() {
+        // TODO: test bListpresentationDefault
+    }
+
 }

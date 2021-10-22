@@ -30,7 +30,7 @@ import java.util.List;
  * A Listpresentation element
  */
 @ApiModel(description = "A Listpresentation element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T17:29:23.959452Z[Etc/UTC]")
 public class ListpresentationRequest {
   public static final String SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION = "sListpresentationDescription";
   @SerializedName(SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION)
@@ -55,6 +55,10 @@ public class ListpresentationRequest {
   public static final String SERIALIZED_NAME_I_LISTPRESENTATION_ROW_OFFSET = "iListpresentationRowOffset";
   @SerializedName(SERIALIZED_NAME_I_LISTPRESENTATION_ROW_OFFSET)
   private Integer iListpresentationRowOffset;
+
+  public static final String SERIALIZED_NAME_B_LISTPRESENTATION_DEFAULT = "bListpresentationDefault";
+  @SerializedName(SERIALIZED_NAME_B_LISTPRESENTATION_DEFAULT)
+  private Boolean bListpresentationDefault;
 
 
   public ListpresentationRequest sListpresentationDescription(String sListpresentationDescription) {
@@ -91,7 +95,7 @@ public class ListpresentationRequest {
    * @return sListpresentationFilter
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "bField1 eq true and iField2 gte 0 and iField2 lte 1000 and sField3 eq 'Other' and eField4 eq 'Paid' and sField5 like '%needle%'", required = true, value = "The filter to apply to the request to limit results.")
+  @ApiModelProperty(example = "bField1 eq true and iField2 gte 0 and iField2 lte 1000 and sField3 eq 'Other' and eField4 eq 'Paid' and sField5 like '%needle%' and iField6 in '1,2,3'", required = true, value = "The filter to apply to the request to limit results.")
 
   public String getsListpresentationFilter() {
     return sListpresentationFilter;
@@ -200,6 +204,29 @@ public class ListpresentationRequest {
   }
 
 
+  public ListpresentationRequest bListpresentationDefault(Boolean bListpresentationDefault) {
+    
+    this.bListpresentationDefault = bListpresentationDefault;
+    return this;
+  }
+
+   /**
+   * Set to true if the user chose this Listpresentation as the default one. A single element should be set to true
+   * @return bListpresentationDefault
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Set to true if the user chose this Listpresentation as the default one. A single element should be set to true")
+
+  public Boolean getbListpresentationDefault() {
+    return bListpresentationDefault;
+  }
+
+
+  public void setbListpresentationDefault(Boolean bListpresentationDefault) {
+    this.bListpresentationDefault = bListpresentationDefault;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -214,12 +241,13 @@ public class ListpresentationRequest {
         Objects.equals(this.sListpresentationOrderby, listpresentationRequest.sListpresentationOrderby) &&
         Objects.equals(this.aSColumnName, listpresentationRequest.aSColumnName) &&
         Objects.equals(this.iListpresentationRowMax, listpresentationRequest.iListpresentationRowMax) &&
-        Objects.equals(this.iListpresentationRowOffset, listpresentationRequest.iListpresentationRowOffset);
+        Objects.equals(this.iListpresentationRowOffset, listpresentationRequest.iListpresentationRowOffset) &&
+        Objects.equals(this.bListpresentationDefault, listpresentationRequest.bListpresentationDefault);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sListpresentationDescription, sListpresentationFilter, sListpresentationOrderby, aSColumnName, iListpresentationRowMax, iListpresentationRowOffset);
+    return Objects.hash(sListpresentationDescription, sListpresentationFilter, sListpresentationOrderby, aSColumnName, iListpresentationRowMax, iListpresentationRowOffset, bListpresentationDefault);
   }
 
   @Override
@@ -232,6 +260,7 @@ public class ListpresentationRequest {
     sb.append("    aSColumnName: ").append(toIndentedString(aSColumnName)).append("\n");
     sb.append("    iListpresentationRowMax: ").append(toIndentedString(iListpresentationRowMax)).append("\n");
     sb.append("    iListpresentationRowOffset: ").append(toIndentedString(iListpresentationRowOffset)).append("\n");
+    sb.append("    bListpresentationDefault: ").append(toIndentedString(bListpresentationDefault)).append("\n");
     sb.append("}");
     return sb.toString();
   }

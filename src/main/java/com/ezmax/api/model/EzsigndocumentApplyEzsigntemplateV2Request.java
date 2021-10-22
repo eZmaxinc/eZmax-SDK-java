@@ -30,7 +30,7 @@ import java.util.List;
  * Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
  */
 @ApiModel(description = "Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T07:57:30.294762Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-22T17:29:23.959452Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV2Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
