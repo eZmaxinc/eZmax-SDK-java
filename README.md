@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.2
-  - Build date: 2021-10-26T15:55:39.565156Z[Etc/UTC]
+  - Build date: 2021-10-26T17:23:20.020401Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -188,6 +188,8 @@ Class | Method | HTTP request | Description
  - [CommonGetListV1ResponseMPayload](docs/CommonGetListV1ResponseMPayload.md)
  - [CommonResponse](docs/CommonResponse.md)
  - [CommonResponseError](docs/CommonResponseError.md)
+ - [CommonResponseErrorSTemporaryFileUrl](docs/CommonResponseErrorSTemporaryFileUrl.md)
+ - [CommonResponseErrorSTemporaryFileUrlAllOf](docs/CommonResponseErrorSTemporaryFileUrlAllOf.md)
  - [CommonResponseFilter](docs/CommonResponseFilter.md)
  - [CommonResponseGetList](docs/CommonResponseGetList.md)
  - [CommonResponseObjDebug](docs/CommonResponseObjDebug.md)

@@ -29,7 +29,7 @@ import java.io.IOException;
  * Request for the /1/module/sspr/unlockAccountRequest API Request
  */
 @ApiModel(description = "Request for the /1/module/sspr/unlockAccountRequest API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-26T15:55:39.565156Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-26T17:23:20.020401Z[Etc/UTC]")
 public class SsprUnlockAccountRequestV1Request {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)

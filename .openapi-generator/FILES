@@ -27,6 +27,8 @@ docs/CommonGetAutocompleteV1ResponseAllOf.md
 docs/CommonGetListV1ResponseMPayload.md
 docs/CommonResponse.md
 docs/CommonResponseError.md
+docs/CommonResponseErrorSTemporaryFileUrl.md
+docs/CommonResponseErrorSTemporaryFileUrlAllOf.md
 docs/CommonResponseFilter.md
 docs/CommonResponseGetList.md
 docs/CommonResponseObjDebug.md
@@ -252,6 +254,8 @@ src/main/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/CommonGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CommonResponse.java
 src/main/java/com/ezmax/api/model/CommonResponseError.java
+src/main/java/com/ezmax/api/model/CommonResponseErrorSTemporaryFileUrl.java
+src/main/java/com/ezmax/api/model/CommonResponseErrorSTemporaryFileUrlAllOf.java
 src/main/java/com/ezmax/api/model/CommonResponseFilter.java
 src/main/java/com/ezmax/api/model/CommonResponseGetList.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebug.java
@@ -467,6 +471,8 @@ src/test/java/com/ezmax/api/model/CommonAuditTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/CommonGetAutocompleteV1ResponseTest.java
 src/test/java/com/ezmax/api/model/CommonGetListV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/CommonResponseErrorSTemporaryFileUrlAllOfTest.java
+src/test/java/com/ezmax/api/model/CommonResponseErrorSTemporaryFileUrlTest.java
 src/test/java/com/ezmax/api/model/CommonResponseErrorTest.java
 src/test/java/com/ezmax/api/model/CommonResponseFilterTest.java
 src/test/java/com/ezmax/api/model/CommonResponseGetListTest.java

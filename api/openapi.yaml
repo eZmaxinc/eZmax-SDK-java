@@ -760,19 +760,11 @@ paths:
           content:
             application/json:
               schema:
-                allOf:
-                - $ref: '#/components/schemas/Common-Response-Error'
-                - properties:
-                    sTemporaryFileUrl:
-                      description: The Temporary File Url of the document that was
-                        uploaded. That url can be reused instead of uploading the
-                        file again.
-                      example: http://www.example.com/document.pdf
-                      type: string
-                  type: object
-                type: object
+                $ref: '#/components/schemas/Common-Response-Error-sTemporaryFileUrl'
           description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
+            completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl
+            will be set and you can use this url to try a new request without sending
+            the file over again
       security:
       - Authorization: []
       summary: Create a new Ezsigndocument
@@ -2603,18 +2595,11 @@ components:
       content:
         application/json:
           schema:
-            allOf:
-            - $ref: '#/components/schemas/Common-Response-Error'
-            - properties:
-                sTemporaryFileUrl:
-                  description: The Temporary File Url of the document that was uploaded.
-                    That url can be reused instead of uploading the file again.
-                  example: http://www.example.com/document.pdf
-                  type: string
-              type: object
-            type: object
+            $ref: '#/components/schemas/Common-Response-Error-sTemporaryFileUrl'
       description: The syntax of the request is valid but the request cannot be completed.
-        Look for detail in body.
+        Look for detail in body. If the error is recoverable sTemporaryFileUrl will
+        be set and you can use this url to try a new request without sending the file
+        over again
   schemas:
     activesession-getCurrent-v1-Response-mPayload:
       description: Payload for the /1/object/activesession/getCurrent API Request
@@ -6140,6 +6125,12 @@ components:
       - fkiLanguageID
       - sEzsigndocumentName
       type: object
+    Common-Response-Error-sTemporaryFileUrl:
+      allOf:
+      - $ref: '#/components/schemas/Common_Response_Error_sTemporaryFileUrl_allOf'
+      - $ref: '#/components/schemas/Common-Response-Error'
+      description: Generic Error Message
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -6436,6 +6427,14 @@ components:
           $ref: '#/components/schemas/list-getListpresentation-v1-Response-mPayload'
       required:
       - mPayload
+      type: object
+    Common_Response_Error_sTemporaryFileUrl_allOf:
+      properties:
+        sTemporaryFileUrl:
+          description: The Temporary File Url of the document that was uploaded. That
+            url can be reused instead of uploading the file again.
+          example: http://www.example.com/document.pdf
+          type: string
       type: object
   securitySchemes:
     Authorization:

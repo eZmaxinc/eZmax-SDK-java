@@ -28,7 +28,7 @@ import java.io.IOException;
  * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  
  */
 @ApiModel(description = "Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-26T15:55:39.565156Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-26T17:23:20.020401Z[Etc/UTC]")
 public class CommonAudit {
   public static final String SERIALIZED_NAME_FKI_USER_I_D_CREATED = "fkiUserIDCreated";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_CREATED)

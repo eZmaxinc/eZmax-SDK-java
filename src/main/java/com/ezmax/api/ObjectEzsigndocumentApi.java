@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
@@ -345,7 +346,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigndocumentCreateObjectV1Call(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -403,7 +404,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
     public EzsigndocumentCreateObjectV1Response ezsigndocumentCreateObjectV1(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request) throws ApiException {
@@ -422,7 +423,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigndocumentCreateObjectV1Response> ezsigndocumentCreateObjectV1WithHttpInfo(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request) throws ApiException {
@@ -443,7 +444,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigndocumentCreateObjectV1Async(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback<EzsigndocumentCreateObjectV1Response> _callback) throws ApiException {
