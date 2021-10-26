@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
 **fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. | 
+**eEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  | 
 **sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester | 
 **sEzsignfolderDescription** | **String** | The description of the Ezsign Folder | 
 **eEzsignfolderStep** | **FieldEEzsignfolderStep** |  | 
