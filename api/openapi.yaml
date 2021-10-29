@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.1.2
+  version: 1.1.3
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -534,11 +534,14 @@ tags:
     \ unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_INCOMPATIBLE  | The pdf document\
     \ cannot be signed                                      |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
     \      | The pdf document contains a password and cannot be signed           \
-    \   |\r\n| UNPROCESSABLEENTITY_PDF_XFA           | The pdf document contains XFA\
-    \ form and cannot be signed                |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH\
-    \ | The number of pages between the document and the template do not match |\r\
-    \n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples    \
-    \              |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
+    \   |\r\n| UNPROCESSABLEENTITY_PDF_REPAIRABLE    | The pdf document contains errors\
+    \ and can be repaired                   |\r\n| UNPROCESSABLEENTITY_PDF_XFA   \
+    \        | The pdf document contains XFA form and cannot be signed           \
+    \     |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH | The number of pages between\
+    \ the document and the template do not match |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \    | We cannot retrieve ressource at supplied url                          \
+    \ |\r\n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples\
+    \                  |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
     \ | Unhandled error on server |\r\n\r\n### HTTP 501 (Not Implemented)\r\n| eErrorCode\
     \           | Examples                                                 |\r\n|\
     \ -------------------- | --------------------------------------------------------\
@@ -610,7 +613,10 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList\
+    \n## 1.1.X Releases\n### [1.1.3] - 2021-10-\n\n#### Added\n- POST /1/object/ezsignfoldersignerassociation\
+    \ bEzsignfoldersignerassociationReceivecopy property \n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
+    \ to documentation\n\n### [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList\
     \ eEzsignfoldertypePrivacylevel property\n- POST /1/object/ezsigndocument returns\
     \ a sTemporaryFileUrl on error 422 if error is recoverable\n- POST /1/object/ezsigndocument\
     \ sEzsigndocumentUrl property\n- POST /1/object/ezsigndocument eEzsigndocumentSource\
@@ -2829,29 +2835,6 @@ components:
         The timezone is the one configured in the User's profile.
       example: 2020-12-31 23:59:59
       type: string
-    ezsignfoldersignerassociation-Request:
-      description: An Ezsignfoldersignerassociation Object
-      example:
-        fkiUserID: 48
-        fkiEzsignfolderID: 85
-      properties:
-        fkiUserID:
-          description: |-
-            A reference to a valid User.
-
-            This is only used if the signatory will be a user from the system.
-          minimum: 1
-          type: integer
-        fkiEzsignfolderID:
-          description: |-
-            A reference to a valid Ezsignfolder.
-
-            That value is returned after a successful Ezsignfolder Creation.
-          minimum: 1
-          type: integer
-      required:
-      - fkiEzsignfolderID
-      type: object
     ezsignsigner-Request:
       description: An Ezsignsigner Object
       example:
@@ -6131,6 +6114,28 @@ components:
       - $ref: '#/components/schemas/Common-Response-Error'
       description: Generic Error Message
       type: object
+    ezsignfoldersignerassociation-Request:
+      description: An Ezsignfoldersignerassociation Object
+      properties:
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        bEzsignfoldersignerassociationReceivecopy:
+          description: If this flag is true. The signatory will receive a copy of
+            every signed Ezsigndocument even if it ain't required to sign the document.
+          type: boolean
+      required:
+      - fkiEzsignfolderID
+      type: object
+    Field-bEzsignfoldersignerassociationReceivecopy:
+      description: If this flag is true. The signatory will receive a copy of every
+        signed Ezsigndocument even if it ain't required to sign the document.
+      type: boolean
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
