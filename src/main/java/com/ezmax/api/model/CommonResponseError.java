@@ -28,7 +28,7 @@ import java.io.IOException;
  * Generic Error Message
  */
 @ApiModel(description = "Generic Error Message")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CommonResponseError {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -38,6 +38,8 @@ public class CommonResponseError {
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
   private String eErrorCode;
 
+  public CommonResponseError() { 
+  }
 
   public CommonResponseError sErrorMessage(String sErrorMessage) {
     

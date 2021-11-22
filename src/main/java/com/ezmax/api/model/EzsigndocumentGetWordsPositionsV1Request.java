@@ -30,7 +30,7 @@ import java.util.List;
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -91,6 +91,8 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   @SerializedName(SERIALIZED_NAME_A_S_WORD)
   private List<String> aSWord = null;
 
+  public EzsigndocumentGetWordsPositionsV1Request() { 
+  }
 
   public EzsigndocumentGetWordsPositionsV1Request eGet(EGetEnum eGet) {
     

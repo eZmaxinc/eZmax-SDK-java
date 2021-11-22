@@ -31,7 +31,7 @@ import java.util.List;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -41,6 +41,8 @@ public class CustomWordPositionWordResponse {
   @SerializedName(SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE)
   private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = new ArrayList<CustomWordPositionOccurenceResponse>();
 
+  public CustomWordPositionWordResponse() { 
+  }
 
   public CustomWordPositionWordResponse sWord(String sWord) {
     

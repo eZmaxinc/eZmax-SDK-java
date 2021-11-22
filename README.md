@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.3
-  - Build date: 2021-10-29T17:31:02.346258Z[Etc/UTC]
+  - Build date: 2021-11-22T21:09:41.243489Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -15,7 +15,7 @@ This API expose all the functionnalities for the eZmax and eZsign applications.
 
 Building the API client library requires:
 1. Java 1.7+
-2. Maven/Gradle
+2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
 
@@ -51,7 +51,14 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ezmax:ezmax-java:1.1.3"
+  repositories {
+    mavenCentral()     // Needed if the 'ezmax-java' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'ezmax-java' jar has been published to the local maven repo.
+  }
+
+  dependencies {
+     implementation "com.ezmax:ezmax-java:1.1.3"
+  }
 ```
 
 ### Others
@@ -129,6 +136,7 @@ Class | Method | HTTP request | Description
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
 *ObjectActivesessionApi* | [**activesessionGetCurrentV1**](docs/ObjectActivesessionApi.md#activesessionGetCurrentV1) | **GET** /1/object/activesession/getCurrent | Get Current Activesession
 *ObjectApikeyApi* | [**apikeyCreateObjectV1**](docs/ObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
+*ObjectEzsignbulksendApi* | [**ezsignbulksendGetListV1**](docs/ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentApplyEzsigntemplateV2**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentApplyEzsigntemplateV2) | **POST** /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate | Apply an Ezsign Template to the Ezsigndocument.
 *ObjectEzsigndocumentApi* | [**ezsigndocumentCreateObjectV1**](docs/ObjectEzsigndocumentApi.md#ezsigndocumentCreateObjectV1) | **POST** /1/object/ezsigndocument | Create a new Ezsigndocument
@@ -211,6 +219,11 @@ Class | Method | HTTP request | Description
  - [CustomWordPositionOccurenceResponse](docs/CustomWordPositionOccurenceResponse.md)
  - [CustomWordPositionWordResponse](docs/CustomWordPositionWordResponse.md)
  - [EmailRequest](docs/EmailRequest.md)
+ - [EzsignbulksendGetListV1Response](docs/EzsignbulksendGetListV1Response.md)
+ - [EzsignbulksendGetListV1ResponseAllOf](docs/EzsignbulksendGetListV1ResponseAllOf.md)
+ - [EzsignbulksendGetListV1ResponseMPayload](docs/EzsignbulksendGetListV1ResponseMPayload.md)
+ - [EzsignbulksendGetListV1ResponseMPayloadAllOf](docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md)
+ - [EzsignbulksendListElement](docs/EzsignbulksendListElement.md)
  - [EzsigndocumentApplyEzsigntemplateV1Request](docs/EzsigndocumentApplyEzsigntemplateV1Request.md)
  - [EzsigndocumentApplyEzsigntemplateV1Response](docs/EzsigndocumentApplyEzsigntemplateV1Response.md)
  - [EzsigndocumentApplyEzsigntemplateV2Request](docs/EzsigndocumentApplyEzsigntemplateV2Request.md)

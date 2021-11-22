@@ -30,12 +30,14 @@ import java.util.List;
 /**
  * EzsignfoldertypeGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
   private List<EzsignfoldertypeListElement> aObjEzsignfoldertype = new ArrayList<EzsignfoldertypeListElement>();
 
+  public EzsignfoldertypeGetListV1ResponseMPayloadAllOf() { 
+  }
 
   public EzsignfoldertypeGetListV1ResponseMPayloadAllOf aObjEzsignfoldertype(List<EzsignfoldertypeListElement> aObjEzsignfoldertype) {
     

@@ -613,14 +613,15 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.3] - 2021-10-\n\n#### Added\n- POST /1/object/ezsignfoldersignerassociation\
-    \ bEzsignfoldersignerassociationReceivecopy property \n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
-    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
-    \ to documentation\n\n### [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList\
-    \ eEzsignfoldertypePrivacylevel property\n- POST /1/object/ezsigndocument returns\
-    \ a sTemporaryFileUrl on error 422 if error is recoverable\n- POST /1/object/ezsigndocument\
-    \ sEzsigndocumentUrl property\n- POST /1/object/ezsigndocument eEzsigndocumentSource\
-    \ property now accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
+    \n## 1.1.X Releases\n### [1.1.3] - 2021-10-\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
+    - POST /1/object/ezsignfoldersignerassociation bEzsignfoldersignerassociationReceivecopy\
+    \ property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR added to documentation\n\
+    - Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added to documentation\n\n###\
+    \ [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
+    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
+    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
+    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
+    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
     \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
     \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
     \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
@@ -671,12 +672,15 @@ tags:
 - description: User module contains actions that can be called to interract with users
   name: Module_User
   x-displayName: User
-- description: Activesession contains detail about the currently executing api request.
+- description: Activesession contains detail about the currently executing api request
   name: Object_Activesession
   x-displayName: Activesession
 - description: Apikey contains detail about an api key used to access the API
   name: Object_Apikey
   x-displayName: Apikey
+- description: Ezsignbulksend contains detail about a batch of Ezsignfolders
+  name: Object_Ezsignbulksend
+  x-displayName: Ezsignbulksend
 - description: Ezsigndocument contains detail about a document to sign
   name: Object_Ezsigndocument
   x-displayName: Ezsigndocument
@@ -689,7 +693,7 @@ tags:
     persons outside of the system.
   name: Object_Ezsignfoldersignerassociation
   x-displayName: Ezsignfoldersignerassociation
-- description: Ezsignfoldertype contains detail about the types of ezsign folders
+- description: Ezsignfoldertype contains detail about the types of Ezsignfolders
   name: Object_Ezsignfoldertype
   x-displayName: Ezsignfoldertype
 - description: Ezsignsignature contains detail about a specific signature block on
@@ -2561,6 +2565,97 @@ paths:
       - Module_List
       x-contentType: application/json
       x-accepts: application/json
+  /1/object/ezsignbulksend/getList:
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+      operationId: Ezsignbulksend_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiEzsignbulksendID_ASC
+          - pkiEzsignbulksendID_DESC
+          - fkiEzsignfoldertypeID_ASC
+          - fkiEzsignfoldertypeID_DESC
+          - sEzsignbulksendDescription_ASC
+          - sEzsignbulksendDescription_DESC
+          - sEzsignfoldertypeNameX_ASC
+          - sEzsignfoldertypeNameX_DESC
+          - eEzsignfoldertypePrivacylevel_ASC
+          - eEzsignfoldertypePrivacylevel_DESC
+          - bEzsignbulksendIsactive_ASC
+          - bEzsignbulksendIsactive_DESC
+          - iEzsignbulksendtransmission_ASC
+          - iEzsignbulksendtransmission_DESC
+          - iEzsignfolder_ASC
+          - iEzsignfolder_DESC
+          - iEzsigndocument_ASC
+          - iEzsigndocument_DESC
+          - iEzsignsignature_ASC
+          - iEzsignsignature_DESC
+          - iEzsignsignatureSigned_ASC
+          - iEzsignsignatureSigned_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksend-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: One of the accept header is not defined or invalid.
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignbulksend list
+      tags:
+      - Object_Ezsignbulksend
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -3406,10 +3501,6 @@ components:
       description: The date and time when the Ezsigndocument was sent the last time.
       example: 2020-12-31 23:59:59
       type: string
-    Field-sEzsignfolderDescription:
-      description: The description of the Ezsign Folder
-      example: Test eZsign Folder
-      type: string
     Field-tEzsignfolderNote:
       description: Somes extra notes about the eZsign Folder
       example: An extra notes we can add to the ezsign folder
@@ -4217,7 +4308,7 @@ components:
           minimum: 1
           type: integer
         sEzsignfolderDescription:
-          description: The description of the Ezsign Folder
+          description: The description of the Ezsignfolder
           example: Test eZsign Folder
           type: string
         tEzsignfolderNote:
@@ -5602,7 +5693,7 @@ components:
           example: 33
           type: integer
         sEzsignfolderDescription:
-          description: The description of the Ezsign Folder
+          description: The description of the Ezsignfolder
           example: Test eZsign Folder
           type: string
         a_objFormDataDocument:
@@ -5883,7 +5974,7 @@ components:
           minimum: 1
           type: integer
         sEzsignfolderDescription:
-          description: The description of the Ezsign Folder
+          description: The description of the Ezsignfolder
           example: Test eZsign Folder
           type: string
         tEzsignfolderNote:
@@ -5968,73 +6059,6 @@ components:
         eq 'Other' and eField4 eq 'Paid' and sField5 like '%needle%' and iField6 in
         '1,2,3' and dtField7 rg '=m,=3mm'
       type: string
-    ezsignfolder-ListElement:
-      description: An Ezsignfolder List Element
-      properties:
-        pkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        fkiEzsignfoldertypeID:
-          description: The unique ID of the Ezsignfoldertype.
-          example: 5
-          type: integer
-        eEzsignfoldertypePrivacylevel:
-          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
-        sEzsignfoldertypeNameX:
-          description: The name of the Ezsignfoldertype in the language of the requester
-          example: Default
-          type: string
-        sEzsignfolderDescription:
-          description: The description of the Ezsign Folder
-          example: Test eZsign Folder
-          type: string
-        eEzsignfolderStep:
-          $ref: '#/components/schemas/Field-eEzsignfolderStep'
-        dtCreatedDate:
-          description: The date and time at which the object was created
-          example: 2020-12-31 23:59:59
-          type: string
-        dtEzsignfolderSentdate:
-          oneOf:
-          - $ref: '#/components/schemas/Field-dtEzsignfolderSentdate'
-          - $ref: '#/components/schemas/Custom-Null'
-        dtDueDate:
-          description: The date at which no more signature will be accepted on the
-            folder
-          oneOf:
-          - $ref: '#/components/schemas/Common-Format-DateTime'
-          - $ref: '#/components/schemas/Custom-Null'
-        iTotalDocument:
-          description: The total number of Ezsigndocument in the folder
-          type: integer
-        iTotalDocumentEdm:
-          description: The total number of Ezsigndocument in the folder that were
-            saved in the edm system
-          type: integer
-        iTotalSignature:
-          description: The total number of signature blocks in all Ezsigndocuments
-            in the folder
-          type: integer
-        iTotalSignatureSigned:
-          description: The total number of already signed signature blocks in all
-            Ezsigndocuments in the folder
-          type: integer
-      required:
-      - dtCreatedDate
-      - dtDueDate
-      - dtEzsignfolderSentdate
-      - eEzsignfolderStep
-      - eEzsignfoldertypePrivacylevel
-      - fkiEzsignfoldertypeID
-      - iTotalDocument
-      - iTotalDocumentEdm
-      - iTotalSignature
-      - iTotalSignatureSigned
-      - pkiEzsignfolderID
-      - sEzsignfolderDescription
-      - sEzsignfoldertypeNameX
-      type: object
     ezsigndocument-Request:
       description: An Ezsigndocument Object
       properties:
@@ -6136,6 +6160,153 @@ components:
       description: If this flag is true. The signatory will receive a copy of every
         signed Ezsigndocument even if it ain't required to sign the document.
       type: boolean
+    ezsignbulksend-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for the /1/object/ezsignbulksend/getList API Request
+      type: object
+    ezsignbulksend-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for the /1/object/ezsignbulksend/getList API Request
+      type: object
+    Field-sEzsignbulksendDescription:
+      description: The description of the Ezsignbulksend
+      example: Test eZsign Bulk Send
+      type: string
+    Field-sEzsignfolderDescription:
+      description: The description of the Ezsignfolder
+      example: Test eZsign Folder
+      type: string
+    Field-bEzsignbulksendIsactive:
+      description: Whether the Ezsignbulksend is active or not
+      type: boolean
+    ezsignbulksend-ListElement:
+      description: An Ezsignbulksend List Element
+      properties:
+        pkiEzsignbulksendID:
+          description: The unique ID of the Ezsignbulksend
+          example: 8
+          type: integer
+        fkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        sEzsignbulksendDescription:
+          description: The description of the Ezsignbulksend
+          example: Test eZsign Bulk Send
+          type: string
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        bEzsignbulksendIsactive:
+          description: Whether the Ezsignbulksend is active or not
+          type: boolean
+        iEzsignbulksendtransmission:
+          description: The total number of Ezsignbulksendtransmissions in the Ezsignbulksend
+          type: integer
+        iEzsignfolder:
+          description: The total number of Ezsignfolders in the Ezsignbulksend
+          type: integer
+        iEzsigndocument:
+          description: The total number of Ezsigndocuments in the Ezsignbulksend
+          type: integer
+        iEzsignsignature:
+          description: The total number of Ezsignsignature in the Ezsignbulksend
+          type: integer
+        iEzsignsignatureSigned:
+          description: The total number of already signed Ezsignsignature blocks in
+            the Ezsignbulksend
+          type: integer
+      required:
+      - bEzsignbulksendIsactive
+      - eEzsignfoldertypePrivacylevel
+      - fkiEzsignfoldertypeID
+      - iEzsignbulksendtransmission
+      - iEzsigndocument
+      - iEzsignfolder
+      - iEzsignsignature
+      - iEzsignsignatureSigned
+      - pkiEzsignbulksendID
+      - sEzsignbulksendDescription
+      - sEzsignfoldertypeNameX
+      type: object
+    Field-pkiEzsignbulksendID:
+      description: The unique ID of the Ezsignbulksend
+      example: 8
+      type: integer
+    ezsignfolder-ListElement:
+      description: An Ezsignfolder List Element
+      properties:
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        fkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        sEzsignfolderDescription:
+          description: The description of the Ezsignfolder
+          example: Test eZsign Folder
+          type: string
+        eEzsignfolderStep:
+          $ref: '#/components/schemas/Field-eEzsignfolderStep'
+        dtCreatedDate:
+          description: The date and time at which the object was created
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsignfolderSentdate:
+          oneOf:
+          - $ref: '#/components/schemas/Field-dtEzsignfolderSentdate'
+          - $ref: '#/components/schemas/Custom-Null'
+        dtDueDate:
+          description: The date at which no more signature will be accepted on the
+            folder
+          oneOf:
+          - $ref: '#/components/schemas/Common-Format-DateTime'
+          - $ref: '#/components/schemas/Custom-Null'
+        iEzsigndocument:
+          description: The total number of Ezsigndocument in the folder
+          type: integer
+        iEzsigndocumentEdm:
+          description: The total number of Ezsigndocument in the folder that were
+            saved in the edm system
+          type: integer
+        iEzsignsignature:
+          description: The total number of signature blocks in all Ezsigndocuments
+            in the folder
+          type: integer
+        iEzsignsignatureSigned:
+          description: The total number of already signed signature blocks in all
+            Ezsigndocuments in the folder
+          type: integer
+      required:
+      - dtCreatedDate
+      - dtDueDate
+      - dtEzsignfolderSentdate
+      - eEzsignfolderStep
+      - eEzsignfoldertypePrivacylevel
+      - fkiEzsignfoldertypeID
+      - iEzsigndocument
+      - iEzsigndocumentEdm
+      - iEzsignsignature
+      - iEzsignsignatureSigned
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
+      - sEzsignfoldertypeNameX
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -6441,6 +6612,22 @@ components:
           example: http://www.example.com/document.pdf
           type: string
       type: object
+    ezsignbulksend_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksend-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignbulksend_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objEzsignfolder:
+          items:
+            $ref: '#/components/schemas/ezsignbulksend-ListElement'
+          type: array
+      required:
+      - a_objEzsignbulksend
+      type: object
   securitySchemes:
     Authorization:
       in: header
@@ -6518,6 +6705,7 @@ x-tagGroups:
   tags:
   - Object_Activesession
   - Object_Apikey
+  - Object_Ezsignbulksend
   - Object_Ezsigndocument
   - Object_Ezsignfolder
   - Object_Ezsignfoldersignerassociation

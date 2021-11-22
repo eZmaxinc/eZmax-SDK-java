@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * ContactinformationsRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class ContactinformationsRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
@@ -51,6 +51,8 @@ public class ContactinformationsRequestCompoundAllOf {
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
   private List<WebsiteRequest> aObjWebsite = new ArrayList<WebsiteRequest>();
 
+  public ContactinformationsRequestCompoundAllOf() { 
+  }
 
   public ContactinformationsRequestCompoundAllOf aObjAddress(List<AddressRequest> aObjAddress) {
     

@@ -31,7 +31,7 @@ import java.io.IOException;
  * An Ezsignfolder Object
  */
 @ApiModel(description = "An Ezsignfolder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -73,6 +73,8 @@ public class EzsignfolderResponse {
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
 
+  public EzsignfolderResponse() { 
+  }
 
   public EzsignfolderResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     
@@ -129,11 +131,11 @@ public class EzsignfolderResponse {
   }
 
    /**
-   * The description of the Ezsign Folder
+   * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsign Folder")
+  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;

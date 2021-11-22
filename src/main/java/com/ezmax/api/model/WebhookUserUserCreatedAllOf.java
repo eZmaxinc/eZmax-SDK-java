@@ -28,12 +28,14 @@ import java.io.IOException;
 /**
  * WebhookUserUserCreatedAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class WebhookUserUserCreatedAllOf {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
   private UserResponse objUser;
 
+  public WebhookUserUserCreatedAllOf() { 
+  }
 
   public WebhookUserUserCreatedAllOf objUser(UserResponse objUser) {
     

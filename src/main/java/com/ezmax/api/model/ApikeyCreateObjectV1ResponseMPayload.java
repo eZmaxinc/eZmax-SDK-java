@@ -31,12 +31,14 @@ import java.util.List;
  * Payload for the /1/object/apikey/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/apikey/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class ApikeyCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
   private List<ApikeyResponse> aObjApikey = new ArrayList<ApikeyResponse>();
 
+  public ApikeyCreateObjectV1ResponseMPayload() { 
+  }
 
   public ApikeyCreateObjectV1ResponseMPayload aObjApikey(List<ApikeyResponse> aObjApikey) {
     

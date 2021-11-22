@@ -28,12 +28,14 @@ import java.io.IOException;
  * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
  */
 @ApiModel(description = "Response for the /1/customer/{pksCustomerCode}/endpoint API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class GlobalCustomerGetEndpointV1Response {
   public static final String SERIALIZED_NAME_S_ENDPOINT_U_R_L = "sEndpointURL";
   @SerializedName(SERIALIZED_NAME_S_ENDPOINT_U_R_L)
   private String sEndpointURL;
 
+  public GlobalCustomerGetEndpointV1Response() { 
+  }
 
   public GlobalCustomerGetEndpointV1Response sEndpointURL(String sEndpointURL) {
     

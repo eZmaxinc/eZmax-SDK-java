@@ -50,6 +50,11 @@ docs/CustomFormsDataFolderResponse.md
 docs/CustomWordPositionOccurenceResponse.md
 docs/CustomWordPositionWordResponse.md
 docs/EmailRequest.md
+docs/EzsignbulksendGetListV1Response.md
+docs/EzsignbulksendGetListV1ResponseAllOf.md
+docs/EzsignbulksendGetListV1ResponseMPayload.md
+docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendListElement.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -170,6 +175,7 @@ docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
 docs/ObjectApikeyApi.md
+docs/ObjectEzsignbulksendApi.md
 docs/ObjectEzsigndocumentApi.md
 docs/ObjectEzsignfolderApi.md
 docs/ObjectEzsignfoldersignerassociationApi.md
@@ -223,6 +229,7 @@ src/main/java/com/ezmax/api/ModuleSsprApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
 src/main/java/com/ezmax/api/ObjectApikeyApi.java
+src/main/java/com/ezmax/api/ObjectEzsignbulksendApi.java
 src/main/java/com/ezmax/api/ObjectEzsigndocumentApi.java
 src/main/java/com/ezmax/api/ObjectEzsignfolderApi.java
 src/main/java/com/ezmax/api/ObjectEzsignfoldersignerassociationApi.java
@@ -277,6 +284,11 @@ src/main/java/com/ezmax/api/model/CustomFormsDataFolderResponse.java
 src/main/java/com/ezmax/api/model/CustomWordPositionOccurenceResponse.java
 src/main/java/com/ezmax/api/model/CustomWordPositionWordResponse.java
 src/main/java/com/ezmax/api/model/EmailRequest.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendListElement.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV2Request.java
@@ -442,6 +454,7 @@ src/test/java/com/ezmax/api/ModuleSsprApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
 src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
+src/test/java/com/ezmax/api/ObjectEzsignbulksendApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsigndocumentApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignfolderApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignfoldersignerassociationApiTest.java
@@ -496,6 +509,11 @@ src/test/java/com/ezmax/api/model/CustomFormsDataFolderResponseTest.java
 src/test/java/com/ezmax/api/model/CustomWordPositionOccurenceResponseTest.java
 src/test/java/com/ezmax/api/model/CustomWordPositionWordResponseTest.java
 src/test/java/com/ezmax/api/model/EmailRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendListElementTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV2RequestTest.java

@@ -116,35 +116,35 @@ public class EzsignfolderListElementTest {
     }
 
     /**
-     * Test the property 'iTotalDocument'
+     * Test the property 'iEzsigndocument'
      */
     @Test
-    public void iTotalDocumentTest() {
-        // TODO: test iTotalDocument
+    public void iEzsigndocumentTest() {
+        // TODO: test iEzsigndocument
     }
 
     /**
-     * Test the property 'iTotalDocumentEdm'
+     * Test the property 'iEzsigndocumentEdm'
      */
     @Test
-    public void iTotalDocumentEdmTest() {
-        // TODO: test iTotalDocumentEdm
+    public void iEzsigndocumentEdmTest() {
+        // TODO: test iEzsigndocumentEdm
     }
 
     /**
-     * Test the property 'iTotalSignature'
+     * Test the property 'iEzsignsignature'
      */
     @Test
-    public void iTotalSignatureTest() {
-        // TODO: test iTotalSignature
+    public void iEzsignsignatureTest() {
+        // TODO: test iEzsignsignature
     }
 
     /**
-     * Test the property 'iTotalSignatureSigned'
+     * Test the property 'iEzsignsignatureSigned'
      */
     @Test
-    public void iTotalSignatureSignedTest() {
-        // TODO: test iTotalSignatureSigned
+    public void iEzsignsignatureSignedTest() {
+        // TODO: test iEzsignsignatureSigned
     }
 
 }

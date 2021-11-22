@@ -35,7 +35,7 @@ import java.util.List;
  * This is the base Webhook object
  */
 @ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class WebhookEzsignFolderCompleted {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
@@ -49,6 +49,8 @@ public class WebhookEzsignFolderCompleted {
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
   private List<AttemptResponse> aObjAttempt = new ArrayList<AttemptResponse>();
 
+  public WebhookEzsignFolderCompleted() { 
+  }
 
   public WebhookEzsignFolderCompleted objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
     

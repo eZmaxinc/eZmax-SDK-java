@@ -28,7 +28,7 @@ import java.io.IOException;
  * Payload for the /2/module/authenticate/authenticate API Request
  */
 @ApiModel(description = "Payload for the /2/module/authenticate/authenticate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class AuthenticateAuthenticateV2ResponseMPayload {
   public static final String SERIALIZED_NAME_S_AUTHORIZATION = "sAuthorization";
   @SerializedName(SERIALIZED_NAME_S_AUTHORIZATION)
@@ -38,6 +38,8 @@ public class AuthenticateAuthenticateV2ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_S_SECRET)
   private String sSecret;
 
+  public AuthenticateAuthenticateV2ResponseMPayload() { 
+  }
 
   public AuthenticateAuthenticateV2ResponseMPayload sAuthorization(String sAuthorization) {
     

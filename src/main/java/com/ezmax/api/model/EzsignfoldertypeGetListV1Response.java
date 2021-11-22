@@ -33,7 +33,7 @@ import java.io.IOException;
  * Response for the /1/object/ezsignfoldertype/getList API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsignfoldertype/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfoldertypeGetListV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
@@ -47,6 +47,8 @@ public class EzsignfoldertypeGetListV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
+  public EzsignfoldertypeGetListV1Response() { 
+  }
 
   public EzsignfoldertypeGetListV1Response mPayload(EzsignfoldertypeGetListV1ResponseMPayload mPayload) {
     

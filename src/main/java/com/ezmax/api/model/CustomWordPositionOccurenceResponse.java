@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
@@ -42,6 +42,8 @@ public class CustomWordPositionOccurenceResponse {
   @SerializedName(SERIALIZED_NAME_I_Y)
   private Integer iY;
 
+  public CustomWordPositionOccurenceResponse() { 
+  }
 
   public CustomWordPositionOccurenceResponse iPage(Integer iPage) {
     

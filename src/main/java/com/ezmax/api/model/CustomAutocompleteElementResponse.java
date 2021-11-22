@@ -29,7 +29,7 @@ import java.io.IOException;
  * Generic Autocomplete Response
  */
 @ApiModel(description = "Generic Autocomplete Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CATEGORY = "sCategory";
   @SerializedName(SERIALIZED_NAME_S_CATEGORY)
@@ -43,6 +43,8 @@ public class CustomAutocompleteElementResponse {
   @SerializedName(SERIALIZED_NAME_M_VALUE)
   private OneOfintegerstring mValue;
 
+  public CustomAutocompleteElementResponse() { 
+  }
 
   public CustomAutocompleteElementResponse sCategory(String sCategory) {
     

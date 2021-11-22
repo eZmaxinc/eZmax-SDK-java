@@ -30,7 +30,7 @@ import java.io.IOException;
  * Generic Error Message
  */
 @ApiModel(description = "Generic Error Message")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
@@ -44,6 +44,8 @@ public class CommonResponseErrorSTemporaryFileUrl {
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
   private String eErrorCode;
 
+  public CommonResponseErrorSTemporaryFileUrl() { 
+  }
 
   public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(String sTemporaryFileUrl) {
     

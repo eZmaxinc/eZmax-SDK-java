@@ -31,7 +31,7 @@ import java.io.IOException;
  * A Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class ContactRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS = "objContactinformations";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS)
@@ -61,6 +61,8 @@ public class ContactRequestCompound {
   @SerializedName(SERIALIZED_NAME_DT_CONTACT_BIRTHDATE)
   private String dtContactBirthdate;
 
+  public ContactRequestCompound() { 
+  }
 
   public ContactRequestCompound objContactinformations(ContactinformationsRequestCompound objContactinformations) {
     

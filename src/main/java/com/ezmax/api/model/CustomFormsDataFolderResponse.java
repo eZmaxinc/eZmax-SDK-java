@@ -31,7 +31,7 @@ import java.util.List;
  * A forms Data Folder Object
  */
 @ApiModel(description = "A forms Data Folder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CustomFormsDataFolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -45,6 +45,8 @@ public class CustomFormsDataFolderResponse {
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORM_DATA_DOCUMENT)
   private List<CustomFormDataDocumentResponse> aObjFormDataDocument = new ArrayList<CustomFormDataDocumentResponse>();
 
+  public CustomFormsDataFolderResponse() { 
+  }
 
   public CustomFormsDataFolderResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
     
@@ -76,11 +78,11 @@ public class CustomFormsDataFolderResponse {
   }
 
    /**
-   * The description of the Ezsign Folder
+   * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsign Folder")
+  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;

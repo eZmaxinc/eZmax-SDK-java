@@ -31,7 +31,7 @@ import java.io.IOException;
  * Response for the /1/object/ezsignfoldersignerassociation/deleteObject API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsignfoldersignerassociation/deleteObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfoldersignerassociationDeleteObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -41,6 +41,8 @@ public class EzsignfoldersignerassociationDeleteObjectV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
+  public EzsignfoldersignerassociationDeleteObjectV1Response() { 
+  }
 
   public EzsignfoldersignerassociationDeleteObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     

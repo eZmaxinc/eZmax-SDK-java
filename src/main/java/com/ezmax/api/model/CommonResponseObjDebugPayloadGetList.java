@@ -35,7 +35,7 @@ import java.util.Map;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -57,6 +57,8 @@ public class CommonResponseObjDebugPayloadGetList {
   @SerializedName(SERIALIZED_NAME_A_ORDER_BY)
   private Map<String, String> aOrderBy = new HashMap<String, String>();
 
+  public CommonResponseObjDebugPayloadGetList() { 
+  }
 
   public CommonResponseObjDebugPayloadGetList iVersionMin(Integer iVersionMin) {
     

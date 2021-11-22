@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Contact Object
  */
 @ApiModel(description = "A Contact Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class ContactRequest {
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
@@ -54,6 +54,8 @@ public class ContactRequest {
   @SerializedName(SERIALIZED_NAME_DT_CONTACT_BIRTHDATE)
   private String dtContactBirthdate;
 
+  public ContactRequest() { 
+  }
 
   public ContactRequest fkiContacttitleID(Integer fkiContacttitleID) {
     

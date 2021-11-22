@@ -31,7 +31,7 @@ import java.util.List;
  * This is a generic debug object that is returned by all API requests
  */
 @ApiModel(description = "This is a generic debug object that is returned by all API requests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -53,6 +53,8 @@ public class CommonResponseObjDebug {
   @SerializedName(SERIALIZED_NAME_A_OBJ_S_Q_L_QUERY)
   private List<CommonResponseObjSQLQuery> aObjSQLQuery = new ArrayList<CommonResponseObjSQLQuery>();
 
+  public CommonResponseObjDebug() { 
+  }
 
   public CommonResponseObjDebug sMemoryUsage(String sMemoryUsage) {
     

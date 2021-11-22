@@ -31,7 +31,7 @@ import java.util.List;
  * A form Data Document Object 
  */
 @ApiModel(description = "A form Data Document Object ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -53,6 +53,8 @@ public class CustomFormDataDocumentResponse {
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER)
   private List<CustomFormDataSignerResponse> aObjFormDataSigner = new ArrayList<CustomFormDataSignerResponse>();
 
+  public CustomFormDataDocumentResponse() { 
+  }
 
   public CustomFormDataDocumentResponse pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     

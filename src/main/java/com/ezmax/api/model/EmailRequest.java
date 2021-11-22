@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Contact Object
  */
 @ApiModel(description = "A Contact Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EmailRequest {
   public static final String SERIALIZED_NAME_FKI_EMAILTYPE_I_D = "fkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAILTYPE_I_D)
@@ -38,6 +38,8 @@ public class EmailRequest {
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
   private String sEmailAddress;
 
+  public EmailRequest() { 
+  }
 
   public EmailRequest fkiEmailtypeID(Integer fkiEmailtypeID) {
     

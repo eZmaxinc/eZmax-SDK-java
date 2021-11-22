@@ -28,7 +28,7 @@ import java.io.IOException;
  * Request for the /2/module/authenticate/authenticate API Request
  */
 @ApiModel(description = "Request for the /2/module/authenticate/authenticate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class AuthenticateAuthenticateV2Request {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
@@ -50,6 +50,8 @@ public class AuthenticateAuthenticateV2Request {
   @SerializedName(SERIALIZED_NAME_S_PASSWORD_ENCRYPTED)
   private String sPasswordEncrypted;
 
+  public AuthenticateAuthenticateV2Request() { 
+  }
 
   public AuthenticateAuthenticateV2Request pksCustomerCode(String pksCustomerCode) {
     

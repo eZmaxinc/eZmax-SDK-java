@@ -27,12 +27,14 @@ import java.io.IOException;
 /**
  * CommonResponseErrorSTemporaryFileUrlAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class CommonResponseErrorSTemporaryFileUrlAllOf {
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
   private String sTemporaryFileUrl;
 
+  public CommonResponseErrorSTemporaryFileUrlAllOf() { 
+  }
 
   public CommonResponseErrorSTemporaryFileUrlAllOf sTemporaryFileUrl(String sTemporaryFileUrl) {
     

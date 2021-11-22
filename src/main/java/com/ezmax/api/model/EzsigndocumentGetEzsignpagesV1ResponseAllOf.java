@@ -28,12 +28,14 @@ import java.io.IOException;
 /**
  * EzsigndocumentGetEzsignpagesV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignpagesV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
   private EzsigndocumentGetEzsignpagesV1ResponseMPayload mPayload;
 
+  public EzsigndocumentGetEzsignpagesV1ResponseAllOf() { 
+  }
 
   public EzsigndocumentGetEzsignpagesV1ResponseAllOf mPayload(EzsigndocumentGetEzsignpagesV1ResponseMPayload mPayload) {
     

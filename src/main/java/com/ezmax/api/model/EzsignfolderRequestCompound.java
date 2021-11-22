@@ -34,7 +34,7 @@ import java.util.List;
  * An Ezsignfolder Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfolderRequestCompound {
   public static final String SERIALIZED_NAME_A_EZSIGNFOLDERSIGNERASSOCIATION = "a_Ezsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -60,6 +60,8 @@ public class EzsignfolderRequestCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY)
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
+  public EzsignfolderRequestCompound() { 
+  }
 
   public EzsignfolderRequestCompound aEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation) {
     
@@ -144,11 +146,11 @@ public class EzsignfolderRequestCompound {
   }
 
    /**
-   * The description of the Ezsign Folder
+   * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsign Folder")
+  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;

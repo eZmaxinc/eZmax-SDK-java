@@ -30,12 +30,14 @@ import java.util.List;
 /**
  * EzsignformfieldgroupResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignformfieldgroupResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD = "a_objEzsignformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD)
   private List<EzsignformfieldResponse> aObjEzsignformfield = new ArrayList<EzsignformfieldResponse>();
 
+  public EzsignformfieldgroupResponseCompoundAllOf() { 
+  }
 
   public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfield(List<EzsignformfieldResponse> aObjEzsignformfield) {
     

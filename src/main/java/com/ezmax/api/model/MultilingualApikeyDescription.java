@@ -28,7 +28,7 @@ import java.io.IOException;
  * Description of the API Key  
  */
 @ApiModel(description = "Description of the API Key  ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class MultilingualApikeyDescription {
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION1 = "sApikeyDescription1";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION1)
@@ -38,6 +38,8 @@ public class MultilingualApikeyDescription {
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION2)
   private String sApikeyDescription2;
 
+  public MultilingualApikeyDescription() { 
+  }
 
   public MultilingualApikeyDescription sApikeyDescription1(String sApikeyDescription1) {
     

@@ -29,7 +29,7 @@ import java.io.IOException;
  * An Ezsignfoldertype List Element
  */
 @ApiModel(description = "An Ezsignfoldertype List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-29T17:31:02.346258Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
 public class EzsignfoldertypeListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -47,6 +47,8 @@ public class EzsignfoldertypeListElement {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ISACTIVE)
   private Boolean bEzsignfoldertypeIsactive;
 
+  public EzsignfoldertypeListElement() { 
+  }
 
   public EzsignfoldertypeListElement pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     
