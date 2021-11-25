@@ -38,6 +38,8 @@ import java.util.Map;
 
 public class ObjectFranchisereferalincomeApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public ObjectFranchisereferalincomeApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,6 +57,22 @@ public class ObjectFranchisereferalincomeApi {
         this.localVarApiClient = apiClient;
     }
 
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
+    }
+
     /**
      * Build call for franchisereferalincomeCreateObjectV1
      * @param franchisereferalincomeCreateObjectV1Request  (required)
@@ -68,6 +86,20 @@ public class ObjectFranchisereferalincomeApi {
      </table>
      */
     public okhttp3.Call franchisereferalincomeCreateObjectV1Call(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = franchisereferalincomeCreateObjectV1Request;
 
         // create path and map variables
@@ -96,7 +128,7 @@ public class ObjectFranchisereferalincomeApi {
         }
 
         String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")

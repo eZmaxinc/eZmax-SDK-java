@@ -31,7 +31,7 @@ import java.io.IOException;
  * Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T20:39:52.064550Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

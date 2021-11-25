@@ -31,7 +31,7 @@ import java.util.Map;
  * Definition of Filters for getList
  */
 @ApiModel(description = "Definition of Filters for getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T20:39:52.064550Z[Etc/UTC]")
 public class CommonResponseFilter {
   public static final String SERIALIZED_NAME_A_AUTO_TYPE = "a_AutoType";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE)

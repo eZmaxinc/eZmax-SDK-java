@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Contactinformations Object
  */
 @ApiModel(description = "A Contactinformations Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-22T21:09:41.243489Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T20:39:52.064550Z[Etc/UTC]")
 public class ContactinformationsRequest {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)

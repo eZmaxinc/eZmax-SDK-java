@@ -614,14 +614,14 @@ tags:
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
     \n## 1.1.X Releases\n### [1.1.3] - 2021-10-\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
-    - POST /1/object/ezsignfoldersignerassociation bEzsignfoldersignerassociationReceivecopy\
-    \ property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR added to documentation\n\
-    - Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added to documentation\n\n###\
-    \ [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
-    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
-    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
-    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
-    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
+    - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
+    \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
+    \ to documentation\n\n### [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList\
+    \ eEzsignfoldertypePrivacylevel property\n- POST /1/object/ezsigndocument returns\
+    \ a sTemporaryFileUrl on error 422 if error is recoverable\n- POST /1/object/ezsigndocument\
+    \ sEzsigndocumentUrl property\n- POST /1/object/ezsigndocument eEzsigndocumentSource\
+    \ property now accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
     \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
     \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
     \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
@@ -700,6 +700,10 @@ tags:
     a page of a Ezsigndocument
   name: Object_Ezsignsignature
   x-displayName: Ezsignsignature
+- description: Ezsigntemplatepackage contains detail about a package of ezsign templates
+    that can be used as a whole
+  name: Object_Ezsigntemplatepackage
+  x-displayName: Ezsigntemplatepackage
 - description: Franchisebroker contains detail about a brokerage in the franchise
     administration module
   name: Object_Franchisebroker
@@ -2655,6 +2659,93 @@ paths:
       summary: Retrieve Ezsignbulksend list
       tags:
       - Object_Ezsignbulksend
+      x-accepts: application/json
+  /1/object/ezsigntemplatepackage/getList:
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | ezsigntemplatepackage | Company<br>Department<br>Team<br>User<br>Usergroup |
+      operationId: Ezsigntemplatepackage_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiEzsigntemplatepackageID_ASC
+          - pkiEzsigntemplatepackageID_DESC
+          - fkiDepartmentID_ASC
+          - fkiDepartmentID_DESC
+          - fkiTeamID_ASC
+          - fkiTeamID_DESC
+          - fkiEzsignfoldertypeID_ASC
+          - fkiEzsignfoldertypeID_DESC
+          - fkiLanguageID_ASC
+          - fkiLanguageID_DESC
+          - eEzsigntemplatepackageType_ASC
+          - eEzsigntemplatepackageType_DESC
+          - sEzsigntemplatepackageDescription_ASC
+          - sEzsigntemplatepackageDescription_DESC
+          - bEzsigntemplatepackageIsactive_ASC
+          - bEzsigntemplatepackageIsactive_DESC
+          - iEzsigntemplatepackagemembership_ASC
+          - iEzsigntemplatepackagemembership_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackage-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: One of the accept header is not defined or invalid.
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsigntemplatepackage list
+      tags:
+      - Object_Ezsigntemplatepackage
       x-accepts: application/json
 components:
   responses:
@@ -6307,6 +6398,104 @@ components:
       - sEzsignfolderDescription
       - sEzsignfoldertypeNameX
       type: object
+    ezsigntemplatepackage-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackage_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for the /1/object/ezsigntemplatepackage/getList API Request
+      type: object
+    ezsigntemplatepackage-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackage_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for the /1/object/ezsigntemplatepackage/getList API Request
+      type: object
+    Field-pkiEzsigntemplatepackageID:
+      description: The unique ID of the Ezsigntemplatepackage
+      example: 99
+      type: integer
+    Field-pkiDepartmentID:
+      description: The unique ID of the Department.
+      example: 1
+      type: integer
+    Field-pkiTeamID:
+      description: The unique ID of the Team
+      example: 1
+      type: integer
+    Field-sEzsigntemplatepackageDescription:
+      description: The description of the Ezsigntemplatepackage
+      example: Package for new clients
+      type: string
+    Field-bEzsigntemplatepackageIsactive:
+      description: Whether the Ezsigntemplatepackage is active or not
+      type: boolean
+    Field-eEzsigntemplatepackageType:
+      description: The type of the Ezsigntemplatepackage.
+      enum:
+      - Company
+      - Department
+      - Team
+      - User
+      - Usergroup
+      example: User
+      type: string
+    ezsigntemplatepackage-ListElement:
+      description: An Ezsigntemplatepackage List Element
+      properties:
+        pkiEzsigntemplatepackageID:
+          description: The unique ID of the Ezsigntemplatepackage
+          example: 99
+          type: integer
+        fkiDepartmentID:
+          oneOf:
+          - $ref: '#/components/schemas/Field-pkiDepartmentID'
+          - $ref: '#/components/schemas/Custom-Null'
+        fkiTeamID:
+          oneOf:
+          - $ref: '#/components/schemas/Field-pkiTeamID'
+          - $ref: '#/components/schemas/Custom-Null'
+        fkiEzsignfoldertypeID:
+          oneOf:
+          - $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+          - $ref: '#/components/schemas/Custom-Null'
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        eEzsigntemplatepackageType:
+          $ref: '#/components/schemas/Field-eEzsigntemplatepackageType'
+        sEzsigntemplatepackageDescription:
+          description: The description of the Ezsigntemplatepackage
+          example: Package for new clients
+          type: string
+        bEzsigntemplatepackageIsactive:
+          description: Whether the Ezsigntemplatepackage is active or not
+          type: boolean
+        iEzsigntemplatepackagemembership:
+          description: The total number of Ezsigntemplatepackagemembership in the
+            Ezsigntemplatepackage
+          type: integer
+      required:
+      - bEzsigntemplatepackageIsactive
+      - eEzsigntemplatepackageType
+      - fkiDepartmentID
+      - fkiEzsignfoldertypeID
+      - fkiLanguageID
+      - fkiTeamID
+      - iEzsigntemplatepackagemembership
+      - pkiEzsigntemplatepackageID
+      - sEzsigntemplatepackageDescription
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -6628,6 +6817,22 @@ components:
       required:
       - a_objEzsignbulksend
       type: object
+    ezsigntemplatepackage_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackage-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigntemplatepackage_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objEzsigntemplatepackage:
+          items:
+            $ref: '#/components/schemas/ezsigntemplatepackage-ListElement'
+          type: array
+      required:
+      - a_objEzsigntemplatepackage
+      type: object
   securitySchemes:
     Authorization:
       in: header
@@ -6711,6 +6916,7 @@ x-tagGroups:
   - Object_Ezsignfoldersignerassociation
   - Object_Ezsignfoldertype
   - Object_Ezsignsignature
+  - Object_Ezsigntemplatepackage
   - Object_Franchisebroker
   - Object_Franchiseoffice
   - Object_Franchisereferalincome
