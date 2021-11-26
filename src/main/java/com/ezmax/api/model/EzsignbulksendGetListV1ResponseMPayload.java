@@ -33,11 +33,11 @@ import java.util.List;
  * Payload for the /1/object/ezsignbulksend/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignbulksend/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T20:39:52.064550Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
-  private List<EzsignbulksendListElement> aObjEzsignfolder = null;
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
+  private List<EzsignbulksendListElement> aObjEzsignbulksend = new ArrayList<EzsignbulksendListElement>();
 
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
@@ -50,34 +50,31 @@ public class EzsignbulksendGetListV1ResponseMPayload {
   public EzsignbulksendGetListV1ResponseMPayload() { 
   }
 
-  public EzsignbulksendGetListV1ResponseMPayload aObjEzsignfolder(List<EzsignbulksendListElement> aObjEzsignfolder) {
+  public EzsignbulksendGetListV1ResponseMPayload aObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
     
-    this.aObjEzsignfolder = aObjEzsignfolder;
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
     return this;
   }
 
-  public EzsignbulksendGetListV1ResponseMPayload addAObjEzsignfolderItem(EzsignbulksendListElement aObjEzsignfolderItem) {
-    if (this.aObjEzsignfolder == null) {
-      this.aObjEzsignfolder = new ArrayList<EzsignbulksendListElement>();
-    }
-    this.aObjEzsignfolder.add(aObjEzsignfolderItem);
+  public EzsignbulksendGetListV1ResponseMPayload addAObjEzsignbulksendItem(EzsignbulksendListElement aObjEzsignbulksendItem) {
+    this.aObjEzsignbulksend.add(aObjEzsignbulksendItem);
     return this;
   }
 
    /**
-   * Get aObjEzsignfolder
-   * @return aObjEzsignfolder
+   * Get aObjEzsignbulksend
+   * @return aObjEzsignbulksend
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignbulksendListElement> getaObjEzsignfolder() {
-    return aObjEzsignfolder;
+  public List<EzsignbulksendListElement> getaObjEzsignbulksend() {
+    return aObjEzsignbulksend;
   }
 
 
-  public void setaObjEzsignfolder(List<EzsignbulksendListElement> aObjEzsignfolder) {
-    this.aObjEzsignfolder = aObjEzsignfolder;
+  public void setaObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
   }
 
 
@@ -136,21 +133,21 @@ public class EzsignbulksendGetListV1ResponseMPayload {
       return false;
     }
     EzsignbulksendGetListV1ResponseMPayload ezsignbulksendGetListV1ResponseMPayload = (EzsignbulksendGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjEzsignfolder, ezsignbulksendGetListV1ResponseMPayload.aObjEzsignfolder) &&
+    return Objects.equals(this.aObjEzsignbulksend, ezsignbulksendGetListV1ResponseMPayload.aObjEzsignbulksend) &&
         Objects.equals(this.iRowReturned, ezsignbulksendGetListV1ResponseMPayload.iRowReturned) &&
         Objects.equals(this.iRowFiltered, ezsignbulksendGetListV1ResponseMPayload.iRowFiltered);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfolder, iRowReturned, iRowFiltered);
+    return Objects.hash(aObjEzsignbulksend, iRowReturned, iRowFiltered);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendGetListV1ResponseMPayload {\n");
-    sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
+    sb.append("    aObjEzsignbulksend: ").append(toIndentedString(aObjEzsignbulksend)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("}");

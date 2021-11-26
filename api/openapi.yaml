@@ -617,11 +617,13 @@ tags:
     - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
     \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
     \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
-    \ to documentation\n\n### [1.1.2] - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList\
-    \ eEzsignfoldertypePrivacylevel property\n- POST /1/object/ezsigndocument returns\
-    \ a sTemporaryFileUrl on error 422 if error is recoverable\n- POST /1/object/ezsigndocument\
-    \ sEzsigndocumentUrl property\n- POST /1/object/ezsigndocument eEzsigndocumentSource\
-    \ property now accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
+    \ to documentation\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
+    \ was invalid when url parameters contained utf8 special chars\n\n### [1.1.2]\
+    \ - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
+    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
+    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
+    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
+    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
     \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
     \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
     \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
@@ -2667,7 +2669,7 @@ paths:
 
         | Variable | Valid values |
         |---|---|
-        | ezsigntemplatepackage | Company<br>Department<br>Team<br>User<br>Usergroup |
+        | eEzsigntemplatepackageType | Company<br>Department<br>Team<br>User<br>Usergroup |
       operationId: Ezsigntemplatepackage_GetList_V1
       parameters:
       - description: Specify how you want the results to be sorted
@@ -6810,7 +6812,7 @@ components:
       type: object
     ezsignbulksend_getList_v1_Response_mPayload_allOf:
       properties:
-        a_objEzsignfolder:
+        a_objEzsignbulksend:
           items:
             $ref: '#/components/schemas/ezsignbulksend-ListElement'
           type: array

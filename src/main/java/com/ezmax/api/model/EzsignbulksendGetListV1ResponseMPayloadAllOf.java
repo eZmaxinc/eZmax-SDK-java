@@ -30,43 +30,40 @@ import java.util.List;
 /**
  * EzsignbulksendGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-25T20:39:52.064550Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
-  private List<EzsignbulksendListElement> aObjEzsignfolder = null;
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
+  private List<EzsignbulksendListElement> aObjEzsignbulksend = new ArrayList<EzsignbulksendListElement>();
 
   public EzsignbulksendGetListV1ResponseMPayloadAllOf() { 
   }
 
-  public EzsignbulksendGetListV1ResponseMPayloadAllOf aObjEzsignfolder(List<EzsignbulksendListElement> aObjEzsignfolder) {
+  public EzsignbulksendGetListV1ResponseMPayloadAllOf aObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
     
-    this.aObjEzsignfolder = aObjEzsignfolder;
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
     return this;
   }
 
-  public EzsignbulksendGetListV1ResponseMPayloadAllOf addAObjEzsignfolderItem(EzsignbulksendListElement aObjEzsignfolderItem) {
-    if (this.aObjEzsignfolder == null) {
-      this.aObjEzsignfolder = new ArrayList<EzsignbulksendListElement>();
-    }
-    this.aObjEzsignfolder.add(aObjEzsignfolderItem);
+  public EzsignbulksendGetListV1ResponseMPayloadAllOf addAObjEzsignbulksendItem(EzsignbulksendListElement aObjEzsignbulksendItem) {
+    this.aObjEzsignbulksend.add(aObjEzsignbulksendItem);
     return this;
   }
 
    /**
-   * Get aObjEzsignfolder
-   * @return aObjEzsignfolder
+   * Get aObjEzsignbulksend
+   * @return aObjEzsignbulksend
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignbulksendListElement> getaObjEzsignfolder() {
-    return aObjEzsignfolder;
+  public List<EzsignbulksendListElement> getaObjEzsignbulksend() {
+    return aObjEzsignbulksend;
   }
 
 
-  public void setaObjEzsignfolder(List<EzsignbulksendListElement> aObjEzsignfolder) {
-    this.aObjEzsignfolder = aObjEzsignfolder;
+  public void setaObjEzsignbulksend(List<EzsignbulksendListElement> aObjEzsignbulksend) {
+    this.aObjEzsignbulksend = aObjEzsignbulksend;
   }
 
 
@@ -79,19 +76,19 @@ public class EzsignbulksendGetListV1ResponseMPayloadAllOf {
       return false;
     }
     EzsignbulksendGetListV1ResponseMPayloadAllOf ezsignbulksendGetListV1ResponseMPayloadAllOf = (EzsignbulksendGetListV1ResponseMPayloadAllOf) o;
-    return Objects.equals(this.aObjEzsignfolder, ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignfolder);
+    return Objects.equals(this.aObjEzsignbulksend, ezsignbulksendGetListV1ResponseMPayloadAllOf.aObjEzsignbulksend);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfolder);
+    return Objects.hash(aObjEzsignbulksend);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendGetListV1ResponseMPayloadAllOf {\n");
-    sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
+    sb.append("    aObjEzsignbulksend: ").append(toIndentedString(aObjEzsignbulksend)).append("\n");
     sb.append("}");
     return sb.toString();
   }

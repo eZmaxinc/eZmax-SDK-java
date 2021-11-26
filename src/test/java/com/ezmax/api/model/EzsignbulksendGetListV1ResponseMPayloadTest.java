@@ -46,11 +46,11 @@ public class EzsignbulksendGetListV1ResponseMPayloadTest {
     }
 
     /**
-     * Test the property 'aObjEzsignfolder'
+     * Test the property 'aObjEzsignbulksend'
      */
     @Test
-    public void aObjEzsignfolderTest() {
-        // TODO: test aObjEzsignfolder
+    public void aObjEzsignbulksendTest() {
+        // TODO: test aObjEzsignbulksend
     }
 
     /**
