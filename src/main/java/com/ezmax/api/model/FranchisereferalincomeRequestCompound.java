@@ -34,7 +34,7 @@ import java.util.List;
  * A Franchisereferalincome Object and children to create a complete structure
  */
 @ApiModel(description = "A Franchisereferalincome Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)

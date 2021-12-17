@@ -17,7 +17,6 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
-import com.ezmax.api.model.OneOfstringobject;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,7 +30,7 @@ import java.io.IOException;
  * An Ezsignfolder List Element
  */
 @ApiModel(description = "An Ezsignfolder List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -63,11 +62,11 @@ public class EzsignfolderListElement {
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE = "dtEzsignfolderSentdate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
-  private OneOfstringobject dtEzsignfolderSentdate;
+  private String dtEzsignfolderSentdate;
 
   public static final String SERIALIZED_NAME_DT_DUE_DATE = "dtDueDate";
   @SerializedName(SERIALIZED_NAME_DT_DUE_DATE)
-  private OneOfstringobject dtDueDate;
+  private String dtDueDate;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT = "iEzsigndocument";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT)
@@ -249,48 +248,48 @@ public class EzsignfolderListElement {
   }
 
 
-  public EzsignfolderListElement dtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
+  public EzsignfolderListElement dtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
     return this;
   }
 
    /**
-   * Get dtEzsignfolderSentdate
+   * The date and time at which the Ezsign folder was sent the last time.
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
 
-  public OneOfstringobject getDtEzsignfolderSentdate() {
+  public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
 
 
-  public void setDtEzsignfolderSentdate(OneOfstringobject dtEzsignfolderSentdate) {
+  public void setDtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
 
-  public EzsignfolderListElement dtDueDate(OneOfstringobject dtDueDate) {
+  public EzsignfolderListElement dtDueDate(String dtDueDate) {
     
     this.dtDueDate = dtDueDate;
     return this;
   }
 
    /**
-   * The date at which no more signature will be accepted on the folder
+   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
    * @return dtDueDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "The date at which no more signature will be accepted on the folder")
+  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
 
-  public OneOfstringobject getDtDueDate() {
+  public String getDtDueDate() {
     return dtDueDate;
   }
 
 
-  public void setDtDueDate(OneOfstringobject dtDueDate) {
+  public void setDtDueDate(String dtDueDate) {
     this.dtDueDate = dtDueDate;
   }
 

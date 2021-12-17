@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.OneOfintegerstring;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,7 +28,7 @@ import java.io.IOException;
  * Generic Autocomplete Response
  */
 @ApiModel(description = "Generic Autocomplete Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CATEGORY = "sCategory";
   @SerializedName(SERIALIZED_NAME_S_CATEGORY)
@@ -41,7 +40,7 @@ public class CustomAutocompleteElementResponse {
 
   public static final String SERIALIZED_NAME_M_VALUE = "mValue";
   @SerializedName(SERIALIZED_NAME_M_VALUE)
-  private OneOfintegerstring mValue;
+  private String mValue;
 
   public CustomAutocompleteElementResponse() { 
   }
@@ -92,7 +91,7 @@ public class CustomAutocompleteElementResponse {
   }
 
 
-  public CustomAutocompleteElementResponse mValue(OneOfintegerstring mValue) {
+  public CustomAutocompleteElementResponse mValue(String mValue) {
     
     this.mValue = mValue;
     return this;
@@ -102,15 +101,15 @@ public class CustomAutocompleteElementResponse {
    * The Unique ID of the element
    * @return mValue
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The Unique ID of the element")
 
-  public OneOfintegerstring getmValue() {
+  public String getmValue() {
     return mValue;
   }
 
 
-  public void setmValue(OneOfintegerstring mValue) {
+  public void setmValue(String mValue) {
     this.mValue = mValue;
   }
 

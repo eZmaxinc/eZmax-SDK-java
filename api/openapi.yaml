@@ -617,8 +617,11 @@ tags:
     - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
     \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
     \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
-    \ to documentation\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
-    \ was invalid when url parameters contained utf8 special chars\n\n### [1.1.2]\
+    \ to documentation\n\n#### Changed\n- Changed all the OneOf used back to nullable\
+    \ types. When the generators will support 3.1 nullable polymorphism documentation\
+    \ will be improved\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
+    \ was invalid when url parameters contained utf8 special chars\n- (CsharpSDK)\
+    \ OneOf not supported for polymorphism was preventing compilation\n- \n### [1.1.2]\
     \ - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
     \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
     \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
@@ -3017,12 +3020,6 @@ components:
         objEzsignfoldersignerassociationCompound:
           $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestCompound'
       type: object
-    Common-Format-DateTime:
-      description: |-
-        Represent a Date Time.
-        The timezone is the one configured in the User's profile.
-      example: 2020-12-31 23:59:59
-      type: string
     ezsignsigner-Request:
       description: An Ezsignsigner Object
       example:
@@ -3597,11 +3594,6 @@ components:
     Field-tEzsignfolderNote:
       description: Somes extra notes about the eZsign Folder
       example: An extra notes we can add to the ezsign folder
-      type: string
-    Field-dtEzsignfolderSentdate:
-      description: The date and time at which the Ezsign folder was sent the last
-        time.
-      example: 2020-12-31 23:59:59
       type: string
     Field-dtEzsignfolderClose:
       description: The date and time at which the folder was closed. Either by applying
@@ -4418,6 +4410,7 @@ components:
           description: The date and time at which the Ezsign folder was sent the last
             time.
           example: 2020-12-31 23:59:59
+          nullable: true
           type: string
         eEzsignfolderStep:
           $ref: '#/components/schemas/Field-eEzsignfolderStep'
@@ -5939,25 +5932,6 @@ components:
       items:
         $ref: '#/components/schemas/Custom-AutocompleteElement-Response'
       type: array
-    Custom-AutocompleteElement-Response:
-      description: Generic Autocomplete Response
-      properties:
-        sCategory:
-          description: The Category for the dropdown or an empty string if not categorized
-          type: string
-        sLabel:
-          description: The Description of the element
-          type: string
-        mValue:
-          description: The Unique ID of the element
-          oneOf:
-          - type: integer
-          - type: string
-      required:
-      - mValue
-      - sCategory
-      - sLabel
-      type: object
     ezsignfoldertype-getList-v1-Response-mPayload:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldertype_getList_v1_Response_mPayload_allOf'
@@ -6009,10 +5983,6 @@ components:
       - Archived
       example: Completed
       type: string
-    Custom-Null:
-      description: A custom type for null until OAS 3.1 support for null type
-      nullable: true
-      type: object
     ezsignfolder-unsend-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
@@ -6333,73 +6303,6 @@ components:
       description: The unique ID of the Ezsignbulksend
       example: 8
       type: integer
-    ezsignfolder-ListElement:
-      description: An Ezsignfolder List Element
-      properties:
-        pkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        fkiEzsignfoldertypeID:
-          description: The unique ID of the Ezsignfoldertype.
-          example: 5
-          type: integer
-        eEzsignfoldertypePrivacylevel:
-          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
-        sEzsignfoldertypeNameX:
-          description: The name of the Ezsignfoldertype in the language of the requester
-          example: Default
-          type: string
-        sEzsignfolderDescription:
-          description: The description of the Ezsignfolder
-          example: Test eZsign Folder
-          type: string
-        eEzsignfolderStep:
-          $ref: '#/components/schemas/Field-eEzsignfolderStep'
-        dtCreatedDate:
-          description: The date and time at which the object was created
-          example: 2020-12-31 23:59:59
-          type: string
-        dtEzsignfolderSentdate:
-          oneOf:
-          - $ref: '#/components/schemas/Field-dtEzsignfolderSentdate'
-          - $ref: '#/components/schemas/Custom-Null'
-        dtDueDate:
-          description: The date at which no more signature will be accepted on the
-            folder
-          oneOf:
-          - $ref: '#/components/schemas/Common-Format-DateTime'
-          - $ref: '#/components/schemas/Custom-Null'
-        iEzsigndocument:
-          description: The total number of Ezsigndocument in the folder
-          type: integer
-        iEzsigndocumentEdm:
-          description: The total number of Ezsigndocument in the folder that were
-            saved in the edm system
-          type: integer
-        iEzsignsignature:
-          description: The total number of signature blocks in all Ezsigndocuments
-            in the folder
-          type: integer
-        iEzsignsignatureSigned:
-          description: The total number of already signed signature blocks in all
-            Ezsigndocuments in the folder
-          type: integer
-      required:
-      - dtCreatedDate
-      - dtDueDate
-      - dtEzsignfolderSentdate
-      - eEzsignfolderStep
-      - eEzsignfoldertypePrivacylevel
-      - fkiEzsignfoldertypeID
-      - iEzsigndocument
-      - iEzsigndocumentEdm
-      - iEzsignsignature
-      - iEzsignsignatureSigned
-      - pkiEzsignfolderID
-      - sEzsignfolderDescription
-      - sEzsignfoldertypeNameX
-      type: object
     ezsigntemplatepackage-getList-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatepackage_getList_v1_Response_allOf'
@@ -6441,6 +6344,127 @@ components:
       - Usergroup
       example: User
       type: string
+    Custom-AutocompleteElement-Response:
+      description: Generic Autocomplete Response
+      properties:
+        sCategory:
+          description: The Category for the dropdown or an empty string if not categorized
+          type: string
+        sLabel:
+          description: The Description of the element
+          type: string
+        mValue:
+          description: The Unique ID of the element
+          type: string
+      required:
+      - mValue
+      - sCategory
+      - sLabel
+      type: object
+    Common-Format-DateTime:
+      description: |-
+        Represent a Date Time.
+        The timezone is the one configured in the User's profile.
+      example: 2020-12-31 23:59:59
+      type: string
+    Common-Format-DateTimeNullable:
+      description: |-
+        Represent a Date Time.
+        The timezone is the one configured in the User's profile.
+      example: 2020-12-31 23:59:59
+      nullable: true
+      type: string
+    ezsignfolder-ListElement:
+      description: An Ezsignfolder List Element
+      properties:
+        pkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        fkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        sEzsignfolderDescription:
+          description: The description of the Ezsignfolder
+          example: Test eZsign Folder
+          type: string
+        eEzsignfolderStep:
+          $ref: '#/components/schemas/Field-eEzsignfolderStep'
+        dtCreatedDate:
+          description: The date and time at which the object was created
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsignfolderSentdate:
+          description: The date and time at which the Ezsign folder was sent the last
+            time.
+          example: 2020-12-31 23:59:59
+          nullable: true
+          type: string
+        dtDueDate:
+          description: |-
+            Represent a Date Time.
+            The timezone is the one configured in the User's profile.
+          example: 2020-12-31 23:59:59
+          nullable: true
+          type: string
+        iEzsigndocument:
+          description: The total number of Ezsigndocument in the folder
+          type: integer
+        iEzsigndocumentEdm:
+          description: The total number of Ezsigndocument in the folder that were
+            saved in the edm system
+          type: integer
+        iEzsignsignature:
+          description: The total number of signature blocks in all Ezsigndocuments
+            in the folder
+          type: integer
+        iEzsignsignatureSigned:
+          description: The total number of already signed signature blocks in all
+            Ezsigndocuments in the folder
+          type: integer
+      required:
+      - dtCreatedDate
+      - dtDueDate
+      - dtEzsignfolderSentdate
+      - eEzsignfolderStep
+      - eEzsignfoldertypePrivacylevel
+      - fkiEzsignfoldertypeID
+      - iEzsigndocument
+      - iEzsigndocumentEdm
+      - iEzsignsignature
+      - iEzsignsignatureSigned
+      - pkiEzsignfolderID
+      - sEzsignfolderDescription
+      - sEzsignfoldertypeNameX
+      type: object
+    Field-dtEzsignfolderSentdateNullable:
+      description: The date and time at which the Ezsign folder was sent the last
+        time.
+      example: 2020-12-31 23:59:59
+      nullable: true
+      type: string
+    Field-pkiDepartmentIDNullable:
+      description: The unique ID of the Department.
+      example: 1
+      nullable: true
+      type: integer
+    Field-pkiTeamIDNullable:
+      description: The unique ID of the Team
+      example: 1
+      nullable: true
+      type: integer
+    Field-pkiEzsignfoldertypeIDNullable:
+      description: The unique ID of the Ezsignfoldertype.
+      example: 5
+      nullable: true
+      type: integer
     ezsigntemplatepackage-ListElement:
       description: An Ezsigntemplatepackage List Element
       properties:
@@ -6449,17 +6473,20 @@ components:
           example: 99
           type: integer
         fkiDepartmentID:
-          oneOf:
-          - $ref: '#/components/schemas/Field-pkiDepartmentID'
-          - $ref: '#/components/schemas/Custom-Null'
+          description: The unique ID of the Department.
+          example: 1
+          nullable: true
+          type: integer
         fkiTeamID:
-          oneOf:
-          - $ref: '#/components/schemas/Field-pkiTeamID'
-          - $ref: '#/components/schemas/Custom-Null'
+          description: The unique ID of the Team
+          example: 1
+          nullable: true
+          type: integer
         fkiEzsignfoldertypeID:
-          oneOf:
-          - $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
-          - $ref: '#/components/schemas/Custom-Null'
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          nullable: true
+          type: integer
         fkiLanguageID:
           description: |-
             The unique ID of the Language.

@@ -31,7 +31,7 @@ import java.io.IOException;
  * An Ezsignfolder Object
  */
 @ApiModel(description = "An Ezsignfolder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class EzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -226,7 +226,7 @@ public class EzsignfolderResponse {
    * The date and time at which the Ezsign folder was sent the last time.
    * @return dtEzsignfolderSentdate
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
 
   public String getDtEzsignfolderSentdate() {

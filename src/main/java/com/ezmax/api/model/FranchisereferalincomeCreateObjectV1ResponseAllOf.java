@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * FranchisereferalincomeCreateObjectV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class FranchisereferalincomeCreateObjectV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

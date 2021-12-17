@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.FieldEEzsigntemplatepackageType;
-import com.ezmax.api.model.OneOfintegerobject;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +29,7 @@ import java.io.IOException;
  * An Ezsigntemplatepackage List Element
  */
 @ApiModel(description = "An Ezsigntemplatepackage List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-26T20:26:23.030056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
 public class EzsigntemplatepackageListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -38,15 +37,15 @@ public class EzsigntemplatepackageListElement {
 
   public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
-  private OneOfintegerobject fkiDepartmentID;
+  private Integer fkiDepartmentID;
 
   public static final String SERIALIZED_NAME_FKI_TEAM_I_D = "fkiTeamID";
   @SerializedName(SERIALIZED_NAME_FKI_TEAM_I_D)
-  private OneOfintegerobject fkiTeamID;
+  private Integer fkiTeamID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  private OneOfintegerobject fkiEzsignfoldertypeID;
+  private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -94,71 +93,71 @@ public class EzsigntemplatepackageListElement {
   }
 
 
-  public EzsigntemplatepackageListElement fkiDepartmentID(OneOfintegerobject fkiDepartmentID) {
+  public EzsigntemplatepackageListElement fkiDepartmentID(Integer fkiDepartmentID) {
     
     this.fkiDepartmentID = fkiDepartmentID;
     return this;
   }
 
    /**
-   * Get fkiDepartmentID
+   * The unique ID of the Department.
    * @return fkiDepartmentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Department.")
 
-  public OneOfintegerobject getFkiDepartmentID() {
+  public Integer getFkiDepartmentID() {
     return fkiDepartmentID;
   }
 
 
-  public void setFkiDepartmentID(OneOfintegerobject fkiDepartmentID) {
+  public void setFkiDepartmentID(Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
-  public EzsigntemplatepackageListElement fkiTeamID(OneOfintegerobject fkiTeamID) {
+  public EzsigntemplatepackageListElement fkiTeamID(Integer fkiTeamID) {
     
     this.fkiTeamID = fkiTeamID;
     return this;
   }
 
    /**
-   * Get fkiTeamID
+   * The unique ID of the Team
    * @return fkiTeamID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Team")
 
-  public OneOfintegerobject getFkiTeamID() {
+  public Integer getFkiTeamID() {
     return fkiTeamID;
   }
 
 
-  public void setFkiTeamID(OneOfintegerobject fkiTeamID) {
+  public void setFkiTeamID(Integer fkiTeamID) {
     this.fkiTeamID = fkiTeamID;
   }
 
 
-  public EzsigntemplatepackageListElement fkiEzsignfoldertypeID(OneOfintegerobject fkiEzsignfoldertypeID) {
+  public EzsigntemplatepackageListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
 
    /**
-   * Get fkiEzsignfoldertypeID
+   * The unique ID of the Ezsignfoldertype.
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
-  public OneOfintegerobject getFkiEzsignfoldertypeID() {
+  public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
 
 
-  public void setFkiEzsignfoldertypeID(OneOfintegerobject fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
