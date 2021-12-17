@@ -30,7 +30,7 @@ import java.util.List;
  * Payload for the /1/object/activesession/getCurrent API Request
  */
 @ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T20:11:08.557587Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
   @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)

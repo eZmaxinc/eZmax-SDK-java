@@ -36,7 +36,7 @@ import java.util.List;
  * A Contactinformations Object and children to create a complete structure
  */
 @ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T20:11:08.557587Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)

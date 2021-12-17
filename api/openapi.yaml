@@ -613,7 +613,7 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.3] - 2021-10-\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
+    \n## 1.1.X Releases\n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
     - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
     \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
     \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\

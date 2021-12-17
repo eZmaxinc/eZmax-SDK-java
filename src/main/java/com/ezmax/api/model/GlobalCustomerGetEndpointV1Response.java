@@ -28,7 +28,7 @@ import java.io.IOException;
  * Response for the /1/customer/{pksCustomerCode}/endpoint API Request
  */
 @ApiModel(description = "Response for the /1/customer/{pksCustomerCode}/endpoint API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T16:52:01.309038Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-17T20:11:08.557587Z[Etc/UTC]")
 public class GlobalCustomerGetEndpointV1Response {
   public static final String SERIALIZED_NAME_S_ENDPOINT_U_R_L = "sEndpointURL";
   @SerializedName(SERIALIZED_NAME_S_ENDPOINT_U_R_L)
