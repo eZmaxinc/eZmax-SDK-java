@@ -9,7 +9,7 @@ An Ezsigndocument Object and children to create a complete structure
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
-**dtEzsigndocumentDuedate** | **String** | The maximum date and time at which the document can be signed. | 
+**dtEzsigndocumentDuedate** | **String** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
 **sEzsigndocumentName** | **String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
 **pkiEzsigndocumentID** | **Integer** | The unique ID of the Ezsigndocument | 

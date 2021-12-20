@@ -8,7 +8,7 @@ Response for the /1/object/ezsignfoldersignerassociation/getObject API Request
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mPayload** | **Object** | Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request | 
+**mPayload** | [**EzsignfoldersignerassociationGetObjectV1ResponseMPayload**](EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 

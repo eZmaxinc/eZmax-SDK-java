@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ezsignfolderCreateObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 [**ezsignfolderDeleteObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
-[**ezsignfolderGetChildrenV1**](ObjectEzsignfolderApi.md#ezsignfolderGetChildrenV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getChildren | Retrieve an existing Ezsignfolder&#39;s children IDs
+[**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 [**ezsignfolderGetObjectV1**](ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -152,13 +152,11 @@ Name | Type | Description  | Notes
 **404** | The element you are trying to work on does not exist |  -  |
 **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
 
-<a name="ezsignfolderGetChildrenV1"></a>
-# **ezsignfolderGetChildrenV1**
-> ezsignfolderGetChildrenV1(pkiEzsignfolderID)
+<a name="ezsignfolderGetEzsigndocumentsV1"></a>
+# **ezsignfolderGetEzsigndocumentsV1**
+> EzsignfolderGetEzsigndocumentsV1Response ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
 
-Retrieve an existing Ezsignfolder&#39;s children IDs
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
 
 ### Example
 ```java
@@ -184,9 +182,10 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     Integer pkiEzsignfolderID = 56; // Integer | 
     try {
-      apiInstance.ezsignfolderGetChildrenV1(pkiEzsignfolderID);
+      EzsignfolderGetEzsigndocumentsV1Response result = apiInstance.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
+      System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetChildrenV1");
+      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetEzsigndocumentsV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -204,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**EzsignfolderGetEzsigndocumentsV1Response**](EzsignfolderGetEzsigndocumentsV1Response.md)
 
 ### Authorization
 
@@ -218,6 +217,7 @@ null (empty response body)
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | Successful response |  -  |
 **404** | The element you are trying to work on does not exist |  -  |
 
 <a name="ezsignfolderGetFormsDataV1"></a>
@@ -373,8 +373,6 @@ Name | Type | Description  | Notes
 > EzsignfolderGetObjectV1Response ezsignfolderGetObjectV1(pkiEzsignfolderID)
 
 Retrieve an existing Ezsignfolder
-
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
 
 ### Example
 ```java
