@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignfoldersignerassociationRequest;
+import com.ezmax.api.model.EzsignfoldersignerassociationResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,25 +30,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for EzsignfolderRequestCompoundAllOf
+ * Model tests for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
  */
-public class EzsignfolderRequestCompoundAllOfTest {
-    private final EzsignfolderRequestCompoundAllOf model = new EzsignfolderRequestCompoundAllOf();
+public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayloadTest {
+    private final EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload model = new EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload();
 
     /**
-     * Model tests for EzsignfolderRequestCompoundAllOf
+     * Model tests for EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
      */
     @Test
-    public void testEzsignfolderRequestCompoundAllOf() {
-        // TODO: test EzsignfolderRequestCompoundAllOf
+    public void testEzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload() {
+        // TODO: test EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
     }
 
     /**
-     * Test the property 'aEzsignfoldersignerassociation'
+     * Test the property 'aObjEzsignfoldersignerassociation'
      */
     @Test
-    public void aEzsignfoldersignerassociationTest() {
-        // TODO: test aEzsignfoldersignerassociation
+    public void aObjEzsignfoldersignerassociationTest() {
+        // TODO: test aObjEzsignfoldersignerassociation
     }
 
 }

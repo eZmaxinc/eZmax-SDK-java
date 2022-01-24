@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.4
-  - Build date: 2021-12-20T20:59:45.754840Z[Etc/UTC]
+  - Build date: 2022-01-24T18:57:52.199361Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
 *ObjectEzsignfolderApi* | [**ezsignfolderCreateObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderCreateObjectV1) | **POST** /1/object/ezsignfolder | Create a new Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderDeleteObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderDeleteObjectV1) | **DELETE** /1/object/ezsignfolder/{pkiEzsignfolderID} | Delete an existing Ezsignfolder
 *ObjectEzsignfolderApi* | [**ezsignfolderGetEzsigndocumentsV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
+*ObjectEzsignfolderApi* | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
 *ObjectEzsignfolderApi* | [**ezsignfolderGetFormsDataV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data
 *ObjectEzsignfolderApi* | [**ezsignfolderGetListV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list
 *ObjectEzsignfolderApi* | [**ezsignfolderGetObjectV1**](docs/ObjectEzsignfolderApi.md#ezsignfolderGetObjectV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID} | Retrieve an existing Ezsignfolder
@@ -211,6 +212,8 @@ Class | Method | HTTP request | Description
  - [ContactinformationsRequestCompound](docs/ContactinformationsRequestCompound.md)
  - [ContactinformationsRequestCompoundAllOf](docs/ContactinformationsRequestCompoundAllOf.md)
  - [CustomAutocompleteElementResponse](docs/CustomAutocompleteElementResponse.md)
+ - [CustomEzsignfoldersignerassociationstatusResponse](docs/CustomEzsignfoldersignerassociationstatusResponse.md)
+ - [CustomEzsignsignaturestatusResponse](docs/CustomEzsignsignaturestatusResponse.md)
  - [CustomFormDataDocumentResponse](docs/CustomFormDataDocumentResponse.md)
  - [CustomFormDataSignerResponse](docs/CustomFormDataSignerResponse.md)
  - [CustomFormsDataFolderResponse](docs/CustomFormsDataFolderResponse.md)
@@ -258,6 +261,9 @@ Class | Method | HTTP request | Description
  - [EzsignfolderGetEzsigndocumentsV1Response](docs/EzsignfolderGetEzsigndocumentsV1Response.md)
  - [EzsignfolderGetEzsigndocumentsV1ResponseAllOf](docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md)
  - [EzsignfolderGetEzsigndocumentsV1ResponseMPayload](docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md)
+ - [EzsignfolderGetEzsignfoldersignerassociationsV1Response](docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
+ - [EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf](docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md)
+ - [EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload](docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md)
  - [EzsignfolderGetFormsDataV1Response](docs/EzsignfolderGetFormsDataV1Response.md)
  - [EzsignfolderGetFormsDataV1ResponseAllOf](docs/EzsignfolderGetFormsDataV1ResponseAllOf.md)
  - [EzsignfolderGetFormsDataV1ResponseMPayload](docs/EzsignfolderGetFormsDataV1ResponseMPayload.md)
@@ -271,7 +277,6 @@ Class | Method | HTTP request | Description
  - [EzsignfolderListElement](docs/EzsignfolderListElement.md)
  - [EzsignfolderRequest](docs/EzsignfolderRequest.md)
  - [EzsignfolderRequestCompound](docs/EzsignfolderRequestCompound.md)
- - [EzsignfolderRequestCompoundAllOf](docs/EzsignfolderRequestCompoundAllOf.md)
  - [EzsignfolderResponse](docs/EzsignfolderResponse.md)
  - [EzsignfolderResponseCompound](docs/EzsignfolderResponseCompound.md)
  - [EzsignfolderSendV1Request](docs/EzsignfolderSendV1Request.md)
@@ -317,6 +322,10 @@ Class | Method | HTTP request | Description
  - [EzsignsignerRequestCompound](docs/EzsignsignerRequestCompound.md)
  - [EzsignsignerRequestCompoundAllOf](docs/EzsignsignerRequestCompoundAllOf.md)
  - [EzsignsignerRequestCompoundContact](docs/EzsignsignerRequestCompoundContact.md)
+ - [EzsignsignerResponse](docs/EzsignsignerResponse.md)
+ - [EzsignsignerResponseCompound](docs/EzsignsignerResponseCompound.md)
+ - [EzsignsignerResponseCompoundAllOf](docs/EzsignsignerResponseCompoundAllOf.md)
+ - [EzsignsignerResponseCompoundContact](docs/EzsignsignerResponseCompoundContact.md)
  - [EzsigntemplatepackageGetListV1Response](docs/EzsigntemplatepackageGetListV1Response.md)
  - [EzsigntemplatepackageGetListV1ResponseAllOf](docs/EzsigntemplatepackageGetListV1ResponseAllOf.md)
  - [EzsigntemplatepackageGetListV1ResponseMPayload](docs/EzsigntemplatepackageGetListV1ResponseMPayload.md)

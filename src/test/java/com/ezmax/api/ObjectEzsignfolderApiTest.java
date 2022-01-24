@@ -19,12 +19,14 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
+import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderUnsendV1Response;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -85,6 +87,21 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetEzsigndocumentsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
                 EzsignfolderGetEzsigndocumentsV1Response response = api.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetEzsignfoldersignerassociationsV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+                EzsignfolderGetEzsignfoldersignerassociationsV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
         // TODO: test validations
     }
     

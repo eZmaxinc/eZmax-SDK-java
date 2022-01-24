@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -162,11 +162,11 @@ public class EzsignsignatureRequestCompound {
   }
 
    /**
-   * The step when the Ezsignsigner will be invited to sign.
+   * The step when the Ezsignsigner will be invited to sign or fill form fields
    * @return iEzsignsignatureStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign.")
+  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign or fill form fields")
 
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;

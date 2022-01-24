@@ -32,7 +32,7 @@ import java.io.IOException;
  * Payload for the /1/object/ezsignfolder/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignfolderGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -81,6 +81,14 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE = "dtEzsignfolderSentdate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
   private String dtEzsignfolderSentdate;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDARCHIVE = "dtEzsignfolderScheduledarchive";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDARCHIVE)
+  private String dtEzsignfolderScheduledarchive;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDDESTRUCTION = "dtEzsignfolderScheduleddestruction";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDDESTRUCTION)
+  private String dtEzsignfolderScheduleddestruction;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_STEP = "eEzsignfolderStep";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
@@ -375,6 +383,52 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
+    
+    this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+    return this;
+  }
+
+   /**
+   * The scheduled date and time at which the Ezsignfolder should be archived.
+   * @return dtEzsignfolderScheduledarchive
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The scheduled date and time at which the Ezsignfolder should be archived.")
+
+  public String getDtEzsignfolderScheduledarchive() {
+    return dtEzsignfolderScheduledarchive;
+  }
+
+
+  public void setDtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
+    this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderScheduleddestruction(String dtEzsignfolderScheduleddestruction) {
+    
+    this.dtEzsignfolderScheduleddestruction = dtEzsignfolderScheduleddestruction;
+    return this;
+  }
+
+   /**
+   * The scheduled date and time at which the Ezsignfolder should be Destroyed.
+   * @return dtEzsignfolderScheduleddestruction
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The scheduled date and time at which the Ezsignfolder should be Destroyed.")
+
+  public String getDtEzsignfolderScheduleddestruction() {
+    return dtEzsignfolderScheduleddestruction;
+  }
+
+
+  public void setDtEzsignfolderScheduleddestruction(String dtEzsignfolderScheduleddestruction) {
+    this.dtEzsignfolderScheduleddestruction = dtEzsignfolderScheduleddestruction;
+  }
+
+
   public EzsignfolderGetObjectV1ResponseMPayload eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     
     this.eEzsignfolderStep = eEzsignfolderStep;
@@ -465,6 +519,8 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
         Objects.equals(this.eEzsignfolderSendreminderfrequency, ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderSendreminderfrequency) &&
         Objects.equals(this.dtEzsignfolderDuedate, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderDuedate) &&
         Objects.equals(this.dtEzsignfolderSentdate, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderSentdate) &&
+        Objects.equals(this.dtEzsignfolderScheduledarchive, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduledarchive) &&
+        Objects.equals(this.dtEzsignfolderScheduleddestruction, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduleddestruction) &&
         Objects.equals(this.eEzsignfolderStep, ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep) &&
         Objects.equals(this.dtEzsignfolderClose, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose) &&
         Objects.equals(this.objAudit, ezsignfolderGetObjectV1ResponseMPayload.objAudit);
@@ -472,7 +528,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate, dtEzsignfolderSentdate, eEzsignfolderStep, dtEzsignfolderClose, objAudit);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddestruction, eEzsignfolderStep, dtEzsignfolderClose, objAudit);
   }
 
   @Override
@@ -491,6 +547,8 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
     sb.append("    eEzsignfolderSendreminderfrequency: ").append(toIndentedString(eEzsignfolderSendreminderfrequency)).append("\n");
     sb.append("    dtEzsignfolderDuedate: ").append(toIndentedString(dtEzsignfolderDuedate)).append("\n");
     sb.append("    dtEzsignfolderSentdate: ").append(toIndentedString(dtEzsignfolderSentdate)).append("\n");
+    sb.append("    dtEzsignfolderScheduledarchive: ").append(toIndentedString(dtEzsignfolderScheduledarchive)).append("\n");
+    sb.append("    dtEzsignfolderScheduleddestruction: ").append(toIndentedString(dtEzsignfolderScheduleddestruction)).append("\n");
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
     sb.append("    dtEzsignfolderClose: ").append(toIndentedString(dtEzsignfolderClose)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");

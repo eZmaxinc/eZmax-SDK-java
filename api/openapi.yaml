@@ -613,27 +613,30 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.4] - 2021-12-\n\n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}\
-    \ fkiBillingentityinternalID, dtEzsignfolderDuedate, sBillingentityinternalDescriptionX,\
-    \ sEzsignfoldertypeNameX, sEzsigntsarequirementDescriptionX properties\n- GET\
-    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\n### [1.1.3]\
-    \ - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n- GET /1/object/ezsigntemplatepackage/getList\n\
-    - POST /1/object/ezsignfoldersignerassociation bEzsignfoldersignerassociationReceivecopy\
-    \ property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR added to documentation\n\
-    - Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added to documentation\n\n####\
-    \ Changed\n- Changed all the OneOf used back to nullable types. When the generators\
-    \ will support 3.1 nullable polymorphism documentation will be improved\n\n####\
-    \ Fixed\n- (AxiosSDK) Fingerprint header on GET requests was invalid when url\
-    \ parameters contained utf8 special chars\n- (CsharpSDK) OneOf not supported for\
-    \ polymorphism was preventing compilation\n- \n### [1.1.2] - 2021-10-26\n\n####\
-    \ Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel property\n\
-    - POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error 422 if error\
-    \ is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl property\n\
-    - POST /1/object/ezsigndocument eEzsigndocumentSource property now accept \"Url\"\
-    \ as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair property\n\
-    - Support for \"rg\" operator in date fields in sFilter\n- Range operator added\
-    \ to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\n####\
-    \ Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
+    \n## 1.1.X Releases\n### [1.1.4] - 2022-01-\n\n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
+    \ Added status\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID} fkiBillingentityinternalID,\
+    \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
+    \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
+    \ properties\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\
+    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
+    - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
+    \n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
+    - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
+    \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
+    \ to documentation\n\n#### Changed\n- Changed all the OneOf used back to nullable\
+    \ types. When the generators will support 3.1 nullable polymorphism documentation\
+    \ will be improved\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
+    \ was invalid when url parameters contained utf8 special chars\n- (CsharpSDK)\
+    \ OneOf not supported for polymorphism was preventing compilation\n- \n### [1.1.2]\
+    \ - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
+    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
+    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
+    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
+    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
+    \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
+    \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
+    \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
     - POST /1/module/list/listpresentation/{sListName}\n- Variables convention documentation\
     \ now contains type \"m\" for mixed type\n- POST /1/object/ezsigndocument/ sEzsigndocumentPassword\
     \ property\n- Support for \"in\" operator for integer fields in sFilter\n- Support\
@@ -2666,6 +2669,36 @@ paths:
       tags:
       - Object_Ezsignfoldersignerassociation
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
+    get:
+      operationId: Ezsignfolder_GetEzsignfoldersignerassociations_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
 components:
   responses:
     Response-Error-404:
@@ -3027,7 +3060,7 @@ components:
       type: object
     ezsignfolder-RequestCompound:
       allOf:
-      - $ref: '#/components/schemas/ezsignfolder_RequestCompound_allOf'
+      - type: object
       - $ref: '#/components/schemas/ezsignfolder-Request'
       description: An Ezsignfolder Object and children to create a complete structure
       example:
@@ -3036,58 +3069,6 @@ components:
         tEzsignfolderNote: An extra notes we can add to the ezsign folder
         fkiEzsigntsarequirementID: 1
         eEzsignfolderSendreminderfrequency: Daily
-      type: object
-    ezsignsigner-RequestCompound-Contact:
-      description: A Ezsignsigner->Contact Object and children to create a complete
-        structure
-      example:
-        sContactFirstname: John
-        sContactLastname: Doe
-        fkiLanguageID: 1
-        sEmailAddress: johh.doe@domain.com
-        sPhoneNumber: "5149901516"
-        sPhoneNumberCell: "5149901516"
-      properties:
-        sContactFirstname:
-          description: The first name of the Contact
-          type: string
-        sContactLastname:
-          description: The last name of the Contact
-          type: string
-        fkiLanguageID:
-          description: |-
-            The unique ID of the Language.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|French|
-            |2|English|
-          example: 2
-          maximum: 2
-          minimum: 1
-          type: integer
-        sEmailAddress:
-          description: The email address of the contact. Must be filled if email authentification
-            was requested
-          type: string
-        sPhoneNumber:
-          description: |-
-            The Phone number of the contact.
-            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
-            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-          type: string
-        sPhoneNumberCell:
-          description: |-
-            The Cell Phone number of the contact.
-            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
-            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-          type: string
-      required:
-      - fkiLanguageID
-      - sContactFirstname
-      - sContactLastname
       type: object
     ezsignsigner-RequestCompound:
       allOf:
@@ -3190,7 +3171,8 @@ components:
           example: 300
           type: integer
         iEzsignsignatureStep:
-          description: The step when the Ezsignsigner will be invited to sign.
+          description: The step when the Ezsignsigner will be invited to sign or fill
+            form fields
           example: 1
           type: integer
         eEzsignsignatureType:
@@ -3408,18 +3390,6 @@ components:
       - sEzsigndocumentMD5signed
       - sEzsigndocumentName
       type: object
-    ezsigndocument-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/ezsigndocument-Response'
-      description: An Ezsigndocument Object and children to create a complete structure
-      example:
-        pkiEzsigndocumentID: 66
-        sEzsigndocumentName: Important contract
-        sEzsigndocumentFilename: Important Contract.pdf
-        fkiEzsignfolderID: 1
-        dtEzsigndocumentDuedate: 2020-12-31 23:59:59
-        fkiLanguageID: 2
-      type: object
     Common-Audit:
       description: |+
         Gives informations about the user that created the object and the last user to have modified it.
@@ -3474,11 +3444,6 @@ components:
       description: The name of the document that will be presented to Ezsignfoldersignerassociations
       example: 'Contract #123'
       type: string
-    ezsigndocument-getObject-v1-Response-mPayload:
-      allOf:
-      - $ref: '#/components/schemas/ezsigndocument-Response'
-      description: Payload for the /1/object/ezsigndocument/getObject API Request
-      type: object
     Field-eEzsigndocumentStep:
       description: The signature step of the Ezsigndocument.
       enum:
@@ -5264,10 +5229,6 @@ components:
       description: The number of total signatures that were requested in the Ezsigndocument.
       example: 4
       type: integer
-    Field-iEzsignsignatureStep:
-      description: The step when the Ezsignsigner will be invited to sign.
-      example: 1
-      type: integer
     Field-iEzsignsignatureX:
       description: |-
         The X coordinate (Horizontal) where to put the signature block on the page.
@@ -6391,6 +6352,293 @@ components:
         the requester
       example: Default
       type: string
+    ezsignfolder-getEzsigndocuments-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getEzsigndocuments_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments
+        API Request
+      type: object
+    Field-pkiUserIDNullable:
+      description: The unique ID of the User
+      example: 70
+      nullable: true
+      type: integer
+    Field-pkiEzsignsignerID:
+      description: The unique ID of the Ezsignsigner
+      example: 89
+      type: integer
+    Field-pkiEzsignsignerIDNullable:
+      description: The unique ID of the Ezsignsigner
+      example: 89
+      nullable: true
+      type: integer
+    ezsignfoldersignerassociation-Response:
+      description: An Ezsignfoldersignerassociation Object
+      properties:
+        pkiEzsignfoldersignerassociationID:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          nullable: true
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          nullable: true
+          type: integer
+        bEzsignfoldersignerassociationReceivecopy:
+          description: If this flag is true. The signatory will receive a copy of
+            every signed Ezsigndocument even if it ain't required to sign the document.
+          type: boolean
+      required:
+      - bEzsignfoldersignerassociationReceivecopy
+      - fkiEzsignfolderID
+      - fkiEzsignsignerID
+      - fkiUserID
+      - pkiEzsignfoldersignerassociationID
+      type: object
+    ezsignfoldersignerassociation-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
+      description: An Ezsignfoldersignerassociation Object
+      type: object
+    ezsignfoldersignerassociation-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
+      description: Payload for the /1/object/ezsignfoldersignerassociation/getObject
+        API Request
+      type: object
+    ezsignfolder-getEzsignfoldersignerassociations-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getEzsignfoldersignerassociations_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
+        API Request
+      type: object
+    ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
+        API Request
+      properties:
+        a_objEzsignfoldersignerassociation:
+          items:
+            $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociation
+      type: object
+    ezsignsigner-ResponseCompound-Contact:
+      description: A Ezsignsigner->Contact Object and children to create a complete
+        structure
+      example:
+        sContactFirstname: John
+        sContactLastname: Doe
+        fkiLanguageID: 1
+        sEmailAddress: johh.doe@domain.com
+        sPhoneNumber: "5149901516"
+        sPhoneNumberCell: "5149901516"
+      properties:
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sPhoneNumber:
+          description: |-
+            The Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+        sPhoneNumberCell:
+          description: |-
+            The Cell Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+      required:
+      - fkiLanguageID
+      - sContactFirstname
+      - sContactLastname
+      type: object
+    ezsignsigner-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsigner_ResponseCompound_allOf'
+      - $ref: '#/components/schemas/ezsignsigner-Response'
+      description: An Ezsignsigner Object and children to create a complete structure
+      type: object
+    ezsignsigner-Response:
+      description: An Ezsignsigner Object
+      example:
+        fkiTaxassignmentID: 1
+        fkiSecretquestionID: 5
+        eEzsignsignerLogintype: PasswordQuestion
+        sEzsignsignerSecretanswer: This Is My Secret Answer
+      properties:
+        fkiTaxassignmentID:
+          description: |-
+            The unique ID of the Taxassignment.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No tax|
+            |2|GST|
+            |3|HST (ON)|
+            |4|HST (NB)|
+            |5|HST (NS)|
+            |6|HST (NL)|
+            |7|HST (PE)|
+            |8|GST + QST (QC)|
+            |9|GST + QST (QC) Non-Recoverable|
+            |10|GST + PST (BC)|
+            |11|GST + PST (SK)|
+            |12|GST + RST (MB)|
+            |13|GST + PST (BC) Non-Recoverable|
+            |14|GST + PST (SK) Non-Recoverable|
+            |15|GST + RST (MB) Non-Recoverable|
+          example: 1
+          maximum: 15
+          minimum: 1
+          type: integer
+        fkiSecretquestionID:
+          description: |-
+            The unique ID of the Secretquestion.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|The name of the hospital in which you were born|
+            |2|The name of your grade school|
+            |3|The last name of your favorite teacher|
+            |4|Your favorite sports team|
+            |5|Your favorite TV show|
+            |6|Your favorite movie|
+            |7|The name of the street on which you grew up|
+            |8|The name of your first employer|
+            |9|Your first car|
+            |10|Your favorite food|
+            |11|The name of your first pet|
+            |12|Favorite musician/band|
+            |13|What instrument you play|
+            |14|Your father's middle name|
+            |15|Your mother's maiden name|
+            |16|Name of your eldest child|
+            |17|Your spouse's middle name|
+            |18|Favorite restaurant|
+            |19|Childhood nickname|
+            |20|Favorite vacation destination|
+            |21|Your boat's name|
+            |22|Date of Birth (YYYY-MM-DD)|
+          example: 7
+          type: integer
+        eEzsignsignerLogintype:
+          description: |-
+            The method the Ezsignsigner will authenticate to the signing platform.
+
+            1. **Password** means the Ezsignsigner will receive a secure link by email.
+            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
+            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
+            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
+            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+          enum:
+          - Password
+          - PasswordPhone
+          - PasswordQuestion
+          - InPersonPhone
+          - InPerson
+          type: string
+        sEzsignsignerSecretanswer:
+          description: The predefined answer to the secret question the Ezsignsigner
+            will need to provide to successfully authenticate.
+          type: string
+      required:
+      - eEzsignsignerLogintype
+      - fkiTaxassignmentID
+      type: object
+    ezsignsigner-RequestCompound-Contact:
+      description: A Ezsignsigner->Contact Object and children to create a complete
+        structure
+      example:
+        sContactFirstname: John
+        sContactLastname: Doe
+        fkiLanguageID: 1
+        sEmailAddress: johh.doe@domain.com
+        sPhoneNumber: "5149901516"
+        sPhoneNumberCell: "5149901516"
+      properties:
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sPhoneNumber:
+          description: |-
+            The Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+        sPhoneNumberCell:
+          description: |-
+            The Cell Phone number of the contact.
+            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
+            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
+          type: string
+      required:
+      - fkiLanguageID
+      - sContactFirstname
+      - sContactLastname
+      type: object
     ezsignfolder-Response:
       description: An Ezsignfolder Object
       properties:
@@ -6457,6 +6705,16 @@ components:
           example: 2020-12-31 23:59:59
           nullable: true
           type: string
+        dtEzsignfolderScheduledarchive:
+          description: The scheduled date and time at which the Ezsignfolder should
+            be archived.
+          example: 2020-12-31 23:59:59
+          type: string
+        dtEzsignfolderScheduleddestruction:
+          description: The scheduled date and time at which the Ezsignfolder should
+            be Destroyed.
+          example: 2020-12-31 23:59:59
+          type: string
         eEzsignfolderStep:
           $ref: '#/components/schemas/Field-eEzsignfolderStep'
         dtEzsignfolderClose:
@@ -6469,6 +6727,8 @@ components:
       required:
       - dtEzsignfolderClose
       - dtEzsignfolderDuedate
+      - dtEzsignfolderScheduledarchive
+      - dtEzsignfolderScheduleddestruction
       - dtEzsignfolderSentdate
       - eEzsignfolderSendreminderfrequency
       - eEzsignfolderStep
@@ -6483,80 +6743,141 @@ components:
       - sEzsigntsarequirementDescriptionX
       - tEzsignfolderNote
       type: object
-    ezsignfolder-getEzsigndocuments-v1-Response:
+    Computed-dtEzsignfolderScheduledarchive:
+      description: The scheduled date and time at which the Ezsignfolder should be
+        archived.
+      example: 2020-12-31 23:59:59
+      type: string
+    Computed-dtEzsignfolderScheduleddestruction:
+      description: The scheduled date and time at which the Ezsignfolder should be
+        Destroyed.
+      example: 2020-12-31 23:59:59
+      type: string
+    Computed-iEzsigndocumentStepsignaturetotal:
+      description: The total number of steps in the signature filling phase
+      example: 2
+      type: integer
+    Computed-iEzsigndocumentStepformtotal:
+      description: The total number of steps in the form filling phase
+      example: 2
+      type: integer
+    Computed-iEzsigndocumentStepformcurrent:
+      description: The current step in the form filling phase
+      example: 1
+      type: integer
+    ezsigndocument-getObject-v1-Response-mPayload:
       allOf:
-      - $ref: '#/components/schemas/ezsignfolder_getEzsigndocuments_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments
-        API Request
+      - $ref: '#/components/schemas/ezsigndocument-ResponseCompound'
+      description: Payload for the /1/object/ezsigndocument/getObject API Request
       type: object
+    Computed-iEzsigndocumentStepsignatureCurrent:
+      description: The current step in the signature phase
+      example: 0
+      type: integer
     ezsignfolder-getEzsigndocuments-v1-Response-mPayload:
       description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments
         API Request
       properties:
         a_objEzsigndocument:
           items:
-            $ref: '#/components/schemas/ezsigndocument-Response'
+            $ref: '#/components/schemas/ezsigndocument-ResponseCompound'
           type: array
       required:
       - a_objEzsigndocument
       type: object
-    Field-pkiUserIDNullable:
-      description: The unique ID of the User
-      example: 70
-      nullable: true
-      type: integer
-    Field-pkiEzsignsignerID:
-      description: The unique ID of the Ezsignsigner
-      example: 89
-      type: integer
-    Field-pkiEzsignsignerIDNullable:
-      description: The unique ID of the Ezsignsigner
-      example: 89
-      nullable: true
-      type: integer
-    ezsignfoldersignerassociation-Response:
-      description: An Ezsignfoldersignerassociation Object
+    ezsigndocument-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument-Response'
+      description: An Ezsigndocument Object and children to create a complete structure
       properties:
-        pkiEzsignfoldersignerassociationID:
+        iEzsigndocumentStepformtotal:
+          description: The total number of steps in the form filling phase
+          example: 2
+          type: integer
+        iEzsigndocumentStepformcurrent:
+          description: The current step in the form filling phase
+          example: 1
+          type: integer
+        iEzsigndocumentStepsignaturetotal:
+          description: The total number of steps in the signature filling phase
+          example: 2
+          type: integer
+        iEzsigndocumentStepsignatureCurrent:
+          description: The current step in the signature phase
+          example: 0
+          type: integer
+        a_objEzsignfoldersignerassociationstatus:
+          items:
+            $ref: '#/components/schemas/Custom-Ezsignfoldersignerassociationstatus-Response'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociationstatus
+      - iEzsigndocumentStepformcurrent
+      - iEzsigndocumentStepformtotal
+      - iEzsigndocumentStepsignatureCurrent
+      - iEzsigndocumentStepsignaturetotal
+      type: object
+    Field-iEzsignsignatureStep:
+      description: The step when the Ezsignsigner will be invited to sign or fill
+        form fields
+      example: 1
+      type: integer
+    Custom-Ezsignsignaturestatus-Response:
+      description: A Ezsignsignaturestatus Object and children to create a complete
+        structure
+      properties:
+        eEzsignsignaturestatusSteptype:
+          description: Type of step
+          enum:
+          - Form
+          - Signature
+          type: string
+        iEzsignsignaturestatusStep:
+          description: The step at which the Ezsignsigner will be invited to sign
+            or fill the form fields
+          example: 1
+          type: integer
+        iEzsignsignaturestatusTotal:
+          description: The total number of signature or form fields the Ezsignsigner
+            must process at the current step
+          example: 2
+          type: integer
+        iEzsignsignaturestatusSigned:
+          description: The number of signature or form fields the Ezsignsigner has
+            already processed at the current step
+          example: 1
+          type: integer
+      required:
+      - eEzsignsignaturestatusSteptype
+      - iEzsignsignaturestatusSigned
+      - iEzsignsignaturestatusStep
+      - iEzsignsignaturestatusTotal
+      type: object
+    Custom-Ezsignfoldersignerassociationstatus-Response:
+      description: A Ezsignfoldersignerassociationstatus Object and children to create
+        a complete structure
+      properties:
+        fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
           type: integer
-        fkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        fkiEzsignsignerID:
-          description: The unique ID of the Ezsignsigner
-          example: 89
-          nullable: true
-          type: integer
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          nullable: true
-          type: integer
-        bEzsignfoldersignerassociationReceivecopy:
-          description: If this flag is true. The signatory will receive a copy of
-            every signed Ezsigndocument even if it ain't required to sign the document.
-          type: boolean
+        sEzsignfoldersignerassociationstatusLastname:
+          description: The last name of the Ezsignsigner
+          example: Doe
+          type: string
+        sEzsignfoldersignerassociationstatusFirstname:
+          description: The first name of the Ezsignsigner
+          example: John
+          type: string
+        a_objEzsignsignaturestatus:
+          items:
+            $ref: '#/components/schemas/Custom-Ezsignsignaturestatus-Response'
+          type: array
       required:
-      - bEzsignfoldersignerassociationReceivecopy
-      - fkiEzsignfolderID
-      - fkiEzsignsignerID
-      - fkiUserID
-      - pkiEzsignfoldersignerassociationID
-      type: object
-    ezsignfoldersignerassociation-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
-      description: An Ezsignfoldersignerassociation Object
-      type: object
-    ezsignfoldersignerassociation-getObject-v1-Response-mPayload:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
-      description: Payload for the /1/object/ezsignfoldersignerassociation/getObject
-        API Request
+      - a_objEzsignsignaturestatus
+      - fkiEzsignfoldersignerassociationID
+      - sEzsignfoldersignerassociationstatusFirstname
+      - sEzsignfoldersignerassociationstatusLastname
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -6599,16 +6920,6 @@ components:
           $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v1-Response-mPayload'
       required:
       - mPayload
-      type: object
-    ezsignfolder_RequestCompound_allOf:
-      properties:
-        a_Ezsignfoldersignerassociation:
-          description: An array of signers that will be invited to sign the Ezsigndocuments
-          items:
-            $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
-          type: array
-      required:
-      - a_Ezsignfoldersignerassociation
       type: object
     ezsignsigner_RequestCompound_allOf:
       properties:
@@ -6899,6 +7210,20 @@ components:
           $ref: '#/components/schemas/ezsignfolder-getEzsigndocuments-v1-Response-mPayload'
       required:
       - mPayload
+      type: object
+    ezsignfolder_getEzsignfoldersignerassociations_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignsigner_ResponseCompound_allOf:
+      properties:
+        objContact:
+          $ref: '#/components/schemas/ezsignsigner-ResponseCompound-Contact'
+      required:
+      - objContact
       type: object
   securitySchemes:
     Authorization:

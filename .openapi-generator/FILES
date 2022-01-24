@@ -44,6 +44,8 @@ docs/ContactinformationsRequest.md
 docs/ContactinformationsRequestCompound.md
 docs/ContactinformationsRequestCompoundAllOf.md
 docs/CustomAutocompleteElementResponse.md
+docs/CustomEzsignfoldersignerassociationstatusResponse.md
+docs/CustomEzsignsignaturestatusResponse.md
 docs/CustomFormDataDocumentResponse.md
 docs/CustomFormDataSignerResponse.md
 docs/CustomFormsDataFolderResponse.md
@@ -91,6 +93,9 @@ docs/EzsignfolderDeleteObjectV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.md
+docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md
 docs/EzsignfolderGetFormsDataV1Response.md
 docs/EzsignfolderGetFormsDataV1ResponseAllOf.md
 docs/EzsignfolderGetFormsDataV1ResponseMPayload.md
@@ -104,7 +109,6 @@ docs/EzsignfolderGetObjectV1ResponseMPayload.md
 docs/EzsignfolderListElement.md
 docs/EzsignfolderRequest.md
 docs/EzsignfolderRequestCompound.md
-docs/EzsignfolderRequestCompoundAllOf.md
 docs/EzsignfolderResponse.md
 docs/EzsignfolderResponseCompound.md
 docs/EzsignfolderSendV1Request.md
@@ -150,6 +154,10 @@ docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
 docs/EzsignsignerRequestCompoundContact.md
+docs/EzsignsignerResponse.md
+docs/EzsignsignerResponseCompound.md
+docs/EzsignsignerResponseCompoundAllOf.md
+docs/EzsignsignerResponseCompoundContact.md
 docs/EzsigntemplatepackageGetListV1Response.md
 docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
@@ -292,6 +300,8 @@ src/main/java/com/ezmax/api/model/ContactinformationsRequest.java
 src/main/java/com/ezmax/api/model/ContactinformationsRequestCompound.java
 src/main/java/com/ezmax/api/model/ContactinformationsRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/CustomAutocompleteElementResponse.java
+src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponse.java
+src/main/java/com/ezmax/api/model/CustomEzsignsignaturestatusResponse.java
 src/main/java/com/ezmax/api/model/CustomFormDataDocumentResponse.java
 src/main/java/com/ezmax/api/model/CustomFormDataSignerResponse.java
 src/main/java/com/ezmax/api/model/CustomFormsDataFolderResponse.java
@@ -339,6 +349,9 @@ src/main/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseMPayload.java
@@ -352,7 +365,6 @@ src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderListElement.java
 src/main/java/com/ezmax/api/model/EzsignfolderRequest.java
 src/main/java/com/ezmax/api/model/EzsignfolderRequestCompound.java
-src/main/java/com/ezmax/api/model/EzsignfolderRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderResponse.java
 src/main/java/com/ezmax/api/model/EzsignfolderResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignfolderSendV1Request.java
@@ -398,6 +410,10 @@ src/main/java/com/ezmax/api/model/EzsignsignerRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompoundContact.java
+src/main/java/com/ezmax/api/model/EzsignsignerResponse.java
+src/main/java/com/ezmax/api/model/EzsignsignerResponseCompound.java
+src/main/java/com/ezmax/api/model/EzsignsignerResponseCompoundAllOf.java
+src/main/java/com/ezmax/api/model/EzsignsignerResponseCompoundContact.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload.java
@@ -530,6 +546,8 @@ src/test/java/com/ezmax/api/model/ContactinformationsRequestCompoundAllOfTest.ja
 src/test/java/com/ezmax/api/model/ContactinformationsRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/ContactinformationsRequestTest.java
 src/test/java/com/ezmax/api/model/CustomAutocompleteElementResponseTest.java
+src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponseTest.java
+src/test/java/com/ezmax/api/model/CustomEzsignsignaturestatusResponseTest.java
 src/test/java/com/ezmax/api/model/CustomFormDataDocumentResponseTest.java
 src/test/java/com/ezmax/api/model/CustomFormDataSignerResponseTest.java
 src/test/java/com/ezmax/api/model/CustomFormsDataFolderResponseTest.java
@@ -577,6 +595,9 @@ src/test/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseTest.java
@@ -588,7 +609,6 @@ src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderListElementTest.java
-src/test/java/com/ezmax/api/model/EzsignfolderRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderResponseCompoundTest.java
@@ -636,6 +656,10 @@ src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundContactTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignsignerResponseCompoundAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignsignerResponseCompoundContactTest.java
+src/test/java/com/ezmax/api/model/EzsignsignerResponseCompoundTest.java
+src/test/java/com/ezmax/api/model/EzsignsignerResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadTest.java

@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
@@ -149,7 +150,7 @@ public class ObjectEzsignbulksendApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 

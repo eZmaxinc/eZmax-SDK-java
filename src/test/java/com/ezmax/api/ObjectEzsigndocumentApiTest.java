@@ -29,6 +29,7 @@ import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
+import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
 

@@ -33,7 +33,7 @@ import java.util.List;
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignformfieldgroup Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignformfieldgroupResponseCompound {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL = "sEzsignformfieldgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL)

@@ -42,6 +42,7 @@ import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
+import java.io.File;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -142,7 +143,7 @@ public class ObjectEzsigndocumentApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -294,7 +295,7 @@ public class ObjectEzsigndocumentApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -437,7 +438,7 @@ public class ObjectEzsigndocumentApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -573,7 +574,7 @@ public class ObjectEzsigndocumentApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -711,7 +712,7 @@ public class ObjectEzsigndocumentApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -855,7 +856,7 @@ public class ObjectEzsigndocumentApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -992,7 +993,7 @@ public class ObjectEzsigndocumentApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -1130,7 +1131,7 @@ public class ObjectEzsigndocumentApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
@@ -1264,7 +1265,7 @@ public class ObjectEzsigndocumentApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarHeaderParams != null) {
+        if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 

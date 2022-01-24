@@ -8,6 +8,11 @@ An Ezsigndocument Object and children to create a complete structure
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**iEzsigndocumentStepformtotal** | **Integer** | The total number of steps in the form filling phase | 
+**iEzsigndocumentStepformcurrent** | **Integer** | The current step in the form filling phase | 
+**iEzsigndocumentStepsignaturetotal** | **Integer** | The total number of steps in the signature filling phase | 
+**iEzsigndocumentStepsignatureCurrent** | **Integer** | The current step in the signature phase | 
+**aObjEzsignfoldersignerassociationstatus** | [**List&lt;CustomEzsignfoldersignerassociationstatusResponse&gt;**](CustomEzsignfoldersignerassociationstatusResponse.md) |  | 
 **fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
 **dtEzsigndocumentDuedate** | **String** | The maximum date and time at which the Ezsigndocument can be signed. | 
 **fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 

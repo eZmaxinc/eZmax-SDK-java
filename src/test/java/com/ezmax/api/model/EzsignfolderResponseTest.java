@@ -140,6 +140,22 @@ public class EzsignfolderResponseTest {
     }
 
     /**
+     * Test the property 'dtEzsignfolderScheduledarchive'
+     */
+    @Test
+    public void dtEzsignfolderScheduledarchiveTest() {
+        // TODO: test dtEzsignfolderScheduledarchive
+    }
+
+    /**
+     * Test the property 'dtEzsignfolderScheduleddestruction'
+     */
+    @Test
+    public void dtEzsignfolderScheduleddestructionTest() {
+        // TODO: test dtEzsignfolderScheduleddestruction
+    }
+
+    /**
      * Test the property 'eEzsignfolderStep'
      */
     @Test

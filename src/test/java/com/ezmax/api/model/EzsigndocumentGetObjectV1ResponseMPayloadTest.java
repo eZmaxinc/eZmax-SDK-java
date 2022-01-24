@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EzsigndocumentResponse;
+import com.ezmax.api.model.EzsigndocumentResponseCompound;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

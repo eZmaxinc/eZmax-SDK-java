@@ -16,6 +16,7 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.Test;
 import org.junit.Ignore;

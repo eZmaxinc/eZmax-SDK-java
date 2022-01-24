@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignsignerRequestCompoundContact {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -64,11 +64,11 @@ public class EzsignsignerRequestCompoundContact {
   }
 
    /**
-   * The first name of the Contact
+   * The First name of the contact
    * @return sContactFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The first name of the Contact")
+  @ApiModelProperty(example = "John", required = true, value = "The First name of the contact")
 
   public String getsContactFirstname() {
     return sContactFirstname;
@@ -87,11 +87,11 @@ public class EzsignsignerRequestCompoundContact {
   }
 
    /**
-   * The last name of the Contact
+   * The Last name of the contact
    * @return sContactLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The last name of the Contact")
+  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the contact")
 
   public String getsContactLastname() {
     return sContactLastname;
@@ -135,11 +135,11 @@ public class EzsignsignerRequestCompoundContact {
   }
 
    /**
-   * The email address of the contact. Must be filled if email authentification was requested
+   * The email address.
    * @return sEmailAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The email address of the contact. Must be filled if email authentification was requested")
+  @ApiModelProperty(example = "example@domain.com", value = "The email address.")
 
   public String getsEmailAddress() {
     return sEmailAddress;

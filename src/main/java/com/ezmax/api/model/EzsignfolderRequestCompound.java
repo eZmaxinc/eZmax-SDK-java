@@ -16,8 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignfolderRequest;
-import com.ezmax.api.model.EzsignfolderRequestCompoundAllOf;
-import com.ezmax.api.model.EzsignfoldersignerassociationRequest;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -27,19 +25,13 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignfolderRequestCompound {
-  public static final String SERIALIZED_NAME_A_EZSIGNFOLDERSIGNERASSOCIATION = "a_Ezsignfoldersignerassociation";
-  @SerializedName(SERIALIZED_NAME_A_EZSIGNFOLDERSIGNERASSOCIATION)
-  private List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation = new ArrayList<EzsignfoldersignerassociationRequest>();
-
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   private Integer fkiEzsignfoldertypeID;
@@ -62,34 +54,6 @@ public class EzsignfolderRequestCompound {
 
   public EzsignfolderRequestCompound() { 
   }
-
-  public EzsignfolderRequestCompound aEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation) {
-    
-    this.aEzsignfoldersignerassociation = aEzsignfoldersignerassociation;
-    return this;
-  }
-
-  public EzsignfolderRequestCompound addAEzsignfoldersignerassociationItem(EzsignfoldersignerassociationRequest aEzsignfoldersignerassociationItem) {
-    this.aEzsignfoldersignerassociation.add(aEzsignfoldersignerassociationItem);
-    return this;
-  }
-
-   /**
-   * An array of signers that will be invited to sign the Ezsigndocuments
-   * @return aEzsignfoldersignerassociation
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of signers that will be invited to sign the Ezsigndocuments")
-
-  public List<EzsignfoldersignerassociationRequest> getaEzsignfoldersignerassociation() {
-    return aEzsignfoldersignerassociation;
-  }
-
-
-  public void setaEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequest> aEzsignfoldersignerassociation) {
-    this.aEzsignfoldersignerassociation = aEzsignfoldersignerassociation;
-  }
-
 
   public EzsignfolderRequestCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     
@@ -217,8 +181,7 @@ public class EzsignfolderRequestCompound {
       return false;
     }
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
-    return Objects.equals(this.aEzsignfoldersignerassociation, ezsignfolderRequestCompound.aEzsignfoldersignerassociation) &&
-        Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderRequestCompound.fkiEzsignfoldertypeID) &&
+    return Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderRequestCompound.fkiEzsignfoldertypeID) &&
         Objects.equals(this.fkiEzsigntsarequirementID, ezsignfolderRequestCompound.fkiEzsigntsarequirementID) &&
         Objects.equals(this.sEzsignfolderDescription, ezsignfolderRequestCompound.sEzsignfolderDescription) &&
         Objects.equals(this.tEzsignfolderNote, ezsignfolderRequestCompound.tEzsignfolderNote) &&
@@ -227,14 +190,13 @@ public class EzsignfolderRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(aEzsignfoldersignerassociation, fkiEzsignfoldertypeID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency);
+    return Objects.hash(fkiEzsignfoldertypeID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderRequestCompound {\n");
-    sb.append("    aEzsignfoldersignerassociation: ").append(toIndentedString(aEzsignfoldersignerassociation)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    fkiEzsigntsarequirementID: ").append(toIndentedString(fkiEzsigntsarequirementID)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");

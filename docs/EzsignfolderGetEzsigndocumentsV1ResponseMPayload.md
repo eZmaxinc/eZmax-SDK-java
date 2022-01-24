@@ -8,7 +8,7 @@ Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments API 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocument** | [**List&lt;EzsigndocumentResponse&gt;**](EzsigndocumentResponse.md) |  | 
+**aObjEzsigndocument** | [**List&lt;EzsigndocumentResponseCompound&gt;**](EzsigndocumentResponseCompound.md) |  | 
 
 
 

@@ -31,7 +31,7 @@ import java.util.List;
  * Payload for the /1/object/apikey/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/apikey/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class ApikeyCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)

@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsigndocumentResponse;
+import com.ezmax.api.model.EzsigndocumentResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,22 +31,22 @@ import java.util.List;
  * Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-20T20:59:45.754840Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
 public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
-  private List<EzsigndocumentResponse> aObjEzsigndocument = new ArrayList<EzsigndocumentResponse>();
+  private List<EzsigndocumentResponseCompound> aObjEzsigndocument = new ArrayList<EzsigndocumentResponseCompound>();
 
   public EzsignfolderGetEzsigndocumentsV1ResponseMPayload() { 
   }
 
-  public EzsignfolderGetEzsigndocumentsV1ResponseMPayload aObjEzsigndocument(List<EzsigndocumentResponse> aObjEzsigndocument) {
+  public EzsignfolderGetEzsigndocumentsV1ResponseMPayload aObjEzsigndocument(List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
     
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
 
-  public EzsignfolderGetEzsigndocumentsV1ResponseMPayload addAObjEzsigndocumentItem(EzsigndocumentResponse aObjEzsigndocumentItem) {
+  public EzsignfolderGetEzsigndocumentsV1ResponseMPayload addAObjEzsigndocumentItem(EzsigndocumentResponseCompound aObjEzsigndocumentItem) {
     this.aObjEzsigndocument.add(aObjEzsigndocumentItem);
     return this;
   }
@@ -58,12 +58,12 @@ public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EzsigndocumentResponse> getaObjEzsigndocument() {
+  public List<EzsigndocumentResponseCompound> getaObjEzsigndocument() {
     return aObjEzsigndocument;
   }
 
 
-  public void setaObjEzsigndocument(List<EzsigndocumentResponse> aObjEzsigndocument) {
+  public void setaObjEzsigndocument(List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
   }
 
