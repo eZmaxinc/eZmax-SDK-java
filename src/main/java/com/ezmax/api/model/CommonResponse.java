@@ -30,7 +30,7 @@ import java.io.IOException;
  * All API response will inherit this based Response
  */
 @ApiModel(description = "All API response will inherit this based Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-25T21:43:39.288250Z[Etc/UTC]")
 public class CommonResponse {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

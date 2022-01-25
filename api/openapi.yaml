@@ -4488,11 +4488,6 @@ components:
       - objAudit
       - pkiApikeyID
       type: object
-    ezsignfolder-getObject-v1-Response-mPayload:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfolder-Response'
-      description: Payload for the /1/object/ezsignfolder/getObject API Request
-      type: object
     global-customer-getEndpoint-v1-Response:
       description: Response for the /1/customer/{pksCustomerCode}/endpoint API Request
       example:
@@ -6878,6 +6873,11 @@ components:
       - fkiEzsignfoldersignerassociationID
       - sEzsignfoldersignerassociationstatusFirstname
       - sEzsignfoldersignerassociationstatusLastname
+      type: object
+    ezsignfolder-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder-ResponseCompound'
+      description: Payload for the /1/object/ezsignfolder/getObject API Request
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

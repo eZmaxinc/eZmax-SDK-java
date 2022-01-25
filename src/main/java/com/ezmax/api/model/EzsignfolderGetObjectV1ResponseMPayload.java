@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EzsignfolderResponse;
+import com.ezmax.api.model.EzsignfolderResponseCompound;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
 import com.google.gson.TypeAdapter;
@@ -32,7 +32,7 @@ import java.io.IOException;
  * Payload for the /1/object/ezsignfolder/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-25T21:43:39.288250Z[Etc/UTC]")
 public class EzsignfolderGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)

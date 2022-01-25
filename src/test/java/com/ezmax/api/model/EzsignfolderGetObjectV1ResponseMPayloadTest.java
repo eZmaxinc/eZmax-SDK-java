@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EzsignfolderResponse;
+import com.ezmax.api.model.EzsignfolderResponseCompound;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
 import com.google.gson.TypeAdapter;

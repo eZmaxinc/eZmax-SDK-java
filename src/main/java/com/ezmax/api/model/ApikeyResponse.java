@@ -30,7 +30,7 @@ import java.io.IOException;
  * An Apikey Object
  */
 @ApiModel(description = "An Apikey Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-24T18:57:52.199361Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-25T21:43:39.288250Z[Etc/UTC]")
 public class ApikeyResponse {
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
