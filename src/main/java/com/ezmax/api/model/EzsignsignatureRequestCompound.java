@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignsignatureRequest;
+import com.ezmax.api.model.EzsignsignaturecustomdateRequest;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -25,13 +26,23 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-25T22:00:35.307888Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
+  public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
+  private Boolean bEzsignsignatureCustomdate;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
+  private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
+
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   private Integer fkiEzsignfoldersignerassociationID;
@@ -62,6 +73,60 @@ public class EzsignsignatureRequestCompound {
 
   public EzsignsignatureRequestCompound() { 
   }
+
+  public EzsignsignatureRequestCompound bEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
+    
+    this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+   * @return bEzsignsignatureCustomdate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+
+  public Boolean getbEzsignsignatureCustomdate() {
+    return bEzsignsignatureCustomdate;
+  }
+
+
+  public void setbEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
+    this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
+  }
+
+
+  public EzsignsignatureRequestCompound aObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
+    
+    this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+    return this;
+  }
+
+  public EzsignsignatureRequestCompound addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateRequest aObjEzsignsignaturecustomdateItem) {
+    if (this.aObjEzsignsignaturecustomdate == null) {
+      this.aObjEzsignsignaturecustomdate = new ArrayList<EzsignsignaturecustomdateRequest>();
+    }
+    this.aObjEzsignsignaturecustomdate.add(aObjEzsignsignaturecustomdateItem);
+    return this;
+  }
+
+   /**
+   * An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.
+   * @return aObjEzsignsignaturecustomdate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
+
+  public List<EzsignsignaturecustomdateRequest> getaObjEzsignsignaturecustomdate() {
+    return aObjEzsignsignaturecustomdate;
+  }
+
+
+  public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
+    this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
 
   public EzsignsignatureRequestCompound fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     
@@ -233,7 +298,9 @@ public class EzsignsignatureRequestCompound {
       return false;
     }
     EzsignsignatureRequestCompound ezsignsignatureRequestCompound = (EzsignsignatureRequestCompound) o;
-    return Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID) &&
+    return Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate) &&
+        Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate) &&
+        Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureRequestCompound.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureRequestCompound.iEzsignsignatureX) &&
         Objects.equals(this.iEzsignsignatureY, ezsignsignatureRequestCompound.iEzsignsignatureY) &&
@@ -244,13 +311,15 @@ public class EzsignsignatureRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID);
+    return Objects.hash(bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureRequestCompound {\n");
+    sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
+    sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");

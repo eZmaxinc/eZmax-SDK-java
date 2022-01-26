@@ -150,6 +150,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
 docs/EzsignsignerRequestCompoundAllOf.md
@@ -406,6 +407,7 @@ src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompound.java
+src/main/java/com/ezmax/api/model/EzsignsignaturecustomdateRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompoundAllOf.java
@@ -652,6 +654,7 @@ src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOfTest.ja
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignsignaturecustomdateRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundContactTest.java
 src/test/java/com/ezmax/api/model/EzsignsignerRequestCompoundTest.java
