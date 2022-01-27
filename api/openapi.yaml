@@ -614,7 +614,7 @@ tags:
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
     \n## 1.1.X Releases\n### [1.1.4] - 2022-01-\n\n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
-    \ Added status\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID} fkiBillingentityinternalID,\
+    \ Added status\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
     \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
     \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
     \ properties\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\
@@ -2968,97 +2968,6 @@ components:
         objEzsignfoldersignerassociationCompound:
           $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestCompound'
       type: object
-    ezsignsigner-Request:
-      description: An Ezsignsigner Object
-      example:
-        fkiTaxassignmentID: 1
-        fkiSecretquestionID: 5
-        eEzsignsignerLogintype: PasswordQuestion
-        sEzsignsignerSecretanswer: This Is My Secret Answer
-      properties:
-        fkiTaxassignmentID:
-          description: |-
-            The unique ID of the Taxassignment.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|No tax|
-            |2|GST|
-            |3|HST (ON)|
-            |4|HST (NB)|
-            |5|HST (NS)|
-            |6|HST (NL)|
-            |7|HST (PE)|
-            |8|GST + QST (QC)|
-            |9|GST + QST (QC) Non-Recoverable|
-            |10|GST + PST (BC)|
-            |11|GST + PST (SK)|
-            |12|GST + RST (MB)|
-            |13|GST + PST (BC) Non-Recoverable|
-            |14|GST + PST (SK) Non-Recoverable|
-            |15|GST + RST (MB) Non-Recoverable|
-          example: 1
-          maximum: 15
-          minimum: 1
-          type: integer
-        fkiSecretquestionID:
-          description: |-
-            The unique ID of the Secretquestion.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|The name of the hospital in which you were born|
-            |2|The name of your grade school|
-            |3|The last name of your favorite teacher|
-            |4|Your favorite sports team|
-            |5|Your favorite TV show|
-            |6|Your favorite movie|
-            |7|The name of the street on which you grew up|
-            |8|The name of your first employer|
-            |9|Your first car|
-            |10|Your favorite food|
-            |11|The name of your first pet|
-            |12|Favorite musician/band|
-            |13|What instrument you play|
-            |14|Your father's middle name|
-            |15|Your mother's maiden name|
-            |16|Name of your eldest child|
-            |17|Your spouse's middle name|
-            |18|Favorite restaurant|
-            |19|Childhood nickname|
-            |20|Favorite vacation destination|
-            |21|Your boat's name|
-            |22|Date of Birth (YYYY-MM-DD)|
-          example: 7
-          type: integer
-        eEzsignsignerLogintype:
-          description: |-
-            The method the Ezsignsigner will authenticate to the signing platform.
-
-            1. **Password** means the Ezsignsigner will receive a secure link by email.
-            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
-            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
-            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
-            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-          enum:
-          - Password
-          - PasswordPhone
-          - PasswordQuestion
-          - InPersonPhone
-          - InPerson
-          type: string
-        sEzsignsignerSecretanswer:
-          description: The predefined answer to the secret question the Ezsignsigner
-            will need to provide to successfully authenticate.
-          type: string
-      required:
-      - eEzsignsignerLogintype
-      - fkiTaxassignmentID
-      type: object
     ezsignfolder-RequestCompound:
       allOf:
       - type: object
@@ -3870,13 +3779,6 @@ components:
         The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
       example: "990"
       type: string
-    Field-sPhoneNumber:
-      description: |-
-        The number of the phone number. (For a North America Number only)
-
-        The number is the "1516" section in this sample phone number: (514) 990-1516 x123
-      example: "1516"
-      type: string
     Field-sPhoneExtension:
       description: |-
         The extension of the phone number.
@@ -3885,15 +3787,6 @@ components:
 
         It can also be used with international phone numbers
       example: "123"
-      type: string
-    Field-sPhoneInternational:
-      description: |-
-        The international phone number. (For phone numbers outside of North)
-
-        Do not specify the "011" part of the phone number used to dial an international phone number from North America.
-
-        For example for this sample phone number "+442071838750", you would send "442071838750" without the "+" sign.
-      example: "442071838750"
       type: string
     Field-ePhoneType:
       description: |-
@@ -3949,13 +3842,8 @@ components:
           example: "1516"
           type: string
         sPhoneInternational:
-          description: |-
-            The international phone number. (For phone numbers outside of North)
-
-            Do not specify the "011" part of the phone number used to dial an international phone number from North America.
-
-            For example for this sample phone number "+442071838750", you would send "442071838750" without the "+" sign.
-          example: "442071838750"
+          description: A phone number in E.164 Format
+          example: +5149901516
           type: string
         sPhoneExtension:
           description: |-
@@ -6319,43 +6207,6 @@ components:
       example: 89
       nullable: true
       type: integer
-    ezsignfoldersignerassociation-Response:
-      description: An Ezsignfoldersignerassociation Object
-      properties:
-        pkiEzsignfoldersignerassociationID:
-          description: The unique ID of the Ezsignfoldersignerassociation
-          example: 20
-          type: integer
-        fkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          type: integer
-        fkiEzsignsignerID:
-          description: The unique ID of the Ezsignsigner
-          example: 89
-          nullable: true
-          type: integer
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          nullable: true
-          type: integer
-        bEzsignfoldersignerassociationReceivecopy:
-          description: If this flag is true. The signatory will receive a copy of
-            every signed Ezsigndocument even if it ain't required to sign the document.
-          type: boolean
-      required:
-      - bEzsignfoldersignerassociationReceivecopy
-      - fkiEzsignfolderID
-      - fkiEzsignsignerID
-      - fkiUserID
-      - pkiEzsignfoldersignerassociationID
-      type: object
-    ezsignfoldersignerassociation-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
-      description: An Ezsignfoldersignerassociation Object
-      type: object
     ezsignfoldersignerassociation-getObject-v1-Response-mPayload:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
@@ -6369,167 +6220,11 @@ components:
       description: Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
         API Request
       type: object
-    ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload:
-      description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
-        API Request
-      properties:
-        a_objEzsignfoldersignerassociation:
-          items:
-            $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
-          type: array
-      required:
-      - a_objEzsignfoldersignerassociation
-      type: object
-    ezsignsigner-ResponseCompound-Contact:
-      description: A Ezsignsigner->Contact Object and children to create a complete
-        structure
-      example:
-        sContactFirstname: John
-        sContactLastname: Doe
-        fkiLanguageID: 1
-        sEmailAddress: johh.doe@domain.com
-        sPhoneNumber: "5149901516"
-        sPhoneNumberCell: "5149901516"
-      properties:
-        sContactFirstname:
-          description: The First name of the contact
-          example: John
-          type: string
-        sContactLastname:
-          description: The Last name of the contact
-          example: Doe
-          type: string
-        fkiLanguageID:
-          description: |-
-            The unique ID of the Language.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|French|
-            |2|English|
-          example: 2
-          maximum: 2
-          minimum: 1
-          type: integer
-        sEmailAddress:
-          description: The email address.
-          example: example@domain.com
-          type: string
-        sPhoneNumber:
-          description: |-
-            The Phone number of the contact.
-            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
-            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-          type: string
-        sPhoneNumberCell:
-          description: |-
-            The Cell Phone number of the contact.
-            Use format "5149901516" for North American Numbers (Without "1" for long distance code) you would dial like this: 1-514-990-1516.
-            Use format "498945233886" for international numbers (Without "011") you would dial like this: +49 89 452 33 88-6. In this example "49" is the country code of Germany.
-          type: string
-      required:
-      - fkiLanguageID
-      - sContactFirstname
-      - sContactLastname
-      type: object
     ezsignsigner-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/ezsignsigner_ResponseCompound_allOf'
       - $ref: '#/components/schemas/ezsignsigner-Response'
       description: An Ezsignsigner Object and children to create a complete structure
-      type: object
-    ezsignsigner-Response:
-      description: An Ezsignsigner Object
-      example:
-        fkiTaxassignmentID: 1
-        fkiSecretquestionID: 5
-        eEzsignsignerLogintype: PasswordQuestion
-        sEzsignsignerSecretanswer: This Is My Secret Answer
-      properties:
-        fkiTaxassignmentID:
-          description: |-
-            The unique ID of the Taxassignment.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|No tax|
-            |2|GST|
-            |3|HST (ON)|
-            |4|HST (NB)|
-            |5|HST (NS)|
-            |6|HST (NL)|
-            |7|HST (PE)|
-            |8|GST + QST (QC)|
-            |9|GST + QST (QC) Non-Recoverable|
-            |10|GST + PST (BC)|
-            |11|GST + PST (SK)|
-            |12|GST + RST (MB)|
-            |13|GST + PST (BC) Non-Recoverable|
-            |14|GST + PST (SK) Non-Recoverable|
-            |15|GST + RST (MB) Non-Recoverable|
-          example: 1
-          maximum: 15
-          minimum: 1
-          type: integer
-        fkiSecretquestionID:
-          description: |-
-            The unique ID of the Secretquestion.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|The name of the hospital in which you were born|
-            |2|The name of your grade school|
-            |3|The last name of your favorite teacher|
-            |4|Your favorite sports team|
-            |5|Your favorite TV show|
-            |6|Your favorite movie|
-            |7|The name of the street on which you grew up|
-            |8|The name of your first employer|
-            |9|Your first car|
-            |10|Your favorite food|
-            |11|The name of your first pet|
-            |12|Favorite musician/band|
-            |13|What instrument you play|
-            |14|Your father's middle name|
-            |15|Your mother's maiden name|
-            |16|Name of your eldest child|
-            |17|Your spouse's middle name|
-            |18|Favorite restaurant|
-            |19|Childhood nickname|
-            |20|Favorite vacation destination|
-            |21|Your boat's name|
-            |22|Date of Birth (YYYY-MM-DD)|
-          example: 7
-          type: integer
-        eEzsignsignerLogintype:
-          description: |-
-            The method the Ezsignsigner will authenticate to the signing platform.
-
-            1. **Password** means the Ezsignsigner will receive a secure link by email.
-            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
-            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
-            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
-            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-          enum:
-          - Password
-          - PasswordPhone
-          - PasswordQuestion
-          - InPersonPhone
-          - InPerson
-          type: string
-        sEzsignsignerSecretanswer:
-          description: The predefined answer to the secret question the Ezsignsigner
-            will need to provide to successfully authenticate.
-          type: string
-      required:
-      - eEzsignsignerLogintype
-      - fkiTaxassignmentID
       type: object
     ezsignsigner-RequestCompound-Contact:
       description: A Ezsignsigner->Contact Object and children to create a complete
@@ -6980,6 +6675,327 @@ components:
         \ | 2022-01-06 08:07:09 EST |\n"
       example: 'Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}'
       type: string
+    ezsignfoldersignerassociation-Response:
+      description: An Ezsignfoldersignerassociation Object
+      properties:
+        pkiEzsignfoldersignerassociationID:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          type: integer
+        bEzsignfoldersignerassociationReceivecopy:
+          description: If this flag is true. The signatory will receive a copy of
+            every signed Ezsigndocument even if it ain't required to sign the document.
+          type: boolean
+      required:
+      - bEzsignfoldersignerassociationReceivecopy
+      - fkiEzsignfolderID
+      - pkiEzsignfoldersignerassociationID
+      type: object
+    ezsignsigner-Request:
+      description: An Ezsignsigner Object
+      example:
+        fkiTaxassignmentID: 1
+        fkiSecretquestionID: 5
+        eEzsignsignerLogintype: PasswordQuestion
+        sEzsignsignerSecretanswer: This Is My Secret Answer
+      properties:
+        fkiTaxassignmentID:
+          description: |-
+            The unique ID of the Taxassignment.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No tax|
+            |2|GST|
+            |3|HST (ON)|
+            |4|HST (NB)|
+            |5|HST (NS)|
+            |6|HST (NL)|
+            |7|HST (PE)|
+            |8|GST + QST (QC)|
+            |9|GST + QST (QC) Non-Recoverable|
+            |10|GST + PST (BC)|
+            |11|GST + PST (SK)|
+            |12|GST + RST (MB)|
+            |13|GST + PST (BC) Non-Recoverable|
+            |14|GST + PST (SK) Non-Recoverable|
+            |15|GST + RST (MB) Non-Recoverable|
+          example: 1
+          maximum: 15
+          minimum: 1
+          type: integer
+        fkiSecretquestionID:
+          description: |-
+            The unique ID of the Secretquestion.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|The name of the hospital in which you were born|
+            |2|The name of your grade school|
+            |3|The last name of your favorite teacher|
+            |4|Your favorite sports team|
+            |5|Your favorite TV show|
+            |6|Your favorite movie|
+            |7|The name of the street on which you grew up|
+            |8|The name of your first employer|
+            |9|Your first car|
+            |10|Your favorite food|
+            |11|The name of your first pet|
+            |12|Favorite musician/band|
+            |13|What instrument you play|
+            |14|Your father's middle name|
+            |15|Your mother's maiden name|
+            |16|Name of your eldest child|
+            |17|Your spouse's middle name|
+            |18|Favorite restaurant|
+            |19|Childhood nickname|
+            |20|Favorite vacation destination|
+            |21|Your boat's name|
+            |22|Date of Birth (YYYY-MM-DD)|
+          example: 7
+          type: integer
+        eEzsignsignerLogintype:
+          description: |-
+            The method the Ezsignsigner will authenticate to the signing platform.
+
+            1. **Password** means the Ezsignsigner will receive a secure link by email.
+            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
+            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
+            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
+            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+          enum:
+          - Password
+          - PasswordPhone
+          - PasswordQuestion
+          - InPersonPhone
+          - InPerson
+          type: string
+        sEzsignsignerSecretanswer:
+          description: The predefined answer to the secret question the Ezsignsigner
+            will need to provide to successfully authenticate.
+          type: string
+      required:
+      - eEzsignsignerLogintype
+      - fkiTaxassignmentID
+      type: object
+    Field-pkiUserlogintypeID:
+      description: The unique ID of the Userlogintype
+      example: 2
+      type: integer
+    Field-pkiUserlogintypeIDNullable:
+      description: The unique ID of the Userlogintype
+      example: 2
+      nullable: true
+      type: integer
+    ezsignfoldersignerassociation-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
+      description: An Ezsignfoldersignerassociation Object
+      properties:
+        objUser:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound-User'
+        objEzsignsigner:
+          $ref: '#/components/schemas/ezsignsigner-ResponseCompound'
+      type: object
+    ezsignfoldersignerassociation-ResponseCompound-User:
+      description: A Ezsignfoldersignerassociation->User Object and children to create
+        a complete structure
+      properties:
+        pkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sUserFirstname:
+          description: The First name of the user
+          example: John
+          type: string
+        sUserLastname:
+          description: The Last name of the user
+          example: Doe
+          type: string
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+      required:
+      - fkiLanguageID
+      - pkiUserID
+      - sEmailAddress
+      - sUserFirstname
+      - sUserLastname
+      type: object
+    ezsignsigner-Response:
+      description: An Ezsignsigner Object
+      properties:
+        pkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          type: integer
+        fkiTaxassignmentID:
+          description: |-
+            The unique ID of the Taxassignment.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No tax|
+            |2|GST|
+            |3|HST (ON)|
+            |4|HST (NB)|
+            |5|HST (NS)|
+            |6|HST (NL)|
+            |7|HST (PE)|
+            |8|GST + QST (QC)|
+            |9|GST + QST (QC) Non-Recoverable|
+            |10|GST + PST (BC)|
+            |11|GST + PST (SK)|
+            |12|GST + RST (MB)|
+            |13|GST + PST (BC) Non-Recoverable|
+            |14|GST + PST (SK) Non-Recoverable|
+            |15|GST + RST (MB) Non-Recoverable|
+          example: 1
+          maximum: 15
+          minimum: 1
+          type: integer
+        fkiSecretquestionID:
+          description: |-
+            The unique ID of the Secretquestion.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|The name of the hospital in which you were born|
+            |2|The name of your grade school|
+            |3|The last name of your favorite teacher|
+            |4|Your favorite sports team|
+            |5|Your favorite TV show|
+            |6|Your favorite movie|
+            |7|The name of the street on which you grew up|
+            |8|The name of your first employer|
+            |9|Your first car|
+            |10|Your favorite food|
+            |11|The name of your first pet|
+            |12|Favorite musician/band|
+            |13|What instrument you play|
+            |14|Your father's middle name|
+            |15|Your mother's maiden name|
+            |16|Name of your eldest child|
+            |17|Your spouse's middle name|
+            |18|Favorite restaurant|
+            |19|Childhood nickname|
+            |20|Favorite vacation destination|
+            |21|Your boat's name|
+            |22|Date of Birth (YYYY-MM-DD)|
+          example: 7
+          type: integer
+        fkiUserlogintypeID:
+          description: The unique ID of the Userlogintype
+          example: 2
+          type: integer
+        sUserlogintypeDescriptionX:
+          description: The description of the Userlogintype in the language of the
+            requester
+          example: Email and phone or SMS
+          type: string
+      required:
+      - fkiTaxassignmentID
+      - fkiUserlogintypeID
+      - pkiEzsignsignerID
+      - sUserlogintypeDescriptionX
+      type: object
+    Field-sUserlogintypeDescriptionX:
+      description: The description of the Userlogintype in the language of the requester
+      example: Email and phone or SMS
+      type: string
+    Field-iPhoneNumber:
+      description: |-
+        The number of the phone number. (For a North America Number only)
+
+        The number is the "1516" section in this sample phone number: (514) 990-1516 x123
+      example: "1516"
+      type: string
+    Field-sPhoneE164:
+      description: A phone number in E.164 Format
+      example: +5149901516
+      type: string
+    ezsignsigner-ResponseCompound-Contact:
+      description: A Ezsignsigner->Contact Object and children to create a complete
+        structure
+      properties:
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: example@domain.com
+          type: string
+        sPhoneE164:
+          description: A phone number in E.164 Format
+          example: +5149901516
+          type: string
+        sPhoneE164Cell:
+          description: A phone number in E.164 Format
+          example: +5149901516
+          type: string
+      required:
+      - fkiLanguageID
+      - sContactFirstname
+      - sContactLastname
+      type: object
+    ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
+        API Request
+      properties:
+        a_objEzsignfoldersignerassociation:
+          items:
+            $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociation
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:

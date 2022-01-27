@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsignaturestatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step

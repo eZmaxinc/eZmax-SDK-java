@@ -29,7 +29,7 @@ import java.io.IOException;
  * A Phone Object
  */
 @ApiModel(description = "A Phone Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class PhoneRequest {
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
@@ -184,11 +184,11 @@ public class PhoneRequest {
   }
 
    /**
-   * The international phone number. (For phone numbers outside of North)  Do not specify the \&quot;011\&quot; part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \&quot;+442071838750\&quot;, you would send \&quot;442071838750\&quot; without the \&quot;+\&quot; sign.
+   * A phone number in E.164 Format
    * @return sPhoneInternational
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "442071838750", value = "The international phone number. (For phone numbers outside of North)  Do not specify the \"011\" part of the phone number used to dial an international phone number from North America.  For example for this sample phone number \"+442071838750\", you would send \"442071838750\" without the \"+\" sign.")
+  @ApiModelProperty(example = "+5149901516", value = "A phone number in E.164 Format")
 
   public String getsPhoneInternational() {
     return sPhoneInternational;

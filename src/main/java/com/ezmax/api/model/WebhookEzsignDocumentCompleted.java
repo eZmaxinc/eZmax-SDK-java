@@ -35,7 +35,7 @@ import java.util.List;
  * This is the base Webhook object
  */
 @ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class WebhookEzsignDocumentCompleted {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)

@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Contact Object
  */
 @ApiModel(description = "A Contact Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EmailRequest {
   public static final String SERIALIZED_NAME_FKI_EMAILTYPE_I_D = "fkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAILTYPE_I_D)

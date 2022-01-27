@@ -28,7 +28,7 @@ import java.io.IOException;
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -37,14 +37,6 @@ public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
   private Integer fkiEzsignfolderID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  private Integer fkiEzsignsignerID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY = "bEzsignfoldersignerassociationReceivecopy";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
@@ -99,52 +91,6 @@ public class EzsignfoldersignerassociationResponse {
   }
 
 
-  public EzsignfoldersignerassociationResponse fkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Ezsignsigner
-   * @return fkiEzsignsignerID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Ezsignsigner")
-
-  public Integer getFkiEzsignsignerID() {
-    return fkiEzsignsignerID;
-  }
-
-
-  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-  }
-
-
-  public EzsignfoldersignerassociationResponse fkiUserID(Integer fkiUserID) {
-    
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the User
-   * @return fkiUserID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
-
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-
-  public void setFkiUserID(Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
   public EzsignfoldersignerassociationResponse bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
@@ -179,14 +125,12 @@ public class EzsignfoldersignerassociationResponse {
     EzsignfoldersignerassociationResponse ezsignfoldersignerassociationResponse = (EzsignfoldersignerassociationResponse) o;
     return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponse.pkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationResponse.fkiEzsignfolderID) &&
-        Objects.equals(this.fkiEzsignsignerID, ezsignfoldersignerassociationResponse.fkiEzsignsignerID) &&
-        Objects.equals(this.fkiUserID, ezsignfoldersignerassociationResponse.fkiUserID) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, fkiEzsignsignerID, fkiUserID, bEzsignfoldersignerassociationReceivecopy);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
@@ -195,8 +139,6 @@ public class EzsignfoldersignerassociationResponse {
     sb.append("class EzsignfoldersignerassociationResponse {\n");
     sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
-    sb.append("    fkiEzsignsignerID: ").append(toIndentedString(fkiEzsignsignerID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
     sb.append("}");
     return sb.toString();

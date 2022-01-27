@@ -28,7 +28,7 @@ import java.io.IOException;
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EzsignsignerResponseCompoundContact {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -46,13 +46,13 @@ public class EzsignsignerResponseCompoundContact {
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
   private String sEmailAddress;
 
-  public static final String SERIALIZED_NAME_S_PHONE_NUMBER = "sPhoneNumber";
-  @SerializedName(SERIALIZED_NAME_S_PHONE_NUMBER)
-  private String sPhoneNumber;
+  public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  private String sPhoneE164;
 
-  public static final String SERIALIZED_NAME_S_PHONE_NUMBER_CELL = "sPhoneNumberCell";
-  @SerializedName(SERIALIZED_NAME_S_PHONE_NUMBER_CELL)
-  private String sPhoneNumberCell;
+  public static final String SERIALIZED_NAME_S_PHONE_E164_CELL = "sPhoneE164Cell";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164_CELL)
+  private String sPhoneE164Cell;
 
   public EzsignsignerResponseCompoundContact() { 
   }
@@ -151,49 +151,49 @@ public class EzsignsignerResponseCompoundContact {
   }
 
 
-  public EzsignsignerResponseCompoundContact sPhoneNumber(String sPhoneNumber) {
+  public EzsignsignerResponseCompoundContact sPhoneE164(String sPhoneE164) {
     
-    this.sPhoneNumber = sPhoneNumber;
+    this.sPhoneE164 = sPhoneE164;
     return this;
   }
 
    /**
-   * The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
-   * @return sPhoneNumber
+   * A phone number in E.164 Format
+   * @return sPhoneE164
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(example = "+5149901516", value = "A phone number in E.164 Format")
 
-  public String getsPhoneNumber() {
-    return sPhoneNumber;
+  public String getsPhoneE164() {
+    return sPhoneE164;
   }
 
 
-  public void setsPhoneNumber(String sPhoneNumber) {
-    this.sPhoneNumber = sPhoneNumber;
+  public void setsPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public EzsignsignerResponseCompoundContact sPhoneNumberCell(String sPhoneNumberCell) {
+  public EzsignsignerResponseCompoundContact sPhoneE164Cell(String sPhoneE164Cell) {
     
-    this.sPhoneNumberCell = sPhoneNumberCell;
+    this.sPhoneE164Cell = sPhoneE164Cell;
     return this;
   }
 
    /**
-   * The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
-   * @return sPhoneNumberCell
+   * A phone number in E.164 Format
+   * @return sPhoneE164Cell
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(example = "+5149901516", value = "A phone number in E.164 Format")
 
-  public String getsPhoneNumberCell() {
-    return sPhoneNumberCell;
+  public String getsPhoneE164Cell() {
+    return sPhoneE164Cell;
   }
 
 
-  public void setsPhoneNumberCell(String sPhoneNumberCell) {
-    this.sPhoneNumberCell = sPhoneNumberCell;
+  public void setsPhoneE164Cell(String sPhoneE164Cell) {
+    this.sPhoneE164Cell = sPhoneE164Cell;
   }
 
 
@@ -210,13 +210,13 @@ public class EzsignsignerResponseCompoundContact {
         Objects.equals(this.sContactLastname, ezsignsignerResponseCompoundContact.sContactLastname) &&
         Objects.equals(this.fkiLanguageID, ezsignsignerResponseCompoundContact.fkiLanguageID) &&
         Objects.equals(this.sEmailAddress, ezsignsignerResponseCompoundContact.sEmailAddress) &&
-        Objects.equals(this.sPhoneNumber, ezsignsignerResponseCompoundContact.sPhoneNumber) &&
-        Objects.equals(this.sPhoneNumberCell, ezsignsignerResponseCompoundContact.sPhoneNumberCell);
+        Objects.equals(this.sPhoneE164, ezsignsignerResponseCompoundContact.sPhoneE164) &&
+        Objects.equals(this.sPhoneE164Cell, ezsignsignerResponseCompoundContact.sPhoneE164Cell);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneNumber, sPhoneNumberCell);
+    return Objects.hash(sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneE164, sPhoneE164Cell);
   }
 
   @Override
@@ -227,8 +227,8 @@ public class EzsignsignerResponseCompoundContact {
     sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
-    sb.append("    sPhoneNumber: ").append(toIndentedString(sPhoneNumber)).append("\n");
-    sb.append("    sPhoneNumberCell: ").append(toIndentedString(sPhoneNumberCell)).append("\n");
+    sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
+    sb.append("    sPhoneE164Cell: ").append(toIndentedString(sPhoneE164Cell)).append("\n");
     sb.append("}");
     return sb.toString();
   }

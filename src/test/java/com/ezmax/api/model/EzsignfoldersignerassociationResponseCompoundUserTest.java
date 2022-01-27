@@ -27,33 +27,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for EzsignsignerResponseCompoundContact
+ * Model tests for EzsignfoldersignerassociationResponseCompoundUser
  */
-public class EzsignsignerResponseCompoundContactTest {
-    private final EzsignsignerResponseCompoundContact model = new EzsignsignerResponseCompoundContact();
+public class EzsignfoldersignerassociationResponseCompoundUserTest {
+    private final EzsignfoldersignerassociationResponseCompoundUser model = new EzsignfoldersignerassociationResponseCompoundUser();
 
     /**
-     * Model tests for EzsignsignerResponseCompoundContact
+     * Model tests for EzsignfoldersignerassociationResponseCompoundUser
      */
     @Test
-    public void testEzsignsignerResponseCompoundContact() {
-        // TODO: test EzsignsignerResponseCompoundContact
+    public void testEzsignfoldersignerassociationResponseCompoundUser() {
+        // TODO: test EzsignfoldersignerassociationResponseCompoundUser
     }
 
     /**
-     * Test the property 'sContactFirstname'
+     * Test the property 'pkiUserID'
      */
     @Test
-    public void sContactFirstnameTest() {
-        // TODO: test sContactFirstname
-    }
-
-    /**
-     * Test the property 'sContactLastname'
-     */
-    @Test
-    public void sContactLastnameTest() {
-        // TODO: test sContactLastname
+    public void pkiUserIDTest() {
+        // TODO: test pkiUserID
     }
 
     /**
@@ -65,27 +57,27 @@ public class EzsignsignerResponseCompoundContactTest {
     }
 
     /**
+     * Test the property 'sUserFirstname'
+     */
+    @Test
+    public void sUserFirstnameTest() {
+        // TODO: test sUserFirstname
+    }
+
+    /**
+     * Test the property 'sUserLastname'
+     */
+    @Test
+    public void sUserLastnameTest() {
+        // TODO: test sUserLastname
+    }
+
+    /**
      * Test the property 'sEmailAddress'
      */
     @Test
     public void sEmailAddressTest() {
         // TODO: test sEmailAddress
-    }
-
-    /**
-     * Test the property 'sPhoneE164'
-     */
-    @Test
-    public void sPhoneE164Test() {
-        // TODO: test sPhoneE164
-    }
-
-    /**
-     * Test the property 'sPhoneE164Cell'
-     */
-    @Test
-    public void sPhoneE164CellTest() {
-        // TODO: test sPhoneE164Cell
     }
 
 }

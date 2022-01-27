@@ -29,7 +29,7 @@ import java.io.IOException;
  * Request for the /1/object/ezsignsignature/editObject API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsignsignature/editObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class UNUSEDEzsignsignatureEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)

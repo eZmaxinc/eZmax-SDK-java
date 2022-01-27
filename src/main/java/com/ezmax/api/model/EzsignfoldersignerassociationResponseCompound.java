@@ -16,6 +16,8 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponse;
+import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
+import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -29,8 +31,16 @@ import java.io.IOException;
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompound {
+  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  private EzsignfoldersignerassociationResponseCompoundUser objUser;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
+  private EzsignsignerResponseCompound objEzsignsigner;
+
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   private Integer pkiEzsignfoldersignerassociationID;
@@ -39,20 +49,58 @@ public class EzsignfoldersignerassociationResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
   private Integer fkiEzsignfolderID;
 
-  public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  private Integer fkiEzsignsignerID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  private Integer fkiUserID;
-
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY = "bEzsignfoldersignerassociationReceivecopy";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
   private Boolean bEzsignfoldersignerassociationReceivecopy;
 
   public EzsignfoldersignerassociationResponseCompound() { 
   }
+
+  public EzsignfoldersignerassociationResponseCompound objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    
+    this.objUser = objUser;
+    return this;
+  }
+
+   /**
+   * Get objUser
+   * @return objUser
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
+    return objUser;
+  }
+
+
+  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    this.objUser = objUser;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    
+    this.objEzsignsigner = objEzsignsigner;
+    return this;
+  }
+
+   /**
+   * Get objEzsignsigner
+   * @return objEzsignsigner
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignsignerResponseCompound getObjEzsignsigner() {
+    return objEzsignsigner;
+  }
+
+
+  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    this.objEzsignsigner = objEzsignsigner;
+  }
+
 
   public EzsignfoldersignerassociationResponseCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     
@@ -100,52 +148,6 @@ public class EzsignfoldersignerassociationResponseCompound {
   }
 
 
-  public EzsignfoldersignerassociationResponseCompound fkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Ezsignsigner
-   * @return fkiEzsignsignerID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Ezsignsigner")
-
-  public Integer getFkiEzsignsignerID() {
-    return fkiEzsignsignerID;
-  }
-
-
-  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-  }
-
-
-  public EzsignfoldersignerassociationResponseCompound fkiUserID(Integer fkiUserID) {
-    
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the User
-   * @return fkiUserID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
-
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-
-  public void setFkiUserID(Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
   public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
@@ -178,26 +180,26 @@ public class EzsignfoldersignerassociationResponseCompound {
       return false;
     }
     EzsignfoldersignerassociationResponseCompound ezsignfoldersignerassociationResponseCompound = (EzsignfoldersignerassociationResponseCompound) o;
-    return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponseCompound.pkiEzsignfoldersignerassociationID) &&
+    return Objects.equals(this.objUser, ezsignfoldersignerassociationResponseCompound.objUser) &&
+        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompound.objEzsignsigner) &&
+        Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponseCompound.pkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationResponseCompound.fkiEzsignfolderID) &&
-        Objects.equals(this.fkiEzsignsignerID, ezsignfoldersignerassociationResponseCompound.fkiEzsignsignerID) &&
-        Objects.equals(this.fkiUserID, ezsignfoldersignerassociationResponseCompound.fkiUserID) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, fkiEzsignsignerID, fkiUserID, bEzsignfoldersignerassociationReceivecopy);
+    return Objects.hash(objUser, objEzsignsigner, pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationResponseCompound {\n");
+    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
+    sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
-    sb.append("    fkiEzsignsignerID: ").append(toIndentedString(fkiEzsignsignerID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
     sb.append("}");
     return sb.toString();

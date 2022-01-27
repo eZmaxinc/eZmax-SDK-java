@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.4
-  - Build date: 2022-01-26T19:09:30.014830Z[Etc/UTC]
+  - Build date: 2022-01-27T21:40:38.310231Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -298,6 +298,7 @@ Class | Method | HTTP request | Description
  - [EzsignfoldersignerassociationRequestCompoundAllOf](docs/EzsignfoldersignerassociationRequestCompoundAllOf.md)
  - [EzsignfoldersignerassociationResponse](docs/EzsignfoldersignerassociationResponse.md)
  - [EzsignfoldersignerassociationResponseCompound](docs/EzsignfoldersignerassociationResponseCompound.md)
+ - [EzsignfoldersignerassociationResponseCompoundUser](docs/EzsignfoldersignerassociationResponseCompoundUser.md)
  - [EzsignfoldertypeGetListV1Response](docs/EzsignfoldertypeGetListV1Response.md)
  - [EzsignfoldertypeGetListV1ResponseAllOf](docs/EzsignfoldertypeGetListV1ResponseAllOf.md)
  - [EzsignfoldertypeGetListV1ResponseMPayload](docs/EzsignfoldertypeGetListV1ResponseMPayload.md)

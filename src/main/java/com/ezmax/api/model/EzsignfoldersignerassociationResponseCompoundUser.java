@@ -15,8 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.FieldEUserType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -27,11 +25,11 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * A User Object
+ * A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
  */
-@ApiModel(description = "A User Object")
+@ApiModel(description = "A Ezsignfoldersignerassociation->User Object and children to create a complete structure")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
-public class UserResponse {
+public class EzsignfoldersignerassociationResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
   private Integer pkiUserID;
@@ -39,10 +37,6 @@ public class UserResponse {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
   private Integer fkiLanguageID;
-
-  public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
-  @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
-  private FieldEUserType eUserType;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
@@ -52,18 +46,14 @@ public class UserResponse {
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
   private String sUserLastname;
 
-  public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
-  @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  private String sUserLoginname;
+  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
+  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  private String sEmailAddress;
 
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  private CommonAudit objAudit;
-
-  public UserResponse() { 
+  public EzsignfoldersignerassociationResponseCompoundUser() { 
   }
 
-  public UserResponse pkiUserID(Integer pkiUserID) {
+  public EzsignfoldersignerassociationResponseCompoundUser pkiUserID(Integer pkiUserID) {
     
     this.pkiUserID = pkiUserID;
     return this;
@@ -86,7 +76,7 @@ public class UserResponse {
   }
 
 
-  public UserResponse fkiLanguageID(Integer fkiLanguageID) {
+  public EzsignfoldersignerassociationResponseCompoundUser fkiLanguageID(Integer fkiLanguageID) {
     
     this.fkiLanguageID = fkiLanguageID;
     return this;
@@ -111,30 +101,7 @@ public class UserResponse {
   }
 
 
-  public UserResponse eUserType(FieldEUserType eUserType) {
-    
-    this.eUserType = eUserType;
-    return this;
-  }
-
-   /**
-   * Get eUserType
-   * @return eUserType
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public FieldEUserType geteUserType() {
-    return eUserType;
-  }
-
-
-  public void seteUserType(FieldEUserType eUserType) {
-    this.eUserType = eUserType;
-  }
-
-
-  public UserResponse sUserFirstname(String sUserFirstname) {
+  public EzsignfoldersignerassociationResponseCompoundUser sUserFirstname(String sUserFirstname) {
     
     this.sUserFirstname = sUserFirstname;
     return this;
@@ -157,7 +124,7 @@ public class UserResponse {
   }
 
 
-  public UserResponse sUserLastname(String sUserLastname) {
+  public EzsignfoldersignerassociationResponseCompoundUser sUserLastname(String sUserLastname) {
     
     this.sUserLastname = sUserLastname;
     return this;
@@ -180,49 +147,26 @@ public class UserResponse {
   }
 
 
-  public UserResponse sUserLoginname(String sUserLoginname) {
+  public EzsignfoldersignerassociationResponseCompoundUser sEmailAddress(String sEmailAddress) {
     
-    this.sUserLoginname = sUserLoginname;
+    this.sEmailAddress = sEmailAddress;
     return this;
   }
 
    /**
-   * The Login name of the User.
-   * @return sUserLoginname
+   * The email address.
+   * @return sEmailAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "JohnDoe", required = true, value = "The Login name of the User.")
+  @ApiModelProperty(example = "example@domain.com", required = true, value = "The email address.")
 
-  public String getsUserLoginname() {
-    return sUserLoginname;
+  public String getsEmailAddress() {
+    return sEmailAddress;
   }
 
 
-  public void setsUserLoginname(String sUserLoginname) {
-    this.sUserLoginname = sUserLoginname;
-  }
-
-
-  public UserResponse objAudit(CommonAudit objAudit) {
-    
-    this.objAudit = objAudit;
-    return this;
-  }
-
-   /**
-   * Get objAudit
-   * @return objAudit
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-
-  public void setObjAudit(CommonAudit objAudit) {
-    this.objAudit = objAudit;
+  public void setsEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
   }
 
 
@@ -234,32 +178,28 @@ public class UserResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UserResponse userResponse = (UserResponse) o;
-    return Objects.equals(this.pkiUserID, userResponse.pkiUserID) &&
-        Objects.equals(this.fkiLanguageID, userResponse.fkiLanguageID) &&
-        Objects.equals(this.eUserType, userResponse.eUserType) &&
-        Objects.equals(this.sUserFirstname, userResponse.sUserFirstname) &&
-        Objects.equals(this.sUserLastname, userResponse.sUserLastname) &&
-        Objects.equals(this.sUserLoginname, userResponse.sUserLoginname) &&
-        Objects.equals(this.objAudit, userResponse.objAudit);
+    EzsignfoldersignerassociationResponseCompoundUser ezsignfoldersignerassociationResponseCompoundUser = (EzsignfoldersignerassociationResponseCompoundUser) o;
+    return Objects.equals(this.pkiUserID, ezsignfoldersignerassociationResponseCompoundUser.pkiUserID) &&
+        Objects.equals(this.fkiLanguageID, ezsignfoldersignerassociationResponseCompoundUser.fkiLanguageID) &&
+        Objects.equals(this.sUserFirstname, ezsignfoldersignerassociationResponseCompoundUser.sUserFirstname) &&
+        Objects.equals(this.sUserLastname, ezsignfoldersignerassociationResponseCompoundUser.sUserLastname) &&
+        Objects.equals(this.sEmailAddress, ezsignfoldersignerassociationResponseCompoundUser.sEmailAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, fkiLanguageID, eUserType, sUserFirstname, sUserLastname, sUserLoginname, objAudit);
+    return Objects.hash(pkiUserID, fkiLanguageID, sUserFirstname, sUserLastname, sEmailAddress);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UserResponse {\n");
+    sb.append("class EzsignfoldersignerassociationResponseCompoundUser {\n");
     sb.append("    pkiUserID: ").append(toIndentedString(pkiUserID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
-    sb.append("    eUserType: ").append(toIndentedString(eUserType)).append("\n");
     sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
-    sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

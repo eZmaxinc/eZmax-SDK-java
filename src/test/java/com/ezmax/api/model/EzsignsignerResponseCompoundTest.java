@@ -52,6 +52,14 @@ public class EzsignsignerResponseCompoundTest {
     }
 
     /**
+     * Test the property 'pkiEzsignsignerID'
+     */
+    @Test
+    public void pkiEzsignsignerIDTest() {
+        // TODO: test pkiEzsignsignerID
+    }
+
+    /**
      * Test the property 'fkiTaxassignmentID'
      */
     @Test
@@ -68,19 +76,19 @@ public class EzsignsignerResponseCompoundTest {
     }
 
     /**
-     * Test the property 'eEzsignsignerLogintype'
+     * Test the property 'fkiUserlogintypeID'
      */
     @Test
-    public void eEzsignsignerLogintypeTest() {
-        // TODO: test eEzsignsignerLogintype
+    public void fkiUserlogintypeIDTest() {
+        // TODO: test fkiUserlogintypeID
     }
 
     /**
-     * Test the property 'sEzsignsignerSecretanswer'
+     * Test the property 'sUserlogintypeDescriptionX'
      */
     @Test
-    public void sEzsignsignerSecretanswerTest() {
-        // TODO: test sEzsignsignerSecretanswer
+    public void sUserlogintypeDescriptionXTest() {
+        // TODO: test sUserlogintypeDescriptionX
     }
 
 }

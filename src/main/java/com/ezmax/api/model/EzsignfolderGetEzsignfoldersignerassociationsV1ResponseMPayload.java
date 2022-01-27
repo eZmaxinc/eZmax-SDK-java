@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignfoldersignerassociationResponse;
+import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,22 +31,22 @@ import java.util.List;
  * Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
-  private List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation = new ArrayList<EzsignfoldersignerassociationResponse>();
+  private List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation = new ArrayList<EzsignfoldersignerassociationResponseCompound>();
 
   public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload() { 
   }
 
-  public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload aObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation) {
+  public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload aObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation) {
     
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
     return this;
   }
 
-  public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload addAObjEzsignfoldersignerassociationItem(EzsignfoldersignerassociationResponse aObjEzsignfoldersignerassociationItem) {
+  public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload addAObjEzsignfoldersignerassociationItem(EzsignfoldersignerassociationResponseCompound aObjEzsignfoldersignerassociationItem) {
     this.aObjEzsignfoldersignerassociation.add(aObjEzsignfoldersignerassociationItem);
     return this;
   }
@@ -58,12 +58,12 @@ public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignfoldersignerassociationResponse> getaObjEzsignfoldersignerassociation() {
+  public List<EzsignfoldersignerassociationResponseCompound> getaObjEzsignfoldersignerassociation() {
     return aObjEzsignfoldersignerassociation;
   }
 
 
-  public void setaObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponse> aObjEzsignfoldersignerassociation) {
+  public void setaObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation) {
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
   }
 

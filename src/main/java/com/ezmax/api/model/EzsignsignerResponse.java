@@ -28,8 +28,12 @@ import java.io.IOException;
  * An Ezsignsigner Object
  */
 @ApiModel(description = "An Ezsignsigner Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-26T19:09:30.014830Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
 public class EzsignsignerResponse {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
+  private Integer pkiEzsignsignerID;
+
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
   private Integer fkiTaxassignmentID;
@@ -38,69 +42,39 @@ public class EzsignsignerResponse {
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
   private Integer fkiSecretquestionID;
 
-  /**
-   * The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-   */
-  @JsonAdapter(EEzsignsignerLogintypeEnum.Adapter.class)
-  public enum EEzsignsignerLogintypeEnum {
-    PASSWORD("Password"),
-    
-    PASSWORDPHONE("PasswordPhone"),
-    
-    PASSWORDQUESTION("PasswordQuestion"),
-    
-    INPERSONPHONE("InPersonPhone"),
-    
-    INPERSON("InPerson");
+  public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  private Integer fkiUserlogintypeID;
 
-    private String value;
-
-    EEzsignsignerLogintypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static EEzsignsignerLogintypeEnum fromValue(String value) {
-      for (EEzsignsignerLogintypeEnum b : EEzsignsignerLogintypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<EEzsignsignerLogintypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final EEzsignsignerLogintypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public EEzsignsignerLogintypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return EEzsignsignerLogintypeEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE)
-  private EEzsignsignerLogintypeEnum eEzsignsignerLogintype;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER = "sEzsignsignerSecretanswer";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER)
-  private String sEzsignsignerSecretanswer;
+  public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X = "sUserlogintypeDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
+  private String sUserlogintypeDescriptionX;
 
   public EzsignsignerResponse() { 
   }
+
+  public EzsignsignerResponse pkiEzsignsignerID(Integer pkiEzsignsignerID) {
+    
+    this.pkiEzsignsignerID = pkiEzsignsignerID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignsigner
+   * @return pkiEzsignsignerID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Ezsignsigner")
+
+  public Integer getPkiEzsignsignerID() {
+    return pkiEzsignsignerID;
+  }
+
+
+  public void setPkiEzsignsignerID(Integer pkiEzsignsignerID) {
+    this.pkiEzsignsignerID = pkiEzsignsignerID;
+  }
+
 
   public EzsignsignerResponse fkiTaxassignmentID(Integer fkiTaxassignmentID) {
     
@@ -150,49 +124,49 @@ public class EzsignsignerResponse {
   }
 
 
-  public EzsignsignerResponse eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+  public EzsignsignerResponse fkiUserlogintypeID(Integer fkiUserlogintypeID) {
     
-    this.eEzsignsignerLogintype = eEzsignsignerLogintype;
+    this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
 
    /**
-   * The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
-   * @return eEzsignsignerLogintype
+   * The unique ID of the Userlogintype
+   * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.")
+  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Userlogintype")
 
-  public EEzsignsignerLogintypeEnum geteEzsignsignerLogintype() {
-    return eEzsignsignerLogintype;
+  public Integer getFkiUserlogintypeID() {
+    return fkiUserlogintypeID;
   }
 
 
-  public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
-    this.eEzsignsignerLogintype = eEzsignsignerLogintype;
+  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+    this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignsignerResponse sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
+  public EzsignsignerResponse sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     
-    this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
+    this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
 
    /**
-   * The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
-   * @return sEzsignsignerSecretanswer
+   * The description of the Userlogintype in the language of the requester
+   * @return sUserlogintypeDescriptionX
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "Email and phone or SMS", required = true, value = "The description of the Userlogintype in the language of the requester")
 
-  public String getsEzsignsignerSecretanswer() {
-    return sEzsignsignerSecretanswer;
+  public String getsUserlogintypeDescriptionX() {
+    return sUserlogintypeDescriptionX;
   }
 
 
-  public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
-    this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
+  public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
+    this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
 
@@ -205,25 +179,27 @@ public class EzsignsignerResponse {
       return false;
     }
     EzsignsignerResponse ezsignsignerResponse = (EzsignsignerResponse) o;
-    return Objects.equals(this.fkiTaxassignmentID, ezsignsignerResponse.fkiTaxassignmentID) &&
+    return Objects.equals(this.pkiEzsignsignerID, ezsignsignerResponse.pkiEzsignsignerID) &&
+        Objects.equals(this.fkiTaxassignmentID, ezsignsignerResponse.fkiTaxassignmentID) &&
         Objects.equals(this.fkiSecretquestionID, ezsignsignerResponse.fkiSecretquestionID) &&
-        Objects.equals(this.eEzsignsignerLogintype, ezsignsignerResponse.eEzsignsignerLogintype) &&
-        Objects.equals(this.sEzsignsignerSecretanswer, ezsignsignerResponse.sEzsignsignerSecretanswer);
+        Objects.equals(this.fkiUserlogintypeID, ezsignsignerResponse.fkiUserlogintypeID) &&
+        Objects.equals(this.sUserlogintypeDescriptionX, ezsignsignerResponse.sUserlogintypeDescriptionX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiTaxassignmentID, fkiSecretquestionID, eEzsignsignerLogintype, sEzsignsignerSecretanswer);
+    return Objects.hash(pkiEzsignsignerID, fkiTaxassignmentID, fkiSecretquestionID, fkiUserlogintypeID, sUserlogintypeDescriptionX);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerResponse {\n");
+    sb.append("    pkiEzsignsignerID: ").append(toIndentedString(pkiEzsignsignerID)).append("\n");
     sb.append("    fkiTaxassignmentID: ").append(toIndentedString(fkiTaxassignmentID)).append("\n");
     sb.append("    fkiSecretquestionID: ").append(toIndentedString(fkiSecretquestionID)).append("\n");
-    sb.append("    eEzsignsignerLogintype: ").append(toIndentedString(eEzsignsignerLogintype)).append("\n");
-    sb.append("    sEzsignsignerSecretanswer: ").append(toIndentedString(sEzsignsignerSecretanswer)).append("\n");
+    sb.append("    fkiUserlogintypeID: ").append(toIndentedString(fkiUserlogintypeID)).append("\n");
+    sb.append("    sUserlogintypeDescriptionX: ").append(toIndentedString(sUserlogintypeDescriptionX)).append("\n");
     sb.append("}");
     return sb.toString();
   }

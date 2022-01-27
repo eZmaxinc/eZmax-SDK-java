@@ -57,22 +57,6 @@ public class EzsignfoldersignerassociationResponseTest {
     }
 
     /**
-     * Test the property 'fkiEzsignsignerID'
-     */
-    @Test
-    public void fkiEzsignsignerIDTest() {
-        // TODO: test fkiEzsignsignerID
-    }
-
-    /**
-     * Test the property 'fkiUserID'
-     */
-    @Test
-    public void fkiUserIDTest() {
-        // TODO: test fkiUserID
-    }
-
-    /**
      * Test the property 'bEzsignfoldersignerassociationReceivecopy'
      */
     @Test
