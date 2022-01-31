@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignfolderListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -24,46 +23,67 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * EzsignfolderGetListV1ResponseMPayloadAllOf
+ * Test
  */
+@ApiModel(description = "Test")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
-public class EzsignfolderGetListV1ResponseMPayloadAllOf {
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
-  private List<EzsignfolderListElement> aObjEzsignfolder = new ArrayList<EzsignfolderListElement>();
+public class Xxxx {
+  public static final String SERIALIZED_NAME_FOO = "foo";
+  @SerializedName(SERIALIZED_NAME_FOO)
+  private Integer foo;
 
-  public EzsignfolderGetListV1ResponseMPayloadAllOf() { 
+  public static final String SERIALIZED_NAME_BAR = "bar";
+  @SerializedName(SERIALIZED_NAME_BAR)
+  private Integer bar;
+
+  public Xxxx() { 
   }
 
-  public EzsignfolderGetListV1ResponseMPayloadAllOf aObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
+  public Xxxx foo(Integer foo) {
     
-    this.aObjEzsignfolder = aObjEzsignfolder;
-    return this;
-  }
-
-  public EzsignfolderGetListV1ResponseMPayloadAllOf addAObjEzsignfolderItem(EzsignfolderListElement aObjEzsignfolderItem) {
-    this.aObjEzsignfolder.add(aObjEzsignfolderItem);
+    this.foo = foo;
     return this;
   }
 
    /**
-   * Get aObjEzsignfolder
-   * @return aObjEzsignfolder
+   * Get foo
+   * @return foo
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "1", required = true, value = "")
 
-  public List<EzsignfolderListElement> getaObjEzsignfolder() {
-    return aObjEzsignfolder;
+  public Integer getFoo() {
+    return foo;
   }
 
 
-  public void setaObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
-    this.aObjEzsignfolder = aObjEzsignfolder;
+  public void setFoo(Integer foo) {
+    this.foo = foo;
+  }
+
+
+  public Xxxx bar(Integer bar) {
+    
+    this.bar = bar;
+    return this;
+  }
+
+   /**
+   * Get bar
+   * @return bar
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "1", required = true, value = "")
+
+  public Integer getBar() {
+    return bar;
+  }
+
+
+  public void setBar(Integer bar) {
+    this.bar = bar;
   }
 
 
@@ -75,20 +95,22 @@ public class EzsignfolderGetListV1ResponseMPayloadAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignfolderGetListV1ResponseMPayloadAllOf ezsignfolderGetListV1ResponseMPayloadAllOf = (EzsignfolderGetListV1ResponseMPayloadAllOf) o;
-    return Objects.equals(this.aObjEzsignfolder, ezsignfolderGetListV1ResponseMPayloadAllOf.aObjEzsignfolder);
+    Xxxx xxxx = (Xxxx) o;
+    return Objects.equals(this.foo, xxxx.foo) &&
+        Objects.equals(this.bar, xxxx.bar);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfolder);
+    return Objects.hash(foo, bar);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EzsignfolderGetListV1ResponseMPayloadAllOf {\n");
-    sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
+    sb.append("class Xxxx {\n");
+    sb.append("    foo: ").append(toIndentedString(foo)).append("\n");
+    sb.append("    bar: ").append(toIndentedString(bar)).append("\n");
     sb.append("}");
     return sb.toString();
   }

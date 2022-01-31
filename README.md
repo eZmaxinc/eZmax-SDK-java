@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.4
-  - Build date: 2022-01-27T21:40:38.310231Z[Etc/UTC]
+  - Build date: 2022-01-31T18:51:45.466914Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -386,6 +386,7 @@ Class | Method | HTTP request | Description
  - [WebhookUserUserCreated](docs/WebhookUserUserCreated.md)
  - [WebhookUserUserCreatedAllOf](docs/WebhookUserUserCreatedAllOf.md)
  - [WebsiteRequest](docs/WebsiteRequest.md)
+ - [Xxxx](docs/Xxxx.md)
 
 
 ## Documentation for Authorization

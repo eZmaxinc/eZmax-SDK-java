@@ -29,7 +29,7 @@ import java.io.IOException;
  * Request for the /1/object/ezsignfolder/editObject API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsignfolder/editObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
 public class UNUSEDEzsignfolderEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)

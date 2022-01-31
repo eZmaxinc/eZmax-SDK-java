@@ -41,6 +41,14 @@ public class EzsignsignerResponseCompoundContactTest {
     }
 
     /**
+     * Test the property 'pkiContactID'
+     */
+    @Test
+    public void pkiContactIDTest() {
+        // TODO: test pkiContactID
+    }
+
+    /**
      * Test the property 'sContactFirstname'
      */
     @Test

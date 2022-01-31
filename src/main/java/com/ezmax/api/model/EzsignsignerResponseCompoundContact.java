@@ -28,8 +28,12 @@ import java.io.IOException;
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
 public class EzsignsignerResponseCompoundContact {
+  public static final String SERIALIZED_NAME_PKI_CONTACT_I_D = "pkiContactID";
+  @SerializedName(SERIALIZED_NAME_PKI_CONTACT_I_D)
+  private Integer pkiContactID;
+
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
   private String sContactFirstname;
@@ -56,6 +60,29 @@ public class EzsignsignerResponseCompoundContact {
 
   public EzsignsignerResponseCompoundContact() { 
   }
+
+  public EzsignsignerResponseCompoundContact pkiContactID(Integer pkiContactID) {
+    
+    this.pkiContactID = pkiContactID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Contact
+   * @return pkiContactID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "21", required = true, value = "The unique ID of the Contact")
+
+  public Integer getPkiContactID() {
+    return pkiContactID;
+  }
+
+
+  public void setPkiContactID(Integer pkiContactID) {
+    this.pkiContactID = pkiContactID;
+  }
+
 
   public EzsignsignerResponseCompoundContact sContactFirstname(String sContactFirstname) {
     
@@ -206,7 +233,8 @@ public class EzsignsignerResponseCompoundContact {
       return false;
     }
     EzsignsignerResponseCompoundContact ezsignsignerResponseCompoundContact = (EzsignsignerResponseCompoundContact) o;
-    return Objects.equals(this.sContactFirstname, ezsignsignerResponseCompoundContact.sContactFirstname) &&
+    return Objects.equals(this.pkiContactID, ezsignsignerResponseCompoundContact.pkiContactID) &&
+        Objects.equals(this.sContactFirstname, ezsignsignerResponseCompoundContact.sContactFirstname) &&
         Objects.equals(this.sContactLastname, ezsignsignerResponseCompoundContact.sContactLastname) &&
         Objects.equals(this.fkiLanguageID, ezsignsignerResponseCompoundContact.fkiLanguageID) &&
         Objects.equals(this.sEmailAddress, ezsignsignerResponseCompoundContact.sEmailAddress) &&
@@ -216,13 +244,14 @@ public class EzsignsignerResponseCompoundContact {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneE164, sPhoneE164Cell);
+    return Objects.hash(pkiContactID, sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneE164, sPhoneE164Cell);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerResponseCompoundContact {\n");
+    sb.append("    pkiContactID: ").append(toIndentedString(pkiContactID)).append("\n");
     sb.append("    sContactFirstname: ").append(toIndentedString(sContactFirstname)).append("\n");
     sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");

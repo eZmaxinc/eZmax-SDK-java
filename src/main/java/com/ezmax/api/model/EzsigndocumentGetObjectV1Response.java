@@ -33,7 +33,7 @@ import java.io.IOException;
  * Response for the /1/object/ezsigndocument/getDownloadUrl API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsigndocument/getDownloadUrl API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-27T21:40:38.310231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

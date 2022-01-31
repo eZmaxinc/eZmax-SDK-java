@@ -236,6 +236,7 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
+docs/Xxxx.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -476,6 +477,7 @@ src/main/java/com/ezmax/api/model/WebhookResponse.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreated.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreatedAllOf.java
 src/main/java/com/ezmax/api/model/WebsiteRequest.java
+src/main/java/com/ezmax/api/model/Xxxx.java
 src/main/java/eZmaxAPI/ApiCallback.java
 src/main/java/eZmaxAPI/ApiClient.java
 src/main/java/eZmaxAPI/ApiException.java
@@ -724,3 +726,4 @@ src/test/java/com/ezmax/api/model/WebhookResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookUserUserCreatedAllOfTest.java
 src/test/java/com/ezmax/api/model/WebhookUserUserCreatedTest.java
 src/test/java/com/ezmax/api/model/WebsiteRequestTest.java
+src/test/java/com/ezmax/api/model/XxxxTest.java

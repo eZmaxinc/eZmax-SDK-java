@@ -2872,14 +2872,6 @@ components:
       description: Response for the /1/object/ezsignfoldersignerassociation/getObject
         API Request
       type: object
-    Common-Response:
-      description: All API response will inherit this based Response
-      properties:
-        objDebugPayload:
-          $ref: '#/components/schemas/Common-Response-objDebugPayload'
-        objDebug:
-          $ref: '#/components/schemas/Common-Response-objDebug'
-      type: object
     Common-Response-Error:
       description: Generic Error Message
       properties:
@@ -6942,10 +6934,50 @@ components:
       description: A phone number in E.164 Format
       example: +5149901516
       type: string
+    ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload:
+      description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
+        API Request
+      properties:
+        a_objEzsignfoldersignerassociation:
+          items:
+            $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociation
+      type: object
+    Common-Response:
+      description: All API response will inherit this based Response
+      properties:
+        objDebugPayload:
+          $ref: '#/components/schemas/Common-Response-objDebugPayload'
+        objDebug:
+          $ref: '#/components/schemas/Common-Response-objDebug'
+      type: object
+    xxxx:
+      description: Test
+      properties:
+        foo:
+          example: 1
+          type: integer
+        bar:
+          example: 1
+          type: integer
+      required:
+      - bar
+      - foo
+      type: object
+    Field-pkiContactID:
+      description: The unique ID of the Contact
+      example: 21
+      type: integer
     ezsignsigner-ResponseCompound-Contact:
       description: A Ezsignsigner->Contact Object and children to create a complete
         structure
       properties:
+        pkiContactID:
+          description: The unique ID of the Contact
+          example: 21
+          type: integer
         sContactFirstname:
           description: The First name of the contact
           example: John
@@ -6982,19 +7014,9 @@ components:
           type: string
       required:
       - fkiLanguageID
+      - pkiContactID
       - sContactFirstname
       - sContactLastname
-      type: object
-    ezsignfolder-getEzsignfoldersignerassociations-v1-Response-mPayload:
-      description: Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations
-        API Request
-      properties:
-        a_objEzsignfoldersignerassociation:
-          items:
-            $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
-          type: array
-      required:
-      - a_objEzsignfoldersignerassociation
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
