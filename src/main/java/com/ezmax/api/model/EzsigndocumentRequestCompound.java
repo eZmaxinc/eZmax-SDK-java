@@ -29,7 +29,7 @@ import java.io.IOException;
  * An Ezsigndocument Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
 public class EzsigndocumentRequestCompound {
   /**
    * Indicates where to look for the document binary content.

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Generic List Response
  */
 @ApiModel(description = "Generic List Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
 public class CommonGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)

@@ -28,7 +28,7 @@ import java.io.IOException;
  * An Ezsignformfield Object
  */
 @ApiModel(description = "An Ezsignformfield Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
 public class EzsignformfieldResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)

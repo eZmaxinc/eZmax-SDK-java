@@ -30,7 +30,7 @@ import java.util.List;
  * Payload for the /1/object/ezsignfolder/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-31T18:51:45.466914Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D = "a_pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D)
