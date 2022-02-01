@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,7 +31,7 @@ import java.util.List;
  * Payload for the /1/object/activesession/getCurrent API Request
  */
 @ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
   @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)
@@ -84,6 +85,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE = "eActivesessionSessiontype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE)
   private EActivesessionSessiontypeEnum eActivesessionSessiontype;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
+  private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -159,6 +164,29 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
   public void seteActivesessionSessiontype(EActivesessionSessiontypeEnum eActivesessionSessiontype) {
     this.eActivesessionSessiontype = eActivesessionSessiontype;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
+    
+    this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
+    return this;
+  }
+
+   /**
+   * Get eActivesessionWeekdaystart
+   * @return eActivesessionWeekdaystart
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
+    return eActivesessionWeekdaystart;
+  }
+
+
+  public void seteActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
+    this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
   }
 
 
@@ -346,6 +374,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
     return Objects.equals(this.sCustomerCode, activesessionGetCurrentV1ResponseMPayload.sCustomerCode) &&
         Objects.equals(this.eActivesessionSessiontype, activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype) &&
+        Objects.equals(this.eActivesessionWeekdaystart, activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionGetCurrentV1ResponseMPayload.fkiLanguageID) &&
         Objects.equals(this.sCompanyNameX, activesessionGetCurrentV1ResponseMPayload.sCompanyNameX) &&
         Objects.equals(this.sDepartmentNameX, activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX) &&
@@ -357,7 +386,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sCustomerCode, eActivesessionSessiontype, fkiLanguageID, sCompanyNameX, sDepartmentNameX, aRegisteredModules, aPermissions, fkiUserID, fkiApikeyID);
+    return Objects.hash(sCustomerCode, eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, aRegisteredModules, aPermissions, fkiUserID, fkiApikeyID);
   }
 
   @Override
@@ -366,6 +395,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
     sb.append("    sCustomerCode: ").append(toIndentedString(sCustomerCode)).append("\n");
     sb.append("    eActivesessionSessiontype: ").append(toIndentedString(eActivesessionSessiontype)).append("\n");
+    sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");

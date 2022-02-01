@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponse;
+import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundAllOf;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
 import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -31,7 +32,7 @@ import java.io.IOException;
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)

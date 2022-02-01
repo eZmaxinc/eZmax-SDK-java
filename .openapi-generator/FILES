@@ -85,6 +85,7 @@ docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
+docs/EzsigndocumentResponseCompoundAllOf.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -130,6 +131,7 @@ docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
+docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
 docs/EzsignfoldersignerassociationResponseCompoundUser.md
 docs/EzsignfoldertypeGetListV1Response.md
 docs/EzsignfoldertypeGetListV1ResponseAllOf.md
@@ -151,6 +153,7 @@ docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
+docs/EzsignsignatureRequestCompoundAllOf.md
 docs/EzsignsignaturecustomdateRequest.md
 docs/EzsignsignerRequest.md
 docs/EzsignsignerRequestCompound.md
@@ -165,6 +168,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
@@ -344,6 +348,7 @@ src/main/java/com/ezmax/api/model/EzsigndocumentRequest.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompound.java
+src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOf.java
@@ -389,6 +394,7 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompound.j
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponse.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompound.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundUser.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseAllOf.java
@@ -410,6 +416,7 @@ src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompound.java
+src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompoundAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignaturecustomdateRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignerRequestCompound.java
@@ -424,6 +431,7 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseAllOf.ja
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageListElement.java
+src/main/java/com/ezmax/api/model/FieldEActivesessionWeekdaystart.java
 src/main/java/com/ezmax/api/model/FieldEEzsigndocumentStep.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderStep.java
@@ -591,6 +599,7 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1RequestTest.java
@@ -636,6 +645,7 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundUserTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseTest.java
@@ -657,6 +667,7 @@ src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignsignaturecustomdateRequestTest.java
@@ -673,6 +684,7 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageListElementTest.java
+src/test/java/com/ezmax/api/model/FieldEActivesessionWeekdaystartTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderStepTest.java

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
 import com.ezmax.api.model.EzsigndocumentResponseCompound;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
@@ -24,6 +25,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -41,6 +44,46 @@ public class EzsigndocumentGetObjectV1ResponseMPayloadTest {
     @Test
     public void testEzsigndocumentGetObjectV1ResponseMPayload() {
         // TODO: test EzsigndocumentGetObjectV1ResponseMPayload
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformtotal'
+     */
+    @Test
+    public void iEzsigndocumentStepformtotalTest() {
+        // TODO: test iEzsigndocumentStepformtotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformcurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepformcurrentTest() {
+        // TODO: test iEzsigndocumentStepformcurrent
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignaturetotal'
+     */
+    @Test
+    public void iEzsigndocumentStepsignaturetotalTest() {
+        // TODO: test iEzsigndocumentStepsignaturetotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignatureCurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepsignatureCurrentTest() {
+        // TODO: test iEzsigndocumentStepsignatureCurrent
+    }
+
+    /**
+     * Test the property 'aObjEzsignfoldersignerassociationstatus'
+     */
+    @Test
+    public void aObjEzsignfoldersignerassociationstatusTest() {
+        // TODO: test aObjEzsignfoldersignerassociationstatus
     }
 
     /**

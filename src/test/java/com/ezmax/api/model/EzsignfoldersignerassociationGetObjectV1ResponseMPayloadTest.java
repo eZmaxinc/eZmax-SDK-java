@@ -14,6 +14,8 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompound;
+import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
+import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,6 +41,22 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayloadTest {
     @Test
     public void testEzsignfoldersignerassociationGetObjectV1ResponseMPayload() {
         // TODO: test EzsignfoldersignerassociationGetObjectV1ResponseMPayload
+    }
+
+    /**
+     * Test the property 'objUser'
+     */
+    @Test
+    public void objUserTest() {
+        // TODO: test objUser
+    }
+
+    /**
+     * Test the property 'objEzsignsigner'
+     */
+    @Test
+    public void objEzsignsignerTest() {
+        // TODO: test objEzsignsigner
     }
 
     /**

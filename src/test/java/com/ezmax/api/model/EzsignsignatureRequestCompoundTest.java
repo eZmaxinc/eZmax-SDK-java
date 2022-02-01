@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EzsignsignatureRequest;
+import com.ezmax.api.model.EzsignsignatureRequestCompoundAllOf;
 import com.ezmax.api.model.EzsignsignaturecustomdateRequest;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.google.gson.TypeAdapter;
@@ -43,6 +44,22 @@ public class EzsignsignatureRequestCompoundTest {
     @Test
     public void testEzsignsignatureRequestCompound() {
         // TODO: test EzsignsignatureRequestCompound
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureCustomdate'
+     */
+    @Test
+    public void bEzsignsignatureCustomdateTest() {
+        // TODO: test bEzsignsignatureCustomdate
+    }
+
+    /**
+     * Test the property 'aObjEzsignsignaturecustomdate'
+     */
+    @Test
+    public void aObjEzsignsignaturecustomdateTest() {
+        // TODO: test aObjEzsignsignaturecustomdate
     }
 
     /**

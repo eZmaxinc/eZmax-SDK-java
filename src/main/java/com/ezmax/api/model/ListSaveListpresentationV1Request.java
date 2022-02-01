@@ -31,7 +31,7 @@ import java.util.List;
  * Request for the POST /1/module/list/listpresentation/{sListName} API Request
  */
 @ApiModel(description = "Request for the POST /1/module/list/listpresentation/{sListName} API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
 public class ListSaveListpresentationV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_LISTPRESENTATION = "a_objListpresentation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_LISTPRESENTATION)

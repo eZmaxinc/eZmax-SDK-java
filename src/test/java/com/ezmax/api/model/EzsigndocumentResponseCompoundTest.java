@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
 import com.ezmax.api.model.EzsigndocumentResponse;
+import com.ezmax.api.model.EzsigndocumentResponseCompoundAllOf;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,6 +45,46 @@ public class EzsigndocumentResponseCompoundTest {
     @Test
     public void testEzsigndocumentResponseCompound() {
         // TODO: test EzsigndocumentResponseCompound
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformtotal'
+     */
+    @Test
+    public void iEzsigndocumentStepformtotalTest() {
+        // TODO: test iEzsigndocumentStepformtotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformcurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepformcurrentTest() {
+        // TODO: test iEzsigndocumentStepformcurrent
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignaturetotal'
+     */
+    @Test
+    public void iEzsigndocumentStepsignaturetotalTest() {
+        // TODO: test iEzsigndocumentStepsignaturetotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignatureCurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepsignatureCurrentTest() {
+        // TODO: test iEzsigndocumentStepsignatureCurrent
+    }
+
+    /**
+     * Test the property 'aObjEzsignfoldersignerassociationstatus'
+     */
+    @Test
+    public void aObjEzsignfoldersignerassociationstatusTest() {
+        // TODO: test aObjEzsignfoldersignerassociationstatus
     }
 
     /**

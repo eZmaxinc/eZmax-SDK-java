@@ -2746,70 +2746,6 @@ components:
         be set and you can use this url to try a new request without sending the file
         over again
   schemas:
-    activesession-getCurrent-v1-Response-mPayload:
-      description: Payload for the /1/object/activesession/getCurrent API Request
-      properties:
-        sCustomerCode:
-          description: The customer code specific to the client in which the API request
-            is being made
-          type: string
-        eActivesessionSessiontype:
-          description: The type of session used for the API request call
-          enum:
-          - Normal
-          type: string
-        fkiLanguageID:
-          description: |-
-            The unique ID of the Language.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|French|
-            |2|English|
-          example: 2
-          maximum: 2
-          minimum: 1
-          type: integer
-        sCompanyNameX:
-          description: The name of the active Company in the current language
-          type: string
-        sDepartmentNameX:
-          description: The name of the active Department in the current language
-          type: string
-        a_RegisteredModules:
-          description: |-
-            An Array of Registered modules.
-
-            These are the modules that are Licensed to be used by the User or the API Key.
-          items:
-            type: string
-          type: array
-        a_Permissions:
-          description: An array of permissions granted to the user or api key
-          items:
-            type: integer
-          type: array
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          type: integer
-        fkiApikeyID:
-          description: The unique ID of the Apikey
-          example: 99
-          type: integer
-      required:
-      - a_Permissions
-      - a_RegisteredModules
-      - eActivesessionSessiontype
-      - fkiApikeyID
-      - fkiLanguageID
-      - fkiUserID
-      - sCompanyNameX
-      - sCustomerCode
-      - sDepartmentNameX
-      type: object
     ezsigndocument-createObject-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument_createObject_v1_Response_allOf'
@@ -6420,35 +6356,9 @@ components:
       type: object
     ezsigndocument-ResponseCompound:
       allOf:
+      - $ref: '#/components/schemas/ezsigndocument_ResponseCompound_allOf'
       - $ref: '#/components/schemas/ezsigndocument-Response'
       description: An Ezsigndocument Object and children to create a complete structure
-      properties:
-        iEzsigndocumentStepformtotal:
-          description: The total number of steps in the form filling phase
-          example: 2
-          type: integer
-        iEzsigndocumentStepformcurrent:
-          description: The current step in the form filling phase
-          example: 1
-          type: integer
-        iEzsigndocumentStepsignaturetotal:
-          description: The total number of steps in the signature filling phase
-          example: 2
-          type: integer
-        iEzsigndocumentStepsignatureCurrent:
-          description: The current step in the signature phase
-          example: 0
-          type: integer
-        a_objEzsignfoldersignerassociationstatus:
-          items:
-            $ref: '#/components/schemas/Custom-Ezsignfoldersignerassociationstatus-Response'
-          type: array
-      required:
-      - a_objEzsignfoldersignerassociationstatus
-      - iEzsigndocumentStepformcurrent
-      - iEzsigndocumentStepformtotal
-      - iEzsigndocumentStepsignatureCurrent
-      - iEzsigndocumentStepsignaturetotal
       type: object
     Field-iEzsignsignatureStep:
       description: The step when the Ezsignsigner will be invited to sign or fill
@@ -6523,23 +6433,9 @@ components:
       type: boolean
     ezsignsignature-RequestCompound:
       allOf:
+      - $ref: '#/components/schemas/ezsignsignature_RequestCompound_allOf'
       - $ref: '#/components/schemas/ezsignsignature-Request'
       description: An Ezsignsignature Object and children to create a complete structure
-      properties:
-        bEzsignsignatureCustomdate:
-          description: Whether the Ezsignsignature has a custom date format or not.
-            (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
-          type: boolean
-        a_objEzsignsignaturecustomdate:
-          description: |-
-            An array of custom date blocks that will be filled at the time of signature.
-
-            Can only be used if bEzsignsignatureCustomdate is true.
-
-            Use an empty array if you don't want to have a date at all.
-          items:
-            $ref: '#/components/schemas/ezsignsignaturecustomdate-Request'
-          type: array
       type: object
     ezsignsignature-Request:
       description: An Ezsignsignature Object
@@ -6789,13 +6685,9 @@ components:
       type: integer
     ezsignfoldersignerassociation-ResponseCompound:
       allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation_ResponseCompound_allOf'
       - $ref: '#/components/schemas/ezsignfoldersignerassociation-Response'
       description: An Ezsignfoldersignerassociation Object
-      properties:
-        objUser:
-          $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound-User'
-        objEzsignsigner:
-          $ref: '#/components/schemas/ezsignsigner-ResponseCompound'
       type: object
     ezsignfoldersignerassociation-ResponseCompound-User:
       description: A Ezsignfoldersignerassociation->User Object and children to create
@@ -7017,6 +6909,85 @@ components:
       - pkiContactID
       - sContactFirstname
       - sContactLastname
+      type: object
+    Field-eActivesessionWeekdaystart:
+      description: The weekday start of the User.
+      enum:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      example: Sunday
+      type: string
+    activesession-getCurrent-v1-Response-mPayload:
+      description: Payload for the /1/object/activesession/getCurrent API Request
+      properties:
+        sCustomerCode:
+          description: The customer code specific to the client in which the API request
+            is being made
+          type: string
+        eActivesessionSessiontype:
+          description: The type of session used for the API request call
+          enum:
+          - Normal
+          type: string
+        eActivesessionWeekdaystart:
+          $ref: '#/components/schemas/Field-eActivesessionWeekdaystart'
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sCompanyNameX:
+          description: The name of the active Company in the current language
+          type: string
+        sDepartmentNameX:
+          description: The name of the active Department in the current language
+          type: string
+        a_RegisteredModules:
+          description: |-
+            An Array of Registered modules.
+
+            These are the modules that are Licensed to be used by the User or the API Key.
+          items:
+            type: string
+          type: array
+        a_Permissions:
+          description: An array of permissions granted to the user or api key
+          items:
+            type: integer
+          type: array
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          type: integer
+        fkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          type: integer
+      required:
+      - a_Permissions
+      - a_RegisteredModules
+      - eActivesessionSessiontype
+      - eActivesessionWeekdaystart
+      - fkiApikeyID
+      - fkiLanguageID
+      - fkiUserID
+      - sCompanyNameX
+      - sCustomerCode
+      - sDepartmentNameX
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
@@ -7363,6 +7334,59 @@ components:
           $ref: '#/components/schemas/ezsignsigner-ResponseCompound-Contact'
       required:
       - objContact
+      type: object
+    ezsigndocument_ResponseCompound_allOf:
+      properties:
+        iEzsigndocumentStepformtotal:
+          description: The total number of steps in the form filling phase
+          example: 2
+          type: integer
+        iEzsigndocumentStepformcurrent:
+          description: The current step in the form filling phase
+          example: 1
+          type: integer
+        iEzsigndocumentStepsignaturetotal:
+          description: The total number of steps in the signature filling phase
+          example: 2
+          type: integer
+        iEzsigndocumentStepsignatureCurrent:
+          description: The current step in the signature phase
+          example: 0
+          type: integer
+        a_objEzsignfoldersignerassociationstatus:
+          items:
+            $ref: '#/components/schemas/Custom-Ezsignfoldersignerassociationstatus-Response'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociationstatus
+      - iEzsigndocumentStepformcurrent
+      - iEzsigndocumentStepformtotal
+      - iEzsigndocumentStepsignatureCurrent
+      - iEzsigndocumentStepsignaturetotal
+      type: object
+    ezsignsignature_RequestCompound_allOf:
+      properties:
+        bEzsignsignatureCustomdate:
+          description: Whether the Ezsignsignature has a custom date format or not.
+            (Only possible when eEzsignsignatureType is "Name" or "Handwritten")
+          type: boolean
+        a_objEzsignsignaturecustomdate:
+          description: |-
+            An array of custom date blocks that will be filled at the time of signature.
+
+            Can only be used if bEzsignsignatureCustomdate is true.
+
+            Use an empty array if you don't want to have a date at all.
+          items:
+            $ref: '#/components/schemas/ezsignsignaturecustomdate-Request'
+          type: array
+      type: object
+    ezsignfoldersignerassociation_ResponseCompound_allOf:
+      properties:
+        objUser:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound-User'
+        objEzsignsigner:
+          $ref: '#/components/schemas/ezsignsigner-ResponseCompound'
       type: object
   securitySchemes:
     Authorization:

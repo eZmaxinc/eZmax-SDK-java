@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignsignatureRequest;
+import com.ezmax.api.model.EzsignsignatureRequestCompoundAllOf;
 import com.ezmax.api.model.EzsignsignaturecustomdateRequest;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.google.gson.TypeAdapter;
@@ -33,7 +34,7 @@ import java.util.List;
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)

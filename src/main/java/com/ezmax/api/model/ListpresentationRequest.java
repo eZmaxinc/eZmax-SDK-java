@@ -30,7 +30,7 @@ import java.util.List;
  * A Listpresentation element
  */
 @ApiModel(description = "A Listpresentation element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T14:01:19.555802Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
 public class ListpresentationRequest {
   public static final String SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION = "sListpresentationDescription";
   @SerializedName(SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION)
