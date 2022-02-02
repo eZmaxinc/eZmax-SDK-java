@@ -13,6 +13,10 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.ActivesessionResponseCompound;
+import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
+import com.ezmax.api.model.ActivesessionResponseCompoundUser;
+import com.ezmax.api.model.FieldEActivesessionSessiontype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,11 +48,43 @@ public class ActivesessionGetCurrentV1ResponseMPayloadTest {
     }
 
     /**
-     * Test the property 'sCustomerCode'
+     * Test the property 'aPkiPermissionID'
      */
     @Test
-    public void sCustomerCodeTest() {
-        // TODO: test sCustomerCode
+    public void aPkiPermissionIDTest() {
+        // TODO: test aPkiPermissionID
+    }
+
+    /**
+     * Test the property 'objUserReal'
+     */
+    @Test
+    public void objUserRealTest() {
+        // TODO: test objUserReal
+    }
+
+    /**
+     * Test the property 'objUserCloned'
+     */
+    @Test
+    public void objUserClonedTest() {
+        // TODO: test objUserCloned
+    }
+
+    /**
+     * Test the property 'objApikey'
+     */
+    @Test
+    public void objApikeyTest() {
+        // TODO: test objApikey
+    }
+
+    /**
+     * Test the property 'aEModuleInternalname'
+     */
+    @Test
+    public void aEModuleInternalnameTest() {
+        // TODO: test aEModuleInternalname
     }
 
     /**
@@ -92,35 +128,19 @@ public class ActivesessionGetCurrentV1ResponseMPayloadTest {
     }
 
     /**
-     * Test the property 'aRegisteredModules'
+     * Test the property 'bActivesessionDebug'
      */
     @Test
-    public void aRegisteredModulesTest() {
-        // TODO: test aRegisteredModules
+    public void bActivesessionDebugTest() {
+        // TODO: test bActivesessionDebug
     }
 
     /**
-     * Test the property 'aPermissions'
+     * Test the property 'pksCustomerCode'
      */
     @Test
-    public void aPermissionsTest() {
-        // TODO: test aPermissions
-    }
-
-    /**
-     * Test the property 'fkiUserID'
-     */
-    @Test
-    public void fkiUserIDTest() {
-        // TODO: test fkiUserID
-    }
-
-    /**
-     * Test the property 'fkiApikeyID'
-     */
-    @Test
-    public void fkiApikeyIDTest() {
-        // TODO: test fkiApikeyID
+    public void pksCustomerCodeTest() {
+        // TODO: test pksCustomerCode
     }
 
 }

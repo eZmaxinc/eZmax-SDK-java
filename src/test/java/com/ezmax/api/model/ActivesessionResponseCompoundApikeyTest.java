@@ -27,33 +27,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for Xxxx
+ * Model tests for ActivesessionResponseCompoundApikey
  */
-public class XxxxTest {
-    private final Xxxx model = new Xxxx();
+public class ActivesessionResponseCompoundApikeyTest {
+    private final ActivesessionResponseCompoundApikey model = new ActivesessionResponseCompoundApikey();
 
     /**
-     * Model tests for Xxxx
+     * Model tests for ActivesessionResponseCompoundApikey
      */
     @Test
-    public void testXxxx() {
-        // TODO: test Xxxx
+    public void testActivesessionResponseCompoundApikey() {
+        // TODO: test ActivesessionResponseCompoundApikey
     }
 
     /**
-     * Test the property 'foo'
+     * Test the property 'pkiApikeyID'
      */
     @Test
-    public void fooTest() {
-        // TODO: test foo
+    public void pkiApikeyIDTest() {
+        // TODO: test pkiApikeyID
     }
 
     /**
-     * Test the property 'bar'
+     * Test the property 'sApikeyDescriptionX'
      */
     @Test
-    public void barTest() {
-        // TODO: test bar
+    public void sApikeyDescriptionXTest() {
+        // TODO: test sApikeyDescriptionX
     }
 
 }

@@ -8,6 +8,11 @@ build.sbt
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseAllOf.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionResponse.md
+docs/ActivesessionResponseCompound.md
+docs/ActivesessionResponseCompoundAllOf.md
+docs/ActivesessionResponseCompoundApikey.md
+docs/ActivesessionResponseCompoundUser.md
 docs/AddressRequest.md
 docs/ApikeyCreateObjectV1Request.md
 docs/ApikeyCreateObjectV1Response.md
@@ -168,6 +173,7 @@ docs/EzsigntemplatepackageGetListV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayload.md
 docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageListElement.md
+docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
@@ -240,7 +246,6 @@ docs/WebhookResponse.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
 docs/WebsiteRequest.md
-docs/Xxxx.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -271,6 +276,11 @@ src/main/java/com/ezmax/api/ObjectPeriodApi.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1Response.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/ActivesessionResponse.java
+src/main/java/com/ezmax/api/model/ActivesessionResponseCompound.java
+src/main/java/com/ezmax/api/model/ActivesessionResponseCompoundAllOf.java
+src/main/java/com/ezmax/api/model/ActivesessionResponseCompoundApikey.java
+src/main/java/com/ezmax/api/model/ActivesessionResponseCompoundUser.java
 src/main/java/com/ezmax/api/model/AddressRequest.java
 src/main/java/com/ezmax/api/model/ApikeyCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/ApikeyCreateObjectV1Response.java
@@ -431,6 +441,7 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseAllOf.ja
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageListElement.java
+src/main/java/com/ezmax/api/model/FieldEActivesessionSessiontype.java
 src/main/java/com/ezmax/api/model/FieldEActivesessionWeekdaystart.java
 src/main/java/com/ezmax/api/model/FieldEEzsigndocumentStep.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
@@ -485,7 +496,6 @@ src/main/java/com/ezmax/api/model/WebhookResponse.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreated.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreatedAllOf.java
 src/main/java/com/ezmax/api/model/WebsiteRequest.java
-src/main/java/com/ezmax/api/model/Xxxx.java
 src/main/java/eZmaxAPI/ApiCallback.java
 src/main/java/eZmaxAPI/ApiClient.java
 src/main/java/eZmaxAPI/ApiException.java
@@ -524,6 +534,11 @@ src/test/java/com/ezmax/api/ObjectPeriodApiTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseTest.java
+src/test/java/com/ezmax/api/model/ActivesessionResponseCompoundAllOfTest.java
+src/test/java/com/ezmax/api/model/ActivesessionResponseCompoundApikeyTest.java
+src/test/java/com/ezmax/api/model/ActivesessionResponseCompoundTest.java
+src/test/java/com/ezmax/api/model/ActivesessionResponseCompoundUserTest.java
+src/test/java/com/ezmax/api/model/ActivesessionResponseTest.java
 src/test/java/com/ezmax/api/model/AddressRequestTest.java
 src/test/java/com/ezmax/api/model/ApikeyCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/ApikeyCreateObjectV1ResponseAllOfTest.java
@@ -684,6 +699,7 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageListElementTest.java
+src/test/java/com/ezmax/api/model/FieldEActivesessionSessiontypeTest.java
 src/test/java/com/ezmax/api/model/FieldEActivesessionWeekdaystartTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
@@ -738,4 +754,3 @@ src/test/java/com/ezmax/api/model/WebhookResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookUserUserCreatedAllOfTest.java
 src/test/java/com/ezmax/api/model/WebhookUserUserCreatedTest.java
 src/test/java/com/ezmax/api/model/WebsiteRequestTest.java
-src/test/java/com/ezmax/api/model/XxxxTest.java

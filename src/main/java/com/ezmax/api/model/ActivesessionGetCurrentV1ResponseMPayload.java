@@ -15,6 +15,10 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.ActivesessionResponseCompound;
+import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
+import com.ezmax.api.model.ActivesessionResponseCompoundUser;
+import com.ezmax.api.model.FieldEActivesessionSessiontype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -31,60 +35,31 @@ import java.util.List;
  * Payload for the /1/object/activesession/getCurrent API Request
  */
 @ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-01T20:20:32.921872Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
-  @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)
-  private String sCustomerCode;
+  public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
+  @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
+  private List<Integer> aPkiPermissionID = new ArrayList<Integer>();
 
-  /**
-   * The type of session used for the API request call
-   */
-  @JsonAdapter(EActivesessionSessiontypeEnum.Adapter.class)
-  public enum EActivesessionSessiontypeEnum {
-    NORMAL("Normal");
+  public static final String SERIALIZED_NAME_OBJ_USER_REAL = "objUserReal";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER_REAL)
+  private ActivesessionResponseCompoundUser objUserReal;
 
-    private String value;
+  public static final String SERIALIZED_NAME_OBJ_USER_CLONED = "objUserCloned";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER_CLONED)
+  private ActivesessionResponseCompoundUser objUserCloned;
 
-    EActivesessionSessiontypeEnum(String value) {
-      this.value = value;
-    }
+  public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
+  @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
+  private ActivesessionResponseCompoundApikey objApikey;
 
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static EActivesessionSessiontypeEnum fromValue(String value) {
-      for (EActivesessionSessiontypeEnum b : EActivesessionSessiontypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<EActivesessionSessiontypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final EActivesessionSessiontypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public EActivesessionSessiontypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return EActivesessionSessiontypeEnum.fromValue(value);
-      }
-    }
-  }
+  public static final String SERIALIZED_NAME_A_E_MODULE_INTERNALNAME = "a_eModuleInternalname";
+  @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
+  private List<String> aEModuleInternalname = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE = "eActivesessionSessiontype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE)
-  private EActivesessionSessiontypeEnum eActivesessionSessiontype;
+  private FieldEActivesessionSessiontype eActivesessionSessiontype;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
@@ -102,67 +77,161 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
   private String sDepartmentNameX;
 
-  public static final String SERIALIZED_NAME_A_REGISTERED_MODULES = "a_RegisteredModules";
-  @SerializedName(SERIALIZED_NAME_A_REGISTERED_MODULES)
-  private List<String> aRegisteredModules = new ArrayList<String>();
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_DEBUG = "bActivesessionDebug";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_DEBUG)
+  private Boolean bActivesessionDebug;
 
-  public static final String SERIALIZED_NAME_A_PERMISSIONS = "a_Permissions";
-  @SerializedName(SERIALIZED_NAME_A_PERMISSIONS)
-  private List<Integer> aPermissions = new ArrayList<Integer>();
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
-  @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
-  private Integer fkiApikeyID;
+  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
+  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
+  private String pksCustomerCode;
 
   public ActivesessionGetCurrentV1ResponseMPayload() { 
   }
 
-  public ActivesessionGetCurrentV1ResponseMPayload sCustomerCode(String sCustomerCode) {
+  public ActivesessionGetCurrentV1ResponseMPayload aPkiPermissionID(List<Integer> aPkiPermissionID) {
     
-    this.sCustomerCode = sCustomerCode;
+    this.aPkiPermissionID = aPkiPermissionID;
+    return this;
+  }
+
+  public ActivesessionGetCurrentV1ResponseMPayload addAPkiPermissionIDItem(Integer aPkiPermissionIDItem) {
+    this.aPkiPermissionID.add(aPkiPermissionIDItem);
     return this;
   }
 
    /**
-   * The customer code specific to the client in which the API request is being made
-   * @return sCustomerCode
+   * An array of permissions granted to the user or api key
+   * @return aPkiPermissionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The customer code specific to the client in which the API request is being made")
+  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
 
-  public String getsCustomerCode() {
-    return sCustomerCode;
+  public List<Integer> getaPkiPermissionID() {
+    return aPkiPermissionID;
   }
 
 
-  public void setsCustomerCode(String sCustomerCode) {
-    this.sCustomerCode = sCustomerCode;
+  public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
+    this.aPkiPermissionID = aPkiPermissionID;
   }
 
 
-  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionSessiontype(EActivesessionSessiontypeEnum eActivesessionSessiontype) {
+  public ActivesessionGetCurrentV1ResponseMPayload objUserReal(ActivesessionResponseCompoundUser objUserReal) {
+    
+    this.objUserReal = objUserReal;
+    return this;
+  }
+
+   /**
+   * Get objUserReal
+   * @return objUserReal
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public ActivesessionResponseCompoundUser getObjUserReal() {
+    return objUserReal;
+  }
+
+
+  public void setObjUserReal(ActivesessionResponseCompoundUser objUserReal) {
+    this.objUserReal = objUserReal;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload objUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
+    
+    this.objUserCloned = objUserCloned;
+    return this;
+  }
+
+   /**
+   * Get objUserCloned
+   * @return objUserCloned
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ActivesessionResponseCompoundUser getObjUserCloned() {
+    return objUserCloned;
+  }
+
+
+  public void setObjUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
+    this.objUserCloned = objUserCloned;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload objApikey(ActivesessionResponseCompoundApikey objApikey) {
+    
+    this.objApikey = objApikey;
+    return this;
+  }
+
+   /**
+   * Get objApikey
+   * @return objApikey
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ActivesessionResponseCompoundApikey getObjApikey() {
+    return objApikey;
+  }
+
+
+  public void setObjApikey(ActivesessionResponseCompoundApikey objApikey) {
+    this.objApikey = objApikey;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload aEModuleInternalname(List<String> aEModuleInternalname) {
+    
+    this.aEModuleInternalname = aEModuleInternalname;
+    return this;
+  }
+
+  public ActivesessionGetCurrentV1ResponseMPayload addAEModuleInternalnameItem(String aEModuleInternalnameItem) {
+    this.aEModuleInternalname.add(aEModuleInternalnameItem);
+    return this;
+  }
+
+   /**
+   * An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+   * @return aEModuleInternalname
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
+
+  public List<String> getaEModuleInternalname() {
+    return aEModuleInternalname;
+  }
+
+
+  public void setaEModuleInternalname(List<String> aEModuleInternalname) {
+    this.aEModuleInternalname = aEModuleInternalname;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
     
     this.eActivesessionSessiontype = eActivesessionSessiontype;
     return this;
   }
 
    /**
-   * The type of session used for the API request call
+   * Get eActivesessionSessiontype
    * @return eActivesessionSessiontype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The type of session used for the API request call")
+  @ApiModelProperty(required = true, value = "")
 
-  public EActivesessionSessiontypeEnum geteActivesessionSessiontype() {
+  public FieldEActivesessionSessiontype geteActivesessionSessiontype() {
     return eActivesessionSessiontype;
   }
 
 
-  public void seteActivesessionSessiontype(EActivesessionSessiontypeEnum eActivesessionSessiontype) {
+  public void seteActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
     this.eActivesessionSessiontype = eActivesessionSessiontype;
   }
 
@@ -222,11 +291,11 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
    /**
-   * The name of the active Company in the current language
+   * The Name of the Company in the language of the requester
    * @return sCompanyNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the active Company in the current language")
+  @ApiModelProperty(example = "Acme inc.", required = true, value = "The Name of the Company in the language of the requester")
 
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -245,11 +314,11 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
    /**
-   * The name of the active Department in the current language
+   * The Name of the Department in the language of the requester
    * @return sDepartmentNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the active Department in the current language")
+  @ApiModelProperty(example = "Head Office", required = true, value = "The Name of the Department in the language of the requester")
 
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -261,105 +330,49 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
-  public ActivesessionGetCurrentV1ResponseMPayload aRegisteredModules(List<String> aRegisteredModules) {
+  public ActivesessionGetCurrentV1ResponseMPayload bActivesessionDebug(Boolean bActivesessionDebug) {
     
-    this.aRegisteredModules = aRegisteredModules;
-    return this;
-  }
-
-  public ActivesessionGetCurrentV1ResponseMPayload addARegisteredModulesItem(String aRegisteredModulesItem) {
-    this.aRegisteredModules.add(aRegisteredModulesItem);
+    this.bActivesessionDebug = bActivesessionDebug;
     return this;
   }
 
    /**
-   * An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
-   * @return aRegisteredModules
+   * Whether the active session is in debug or not
+   * @return bActivesessionDebug
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
+  @ApiModelProperty(example = "false", required = true, value = "Whether the active session is in debug or not")
 
-  public List<String> getaRegisteredModules() {
-    return aRegisteredModules;
+  public Boolean getbActivesessionDebug() {
+    return bActivesessionDebug;
   }
 
 
-  public void setaRegisteredModules(List<String> aRegisteredModules) {
-    this.aRegisteredModules = aRegisteredModules;
+  public void setbActivesessionDebug(Boolean bActivesessionDebug) {
+    this.bActivesessionDebug = bActivesessionDebug;
   }
 
 
-  public ActivesessionGetCurrentV1ResponseMPayload aPermissions(List<Integer> aPermissions) {
+  public ActivesessionGetCurrentV1ResponseMPayload pksCustomerCode(String pksCustomerCode) {
     
-    this.aPermissions = aPermissions;
-    return this;
-  }
-
-  public ActivesessionGetCurrentV1ResponseMPayload addAPermissionsItem(Integer aPermissionsItem) {
-    this.aPermissions.add(aPermissionsItem);
+    this.pksCustomerCode = pksCustomerCode;
     return this;
   }
 
    /**
-   * An array of permissions granted to the user or api key
-   * @return aPermissions
+   * The customer code assigned to your account
+   * @return pksCustomerCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
+  @ApiModelProperty(example = "demo", required = true, value = "The customer code assigned to your account")
 
-  public List<Integer> getaPermissions() {
-    return aPermissions;
+  public String getPksCustomerCode() {
+    return pksCustomerCode;
   }
 
 
-  public void setaPermissions(List<Integer> aPermissions) {
-    this.aPermissions = aPermissions;
-  }
-
-
-  public ActivesessionGetCurrentV1ResponseMPayload fkiUserID(Integer fkiUserID) {
-    
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the User
-   * @return fkiUserID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
-
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-
-  public void setFkiUserID(Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public ActivesessionGetCurrentV1ResponseMPayload fkiApikeyID(Integer fkiApikeyID) {
-    
-    this.fkiApikeyID = fkiApikeyID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Apikey
-   * @return fkiApikeyID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Apikey")
-
-  public Integer getFkiApikeyID() {
-    return fkiApikeyID;
-  }
-
-
-  public void setFkiApikeyID(Integer fkiApikeyID) {
-    this.fkiApikeyID = fkiApikeyID;
+  public void setPksCustomerCode(String pksCustomerCode) {
+    this.pksCustomerCode = pksCustomerCode;
   }
 
 
@@ -372,37 +385,41 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       return false;
     }
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
-    return Objects.equals(this.sCustomerCode, activesessionGetCurrentV1ResponseMPayload.sCustomerCode) &&
+    return Objects.equals(this.aPkiPermissionID, activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID) &&
+        Objects.equals(this.objUserReal, activesessionGetCurrentV1ResponseMPayload.objUserReal) &&
+        Objects.equals(this.objUserCloned, activesessionGetCurrentV1ResponseMPayload.objUserCloned) &&
+        Objects.equals(this.objApikey, activesessionGetCurrentV1ResponseMPayload.objApikey) &&
+        Objects.equals(this.aEModuleInternalname, activesessionGetCurrentV1ResponseMPayload.aEModuleInternalname) &&
         Objects.equals(this.eActivesessionSessiontype, activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionGetCurrentV1ResponseMPayload.fkiLanguageID) &&
         Objects.equals(this.sCompanyNameX, activesessionGetCurrentV1ResponseMPayload.sCompanyNameX) &&
         Objects.equals(this.sDepartmentNameX, activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX) &&
-        Objects.equals(this.aRegisteredModules, activesessionGetCurrentV1ResponseMPayload.aRegisteredModules) &&
-        Objects.equals(this.aPermissions, activesessionGetCurrentV1ResponseMPayload.aPermissions) &&
-        Objects.equals(this.fkiUserID, activesessionGetCurrentV1ResponseMPayload.fkiUserID) &&
-        Objects.equals(this.fkiApikeyID, activesessionGetCurrentV1ResponseMPayload.fkiApikeyID);
+        Objects.equals(this.bActivesessionDebug, activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug) &&
+        Objects.equals(this.pksCustomerCode, activesessionGetCurrentV1ResponseMPayload.pksCustomerCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sCustomerCode, eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, aRegisteredModules, aPermissions, fkiUserID, fkiApikeyID);
+    return Objects.hash(aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, pksCustomerCode);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
-    sb.append("    sCustomerCode: ").append(toIndentedString(sCustomerCode)).append("\n");
+    sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
+    sb.append("    objUserReal: ").append(toIndentedString(objUserReal)).append("\n");
+    sb.append("    objUserCloned: ").append(toIndentedString(objUserCloned)).append("\n");
+    sb.append("    objApikey: ").append(toIndentedString(objApikey)).append("\n");
+    sb.append("    aEModuleInternalname: ").append(toIndentedString(aEModuleInternalname)).append("\n");
     sb.append("    eActivesessionSessiontype: ").append(toIndentedString(eActivesessionSessiontype)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
-    sb.append("    aRegisteredModules: ").append(toIndentedString(aRegisteredModules)).append("\n");
-    sb.append("    aPermissions: ").append(toIndentedString(aPermissions)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    fkiApikeyID: ").append(toIndentedString(fkiApikeyID)).append("\n");
+    sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
+    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
