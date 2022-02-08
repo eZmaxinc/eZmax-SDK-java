@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ModuleUserApi {
     private ApiClient localVarApiClient;
@@ -87,7 +88,6 @@ public class ModuleUserApi {
      */
     public okhttp3.Call userCreateEzsignuserV1Call(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -176,8 +176,14 @@ public class ModuleUserApi {
      */
     public ApiResponse<UserCreateEzsignuserV1Response> userCreateEzsignuserV1WithHttpInfo(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request) throws ApiException {
         okhttp3.Call localVarCall = userCreateEzsignuserV1ValidateBeforeCall(userCreateEzsignuserV1Request, null);
-        Type localVarReturnType = new TypeToken<UserCreateEzsignuserV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<UserCreateEzsignuserV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<UserCreateEzsignuserV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<UserCreateEzsignuserV1Response>(){});
+            throw e;
+        }
     }
 
     /**

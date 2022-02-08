@@ -25,12 +25,35 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * An Ezsigndocument Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class EzsigndocumentRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
+  private Integer pkiEzsigndocumentID;
+
   /**
    * Indicates where to look for the document binary content.
    */
@@ -165,6 +188,29 @@ public class EzsigndocumentRequestCompound {
 
   public EzsigndocumentRequestCompound() { 
   }
+
+  public EzsigndocumentRequestCompound pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+    
+    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsigndocument
+   * @return pkiEzsigndocumentID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "97", value = "The unique ID of the Ezsigndocument")
+
+  public Integer getPkiEzsigndocumentID() {
+    return pkiEzsigndocumentID;
+  }
+
+
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+  }
+
 
   public EzsigndocumentRequestCompound eEzsigndocumentSource(EEzsigndocumentSourceEnum eEzsigndocumentSource) {
     
@@ -407,7 +453,8 @@ public class EzsigndocumentRequestCompound {
       return false;
     }
     EzsigndocumentRequestCompound ezsigndocumentRequestCompound = (EzsigndocumentRequestCompound) o;
-    return Objects.equals(this.eEzsigndocumentSource, ezsigndocumentRequestCompound.eEzsigndocumentSource) &&
+    return Objects.equals(this.pkiEzsigndocumentID, ezsigndocumentRequestCompound.pkiEzsigndocumentID) &&
+        Objects.equals(this.eEzsigndocumentSource, ezsigndocumentRequestCompound.eEzsigndocumentSource) &&
         Objects.equals(this.eEzsigndocumentFormat, ezsigndocumentRequestCompound.eEzsigndocumentFormat) &&
         Arrays.equals(this.sEzsigndocumentBase64, ezsigndocumentRequestCompound.sEzsigndocumentBase64) &&
         Objects.equals(this.sEzsigndocumentUrl, ezsigndocumentRequestCompound.sEzsigndocumentUrl) &&
@@ -421,13 +468,14 @@ public class EzsigndocumentRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, fkiEzsignfolderID, dtEzsigndocumentDuedate, fkiLanguageID, sEzsigndocumentName);
+    return Objects.hash(pkiEzsigndocumentID, eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, fkiEzsignfolderID, dtEzsigndocumentDuedate, fkiLanguageID, sEzsigndocumentName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentRequestCompound {\n");
+    sb.append("    pkiEzsigndocumentID: ").append(toIndentedString(pkiEzsigndocumentID)).append("\n");
     sb.append("    eEzsigndocumentSource: ").append(toIndentedString(eEzsigndocumentSource)).append("\n");
     sb.append("    eEzsigndocumentFormat: ").append(toIndentedString(eEzsigndocumentFormat)).append("\n");
     sb.append("    sEzsigndocumentBase64: ").append(toIndentedString(sEzsigndocumentBase64)).append("\n");
@@ -453,5 +501,112 @@ public class EzsigndocumentRequestCompound {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("pkiEzsigndocumentID");
+    openapiFields.add("eEzsigndocumentSource");
+    openapiFields.add("eEzsigndocumentFormat");
+    openapiFields.add("sEzsigndocumentBase64");
+    openapiFields.add("sEzsigndocumentUrl");
+    openapiFields.add("bEzsigndocumentForcerepair");
+    openapiFields.add("sEzsigndocumentPassword");
+    openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("dtEzsigndocumentDuedate");
+    openapiFields.add("fkiLanguageID");
+    openapiFields.add("sEzsigndocumentName");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eEzsigndocumentSource");
+    openapiRequiredFields.add("eEzsigndocumentFormat");
+    openapiRequiredFields.add("fkiEzsignfolderID");
+    openapiRequiredFields.add("dtEzsigndocumentDuedate");
+    openapiRequiredFields.add("fkiLanguageID");
+    openapiRequiredFields.add("sEzsigndocumentName");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EzsigndocumentRequestCompound
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EzsigndocumentRequestCompound.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentRequestCompound is not found in the empty JSON string", EzsigndocumentRequestCompound.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EzsigndocumentRequestCompound.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentRequestCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigndocumentRequestCompound.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsigndocumentRequestCompound.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigndocumentRequestCompound' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsigndocumentRequestCompound> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigndocumentRequestCompound.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsigndocumentRequestCompound>() {
+           @Override
+           public void write(JsonWriter out, EzsigndocumentRequestCompound value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsigndocumentRequestCompound read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EzsigndocumentRequestCompound given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EzsigndocumentRequestCompound
+  * @throws IOException if the JSON string is invalid with respect to EzsigndocumentRequestCompound
+  */
+  public static EzsigndocumentRequestCompound fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsigndocumentRequestCompound.class);
+  }
+
+ /**
+  * Convert an instance of EzsigndocumentRequestCompound to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

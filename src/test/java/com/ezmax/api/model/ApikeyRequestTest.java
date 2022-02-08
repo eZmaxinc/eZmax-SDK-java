@@ -42,6 +42,14 @@ public class ApikeyRequestTest {
     }
 
     /**
+     * Test the property 'pkiApikeyID'
+     */
+    @Test
+    public void pkiApikeyIDTest() {
+        // TODO: test pkiApikeyID
+    }
+
+    /**
      * Test the property 'fkiUserID'
      */
     @Test

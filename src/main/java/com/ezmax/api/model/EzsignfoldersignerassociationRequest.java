@@ -24,12 +24,35 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequest {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  private Integer pkiEzsignfoldersignerassociationID;
+
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
@@ -44,6 +67,29 @@ public class EzsignfoldersignerassociationRequest {
 
   public EzsignfoldersignerassociationRequest() { 
   }
+
+  public EzsignfoldersignerassociationRequest pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+    
+    this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   * @return pkiEzsignfoldersignerassociationID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "20", value = "The unique ID of the Ezsignfoldersignerassociation")
+
+  public Integer getPkiEzsignfoldersignerassociationID() {
+    return pkiEzsignfoldersignerassociationID;
+  }
+
+
+  public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+    this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+  }
+
 
   public EzsignfoldersignerassociationRequest fkiUserID(Integer fkiUserID) {
     
@@ -123,20 +169,22 @@ public class EzsignfoldersignerassociationRequest {
       return false;
     }
     EzsignfoldersignerassociationRequest ezsignfoldersignerassociationRequest = (EzsignfoldersignerassociationRequest) o;
-    return Objects.equals(this.fkiUserID, ezsignfoldersignerassociationRequest.fkiUserID) &&
+    return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationRequest.pkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiUserID, ezsignfoldersignerassociationRequest.fkiUserID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationRequest.fkiEzsignfolderID) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationRequest.bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiUserID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiUserID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationRequest {\n");
+    sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
@@ -155,5 +203,100 @@ public class EzsignfoldersignerassociationRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("pkiEzsignfoldersignerassociationID");
+    openapiFields.add("fkiUserID");
+    openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("bEzsignfoldersignerassociationReceivecopy");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("fkiEzsignfolderID");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EzsignfoldersignerassociationRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EzsignfoldersignerassociationRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationRequest is not found in the empty JSON string", EzsignfoldersignerassociationRequest.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EzsignfoldersignerassociationRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldersignerassociationRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignfoldersignerassociationRequest.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignfoldersignerassociationRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignfoldersignerassociationRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignfoldersignerassociationRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfoldersignerassociationRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignfoldersignerassociationRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignfoldersignerassociationRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignfoldersignerassociationRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EzsignfoldersignerassociationRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EzsignfoldersignerassociationRequest
+  * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationRequest
+  */
+  public static EzsignfoldersignerassociationRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsignfoldersignerassociationRequest.class);
+  }
+
+ /**
+  * Convert an instance of EzsignfoldersignerassociationRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

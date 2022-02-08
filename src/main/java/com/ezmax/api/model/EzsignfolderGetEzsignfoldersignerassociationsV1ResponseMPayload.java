@@ -27,11 +27,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -105,5 +124,104 @@ public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("a_objEzsignfoldersignerassociation");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objEzsignfoldersignerassociation");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload is not found in the empty JSON string", EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      JsonArray jsonArrayaObjEzsignfoldersignerassociation = jsonObj.getAsJsonArray("a_objEzsignfoldersignerassociation");
+      // validate the optional field `a_objEzsignfoldersignerassociation` (array)
+      if (jsonArrayaObjEzsignfoldersignerassociation != null) {
+        for (int i = 0; i < jsonArrayaObjEzsignfoldersignerassociation.size(); i++) {
+          EzsignfoldersignerassociationResponseCompound.validateJsonObject(jsonArrayaObjEzsignfoldersignerassociation.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload>() {
+           @Override
+           public void write(JsonWriter out, EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
+  * @throws IOException if the JSON string is invalid with respect to EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload
+  */
+  public static EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.class);
+  }
+
+ /**
+  * Convert an instance of EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

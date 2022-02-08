@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectFranchiseofficeApi {
     private ApiClient localVarApiClient;
@@ -87,7 +88,6 @@ public class ObjectFranchiseofficeApi {
      */
     public okhttp3.Call franchiseofficeGetAutocompleteV1Call(String sSelector, String sQuery, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -183,8 +183,14 @@ public class ObjectFranchiseofficeApi {
      */
     public ApiResponse<CommonGetAutocompleteV1Response> franchiseofficeGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery) throws ApiException {
         okhttp3.Call localVarCall = franchiseofficeGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, null);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CommonGetAutocompleteV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<CommonGetAutocompleteV1Response>(){});
+            throw e;
+        }
     }
 
     /**

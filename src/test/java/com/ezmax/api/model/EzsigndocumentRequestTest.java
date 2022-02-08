@@ -41,6 +41,14 @@ public class EzsigndocumentRequestTest {
     }
 
     /**
+     * Test the property 'pkiEzsigndocumentID'
+     */
+    @Test
+    public void pkiEzsigndocumentIDTest() {
+        // TODO: test pkiEzsigndocumentID
+    }
+
+    /**
      * Test the property 'eEzsigndocumentSource'
      */
     @Test

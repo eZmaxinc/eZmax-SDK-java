@@ -30,11 +30,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -43,6 +62,10 @@ public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
   private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
+
+  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
+  private Integer pkiEzsignsignatureID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -126,6 +149,29 @@ public class EzsignsignatureRequestCompound {
 
   public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
+
+  public EzsignsignatureRequestCompound pkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
+    
+    this.pkiEzsignsignatureID = pkiEzsignsignatureID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignsignature
+   * @return pkiEzsignsignatureID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "49", value = "The unique ID of the Ezsignsignature")
+
+  public Integer getPkiEzsignsignatureID() {
+    return pkiEzsignsignatureID;
+  }
+
+
+  public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
+    this.pkiEzsignsignatureID = pkiEzsignsignatureID;
   }
 
 
@@ -301,6 +347,7 @@ public class EzsignsignatureRequestCompound {
     EzsignsignatureRequestCompound ezsignsignatureRequestCompound = (EzsignsignatureRequestCompound) o;
     return Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate) &&
         Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate) &&
+        Objects.equals(this.pkiEzsignsignatureID, ezsignsignatureRequestCompound.pkiEzsignsignatureID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureRequestCompound.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureRequestCompound.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureRequestCompound.iEzsignsignatureX) &&
@@ -312,7 +359,7 @@ public class EzsignsignatureRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID);
+    return Objects.hash(bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID);
   }
 
   @Override
@@ -321,6 +368,7 @@ public class EzsignsignatureRequestCompound {
     sb.append("class EzsignsignatureRequestCompound {\n");
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
+    sb.append("    pkiEzsignsignatureID: ").append(toIndentedString(pkiEzsignsignatureID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
@@ -343,5 +391,119 @@ public class EzsignsignatureRequestCompound {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("bEzsignsignatureCustomdate");
+    openapiFields.add("a_objEzsignsignaturecustomdate");
+    openapiFields.add("pkiEzsignsignatureID");
+    openapiFields.add("fkiEzsignfoldersignerassociationID");
+    openapiFields.add("iEzsignpagePagenumber");
+    openapiFields.add("iEzsignsignatureX");
+    openapiFields.add("iEzsignsignatureY");
+    openapiFields.add("iEzsignsignatureStep");
+    openapiFields.add("eEzsignsignatureType");
+    openapiFields.add("fkiEzsigndocumentID");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("fkiEzsignfoldersignerassociationID");
+    openapiRequiredFields.add("iEzsignpagePagenumber");
+    openapiRequiredFields.add("iEzsignsignatureX");
+    openapiRequiredFields.add("iEzsignsignatureY");
+    openapiRequiredFields.add("iEzsignsignatureStep");
+    openapiRequiredFields.add("eEzsignsignatureType");
+    openapiRequiredFields.add("fkiEzsigndocumentID");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EzsignsignatureRequestCompound
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EzsignsignatureRequestCompound.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequestCompound is not found in the empty JSON string", EzsignsignatureRequestCompound.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EzsignsignatureRequestCompound.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignatureRequestCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsignatureRequestCompound.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
+      // validate the optional field `a_objEzsignsignaturecustomdate` (array)
+      if (jsonArrayaObjEzsignsignaturecustomdate != null) {
+        for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
+          EzsignsignaturecustomdateRequest.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignsignatureRequestCompound.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignsignatureRequestCompound' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignsignatureRequestCompound> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignsignatureRequestCompound.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignsignatureRequestCompound>() {
+           @Override
+           public void write(JsonWriter out, EzsignsignatureRequestCompound value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignsignatureRequestCompound read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EzsignsignatureRequestCompound given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EzsignsignatureRequestCompound
+  * @throws IOException if the JSON string is invalid with respect to EzsignsignatureRequestCompound
+  */
+  public static EzsignsignatureRequestCompound fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsignsignatureRequestCompound.class);
+  }
+
+ /**
+  * Convert an instance of EzsignsignatureRequestCompound to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

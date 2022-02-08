@@ -18,6 +18,8 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
+import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
+import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
@@ -72,6 +74,22 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
                 EzsignfolderDeleteObjectV1Response response = api.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Edit an Ezsignfolder
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfolderEditObjectV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
+                EzsignfolderEditObjectV1Response response = api.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
         // TODO: test validations
     }
     

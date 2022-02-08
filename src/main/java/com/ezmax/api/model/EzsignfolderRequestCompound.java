@@ -26,12 +26,35 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class EzsignfolderRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
+  private Integer pkiEzsignfolderID;
+
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   private Integer fkiEzsignfoldertypeID;
@@ -54,6 +77,29 @@ public class EzsignfolderRequestCompound {
 
   public EzsignfolderRequestCompound() { 
   }
+
+  public EzsignfolderRequestCompound pkiEzsignfolderID(Integer pkiEzsignfolderID) {
+    
+    this.pkiEzsignfolderID = pkiEzsignfolderID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignfolder
+   * @return pkiEzsignfolderID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "33", value = "The unique ID of the Ezsignfolder")
+
+  public Integer getPkiEzsignfolderID() {
+    return pkiEzsignfolderID;
+  }
+
+
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
+    this.pkiEzsignfolderID = pkiEzsignfolderID;
+  }
+
 
   public EzsignfolderRequestCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     
@@ -181,7 +227,8 @@ public class EzsignfolderRequestCompound {
       return false;
     }
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
-    return Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderRequestCompound.fkiEzsignfoldertypeID) &&
+    return Objects.equals(this.pkiEzsignfolderID, ezsignfolderRequestCompound.pkiEzsignfolderID) &&
+        Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderRequestCompound.fkiEzsignfoldertypeID) &&
         Objects.equals(this.fkiEzsigntsarequirementID, ezsignfolderRequestCompound.fkiEzsigntsarequirementID) &&
         Objects.equals(this.sEzsignfolderDescription, ezsignfolderRequestCompound.sEzsignfolderDescription) &&
         Objects.equals(this.tEzsignfolderNote, ezsignfolderRequestCompound.tEzsignfolderNote) &&
@@ -190,13 +237,14 @@ public class EzsignfolderRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfoldertypeID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderRequestCompound {\n");
+    sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    fkiEzsigntsarequirementID: ").append(toIndentedString(fkiEzsigntsarequirementID)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
@@ -217,5 +265,106 @@ public class EzsignfolderRequestCompound {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("pkiEzsignfolderID");
+    openapiFields.add("fkiEzsignfoldertypeID");
+    openapiFields.add("fkiEzsigntsarequirementID");
+    openapiFields.add("sEzsignfolderDescription");
+    openapiFields.add("tEzsignfolderNote");
+    openapiFields.add("eEzsignfolderSendreminderfrequency");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("fkiEzsignfoldertypeID");
+    openapiRequiredFields.add("fkiEzsigntsarequirementID");
+    openapiRequiredFields.add("sEzsignfolderDescription");
+    openapiRequiredFields.add("tEzsignfolderNote");
+    openapiRequiredFields.add("eEzsignfolderSendreminderfrequency");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to EzsignfolderRequestCompound
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (EzsignfolderRequestCompound.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderRequestCompound is not found in the empty JSON string", EzsignfolderRequestCompound.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!EzsignfolderRequestCompound.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfolderRequestCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignfolderRequestCompound.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignfolderRequestCompound.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignfolderRequestCompound' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignfolderRequestCompound> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfolderRequestCompound.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignfolderRequestCompound>() {
+           @Override
+           public void write(JsonWriter out, EzsignfolderRequestCompound value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignfolderRequestCompound read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of EzsignfolderRequestCompound given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EzsignfolderRequestCompound
+  * @throws IOException if the JSON string is invalid with respect to EzsignfolderRequestCompound
+  */
+  public static EzsignfolderRequestCompound fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsignfolderRequestCompound.class);
+  }
+
+ /**
+  * Convert an instance of EzsignfolderRequestCompound to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -42,6 +42,14 @@ public class EzsignfolderRequestTest {
     }
 
     /**
+     * Test the property 'pkiEzsignfolderID'
+     */
+    @Test
+    public void pkiEzsignfolderIDTest() {
+        // TODO: test pkiEzsignfolderID
+    }
+
+    /**
      * Test the property 'fkiEzsignfoldertypeID'
      */
     @Test

@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ModuleListApi {
     private ApiClient localVarApiClient;
@@ -90,7 +91,6 @@ public class ModuleListApi {
      */
     public okhttp3.Call listGetListpresentationV1Call(String sListName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -182,8 +182,14 @@ public class ModuleListApi {
      */
     public ApiResponse<ListGetListpresentationV1Response> listGetListpresentationV1WithHttpInfo(String sListName) throws ApiException {
         okhttp3.Call localVarCall = listGetListpresentationV1ValidateBeforeCall(sListName, null);
-        Type localVarReturnType = new TypeToken<ListGetListpresentationV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ListGetListpresentationV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ListGetListpresentationV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ListGetListpresentationV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -223,7 +229,6 @@ public class ModuleListApi {
      */
     public okhttp3.Call listSaveListpresentationV1Call(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -322,8 +327,14 @@ public class ModuleListApi {
      */
     public ApiResponse<ListSaveListpresentationV1Response> listSaveListpresentationV1WithHttpInfo(String sListName, ListSaveListpresentationV1Request listSaveListpresentationV1Request) throws ApiException {
         okhttp3.Call localVarCall = listSaveListpresentationV1ValidateBeforeCall(sListName, listSaveListpresentationV1Request, null);
-        Type localVarReturnType = new TypeToken<ListSaveListpresentationV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ListSaveListpresentationV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ListSaveListpresentationV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ListSaveListpresentationV1Response>(){});
+            throw e;
+        }
     }
 
     /**

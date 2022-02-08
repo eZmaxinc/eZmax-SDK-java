@@ -63,6 +63,14 @@ public class EzsignsignatureRequestCompoundTest {
     }
 
     /**
+     * Test the property 'pkiEzsignsignatureID'
+     */
+    @Test
+    public void pkiEzsignsignatureIDTest() {
+        // TODO: test pkiEzsignsignatureID
+    }
+
+    /**
      * Test the property 'fkiEzsignfoldersignerassociationID'
      */
     @Test

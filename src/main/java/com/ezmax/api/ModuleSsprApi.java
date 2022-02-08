@@ -40,6 +40,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ModuleSsprApi {
     private ApiClient localVarApiClient;
@@ -94,7 +95,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprResetPasswordRequestV1Call(SsprResetPasswordRequestV1Request ssprResetPasswordRequestV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -225,7 +225,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprResetPasswordV1Call(SsprResetPasswordV1Request ssprResetPasswordV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -356,7 +355,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprSendUsernamesV1Call(SsprSendUsernamesV1Request ssprSendUsernamesV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -487,7 +485,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprUnlockAccountRequestV1Call(SsprUnlockAccountRequestV1Request ssprUnlockAccountRequestV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -618,7 +615,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprUnlockAccountV1Call(SsprUnlockAccountV1Request ssprUnlockAccountV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -749,7 +745,6 @@ public class ModuleSsprApi {
      */
     public okhttp3.Call ssprValidateTokenV1Call(SsprValidateTokenV1Request ssprValidateTokenV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

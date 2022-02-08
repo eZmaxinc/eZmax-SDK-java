@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsignfoldersignerassociationApi {
     private ApiClient localVarApiClient;
@@ -91,7 +92,6 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public okhttp3.Call ezsignfoldersignerassociationCreateObjectV1Call(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -180,8 +180,14 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV1ValidateBeforeCall(ezsignfoldersignerassociationCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldersignerassociationCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldersignerassociationCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -220,7 +226,6 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public okhttp3.Call ezsignfoldersignerassociationDeleteObjectV1Call(Integer pkiEzsignfoldersignerassociationID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -314,8 +319,14 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationDeleteObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldersignerassociationDeleteObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -356,7 +367,6 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public okhttp3.Call ezsignfoldersignerassociationGetInPersonLoginUrlV1Call(Integer pkiEzsignfoldersignerassociationID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -450,8 +460,14 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public ApiResponse<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response> ezsignfoldersignerassociationGetInPersonLoginUrlV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationGetInPersonLoginUrlV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldersignerassociationGetInPersonLoginUrlV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -491,7 +507,6 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public okhttp3.Call ezsignfoldersignerassociationGetObjectV1Call(Integer pkiEzsignfoldersignerassociationID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -583,8 +598,14 @@ public class ObjectEzsignfoldersignerassociationApi {
      */
     public ApiResponse<EzsignfoldersignerassociationGetObjectV1Response> ezsignfoldersignerassociationGetObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationGetObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationGetObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationGetObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldersignerassociationGetObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldersignerassociationGetObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**

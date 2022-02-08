@@ -63,6 +63,14 @@ public class FranchisereferalincomeRequestCompoundTest {
     }
 
     /**
+     * Test the property 'pkiFranchisereferalincomeID'
+     */
+    @Test
+    public void pkiFranchisereferalincomeIDTest() {
+        // TODO: test pkiFranchisereferalincomeID
+    }
+
+    /**
      * Test the property 'fkiFranchisebrokerID'
      */
     @Test

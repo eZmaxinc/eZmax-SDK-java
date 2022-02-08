@@ -24,12 +24,35 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * An Franchisereferalincome Object
  */
 @ApiModel(description = "An Franchisereferalincome Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class FranchisereferalincomeRequest {
+  public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
+  @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
+  private Integer pkiFranchisereferalincomeID;
+
   public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
   private Integer fkiFranchisebrokerID;
@@ -76,6 +99,29 @@ public class FranchisereferalincomeRequest {
 
   public FranchisereferalincomeRequest() { 
   }
+
+  public FranchisereferalincomeRequest pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
+    
+    this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Franchisereferalincome
+   * @return pkiFranchisereferalincomeID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "35", value = "The unique ID of the Franchisereferalincome")
+
+  public Integer getPkiFranchisereferalincomeID() {
+    return pkiFranchisereferalincomeID;
+  }
+
+
+  public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
+    this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+  }
+
 
   public FranchisereferalincomeRequest fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     
@@ -339,7 +385,8 @@ public class FranchisereferalincomeRequest {
       return false;
     }
     FranchisereferalincomeRequest franchisereferalincomeRequest = (FranchisereferalincomeRequest) o;
-    return Objects.equals(this.fkiFranchisebrokerID, franchisereferalincomeRequest.fkiFranchisebrokerID) &&
+    return Objects.equals(this.pkiFranchisereferalincomeID, franchisereferalincomeRequest.pkiFranchisereferalincomeID) &&
+        Objects.equals(this.fkiFranchisebrokerID, franchisereferalincomeRequest.fkiFranchisebrokerID) &&
         Objects.equals(this.fkiFranchisereferalincomeprogramID, franchisereferalincomeRequest.fkiFranchisereferalincomeprogramID) &&
         Objects.equals(this.fkiPeriodID, franchisereferalincomeRequest.fkiPeriodID) &&
         Objects.equals(this.dFranchisereferalincomeLoan, franchisereferalincomeRequest.dFranchisereferalincomeLoan) &&
@@ -354,13 +401,14 @@ public class FranchisereferalincomeRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID, fkiPeriodID, dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment, fkiFranchiseofficeID, sFranchisereferalincomeRemoteid);
+    return Objects.hash(pkiFranchisereferalincomeID, fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID, fkiPeriodID, dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment, fkiFranchiseofficeID, sFranchisereferalincomeRemoteid);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeRequest {\n");
+    sb.append("    pkiFranchisereferalincomeID: ").append(toIndentedString(pkiFranchisereferalincomeID)).append("\n");
     sb.append("    fkiFranchisebrokerID: ").append(toIndentedString(fkiFranchisebrokerID)).append("\n");
     sb.append("    fkiFranchisereferalincomeprogramID: ").append(toIndentedString(fkiFranchisereferalincomeprogramID)).append("\n");
     sb.append("    fkiPeriodID: ").append(toIndentedString(fkiPeriodID)).append("\n");
@@ -387,5 +435,118 @@ public class FranchisereferalincomeRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("pkiFranchisereferalincomeID");
+    openapiFields.add("fkiFranchisebrokerID");
+    openapiFields.add("fkiFranchisereferalincomeprogramID");
+    openapiFields.add("fkiPeriodID");
+    openapiFields.add("dFranchisereferalincomeLoan");
+    openapiFields.add("dFranchisereferalincomeFranchiseamount");
+    openapiFields.add("dFranchisereferalincomeFranchisoramount");
+    openapiFields.add("dFranchisereferalincomeAgentamount");
+    openapiFields.add("dtFranchisereferalincomeDisbursed");
+    openapiFields.add("tFranchisereferalincomeComment");
+    openapiFields.add("fkiFranchiseofficeID");
+    openapiFields.add("sFranchisereferalincomeRemoteid");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("fkiFranchisebrokerID");
+    openapiRequiredFields.add("fkiFranchisereferalincomeprogramID");
+    openapiRequiredFields.add("fkiPeriodID");
+    openapiRequiredFields.add("dFranchisereferalincomeLoan");
+    openapiRequiredFields.add("dFranchisereferalincomeFranchiseamount");
+    openapiRequiredFields.add("dFranchisereferalincomeFranchisoramount");
+    openapiRequiredFields.add("dFranchisereferalincomeAgentamount");
+    openapiRequiredFields.add("dtFranchisereferalincomeDisbursed");
+    openapiRequiredFields.add("tFranchisereferalincomeComment");
+    openapiRequiredFields.add("fkiFranchiseofficeID");
+    openapiRequiredFields.add("sFranchisereferalincomeRemoteid");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to FranchisereferalincomeRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (FranchisereferalincomeRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeRequest is not found in the empty JSON string", FranchisereferalincomeRequest.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!FranchisereferalincomeRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FranchisereferalincomeRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : FranchisereferalincomeRequest.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!FranchisereferalincomeRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FranchisereferalincomeRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<FranchisereferalincomeRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FranchisereferalincomeRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<FranchisereferalincomeRequest>() {
+           @Override
+           public void write(JsonWriter out, FranchisereferalincomeRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public FranchisereferalincomeRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of FranchisereferalincomeRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FranchisereferalincomeRequest
+  * @throws IOException if the JSON string is invalid with respect to FranchisereferalincomeRequest
+  */
+  public static FranchisereferalincomeRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FranchisereferalincomeRequest.class);
+  }
+
+ /**
+  * Convert an instance of FranchisereferalincomeRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

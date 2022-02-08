@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class GlobalCustomerApi {
     private ApiClient localVarApiClient;
@@ -89,7 +90,6 @@ public class GlobalCustomerApi {
      */
     public okhttp3.Call globalCustomerGetEndpointV1Call(String pksCustomerCode, String sInfrastructureproductCode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -187,8 +187,14 @@ public class GlobalCustomerApi {
      */
     public ApiResponse<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, String sInfrastructureproductCode) throws ApiException {
         okhttp3.Call localVarCall = globalCustomerGetEndpointV1ValidateBeforeCall(pksCustomerCode, sInfrastructureproductCode, null);
-        Type localVarReturnType = new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<GlobalCustomerGetEndpointV1Response>(){});
+            throw e;
+        }
     }
 
     /**

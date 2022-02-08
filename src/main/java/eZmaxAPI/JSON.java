@@ -27,7 +27,6 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
 
-import com.ezmax.api.model.*;
 import okio.ByteString;
 
 import java.io.IOException;
@@ -41,14 +40,20 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
 
+/*
+ * A JSON utility class
+ *
+ * NOTE: in the future, this class may be converted to static, which may break
+ *       backward-compatibility
+ */
 public class JSON {
-    private Gson gson;
-    private boolean isLenientOnJson = false;
-    private DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
-    private SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
-    private OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
-    private LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
-    private ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+    private static Gson gson;
+    private static boolean isLenientOnJson = false;
+    private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
+    private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
+    private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
+    private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
+    private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
@@ -81,13 +86,226 @@ public class JSON {
         return clazz;
     }
 
-    public JSON() {
+    {
         gson = createGson()
             .registerTypeAdapter(Date.class, dateTypeAdapter)
             .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
             .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
             .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
             .registerTypeAdapter(byte[].class, byteArrayAdapter)
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionResponseCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionResponseCompoundApikey.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionResponseCompoundUser.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AddressRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AttemptResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticateAuthenticateV2Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticateAuthenticateV2Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticateAuthenticateV2ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticateAuthenticateV2ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonAudit.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonGetAutocompleteV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonGetAutocompleteV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonGetListV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseError.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrlAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseFilter.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseGetList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseObjDebug.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseObjDebugPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseObjDebugPayloadGetList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseObjDebugPayloadGetListAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonResponseObjSQLQuery.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CommonWebhook.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactinformationsRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactinformationsRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ContactinformationsRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomAutocompleteElementResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignsignaturestatusResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomFormDataDocumentResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomFormDataSignerResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomFormsDataFolderResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomWordPositionOccurenceResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.CustomWordPositionWordResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EmailRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignbulksendGetListV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignbulksendGetListV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignbulksendGetListV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignbulksendGetListV1ResponseMPayloadAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignbulksendListElement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetFormDataV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetFormDataV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetFormDataV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigndocumentResponseCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderDeleteObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderEditObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetFormsDataV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetFormsDataV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetFormsDataV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetListV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetListV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetListV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetListV1ResponseMPayloadAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderListElement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderSendV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderSendV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderUnsendV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldertypeGetListV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldertypeGetListV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldertypeGetListV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldertypeGetListV1ResponseMPayloadAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfoldertypeListElement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignformfieldResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignformfieldResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignformfieldgroupResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignformfieldgroupResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignformfieldgroupResponseCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignpageResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureGetObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureGetObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignaturecustomdateRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerRequestCompoundContact.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerResponseCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerResponseCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignerResponseCompoundContact.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigntemplatepackageGetListV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigntemplatepackageGetListV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigntemplatepackageGetListV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsigntemplatepackageListElement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeRequestCompound.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.FranchisereferalincomeRequestCompoundAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.GlobalCustomerGetEndpointV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListGetListpresentationV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListGetListpresentationV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListGetListpresentationV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListSaveListpresentationV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListSaveListpresentationV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.ListpresentationRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.MultilingualApikeyDescription.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.PhoneRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprResetPasswordRequestV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprResetPasswordV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprSendUsernamesV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprUnlockAccountRequestV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprUnlockAccountV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.SsprValidateTokenV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsigndocumentEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsigndocumentEditObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignfolderEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignfolderEditObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignfoldersignerassociationEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignfoldersignerassociationEditObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignsignatureEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UNUSEDEzsignsignatureEditObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UserCreateEzsignuserV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UserCreateEzsignuserV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UserCreateEzsignuserV1ResponseAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UserCreateEzsignuserV1ResponseMPayload.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.UserResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookEzsignDocumentCompleted.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookEzsignDocumentCompletedAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookEzsignFolderCompleted.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookEzsignFolderCompletedAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookUserUserCreated.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebhookUserUserCreatedAllOf.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.WebsiteRequest.CustomTypeAdapterFactory())
             .create();
     }
 
@@ -96,7 +314,7 @@ public class JSON {
      *
      * @return Gson
      */
-    public Gson getGson() {
+    public static Gson getGson() {
         return gson;
     }
 
@@ -104,23 +322,13 @@ public class JSON {
      * Set Gson.
      *
      * @param gson Gson
-     * @return JSON
      */
-    public JSON setGson(Gson gson) {
-        this.gson = gson;
-        return this;
+    public static void setGson(Gson gson) {
+        JSON.gson = gson;
     }
 
-    /**
-     * Configure the parser to be liberal in what it accepts.
-     *
-     * @param lenientOnJson Set it to true to ignore some syntax errors
-     * @return JSON
-     * @see <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
-     */
-    public JSON setLenientOnJson(boolean lenientOnJson) {
+    public static void setLenientOnJson(boolean lenientOnJson) {
         isLenientOnJson = lenientOnJson;
-        return this;
     }
 
     /**
@@ -129,7 +337,7 @@ public class JSON {
      * @param obj Object
      * @return String representation of the JSON
      */
-    public String serialize(Object obj) {
+    public static String serialize(Object obj) {
         return gson.toJson(obj);
     }
 
@@ -142,11 +350,11 @@ public class JSON {
      * @return The deserialized Java object
      */
     @SuppressWarnings("unchecked")
-    public <T> T deserialize(String body, Type returnType) {
+    public static <T> T deserialize(String body, Type returnType) {
         try {
             if (isLenientOnJson) {
                 JsonReader jsonReader = new JsonReader(new StringReader(body));
-                // see https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
+                // see https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
                 jsonReader.setLenient(true);
                 return gson.fromJson(jsonReader, returnType);
             } else {
@@ -166,7 +374,7 @@ public class JSON {
     /**
      * Gson TypeAdapter for Byte Array type
      */
-    public class ByteArrayAdapter extends TypeAdapter<byte[]> {
+    public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
         @Override
         public void write(JsonWriter out, byte[] value) throws IOException {
@@ -238,7 +446,7 @@ public class JSON {
     /**
      * Gson TypeAdapter for JSR310 LocalDate type
      */
-    public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
+    public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
         private DateTimeFormatter formatter;
 
@@ -276,14 +484,12 @@ public class JSON {
         }
     }
 
-    public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+    public static void setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
         offsetDateTimeTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
-    public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
+    public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
         localDateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
     /**
@@ -397,14 +603,11 @@ public class JSON {
         }
     }
 
-    public JSON setDateFormat(DateFormat dateFormat) {
+    public static void setDateFormat(DateFormat dateFormat) {
         dateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
-    public JSON setSqlDateFormat(DateFormat dateFormat) {
+    public static void setSqlDateFormat(DateFormat dateFormat) {
         sqlDateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
-
 }

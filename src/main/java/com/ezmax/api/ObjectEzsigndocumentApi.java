@@ -49,6 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsigndocumentApi {
     private ApiClient localVarApiClient;
@@ -106,7 +107,6 @@ public class ObjectEzsigndocumentApi {
     @Deprecated
     public okhttp3.Call ezsigndocumentApplyEzsigntemplateV1Call(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -212,8 +212,14 @@ public class ObjectEzsigndocumentApi {
     @Deprecated
     public ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentApplyEzsigntemplateV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentApplyEzsigntemplateV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentApplyEzsigntemplateV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -258,7 +264,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentApplyEzsigntemplateV2Call(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -359,8 +364,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentApplyEzsigntemplateV2Response> ezsigndocumentApplyEzsigntemplateV2WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentApplyEzsigntemplateV2ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV2Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV2Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentApplyEzsigntemplateV2Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentApplyEzsigntemplateV2Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -402,7 +413,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentCreateObjectV1Call(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -495,8 +505,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentCreateObjectV1Response> ezsigndocumentCreateObjectV1WithHttpInfo(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentCreateObjectV1ValidateBeforeCall(ezsigndocumentCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -537,7 +553,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentDeleteObjectV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -631,8 +646,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentDeleteObjectV1Response> ezsigndocumentDeleteObjectV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentDeleteObjectV1ValidateBeforeCall(pkiEzsigndocumentID, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentDeleteObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -674,7 +695,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentGetDownloadUrlV1Call(Integer pkiEzsigndocumentID, String eDocumentType, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -776,8 +796,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentGetDownloadUrlV1Response> ezsigndocumentGetDownloadUrlV1WithHttpInfo(Integer pkiEzsigndocumentID, String eDocumentType) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentGetDownloadUrlV1ValidateBeforeCall(pkiEzsigndocumentID, eDocumentType, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentGetDownloadUrlV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentGetDownloadUrlV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentGetDownloadUrlV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentGetDownloadUrlV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -819,7 +845,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentGetEzsignpagesV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -913,8 +938,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentGetEzsignpagesV1Response> ezsigndocumentGetEzsignpagesV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentGetEzsignpagesV1ValidateBeforeCall(pkiEzsigndocumentID, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentGetEzsignpagesV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentGetEzsignpagesV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentGetEzsignpagesV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentGetEzsignpagesV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -956,7 +987,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentGetFormDataV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1052,8 +1082,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentGetFormDataV1Response> ezsigndocumentGetFormDataV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentGetFormDataV1ValidateBeforeCall(pkiEzsigndocumentID, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentGetFormDataV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentGetFormDataV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentGetFormDataV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentGetFormDataV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1094,7 +1130,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentGetObjectV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1186,8 +1221,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentGetObjectV1Response> ezsigndocumentGetObjectV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentGetObjectV1ValidateBeforeCall(pkiEzsigndocumentID, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentGetObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentGetObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentGetObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentGetObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1228,7 +1269,6 @@ public class ObjectEzsigndocumentApi {
      */
     public okhttp3.Call ezsigndocumentGetWordsPositionsV1Call(Integer pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1329,8 +1369,14 @@ public class ObjectEzsigndocumentApi {
      */
     public ApiResponse<EzsigndocumentGetWordsPositionsV1Response> ezsigndocumentGetWordsPositionsV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentGetWordsPositionsV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigndocumentGetWordsPositionsV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentGetWordsPositionsV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentGetWordsPositionsV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentGetWordsPositionsV1Response>(){});
+            throw e;
+        }
     }
 
     /**

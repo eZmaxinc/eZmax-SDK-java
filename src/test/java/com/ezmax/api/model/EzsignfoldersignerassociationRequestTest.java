@@ -41,6 +41,14 @@ public class EzsignfoldersignerassociationRequestTest {
     }
 
     /**
+     * Test the property 'pkiEzsignfoldersignerassociationID'
+     */
+    @Test
+    public void pkiEzsignfoldersignerassociationIDTest() {
+        // TODO: test pkiEzsignfoldersignerassociationID
+    }
+
+    /**
      * Test the property 'fkiUserID'
      */
     @Test

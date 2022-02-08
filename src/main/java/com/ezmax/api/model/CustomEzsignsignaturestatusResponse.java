@@ -24,11 +24,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsignaturestatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -231,5 +250,103 @@ public class CustomEzsignsignaturestatusResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("eEzsignsignaturestatusSteptype");
+    openapiFields.add("iEzsignsignaturestatusStep");
+    openapiFields.add("iEzsignsignaturestatusTotal");
+    openapiFields.add("iEzsignsignaturestatusSigned");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eEzsignsignaturestatusSteptype");
+    openapiRequiredFields.add("iEzsignsignaturestatusStep");
+    openapiRequiredFields.add("iEzsignsignaturestatusTotal");
+    openapiRequiredFields.add("iEzsignsignaturestatusSigned");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to CustomEzsignsignaturestatusResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (CustomEzsignsignaturestatusResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CustomEzsignsignaturestatusResponse is not found in the empty JSON string", CustomEzsignsignaturestatusResponse.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!CustomEzsignsignaturestatusResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CustomEzsignsignaturestatusResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CustomEzsignsignaturestatusResponse.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CustomEzsignsignaturestatusResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CustomEzsignsignaturestatusResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CustomEzsignsignaturestatusResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CustomEzsignsignaturestatusResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CustomEzsignsignaturestatusResponse>() {
+           @Override
+           public void write(JsonWriter out, CustomEzsignsignaturestatusResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CustomEzsignsignaturestatusResponse read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of CustomEzsignsignaturestatusResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CustomEzsignsignaturestatusResponse
+  * @throws IOException if the JSON string is invalid with respect to CustomEzsignsignaturestatusResponse
+  */
+  public static CustomEzsignsignaturestatusResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CustomEzsignsignaturestatusResponse.class);
+  }
+
+ /**
+  * Convert an instance of CustomEzsignsignaturestatusResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

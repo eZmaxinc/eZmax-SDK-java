@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectFranchisereferalincomeApi {
     private ApiClient localVarApiClient;
@@ -87,7 +88,6 @@ public class ObjectFranchisereferalincomeApi {
      */
     public okhttp3.Call franchisereferalincomeCreateObjectV1Call(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -176,8 +176,14 @@ public class ObjectFranchisereferalincomeApi {
      */
     public ApiResponse<FranchisereferalincomeCreateObjectV1Response> franchisereferalincomeCreateObjectV1WithHttpInfo(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV1ValidateBeforeCall(franchisereferalincomeCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<FranchisereferalincomeCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**

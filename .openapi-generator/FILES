@@ -96,6 +96,8 @@ docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
 docs/EzsignfolderCreateObjectV1ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderEditObjectV1Request.md
+docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
@@ -273,6 +275,7 @@ src/main/java/com/ezmax/api/ObjectFranchisebrokerApi.java
 src/main/java/com/ezmax/api/ObjectFranchiseofficeApi.java
 src/main/java/com/ezmax/api/ObjectFranchisereferalincomeApi.java
 src/main/java/com/ezmax/api/ObjectPeriodApi.java
+src/main/java/com/ezmax/api/model/AbstractOpenApiSchema.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1Response.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayload.java
@@ -364,6 +367,8 @@ src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.java
@@ -622,6 +627,8 @@ src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOfTest.ja
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseTest.java

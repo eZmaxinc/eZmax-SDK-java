@@ -8,6 +8,7 @@ An Franchisereferalincome Object
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**pkiFranchisereferalincomeID** | **Integer** | The unique ID of the Franchisereferalincome |  [optional]
 **fkiFranchisebrokerID** | **Integer** | The unique ID of the Franchisebroker | 
 **fkiFranchisereferalincomeprogramID** | **Integer** | The unique ID of the Franchisereferalincomeprogram | 
 **fkiPeriodID** | **Integer** | The unique ID of the Period | 

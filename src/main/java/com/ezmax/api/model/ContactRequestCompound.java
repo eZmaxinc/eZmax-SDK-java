@@ -27,11 +27,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * A Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class ContactRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS = "objContactinformations";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS)
@@ -276,5 +295,112 @@ public class ContactRequestCompound {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("objContactinformations");
+    openapiFields.add("fkiContacttitleID");
+    openapiFields.add("fkiLanguageID");
+    openapiFields.add("sContactFirstname");
+    openapiFields.add("sContactLastname");
+    openapiFields.add("sContactCompany");
+    openapiFields.add("dtContactBirthdate");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objContactinformations");
+    openapiRequiredFields.add("fkiContacttitleID");
+    openapiRequiredFields.add("fkiLanguageID");
+    openapiRequiredFields.add("sContactFirstname");
+    openapiRequiredFields.add("sContactLastname");
+    openapiRequiredFields.add("sContactCompany");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ContactRequestCompound
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ContactRequestCompound.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ContactRequestCompound is not found in the empty JSON string", ContactRequestCompound.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ContactRequestCompound.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ContactRequestCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ContactRequestCompound.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `objContactinformations`
+      if (jsonObj.getAsJsonObject("objContactinformations") != null) {
+        ContactinformationsRequestCompound.validateJsonObject(jsonObj.getAsJsonObject("objContactinformations"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ContactRequestCompound.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ContactRequestCompound' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ContactRequestCompound> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ContactRequestCompound.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ContactRequestCompound>() {
+           @Override
+           public void write(JsonWriter out, ContactRequestCompound value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ContactRequestCompound read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of ContactRequestCompound given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ContactRequestCompound
+  * @throws IOException if the JSON string is invalid with respect to ContactRequestCompound
+  */
+  public static ContactRequestCompound fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ContactRequestCompound.class);
+  }
+
+ /**
+  * Convert an instance of ContactRequestCompound to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

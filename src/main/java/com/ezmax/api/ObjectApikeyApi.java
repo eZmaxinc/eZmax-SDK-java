@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectApikeyApi {
     private ApiClient localVarApiClient;
@@ -87,7 +88,6 @@ public class ObjectApikeyApi {
      */
     public okhttp3.Call apikeyCreateObjectV1Call(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -176,8 +176,14 @@ public class ObjectApikeyApi {
      */
     public ApiResponse<ApikeyCreateObjectV1Response> apikeyCreateObjectV1WithHttpInfo(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = apikeyCreateObjectV1ValidateBeforeCall(apikeyCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<ApikeyCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ApikeyCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ApikeyCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ApikeyCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**

@@ -31,11 +31,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import eZmaxAPI.JSON;
+
 /**
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-02T19:25:42.673502Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -230,5 +249,109 @@ public class CommonResponseObjDebugPayloadGetList {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("iVersionMin");
+    openapiFields.add("iVersionMax");
+    openapiFields.add("a_RequiredPermission");
+    openapiFields.add("a_Filter");
+    openapiFields.add("a_OrderBy");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("iVersionMin");
+    openapiRequiredFields.add("iVersionMax");
+    openapiRequiredFields.add("a_RequiredPermission");
+    openapiRequiredFields.add("a_Filter");
+    openapiRequiredFields.add("a_OrderBy");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to CommonResponseObjDebugPayloadGetList
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (CommonResponseObjDebugPayloadGetList.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayloadGetList is not found in the empty JSON string", CommonResponseObjDebugPayloadGetList.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!CommonResponseObjDebugPayloadGetList.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayloadGetList` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CommonResponseObjDebugPayloadGetList.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `a_Filter`
+      if (jsonObj.getAsJsonObject("a_Filter") != null) {
+        CommonResponseFilter.validateJsonObject(jsonObj.getAsJsonObject("a_Filter"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CommonResponseObjDebugPayloadGetList.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommonResponseObjDebugPayloadGetList' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CommonResponseObjDebugPayloadGetList> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommonResponseObjDebugPayloadGetList.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CommonResponseObjDebugPayloadGetList>() {
+           @Override
+           public void write(JsonWriter out, CommonResponseObjDebugPayloadGetList value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CommonResponseObjDebugPayloadGetList read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of CommonResponseObjDebugPayloadGetList given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CommonResponseObjDebugPayloadGetList
+  * @throws IOException if the JSON string is invalid with respect to CommonResponseObjDebugPayloadGetList
+  */
+  public static CommonResponseObjDebugPayloadGetList fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CommonResponseObjDebugPayloadGetList.class);
+  }
+
+ /**
+  * Convert an instance of CommonResponseObjDebugPayloadGetList to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

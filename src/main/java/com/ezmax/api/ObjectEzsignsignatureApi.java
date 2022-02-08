@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsignsignatureApi {
     private ApiClient localVarApiClient;
@@ -90,7 +91,6 @@ public class ObjectEzsignsignatureApi {
      */
     public okhttp3.Call ezsignsignatureCreateObjectV1Call(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -179,8 +179,14 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureCreateObjectV1Response> ezsignsignatureCreateObjectV1WithHttpInfo(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureCreateObjectV1ValidateBeforeCall(ezsignsignatureCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignsignatureCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -219,7 +225,6 @@ public class ObjectEzsignsignatureApi {
      */
     public okhttp3.Call ezsignsignatureDeleteObjectV1Call(Integer pkiEzsignsignatureID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -313,8 +318,14 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureDeleteObjectV1ValidateBeforeCall(pkiEzsignsignatureID, null);
-        Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignsignatureDeleteObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -354,7 +365,6 @@ public class ObjectEzsignsignatureApi {
      */
     public okhttp3.Call ezsignsignatureGetObjectV1Call(Integer pkiEzsignsignatureID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -446,8 +456,14 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureGetObjectV1ValidateBeforeCall(pkiEzsignsignatureID, null);
-        Type localVarReturnType = new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignsignatureGetObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**

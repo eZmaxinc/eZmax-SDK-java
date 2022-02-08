@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsignfoldertypeApi {
     private ApiClient localVarApiClient;
@@ -92,7 +93,6 @@ public class ObjectEzsignfoldertypeApi {
      */
     public okhttp3.Call ezsignfoldertypeGetAutocompleteV1Call(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -194,8 +194,14 @@ public class ObjectEzsignfoldertypeApi {
      */
     public ApiResponse<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, null);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CommonGetAutocompleteV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<CommonGetAutocompleteV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -239,7 +245,6 @@ public class ObjectEzsignfoldertypeApi {
      */
     public okhttp3.Call ezsignfoldertypeGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -353,8 +358,14 @@ public class ObjectEzsignfoldertypeApi {
      */
     public ApiResponse<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldertypeGetListV1Response>(){});
+            throw e;
+        }
     }
 
     /**

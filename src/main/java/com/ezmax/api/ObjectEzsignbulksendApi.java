@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsignbulksendApi {
     private ApiClient localVarApiClient;
@@ -94,7 +95,6 @@ public class ObjectEzsignbulksendApi {
      */
     public okhttp3.Call ezsignbulksendGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -208,8 +208,14 @@ public class ObjectEzsignbulksendApi {
      */
     public ApiResponse<EzsignbulksendGetListV1Response> ezsignbulksendGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
         okhttp3.Call localVarCall = ezsignbulksendGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
-        Type localVarReturnType = new TypeToken<EzsignbulksendGetListV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignbulksendGetListV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignbulksendGetListV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignbulksendGetListV1Response>(){});
+            throw e;
+        }
     }
 
     /**

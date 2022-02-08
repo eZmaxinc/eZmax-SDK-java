@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectActivesessionApi {
     private ApiClient localVarApiClient;
@@ -85,7 +86,6 @@ public class ObjectActivesessionApi {
      */
     public okhttp3.Call activesessionGetCurrentV1Call(final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -167,8 +167,14 @@ public class ObjectActivesessionApi {
      */
     public ApiResponse<ActivesessionGetCurrentV1Response> activesessionGetCurrentV1WithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = activesessionGetCurrentV1ValidateBeforeCall(null);
-        Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ActivesessionGetCurrentV1Response>(){});
+            throw e;
+        }
     }
 
     /**

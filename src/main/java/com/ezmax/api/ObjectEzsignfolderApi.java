@@ -31,6 +31,8 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
+import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
+import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
@@ -47,6 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ObjectEzsignfolderApi {
     private ApiClient localVarApiClient;
@@ -99,7 +102,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderCreateObjectV1Call(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -188,8 +190,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderCreateObjectV1Response> ezsignfolderCreateObjectV1WithHttpInfo(List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderCreateObjectV1ValidateBeforeCall(ezsignfolderCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderCreateObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderCreateObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -228,7 +236,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderDeleteObjectV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -322,8 +329,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderDeleteObjectV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderDeleteObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -349,6 +362,152 @@ public class ObjectEzsignfolderApi {
         return localVarCall;
     }
     /**
+     * Build call for ezsignfolderEditObjectV1
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderEditObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderEditObjectV1Call(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfolderEditObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}"
+            .replaceAll("\\{" + "pkiEzsignfolderID" + "\\}", localVarApiClient.escapeString(pkiEzsignfolderID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderEditObjectV1ValidateBeforeCall(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'pkiEzsignfolderID' is set
+        if (pkiEzsignfolderID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderEditObjectV1(Async)");
+        }
+        
+        // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
+        if (ezsignfolderEditObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfolderEditObjectV1Request' when calling ezsignfolderEditObjectV1(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsignfolderEditObjectV1Call(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Edit an Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderEditObjectV1Request  (required)
+     * @return EzsignfolderEditObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignfolderEditObjectV1Response> localVarResp = ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit an Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderEditObjectV1Request  (required)
+     * @return ApiResponse&lt;EzsignfolderEditObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderEditObjectV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, null);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderEditObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderEditObjectV1Response>(){});
+            throw e;
+        }
+    }
+
+    /**
+     * Edit an Ezsignfolder (asynchronously)
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderEditObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderEditObjectV1Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback<EzsignfolderEditObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderEditObjectV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for ezsignfolderGetEzsigndocumentsV1
      * @param pkiEzsignfolderID  (required)
      * @param _callback Callback for upload/download progress
@@ -363,7 +522,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderGetEzsigndocumentsV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -455,8 +613,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderGetEzsigndocumentsV1Response> ezsignfolderGetEzsigndocumentsV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetEzsigndocumentsV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderGetEzsigndocumentsV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderGetEzsigndocumentsV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderGetEzsigndocumentsV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderGetEzsigndocumentsV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -495,7 +659,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderGetEzsignfoldersignerassociationsV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -587,8 +750,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderGetEzsignfoldersignerassociationsV1Response> ezsignfolderGetEzsignfoldersignerassociationsV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetEzsignfoldersignerassociationsV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderGetEzsignfoldersignerassociationsV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderGetEzsignfoldersignerassociationsV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderGetEzsignfoldersignerassociationsV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderGetEzsignfoldersignerassociationsV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -629,7 +798,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderGetFormsDataV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -725,8 +893,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderGetFormsDataV1Response> ezsignfolderGetFormsDataV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetFormsDataV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderGetFormsDataV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderGetFormsDataV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderGetFormsDataV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderGetFormsDataV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -771,7 +945,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -885,8 +1058,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderGetListV1Response> ezsignfolderGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderGetListV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderGetListV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderGetListV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderGetListV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -929,7 +1108,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderGetObjectV1Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1021,8 +1199,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderGetObjectV1Response> ezsignfolderGetObjectV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetObjectV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderGetObjectV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderGetObjectV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1063,7 +1247,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderSendV1Call(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1164,8 +1347,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderSendV1Response> ezsignfolderSendV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderSendV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderSendV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderSendV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderSendV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderSendV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderSendV1Response>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1208,7 +1397,6 @@ public class ObjectEzsignfolderApi {
      */
     public okhttp3.Call ezsignfolderUnsendV1Call(Integer pkiEzsignfolderID, String body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1309,8 +1497,14 @@ public class ObjectEzsignfolderApi {
      */
     public ApiResponse<EzsignfolderUnsendV1Response> ezsignfolderUnsendV1WithHttpInfo(Integer pkiEzsignfolderID, String body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderUnsendV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfolderUnsendV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfolderUnsendV1Response>(){});
+            throw e;
+        }
     }
 
     /**

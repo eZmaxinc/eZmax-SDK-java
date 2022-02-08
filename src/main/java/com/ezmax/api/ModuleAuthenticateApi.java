@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class ModuleAuthenticateApi {
     private ApiClient localVarApiClient;
@@ -90,7 +91,6 @@ public class ModuleAuthenticateApi {
      */
     public okhttp3.Call authenticateAuthenticateV2Call(String eSessionType, AuthenticateAuthenticateV2Request authenticateAuthenticateV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -189,8 +189,14 @@ public class ModuleAuthenticateApi {
      */
     public ApiResponse<AuthenticateAuthenticateV2Response> authenticateAuthenticateV2WithHttpInfo(String eSessionType, AuthenticateAuthenticateV2Request authenticateAuthenticateV2Request) throws ApiException {
         okhttp3.Call localVarCall = authenticateAuthenticateV2ValidateBeforeCall(eSessionType, authenticateAuthenticateV2Request, null);
-        Type localVarReturnType = new TypeToken<AuthenticateAuthenticateV2Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<AuthenticateAuthenticateV2Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<AuthenticateAuthenticateV2Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<AuthenticateAuthenticateV2Response>(){});
+            throw e;
+        }
     }
 
     /**
