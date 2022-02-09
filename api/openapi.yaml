@@ -539,23 +539,26 @@ tags:
     \ not allowed ex: \"application/json\" vs \"image/png\" |\r\n| NOTACCEPTABLE_LANGUAGE\
     \ | The route is valid but the Accept-Language header is not allowed ex: \"en\"\
     \ vs \"es\"             |\r\n\r\n### HTTP 422 (Unprocessable entity)\r\n| eErrorCode\
-    \                            | Examples                                      \
-    \                         |\r\n| ------------------------------------- | ----------------------------------------------------------------------\
-    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE      | The element cannot be deleted\
-    \                                          |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
-    \       | The request was valid, but no action was necessary                 \
-    \    |\r\n| UNPROCESSABLEENTITY_NOTREADY          | The element is not in a state\
-    \ that allows the action (Sending a document without signature, downloading an\
-    \ unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_INCOMPATIBLE  | The pdf document\
-    \ cannot be signed                                      |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
-    \      | The pdf document contains a password and cannot be signed           \
-    \   |\r\n| UNPROCESSABLEENTITY_PDF_REPAIRABLE    | The pdf document contains errors\
-    \ and can be repaired                   |\r\n| UNPROCESSABLEENTITY_PDF_XFA   \
-    \        | The pdf document contains XFA form and cannot be signed           \
-    \     |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH | The number of pages between\
-    \ the document and the template do not match |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
-    \    | We cannot retrieve ressource at supplied url                          \
-    \ |\r\n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples\
+    \                             | Examples                                     \
+    \                          |\r\n| -------------------------------------- | ----------------------------------------------------------------------\
+    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE       | The element cannot be deleted\
+    \                                          |\r\n| UNPROCESSABLEENTITY_CANNOTMODIFY\
+    \       | The element cannot be modified                                     \
+    \    |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
+    \ at supplied url                           |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
+    \        | The request was valid, but no action was necessary                \
+    \     |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a\
+    \ state that allows the action (Sending a document without signature, downloading\
+    \ an unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_INCOMPATIBLE   | The pdf\
+    \ document cannot be signed                                      |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
+    \       | The pdf document contains a password and cannot be signed          \
+    \    |\r\n| UNPROCESSABLEENTITY_PDF_REPAIRABLE     | The pdf document contains\
+    \ errors and can be repaired                   |\r\n| UNPROCESSABLEENTITY_PDF_XFA\
+    \            | The pdf document contains XFA form and cannot be signed       \
+    \         |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH  | The number of pages\
+    \ between the document and the template do not match |\r\n| UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
+    \ | The field is not modifiable in the current state                       |\r\
+    \n\r\n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples\
     \                  |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
     \ | Unhandled error on server |\r\n\r\n### HTTP 501 (Not Implemented)\r\n| eErrorCode\
     \           | Examples                                                 |\r\n|\
@@ -643,9 +646,11 @@ tags:
     \ properties\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\
     - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
     - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - POST /1/object/ezsignsignature bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n\
-    - PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\n\n### [1.1.3] - 2021-12-17\n\
-    \n#### Added\n- GET /1/object/ezsignbulksend/getList\n- GET /1/object/ezsigntemplatepackage/getList\n\
+    - PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\n- POST /1/object/ezsignsignature\
+    \ bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n- PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\n\
+    - Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD added to documentation\n-\
+    \ Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added to documentation\n\n### [1.1.3]\
+    \ - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n- GET /1/object/ezsigntemplatepackage/getList\n\
     - POST /1/object/ezsignfoldersignerassociation bEzsignfoldersignerassociationReceivecopy\
     \ property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR added to documentation\n\
     - Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added to documentation\n\n####\
@@ -1390,76 +1395,6 @@ paths:
       security:
       - Authorization: []
       summary: Retrieve an existing Ezsigndocument's Ezsignpages
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}:
-    delete:
-      operationId: Ezsigndocument_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Ezsigndocument
-      tags:
-      - Object_Ezsigndocument
-      x-accepts: application/json
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsigndocument_GetObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-getObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
       x-accepts: application/json
@@ -2559,6 +2494,149 @@ paths:
       tags:
       - Object_Ezsignfolder
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
+    get:
+      operationId: Ezsignfolder_GetEzsignfoldersignerassociations_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+      tags:
+      - Object_Ezsignfolder
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}:
+    delete:
+      operationId: Ezsigndocument_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsigndocument_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-accepts: application/json
+    patch:
+      operationId: Ezsigndocument_PatchObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-patchObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-patchObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Patch an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-contentType: application/json
+      x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     delete:
       operationId: Ezsignfoldersignerassociation_DeleteObject_V1
@@ -2624,36 +2702,6 @@ paths:
       summary: Retrieve an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
-    get:
-      operationId: Ezsignfolder_GetEzsignfoldersignerassociations_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
-      tags:
-      - Object_Ezsignfolder
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}:
     delete:
@@ -2750,9 +2798,16 @@ paths:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: Edit an Ezsignfolder
+      summary: Modify an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
       x-contentType: application/json
@@ -7119,6 +7174,32 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignfolder-Request'
       description: An Ezsignfolder Object and children to create a complete structure
+      type: object
+    ezsigndocument-patchObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsigndocument/patchObject API Request
+      type: object
+    ezsigndocument-patchObject-v1-Request:
+      description: Request for the /1/object/ezsigndocument/pathObject API Request
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-RequestPatch'
+      required:
+      - objEzsigndocument
+      type: object
+    ezsigndocument-RequestPatch:
+      description: An Ezsigndocument Object
+      properties:
+        dtEzsigndocumentDuedate:
+          description: The maximum date and time at which the Ezsigndocument can be
+            signed.
+          example: 2020-12-31 23:59:59
+          type: string
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          example: "Contract #123"
+          type: string
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * An Ezsignsignaturecustomdate Object
  */
 @ApiModel(description = "An Ezsignsignaturecustomdate Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T15:56:57.693377Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
 public class EzsignsignaturecustomdateRequest {
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X = "iEzsignsignaturecustomdateX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X)

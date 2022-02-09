@@ -373,6 +373,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignfolderEditObjectV1Call(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -441,7 +442,7 @@ public class ObjectEzsignfolderApi {
     }
 
     /**
-     * Edit an Ezsignfolder
+     * Modify an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderEditObjectV1Request  (required)
@@ -452,6 +453,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
@@ -460,7 +462,7 @@ public class ObjectEzsignfolderApi {
     }
 
     /**
-     * Edit an Ezsignfolder
+     * Modify an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderEditObjectV1Request  (required)
@@ -471,6 +473,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
@@ -486,7 +489,7 @@ public class ObjectEzsignfolderApi {
     }
 
     /**
-     * Edit an Ezsignfolder (asynchronously)
+     * Modify an existing Ezsignfolder (asynchronously)
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderEditObjectV1Request  (required)
@@ -498,6 +501,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignfolderEditObjectV1Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback<EzsignfolderEditObjectV1Response> _callback) throws ApiException {

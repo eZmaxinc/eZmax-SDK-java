@@ -86,8 +86,11 @@ docs/EzsigndocumentGetObjectV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
+docs/EzsigndocumentPatchObjectV1Request.md
+docs/EzsigndocumentPatchObjectV1Response.md
 docs/EzsigndocumentRequest.md
 docs/EzsigndocumentRequestCompound.md
+docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
@@ -357,8 +360,11 @@ src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigndocumentPatchObjectV1Request.java
+src/main/java/com/ezmax/api/model/EzsigndocumentPatchObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequest.java
 src/main/java/com/ezmax/api/model/EzsigndocumentRequestCompound.java
+src/main/java/com/ezmax/api/model/EzsigndocumentRequestPatch.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOf.java
@@ -617,7 +623,10 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentPatchObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentPatchObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestCompoundTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentRequestPatchTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundTest.java

@@ -29,6 +29,8 @@ import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
+import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
+import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
 import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -183,6 +185,22 @@ public class ObjectEzsigndocumentApiTest {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = null;
                 EzsigndocumentGetWordsPositionsV1Response response = api.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Patch an existing Ezsigndocument
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentPatchObjectV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
+                EzsigndocumentPatchObjectV1Response response = api.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
         // TODO: test validations
     }
     
