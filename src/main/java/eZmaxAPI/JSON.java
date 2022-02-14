@@ -247,6 +247,8 @@ public class JSON {
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1ResponseAllOf.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureCreateObjectV1ResponseMPayload.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureEditObjectV1Request.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureEditObjectV1Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureGetObjectV1Response.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureGetObjectV1ResponseAllOf.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new com.ezmax.api.model.EzsignsignatureRequest.CustomTypeAdapterFactory())

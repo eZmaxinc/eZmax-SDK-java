@@ -18,6 +18,8 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureEditObjectV1Request;
+import com.ezmax.api.model.EzsignsignatureEditObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV1Response;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -63,6 +65,22 @@ public class ObjectEzsignsignatureApiTest {
     public void ezsignsignatureDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
                 EzsignsignatureDeleteObjectV1Response response = api.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Edit an existing Ezsignsignature
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignsignatureEditObjectV1Test() throws ApiException {
+        Integer pkiEzsignsignatureID = null;
+        EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request = null;
+                EzsignsignatureEditObjectV1Response response = api.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
         // TODO: test validations
     }
     

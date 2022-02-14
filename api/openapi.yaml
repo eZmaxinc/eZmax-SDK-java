@@ -1639,76 +1639,6 @@ paths:
       tags:
       - Object_Ezsignfoldersignerassociation
       x-accepts: application/json
-  /1/object/ezsignsignature/{pkiEzsignsignatureID}:
-    delete:
-      operationId: Ezsignsignature_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-accepts: application/json
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsignsignature_GetObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-accepts: application/json
   /1/customer/{pksCustomerCode}/endpoint:
     get:
       description: "Retrieve the customer's specific server endpoint where to send\
@@ -2810,6 +2740,119 @@ paths:
       summary: Modify an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature/{pkiEzsignsignatureID}:
+    delete:
+      operationId: Ezsignsignature_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-accepts: application/json
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsignsignature_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-accepts: application/json
+    put:
+      operationId: Ezsignsignature_EditObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignature-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Edit an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
       x-contentType: application/json
       x-accepts: application/json
 components:
@@ -7190,7 +7233,6 @@ components:
       type: object
     ezsigndocument-RequestPatch:
       description: An Ezsigndocument Object
-      minProperties: 1
       properties:
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
@@ -7201,6 +7243,19 @@ components:
           description: The name of the document that will be presented to Ezsignfoldersignerassociations
           example: "Contract #123"
           type: string
+      type: object
+    ezsignsignature-editObject-v1-Request:
+      description: Request for the /1/object/ezsignsignature/editObject API Request
+      properties:
+        objEzsignsignature:
+          $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+      required:
+      - objEzsignsignature
+      type: object
+    ezsignsignature-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignsignature/editObject API Request
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

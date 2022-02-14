@@ -159,6 +159,8 @@ docs/EzsignsignatureCreateObjectV1Response.md
 docs/EzsignsignatureCreateObjectV1ResponseAllOf.md
 docs/EzsignsignatureCreateObjectV1ResponseMPayload.md
 docs/EzsignsignatureDeleteObjectV1Response.md
+docs/EzsignsignatureEditObjectV1Request.md
+docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureRequest.md
@@ -433,6 +435,8 @@ src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignsignatureDeleteObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsignsignatureEditObjectV1Request.java
+src/main/java/com/ezmax/api/model/EzsignsignatureEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequest.java
@@ -696,6 +700,8 @@ src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseAllOfTest
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureDeleteObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundAllOfTest.java

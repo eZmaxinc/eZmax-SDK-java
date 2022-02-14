@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * An Apikey Object and children to create a complete structure
  */
 @ApiModel(description = "An Apikey Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:46:59.500263Z[Etc/UTC]")
 public class ApikeyRequestCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
