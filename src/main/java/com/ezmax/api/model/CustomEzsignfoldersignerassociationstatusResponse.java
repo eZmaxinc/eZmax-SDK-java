@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignfoldersignerassociationstatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -66,7 +66,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS = "a_objEzsignsignaturestatus";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS)
-  private List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = new ArrayList<CustomEzsignsignaturestatusResponse>();
+  private List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = new ArrayList<>();
 
   public CustomEzsignfoldersignerassociationstatusResponse() { 
   }

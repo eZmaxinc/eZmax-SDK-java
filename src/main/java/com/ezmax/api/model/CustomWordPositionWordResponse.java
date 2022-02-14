@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -58,7 +58,7 @@ public class CustomWordPositionWordResponse {
 
   public static final String SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE = "a_objWordPositionOccurence";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE)
-  private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = new ArrayList<CustomWordPositionOccurenceResponse>();
+  private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = new ArrayList<>();
 
   public CustomWordPositionWordResponse() { 
   }

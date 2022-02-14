@@ -49,11 +49,11 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfolder/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D = "a_pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D)
-  private List<Integer> aPkiEzsignfolderID = new ArrayList<Integer>();
+  private List<Integer> aPkiEzsignfolderID = new ArrayList<>();
 
   public EzsignfolderCreateObjectV1ResponseMPayload() { 
   }

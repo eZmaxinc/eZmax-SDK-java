@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request
  */
 @ApiModel(description = "Request for the /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV2Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
@@ -57,11 +57,11 @@ public class EzsigndocumentApplyEzsigntemplateV2Request {
 
   public static final String SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER = "a_sEzsigntemplatesigner";
   @SerializedName(SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER)
-  private List<String> aSEzsigntemplatesigner = new ArrayList<String>();
+  private List<String> aSEzsigntemplatesigner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
-  private List<Integer> aPkiEzsignfoldersignerassociationID = new ArrayList<Integer>();
+  private List<Integer> aPkiEzsignfoldersignerassociationID = new ArrayList<>();
 
   public EzsigndocumentApplyEzsigntemplateV2Request() { 
   }

@@ -50,11 +50,11 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/apikey/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/apikey/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class ApikeyCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  private List<ApikeyResponse> aObjApikey = new ArrayList<ApikeyResponse>();
+  private List<ApikeyResponse> aObjApikey = new ArrayList<>();
 
   public ApikeyCreateObjectV1ResponseMPayload() { 
   }

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Definition of Filters for getList
  */
 @ApiModel(description = "Definition of Filters for getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CommonResponseFilter {
   public static final String SERIALIZED_NAME_A_AUTO_TYPE = "a_AutoType";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE)
@@ -71,7 +71,7 @@ public class CommonResponseFilter {
 
   public CommonResponseFilter putAAutoTypeItem(String key, String aAutoTypeItem) {
     if (this.aAutoType == null) {
-      this.aAutoType = new HashMap<String, String>();
+      this.aAutoType = new HashMap<>();
     }
     this.aAutoType.put(key, aAutoTypeItem);
     return this;
@@ -102,7 +102,7 @@ public class CommonResponseFilter {
 
   public CommonResponseFilter putAEnumItem(String key, Map<String, String> aEnumItem) {
     if (this.aEnum == null) {
-      this.aEnum = new HashMap<String, Map<String, String>>();
+      this.aEnum = new HashMap<>();
     }
     this.aEnum.put(key, aEnumItem);
     return this;

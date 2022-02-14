@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -66,7 +66,7 @@ public class CommonResponseObjDebugPayloadGetList {
 
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
-  private List<Integer> aRequiredPermission = new ArrayList<Integer>();
+  private List<Integer> aRequiredPermission = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
@@ -74,7 +74,7 @@ public class CommonResponseObjDebugPayloadGetList {
 
   public static final String SERIALIZED_NAME_A_ORDER_BY = "a_OrderBy";
   @SerializedName(SERIALIZED_NAME_A_ORDER_BY)
-  private Map<String, String> aOrderBy = new HashMap<String, String>();
+  private Map<String, String> aOrderBy = new HashMap<>();
 
   public CommonResponseObjDebugPayloadGetList() { 
   }

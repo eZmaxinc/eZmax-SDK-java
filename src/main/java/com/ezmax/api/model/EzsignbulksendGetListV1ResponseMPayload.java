@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignbulksend/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignbulksend/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
-  private List<EzsignbulksendListElement> aObjEzsignbulksend = new ArrayList<EzsignbulksendListElement>();
+  private List<EzsignbulksendListElement> aObjEzsignbulksend = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)

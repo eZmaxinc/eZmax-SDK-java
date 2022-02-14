@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Listpresentation element
  */
 @ApiModel(description = "A Listpresentation element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class ListpresentationRequest {
   public static final String SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION = "sListpresentationDescription";
   @SerializedName(SERIALIZED_NAME_S_LISTPRESENTATION_DESCRIPTION)
@@ -65,7 +65,7 @@ public class ListpresentationRequest {
 
   public static final String SERIALIZED_NAME_A_S_COLUMN_NAME = "a_sColumnName";
   @SerializedName(SERIALIZED_NAME_A_S_COLUMN_NAME)
-  private List<String> aSColumnName = new ArrayList<String>();
+  private List<String> aSColumnName = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_I_LISTPRESENTATION_ROW_MAX = "iListpresentationRowMax";
   @SerializedName(SERIALIZED_NAME_I_LISTPRESENTATION_ROW_MAX)

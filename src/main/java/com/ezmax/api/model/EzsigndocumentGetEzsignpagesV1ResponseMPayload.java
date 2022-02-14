@@ -50,11 +50,11 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNPAGE = "a_objEzsignpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNPAGE)
-  private List<EzsignpageResponse> aObjEzsignpage = new ArrayList<EzsignpageResponse>();
+  private List<EzsignpageResponse> aObjEzsignpage = new ArrayList<>();
 
   public EzsigndocumentGetEzsignpagesV1ResponseMPayload() { 
   }

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * This is a generic debug object that is returned by all API requests
  */
 @ApiModel(description = "This is a generic debug object that is returned by all API requests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -70,7 +70,7 @@ public class CommonResponseObjDebug {
 
   public static final String SERIALIZED_NAME_A_OBJ_S_Q_L_QUERY = "a_objSQLQuery";
   @SerializedName(SERIALIZED_NAME_A_OBJ_S_Q_L_QUERY)
-  private List<CommonResponseObjSQLQuery> aObjSQLQuery = new ArrayList<CommonResponseObjSQLQuery>();
+  private List<CommonResponseObjSQLQuery> aObjSQLQuery = new ArrayList<>();
 
   public CommonResponseObjDebug() { 
   }

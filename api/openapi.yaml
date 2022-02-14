@@ -7190,6 +7190,7 @@ components:
       type: object
     ezsigndocument-RequestPatch:
       description: An Ezsigndocument Object
+      minProperties: 1
       properties:
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be

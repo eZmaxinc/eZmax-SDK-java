@@ -2,7 +2,7 @@
 
 eZmax API Definition
 - API version: 1.1.4
-  - Build date: 2022-02-09T19:47:38.409927Z[Etc/UTC]
+  - Build date: 2022-02-14T18:36:52.014353Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -14,7 +14,7 @@ This API expose all the functionnalities for the eZmax and eZsign applications.
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.7+
+1. Java 1.8+
 2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation

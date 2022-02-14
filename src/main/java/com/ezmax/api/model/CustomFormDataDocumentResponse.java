@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A form Data Document Object 
  */
 @ApiModel(description = "A form Data Document Object ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -70,7 +70,7 @@ public class CustomFormDataDocumentResponse {
 
   public static final String SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER = "a_objFormDataSigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER)
-  private List<CustomFormDataSignerResponse> aObjFormDataSigner = new ArrayList<CustomFormDataSignerResponse>();
+  private List<CustomFormDataSignerResponse> aObjFormDataSigner = new ArrayList<>();
 
   public CustomFormDataDocumentResponse() { 
   }

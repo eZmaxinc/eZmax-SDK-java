@@ -50,11 +50,11 @@ import eZmaxAPI.JSON;
 /**
  * ActivesessionResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class ActivesessionResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
-  private List<Integer> aPkiPermissionID = new ArrayList<Integer>();
+  private List<Integer> aPkiPermissionID = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_USER_REAL = "objUserReal";
   @SerializedName(SERIALIZED_NAME_OBJ_USER_REAL)
@@ -70,7 +70,7 @@ public class ActivesessionResponseCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_E_MODULE_INTERNALNAME = "a_eModuleInternalname";
   @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
-  private List<String> aEModuleInternalname = new ArrayList<String>();
+  private List<String> aEModuleInternalname = new ArrayList<>();
 
   public ActivesessionResponseCompoundAllOf() { 
   }

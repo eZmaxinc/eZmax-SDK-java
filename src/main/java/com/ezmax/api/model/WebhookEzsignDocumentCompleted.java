@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
  * This is the base Webhook object
  */
 @ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class WebhookEzsignDocumentCompleted {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -66,7 +66,7 @@ public class WebhookEzsignDocumentCompleted {
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
-  private List<AttemptResponse> aObjAttempt = new ArrayList<AttemptResponse>();
+  private List<AttemptResponse> aObjAttempt = new ArrayList<>();
 
   public WebhookEzsignDocumentCompleted() { 
   }

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigndocumentResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T19:47:38.409927Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:36:52.014353Z[Etc/UTC]")
 public class EzsigndocumentResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
@@ -69,7 +69,7 @@ public class EzsigndocumentResponseCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS = "a_objEzsignfoldersignerassociationstatus";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS)
-  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = new ArrayList<CustomEzsignfoldersignerassociationstatusResponse>();
+  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
 
   public EzsigndocumentResponseCompoundAllOf() { 
   }
