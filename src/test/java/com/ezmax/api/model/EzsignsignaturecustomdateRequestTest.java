@@ -41,6 +41,14 @@ public class EzsignsignaturecustomdateRequestTest {
     }
 
     /**
+     * Test the property 'pkiEzsignsignaturecustomdateID'
+     */
+    @Test
+    public void pkiEzsignsignaturecustomdateIDTest() {
+        // TODO: test pkiEzsignsignaturecustomdateID
+    }
+
+    /**
      * Test the property 'iEzsignsignaturecustomdateX'
      */
     @Test

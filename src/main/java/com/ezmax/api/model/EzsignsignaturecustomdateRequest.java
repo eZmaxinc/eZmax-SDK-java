@@ -47,8 +47,12 @@ import eZmaxAPI.JSON;
  * An Ezsignsignaturecustomdate Object
  */
 @ApiModel(description = "An Ezsignsignaturecustomdate Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:46:59.500263Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T15:53:52.535930Z[Etc/UTC]")
 public class EzsignsignaturecustomdateRequest {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D = "pkiEzsignsignaturecustomdateID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D)
+  private Integer pkiEzsignsignaturecustomdateID;
+
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X = "iEzsignsignaturecustomdateX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X)
   private Integer iEzsignsignaturecustomdateX;
@@ -63,6 +67,29 @@ public class EzsignsignaturecustomdateRequest {
 
   public EzsignsignaturecustomdateRequest() { 
   }
+
+  public EzsignsignaturecustomdateRequest pkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
+    
+    this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignsignaturecustomdate
+   * @return pkiEzsignsignaturecustomdateID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "27", value = "The unique ID of the Ezsignsignaturecustomdate")
+
+  public Integer getPkiEzsignsignaturecustomdateID() {
+    return pkiEzsignsignaturecustomdateID;
+  }
+
+
+  public void setPkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
+    this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
+  }
+
 
   public EzsignsignaturecustomdateRequest iEzsignsignaturecustomdateX(Integer iEzsignsignaturecustomdateX) {
     
@@ -142,20 +169,22 @@ public class EzsignsignaturecustomdateRequest {
       return false;
     }
     EzsignsignaturecustomdateRequest ezsignsignaturecustomdateRequest = (EzsignsignaturecustomdateRequest) o;
-    return Objects.equals(this.iEzsignsignaturecustomdateX, ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX) &&
+    return Objects.equals(this.pkiEzsignsignaturecustomdateID, ezsignsignaturecustomdateRequest.pkiEzsignsignaturecustomdateID) &&
+        Objects.equals(this.iEzsignsignaturecustomdateX, ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateX) &&
         Objects.equals(this.iEzsignsignaturecustomdateY, ezsignsignaturecustomdateRequest.iEzsignsignaturecustomdateY) &&
         Objects.equals(this.sEzsignsignaturecustomdateFormat, ezsignsignaturecustomdateRequest.sEzsignsignaturecustomdateFormat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat);
+    return Objects.hash(pkiEzsignsignaturecustomdateID, iEzsignsignaturecustomdateX, iEzsignsignaturecustomdateY, sEzsignsignaturecustomdateFormat);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignaturecustomdateRequest {\n");
+    sb.append("    pkiEzsignsignaturecustomdateID: ").append(toIndentedString(pkiEzsignsignaturecustomdateID)).append("\n");
     sb.append("    iEzsignsignaturecustomdateX: ").append(toIndentedString(iEzsignsignaturecustomdateX)).append("\n");
     sb.append("    iEzsignsignaturecustomdateY: ").append(toIndentedString(iEzsignsignaturecustomdateY)).append("\n");
     sb.append("    sEzsignsignaturecustomdateFormat: ").append(toIndentedString(sEzsignsignaturecustomdateFormat)).append("\n");
@@ -181,6 +210,7 @@ public class EzsignsignaturecustomdateRequest {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("pkiEzsignsignaturecustomdateID");
     openapiFields.add("iEzsignsignaturecustomdateX");
     openapiFields.add("iEzsignsignaturecustomdateY");
     openapiFields.add("sEzsignsignaturecustomdateFormat");

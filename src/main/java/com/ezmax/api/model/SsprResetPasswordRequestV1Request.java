@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
  * Request for the /1/module/sspr/resetPasswordRequest API Request
  */
 @ApiModel(description = "Request for the /1/module/sspr/resetPasswordRequest API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-14T18:46:59.500263Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T15:53:52.535930Z[Etc/UTC]")
 public class SsprResetPasswordRequestV1Request {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
