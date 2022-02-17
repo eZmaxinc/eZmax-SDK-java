@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfoldersignerassociation Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T15:45:54.914027Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T17:31:20.175666Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)

@@ -7305,17 +7305,22 @@ components:
       description: The unique ID of the Ezsignsignaturecustomdate
       example: 27
       type: integer
-    ezsigndocument-editEzsignsignatures-v1-Request:
-      description: "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\
-        \ API Request"
-      items:
-        $ref: '#/components/schemas/ezsignsignature-RequestCompound'
-      type: array
     ezsigndocument-editEzsignsignatures-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\
         \ API Request"
+      type: object
+    ezsigndocument-editEzsignsignatures-v1-Request:
+      description: "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\
+        \ API Request"
+      properties:
+        a_objEzsignsignature:
+          items:
+            $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+          type: array
+      required:
+      - a_objEzsignsignature
       type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:

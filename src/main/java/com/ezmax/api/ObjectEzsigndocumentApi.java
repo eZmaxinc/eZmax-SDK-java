@@ -36,6 +36,7 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
@@ -45,7 +46,6 @@ import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
-import com.ezmax.api.model.EzsignsignatureRequestCompound;
 import java.io.File;
 
 import java.lang.reflect.Type;
@@ -681,7 +681,7 @@ public class ObjectEzsigndocumentApi {
     /**
      * Build call for ezsigndocumentEditEzsignsignaturesV1
      * @param pkiEzsigndocumentID  (required)
-     * @param ezsignsignatureRequestCompound  (required)
+     * @param ezsigndocumentEditEzsignsignaturesV1Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -693,7 +693,7 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Call(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Call(Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -707,7 +707,7 @@ public class ObjectEzsigndocumentApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ezsignsignatureRequestCompound;
+        Object localVarPostBody = ezsigndocumentEditEzsignsignaturesV1Request;
 
         // create path and map variables
         String localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures"
@@ -740,20 +740,20 @@ public class ObjectEzsigndocumentApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'pkiEzsigndocumentID' is set
         if (pkiEzsigndocumentID == null) {
             throw new ApiException("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1(Async)");
         }
         
-        // verify the required parameter 'ezsignsignatureRequestCompound' is set
-        if (ezsignsignatureRequestCompound == null) {
-            throw new ApiException("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1(Async)");
+        // verify the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' is set
+        if (ezsigndocumentEditEzsignsignaturesV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigndocumentEditEzsignsignaturesV1Request' when calling ezsigndocumentEditEzsignsignaturesV1(Async)");
         }
         
 
-        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1Call(pkiEzsigndocumentID, ezsignsignatureRequestCompound, _callback);
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1Call(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request, _callback);
         return localVarCall;
 
     }
@@ -762,7 +762,7 @@ public class ObjectEzsigndocumentApi {
      * Edit multiple ezsignsignatures
      * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID  (required)
-     * @param ezsignsignatureRequestCompound  (required)
+     * @param ezsigndocumentEditEzsignsignaturesV1Request  (required)
      * @return EzsigndocumentEditEzsignsignaturesV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -773,8 +773,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws ApiException {
-        ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> localVarResp = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID, ezsignsignatureRequestCompound);
+    public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> localVarResp = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request);
         return localVarResp.getData();
     }
 
@@ -782,7 +782,7 @@ public class ObjectEzsigndocumentApi {
      * Edit multiple ezsignsignatures
      * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID  (required)
-     * @param ezsignsignatureRequestCompound  (required)
+     * @param ezsigndocumentEditEzsignsignaturesV1Request  (required)
      * @return ApiResponse&lt;EzsigndocumentEditEzsignsignaturesV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -793,8 +793,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws ApiException {
-        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsignsignatureRequestCompound, null);
+    public ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request, null);
         try {
             Type localVarReturnType = new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType();
             return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -809,7 +809,7 @@ public class ObjectEzsigndocumentApi {
      * Edit multiple ezsignsignatures (asynchronously)
      * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
      * @param pkiEzsigndocumentID  (required)
-     * @param ezsignsignatureRequestCompound  (required)
+     * @param ezsigndocumentEditEzsignsignaturesV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -821,9 +821,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Async(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback<EzsigndocumentEditEzsignsignaturesV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Async(Integer pkiEzsigndocumentID, EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request, final ApiCallback<EzsigndocumentEditEzsignsignaturesV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsignsignatureRequestCompound, _callback);
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
