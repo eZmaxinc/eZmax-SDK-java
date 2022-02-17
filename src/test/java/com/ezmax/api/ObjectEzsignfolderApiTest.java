@@ -78,7 +78,7 @@ public class ObjectEzsignfolderApiTest {
     }
     
     /**
-     * Modify an existing Ezsignfolder
+     * Edit an existing Ezsignfolder
      *
      * 
      *

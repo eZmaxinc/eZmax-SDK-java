@@ -647,26 +647,26 @@ tags:
     - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
     - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
     - PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\n- POST /1/object/ezsignsignature\
-    \ bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n- PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\n\
-    - Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD added to documentation\n-\
-    \ Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added to documentation\n\n### [1.1.3]\
-    \ - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n- GET /1/object/ezsigntemplatepackage/getList\n\
-    - POST /1/object/ezsignfoldersignerassociation bEzsignfoldersignerassociationReceivecopy\
-    \ property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR added to documentation\n\
-    - Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added to documentation\n\n####\
-    \ Changed\n- Changed all the OneOf used back to nullable types. When the generators\
-    \ will support 3.1 nullable polymorphism documentation will be improved\n\n####\
-    \ Fixed\n- (AxiosSDK) Fingerprint header on GET requests was invalid when url\
-    \ parameters contained utf8 special chars\n- (CsharpSDK) OneOf not supported for\
-    \ polymorphism was preventing compilation\n- \n### [1.1.2] - 2021-10-26\n\n####\
-    \ Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel property\n\
-    - POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error 422 if error\
-    \ is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl property\n\
-    - POST /1/object/ezsigndocument eEzsigndocumentSource property now accept \"Url\"\
-    \ as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair property\n\
-    - Support for \"rg\" operator in date fields in sFilter\n- Range operator added\
-    \ to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\n####\
-    \ Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
+    \ bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n\
+    - PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\n- Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
+    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added\
+    \ to documentation\n\n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
+    - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
+    \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
+    \ to documentation\n\n#### Changed\n- Changed all the OneOf used back to nullable\
+    \ types. When the generators will support 3.1 nullable polymorphism documentation\
+    \ will be improved\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
+    \ was invalid when url parameters contained utf8 special chars\n- (CsharpSDK)\
+    \ OneOf not supported for polymorphism was preventing compilation\n- \n### [1.1.2]\
+    \ - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
+    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
+    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
+    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
+    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
+    \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
+    \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
+    \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
     - POST /1/module/list/listpresentation/{sListName}\n- Variables convention documentation\
     \ now contains type \"m\" for mixed type\n- POST /1/object/ezsigndocument/ sEzsigndocumentPassword\
     \ property\n- Support for \"in\" operator for integer fields in sFilter\n- Support\
@@ -806,12 +806,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/ezsigndocument-createObject-v1-Response'
           description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
         "422":
           content:
             application/json:
@@ -2737,7 +2731,7 @@ paths:
             completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: Modify an existing Ezsignfolder
+      summary: Edit an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
       x-contentType: application/json
@@ -2853,6 +2847,52 @@ paths:
       summary: Edit an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures:
+    put:
+      description: "Using this endpoint, you can edit multiple ezsignsignatures at\
+        \ the same time."
+      operationId: Ezsigndocument_EditEzsignsignatures_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Edit multiple ezsignsignatures
+      tags:
+      - Object_Ezsigndocument
       x-contentType: application/json
       x-accepts: application/json
 components:
@@ -7265,6 +7305,18 @@ components:
       description: The unique ID of the Ezsignsignaturecustomdate
       example: 27
       type: integer
+    ezsigndocument-editEzsignsignatures-v1-Request:
+      description: "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\
+        \ API Request"
+      items:
+        $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+      type: array
+    ezsigndocument-editEzsignsignatures-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\
+        \ API Request"
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -7782,4 +7834,8 @@ x-tagGroups:
   - Object_User
 - name: Report
   tags: []
+x-Presentations:
+- Internal
+- Full
+- Ezsign
 

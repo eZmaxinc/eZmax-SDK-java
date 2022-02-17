@@ -1,3 +1,4 @@
+.github/workflows/maven.yml
 .gitignore
 .openapi-generator-ignore
 .travis.yml
@@ -71,6 +72,7 @@ docs/EzsigndocumentCreateObjectV1Response.md
 docs/EzsigndocumentCreateObjectV1ResponseAllOf.md
 docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
+docs/EzsigndocumentEditEzsignsignaturesV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -347,6 +349,7 @@ src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
@@ -612,6 +615,7 @@ src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseAllOfTest.
 src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseTest.java

@@ -23,6 +23,7 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
@@ -31,6 +32,7 @@ import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureRequestCompound;
 import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -108,6 +110,22 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
                 EzsigndocumentDeleteObjectV1Response response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Edit multiple ezsignsignatures
+     *
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentEditEzsignsignaturesV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound = null;
+                EzsigndocumentEditEzsignsignaturesV1Response response = api.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsignsignatureRequestCompound);
         // TODO: test validations
     }
     

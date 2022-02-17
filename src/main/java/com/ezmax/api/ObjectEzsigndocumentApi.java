@@ -36,6 +36,7 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
@@ -44,6 +45,7 @@ import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureRequestCompound;
 import java.io.File;
 
 import java.lang.reflect.Type;
@@ -409,7 +411,6 @@ public class ObjectEzsigndocumentApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
@@ -482,7 +483,6 @@ public class ObjectEzsigndocumentApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
@@ -501,7 +501,6 @@ public class ObjectEzsigndocumentApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
@@ -528,7 +527,6 @@ public class ObjectEzsigndocumentApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
      */
@@ -677,6 +675,156 @@ public class ObjectEzsigndocumentApi {
 
         okhttp3.Call localVarCall = ezsigndocumentDeleteObjectV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigndocumentEditEzsignsignaturesV1
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsignsignatureRequestCompound  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Call(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignsignatureRequestCompound;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures"
+            .replaceAll("\\{" + "pkiEzsigndocumentID" + "\\}", localVarApiClient.escapeString(pkiEzsigndocumentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'pkiEzsigndocumentID' is set
+        if (pkiEzsigndocumentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentEditEzsignsignaturesV1(Async)");
+        }
+        
+        // verify the required parameter 'ezsignsignatureRequestCompound' is set
+        if (ezsignsignatureRequestCompound == null) {
+            throw new ApiException("Missing the required parameter 'ezsignsignatureRequestCompound' when calling ezsigndocumentEditEzsignsignaturesV1(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1Call(pkiEzsigndocumentID, ezsignsignatureRequestCompound, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Edit multiple ezsignsignatures
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsignsignatureRequestCompound  (required)
+     * @return EzsigndocumentEditEzsignsignaturesV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws ApiException {
+        ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> localVarResp = ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(pkiEzsigndocumentID, ezsignsignatureRequestCompound);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit multiple ezsignsignatures
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsignsignatureRequestCompound  (required)
+     * @return ApiResponse&lt;EzsigndocumentEditEzsignsignaturesV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigndocumentEditEzsignsignaturesV1Response> ezsigndocumentEditEzsignsignaturesV1WithHttpInfo(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsignsignatureRequestCompound, null);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentEditEzsignsignaturesV1Response>(){});
+            throw e;
+        }
+    }
+
+    /**
+     * Edit multiple ezsignsignatures (asynchronously)
+     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsignsignatureRequestCompound  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentEditEzsignsignaturesV1Async(Integer pkiEzsigndocumentID, List<EzsignsignatureRequestCompound> ezsignsignatureRequestCompound, final ApiCallback<EzsigndocumentEditEzsignsignaturesV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigndocumentEditEzsignsignaturesV1ValidateBeforeCall(pkiEzsigndocumentID, ezsignsignatureRequestCompound, _callback);
+        Type localVarReturnType = new TypeToken<EzsigndocumentEditEzsignsignaturesV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

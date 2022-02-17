@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Response for the GET /1/module/list/listpresentation/{sListName} API Request
  */
 @ApiModel(description = "Response for the GET /1/module/list/listpresentation/{sListName} API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T15:53:52.535930Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T15:45:54.914027Z[Etc/UTC]")
 public class ListGetListpresentationV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
