@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * Definition of objSQLQuery Object
  */
 @ApiModel(description = "Definition of objSQLQuery Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T17:31:20.175666Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T21:53:16.637114Z[Etc/UTC]")
 public class CommonResponseObjSQLQuery {
   public static final String SERIALIZED_NAME_S_QUERY = "sQuery";
   @SerializedName(SERIALIZED_NAME_S_QUERY)
