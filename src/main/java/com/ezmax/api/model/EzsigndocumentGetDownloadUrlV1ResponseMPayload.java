@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T21:53:16.637114Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
 public class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_DOWNLOAD_URL = "sDownloadUrl";
   @SerializedName(SERIALIZED_NAME_S_DOWNLOAD_URL)

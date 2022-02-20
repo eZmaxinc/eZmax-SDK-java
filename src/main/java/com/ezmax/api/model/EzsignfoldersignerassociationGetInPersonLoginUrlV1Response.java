@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Response for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl API Request
  */
 @ApiModel(description = "Response for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T21:53:16.637114Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
 public class EzsignfoldersignerassociationGetInPersonLoginUrlV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
