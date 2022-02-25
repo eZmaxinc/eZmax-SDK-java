@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.1.4
+  version: 1.1.5
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -642,8 +642,9 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.4] - 2022-02-24\n\n#### Added\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID} Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
+    \n## 1.1.X Releases\n### [1.1.5] - 2022-02-\n\n### [1.1.4] - 2022-02-24\n\n####\
+    \ Added\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
+    \ Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
     - GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
     \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
     \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
