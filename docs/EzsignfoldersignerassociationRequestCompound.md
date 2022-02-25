@@ -8,7 +8,7 @@ An Ezsignfoldersignerassociation Object and children to create a complete struct
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**objEzsignsigner** | [**EzsignsignerRequestCompound**](EzsignsignerRequestCompound.md) |  |  [optional]
+**objEzsignsigner** | [**EzsignsignerRequestCompound**](EzsignsignerRequestCompound.md) |  | 
 **pkiEzsignfoldersignerassociationID** | **Integer** | The unique ID of the Ezsignfoldersignerassociation |  [optional]
 **fkiUserID** | **Integer** | The unique ID of the User |  [optional]
 **fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 

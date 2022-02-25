@@ -1,8 +1,8 @@
 
 
-# UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+# EzsigndocumentEndPrematurelyV1Response
 
-Response for the /1/object/ezsignfoldersignerassociation/editObject API Request
+Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely API Request
 
 ## Properties
 

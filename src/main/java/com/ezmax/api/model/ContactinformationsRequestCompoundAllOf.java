@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * ContactinformationsRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class ContactinformationsRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
@@ -85,7 +85,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
    /**
-   * Get aObjAddress
+   * 
    * @return aObjAddress
   **/
   @javax.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
    /**
-   * Get aObjPhone
+   * 
    * @return aObjPhone
   **/
   @javax.annotation.Nonnull
@@ -141,7 +141,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
    /**
-   * Get aObjEmail
+   * 
    * @return aObjEmail
   **/
   @javax.annotation.Nonnull
@@ -169,7 +169,7 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
    /**
-   * Get aObjWebsite
+   * 
    * @return aObjWebsite
   **/
   @javax.annotation.Nonnull

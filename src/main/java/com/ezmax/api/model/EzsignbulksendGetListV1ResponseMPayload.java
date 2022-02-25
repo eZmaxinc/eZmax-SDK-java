@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignbulksend/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignbulksend/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
@@ -81,7 +81,7 @@ public class EzsignbulksendGetListV1ResponseMPayload {
   }
 
    /**
-   * Get aObjEzsignbulksend
+   * 
    * @return aObjEzsignbulksend
   **/
   @javax.annotation.Nonnull

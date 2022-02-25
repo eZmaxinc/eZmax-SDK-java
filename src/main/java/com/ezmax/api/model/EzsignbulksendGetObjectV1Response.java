@@ -18,6 +18,8 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsignbulksendGetObjectV1ResponseAllOf;
+import com.ezmax.api.model.EzsignbulksendGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,11 +49,15 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for the /1/object/ezsignsignature/editObject API Request
+ * Response for the /1/object/ezsignbulksend/getObject API Request
  */
-@ApiModel(description = "Response for the /1/object/ezsignsignature/editObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
-public class UNUSEDEzsignsignatureEditObjectV1Response {
+@ApiModel(description = "Response for the /1/object/ezsignbulksend/getObject API Request")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
+public class EzsignbulksendGetObjectV1Response {
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private EzsignbulksendGetObjectV1ResponseMPayload mPayload;
+
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -60,10 +66,33 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
-  public UNUSEDEzsignsignatureEditObjectV1Response() { 
+  public EzsignbulksendGetObjectV1Response() { 
   }
 
-  public UNUSEDEzsignsignatureEditObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsignbulksendGetObjectV1Response mPayload(EzsignbulksendGetObjectV1ResponseMPayload mPayload) {
+    
+    this.mPayload = mPayload;
+    return this;
+  }
+
+   /**
+   * Get mPayload
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EzsignbulksendGetObjectV1ResponseMPayload getmPayload() {
+    return mPayload;
+  }
+
+
+  public void setmPayload(EzsignbulksendGetObjectV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
+
+  public EzsignbulksendGetObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
     this.objDebugPayload = objDebugPayload;
     return this;
@@ -86,7 +115,7 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
   }
 
 
-  public UNUSEDEzsignsignatureEditObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public EzsignbulksendGetObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
     
     this.objDebug = objDebug;
     return this;
@@ -117,20 +146,22 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UNUSEDEzsignsignatureEditObjectV1Response unUSEDEzsignsignatureEditObjectV1Response = (UNUSEDEzsignsignatureEditObjectV1Response) o;
-    return Objects.equals(this.objDebugPayload, unUSEDEzsignsignatureEditObjectV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, unUSEDEzsignsignatureEditObjectV1Response.objDebug);
+    EzsignbulksendGetObjectV1Response ezsignbulksendGetObjectV1Response = (EzsignbulksendGetObjectV1Response) o;
+    return Objects.equals(this.mPayload, ezsignbulksendGetObjectV1Response.mPayload) &&
+        Objects.equals(this.objDebugPayload, ezsignbulksendGetObjectV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsignbulksendGetObjectV1Response.objDebug);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(mPayload, objDebugPayload, objDebug);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UNUSEDEzsignsignatureEditObjectV1Response {\n");
+    sb.append("class EzsignbulksendGetObjectV1Response {\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("}");
@@ -155,33 +186,46 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("mPayload");
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("mPayload");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UNUSEDEzsignsignatureEditObjectV1Response
+  * @throws IOException if the JSON Object is invalid with respect to EzsignbulksendGetObjectV1Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (UNUSEDEzsignsignatureEditObjectV1Response.openapiRequiredFields.isEmpty()) {
+        if (EzsignbulksendGetObjectV1Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UNUSEDEzsignsignatureEditObjectV1Response is not found in the empty JSON string", UNUSEDEzsignsignatureEditObjectV1Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendGetObjectV1Response is not found in the empty JSON string", EzsignbulksendGetObjectV1Response.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!UNUSEDEzsignsignatureEditObjectV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UNUSEDEzsignsignatureEditObjectV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!EzsignbulksendGetObjectV1Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignbulksendGetObjectV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignbulksendGetObjectV1Response.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `mPayload`
+      if (jsonObj.getAsJsonObject("mPayload") != null) {
+        EzsignbulksendGetObjectV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
       }
       // validate the optional field `objDebugPayload`
       if (jsonObj.getAsJsonObject("objDebugPayload") != null) {
@@ -197,22 +241,22 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UNUSEDEzsignsignatureEditObjectV1Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UNUSEDEzsignsignatureEditObjectV1Response' and its subtypes
+       if (!EzsignbulksendGetObjectV1Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignbulksendGetObjectV1Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UNUSEDEzsignsignatureEditObjectV1Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UNUSEDEzsignsignatureEditObjectV1Response.class));
+       final TypeAdapter<EzsignbulksendGetObjectV1Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignbulksendGetObjectV1Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<UNUSEDEzsignsignatureEditObjectV1Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<EzsignbulksendGetObjectV1Response>() {
            @Override
-           public void write(JsonWriter out, UNUSEDEzsignsignatureEditObjectV1Response value) throws IOException {
+           public void write(JsonWriter out, EzsignbulksendGetObjectV1Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public UNUSEDEzsignsignatureEditObjectV1Response read(JsonReader in) throws IOException {
+           public EzsignbulksendGetObjectV1Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -223,18 +267,18 @@ public class UNUSEDEzsignsignatureEditObjectV1Response {
   }
 
  /**
-  * Create an instance of UNUSEDEzsignsignatureEditObjectV1Response given an JSON string
+  * Create an instance of EzsignbulksendGetObjectV1Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of UNUSEDEzsignsignatureEditObjectV1Response
-  * @throws IOException if the JSON string is invalid with respect to UNUSEDEzsignsignatureEditObjectV1Response
+  * @return An instance of EzsignbulksendGetObjectV1Response
+  * @throws IOException if the JSON string is invalid with respect to EzsignbulksendGetObjectV1Response
   */
-  public static UNUSEDEzsignsignatureEditObjectV1Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, UNUSEDEzsignsignatureEditObjectV1Response.class);
+  public static EzsignbulksendGetObjectV1Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsignbulksendGetObjectV1Response.class);
   }
 
  /**
-  * Convert an instance of UNUSEDEzsignsignatureEditObjectV1Response to an JSON string
+  * Convert an instance of EzsignbulksendGetObjectV1Response to an JSON string
   *
   * @return JSON string
   */

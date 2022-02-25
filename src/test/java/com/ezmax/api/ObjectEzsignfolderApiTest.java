@@ -199,7 +199,7 @@ public class ObjectEzsignfolderApiTest {
     @Test
     public void ezsignfolderUnsendV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-        String body = null;
+        Object body = null;
                 EzsignfolderUnsendV1Response response = api.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
  * A Franchisereferalincome Object and children to create a complete structure
  */
 @ApiModel(description = "A Franchisereferalincome Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)
@@ -149,7 +149,7 @@ public class FranchisereferalincomeRequestCompound {
   }
 
    /**
-   * Get aObjContact
+   * 
    * @return aObjContact
   **/
   @javax.annotation.Nonnull
@@ -379,11 +379,11 @@ public class FranchisereferalincomeRequestCompound {
   }
 
    /**
-   * A comment about the transaction
+   * Comment about the transaction
    * @return tFranchisereferalincomeComment
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is a comment", required = true, value = "A comment about the transaction")
+  @ApiModelProperty(example = "This is a comment", required = true, value = "Comment about the transaction")
 
   public String gettFranchisereferalincomeComment() {
     return tFranchisereferalincomeComment;
@@ -425,7 +425,7 @@ public class FranchisereferalincomeRequestCompound {
   }
 
    /**
-   * Get sFranchisereferalincomeRemoteid
+   * 
    * @return sFranchisereferalincomeRemoteid
   **/
   @javax.annotation.Nonnull

@@ -1399,7 +1399,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderUnsendV1Call(Integer pkiEzsignfolderID, String body, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderUnsendV1Call(Integer pkiEzsignfolderID, Object body, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1446,7 +1446,7 @@ public class ObjectEzsignfolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignfolderUnsendV1ValidateBeforeCall(Integer pkiEzsignfolderID, String body, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignfolderUnsendV1ValidateBeforeCall(Integer pkiEzsignfolderID, Object body, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'pkiEzsignfolderID' is set
         if (pkiEzsignfolderID == null) {
@@ -1479,7 +1479,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfolderUnsendV1Response ezsignfolderUnsendV1(Integer pkiEzsignfolderID, String body) throws ApiException {
+    public EzsignfolderUnsendV1Response ezsignfolderUnsendV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
         ApiResponse<EzsignfolderUnsendV1Response> localVarResp = ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
         return localVarResp.getData();
     }
@@ -1499,7 +1499,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfolderUnsendV1Response> ezsignfolderUnsendV1WithHttpInfo(Integer pkiEzsignfolderID, String body) throws ApiException {
+    public ApiResponse<EzsignfolderUnsendV1Response> ezsignfolderUnsendV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderUnsendV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
         try {
             Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();
@@ -1527,7 +1527,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderUnsendV1Async(Integer pkiEzsignfolderID, String body, final ApiCallback<EzsignfolderUnsendV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderUnsendV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<EzsignfolderUnsendV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderUnsendV1ValidateBeforeCall(pkiEzsignfolderID, body, _callback);
         Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();

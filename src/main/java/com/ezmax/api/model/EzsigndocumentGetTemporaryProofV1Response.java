@@ -18,6 +18,8 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1ResponseAllOf;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,11 +49,15 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for the /1/object/ezsigndocument/editObject API Request
+ * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
  */
-@ApiModel(description = "Response for the /1/object/ezsigndocument/editObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
-public class UNUSEDEzsigndocumentEditObjectV1Response {
+@ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
+public class EzsigndocumentGetTemporaryProofV1Response {
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload;
+
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -60,10 +66,33 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
-  public UNUSEDEzsigndocumentEditObjectV1Response() { 
+  public EzsigndocumentGetTemporaryProofV1Response() { 
   }
 
-  public UNUSEDEzsigndocumentEditObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsigndocumentGetTemporaryProofV1Response mPayload(EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload) {
+    
+    this.mPayload = mPayload;
+    return this;
+  }
+
+   /**
+   * Get mPayload
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload getmPayload() {
+    return mPayload;
+  }
+
+
+  public void setmPayload(EzsigndocumentGetTemporaryProofV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
+
+  public EzsigndocumentGetTemporaryProofV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
     this.objDebugPayload = objDebugPayload;
     return this;
@@ -86,7 +115,7 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
   }
 
 
-  public UNUSEDEzsigndocumentEditObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public EzsigndocumentGetTemporaryProofV1Response objDebug(CommonResponseObjDebug objDebug) {
     
     this.objDebug = objDebug;
     return this;
@@ -117,20 +146,22 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UNUSEDEzsigndocumentEditObjectV1Response unUSEDEzsigndocumentEditObjectV1Response = (UNUSEDEzsigndocumentEditObjectV1Response) o;
-    return Objects.equals(this.objDebugPayload, unUSEDEzsigndocumentEditObjectV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, unUSEDEzsigndocumentEditObjectV1Response.objDebug);
+    EzsigndocumentGetTemporaryProofV1Response ezsigndocumentGetTemporaryProofV1Response = (EzsigndocumentGetTemporaryProofV1Response) o;
+    return Objects.equals(this.mPayload, ezsigndocumentGetTemporaryProofV1Response.mPayload) &&
+        Objects.equals(this.objDebugPayload, ezsigndocumentGetTemporaryProofV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsigndocumentGetTemporaryProofV1Response.objDebug);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(mPayload, objDebugPayload, objDebug);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UNUSEDEzsigndocumentEditObjectV1Response {\n");
+    sb.append("class EzsigndocumentGetTemporaryProofV1Response {\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("}");
@@ -155,33 +186,46 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("mPayload");
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("mPayload");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UNUSEDEzsigndocumentEditObjectV1Response
+  * @throws IOException if the JSON Object is invalid with respect to EzsigndocumentGetTemporaryProofV1Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (UNUSEDEzsigndocumentEditObjectV1Response.openapiRequiredFields.isEmpty()) {
+        if (EzsigndocumentGetTemporaryProofV1Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UNUSEDEzsigndocumentEditObjectV1Response is not found in the empty JSON string", UNUSEDEzsigndocumentEditObjectV1Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetTemporaryProofV1Response is not found in the empty JSON string", EzsigndocumentGetTemporaryProofV1Response.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!UNUSEDEzsigndocumentEditObjectV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UNUSEDEzsigndocumentEditObjectV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!EzsigndocumentGetTemporaryProofV1Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentGetTemporaryProofV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigndocumentGetTemporaryProofV1Response.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `mPayload`
+      if (jsonObj.getAsJsonObject("mPayload") != null) {
+        EzsigndocumentGetTemporaryProofV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
       }
       // validate the optional field `objDebugPayload`
       if (jsonObj.getAsJsonObject("objDebugPayload") != null) {
@@ -197,22 +241,22 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UNUSEDEzsigndocumentEditObjectV1Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UNUSEDEzsigndocumentEditObjectV1Response' and its subtypes
+       if (!EzsigndocumentGetTemporaryProofV1Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigndocumentGetTemporaryProofV1Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UNUSEDEzsigndocumentEditObjectV1Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UNUSEDEzsigndocumentEditObjectV1Response.class));
+       final TypeAdapter<EzsigndocumentGetTemporaryProofV1Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigndocumentGetTemporaryProofV1Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<UNUSEDEzsigndocumentEditObjectV1Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<EzsigndocumentGetTemporaryProofV1Response>() {
            @Override
-           public void write(JsonWriter out, UNUSEDEzsigndocumentEditObjectV1Response value) throws IOException {
+           public void write(JsonWriter out, EzsigndocumentGetTemporaryProofV1Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public UNUSEDEzsigndocumentEditObjectV1Response read(JsonReader in) throws IOException {
+           public EzsigndocumentGetTemporaryProofV1Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -223,18 +267,18 @@ public class UNUSEDEzsigndocumentEditObjectV1Response {
   }
 
  /**
-  * Create an instance of UNUSEDEzsigndocumentEditObjectV1Response given an JSON string
+  * Create an instance of EzsigndocumentGetTemporaryProofV1Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of UNUSEDEzsigndocumentEditObjectV1Response
-  * @throws IOException if the JSON string is invalid with respect to UNUSEDEzsigndocumentEditObjectV1Response
+  * @return An instance of EzsigndocumentGetTemporaryProofV1Response
+  * @throws IOException if the JSON string is invalid with respect to EzsigndocumentGetTemporaryProofV1Response
   */
-  public static UNUSEDEzsigndocumentEditObjectV1Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, UNUSEDEzsigndocumentEditObjectV1Response.class);
+  public static EzsigndocumentGetTemporaryProofV1Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzsigndocumentGetTemporaryProofV1Response.class);
   }
 
  /**
-  * Convert an instance of UNUSEDEzsigndocumentEditObjectV1Response to an JSON string
+  * Convert an instance of EzsigndocumentGetTemporaryProofV1Response to an JSON string
   *
   * @return JSON string
   */

@@ -16,6 +16,8 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1ResponseAllOf;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,17 +32,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsignfolderEditObjectV1Response
+ * Model tests for EzsigndocumentGetTemporaryProofV1Response
  */
-public class UNUSEDEzsignfolderEditObjectV1ResponseTest {
-    private final UNUSEDEzsignfolderEditObjectV1Response model = new UNUSEDEzsignfolderEditObjectV1Response();
+public class EzsigndocumentGetTemporaryProofV1ResponseTest {
+    private final EzsigndocumentGetTemporaryProofV1Response model = new EzsigndocumentGetTemporaryProofV1Response();
 
     /**
-     * Model tests for UNUSEDEzsignfolderEditObjectV1Response
+     * Model tests for EzsigndocumentGetTemporaryProofV1Response
      */
     @Test
-    public void testUNUSEDEzsignfolderEditObjectV1Response() {
-        // TODO: test UNUSEDEzsignfolderEditObjectV1Response
+    public void testEzsigndocumentGetTemporaryProofV1Response() {
+        // TODO: test EzsigndocumentGetTemporaryProofV1Response
+    }
+
+    /**
+     * Test the property 'mPayload'
+     */
+    @Test
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
     /**

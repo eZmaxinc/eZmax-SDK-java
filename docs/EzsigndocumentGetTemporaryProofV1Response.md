@@ -1,13 +1,14 @@
 
 
-# UNUSEDEzsignsignatureEditObjectV1Response
+# EzsigndocumentGetTemporaryProofV1Response
 
-Response for the /1/object/ezsignsignature/editObject API Request
+Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**EzsigndocumentGetTemporaryProofV1ResponseMPayload**](EzsigndocumentGetTemporaryProofV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 

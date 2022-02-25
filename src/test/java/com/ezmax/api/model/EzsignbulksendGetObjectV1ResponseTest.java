@@ -16,6 +16,8 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsignbulksendGetObjectV1ResponseAllOf;
+import com.ezmax.api.model.EzsignbulksendGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,17 +32,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsigndocumentEditObjectV1Response
+ * Model tests for EzsignbulksendGetObjectV1Response
  */
-public class UNUSEDEzsigndocumentEditObjectV1ResponseTest {
-    private final UNUSEDEzsigndocumentEditObjectV1Response model = new UNUSEDEzsigndocumentEditObjectV1Response();
+public class EzsignbulksendGetObjectV1ResponseTest {
+    private final EzsignbulksendGetObjectV1Response model = new EzsignbulksendGetObjectV1Response();
 
     /**
-     * Model tests for UNUSEDEzsigndocumentEditObjectV1Response
+     * Model tests for EzsignbulksendGetObjectV1Response
      */
     @Test
-    public void testUNUSEDEzsigndocumentEditObjectV1Response() {
-        // TODO: test UNUSEDEzsigndocumentEditObjectV1Response
+    public void testEzsignbulksendGetObjectV1Response() {
+        // TODO: test EzsignbulksendGetObjectV1Response
+    }
+
+    /**
+     * Test the property 'mPayload'
+     */
+    @Test
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
     /**

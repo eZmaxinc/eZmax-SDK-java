@@ -62,7 +62,12 @@ docs/EzsignbulksendGetListV1Response.md
 docs/EzsignbulksendGetListV1ResponseAllOf.md
 docs/EzsignbulksendGetListV1ResponseMPayload.md
 docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
+docs/EzsignbulksendGetObjectV1Response.md
+docs/EzsignbulksendGetObjectV1ResponseAllOf.md
+docs/EzsignbulksendGetObjectV1ResponseMPayload.md
 docs/EzsignbulksendListElement.md
+docs/EzsignbulksendResponse.md
+docs/EzsignbulksendResponseCompound.md
 docs/EzsigndocumentApplyEzsigntemplateV1Request.md
 docs/EzsigndocumentApplyEzsigntemplateV1Response.md
 docs/EzsigndocumentApplyEzsigntemplateV2Request.md
@@ -74,6 +79,7 @@ docs/EzsigndocumentCreateObjectV1ResponseMPayload.md
 docs/EzsigndocumentDeleteObjectV1Response.md
 docs/EzsigndocumentEditEzsignsignaturesV1Request.md
 docs/EzsigndocumentEditEzsignsignaturesV1Response.md
+docs/EzsigndocumentEndPrematurelyV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1Response.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseAllOf.md
 docs/EzsigndocumentGetDownloadUrlV1ResponseMPayload.md
@@ -86,6 +92,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetTemporaryProofV1Response.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
+docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
 docs/EzsigndocumentGetWordsPositionsV1Request.md
 docs/EzsigndocumentGetWordsPositionsV1Response.md
 docs/EzsigndocumentGetWordsPositionsV1ResponseAllOf.md
@@ -97,6 +106,7 @@ docs/EzsigndocumentRequestPatch.md
 docs/EzsigndocumentResponse.md
 docs/EzsigndocumentResponseCompound.md
 docs/EzsigndocumentResponseCompoundAllOf.md
+docs/EzsigndocumentlogResponse.md
 docs/EzsignfolderCreateObjectV1Request.md
 docs/EzsignfolderCreateObjectV1Response.md
 docs/EzsignfolderCreateObjectV1ResponseAllOf.md
@@ -186,6 +196,7 @@ docs/EzsigntemplatepackageListElement.md
 docs/FieldEActivesessionSessiontype.md
 docs/FieldEActivesessionWeekdaystart.md
 docs/FieldEEzsigndocumentStep.md
+docs/FieldEEzsigndocumentlogType.md
 docs/FieldEEzsignfolderSendreminderfrequency.md
 docs/FieldEEzsignfolderStep.md
 docs/FieldEEzsignfoldertypePrivacylevel.md
@@ -212,7 +223,6 @@ docs/ListSaveListpresentationV1Response.md
 docs/ListpresentationRequest.md
 docs/ModuleAuthenticateApi.md
 docs/ModuleListApi.md
-docs/ModuleSsprApi.md
 docs/ModuleUserApi.md
 docs/MultilingualApikeyDescription.md
 docs/ObjectActivesessionApi.md
@@ -235,14 +245,6 @@ docs/SsprSendUsernamesV1Request.md
 docs/SsprUnlockAccountRequestV1Request.md
 docs/SsprUnlockAccountV1Request.md
 docs/SsprValidateTokenV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Request.md
-docs/UNUSEDEzsigndocumentEditObjectV1Response.md
-docs/UNUSEDEzsignfolderEditObjectV1Request.md
-docs/UNUSEDEzsignfolderEditObjectV1Response.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.md
-docs/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.md
-docs/UNUSEDEzsignsignatureEditObjectV1Request.md
-docs/UNUSEDEzsignsignatureEditObjectV1Response.md
 docs/UserCreateEzsignuserV1Request.md
 docs/UserCreateEzsignuserV1Response.md
 docs/UserCreateEzsignuserV1ResponseAllOf.md
@@ -268,7 +270,6 @@ src/main/AndroidManifest.xml
 src/main/java/com/ezmax/api/GlobalCustomerApi.java
 src/main/java/com/ezmax/api/ModuleAuthenticateApi.java
 src/main/java/com/ezmax/api/ModuleListApi.java
-src/main/java/com/ezmax/api/ModuleSsprApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
 src/main/java/com/ezmax/api/ObjectApikeyApi.java
@@ -340,7 +341,12 @@ src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1Response.java
 src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksendListElement.java
+src/main/java/com/ezmax/api/model/EzsignbulksendResponse.java
+src/main/java/com/ezmax/api/model/EzsignbulksendResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV2Request.java
@@ -352,6 +358,7 @@ src/main/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseMPayload.j
 src/main/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1Response.java
+src/main/java/com/ezmax/api/model/EzsigndocumentEndPrematurelyV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayload.java
@@ -364,6 +371,9 @@ src/main/java/com/ezmax/api/model/EzsigndocumentGetFormDataV1ResponseMPayload.ja
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1Response.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Request.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOf.java
@@ -375,6 +385,7 @@ src/main/java/com/ezmax/api/model/EzsigndocumentRequestPatch.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponse.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOf.java
+src/main/java/com/ezmax/api/model/EzsigndocumentlogResponse.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOf.java
@@ -464,6 +475,7 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackageListElement.java
 src/main/java/com/ezmax/api/model/FieldEActivesessionSessiontype.java
 src/main/java/com/ezmax/api/model/FieldEActivesessionWeekdaystart.java
 src/main/java/com/ezmax/api/model/FieldEEzsigndocumentStep.java
+src/main/java/com/ezmax/api/model/FieldEEzsigndocumentlogType.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfolderStep.java
 src/main/java/com/ezmax/api/model/FieldEEzsignfoldertypePrivacylevel.java
@@ -495,14 +507,6 @@ src/main/java/com/ezmax/api/model/SsprSendUsernamesV1Request.java
 src/main/java/com/ezmax/api/model/SsprUnlockAccountRequestV1Request.java
 src/main/java/com/ezmax/api/model/SsprUnlockAccountV1Request.java
 src/main/java/com/ezmax/api/model/SsprValidateTokenV1Request.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1Response.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1Response.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1Response.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1Request.java
-src/main/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1Request.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1Response.java
 src/main/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseAllOf.java
@@ -536,7 +540,6 @@ src/main/java/eZmaxAPI/auth/HttpBearerAuth.java
 src/test/java/com/ezmax/api/GlobalCustomerApiTest.java
 src/test/java/com/ezmax/api/ModuleAuthenticateApiTest.java
 src/test/java/com/ezmax/api/ModuleListApiTest.java
-src/test/java/com/ezmax/api/ModuleSsprApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
 src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
@@ -607,7 +610,12 @@ src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendListElementTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendResponseCompoundTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentApplyEzsigntemplateV2RequestTest.java
@@ -619,6 +627,7 @@ src/test/java/com/ezmax/api/model/EzsigndocumentCreateObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentEditEzsignsignaturesV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentEndPrematurelyV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetDownloadUrlV1ResponseTest.java
@@ -631,6 +640,9 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetFormDataV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetWordsPositionsV1ResponseTest.java
@@ -642,6 +654,7 @@ src/test/java/com/ezmax/api/model/EzsigndocumentRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentlogResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV1ResponseMPayloadTest.java
@@ -731,6 +744,7 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackageListElementTest.java
 src/test/java/com/ezmax/api/model/FieldEActivesessionSessiontypeTest.java
 src/test/java/com/ezmax/api/model/FieldEActivesessionWeekdaystartTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsigndocumentStepTest.java
+src/test/java/com/ezmax/api/model/FieldEEzsigndocumentlogTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderSendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfolderStepTest.java
 src/test/java/com/ezmax/api/model/FieldEEzsignfoldertypePrivacylevelTest.java
@@ -762,14 +776,6 @@ src/test/java/com/ezmax/api/model/SsprSendUsernamesV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprUnlockAccountRequestV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprUnlockAccountV1RequestTest.java
 src/test/java/com/ezmax/api/model/SsprValidateTokenV1RequestTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsigndocumentEditObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignfolderEditObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignfoldersignerassociationEditObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1RequestTest.java
-src/test/java/com/ezmax/api/model/UNUSEDEzsignsignatureEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1RequestTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/UserCreateEzsignuserV1ResponseMPayloadTest.java

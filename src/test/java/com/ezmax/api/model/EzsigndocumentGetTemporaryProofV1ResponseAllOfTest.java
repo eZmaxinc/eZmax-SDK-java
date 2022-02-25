@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignfolderRequest;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,25 +28,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsignfolderEditObjectV1Request
+ * Model tests for EzsigndocumentGetTemporaryProofV1ResponseAllOf
  */
-public class UNUSEDEzsignfolderEditObjectV1RequestTest {
-    private final UNUSEDEzsignfolderEditObjectV1Request model = new UNUSEDEzsignfolderEditObjectV1Request();
+public class EzsigndocumentGetTemporaryProofV1ResponseAllOfTest {
+    private final EzsigndocumentGetTemporaryProofV1ResponseAllOf model = new EzsigndocumentGetTemporaryProofV1ResponseAllOf();
 
     /**
-     * Model tests for UNUSEDEzsignfolderEditObjectV1Request
+     * Model tests for EzsigndocumentGetTemporaryProofV1ResponseAllOf
      */
     @Test
-    public void testUNUSEDEzsignfolderEditObjectV1Request() {
-        // TODO: test UNUSEDEzsignfolderEditObjectV1Request
+    public void testEzsigndocumentGetTemporaryProofV1ResponseAllOf() {
+        // TODO: test EzsigndocumentGetTemporaryProofV1ResponseAllOf
     }
 
     /**
-     * Test the property 'objEzsignfolder'
+     * Test the property 'mPayload'
      */
     @Test
-    public void objEzsignfolderTest() {
-        // TODO: test objEzsignfolder
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
 }

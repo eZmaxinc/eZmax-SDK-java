@@ -1,13 +1,14 @@
 
 
-# UNUSEDEzsignfolderEditObjectV1Response
+# EzsignbulksendGetObjectV1Response
 
-Response for the /1/object/ezsignfolder/editObject API Request
+Response for the /1/object/ezsignbulksend/getObject API Request
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mPayload** | [**EzsignbulksendGetObjectV1ResponseMPayload**](EzsignbulksendGetObjectV1ResponseMPayload.md) |  | 
 **objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
 **objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
 

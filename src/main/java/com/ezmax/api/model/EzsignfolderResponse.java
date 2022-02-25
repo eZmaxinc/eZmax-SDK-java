@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfolder Object
  */
 @ApiModel(description = "An Ezsignfolder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class EzsignfolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -316,11 +316,11 @@ public class EzsignfolderResponse {
   }
 
    /**
-   * Somes extra notes about the eZsign Folder
+   * Note about the Ezsignfolder
    * @return tEzsignfolderNote
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "An extra notes we can add to the ezsign folder", required = true, value = "Somes extra notes about the eZsign Folder")
+  @ApiModelProperty(example = "This is a note", required = true, value = "Note about the Ezsignfolder")
 
   public String gettEzsignfolderNote() {
     return tEzsignfolderNote;

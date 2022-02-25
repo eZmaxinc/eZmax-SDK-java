@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignsignatureRequest;
+import com.ezmax.api.model.EzsignbulksendGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,25 +28,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsignsignatureEditObjectV1Request
+ * Model tests for EzsignbulksendGetObjectV1ResponseAllOf
  */
-public class UNUSEDEzsignsignatureEditObjectV1RequestTest {
-    private final UNUSEDEzsignsignatureEditObjectV1Request model = new UNUSEDEzsignsignatureEditObjectV1Request();
+public class EzsignbulksendGetObjectV1ResponseAllOfTest {
+    private final EzsignbulksendGetObjectV1ResponseAllOf model = new EzsignbulksendGetObjectV1ResponseAllOf();
 
     /**
-     * Model tests for UNUSEDEzsignsignatureEditObjectV1Request
+     * Model tests for EzsignbulksendGetObjectV1ResponseAllOf
      */
     @Test
-    public void testUNUSEDEzsignsignatureEditObjectV1Request() {
-        // TODO: test UNUSEDEzsignsignatureEditObjectV1Request
+    public void testEzsignbulksendGetObjectV1ResponseAllOf() {
+        // TODO: test EzsignbulksendGetObjectV1ResponseAllOf
     }
 
     /**
-     * Test the property 'objEzsignsignature'
+     * Test the property 'mPayload'
      */
     @Test
-    public void objEzsignsignatureTest() {
-        // TODO: test objEzsignsignature
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
 }

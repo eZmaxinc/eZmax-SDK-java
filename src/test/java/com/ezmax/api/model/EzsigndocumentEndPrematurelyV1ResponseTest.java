@@ -30,17 +30,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+ * Model tests for EzsigndocumentEndPrematurelyV1Response
  */
-public class UNUSEDEzsignfoldersignerassociationEditObjectV1ResponseTest {
-    private final UNUSEDEzsignfoldersignerassociationEditObjectV1Response model = new UNUSEDEzsignfoldersignerassociationEditObjectV1Response();
+public class EzsigndocumentEndPrematurelyV1ResponseTest {
+    private final EzsigndocumentEndPrematurelyV1Response model = new EzsigndocumentEndPrematurelyV1Response();
 
     /**
-     * Model tests for UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+     * Model tests for EzsigndocumentEndPrematurelyV1Response
      */
     @Test
-    public void testUNUSEDEzsignfoldersignerassociationEditObjectV1Response() {
-        // TODO: test UNUSEDEzsignfoldersignerassociationEditObjectV1Response
+    public void testEzsigndocumentEndPrematurelyV1Response() {
+        // TODO: test EzsigndocumentEndPrematurelyV1Response
     }
 
     /**

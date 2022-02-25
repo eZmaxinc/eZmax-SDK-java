@@ -25,10 +25,12 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
+import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
@@ -130,6 +132,21 @@ public class ObjectEzsigndocumentApiTest {
     }
     
     /**
+     * End prematurely
+     *
+     * End prematurely an Ezsigndocument when some signatures are still required
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentEndPrematurelyV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+                EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+    
+    /**
      * Retrieve a URL to download documents.
      *
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
@@ -178,7 +195,7 @@ public class ObjectEzsigndocumentApiTest {
     /**
      * Retrieve an existing Ezsigndocument
      *
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -187,6 +204,21 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentGetObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
                 EzsigndocumentGetObjectV1Response response = api.ezsigndocumentGetObjectV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve the temporary proof
+     *
+     * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetTemporaryProofV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+                EzsigndocumentGetTemporaryProofV1Response response = api.ezsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
     

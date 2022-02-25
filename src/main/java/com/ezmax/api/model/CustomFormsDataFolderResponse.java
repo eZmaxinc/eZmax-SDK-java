@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A forms Data Folder Object
  */
 @ApiModel(description = "A forms Data Folder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class CustomFormsDataFolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -125,7 +125,7 @@ public class CustomFormsDataFolderResponse {
   }
 
    /**
-   * Get aObjFormDataDocument
+   * 
    * @return aObjFormDataDocument
   **/
   @javax.annotation.Nonnull

@@ -13,9 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommonResponse;
-import com.ezmax.api.model.CommonResponseObjDebug;
-import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsigndocumentlogResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -30,33 +28,25 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UNUSEDEzsignsignatureEditObjectV1Response
+ * Model tests for EzsigndocumentGetTemporaryProofV1ResponseMPayload
  */
-public class UNUSEDEzsignsignatureEditObjectV1ResponseTest {
-    private final UNUSEDEzsignsignatureEditObjectV1Response model = new UNUSEDEzsignsignatureEditObjectV1Response();
+public class EzsigndocumentGetTemporaryProofV1ResponseMPayloadTest {
+    private final EzsigndocumentGetTemporaryProofV1ResponseMPayload model = new EzsigndocumentGetTemporaryProofV1ResponseMPayload();
 
     /**
-     * Model tests for UNUSEDEzsignsignatureEditObjectV1Response
+     * Model tests for EzsigndocumentGetTemporaryProofV1ResponseMPayload
      */
     @Test
-    public void testUNUSEDEzsignsignatureEditObjectV1Response() {
-        // TODO: test UNUSEDEzsignsignatureEditObjectV1Response
+    public void testEzsigndocumentGetTemporaryProofV1ResponseMPayload() {
+        // TODO: test EzsigndocumentGetTemporaryProofV1ResponseMPayload
     }
 
     /**
-     * Test the property 'objDebugPayload'
+     * Test the property 'aObjEzsigndocumentlog'
      */
     @Test
-    public void objDebugPayloadTest() {
-        // TODO: test objDebugPayload
-    }
-
-    /**
-     * Test the property 'objDebug'
-     */
-    @Test
-    public void objDebugTest() {
-        // TODO: test objDebug
+    public void aObjEzsigndocumentlogTest() {
+        // TODO: test aObjEzsigndocumentlog
     }
 
 }

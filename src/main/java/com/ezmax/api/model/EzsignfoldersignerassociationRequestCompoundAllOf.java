@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfoldersignerassociationRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
@@ -66,8 +66,8 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
    * Get objEzsignsigner
    * @return objEzsignsigner
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public EzsignsignerRequestCompound getObjEzsignsigner() {
     return objEzsignsigner;
@@ -127,6 +127,7 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objEzsignsigner");
   }
 
  /**
@@ -148,6 +149,13 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignfoldersignerassociationRequestCompoundAllOf.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldersignerassociationRequestCompoundAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignfoldersignerassociationRequestCompoundAllOf.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       // validate the optional field `objEzsignsigner`

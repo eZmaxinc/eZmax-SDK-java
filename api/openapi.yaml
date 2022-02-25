@@ -15,7 +15,7 @@ info:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
     altText: eZmax Logo
-  x-restgeninfo: {}
+  x-restgeninfo: []
 servers:
 - description: The server endpoint where to send your region specific API requests.
   url: "https://{sInfrastructureenvironmenttypeDescription}.api.appcluster01.{sInfrastructureregionCode}.ezmax.com/rest"
@@ -544,7 +544,10 @@ tags:
     \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE       | The element cannot be deleted\
     \                                          |\r\n| UNPROCESSABLEENTITY_CANNOTMODIFY\
     \       | The element cannot be modified                                     \
-    \    |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
+    \    |\r\n| UNPROCESSABLEENTITY_DATA_VALIDATION    | The data fails some validation\
+    \                                         |\r\n| UNPROCESSABLEENTITY_DATA_OUTOFBOUND\
+    \    | The data contains a value that is out of bound                        \
+    \ |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
     \ at supplied url                           |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
     \        | The request was valid, but no action was necessary                \
     \     |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a\
@@ -639,18 +642,22 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.4] - 2022-02-\n\n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
-    \ Added status\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
+    \n## 1.1.X Releases\n### [1.1.4] - 2022-02-24\n\n#### Added\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID} Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
+    - GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
     \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
     \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
     \ properties\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\
     - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
     - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\n- POST /1/object/ezsignsignature\
-    \ bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n\
-    - PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\n- Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
+    - PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely\n\
+    - POST /1/object/ezsignsignature bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n\
+    - PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n- PUT\
+    \ /1/object/ezsignfolder/{pkiEzsignfolderID}\n- Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
     \ added to documentation\n- Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added\
-    \ to documentation\n\n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
+    \ to documentation\n- Error Code UNPROCESSABLEENTITY_DATA_VALIDATION added to\
+    \ documentation\n- Error Code UNPROCESSABLEENTITY_DATA_OUTOFBOUND added to documentation\n\
+    \n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
     - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
     \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
     \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
@@ -765,7 +772,40 @@ tags:
   name: Object_User
   x-displayName: User
 paths:
+  /1/module/user/createezsignuser:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to initiate the creation or a user of type Ezsignuser.
+
+        The user will be created only once the email verification process will be completed
+      operationId: User_CreateEzsignuser_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/user-createEzsignuser-v1-Request'
+              type: array
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user-createEzsignuser-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new User of type Ezsignuser
+      tags:
+      - Module_User
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
   /1/object/activesession/getCurrent:
+    description: ""
     get:
       description: Retrieve the details about the current activesession
       operationId: Activesession_GetCurrent_V1
@@ -781,8 +821,139 @@ paths:
       summary: Get Current Activesession
       tags:
       - Object_Activesession
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/apikey:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Apikey_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/apikey-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Apikey
+      tags:
+      - Object_Apikey
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignbulksend/getList:
+    description: ""
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
+      operationId: Ezsignbulksend_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiEzsignbulksendID_ASC
+          - pkiEzsignbulksendID_DESC
+          - fkiEzsignfoldertypeID_ASC
+          - fkiEzsignfoldertypeID_DESC
+          - sEzsignbulksendDescription_ASC
+          - sEzsignbulksendDescription_DESC
+          - sEzsignfoldertypeNameX_ASC
+          - sEzsignfoldertypeNameX_DESC
+          - eEzsignfoldertypePrivacylevel_ASC
+          - eEzsignfoldertypePrivacylevel_DESC
+          - bEzsignbulksendIsactive_ASC
+          - bEzsignbulksendIsactive_DESC
+          - iEzsignbulksendtransmission_ASC
+          - iEzsignbulksendtransmission_DESC
+          - iEzsignfolder_ASC
+          - iEzsignfolder_DESC
+          - iEzsigndocument_ASC
+          - iEzsigndocument_DESC
+          - iEzsignsignature_ASC
+          - iEzsignsignature_DESC
+          - iEzsignsignatureSigned_ASC
+          - iEzsignsignatureSigned_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksend-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: One of the accept header is not defined or invalid.
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignbulksend list
+      tags:
+      - Object_Ezsignbulksend
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsigndocument:
+    description: ""
     post:
       description: |-
         The endpoint allows to create one or many elements at once.
@@ -820,577 +991,9 @@ paths:
       summary: Create a new Ezsigndocument
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfolder:
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignfolder_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfoldersignerassociation:
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignfoldersignerassociation_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignfoldersignerassociation
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignsignature:
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignsignature_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/franchisereferalincome:
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Franchisereferalincome_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Franchisereferalincome
-      tags:
-      - Object_Franchisereferalincome
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/franchisebroker/getAutocomplete/{sSelector}:
-    get:
-      description: Get the list of Franchisebrokers to be used in a dropdown or autocomplete
-        control.
-      operationId: Franchisebroker_GetAutocomplete_V1
-      parameters:
-      - description: The type of Franchisebrokers to return
-        explode: false
-        in: path
-        name: sSelector
-        required: true
-        schema:
-          enum:
-          - Active
-          - All
-          type: string
-        style: simple
-      - description: Allow to filter the returned results
-        explode: true
-        in: query
-        name: sQuery
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Retrieve Franchisebrokers and IDs
-      tags:
-      - Object_Franchisebroker
-      x-accepts: application/json
-  /1/object/franchiseoffice/getAutocomplete/{sSelector}:
-    get:
-      description: Get the list of Franchiseoffices to be used in a dropdown or autocomplete
-        control.
-      operationId: Franchiseoffice_GetAutocomplete_V1
-      parameters:
-      - description: The type of Franchiseoffices to return
-        explode: false
-        in: path
-        name: sSelector
-        required: true
-        schema:
-          enum:
-          - Active
-          - All
-          type: string
-        style: simple
-      - description: Allow to filter the returned results
-        explode: true
-        in: query
-        name: sQuery
-        required: false
-        schema:
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Retrieve Franchiseoffices and IDs
-      tags:
-      - Object_Franchiseoffice
-      x-accepts: application/json
-  /1/module/user/createezsignuser:
-    post:
-      description: |-
-        The endpoint allows to initiate the creation or a user of type Ezsignuser.
-
-        The user will be created only once the email verification process will be completed
-      operationId: User_CreateEzsignuser_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/user-createEzsignuser-v1-Request'
-              type: array
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/user-createEzsignuser-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new User of type Ezsignuser
-      tags:
-      - Module_User
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/apikey:
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Apikey_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/apikey-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/apikey-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Apikey
-      tags:
-      - Object_Apikey
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/sendUsernames:
-    post:
-      description: This endpoint returns an email with the username(s) matching the
-        email address provided in case of forgotten username
-      operationId: Sspr_SendUsernames_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-sendUsernames-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: |-
-            The request was accepted.
-
-            Do not misinterpret as "the email address has an account attached to it". It only means an email will be sent if (and only if) an account exists for that email address.
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Send username(s)
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/unlockAccountRequest:
-    post:
-      description: |-
-        This endpoint sends an email with a link to unlock the user account.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_UnlockAccountRequest_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-unlockAccountRequest-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: |-
-            The request was accepted.
-
-            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Unlock Account Request
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/unlockAccount:
-    post:
-      description: |-
-        This endpoint unlocks the user account.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_UnlockAccount_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-unlockAccount-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: The account was unlocked Successfully
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Unlock Account
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/resetPassword:
-    post:
-      description: |-
-        This endpoint resets the user's password.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_ResetPassword_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-resetPassword-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: The password was reset Successfully
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Reset Password
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/validateToken:
-    post:
-      description: |-
-        This endpoint validates if a Token is valid and not expired.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_ValidateToken_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-validateToken-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: The token is valid
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Validate Token
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/sspr/resetPasswordRequest:
-    post:
-      description: |-
-        This endpoint sends an email with a link to reset the user's password.
-
-        sEmailAddress must be set if eUserTypeSSPR = EzsignUser
-
-        sUserLoginname must be set if eUserTypeSSPR = Native
-      operationId: Sspr_ResetPasswordRequest_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/sspr-resetPasswordRequest-v1-Request'
-        required: true
-      responses:
-        "204":
-          description: |-
-            The request was accepted.
-
-            Do not misinterpret as "the account exists". It only means an email will be sent if (and only if) an account exists.
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: You are not allowed to call this function
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - {}
-      summary: Reset Password Request
-      tags:
-      - Module_Sspr
-      x-contentType: application/json
-      x-accepts: application/json
-  /2/module/authenticate/authenticate/{eSessionType}:
-    post:
-      description: This endpoint authenticates a user.
-      operationId: Authenticate_Authenticate_V2
-      parameters:
-      - explode: false
-        in: path
-        name: eSessionType
-        required: true
-        schema:
-          enum:
-          - ezsignuser
-          type: string
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/authenticate-authenticate-v2-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/authenticate-authenticate-v2-Response'
-          description: Successful response
-        "401":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: Unauthorized
-      security:
-      - {}
-      summary: Authenticate a user
-      tags:
-      - Module_Authenticate
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
-    get:
-      operationId: Ezsigndocument_GetEzsignpages_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-getEzsignpages-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsigndocument's Ezsignpages
-      tags:
-      - Object_Ezsigndocument
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
     post:
@@ -1442,6 +1045,55 @@ paths:
       summary: Apply an Ezsign Template to the Ezsigndocument.
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures:
+    put:
+      description: "Using this endpoint, you can edit multiple ezsignsignatures at\
+        \ the same time."
+      operationId: Ezsigndocument_EditEzsignsignatures_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Edit multiple ezsignsignatures
+      tags:
+      - Object_Ezsigndocument
+      x-presentations: []
       x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}:
@@ -1503,10 +1155,13 @@ paths:
       summary: Retrieve a URL to download documents.
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
-    post:
-      operationId: Ezsigndocument_GetWordsPositions_V1
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
+    get:
+      description: ""
+      operationId: Ezsigndocument_GetEzsignpages_V1
       parameters:
       - explode: false
         in: path
@@ -1515,18 +1170,12 @@ paths:
         schema:
           $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
         style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Request'
-        required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Response'
+                $ref: '#/components/schemas/ezsigndocument-getEzsignpages-v1-Response'
           description: Successful response
         "404":
           content:
@@ -1543,144 +1192,14 @@ paths:
             completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: "Retrieve positions X,Y of given words from a Ezsigndocument"
+      summary: Retrieve an existing Ezsigndocument's Ezsignpages
       tags:
       - Object_Ezsigndocument
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
-    post:
-      operationId: Ezsignfolder_Send_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfolder-send-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-send-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Send the Ezsignfolder to the signatories for signature
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
-    get:
-      description: |-
-        This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.
-
-        The signer Login type must be configured as In-Person.
-      operationId: Ezsignfoldersignerassociation_GetInPersonLoginUrl_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfoldersignerassociationID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Retrieve a Login Url to allow In-Person signing
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-accepts: application/json
-  /1/customer/{pksCustomerCode}/endpoint:
-    get:
-      description: "Retrieve the customer's specific server endpoint where to send\
-        \ requests. This will help locate the proper region (ie: sInfrastructureregionCode)\
-        \ and the proper environment (ie: sInfrastructureenvironmenttypeDescription)\
-        \ where the customer's data is stored."
-      operationId: Global_Customer_GetEndpoint_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pksCustomerCode
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pksCustomerCode'
-        style: simple
-      - description: "The infrastructure product Code\n\nIf undefined, \"appcluster01\"\
-          \ is assumed"
-        explode: true
-        in: query
-        name: sInfrastructureproductCode
-        required: false
-        schema:
-          enum:
-          - appcluster01
-          - ezsignuser
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/global-customer-getEndpoint-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - {}
-      summary: Get customer endpoint
-      tags:
-      - Global_Customer
+      x-presentations: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
     get:
+      description: ""
       operationId: Ezsigndocument_GetFormData_V1
       parameters:
       - explode: false
@@ -1736,16 +1255,13 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Form Data
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
-  /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate:
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
     post:
-      deprecated: false
-      description: |-
-        This endpoint applies a predefined template to the ezsign document.
-        This allows to automatically apply all the form and signature fields on a document in a single step.
-
-        The document must not already have fields otherwise an error will be returned.
-      operationId: Ezsigndocument_ApplyEzsigntemplate_V2
+      description: ""
+      operationId: Ezsigndocument_GetWordsPositions_V1
       parameters:
       - explode: false
         in: path
@@ -1758,14 +1274,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Request'
+              $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Request'
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Response'
+                $ref: '#/components/schemas/ezsigndocument-getWordsPositions-v1-Response'
           description: Successful response
         "404":
           content:
@@ -1782,13 +1298,235 @@ paths:
             completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: Apply an Ezsign Template to the Ezsigndocument.
+      summary: "Retrieve positions X,Y of given words from a Ezsigndocument"
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfolder_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}:
+    delete:
+      description: ""
+      operationId: Ezsignfolder_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsignfolder_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    put:
+      description: ""
+      operationId: Ezsignfolder_EditObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Edit an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments:
+    get:
+      description: ""
+      operationId: Ezsignfolder_GetEzsigndocuments_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getEzsigndocuments-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's Ezsigndocuments
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
+    get:
+      description: ""
+      operationId: Ezsignfolder_GetEzsignfoldersignerassociations_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
     get:
+      description: ""
       operationId: Ezsignfolder_GetFormsData_V1
       parameters:
       - explode: false
@@ -1832,125 +1570,110 @@ paths:
       summary: Retrieve an existing Ezsignfolder's forms data
       tags:
       - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
-  /1/object/ezsignfoldertype/getList:
-    get:
-      description: |-
-        Enum values that can be filtered in query parameter *sFilter*:
-
-        | Variable | Valid values |
-        |---|---|
-        | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
-      operationId: Ezsignfoldertype_GetList_V1
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
+    post:
+      description: ""
+      operationId: Ezsignfolder_Send_V1
       parameters:
-      - description: Specify how you want the results to be sorted
-        explode: true
-        in: query
-        name: eOrderBy
-        required: false
-        schema:
-          enum:
-          - pkiEzsignfoldertypeID_ASC
-          - pkiEzsignfoldertypeID_DESC
-          - eEzsignfoldertypePrivacylevel_ASC
-          - eEzsignfoldertypePrivacylevel_DESC
-          - sEzsignfoldertypeNameX_ASC
-          - sEzsignfoldertypeNameX_DESC
-          - bEzsignfoldertypeIsactive_ASC
-          - bEzsignfoldertypeIsactive_DESC
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: iRowMax
-        required: false
-        schema:
-          $ref: '#/components/schemas/Field-iRowMax'
-        style: form
-      - explode: true
-        in: query
-        name: iRowOffset
-        required: false
-        schema:
-          $ref: '#/components/schemas/Field-iRowOffset'
-        style: form
       - explode: false
-        in: header
-        name: Accept-Language
-        required: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
         schema:
-          $ref: '#/components/schemas/Header-Accept-Language'
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
         style: simple
-      - explode: true
-        in: query
-        name: sFilter
-        required: false
-        schema:
-          $ref: '#/components/schemas/Field-sFilter'
-        style: form
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-send-v1-Request'
+        required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response'
-            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
-              schema:
-                $ref: '#/components/schemas/File-Xlsx'
+                $ref: '#/components/schemas/ezsignfolder-send-v1-Response'
           description: Successful response
-        "406":
+        "404":
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Common-Response-Error'
-          description: One of the accept header is not defined or invalid.
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: Retrieve Ezsignfoldertype list
+      summary: Send the Ezsignfolder to the signatories for signature
       tags:
-      - Object_Ezsignfoldertype
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
       x-accepts: application/json
-  /1/object/period/getAutocomplete/{sSelector}:
-    get:
-      description: Get the list of Periods to be used in a dropdown or autocomplete
-        control.
-      operationId: Period_GetAutocomplete_V1
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend:
+    post:
+      description: "Once an Ezsignfolder has been sent to signatories, it cannot be\
+        \ modified.\n\nUsing this endpoint, you can unsend the Ezsignfolder and make\
+        \ it modifiable again.\n\nSignatories will receive an email informing them\
+        \ the signature process was aborted and they might receive a new invitation\
+        \ to sign.\n\n⚠️ Warning: Any signature previously made by signatories on\
+        \ \"Non-completed\" Ezsigndocuments will be lost."
+      operationId: Ezsignfolder_Unsend_V1
       parameters:
-      - description: The types of Periods to return
-        explode: false
+      - explode: false
         in: path
-        name: sSelector
+        name: pkiEzsignfolderID
         required: true
         schema:
-          enum:
-          - ActiveNormal
-          - ActiveNormalAndEndOfYear
-          - AllNormal
-          - AllNormalAndEndOfYear
-          type: string
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
         style: simple
-      - description: Allow to filter the returned results
-        explode: true
-        in: query
-        name: sQuery
-        required: false
-        schema:
-          type: string
-        style: form
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-unsend-v1-Request'
+        required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+                $ref: '#/components/schemas/ezsignfolder-unsend-v1-Response'
           description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
       security:
       - Authorization: []
-      summary: Retrieve Periods and IDs
+      summary: Unsend the Ezsignfolder
       tags:
-      - Object_Period
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsignfolder/getList:
+    description: ""
     get:
       description: |-
         Enum values that can be filtered in query parameter *sFilter*:
@@ -2043,8 +1766,161 @@ paths:
       summary: Retrieve Ezsignfolder list
       tags:
       - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfoldersignerassociation_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
+    delete:
+      description: ""
+      operationId: Ezsignfoldersignerassociation_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsignfoldersignerassociation_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
+    get:
+      description: |-
+        This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.
+
+        The signer Login type must be configured as In-Person.
+      operationId: Ezsignfoldersignerassociation_GetInPersonLoginUrl_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve a Login Url to allow In-Person signing
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
+    description: ""
     get:
       description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
         control.
@@ -2088,129 +1964,11 @@ paths:
       summary: Retrieve Ezsignfoldertypes and IDs
       tags:
       - Object_Ezsignfoldertype
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend:
-    post:
-      description: "Once an Ezsignfolder has been sent to signatories, it cannot be\
-        \ modified.\n\nUsing this endpoint, you can unsend the Ezsignfolder and make\
-        \ it modifiable again.\n\nSignatories will receive an email informing them\
-        \ the signature process was aborted and they might receive a new invitation\
-        \ to sign.\n\n⚠️ Warning: Any signature previously made by signatories on\
-        \ \"Non-completed\" Ezsigndocuments will be lost."
-      operationId: Ezsignfolder_Unsend_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfolder-unsend-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-unsend-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Unsend the Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/module/list/listpresentation/{sListName}:
-    get:
-      description: Retrive previously saved Listpresentation
-      operationId: List_GetListpresentation_V1
-      parameters:
-      - description: The list Name
-        explode: false
-        in: path
-        name: sListName
-        required: true
-        schema:
-          type: string
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/list-getListpresentation-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Get all Listpresentation for a specific list
-      tags:
-      - Module_List
-      x-accepts: application/json
-    post:
-      description: "Users can create many Listpresentations for lists in the system.\
-        \ They can customize orber by, filters, numbers of rows, etc."
-      operationId: List_SaveListpresentation_V1
-      parameters:
-      - description: The list Name
-        explode: false
-        in: path
-        name: sListName
-        required: true
-        schema:
-          type: string
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/list-saveListpresentation-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/list-saveListpresentation-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Save all Listpresentation for a specific list
-      tags:
-      - Module_List
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignbulksend/getList:
+  /1/object/ezsignfoldertype/getList:
+    description: ""
     get:
       description: |-
         Enum values that can be filtered in query parameter *sFilter*:
@@ -2218,7 +1976,7 @@ paths:
         | Variable | Valid values |
         |---|---|
         | eEzsignfoldertypePrivacylevel | User<br>Usergroup |
-      operationId: Ezsignbulksend_GetList_V1
+      operationId: Ezsignfoldertype_GetList_V1
       parameters:
       - description: Specify how you want the results to be sorted
         explode: true
@@ -2227,28 +1985,14 @@ paths:
         required: false
         schema:
           enum:
-          - pkiEzsignbulksendID_ASC
-          - pkiEzsignbulksendID_DESC
-          - fkiEzsignfoldertypeID_ASC
-          - fkiEzsignfoldertypeID_DESC
-          - sEzsignbulksendDescription_ASC
-          - sEzsignbulksendDescription_DESC
-          - sEzsignfoldertypeNameX_ASC
-          - sEzsignfoldertypeNameX_DESC
+          - pkiEzsignfoldertypeID_ASC
+          - pkiEzsignfoldertypeID_DESC
           - eEzsignfoldertypePrivacylevel_ASC
           - eEzsignfoldertypePrivacylevel_DESC
-          - bEzsignbulksendIsactive_ASC
-          - bEzsignbulksendIsactive_DESC
-          - iEzsignbulksendtransmission_ASC
-          - iEzsignbulksendtransmission_DESC
-          - iEzsignfolder_ASC
-          - iEzsignfolder_DESC
-          - iEzsigndocument_ASC
-          - iEzsigndocument_DESC
-          - iEzsignsignature_ASC
-          - iEzsignsignature_DESC
-          - iEzsignsignatureSigned_ASC
-          - iEzsignsignatureSigned_DESC
+          - sEzsignfoldertypeNameX_ASC
+          - sEzsignfoldertypeNameX_DESC
+          - bEzsignfoldertypeIsactive_ASC
+          - bEzsignfoldertypeIsactive_DESC
           type: string
         style: form
       - explode: true
@@ -2284,7 +2028,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsignbulksend-getList-v1-Response'
+                $ref: '#/components/schemas/ezsignfoldertype-getList-v1-Response'
             application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
               schema:
                 $ref: '#/components/schemas/File-Xlsx'
@@ -2297,11 +2041,170 @@ paths:
           description: One of the accept header is not defined or invalid.
       security:
       - Authorization: []
-      summary: Retrieve Ezsignbulksend list
+      summary: Retrieve Ezsignfoldertype list
       tags:
-      - Object_Ezsignbulksend
+      - Object_Ezsignfoldertype
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignsignature:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignsignature_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature/{pkiEzsignsignatureID}:
+    delete:
+      description: ""
+      operationId: Ezsignsignature_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    description: ""
+    get:
+      description: |-
+        ## ⚠️EARLY ADOPTERS WARNING
+
+        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+      operationId: Ezsignsignature_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    put:
+      description: ""
+      operationId: Ezsignsignature_EditObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignature-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Edit an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsigntemplatepackage/getList:
+    description: ""
     get:
       description: |-
         Enum values that can be filtered in query parameter *sFilter*:
@@ -2387,24 +2290,273 @@ paths:
       summary: Retrieve Ezsigntemplatepackage list
       tags:
       - Object_Ezsigntemplatepackage
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments:
+  /1/object/franchisebroker/getAutocomplete/{sSelector}:
+    description: ""
     get:
-      operationId: Ezsignfolder_GetEzsigndocuments_V1
+      description: Get the list of Franchisebrokers to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchisebroker_GetAutocomplete_V1
+      parameters:
+      - description: The type of Franchisebrokers to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchisebrokers and IDs
+      tags:
+      - Object_Franchisebroker
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/franchiseoffice/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Franchiseoffices to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchiseoffice_GetAutocomplete_V1
+      parameters:
+      - description: The type of Franchiseoffices to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchiseoffices and IDs
+      tags:
+      - Object_Franchiseoffice
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/franchisereferalincome:
+    description: ""
+    post:
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Franchisereferalincome_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Franchisereferalincome
+      tags:
+      - Object_Franchisereferalincome
+      x-presentations: []
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/period/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Periods to be used in a dropdown or autocomplete
+        control.
+      operationId: Period_GetAutocomplete_V1
+      parameters:
+      - description: The types of Periods to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - ActiveNormal
+          - ActiveNormalAndEndOfYear
+          - AllNormal
+          - AllNormalAndEndOfYear
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Periods and IDs
+      tags:
+      - Object_Period
+      x-presentations: []
+      x-accepts: application/json
+  /2/module/authenticate/authenticate/{eSessionType}:
+    post:
+      description: This endpoint authenticates a user.
+      operationId: Authenticate_Authenticate_V2
       parameters:
       - explode: false
         in: path
-        name: pkiEzsignfolderID
+        name: eSessionType
         required: true
         schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          enum:
+          - ezsignuser
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/authenticate-authenticate-v2-Request'
+        description: ""
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authenticate-authenticate-v2-Response'
+          description: Successful response
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: Unauthorized
+      security:
+      - {}
+      summary: Authenticate a user
+      tags:
+      - Module_Authenticate
+      x-presentations: []
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/customer/{pksCustomerCode}/endpoint:
+    description: ""
+    get:
+      description: "Retrieve the customer's specific server endpoint where to send\
+        \ requests. This will help locate the proper region (ie: sInfrastructureregionCode)\
+        \ and the proper environment (ie: sInfrastructureenvironmenttypeDescription)\
+        \ where the customer's data is stored."
+      operationId: Global_Customer_GetEndpoint_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pksCustomerCode
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pksCustomerCode'
+        style: simple
+      - description: "The infrastructure product Code\n\nIf undefined, \"appcluster01\"\
+          \ is assumed"
+        explode: true
+        in: query
+        name: sInfrastructureproductCode
+        required: false
+        schema:
+          enum:
+          - appcluster01
+          - ezsignuser
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/global-customer-getEndpoint-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - {}
+      summary: Get customer endpoint
+      tags:
+      - Global_Customer
+      x-presentations: []
+      x-accepts: application/json
+  /1/module/list/listpresentation/{sListName}:
+    get:
+      description: Retrive previously saved Listpresentation
+      operationId: List_GetListpresentation_V1
+      parameters:
+      - description: The list Name
+        explode: false
+        in: path
+        name: sListName
+        required: true
+        schema:
+          type: string
         style: simple
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsignfolder-getEzsigndocuments-v1-Response'
+                $ref: '#/components/schemas/list-getListpresentation-v1-Response'
           description: Successful response
         "404":
           content:
@@ -2414,27 +2566,37 @@ paths:
           description: The element you are trying to work on does not exist
       security:
       - Authorization: []
-      summary: Retrieve an existing Ezsignfolder's Ezsigndocuments
+      summary: Get all Listpresentation for a specific list
       tags:
-      - Object_Ezsignfolder
+      - Module_List
+      x-presentations: []
       x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations:
-    get:
-      operationId: Ezsignfolder_GetEzsignfoldersignerassociations_V1
+    post:
+      description: "Users can create many Listpresentations for lists in the system.\
+        \ They can customize orber by, filters, numbers of rows, etc."
+      operationId: List_SaveListpresentation_V1
       parameters:
-      - explode: false
+      - description: The list Name
+        explode: false
         in: path
-        name: pkiEzsignfolderID
+        name: sListName
         required: true
         schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          type: string
         style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/list-saveListpresentation-v1-Request'
+        description: ""
+        required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociations-v1-Response'
+                $ref: '#/components/schemas/list-saveListpresentation-v1-Response'
           description: Successful response
         "404":
           content:
@@ -2444,12 +2606,183 @@ paths:
           description: The element you are trying to work on does not exist
       security:
       - Authorization: []
-      summary: Retrieve an existing Ezsignfolder's Ezsignfoldersignerassociations
+      summary: Save all Listpresentation for a specific list
       tags:
-      - Object_Ezsignfolder
+      - Module_List
+      x-presentations: []
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate:
+    post:
+      deprecated: false
+      description: |-
+        This endpoint applies a predefined template to the ezsign document.
+        This allows to automatically apply all the form and signature fields on a document in a single step.
+
+        The document must not already have fields otherwise an error will be returned.
+      operationId: Ezsigndocument_ApplyEzsigntemplate_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-applyEzsigntemplate-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Apply an Ezsign Template to the Ezsigndocument.
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof:
+    get:
+      description: Retrieve the temporary proof while the Ezsigndocument is being
+        processed since the proof isn't available until the Ezsigndocument is completed
+      operationId: Ezsigndocument_GetTemporaryProof_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getTemporaryProof-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Retrieve the temporary proof
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely:
+    post:
+      description: End prematurely an Ezsigndocument when some signatures are still
+        required
+      operationId: Ezsigndocument_EndPrematurely_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-endPrematurely-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: End prematurely
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignbulksend/{pkiEzsignbulksendID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsignbulksend_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignbulksendID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignbulksendID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksend-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignbulksend
+      tags:
+      - Object_Ezsignbulksend
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}:
     delete:
+      description: ""
       operationId: Ezsigndocument_DeleteObject_V1
       parameters:
       - explode: false
@@ -2484,12 +2817,11 @@ paths:
       summary: Delete an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
+    description: ""
     get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
       operationId: Ezsigndocument_GetObject_V1
       parameters:
       - explode: false
@@ -2517,8 +2849,11 @@ paths:
       summary: Retrieve an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
     patch:
+      description: ""
       operationId: Ezsigndocument_PatchObject_V1
       parameters:
       - explode: false
@@ -2559,340 +2894,8 @@ paths:
       summary: Patch an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
-    delete:
-      operationId: Ezsignfoldersignerassociation_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfoldersignerassociationID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Ezsignfoldersignerassociation
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-accepts: application/json
-    get:
-      operationId: Ezsignfoldersignerassociation_GetObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfoldersignerassociationID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignfoldersignerassociation
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}:
-    delete:
-      operationId: Ezsignfolder_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-accepts: application/json
-    get:
-      operationId: Ezsignfolder_GetObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-getObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-accepts: application/json
-    put:
-      operationId: Ezsignfolder_EditObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignfolder-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Edit an existing Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignsignature/{pkiEzsignsignatureID}:
-    delete:
-      operationId: Ezsignsignature_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-accepts: application/json
-    get:
-      description: |-
-        ## ⚠️EARLY ADOPTERS WARNING
-
-        ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
-      operationId: Ezsignsignature_GetObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-accepts: application/json
-    put:
-      operationId: Ezsignsignature_EditObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignsignatureID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsignsignature-editObject-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-editObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Edit an existing Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures:
-    put:
-      description: "Using this endpoint, you can edit multiple ezsignsignatures at\
-        \ the same time."
-      operationId: Ezsigndocument_EditEzsignsignatures_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsigndocumentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Request'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-editEzsignsignatures-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The element you are trying to work on does not exist
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body.
-      security:
-      - Authorization: []
-      summary: Edit multiple ezsignsignatures
-      tags:
-      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
       x-contentType: application/json
       x-accepts: application/json
 components:
@@ -3096,13 +3099,6 @@ components:
       - $ref: '#/components/schemas/ezsignsigner_RequestCompound_allOf'
       - $ref: '#/components/schemas/ezsignsigner-Request'
       description: An Ezsignsigner Object and children to create a complete structure
-      type: object
-    ezsignfoldersignerassociation-RequestCompound:
-      allOf:
-      - $ref: '#/components/schemas/ezsignfoldersignerassociation_RequestCompound_allOf'
-      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
-      description: An Ezsignfoldersignerassociation Object and children to create
-        a complete structure
       type: object
     ezsigndocument-RequestCompound:
       allOf:
@@ -3423,10 +3419,6 @@ components:
       description: The date and time when the Ezsigndocument was sent the last time.
       example: 2020-12-31 23:59:59
       type: string
-    Field-tEzsignfolderNote:
-      description: Somes extra notes about the eZsign Folder
-      example: An extra notes we can add to the ezsign folder
-      type: string
     Field-dtEzsignfolderClose:
       description: The date and time at which the folder was closed. Either by applying
         the last signature or by completing it prematurely.
@@ -3684,10 +3676,6 @@ components:
       description: The City name
       example: Laval
       type: string
-    Field-tFranchisereferalincomeComment:
-      description: A comment about the transaction
-      example: This is a comment
-      type: string
     Field-dtFranchisereferalincomeDisbursed:
       description: The date the amounts were disbursed
       example: 2020-12-31
@@ -3801,10 +3789,6 @@ components:
     Field-dtContactBirthdate:
       description: The Birth Date of the contact
       example: 1980-01-01
-      type: string
-    Field-tContactNote:
-      description: Some Notes about the contact
-      example: This is a note
       type: string
     Field-sPhoneRegion:
       description: "The region of the phone number. (For a North America Number only)\n\
@@ -4084,6 +4068,7 @@ components:
           example: 36
           type: integer
         a_sEzsigntemplatesigner:
+          description: ""
           items:
             $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
           type: array
@@ -4281,6 +4266,7 @@ components:
       description: Payload for the /1/object/apikey/createObject API Request
       properties:
         a_objApikey:
+          description: ""
           items:
             $ref: '#/components/schemas/apikey-Response'
           type: array
@@ -4325,52 +4311,6 @@ components:
           type: string
       required:
       - sEndpointURL
-      type: object
-    UNUSED-ezsigndocument-editObject-v1-Request:
-      description: Request for the /1/object/ezsigndocument/editObject API Request
-      properties:
-        objEzsigndocument:
-          $ref: '#/components/schemas/ezsigndocument-Request'
-      type: object
-    UNUSED-ezsigndocument-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsigndocument/editObject API Request
-      type: object
-    UNUSED-ezsignfolder-editObject-v1-Request:
-      description: Request for the /1/object/ezsignfolder/editObject API Request
-      properties:
-        objEzsignfolder:
-          $ref: '#/components/schemas/ezsignfolder-Request'
-      type: object
-    UNUSED-ezsignfolder-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfolder/editObject API Request
-      type: object
-    UNUSED-ezsignfoldersignerassociation-editObject-v1-Request:
-      description: Request for the /1/object/ezsignfoldersignerassociation/editObject
-        API Request
-      properties:
-        objEzsignfoldersignerassociation:
-          $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
-      type: object
-    UNUSED-ezsignfoldersignerassociation-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignfoldersignerassociation/editObject
-        API Request
-      type: object
-    UNUSED-ezsignsignature-editObject-v1-Request:
-      description: Request for the /1/object/ezsignsignature/editObject API Request
-      properties:
-        objEzsignsignature:
-          $ref: '#/components/schemas/ezsignsignature-Request'
-      type: object
-    UNUSED-ezsignsignature-editObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for the /1/object/ezsignsignature/editObject API Request
       type: object
     Field-eUserTypeSSPR:
       description: The user type of the User for SSPR
@@ -5017,6 +4957,7 @@ components:
         \ API Request"
       properties:
         a_objEzsignpage:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignpage-Response'
           type: array
@@ -5161,6 +5102,7 @@ components:
           example: 36
           type: integer
         a_sEzsigntemplatesigner:
+          description: ""
           items:
             $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
           type: array
@@ -5251,6 +5193,7 @@ components:
           example: Doe
           type: string
         a_objEzsignformfieldgroupCompound:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
           type: array
@@ -5295,6 +5238,7 @@ components:
           example: 2020-12-31 23:59:59
           type: string
         a_objFormDataSigner:
+          description: ""
           items:
             $ref: '#/components/schemas/Custom-FormDataSigner-Response'
           type: array
@@ -5402,6 +5346,7 @@ components:
           example: Test eZsign Folder
           type: string
         a_objFormDataDocument:
+          description: ""
           items:
             $ref: '#/components/schemas/Custom-FormDataDocument-Response'
           type: array
@@ -5580,10 +5525,6 @@ components:
       description: "Response for the /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\
         \ API Request"
       type: object
-    ezsignfolder-unsend-v1-Request:
-      description: "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\
-        \ API Request\n\nIntentionally empty for future-proofing"
-      type: string
     list-saveListpresentation-v1-Response:
       allOf:
       - type: object
@@ -5596,6 +5537,7 @@ components:
         \ API Request"
       properties:
         a_objListpresentation:
+          description: ""
           items:
             $ref: '#/components/schemas/listpresentation-Request'
           type: array
@@ -5616,6 +5558,7 @@ components:
         \ API Request"
       properties:
         a_objListpresentation:
+          description: ""
           items:
             $ref: '#/components/schemas/listpresentation-Response'
           type: array
@@ -5819,12 +5762,6 @@ components:
       - sCategory
       - sLabel
       type: object
-    Common-Format-DateTime:
-      description: |-
-        Represent a Date Time.
-        The timezone is the one configured in the User's profile.
-      example: 2020-12-31 23:59:59
-      type: string
     Common-Format-DateTimeNullable:
       description: |-
         Represent a Date Time.
@@ -6012,11 +5949,6 @@ components:
       description: "Response for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments\
         \ API Request"
       type: object
-    Field-pkiUserIDNullable:
-      description: The unique ID of the User
-      example: 70
-      nullable: true
-      type: integer
     Field-pkiEzsignsignerID:
       description: The unique ID of the Ezsignsigner
       example: 89
@@ -6152,8 +6084,8 @@ components:
           example: Test eZsign Folder
           type: string
         tEzsignfolderNote:
-          description: Somes extra notes about the eZsign Folder
-          example: An extra notes we can add to the ezsign folder
+          description: Note about the Ezsignfolder
+          example: This is a note
           type: string
         eEzsignfolderSendreminderfrequency:
           $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
@@ -6242,6 +6174,7 @@ components:
         \ API Request"
       properties:
         a_objEzsigndocument:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsigndocument-ResponseCompound'
           type: array
@@ -6640,6 +6573,7 @@ components:
         \ API Request"
       properties:
         a_objEzsignfoldersignerassociation:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
           type: array
@@ -6942,8 +6876,8 @@ components:
           example: Test eZsign Folder
           type: string
         tEzsignfolderNote:
-          description: Somes extra notes about the eZsign Folder
-          example: An extra notes we can add to the ezsign folder
+          description: Note about the Ezsignfolder
+          example: This is a note
           type: string
         eEzsignfolderSendreminderfrequency:
           $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
@@ -7168,7 +7102,7 @@ components:
           example: 2020-12-31
           type: string
         tFranchisereferalincomeComment:
-          description: A comment about the transaction
+          description: Comment about the transaction
           example: This is a comment
           type: string
         fkiFranchiseofficeID:
@@ -7176,6 +7110,7 @@ components:
           example: 50
           type: integer
         sFranchisereferalincomeRemoteid:
+          description: ""
           type: string
       required:
       - dFranchisereferalincomeAgentamount
@@ -7322,6 +7257,219 @@ components:
       required:
       - a_objEzsignsignature
       type: object
+    ezsignfolder-unsend-v1-Request:
+      description: "Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\
+        \ API Request\n\nIntentionally empty for future-proofing"
+      type: object
+    ezsigndocument-getTemporaryProof-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getTemporaryProof_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\
+        \ API Request"
+      type: object
+    Field-eEzsigndocumentlogType:
+      description: The Ezsigndocumentlog Type.
+      enum:
+      - Clone
+      - Login
+      - Sendcode
+      - Badcode
+      - Goodcode
+      - Authentication
+      - Createpage
+      - Download
+      - Send
+      - Sign
+      - Upload
+      - View
+      - Completion
+      - Changelimitdate
+      - Unsign
+      - ImportFromInstanet
+      - SendEmail
+      - FormCompletion
+      - SignatureAttachmentAdd
+      - SignatureAttachmentValidation
+      - SignatureAttachmentRefused
+      - SignatureAttachmentDeleted
+      - DeclinedToSign
+      example: Createpage
+      type: string
+    Field-dtEzsigndocumentlogDatetime:
+      description: The date and time at which the event was logged
+      example: 2020-12-31 23:59:59
+      type: string
+    Field-sEzsigndocumentlogDetail:
+      description: The detail of the Ezsigndocumentlog
+      example: "Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5"
+      type: string
+    Common-Format-DateTime:
+      description: |-
+        Represent a Date Time.
+        The timezone is the one configured in the User's profile.
+      example: 2020-12-31 23:59:59
+      type: string
+    Common-Format-IP:
+      description: Represent an IP address.
+      example: 127.0.0.1
+      type: string
+    ezsigndocumentlog-Response:
+      description: An Ezsigndocumentlog Object
+      properties:
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          nullable: true
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          nullable: true
+          type: integer
+        dtEzsigndocumentlogDatetime:
+          description: The date and time at which the event was logged
+          example: 2020-12-31 23:59:59
+          type: string
+        eEzsigndocumentlogType:
+          $ref: '#/components/schemas/Field-eEzsigndocumentlogType'
+        sEzsigndocumentlogDetail:
+          description: The detail of the Ezsigndocumentlog
+          example: "Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5"
+          type: string
+        sEzsigndocumentlogLastname:
+          description: The last name of the User or Ezsignsigner
+          example: Doe
+          type: string
+        sEzsigndocumentlogFirstname:
+          description: The first name of the User or Ezsignsigner
+          example: John
+          type: string
+        sEzsigndocumentlogIP:
+          description: Represent an IP address.
+          example: 127.0.0.1
+          type: string
+      required:
+      - dtEzsigndocumentlogDatetime
+      - eEzsigndocumentlogType
+      - fkiEzsignsignerID
+      - fkiUserID
+      - sEzsigndocumentlogDetail
+      - sEzsigndocumentlogFirstname
+      - sEzsigndocumentlogIP
+      - sEzsigndocumentlogLastname
+      type: object
+    Field-pkiUserIDNullable:
+      description: The unique ID of the User
+      example: 70
+      nullable: true
+      type: integer
+    ezsigndocument-getTemporaryProof-v1-Response-mPayload:
+      description: "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\
+        \ API Request"
+      properties:
+        a_objEzsigndocumentlog:
+          $ref: '#/components/schemas/ezsigndocumentlog-Response'
+      required:
+      - a_objEzsigndocumentlog
+      type: object
+    ezsigndocument-endPrematurely-v1-Request:
+      description: "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely\
+        \ API Request\n\nIntentionally empty for future-proofing"
+      type: object
+    ezsigndocument-endPrematurely-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely\
+        \ API Request"
+      type: object
+    ezsignbulksend-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend_getObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /1/object/ezsignbulksend/getObject API Request
+      type: object
+    ezsignbulksend-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend-ResponseCompound'
+      description: "Payload for the /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getObject\
+        \ API Request"
+      type: object
+    ezsignbulksend-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend-Response'
+      description: An Ezsignbulksend Object and children to create a complete structure
+      type: object
+    ezsignbulksend-Response:
+      description: An Ezsignbulksend Object
+      properties:
+        pkiEzsignbulksendID:
+          description: The unique ID of the Ezsignbulksend
+          example: 8
+          type: integer
+        fkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          type: integer
+        fkiLanguageID:
+          description: |-
+            The unique ID of the Language.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|French|
+            |2|English|
+          example: 2
+          maximum: 2
+          minimum: 1
+          type: integer
+        sEzsignbulksendDescription:
+          description: The description of the Ezsignbulksend
+          example: Test eZsign Bulk Send
+          type: string
+        tEzsignbulksendNote:
+          description: Note about the Ezsignbulksend
+          example: This is a note
+          type: string
+        bEzsignbulksendIsactive:
+          description: Whether the Ezsignbulksend is active or not
+          type: boolean
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - bEzsignbulksendIsactive
+      - fkiEzsignfoldertypeID
+      - fkiLanguageID
+      - objAudit
+      - pkiEzsignbulksendID
+      - sEzsignbulksendDescription
+      - tEzsignbulksendNote
+      type: object
+    Field-tContactNote:
+      description: Note about the Contact
+      example: This is a note
+      type: string
+    Field-tEzsignfolderNote:
+      description: Note about the Ezsignfolder
+      example: This is a note
+      type: string
+    Field-tFranchisereferalincomeComment:
+      description: Comment about the transaction
+      example: This is a comment
+      type: string
+    Field-tEzsignbulksendNote:
+      description: Note about the Ezsignbulksend
+      example: This is a note
+      type: string
+    ezsignfoldersignerassociation-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation_RequestCompound_allOf'
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation-Request'
+      description: An Ezsignfoldersignerassociation Object and children to create
+        a complete structure
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -7370,11 +7518,6 @@ components:
           $ref: '#/components/schemas/ezsignsigner-RequestCompound-Contact'
       required:
       - objContact
-      type: object
-    ezsignfoldersignerassociation_RequestCompound_allOf:
-      properties:
-        objEzsignsigner:
-          $ref: '#/components/schemas/ezsignsigner-RequestCompound'
       type: object
     ezsignsignature_createObject_v1_Response_allOf:
       properties:
@@ -7438,6 +7581,7 @@ components:
         objAddress:
           $ref: '#/components/schemas/address-Request'
         a_objContact:
+          description: ""
           items:
             $ref: '#/components/schemas/contact-RequestCompound'
           type: array
@@ -7447,18 +7591,22 @@ components:
     contactinformations_RequestCompound_allOf:
       properties:
         a_objAddress:
+          description: ""
           items:
             $ref: '#/components/schemas/address-Request'
           type: array
         a_objPhone:
+          description: ""
           items:
             $ref: '#/components/schemas/phone-Request'
           type: array
         a_objEmail:
+          description: ""
           items:
             $ref: '#/components/schemas/email-Request'
           type: array
         a_objWebsite:
+          description: ""
           items:
             $ref: '#/components/schemas/website-Request'
           type: array
@@ -7523,6 +7671,7 @@ components:
     ezsignformfieldgroup_ResponseCompound_allOf:
       properties:
         a_objEzsignformfield:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignformfield-Response'
           type: array
@@ -7578,6 +7727,7 @@ components:
     ezsignfoldertype_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignfoldertype:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignfoldertype-ListElement'
           type: array
@@ -7594,6 +7744,7 @@ components:
     ezsignfolder_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignfolder:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignfolder-ListElement'
           type: array
@@ -7625,6 +7776,7 @@ components:
     ezsignbulksend_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignbulksend:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsignbulksend-ListElement'
           type: array
@@ -7641,6 +7793,7 @@ components:
     ezsigntemplatepackage_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsigntemplatepackage:
+          description: ""
           items:
             $ref: '#/components/schemas/ezsigntemplatepackage-ListElement'
           type: array
@@ -7748,8 +7901,30 @@ components:
       - a_pkiPermissionID
       - objUserReal
       type: object
+    ezsigndocument_getTemporaryProof_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getTemporaryProof-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignbulksend_getObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksend-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldersignerassociation_RequestCompound_allOf:
+      properties:
+        objEzsignsigner:
+          $ref: '#/components/schemas/ezsignsigner-RequestCompound'
+      required:
+      - objEzsignsigner
+      type: object
   securitySchemes:
     Authorization:
+      description: ""
       in: header
       name: Authorization
       type: apiKey
@@ -7801,6 +7976,7 @@ x-webhooks:
       responses:
         "204":
           $ref: '#/components/responses/Response-Webhook-204'
+      x-internal: true
 x-tagGroups:
 - name: General
   tags:
@@ -7839,8 +8015,6 @@ x-tagGroups:
   - Object_User
 - name: Report
   tags: []
-x-Presentations:
-- Internal
-- Full
+x-presentations:
 - Ezsign
 

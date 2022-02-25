@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfoldertype/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfoldertype/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class EzsignfoldertypeGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
@@ -81,7 +81,7 @@ public class EzsignfoldertypeGetListV1ResponseMPayload {
   }
 
    /**
-   * Get aObjEzsignfoldertype
+   * 
    * @return aObjEzsignfoldertype
   **/
   @javax.annotation.Nonnull

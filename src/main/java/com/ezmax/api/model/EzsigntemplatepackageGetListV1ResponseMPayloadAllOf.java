@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigntemplatepackageGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T18:10:31.233662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
 public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -70,7 +70,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
   }
 
    /**
-   * Get aObjEzsigntemplatepackage
+   * 
    * @return aObjEzsigntemplatepackage
   **/
   @javax.annotation.Nonnull
