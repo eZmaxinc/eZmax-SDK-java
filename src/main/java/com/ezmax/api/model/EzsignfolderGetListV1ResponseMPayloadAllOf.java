@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfolderGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T03:49:17.012787Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
 public class EzsignfolderGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)

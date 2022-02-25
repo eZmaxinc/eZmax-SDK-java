@@ -17,6 +17,8 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
@@ -49,6 +51,21 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     public void ezsignfoldersignerassociationCreateObjectV1Test() throws ApiException {
         List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request = null;
                 EzsignfoldersignerassociationCreateObjectV1Response response = api.ezsignfoldersignerassociationCreateObjectV1(ezsignfoldersignerassociationCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Ezsignfoldersignerassociation
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfoldersignerassociationCreateObjectV2Test() throws ApiException {
+        EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request = null;
+                EzsignfoldersignerassociationCreateObjectV2Response response = api.ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationCreateObjectV2Request);
         // TODO: test validations
     }
     

@@ -22,6 +22,8 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
@@ -97,6 +99,21 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentCreateObjectV1Test() throws ApiException {
         List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request = null;
                 EzsigndocumentCreateObjectV1Response response = api.ezsigndocumentCreateObjectV1(ezsigndocumentCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Ezsigndocument
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentCreateObjectV2Test() throws ApiException {
+        EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request = null;
+                EzsigndocumentCreateObjectV2Response response = api.ezsigndocumentCreateObjectV2(ezsigndocumentCreateObjectV2Request);
         // TODO: test validations
     }
     

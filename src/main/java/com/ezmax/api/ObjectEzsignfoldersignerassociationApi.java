@@ -30,6 +30,8 @@ import java.io.IOException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
@@ -89,7 +91,9 @@ public class ObjectEzsignfoldersignerassociationApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfoldersignerassociationCreateObjectV1Call(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -135,6 +139,7 @@ public class ObjectEzsignfoldersignerassociationApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsignfoldersignerassociationCreateObjectV1ValidateBeforeCall(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         
@@ -160,7 +165,9 @@ public class ObjectEzsignfoldersignerassociationApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsignfoldersignerassociationCreateObjectV1Response ezsignfoldersignerassociationCreateObjectV1(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request) throws ApiException {
         ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> localVarResp = ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(ezsignfoldersignerassociationCreateObjectV1Request);
         return localVarResp.getData();
@@ -177,7 +184,9 @@ public class ObjectEzsignfoldersignerassociationApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsignfoldersignerassociationCreateObjectV1Response> ezsignfoldersignerassociationCreateObjectV1WithHttpInfo(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV1ValidateBeforeCall(ezsignfoldersignerassociationCreateObjectV1Request, null);
         try {
@@ -202,11 +211,145 @@ public class ObjectEzsignfoldersignerassociationApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfoldersignerassociationCreateObjectV1Async(List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request, final ApiCallback<EzsignfoldersignerassociationCreateObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV1ValidateBeforeCall(ezsignfoldersignerassociationCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfoldersignerassociationCreateObjectV2
+     * @param ezsignfoldersignerassociationCreateObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationCreateObjectV2Call(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfoldersignerassociationCreateObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/ezsignfoldersignerassociation";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfoldersignerassociationCreateObjectV2ValidateBeforeCall(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' is set
+        if (ezsignfoldersignerassociationCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfoldersignerassociationCreateObjectV2Request' when calling ezsignfoldersignerassociationCreateObjectV2(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV2Call(ezsignfoldersignerassociationCreateObjectV2Request, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationCreateObjectV2Request  (required)
+     * @return EzsignfoldersignerassociationCreateObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfoldersignerassociationCreateObjectV2Response ezsignfoldersignerassociationCreateObjectV2(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request) throws ApiException {
+        ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> localVarResp = ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(ezsignfoldersignerassociationCreateObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Ezsignfoldersignerassociation
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsignfoldersignerassociationCreateObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfoldersignerassociationCreateObjectV2Response> ezsignfoldersignerassociationCreateObjectV2WithHttpInfo(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV2ValidateBeforeCall(ezsignfoldersignerassociationCreateObjectV2Request, null);
+        try {
+            Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateObjectV2Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldersignerassociationCreateObjectV2Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsignfoldersignerassociationCreateObjectV2Response>(){});
+            throw e;
+        }
+    }
+
+    /**
+     * Create a new Ezsignfoldersignerassociation (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfoldersignerassociationCreateObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationCreateObjectV2Async(EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request, final ApiCallback<EzsignfoldersignerassociationCreateObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateObjectV2ValidateBeforeCall(ezsignfoldersignerassociationCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

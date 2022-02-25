@@ -642,9 +642,14 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.5] - 2022-02-\n\n### [1.1.4] - 2022-02-24\n\n####\
-    \ Added\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
-    \ Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
+    \n## 1.1.X Releases\n### [1.1.5] - 2022-02-\n\n#### Added\n- POST /2/object/apikey\n\
+    - POST /2/object/ezsigndocument\n- POST /2/object/ezsignfolder\n- POST /2/object/ezsignfoldersignerassociation\n\
+    - POST /2/object/ezsignsignature\n- POST /2/object/franchisereferalincome\n\n\
+    #### Deprecated\n- POST /1/object/apikey\n- POST /1/object/ezsigndocument\n- POST\
+    \ /1/object/ezsignfolder\n- POST /1/object/ezsignfoldersignerassociation\n- POST\
+    \ /1/object/ezsignsignature\n- POST /1/object/franchisereferalincome\n\n### [1.1.4]\
+    \ - 2022-02-24\n\n#### Added\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID} Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
     - GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
     \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
     \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
@@ -693,7 +698,8 @@ tags:
     - Support for typescript-fetch\n- Support for typescript-jquery\n- Support for\
     \ typescript-node\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
     \ was invalid when url parameters were used\n\n## 1.0.X Releases\nDocumentation\
-    \ and changelog for version 1.0x can be found here: [1.0.x Releases Documentation](https://ezmaxinc.github.io/eZmax-API/docs/ezmax.v1.0.html)"
+    \ and changelog for version 1.0x can be found here: [1.0.x Releases Documentation\
+    \ (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
   name: General_Changelog
   x-displayName: Changelog
 - description: Customer contains details about the customer code assigned to your
@@ -825,40 +831,6 @@ paths:
       x-presentations:
       - Ezsign
       x-accepts: application/json
-  /1/object/apikey:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Apikey_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/apikey-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/apikey-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Apikey
-      tags:
-      - Object_Apikey
-      x-presentations:
-      - Ezsign
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/ezsignbulksend/getList:
     description: ""
     get:
@@ -952,49 +924,6 @@ paths:
       - Object_Ezsignbulksend
       x-presentations:
       - Ezsign
-      x-accepts: application/json
-  /1/object/ezsigndocument:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsigndocument_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Response'
-          description: Successful response
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error-sTemporaryFileUrl'
-          description: The syntax of the request is valid but the request cannot be
-            completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl
-            will be set and you can use this url to try a new request without sending
-            the file over again
-      security:
-      - Authorization: []
-      summary: Create a new Ezsigndocument
-      tags:
-      - Object_Ezsigndocument
-      x-presentations:
-      - Ezsign
-      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate:
     post:
@@ -1302,40 +1231,6 @@ paths:
       summary: "Retrieve positions X,Y of given words from a Ezsigndocument"
       tags:
       - Object_Ezsigndocument
-      x-presentations:
-      - Ezsign
-      x-contentType: application/json
-      x-accepts: application/json
-  /1/object/ezsignfolder:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignfolder_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
       x-presentations:
       - Ezsign
       x-contentType: application/json
@@ -1770,40 +1665,6 @@ paths:
       x-presentations:
       - Ezsign
       x-accepts: application/json
-  /1/object/ezsignfoldersignerassociation:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignfoldersignerassociation_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignfoldersignerassociation
-      tags:
-      - Object_Ezsignfoldersignerassociation
-      x-presentations:
-      - Ezsign
-      x-contentType: application/json
-      x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     delete:
       description: ""
@@ -2047,40 +1908,6 @@ paths:
       - Object_Ezsignfoldertype
       x-presentations:
       - Ezsign
-      x-accepts: application/json
-  /1/object/ezsignsignature:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Ezsignsignature_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Ezsignsignature
-      tags:
-      - Object_Ezsignsignature
-      x-presentations:
-      - Ezsign
-      x-contentType: application/json
       x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}:
     delete:
@@ -2373,39 +2200,6 @@ paths:
       tags:
       - Object_Franchiseoffice
       x-presentations: []
-      x-accepts: application/json
-  /1/object/franchisereferalincome:
-    description: ""
-    post:
-      description: |-
-        The endpoint allows to create one or many elements at once.
-
-        The array can contain simple (Just the object) or compound (The object and its child) objects.
-
-        Creating compound elements allows to reduce the multiple requests to create all child objects.
-      operationId: Franchisereferalincome_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Request'
-              type: array
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response'
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Franchisereferalincome
-      tags:
-      - Object_Franchisereferalincome
-      x-presentations: []
-      x-contentType: application/json
       x-accepts: application/json
   /1/object/period/getAutocomplete/{sSelector}:
     description: ""
@@ -2897,6 +2691,394 @@ paths:
       - Object_Ezsigndocument
       x-presentations:
       - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsigndocument_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-createObject-v1-Response'
+          description: Successful response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error-sTemporaryFileUrl'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl
+            will be set and you can use this url to try a new request without sending
+            the file over again
+      security:
+      - Authorization: []
+      summary: Create a new Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfolder_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignfoldersignerassociation_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignature:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Ezsignsignature_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/franchisereferalincome:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Franchisereferalincome_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Franchisereferalincome
+      tags:
+      - Object_Franchisereferalincome
+      x-presentations: []
+      x-contentType: application/json
+      x-accepts: application/json
+  /1/object/apikey:
+    description: ""
+    post:
+      deprecated: true
+      description: |-
+        The endpoint allows to create one or many elements at once.
+
+        The array can contain simple (Just the object) or compound (The object and its child) objects.
+
+        Creating compound elements allows to reduce the multiple requests to create all child objects.
+      operationId: Apikey_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                $ref: '#/components/schemas/apikey-createObject-v1-Request'
+              type: array
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Apikey
+      tags:
+      - Object_Apikey
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/apikey:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Apikey_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/apikey-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-createObject-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Apikey
+      tags:
+      - Object_Apikey
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/ezsigndocument:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsigndocument_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-createObject-v2-Response'
+          description: Successful response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error-sTemporaryFileUrl'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl
+            will be set and you can use this url to try a new request without sending
+            the file over again
+      security:
+      - Authorization: []
+      summary: Create a new Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/ezsignfolder:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsignfolder_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-createObject-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/ezsignfoldersignerassociation:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsignfoldersignerassociation_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/ezsignsignature:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsignsignature_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignature-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-createObject-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-contentType: application/json
+      x-accepts: application/json
+  /2/object/franchisereferalincome:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Franchisereferalincome_CreateObject_V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/franchisereferalincome-createObject-v2-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchisereferalincome-createObject-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Franchisereferalincome
+      tags:
+      - Object_Franchisereferalincome
+      x-presentations: []
       x-contentType: application/json
       x-accepts: application/json
 components:
@@ -7471,6 +7653,208 @@ components:
       description: An Ezsignfoldersignerassociation Object and children to create
         a complete structure
       type: object
+    apikey-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/apikey_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/apikey/createObject API Request
+      type: object
+    apikey-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/apikey/createObject API Request
+      properties:
+        a_objApikey:
+          items:
+            $ref: '#/components/schemas/apikey-Response'
+          type: array
+      required:
+      - a_objApikey
+      type: object
+    apikey-createObject-v2-Request:
+      description: Request for the /2/object/apikey/createObject API Request
+      properties:
+        a_objApikey:
+          items:
+            $ref: '#/components/schemas/apikey-RequestCompound'
+          type: array
+      required:
+      - a_objApikey
+      type: object
+    ezsigndocument-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/ezsigndocument/createObject API Request
+      example:
+        a_pkiEzsigndocumentID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsigndocumentID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsigndocumentID
+      type: object
+    ezsigndocument-createObject-v2-Request:
+      description: Request for the /2/object/ezsigndocument/createObject API Request
+      properties:
+        a_objEzsigndocument:
+          items:
+            $ref: '#/components/schemas/ezsigndocument-RequestCompound'
+          type: array
+      required:
+      - a_objEzsigndocument
+      type: object
+    ezsigndocument-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/ezsigndocument/createObject API Request
+      type: object
+    ezsignfolder-createObject-v2-Request:
+      description: Request for the /2/object/ezsignfolder/createObject API Request
+      properties:
+        a_objEzsignfolder:
+          items:
+            $ref: '#/components/schemas/ezsignfolder-RequestCompound'
+          type: array
+      required:
+      - a_objEzsignfolder
+      type: object
+    ezsignfolder-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/ezsignfolder/createObject API Request
+      type: object
+    ezsignfolder-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/ezsignfolder/createObject API Request
+      example:
+        a_pkiEzsignfolderID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignfolderID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignfolderID
+      type: object
+    ezsignfoldersignerassociation-createObject-v2-Request:
+      description: Request for the /2/object/ezsignfoldersignerassociation/createObject
+        API Request
+      properties:
+        a_objEzsignfoldersignerassociation:
+          items:
+            $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestCompound'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociation
+      type: object
+    ezsignfoldersignerassociation-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/ezsignfoldersignerassociation/createObject
+        API Request
+      type: object
+    ezsignfoldersignerassociation-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/ezsignfoldersignerassociation/createObject
+        API Request
+      example:
+        a_pkiEzsignfoldersignerassociationID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignfoldersignerassociationID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignfoldersignerassociationID
+      type: object
+    ezsignsignature-createObject-v2-Request:
+      description: Request for the /2/object/ezsignsignature/createObject API Request
+      properties:
+        a_objEzsignsignature:
+          items:
+            $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+          type: array
+      required:
+      - a_objEzsignsignature
+      type: object
+    ezsignsignature-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignature_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/ezsignsignature/createObject API Request
+      type: object
+    ezsignsignature-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/ezsignsignature/createObject API Request
+      example:
+        a_pkiEzsignsignatureID:
+        - 95
+        - 96
+      properties:
+        a_pkiEzsignsignatureID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiEzsignsignatureID
+      type: object
+    franchisereferalincome-createObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/franchisereferalincome_createObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for the /2/object/franchisereferalincome/createObject
+        API Request
+      type: object
+    franchisereferalincome-createObject-v2-Response-mPayload:
+      description: Payload for the /2/object/franchisereferalincome/createObject API
+        Request
+      example:
+        a_pkiFranchisereferalincomeID:
+        - 95
+        - 96
+      properties:
+        a_pkiFranchisereferalincomeID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            type: integer
+          type: array
+      required:
+      - a_pkiFranchisereferalincomeID
+      type: object
+    franchisereferalincome-createObject-v2-Request:
+      description: Request for the /2/object/franchisereferalincome/createObject API
+        Request
+      properties:
+        a_objFranchisereferalincome:
+          items:
+            $ref: '#/components/schemas/franchisereferalincome-RequestCompound'
+          type: array
+      required:
+      - a_objFranchisereferalincome
+      type: object
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -7922,6 +8306,48 @@ components:
           $ref: '#/components/schemas/ezsignsigner-RequestCompound'
       required:
       - objEzsignsigner
+      type: object
+    apikey_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/apikey-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigndocument_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfolder_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldersignerassociation_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignsignature_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignature-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    franchisereferalincome_createObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/franchisereferalincome-createObject-v2-Response-mPayload'
+      required:
+      - mPayload
       type: object
   securitySchemes:
     Authorization:

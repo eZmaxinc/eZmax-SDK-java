@@ -29,6 +29,8 @@ import java.io.IOException;
 
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Response;
+import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
+import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -85,7 +87,9 @@ public class ObjectFranchisereferalincomeApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call franchisereferalincomeCreateObjectV1Call(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -131,6 +135,7 @@ public class ObjectFranchisereferalincomeApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call franchisereferalincomeCreateObjectV1ValidateBeforeCall(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         
@@ -156,7 +161,9 @@ public class ObjectFranchisereferalincomeApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public FranchisereferalincomeCreateObjectV1Response franchisereferalincomeCreateObjectV1(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request) throws ApiException {
         ApiResponse<FranchisereferalincomeCreateObjectV1Response> localVarResp = franchisereferalincomeCreateObjectV1WithHttpInfo(franchisereferalincomeCreateObjectV1Request);
         return localVarResp.getData();
@@ -173,7 +180,9 @@ public class ObjectFranchisereferalincomeApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<FranchisereferalincomeCreateObjectV1Response> franchisereferalincomeCreateObjectV1WithHttpInfo(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV1ValidateBeforeCall(franchisereferalincomeCreateObjectV1Request, null);
         try {
@@ -198,11 +207,145 @@ public class ObjectFranchisereferalincomeApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call franchisereferalincomeCreateObjectV1Async(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request, final ApiCallback<FranchisereferalincomeCreateObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV1ValidateBeforeCall(franchisereferalincomeCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for franchisereferalincomeCreateObjectV2
+     * @param franchisereferalincomeCreateObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call franchisereferalincomeCreateObjectV2Call(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = franchisereferalincomeCreateObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/franchisereferalincome";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call franchisereferalincomeCreateObjectV2ValidateBeforeCall(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'franchisereferalincomeCreateObjectV2Request' is set
+        if (franchisereferalincomeCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'franchisereferalincomeCreateObjectV2Request' when calling franchisereferalincomeCreateObjectV2(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV2Call(franchisereferalincomeCreateObjectV2Request, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.
+     * @param franchisereferalincomeCreateObjectV2Request  (required)
+     * @return FranchisereferalincomeCreateObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public FranchisereferalincomeCreateObjectV2Response franchisereferalincomeCreateObjectV2(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) throws ApiException {
+        ApiResponse<FranchisereferalincomeCreateObjectV2Response> localVarResp = franchisereferalincomeCreateObjectV2WithHttpInfo(franchisereferalincomeCreateObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Franchisereferalincome
+     * The endpoint allows to create one or many elements at once.
+     * @param franchisereferalincomeCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;FranchisereferalincomeCreateObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<FranchisereferalincomeCreateObjectV2Response> franchisereferalincomeCreateObjectV2WithHttpInfo(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV2ValidateBeforeCall(franchisereferalincomeCreateObjectV2Request, null);
+        try {
+            Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<FranchisereferalincomeCreateObjectV2Response>(){});
+            throw e;
+        }
+    }
+
+    /**
+     * Create a new Franchisereferalincome (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param franchisereferalincomeCreateObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call franchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, final ApiCallback<FranchisereferalincomeCreateObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV2ValidateBeforeCall(franchisereferalincomeCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

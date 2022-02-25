@@ -17,6 +17,8 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
+import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
+import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
@@ -59,6 +61,21 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderCreateObjectV1Test() throws ApiException {
         List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request = null;
                 EzsignfolderCreateObjectV1Response response = api.ezsignfolderCreateObjectV1(ezsignfolderCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Ezsignfolder
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignfolderCreateObjectV2Test() throws ApiException {
+        EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request = null;
+                EzsignfolderCreateObjectV2Response response = api.ezsignfolderCreateObjectV2(ezsignfolderCreateObjectV2Request);
         // TODO: test validations
     }
     

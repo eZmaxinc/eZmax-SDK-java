@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * Payload for the /2/module/authenticate/authenticate API Request
  */
 @ApiModel(description = "Payload for the /2/module/authenticate/authenticate API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T03:49:17.012787Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
 public class AuthenticateAuthenticateV2ResponseMPayload {
   public static final String SERIALIZED_NAME_S_AUTHORIZATION = "sAuthorization";
   @SerializedName(SERIALIZED_NAME_S_AUTHORIZATION)

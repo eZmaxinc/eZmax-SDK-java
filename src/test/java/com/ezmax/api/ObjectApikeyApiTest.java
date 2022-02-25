@@ -16,6 +16,8 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.ApikeyCreateObjectV1Request;
 import com.ezmax.api.model.ApikeyCreateObjectV1Response;
+import com.ezmax.api.model.ApikeyCreateObjectV2Request;
+import com.ezmax.api.model.ApikeyCreateObjectV2Response;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,6 +47,21 @@ public class ObjectApikeyApiTest {
     public void apikeyCreateObjectV1Test() throws ApiException {
         List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request = null;
                 ApikeyCreateObjectV1Response response = api.apikeyCreateObjectV1(apikeyCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Apikey
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void apikeyCreateObjectV2Test() throws ApiException {
+        ApikeyCreateObjectV2Request apikeyCreateObjectV2Request = null;
+                ApikeyCreateObjectV2Response response = api.apikeyCreateObjectV2(apikeyCreateObjectV2Request);
         // TODO: test validations
     }
     

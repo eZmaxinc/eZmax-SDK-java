@@ -16,6 +16,8 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Response;
+import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
+import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -45,6 +47,21 @@ public class ObjectFranchisereferalincomeApiTest {
     public void franchisereferalincomeCreateObjectV1Test() throws ApiException {
         List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request = null;
                 FranchisereferalincomeCreateObjectV1Response response = api.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Franchisereferalincome
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void franchisereferalincomeCreateObjectV2Test() throws ApiException {
+        FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request = null;
+                FranchisereferalincomeCreateObjectV2Response response = api.franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request);
         // TODO: test validations
     }
     

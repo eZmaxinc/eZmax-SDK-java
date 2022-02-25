@@ -17,6 +17,8 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureCreateObjectV2Request;
+import com.ezmax.api.model.EzsignsignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Response;
@@ -50,6 +52,21 @@ public class ObjectEzsignsignatureApiTest {
     public void ezsignsignatureCreateObjectV1Test() throws ApiException {
         List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request = null;
                 EzsignsignatureCreateObjectV1Response response = api.ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Create a new Ezsignsignature
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignsignatureCreateObjectV2Test() throws ApiException {
+        EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request = null;
+                EzsignsignatureCreateObjectV2Response response = api.ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request);
         // TODO: test validations
     }
     

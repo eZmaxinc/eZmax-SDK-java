@@ -35,6 +35,8 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
@@ -415,7 +417,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigndocumentCreateObjectV1Call(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -461,6 +465,7 @@ public class ObjectEzsigndocumentApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsigndocumentCreateObjectV1ValidateBeforeCall(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         
@@ -487,7 +492,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsigndocumentCreateObjectV1Response ezsigndocumentCreateObjectV1(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request) throws ApiException {
         ApiResponse<EzsigndocumentCreateObjectV1Response> localVarResp = ezsigndocumentCreateObjectV1WithHttpInfo(ezsigndocumentCreateObjectV1Request);
         return localVarResp.getData();
@@ -505,7 +512,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsigndocumentCreateObjectV1Response> ezsigndocumentCreateObjectV1WithHttpInfo(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentCreateObjectV1ValidateBeforeCall(ezsigndocumentCreateObjectV1Request, null);
         try {
@@ -531,11 +540,149 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigndocumentCreateObjectV1Async(List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request, final ApiCallback<EzsigndocumentCreateObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentCreateObjectV1ValidateBeforeCall(ezsigndocumentCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigndocumentCreateObjectV2
+     * @param ezsigndocumentCreateObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentCreateObjectV2Call(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsigndocumentCreateObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/ezsigndocument";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigndocumentCreateObjectV2ValidateBeforeCall(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'ezsigndocumentCreateObjectV2Request' is set
+        if (ezsigndocumentCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigndocumentCreateObjectV2Request' when calling ezsigndocumentCreateObjectV2(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsigndocumentCreateObjectV2Call(ezsigndocumentCreateObjectV2Request, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Create a new Ezsigndocument
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigndocumentCreateObjectV2Request  (required)
+     * @return EzsigndocumentCreateObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigndocumentCreateObjectV2Response ezsigndocumentCreateObjectV2(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request) throws ApiException {
+        ApiResponse<EzsigndocumentCreateObjectV2Response> localVarResp = ezsigndocumentCreateObjectV2WithHttpInfo(ezsigndocumentCreateObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Ezsigndocument
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigndocumentCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsigndocumentCreateObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigndocumentCreateObjectV2Response> ezsigndocumentCreateObjectV2WithHttpInfo(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentCreateObjectV2ValidateBeforeCall(ezsigndocumentCreateObjectV2Request, null);
+        try {
+            Type localVarReturnType = new TypeToken<EzsigndocumentCreateObjectV2Response>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsigndocumentCreateObjectV2Response>(){}.getType()));
+            e.setErrorObjectType(new GenericType<EzsigndocumentCreateObjectV2Response>(){});
+            throw e;
+        }
+    }
+
+    /**
+     * Create a new Ezsigndocument (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigndocumentCreateObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentCreateObjectV2Async(EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request, final ApiCallback<EzsigndocumentCreateObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigndocumentCreateObjectV2ValidateBeforeCall(ezsigndocumentCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigndocumentCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
