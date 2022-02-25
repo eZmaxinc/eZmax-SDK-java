@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A form Data Signer Object
  */
 @ApiModel(description = "A form Data Signer Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T02:49:17.235270Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T03:24:27.571324Z[Etc/UTC]")
 public class CustomFormDataSignerResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
