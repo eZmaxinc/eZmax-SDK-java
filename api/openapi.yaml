@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition
-  version: 1.1.6
+  version: 1.1.7
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -642,7 +642,8 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.6] - 2022-03-04\n\n#### Added\n- DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\n\
+    \n## 1.1.X Releases\n### [1.1.7] - 2022-03-\n\n#### Added\n\n### [1.1.6] - 2022-03-04\n\
+    \n#### Added\n- DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\n\
     - GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\n- GET\
