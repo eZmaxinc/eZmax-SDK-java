@@ -53,28 +53,8 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsigndocument/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
-  private Integer iEzsigndocumentStepformtotal;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT = "iEzsigndocumentStepformcurrent";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT)
-  private Integer iEzsigndocumentStepformcurrent;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL = "iEzsigndocumentStepsignaturetotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL)
-  private Integer iEzsigndocumentStepsignaturetotal;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT = "iEzsigndocumentStepsignatureCurrent";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT)
-  private Integer iEzsigndocumentStepsignatureCurrent;
-
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS = "a_objEzsignfoldersignerassociationstatus";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS)
-  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
   private Integer fkiEzsignfolderID;
@@ -135,128 +115,28 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
+  private Integer iEzsigndocumentStepformtotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT = "iEzsigndocumentStepformcurrent";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT)
+  private Integer iEzsigndocumentStepformcurrent;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL = "iEzsigndocumentStepsignaturetotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL)
+  private Integer iEzsigndocumentStepsignaturetotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT = "iEzsigndocumentStepsignatureCurrent";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT)
+  private Integer iEzsigndocumentStepsignatureCurrent;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS = "a_objEzsignfoldersignerassociationstatus";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS)
+  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
+
   public EzsigndocumentGetObjectV1ResponseMPayload() { 
   }
-
-  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
-    
-    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
-    return this;
-  }
-
-   /**
-   * The total number of steps in the form filling phase
-   * @return iEzsigndocumentStepformtotal
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the form filling phase")
-
-  public Integer getiEzsigndocumentStepformtotal() {
-    return iEzsigndocumentStepformtotal;
-  }
-
-
-  public void setiEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
-    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
-  }
-
-
-  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
-    
-    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
-    return this;
-  }
-
-   /**
-   * The current step in the form filling phase
-   * @return iEzsigndocumentStepformcurrent
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The current step in the form filling phase")
-
-  public Integer getiEzsigndocumentStepformcurrent() {
-    return iEzsigndocumentStepformcurrent;
-  }
-
-
-  public void setiEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
-    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
-  }
-
-
-  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
-    
-    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
-    return this;
-  }
-
-   /**
-   * The total number of steps in the signature filling phase
-   * @return iEzsigndocumentStepsignaturetotal
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the signature filling phase")
-
-  public Integer getiEzsigndocumentStepsignaturetotal() {
-    return iEzsigndocumentStepsignaturetotal;
-  }
-
-
-  public void setiEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
-    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
-  }
-
-
-  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
-    
-    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
-    return this;
-  }
-
-   /**
-   * The current step in the signature phase
-   * @return iEzsigndocumentStepsignatureCurrent
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0", required = true, value = "The current step in the signature phase")
-
-  public Integer getiEzsigndocumentStepsignatureCurrent() {
-    return iEzsigndocumentStepsignatureCurrent;
-  }
-
-
-  public void setiEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
-    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
-  }
-
-
-  public EzsigndocumentGetObjectV1ResponseMPayload aObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
-    
-    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
-    return this;
-  }
-
-  public EzsigndocumentGetObjectV1ResponseMPayload addAObjEzsignfoldersignerassociationstatusItem(CustomEzsignfoldersignerassociationstatusResponse aObjEzsignfoldersignerassociationstatusItem) {
-    this.aObjEzsignfoldersignerassociationstatus.add(aObjEzsignfoldersignerassociationstatusItem);
-    return this;
-  }
-
-   /**
-   * Get aObjEzsignfoldersignerassociationstatus
-   * @return aObjEzsignfoldersignerassociationstatus
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
-    return aObjEzsignfoldersignerassociationstatus;
-  }
-
-
-  public void setaObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
-    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
-  }
-
 
   public EzsigndocumentGetObjectV1ResponseMPayload fkiEzsignfolderID(Integer fkiEzsignfolderID) {
     
@@ -605,6 +485,126 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
+    
+    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+    return this;
+  }
+
+   /**
+   * The total number of steps in the form filling phase
+   * @return iEzsigndocumentStepformtotal
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the form filling phase")
+
+  public Integer getiEzsigndocumentStepformtotal() {
+    return iEzsigndocumentStepformtotal;
+  }
+
+
+  public void setiEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
+    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
+    
+    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+    return this;
+  }
+
+   /**
+   * The current step in the form filling phase
+   * @return iEzsigndocumentStepformcurrent
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "1", required = true, value = "The current step in the form filling phase")
+
+  public Integer getiEzsigndocumentStepformcurrent() {
+    return iEzsigndocumentStepformcurrent;
+  }
+
+
+  public void setiEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
+    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
+    
+    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+    return this;
+  }
+
+   /**
+   * The total number of steps in the signature filling phase
+   * @return iEzsigndocumentStepsignaturetotal
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the signature filling phase")
+
+  public Integer getiEzsigndocumentStepsignaturetotal() {
+    return iEzsigndocumentStepsignaturetotal;
+  }
+
+
+  public void setiEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
+    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
+    
+    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+    return this;
+  }
+
+   /**
+   * The current step in the signature phase
+   * @return iEzsigndocumentStepsignatureCurrent
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "0", required = true, value = "The current step in the signature phase")
+
+  public Integer getiEzsigndocumentStepsignatureCurrent() {
+    return iEzsigndocumentStepsignatureCurrent;
+  }
+
+
+  public void setiEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
+    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload aObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
+    
+    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+    return this;
+  }
+
+  public EzsigndocumentGetObjectV1ResponseMPayload addAObjEzsignfoldersignerassociationstatusItem(CustomEzsignfoldersignerassociationstatusResponse aObjEzsignfoldersignerassociationstatusItem) {
+    this.aObjEzsignfoldersignerassociationstatus.add(aObjEzsignfoldersignerassociationstatusItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignfoldersignerassociationstatus
+   * @return aObjEzsignfoldersignerassociationstatus
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
+    return aObjEzsignfoldersignerassociationstatus;
+  }
+
+
+  public void setaObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
+    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -614,12 +614,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       return false;
     }
     EzsigndocumentGetObjectV1ResponseMPayload ezsigndocumentGetObjectV1ResponseMPayload = (EzsigndocumentGetObjectV1ResponseMPayload) o;
-    return Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
-        Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
-        Objects.equals(this.iEzsigndocumentStepsignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignaturetotal) &&
-        Objects.equals(this.iEzsigndocumentStepsignatureCurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignatureCurrent) &&
-        Objects.equals(this.aObjEzsignfoldersignerassociationstatus, ezsigndocumentGetObjectV1ResponseMPayload.aObjEzsignfoldersignerassociationstatus) &&
-        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentGetObjectV1ResponseMPayload.fkiEzsignfolderID) &&
+    return Objects.equals(this.fkiEzsignfolderID, ezsigndocumentGetObjectV1ResponseMPayload.fkiEzsignfolderID) &&
         Objects.equals(this.dtEzsigndocumentDuedate, ezsigndocumentGetObjectV1ResponseMPayload.dtEzsigndocumentDuedate) &&
         Objects.equals(this.fkiLanguageID, ezsigndocumentGetObjectV1ResponseMPayload.fkiLanguageID) &&
         Objects.equals(this.sEzsigndocumentName, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentName) &&
@@ -633,23 +628,23 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         Objects.equals(this.iEzsigndocumentSignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentSignaturetotal) &&
         Objects.equals(this.sEzsigndocumentMD5initial, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5initial) &&
         Objects.equals(this.sEzsigndocumentMD5signed, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5signed) &&
-        Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit);
+        Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit) &&
+        Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
+        Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
+        Objects.equals(this.iEzsigndocumentStepsignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignaturetotal) &&
+        Objects.equals(this.iEzsigndocumentStepsignatureCurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignatureCurrent) &&
+        Objects.equals(this.aObjEzsignfoldersignerassociationstatus, ezsigndocumentGetObjectV1ResponseMPayload.aObjEzsignfoldersignerassociationstatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus, fkiEzsignfolderID, dtEzsigndocumentDuedate, fkiLanguageID, sEzsigndocumentName, pkiEzsigndocumentID, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, sEzsigndocumentMD5signed, objAudit);
+    return Objects.hash(fkiEzsignfolderID, dtEzsigndocumentDuedate, fkiLanguageID, sEzsigndocumentName, pkiEzsigndocumentID, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, sEzsigndocumentMD5signed, objAudit, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetObjectV1ResponseMPayload {\n");
-    sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
-    sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
-    sb.append("    iEzsigndocumentStepsignaturetotal: ").append(toIndentedString(iEzsigndocumentStepsignaturetotal)).append("\n");
-    sb.append("    iEzsigndocumentStepsignatureCurrent: ").append(toIndentedString(iEzsigndocumentStepsignatureCurrent)).append("\n");
-    sb.append("    aObjEzsignfoldersignerassociationstatus: ").append(toIndentedString(aObjEzsignfoldersignerassociationstatus)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    dtEzsigndocumentDuedate: ").append(toIndentedString(dtEzsigndocumentDuedate)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
@@ -665,6 +660,11 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("    sEzsigndocumentMD5initial: ").append(toIndentedString(sEzsigndocumentMD5initial)).append("\n");
     sb.append("    sEzsigndocumentMD5signed: ").append(toIndentedString(sEzsigndocumentMD5signed)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
+    sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
+    sb.append("    iEzsigndocumentStepsignaturetotal: ").append(toIndentedString(iEzsigndocumentStepsignaturetotal)).append("\n");
+    sb.append("    iEzsigndocumentStepsignatureCurrent: ").append(toIndentedString(iEzsigndocumentStepsignatureCurrent)).append("\n");
+    sb.append("    aObjEzsignfoldersignerassociationstatus: ").append(toIndentedString(aObjEzsignfoldersignerassociationstatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -687,11 +687,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("iEzsigndocumentStepformtotal");
-    openapiFields.add("iEzsigndocumentStepformcurrent");
-    openapiFields.add("iEzsigndocumentStepsignaturetotal");
-    openapiFields.add("iEzsigndocumentStepsignatureCurrent");
-    openapiFields.add("a_objEzsignfoldersignerassociationstatus");
     openapiFields.add("fkiEzsignfolderID");
     openapiFields.add("dtEzsigndocumentDuedate");
     openapiFields.add("fkiLanguageID");
@@ -707,14 +702,14 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiFields.add("sEzsigndocumentMD5initial");
     openapiFields.add("sEzsigndocumentMD5signed");
     openapiFields.add("objAudit");
+    openapiFields.add("iEzsigndocumentStepformtotal");
+    openapiFields.add("iEzsigndocumentStepformcurrent");
+    openapiFields.add("iEzsigndocumentStepsignaturetotal");
+    openapiFields.add("iEzsigndocumentStepsignatureCurrent");
+    openapiFields.add("a_objEzsignfoldersignerassociationstatus");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("iEzsigndocumentStepformtotal");
-    openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
-    openapiRequiredFields.add("iEzsigndocumentStepsignaturetotal");
-    openapiRequiredFields.add("iEzsigndocumentStepsignatureCurrent");
-    openapiRequiredFields.add("a_objEzsignfoldersignerassociationstatus");
     openapiRequiredFields.add("fkiEzsignfolderID");
     openapiRequiredFields.add("dtEzsigndocumentDuedate");
     openapiRequiredFields.add("fkiLanguageID");
@@ -730,6 +725,11 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiRequiredFields.add("sEzsigndocumentMD5initial");
     openapiRequiredFields.add("sEzsigndocumentMD5signed");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("iEzsigndocumentStepformtotal");
+    openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
+    openapiRequiredFields.add("iEzsigndocumentStepsignaturetotal");
+    openapiRequiredFields.add("iEzsigndocumentStepsignatureCurrent");
+    openapiRequiredFields.add("a_objEzsignfoldersignerassociationstatus");
   }
 
  /**
@@ -742,7 +742,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
@@ -760,16 +760,16 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      // validate the optional field `objAudit`
+      if (jsonObj.getAsJsonObject("objAudit") != null) {
+        CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
+      }
       JsonArray jsonArrayaObjEzsignfoldersignerassociationstatus = jsonObj.getAsJsonArray("a_objEzsignfoldersignerassociationstatus");
       // validate the optional field `a_objEzsignfoldersignerassociationstatus` (array)
       if (jsonArrayaObjEzsignfoldersignerassociationstatus != null) {
         for (int i = 0; i < jsonArrayaObjEzsignfoldersignerassociationstatus.size(); i++) {
           CustomEzsignfoldersignerassociationstatusResponse.validateJsonObject(jsonArrayaObjEzsignfoldersignerassociationstatus.get(i).getAsJsonObject());
         };
-      }
-      // validate the optional field `objAudit`
-      if (jsonObj.getAsJsonObject("objAudit") != null) {
-        CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
       }
   }
 

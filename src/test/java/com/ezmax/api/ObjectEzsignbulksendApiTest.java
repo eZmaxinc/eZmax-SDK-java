@@ -15,6 +15,7 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
 import com.ezmax.api.model.EzsignbulksendGetObjectV1Response;
 import java.io.File;
@@ -35,6 +36,21 @@ public class ObjectEzsignbulksendApiTest {
 
     private final ObjectEzsignbulksendApi api = new ObjectEzsignbulksendApi();
 
+    
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendGetEzsignbulksendtransmissionsV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+                EzsignbulksendGetEzsignbulksendtransmissionsV1Response response = api.ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID);
+        // TODO: test validations
+    }
     
     /**
      * Retrieve Ezsignbulksend list

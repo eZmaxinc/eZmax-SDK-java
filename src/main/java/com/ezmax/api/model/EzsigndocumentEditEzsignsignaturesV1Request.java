@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigndocumentEditEzsignsignaturesV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
@@ -148,7 +148,7 @@ public class EzsigndocumentEditEzsignsignaturesV1Request {
       if (jsonObj == null) {
         if (EzsigndocumentEditEzsignsignaturesV1Request.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentEditEzsignsignaturesV1Request is not found in the empty JSON string", EzsigndocumentEditEzsignsignaturesV1Request.openapiRequiredFields.toString()));
         }
       }

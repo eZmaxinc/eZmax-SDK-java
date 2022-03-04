@@ -25,11 +25,15 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Request;
+import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1Response;
@@ -133,9 +137,25 @@ public class ObjectEzsigndocumentApiTest {
     }
     
     /**
-     * Edit multiple ezsignsignatures
+     * Edit multiple Ezsignformfieldgroups
      *
-     * Using this endpoint, you can edit multiple ezsignsignatures at the same time.
+     * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentEditEzsignformfieldgroupsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request = null;
+                EzsigndocumentEditEzsignformfieldgroupsV1Response response = api.ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request);
+        // TODO: test validations
+    }
+    
+    /**
+     * Edit multiple Ezsignsignatures
+     *
+     * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -159,7 +179,8 @@ public class ObjectEzsigndocumentApiTest {
     @Test
     public void ezsigndocumentEndPrematurelyV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID);
+        Object body = null;
+                EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
         // TODO: test validations
     }
     
@@ -180,6 +201,21 @@ public class ObjectEzsigndocumentApiTest {
     }
     
     /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsignformfieldgroupsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+                EzsigndocumentGetEzsignformfieldgroupsV1Response response = api.ezsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+    
+    /**
      * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
      *
      * 
@@ -191,6 +227,21 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentGetEzsignpagesV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
                 EzsigndocumentGetEzsignpagesV1Response response = api.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+    
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsignsignaturesV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+                EzsigndocumentGetEzsignsignaturesV1Response response = api.ezsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
     

@@ -50,12 +50,8 @@ import eZmaxAPI.JSON;
  * An Ezsignsigner Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsigner Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignsignerResponseCompound {
-  public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  private EzsignsignerResponseCompoundContact objContact;
-
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
   private Integer pkiEzsignsignerID;
@@ -76,31 +72,12 @@ public class EzsignsignerResponseCompound {
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
   private String sUserlogintypeDescriptionX;
 
+  public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
+  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
+  private EzsignsignerResponseCompoundContact objContact;
+
   public EzsignsignerResponseCompound() { 
   }
-
-  public EzsignsignerResponseCompound objContact(EzsignsignerResponseCompoundContact objContact) {
-    
-    this.objContact = objContact;
-    return this;
-  }
-
-   /**
-   * Get objContact
-   * @return objContact
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public EzsignsignerResponseCompoundContact getObjContact() {
-    return objContact;
-  }
-
-
-  public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
-    this.objContact = objContact;
-  }
-
 
   public EzsignsignerResponseCompound pkiEzsignsignerID(Integer pkiEzsignsignerID) {
     
@@ -180,11 +157,11 @@ public class EzsignsignerResponseCompound {
   }
 
    /**
-   * The unique ID of the Userlogintype
+   * The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
    * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Userlogintype")
+  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|")
 
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
@@ -219,6 +196,29 @@ public class EzsignsignerResponseCompound {
   }
 
 
+  public EzsignsignerResponseCompound objContact(EzsignsignerResponseCompoundContact objContact) {
+    
+    this.objContact = objContact;
+    return this;
+  }
+
+   /**
+   * Get objContact
+   * @return objContact
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EzsignsignerResponseCompoundContact getObjContact() {
+    return objContact;
+  }
+
+
+  public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
+    this.objContact = objContact;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -228,29 +228,29 @@ public class EzsignsignerResponseCompound {
       return false;
     }
     EzsignsignerResponseCompound ezsignsignerResponseCompound = (EzsignsignerResponseCompound) o;
-    return Objects.equals(this.objContact, ezsignsignerResponseCompound.objContact) &&
-        Objects.equals(this.pkiEzsignsignerID, ezsignsignerResponseCompound.pkiEzsignsignerID) &&
+    return Objects.equals(this.pkiEzsignsignerID, ezsignsignerResponseCompound.pkiEzsignsignerID) &&
         Objects.equals(this.fkiTaxassignmentID, ezsignsignerResponseCompound.fkiTaxassignmentID) &&
         Objects.equals(this.fkiSecretquestionID, ezsignsignerResponseCompound.fkiSecretquestionID) &&
         Objects.equals(this.fkiUserlogintypeID, ezsignsignerResponseCompound.fkiUserlogintypeID) &&
-        Objects.equals(this.sUserlogintypeDescriptionX, ezsignsignerResponseCompound.sUserlogintypeDescriptionX);
+        Objects.equals(this.sUserlogintypeDescriptionX, ezsignsignerResponseCompound.sUserlogintypeDescriptionX) &&
+        Objects.equals(this.objContact, ezsignsignerResponseCompound.objContact);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objContact, pkiEzsignsignerID, fkiTaxassignmentID, fkiSecretquestionID, fkiUserlogintypeID, sUserlogintypeDescriptionX);
+    return Objects.hash(pkiEzsignsignerID, fkiTaxassignmentID, fkiSecretquestionID, fkiUserlogintypeID, sUserlogintypeDescriptionX, objContact);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerResponseCompound {\n");
-    sb.append("    objContact: ").append(toIndentedString(objContact)).append("\n");
     sb.append("    pkiEzsignsignerID: ").append(toIndentedString(pkiEzsignsignerID)).append("\n");
     sb.append("    fkiTaxassignmentID: ").append(toIndentedString(fkiTaxassignmentID)).append("\n");
     sb.append("    fkiSecretquestionID: ").append(toIndentedString(fkiSecretquestionID)).append("\n");
     sb.append("    fkiUserlogintypeID: ").append(toIndentedString(fkiUserlogintypeID)).append("\n");
     sb.append("    sUserlogintypeDescriptionX: ").append(toIndentedString(sUserlogintypeDescriptionX)).append("\n");
+    sb.append("    objContact: ").append(toIndentedString(objContact)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -273,20 +273,20 @@ public class EzsignsignerResponseCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objContact");
     openapiFields.add("pkiEzsignsignerID");
     openapiFields.add("fkiTaxassignmentID");
     openapiFields.add("fkiSecretquestionID");
     openapiFields.add("fkiUserlogintypeID");
     openapiFields.add("sUserlogintypeDescriptionX");
+    openapiFields.add("objContact");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objContact");
     openapiRequiredFields.add("pkiEzsignsignerID");
     openapiRequiredFields.add("fkiTaxassignmentID");
     openapiRequiredFields.add("fkiUserlogintypeID");
     openapiRequiredFields.add("sUserlogintypeDescriptionX");
+    openapiRequiredFields.add("objContact");
   }
 
  /**
@@ -299,7 +299,7 @@ public class EzsignsignerResponseCompound {
       if (jsonObj == null) {
         if (EzsignsignerResponseCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignerResponseCompound is not found in the empty JSON string", EzsignsignerResponseCompound.openapiRequiredFields.toString()));
         }
       }

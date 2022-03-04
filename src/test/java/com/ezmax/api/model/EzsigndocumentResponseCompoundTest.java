@@ -48,46 +48,6 @@ public class EzsigndocumentResponseCompoundTest {
     }
 
     /**
-     * Test the property 'iEzsigndocumentStepformtotal'
-     */
-    @Test
-    public void iEzsigndocumentStepformtotalTest() {
-        // TODO: test iEzsigndocumentStepformtotal
-    }
-
-    /**
-     * Test the property 'iEzsigndocumentStepformcurrent'
-     */
-    @Test
-    public void iEzsigndocumentStepformcurrentTest() {
-        // TODO: test iEzsigndocumentStepformcurrent
-    }
-
-    /**
-     * Test the property 'iEzsigndocumentStepsignaturetotal'
-     */
-    @Test
-    public void iEzsigndocumentStepsignaturetotalTest() {
-        // TODO: test iEzsigndocumentStepsignaturetotal
-    }
-
-    /**
-     * Test the property 'iEzsigndocumentStepsignatureCurrent'
-     */
-    @Test
-    public void iEzsigndocumentStepsignatureCurrentTest() {
-        // TODO: test iEzsigndocumentStepsignatureCurrent
-    }
-
-    /**
-     * Test the property 'aObjEzsignfoldersignerassociationstatus'
-     */
-    @Test
-    public void aObjEzsignfoldersignerassociationstatusTest() {
-        // TODO: test aObjEzsignfoldersignerassociationstatus
-    }
-
-    /**
      * Test the property 'fkiEzsignfolderID'
      */
     @Test
@@ -205,6 +165,46 @@ public class EzsigndocumentResponseCompoundTest {
     @Test
     public void objAuditTest() {
         // TODO: test objAudit
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformtotal'
+     */
+    @Test
+    public void iEzsigndocumentStepformtotalTest() {
+        // TODO: test iEzsigndocumentStepformtotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepformcurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepformcurrentTest() {
+        // TODO: test iEzsigndocumentStepformcurrent
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignaturetotal'
+     */
+    @Test
+    public void iEzsigndocumentStepsignaturetotalTest() {
+        // TODO: test iEzsigndocumentStepsignaturetotal
+    }
+
+    /**
+     * Test the property 'iEzsigndocumentStepsignatureCurrent'
+     */
+    @Test
+    public void iEzsigndocumentStepsignatureCurrentTest() {
+        // TODO: test iEzsigndocumentStepsignatureCurrent
+    }
+
+    /**
+     * Test the property 'aObjEzsignfoldersignerassociationstatus'
+     */
+    @Test
+    public void aObjEzsignfoldersignerassociationstatusTest() {
+        // TODO: test aObjEzsignfoldersignerassociationstatus
     }
 
 }

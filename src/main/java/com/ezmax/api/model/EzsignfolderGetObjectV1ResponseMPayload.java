@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfolder/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfolderGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -642,7 +642,7 @@ public class EzsignfolderGetObjectV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignfolderGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsignfolderGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

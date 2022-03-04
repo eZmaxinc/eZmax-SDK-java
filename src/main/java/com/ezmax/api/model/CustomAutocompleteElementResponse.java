@@ -44,10 +44,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Generic Autocomplete Response
+ * Generic AutocompleteElement Response
  */
-@ApiModel(description = "Generic Autocomplete Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@ApiModel(description = "Generic AutocompleteElement Response")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CATEGORY = "sCategory";
   @SerializedName(SERIALIZED_NAME_S_CATEGORY)
@@ -202,7 +202,7 @@ public class CustomAutocompleteElementResponse {
       if (jsonObj == null) {
         if (CustomAutocompleteElementResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomAutocompleteElementResponse is not found in the empty JSON string", CustomAutocompleteElementResponse.openapiRequiredFields.toString()));
         }
       }

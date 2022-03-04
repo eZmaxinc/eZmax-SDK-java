@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Request for the /2/object/apikey/createObject API Request
  */
 @ApiModel(description = "Request for the /2/object/apikey/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ApikeyCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
@@ -148,7 +148,7 @@ public class ApikeyCreateObjectV2Request {
       if (jsonObj == null) {
         if (ApikeyCreateObjectV2Request.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ApikeyCreateObjectV2Request is not found in the empty JSON string", ApikeyCreateObjectV2Request.openapiRequiredFields.toString()));
         }
       }

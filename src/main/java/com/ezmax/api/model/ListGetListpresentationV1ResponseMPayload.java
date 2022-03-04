@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.ListpresentationRequest;
+import com.ezmax.api.model.ListpresentationResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,39 +50,39 @@ import eZmaxAPI.JSON;
  * Payload for the GET /1/module/list/listpresentation/{sListName} API Request
  */
 @ApiModel(description = "Payload for the GET /1/module/list/listpresentation/{sListName} API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ListGetListpresentationV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_LISTPRESENTATION = "a_objListpresentation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_LISTPRESENTATION)
-  private List<ListpresentationRequest> aObjListpresentation = new ArrayList<>();
+  private List<ListpresentationResponseCompound> aObjListpresentation = new ArrayList<>();
 
   public ListGetListpresentationV1ResponseMPayload() { 
   }
 
-  public ListGetListpresentationV1ResponseMPayload aObjListpresentation(List<ListpresentationRequest> aObjListpresentation) {
+  public ListGetListpresentationV1ResponseMPayload aObjListpresentation(List<ListpresentationResponseCompound> aObjListpresentation) {
     
     this.aObjListpresentation = aObjListpresentation;
     return this;
   }
 
-  public ListGetListpresentationV1ResponseMPayload addAObjListpresentationItem(ListpresentationRequest aObjListpresentationItem) {
+  public ListGetListpresentationV1ResponseMPayload addAObjListpresentationItem(ListpresentationResponseCompound aObjListpresentationItem) {
     this.aObjListpresentation.add(aObjListpresentationItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjListpresentation
    * @return aObjListpresentation
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<ListpresentationRequest> getaObjListpresentation() {
+  public List<ListpresentationResponseCompound> getaObjListpresentation() {
     return aObjListpresentation;
   }
 
 
-  public void setaObjListpresentation(List<ListpresentationRequest> aObjListpresentation) {
+  public void setaObjListpresentation(List<ListpresentationResponseCompound> aObjListpresentation) {
     this.aObjListpresentation = aObjListpresentation;
   }
 
@@ -148,7 +148,7 @@ public class ListGetListpresentationV1ResponseMPayload {
       if (jsonObj == null) {
         if (ListGetListpresentationV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ListGetListpresentationV1ResponseMPayload is not found in the empty JSON string", ListGetListpresentationV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
@@ -170,7 +170,7 @@ public class ListGetListpresentationV1ResponseMPayload {
       // validate the optional field `a_objListpresentation` (array)
       if (jsonArrayaObjListpresentation != null) {
         for (int i = 0; i < jsonArrayaObjListpresentation.size(); i++) {
-          ListpresentationRequest.validateJsonObject(jsonArrayaObjListpresentation.get(i).getAsJsonObject());
+          ListpresentationResponseCompound.validateJsonObject(jsonArrayaObjListpresentation.get(i).getAsJsonObject());
         };
       }
   }

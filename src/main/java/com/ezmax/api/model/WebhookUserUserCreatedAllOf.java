@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.UserResponse;
+import com.ezmax.api.model.UserResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,16 +47,16 @@ import eZmaxAPI.JSON;
 /**
  * WebhookUserUserCreatedAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class WebhookUserUserCreatedAllOf {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  private UserResponse objUser;
+  private UserResponseCompound objUser;
 
   public WebhookUserUserCreatedAllOf() { 
   }
 
-  public WebhookUserUserCreatedAllOf objUser(UserResponse objUser) {
+  public WebhookUserUserCreatedAllOf objUser(UserResponseCompound objUser) {
     
     this.objUser = objUser;
     return this;
@@ -69,12 +69,12 @@ public class WebhookUserUserCreatedAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public UserResponse getObjUser() {
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
 
 
-  public void setObjUser(UserResponse objUser) {
+  public void setObjUser(UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 
@@ -140,7 +140,7 @@ public class WebhookUserUserCreatedAllOf {
       if (jsonObj == null) {
         if (WebhookUserUserCreatedAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookUserUserCreatedAllOf is not found in the empty JSON string", WebhookUserUserCreatedAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -160,7 +160,7 @@ public class WebhookUserUserCreatedAllOf {
       }
       // validate the optional field `objUser`
       if (jsonObj.getAsJsonObject("objUser") != null) {
-        UserResponse.validateJsonObject(jsonObj.getAsJsonObject("objUser"));
+        UserResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objUser"));
       }
   }
 

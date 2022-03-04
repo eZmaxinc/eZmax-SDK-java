@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.ApikeyResponse;
+import com.ezmax.api.model.ApikeyResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,39 +50,39 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/apikey/createObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/apikey/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ApikeyCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  private List<ApikeyResponse> aObjApikey = new ArrayList<>();
+  private List<ApikeyResponseCompound> aObjApikey = new ArrayList<>();
 
   public ApikeyCreateObjectV1ResponseMPayload() { 
   }
 
-  public ApikeyCreateObjectV1ResponseMPayload aObjApikey(List<ApikeyResponse> aObjApikey) {
+  public ApikeyCreateObjectV1ResponseMPayload aObjApikey(List<ApikeyResponseCompound> aObjApikey) {
     
     this.aObjApikey = aObjApikey;
     return this;
   }
 
-  public ApikeyCreateObjectV1ResponseMPayload addAObjApikeyItem(ApikeyResponse aObjApikeyItem) {
+  public ApikeyCreateObjectV1ResponseMPayload addAObjApikeyItem(ApikeyResponseCompound aObjApikeyItem) {
     this.aObjApikey.add(aObjApikeyItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjApikey
    * @return aObjApikey
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<ApikeyResponse> getaObjApikey() {
+  public List<ApikeyResponseCompound> getaObjApikey() {
     return aObjApikey;
   }
 
 
-  public void setaObjApikey(List<ApikeyResponse> aObjApikey) {
+  public void setaObjApikey(List<ApikeyResponseCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;
   }
 
@@ -148,7 +148,7 @@ public class ApikeyCreateObjectV1ResponseMPayload {
       if (jsonObj == null) {
         if (ApikeyCreateObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ApikeyCreateObjectV1ResponseMPayload is not found in the empty JSON string", ApikeyCreateObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
@@ -170,7 +170,7 @@ public class ApikeyCreateObjectV1ResponseMPayload {
       // validate the optional field `a_objApikey` (array)
       if (jsonArrayaObjApikey != null) {
         for (int i = 0; i < jsonArrayaObjApikey.size(); i++) {
-          ApikeyResponse.validateJsonObject(jsonArrayaObjApikey.get(i).getAsJsonObject());
+          ApikeyResponseCompound.validateJsonObject(jsonArrayaObjApikey.get(i).getAsJsonObject());
         };
       }
   }

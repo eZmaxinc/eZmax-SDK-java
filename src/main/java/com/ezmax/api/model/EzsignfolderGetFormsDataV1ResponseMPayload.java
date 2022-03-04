@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfolderGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -126,7 +126,7 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
   }
 
    /**
-   * 
+   * Get aObjFormDataDocument
    * @return aObjFormDataDocument
   **/
   @javax.annotation.Nonnull
@@ -211,7 +211,7 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignfolderGetFormsDataV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderGetFormsDataV1ResponseMPayload is not found in the empty JSON string", EzsignfolderGetFormsDataV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

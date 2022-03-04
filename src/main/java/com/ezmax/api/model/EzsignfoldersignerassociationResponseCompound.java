@@ -51,16 +51,8 @@ import eZmaxAPI.JSON;
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompound {
-  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
-  @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  private EzsignfoldersignerassociationResponseCompoundUser objUser;
-
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
-  private EzsignsignerResponseCompound objEzsignsigner;
-
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   private Integer pkiEzsignfoldersignerassociationID;
@@ -73,54 +65,16 @@ public class EzsignfoldersignerassociationResponseCompound {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
   private Boolean bEzsignfoldersignerassociationReceivecopy;
 
+  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  private EzsignfoldersignerassociationResponseCompoundUser objUser;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
+  private EzsignsignerResponseCompound objEzsignsigner;
+
   public EzsignfoldersignerassociationResponseCompound() { 
   }
-
-  public EzsignfoldersignerassociationResponseCompound objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    
-    this.objUser = objUser;
-    return this;
-  }
-
-   /**
-   * Get objUser
-   * @return objUser
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
-    return objUser;
-  }
-
-
-  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    this.objUser = objUser;
-  }
-
-
-  public EzsignfoldersignerassociationResponseCompound objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    
-    this.objEzsignsigner = objEzsignsigner;
-    return this;
-  }
-
-   /**
-   * Get objEzsignsigner
-   * @return objEzsignsigner
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public EzsignsignerResponseCompound getObjEzsignsigner() {
-    return objEzsignsigner;
-  }
-
-
-  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    this.objEzsignsigner = objEzsignsigner;
-  }
-
 
   public EzsignfoldersignerassociationResponseCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     
@@ -191,6 +145,52 @@ public class EzsignfoldersignerassociationResponseCompound {
   }
 
 
+  public EzsignfoldersignerassociationResponseCompound objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    
+    this.objUser = objUser;
+    return this;
+  }
+
+   /**
+   * Get objUser
+   * @return objUser
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
+    return objUser;
+  }
+
+
+  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    this.objUser = objUser;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    
+    this.objEzsignsigner = objEzsignsigner;
+    return this;
+  }
+
+   /**
+   * Get objEzsignsigner
+   * @return objEzsignsigner
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignsignerResponseCompound getObjEzsignsigner() {
+    return objEzsignsigner;
+  }
+
+
+  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    this.objEzsignsigner = objEzsignsigner;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -200,27 +200,27 @@ public class EzsignfoldersignerassociationResponseCompound {
       return false;
     }
     EzsignfoldersignerassociationResponseCompound ezsignfoldersignerassociationResponseCompound = (EzsignfoldersignerassociationResponseCompound) o;
-    return Objects.equals(this.objUser, ezsignfoldersignerassociationResponseCompound.objUser) &&
-        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompound.objEzsignsigner) &&
-        Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponseCompound.pkiEzsignfoldersignerassociationID) &&
+    return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponseCompound.pkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationResponseCompound.fkiEzsignfolderID) &&
-        Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationReceivecopy);
+        Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationReceivecopy) &&
+        Objects.equals(this.objUser, ezsignfoldersignerassociationResponseCompound.objUser) &&
+        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompound.objEzsignsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objUser, objEzsignsigner, pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy, objUser, objEzsignsigner);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationResponseCompound {\n");
-    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
-    sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
+    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
+    sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -243,11 +243,11 @@ public class EzsignfoldersignerassociationResponseCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objUser");
-    openapiFields.add("objEzsignsigner");
     openapiFields.add("pkiEzsignfoldersignerassociationID");
     openapiFields.add("fkiEzsignfolderID");
     openapiFields.add("bEzsignfoldersignerassociationReceivecopy");
+    openapiFields.add("objUser");
+    openapiFields.add("objEzsignsigner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -266,7 +266,7 @@ public class EzsignfoldersignerassociationResponseCompound {
       if (jsonObj == null) {
         if (EzsignfoldersignerassociationResponseCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationResponseCompound is not found in the empty JSON string", EzsignfoldersignerassociationResponseCompound.openapiRequiredFields.toString()));
         }
       }

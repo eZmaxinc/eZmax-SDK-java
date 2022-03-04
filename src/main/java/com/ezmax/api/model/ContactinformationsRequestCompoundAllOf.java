@@ -15,10 +15,10 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.AddressRequest;
-import com.ezmax.api.model.EmailRequest;
-import com.ezmax.api.model.PhoneRequest;
-import com.ezmax.api.model.WebsiteRequest;
+import com.ezmax.api.model.AddressRequestCompound;
+import com.ezmax.api.model.EmailRequestCompound;
+import com.ezmax.api.model.PhoneRequestCompound;
+import com.ezmax.api.model.WebsiteRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,135 +52,135 @@ import eZmaxAPI.JSON;
 /**
  * ContactinformationsRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ContactinformationsRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
-  private List<AddressRequest> aObjAddress = new ArrayList<>();
+  private List<AddressRequestCompound> aObjAddress = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_PHONE = "a_objPhone";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PHONE)
-  private List<PhoneRequest> aObjPhone = new ArrayList<>();
+  private List<PhoneRequestCompound> aObjPhone = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EMAIL = "a_objEmail";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAIL)
-  private List<EmailRequest> aObjEmail = new ArrayList<>();
+  private List<EmailRequestCompound> aObjEmail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBSITE = "a_objWebsite";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
-  private List<WebsiteRequest> aObjWebsite = new ArrayList<>();
+  private List<WebsiteRequestCompound> aObjWebsite = new ArrayList<>();
 
   public ContactinformationsRequestCompoundAllOf() { 
   }
 
-  public ContactinformationsRequestCompoundAllOf aObjAddress(List<AddressRequest> aObjAddress) {
+  public ContactinformationsRequestCompoundAllOf aObjAddress(List<AddressRequestCompound> aObjAddress) {
     
     this.aObjAddress = aObjAddress;
     return this;
   }
 
-  public ContactinformationsRequestCompoundAllOf addAObjAddressItem(AddressRequest aObjAddressItem) {
+  public ContactinformationsRequestCompoundAllOf addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
     this.aObjAddress.add(aObjAddressItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjAddress
    * @return aObjAddress
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<AddressRequest> getaObjAddress() {
+  public List<AddressRequestCompound> getaObjAddress() {
     return aObjAddress;
   }
 
 
-  public void setaObjAddress(List<AddressRequest> aObjAddress) {
+  public void setaObjAddress(List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
   }
 
 
-  public ContactinformationsRequestCompoundAllOf aObjPhone(List<PhoneRequest> aObjPhone) {
+  public ContactinformationsRequestCompoundAllOf aObjPhone(List<PhoneRequestCompound> aObjPhone) {
     
     this.aObjPhone = aObjPhone;
     return this;
   }
 
-  public ContactinformationsRequestCompoundAllOf addAObjPhoneItem(PhoneRequest aObjPhoneItem) {
+  public ContactinformationsRequestCompoundAllOf addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
     this.aObjPhone.add(aObjPhoneItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjPhone
    * @return aObjPhone
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<PhoneRequest> getaObjPhone() {
+  public List<PhoneRequestCompound> getaObjPhone() {
     return aObjPhone;
   }
 
 
-  public void setaObjPhone(List<PhoneRequest> aObjPhone) {
+  public void setaObjPhone(List<PhoneRequestCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
   }
 
 
-  public ContactinformationsRequestCompoundAllOf aObjEmail(List<EmailRequest> aObjEmail) {
+  public ContactinformationsRequestCompoundAllOf aObjEmail(List<EmailRequestCompound> aObjEmail) {
     
     this.aObjEmail = aObjEmail;
     return this;
   }
 
-  public ContactinformationsRequestCompoundAllOf addAObjEmailItem(EmailRequest aObjEmailItem) {
+  public ContactinformationsRequestCompoundAllOf addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
     this.aObjEmail.add(aObjEmailItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjEmail
    * @return aObjEmail
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EmailRequest> getaObjEmail() {
+  public List<EmailRequestCompound> getaObjEmail() {
     return aObjEmail;
   }
 
 
-  public void setaObjEmail(List<EmailRequest> aObjEmail) {
+  public void setaObjEmail(List<EmailRequestCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
   }
 
 
-  public ContactinformationsRequestCompoundAllOf aObjWebsite(List<WebsiteRequest> aObjWebsite) {
+  public ContactinformationsRequestCompoundAllOf aObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     
     this.aObjWebsite = aObjWebsite;
     return this;
   }
 
-  public ContactinformationsRequestCompoundAllOf addAObjWebsiteItem(WebsiteRequest aObjWebsiteItem) {
+  public ContactinformationsRequestCompoundAllOf addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
     this.aObjWebsite.add(aObjWebsiteItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjWebsite
    * @return aObjWebsite
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<WebsiteRequest> getaObjWebsite() {
+  public List<WebsiteRequestCompound> getaObjWebsite() {
     return aObjWebsite;
   }
 
 
-  public void setaObjWebsite(List<WebsiteRequest> aObjWebsite) {
+  public void setaObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
   }
 
@@ -258,7 +258,7 @@ public class ContactinformationsRequestCompoundAllOf {
       if (jsonObj == null) {
         if (ContactinformationsRequestCompoundAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ContactinformationsRequestCompoundAllOf is not found in the empty JSON string", ContactinformationsRequestCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -280,28 +280,28 @@ public class ContactinformationsRequestCompoundAllOf {
       // validate the optional field `a_objAddress` (array)
       if (jsonArrayaObjAddress != null) {
         for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-          AddressRequest.validateJsonObject(jsonArrayaObjAddress.get(i).getAsJsonObject());
+          AddressRequestCompound.validateJsonObject(jsonArrayaObjAddress.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
       // validate the optional field `a_objPhone` (array)
       if (jsonArrayaObjPhone != null) {
         for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
-          PhoneRequest.validateJsonObject(jsonArrayaObjPhone.get(i).getAsJsonObject());
+          PhoneRequestCompound.validateJsonObject(jsonArrayaObjPhone.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
       // validate the optional field `a_objEmail` (array)
       if (jsonArrayaObjEmail != null) {
         for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-          EmailRequest.validateJsonObject(jsonArrayaObjEmail.get(i).getAsJsonObject());
+          EmailRequestCompound.validateJsonObject(jsonArrayaObjEmail.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
       // validate the optional field `a_objWebsite` (array)
       if (jsonArrayaObjWebsite != null) {
         for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-          WebsiteRequest.validateJsonObject(jsonArrayaObjWebsite.get(i).getAsJsonObject());
+          WebsiteRequestCompound.validateJsonObject(jsonArrayaObjWebsite.get(i).getAsJsonObject());
         };
       }
   }

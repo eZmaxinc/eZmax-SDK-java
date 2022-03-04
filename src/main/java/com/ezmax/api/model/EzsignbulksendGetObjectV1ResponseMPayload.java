@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignbulksendGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -330,7 +330,7 @@ public class EzsignbulksendGetObjectV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignbulksendGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsignbulksendGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

@@ -13,6 +13,9 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
+import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
+import com.ezmax.api.model.FieldEEzsignformfieldgroupType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,11 +44,123 @@ public class EzsignformfieldgroupResponseTest {
     }
 
     /**
+     * Test the property 'pkiEzsignformfieldgroupID'
+     */
+    @Test
+    public void pkiEzsignformfieldgroupIDTest() {
+        // TODO: test pkiEzsignformfieldgroupID
+    }
+
+    /**
+     * Test the property 'fkiEzsigndocumentID'
+     */
+    @Test
+    public void fkiEzsigndocumentIDTest() {
+        // TODO: test fkiEzsigndocumentID
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldgroupType'
+     */
+    @Test
+    public void eEzsignformfieldgroupTypeTest() {
+        // TODO: test eEzsignformfieldgroupType
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldgroupSignerrequirement'
+     */
+    @Test
+    public void eEzsignformfieldgroupSignerrequirementTest() {
+        // TODO: test eEzsignformfieldgroupSignerrequirement
+    }
+
+    /**
      * Test the property 'sEzsignformfieldgroupLabel'
      */
     @Test
     public void sEzsignformfieldgroupLabelTest() {
         // TODO: test sEzsignformfieldgroupLabel
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldgroupStep'
+     */
+    @Test
+    public void iEzsignformfieldgroupStepTest() {
+        // TODO: test iEzsignformfieldgroupStep
+    }
+
+    /**
+     * Test the property 'sEzsignformfieldgroupDefaultvalue'
+     */
+    @Test
+    public void sEzsignformfieldgroupDefaultvalueTest() {
+        // TODO: test sEzsignformfieldgroupDefaultvalue
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldgroupFilledmin'
+     */
+    @Test
+    public void iEzsignformfieldgroupFilledminTest() {
+        // TODO: test iEzsignformfieldgroupFilledmin
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldgroupFilledmax'
+     */
+    @Test
+    public void iEzsignformfieldgroupFilledmaxTest() {
+        // TODO: test iEzsignformfieldgroupFilledmax
+    }
+
+    /**
+     * Test the property 'bEzsignformfieldgroupReadonly'
+     */
+    @Test
+    public void bEzsignformfieldgroupReadonlyTest() {
+        // TODO: test bEzsignformfieldgroupReadonly
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldgroupMaxlength'
+     */
+    @Test
+    public void iEzsignformfieldgroupMaxlengthTest() {
+        // TODO: test iEzsignformfieldgroupMaxlength
+    }
+
+    /**
+     * Test the property 'bEzsignformfieldgroupEncrypted'
+     */
+    @Test
+    public void bEzsignformfieldgroupEncryptedTest() {
+        // TODO: test bEzsignformfieldgroupEncrypted
+    }
+
+    /**
+     * Test the property 'sEzsignformfieldgroupRegexp'
+     */
+    @Test
+    public void sEzsignformfieldgroupRegexpTest() {
+        // TODO: test sEzsignformfieldgroupRegexp
+    }
+
+    /**
+     * Test the property 'tEzsignformfieldgroupTooltip'
+     */
+    @Test
+    public void tEzsignformfieldgroupTooltipTest() {
+        // TODO: test tEzsignformfieldgroupTooltip
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldgroupTooltipposition'
+     */
+    @Test
+    public void eEzsignformfieldgroupTooltippositionTest() {
+        // TODO: test eEzsignformfieldgroupTooltipposition
     }
 
 }

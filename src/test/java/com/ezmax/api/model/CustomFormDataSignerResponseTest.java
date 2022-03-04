@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignformfieldgroupResponseCompound;
+import com.ezmax.api.model.CustomFormDataEzsignformfieldgroupResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -76,11 +76,11 @@ public class CustomFormDataSignerResponseTest {
     }
 
     /**
-     * Test the property 'aObjEzsignformfieldgroupCompound'
+     * Test the property 'aObjEzsignformfieldgroup'
      */
     @Test
-    public void aObjEzsignformfieldgroupCompoundTest() {
-        // TODO: test aObjEzsignformfieldgroupCompound
+    public void aObjEzsignformfieldgroupTest() {
+        // TODO: test aObjEzsignformfieldgroup
     }
 
 }

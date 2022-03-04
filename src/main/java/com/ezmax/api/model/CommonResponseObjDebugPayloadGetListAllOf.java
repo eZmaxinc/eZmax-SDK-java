@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * CommonResponseObjDebugPayloadGetListAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetListAllOf {
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
@@ -179,7 +179,7 @@ public class CommonResponseObjDebugPayloadGetListAllOf {
       if (jsonObj == null) {
         if (CommonResponseObjDebugPayloadGetListAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayloadGetListAllOf is not found in the empty JSON string", CommonResponseObjDebugPayloadGetListAllOf.openapiRequiredFields.toString()));
         }
       }

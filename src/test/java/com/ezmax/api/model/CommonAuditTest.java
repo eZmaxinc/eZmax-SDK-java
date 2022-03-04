@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommonAuditdetail;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,51 +42,19 @@ public class CommonAuditTest {
     }
 
     /**
-     * Test the property 'fkiUserIDCreated'
+     * Test the property 'objAuditdetailCreated'
      */
     @Test
-    public void fkiUserIDCreatedTest() {
-        // TODO: test fkiUserIDCreated
+    public void objAuditdetailCreatedTest() {
+        // TODO: test objAuditdetailCreated
     }
 
     /**
-     * Test the property 'fkiUserIDModified'
+     * Test the property 'objAuditdetailModified'
      */
     @Test
-    public void fkiUserIDModifiedTest() {
-        // TODO: test fkiUserIDModified
-    }
-
-    /**
-     * Test the property 'fkiApikeyIDCreated'
-     */
-    @Test
-    public void fkiApikeyIDCreatedTest() {
-        // TODO: test fkiApikeyIDCreated
-    }
-
-    /**
-     * Test the property 'fkiApikeyIDModified'
-     */
-    @Test
-    public void fkiApikeyIDModifiedTest() {
-        // TODO: test fkiApikeyIDModified
-    }
-
-    /**
-     * Test the property 'dtCreatedDate'
-     */
-    @Test
-    public void dtCreatedDateTest() {
-        // TODO: test dtCreatedDate
-    }
-
-    /**
-     * Test the property 'dtModifiedDate'
-     */
-    @Test
-    public void dtModifiedDateTest() {
-        // TODO: test dtModifiedDate
+    public void objAuditdetailModifiedTest() {
+        // TODO: test objAuditdetailModified
     }
 
 }

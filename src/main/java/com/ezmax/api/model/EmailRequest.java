@@ -44,10 +44,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * A Contact Object
+ * An Email Object
  */
-@ApiModel(description = "A Contact Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@ApiModel(description = "An Email Object")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EmailRequest {
   public static final String SERIALIZED_NAME_FKI_EMAILTYPE_I_D = "fkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAILTYPE_I_D)
@@ -171,7 +171,7 @@ public class EmailRequest {
       if (jsonObj == null) {
         if (EmailRequest.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EmailRequest is not found in the empty JSON string", EmailRequest.openapiRequiredFields.toString()));
         }
       }

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A form Data Document Object 
  */
 @ApiModel(description = "A form Data Document Object ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -179,7 +179,7 @@ public class CustomFormDataDocumentResponse {
   }
 
    /**
-   * 
+   * Get aObjFormDataSigner
    * @return aObjFormDataSigner
   **/
   @javax.annotation.Nonnull
@@ -272,7 +272,7 @@ public class CustomFormDataDocumentResponse {
       if (jsonObj == null) {
         if (CustomFormDataDocumentResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomFormDataDocumentResponse is not found in the empty JSON string", CustomFormDataDocumentResponse.openapiRequiredFields.toString()));
         }
       }

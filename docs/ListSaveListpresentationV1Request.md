@@ -8,7 +8,7 @@ Request for the POST /1/module/list/listpresentation/{sListName} API Request
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjListpresentation** | [**List&lt;ListpresentationRequest&gt;**](ListpresentationRequest.md) |  | 
+**aObjListpresentation** | [**List&lt;ListpresentationRequestCompound&gt;**](ListpresentationRequestCompound.md) |  | 
 
 
 

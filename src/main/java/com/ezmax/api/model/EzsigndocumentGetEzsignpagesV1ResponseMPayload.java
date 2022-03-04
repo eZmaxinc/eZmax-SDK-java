@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignpageResponse;
+import com.ezmax.api.model.EzsignpageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,39 +50,39 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNPAGE = "a_objEzsignpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNPAGE)
-  private List<EzsignpageResponse> aObjEzsignpage = new ArrayList<>();
+  private List<EzsignpageResponseCompound> aObjEzsignpage = new ArrayList<>();
 
   public EzsigndocumentGetEzsignpagesV1ResponseMPayload() { 
   }
 
-  public EzsigndocumentGetEzsignpagesV1ResponseMPayload aObjEzsignpage(List<EzsignpageResponse> aObjEzsignpage) {
+  public EzsigndocumentGetEzsignpagesV1ResponseMPayload aObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     
     this.aObjEzsignpage = aObjEzsignpage;
     return this;
   }
 
-  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponse aObjEzsignpageItem) {
+  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponseCompound aObjEzsignpageItem) {
     this.aObjEzsignpage.add(aObjEzsignpageItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjEzsignpage
    * @return aObjEzsignpage
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignpageResponse> getaObjEzsignpage() {
+  public List<EzsignpageResponseCompound> getaObjEzsignpage() {
     return aObjEzsignpage;
   }
 
 
-  public void setaObjEzsignpage(List<EzsignpageResponse> aObjEzsignpage) {
+  public void setaObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     this.aObjEzsignpage = aObjEzsignpage;
   }
 
@@ -148,7 +148,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsigndocumentGetEzsignpagesV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetEzsignpagesV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetEzsignpagesV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
@@ -170,7 +170,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       // validate the optional field `a_objEzsignpage` (array)
       if (jsonArrayaObjEzsignpage != null) {
         for (int i = 0; i < jsonArrayaObjEzsignpage.size(); i++) {
-          EzsignpageResponse.validateJsonObject(jsonArrayaObjEzsignpage.get(i).getAsJsonObject());
+          EzsignpageResponseCompound.validateJsonObject(jsonArrayaObjEzsignpage.get(i).getAsJsonObject());
         };
       }
   }

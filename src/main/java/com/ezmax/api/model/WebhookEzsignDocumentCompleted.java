@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CommonWebhook;
 import com.ezmax.api.model.EzsigndocumentResponse;
 import com.ezmax.api.model.WebhookEzsignDocumentCompletedAllOf;
@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
  * This is the base Webhook object
  */
 @ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class WebhookEzsignDocumentCompleted {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -66,7 +66,7 @@ public class WebhookEzsignDocumentCompleted {
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
-  private List<AttemptResponse> aObjAttempt = new ArrayList<>();
+  private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
 
   public WebhookEzsignDocumentCompleted() { 
   }
@@ -117,13 +117,13 @@ public class WebhookEzsignDocumentCompleted {
   }
 
 
-  public WebhookEzsignDocumentCompleted aObjAttempt(List<AttemptResponse> aObjAttempt) {
+  public WebhookEzsignDocumentCompleted aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     
     this.aObjAttempt = aObjAttempt;
     return this;
   }
 
-  public WebhookEzsignDocumentCompleted addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
+  public WebhookEzsignDocumentCompleted addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
     this.aObjAttempt.add(aObjAttemptItem);
     return this;
   }
@@ -135,12 +135,12 @@ public class WebhookEzsignDocumentCompleted {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.")
 
-  public List<AttemptResponse> getaObjAttempt() {
+  public List<AttemptResponseCompound> getaObjAttempt() {
     return aObjAttempt;
   }
 
 
-  public void setaObjAttempt(List<AttemptResponse> aObjAttempt) {
+  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
@@ -214,7 +214,7 @@ public class WebhookEzsignDocumentCompleted {
       if (jsonObj == null) {
         if (WebhookEzsignDocumentCompleted.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookEzsignDocumentCompleted is not found in the empty JSON string", WebhookEzsignDocumentCompleted.openapiRequiredFields.toString()));
         }
       }
@@ -244,7 +244,7 @@ public class WebhookEzsignDocumentCompleted {
       // validate the optional field `a_objAttempt` (array)
       if (jsonArrayaObjAttempt != null) {
         for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-          AttemptResponse.validateJsonObject(jsonArrayaObjAttempt.get(i).getAsJsonObject());
+          AttemptResponseCompound.validateJsonObject(jsonArrayaObjAttempt.get(i).getAsJsonObject());
         };
       }
   }

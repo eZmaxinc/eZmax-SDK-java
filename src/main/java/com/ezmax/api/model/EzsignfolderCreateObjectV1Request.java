@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Request for the /1/object/ezsignfolder/createObject API Request
  */
 @ApiModel(description = "Request for the /1/object/ezsignfolder/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
@@ -171,7 +171,7 @@ public class EzsignfolderCreateObjectV1Request {
       if (jsonObj == null) {
         if (EzsignfolderCreateObjectV1Request.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderCreateObjectV1Request is not found in the empty JSON string", EzsignfolderCreateObjectV1Request.openapiRequiredFields.toString()));
         }
       }

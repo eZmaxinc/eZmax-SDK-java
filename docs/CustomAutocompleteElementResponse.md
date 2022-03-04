@@ -2,7 +2,7 @@
 
 # CustomAutocompleteElementResponse
 
-Generic Autocomplete Response
+Generic AutocompleteElement Response
 
 ## Properties
 

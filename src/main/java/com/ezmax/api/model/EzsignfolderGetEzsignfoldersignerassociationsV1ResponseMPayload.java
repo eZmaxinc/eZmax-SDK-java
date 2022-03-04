@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociations API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -71,7 +71,7 @@ public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
   }
 
    /**
-   * 
+   * Get aObjEzsignfoldersignerassociation
    * @return aObjEzsignfoldersignerassociation
   **/
   @javax.annotation.Nonnull
@@ -148,7 +148,7 @@ public class EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload is not found in the empty JSON string", EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

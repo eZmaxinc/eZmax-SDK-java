@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
  * An Ezsignsignature Object
  */
 @ApiModel(description = "An Ezsignsignature Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -161,11 +161,11 @@ public class EzsignsignatureRequest {
   }
 
    /**
-   * The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
+   * The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * @return iEzsignsignatureX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
+  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
 
   public Integer getiEzsignsignatureX() {
     return iEzsignsignatureX;
@@ -207,11 +207,11 @@ public class EzsignsignatureRequest {
   }
 
    /**
-   * The step when the Ezsignsigner will be invited to sign or fill form fields
+   * The step when the Ezsignsigner will be invited to sign
    * @return iEzsignsignatureStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign or fill form fields")
+  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign")
 
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;
@@ -357,7 +357,7 @@ public class EzsignsignatureRequest {
       if (jsonObj == null) {
         if (EzsignsignatureRequest.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequest is not found in the empty JSON string", EzsignsignatureRequest.openapiRequiredFields.toString()));
         }
       }

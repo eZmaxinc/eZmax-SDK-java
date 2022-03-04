@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfoldertypeGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
@@ -147,7 +147,7 @@ public class EzsignfoldertypeGetListV1ResponseMPayloadAllOf {
       if (jsonObj == null) {
         if (EzsignfoldertypeGetListV1ResponseMPayloadAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldertypeGetListV1ResponseMPayloadAllOf is not found in the empty JSON string", EzsignfoldertypeGetListV1ResponseMPayloadAllOf.openapiRequiredFields.toString()));
         }
       }

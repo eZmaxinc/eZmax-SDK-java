@@ -2,7 +2,7 @@
 
 # EmailRequest
 
-A Contact Object
+An Email Object
 
 ## Properties
 

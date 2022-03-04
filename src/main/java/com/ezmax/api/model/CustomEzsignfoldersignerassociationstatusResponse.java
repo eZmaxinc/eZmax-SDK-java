@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignfoldersignerassociationstatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -241,7 +241,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
       if (jsonObj == null) {
         if (CustomEzsignfoldersignerassociationstatusResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomEzsignfoldersignerassociationstatusResponse is not found in the empty JSON string", CustomEzsignfoldersignerassociationstatusResponse.openapiRequiredFields.toString()));
         }
       }

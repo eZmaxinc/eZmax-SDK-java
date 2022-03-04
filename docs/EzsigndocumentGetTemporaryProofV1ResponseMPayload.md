@@ -8,7 +8,7 @@ Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjEzsigndocumentlog** | [**EzsigndocumentlogResponse**](EzsigndocumentlogResponse.md) |  | 
+**aObjEzsigndocumentlog** | [**EzsigndocumentlogResponseCompound**](EzsigndocumentlogResponseCompound.md) |  | 
 
 
 

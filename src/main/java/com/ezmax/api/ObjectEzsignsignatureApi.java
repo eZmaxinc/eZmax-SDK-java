@@ -720,7 +720,7 @@ public class ObjectEzsignsignatureApi {
 
     /**
      * Retrieve an existing Ezsignsignature
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignsignatureID  (required)
      * @return EzsignsignatureGetObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -738,7 +738,7 @@ public class ObjectEzsignsignatureApi {
 
     /**
      * Retrieve an existing Ezsignsignature
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignsignatureID  (required)
      * @return ApiResponse&lt;EzsignsignatureGetObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -763,7 +763,7 @@ public class ObjectEzsignsignatureApi {
 
     /**
      * Retrieve an existing Ezsignsignature (asynchronously)
-     * ## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+     * 
      * @param pkiEzsignsignatureID  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

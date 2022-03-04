@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * An Ezsigndocument Object
  */
 @ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigndocumentRequestPatch {
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
@@ -169,7 +169,7 @@ public class EzsigndocumentRequestPatch {
       if (jsonObj == null) {
         if (EzsigndocumentRequestPatch.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentRequestPatch is not found in the empty JSON string", EzsigndocumentRequestPatch.openapiRequiredFields.toString()));
         }
       }

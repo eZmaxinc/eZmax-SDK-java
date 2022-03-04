@@ -50,16 +50,8 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignfoldersignerassociation/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
-  @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  private EzsignfoldersignerassociationResponseCompoundUser objUser;
-
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
-  private EzsignsignerResponseCompound objEzsignsigner;
-
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   private Integer pkiEzsignfoldersignerassociationID;
@@ -72,54 +64,16 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
   private Boolean bEzsignfoldersignerassociationReceivecopy;
 
+  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  private EzsignfoldersignerassociationResponseCompoundUser objUser;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
+  private EzsignsignerResponseCompound objEzsignsigner;
+
   public EzsignfoldersignerassociationGetObjectV1ResponseMPayload() { 
   }
-
-  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    
-    this.objUser = objUser;
-    return this;
-  }
-
-   /**
-   * Get objUser
-   * @return objUser
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
-    return objUser;
-  }
-
-
-  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    this.objUser = objUser;
-  }
-
-
-  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    
-    this.objEzsignsigner = objEzsignsigner;
-    return this;
-  }
-
-   /**
-   * Get objEzsignsigner
-   * @return objEzsignsigner
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public EzsignsignerResponseCompound getObjEzsignsigner() {
-    return objEzsignsigner;
-  }
-
-
-  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    this.objEzsignsigner = objEzsignsigner;
-  }
-
 
   public EzsignfoldersignerassociationGetObjectV1ResponseMPayload pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     
@@ -190,6 +144,52 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    
+    this.objUser = objUser;
+    return this;
+  }
+
+   /**
+   * Get objUser
+   * @return objUser
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
+    return objUser;
+  }
+
+
+  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
+    this.objUser = objUser;
+  }
+
+
+  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    
+    this.objEzsignsigner = objEzsignsigner;
+    return this;
+  }
+
+   /**
+   * Get objEzsignsigner
+   * @return objEzsignsigner
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EzsignsignerResponseCompound getObjEzsignsigner() {
+    return objEzsignsigner;
+  }
+
+
+  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
+    this.objEzsignsigner = objEzsignsigner;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -199,27 +199,27 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
       return false;
     }
     EzsignfoldersignerassociationGetObjectV1ResponseMPayload ezsignfoldersignerassociationGetObjectV1ResponseMPayload = (EzsignfoldersignerassociationGetObjectV1ResponseMPayload) o;
-    return Objects.equals(this.objUser, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser) &&
-        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner) &&
-        Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.pkiEzsignfoldersignerassociationID) &&
+    return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.pkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.fkiEzsignfolderID) &&
-        Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationReceivecopy);
+        Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationReceivecopy) &&
+        Objects.equals(this.objUser, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser) &&
+        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objUser, objEzsignsigner, pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy, objUser, objEzsignsigner);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {\n");
-    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
-    sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
+    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
+    sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -242,11 +242,11 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objUser");
-    openapiFields.add("objEzsignsigner");
     openapiFields.add("pkiEzsignfoldersignerassociationID");
     openapiFields.add("fkiEzsignfolderID");
     openapiFields.add("bEzsignfoldersignerassociationReceivecopy");
+    openapiFields.add("objUser");
+    openapiFields.add("objEzsignsigner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -265,7 +265,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignfoldersignerassociationGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsignfoldersignerassociationGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

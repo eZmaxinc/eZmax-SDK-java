@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.EzsignsignatureGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,34 +47,34 @@ import eZmaxAPI.JSON;
 /**
  * EzsignsignatureGetObjectV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignsignatureGetObjectV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private Object mPayload;
+  private EzsignsignatureGetObjectV1ResponseMPayload mPayload;
 
   public EzsignsignatureGetObjectV1ResponseAllOf() { 
   }
 
-  public EzsignsignatureGetObjectV1ResponseAllOf mPayload(Object mPayload) {
+  public EzsignsignatureGetObjectV1ResponseAllOf mPayload(EzsignsignatureGetObjectV1ResponseMPayload mPayload) {
     
     this.mPayload = mPayload;
     return this;
   }
 
    /**
-   * Payload for the /1/object/ezsignsignature/getObject API Request
+   * Get mPayload
    * @return mPayload
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Payload for the /1/object/ezsignsignature/getObject API Request")
+  @ApiModelProperty(required = true, value = "")
 
-  public Object getmPayload() {
+  public EzsignsignatureGetObjectV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
 
-  public void setmPayload(Object mPayload) {
+  public void setmPayload(EzsignsignatureGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -139,7 +140,7 @@ public class EzsignsignatureGetObjectV1ResponseAllOf {
       if (jsonObj == null) {
         if (EzsignsignatureGetObjectV1ResponseAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureGetObjectV1ResponseAllOf is not found in the empty JSON string", EzsignsignatureGetObjectV1ResponseAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -156,6 +157,10 @@ public class EzsignsignatureGetObjectV1ResponseAllOf {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      // validate the optional field `mPayload`
+      if (jsonObj.getAsJsonObject("mPayload") != null) {
+        EzsignsignatureGetObjectV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
       }
   }
 

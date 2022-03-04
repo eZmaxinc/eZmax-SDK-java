@@ -15,12 +15,12 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.AddressRequest;
+import com.ezmax.api.model.AddressRequestCompound;
 import com.ezmax.api.model.ContactinformationsRequest;
 import com.ezmax.api.model.ContactinformationsRequestCompoundAllOf;
-import com.ezmax.api.model.EmailRequest;
-import com.ezmax.api.model.PhoneRequest;
-import com.ezmax.api.model.WebsiteRequest;
+import com.ezmax.api.model.EmailRequestCompound;
+import com.ezmax.api.model.PhoneRequestCompound;
+import com.ezmax.api.model.WebsiteRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,24 +55,8 @@ import eZmaxAPI.JSON;
  * A Contactinformations Object and children to create a complete structure
  */
 @ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
-  public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
-  private List<AddressRequest> aObjAddress = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_PHONE = "a_objPhone";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_PHONE)
-  private List<PhoneRequest> aObjPhone = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_EMAIL = "a_objEmail";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EMAIL)
-  private List<EmailRequest> aObjEmail = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_WEBSITE = "a_objWebsite";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
-  private List<WebsiteRequest> aObjWebsite = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
   private Integer iAddressDefault;
@@ -89,120 +73,24 @@ public class ContactinformationsRequestCompound {
   @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
   private Integer iWebsiteDefault;
 
+  public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
+  private List<AddressRequestCompound> aObjAddress = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_PHONE = "a_objPhone";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_PHONE)
+  private List<PhoneRequestCompound> aObjPhone = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EMAIL = "a_objEmail";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EMAIL)
+  private List<EmailRequestCompound> aObjEmail = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_WEBSITE = "a_objWebsite";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
+  private List<WebsiteRequestCompound> aObjWebsite = new ArrayList<>();
+
   public ContactinformationsRequestCompound() { 
   }
-
-  public ContactinformationsRequestCompound aObjAddress(List<AddressRequest> aObjAddress) {
-    
-    this.aObjAddress = aObjAddress;
-    return this;
-  }
-
-  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequest aObjAddressItem) {
-    this.aObjAddress.add(aObjAddressItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return aObjAddress
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<AddressRequest> getaObjAddress() {
-    return aObjAddress;
-  }
-
-
-  public void setaObjAddress(List<AddressRequest> aObjAddress) {
-    this.aObjAddress = aObjAddress;
-  }
-
-
-  public ContactinformationsRequestCompound aObjPhone(List<PhoneRequest> aObjPhone) {
-    
-    this.aObjPhone = aObjPhone;
-    return this;
-  }
-
-  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequest aObjPhoneItem) {
-    this.aObjPhone.add(aObjPhoneItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return aObjPhone
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<PhoneRequest> getaObjPhone() {
-    return aObjPhone;
-  }
-
-
-  public void setaObjPhone(List<PhoneRequest> aObjPhone) {
-    this.aObjPhone = aObjPhone;
-  }
-
-
-  public ContactinformationsRequestCompound aObjEmail(List<EmailRequest> aObjEmail) {
-    
-    this.aObjEmail = aObjEmail;
-    return this;
-  }
-
-  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequest aObjEmailItem) {
-    this.aObjEmail.add(aObjEmailItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return aObjEmail
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<EmailRequest> getaObjEmail() {
-    return aObjEmail;
-  }
-
-
-  public void setaObjEmail(List<EmailRequest> aObjEmail) {
-    this.aObjEmail = aObjEmail;
-  }
-
-
-  public ContactinformationsRequestCompound aObjWebsite(List<WebsiteRequest> aObjWebsite) {
-    
-    this.aObjWebsite = aObjWebsite;
-    return this;
-  }
-
-  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequest aObjWebsiteItem) {
-    this.aObjWebsite.add(aObjWebsiteItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return aObjWebsite
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<WebsiteRequest> getaObjWebsite() {
-    return aObjWebsite;
-  }
-
-
-  public void setaObjWebsite(List<WebsiteRequest> aObjWebsite) {
-    this.aObjWebsite = aObjWebsite;
-  }
-
 
   public ContactinformationsRequestCompound iAddressDefault(Integer iAddressDefault) {
     
@@ -296,6 +184,118 @@ public class ContactinformationsRequestCompound {
   }
 
 
+  public ContactinformationsRequestCompound aObjAddress(List<AddressRequestCompound> aObjAddress) {
+    
+    this.aObjAddress = aObjAddress;
+    return this;
+  }
+
+  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
+    this.aObjAddress.add(aObjAddressItem);
+    return this;
+  }
+
+   /**
+   * Get aObjAddress
+   * @return aObjAddress
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<AddressRequestCompound> getaObjAddress() {
+    return aObjAddress;
+  }
+
+
+  public void setaObjAddress(List<AddressRequestCompound> aObjAddress) {
+    this.aObjAddress = aObjAddress;
+  }
+
+
+  public ContactinformationsRequestCompound aObjPhone(List<PhoneRequestCompound> aObjPhone) {
+    
+    this.aObjPhone = aObjPhone;
+    return this;
+  }
+
+  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
+    this.aObjPhone.add(aObjPhoneItem);
+    return this;
+  }
+
+   /**
+   * Get aObjPhone
+   * @return aObjPhone
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<PhoneRequestCompound> getaObjPhone() {
+    return aObjPhone;
+  }
+
+
+  public void setaObjPhone(List<PhoneRequestCompound> aObjPhone) {
+    this.aObjPhone = aObjPhone;
+  }
+
+
+  public ContactinformationsRequestCompound aObjEmail(List<EmailRequestCompound> aObjEmail) {
+    
+    this.aObjEmail = aObjEmail;
+    return this;
+  }
+
+  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
+    this.aObjEmail.add(aObjEmailItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEmail
+   * @return aObjEmail
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<EmailRequestCompound> getaObjEmail() {
+    return aObjEmail;
+  }
+
+
+  public void setaObjEmail(List<EmailRequestCompound> aObjEmail) {
+    this.aObjEmail = aObjEmail;
+  }
+
+
+  public ContactinformationsRequestCompound aObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
+    
+    this.aObjWebsite = aObjWebsite;
+    return this;
+  }
+
+  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
+    this.aObjWebsite.add(aObjWebsiteItem);
+    return this;
+  }
+
+   /**
+   * Get aObjWebsite
+   * @return aObjWebsite
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<WebsiteRequestCompound> getaObjWebsite() {
+    return aObjWebsite;
+  }
+
+
+  public void setaObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
+    this.aObjWebsite = aObjWebsite;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -305,33 +305,33 @@ public class ContactinformationsRequestCompound {
       return false;
     }
     ContactinformationsRequestCompound contactinformationsRequestCompound = (ContactinformationsRequestCompound) o;
-    return Objects.equals(this.aObjAddress, contactinformationsRequestCompound.aObjAddress) &&
-        Objects.equals(this.aObjPhone, contactinformationsRequestCompound.aObjPhone) &&
-        Objects.equals(this.aObjEmail, contactinformationsRequestCompound.aObjEmail) &&
-        Objects.equals(this.aObjWebsite, contactinformationsRequestCompound.aObjWebsite) &&
-        Objects.equals(this.iAddressDefault, contactinformationsRequestCompound.iAddressDefault) &&
+    return Objects.equals(this.iAddressDefault, contactinformationsRequestCompound.iAddressDefault) &&
         Objects.equals(this.iPhoneDefault, contactinformationsRequestCompound.iPhoneDefault) &&
         Objects.equals(this.iEmailDefault, contactinformationsRequestCompound.iEmailDefault) &&
-        Objects.equals(this.iWebsiteDefault, contactinformationsRequestCompound.iWebsiteDefault);
+        Objects.equals(this.iWebsiteDefault, contactinformationsRequestCompound.iWebsiteDefault) &&
+        Objects.equals(this.aObjAddress, contactinformationsRequestCompound.aObjAddress) &&
+        Objects.equals(this.aObjPhone, contactinformationsRequestCompound.aObjPhone) &&
+        Objects.equals(this.aObjEmail, contactinformationsRequestCompound.aObjEmail) &&
+        Objects.equals(this.aObjWebsite, contactinformationsRequestCompound.aObjWebsite);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjAddress, aObjPhone, aObjEmail, aObjWebsite, iAddressDefault, iPhoneDefault, iEmailDefault, iWebsiteDefault);
+    return Objects.hash(iAddressDefault, iPhoneDefault, iEmailDefault, iWebsiteDefault, aObjAddress, aObjPhone, aObjEmail, aObjWebsite);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsRequestCompound {\n");
-    sb.append("    aObjAddress: ").append(toIndentedString(aObjAddress)).append("\n");
-    sb.append("    aObjPhone: ").append(toIndentedString(aObjPhone)).append("\n");
-    sb.append("    aObjEmail: ").append(toIndentedString(aObjEmail)).append("\n");
-    sb.append("    aObjWebsite: ").append(toIndentedString(aObjWebsite)).append("\n");
     sb.append("    iAddressDefault: ").append(toIndentedString(iAddressDefault)).append("\n");
     sb.append("    iPhoneDefault: ").append(toIndentedString(iPhoneDefault)).append("\n");
     sb.append("    iEmailDefault: ").append(toIndentedString(iEmailDefault)).append("\n");
     sb.append("    iWebsiteDefault: ").append(toIndentedString(iWebsiteDefault)).append("\n");
+    sb.append("    aObjAddress: ").append(toIndentedString(aObjAddress)).append("\n");
+    sb.append("    aObjPhone: ").append(toIndentedString(aObjPhone)).append("\n");
+    sb.append("    aObjEmail: ").append(toIndentedString(aObjEmail)).append("\n");
+    sb.append("    aObjWebsite: ").append(toIndentedString(aObjWebsite)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -354,25 +354,25 @@ public class ContactinformationsRequestCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objAddress");
-    openapiFields.add("a_objPhone");
-    openapiFields.add("a_objEmail");
-    openapiFields.add("a_objWebsite");
     openapiFields.add("iAddressDefault");
     openapiFields.add("iPhoneDefault");
     openapiFields.add("iEmailDefault");
     openapiFields.add("iWebsiteDefault");
+    openapiFields.add("a_objAddress");
+    openapiFields.add("a_objPhone");
+    openapiFields.add("a_objEmail");
+    openapiFields.add("a_objWebsite");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objAddress");
-    openapiRequiredFields.add("a_objPhone");
-    openapiRequiredFields.add("a_objEmail");
-    openapiRequiredFields.add("a_objWebsite");
     openapiRequiredFields.add("iAddressDefault");
     openapiRequiredFields.add("iPhoneDefault");
     openapiRequiredFields.add("iEmailDefault");
     openapiRequiredFields.add("iWebsiteDefault");
+    openapiRequiredFields.add("a_objAddress");
+    openapiRequiredFields.add("a_objPhone");
+    openapiRequiredFields.add("a_objEmail");
+    openapiRequiredFields.add("a_objWebsite");
   }
 
  /**
@@ -385,7 +385,7 @@ public class ContactinformationsRequestCompound {
       if (jsonObj == null) {
         if (ContactinformationsRequestCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ContactinformationsRequestCompound is not found in the empty JSON string", ContactinformationsRequestCompound.openapiRequiredFields.toString()));
         }
       }
@@ -407,28 +407,28 @@ public class ContactinformationsRequestCompound {
       // validate the optional field `a_objAddress` (array)
       if (jsonArrayaObjAddress != null) {
         for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-          AddressRequest.validateJsonObject(jsonArrayaObjAddress.get(i).getAsJsonObject());
+          AddressRequestCompound.validateJsonObject(jsonArrayaObjAddress.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
       // validate the optional field `a_objPhone` (array)
       if (jsonArrayaObjPhone != null) {
         for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
-          PhoneRequest.validateJsonObject(jsonArrayaObjPhone.get(i).getAsJsonObject());
+          PhoneRequestCompound.validateJsonObject(jsonArrayaObjPhone.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
       // validate the optional field `a_objEmail` (array)
       if (jsonArrayaObjEmail != null) {
         for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-          EmailRequest.validateJsonObject(jsonArrayaObjEmail.get(i).getAsJsonObject());
+          EmailRequestCompound.validateJsonObject(jsonArrayaObjEmail.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
       // validate the optional field `a_objWebsite` (array)
       if (jsonArrayaObjWebsite != null) {
         for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-          WebsiteRequest.validateJsonObject(jsonArrayaObjWebsite.get(i).getAsJsonObject());
+          WebsiteRequestCompound.validateJsonObject(jsonArrayaObjWebsite.get(i).getAsJsonObject());
         };
       }
   }

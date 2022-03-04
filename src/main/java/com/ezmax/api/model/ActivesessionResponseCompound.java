@@ -55,28 +55,8 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/activesession/getCurrent API Request
  */
 @ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ActivesessionResponseCompound {
-  public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
-  @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
-  private List<Integer> aPkiPermissionID = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_OBJ_USER_REAL = "objUserReal";
-  @SerializedName(SERIALIZED_NAME_OBJ_USER_REAL)
-  private ActivesessionResponseCompoundUser objUserReal;
-
-  public static final String SERIALIZED_NAME_OBJ_USER_CLONED = "objUserCloned";
-  @SerializedName(SERIALIZED_NAME_OBJ_USER_CLONED)
-  private ActivesessionResponseCompoundUser objUserCloned;
-
-  public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
-  @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
-  private ActivesessionResponseCompoundApikey objApikey;
-
-  public static final String SERIALIZED_NAME_A_E_MODULE_INTERNALNAME = "a_eModuleInternalname";
-  @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
-  private List<String> aEModuleInternalname = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE = "eActivesessionSessiontype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE)
   private FieldEActivesessionSessiontype eActivesessionSessiontype;
@@ -105,133 +85,28 @@ public class ActivesessionResponseCompound {
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
   private String pksCustomerCode;
 
+  public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
+  @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
+  private List<Integer> aPkiPermissionID = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_OBJ_USER_REAL = "objUserReal";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER_REAL)
+  private ActivesessionResponseCompoundUser objUserReal;
+
+  public static final String SERIALIZED_NAME_OBJ_USER_CLONED = "objUserCloned";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER_CLONED)
+  private ActivesessionResponseCompoundUser objUserCloned;
+
+  public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
+  @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
+  private ActivesessionResponseCompoundApikey objApikey;
+
+  public static final String SERIALIZED_NAME_A_E_MODULE_INTERNALNAME = "a_eModuleInternalname";
+  @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
+  private List<String> aEModuleInternalname = new ArrayList<>();
+
   public ActivesessionResponseCompound() { 
   }
-
-  public ActivesessionResponseCompound aPkiPermissionID(List<Integer> aPkiPermissionID) {
-    
-    this.aPkiPermissionID = aPkiPermissionID;
-    return this;
-  }
-
-  public ActivesessionResponseCompound addAPkiPermissionIDItem(Integer aPkiPermissionIDItem) {
-    this.aPkiPermissionID.add(aPkiPermissionIDItem);
-    return this;
-  }
-
-   /**
-   * An array of permissions granted to the user or api key
-   * @return aPkiPermissionID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
-
-  public List<Integer> getaPkiPermissionID() {
-    return aPkiPermissionID;
-  }
-
-
-  public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
-    this.aPkiPermissionID = aPkiPermissionID;
-  }
-
-
-  public ActivesessionResponseCompound objUserReal(ActivesessionResponseCompoundUser objUserReal) {
-    
-    this.objUserReal = objUserReal;
-    return this;
-  }
-
-   /**
-   * Get objUserReal
-   * @return objUserReal
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ActivesessionResponseCompoundUser getObjUserReal() {
-    return objUserReal;
-  }
-
-
-  public void setObjUserReal(ActivesessionResponseCompoundUser objUserReal) {
-    this.objUserReal = objUserReal;
-  }
-
-
-  public ActivesessionResponseCompound objUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
-    
-    this.objUserCloned = objUserCloned;
-    return this;
-  }
-
-   /**
-   * Get objUserCloned
-   * @return objUserCloned
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ActivesessionResponseCompoundUser getObjUserCloned() {
-    return objUserCloned;
-  }
-
-
-  public void setObjUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
-    this.objUserCloned = objUserCloned;
-  }
-
-
-  public ActivesessionResponseCompound objApikey(ActivesessionResponseCompoundApikey objApikey) {
-    
-    this.objApikey = objApikey;
-    return this;
-  }
-
-   /**
-   * Get objApikey
-   * @return objApikey
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ActivesessionResponseCompoundApikey getObjApikey() {
-    return objApikey;
-  }
-
-
-  public void setObjApikey(ActivesessionResponseCompoundApikey objApikey) {
-    this.objApikey = objApikey;
-  }
-
-
-  public ActivesessionResponseCompound aEModuleInternalname(List<String> aEModuleInternalname) {
-    
-    this.aEModuleInternalname = aEModuleInternalname;
-    return this;
-  }
-
-  public ActivesessionResponseCompound addAEModuleInternalnameItem(String aEModuleInternalnameItem) {
-    this.aEModuleInternalname.add(aEModuleInternalnameItem);
-    return this;
-  }
-
-   /**
-   * An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
-   * @return aEModuleInternalname
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
-
-  public List<String> getaEModuleInternalname() {
-    return aEModuleInternalname;
-  }
-
-
-  public void setaEModuleInternalname(List<String> aEModuleInternalname) {
-    this.aEModuleInternalname = aEModuleInternalname;
-  }
-
 
   public ActivesessionResponseCompound eActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
     
@@ -396,6 +271,131 @@ public class ActivesessionResponseCompound {
   }
 
 
+  public ActivesessionResponseCompound aPkiPermissionID(List<Integer> aPkiPermissionID) {
+    
+    this.aPkiPermissionID = aPkiPermissionID;
+    return this;
+  }
+
+  public ActivesessionResponseCompound addAPkiPermissionIDItem(Integer aPkiPermissionIDItem) {
+    this.aPkiPermissionID.add(aPkiPermissionIDItem);
+    return this;
+  }
+
+   /**
+   * An array of permissions granted to the user or api key
+   * @return aPkiPermissionID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
+
+  public List<Integer> getaPkiPermissionID() {
+    return aPkiPermissionID;
+  }
+
+
+  public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
+    this.aPkiPermissionID = aPkiPermissionID;
+  }
+
+
+  public ActivesessionResponseCompound objUserReal(ActivesessionResponseCompoundUser objUserReal) {
+    
+    this.objUserReal = objUserReal;
+    return this;
+  }
+
+   /**
+   * Get objUserReal
+   * @return objUserReal
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public ActivesessionResponseCompoundUser getObjUserReal() {
+    return objUserReal;
+  }
+
+
+  public void setObjUserReal(ActivesessionResponseCompoundUser objUserReal) {
+    this.objUserReal = objUserReal;
+  }
+
+
+  public ActivesessionResponseCompound objUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
+    
+    this.objUserCloned = objUserCloned;
+    return this;
+  }
+
+   /**
+   * Get objUserCloned
+   * @return objUserCloned
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ActivesessionResponseCompoundUser getObjUserCloned() {
+    return objUserCloned;
+  }
+
+
+  public void setObjUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
+    this.objUserCloned = objUserCloned;
+  }
+
+
+  public ActivesessionResponseCompound objApikey(ActivesessionResponseCompoundApikey objApikey) {
+    
+    this.objApikey = objApikey;
+    return this;
+  }
+
+   /**
+   * Get objApikey
+   * @return objApikey
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ActivesessionResponseCompoundApikey getObjApikey() {
+    return objApikey;
+  }
+
+
+  public void setObjApikey(ActivesessionResponseCompoundApikey objApikey) {
+    this.objApikey = objApikey;
+  }
+
+
+  public ActivesessionResponseCompound aEModuleInternalname(List<String> aEModuleInternalname) {
+    
+    this.aEModuleInternalname = aEModuleInternalname;
+    return this;
+  }
+
+  public ActivesessionResponseCompound addAEModuleInternalnameItem(String aEModuleInternalnameItem) {
+    this.aEModuleInternalname.add(aEModuleInternalnameItem);
+    return this;
+  }
+
+   /**
+   * An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
+   * @return aEModuleInternalname
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
+
+  public List<String> getaEModuleInternalname() {
+    return aEModuleInternalname;
+  }
+
+
+  public void setaEModuleInternalname(List<String> aEModuleInternalname) {
+    this.aEModuleInternalname = aEModuleInternalname;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -405,34 +405,29 @@ public class ActivesessionResponseCompound {
       return false;
     }
     ActivesessionResponseCompound activesessionResponseCompound = (ActivesessionResponseCompound) o;
-    return Objects.equals(this.aPkiPermissionID, activesessionResponseCompound.aPkiPermissionID) &&
-        Objects.equals(this.objUserReal, activesessionResponseCompound.objUserReal) &&
-        Objects.equals(this.objUserCloned, activesessionResponseCompound.objUserCloned) &&
-        Objects.equals(this.objApikey, activesessionResponseCompound.objApikey) &&
-        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname) &&
-        Objects.equals(this.eActivesessionSessiontype, activesessionResponseCompound.eActivesessionSessiontype) &&
+    return Objects.equals(this.eActivesessionSessiontype, activesessionResponseCompound.eActivesessionSessiontype) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionResponseCompound.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionResponseCompound.fkiLanguageID) &&
         Objects.equals(this.sCompanyNameX, activesessionResponseCompound.sCompanyNameX) &&
         Objects.equals(this.sDepartmentNameX, activesessionResponseCompound.sDepartmentNameX) &&
         Objects.equals(this.bActivesessionDebug, activesessionResponseCompound.bActivesessionDebug) &&
-        Objects.equals(this.pksCustomerCode, activesessionResponseCompound.pksCustomerCode);
+        Objects.equals(this.pksCustomerCode, activesessionResponseCompound.pksCustomerCode) &&
+        Objects.equals(this.aPkiPermissionID, activesessionResponseCompound.aPkiPermissionID) &&
+        Objects.equals(this.objUserReal, activesessionResponseCompound.objUserReal) &&
+        Objects.equals(this.objUserCloned, activesessionResponseCompound.objUserCloned) &&
+        Objects.equals(this.objApikey, activesessionResponseCompound.objApikey) &&
+        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, pksCustomerCode);
+    return Objects.hash(eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, pksCustomerCode, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponseCompound {\n");
-    sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
-    sb.append("    objUserReal: ").append(toIndentedString(objUserReal)).append("\n");
-    sb.append("    objUserCloned: ").append(toIndentedString(objUserCloned)).append("\n");
-    sb.append("    objApikey: ").append(toIndentedString(objApikey)).append("\n");
-    sb.append("    aEModuleInternalname: ").append(toIndentedString(aEModuleInternalname)).append("\n");
     sb.append("    eActivesessionSessiontype: ").append(toIndentedString(eActivesessionSessiontype)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
@@ -440,6 +435,11 @@ public class ActivesessionResponseCompound {
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
+    sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
+    sb.append("    objUserReal: ").append(toIndentedString(objUserReal)).append("\n");
+    sb.append("    objUserCloned: ").append(toIndentedString(objUserCloned)).append("\n");
+    sb.append("    objApikey: ").append(toIndentedString(objApikey)).append("\n");
+    sb.append("    aEModuleInternalname: ").append(toIndentedString(aEModuleInternalname)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -462,11 +462,6 @@ public class ActivesessionResponseCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_pkiPermissionID");
-    openapiFields.add("objUserReal");
-    openapiFields.add("objUserCloned");
-    openapiFields.add("objApikey");
-    openapiFields.add("a_eModuleInternalname");
     openapiFields.add("eActivesessionSessiontype");
     openapiFields.add("eActivesessionWeekdaystart");
     openapiFields.add("fkiLanguageID");
@@ -474,12 +469,14 @@ public class ActivesessionResponseCompound {
     openapiFields.add("sDepartmentNameX");
     openapiFields.add("bActivesessionDebug");
     openapiFields.add("pksCustomerCode");
+    openapiFields.add("a_pkiPermissionID");
+    openapiFields.add("objUserReal");
+    openapiFields.add("objUserCloned");
+    openapiFields.add("objApikey");
+    openapiFields.add("a_eModuleInternalname");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_pkiPermissionID");
-    openapiRequiredFields.add("objUserReal");
-    openapiRequiredFields.add("a_eModuleInternalname");
     openapiRequiredFields.add("eActivesessionSessiontype");
     openapiRequiredFields.add("eActivesessionWeekdaystart");
     openapiRequiredFields.add("fkiLanguageID");
@@ -487,6 +484,9 @@ public class ActivesessionResponseCompound {
     openapiRequiredFields.add("sDepartmentNameX");
     openapiRequiredFields.add("bActivesessionDebug");
     openapiRequiredFields.add("pksCustomerCode");
+    openapiRequiredFields.add("a_pkiPermissionID");
+    openapiRequiredFields.add("objUserReal");
+    openapiRequiredFields.add("a_eModuleInternalname");
   }
 
  /**
@@ -499,7 +499,7 @@ public class ActivesessionResponseCompound {
       if (jsonObj == null) {
         if (ActivesessionResponseCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionResponseCompound is not found in the empty JSON string", ActivesessionResponseCompound.openapiRequiredFields.toString()));
         }
       }

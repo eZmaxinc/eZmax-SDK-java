@@ -41,6 +41,22 @@ public class EzsignformfieldResponseTest {
     }
 
     /**
+     * Test the property 'pkiEzsignformfieldID'
+     */
+    @Test
+    public void pkiEzsignformfieldIDTest() {
+        // TODO: test pkiEzsignformfieldID
+    }
+
+    /**
+     * Test the property 'iEzsignpagePagenumber'
+     */
+    @Test
+    public void iEzsignpagePagenumberTest() {
+        // TODO: test iEzsignpagePagenumber
+    }
+
+    /**
      * Test the property 'sEzsignformfieldLabel'
      */
     @Test
@@ -54,6 +70,54 @@ public class EzsignformfieldResponseTest {
     @Test
     public void sEzsignformfieldValueTest() {
         // TODO: test sEzsignformfieldValue
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldX'
+     */
+    @Test
+    public void iEzsignformfieldXTest() {
+        // TODO: test iEzsignformfieldX
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldY'
+     */
+    @Test
+    public void iEzsignformfieldYTest() {
+        // TODO: test iEzsignformfieldY
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldWidth'
+     */
+    @Test
+    public void iEzsignformfieldWidthTest() {
+        // TODO: test iEzsignformfieldWidth
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldHeight'
+     */
+    @Test
+    public void iEzsignformfieldHeightTest() {
+        // TODO: test iEzsignformfieldHeight
+    }
+
+    /**
+     * Test the property 'bEzsignformfieldSelected'
+     */
+    @Test
+    public void bEzsignformfieldSelectedTest() {
+        // TODO: test bEzsignformfieldSelected
+    }
+
+    /**
+     * Test the property 'sEzsignformfieldEnteredvalue'
+     */
+    @Test
+    public void sEzsignformfieldEnteredvalueTest() {
+        // TODO: test sEzsignformfieldEnteredvalue
     }
 
 }

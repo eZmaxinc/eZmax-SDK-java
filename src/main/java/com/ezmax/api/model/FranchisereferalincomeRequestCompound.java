@@ -53,16 +53,8 @@ import eZmaxAPI.JSON;
  * A Franchisereferalincome Object and children to create a complete structure
  */
 @ApiModel(description = "A Franchisereferalincome Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class FranchisereferalincomeRequestCompound {
-  public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
-  @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)
-  private AddressRequest objAddress;
-
-  public static final String SERIALIZED_NAME_A_OBJ_CONTACT = "a_objContact";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_CONTACT)
-  private List<ContactRequestCompound> aObjContact = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
   private Integer pkiFranchisereferalincomeID;
@@ -111,59 +103,16 @@ public class FranchisereferalincomeRequestCompound {
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID)
   private String sFranchisereferalincomeRemoteid;
 
+  public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
+  @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)
+  private AddressRequest objAddress;
+
+  public static final String SERIALIZED_NAME_A_OBJ_CONTACT = "a_objContact";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_CONTACT)
+  private List<ContactRequestCompound> aObjContact = new ArrayList<>();
+
   public FranchisereferalincomeRequestCompound() { 
   }
-
-  public FranchisereferalincomeRequestCompound objAddress(AddressRequest objAddress) {
-    
-    this.objAddress = objAddress;
-    return this;
-  }
-
-   /**
-   * Get objAddress
-   * @return objAddress
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public AddressRequest getObjAddress() {
-    return objAddress;
-  }
-
-
-  public void setObjAddress(AddressRequest objAddress) {
-    this.objAddress = objAddress;
-  }
-
-
-  public FranchisereferalincomeRequestCompound aObjContact(List<ContactRequestCompound> aObjContact) {
-    
-    this.aObjContact = aObjContact;
-    return this;
-  }
-
-  public FranchisereferalincomeRequestCompound addAObjContactItem(ContactRequestCompound aObjContactItem) {
-    this.aObjContact.add(aObjContactItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return aObjContact
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<ContactRequestCompound> getaObjContact() {
-    return aObjContact;
-  }
-
-
-  public void setaObjContact(List<ContactRequestCompound> aObjContact) {
-    this.aObjContact = aObjContact;
-  }
-
 
   public FranchisereferalincomeRequestCompound pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     
@@ -441,6 +390,57 @@ public class FranchisereferalincomeRequestCompound {
   }
 
 
+  public FranchisereferalincomeRequestCompound objAddress(AddressRequest objAddress) {
+    
+    this.objAddress = objAddress;
+    return this;
+  }
+
+   /**
+   * Get objAddress
+   * @return objAddress
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public AddressRequest getObjAddress() {
+    return objAddress;
+  }
+
+
+  public void setObjAddress(AddressRequest objAddress) {
+    this.objAddress = objAddress;
+  }
+
+
+  public FranchisereferalincomeRequestCompound aObjContact(List<ContactRequestCompound> aObjContact) {
+    
+    this.aObjContact = aObjContact;
+    return this;
+  }
+
+  public FranchisereferalincomeRequestCompound addAObjContactItem(ContactRequestCompound aObjContactItem) {
+    this.aObjContact.add(aObjContactItem);
+    return this;
+  }
+
+   /**
+   * Get aObjContact
+   * @return aObjContact
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<ContactRequestCompound> getaObjContact() {
+    return aObjContact;
+  }
+
+
+  public void setaObjContact(List<ContactRequestCompound> aObjContact) {
+    this.aObjContact = aObjContact;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -450,9 +450,7 @@ public class FranchisereferalincomeRequestCompound {
       return false;
     }
     FranchisereferalincomeRequestCompound franchisereferalincomeRequestCompound = (FranchisereferalincomeRequestCompound) o;
-    return Objects.equals(this.objAddress, franchisereferalincomeRequestCompound.objAddress) &&
-        Objects.equals(this.aObjContact, franchisereferalincomeRequestCompound.aObjContact) &&
-        Objects.equals(this.pkiFranchisereferalincomeID, franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID) &&
+    return Objects.equals(this.pkiFranchisereferalincomeID, franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID) &&
         Objects.equals(this.fkiFranchisebrokerID, franchisereferalincomeRequestCompound.fkiFranchisebrokerID) &&
         Objects.equals(this.fkiFranchisereferalincomeprogramID, franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID) &&
         Objects.equals(this.fkiPeriodID, franchisereferalincomeRequestCompound.fkiPeriodID) &&
@@ -463,20 +461,20 @@ public class FranchisereferalincomeRequestCompound {
         Objects.equals(this.dtFranchisereferalincomeDisbursed, franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed) &&
         Objects.equals(this.tFranchisereferalincomeComment, franchisereferalincomeRequestCompound.tFranchisereferalincomeComment) &&
         Objects.equals(this.fkiFranchiseofficeID, franchisereferalincomeRequestCompound.fkiFranchiseofficeID) &&
-        Objects.equals(this.sFranchisereferalincomeRemoteid, franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid);
+        Objects.equals(this.sFranchisereferalincomeRemoteid, franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid) &&
+        Objects.equals(this.objAddress, franchisereferalincomeRequestCompound.objAddress) &&
+        Objects.equals(this.aObjContact, franchisereferalincomeRequestCompound.aObjContact);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objAddress, aObjContact, pkiFranchisereferalincomeID, fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID, fkiPeriodID, dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment, fkiFranchiseofficeID, sFranchisereferalincomeRemoteid);
+    return Objects.hash(pkiFranchisereferalincomeID, fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID, fkiPeriodID, dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment, fkiFranchiseofficeID, sFranchisereferalincomeRemoteid, objAddress, aObjContact);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeRequestCompound {\n");
-    sb.append("    objAddress: ").append(toIndentedString(objAddress)).append("\n");
-    sb.append("    aObjContact: ").append(toIndentedString(aObjContact)).append("\n");
     sb.append("    pkiFranchisereferalincomeID: ").append(toIndentedString(pkiFranchisereferalincomeID)).append("\n");
     sb.append("    fkiFranchisebrokerID: ").append(toIndentedString(fkiFranchisebrokerID)).append("\n");
     sb.append("    fkiFranchisereferalincomeprogramID: ").append(toIndentedString(fkiFranchisereferalincomeprogramID)).append("\n");
@@ -489,6 +487,8 @@ public class FranchisereferalincomeRequestCompound {
     sb.append("    tFranchisereferalincomeComment: ").append(toIndentedString(tFranchisereferalincomeComment)).append("\n");
     sb.append("    fkiFranchiseofficeID: ").append(toIndentedString(fkiFranchiseofficeID)).append("\n");
     sb.append("    sFranchisereferalincomeRemoteid: ").append(toIndentedString(sFranchisereferalincomeRemoteid)).append("\n");
+    sb.append("    objAddress: ").append(toIndentedString(objAddress)).append("\n");
+    sb.append("    aObjContact: ").append(toIndentedString(aObjContact)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -511,8 +511,6 @@ public class FranchisereferalincomeRequestCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objAddress");
-    openapiFields.add("a_objContact");
     openapiFields.add("pkiFranchisereferalincomeID");
     openapiFields.add("fkiFranchisebrokerID");
     openapiFields.add("fkiFranchisereferalincomeprogramID");
@@ -525,11 +523,11 @@ public class FranchisereferalincomeRequestCompound {
     openapiFields.add("tFranchisereferalincomeComment");
     openapiFields.add("fkiFranchiseofficeID");
     openapiFields.add("sFranchisereferalincomeRemoteid");
+    openapiFields.add("objAddress");
+    openapiFields.add("a_objContact");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objAddress");
-    openapiRequiredFields.add("a_objContact");
     openapiRequiredFields.add("fkiFranchisebrokerID");
     openapiRequiredFields.add("fkiFranchisereferalincomeprogramID");
     openapiRequiredFields.add("fkiPeriodID");
@@ -541,6 +539,8 @@ public class FranchisereferalincomeRequestCompound {
     openapiRequiredFields.add("tFranchisereferalincomeComment");
     openapiRequiredFields.add("fkiFranchiseofficeID");
     openapiRequiredFields.add("sFranchisereferalincomeRemoteid");
+    openapiRequiredFields.add("objAddress");
+    openapiRequiredFields.add("a_objContact");
   }
 
  /**
@@ -553,7 +553,7 @@ public class FranchisereferalincomeRequestCompound {
       if (jsonObj == null) {
         if (FranchisereferalincomeRequestCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeRequestCompound is not found in the empty JSON string", FranchisereferalincomeRequestCompound.openapiRequiredFields.toString()));
         }
       }

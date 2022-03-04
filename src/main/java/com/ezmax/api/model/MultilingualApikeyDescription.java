@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * Description of the API Key  
  */
 @ApiModel(description = "Description of the API Key  ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class MultilingualApikeyDescription {
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION1 = "sApikeyDescription1";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION1)
@@ -169,7 +169,7 @@ public class MultilingualApikeyDescription {
       if (jsonObj == null) {
         if (MultilingualApikeyDescription.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in MultilingualApikeyDescription is not found in the empty JSON string", MultilingualApikeyDescription.openapiRequiredFields.toString()));
         }
       }

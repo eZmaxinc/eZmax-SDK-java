@@ -15,7 +15,9 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignformfieldResponse;
+import com.ezmax.api.model.CustomDropdownElementResponseCompound;
+import com.ezmax.api.model.EzsignformfieldResponseCompound;
+import com.ezmax.api.model.EzsignformfieldgroupsignerResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,40 +51,102 @@ import eZmaxAPI.JSON;
 /**
  * EzsignformfieldgroupResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignformfieldgroupResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD = "a_objEzsignformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD)
-  private List<EzsignformfieldResponse> aObjEzsignformfield = new ArrayList<>();
+  private List<EzsignformfieldResponseCompound> aObjEzsignformfield = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT = "a_objDropdownElement";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT)
+  private List<CustomDropdownElementResponseCompound> aObjDropdownElement = null;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUPSIGNER = "a_objEzsignformfieldgroupsigner";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUPSIGNER)
+  private EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner;
 
   public EzsignformfieldgroupResponseCompoundAllOf() { 
   }
 
-  public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfield(List<EzsignformfieldResponse> aObjEzsignformfield) {
+  public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfield(List<EzsignformfieldResponseCompound> aObjEzsignformfield) {
     
     this.aObjEzsignformfield = aObjEzsignformfield;
     return this;
   }
 
-  public EzsignformfieldgroupResponseCompoundAllOf addAObjEzsignformfieldItem(EzsignformfieldResponse aObjEzsignformfieldItem) {
+  public EzsignformfieldgroupResponseCompoundAllOf addAObjEzsignformfieldItem(EzsignformfieldResponseCompound aObjEzsignformfieldItem) {
     this.aObjEzsignformfield.add(aObjEzsignformfieldItem);
     return this;
   }
 
    /**
-   * 
+   * Get aObjEzsignformfield
    * @return aObjEzsignformfield
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignformfieldResponse> getaObjEzsignformfield() {
+  public List<EzsignformfieldResponseCompound> getaObjEzsignformfield() {
     return aObjEzsignformfield;
   }
 
 
-  public void setaObjEzsignformfield(List<EzsignformfieldResponse> aObjEzsignformfield) {
+  public void setaObjEzsignformfield(List<EzsignformfieldResponseCompound> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
+  }
+
+
+  public EzsignformfieldgroupResponseCompoundAllOf aObjDropdownElement(List<CustomDropdownElementResponseCompound> aObjDropdownElement) {
+    
+    this.aObjDropdownElement = aObjDropdownElement;
+    return this;
+  }
+
+  public EzsignformfieldgroupResponseCompoundAllOf addAObjDropdownElementItem(CustomDropdownElementResponseCompound aObjDropdownElementItem) {
+    if (this.aObjDropdownElement == null) {
+      this.aObjDropdownElement = new ArrayList<>();
+    }
+    this.aObjDropdownElement.add(aObjDropdownElementItem);
+    return this;
+  }
+
+   /**
+   * Get aObjDropdownElement
+   * @return aObjDropdownElement
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<CustomDropdownElementResponseCompound> getaObjDropdownElement() {
+    return aObjDropdownElement;
+  }
+
+
+  public void setaObjDropdownElement(List<CustomDropdownElementResponseCompound> aObjDropdownElement) {
+    this.aObjDropdownElement = aObjDropdownElement;
+  }
+
+
+  public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+    
+    this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignformfieldgroupsigner
+   * @return aObjEzsignformfieldgroupsigner
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EzsignformfieldgroupsignerResponseCompound getaObjEzsignformfieldgroupsigner() {
+    return aObjEzsignformfieldgroupsigner;
+  }
+
+
+  public void setaObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+    this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
   }
 
 
@@ -95,12 +159,14 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
       return false;
     }
     EzsignformfieldgroupResponseCompoundAllOf ezsignformfieldgroupResponseCompoundAllOf = (EzsignformfieldgroupResponseCompoundAllOf) o;
-    return Objects.equals(this.aObjEzsignformfield, ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield);
+    return Objects.equals(this.aObjEzsignformfield, ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfield) &&
+        Objects.equals(this.aObjDropdownElement, ezsignformfieldgroupResponseCompoundAllOf.aObjDropdownElement) &&
+        Objects.equals(this.aObjEzsignformfieldgroupsigner, ezsignformfieldgroupResponseCompoundAllOf.aObjEzsignformfieldgroupsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignformfield);
+    return Objects.hash(aObjEzsignformfield, aObjDropdownElement, aObjEzsignformfieldgroupsigner);
   }
 
   @Override
@@ -108,6 +174,8 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignformfieldgroupResponseCompoundAllOf {\n");
     sb.append("    aObjEzsignformfield: ").append(toIndentedString(aObjEzsignformfield)).append("\n");
+    sb.append("    aObjDropdownElement: ").append(toIndentedString(aObjDropdownElement)).append("\n");
+    sb.append("    aObjEzsignformfieldgroupsigner: ").append(toIndentedString(aObjEzsignformfieldgroupsigner)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -131,10 +199,13 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objEzsignformfield");
+    openapiFields.add("a_objDropdownElement");
+    openapiFields.add("a_objEzsignformfieldgroupsigner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objEzsignformfield");
+    openapiRequiredFields.add("a_objEzsignformfieldgroupsigner");
   }
 
  /**
@@ -147,7 +218,7 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
       if (jsonObj == null) {
         if (EzsignformfieldgroupResponseCompoundAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupResponseCompoundAllOf is not found in the empty JSON string", EzsignformfieldgroupResponseCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -169,8 +240,19 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
       // validate the optional field `a_objEzsignformfield` (array)
       if (jsonArrayaObjEzsignformfield != null) {
         for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
-          EzsignformfieldResponse.validateJsonObject(jsonArrayaObjEzsignformfield.get(i).getAsJsonObject());
+          EzsignformfieldResponseCompound.validateJsonObject(jsonArrayaObjEzsignformfield.get(i).getAsJsonObject());
         };
+      }
+      JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
+      // validate the optional field `a_objDropdownElement` (array)
+      if (jsonArrayaObjDropdownElement != null) {
+        for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
+          CustomDropdownElementResponseCompound.validateJsonObject(jsonArrayaObjDropdownElement.get(i).getAsJsonObject());
+        };
+      }
+      // validate the optional field `a_objEzsignformfieldgroupsigner`
+      if (jsonObj.getAsJsonObject("a_objEzsignformfieldgroupsigner") != null) {
+        EzsignformfieldgroupsignerResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("a_objEzsignformfieldgroupsigner"));
       }
   }
 

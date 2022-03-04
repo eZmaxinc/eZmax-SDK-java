@@ -50,12 +50,8 @@ import eZmaxAPI.JSON;
  * A Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ContactRequestCompound {
-  public static final String SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS = "objContactinformations";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS)
-  private ContactinformationsRequestCompound objContactinformations;
-
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
   private Integer fkiContacttitleID;
@@ -80,31 +76,12 @@ public class ContactRequestCompound {
   @SerializedName(SERIALIZED_NAME_DT_CONTACT_BIRTHDATE)
   private String dtContactBirthdate;
 
+  public static final String SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS = "objContactinformations";
+  @SerializedName(SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS)
+  private ContactinformationsRequestCompound objContactinformations;
+
   public ContactRequestCompound() { 
   }
-
-  public ContactRequestCompound objContactinformations(ContactinformationsRequestCompound objContactinformations) {
-    
-    this.objContactinformations = objContactinformations;
-    return this;
-  }
-
-   /**
-   * Get objContactinformations
-   * @return objContactinformations
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public ContactinformationsRequestCompound getObjContactinformations() {
-    return objContactinformations;
-  }
-
-
-  public void setObjContactinformations(ContactinformationsRequestCompound objContactinformations) {
-    this.objContactinformations = objContactinformations;
-  }
-
 
   public ContactRequestCompound fkiContacttitleID(Integer fkiContacttitleID) {
     
@@ -246,6 +223,29 @@ public class ContactRequestCompound {
   }
 
 
+  public ContactRequestCompound objContactinformations(ContactinformationsRequestCompound objContactinformations) {
+    
+    this.objContactinformations = objContactinformations;
+    return this;
+  }
+
+   /**
+   * Get objContactinformations
+   * @return objContactinformations
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public ContactinformationsRequestCompound getObjContactinformations() {
+    return objContactinformations;
+  }
+
+
+  public void setObjContactinformations(ContactinformationsRequestCompound objContactinformations) {
+    this.objContactinformations = objContactinformations;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -255,31 +255,31 @@ public class ContactRequestCompound {
       return false;
     }
     ContactRequestCompound contactRequestCompound = (ContactRequestCompound) o;
-    return Objects.equals(this.objContactinformations, contactRequestCompound.objContactinformations) &&
-        Objects.equals(this.fkiContacttitleID, contactRequestCompound.fkiContacttitleID) &&
+    return Objects.equals(this.fkiContacttitleID, contactRequestCompound.fkiContacttitleID) &&
         Objects.equals(this.fkiLanguageID, contactRequestCompound.fkiLanguageID) &&
         Objects.equals(this.sContactFirstname, contactRequestCompound.sContactFirstname) &&
         Objects.equals(this.sContactLastname, contactRequestCompound.sContactLastname) &&
         Objects.equals(this.sContactCompany, contactRequestCompound.sContactCompany) &&
-        Objects.equals(this.dtContactBirthdate, contactRequestCompound.dtContactBirthdate);
+        Objects.equals(this.dtContactBirthdate, contactRequestCompound.dtContactBirthdate) &&
+        Objects.equals(this.objContactinformations, contactRequestCompound.objContactinformations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objContactinformations, fkiContacttitleID, fkiLanguageID, sContactFirstname, sContactLastname, sContactCompany, dtContactBirthdate);
+    return Objects.hash(fkiContacttitleID, fkiLanguageID, sContactFirstname, sContactLastname, sContactCompany, dtContactBirthdate, objContactinformations);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactRequestCompound {\n");
-    sb.append("    objContactinformations: ").append(toIndentedString(objContactinformations)).append("\n");
     sb.append("    fkiContacttitleID: ").append(toIndentedString(fkiContacttitleID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sContactFirstname: ").append(toIndentedString(sContactFirstname)).append("\n");
     sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
     sb.append("    sContactCompany: ").append(toIndentedString(sContactCompany)).append("\n");
     sb.append("    dtContactBirthdate: ").append(toIndentedString(dtContactBirthdate)).append("\n");
+    sb.append("    objContactinformations: ").append(toIndentedString(objContactinformations)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -302,22 +302,22 @@ public class ContactRequestCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objContactinformations");
     openapiFields.add("fkiContacttitleID");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sContactFirstname");
     openapiFields.add("sContactLastname");
     openapiFields.add("sContactCompany");
     openapiFields.add("dtContactBirthdate");
+    openapiFields.add("objContactinformations");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objContactinformations");
     openapiRequiredFields.add("fkiContacttitleID");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sContactFirstname");
     openapiRequiredFields.add("sContactLastname");
     openapiRequiredFields.add("sContactCompany");
+    openapiRequiredFields.add("objContactinformations");
   }
 
  /**
@@ -330,7 +330,7 @@ public class ContactRequestCompound {
       if (jsonObj == null) {
         if (ContactRequestCompound.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ContactRequestCompound is not found in the empty JSON string", ContactRequestCompound.openapiRequiredFields.toString()));
         }
       }

@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
  * An Ezsigndocumentlog Object
  */
 @ApiModel(description = "An Ezsigndocumentlog Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigndocumentlogResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -358,7 +358,7 @@ public class EzsigndocumentlogResponse {
       if (jsonObj == null) {
         if (EzsigndocumentlogResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentlogResponse is not found in the empty JSON string", EzsigndocumentlogResponse.openapiRequiredFields.toString()));
         }
       }

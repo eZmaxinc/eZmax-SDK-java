@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * An Activesession Object
  */
 @ApiModel(description = "An Activesession Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE = "eActivesessionSessiontype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE)
@@ -330,7 +330,7 @@ public class ActivesessionResponse {
       if (jsonObj == null) {
         if (ActivesessionResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionResponse is not found in the empty JSON string", ActivesessionResponse.openapiRequiredFields.toString()));
         }
       }

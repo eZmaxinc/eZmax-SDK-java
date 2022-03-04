@@ -44,11 +44,11 @@ public class EzsignsignerRequestCompoundTest {
     }
 
     /**
-     * Test the property 'objContact'
+     * Test the property 'fkiUserlogintypeID'
      */
     @Test
-    public void objContactTest() {
-        // TODO: test objContact
+    public void fkiUserlogintypeIDTest() {
+        // TODO: test fkiUserlogintypeID
     }
 
     /**
@@ -81,6 +81,14 @@ public class EzsignsignerRequestCompoundTest {
     @Test
     public void sEzsignsignerSecretanswerTest() {
         // TODO: test sEzsignsignerSecretanswer
+    }
+
+    /**
+     * Test the property 'objContact'
+     */
+    @Test
+    public void objContactTest() {
+        // TODO: test objContact
     }
 
 }

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsigntemplatepackage/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsigntemplatepackage/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsigntemplatepackageGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -81,7 +81,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
   }
 
    /**
-   * 
+   * Get aObjEzsigntemplatepackage
    * @return aObjEzsigntemplatepackage
   **/
   @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsigntemplatepackageGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatepackageGetListV1ResponseMPayload is not found in the empty JSON string", EzsigntemplatepackageGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }

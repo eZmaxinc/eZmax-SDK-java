@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignsignaturecustomdateRequest;
+import com.ezmax.api.model.EzsignsignaturecustomdateRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignsignatureRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignsignatureRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -57,7 +57,7 @@ public class EzsignsignatureRequestCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
-  private List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate = null;
+  private List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate = null;
 
   public EzsignsignatureRequestCompoundAllOf() { 
   }
@@ -85,13 +85,13 @@ public class EzsignsignatureRequestCompoundAllOf {
   }
 
 
-  public EzsignsignatureRequestCompoundAllOf aObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
+  public EzsignsignatureRequestCompoundAllOf aObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
     
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
     return this;
   }
 
-  public EzsignsignatureRequestCompoundAllOf addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateRequest aObjEzsignsignaturecustomdateItem) {
+  public EzsignsignatureRequestCompoundAllOf addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateRequestCompound aObjEzsignsignaturecustomdateItem) {
     if (this.aObjEzsignsignaturecustomdate == null) {
       this.aObjEzsignsignaturecustomdate = new ArrayList<>();
     }
@@ -106,12 +106,12 @@ public class EzsignsignatureRequestCompoundAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
 
-  public List<EzsignsignaturecustomdateRequest> getaObjEzsignsignaturecustomdate() {
+  public List<EzsignsignaturecustomdateRequestCompound> getaObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;
   }
 
 
-  public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequest> aObjEzsignsignaturecustomdate) {
+  public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
   }
 
@@ -179,7 +179,7 @@ public class EzsignsignatureRequestCompoundAllOf {
       if (jsonObj == null) {
         if (EzsignsignatureRequestCompoundAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequestCompoundAllOf is not found in the empty JSON string", EzsignsignatureRequestCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -194,7 +194,7 @@ public class EzsignsignatureRequestCompoundAllOf {
       // validate the optional field `a_objEzsignsignaturecustomdate` (array)
       if (jsonArrayaObjEzsignsignaturecustomdate != null) {
         for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
-          EzsignsignaturecustomdateRequest.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
+          EzsignsignaturecustomdateRequestCompound.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
         };
       }
   }

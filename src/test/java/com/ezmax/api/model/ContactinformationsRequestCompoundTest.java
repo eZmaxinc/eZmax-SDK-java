@@ -13,12 +13,12 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.AddressRequest;
+import com.ezmax.api.model.AddressRequestCompound;
 import com.ezmax.api.model.ContactinformationsRequest;
 import com.ezmax.api.model.ContactinformationsRequestCompoundAllOf;
-import com.ezmax.api.model.EmailRequest;
-import com.ezmax.api.model.PhoneRequest;
-import com.ezmax.api.model.WebsiteRequest;
+import com.ezmax.api.model.EmailRequestCompound;
+import com.ezmax.api.model.PhoneRequestCompound;
+import com.ezmax.api.model.WebsiteRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,38 +46,6 @@ public class ContactinformationsRequestCompoundTest {
     @Test
     public void testContactinformationsRequestCompound() {
         // TODO: test ContactinformationsRequestCompound
-    }
-
-    /**
-     * Test the property 'aObjAddress'
-     */
-    @Test
-    public void aObjAddressTest() {
-        // TODO: test aObjAddress
-    }
-
-    /**
-     * Test the property 'aObjPhone'
-     */
-    @Test
-    public void aObjPhoneTest() {
-        // TODO: test aObjPhone
-    }
-
-    /**
-     * Test the property 'aObjEmail'
-     */
-    @Test
-    public void aObjEmailTest() {
-        // TODO: test aObjEmail
-    }
-
-    /**
-     * Test the property 'aObjWebsite'
-     */
-    @Test
-    public void aObjWebsiteTest() {
-        // TODO: test aObjWebsite
     }
 
     /**
@@ -110,6 +78,38 @@ public class ContactinformationsRequestCompoundTest {
     @Test
     public void iWebsiteDefaultTest() {
         // TODO: test iWebsiteDefault
+    }
+
+    /**
+     * Test the property 'aObjAddress'
+     */
+    @Test
+    public void aObjAddressTest() {
+        // TODO: test aObjAddress
+    }
+
+    /**
+     * Test the property 'aObjPhone'
+     */
+    @Test
+    public void aObjPhoneTest() {
+        // TODO: test aObjPhone
+    }
+
+    /**
+     * Test the property 'aObjEmail'
+     */
+    @Test
+    public void aObjEmailTest() {
+        // TODO: test aObjEmail
+    }
+
+    /**
+     * Test the property 'aObjWebsite'
+     */
+    @Test
+    public void aObjWebsiteTest() {
+        // TODO: test aObjWebsite
     }
 
 }

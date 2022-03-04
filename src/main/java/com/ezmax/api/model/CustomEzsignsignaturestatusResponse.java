@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsignaturestatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -280,7 +280,7 @@ public class CustomEzsignsignaturestatusResponse {
       if (jsonObj == null) {
         if (CustomEzsignsignaturestatusResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomEzsignsignaturestatusResponse is not found in the empty JSON string", CustomEzsignsignaturestatusResponse.openapiRequiredFields.toString()));
         }
       }

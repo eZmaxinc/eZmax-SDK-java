@@ -49,46 +49,6 @@ public class ActivesessionResponseCompoundTest {
     }
 
     /**
-     * Test the property 'aPkiPermissionID'
-     */
-    @Test
-    public void aPkiPermissionIDTest() {
-        // TODO: test aPkiPermissionID
-    }
-
-    /**
-     * Test the property 'objUserReal'
-     */
-    @Test
-    public void objUserRealTest() {
-        // TODO: test objUserReal
-    }
-
-    /**
-     * Test the property 'objUserCloned'
-     */
-    @Test
-    public void objUserClonedTest() {
-        // TODO: test objUserCloned
-    }
-
-    /**
-     * Test the property 'objApikey'
-     */
-    @Test
-    public void objApikeyTest() {
-        // TODO: test objApikey
-    }
-
-    /**
-     * Test the property 'aEModuleInternalname'
-     */
-    @Test
-    public void aEModuleInternalnameTest() {
-        // TODO: test aEModuleInternalname
-    }
-
-    /**
      * Test the property 'eActivesessionSessiontype'
      */
     @Test
@@ -142,6 +102,46 @@ public class ActivesessionResponseCompoundTest {
     @Test
     public void pksCustomerCodeTest() {
         // TODO: test pksCustomerCode
+    }
+
+    /**
+     * Test the property 'aPkiPermissionID'
+     */
+    @Test
+    public void aPkiPermissionIDTest() {
+        // TODO: test aPkiPermissionID
+    }
+
+    /**
+     * Test the property 'objUserReal'
+     */
+    @Test
+    public void objUserRealTest() {
+        // TODO: test objUserReal
+    }
+
+    /**
+     * Test the property 'objUserCloned'
+     */
+    @Test
+    public void objUserClonedTest() {
+        // TODO: test objUserCloned
+    }
+
+    /**
+     * Test the property 'objApikey'
+     */
+    @Test
+    public void objApikeyTest() {
+        // TODO: test objApikey
+    }
+
+    /**
+     * Test the property 'aEModuleInternalname'
+     */
+    @Test
+    public void aEModuleInternalnameTest() {
+        // TODO: test aEModuleInternalname
     }
 
 }

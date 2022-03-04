@@ -47,8 +47,16 @@ import eZmaxAPI.JSON;
  * An Ezsignformfield Object
  */
 @ApiModel(description = "An Ezsignformfield Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignformfieldResponse {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
+  private Integer pkiEzsignformfieldID;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
+  private Integer iEzsignpagePagenumber;
+
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
   private String sEzsignformfieldLabel;
@@ -57,8 +65,78 @@ public class EzsignformfieldResponse {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE)
   private String sEzsignformfieldValue;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_X = "iEzsignformfieldX";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_X)
+  private Integer iEzsignformfieldX;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y = "iEzsignformfieldY";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y)
+  private Integer iEzsignformfieldY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH = "iEzsignformfieldWidth";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH)
+  private Integer iEzsignformfieldWidth;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT = "iEzsignformfieldHeight";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT)
+  private Integer iEzsignformfieldHeight;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED = "bEzsignformfieldSelected";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED)
+  private Boolean bEzsignformfieldSelected;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
+  private String sEzsignformfieldEnteredvalue;
+
   public EzsignformfieldResponse() { 
   }
+
+  public EzsignformfieldResponse pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
+    
+    this.pkiEzsignformfieldID = pkiEzsignformfieldID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignformfield
+   * @return pkiEzsignformfieldID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "32", required = true, value = "The unique ID of the Ezsignformfield")
+
+  public Integer getPkiEzsignformfieldID() {
+    return pkiEzsignformfieldID;
+  }
+
+
+  public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
+    this.pkiEzsignformfieldID = pkiEzsignformfieldID;
+  }
+
+
+  public EzsignformfieldResponse iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+    
+    this.iEzsignpagePagenumber = iEzsignpagePagenumber;
+    return this;
+  }
+
+   /**
+   * The page number in the Ezsigndocument
+   * @return iEzsignpagePagenumber
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigndocument")
+
+  public Integer getiEzsignpagePagenumber() {
+    return iEzsignpagePagenumber;
+  }
+
+
+  public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+    this.iEzsignpagePagenumber = iEzsignpagePagenumber;
+  }
+
 
   public EzsignformfieldResponse sEzsignformfieldLabel(String sEzsignformfieldLabel) {
     
@@ -90,11 +168,11 @@ public class EzsignformfieldResponse {
   }
 
    /**
-   * The Value for the Ezsignformfield
+   * The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
    * @return sEzsignformfieldValue
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Yes", required = true, value = "The Value for the Ezsignformfield")
+  @ApiModelProperty(example = "Yes", required = true, value = "The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio")
 
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;
@@ -103,6 +181,144 @@ public class EzsignformfieldResponse {
 
   public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
+  }
+
+
+  public EzsignformfieldResponse iEzsignformfieldX(Integer iEzsignformfieldX) {
+    
+    this.iEzsignformfieldX = iEzsignformfieldX;
+    return this;
+  }
+
+   /**
+   * The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
+   * @return iEzsignformfieldX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
+
+  public Integer getiEzsignformfieldX() {
+    return iEzsignformfieldX;
+  }
+
+
+  public void setiEzsignformfieldX(Integer iEzsignformfieldX) {
+    this.iEzsignformfieldX = iEzsignformfieldX;
+  }
+
+
+  public EzsignformfieldResponse iEzsignformfieldY(Integer iEzsignformfieldY) {
+    
+    this.iEzsignformfieldY = iEzsignformfieldY;
+    return this;
+  }
+
+   /**
+   * The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+   * @return iEzsignformfieldY
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+
+  public Integer getiEzsignformfieldY() {
+    return iEzsignformfieldY;
+  }
+
+
+  public void setiEzsignformfieldY(Integer iEzsignformfieldY) {
+    this.iEzsignformfieldY = iEzsignformfieldY;
+  }
+
+
+  public EzsignformfieldResponse iEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
+    
+    this.iEzsignformfieldWidth = iEzsignformfieldWidth;
+    return this;
+  }
+
+   /**
+   * The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+   * @return iEzsignformfieldWidth
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "102", required = true, value = "The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |")
+
+  public Integer getiEzsignformfieldWidth() {
+    return iEzsignformfieldWidth;
+  }
+
+
+  public void setiEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
+    this.iEzsignformfieldWidth = iEzsignformfieldWidth;
+  }
+
+
+  public EzsignformfieldResponse iEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
+    
+    this.iEzsignformfieldHeight = iEzsignformfieldHeight;
+    return this;
+  }
+
+   /**
+   * The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+   * @return iEzsignformfieldHeight
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "22", required = true, value = "The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | ")
+
+  public Integer getiEzsignformfieldHeight() {
+    return iEzsignformfieldHeight;
+  }
+
+
+  public void setiEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
+    this.iEzsignformfieldHeight = iEzsignformfieldHeight;
+  }
+
+
+  public EzsignformfieldResponse bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
+    
+    this.bEzsignformfieldSelected = bEzsignformfieldSelected;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
+   * @return bEzsignformfieldSelected
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**")
+
+  public Boolean getbEzsignformfieldSelected() {
+    return bEzsignformfieldSelected;
+  }
+
+
+  public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
+    this.bEzsignformfieldSelected = bEzsignformfieldSelected;
+  }
+
+
+  public EzsignformfieldResponse sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
+    
+    this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
+    return this;
+  }
+
+   /**
+   * This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
+   * @return sEzsignformfieldEnteredvalue
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Montreal", value = "This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**")
+
+  public String getsEzsignformfieldEnteredvalue() {
+    return sEzsignformfieldEnteredvalue;
+  }
+
+
+  public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
+    this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
 
@@ -115,21 +331,37 @@ public class EzsignformfieldResponse {
       return false;
     }
     EzsignformfieldResponse ezsignformfieldResponse = (EzsignformfieldResponse) o;
-    return Objects.equals(this.sEzsignformfieldLabel, ezsignformfieldResponse.sEzsignformfieldLabel) &&
-        Objects.equals(this.sEzsignformfieldValue, ezsignformfieldResponse.sEzsignformfieldValue);
+    return Objects.equals(this.pkiEzsignformfieldID, ezsignformfieldResponse.pkiEzsignformfieldID) &&
+        Objects.equals(this.iEzsignpagePagenumber, ezsignformfieldResponse.iEzsignpagePagenumber) &&
+        Objects.equals(this.sEzsignformfieldLabel, ezsignformfieldResponse.sEzsignformfieldLabel) &&
+        Objects.equals(this.sEzsignformfieldValue, ezsignformfieldResponse.sEzsignformfieldValue) &&
+        Objects.equals(this.iEzsignformfieldX, ezsignformfieldResponse.iEzsignformfieldX) &&
+        Objects.equals(this.iEzsignformfieldY, ezsignformfieldResponse.iEzsignformfieldY) &&
+        Objects.equals(this.iEzsignformfieldWidth, ezsignformfieldResponse.iEzsignformfieldWidth) &&
+        Objects.equals(this.iEzsignformfieldHeight, ezsignformfieldResponse.iEzsignformfieldHeight) &&
+        Objects.equals(this.bEzsignformfieldSelected, ezsignformfieldResponse.bEzsignformfieldSelected) &&
+        Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponse.sEzsignformfieldEnteredvalue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sEzsignformfieldLabel, sEzsignformfieldValue);
+    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignformfieldResponse {\n");
+    sb.append("    pkiEzsignformfieldID: ").append(toIndentedString(pkiEzsignformfieldID)).append("\n");
+    sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    sEzsignformfieldLabel: ").append(toIndentedString(sEzsignformfieldLabel)).append("\n");
     sb.append("    sEzsignformfieldValue: ").append(toIndentedString(sEzsignformfieldValue)).append("\n");
+    sb.append("    iEzsignformfieldX: ").append(toIndentedString(iEzsignformfieldX)).append("\n");
+    sb.append("    iEzsignformfieldY: ").append(toIndentedString(iEzsignformfieldY)).append("\n");
+    sb.append("    iEzsignformfieldWidth: ").append(toIndentedString(iEzsignformfieldWidth)).append("\n");
+    sb.append("    iEzsignformfieldHeight: ").append(toIndentedString(iEzsignformfieldHeight)).append("\n");
+    sb.append("    bEzsignformfieldSelected: ").append(toIndentedString(bEzsignformfieldSelected)).append("\n");
+    sb.append("    sEzsignformfieldEnteredvalue: ").append(toIndentedString(sEzsignformfieldEnteredvalue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -152,13 +384,27 @@ public class EzsignformfieldResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("pkiEzsignformfieldID");
+    openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("sEzsignformfieldLabel");
     openapiFields.add("sEzsignformfieldValue");
+    openapiFields.add("iEzsignformfieldX");
+    openapiFields.add("iEzsignformfieldY");
+    openapiFields.add("iEzsignformfieldWidth");
+    openapiFields.add("iEzsignformfieldHeight");
+    openapiFields.add("bEzsignformfieldSelected");
+    openapiFields.add("sEzsignformfieldEnteredvalue");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("pkiEzsignformfieldID");
+    openapiRequiredFields.add("iEzsignpagePagenumber");
     openapiRequiredFields.add("sEzsignformfieldLabel");
     openapiRequiredFields.add("sEzsignformfieldValue");
+    openapiRequiredFields.add("iEzsignformfieldX");
+    openapiRequiredFields.add("iEzsignformfieldY");
+    openapiRequiredFields.add("iEzsignformfieldWidth");
+    openapiRequiredFields.add("iEzsignformfieldHeight");
   }
 
  /**
@@ -171,7 +417,7 @@ public class EzsignformfieldResponse {
       if (jsonObj == null) {
         if (EzsignformfieldResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldResponse is not found in the empty JSON string", EzsignformfieldResponse.openapiRequiredFields.toString()));
         }
       }

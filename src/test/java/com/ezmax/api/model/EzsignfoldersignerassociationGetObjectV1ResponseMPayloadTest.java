@@ -44,22 +44,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayloadTest {
     }
 
     /**
-     * Test the property 'objUser'
-     */
-    @Test
-    public void objUserTest() {
-        // TODO: test objUser
-    }
-
-    /**
-     * Test the property 'objEzsignsigner'
-     */
-    @Test
-    public void objEzsignsignerTest() {
-        // TODO: test objEzsignsigner
-    }
-
-    /**
      * Test the property 'pkiEzsignfoldersignerassociationID'
      */
     @Test
@@ -81,6 +65,22 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayloadTest {
     @Test
     public void bEzsignfoldersignerassociationReceivecopyTest() {
         // TODO: test bEzsignfoldersignerassociationReceivecopy
+    }
+
+    /**
+     * Test the property 'objUser'
+     */
+    @Test
+    public void objUserTest() {
+        // TODO: test objUser
+    }
+
+    /**
+     * Test the property 'objEzsignsigner'
+     */
+    @Test
+    public void objEzsignsignerTest() {
+        // TODO: test objEzsignsigner
     }
 
 }

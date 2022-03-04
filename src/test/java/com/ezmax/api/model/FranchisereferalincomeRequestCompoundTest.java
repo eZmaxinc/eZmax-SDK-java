@@ -47,22 +47,6 @@ public class FranchisereferalincomeRequestCompoundTest {
     }
 
     /**
-     * Test the property 'objAddress'
-     */
-    @Test
-    public void objAddressTest() {
-        // TODO: test objAddress
-    }
-
-    /**
-     * Test the property 'aObjContact'
-     */
-    @Test
-    public void aObjContactTest() {
-        // TODO: test aObjContact
-    }
-
-    /**
      * Test the property 'pkiFranchisereferalincomeID'
      */
     @Test
@@ -156,6 +140,22 @@ public class FranchisereferalincomeRequestCompoundTest {
     @Test
     public void sFranchisereferalincomeRemoteidTest() {
         // TODO: test sFranchisereferalincomeRemoteid
+    }
+
+    /**
+     * Test the property 'objAddress'
+     */
+    @Test
+    public void objAddressTest() {
+        // TODO: test objAddress
+    }
+
+    /**
+     * Test the property 'aObjContact'
+     */
+    @Test
+    public void aObjContactTest() {
+        // TODO: test aObjContact
     }
 
 }

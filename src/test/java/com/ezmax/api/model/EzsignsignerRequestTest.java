@@ -41,6 +41,14 @@ public class EzsignsignerRequestTest {
     }
 
     /**
+     * Test the property 'fkiUserlogintypeID'
+     */
+    @Test
+    public void fkiUserlogintypeIDTest() {
+        // TODO: test fkiUserlogintypeID
+    }
+
+    /**
      * Test the property 'fkiTaxassignmentID'
      */
     @Test

@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.EzsignformfieldgroupResponseCompound;
+import com.ezmax.api.model.CustomFormDataEzsignformfieldgroupResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A form Data Signer Object
  */
 @ApiModel(description = "A form Data Signer Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CustomFormDataSignerResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -68,9 +68,9 @@ public class CustomFormDataSignerResponse {
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
   private String sContactLastname;
 
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP_COMPOUND = "a_objEzsignformfieldgroupCompound";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP_COMPOUND)
-  private List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound = new ArrayList<>();
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
+  private List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = new ArrayList<>();
 
   public CustomFormDataSignerResponse() { 
   }
@@ -167,31 +167,31 @@ public class CustomFormDataSignerResponse {
   }
 
 
-  public CustomFormDataSignerResponse aObjEzsignformfieldgroupCompound(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound) {
+  public CustomFormDataSignerResponse aObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
     
-    this.aObjEzsignformfieldgroupCompound = aObjEzsignformfieldgroupCompound;
+    this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
 
-  public CustomFormDataSignerResponse addAObjEzsignformfieldgroupCompoundItem(EzsignformfieldgroupResponseCompound aObjEzsignformfieldgroupCompoundItem) {
-    this.aObjEzsignformfieldgroupCompound.add(aObjEzsignformfieldgroupCompoundItem);
+  public CustomFormDataSignerResponse addAObjEzsignformfieldgroupItem(CustomFormDataEzsignformfieldgroupResponse aObjEzsignformfieldgroupItem) {
+    this.aObjEzsignformfieldgroup.add(aObjEzsignformfieldgroupItem);
     return this;
   }
 
    /**
-   * 
-   * @return aObjEzsignformfieldgroupCompound
+   * Get aObjEzsignformfieldgroup
+   * @return aObjEzsignformfieldgroup
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<EzsignformfieldgroupResponseCompound> getaObjEzsignformfieldgroupCompound() {
-    return aObjEzsignformfieldgroupCompound;
+  public List<CustomFormDataEzsignformfieldgroupResponse> getaObjEzsignformfieldgroup() {
+    return aObjEzsignformfieldgroup;
   }
 
 
-  public void setaObjEzsignformfieldgroupCompound(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroupCompound) {
-    this.aObjEzsignformfieldgroupCompound = aObjEzsignformfieldgroupCompound;
+  public void setaObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
+    this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
 
 
@@ -208,12 +208,12 @@ public class CustomFormDataSignerResponse {
         Objects.equals(this.fkiUserID, customFormDataSignerResponse.fkiUserID) &&
         Objects.equals(this.sContactFirstname, customFormDataSignerResponse.sContactFirstname) &&
         Objects.equals(this.sContactLastname, customFormDataSignerResponse.sContactLastname) &&
-        Objects.equals(this.aObjEzsignformfieldgroupCompound, customFormDataSignerResponse.aObjEzsignformfieldgroupCompound);
+        Objects.equals(this.aObjEzsignformfieldgroup, customFormDataSignerResponse.aObjEzsignformfieldgroup);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfoldersignerassociationID, fkiUserID, sContactFirstname, sContactLastname, aObjEzsignformfieldgroupCompound);
+    return Objects.hash(fkiEzsignfoldersignerassociationID, fkiUserID, sContactFirstname, sContactLastname, aObjEzsignformfieldgroup);
   }
 
   @Override
@@ -224,7 +224,7 @@ public class CustomFormDataSignerResponse {
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    sContactFirstname: ").append(toIndentedString(sContactFirstname)).append("\n");
     sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
-    sb.append("    aObjEzsignformfieldgroupCompound: ").append(toIndentedString(aObjEzsignformfieldgroupCompound)).append("\n");
+    sb.append("    aObjEzsignformfieldgroup: ").append(toIndentedString(aObjEzsignformfieldgroup)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -251,14 +251,14 @@ public class CustomFormDataSignerResponse {
     openapiFields.add("fkiUserID");
     openapiFields.add("sContactFirstname");
     openapiFields.add("sContactLastname");
-    openapiFields.add("a_objEzsignformfieldgroupCompound");
+    openapiFields.add("a_objEzsignformfieldgroup");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("fkiEzsignfoldersignerassociationID");
     openapiRequiredFields.add("sContactFirstname");
     openapiRequiredFields.add("sContactLastname");
-    openapiRequiredFields.add("a_objEzsignformfieldgroupCompound");
+    openapiRequiredFields.add("a_objEzsignformfieldgroup");
   }
 
  /**
@@ -271,7 +271,7 @@ public class CustomFormDataSignerResponse {
       if (jsonObj == null) {
         if (CustomFormDataSignerResponse.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomFormDataSignerResponse is not found in the empty JSON string", CustomFormDataSignerResponse.openapiRequiredFields.toString()));
         }
       }
@@ -289,11 +289,11 @@ public class CustomFormDataSignerResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      JsonArray jsonArrayaObjEzsignformfieldgroupCompound = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupCompound");
-      // validate the optional field `a_objEzsignformfieldgroupCompound` (array)
-      if (jsonArrayaObjEzsignformfieldgroupCompound != null) {
-        for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupCompound.size(); i++) {
-          EzsignformfieldgroupResponseCompound.validateJsonObject(jsonArrayaObjEzsignformfieldgroupCompound.get(i).getAsJsonObject());
+      JsonArray jsonArrayaObjEzsignformfieldgroup = jsonObj.getAsJsonArray("a_objEzsignformfieldgroup");
+      // validate the optional field `a_objEzsignformfieldgroup` (array)
+      if (jsonArrayaObjEzsignformfieldgroup != null) {
+        for (int i = 0; i < jsonArrayaObjEzsignformfieldgroup.size(); i++) {
+          CustomFormDataEzsignformfieldgroupResponse.validateJsonObject(jsonArrayaObjEzsignformfieldgroup.get(i).getAsJsonObject());
         };
       }
   }

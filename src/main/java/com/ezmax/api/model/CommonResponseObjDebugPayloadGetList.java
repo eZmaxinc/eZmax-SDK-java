@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -281,7 +281,7 @@ public class CommonResponseObjDebugPayloadGetList {
       if (jsonObj == null) {
         if (CommonResponseObjDebugPayloadGetList.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayloadGetList is not found in the empty JSON string", CommonResponseObjDebugPayloadGetList.openapiRequiredFields.toString()));
         }
       }

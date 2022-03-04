@@ -47,7 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfoldersignerassociationRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
@@ -66,8 +66,8 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
    * Get objEzsignsigner
    * @return objEzsignsigner
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public EzsignsignerRequestCompound getObjEzsignsigner() {
     return objEzsignsigner;
@@ -127,7 +127,6 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objEzsignsigner");
   }
 
  /**
@@ -140,7 +139,7 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
       if (jsonObj == null) {
         if (EzsignfoldersignerassociationRequestCompoundAllOf.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationRequestCompoundAllOf is not found in the empty JSON string", EzsignfoldersignerassociationRequestCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
@@ -149,13 +148,6 @@ public class EzsignfoldersignerassociationRequestCompoundAllOf {
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignfoldersignerassociationRequestCompoundAllOf.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldersignerassociationRequestCompoundAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsignfoldersignerassociationRequestCompoundAllOf.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       // validate the optional field `objEzsignsigner`

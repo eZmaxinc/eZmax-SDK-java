@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.CommonAuditdetail;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -44,173 +45,65 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  
+ * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
  */
-@ApiModel(description = "Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same.  Apikey details will only be provided if the changes were made by an API key.  ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@ApiModel(description = "Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won't be returned. ")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class CommonAudit {
-  public static final String SERIALIZED_NAME_FKI_USER_I_D_CREATED = "fkiUserIDCreated";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_CREATED)
-  private Integer fkiUserIDCreated;
+  public static final String SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED = "objAuditdetailCreated";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED)
+  private CommonAuditdetail objAuditdetailCreated;
 
-  public static final String SERIALIZED_NAME_FKI_USER_I_D_MODIFIED = "fkiUserIDModified";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_MODIFIED)
-  private Integer fkiUserIDModified;
-
-  public static final String SERIALIZED_NAME_FKI_APIKEY_I_D_CREATED = "fkiApikeyIDCreated";
-  @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D_CREATED)
-  private Integer fkiApikeyIDCreated;
-
-  public static final String SERIALIZED_NAME_FKI_APIKEY_I_D_MODIFIED = "fkiApikeyIDModified";
-  @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D_MODIFIED)
-  private Integer fkiApikeyIDModified;
-
-  public static final String SERIALIZED_NAME_DT_CREATED_DATE = "dtCreatedDate";
-  @SerializedName(SERIALIZED_NAME_DT_CREATED_DATE)
-  private String dtCreatedDate;
-
-  public static final String SERIALIZED_NAME_DT_MODIFIED_DATE = "dtModifiedDate";
-  @SerializedName(SERIALIZED_NAME_DT_MODIFIED_DATE)
-  private String dtModifiedDate;
+  public static final String SERIALIZED_NAME_OBJ_AUDITDETAIL_MODIFIED = "objAuditdetailModified";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDITDETAIL_MODIFIED)
+  private CommonAuditdetail objAuditdetailModified;
 
   public CommonAudit() { 
   }
 
-  public CommonAudit fkiUserIDCreated(Integer fkiUserIDCreated) {
+  public CommonAudit objAuditdetailCreated(CommonAuditdetail objAuditdetailCreated) {
     
-    this.fkiUserIDCreated = fkiUserIDCreated;
+    this.objAuditdetailCreated = objAuditdetailCreated;
     return this;
   }
 
    /**
-   * The unique ID of the User
-   * @return fkiUserIDCreated
+   * Get objAuditdetailCreated
+   * @return objAuditdetailCreated
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
+  @ApiModelProperty(required = true, value = "")
 
-  public Integer getFkiUserIDCreated() {
-    return fkiUserIDCreated;
+  public CommonAuditdetail getObjAuditdetailCreated() {
+    return objAuditdetailCreated;
   }
 
 
-  public void setFkiUserIDCreated(Integer fkiUserIDCreated) {
-    this.fkiUserIDCreated = fkiUserIDCreated;
+  public void setObjAuditdetailCreated(CommonAuditdetail objAuditdetailCreated) {
+    this.objAuditdetailCreated = objAuditdetailCreated;
   }
 
 
-  public CommonAudit fkiUserIDModified(Integer fkiUserIDModified) {
+  public CommonAudit objAuditdetailModified(CommonAuditdetail objAuditdetailModified) {
     
-    this.fkiUserIDModified = fkiUserIDModified;
+    this.objAuditdetailModified = objAuditdetailModified;
     return this;
   }
 
    /**
-   * The unique ID of the User
-   * @return fkiUserIDModified
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
-
-  public Integer getFkiUserIDModified() {
-    return fkiUserIDModified;
-  }
-
-
-  public void setFkiUserIDModified(Integer fkiUserIDModified) {
-    this.fkiUserIDModified = fkiUserIDModified;
-  }
-
-
-  public CommonAudit fkiApikeyIDCreated(Integer fkiApikeyIDCreated) {
-    
-    this.fkiApikeyIDCreated = fkiApikeyIDCreated;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Apikey
-   * @return fkiApikeyIDCreated
+   * Get objAuditdetailModified
+   * @return objAuditdetailModified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "99", value = "The unique ID of the Apikey")
+  @ApiModelProperty(value = "")
 
-  public Integer getFkiApikeyIDCreated() {
-    return fkiApikeyIDCreated;
+  public CommonAuditdetail getObjAuditdetailModified() {
+    return objAuditdetailModified;
   }
 
 
-  public void setFkiApikeyIDCreated(Integer fkiApikeyIDCreated) {
-    this.fkiApikeyIDCreated = fkiApikeyIDCreated;
-  }
-
-
-  public CommonAudit fkiApikeyIDModified(Integer fkiApikeyIDModified) {
-    
-    this.fkiApikeyIDModified = fkiApikeyIDModified;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Apikey
-   * @return fkiApikeyIDModified
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "99", value = "The unique ID of the Apikey")
-
-  public Integer getFkiApikeyIDModified() {
-    return fkiApikeyIDModified;
-  }
-
-
-  public void setFkiApikeyIDModified(Integer fkiApikeyIDModified) {
-    this.fkiApikeyIDModified = fkiApikeyIDModified;
-  }
-
-
-  public CommonAudit dtCreatedDate(String dtCreatedDate) {
-    
-    this.dtCreatedDate = dtCreatedDate;
-    return this;
-  }
-
-   /**
-   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-   * @return dtCreatedDate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
-
-  public String getDtCreatedDate() {
-    return dtCreatedDate;
-  }
-
-
-  public void setDtCreatedDate(String dtCreatedDate) {
-    this.dtCreatedDate = dtCreatedDate;
-  }
-
-
-  public CommonAudit dtModifiedDate(String dtModifiedDate) {
-    
-    this.dtModifiedDate = dtModifiedDate;
-    return this;
-  }
-
-   /**
-   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-   * @return dtModifiedDate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
-
-  public String getDtModifiedDate() {
-    return dtModifiedDate;
-  }
-
-
-  public void setDtModifiedDate(String dtModifiedDate) {
-    this.dtModifiedDate = dtModifiedDate;
+  public void setObjAuditdetailModified(CommonAuditdetail objAuditdetailModified) {
+    this.objAuditdetailModified = objAuditdetailModified;
   }
 
 
@@ -223,29 +116,21 @@ public class CommonAudit {
       return false;
     }
     CommonAudit commonAudit = (CommonAudit) o;
-    return Objects.equals(this.fkiUserIDCreated, commonAudit.fkiUserIDCreated) &&
-        Objects.equals(this.fkiUserIDModified, commonAudit.fkiUserIDModified) &&
-        Objects.equals(this.fkiApikeyIDCreated, commonAudit.fkiApikeyIDCreated) &&
-        Objects.equals(this.fkiApikeyIDModified, commonAudit.fkiApikeyIDModified) &&
-        Objects.equals(this.dtCreatedDate, commonAudit.dtCreatedDate) &&
-        Objects.equals(this.dtModifiedDate, commonAudit.dtModifiedDate);
+    return Objects.equals(this.objAuditdetailCreated, commonAudit.objAuditdetailCreated) &&
+        Objects.equals(this.objAuditdetailModified, commonAudit.objAuditdetailModified);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiUserIDCreated, fkiUserIDModified, fkiApikeyIDCreated, fkiApikeyIDModified, dtCreatedDate, dtModifiedDate);
+    return Objects.hash(objAuditdetailCreated, objAuditdetailModified);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonAudit {\n");
-    sb.append("    fkiUserIDCreated: ").append(toIndentedString(fkiUserIDCreated)).append("\n");
-    sb.append("    fkiUserIDModified: ").append(toIndentedString(fkiUserIDModified)).append("\n");
-    sb.append("    fkiApikeyIDCreated: ").append(toIndentedString(fkiApikeyIDCreated)).append("\n");
-    sb.append("    fkiApikeyIDModified: ").append(toIndentedString(fkiApikeyIDModified)).append("\n");
-    sb.append("    dtCreatedDate: ").append(toIndentedString(dtCreatedDate)).append("\n");
-    sb.append("    dtModifiedDate: ").append(toIndentedString(dtModifiedDate)).append("\n");
+    sb.append("    objAuditdetailCreated: ").append(toIndentedString(objAuditdetailCreated)).append("\n");
+    sb.append("    objAuditdetailModified: ").append(toIndentedString(objAuditdetailModified)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -268,19 +153,12 @@ public class CommonAudit {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("fkiUserIDCreated");
-    openapiFields.add("fkiUserIDModified");
-    openapiFields.add("fkiApikeyIDCreated");
-    openapiFields.add("fkiApikeyIDModified");
-    openapiFields.add("dtCreatedDate");
-    openapiFields.add("dtModifiedDate");
+    openapiFields.add("objAuditdetailCreated");
+    openapiFields.add("objAuditdetailModified");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("fkiUserIDCreated");
-    openapiRequiredFields.add("fkiUserIDModified");
-    openapiRequiredFields.add("dtCreatedDate");
-    openapiRequiredFields.add("dtModifiedDate");
+    openapiRequiredFields.add("objAuditdetailCreated");
   }
 
  /**
@@ -293,7 +171,7 @@ public class CommonAudit {
       if (jsonObj == null) {
         if (CommonAudit.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonAudit is not found in the empty JSON string", CommonAudit.openapiRequiredFields.toString()));
         }
       }
@@ -310,6 +188,14 @@ public class CommonAudit {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      // validate the optional field `objAuditdetailCreated`
+      if (jsonObj.getAsJsonObject("objAuditdetailCreated") != null) {
+        CommonAuditdetail.validateJsonObject(jsonObj.getAsJsonObject("objAuditdetailCreated"));
+      }
+      // validate the optional field `objAuditdetailModified`
+      if (jsonObj.getAsJsonObject("objAuditdetailModified") != null) {
+        CommonAuditdetail.validateJsonObject(jsonObj.getAsJsonObject("objAuditdetailModified"));
       }
   }
 

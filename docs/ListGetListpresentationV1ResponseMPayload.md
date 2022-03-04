@@ -8,7 +8,7 @@ Payload for the GET /1/module/list/listpresentation/{sListName} API Request
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**aObjListpresentation** | [**List&lt;ListpresentationRequest&gt;**](ListpresentationRequest.md) |  | 
+**aObjListpresentation** | [**List&lt;ListpresentationResponseCompound&gt;**](ListpresentationResponseCompound.md) |  | 
 
 
 

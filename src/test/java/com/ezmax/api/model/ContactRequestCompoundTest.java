@@ -44,14 +44,6 @@ public class ContactRequestCompoundTest {
     }
 
     /**
-     * Test the property 'objContactinformations'
-     */
-    @Test
-    public void objContactinformationsTest() {
-        // TODO: test objContactinformations
-    }
-
-    /**
      * Test the property 'fkiContacttitleID'
      */
     @Test
@@ -97,6 +89,14 @@ public class ContactRequestCompoundTest {
     @Test
     public void dtContactBirthdateTest() {
         // TODO: test dtContactBirthdate
+    }
+
+    /**
+     * Test the property 'objContactinformations'
+     */
+    @Test
+    public void objContactinformationsTest() {
+        // TODO: test objContactinformations
     }
 
 }

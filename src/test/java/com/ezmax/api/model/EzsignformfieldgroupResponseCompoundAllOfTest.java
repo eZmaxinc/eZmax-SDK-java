@@ -13,7 +13,9 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignformfieldResponse;
+import com.ezmax.api.model.CustomDropdownElementResponseCompound;
+import com.ezmax.api.model.EzsignformfieldResponseCompound;
+import com.ezmax.api.model.EzsignformfieldgroupsignerResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,6 +51,22 @@ public class EzsignformfieldgroupResponseCompoundAllOfTest {
     @Test
     public void aObjEzsignformfieldTest() {
         // TODO: test aObjEzsignformfield
+    }
+
+    /**
+     * Test the property 'aObjDropdownElement'
+     */
+    @Test
+    public void aObjDropdownElementTest() {
+        // TODO: test aObjDropdownElement
+    }
+
+    /**
+     * Test the property 'aObjEzsignformfieldgroupsigner'
+     */
+    @Test
+    public void aObjEzsignformfieldgroupsignerTest() {
+        // TODO: test aObjEzsignformfieldgroupsigner
     }
 
 }

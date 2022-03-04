@@ -44,14 +44,6 @@ public class EzsignsignerResponseCompoundTest {
     }
 
     /**
-     * Test the property 'objContact'
-     */
-    @Test
-    public void objContactTest() {
-        // TODO: test objContact
-    }
-
-    /**
      * Test the property 'pkiEzsignsignerID'
      */
     @Test
@@ -89,6 +81,14 @@ public class EzsignsignerResponseCompoundTest {
     @Test
     public void sUserlogintypeDescriptionXTest() {
         // TODO: test sUserlogintypeDescriptionX
+    }
+
+    /**
+     * Test the property 'objContact'
+     */
+    @Test
+    public void objContactTest() {
+        // TODO: test objContact
     }
 
 }

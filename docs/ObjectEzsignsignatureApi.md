@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 Retrieve an existing Ezsignsignature
 
-## ⚠️EARLY ADOPTERS WARNING  ### This endpoint is not officially released. Its definition might still change and it might not be available in every environment and region.
+
 
 ### Example
 ```java

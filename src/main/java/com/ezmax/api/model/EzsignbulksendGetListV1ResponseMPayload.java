@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for the /1/object/ezsignbulksend/getList API Request
  */
 @ApiModel(description = "Payload for the /1/object/ezsignbulksend/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T05:00:31.569417Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T21:27:42.909167Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
@@ -81,7 +81,7 @@ public class EzsignbulksendGetListV1ResponseMPayload {
   }
 
    /**
-   * 
+   * Get aObjEzsignbulksend
    * @return aObjEzsignbulksend
   **/
   @javax.annotation.Nonnull
@@ -212,7 +212,7 @@ public class EzsignbulksendGetListV1ResponseMPayload {
       if (jsonObj == null) {
         if (EzsignbulksendGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) {
           return;
-        } else { // has reuqired fields
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendGetListV1ResponseMPayload is not found in the empty JSON string", EzsignbulksendGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
