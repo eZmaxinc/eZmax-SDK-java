@@ -2,14 +2,14 @@
 
 # EzsignformfieldgroupDeleteObjectV1Response
 
-Response for the /1/object/ezsignformfieldgroup/deleteObject API Request
+Response for DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

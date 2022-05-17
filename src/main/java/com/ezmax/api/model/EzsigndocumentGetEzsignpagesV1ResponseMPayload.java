@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,10 +48,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
  */
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNPAGE = "a_objEzsignpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNPAGE)
@@ -85,6 +86,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public void setaObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     this.aObjEzsignpage = aObjEzsignpage;
   }
+
 
 
   @Override
@@ -152,6 +154,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetEzsignpagesV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetEzsignpagesV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -167,8 +170,13 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
         }
       }
       JsonArray jsonArrayaObjEzsignpage = jsonObj.getAsJsonArray("a_objEzsignpage");
-      // validate the optional field `a_objEzsignpage` (array)
       if (jsonArrayaObjEzsignpage != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignpage").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignpage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignpage").toString()));
+        }
+
+        // validate the optional field `a_objEzsignpage` (array)
         for (int i = 0; i < jsonArrayaObjEzsignpage.size(); i++) {
           EzsignpageResponseCompound.validateJsonObject(jsonArrayaObjEzsignpage.get(i).getAsJsonObject());
         };

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -38,6 +38,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
  * An Apikey Object
  */
 @ApiModel(description = "An Apikey Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class ApikeyResponse {
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
@@ -162,6 +163,7 @@ public class ApikeyResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -238,6 +240,7 @@ public class ApikeyResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ApikeyResponse is not found in the empty JSON string", ApikeyResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -255,6 +258,9 @@ public class ApikeyResponse {
       // validate the optional field `objApikeyDescription`
       if (jsonObj.getAsJsonObject("objApikeyDescription") != null) {
         MultilingualApikeyDescription.validateJsonObject(jsonObj.getAsJsonObject("objApikeyDescription"));
+      }
+      if (jsonObj.get("sComputedToken") != null && !jsonObj.get("sComputedToken").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sComputedToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sComputedToken").toString()));
       }
       // validate the optional field `objAudit`
       if (jsonObj.getAsJsonObject("objAudit") != null) {

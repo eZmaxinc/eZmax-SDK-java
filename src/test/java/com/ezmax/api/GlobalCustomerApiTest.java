@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,8 +16,8 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.GlobalCustomerGetEndpointV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,26 +27,24 @@ import java.util.Map;
 /**
  * API tests for GlobalCustomerApi
  */
-@Ignore
+@Disabled
 public class GlobalCustomerApiTest {
 
     private final GlobalCustomerApi api = new GlobalCustomerApi();
 
-    
     /**
      * Get customer endpoint
      *
      * Retrieve the customer&#39;s specific server endpoint where to send requests. This will help locate the proper region (ie: sInfrastructureregionCode) and the proper environment (ie: sInfrastructureenvironmenttypeDescription) where the customer&#39;s data is stored.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void globalCustomerGetEndpointV1Test() throws ApiException {
         String pksCustomerCode = null;
         String sInfrastructureproductCode = null;
-                GlobalCustomerGetEndpointV1Response response = api.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
+        GlobalCustomerGetEndpointV1Response response = api.globalCustomerGetEndpointV1(pksCustomerCode, sInfrastructureproductCode);
         // TODO: test validations
     }
-    
+
 }

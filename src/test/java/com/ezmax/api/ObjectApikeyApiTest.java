@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,8 +18,8 @@ import com.ezmax.api.model.ApikeyCreateObjectV1Request;
 import com.ezmax.api.model.ApikeyCreateObjectV1Response;
 import com.ezmax.api.model.ApikeyCreateObjectV2Request;
 import com.ezmax.api.model.ApikeyCreateObjectV2Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,40 +29,37 @@ import java.util.Map;
 /**
  * API tests for ObjectApikeyApi
  */
-@Ignore
+@Disabled
 public class ObjectApikeyApiTest {
 
     private final ObjectApikeyApi api = new ObjectApikeyApi();
 
-    
     /**
      * Create a new Apikey
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void apikeyCreateObjectV1Test() throws ApiException {
         List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request = null;
-                ApikeyCreateObjectV1Response response = api.apikeyCreateObjectV1(apikeyCreateObjectV1Request);
+        ApikeyCreateObjectV1Response response = api.apikeyCreateObjectV1(apikeyCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Apikey
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void apikeyCreateObjectV2Test() throws ApiException {
         ApikeyCreateObjectV2Request apikeyCreateObjectV2Request = null;
-                ApikeyCreateObjectV2Response response = api.apikeyCreateObjectV2(apikeyCreateObjectV2Request);
+        ApikeyCreateObjectV2Response response = api.apikeyCreateObjectV2(apikeyCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
 }

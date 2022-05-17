@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -77,6 +78,7 @@ public class ObjectPeriodApi {
      * Build call for periodGetAutocompleteV1
      * @param sSelector The types of Periods to return (required)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -86,7 +88,7 @@ public class ObjectPeriodApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call periodGetAutocompleteV1Call(String sSelector, String sQuery, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call periodGetAutocompleteV1Call(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -116,6 +118,10 @@ public class ObjectPeriodApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("sQuery", sQuery));
         }
 
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -137,7 +143,7 @@ public class ObjectPeriodApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call periodGetAutocompleteV1ValidateBeforeCall(String sSelector, String sQuery, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call periodGetAutocompleteV1ValidateBeforeCall(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'sSelector' is set
         if (sSelector == null) {
@@ -145,7 +151,7 @@ public class ObjectPeriodApi {
         }
         
 
-        okhttp3.Call localVarCall = periodGetAutocompleteV1Call(sSelector, sQuery, _callback);
+        okhttp3.Call localVarCall = periodGetAutocompleteV1Call(sSelector, sQuery, acceptLanguage, _callback);
         return localVarCall;
 
     }
@@ -155,6 +161,7 @@ public class ObjectPeriodApi {
      * Get the list of Periods to be used in a dropdown or autocomplete control.
      * @param sSelector The types of Periods to return (required)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @return CommonGetAutocompleteV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -163,8 +170,8 @@ public class ObjectPeriodApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public CommonGetAutocompleteV1Response periodGetAutocompleteV1(String sSelector, String sQuery) throws ApiException {
-        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = periodGetAutocompleteV1WithHttpInfo(sSelector, sQuery);
+    public CommonGetAutocompleteV1Response periodGetAutocompleteV1(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = periodGetAutocompleteV1WithHttpInfo(sSelector, sQuery, acceptLanguage);
         return localVarResp.getData();
     }
 
@@ -173,6 +180,7 @@ public class ObjectPeriodApi {
      * Get the list of Periods to be used in a dropdown or autocomplete control.
      * @param sSelector The types of Periods to return (required)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @return ApiResponse&lt;CommonGetAutocompleteV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -181,16 +189,10 @@ public class ObjectPeriodApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonGetAutocompleteV1Response> periodGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery) throws ApiException {
-        okhttp3.Call localVarCall = periodGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, null);
-        try {
-            Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CommonGetAutocompleteV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<CommonGetAutocompleteV1Response>(){});
-            throw e;
-        }
+    public ApiResponse<CommonGetAutocompleteV1Response> periodGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        okhttp3.Call localVarCall = periodGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, null);
+        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -198,6 +200,7 @@ public class ObjectPeriodApi {
      * Get the list of Periods to be used in a dropdown or autocomplete control.
      * @param sSelector The types of Periods to return (required)
      * @param sQuery Allow to filter the returned results (optional)
+     * @param acceptLanguage  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -207,9 +210,9 @@ public class ObjectPeriodApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call periodGetAutocompleteV1Async(String sSelector, String sQuery, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
+    public okhttp3.Call periodGetAutocompleteV1Async(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = periodGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, _callback);
+        okhttp3.Call localVarCall = periodGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

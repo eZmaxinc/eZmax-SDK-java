@@ -2,14 +2,14 @@
 
 # EzsigndocumentApplyEzsigntemplateV1Response
 
-Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate API Request
+Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

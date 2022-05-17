@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,6 +18,8 @@ import java.util.Arrays;
 import com.ezmax.api.model.EzsignsignatureRequest;
 import com.ezmax.api.model.EzsignsignatureRequestCompoundAllOf;
 import com.ezmax.api.model.EzsignsignaturecustomdateRequestCompound;
+import com.ezmax.api.model.FieldEEzsignsignatureFont;
+import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -42,6 +44,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -53,7 +56,7 @@ import eZmaxAPI.JSON;
  * An Ezsignsignature Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -86,6 +89,18 @@ public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
   private Integer fkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP = "tEzsignsignatureTooltip";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP)
+  private String tEzsignsignatureTooltip;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_TOOLTIPPOSITION = "eEzsignsignatureTooltipposition";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TOOLTIPPOSITION)
+  private FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_FONT = "eEzsignsignatureFont";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_FONT)
+  private FieldEEzsignsignatureFont eEzsignsignatureFont;
 
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -197,11 +212,11 @@ public class EzsignsignatureRequestCompound {
   }
 
    /**
-   * The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+   * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * @return iEzsignsignatureY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
@@ -282,6 +297,75 @@ public class EzsignsignatureRequestCompound {
   }
 
 
+  public EzsignsignatureRequestCompound tEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+    return this;
+  }
+
+   /**
+   * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+   * @return tEzsignsignatureTooltip
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Please sign here if you agree to the terms", value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
+
+  public String gettEzsignsignatureTooltip() {
+    return tEzsignsignatureTooltip;
+  }
+
+
+  public void settEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+  }
+
+
+  public EzsignsignatureRequestCompound eEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureTooltipposition
+   * @return eEzsignsignatureTooltipposition
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
+    return eEzsignsignatureTooltipposition;
+  }
+
+
+  public void seteEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+  }
+
+
+  public EzsignsignatureRequestCompound eEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureFont
+   * @return eEzsignsignatureFont
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
+    return eEzsignsignatureFont;
+  }
+
+
+  public void seteEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
+  }
+
+
   public EzsignsignatureRequestCompound bEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
     
     this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
@@ -289,11 +373,11 @@ public class EzsignsignatureRequestCompound {
   }
 
    /**
-   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
 
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -336,6 +420,7 @@ public class EzsignsignatureRequestCompound {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -353,13 +438,16 @@ public class EzsignsignatureRequestCompound {
         Objects.equals(this.iEzsignsignatureStep, ezsignsignatureRequestCompound.iEzsignsignatureStep) &&
         Objects.equals(this.eEzsignsignatureType, ezsignsignatureRequestCompound.eEzsignsignatureType) &&
         Objects.equals(this.fkiEzsigndocumentID, ezsignsignatureRequestCompound.fkiEzsigndocumentID) &&
+        Objects.equals(this.tEzsignsignatureTooltip, ezsignsignatureRequestCompound.tEzsignsignatureTooltip) &&
+        Objects.equals(this.eEzsignsignatureTooltipposition, ezsignsignatureRequestCompound.eEzsignsignatureTooltipposition) &&
+        Objects.equals(this.eEzsignsignatureFont, ezsignsignatureRequestCompound.eEzsignsignatureFont) &&
         Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureRequestCompound.bEzsignsignatureCustomdate) &&
         Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureRequestCompound.aObjEzsignsignaturecustomdate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate);
   }
 
   @Override
@@ -374,6 +462,9 @@ public class EzsignsignatureRequestCompound {
     sb.append("    iEzsignsignatureStep: ").append(toIndentedString(iEzsignsignatureStep)).append("\n");
     sb.append("    eEzsignsignatureType: ").append(toIndentedString(eEzsignsignatureType)).append("\n");
     sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
+    sb.append("    tEzsignsignatureTooltip: ").append(toIndentedString(tEzsignsignatureTooltip)).append("\n");
+    sb.append("    eEzsignsignatureTooltipposition: ").append(toIndentedString(eEzsignsignatureTooltipposition)).append("\n");
+    sb.append("    eEzsignsignatureFont: ").append(toIndentedString(eEzsignsignatureFont)).append("\n");
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
     sb.append("}");
@@ -406,6 +497,9 @@ public class EzsignsignatureRequestCompound {
     openapiFields.add("iEzsignsignatureStep");
     openapiFields.add("eEzsignsignatureType");
     openapiFields.add("fkiEzsigndocumentID");
+    openapiFields.add("tEzsignsignatureTooltip");
+    openapiFields.add("eEzsignsignatureTooltipposition");
+    openapiFields.add("eEzsignsignatureFont");
     openapiFields.add("bEzsignsignatureCustomdate");
     openapiFields.add("a_objEzsignsignaturecustomdate");
 
@@ -434,6 +528,7 @@ public class EzsignsignatureRequestCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequestCompound is not found in the empty JSON string", EzsignsignatureRequestCompound.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -448,9 +543,17 @@ public class EzsignsignatureRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("tEzsignsignatureTooltip") != null && !jsonObj.get("tEzsignsignatureTooltip").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
+      }
       JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
-      // validate the optional field `a_objEzsignsignaturecustomdate` (array)
       if (jsonArrayaObjEzsignsignaturecustomdate != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignsignaturecustomdate").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignaturecustomdate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturecustomdate").toString()));
+        }
+
+        // validate the optional field `a_objEzsignsignaturecustomdate` (array)
         for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
           EzsignsignaturecustomdateRequestCompound.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
         };

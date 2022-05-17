@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
  * A Word Position Object
  */
 @ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -112,6 +113,7 @@ public class CustomWordPositionWordResponse {
   public void setaObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
     this.aObjWordPositionOccurence = aObjWordPositionOccurence;
   }
+
 
 
   @Override
@@ -183,6 +185,7 @@ public class CustomWordPositionWordResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomWordPositionWordResponse is not found in the empty JSON string", CustomWordPositionWordResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -197,9 +200,17 @@ public class CustomWordPositionWordResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sWord") != null && !jsonObj.get("sWord").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWord` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWord").toString()));
+      }
       JsonArray jsonArrayaObjWordPositionOccurence = jsonObj.getAsJsonArray("a_objWordPositionOccurence");
-      // validate the optional field `a_objWordPositionOccurence` (array)
       if (jsonArrayaObjWordPositionOccurence != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objWordPositionOccurence").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objWordPositionOccurence` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWordPositionOccurence").toString()));
+        }
+
+        // validate the optional field `a_objWordPositionOccurence` (array)
         for (int i = 0; i < jsonArrayaObjWordPositionOccurence.size(); i++) {
           CustomWordPositionOccurenceResponse.validateJsonObject(jsonArrayaObjWordPositionOccurence.get(i).getAsJsonObject());
         };

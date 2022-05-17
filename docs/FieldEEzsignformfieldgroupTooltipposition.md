@@ -13,8 +13,6 @@
 
 * `MIDDLELEFT` (value: `"MiddleLeft"`)
 
-* `MIDDLECENTER` (value: `"MiddleCenter"`)
-
 * `MIDDLERIGHT` (value: `"MiddleRight"`)
 
 * `BOTTOMLEFT` (value: `"BottomLeft"`)

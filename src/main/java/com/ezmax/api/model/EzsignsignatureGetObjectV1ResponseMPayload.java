@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -17,6 +17,8 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.EzsignsignatureResponseCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
+import com.ezmax.api.model.FieldEEzsignsignatureFont;
+import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -41,6 +43,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,14 +52,18 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsignsignature/getObject API Request
+ * Payload for GET /1/object/ezsignsignature/{pkiEzsignsignatureID}
  */
-@ApiModel(description = "Payload for the /1/object/ezsignsignature/getObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsignsignature/{pkiEzsignsignatureID}")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignsignatureGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
   private Integer pkiEzsignsignatureID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -82,9 +89,17 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TYPE)
   private FieldEEzsignsignatureType eEzsignsignatureType;
 
-  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  private Integer fkiEzsigndocumentID;
+  public static final String SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP = "tEzsignsignatureTooltip";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP)
+  private String tEzsignsignatureTooltip;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_TOOLTIPPOSITION = "eEzsignsignatureTooltipposition";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TOOLTIPPOSITION)
+  private FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_FONT = "eEzsignsignatureFont";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_FONT)
+  private FieldEEzsignsignatureFont eEzsignsignatureFont;
 
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -117,6 +132,29 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
 
   public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
+  }
+
+
+  public EzsignsignatureGetObjectV1ResponseMPayload fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsigndocument
+   * @return fkiEzsigndocumentID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
+
+  public Integer getFkiEzsigndocumentID() {
+    return fkiEzsigndocumentID;
+  }
+
+
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
@@ -196,11 +234,11 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
   }
 
    /**
-   * The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+   * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * @return iEzsignsignatureY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the signature block on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the signature block 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
+  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
@@ -258,26 +296,72 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
   }
 
 
-  public EzsignsignatureGetObjectV1ResponseMPayload fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public EzsignsignatureGetObjectV1ResponseMPayload tEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
     
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
     return this;
   }
 
    /**
-   * The unique ID of the Ezsigndocument
-   * @return fkiEzsigndocumentID
+   * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
+   * @return tEzsignsignatureTooltip
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Please sign here if you agree to the terms", value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
 
-  public Integer getFkiEzsigndocumentID() {
-    return fkiEzsigndocumentID;
+  public String gettEzsignsignatureTooltip() {
+    return tEzsignsignatureTooltip;
   }
 
 
-  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+  public void settEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
+    this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
+  }
+
+
+  public EzsignsignatureGetObjectV1ResponseMPayload eEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureTooltipposition
+   * @return eEzsignsignatureTooltipposition
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
+    return eEzsignsignatureTooltipposition;
+  }
+
+
+  public void seteEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
+    this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
+  }
+
+
+  public EzsignsignatureGetObjectV1ResponseMPayload eEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureFont
+   * @return eEzsignsignatureFont
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
+    return eEzsignsignatureFont;
+  }
+
+
+  public void seteEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
+    this.eEzsignsignatureFont = eEzsignsignatureFont;
   }
 
 
@@ -288,11 +372,11 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
   }
 
    /**
-   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
 
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -335,6 +419,7 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -345,20 +430,23 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
     }
     EzsignsignatureGetObjectV1ResponseMPayload ezsignsignatureGetObjectV1ResponseMPayload = (EzsignsignatureGetObjectV1ResponseMPayload) o;
     return Objects.equals(this.pkiEzsignsignatureID, ezsignsignatureGetObjectV1ResponseMPayload.pkiEzsignsignatureID) &&
+        Objects.equals(this.fkiEzsigndocumentID, ezsignsignatureGetObjectV1ResponseMPayload.fkiEzsigndocumentID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureGetObjectV1ResponseMPayload.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureGetObjectV1ResponseMPayload.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureGetObjectV1ResponseMPayload.iEzsignsignatureX) &&
         Objects.equals(this.iEzsignsignatureY, ezsignsignatureGetObjectV1ResponseMPayload.iEzsignsignatureY) &&
         Objects.equals(this.iEzsignsignatureStep, ezsignsignatureGetObjectV1ResponseMPayload.iEzsignsignatureStep) &&
         Objects.equals(this.eEzsignsignatureType, ezsignsignatureGetObjectV1ResponseMPayload.eEzsignsignatureType) &&
-        Objects.equals(this.fkiEzsigndocumentID, ezsignsignatureGetObjectV1ResponseMPayload.fkiEzsigndocumentID) &&
+        Objects.equals(this.tEzsignsignatureTooltip, ezsignsignatureGetObjectV1ResponseMPayload.tEzsignsignatureTooltip) &&
+        Objects.equals(this.eEzsignsignatureTooltipposition, ezsignsignatureGetObjectV1ResponseMPayload.eEzsignsignatureTooltipposition) &&
+        Objects.equals(this.eEzsignsignatureFont, ezsignsignatureGetObjectV1ResponseMPayload.eEzsignsignatureFont) &&
         Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureGetObjectV1ResponseMPayload.bEzsignsignatureCustomdate) &&
         Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureGetObjectV1ResponseMPayload.aObjEzsignsignaturecustomdate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureStep, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate);
   }
 
   @Override
@@ -366,13 +454,16 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureGetObjectV1ResponseMPayload {\n");
     sb.append("    pkiEzsignsignatureID: ").append(toIndentedString(pkiEzsignsignatureID)).append("\n");
+    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
     sb.append("    iEzsignsignatureY: ").append(toIndentedString(iEzsignsignatureY)).append("\n");
     sb.append("    iEzsignsignatureStep: ").append(toIndentedString(iEzsignsignatureStep)).append("\n");
     sb.append("    eEzsignsignatureType: ").append(toIndentedString(eEzsignsignatureType)).append("\n");
-    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
+    sb.append("    tEzsignsignatureTooltip: ").append(toIndentedString(tEzsignsignatureTooltip)).append("\n");
+    sb.append("    eEzsignsignatureTooltipposition: ").append(toIndentedString(eEzsignsignatureTooltipposition)).append("\n");
+    sb.append("    eEzsignsignatureFont: ").append(toIndentedString(eEzsignsignatureFont)).append("\n");
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
     sb.append("}");
@@ -398,26 +489,29 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignsignatureID");
+    openapiFields.add("fkiEzsigndocumentID");
     openapiFields.add("fkiEzsignfoldersignerassociationID");
     openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("iEzsignsignatureX");
     openapiFields.add("iEzsignsignatureY");
     openapiFields.add("iEzsignsignatureStep");
     openapiFields.add("eEzsignsignatureType");
-    openapiFields.add("fkiEzsigndocumentID");
+    openapiFields.add("tEzsignsignatureTooltip");
+    openapiFields.add("eEzsignsignatureTooltipposition");
+    openapiFields.add("eEzsignsignatureFont");
     openapiFields.add("bEzsignsignatureCustomdate");
     openapiFields.add("a_objEzsignsignaturecustomdate");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignsignatureID");
+    openapiRequiredFields.add("fkiEzsigndocumentID");
     openapiRequiredFields.add("fkiEzsignfoldersignerassociationID");
     openapiRequiredFields.add("iEzsignpagePagenumber");
     openapiRequiredFields.add("iEzsignsignatureX");
     openapiRequiredFields.add("iEzsignsignatureY");
     openapiRequiredFields.add("iEzsignsignatureStep");
     openapiRequiredFields.add("eEzsignsignatureType");
-    openapiRequiredFields.add("fkiEzsigndocumentID");
   }
 
  /**
@@ -434,6 +528,7 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsignsignatureGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -448,9 +543,17 @@ public class EzsignsignatureGetObjectV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("tEzsignsignatureTooltip") != null && !jsonObj.get("tEzsignsignatureTooltip").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
+      }
       JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
-      // validate the optional field `a_objEzsignsignaturecustomdate` (array)
       if (jsonArrayaObjEzsignsignaturecustomdate != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignsignaturecustomdate").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignaturecustomdate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturecustomdate").toString()));
+        }
+
+        // validate the optional field `a_objEzsignsignaturecustomdate` (array)
         for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
           EzsignsignaturecustomdateResponseCompound.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
         };

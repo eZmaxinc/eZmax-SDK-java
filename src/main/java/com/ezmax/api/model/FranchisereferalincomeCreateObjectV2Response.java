@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -41,6 +41,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,10 +50,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for the /2/object/franchisereferalincome/createObject API Request
+ * Response for POST /2/object/franchisereferalincome
  */
-@ApiModel(description = "Response for the /2/object/franchisereferalincome/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Response for POST /2/object/franchisereferalincome")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class FranchisereferalincomeCreateObjectV2Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
@@ -138,6 +139,7 @@ public class FranchisereferalincomeCreateObjectV2Response {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -209,6 +211,7 @@ public class FranchisereferalincomeCreateObjectV2Response {
           throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeCreateObjectV2Response is not found in the empty JSON string", FranchisereferalincomeCreateObjectV2Response.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {

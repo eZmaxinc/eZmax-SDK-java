@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -185,14 +185,8 @@ public class ObjectFranchisereferalincomeApi {
     @Deprecated
     public ApiResponse<FranchisereferalincomeCreateObjectV1Response> franchisereferalincomeCreateObjectV1WithHttpInfo(List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV1ValidateBeforeCall(franchisereferalincomeCreateObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<FranchisereferalincomeCreateObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -319,14 +313,8 @@ public class ObjectFranchisereferalincomeApi {
      */
     public ApiResponse<FranchisereferalincomeCreateObjectV2Response> franchisereferalincomeCreateObjectV2WithHttpInfo(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = franchisereferalincomeCreateObjectV2ValidateBeforeCall(franchisereferalincomeCreateObjectV2Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<FranchisereferalincomeCreateObjectV2Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<FranchisereferalincomeCreateObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

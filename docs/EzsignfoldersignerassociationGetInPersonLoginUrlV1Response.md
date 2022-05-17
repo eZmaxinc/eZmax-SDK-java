@@ -2,15 +2,15 @@
 
 # EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
 
-Response for the /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl API Request
+Response for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload**](EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload**](EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

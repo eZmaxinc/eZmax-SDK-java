@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,8 +18,8 @@ import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Response;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,40 +29,37 @@ import java.util.Map;
 /**
  * API tests for ObjectFranchisereferalincomeApi
  */
-@Ignore
+@Disabled
 public class ObjectFranchisereferalincomeApiTest {
 
     private final ObjectFranchisereferalincomeApi api = new ObjectFranchisereferalincomeApi();
 
-    
     /**
      * Create a new Franchisereferalincome
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void franchisereferalincomeCreateObjectV1Test() throws ApiException {
         List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request = null;
-                FranchisereferalincomeCreateObjectV1Response response = api.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
+        FranchisereferalincomeCreateObjectV1Response response = api.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Franchisereferalincome
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void franchisereferalincomeCreateObjectV2Test() throws ApiException {
         FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request = null;
-                FranchisereferalincomeCreateObjectV2Response response = api.franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request);
+        FranchisereferalincomeCreateObjectV2Response response = api.franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
 }

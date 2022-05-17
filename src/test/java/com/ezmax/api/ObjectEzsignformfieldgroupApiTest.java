@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,8 +21,8 @@ import com.ezmax.api.model.EzsignformfieldgroupDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignformfieldgroupEditObjectV1Request;
 import com.ezmax.api.model.EzsignformfieldgroupEditObjectV1Response;
 import com.ezmax.api.model.EzsignformfieldgroupGetObjectV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,71 +32,64 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignformfieldgroupApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignformfieldgroupApiTest {
 
     private final ObjectEzsignformfieldgroupApi api = new ObjectEzsignformfieldgroupApi();
 
-    
     /**
      * Create a new Ezsignformfieldgroup
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignformfieldgroupCreateObjectV1Test() throws ApiException {
         EzsignformfieldgroupCreateObjectV1Request ezsignformfieldgroupCreateObjectV1Request = null;
-                EzsignformfieldgroupCreateObjectV1Response response = api.ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupCreateObjectV1Request);
+        EzsignformfieldgroupCreateObjectV1Response response = api.ezsignformfieldgroupCreateObjectV1(ezsignformfieldgroupCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Delete an existing Ezsignformfieldgroup
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignformfieldgroupDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignformfieldgroupID = null;
-                EzsignformfieldgroupDeleteObjectV1Response response = api.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
+        EzsignformfieldgroupDeleteObjectV1Response response = api.ezsignformfieldgroupDeleteObjectV1(pkiEzsignformfieldgroupID);
         // TODO: test validations
     }
-    
+
     /**
      * Edit an existing Ezsignformfieldgroup
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignformfieldgroupEditObjectV1Test() throws ApiException {
         Integer pkiEzsignformfieldgroupID = null;
         EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request = null;
-                EzsignformfieldgroupEditObjectV1Response response = api.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+        EzsignformfieldgroupEditObjectV1Response response = api.ezsignformfieldgroupEditObjectV1(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignformfieldgroup
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignformfieldgroupGetObjectV1Test() throws ApiException {
         Integer pkiEzsignformfieldgroupID = null;
-                EzsignformfieldgroupGetObjectV1Response response = api.ezsignformfieldgroupGetObjectV1(pkiEzsignformfieldgroupID);
+        EzsignformfieldgroupGetObjectV1Response response = api.ezsignformfieldgroupGetObjectV1(pkiEzsignformfieldgroupID);
         // TODO: test validations
     }
-    
+
 }

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -185,14 +185,8 @@ public class ObjectApikeyApi {
     @Deprecated
     public ApiResponse<ApikeyCreateObjectV1Response> apikeyCreateObjectV1WithHttpInfo(List<ApikeyCreateObjectV1Request> apikeyCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = apikeyCreateObjectV1ValidateBeforeCall(apikeyCreateObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<ApikeyCreateObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ApikeyCreateObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ApikeyCreateObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ApikeyCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -319,14 +313,8 @@ public class ObjectApikeyApi {
      */
     public ApiResponse<ApikeyCreateObjectV2Response> apikeyCreateObjectV2WithHttpInfo(ApikeyCreateObjectV2Request apikeyCreateObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = apikeyCreateObjectV2ValidateBeforeCall(apikeyCreateObjectV2Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<ApikeyCreateObjectV2Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ApikeyCreateObjectV2Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ApikeyCreateObjectV2Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ApikeyCreateObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

@@ -2,13 +2,13 @@
 
 # FranchisereferalincomeCreateObjectV2Request
 
-Request for the /2/object/franchisereferalincome/createObject API Request
+Request for POST /2/object/franchisereferalincome
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjFranchisereferalincome** | [**List&lt;FranchisereferalincomeRequestCompound&gt;**](FranchisereferalincomeRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aObjFranchisereferalincome** | [**List&lt;FranchisereferalincomeRequestCompound&gt;**](FranchisereferalincomeRequestCompound.md) |  |  |
 
 
 

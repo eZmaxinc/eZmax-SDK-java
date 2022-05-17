@@ -2,13 +2,13 @@
 
 # EzsigndocumentCreateObjectV2ResponseMPayload
 
-Payload for the /2/object/ezsigndocument/createObject API Request
+Payload for POST /2/object/ezsigndocument
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aPkiEzsigndocumentID** | **List&lt;Integer&gt;** | An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aPkiEzsigndocumentID** | **List&lt;Integer&gt;** | An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. |  |
 
 
 

@@ -2,15 +2,15 @@
 
 # EzsigntemplatepackageGetListV1Response
 
-Response for the /1/object/ezsigntemplatepackage/getList API Request
+Response for GET /1/object/ezsigntemplatepackage/getList
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsigntemplatepackageGetListV1ResponseMPayload**](EzsigntemplatepackageGetListV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigntemplatepackageGetListV1ResponseMPayload**](EzsigntemplatepackageGetListV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

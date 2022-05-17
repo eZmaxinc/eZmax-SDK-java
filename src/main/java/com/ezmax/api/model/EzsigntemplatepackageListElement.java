@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.FieldEEzsigntemplatepackageType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,19 +48,11 @@ import eZmaxAPI.JSON;
  * An Ezsigntemplatepackage List Element
  */
 @ApiModel(description = "An Ezsigntemplatepackage List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigntemplatepackageListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
   private Integer pkiEzsigntemplatepackageID;
-
-  public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
-  @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
-  private Integer fkiDepartmentID;
-
-  public static final String SERIALIZED_NAME_FKI_TEAM_I_D = "fkiTeamID";
-  @SerializedName(SERIALIZED_NAME_FKI_TEAM_I_D)
-  private Integer fkiTeamID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -70,10 +62,6 @@ public class EzsigntemplatepackageListElement {
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
   private Integer fkiLanguageID;
 
-  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEPACKAGE_TYPE = "eEzsigntemplatepackageType";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEPACKAGE_TYPE)
-  private FieldEEzsigntemplatepackageType eEzsigntemplatepackageType;
-
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION = "sEzsigntemplatepackageDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION)
   private String sEzsigntemplatepackageDescription;
@@ -82,9 +70,17 @@ public class EzsigntemplatepackageListElement {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ISACTIVE)
   private Boolean bEzsigntemplatepackageIsactive;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
+  private Boolean bEzsigntemplatepackageNeedvalidation;
+
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGEMEMBERSHIP = "iEzsigntemplatepackagemembership";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGEMEMBERSHIP)
   private Integer iEzsigntemplatepackagemembership;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  private String sEzsignfoldertypeNameX;
 
   public EzsigntemplatepackageListElement() { 
   }
@@ -112,52 +108,6 @@ public class EzsigntemplatepackageListElement {
   }
 
 
-  public EzsigntemplatepackageListElement fkiDepartmentID(Integer fkiDepartmentID) {
-    
-    this.fkiDepartmentID = fkiDepartmentID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Department.
-   * @return fkiDepartmentID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Department.")
-
-  public Integer getFkiDepartmentID() {
-    return fkiDepartmentID;
-  }
-
-
-  public void setFkiDepartmentID(Integer fkiDepartmentID) {
-    this.fkiDepartmentID = fkiDepartmentID;
-  }
-
-
-  public EzsigntemplatepackageListElement fkiTeamID(Integer fkiTeamID) {
-    
-    this.fkiTeamID = fkiTeamID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Team
-   * @return fkiTeamID
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Team")
-
-  public Integer getFkiTeamID() {
-    return fkiTeamID;
-  }
-
-
-  public void setFkiTeamID(Integer fkiTeamID) {
-    this.fkiTeamID = fkiTeamID;
-  }
-
-
   public EzsigntemplatepackageListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
@@ -168,7 +118,7 @@ public class EzsigntemplatepackageListElement {
    * The unique ID of the Ezsignfoldertype.
    * @return fkiEzsignfoldertypeID
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
@@ -203,29 +153,6 @@ public class EzsigntemplatepackageListElement {
 
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
-  }
-
-
-  public EzsigntemplatepackageListElement eEzsigntemplatepackageType(FieldEEzsigntemplatepackageType eEzsigntemplatepackageType) {
-    
-    this.eEzsigntemplatepackageType = eEzsigntemplatepackageType;
-    return this;
-  }
-
-   /**
-   * Get eEzsigntemplatepackageType
-   * @return eEzsigntemplatepackageType
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public FieldEEzsigntemplatepackageType geteEzsigntemplatepackageType() {
-    return eEzsigntemplatepackageType;
-  }
-
-
-  public void seteEzsigntemplatepackageType(FieldEEzsigntemplatepackageType eEzsigntemplatepackageType) {
-    this.eEzsigntemplatepackageType = eEzsigntemplatepackageType;
   }
 
 
@@ -275,6 +202,29 @@ public class EzsigntemplatepackageListElement {
   }
 
 
+  public EzsigntemplatepackageListElement bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+    
+    this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsignbulksend was automatically modified and needs a manual validation
+   * @return bEzsigntemplatepackageNeedvalidation
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Whether the Ezsignbulksend was automatically modified and needs a manual validation")
+
+  public Boolean getbEzsigntemplatepackageNeedvalidation() {
+    return bEzsigntemplatepackageNeedvalidation;
+  }
+
+
+  public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+    this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
+  }
+
+
   public EzsigntemplatepackageListElement iEzsigntemplatepackagemembership(Integer iEzsigntemplatepackagemembership) {
     
     this.iEzsigntemplatepackagemembership = iEzsigntemplatepackagemembership;
@@ -298,6 +248,30 @@ public class EzsigntemplatepackageListElement {
   }
 
 
+  public EzsigntemplatepackageListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+    return this;
+  }
+
+   /**
+   * The name of the Ezsignfoldertype in the language of the requester
+   * @return sEzsignfoldertypeNameX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+
+  public String getsEzsignfoldertypeNameX() {
+    return sEzsignfoldertypeNameX;
+  }
+
+
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -308,19 +282,18 @@ public class EzsigntemplatepackageListElement {
     }
     EzsigntemplatepackageListElement ezsigntemplatepackageListElement = (EzsigntemplatepackageListElement) o;
     return Objects.equals(this.pkiEzsigntemplatepackageID, ezsigntemplatepackageListElement.pkiEzsigntemplatepackageID) &&
-        Objects.equals(this.fkiDepartmentID, ezsigntemplatepackageListElement.fkiDepartmentID) &&
-        Objects.equals(this.fkiTeamID, ezsigntemplatepackageListElement.fkiTeamID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplatepackageListElement.fkiEzsignfoldertypeID) &&
         Objects.equals(this.fkiLanguageID, ezsigntemplatepackageListElement.fkiLanguageID) &&
-        Objects.equals(this.eEzsigntemplatepackageType, ezsigntemplatepackageListElement.eEzsigntemplatepackageType) &&
         Objects.equals(this.sEzsigntemplatepackageDescription, ezsigntemplatepackageListElement.sEzsigntemplatepackageDescription) &&
         Objects.equals(this.bEzsigntemplatepackageIsactive, ezsigntemplatepackageListElement.bEzsigntemplatepackageIsactive) &&
-        Objects.equals(this.iEzsigntemplatepackagemembership, ezsigntemplatepackageListElement.iEzsigntemplatepackagemembership);
+        Objects.equals(this.bEzsigntemplatepackageNeedvalidation, ezsigntemplatepackageListElement.bEzsigntemplatepackageNeedvalidation) &&
+        Objects.equals(this.iEzsigntemplatepackagemembership, ezsigntemplatepackageListElement.iEzsigntemplatepackagemembership) &&
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplatepackageListElement.sEzsignfoldertypeNameX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackageID, fkiDepartmentID, fkiTeamID, fkiEzsignfoldertypeID, fkiLanguageID, eEzsigntemplatepackageType, sEzsigntemplatepackageDescription, bEzsigntemplatepackageIsactive, iEzsigntemplatepackagemembership);
+    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplatepackageDescription, bEzsigntemplatepackageIsactive, bEzsigntemplatepackageNeedvalidation, iEzsigntemplatepackagemembership, sEzsignfoldertypeNameX);
   }
 
   @Override
@@ -328,14 +301,13 @@ public class EzsigntemplatepackageListElement {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackageListElement {\n");
     sb.append("    pkiEzsigntemplatepackageID: ").append(toIndentedString(pkiEzsigntemplatepackageID)).append("\n");
-    sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
-    sb.append("    fkiTeamID: ").append(toIndentedString(fkiTeamID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
-    sb.append("    eEzsigntemplatepackageType: ").append(toIndentedString(eEzsigntemplatepackageType)).append("\n");
     sb.append("    sEzsigntemplatepackageDescription: ").append(toIndentedString(sEzsigntemplatepackageDescription)).append("\n");
     sb.append("    bEzsigntemplatepackageIsactive: ").append(toIndentedString(bEzsigntemplatepackageIsactive)).append("\n");
+    sb.append("    bEzsigntemplatepackageNeedvalidation: ").append(toIndentedString(bEzsigntemplatepackageNeedvalidation)).append("\n");
     sb.append("    iEzsigntemplatepackagemembership: ").append(toIndentedString(iEzsigntemplatepackagemembership)).append("\n");
+    sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -359,26 +331,24 @@ public class EzsigntemplatepackageListElement {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsigntemplatepackageID");
-    openapiFields.add("fkiDepartmentID");
-    openapiFields.add("fkiTeamID");
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("fkiLanguageID");
-    openapiFields.add("eEzsigntemplatepackageType");
     openapiFields.add("sEzsigntemplatepackageDescription");
     openapiFields.add("bEzsigntemplatepackageIsactive");
+    openapiFields.add("bEzsigntemplatepackageNeedvalidation");
     openapiFields.add("iEzsigntemplatepackagemembership");
+    openapiFields.add("sEzsignfoldertypeNameX");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsigntemplatepackageID");
-    openapiRequiredFields.add("fkiDepartmentID");
-    openapiRequiredFields.add("fkiTeamID");
     openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("fkiLanguageID");
-    openapiRequiredFields.add("eEzsigntemplatepackageType");
     openapiRequiredFields.add("sEzsigntemplatepackageDescription");
     openapiRequiredFields.add("bEzsigntemplatepackageIsactive");
+    openapiRequiredFields.add("bEzsigntemplatepackageNeedvalidation");
     openapiRequiredFields.add("iEzsigntemplatepackagemembership");
+    openapiRequiredFields.add("sEzsignfoldertypeNameX");
   }
 
  /**
@@ -395,6 +365,7 @@ public class EzsigntemplatepackageListElement {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatepackageListElement is not found in the empty JSON string", EzsigntemplatepackageListElement.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -408,6 +379,12 @@ public class EzsigntemplatepackageListElement {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sEzsigntemplatepackageDescription") != null && !jsonObj.get("sEzsigntemplatepackageDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatepackageDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepackageDescription").toString()));
+      }
+      if (jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
   }
 

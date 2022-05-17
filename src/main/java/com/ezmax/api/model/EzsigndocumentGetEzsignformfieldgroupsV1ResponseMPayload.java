@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,14 +48,14 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups
  */
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
-  private List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = null;
+  private List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = new ArrayList<>();
 
   public EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload() { 
   }
@@ -66,9 +67,6 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
   }
 
   public EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload addAObjEzsignformfieldgroupItem(EzsignformfieldgroupResponseCompound aObjEzsignformfieldgroupItem) {
-    if (this.aObjEzsignformfieldgroup == null) {
-      this.aObjEzsignformfieldgroup = new ArrayList<>();
-    }
     this.aObjEzsignformfieldgroup.add(aObjEzsignformfieldgroupItem);
     return this;
   }
@@ -77,8 +75,8 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
    * Get aObjEzsignformfieldgroup
    * @return aObjEzsignformfieldgroup
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignformfieldgroupResponseCompound> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
@@ -88,6 +86,7 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
   public void setaObjEzsignformfieldgroup(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
+
 
 
   @Override
@@ -138,6 +137,7 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objEzsignformfieldgroup");
   }
 
  /**
@@ -154,6 +154,7 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -161,9 +162,21 @@ public class EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
       JsonArray jsonArrayaObjEzsignformfieldgroup = jsonObj.getAsJsonArray("a_objEzsignformfieldgroup");
-      // validate the optional field `a_objEzsignformfieldgroup` (array)
       if (jsonArrayaObjEzsignformfieldgroup != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignformfieldgroup").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfieldgroup` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfieldgroup").toString()));
+        }
+
+        // validate the optional field `a_objEzsignformfieldgroup` (array)
         for (int i = 0; i < jsonArrayaObjEzsignformfieldgroup.size(); i++) {
           EzsignformfieldgroupResponseCompound.validateJsonObject(jsonArrayaObjEzsignformfieldgroup.get(i).getAsJsonObject());
         };

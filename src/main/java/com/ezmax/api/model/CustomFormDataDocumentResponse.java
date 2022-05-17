@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
  * A form Data Document Object 
  */
 @ApiModel(description = "A form Data Document Object ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -195,6 +196,7 @@ public class CustomFormDataDocumentResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -276,6 +278,7 @@ public class CustomFormDataDocumentResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomFormDataDocumentResponse is not found in the empty JSON string", CustomFormDataDocumentResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -290,9 +293,20 @@ public class CustomFormDataDocumentResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sEzsigndocumentName") != null && !jsonObj.get("sEzsigndocumentName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentName").toString()));
+      }
+      if (jsonObj.get("dtModifiedDate") != null && !jsonObj.get("dtModifiedDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtModifiedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtModifiedDate").toString()));
+      }
       JsonArray jsonArrayaObjFormDataSigner = jsonObj.getAsJsonArray("a_objFormDataSigner");
-      // validate the optional field `a_objFormDataSigner` (array)
       if (jsonArrayaObjFormDataSigner != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objFormDataSigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objFormDataSigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFormDataSigner").toString()));
+        }
+
+        // validate the optional field `a_objFormDataSigner` (array)
         for (int i = 0; i < jsonArrayaObjFormDataSigner.size(); i++) {
           CustomFormDataSignerResponse.validateJsonObject(jsonArrayaObjFormDataSigner.get(i).getAsJsonObject());
         };

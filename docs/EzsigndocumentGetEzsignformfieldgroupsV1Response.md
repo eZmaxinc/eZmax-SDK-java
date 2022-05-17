@@ -2,15 +2,15 @@
 
 # EzsigndocumentGetEzsignformfieldgroupsV1Response
 
-Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups API Request
+Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfieldgroups
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload**](EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload**](EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

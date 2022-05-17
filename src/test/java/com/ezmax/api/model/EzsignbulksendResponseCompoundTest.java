@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,6 +15,9 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.EzsignbulksendResponse;
+import com.ezmax.api.model.EzsignbulksendResponseCompoundAllOf;
+import com.ezmax.api.model.EzsignbulksenddocumentmappingResponseCompound;
+import com.ezmax.api.model.EzsignbulksendsignermappingResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,9 +26,10 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -67,6 +71,22 @@ public class EzsignbulksendResponseCompoundTest {
     }
 
     /**
+     * Test the property 'sLanguageNameX'
+     */
+    @Test
+    public void sLanguageNameXTest() {
+        // TODO: test sLanguageNameX
+    }
+
+    /**
+     * Test the property 'sEzsignfoldertypeNameX'
+     */
+    @Test
+    public void sEzsignfoldertypeNameXTest() {
+        // TODO: test sEzsignfoldertypeNameX
+    }
+
+    /**
      * Test the property 'sEzsignbulksendDescription'
      */
     @Test
@@ -83,6 +103,14 @@ public class EzsignbulksendResponseCompoundTest {
     }
 
     /**
+     * Test the property 'bEzsignbulksendNeedvalidation'
+     */
+    @Test
+    public void bEzsignbulksendNeedvalidationTest() {
+        // TODO: test bEzsignbulksendNeedvalidation
+    }
+
+    /**
      * Test the property 'bEzsignbulksendIsactive'
      */
     @Test
@@ -96,6 +124,22 @@ public class EzsignbulksendResponseCompoundTest {
     @Test
     public void objAuditTest() {
         // TODO: test objAudit
+    }
+
+    /**
+     * Test the property 'aObjEzsignbulksenddocumentmapping'
+     */
+    @Test
+    public void aObjEzsignbulksenddocumentmappingTest() {
+        // TODO: test aObjEzsignbulksenddocumentmapping
+    }
+
+    /**
+     * Test the property 'aObjEzsignbulksendsignermapping'
+     */
+    @Test
+    public void aObjEzsignbulksendsignermappingTest() {
+        // TODO: test aObjEzsignbulksendsignermapping
     }
 
 }

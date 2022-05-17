@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -176,14 +176,8 @@ public class ModuleUserApi {
      */
     public ApiResponse<UserCreateEzsignuserV1Response> userCreateEzsignuserV1WithHttpInfo(List<UserCreateEzsignuserV1Request> userCreateEzsignuserV1Request) throws ApiException {
         okhttp3.Call localVarCall = userCreateEzsignuserV1ValidateBeforeCall(userCreateEzsignuserV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<UserCreateEzsignuserV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<UserCreateEzsignuserV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<UserCreateEzsignuserV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UserCreateEzsignuserV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

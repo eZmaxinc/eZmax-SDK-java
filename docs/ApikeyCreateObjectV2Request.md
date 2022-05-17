@@ -2,13 +2,13 @@
 
 # ApikeyCreateObjectV2Request
 
-Request for the /2/object/apikey/createObject API Request
+Request for POST /2/object/apikey
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjApikey** | [**List&lt;ApikeyRequestCompound&gt;**](ApikeyRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aObjApikey** | [**List&lt;ApikeyRequestCompound&gt;**](ApikeyRequestCompound.md) |  |  |
 
 
 

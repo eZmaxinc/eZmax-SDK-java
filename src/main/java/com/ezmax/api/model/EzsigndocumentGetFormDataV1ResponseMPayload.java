@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CustomFormDataDocumentResponse;
-import com.ezmax.api.model.CustomFormDataSignerResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,8 +24,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -40,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,152 +46,40 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
  */
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetFormDataV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
-  private Integer pkiEzsigndocumentID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  private Integer fkiEzsignfolderID;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
-  private String sEzsigndocumentName;
-
-  public static final String SERIALIZED_NAME_DT_MODIFIED_DATE = "dtModifiedDate";
-  @SerializedName(SERIALIZED_NAME_DT_MODIFIED_DATE)
-  private String dtModifiedDate;
-
-  public static final String SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER = "a_objFormDataSigner";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER)
-  private List<CustomFormDataSignerResponse> aObjFormDataSigner = new ArrayList<>();
+  public static final String SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT = "objFormDataDocument";
+  @SerializedName(SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT)
+  private CustomFormDataDocumentResponse objFormDataDocument;
 
   public EzsigndocumentGetFormDataV1ResponseMPayload() { 
   }
 
-  public EzsigndocumentGetFormDataV1ResponseMPayload pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+  public EzsigndocumentGetFormDataV1ResponseMPayload objFormDataDocument(CustomFormDataDocumentResponse objFormDataDocument) {
     
-    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+    this.objFormDataDocument = objFormDataDocument;
     return this;
   }
 
    /**
-   * The unique ID of the Ezsigndocument
-   * @return pkiEzsigndocumentID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
-
-  public Integer getPkiEzsigndocumentID() {
-    return pkiEzsigndocumentID;
-  }
-
-
-  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
-    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
-  }
-
-
-  public EzsigndocumentGetFormDataV1ResponseMPayload fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Ezsignfolder
-   * @return fkiEzsignfolderID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
-
-  public Integer getFkiEzsignfolderID() {
-    return fkiEzsignfolderID;
-  }
-
-
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-  }
-
-
-  public EzsigndocumentGetFormDataV1ResponseMPayload sEzsigndocumentName(String sEzsigndocumentName) {
-    
-    this.sEzsigndocumentName = sEzsigndocumentName;
-    return this;
-  }
-
-   /**
-   * The name of the document that will be presented to Ezsignfoldersignerassociations
-   * @return sEzsigndocumentName
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Contract #123", required = true, value = "The name of the document that will be presented to Ezsignfoldersignerassociations")
-
-  public String getsEzsigndocumentName() {
-    return sEzsigndocumentName;
-  }
-
-
-  public void setsEzsigndocumentName(String sEzsigndocumentName) {
-    this.sEzsigndocumentName = sEzsigndocumentName;
-  }
-
-
-  public EzsigndocumentGetFormDataV1ResponseMPayload dtModifiedDate(String dtModifiedDate) {
-    
-    this.dtModifiedDate = dtModifiedDate;
-    return this;
-  }
-
-   /**
-   * The date and time at which the object was last modified
-   * @return dtModifiedDate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the object was last modified")
-
-  public String getDtModifiedDate() {
-    return dtModifiedDate;
-  }
-
-
-  public void setDtModifiedDate(String dtModifiedDate) {
-    this.dtModifiedDate = dtModifiedDate;
-  }
-
-
-  public EzsigndocumentGetFormDataV1ResponseMPayload aObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
-    
-    this.aObjFormDataSigner = aObjFormDataSigner;
-    return this;
-  }
-
-  public EzsigndocumentGetFormDataV1ResponseMPayload addAObjFormDataSignerItem(CustomFormDataSignerResponse aObjFormDataSignerItem) {
-    this.aObjFormDataSigner.add(aObjFormDataSignerItem);
-    return this;
-  }
-
-   /**
-   * Get aObjFormDataSigner
-   * @return aObjFormDataSigner
+   * Get objFormDataDocument
+   * @return objFormDataDocument
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<CustomFormDataSignerResponse> getaObjFormDataSigner() {
-    return aObjFormDataSigner;
+  public CustomFormDataDocumentResponse getObjFormDataDocument() {
+    return objFormDataDocument;
   }
 
 
-  public void setaObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
-    this.aObjFormDataSigner = aObjFormDataSigner;
+  public void setObjFormDataDocument(CustomFormDataDocumentResponse objFormDataDocument) {
+    this.objFormDataDocument = objFormDataDocument;
   }
+
 
 
   @Override
@@ -205,27 +91,19 @@ public class EzsigndocumentGetFormDataV1ResponseMPayload {
       return false;
     }
     EzsigndocumentGetFormDataV1ResponseMPayload ezsigndocumentGetFormDataV1ResponseMPayload = (EzsigndocumentGetFormDataV1ResponseMPayload) o;
-    return Objects.equals(this.pkiEzsigndocumentID, ezsigndocumentGetFormDataV1ResponseMPayload.pkiEzsigndocumentID) &&
-        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentGetFormDataV1ResponseMPayload.fkiEzsignfolderID) &&
-        Objects.equals(this.sEzsigndocumentName, ezsigndocumentGetFormDataV1ResponseMPayload.sEzsigndocumentName) &&
-        Objects.equals(this.dtModifiedDate, ezsigndocumentGetFormDataV1ResponseMPayload.dtModifiedDate) &&
-        Objects.equals(this.aObjFormDataSigner, ezsigndocumentGetFormDataV1ResponseMPayload.aObjFormDataSigner);
+    return Objects.equals(this.objFormDataDocument, ezsigndocumentGetFormDataV1ResponseMPayload.objFormDataDocument);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, sEzsigndocumentName, dtModifiedDate, aObjFormDataSigner);
+    return Objects.hash(objFormDataDocument);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetFormDataV1ResponseMPayload {\n");
-    sb.append("    pkiEzsigndocumentID: ").append(toIndentedString(pkiEzsigndocumentID)).append("\n");
-    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
-    sb.append("    sEzsigndocumentName: ").append(toIndentedString(sEzsigndocumentName)).append("\n");
-    sb.append("    dtModifiedDate: ").append(toIndentedString(dtModifiedDate)).append("\n");
-    sb.append("    aObjFormDataSigner: ").append(toIndentedString(aObjFormDataSigner)).append("\n");
+    sb.append("    objFormDataDocument: ").append(toIndentedString(objFormDataDocument)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -248,19 +126,11 @@ public class EzsigndocumentGetFormDataV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("pkiEzsigndocumentID");
-    openapiFields.add("fkiEzsignfolderID");
-    openapiFields.add("sEzsigndocumentName");
-    openapiFields.add("dtModifiedDate");
-    openapiFields.add("a_objFormDataSigner");
+    openapiFields.add("objFormDataDocument");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("pkiEzsigndocumentID");
-    openapiRequiredFields.add("fkiEzsignfolderID");
-    openapiRequiredFields.add("sEzsigndocumentName");
-    openapiRequiredFields.add("dtModifiedDate");
-    openapiRequiredFields.add("a_objFormDataSigner");
+    openapiRequiredFields.add("objFormDataDocument");
   }
 
  /**
@@ -277,6 +147,7 @@ public class EzsigndocumentGetFormDataV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetFormDataV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetFormDataV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -291,12 +162,9 @@ public class EzsigndocumentGetFormDataV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      JsonArray jsonArrayaObjFormDataSigner = jsonObj.getAsJsonArray("a_objFormDataSigner");
-      // validate the optional field `a_objFormDataSigner` (array)
-      if (jsonArrayaObjFormDataSigner != null) {
-        for (int i = 0; i < jsonArrayaObjFormDataSigner.size(); i++) {
-          CustomFormDataSignerResponse.validateJsonObject(jsonArrayaObjFormDataSigner.get(i).getAsJsonObject());
-        };
+      // validate the optional field `objFormDataDocument`
+      if (jsonObj.getAsJsonObject("objFormDataDocument") != null) {
+        CustomFormDataDocumentResponse.validateJsonObject(jsonObj.getAsJsonObject("objFormDataDocument"));
       }
   }
 

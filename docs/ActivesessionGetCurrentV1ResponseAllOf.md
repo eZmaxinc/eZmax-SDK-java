@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**ActivesessionGetCurrentV1ResponseMPayload**](ActivesessionGetCurrentV1ResponseMPayload.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**ActivesessionGetCurrentV1ResponseMPayload**](ActivesessionGetCurrentV1ResponseMPayload.md) |  |  |
 
 
 

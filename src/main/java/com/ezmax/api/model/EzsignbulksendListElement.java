@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
  * An Ezsignbulksend List Element
  */
 @ApiModel(description = "An Ezsignbulksend List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignbulksendListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -66,9 +66,9 @@ public class EzsignbulksendListElement {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
   private String sEzsignfoldertypeNameX;
 
-  public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
-  private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
+  public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
+  private Boolean bEzsignbulksendNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
@@ -189,26 +189,26 @@ public class EzsignbulksendListElement {
   }
 
 
-  public EzsignbulksendListElement eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public EzsignbulksendListElement bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     
-    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
 
    /**
-   * Get eEzsignfoldertypePrivacylevel
-   * @return eEzsignfoldertypePrivacylevel
+   * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+   * @return bEzsignbulksendNeedvalidation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
 
-  public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
-    return eEzsignfoldertypePrivacylevel;
+  public Boolean getbEzsignbulksendNeedvalidation() {
+    return bEzsignbulksendNeedvalidation;
   }
 
 
-  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
+  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
@@ -350,6 +350,7 @@ public class EzsignbulksendListElement {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -363,7 +364,7 @@ public class EzsignbulksendListElement {
         Objects.equals(this.fkiEzsignfoldertypeID, ezsignbulksendListElement.fkiEzsignfoldertypeID) &&
         Objects.equals(this.sEzsignbulksendDescription, ezsignbulksendListElement.sEzsignbulksendDescription) &&
         Objects.equals(this.sEzsignfoldertypeNameX, ezsignbulksendListElement.sEzsignfoldertypeNameX) &&
-        Objects.equals(this.eEzsignfoldertypePrivacylevel, ezsignbulksendListElement.eEzsignfoldertypePrivacylevel) &&
+        Objects.equals(this.bEzsignbulksendNeedvalidation, ezsignbulksendListElement.bEzsignbulksendNeedvalidation) &&
         Objects.equals(this.bEzsignbulksendIsactive, ezsignbulksendListElement.bEzsignbulksendIsactive) &&
         Objects.equals(this.iEzsignbulksendtransmission, ezsignbulksendListElement.iEzsignbulksendtransmission) &&
         Objects.equals(this.iEzsignfolder, ezsignbulksendListElement.iEzsignfolder) &&
@@ -374,7 +375,7 @@ public class EzsignbulksendListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignbulksendID, fkiEzsignfoldertypeID, sEzsignbulksendDescription, sEzsignfoldertypeNameX, eEzsignfoldertypePrivacylevel, bEzsignbulksendIsactive, iEzsignbulksendtransmission, iEzsignfolder, iEzsigndocument, iEzsignsignature, iEzsignsignatureSigned);
+    return Objects.hash(pkiEzsignbulksendID, fkiEzsignfoldertypeID, sEzsignbulksendDescription, sEzsignfoldertypeNameX, bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive, iEzsignbulksendtransmission, iEzsignfolder, iEzsigndocument, iEzsignsignature, iEzsignsignatureSigned);
   }
 
   @Override
@@ -385,7 +386,7 @@ public class EzsignbulksendListElement {
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    sEzsignbulksendDescription: ").append(toIndentedString(sEzsignbulksendDescription)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
-    sb.append("    eEzsignfoldertypePrivacylevel: ").append(toIndentedString(eEzsignfoldertypePrivacylevel)).append("\n");
+    sb.append("    bEzsignbulksendNeedvalidation: ").append(toIndentedString(bEzsignbulksendNeedvalidation)).append("\n");
     sb.append("    bEzsignbulksendIsactive: ").append(toIndentedString(bEzsignbulksendIsactive)).append("\n");
     sb.append("    iEzsignbulksendtransmission: ").append(toIndentedString(iEzsignbulksendtransmission)).append("\n");
     sb.append("    iEzsignfolder: ").append(toIndentedString(iEzsignfolder)).append("\n");
@@ -418,7 +419,7 @@ public class EzsignbulksendListElement {
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("sEzsignbulksendDescription");
     openapiFields.add("sEzsignfoldertypeNameX");
-    openapiFields.add("eEzsignfoldertypePrivacylevel");
+    openapiFields.add("bEzsignbulksendNeedvalidation");
     openapiFields.add("bEzsignbulksendIsactive");
     openapiFields.add("iEzsignbulksendtransmission");
     openapiFields.add("iEzsignfolder");
@@ -432,7 +433,7 @@ public class EzsignbulksendListElement {
     openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("sEzsignbulksendDescription");
     openapiRequiredFields.add("sEzsignfoldertypeNameX");
-    openapiRequiredFields.add("eEzsignfoldertypePrivacylevel");
+    openapiRequiredFields.add("bEzsignbulksendNeedvalidation");
     openapiRequiredFields.add("bEzsignbulksendIsactive");
     openapiRequiredFields.add("iEzsignbulksendtransmission");
     openapiRequiredFields.add("iEzsignfolder");
@@ -455,6 +456,7 @@ public class EzsignbulksendListElement {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendListElement is not found in the empty JSON string", EzsignbulksendListElement.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -468,6 +470,12 @@ public class EzsignbulksendListElement {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sEzsignbulksendDescription") != null && !jsonObj.get("sEzsignbulksendDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendDescription").toString()));
+      }
+      if (jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
   }
 

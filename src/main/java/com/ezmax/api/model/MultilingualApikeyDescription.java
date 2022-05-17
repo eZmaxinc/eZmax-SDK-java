@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * Description of the API Key  
  */
 @ApiModel(description = "Description of the API Key  ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class MultilingualApikeyDescription {
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION1 = "sApikeyDescription1";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION1)
@@ -67,11 +68,11 @@ public class MultilingualApikeyDescription {
   }
 
    /**
-   * Value in French
+   * The description of the Apikey in French
    * @return sApikeyDescription1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value in French")
+  @ApiModelProperty(example = "Projet X", value = "The description of the Apikey in French")
 
   public String getsApikeyDescription1() {
     return sApikeyDescription1;
@@ -90,11 +91,11 @@ public class MultilingualApikeyDescription {
   }
 
    /**
-   * Value in English
+   * The description of the Apikey in English
    * @return sApikeyDescription2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value in English")
+  @ApiModelProperty(example = "Project X", value = "The description of the Apikey in English")
 
   public String getsApikeyDescription2() {
     return sApikeyDescription2;
@@ -104,6 +105,7 @@ public class MultilingualApikeyDescription {
   public void setsApikeyDescription2(String sApikeyDescription2) {
     this.sApikeyDescription2 = sApikeyDescription2;
   }
+
 
 
   @Override
@@ -173,12 +175,19 @@ public class MultilingualApikeyDescription {
           throw new IllegalArgumentException(String.format("The required field(s) %s in MultilingualApikeyDescription is not found in the empty JSON string", MultilingualApikeyDescription.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!MultilingualApikeyDescription.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MultilingualApikeyDescription` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sApikeyDescription1") != null && !jsonObj.get("sApikeyDescription1").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sApikeyDescription1` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sApikeyDescription1").toString()));
+      }
+      if (jsonObj.get("sApikeyDescription2") != null && !jsonObj.get("sApikeyDescription2").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sApikeyDescription2` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sApikeyDescription2").toString()));
       }
   }
 

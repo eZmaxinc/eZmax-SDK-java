@@ -6,36 +6,49 @@ An Ezsigndocument Object and children to create a complete structure
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**pkiEzsigndocumentID** | **Integer** | The unique ID of the Ezsigndocument |  [optional]
-**eEzsigndocumentSource** | [**EEzsigndocumentSourceEnum**](#EEzsigndocumentSourceEnum) | Indicates where to look for the document binary content. | 
-**eEzsigndocumentFormat** | [**EEzsigndocumentFormatEnum**](#EEzsigndocumentFormatEnum) | Indicates the format of the document. | 
-**sEzsigndocumentBase64** | **byte[]** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. |  [optional]
-**sEzsigndocumentUrl** | **String** | The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url. |  [optional]
-**bEzsigndocumentForcerepair** | **Boolean** | Try to repair the document or flatten it if it cannot be used for electronic signature.  |  [optional]
-**sEzsigndocumentPassword** | **String** | If the source document is password protected, the password to open/modify it. |  [optional]
-**fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
-**dtEzsigndocumentDuedate** | **String** | The maximum date and time at which the Ezsigndocument can be signed. | 
-**fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| | 
-**sEzsigndocumentName** | **String** | The name of the document that will be presented to Ezsignfoldersignerassociations | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**pkiEzsigndocumentID** | **Integer** | The unique ID of the Ezsigndocument |  [optional] |
+|**fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  |
+|**fkiEzsigntemplateID** | **Integer** | The unique ID of the Ezsigntemplate |  [optional] |
+|**fkiEzsignfoldersignerassociationID** | **Integer** | The unique ID of the Ezsignfoldersignerassociation |  [optional] |
+|**fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| |  |
+|**eEzsigndocumentSource** | [**EEzsigndocumentSourceEnum**](#EEzsigndocumentSourceEnum) | Indicates where to look for the document binary content. |  |
+|**eEzsigndocumentFormat** | [**EEzsigndocumentFormatEnum**](#EEzsigndocumentFormatEnum) | Indicates the format of the document. |  [optional] |
+|**sEzsigndocumentBase64** | **byte[]** | The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64. |  [optional] |
+|**sEzsigndocumentUrl** | **String** | The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url. |  [optional] |
+|**bEzsigndocumentForcerepair** | **Boolean** | Try to repair the document or flatten it if it cannot be used for electronic signature.  |  [optional] |
+|**sEzsigndocumentPassword** | **String** | If the source document is password protected, the password to open/modify it. |  [optional] |
+|**eEzsigndocumentForm** | [**EEzsigndocumentFormEnum**](#EEzsigndocumentFormEnum) | If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID** |  [optional] |
+|**dtEzsigndocumentDuedate** | **String** | The maximum date and time at which the Ezsigndocument can be signed. |  |
+|**sEzsigndocumentName** | **String** | The name of the document that will be presented to Ezsignfoldersignerassociations |  |
 
 
 
 ## Enum: EEzsigndocumentSourceEnum
 
-Name | Value
----- | -----
-BASE64 | &quot;Base64&quot;
-URL | &quot;Url&quot;
+| Name | Value |
+|---- | -----|
+| BASE64 | &quot;Base64&quot; |
+| EZSIGNTEMPLATE | &quot;Ezsigntemplate&quot; |
+| URL | &quot;Url&quot; |
 
 
 
 ## Enum: EEzsigndocumentFormatEnum
 
-Name | Value
----- | -----
-PDF | &quot;Pdf&quot;
+| Name | Value |
+|---- | -----|
+| PDF | &quot;Pdf&quot; |
+
+
+
+## Enum: EEzsigndocumentFormEnum
+
+| Name | Value |
+|---- | -----|
+| KEEP | &quot;Keep&quot; |
+| CONVERT | &quot;Convert&quot; |
 
 
 

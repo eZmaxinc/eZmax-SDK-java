@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -187,14 +187,8 @@ public class GlobalCustomerApi {
      */
     public ApiResponse<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, String sInfrastructureproductCode) throws ApiException {
         okhttp3.Call localVarCall = globalCustomerGetEndpointV1ValidateBeforeCall(pksCustomerCode, sInfrastructureproductCode, null);
-        try {
-            Type localVarReturnType = new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<GlobalCustomerGetEndpointV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

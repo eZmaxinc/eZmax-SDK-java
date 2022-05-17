@@ -2,15 +2,15 @@
 
 # EzsigndocumentGetFormDataV1Response
 
-Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData API Request
+Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetFormDataV1ResponseMPayload**](EzsigndocumentGetFormDataV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigndocumentGetFormDataV1ResponseMPayload**](EzsigndocumentGetFormDataV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

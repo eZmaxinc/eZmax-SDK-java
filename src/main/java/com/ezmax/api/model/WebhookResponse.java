@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,8 +48,12 @@ import eZmaxAPI.JSON;
  * A webhook object
  */
 @ApiModel(description = "A webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class WebhookResponse {
+  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
+  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
+  private String pksCustomerCode;
+
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
   private Integer pkiWebhookID;
@@ -155,18 +160,6 @@ public class WebhookResponse {
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
   private EWebhookEzsigneventEnum eWebhookEzsignevent;
 
-  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
-  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
-  private String pksCustomerCode;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
-  private String sWebhookUrl;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED = "sWebhookEmailfailed";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
-  private String sWebhookEmailfailed;
-
   /**
    * This Management Event. This property will be set only if the Module is \&quot;Management\&quot;.
    */
@@ -216,8 +209,47 @@ public class WebhookResponse {
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
   private EWebhookManagementeventEnum eWebhookManagementevent;
 
+  public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
+  private String sWebhookUrl;
+
+  public static final String SERIALIZED_NAME_B_WEBHOOK_TEST = "bWebhookTest";
+  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_TEST)
+  private Boolean bWebhookTest;
+
+  public static final String SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION = "bWebhookSkipsslvalidation";
+  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
+  private Boolean bWebhookSkipsslvalidation;
+
+  public static final String SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED = "sWebhookEmailfailed";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
+  private String sWebhookEmailfailed;
+
   public WebhookResponse() { 
   }
+
+  public WebhookResponse pksCustomerCode(String pksCustomerCode) {
+    
+    this.pksCustomerCode = pksCustomerCode;
+    return this;
+  }
+
+   /**
+   * The customer code assigned to your account
+   * @return pksCustomerCode
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "demo", required = true, value = "The customer code assigned to your account")
+
+  public String getPksCustomerCode() {
+    return pksCustomerCode;
+  }
+
+
+  public void setPksCustomerCode(String pksCustomerCode) {
+    this.pksCustomerCode = pksCustomerCode;
+  }
+
 
   public WebhookResponse pkiWebhookID(Integer pkiWebhookID) {
     
@@ -288,26 +320,26 @@ public class WebhookResponse {
   }
 
 
-  public WebhookResponse pksCustomerCode(String pksCustomerCode) {
+  public WebhookResponse eWebhookManagementevent(EWebhookManagementeventEnum eWebhookManagementevent) {
     
-    this.pksCustomerCode = pksCustomerCode;
+    this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
 
    /**
-   * The customer code assigned to your account
-   * @return pksCustomerCode
+   * This Management Event. This property will be set only if the Module is \&quot;Management\&quot;.
+   * @return eWebhookManagementevent
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "demo", required = true, value = "The customer code assigned to your account")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "This Management Event. This property will be set only if the Module is \"Management\".")
 
-  public String getPksCustomerCode() {
-    return pksCustomerCode;
+  public EWebhookManagementeventEnum geteWebhookManagementevent() {
+    return eWebhookManagementevent;
   }
 
 
-  public void setPksCustomerCode(String pksCustomerCode) {
-    this.pksCustomerCode = pksCustomerCode;
+  public void seteWebhookManagementevent(EWebhookManagementeventEnum eWebhookManagementevent) {
+    this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
@@ -334,6 +366,52 @@ public class WebhookResponse {
   }
 
 
+  public WebhookResponse bWebhookTest(Boolean bWebhookTest) {
+    
+    this.bWebhookTest = bWebhookTest;
+    return this;
+  }
+
+   /**
+   * Wheter the webhook received is a manual test or a real event
+   * @return bWebhookTest
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Wheter the webhook received is a manual test or a real event")
+
+  public Boolean getbWebhookTest() {
+    return bWebhookTest;
+  }
+
+
+  public void setbWebhookTest(Boolean bWebhookTest) {
+    this.bWebhookTest = bWebhookTest;
+  }
+
+
+  public WebhookResponse bWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
+    
+    this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
+    return this;
+  }
+
+   /**
+   * Wheter the server&#39;s SSL certificate should be validated or not. Not recommended for production use.
+   * @return bWebhookSkipsslvalidation
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Wheter the server's SSL certificate should be validated or not. Not recommended for production use.")
+
+  public Boolean getbWebhookSkipsslvalidation() {
+    return bWebhookSkipsslvalidation;
+  }
+
+
+  public void setbWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
+    this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
+  }
+
+
   public WebhookResponse sWebhookEmailfailed(String sWebhookEmailfailed) {
     
     this.sWebhookEmailfailed = sWebhookEmailfailed;
@@ -357,28 +435,6 @@ public class WebhookResponse {
   }
 
 
-  public WebhookResponse eWebhookManagementevent(EWebhookManagementeventEnum eWebhookManagementevent) {
-    
-    this.eWebhookManagementevent = eWebhookManagementevent;
-    return this;
-  }
-
-   /**
-   * This Management Event. This property will be set only if the Module is \&quot;Management\&quot;.
-   * @return eWebhookManagementevent
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "This Management Event. This property will be set only if the Module is \"Management\".")
-
-  public EWebhookManagementeventEnum geteWebhookManagementevent() {
-    return eWebhookManagementevent;
-  }
-
-
-  public void seteWebhookManagementevent(EWebhookManagementeventEnum eWebhookManagementevent) {
-    this.eWebhookManagementevent = eWebhookManagementevent;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -389,31 +445,35 @@ public class WebhookResponse {
       return false;
     }
     WebhookResponse webhookResponse = (WebhookResponse) o;
-    return Objects.equals(this.pkiWebhookID, webhookResponse.pkiWebhookID) &&
+    return Objects.equals(this.pksCustomerCode, webhookResponse.pksCustomerCode) &&
+        Objects.equals(this.pkiWebhookID, webhookResponse.pkiWebhookID) &&
         Objects.equals(this.eWebhookModule, webhookResponse.eWebhookModule) &&
         Objects.equals(this.eWebhookEzsignevent, webhookResponse.eWebhookEzsignevent) &&
-        Objects.equals(this.pksCustomerCode, webhookResponse.pksCustomerCode) &&
+        Objects.equals(this.eWebhookManagementevent, webhookResponse.eWebhookManagementevent) &&
         Objects.equals(this.sWebhookUrl, webhookResponse.sWebhookUrl) &&
-        Objects.equals(this.sWebhookEmailfailed, webhookResponse.sWebhookEmailfailed) &&
-        Objects.equals(this.eWebhookManagementevent, webhookResponse.eWebhookManagementevent);
+        Objects.equals(this.bWebhookTest, webhookResponse.bWebhookTest) &&
+        Objects.equals(this.bWebhookSkipsslvalidation, webhookResponse.bWebhookSkipsslvalidation) &&
+        Objects.equals(this.sWebhookEmailfailed, webhookResponse.sWebhookEmailfailed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, eWebhookModule, eWebhookEzsignevent, pksCustomerCode, sWebhookUrl, sWebhookEmailfailed, eWebhookManagementevent);
+    return Objects.hash(pksCustomerCode, pkiWebhookID, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, bWebhookTest, bWebhookSkipsslvalidation, sWebhookEmailfailed);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookResponse {\n");
+    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    pkiWebhookID: ").append(toIndentedString(pkiWebhookID)).append("\n");
     sb.append("    eWebhookModule: ").append(toIndentedString(eWebhookModule)).append("\n");
     sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
-    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
-    sb.append("    sWebhookUrl: ").append(toIndentedString(sWebhookUrl)).append("\n");
-    sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
+    sb.append("    sWebhookUrl: ").append(toIndentedString(sWebhookUrl)).append("\n");
+    sb.append("    bWebhookTest: ").append(toIndentedString(bWebhookTest)).append("\n");
+    sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
+    sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -436,20 +496,24 @@ public class WebhookResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("pksCustomerCode");
     openapiFields.add("pkiWebhookID");
     openapiFields.add("eWebhookModule");
     openapiFields.add("eWebhookEzsignevent");
-    openapiFields.add("pksCustomerCode");
-    openapiFields.add("sWebhookUrl");
-    openapiFields.add("sWebhookEmailfailed");
     openapiFields.add("eWebhookManagementevent");
+    openapiFields.add("sWebhookUrl");
+    openapiFields.add("bWebhookTest");
+    openapiFields.add("bWebhookSkipsslvalidation");
+    openapiFields.add("sWebhookEmailfailed");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("pkiWebhookID");
     openapiRequiredFields.add("eWebhookModule");
-    openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("sWebhookUrl");
+    openapiRequiredFields.add("bWebhookTest");
+    openapiRequiredFields.add("bWebhookSkipsslvalidation");
     openapiRequiredFields.add("sWebhookEmailfailed");
   }
 
@@ -467,6 +531,7 @@ public class WebhookResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookResponse is not found in the empty JSON string", WebhookResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -480,6 +545,24 @@ public class WebhookResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("pksCustomerCode") != null && !jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
+      }
+      if (jsonObj.get("eWebhookModule") != null && !jsonObj.get("eWebhookModule").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eWebhookModule` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eWebhookModule").toString()));
+      }
+      if (jsonObj.get("eWebhookEzsignevent") != null && !jsonObj.get("eWebhookEzsignevent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eWebhookEzsignevent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eWebhookEzsignevent").toString()));
+      }
+      if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eWebhookManagementevent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eWebhookManagementevent").toString()));
+      }
+      if (jsonObj.get("sWebhookUrl") != null && !jsonObj.get("sWebhookUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));
+      }
+      if (jsonObj.get("sWebhookEmailfailed") != null && !jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
       }
   }
 

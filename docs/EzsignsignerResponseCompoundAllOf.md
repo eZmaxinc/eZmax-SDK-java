@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objContact** | [**EzsignsignerResponseCompoundContact**](EzsignsignerResponseCompoundContact.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objContact** | [**EzsignsignerResponseCompoundContact**](EzsignsignerResponseCompoundContact.md) |  |  |
 
 
 

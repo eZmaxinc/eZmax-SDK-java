@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,13 +15,23 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Request;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Response;
+import com.ezmax.api.model.EzsignbulksendCreateObjectV1Request;
+import com.ezmax.api.model.EzsignbulksendCreateObjectV1Response;
+import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
+import com.ezmax.api.model.EzsignbulksendEditObjectV1Request;
+import com.ezmax.api.model.EzsignbulksendEditObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
+import com.ezmax.api.model.EzsignbulksendGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
 import com.ezmax.api.model.EzsignbulksendGetObjectV1Response;
+import com.ezmax.api.model.EzsignbulksendReorderV1Request;
+import com.ezmax.api.model.EzsignbulksendReorderV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,34 +41,116 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignbulksendApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignbulksendApiTest {
 
     private final ObjectEzsignbulksendApi api = new ObjectEzsignbulksendApi();
 
-    
+    /**
+     * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendCreateEzsignbulksendtransmissionV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request = null;
+        EzsignbulksendCreateEzsignbulksendtransmissionV1Response response = api.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Create a new Ezsignbulksend
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendCreateObjectV1Test() throws ApiException {
+        EzsignbulksendCreateObjectV1Request ezsignbulksendCreateObjectV1Request = null;
+        EzsignbulksendCreateObjectV1Response response = api.ezsignbulksendCreateObjectV1(ezsignbulksendCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Delete an existing Ezsignbulksend
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendDeleteObjectV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendDeleteObjectV1Response response = api.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit an existing Ezsignbulksend
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendEditObjectV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request = null;
+        EzsignbulksendEditObjectV1Response response = api.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s empty Csv template
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendGetCsvTemplateV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        String eCsvSeparator = null;
+        String response = api.ezsignbulksendGetCsvTemplateV1(pkiEzsignbulksendID, eCsvSeparator);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignbulksendGetEzsignbulksendtransmissionsV1Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
-                EzsignbulksendGetEzsignbulksendtransmissionsV1Response response = api.ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID);
+        EzsignbulksendGetEzsignbulksendtransmissionsV1Response response = api.ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID);
         // TODO: test validations
     }
-    
+
+    /**
+     * Retrieve an existing Ezsignbulksend&#39;s forms data
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendGetFormsDataV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendGetFormsDataV1Response response = api.ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve Ezsignbulksend list
      *
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignbulksendGetListV1Test() throws ApiException {
@@ -67,23 +159,35 @@ public class ObjectEzsignbulksendApiTest {
         Integer iRowOffset = null;
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
-                EzsignbulksendGetListV1Response response = api.ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        EzsignbulksendGetListV1Response response = api.ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignbulksend
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignbulksendGetObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
-                EzsignbulksendGetObjectV1Response response = api.ezsignbulksendGetObjectV1(pkiEzsignbulksendID);
+        EzsignbulksendGetObjectV1Response response = api.ezsignbulksendGetObjectV1(pkiEzsignbulksendID);
         // TODO: test validations
     }
-    
+
+    /**
+     * Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendReorderV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request = null;
+        EzsignbulksendReorderV1Response response = api.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+        // TODO: test validations
+    }
+
 }

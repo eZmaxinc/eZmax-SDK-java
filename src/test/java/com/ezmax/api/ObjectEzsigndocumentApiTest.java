@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -30,6 +30,7 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
+import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
@@ -41,9 +42,10 @@ import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentUnsendV1Response;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -53,273 +55,282 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsigndocumentApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsigndocumentApiTest {
 
     private final ObjectEzsigndocumentApi api = new ObjectEzsigndocumentApi();
 
-    
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      *
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentApplyEzsigntemplateV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request = null;
-                EzsigndocumentApplyEzsigntemplateV1Response response = api.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+        EzsigndocumentApplyEzsigntemplateV1Response response = api.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
         // TODO: test validations
     }
-    
+
     /**
-     * Apply an Ezsign Template to the Ezsigndocument.
+     * Apply an Ezsigntemplate to the Ezsigndocument.
      *
      * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentApplyEzsigntemplateV2Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request = null;
-                EzsigndocumentApplyEzsigntemplateV2Response response = api.ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
+        EzsigndocumentApplyEzsigntemplateV2Response response = api.ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Ezsigndocument
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentCreateObjectV1Test() throws ApiException {
         List<EzsigndocumentCreateObjectV1Request> ezsigndocumentCreateObjectV1Request = null;
-                EzsigndocumentCreateObjectV1Response response = api.ezsigndocumentCreateObjectV1(ezsigndocumentCreateObjectV1Request);
+        EzsigndocumentCreateObjectV1Response response = api.ezsigndocumentCreateObjectV1(ezsigndocumentCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Ezsigndocument
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentCreateObjectV2Test() throws ApiException {
         EzsigndocumentCreateObjectV2Request ezsigndocumentCreateObjectV2Request = null;
-                EzsigndocumentCreateObjectV2Response response = api.ezsigndocumentCreateObjectV2(ezsigndocumentCreateObjectV2Request);
+        EzsigndocumentCreateObjectV2Response response = api.ezsigndocumentCreateObjectV2(ezsigndocumentCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
     /**
      * Delete an existing Ezsigndocument
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentDeleteObjectV1Response response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+        EzsigndocumentDeleteObjectV1Response response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Edit multiple Ezsignformfieldgroups
      *
      * Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentEditEzsignformfieldgroupsV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentEditEzsignformfieldgroupsV1Request ezsigndocumentEditEzsignformfieldgroupsV1Request = null;
-                EzsigndocumentEditEzsignformfieldgroupsV1Response response = api.ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request);
+        EzsigndocumentEditEzsignformfieldgroupsV1Response response = api.ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Edit multiple Ezsignsignatures
      *
      * Using this endpoint, you can edit multiple Ezsignsignatures at the same time.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentEditEzsignsignaturesV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentEditEzsignsignaturesV1Request ezsigndocumentEditEzsignsignaturesV1Request = null;
-                EzsigndocumentEditEzsignsignaturesV1Response response = api.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request);
+        EzsigndocumentEditEzsignsignaturesV1Response response = api.ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * End prematurely
      *
      * End prematurely an Ezsigndocument when some signatures are still required
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentEndPrematurelyV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         Object body = null;
-                EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
+        EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
         // TODO: test validations
     }
-    
+
+    /**
+     * Retrieve actionable elements for the Ezsigndocument
+     *
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetActionableElementsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetActionableElementsV1Response response = api.ezsigndocumentGetActionableElementsV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve a URL to download documents.
      *
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetDownloadUrlV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         String eDocumentType = null;
-                EzsigndocumentGetDownloadUrlV1Response response = api.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType);
+        EzsigndocumentGetDownloadUrlV1Response response = api.ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetEzsignformfieldgroupsV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetEzsignformfieldgroupsV1Response response = api.ezsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID);
+        EzsigndocumentGetEzsignformfieldgroupsV1Response response = api.ezsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsigndocument&#39;s Ezsignpages
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetEzsignpagesV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetEzsignpagesV1Response response = api.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+        EzsigndocumentGetEzsignpagesV1Response response = api.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsigndocument&#39;s Ezsignsignatures
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetEzsignsignaturesV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetEzsignsignaturesV1Response response = api.ezsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID);
+        EzsigndocumentGetEzsignsignaturesV1Response response = api.ezsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsigndocument&#39;s Form Data
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetFormDataV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetFormDataV1Response response = api.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID);
+        EzsigndocumentGetFormDataV1Response response = api.ezsigndocumentGetFormDataV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsigndocument
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetObjectV1Response response = api.ezsigndocumentGetObjectV1(pkiEzsigndocumentID);
+        EzsigndocumentGetObjectV1Response response = api.ezsigndocumentGetObjectV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve the temporary proof
      *
      * Retrieve the temporary proof while the Ezsigndocument is being processed since the proof isn&#39;t available until the Ezsigndocument is completed
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetTemporaryProofV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-                EzsigndocumentGetTemporaryProofV1Response response = api.ezsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID);
+        EzsigndocumentGetTemporaryProofV1Response response = api.ezsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve positions X,Y of given words from a Ezsigndocument
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentGetWordsPositionsV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentGetWordsPositionsV1Request ezsigndocumentGetWordsPositionsV1Request = null;
-                EzsigndocumentGetWordsPositionsV1Response response = api.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
+        EzsigndocumentGetWordsPositionsV1Response response = api.ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Patch an existing Ezsigndocument
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigndocumentPatchObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
-                EzsigndocumentPatchObjectV1Response response = api.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+        EzsigndocumentPatchObjectV1Response response = api.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
         // TODO: test validations
     }
-    
+
+    /**
+     * Unsend the Ezsigndocument
+     *
+     * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentUnsendV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        Object body = null;
+        EzsigndocumentUnsendV1Response response = api.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body);
+        // TODO: test validations
+    }
+
 }

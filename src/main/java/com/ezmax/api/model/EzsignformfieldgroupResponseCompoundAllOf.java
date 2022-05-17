@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -41,6 +41,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignformfieldgroupResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignformfieldgroupResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD = "a_objEzsignformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD)
@@ -63,7 +64,7 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUPSIGNER = "a_objEzsignformfieldgroupsigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUPSIGNER)
-  private EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner;
+  private List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner = new ArrayList<>();
 
   public EzsignformfieldgroupResponseCompoundAllOf() { 
   }
@@ -127,9 +128,14 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
   }
 
 
-  public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+  public EzsignformfieldgroupResponseCompoundAllOf aObjEzsignformfieldgroupsigner(List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner) {
     
     this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
+    return this;
+  }
+
+  public EzsignformfieldgroupResponseCompoundAllOf addAObjEzsignformfieldgroupsignerItem(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsignerItem) {
+    this.aObjEzsignformfieldgroupsigner.add(aObjEzsignformfieldgroupsignerItem);
     return this;
   }
 
@@ -140,14 +146,15 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EzsignformfieldgroupsignerResponseCompound getaObjEzsignformfieldgroupsigner() {
+  public List<EzsignformfieldgroupsignerResponseCompound> getaObjEzsignformfieldgroupsigner() {
     return aObjEzsignformfieldgroupsigner;
   }
 
 
-  public void setaObjEzsignformfieldgroupsigner(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsigner) {
+  public void setaObjEzsignformfieldgroupsigner(List<EzsignformfieldgroupsignerResponseCompound> aObjEzsignformfieldgroupsigner) {
     this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
   }
+
 
 
   @Override
@@ -222,6 +229,7 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupResponseCompoundAllOf is not found in the empty JSON string", EzsignformfieldgroupResponseCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -237,22 +245,40 @@ public class EzsignformfieldgroupResponseCompoundAllOf {
         }
       }
       JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
-      // validate the optional field `a_objEzsignformfield` (array)
       if (jsonArrayaObjEzsignformfield != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignformfield").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfield` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfield").toString()));
+        }
+
+        // validate the optional field `a_objEzsignformfield` (array)
         for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
           EzsignformfieldResponseCompound.validateJsonObject(jsonArrayaObjEzsignformfield.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
-      // validate the optional field `a_objDropdownElement` (array)
       if (jsonArrayaObjDropdownElement != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objDropdownElement").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objDropdownElement` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDropdownElement").toString()));
+        }
+
+        // validate the optional field `a_objDropdownElement` (array)
         for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
           CustomDropdownElementResponseCompound.validateJsonObject(jsonArrayaObjDropdownElement.get(i).getAsJsonObject());
         };
       }
-      // validate the optional field `a_objEzsignformfieldgroupsigner`
-      if (jsonObj.getAsJsonObject("a_objEzsignformfieldgroupsigner") != null) {
-        EzsignformfieldgroupsignerResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("a_objEzsignformfieldgroupsigner"));
+      JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
+      if (jsonArrayaObjEzsignformfieldgroupsigner != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignformfieldgroupsigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfieldgroupsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfieldgroupsigner").toString()));
+        }
+
+        // validate the optional field `a_objEzsignformfieldgroupsigner` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
+          EzsignformfieldgroupsignerResponseCompound.validateJsonObject(jsonArrayaObjEzsignformfieldgroupsigner.get(i).getAsJsonObject());
+        };
       }
   }
 

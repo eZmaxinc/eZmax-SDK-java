@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -44,6 +44,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -55,7 +56,7 @@ import eZmaxAPI.JSON;
  * A Contactinformations Object and children to create a complete structure
  */
 @ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -296,6 +297,7 @@ public class ContactinformationsRequestCompound {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -389,6 +391,7 @@ public class ContactinformationsRequestCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ContactinformationsRequestCompound is not found in the empty JSON string", ContactinformationsRequestCompound.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -404,29 +407,49 @@ public class ContactinformationsRequestCompound {
         }
       }
       JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
-      // validate the optional field `a_objAddress` (array)
       if (jsonArrayaObjAddress != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objAddress").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objAddress` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAddress").toString()));
+        }
+
+        // validate the optional field `a_objAddress` (array)
         for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
           AddressRequestCompound.validateJsonObject(jsonArrayaObjAddress.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
-      // validate the optional field `a_objPhone` (array)
       if (jsonArrayaObjPhone != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objPhone").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objPhone` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPhone").toString()));
+        }
+
+        // validate the optional field `a_objPhone` (array)
         for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
           PhoneRequestCompound.validateJsonObject(jsonArrayaObjPhone.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
-      // validate the optional field `a_objEmail` (array)
       if (jsonArrayaObjEmail != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEmail").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEmail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEmail").toString()));
+        }
+
+        // validate the optional field `a_objEmail` (array)
         for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
           EmailRequestCompound.validateJsonObject(jsonArrayaObjEmail.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
-      // validate the optional field `a_objWebsite` (array)
       if (jsonArrayaObjWebsite != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objWebsite").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objWebsite` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebsite").toString()));
+        }
+
+        // validate the optional field `a_objWebsite` (array)
         for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
           WebsiteRequestCompound.validateJsonObject(jsonArrayaObjWebsite.get(i).getAsJsonObject());
         };

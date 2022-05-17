@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**globalCustomerGetEndpointV1**](GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint |
 
 
 <a name="globalCustomerGetEndpointV1"></a>
@@ -55,10 +55,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pksCustomerCode** | **String**|  |
- **sInfrastructureproductCode** | **String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pksCustomerCode** | **String**|  | |
+| **sInfrastructureproductCode** | **String**| The infrastructure product Code  If undefined, \&quot;appcluster01\&quot; is assumed | [optional] [enum: appcluster01, ezsignuser] |
 
 ### Return type
 
@@ -76,6 +76,6 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response |  -  |
-**404** | The element you are trying to work on does not exist |  -  |
+| **200** | Successful response |  -  |
+| **404** | The element you are trying to work on does not exist |  -  |
 

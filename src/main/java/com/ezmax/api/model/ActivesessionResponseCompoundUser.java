@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * An Activesession-&gt;User Object and children to create a complete structure
  */
 @ApiModel(description = "An Activesession->User Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -187,6 +188,7 @@ public class ActivesessionResponseCompoundUser {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -268,6 +270,7 @@ public class ActivesessionResponseCompoundUser {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionResponseCompoundUser is not found in the empty JSON string", ActivesessionResponseCompoundUser.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -281,6 +284,18 @@ public class ActivesessionResponseCompoundUser {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sAvatarUrl") != null && !jsonObj.get("sAvatarUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sAvatarUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAvatarUrl").toString()));
+      }
+      if (jsonObj.get("sUserFirstname") != null && !jsonObj.get("sUserFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+      }
+      if (jsonObj.get("sUserLastname") != null && !jsonObj.get("sUserLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
+      }
+      if (jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
   }
 

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,6 +18,8 @@ import java.util.Arrays;
 import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1ResponseAllOf;
+import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,6 +41,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,11 +50,15 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+ * Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
  */
-@ApiModel(description = "Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentEditEzsignsignaturesV1Response {
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private EzsigndocumentEditEzsignsignaturesV1ResponseMPayload mPayload;
+
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -62,6 +69,29 @@ public class EzsigndocumentEditEzsignsignaturesV1Response {
 
   public EzsigndocumentEditEzsignsignaturesV1Response() { 
   }
+
+  public EzsigndocumentEditEzsignsignaturesV1Response mPayload(EzsigndocumentEditEzsignsignaturesV1ResponseMPayload mPayload) {
+    
+    this.mPayload = mPayload;
+    return this;
+  }
+
+   /**
+   * Get mPayload
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EzsigndocumentEditEzsignsignaturesV1ResponseMPayload getmPayload() {
+    return mPayload;
+  }
+
+
+  public void setmPayload(EzsigndocumentEditEzsignsignaturesV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
 
   public EzsigndocumentEditEzsignsignaturesV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
@@ -109,6 +139,7 @@ public class EzsigndocumentEditEzsignsignaturesV1Response {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,19 +149,21 @@ public class EzsigndocumentEditEzsignsignaturesV1Response {
       return false;
     }
     EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1Response = (EzsigndocumentEditEzsignsignaturesV1Response) o;
-    return Objects.equals(this.objDebugPayload, ezsigndocumentEditEzsignsignaturesV1Response.objDebugPayload) &&
+    return Objects.equals(this.mPayload, ezsigndocumentEditEzsignsignaturesV1Response.mPayload) &&
+        Objects.equals(this.objDebugPayload, ezsigndocumentEditEzsignsignaturesV1Response.objDebugPayload) &&
         Objects.equals(this.objDebug, ezsigndocumentEditEzsignsignaturesV1Response.objDebug);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(mPayload, objDebugPayload, objDebug);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentEditEzsignsignaturesV1Response {\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("}");
@@ -155,11 +188,13 @@ public class EzsigndocumentEditEzsignsignaturesV1Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("mPayload");
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("mPayload");
   }
 
  /**
@@ -176,12 +211,24 @@ public class EzsigndocumentEditEzsignsignaturesV1Response {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentEditEzsignsignaturesV1Response is not found in the empty JSON string", EzsigndocumentEditEzsignsignaturesV1Response.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsigndocumentEditEzsignsignaturesV1Response.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentEditEzsignsignaturesV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigndocumentEditEzsignsignaturesV1Response.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `mPayload`
+      if (jsonObj.getAsJsonObject("mPayload") != null) {
+        EzsigndocumentEditEzsignsignaturesV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
       }
       // validate the optional field `objDebugPayload`
       if (jsonObj.getAsJsonObject("objDebugPayload") != null) {

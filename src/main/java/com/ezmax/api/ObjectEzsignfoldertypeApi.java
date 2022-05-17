@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -194,14 +194,8 @@ public class ObjectEzsignfoldertypeApi {
      */
     public ApiResponse<CommonGetAutocompleteV1Response> ezsignfoldertypeGetAutocompleteV1WithHttpInfo(String sSelector, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldertypeGetAutocompleteV1ValidateBeforeCall(sSelector, sQuery, acceptLanguage, null);
-        try {
-            Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<CommonGetAutocompleteV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<CommonGetAutocompleteV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -358,14 +352,8 @@ public class ObjectEzsignfoldertypeApi {
      */
     public ApiResponse<EzsignfoldertypeGetListV1Response> ezsignfoldertypeGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldertypeGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignfoldertypeGetListV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignfoldertypeGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

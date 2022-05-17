@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -24,6 +24,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -37,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -45,21 +48,26 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
+ * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  */
-@ApiModel(description = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG = "a_objEzsigndocumentlog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG)
-  private EzsigndocumentlogResponseCompound aObjEzsigndocumentlog;
+  private List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = new ArrayList<>();
 
   public EzsigndocumentGetTemporaryProofV1ResponseMPayload() { 
   }
 
-  public EzsigndocumentGetTemporaryProofV1ResponseMPayload aObjEzsigndocumentlog(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog) {
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload aObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
+    return this;
+  }
+
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload addAObjEzsigndocumentlogItem(EzsigndocumentlogResponseCompound aObjEzsigndocumentlogItem) {
+    this.aObjEzsigndocumentlog.add(aObjEzsigndocumentlogItem);
     return this;
   }
 
@@ -70,14 +78,15 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EzsigndocumentlogResponseCompound getaObjEzsigndocumentlog() {
+  public List<EzsigndocumentlogResponseCompound> getaObjEzsigndocumentlog() {
     return aObjEzsigndocumentlog;
   }
 
 
-  public void setaObjEzsigndocumentlog(EzsigndocumentlogResponseCompound aObjEzsigndocumentlog) {
+  public void setaObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
   }
+
 
 
   @Override
@@ -145,6 +154,7 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetTemporaryProofV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetTemporaryProofV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -159,9 +169,17 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      // validate the optional field `a_objEzsigndocumentlog`
-      if (jsonObj.getAsJsonObject("a_objEzsigndocumentlog") != null) {
-        EzsigndocumentlogResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("a_objEzsigndocumentlog"));
+      JsonArray jsonArrayaObjEzsigndocumentlog = jsonObj.getAsJsonArray("a_objEzsigndocumentlog");
+      if (jsonArrayaObjEzsigndocumentlog != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsigndocumentlog").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsigndocumentlog` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigndocumentlog").toString()));
+        }
+
+        // validate the optional field `a_objEzsigndocumentlog` (array)
+        for (int i = 0; i < jsonArrayaObjEzsigndocumentlog.size(); i++) {
+          EzsigndocumentlogResponseCompound.validateJsonObject(jsonArrayaObjEzsigndocumentlog.get(i).getAsJsonObject());
+        };
       }
   }
 

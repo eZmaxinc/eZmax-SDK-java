@@ -2,14 +2,15 @@
 
 # EzsigndocumentEditEzsignsignaturesV1Response
 
-Response for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures API Request
+Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigndocumentEditEzsignsignaturesV1ResponseMPayload**](EzsigndocumentEditEzsignsignaturesV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

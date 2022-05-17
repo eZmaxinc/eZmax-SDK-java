@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,6 +15,8 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignfolderArchiveV1Response;
+import com.ezmax.api.model.EzsignfolderBatchDownloadV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
@@ -22,18 +24,23 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
+import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
+import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Request;
+import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Response;
+import com.ezmax.api.model.EzsignfolderReorderV1Request;
+import com.ezmax.api.model.EzsignfolderReorderV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderUnsendV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,125 +50,156 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignfolderApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignfolderApiTest {
 
     private final ObjectEzsignfolderApi api = new ObjectEzsignfolderApi();
 
-    
+    /**
+     * Archive the Ezsignfolder
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderArchiveV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        Object body = null;
+        EzsignfolderArchiveV1Response response = api.ezsignfolderArchiveV1(pkiEzsignfolderID, body);
+        // TODO: test validations
+    }
+
+    /**
+     * Download multiples files from an Ezsignfolder
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderBatchDownloadV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request = null;
+        File response = api.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+        // TODO: test validations
+    }
+
     /**
      * Create a new Ezsignfolder
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderCreateObjectV1Test() throws ApiException {
         List<EzsignfolderCreateObjectV1Request> ezsignfolderCreateObjectV1Request = null;
-                EzsignfolderCreateObjectV1Response response = api.ezsignfolderCreateObjectV1(ezsignfolderCreateObjectV1Request);
+        EzsignfolderCreateObjectV1Response response = api.ezsignfolderCreateObjectV1(ezsignfolderCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Ezsignfolder
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderCreateObjectV2Test() throws ApiException {
         EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request = null;
-                EzsignfolderCreateObjectV2Response response = api.ezsignfolderCreateObjectV2(ezsignfolderCreateObjectV2Request);
+        EzsignfolderCreateObjectV2Response response = api.ezsignfolderCreateObjectV2(ezsignfolderCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
     /**
      * Delete an existing Ezsignfolder
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-                EzsignfolderDeleteObjectV1Response response = api.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
+        EzsignfolderDeleteObjectV1Response response = api.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
         // TODO: test validations
     }
-    
+
     /**
      * Edit an existing Ezsignfolder
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderEditObjectV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
-                EzsignfolderEditObjectV1Response response = api.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+        EzsignfolderEditObjectV1Response response = api.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
         // TODO: test validations
     }
-    
+
+    /**
+     * Retrieve actionable elements for the Ezsignfolder
+     *
+     * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetActionableElementsV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetActionableElementsV1Response response = api.ezsignfolderGetActionableElementsV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderGetEzsigndocumentsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-                EzsignfolderGetEzsigndocumentsV1Response response = api.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
+        EzsignfolderGetEzsigndocumentsV1Response response = api.ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderGetEzsignfoldersignerassociationsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-                EzsignfolderGetEzsignfoldersignerassociationsV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
+        EzsignfolderGetEzsignfoldersignerassociationsV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignfolder&#39;s forms data
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderGetFormsDataV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-                EzsignfolderGetFormsDataV1Response response = api.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
+        EzsignfolderGetFormsDataV1Response response = api.ezsignfolderGetFormsDataV1(pkiEzsignfolderID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve Ezsignfolder list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived | | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderGetListV1Test() throws ApiException {
@@ -170,55 +208,78 @@ public class ObjectEzsignfolderApiTest {
         Integer iRowOffset = null;
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
-                EzsignfolderGetListV1Response response = api.ezsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        EzsignfolderGetListV1Response response = api.ezsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignfolder
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderGetObjectV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-                EzsignfolderGetObjectV1Response response = api.ezsignfolderGetObjectV1(pkiEzsignfolderID);
+        EzsignfolderGetObjectV1Response response = api.ezsignfolderGetObjectV1(pkiEzsignfolderID);
         // TODO: test validations
     }
-    
+
+    /**
+     * Import an Ezsigntemplatepackage in the Ezsignfolder.
+     *
+     * This endpoint imports all of the Ezsigntemplates from the Ezsigntemplatepackage into the Ezsignfolder as Ezsigndocuments.  This allows to automatically apply all the Ezsigntemplateformfieldgroups and Ezsigntemplatesignatures on the newly created Ezsigndocuments in a single step.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderImportEzsigntemplatepackageV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderImportEzsigntemplatepackageV1Request ezsignfolderImportEzsigntemplatepackageV1Request = null;
+        EzsignfolderImportEzsigntemplatepackageV1Response response = api.ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderReorderV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderReorderV1Request ezsignfolderReorderV1Request = null;
+        EzsignfolderReorderV1Response response = api.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+        // TODO: test validations
+    }
+
     /**
      * Send the Ezsignfolder to the signatories for signature
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderSendV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderSendV1Request ezsignfolderSendV1Request = null;
-                EzsignfolderSendV1Response response = api.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
+        EzsignfolderSendV1Response response = api.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Unsend the Ezsignfolder
      *
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfolderUnsendV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         Object body = null;
-                EzsignfolderUnsendV1Response response = api.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
+        EzsignfolderUnsendV1Response response = api.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
-    
+
 }

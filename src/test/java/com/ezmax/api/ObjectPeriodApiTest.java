@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,8 +15,9 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonGetAutocompleteV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import com.ezmax.api.model.HeaderAcceptLanguage;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,26 +27,25 @@ import java.util.Map;
 /**
  * API tests for ObjectPeriodApi
  */
-@Ignore
+@Disabled
 public class ObjectPeriodApiTest {
 
     private final ObjectPeriodApi api = new ObjectPeriodApi();
 
-    
     /**
      * Retrieve Periods and IDs
      *
      * Get the list of Periods to be used in a dropdown or autocomplete control.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void periodGetAutocompleteV1Test() throws ApiException {
         String sSelector = null;
         String sQuery = null;
-                CommonGetAutocompleteV1Response response = api.periodGetAutocompleteV1(sSelector, sQuery);
+        HeaderAcceptLanguage acceptLanguage = null;
+        CommonGetAutocompleteV1Response response = api.periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
         // TODO: test validations
     }
-    
+
 }

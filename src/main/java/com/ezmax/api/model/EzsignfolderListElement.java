@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -38,6 +38,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfolder List Element
  */
 @ApiModel(description = "An Ezsignfolder List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -83,9 +84,9 @@ public class EzsignfolderListElement {
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
   private String dtEzsignfolderSentdate;
 
-  public static final String SERIALIZED_NAME_DT_DUE_DATE = "dtDueDate";
-  @SerializedName(SERIALIZED_NAME_DT_DUE_DATE)
-  private String dtDueDate;
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE = "dtEzsignfolderDuedate";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE)
+  private String dtEzsignfolderDuedate;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT = "iEzsigndocument";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT)
@@ -278,7 +279,7 @@ public class EzsignfolderListElement {
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
+  @ApiModelProperty(example = "2020-12-31T23:59:59.000Z", value = "The date and time at which the Ezsign folder was sent the last time.")
 
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
@@ -290,26 +291,26 @@ public class EzsignfolderListElement {
   }
 
 
-  public EzsignfolderListElement dtDueDate(String dtDueDate) {
+  public EzsignfolderListElement dtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
     
-    this.dtDueDate = dtDueDate;
+    this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
     return this;
   }
 
    /**
-   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-   * @return dtDueDate
+   * The maximum date and time at which the Ezsignfolder can be signed.
+   * @return dtEzsignfolderDuedate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "Represent a Date Time. The timezone is the one configured in the User's profile.")
+  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The maximum date and time at which the Ezsignfolder can be signed.")
 
-  public String getDtDueDate() {
-    return dtDueDate;
+  public String getDtEzsignfolderDuedate() {
+    return dtEzsignfolderDuedate;
   }
 
 
-  public void setDtDueDate(String dtDueDate) {
-    this.dtDueDate = dtDueDate;
+  public void setDtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
+    this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
   }
 
 
@@ -405,6 +406,7 @@ public class EzsignfolderListElement {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -422,7 +424,7 @@ public class EzsignfolderListElement {
         Objects.equals(this.eEzsignfolderStep, ezsignfolderListElement.eEzsignfolderStep) &&
         Objects.equals(this.dtCreatedDate, ezsignfolderListElement.dtCreatedDate) &&
         Objects.equals(this.dtEzsignfolderSentdate, ezsignfolderListElement.dtEzsignfolderSentdate) &&
-        Objects.equals(this.dtDueDate, ezsignfolderListElement.dtDueDate) &&
+        Objects.equals(this.dtEzsignfolderDuedate, ezsignfolderListElement.dtEzsignfolderDuedate) &&
         Objects.equals(this.iEzsigndocument, ezsignfolderListElement.iEzsigndocument) &&
         Objects.equals(this.iEzsigndocumentEdm, ezsignfolderListElement.iEzsigndocumentEdm) &&
         Objects.equals(this.iEzsignsignature, ezsignfolderListElement.iEzsignsignature) &&
@@ -431,7 +433,7 @@ public class EzsignfolderListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, dtCreatedDate, dtEzsignfolderSentdate, dtDueDate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, dtCreatedDate, dtEzsignfolderSentdate, dtEzsignfolderDuedate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned);
   }
 
   @Override
@@ -446,7 +448,7 @@ public class EzsignfolderListElement {
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
     sb.append("    dtCreatedDate: ").append(toIndentedString(dtCreatedDate)).append("\n");
     sb.append("    dtEzsignfolderSentdate: ").append(toIndentedString(dtEzsignfolderSentdate)).append("\n");
-    sb.append("    dtDueDate: ").append(toIndentedString(dtDueDate)).append("\n");
+    sb.append("    dtEzsignfolderDuedate: ").append(toIndentedString(dtEzsignfolderDuedate)).append("\n");
     sb.append("    iEzsigndocument: ").append(toIndentedString(iEzsigndocument)).append("\n");
     sb.append("    iEzsigndocumentEdm: ").append(toIndentedString(iEzsigndocumentEdm)).append("\n");
     sb.append("    iEzsignsignature: ").append(toIndentedString(iEzsignsignature)).append("\n");
@@ -481,7 +483,7 @@ public class EzsignfolderListElement {
     openapiFields.add("eEzsignfolderStep");
     openapiFields.add("dtCreatedDate");
     openapiFields.add("dtEzsignfolderSentdate");
-    openapiFields.add("dtDueDate");
+    openapiFields.add("dtEzsignfolderDuedate");
     openapiFields.add("iEzsigndocument");
     openapiFields.add("iEzsigndocumentEdm");
     openapiFields.add("iEzsignsignature");
@@ -496,8 +498,6 @@ public class EzsignfolderListElement {
     openapiRequiredFields.add("sEzsignfolderDescription");
     openapiRequiredFields.add("eEzsignfolderStep");
     openapiRequiredFields.add("dtCreatedDate");
-    openapiRequiredFields.add("dtEzsignfolderSentdate");
-    openapiRequiredFields.add("dtDueDate");
     openapiRequiredFields.add("iEzsigndocument");
     openapiRequiredFields.add("iEzsigndocumentEdm");
     openapiRequiredFields.add("iEzsignsignature");
@@ -518,6 +518,7 @@ public class EzsignfolderListElement {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderListElement is not found in the empty JSON string", EzsignfolderListElement.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -531,6 +532,21 @@ public class EzsignfolderListElement {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+      }
+      if (jsonObj.get("sEzsignfolderDescription") != null && !jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
+      }
+      if (jsonObj.get("dtCreatedDate") != null && !jsonObj.get("dtCreatedDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCreatedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCreatedDate").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderSentdate") != null && !jsonObj.get("dtEzsignfolderSentdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderSentdate").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderDuedate") != null && !jsonObj.get("dtEzsignfolderDuedate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDuedate").toString()));
       }
   }
 

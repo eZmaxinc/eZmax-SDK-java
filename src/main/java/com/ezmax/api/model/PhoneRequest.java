@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -37,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Phone Object
  */
 @ApiModel(description = "A Phone Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class PhoneRequest {
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
@@ -207,7 +208,7 @@ public class PhoneRequest {
    * @return sPhoneInternational
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "+5149901516", value = "A phone number in E.164 Format")
+  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
 
   public String getsPhoneInternational() {
     return sPhoneInternational;
@@ -240,6 +241,7 @@ public class PhoneRequest {
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
+
 
 
   @Override
@@ -326,6 +328,7 @@ public class PhoneRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in PhoneRequest is not found in the empty JSON string", PhoneRequest.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -339,6 +342,21 @@ public class PhoneRequest {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sPhoneRegion") != null && !jsonObj.get("sPhoneRegion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneRegion").toString()));
+      }
+      if (jsonObj.get("sPhoneExchange") != null && !jsonObj.get("sPhoneExchange").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExchange` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExchange").toString()));
+      }
+      if (jsonObj.get("sPhoneNumber") != null && !jsonObj.get("sPhoneNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneNumber").toString()));
+      }
+      if (jsonObj.get("sPhoneInternational") != null && !jsonObj.get("sPhoneInternational").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneInternational` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneInternational").toString()));
+      }
+      if (jsonObj.get("sPhoneExtension") != null && !jsonObj.get("sPhoneExtension").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExtension` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExtension").toString()));
       }
   }
 

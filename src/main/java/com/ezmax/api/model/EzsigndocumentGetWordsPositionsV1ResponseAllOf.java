@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigndocumentGetWordsPositionsV1ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
@@ -70,11 +71,11 @@ public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   }
 
    /**
-   * Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+   * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
    * @return mPayload
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
+  @ApiModelProperty(required = true, value = "Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
 
   public List<CustomWordPositionWordResponse> getmPayload() {
     return mPayload;
@@ -84,6 +85,7 @@ public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
   public void setmPayload(List<CustomWordPositionWordResponse> mPayload) {
     this.mPayload = mPayload;
   }
+
 
 
   @Override
@@ -151,6 +153,7 @@ public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetWordsPositionsV1ResponseAllOf is not found in the empty JSON string", EzsigndocumentGetWordsPositionsV1ResponseAllOf.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -166,8 +169,13 @@ public class EzsigndocumentGetWordsPositionsV1ResponseAllOf {
         }
       }
       JsonArray jsonArraymPayload = jsonObj.getAsJsonArray("mPayload");
-      // validate the optional field `mPayload` (array)
       if (jsonArraymPayload != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("mPayload").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `mPayload` to be an array in the JSON string but got `%s`", jsonObj.get("mPayload").toString()));
+        }
+
+        // validate the optional field `mPayload` (array)
         for (int i = 0; i < jsonArraymPayload.size(); i++) {
           CustomWordPositionWordResponse.validateJsonObject(jsonArraymPayload.get(i).getAsJsonObject());
         };

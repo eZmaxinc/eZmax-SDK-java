@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -41,6 +41,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,10 +50,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/ezsigntemplatepackage/getList API Request
+ * Payload for GET /1/object/ezsigntemplatepackage/getList
  */
-@ApiModel(description = "Payload for the /1/object/ezsigntemplatepackage/getList API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/ezsigntemplatepackage/getList")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigntemplatepackageGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -143,6 +144,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -216,6 +218,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatepackageGetListV1ResponseMPayload is not found in the empty JSON string", EzsigntemplatepackageGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -231,8 +234,13 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
         }
       }
       JsonArray jsonArrayaObjEzsigntemplatepackage = jsonObj.getAsJsonArray("a_objEzsigntemplatepackage");
-      // validate the optional field `a_objEzsigntemplatepackage` (array)
       if (jsonArrayaObjEzsigntemplatepackage != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsigntemplatepackage").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsigntemplatepackage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatepackage").toString()));
+        }
+
+        // validate the optional field `a_objEzsigntemplatepackage` (array)
         for (int i = 0; i < jsonArrayaObjEzsigntemplatepackage.size(); i++) {
           EzsigntemplatepackageListElement.validateJsonObject(jsonArrayaObjEzsigntemplatepackage.get(i).getAsJsonObject());
         };

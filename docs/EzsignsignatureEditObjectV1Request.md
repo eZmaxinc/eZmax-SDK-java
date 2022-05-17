@@ -2,13 +2,13 @@
 
 # EzsignsignatureEditObjectV1Request
 
-Request for the /1/object/ezsignsignature/editObject API Request
+Request for PUT /1/object/ezsignsignature/{pkiEzsignsignatureID}
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzsignsignature** | [**EzsignsignatureRequestCompound**](EzsignsignatureRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objEzsignsignature** | [**EzsignsignatureRequestCompound**](EzsignsignatureRequestCompound.md) |  |  |
 
 
 

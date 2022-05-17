@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -181,14 +181,8 @@ public class ObjectEzsignformfieldgroupApi {
      */
     public ApiResponse<EzsignformfieldgroupCreateObjectV1Response> ezsignformfieldgroupCreateObjectV1WithHttpInfo(EzsignformfieldgroupCreateObjectV1Request ezsignformfieldgroupCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupCreateObjectV1ValidateBeforeCall(ezsignformfieldgroupCreateObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignformfieldgroupCreateObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignformfieldgroupCreateObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignformfieldgroupCreateObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignformfieldgroupCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -320,14 +314,8 @@ public class ObjectEzsignformfieldgroupApi {
      */
     public ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> ezsignformfieldgroupDeleteObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupDeleteObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignformfieldgroupDeleteObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignformfieldgroupDeleteObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignformfieldgroupDeleteObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignformfieldgroupDeleteObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -469,14 +457,8 @@ public class ObjectEzsignformfieldgroupApi {
      */
     public ApiResponse<EzsignformfieldgroupEditObjectV1Response> ezsignformfieldgroupEditObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupEditObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignformfieldgroupEditObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignformfieldgroupEditObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignformfieldgroupEditObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignformfieldgroupEditObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -608,14 +590,8 @@ public class ObjectEzsignformfieldgroupApi {
      */
     public ApiResponse<EzsignformfieldgroupGetObjectV1Response> ezsignformfieldgroupGetObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupGetObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignformfieldgroupGetObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignformfieldgroupGetObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignformfieldgroupGetObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignformfieldgroupGetObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

@@ -2,14 +2,14 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**franchiseofficeGetAutocompleteV1**](ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**franchiseofficeGetAutocompleteV1**](ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV1) | **GET** /1/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs |
 
 
 <a name="franchiseofficeGetAutocompleteV1"></a>
 # **franchiseofficeGetAutocompleteV1**
-> CommonGetAutocompleteV1Response franchiseofficeGetAutocompleteV1(sSelector, sQuery)
+> CommonGetAutocompleteV1Response franchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Franchiseoffices and IDs
 
@@ -39,8 +39,9 @@ public class Example {
     ObjectFranchiseofficeApi apiInstance = new ObjectFranchiseofficeApi(defaultClient);
     String sSelector = "Active"; // String | The type of Franchiseoffices to return
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.franchiseofficeGetAutocompleteV1(sSelector, sQuery);
+      CommonGetAutocompleteV1Response result = apiInstance.franchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectFranchiseofficeApi#franchiseofficeGetAutocompleteV1");
@@ -55,10 +56,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Franchiseoffices to return | [enum: Active, All]
- **sQuery** | **String**| Allow to filter the returned results | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sSelector** | **String**| The type of Franchiseoffices to return | [enum: Active, All] |
+| **sQuery** | **String**| Allow to filter the returned results | [optional] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
 
@@ -76,5 +78,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response |  -  |
+| **200** | Successful response |  -  |
 

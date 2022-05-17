@@ -2,13 +2,13 @@
 
 # EzsignfolderSendV1Request
 
-Request for the /1/object/ezsignfolder/{pkiEzsignfolderID}/send API Request
+Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**tExtraMessage** | **String** | A custom text message that will be added to the email sent to signatories inviting them to sign.  You can send an empty string and only the generic message will be sent. | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**tExtraMessage** | **String** | A custom text message that will be added to the email sent. |  |
 
 
 

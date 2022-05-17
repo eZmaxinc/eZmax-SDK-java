@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfolder Object
  */
 @ApiModel(description = "An Ezsignfolder Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignfolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -251,7 +252,7 @@ public class EzsignfolderResponse {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "92", required = true, value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
+  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
 
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -365,8 +366,8 @@ public class EzsignfolderResponse {
    * The maximum date and time at which the Ezsignfolder can be signed.
    * @return dtEzsignfolderDuedate
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The maximum date and time at which the Ezsignfolder can be signed.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The maximum date and time at which the Ezsignfolder can be signed.")
 
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
@@ -389,7 +390,7 @@ public class EzsignfolderResponse {
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the Ezsign folder was sent the last time.")
+  @ApiModelProperty(example = "2020-12-31T23:59:59.000Z", value = "The date and time at which the Ezsign folder was sent the last time.")
 
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
@@ -516,6 +517,7 @@ public class EzsignfolderResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -622,8 +624,6 @@ public class EzsignfolderResponse {
     openapiRequiredFields.add("sEzsignfolderDescription");
     openapiRequiredFields.add("tEzsignfolderNote");
     openapiRequiredFields.add("eEzsignfolderSendreminderfrequency");
-    openapiRequiredFields.add("dtEzsignfolderDuedate");
-    openapiRequiredFields.add("dtEzsignfolderSentdate");
     openapiRequiredFields.add("dtEzsignfolderScheduledarchive");
     openapiRequiredFields.add("dtEzsignfolderScheduleddestruction");
     openapiRequiredFields.add("eEzsignfolderStep");
@@ -645,6 +645,7 @@ public class EzsignfolderResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderResponse is not found in the empty JSON string", EzsignfolderResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -658,6 +659,36 @@ public class EzsignfolderResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+      }
+      if (jsonObj.get("sBillingentityinternalDescriptionX") != null && !jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
+      }
+      if (jsonObj.get("sEzsigntsarequirementDescriptionX") != null && !jsonObj.get("sEzsigntsarequirementDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntsarequirementDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntsarequirementDescriptionX").toString()));
+      }
+      if (jsonObj.get("sEzsignfolderDescription") != null && !jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
+      }
+      if (jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderDuedate") != null && !jsonObj.get("dtEzsignfolderDuedate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDuedate").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderSentdate") != null && !jsonObj.get("dtEzsignfolderSentdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderSentdate").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderScheduledarchive") != null && !jsonObj.get("dtEzsignfolderScheduledarchive").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderScheduledarchive` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduledarchive").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderScheduleddestruction") != null && !jsonObj.get("dtEzsignfolderScheduleddestruction").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderScheduleddestruction` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduleddestruction").toString()));
+      }
+      if (jsonObj.get("dtEzsignfolderClose") != null && !jsonObj.get("dtEzsignfolderClose").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));
       }
       // validate the optional field `objAudit`
       if (jsonObj.getAsJsonObject("objAudit") != null) {

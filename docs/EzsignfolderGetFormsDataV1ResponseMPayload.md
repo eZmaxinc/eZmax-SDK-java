@@ -2,15 +2,13 @@
 
 # EzsignfolderGetFormsDataV1ResponseMPayload
 
-Payload for the /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData API Request
+Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder | 
-**sEzsignfolderDescription** | **String** | The description of the Ezsignfolder | 
-**aObjFormDataDocument** | [**List&lt;CustomFormDataDocumentResponse&gt;**](CustomFormDataDocumentResponse.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objFormsDataFolder** | [**CustomFormsDataFolderResponse**](CustomFormsDataFolderResponse.md) |  |  |
 
 
 

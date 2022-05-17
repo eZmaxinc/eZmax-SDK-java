@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.FieldEEzsigntemplatepackageType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,9 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -50,22 +48,6 @@ public class EzsigntemplatepackageListElementTest {
     }
 
     /**
-     * Test the property 'fkiDepartmentID'
-     */
-    @Test
-    public void fkiDepartmentIDTest() {
-        // TODO: test fkiDepartmentID
-    }
-
-    /**
-     * Test the property 'fkiTeamID'
-     */
-    @Test
-    public void fkiTeamIDTest() {
-        // TODO: test fkiTeamID
-    }
-
-    /**
      * Test the property 'fkiEzsignfoldertypeID'
      */
     @Test
@@ -79,14 +61,6 @@ public class EzsigntemplatepackageListElementTest {
     @Test
     public void fkiLanguageIDTest() {
         // TODO: test fkiLanguageID
-    }
-
-    /**
-     * Test the property 'eEzsigntemplatepackageType'
-     */
-    @Test
-    public void eEzsigntemplatepackageTypeTest() {
-        // TODO: test eEzsigntemplatepackageType
     }
 
     /**
@@ -106,11 +80,27 @@ public class EzsigntemplatepackageListElementTest {
     }
 
     /**
+     * Test the property 'bEzsigntemplatepackageNeedvalidation'
+     */
+    @Test
+    public void bEzsigntemplatepackageNeedvalidationTest() {
+        // TODO: test bEzsigntemplatepackageNeedvalidation
+    }
+
+    /**
      * Test the property 'iEzsigntemplatepackagemembership'
      */
     @Test
     public void iEzsigntemplatepackagemembershipTest() {
         // TODO: test iEzsigntemplatepackagemembership
+    }
+
+    /**
+     * Test the property 'sEzsignfoldertypeNameX'
+     */
+    @Test
+    public void sEzsignfoldertypeNameXTest() {
+        // TODO: test sEzsignfoldertypeNameX
     }
 
 }

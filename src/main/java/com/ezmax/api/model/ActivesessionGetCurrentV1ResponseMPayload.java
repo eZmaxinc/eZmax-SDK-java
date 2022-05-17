@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -18,7 +18,7 @@ import java.util.Arrays;
 import com.ezmax.api.model.ActivesessionResponseCompound;
 import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
 import com.ezmax.api.model.ActivesessionResponseCompoundUser;
-import com.ezmax.api.model.FieldEActivesessionSessiontype;
+import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -43,6 +43,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -51,14 +52,14 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for the /1/object/activesession/getCurrent API Request
+ * Payload for GET /1/object/activesession/getCurrent
  */
-@ApiModel(description = "Payload for the /1/object/activesession/getCurrent API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/activesession/getCurrent")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE = "eActivesessionSessiontype";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_SESSIONTYPE)
-  private FieldEActivesessionSessiontype eActivesessionSessiontype;
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
+  private FieldEActivesessionUsertype eActivesessionUsertype;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
@@ -107,26 +108,26 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public ActivesessionGetCurrentV1ResponseMPayload() { 
   }
 
-  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     
-    this.eActivesessionSessiontype = eActivesessionSessiontype;
+    this.eActivesessionUsertype = eActivesessionUsertype;
     return this;
   }
 
    /**
-   * Get eActivesessionSessiontype
-   * @return eActivesessionSessiontype
+   * Get eActivesessionUsertype
+   * @return eActivesessionUsertype
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public FieldEActivesessionSessiontype geteActivesessionSessiontype() {
-    return eActivesessionSessiontype;
+  public FieldEActivesessionUsertype geteActivesessionUsertype() {
+    return eActivesessionUsertype;
   }
 
 
-  public void seteActivesessionSessiontype(FieldEActivesessionSessiontype eActivesessionSessiontype) {
-    this.eActivesessionSessiontype = eActivesessionSessiontype;
+  public void seteActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
+    this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
 
@@ -395,6 +396,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -404,7 +406,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       return false;
     }
     ActivesessionGetCurrentV1ResponseMPayload activesessionGetCurrentV1ResponseMPayload = (ActivesessionGetCurrentV1ResponseMPayload) o;
-    return Objects.equals(this.eActivesessionSessiontype, activesessionGetCurrentV1ResponseMPayload.eActivesessionSessiontype) &&
+    return Objects.equals(this.eActivesessionUsertype, activesessionGetCurrentV1ResponseMPayload.eActivesessionUsertype) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionGetCurrentV1ResponseMPayload.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionGetCurrentV1ResponseMPayload.fkiLanguageID) &&
         Objects.equals(this.sCompanyNameX, activesessionGetCurrentV1ResponseMPayload.sCompanyNameX) &&
@@ -420,14 +422,14 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionSessiontype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, pksCustomerCode, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, pksCustomerCode, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetCurrentV1ResponseMPayload {\n");
-    sb.append("    eActivesessionSessiontype: ").append(toIndentedString(eActivesessionSessiontype)).append("\n");
+    sb.append("    eActivesessionUsertype: ").append(toIndentedString(eActivesessionUsertype)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
@@ -461,7 +463,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("eActivesessionSessiontype");
+    openapiFields.add("eActivesessionUsertype");
     openapiFields.add("eActivesessionWeekdaystart");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sCompanyNameX");
@@ -476,7 +478,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("eActivesessionSessiontype");
+    openapiRequiredFields.add("eActivesessionUsertype");
     openapiRequiredFields.add("eActivesessionWeekdaystart");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sCompanyNameX");
@@ -502,6 +504,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionGetCurrentV1ResponseMPayload is not found in the empty JSON string", ActivesessionGetCurrentV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -516,6 +519,19 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sCompanyNameX") != null && !jsonObj.get("sCompanyNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
+      }
+      if (jsonObj.get("sDepartmentNameX") != null && !jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
+      }
+      if (jsonObj.get("pksCustomerCode") != null && !jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("a_pkiPermissionID") != null && !jsonObj.get("a_pkiPermissionID").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_pkiPermissionID` to be an array in the JSON string but got `%s`", jsonObj.get("a_pkiPermissionID").toString()));
+      }
       // validate the optional field `objUserReal`
       if (jsonObj.getAsJsonObject("objUserReal") != null) {
         ActivesessionResponseCompoundUser.validateJsonObject(jsonObj.getAsJsonObject("objUserReal"));
@@ -527,6 +543,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       // validate the optional field `objApikey`
       if (jsonObj.getAsJsonObject("objApikey") != null) {
         ActivesessionResponseCompoundApikey.validateJsonObject(jsonObj.getAsJsonObject("objApikey"));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("a_eModuleInternalname") != null && !jsonObj.get("a_eModuleInternalname").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_eModuleInternalname` to be an array in the JSON string but got `%s`", jsonObj.get("a_eModuleInternalname").toString()));
       }
   }
 

@@ -2,13 +2,13 @@
 
 # FranchisereferalincomeCreateObjectV1ResponseMPayload
 
-Payload for the /1/object/franchisereferalincome/createObject API Request
+Payload for POST /1/object/franchisereferalincome
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aPkiFranchisereferalincomeID** | **List&lt;Integer&gt;** | An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aPkiFranchisereferalincomeID** | **List&lt;Integer&gt;** | An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request. |  |
 
 
 

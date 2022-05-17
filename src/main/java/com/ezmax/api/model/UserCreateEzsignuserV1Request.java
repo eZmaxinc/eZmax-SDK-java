@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -44,10 +45,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Request for the /1/module/user/createEzsignuser API Request
+ * Request for POST /1/module/user/createEzsignuser
  */
-@ApiModel(description = "Request for the /1/module/user/createEzsignuser API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Request for POST /1/module/user/createEzsignuser")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -270,6 +271,7 @@ public class UserCreateEzsignuserV1Request {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -362,6 +364,7 @@ public class UserCreateEzsignuserV1Request {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UserCreateEzsignuserV1Request is not found in the empty JSON string", UserCreateEzsignuserV1Request.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -375,6 +378,27 @@ public class UserCreateEzsignuserV1Request {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sUserFirstname") != null && !jsonObj.get("sUserFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+      }
+      if (jsonObj.get("sUserLastname") != null && !jsonObj.get("sUserLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
+      }
+      if (jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      }
+      if (jsonObj.get("sPhoneRegion") != null && !jsonObj.get("sPhoneRegion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneRegion").toString()));
+      }
+      if (jsonObj.get("sPhoneExchange") != null && !jsonObj.get("sPhoneExchange").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExchange` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExchange").toString()));
+      }
+      if (jsonObj.get("sPhoneNumber") != null && !jsonObj.get("sPhoneNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneNumber").toString()));
+      }
+      if (jsonObj.get("sPhoneExtension") != null && !jsonObj.get("sPhoneExtension").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExtension` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExtension").toString()));
       }
   }
 

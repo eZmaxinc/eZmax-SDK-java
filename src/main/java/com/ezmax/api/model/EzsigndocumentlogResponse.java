@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -37,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,7 +49,7 @@ import eZmaxAPI.JSON;
  * An Ezsigndocumentlog Object
  */
 @ApiModel(description = "An Ezsigndocumentlog Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentlogResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -96,7 +97,7 @@ public class EzsigndocumentlogResponse {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
+  @ApiModelProperty(example = "70", value = "The unique ID of the User")
 
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -119,7 +120,7 @@ public class EzsigndocumentlogResponse {
    * @return fkiEzsignsignerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Ezsignsigner")
+  @ApiModelProperty(example = "89", value = "The unique ID of the Ezsignsigner")
 
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
@@ -269,6 +270,7 @@ public class EzsigndocumentlogResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -338,8 +340,6 @@ public class EzsigndocumentlogResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("fkiUserID");
-    openapiRequiredFields.add("fkiEzsignsignerID");
     openapiRequiredFields.add("dtEzsigndocumentlogDatetime");
     openapiRequiredFields.add("eEzsigndocumentlogType");
     openapiRequiredFields.add("sEzsigndocumentlogDetail");
@@ -362,6 +362,7 @@ public class EzsigndocumentlogResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentlogResponse is not found in the empty JSON string", EzsigndocumentlogResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -375,6 +376,21 @@ public class EzsigndocumentlogResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("dtEzsigndocumentlogDatetime") != null && !jsonObj.get("dtEzsigndocumentlogDatetime").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentlogDatetime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentlogDatetime").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentlogDetail") != null && !jsonObj.get("sEzsigndocumentlogDetail").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentlogDetail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentlogDetail").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentlogLastname") != null && !jsonObj.get("sEzsigndocumentlogLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentlogLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentlogLastname").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentlogFirstname") != null && !jsonObj.get("sEzsigndocumentlogFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentlogFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentlogFirstname").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentlogIP") != null && !jsonObj.get("sEzsigndocumentlogIP").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentlogIP` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentlogIP").toString()));
       }
   }
 

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignsignerRequestCompoundContact {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -64,6 +65,18 @@ public class EzsignsignerRequestCompoundContact {
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
   private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  private String sPhoneE164;
+
+  public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
+  private String sPhoneExtension;
+
+  public static final String SERIALIZED_NAME_S_PHONE_E164_CELL = "sPhoneE164Cell";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164_CELL)
+  private String sPhoneE164Cell;
 
   public static final String SERIALIZED_NAME_S_PHONE_NUMBER = "sPhoneNumber";
   @SerializedName(SERIALIZED_NAME_S_PHONE_NUMBER)
@@ -170,6 +183,75 @@ public class EzsignsignerRequestCompoundContact {
   }
 
 
+  public EzsignsignerRequestCompoundContact sPhoneE164(String sPhoneE164) {
+    
+    this.sPhoneE164 = sPhoneE164;
+    return this;
+  }
+
+   /**
+   * A phone number in E.164 Format
+   * @return sPhoneE164
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
+
+  public String getsPhoneE164() {
+    return sPhoneE164;
+  }
+
+
+  public void setsPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+  }
+
+
+  public EzsignsignerRequestCompoundContact sPhoneExtension(String sPhoneExtension) {
+    
+    this.sPhoneExtension = sPhoneExtension;
+    return this;
+  }
+
+   /**
+   * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+   * @return sPhoneExtension
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "123", value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
+
+  public String getsPhoneExtension() {
+    return sPhoneExtension;
+  }
+
+
+  public void setsPhoneExtension(String sPhoneExtension) {
+    this.sPhoneExtension = sPhoneExtension;
+  }
+
+
+  public EzsignsignerRequestCompoundContact sPhoneE164Cell(String sPhoneE164Cell) {
+    
+    this.sPhoneE164Cell = sPhoneE164Cell;
+    return this;
+  }
+
+   /**
+   * A phone number in E.164 Format
+   * @return sPhoneE164Cell
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
+
+  public String getsPhoneE164Cell() {
+    return sPhoneE164Cell;
+  }
+
+
+  public void setsPhoneE164Cell(String sPhoneE164Cell) {
+    this.sPhoneE164Cell = sPhoneE164Cell;
+  }
+
+
   public EzsignsignerRequestCompoundContact sPhoneNumber(String sPhoneNumber) {
     
     this.sPhoneNumber = sPhoneNumber;
@@ -177,11 +259,13 @@ public class EzsignsignerRequestCompoundContact {
   }
 
    /**
-   * The Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
+   * Get sPhoneNumber
    * @return sPhoneNumber
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(value = "")
 
   public String getsPhoneNumber() {
     return sPhoneNumber;
@@ -200,11 +284,13 @@ public class EzsignsignerRequestCompoundContact {
   }
 
    /**
-   * The Cell Phone number of the contact. Use format \&quot;5149901516\&quot; for North American Numbers (Without \&quot;1\&quot; for long distance code) you would dial like this: 1-514-990-1516. Use format \&quot;498945233886\&quot; for international numbers (Without \&quot;011\&quot;) you would dial like this: +49 89 452 33 88-6. In this example \&quot;49\&quot; is the country code of Germany.
+   * Get sPhoneNumberCell
    * @return sPhoneNumberCell
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Cell Phone number of the contact. Use format \"5149901516\" for North American Numbers (Without \"1\" for long distance code) you would dial like this: 1-514-990-1516. Use format \"498945233886\" for international numbers (Without \"011\") you would dial like this: +49 89 452 33 88-6. In this example \"49\" is the country code of Germany.")
+  @ApiModelProperty(value = "")
 
   public String getsPhoneNumberCell() {
     return sPhoneNumberCell;
@@ -214,6 +300,7 @@ public class EzsignsignerRequestCompoundContact {
   public void setsPhoneNumberCell(String sPhoneNumberCell) {
     this.sPhoneNumberCell = sPhoneNumberCell;
   }
+
 
 
   @Override
@@ -229,13 +316,16 @@ public class EzsignsignerRequestCompoundContact {
         Objects.equals(this.sContactLastname, ezsignsignerRequestCompoundContact.sContactLastname) &&
         Objects.equals(this.fkiLanguageID, ezsignsignerRequestCompoundContact.fkiLanguageID) &&
         Objects.equals(this.sEmailAddress, ezsignsignerRequestCompoundContact.sEmailAddress) &&
+        Objects.equals(this.sPhoneE164, ezsignsignerRequestCompoundContact.sPhoneE164) &&
+        Objects.equals(this.sPhoneExtension, ezsignsignerRequestCompoundContact.sPhoneExtension) &&
+        Objects.equals(this.sPhoneE164Cell, ezsignsignerRequestCompoundContact.sPhoneE164Cell) &&
         Objects.equals(this.sPhoneNumber, ezsignsignerRequestCompoundContact.sPhoneNumber) &&
         Objects.equals(this.sPhoneNumberCell, ezsignsignerRequestCompoundContact.sPhoneNumberCell);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneNumber, sPhoneNumberCell);
+    return Objects.hash(sContactFirstname, sContactLastname, fkiLanguageID, sEmailAddress, sPhoneE164, sPhoneExtension, sPhoneE164Cell, sPhoneNumber, sPhoneNumberCell);
   }
 
   @Override
@@ -246,6 +336,9 @@ public class EzsignsignerRequestCompoundContact {
     sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
+    sb.append("    sPhoneExtension: ").append(toIndentedString(sPhoneExtension)).append("\n");
+    sb.append("    sPhoneE164Cell: ").append(toIndentedString(sPhoneE164Cell)).append("\n");
     sb.append("    sPhoneNumber: ").append(toIndentedString(sPhoneNumber)).append("\n");
     sb.append("    sPhoneNumberCell: ").append(toIndentedString(sPhoneNumberCell)).append("\n");
     sb.append("}");
@@ -274,6 +367,9 @@ public class EzsignsignerRequestCompoundContact {
     openapiFields.add("sContactLastname");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sEmailAddress");
+    openapiFields.add("sPhoneE164");
+    openapiFields.add("sPhoneExtension");
+    openapiFields.add("sPhoneE164Cell");
     openapiFields.add("sPhoneNumber");
     openapiFields.add("sPhoneNumberCell");
 
@@ -298,6 +394,7 @@ public class EzsignsignerRequestCompoundContact {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignerRequestCompoundContact is not found in the empty JSON string", EzsignsignerRequestCompoundContact.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -311,6 +408,30 @@ public class EzsignsignerRequestCompoundContact {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sContactFirstname") != null && !jsonObj.get("sContactFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sContactFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sContactFirstname").toString()));
+      }
+      if (jsonObj.get("sContactLastname") != null && !jsonObj.get("sContactLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sContactLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sContactLastname").toString()));
+      }
+      if (jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      }
+      if (jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
+      }
+      if (jsonObj.get("sPhoneExtension") != null && !jsonObj.get("sPhoneExtension").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExtension` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExtension").toString()));
+      }
+      if (jsonObj.get("sPhoneE164Cell") != null && !jsonObj.get("sPhoneE164Cell").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164Cell` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164Cell").toString()));
+      }
+      if (jsonObj.get("sPhoneNumber") != null && !jsonObj.get("sPhoneNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneNumber").toString()));
+      }
+      if (jsonObj.get("sPhoneNumberCell") != null && !jsonObj.get("sPhoneNumberCell").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneNumberCell` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneNumberCell").toString()));
       }
   }
 

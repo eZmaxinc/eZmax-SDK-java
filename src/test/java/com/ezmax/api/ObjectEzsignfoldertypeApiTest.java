@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -19,8 +19,8 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,36 +30,33 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignfoldertypeApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignfoldertypeApiTest {
 
     private final ObjectEzsignfoldertypeApi api = new ObjectEzsignfoldertypeApi();
 
-    
     /**
      * Retrieve Ezsignfoldertypes and IDs
      *
      * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldertypeGetAutocompleteV1Test() throws ApiException {
         String sSelector = null;
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
-                CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+        CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve Ezsignfoldertype list
      *
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldertypeGetListV1Test() throws ApiException {
@@ -68,8 +65,8 @@ public class ObjectEzsignfoldertypeApiTest {
         Integer iRowOffset = null;
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
-                EzsignfoldertypeGetListV1Response response = api.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        EzsignfoldertypeGetListV1Response response = api.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         // TODO: test validations
     }
-    
+
 }

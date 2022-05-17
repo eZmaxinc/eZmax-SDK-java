@@ -2,13 +2,13 @@
 
 # ApikeyCreateObjectV2ResponseMPayload
 
-Payload for the /2/object/apikey/createObject API Request
+Payload for POST /2/object/apikey
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjApikey** | [**List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aObjApikey** | [**List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  |  |
 
 
 

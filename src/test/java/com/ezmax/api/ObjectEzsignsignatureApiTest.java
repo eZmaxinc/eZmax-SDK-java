@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -23,8 +23,10 @@ import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import com.ezmax.api.model.EzsignsignatureSignV1Request;
+import com.ezmax.api.model.EzsignsignatureSignV1Response;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,86 +36,95 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignsignatureApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignsignatureApiTest {
 
     private final ObjectEzsignsignatureApi api = new ObjectEzsignsignatureApi();
 
-    
     /**
      * Create a new Ezsignsignature
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignsignatureCreateObjectV1Test() throws ApiException {
         List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request = null;
-                EzsignsignatureCreateObjectV1Response response = api.ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request);
+        EzsignsignatureCreateObjectV1Response response = api.ezsignsignatureCreateObjectV1(ezsignsignatureCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Ezsignsignature
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignsignatureCreateObjectV2Test() throws ApiException {
         EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request = null;
-                EzsignsignatureCreateObjectV2Response response = api.ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request);
+        EzsignsignatureCreateObjectV2Response response = api.ezsignsignatureCreateObjectV2(ezsignsignatureCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
     /**
      * Delete an existing Ezsignsignature
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignsignatureDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
-                EzsignsignatureDeleteObjectV1Response response = api.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
+        EzsignsignatureDeleteObjectV1Response response = api.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
         // TODO: test validations
     }
-    
+
     /**
      * Edit an existing Ezsignsignature
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignsignatureEditObjectV1Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
         EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request = null;
-                EzsignsignatureEditObjectV1Response response = api.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
+        EzsignsignatureEditObjectV1Response response = api.ezsignsignatureEditObjectV1(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignsignature
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignsignatureGetObjectV1Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
-                EzsignsignatureGetObjectV1Response response = api.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
+        EzsignsignatureGetObjectV1Response response = api.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
         // TODO: test validations
     }
-    
+
+    /**
+     * Sign the Ezsignsignature
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignsignatureSignV1Test() throws ApiException {
+        Integer pkiEzsignsignatureID = null;
+        EzsignsignatureSignV1Request ezsignsignatureSignV1Request = null;
+        EzsignsignatureSignV1Response response = api.ezsignsignatureSignV1(pkiEzsignsignatureID, ezsignsignatureSignV1Request);
+        // TODO: test validations
+    }
+
 }

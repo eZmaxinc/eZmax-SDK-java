@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjEzsignfoldertype** | [**List&lt;EzsignfoldertypeListElement&gt;**](EzsignfoldertypeListElement.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aObjEzsignfoldertype** | [**List&lt;EzsignfoldertypeListElement&gt;**](EzsignfoldertypeListElement.md) |  |  |
 
 
 

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -38,6 +38,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
  * Generic Error Message
  */
 @ApiModel(description = "Generic Error Message")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
@@ -135,6 +136,7 @@ public class CommonResponseErrorSTemporaryFileUrl {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -206,6 +208,7 @@ public class CommonResponseErrorSTemporaryFileUrl {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseErrorSTemporaryFileUrl is not found in the empty JSON string", CommonResponseErrorSTemporaryFileUrl.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -219,6 +222,15 @@ public class CommonResponseErrorSTemporaryFileUrl {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sTemporaryFileUrl") != null && !jsonObj.get("sTemporaryFileUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sTemporaryFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sTemporaryFileUrl").toString()));
+      }
+      if (jsonObj.get("sErrorMessage") != null && !jsonObj.get("sErrorMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
+      }
+      if (jsonObj.get("eErrorCode") != null && !jsonObj.get("eErrorCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eErrorCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eErrorCode").toString()));
       }
   }
 

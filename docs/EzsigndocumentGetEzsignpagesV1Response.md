@@ -2,15 +2,15 @@
 
 # EzsigndocumentGetEzsignpagesV1Response
 
-Response for the /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages API Request
+Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetEzsignpagesV1ResponseMPayload**](EzsigndocumentGetEzsignpagesV1ResponseMPayload.md) |  | 
-**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional]
-**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigndocumentGetEzsignpagesV1ResponseMPayload**](EzsigndocumentGetEzsignpagesV1ResponseMPayload.md) |  |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

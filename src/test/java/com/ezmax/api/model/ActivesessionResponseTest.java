@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -13,7 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.FieldEActivesessionSessiontype;
+import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -43,11 +42,11 @@ public class ActivesessionResponseTest {
     }
 
     /**
-     * Test the property 'eActivesessionSessiontype'
+     * Test the property 'eActivesessionUsertype'
      */
     @Test
-    public void eActivesessionSessiontypeTest() {
-        // TODO: test eActivesessionSessiontype
+    public void eActivesessionUsertypeTest() {
+        // TODO: test eActivesessionUsertype
     }
 
     /**

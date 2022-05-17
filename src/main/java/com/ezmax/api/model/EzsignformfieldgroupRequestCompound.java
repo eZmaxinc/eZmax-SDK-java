@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -46,6 +46,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -57,7 +58,7 @@ import eZmaxAPI.JSON;
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignformfieldgroup Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignformfieldgroupRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -566,6 +567,7 @@ public class EzsignformfieldgroupRequestCompound {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -692,6 +694,7 @@ public class EzsignformfieldgroupRequestCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupRequestCompound is not found in the empty JSON string", EzsignformfieldgroupRequestCompound.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -706,23 +709,50 @@ public class EzsignformfieldgroupRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sEzsignformfieldgroupLabel") != null && !jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
+      }
+      if (jsonObj.get("sEzsignformfieldgroupDefaultvalue") != null && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupDefaultvalue").toString()));
+      }
+      if (jsonObj.get("sEzsignformfieldgroupRegexp") != null && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupRegexp").toString()));
+      }
+      if (jsonObj.get("tEzsignformfieldgroupTooltip") != null && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignformfieldgroupTooltip").toString()));
+      }
       JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
-      // validate the optional field `a_objEzsignformfieldgroupsigner` (array)
       if (jsonArrayaObjEzsignformfieldgroupsigner != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignformfieldgroupsigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfieldgroupsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfieldgroupsigner").toString()));
+        }
+
+        // validate the optional field `a_objEzsignformfieldgroupsigner` (array)
         for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
           EzsignformfieldgroupsignerRequestCompound.validateJsonObject(jsonArrayaObjEzsignformfieldgroupsigner.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
-      // validate the optional field `a_objDropdownElement` (array)
       if (jsonArrayaObjDropdownElement != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objDropdownElement").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objDropdownElement` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDropdownElement").toString()));
+        }
+
+        // validate the optional field `a_objDropdownElement` (array)
         for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
           CustomDropdownElementRequestCompound.validateJsonObject(jsonArrayaObjDropdownElement.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
-      // validate the optional field `a_objEzsignformfield` (array)
       if (jsonArrayaObjEzsignformfield != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignformfield").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfield` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfield").toString()));
+        }
+
+        // validate the optional field `a_objEzsignformfield` (array)
         for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
           EzsignformfieldRequestCompound.validateJsonObject(jsonArrayaObjEzsignformfield.get(i).getAsJsonObject());
         };

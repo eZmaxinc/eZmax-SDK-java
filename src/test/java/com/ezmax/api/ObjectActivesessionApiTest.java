@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,8 +15,8 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.ActivesessionGetCurrentV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,24 +26,22 @@ import java.util.Map;
 /**
  * API tests for ObjectActivesessionApi
  */
-@Ignore
+@Disabled
 public class ObjectActivesessionApiTest {
 
     private final ObjectActivesessionApi api = new ObjectActivesessionApi();
 
-    
     /**
      * Get Current Activesession
      *
      * Retrieve the details about the current activesession
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void activesessionGetCurrentV1Test() throws ApiException {
-                ActivesessionGetCurrentV1Response response = api.activesessionGetCurrentV1();
+        ActivesessionGetCurrentV1Response response = api.activesessionGetCurrentV1();
         // TODO: test validations
     }
-    
+
 }

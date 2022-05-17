@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -38,6 +38,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -46,10 +47,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request
+ * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
  */
-@ApiModel(description = "Request for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -190,6 +191,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -262,6 +264,7 @@ public class EzsigndocumentGetWordsPositionsV1Request {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetWordsPositionsV1Request is not found in the empty JSON string", EzsigndocumentGetWordsPositionsV1Request.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -275,6 +278,13 @@ public class EzsigndocumentGetWordsPositionsV1Request {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("eGet") != null && !jsonObj.get("eGet").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eGet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eGet").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("a_sWord") != null && !jsonObj.get("a_sWord").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sWord` to be an array in the JSON string but got `%s`", jsonObj.get("a_sWord").toString()));
       }
   }
 

@@ -6,10 +6,10 @@ Gives informations about the user that created the object and the last user to h
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objAuditdetailCreated** | [**CommonAuditdetail**](CommonAuditdetail.md) |  | 
-**objAuditdetailModified** | [**CommonAuditdetail**](CommonAuditdetail.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objAuditdetailCreated** | [**CommonAuditdetail**](CommonAuditdetail.md) |  |  |
+|**objAuditdetailModified** | [**CommonAuditdetail**](CommonAuditdetail.md) |  |  [optional] |
 
 
 

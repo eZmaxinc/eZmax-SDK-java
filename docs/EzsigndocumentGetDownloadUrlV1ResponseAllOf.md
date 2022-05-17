@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsigndocumentGetDownloadUrlV1ResponseMPayload**](EzsigndocumentGetDownloadUrlV1ResponseMPayload.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsigndocumentGetDownloadUrlV1ResponseMPayload**](EzsigndocumentGetDownloadUrlV1ResponseMPayload.md) |  |  |
 
 
 

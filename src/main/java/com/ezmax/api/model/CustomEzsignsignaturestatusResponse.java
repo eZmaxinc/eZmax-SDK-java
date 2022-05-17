@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignsignaturestatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -207,6 +208,7 @@ public class CustomEzsignsignaturestatusResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -284,6 +286,7 @@ public class CustomEzsignsignaturestatusResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomEzsignsignaturestatusResponse is not found in the empty JSON string", CustomEzsignsignaturestatusResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -297,6 +300,9 @@ public class CustomEzsignsignaturestatusResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("eEzsignsignaturestatusSteptype") != null && !jsonObj.get("eEzsignsignaturestatusSteptype").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignaturestatusSteptype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignaturestatusSteptype").toString()));
       }
   }
 

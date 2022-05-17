@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * An Franchisereferalincome Object
  */
 @ApiModel(description = "An Franchisereferalincome Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class FranchisereferalincomeRequest {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -376,6 +377,7 @@ public class FranchisereferalincomeRequest {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -484,6 +486,7 @@ public class FranchisereferalincomeRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeRequest is not found in the empty JSON string", FranchisereferalincomeRequest.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -497,6 +500,27 @@ public class FranchisereferalincomeRequest {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("dFranchisereferalincomeLoan") != null && !jsonObj.get("dFranchisereferalincomeLoan").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
+      }
+      if (jsonObj.get("dFranchisereferalincomeFranchiseamount") != null && !jsonObj.get("dFranchisereferalincomeFranchiseamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeFranchiseamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchiseamount").toString()));
+      }
+      if (jsonObj.get("dFranchisereferalincomeFranchisoramount") != null && !jsonObj.get("dFranchisereferalincomeFranchisoramount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeFranchisoramount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchisoramount").toString()));
+      }
+      if (jsonObj.get("dFranchisereferalincomeAgentamount") != null && !jsonObj.get("dFranchisereferalincomeAgentamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeAgentamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeAgentamount").toString()));
+      }
+      if (jsonObj.get("dtFranchisereferalincomeDisbursed") != null && !jsonObj.get("dtFranchisereferalincomeDisbursed").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtFranchisereferalincomeDisbursed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtFranchisereferalincomeDisbursed").toString()));
+      }
+      if (jsonObj.get("tFranchisereferalincomeComment") != null && !jsonObj.get("tFranchisereferalincomeComment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tFranchisereferalincomeComment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tFranchisereferalincomeComment").toString()));
+      }
+      if (jsonObj.get("sFranchisereferalincomeRemoteid") != null && !jsonObj.get("sFranchisereferalincomeRemoteid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sFranchisereferalincomeRemoteid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchisereferalincomeRemoteid").toString()));
       }
   }
 

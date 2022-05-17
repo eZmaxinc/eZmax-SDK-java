@@ -2,13 +2,13 @@
 
 # EzsigndocumentGetTemporaryProofV1ResponseMPayload
 
-Payload for the /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof API Request
+Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**aObjEzsigndocumentlog** | [**EzsigndocumentlogResponseCompound**](EzsigndocumentlogResponseCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**aObjEzsigndocumentlog** | [**List&lt;EzsigndocumentlogResponseCompound&gt;**](EzsigndocumentlogResponseCompound.md) |  |  |
 
 
 

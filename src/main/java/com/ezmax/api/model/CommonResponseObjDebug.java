@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
  * This is a generic debug object that is returned by all API requests
  */
 @ApiModel(description = "This is a generic debug object that is returned by all API requests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -195,6 +196,7 @@ public class CommonResponseObjDebug {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -276,6 +278,7 @@ public class CommonResponseObjDebug {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebug is not found in the empty JSON string", CommonResponseObjDebug.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -290,9 +293,20 @@ public class CommonResponseObjDebug {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sMemoryUsage") != null && !jsonObj.get("sMemoryUsage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sMemoryUsage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sMemoryUsage").toString()));
+      }
+      if (jsonObj.get("sRunTime") != null && !jsonObj.get("sRunTime").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sRunTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sRunTime").toString()));
+      }
       JsonArray jsonArrayaObjSQLQuery = jsonObj.getAsJsonArray("a_objSQLQuery");
-      // validate the optional field `a_objSQLQuery` (array)
       if (jsonArrayaObjSQLQuery != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objSQLQuery").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objSQLQuery` to be an array in the JSON string but got `%s`", jsonObj.get("a_objSQLQuery").toString()));
+        }
+
+        // validate the optional field `a_objSQLQuery` (array)
         for (int i = 0; i < jsonArrayaObjSQLQuery.size(); i++) {
           CommonResponseObjSQLQuery.validateJsonObject(jsonArrayaObjSQLQuery.get(i).getAsJsonObject());
         };

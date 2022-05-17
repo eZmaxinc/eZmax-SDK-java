@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,8 @@ import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureSignV1Request;
+import com.ezmax.api.model.EzsignsignatureSignV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -190,14 +192,8 @@ public class ObjectEzsignsignatureApi {
     @Deprecated
     public ApiResponse<EzsignsignatureCreateObjectV1Response> ezsignsignatureCreateObjectV1WithHttpInfo(List<EzsignsignatureCreateObjectV1Request> ezsignsignatureCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureCreateObjectV1ValidateBeforeCall(ezsignsignatureCreateObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignsignatureCreateObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -324,14 +320,8 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureCreateObjectV2Response> ezsignsignatureCreateObjectV2WithHttpInfo(EzsignsignatureCreateObjectV2Request ezsignsignatureCreateObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureCreateObjectV2ValidateBeforeCall(ezsignsignatureCreateObjectV2Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV2Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureCreateObjectV2Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignsignatureCreateObjectV2Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignsignatureCreateObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -463,14 +453,8 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureDeleteObjectV1ValidateBeforeCall(pkiEzsignsignatureID, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignsignatureDeleteObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -612,14 +596,8 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureEditObjectV1Response> ezsignsignatureEditObjectV1WithHttpInfo(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV1Request ezsignsignatureEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureEditObjectV1ValidateBeforeCall(pkiEzsignsignatureID, ezsignsignatureEditObjectV1Request, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignsignatureEditObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureEditObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignsignatureEditObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignsignatureEditObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -751,14 +729,8 @@ public class ObjectEzsignsignatureApi {
      */
     public ApiResponse<EzsignsignatureGetObjectV1Response> ezsignsignatureGetObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureGetObjectV1ValidateBeforeCall(pkiEzsignsignatureID, null);
-        try {
-            Type localVarReturnType = new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<EzsignsignatureGetObjectV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -779,6 +751,150 @@ public class ObjectEzsignsignatureApi {
 
         okhttp3.Call localVarCall = ezsignsignatureGetObjectV1ValidateBeforeCall(pkiEzsignsignatureID, _callback);
         Type localVarReturnType = new TypeToken<EzsignsignatureGetObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignsignatureSignV1
+     * @param pkiEzsignsignatureID  (required)
+     * @param ezsignsignatureSignV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignsignatureSignV1Call(Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignsignatureSignV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
+            .replaceAll("\\{" + "pkiEzsignsignatureID" + "\\}", localVarApiClient.escapeString(pkiEzsignsignatureID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignsignatureSignV1ValidateBeforeCall(Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'pkiEzsignsignatureID' is set
+        if (pkiEzsignsignatureID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignsignatureID' when calling ezsignsignatureSignV1(Async)");
+        }
+        
+        // verify the required parameter 'ezsignsignatureSignV1Request' is set
+        if (ezsignsignatureSignV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignsignatureSignV1Request' when calling ezsignsignatureSignV1(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = ezsignsignatureSignV1Call(pkiEzsignsignatureID, ezsignsignatureSignV1Request, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Sign the Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID  (required)
+     * @param ezsignsignatureSignV1Request  (required)
+     * @return EzsignsignatureSignV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignsignatureSignV1Response ezsignsignatureSignV1(Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request) throws ApiException {
+        ApiResponse<EzsignsignatureSignV1Response> localVarResp = ezsignsignatureSignV1WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureSignV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Sign the Ezsignsignature
+     * 
+     * @param pkiEzsignsignatureID  (required)
+     * @param ezsignsignatureSignV1Request  (required)
+     * @return ApiResponse&lt;EzsignsignatureSignV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignsignatureSignV1Response> ezsignsignatureSignV1WithHttpInfo(Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignsignatureSignV1ValidateBeforeCall(pkiEzsignsignatureID, ezsignsignatureSignV1Request, null);
+        Type localVarReturnType = new TypeToken<EzsignsignatureSignV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Sign the Ezsignsignature (asynchronously)
+     * 
+     * @param pkiEzsignsignatureID  (required)
+     * @param ezsignsignatureSignV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The element you are trying to work on does not exist </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The syntax of the request is valid but the request cannot be completed. Look for detail in body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignsignatureSignV1Async(Integer pkiEzsignsignatureID, EzsignsignatureSignV1Request ezsignsignatureSignV1Request, final ApiCallback<EzsignsignatureSignV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignsignatureSignV1ValidateBeforeCall(pkiEzsignsignatureID, ezsignsignatureSignV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignsignatureSignV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

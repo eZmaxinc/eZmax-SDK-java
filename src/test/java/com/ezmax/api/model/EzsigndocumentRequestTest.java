@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,9 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -46,6 +45,38 @@ public class EzsigndocumentRequestTest {
     @Test
     public void pkiEzsigndocumentIDTest() {
         // TODO: test pkiEzsigndocumentID
+    }
+
+    /**
+     * Test the property 'fkiEzsignfolderID'
+     */
+    @Test
+    public void fkiEzsignfolderIDTest() {
+        // TODO: test fkiEzsignfolderID
+    }
+
+    /**
+     * Test the property 'fkiEzsigntemplateID'
+     */
+    @Test
+    public void fkiEzsigntemplateIDTest() {
+        // TODO: test fkiEzsigntemplateID
+    }
+
+    /**
+     * Test the property 'fkiEzsignfoldersignerassociationID'
+     */
+    @Test
+    public void fkiEzsignfoldersignerassociationIDTest() {
+        // TODO: test fkiEzsignfoldersignerassociationID
+    }
+
+    /**
+     * Test the property 'fkiLanguageID'
+     */
+    @Test
+    public void fkiLanguageIDTest() {
+        // TODO: test fkiLanguageID
     }
 
     /**
@@ -97,11 +128,11 @@ public class EzsigndocumentRequestTest {
     }
 
     /**
-     * Test the property 'fkiEzsignfolderID'
+     * Test the property 'eEzsigndocumentForm'
      */
     @Test
-    public void fkiEzsignfolderIDTest() {
-        // TODO: test fkiEzsignfolderID
+    public void eEzsigndocumentFormTest() {
+        // TODO: test eEzsigndocumentForm
     }
 
     /**
@@ -110,14 +141,6 @@ public class EzsigndocumentRequestTest {
     @Test
     public void dtEzsigndocumentDuedateTest() {
         // TODO: test dtEzsigndocumentDuedate
-    }
-
-    /**
-     * Test the property 'fkiLanguageID'
-     */
-    @Test
-    public void fkiLanguageIDTest() {
-        // TODO: test fkiLanguageID
     }
 
     /**

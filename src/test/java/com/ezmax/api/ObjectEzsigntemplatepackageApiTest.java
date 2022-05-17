@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -14,12 +14,21 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonGetAutocompleteDisabledV1Response;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Request;
+import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatepackageDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request;
+import com.ezmax.api.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response;
+import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Request;
+import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetListV1Response;
+import com.ezmax.api.model.EzsigntemplatepackageGetObjectV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,19 +38,91 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsigntemplatepackageApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsigntemplatepackageApiTest {
 
     private final ObjectEzsigntemplatepackageApi api = new ObjectEzsigntemplatepackageApi();
 
-    
+    /**
+     * Create a new Ezsigntemplatepackage
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageCreateObjectV1Test() throws ApiException {
+        EzsigntemplatepackageCreateObjectV1Request ezsigntemplatepackageCreateObjectV1Request = null;
+        EzsigntemplatepackageCreateObjectV1Response response = api.ezsigntemplatepackageCreateObjectV1(ezsigntemplatepackageCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepackage
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageDeleteObjectV1Test() throws ApiException {
+        Integer pkiEzsigntemplatepackageID = null;
+        EzsigntemplatepackageDeleteObjectV1Response response = api.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit multiple Ezsigntemplatepackagesigners
+     *
+     * Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Test() throws ApiException {
+        Integer pkiEzsigntemplatepackageID = null;
+        EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request = null;
+        EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response response = api.ezsigntemplatepackageEditEzsigntemplatepackagesignersV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit an existing Ezsigntemplatepackage
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageEditObjectV1Test() throws ApiException {
+        Integer pkiEzsigntemplatepackageID = null;
+        EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request = null;
+        EzsigntemplatepackageEditObjectV1Response response = api.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Ezsigntemplatepackages and IDs
+     *
+     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageGetAutocompleteV1Test() throws ApiException {
+        String sSelector = null;
+        String sQuery = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        CommonGetAutocompleteDisabledV1Response response = api.ezsigntemplatepackageGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve Ezsigntemplatepackage list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Department&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsigntemplatepackageType | Company&lt;br&gt;Team&lt;br&gt;User&lt;br&gt;Usergroup |
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsigntemplatepackageGetListV1Test() throws ApiException {
@@ -50,8 +131,22 @@ public class ObjectEzsigntemplatepackageApiTest {
         Integer iRowOffset = null;
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
-                EzsigntemplatepackageGetListV1Response response = api.ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        EzsigntemplatepackageGetListV1Response response = api.ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         // TODO: test validations
     }
-    
+
+    /**
+     * Retrieve an existing Ezsigntemplatepackage
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatepackageGetObjectV1Test() throws ApiException {
+        Integer pkiEzsigntemplatepackageID = null;
+        EzsigntemplatepackageGetObjectV1Response response = api.ezsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID);
+        // TODO: test validations
+    }
+
 }

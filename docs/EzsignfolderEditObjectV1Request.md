@@ -2,13 +2,13 @@
 
 # EzsignfolderEditObjectV1Request
 
-Request for the /1/object/ezsignfolder/editObject API Request
+Request for PUT /1/object/ezsignfolder/{pkiEzsignfolderID}
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzsignfolder** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objEzsignfolder** | [**EzsignfolderRequestCompound**](EzsignfolderRequestCompound.md) |  |  |
 
 
 

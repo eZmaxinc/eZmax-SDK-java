@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,9 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -38,6 +37,14 @@ public class WebhookResponseTest {
     @Test
     public void testWebhookResponse() {
         // TODO: test WebhookResponse
+    }
+
+    /**
+     * Test the property 'pksCustomerCode'
+     */
+    @Test
+    public void pksCustomerCodeTest() {
+        // TODO: test pksCustomerCode
     }
 
     /**
@@ -65,11 +72,11 @@ public class WebhookResponseTest {
     }
 
     /**
-     * Test the property 'pksCustomerCode'
+     * Test the property 'eWebhookManagementevent'
      */
     @Test
-    public void pksCustomerCodeTest() {
-        // TODO: test pksCustomerCode
+    public void eWebhookManagementeventTest() {
+        // TODO: test eWebhookManagementevent
     }
 
     /**
@@ -81,19 +88,27 @@ public class WebhookResponseTest {
     }
 
     /**
+     * Test the property 'bWebhookTest'
+     */
+    @Test
+    public void bWebhookTestTest() {
+        // TODO: test bWebhookTest
+    }
+
+    /**
+     * Test the property 'bWebhookSkipsslvalidation'
+     */
+    @Test
+    public void bWebhookSkipsslvalidationTest() {
+        // TODO: test bWebhookSkipsslvalidation
+    }
+
+    /**
      * Test the property 'sWebhookEmailfailed'
      */
     @Test
     public void sWebhookEmailfailedTest() {
         // TODO: test sWebhookEmailfailed
-    }
-
-    /**
-     * Test the property 'eWebhookManagementevent'
-     */
-    @Test
-    public void eWebhookManagementeventTest() {
-        // TODO: test eWebhookManagementevent
     }
 
 }

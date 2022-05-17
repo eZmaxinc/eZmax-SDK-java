@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**apikeyCreateObjectV1**](ObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey
-[**apikeyCreateObjectV2**](ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**apikeyCreateObjectV1**](ObjectApikeyApi.md#apikeyCreateObjectV1) | **POST** /1/object/apikey | Create a new Apikey |
+| [**apikeyCreateObjectV2**](ObjectApikeyApi.md#apikeyCreateObjectV2) | **POST** /2/object/apikey | Create a new Apikey |
 
 
 <a name="apikeyCreateObjectV1"></a>
@@ -55,9 +55,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apikeyCreateObjectV1Request** | [**List&lt;ApikeyCreateObjectV1Request&gt;**](ApikeyCreateObjectV1Request.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **apikeyCreateObjectV1Request** | [**List&lt;ApikeyCreateObjectV1Request&gt;**](ApikeyCreateObjectV1Request.md)|  | |
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Successful response |  -  |
+| **201** | Successful response |  -  |
 
 <a name="apikeyCreateObjectV2"></a>
 # **apikeyCreateObjectV2**
@@ -124,9 +124,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **apikeyCreateObjectV2Request** | [**ApikeyCreateObjectV2Request**](ApikeyCreateObjectV2Request.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **apikeyCreateObjectV2Request** | [**ApikeyCreateObjectV2Request**](ApikeyCreateObjectV2Request.md)|  | |
 
 ### Return type
 
@@ -144,5 +144,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Successful response |  -  |
+| **201** | Successful response |  -  |
 

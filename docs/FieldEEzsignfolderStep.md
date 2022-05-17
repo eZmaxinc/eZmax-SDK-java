@@ -17,5 +17,7 @@
 
 * `ARCHIVED` (value: `"Archived"`)
 
+* `DISPOSED` (value: `"Disposed"`)
+
 
 

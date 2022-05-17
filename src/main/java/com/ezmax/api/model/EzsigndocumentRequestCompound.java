@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -37,6 +37,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -48,11 +49,27 @@ import eZmaxAPI.JSON;
  * An Ezsigndocument Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsigndocument Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsigndocumentRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
   private Integer pkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  private Integer fkiEzsigntemplateID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  private Integer fkiEzsignfoldersignerassociationID;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
 
   /**
    * Indicates where to look for the document binary content.
@@ -60,6 +77,8 @@ public class EzsigndocumentRequestCompound {
   @JsonAdapter(EEzsigndocumentSourceEnum.Adapter.class)
   public enum EEzsigndocumentSourceEnum {
     BASE64("Base64"),
+    
+    EZSIGNTEMPLATE("Ezsigntemplate"),
     
     URL("Url");
 
@@ -168,19 +187,62 @@ public class EzsigndocumentRequestCompound {
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_PASSWORD = "sEzsigndocumentPassword";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_PASSWORD)
-  private String sEzsigndocumentPassword = "";
+  private String sEzsigndocumentPassword;
 
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  private Integer fkiEzsignfolderID;
+  /**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+   */
+  @JsonAdapter(EEzsigndocumentFormEnum.Adapter.class)
+  public enum EEzsigndocumentFormEnum {
+    KEEP("Keep"),
+    
+    CONVERT("Convert");
+
+    private String value;
+
+    EEzsigndocumentFormEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EEzsigndocumentFormEnum fromValue(String value) {
+      for (EEzsigndocumentFormEnum b : EEzsigndocumentFormEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EEzsigndocumentFormEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EEzsigndocumentFormEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EEzsigndocumentFormEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EEzsigndocumentFormEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORM = "eEzsigndocumentForm";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORM)
+  private EEzsigndocumentFormEnum eEzsigndocumentForm;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
   private String dtEzsigndocumentDuedate;
-
-  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
-  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
@@ -209,6 +271,100 @@ public class EzsigndocumentRequestCompound {
 
   public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+  }
+
+
+  public EzsigndocumentRequestCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignfolder
+   * @return fkiEzsignfolderID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
+
+  public Integer getFkiEzsignfolderID() {
+    return fkiEzsignfolderID;
+  }
+
+
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public EzsigndocumentRequestCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsigntemplate
+   * @return fkiEzsigntemplateID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "36", value = "The unique ID of the Ezsigntemplate")
+
+  public Integer getFkiEzsigntemplateID() {
+    return fkiEzsigntemplateID;
+  }
+
+
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+  }
+
+
+  public EzsigndocumentRequestCompound fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+    
+    this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   * @return fkiEzsignfoldersignerassociationID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "20", value = "The unique ID of the Ezsignfoldersignerassociation")
+
+  public Integer getFkiEzsignfoldersignerassociationID() {
+    return fkiEzsignfoldersignerassociationID;
+  }
+
+
+  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+    this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+
+  public EzsigndocumentRequestCompound fkiLanguageID(Integer fkiLanguageID) {
+    
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
+
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
   }
 
 
@@ -245,8 +401,8 @@ public class EzsigndocumentRequestCompound {
    * Indicates the format of the document.
    * @return eEzsigndocumentFormat
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Indicates the format of the document.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Indicates the format of the document.")
 
   public EEzsigndocumentFormatEnum geteEzsigndocumentFormat() {
     return eEzsigndocumentFormat;
@@ -350,26 +506,26 @@ public class EzsigndocumentRequestCompound {
   }
 
 
-  public EzsigndocumentRequestCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public EzsigndocumentRequestCompound eEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
     
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
+    this.eEzsigndocumentForm = eEzsigndocumentForm;
     return this;
   }
 
    /**
-   * The unique ID of the Ezsignfolder
-   * @return fkiEzsignfolderID
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**
+   * @return eEzsigndocumentForm
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**")
 
-  public Integer getFkiEzsignfolderID() {
-    return fkiEzsignfolderID;
+  public EEzsigndocumentFormEnum geteEzsigndocumentForm() {
+    return eEzsigndocumentForm;
   }
 
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  public void seteEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
+    this.eEzsigndocumentForm = eEzsigndocumentForm;
   }
 
 
@@ -396,31 +552,6 @@ public class EzsigndocumentRequestCompound {
   }
 
 
-  public EzsigndocumentRequestCompound fkiLanguageID(Integer fkiLanguageID) {
-    
-    this.fkiLanguageID = fkiLanguageID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-   * minimum: 1
-   * maximum: 2
-   * @return fkiLanguageID
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
-
-  public Integer getFkiLanguageID() {
-    return fkiLanguageID;
-  }
-
-
-  public void setFkiLanguageID(Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-  }
-
-
   public EzsigndocumentRequestCompound sEzsigndocumentName(String sEzsigndocumentName) {
     
     this.sEzsigndocumentName = sEzsigndocumentName;
@@ -444,6 +575,7 @@ public class EzsigndocumentRequestCompound {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -454,21 +586,24 @@ public class EzsigndocumentRequestCompound {
     }
     EzsigndocumentRequestCompound ezsigndocumentRequestCompound = (EzsigndocumentRequestCompound) o;
     return Objects.equals(this.pkiEzsigndocumentID, ezsigndocumentRequestCompound.pkiEzsigndocumentID) &&
+        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentRequestCompound.fkiEzsignfolderID) &&
+        Objects.equals(this.fkiEzsigntemplateID, ezsigndocumentRequestCompound.fkiEzsigntemplateID) &&
+        Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsigndocumentRequestCompound.fkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiLanguageID, ezsigndocumentRequestCompound.fkiLanguageID) &&
         Objects.equals(this.eEzsigndocumentSource, ezsigndocumentRequestCompound.eEzsigndocumentSource) &&
         Objects.equals(this.eEzsigndocumentFormat, ezsigndocumentRequestCompound.eEzsigndocumentFormat) &&
         Arrays.equals(this.sEzsigndocumentBase64, ezsigndocumentRequestCompound.sEzsigndocumentBase64) &&
         Objects.equals(this.sEzsigndocumentUrl, ezsigndocumentRequestCompound.sEzsigndocumentUrl) &&
         Objects.equals(this.bEzsigndocumentForcerepair, ezsigndocumentRequestCompound.bEzsigndocumentForcerepair) &&
         Objects.equals(this.sEzsigndocumentPassword, ezsigndocumentRequestCompound.sEzsigndocumentPassword) &&
-        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentRequestCompound.fkiEzsignfolderID) &&
+        Objects.equals(this.eEzsigndocumentForm, ezsigndocumentRequestCompound.eEzsigndocumentForm) &&
         Objects.equals(this.dtEzsigndocumentDuedate, ezsigndocumentRequestCompound.dtEzsigndocumentDuedate) &&
-        Objects.equals(this.fkiLanguageID, ezsigndocumentRequestCompound.fkiLanguageID) &&
         Objects.equals(this.sEzsigndocumentName, ezsigndocumentRequestCompound.sEzsigndocumentName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, fkiEzsignfolderID, dtEzsigndocumentDuedate, fkiLanguageID, sEzsigndocumentName);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID, fkiLanguageID, eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, eEzsigndocumentForm, dtEzsigndocumentDuedate, sEzsigndocumentName);
   }
 
   @Override
@@ -476,15 +611,18 @@ public class EzsigndocumentRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentRequestCompound {\n");
     sb.append("    pkiEzsigndocumentID: ").append(toIndentedString(pkiEzsigndocumentID)).append("\n");
+    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
+    sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    eEzsigndocumentSource: ").append(toIndentedString(eEzsigndocumentSource)).append("\n");
     sb.append("    eEzsigndocumentFormat: ").append(toIndentedString(eEzsigndocumentFormat)).append("\n");
     sb.append("    sEzsigndocumentBase64: ").append(toIndentedString(sEzsigndocumentBase64)).append("\n");
     sb.append("    sEzsigndocumentUrl: ").append(toIndentedString(sEzsigndocumentUrl)).append("\n");
     sb.append("    bEzsigndocumentForcerepair: ").append(toIndentedString(bEzsigndocumentForcerepair)).append("\n");
     sb.append("    sEzsigndocumentPassword: ").append(toIndentedString(sEzsigndocumentPassword)).append("\n");
-    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    eEzsigndocumentForm: ").append(toIndentedString(eEzsigndocumentForm)).append("\n");
     sb.append("    dtEzsigndocumentDuedate: ").append(toIndentedString(dtEzsigndocumentDuedate)).append("\n");
-    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sEzsigndocumentName: ").append(toIndentedString(sEzsigndocumentName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -509,24 +647,26 @@ public class EzsigndocumentRequestCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsigndocumentID");
+    openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("fkiEzsigntemplateID");
+    openapiFields.add("fkiEzsignfoldersignerassociationID");
+    openapiFields.add("fkiLanguageID");
     openapiFields.add("eEzsigndocumentSource");
     openapiFields.add("eEzsigndocumentFormat");
     openapiFields.add("sEzsigndocumentBase64");
     openapiFields.add("sEzsigndocumentUrl");
     openapiFields.add("bEzsigndocumentForcerepair");
     openapiFields.add("sEzsigndocumentPassword");
-    openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("eEzsigndocumentForm");
     openapiFields.add("dtEzsigndocumentDuedate");
-    openapiFields.add("fkiLanguageID");
     openapiFields.add("sEzsigndocumentName");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("eEzsigndocumentSource");
-    openapiRequiredFields.add("eEzsigndocumentFormat");
     openapiRequiredFields.add("fkiEzsignfolderID");
-    openapiRequiredFields.add("dtEzsigndocumentDuedate");
     openapiRequiredFields.add("fkiLanguageID");
+    openapiRequiredFields.add("eEzsigndocumentSource");
+    openapiRequiredFields.add("dtEzsigndocumentDuedate");
     openapiRequiredFields.add("sEzsigndocumentName");
   }
 
@@ -544,6 +684,7 @@ public class EzsigndocumentRequestCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentRequestCompound is not found in the empty JSON string", EzsigndocumentRequestCompound.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -557,6 +698,27 @@ public class EzsigndocumentRequestCompound {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("eEzsigndocumentSource") != null && !jsonObj.get("eEzsigndocumentSource").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentSource").toString()));
+      }
+      if (jsonObj.get("eEzsigndocumentFormat") != null && !jsonObj.get("eEzsigndocumentFormat").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentFormat").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentUrl") != null && !jsonObj.get("sEzsigndocumentUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentUrl").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentPassword") != null && !jsonObj.get("sEzsigndocumentPassword").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentPassword` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentPassword").toString()));
+      }
+      if (jsonObj.get("eEzsigndocumentForm") != null && !jsonObj.get("eEzsigndocumentForm").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentForm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentForm").toString()));
+      }
+      if (jsonObj.get("dtEzsigndocumentDuedate") != null && !jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
+      }
+      if (jsonObj.get("sEzsigndocumentName") != null && !jsonObj.get("sEzsigndocumentName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentName").toString()));
       }
   }
 

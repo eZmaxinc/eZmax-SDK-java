@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,10 +48,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Request for the /2/object/ezsignsignature/createObject API Request
+ * Request for POST /2/object/ezsignsignature
  */
-@ApiModel(description = "Request for the /2/object/ezsignsignature/createObject API Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@ApiModel(description = "Request for POST /2/object/ezsignsignature")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignsignatureCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
@@ -85,6 +86,7 @@ public class EzsignsignatureCreateObjectV2Request {
   public void setaObjEzsignsignature(List<EzsignsignatureRequestCompound> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
   }
+
 
 
   @Override
@@ -152,6 +154,7 @@ public class EzsignsignatureCreateObjectV2Request {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureCreateObjectV2Request is not found in the empty JSON string", EzsignsignatureCreateObjectV2Request.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -167,8 +170,13 @@ public class EzsignsignatureCreateObjectV2Request {
         }
       }
       JsonArray jsonArrayaObjEzsignsignature = jsonObj.getAsJsonArray("a_objEzsignsignature");
-      // validate the optional field `a_objEzsignsignature` (array)
       if (jsonArrayaObjEzsignsignature != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignsignature").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignature` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignature").toString()));
+        }
+
+        // validate the optional field `a_objEzsignsignature` (array)
         for (int i = 0; i < jsonArrayaObjEzsignsignature.size(); i++) {
           EzsignsignatureRequestCompound.validateJsonObject(jsonArrayaObjEzsignsignature.get(i).getAsJsonObject());
         };

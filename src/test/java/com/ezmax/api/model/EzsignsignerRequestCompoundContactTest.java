@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -21,9 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -70,6 +69,30 @@ public class EzsignsignerRequestCompoundContactTest {
     @Test
     public void sEmailAddressTest() {
         // TODO: test sEmailAddress
+    }
+
+    /**
+     * Test the property 'sPhoneE164'
+     */
+    @Test
+    public void sPhoneE164Test() {
+        // TODO: test sPhoneE164
+    }
+
+    /**
+     * Test the property 'sPhoneExtension'
+     */
+    @Test
+    public void sPhoneExtensionTest() {
+        // TODO: test sPhoneExtension
+    }
+
+    /**
+     * Test the property 'sPhoneE164Cell'
+     */
+    @Test
+    public void sPhoneE164CellTest() {
+        // TODO: test sPhoneE164Cell
     }
 
     /**

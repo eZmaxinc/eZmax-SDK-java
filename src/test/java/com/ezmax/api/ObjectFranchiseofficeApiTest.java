@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,8 +15,9 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonGetAutocompleteV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import com.ezmax.api.model.HeaderAcceptLanguage;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,26 +27,25 @@ import java.util.Map;
 /**
  * API tests for ObjectFranchiseofficeApi
  */
-@Ignore
+@Disabled
 public class ObjectFranchiseofficeApiTest {
 
     private final ObjectFranchiseofficeApi api = new ObjectFranchiseofficeApi();
 
-    
     /**
      * Retrieve Franchiseoffices and IDs
      *
      * Get the list of Franchiseoffices to be used in a dropdown or autocomplete control.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void franchiseofficeGetAutocompleteV1Test() throws ApiException {
         String sSelector = null;
         String sQuery = null;
-                CommonGetAutocompleteV1Response response = api.franchiseofficeGetAutocompleteV1(sSelector, sQuery);
+        HeaderAcceptLanguage acceptLanguage = null;
+        CommonGetAutocompleteV1Response response = api.franchiseofficeGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
         // TODO: test validations
     }
-    
+
 }

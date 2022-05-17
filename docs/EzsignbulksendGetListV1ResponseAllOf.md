@@ -5,9 +5,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**mPayload** | [**EzsignbulksendGetListV1ResponseMPayload**](EzsignbulksendGetListV1ResponseMPayload.md) |  | 
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**mPayload** | [**EzsignbulksendGetListV1ResponseMPayload**](EzsignbulksendGetListV1ResponseMPayload.md) |  |  |
 
 
 

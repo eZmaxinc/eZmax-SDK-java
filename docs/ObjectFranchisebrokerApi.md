@@ -2,14 +2,14 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**franchisebrokerGetAutocompleteV1**](ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**franchisebrokerGetAutocompleteV1**](ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV1) | **GET** /1/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs |
 
 
 <a name="franchisebrokerGetAutocompleteV1"></a>
 # **franchisebrokerGetAutocompleteV1**
-> CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, sQuery)
+> CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Franchisebrokers and IDs
 
@@ -39,8 +39,9 @@ public class Example {
     ObjectFranchisebrokerApi apiInstance = new ObjectFranchisebrokerApi(defaultClient);
     String sSelector = "Active"; // String | The type of Franchisebrokers to return
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery);
+      CommonGetAutocompleteV1Response result = apiInstance.franchisebrokerGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectFranchisebrokerApi#franchisebrokerGetAutocompleteV1");
@@ -55,10 +56,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The type of Franchisebrokers to return | [enum: Active, All]
- **sQuery** | **String**| Allow to filter the returned results | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sSelector** | **String**| The type of Franchisebrokers to return | [enum: Active, All] |
+| **sQuery** | **String**| Allow to filter the returned results | [optional] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
 
@@ -76,5 +78,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response |  -  |
+| **200** | Successful response |  -  |
 

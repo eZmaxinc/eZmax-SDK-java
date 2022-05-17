@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -277,7 +277,7 @@ public class ApiClient {
      * <p>Setter for the field <code>dateFormat</code>.</p>
      *
      * @param dateFormat a {@link java.text.DateFormat} object
-     * @return a {@link org.openapitools.client.ApiClient} object
+     * @return a {@link eZmaxAPI.ApiClient} object
      */
     public ApiClient setDateFormat(DateFormat dateFormat) {
         this.json.setDateFormat(dateFormat);
@@ -288,7 +288,7 @@ public class ApiClient {
      * <p>Set SqlDateFormat.</p>
      *
      * @param dateFormat a {@link java.text.DateFormat} object
-     * @return a {@link org.openapitools.client.ApiClient} object
+     * @return a {@link eZmaxAPI.ApiClient} object
      */
     public ApiClient setSqlDateFormat(DateFormat dateFormat) {
         this.json.setSqlDateFormat(dateFormat);
@@ -298,8 +298,8 @@ public class ApiClient {
     /**
      * <p>Set OffsetDateTimeFormat.</p>
      *
-     * @param dateFormat a {@link org.threeten.bp.format.DateTimeFormatter} object
-     * @return a {@link org.openapitools.client.ApiClient} object
+     * @param dateFormat a {@link java.time.format.DateTimeFormatter} object
+     * @return a {@link eZmaxAPI.ApiClient} object
      */
     public ApiClient setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
         this.json.setOffsetDateTimeFormat(dateFormat);
@@ -309,8 +309,8 @@ public class ApiClient {
     /**
      * <p>Set LocalDateFormat.</p>
      *
-     * @param dateFormat a {@link org.threeten.bp.format.DateTimeFormatter} object
-     * @return a {@link org.openapitools.client.ApiClient} object
+     * @param dateFormat a {@link java.time.format.DateTimeFormatter} object
+     * @return a {@link eZmaxAPI.ApiClient} object
      */
     public ApiClient setLocalDateFormat(DateTimeFormatter dateFormat) {
         this.json.setLocalDateFormat(dateFormat);
@@ -321,7 +321,7 @@ public class ApiClient {
      * <p>Set LenientOnJson.</p>
      *
      * @param lenientOnJson a boolean
-     * @return a {@link org.openapitools.client.ApiClient} object
+     * @return a {@link eZmaxAPI.ApiClient} object
      */
     public ApiClient setLenientOnJson(boolean lenientOnJson) {
         this.json.setLenientOnJson(lenientOnJson);
@@ -803,7 +803,7 @@ public class ApiClient {
      * @param response HTTP response
      * @param returnType The type of the Java object
      * @return The deserialized Java object
-     * @throws org.openapitools.client.ApiException If fail to deserialize response body, i.e. cannot read response body
+     * @throws eZmaxAPI.ApiException If fail to deserialize response body, i.e. cannot read response body
      *   or the Content-Type of the response is not supported.
      */
     @SuppressWarnings("unchecked")
@@ -864,7 +864,7 @@ public class ApiClient {
      * @param obj The Java object
      * @param contentType The request Content-Type
      * @return The serialized request body
-     * @throws org.openapitools.client.ApiException If fail to serialize the given object
+     * @throws eZmaxAPI.ApiException If fail to serialize the given object
      */
     public RequestBody serialize(Object obj, String contentType) throws ApiException {
         if (obj instanceof byte[]) {
@@ -892,7 +892,7 @@ public class ApiClient {
      * Download file from the given response.
      *
      * @param response An instance of the Response object
-     * @throws org.openapitools.client.ApiException If fail to read file content from response and write to disk
+     * @throws eZmaxAPI.ApiException If fail to read file content from response and write to disk
      * @return Downloaded file
      */
     public File downloadFileFromResponse(Response response) throws ApiException {
@@ -956,7 +956,7 @@ public class ApiClient {
      * @param <T> Type
      * @param call An instance of the Call object
      * @return ApiResponse&lt;T&gt;
-     * @throws org.openapitools.client.ApiException If fail to execute the call
+     * @throws eZmaxAPI.ApiException If fail to execute the call
      */
     public <T> ApiResponse<T> execute(Call call) throws ApiException {
         return execute(call, null);
@@ -971,7 +971,7 @@ public class ApiClient {
      * @return ApiResponse object containing response status, headers and
      *   data, which is a Java object deserialized from response body and would be null
      *   when returnType is null.
-     * @throws org.openapitools.client.ApiException If fail to execute the call
+     * @throws eZmaxAPI.ApiException If fail to execute the call
      */
     public <T> ApiResponse<T> execute(Call call, Type returnType) throws ApiException {
         try {
@@ -1035,7 +1035,7 @@ public class ApiClient {
      * @param response Response
      * @param returnType Return type
      * @return Type
-     * @throws org.openapitools.client.ApiException If the response has an unsuccessful status code or
+     * @throws eZmaxAPI.ApiException If the response has an unsuccessful status code or
      *                      fail to deserialize the response body
      */
     public <T> T handleResponse(Response response, Type returnType) throws ApiException {
@@ -1082,7 +1082,7 @@ public class ApiClient {
      * @param authNames The authentications to apply
      * @param callback Callback for upload/download progress
      * @return The HTTP call
-     * @throws org.openapitools.client.ApiException If fail to serialize the request body object
+     * @throws eZmaxAPI.ApiException If fail to serialize the request body object
      */
     public Call buildCall(String baseUrl, String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames, ApiCallback callback) throws ApiException {
         Request request = buildRequest(baseUrl, path, method, queryParams, collectionQueryParams, body, headerParams, cookieParams, formParams, authNames, callback);
@@ -1105,7 +1105,7 @@ public class ApiClient {
      * @param authNames The authentications to apply
      * @param callback Callback for upload/download progress
      * @return The HTTP request
-     * @throws org.openapitools.client.ApiException If fail to serialize the request body object
+     * @throws eZmaxAPI.ApiException If fail to serialize the request body object
      */
     public Request buildRequest(String baseUrl, String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames, ApiCallback callback) throws ApiException {
         // aggregate queryParams (non-collection) and collectionQueryParams into allQueryParams
@@ -1130,7 +1130,7 @@ public class ApiClient {
                 reqBody = null;
             } else {
                 // use an empty request body (for POST, PUT and PATCH)
-                reqBody = RequestBody.create("", MediaType.parse(contentType));
+                reqBody = RequestBody.create("", contentType == null ? null : MediaType.parse(contentType));
             }
         } else {
             reqBody = serialize(body, contentType);
@@ -1257,7 +1257,7 @@ public class ApiClient {
      * @param payload HTTP request body
      * @param method HTTP method
      * @param uri URI
-     * @throws org.openapitools.client.ApiException If fails to update the parameters
+     * @throws eZmaxAPI.ApiException If fails to update the parameters
      */
     public void updateParamsForAuth(String[] authNames, List<Pair> queryParams, Map<String, String> headerParams,
                                     Map<String, String> cookieParams, String payload, String method, URI uri) throws ApiException {
@@ -1298,9 +1298,11 @@ public class ApiClient {
                 File file = (File) param.getValue();
                 addPartToMultiPartBuilder(mpBuilder, param.getKey(), file);
             } else if (param.getValue() instanceof List) {
-                List<File> files = (List<File>) param.getValue();
-                for (File file : files) {
-                    addPartToMultiPartBuilder(mpBuilder, param.getKey(), file);
+                List list = (List) param.getValue();
+                for (Object item: list) {
+                    if (item instanceof File) {
+                        addPartToMultiPartBuilder(mpBuilder, param.getKey(), (File) item);
+                    }
                 }
             } else {
                 Headers partHeaders = Headers.of("Content-Disposition", "form-data; name=\"" + param.getKey() + "\"");
@@ -1440,7 +1442,7 @@ public class ApiClient {
      *
      * @param request The HTTP request object
      * @return The string representation of the HTTP request body
-     * @throws org.openapitools.client.ApiException If fail to serialize the request body object into a string
+     * @throws eZmaxAPI.ApiException If fail to serialize the request body object into a string
      */
     private String requestBodyToString(RequestBody requestBody) throws ApiException {
         if (requestBody != null) {

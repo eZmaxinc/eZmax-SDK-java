@@ -2,14 +2,14 @@
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**periodGetAutocompleteV1**](ObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**periodGetAutocompleteV1**](ObjectPeriodApi.md#periodGetAutocompleteV1) | **GET** /1/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs |
 
 
 <a name="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
-> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, sQuery)
+> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -39,8 +39,9 @@ public class Example {
     ObjectPeriodApi apiInstance = new ObjectPeriodApi(defaultClient);
     String sSelector = "ActiveNormal"; // String | The types of Periods to return
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery);
+      CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectPeriodApi#periodGetAutocompleteV1");
@@ -55,10 +56,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sSelector** | **String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear]
- **sQuery** | **String**| Allow to filter the returned results | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sSelector** | **String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear] |
+| **sQuery** | **String**| Allow to filter the returned results | [optional] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
 ### Return type
 
@@ -76,5 +78,5 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response |  -  |
+| **200** | Successful response |  -  |
 

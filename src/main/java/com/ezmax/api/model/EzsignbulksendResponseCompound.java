@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -17,6 +17,9 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.EzsignbulksendResponse;
+import com.ezmax.api.model.EzsignbulksendResponseCompoundAllOf;
+import com.ezmax.api.model.EzsignbulksenddocumentmappingResponseCompound;
+import com.ezmax.api.model.EzsignbulksendsignermappingResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -25,6 +28,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -38,6 +43,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +55,7 @@ import eZmaxAPI.JSON;
  * An Ezsignbulksend Object and children to create a complete structure
  */
 @ApiModel(description = "An Ezsignbulksend Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -63,6 +69,14 @@ public class EzsignbulksendResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
   private Integer fkiLanguageID;
 
+  public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
+  @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
+  private String sLanguageNameX;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  private String sEzsignfoldertypeNameX;
+
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
   private String sEzsignbulksendDescription;
@@ -71,6 +85,10 @@ public class EzsignbulksendResponseCompound {
   @SerializedName(SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE)
   private String tEzsignbulksendNote;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
+  private Boolean bEzsignbulksendNeedvalidation;
+
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
   private Boolean bEzsignbulksendIsactive;
@@ -78,6 +96,14 @@ public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING = "a_objEzsignbulksenddocumentmapping";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING)
+  private List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDSIGNERMAPPING = "a_objEzsignbulksendsignermapping";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDSIGNERMAPPING)
+  private List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping = new ArrayList<>();
 
   public EzsignbulksendResponseCompound() { 
   }
@@ -153,6 +179,52 @@ public class EzsignbulksendResponseCompound {
   }
 
 
+  public EzsignbulksendResponseCompound sLanguageNameX(String sLanguageNameX) {
+    
+    this.sLanguageNameX = sLanguageNameX;
+    return this;
+  }
+
+   /**
+   * The Name of the Language in the language of the requester
+   * @return sLanguageNameX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "English", required = true, value = "The Name of the Language in the language of the requester")
+
+  public String getsLanguageNameX() {
+    return sLanguageNameX;
+  }
+
+
+  public void setsLanguageNameX(String sLanguageNameX) {
+    this.sLanguageNameX = sLanguageNameX;
+  }
+
+
+  public EzsignbulksendResponseCompound sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+    return this;
+  }
+
+   /**
+   * The name of the Ezsignfoldertype in the language of the requester
+   * @return sEzsignfoldertypeNameX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
+
+  public String getsEzsignfoldertypeNameX() {
+    return sEzsignfoldertypeNameX;
+  }
+
+
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+
   public EzsignbulksendResponseCompound sEzsignbulksendDescription(String sEzsignbulksendDescription) {
     
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
@@ -196,6 +268,29 @@ public class EzsignbulksendResponseCompound {
 
   public void settEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
+  }
+
+
+  public EzsignbulksendResponseCompound bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+    
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
+   * @return bEzsignbulksendNeedvalidation
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
+
+  public Boolean getbEzsignbulksendNeedvalidation() {
+    return bEzsignbulksendNeedvalidation;
+  }
+
+
+  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+    this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
@@ -245,6 +340,63 @@ public class EzsignbulksendResponseCompound {
   }
 
 
+  public EzsignbulksendResponseCompound aObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
+    
+    this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
+    return this;
+  }
+
+  public EzsignbulksendResponseCompound addAObjEzsignbulksenddocumentmappingItem(EzsignbulksenddocumentmappingResponseCompound aObjEzsignbulksenddocumentmappingItem) {
+    this.aObjEzsignbulksenddocumentmapping.add(aObjEzsignbulksenddocumentmappingItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignbulksenddocumentmapping
+   * @return aObjEzsignbulksenddocumentmapping
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<EzsignbulksenddocumentmappingResponseCompound> getaObjEzsignbulksenddocumentmapping() {
+    return aObjEzsignbulksenddocumentmapping;
+  }
+
+
+  public void setaObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
+    this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
+  }
+
+
+  public EzsignbulksendResponseCompound aObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
+    
+    this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
+    return this;
+  }
+
+  public EzsignbulksendResponseCompound addAObjEzsignbulksendsignermappingItem(EzsignbulksendsignermappingResponse aObjEzsignbulksendsignermappingItem) {
+    this.aObjEzsignbulksendsignermapping.add(aObjEzsignbulksendsignermappingItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignbulksendsignermapping
+   * @return aObjEzsignbulksendsignermapping
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<EzsignbulksendsignermappingResponse> getaObjEzsignbulksendsignermapping() {
+    return aObjEzsignbulksendsignermapping;
+  }
+
+
+  public void setaObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
+    this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
+  }
+
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -257,15 +409,20 @@ public class EzsignbulksendResponseCompound {
     return Objects.equals(this.pkiEzsignbulksendID, ezsignbulksendResponseCompound.pkiEzsignbulksendID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsignbulksendResponseCompound.fkiEzsignfoldertypeID) &&
         Objects.equals(this.fkiLanguageID, ezsignbulksendResponseCompound.fkiLanguageID) &&
+        Objects.equals(this.sLanguageNameX, ezsignbulksendResponseCompound.sLanguageNameX) &&
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsignbulksendResponseCompound.sEzsignfoldertypeNameX) &&
         Objects.equals(this.sEzsignbulksendDescription, ezsignbulksendResponseCompound.sEzsignbulksendDescription) &&
         Objects.equals(this.tEzsignbulksendNote, ezsignbulksendResponseCompound.tEzsignbulksendNote) &&
+        Objects.equals(this.bEzsignbulksendNeedvalidation, ezsignbulksendResponseCompound.bEzsignbulksendNeedvalidation) &&
         Objects.equals(this.bEzsignbulksendIsactive, ezsignbulksendResponseCompound.bEzsignbulksendIsactive) &&
-        Objects.equals(this.objAudit, ezsignbulksendResponseCompound.objAudit);
+        Objects.equals(this.objAudit, ezsignbulksendResponseCompound.objAudit) &&
+        Objects.equals(this.aObjEzsignbulksenddocumentmapping, ezsignbulksendResponseCompound.aObjEzsignbulksenddocumentmapping) &&
+        Objects.equals(this.aObjEzsignbulksendsignermapping, ezsignbulksendResponseCompound.aObjEzsignbulksendsignermapping);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignbulksendID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsignbulksendDescription, tEzsignbulksendNote, bEzsignbulksendIsactive, objAudit);
+    return Objects.hash(pkiEzsignbulksendID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsignfoldertypeNameX, sEzsignbulksendDescription, tEzsignbulksendNote, bEzsignbulksendNeedvalidation, bEzsignbulksendIsactive, objAudit, aObjEzsignbulksenddocumentmapping, aObjEzsignbulksendsignermapping);
   }
 
   @Override
@@ -275,10 +432,15 @@ public class EzsignbulksendResponseCompound {
     sb.append("    pkiEzsignbulksendID: ").append(toIndentedString(pkiEzsignbulksendID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    sLanguageNameX: ").append(toIndentedString(sLanguageNameX)).append("\n");
+    sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("    sEzsignbulksendDescription: ").append(toIndentedString(sEzsignbulksendDescription)).append("\n");
     sb.append("    tEzsignbulksendNote: ").append(toIndentedString(tEzsignbulksendNote)).append("\n");
+    sb.append("    bEzsignbulksendNeedvalidation: ").append(toIndentedString(bEzsignbulksendNeedvalidation)).append("\n");
     sb.append("    bEzsignbulksendIsactive: ").append(toIndentedString(bEzsignbulksendIsactive)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    aObjEzsignbulksenddocumentmapping: ").append(toIndentedString(aObjEzsignbulksenddocumentmapping)).append("\n");
+    sb.append("    aObjEzsignbulksendsignermapping: ").append(toIndentedString(aObjEzsignbulksendsignermapping)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -304,20 +466,30 @@ public class EzsignbulksendResponseCompound {
     openapiFields.add("pkiEzsignbulksendID");
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("fkiLanguageID");
+    openapiFields.add("sLanguageNameX");
+    openapiFields.add("sEzsignfoldertypeNameX");
     openapiFields.add("sEzsignbulksendDescription");
     openapiFields.add("tEzsignbulksendNote");
+    openapiFields.add("bEzsignbulksendNeedvalidation");
     openapiFields.add("bEzsignbulksendIsactive");
     openapiFields.add("objAudit");
+    openapiFields.add("a_objEzsignbulksenddocumentmapping");
+    openapiFields.add("a_objEzsignbulksendsignermapping");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignbulksendID");
     openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("fkiLanguageID");
+    openapiRequiredFields.add("sLanguageNameX");
+    openapiRequiredFields.add("sEzsignfoldertypeNameX");
     openapiRequiredFields.add("sEzsignbulksendDescription");
     openapiRequiredFields.add("tEzsignbulksendNote");
+    openapiRequiredFields.add("bEzsignbulksendNeedvalidation");
     openapiRequiredFields.add("bEzsignbulksendIsactive");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("a_objEzsignbulksenddocumentmapping");
+    openapiRequiredFields.add("a_objEzsignbulksendsignermapping");
   }
 
  /**
@@ -334,6 +506,7 @@ public class EzsignbulksendResponseCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendResponseCompound is not found in the empty JSON string", EzsignbulksendResponseCompound.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -348,9 +521,45 @@ public class EzsignbulksendResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sLanguageNameX") != null && !jsonObj.get("sLanguageNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sLanguageNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLanguageNameX").toString()));
+      }
+      if (jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+      }
+      if (jsonObj.get("sEzsignbulksendDescription") != null && !jsonObj.get("sEzsignbulksendDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendDescription").toString()));
+      }
+      if (jsonObj.get("tEzsignbulksendNote") != null && !jsonObj.get("tEzsignbulksendNote").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignbulksendNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignbulksendNote").toString()));
+      }
       // validate the optional field `objAudit`
       if (jsonObj.getAsJsonObject("objAudit") != null) {
         CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
+      }
+      JsonArray jsonArrayaObjEzsignbulksenddocumentmapping = jsonObj.getAsJsonArray("a_objEzsignbulksenddocumentmapping");
+      if (jsonArrayaObjEzsignbulksenddocumentmapping != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignbulksenddocumentmapping").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignbulksenddocumentmapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksenddocumentmapping").toString()));
+        }
+
+        // validate the optional field `a_objEzsignbulksenddocumentmapping` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignbulksenddocumentmapping.size(); i++) {
+          EzsignbulksenddocumentmappingResponseCompound.validateJsonObject(jsonArrayaObjEzsignbulksenddocumentmapping.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayaObjEzsignbulksendsignermapping = jsonObj.getAsJsonArray("a_objEzsignbulksendsignermapping");
+      if (jsonArrayaObjEzsignbulksendsignermapping != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignbulksendsignermapping").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignbulksendsignermapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksendsignermapping").toString()));
+        }
+
+        // validate the optional field `a_objEzsignbulksendsignermapping` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignbulksendsignermapping.size(); i++) {
+          EzsignbulksendsignermappingResponse.validateJsonObject(jsonArrayaObjEzsignbulksendsignermapping.get(i).getAsJsonObject());
+        };
       }
   }
 

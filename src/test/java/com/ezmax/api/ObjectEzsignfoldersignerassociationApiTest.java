@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -20,10 +20,12 @@ import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response;
+import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,85 +35,94 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignfoldersignerassociationApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignfoldersignerassociationApiTest {
 
     private final ObjectEzsignfoldersignerassociationApi api = new ObjectEzsignfoldersignerassociationApi();
 
-    
     /**
      * Create a new Ezsignfoldersignerassociation
      *
      * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldersignerassociationCreateObjectV1Test() throws ApiException {
         List<EzsignfoldersignerassociationCreateObjectV1Request> ezsignfoldersignerassociationCreateObjectV1Request = null;
-                EzsignfoldersignerassociationCreateObjectV1Response response = api.ezsignfoldersignerassociationCreateObjectV1(ezsignfoldersignerassociationCreateObjectV1Request);
+        EzsignfoldersignerassociationCreateObjectV1Response response = api.ezsignfoldersignerassociationCreateObjectV1(ezsignfoldersignerassociationCreateObjectV1Request);
         // TODO: test validations
     }
-    
+
     /**
      * Create a new Ezsignfoldersignerassociation
      *
      * The endpoint allows to create one or many elements at once.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldersignerassociationCreateObjectV2Test() throws ApiException {
         EzsignfoldersignerassociationCreateObjectV2Request ezsignfoldersignerassociationCreateObjectV2Request = null;
-                EzsignfoldersignerassociationCreateObjectV2Response response = api.ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationCreateObjectV2Request);
+        EzsignfoldersignerassociationCreateObjectV2Response response = api.ezsignfoldersignerassociationCreateObjectV2(ezsignfoldersignerassociationCreateObjectV2Request);
         // TODO: test validations
     }
-    
+
     /**
      * Delete an existing Ezsignfoldersignerassociation
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldersignerassociationDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
-                EzsignfoldersignerassociationDeleteObjectV1Response response = api.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
+        EzsignfoldersignerassociationDeleteObjectV1Response response = api.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
         // TODO: test validations
     }
-    
+
+    /**
+     * Edit an existing Ezsignfoldersignerassociation
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfoldersignerassociationEditObjectV1Test() throws ApiException {
+        Integer pkiEzsignfoldersignerassociationID = null;
+        EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request = null;
+        EzsignfoldersignerassociationEditObjectV1Response response = api.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve a Login Url to allow In-Person signing
      *
      * This endpoint returns a Login Url that can be used in a browser or embedded in an I-Frame to allow in person signing.  The signer Login type must be configured as In-Person.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldersignerassociationGetInPersonLoginUrlV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
-                EzsignfoldersignerassociationGetInPersonLoginUrlV1Response response = api.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID);
+        EzsignfoldersignerassociationGetInPersonLoginUrlV1Response response = api.ezsignfoldersignerassociationGetInPersonLoginUrlV1(pkiEzsignfoldersignerassociationID);
         // TODO: test validations
     }
-    
+
     /**
      * Retrieve an existing Ezsignfoldersignerassociation
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignfoldersignerassociationGetObjectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
-                EzsignfoldersignerassociationGetObjectV1Response response = api.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID);
+        EzsignfoldersignerassociationGetObjectV1Response response = api.ezsignfoldersignerassociationGetObjectV1(pkiEzsignfoldersignerassociationID);
         // TODO: test validations
     }
-    
+
 }

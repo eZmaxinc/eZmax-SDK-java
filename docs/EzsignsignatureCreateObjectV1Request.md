@@ -2,14 +2,14 @@
 
 # EzsignsignatureCreateObjectV1Request
 
-Request for the /1/object/ezsignsignature/createObject API Request
+Request for POST /1/object/ezsignsignature
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**objEzsignsignature** | [**EzsignsignatureRequest**](EzsignsignatureRequest.md) |  |  [optional]
-**objEzsignsignatureCompound** | [**EzsignsignatureRequestCompound**](EzsignsignatureRequestCompound.md) |  |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objEzsignsignature** | [**EzsignsignatureRequest**](EzsignsignatureRequest.md) |  |  [optional] |
+|**objEzsignsignatureCompound** | [**EzsignsignatureRequestCompound**](EzsignsignatureRequestCompound.md) |  |  [optional] |
 
 
 

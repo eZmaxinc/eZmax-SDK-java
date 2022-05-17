@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignsignatureRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class EzsignsignatureRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -69,11 +70,11 @@ public class EzsignsignatureRequestCompoundAllOf {
   }
 
    /**
-   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \&quot;Name\&quot; or \&quot;Handwritten\&quot;)
+   * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is \"Name\" or \"Handwritten\")")
+  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
 
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -114,6 +115,7 @@ public class EzsignsignatureRequestCompoundAllOf {
   public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateRequestCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
   }
+
 
 
   @Override
@@ -183,6 +185,7 @@ public class EzsignsignatureRequestCompoundAllOf {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequestCompoundAllOf is not found in the empty JSON string", EzsignsignatureRequestCompoundAllOf.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -191,8 +194,13 @@ public class EzsignsignatureRequestCompoundAllOf {
         }
       }
       JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
-      // validate the optional field `a_objEzsignsignaturecustomdate` (array)
       if (jsonArrayaObjEzsignsignaturecustomdate != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignsignaturecustomdate").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignaturecustomdate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturecustomdate").toString()));
+        }
+
+        // validate the optional field `a_objEzsignsignaturecustomdate` (array)
         for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
           EzsignsignaturecustomdateRequestCompound.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
         };

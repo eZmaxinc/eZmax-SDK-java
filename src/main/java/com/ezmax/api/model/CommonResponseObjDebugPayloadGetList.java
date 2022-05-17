@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -43,6 +43,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
  * This is a debug object containing debugging information on the actual function
  */
 @ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -204,6 +205,7 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -285,6 +287,7 @@ public class CommonResponseObjDebugPayloadGetList {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayloadGetList is not found in the empty JSON string", CommonResponseObjDebugPayloadGetList.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -298,6 +301,10 @@ public class CommonResponseObjDebugPayloadGetList {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("a_RequiredPermission") != null && !jsonObj.get("a_RequiredPermission").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
       }
       // validate the optional field `a_Filter`
       if (jsonObj.getAsJsonObject("a_Filter") != null) {

@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -167,14 +167,8 @@ public class ObjectActivesessionApi {
      */
     public ApiResponse<ActivesessionGetCurrentV1Response> activesessionGetCurrentV1WithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = activesessionGetCurrentV1ValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ActivesessionGetCurrentV1Response>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

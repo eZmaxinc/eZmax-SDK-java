@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -15,9 +15,11 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignbulksendtransmissionGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignbulksendtransmissionGetObjectV1Response;
-import org.junit.Test;
-import org.junit.Ignore;
+import java.io.File;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,25 +29,51 @@ import java.util.Map;
 /**
  * API tests for ObjectEzsignbulksendtransmissionApi
  */
-@Ignore
+@Disabled
 public class ObjectEzsignbulksendtransmissionApiTest {
 
     private final ObjectEzsignbulksendtransmissionApi api = new ObjectEzsignbulksendtransmissionApi();
 
-    
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendtransmissionGetCsvErrorsV1Test() throws ApiException {
+        Integer pkiEzsignbulksendtransmissionID = null;
+        String response = api.ezsignbulksendtransmissionGetCsvErrorsV1(pkiEzsignbulksendtransmissionID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendtransmissionGetFormsDataV1Test() throws ApiException {
+        Integer pkiEzsignbulksendtransmissionID = null;
+        EzsignbulksendtransmissionGetFormsDataV1Response response = api.ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID);
+        // TODO: test validations
+    }
+
     /**
      * Retrieve an existing Ezsignbulksendtransmission
      *
      * 
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void ezsignbulksendtransmissionGetObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksendtransmissionID = null;
-                EzsignbulksendtransmissionGetObjectV1Response response = api.ezsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID);
+        EzsignbulksendtransmissionGetObjectV1Response response = api.ezsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID);
         // TODO: test validations
     }
-    
+
 }

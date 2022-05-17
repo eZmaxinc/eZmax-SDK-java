@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -36,6 +36,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,7 +48,7 @@ import eZmaxAPI.JSON;
  * Generic AutocompleteElement Response
  */
 @ApiModel(description = "Generic AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CATEGORY = "sCategory";
   @SerializedName(SERIALIZED_NAME_S_CATEGORY)
@@ -56,6 +57,10 @@ public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_LABEL = "sLabel";
   @SerializedName(SERIALIZED_NAME_S_LABEL)
   private String sLabel;
+
+  public static final String SERIALIZED_NAME_S_VALUE = "sValue";
+  @SerializedName(SERIALIZED_NAME_S_VALUE)
+  private String sValue;
 
   public static final String SERIALIZED_NAME_M_VALUE = "mValue";
   @SerializedName(SERIALIZED_NAME_M_VALUE)
@@ -110,6 +115,29 @@ public class CustomAutocompleteElementResponse {
   }
 
 
+  public CustomAutocompleteElementResponse sValue(String sValue) {
+    
+    this.sValue = sValue;
+    return this;
+  }
+
+   /**
+   * The Unique ID of the element
+   * @return sValue
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The Unique ID of the element")
+
+  public String getsValue() {
+    return sValue;
+  }
+
+
+  public void setsValue(String sValue) {
+    this.sValue = sValue;
+  }
+
+
   public CustomAutocompleteElementResponse mValue(String mValue) {
     
     this.mValue = mValue;
@@ -119,9 +147,11 @@ public class CustomAutocompleteElementResponse {
    /**
    * The Unique ID of the element
    * @return mValue
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The Unique ID of the element")
+  @Deprecated
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The Unique ID of the element")
 
   public String getmValue() {
     return mValue;
@@ -131,6 +161,7 @@ public class CustomAutocompleteElementResponse {
   public void setmValue(String mValue) {
     this.mValue = mValue;
   }
+
 
 
   @Override
@@ -144,12 +175,13 @@ public class CustomAutocompleteElementResponse {
     CustomAutocompleteElementResponse customAutocompleteElementResponse = (CustomAutocompleteElementResponse) o;
     return Objects.equals(this.sCategory, customAutocompleteElementResponse.sCategory) &&
         Objects.equals(this.sLabel, customAutocompleteElementResponse.sLabel) &&
+        Objects.equals(this.sValue, customAutocompleteElementResponse.sValue) &&
         Objects.equals(this.mValue, customAutocompleteElementResponse.mValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sCategory, sLabel, mValue);
+    return Objects.hash(sCategory, sLabel, sValue, mValue);
   }
 
   @Override
@@ -158,6 +190,7 @@ public class CustomAutocompleteElementResponse {
     sb.append("class CustomAutocompleteElementResponse {\n");
     sb.append("    sCategory: ").append(toIndentedString(sCategory)).append("\n");
     sb.append("    sLabel: ").append(toIndentedString(sLabel)).append("\n");
+    sb.append("    sValue: ").append(toIndentedString(sValue)).append("\n");
     sb.append("    mValue: ").append(toIndentedString(mValue)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -183,13 +216,14 @@ public class CustomAutocompleteElementResponse {
     openapiFields = new HashSet<String>();
     openapiFields.add("sCategory");
     openapiFields.add("sLabel");
+    openapiFields.add("sValue");
     openapiFields.add("mValue");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("sCategory");
     openapiRequiredFields.add("sLabel");
-    openapiRequiredFields.add("mValue");
+    openapiRequiredFields.add("sValue");
   }
 
  /**
@@ -206,6 +240,7 @@ public class CustomAutocompleteElementResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomAutocompleteElementResponse is not found in the empty JSON string", CustomAutocompleteElementResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -219,6 +254,18 @@ public class CustomAutocompleteElementResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("sCategory") != null && !jsonObj.get("sCategory").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCategory` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCategory").toString()));
+      }
+      if (jsonObj.get("sLabel") != null && !jsonObj.get("sLabel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLabel").toString()));
+      }
+      if (jsonObj.get("sValue") != null && !jsonObj.get("sValue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sValue").toString()));
+      }
+      if (jsonObj.get("mValue") != null && !jsonObj.get("mValue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `mValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mValue").toString()));
       }
   }
 

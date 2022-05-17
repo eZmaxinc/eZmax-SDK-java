@@ -1,5 +1,5 @@
 /*
- * eZmax API Definition
+ * eZmax API Definition (Full)
  * This API expose all the functionnalities for the eZmax and eZsign applications.
  *
  * The version of the OpenAPI document: 1.1.7
@@ -39,6 +39,7 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignfoldersignerassociationstatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T22:24:48.193620Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:00:12.138084Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -168,6 +169,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -245,6 +247,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomEzsignfoldersignerassociationstatusResponse is not found in the empty JSON string", CustomEzsignfoldersignerassociationstatusResponse.openapiRequiredFields.toString()));
         }
       }
+
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -259,9 +262,20 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("sEzsignfoldersignerassociationstatusLastname") != null && !jsonObj.get("sEzsignfoldersignerassociationstatusLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldersignerassociationstatusLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldersignerassociationstatusLastname").toString()));
+      }
+      if (jsonObj.get("sEzsignfoldersignerassociationstatusFirstname") != null && !jsonObj.get("sEzsignfoldersignerassociationstatusFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldersignerassociationstatusFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldersignerassociationstatusFirstname").toString()));
+      }
       JsonArray jsonArrayaObjEzsignsignaturestatus = jsonObj.getAsJsonArray("a_objEzsignsignaturestatus");
-      // validate the optional field `a_objEzsignsignaturestatus` (array)
       if (jsonArrayaObjEzsignsignaturestatus != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("a_objEzsignsignaturestatus").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignaturestatus` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturestatus").toString()));
+        }
+
+        // validate the optional field `a_objEzsignsignaturestatus` (array)
         for (int i = 0; i < jsonArrayaObjEzsignsignaturestatus.size(); i++) {
           CustomEzsignsignaturestatusResponse.validateJsonObject(jsonArrayaObjEzsignsignaturestatus.get(i).getAsJsonObject());
         };
