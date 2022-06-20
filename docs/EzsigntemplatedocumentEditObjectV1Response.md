@@ -10,6 +10,7 @@ Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
 |------------ | ------------- | ------------- | -------------|
 |**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**aObjWarning** | [**List&lt;CommonResponseWarning&gt;**](CommonResponseWarning.md) |  |  [optional] |
 
 
 

@@ -17,5 +17,7 @@
 
 * `COMPLETED` (value: `"Completed"`)
 
+* `DISPOSED` (value: `"Disposed"`)
+
 
 

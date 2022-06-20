@@ -48,6 +48,8 @@ docs/CommonResponseObjDebugPayload.md
 docs/CommonResponseObjDebugPayloadGetList.md
 docs/CommonResponseObjDebugPayloadGetListAllOf.md
 docs/CommonResponseObjSQLQuery.md
+docs/CommonResponseRedirectSSecretquestionTextX.md
+docs/CommonResponseWarning.md
 docs/CommonWebhook.md
 docs/ContactRequest.md
 docs/ContactRequestCompound.md
@@ -224,6 +226,9 @@ docs/EzsignfolderCreateObjectV2Response.md
 docs/EzsignfolderCreateObjectV2ResponseAllOf.md
 docs/EzsignfolderCreateObjectV2ResponseMPayload.md
 docs/EzsignfolderDeleteObjectV1Response.md
+docs/EzsignfolderDisposeEzsignfoldersV1Request.md
+docs/EzsignfolderDisposeEzsignfoldersV1Response.md
+docs/EzsignfolderDisposeV1Response.md
 docs/EzsignfolderEditObjectV1Request.md
 docs/EzsignfolderEditObjectV1Response.md
 docs/EzsignfolderGetActionableElementsV1Response.md
@@ -383,6 +388,7 @@ docs/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseAllOf.md
 docs/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload.md
 docs/EzsigntemplatedocumentEditObjectV1Request.md
 docs/EzsigntemplatedocumentEditObjectV1Response.md
+docs/EzsigntemplatedocumentEditObjectV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.md
@@ -553,6 +559,7 @@ docs/FieldEEzsigntemplatesignatureTooltipposition.md
 docs/FieldEEzsigntemplatesignatureType.md
 docs/FieldENotificationpreferenceStatus.md
 docs/FieldEPhoneType.md
+docs/FieldEUserEzsignsendreminderfrequency.md
 docs/FieldEUserType.md
 docs/FranchisereferalincomeCreateObjectV1Request.md
 docs/FranchisereferalincomeCreateObjectV1Response.md
@@ -575,9 +582,14 @@ docs/NotificationsectionGetNotificationtestsV1Response.md
 docs/NotificationsectionGetNotificationtestsV1ResponseAllOf.md
 docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md
 docs/NotificationsubsectionResponse.md
+docs/NotificationtestGetElementsV1Response.md
+docs/NotificationtestGetElementsV1ResponseAllOf.md
+docs/NotificationtestGetElementsV1ResponseMPayload.md
 docs/NotificationtestResponse.md
 docs/ObjectActivesessionApi.md
 docs/ObjectApikeyApi.md
+docs/ObjectBillingentityinternalApi.md
+docs/ObjectBrandingApi.md
 docs/ObjectEzsignbulksendApi.md
 docs/ObjectEzsignbulksenddocumentmappingApi.md
 docs/ObjectEzsignbulksendsignermappingApi.md
@@ -602,8 +614,13 @@ docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
 docs/ObjectNotificationsectionApi.md
+docs/ObjectNotificationtestApi.md
 docs/ObjectPeriodApi.md
 docs/ObjectSecretquestionApi.md
+docs/ObjectTaxassignmentApi.md
+docs/ObjectTimezoneApi.md
+docs/ObjectUserApi.md
+docs/ObjectUsergroupApi.md
 docs/PhoneRequest.md
 docs/PhoneRequestCompound.md
 docs/UserCreateEzsignuserV1Request.md
@@ -635,6 +652,8 @@ src/main/java/com/ezmax/api/ModuleEzsignApi.java
 src/main/java/com/ezmax/api/ModuleUserApi.java
 src/main/java/com/ezmax/api/ObjectActivesessionApi.java
 src/main/java/com/ezmax/api/ObjectApikeyApi.java
+src/main/java/com/ezmax/api/ObjectBillingentityinternalApi.java
+src/main/java/com/ezmax/api/ObjectBrandingApi.java
 src/main/java/com/ezmax/api/ObjectEzsignbulksendApi.java
 src/main/java/com/ezmax/api/ObjectEzsignbulksenddocumentmappingApi.java
 src/main/java/com/ezmax/api/ObjectEzsignbulksendsignermappingApi.java
@@ -659,8 +678,13 @@ src/main/java/com/ezmax/api/ObjectFranchisebrokerApi.java
 src/main/java/com/ezmax/api/ObjectFranchiseofficeApi.java
 src/main/java/com/ezmax/api/ObjectFranchisereferalincomeApi.java
 src/main/java/com/ezmax/api/ObjectNotificationsectionApi.java
+src/main/java/com/ezmax/api/ObjectNotificationtestApi.java
 src/main/java/com/ezmax/api/ObjectPeriodApi.java
 src/main/java/com/ezmax/api/ObjectSecretquestionApi.java
+src/main/java/com/ezmax/api/ObjectTaxassignmentApi.java
+src/main/java/com/ezmax/api/ObjectTimezoneApi.java
+src/main/java/com/ezmax/api/ObjectUserApi.java
+src/main/java/com/ezmax/api/ObjectUsergroupApi.java
 src/main/java/com/ezmax/api/model/AbstractOpenApiSchema.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1Response.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOf.java
@@ -704,6 +728,8 @@ src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayload.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetList.java
 src/main/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetListAllOf.java
 src/main/java/com/ezmax/api/model/CommonResponseObjSQLQuery.java
+src/main/java/com/ezmax/api/model/CommonResponseRedirectSSecretquestionTextX.java
+src/main/java/com/ezmax/api/model/CommonResponseWarning.java
 src/main/java/com/ezmax/api/model/CommonWebhook.java
 src/main/java/com/ezmax/api/model/ContactRequest.java
 src/main/java/com/ezmax/api/model/ContactRequestCompound.java
@@ -880,6 +906,9 @@ src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV2Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV2ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderCreateObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderDisposeEzsignfoldersV1Request.java
+src/main/java/com/ezmax/api/model/EzsignfolderDisposeEzsignfoldersV1Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderDisposeV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetActionableElementsV1Response.java
@@ -1039,6 +1068,7 @@ src/main/java/com/ezmax/api/model/EzsigntemplatedocumentEditEzsigntemplatesignat
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload.java
@@ -1209,6 +1239,7 @@ src/main/java/com/ezmax/api/model/FieldEEzsigntemplatesignatureTooltipposition.j
 src/main/java/com/ezmax/api/model/FieldEEzsigntemplatesignatureType.java
 src/main/java/com/ezmax/api/model/FieldENotificationpreferenceStatus.java
 src/main/java/com/ezmax/api/model/FieldEPhoneType.java
+src/main/java/com/ezmax/api/model/FieldEUserEzsignsendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEUserType.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1Response.java
@@ -1228,6 +1259,9 @@ src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1Respo
 src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/NotificationsubsectionResponse.java
+src/main/java/com/ezmax/api/model/NotificationtestGetElementsV1Response.java
+src/main/java/com/ezmax/api/model/NotificationtestGetElementsV1ResponseAllOf.java
+src/main/java/com/ezmax/api/model/NotificationtestGetElementsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/NotificationtestResponse.java
 src/main/java/com/ezmax/api/model/PhoneRequest.java
 src/main/java/com/ezmax/api/model/PhoneRequestCompound.java
@@ -1268,6 +1302,8 @@ src/test/java/com/ezmax/api/ModuleEzsignApiTest.java
 src/test/java/com/ezmax/api/ModuleUserApiTest.java
 src/test/java/com/ezmax/api/ObjectActivesessionApiTest.java
 src/test/java/com/ezmax/api/ObjectApikeyApiTest.java
+src/test/java/com/ezmax/api/ObjectBillingentityinternalApiTest.java
+src/test/java/com/ezmax/api/ObjectBrandingApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignbulksendApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignbulksenddocumentmappingApiTest.java
 src/test/java/com/ezmax/api/ObjectEzsignbulksendsignermappingApiTest.java
@@ -1292,8 +1328,13 @@ src/test/java/com/ezmax/api/ObjectFranchisebrokerApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchiseofficeApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchisereferalincomeApiTest.java
 src/test/java/com/ezmax/api/ObjectNotificationsectionApiTest.java
+src/test/java/com/ezmax/api/ObjectNotificationtestApiTest.java
 src/test/java/com/ezmax/api/ObjectPeriodApiTest.java
 src/test/java/com/ezmax/api/ObjectSecretquestionApiTest.java
+src/test/java/com/ezmax/api/ObjectTaxassignmentApiTest.java
+src/test/java/com/ezmax/api/ObjectTimezoneApiTest.java
+src/test/java/com/ezmax/api/ObjectUserApiTest.java
+src/test/java/com/ezmax/api/ObjectUsergroupApiTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseTest.java
@@ -1335,7 +1376,9 @@ src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadGetListTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugPayloadTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjDebugTest.java
 src/test/java/com/ezmax/api/model/CommonResponseObjSQLQueryTest.java
+src/test/java/com/ezmax/api/model/CommonResponseRedirectSSecretquestionTextXTest.java
 src/test/java/com/ezmax/api/model/CommonResponseTest.java
+src/test/java/com/ezmax/api/model/CommonResponseWarningTest.java
 src/test/java/com/ezmax/api/model/CommonWebhookTest.java
 src/test/java/com/ezmax/api/model/ContactRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/ContactRequestCompoundTest.java
@@ -1512,6 +1555,9 @@ src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV2ResponseAllOfTest.ja
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV2ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderCreateObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderDeleteObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderDisposeEzsignfoldersV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderDisposeEzsignfoldersV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderDisposeV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetActionableElementsV1ResponseAllOfTest.java
@@ -1670,6 +1716,7 @@ src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditEzsigntemplatesignat
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayloadTest.java
@@ -1841,6 +1888,7 @@ src/test/java/com/ezmax/api/model/FieldEEzsigntemplatesignatureTooltippositionTe
 src/test/java/com/ezmax/api/model/FieldEEzsigntemplatesignatureTypeTest.java
 src/test/java/com/ezmax/api/model/FieldENotificationpreferenceStatusTest.java
 src/test/java/com/ezmax/api/model/FieldEPhoneTypeTest.java
+src/test/java/com/ezmax/api/model/FieldEUserEzsignsendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/FranchisereferalincomeCreateObjectV1ResponseAllOfTest.java
@@ -1860,6 +1908,9 @@ src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1Respo
 src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/NotificationsubsectionResponseTest.java
+src/test/java/com/ezmax/api/model/NotificationtestGetElementsV1ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/NotificationtestGetElementsV1ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/NotificationtestGetElementsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/NotificationtestResponseTest.java
 src/test/java/com/ezmax/api/model/PhoneRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/PhoneRequestTest.java

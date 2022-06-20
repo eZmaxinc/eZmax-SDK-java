@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.7
+  version: 1.1.8
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,8 +68,15 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.7] - 2022-05-17\n\n#### Added\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
+    \n## 1.1.X Releases\n### [1.1.8] - 2022-06-20\n\n#### Added\n- GET /1/object/activesession/getCurrent\
+    \ fkiTimezoneID, eUserEzsignsendreminderfrequency, iUserInterfacecolor, bUserInterfacedark\
+    \ and iUserListresult\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\n\
+    - GET /1/object/branding/getAutocomplete/{sSelector}\n- GET /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\
+    - GET /1/object/taxassignment/getAutocomplete/{sSelector}\n- GET /1/object/timezone/getAutocomplete/{sSelector}\n\
+    - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
+    - Warning Code MUSTVERIFY added to documentation\n\n### [1.1.7] - 2022-05-17\n\
+    \n#### Added\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- DELETE\
+    \ /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
     - DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\n\
     - DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}\n- DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\n\
     - DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- DELETE\
@@ -368,10 +375,11 @@ tags:
     \ HTTP 401 (Unauthorized)\r\n| eErrorCode           | Examples               \
     \                                            |\r\n| -------------------- | ------------------------------------------------------------------\
     \ |\r\n| UNAUTHORIZED_BADAUTH | Invalid credentials during Authentication    \
-    \                      |\r\n| UNAUTHORIZED_REQUEST | The request is invalid (bad\
-    \ ip source, signature, invalid api key) |\r\n\r\n### HTTP 403 (Forbidden)\r\n\
-    | eErrorCode              | Examples                                         \
-    \   |\r\n| ----------------------- | ---------------------------------------------------\
+    \                      |\r\n| UNAUTHORIZED_BADMFA  | Invalid response to the MFA\
+    \ challenge                              |\r\n| UNAUTHORIZED_REQUEST | The request\
+    \ is invalid (bad ip source, signature, invalid api key) |\r\n\r\n### HTTP 403\
+    \ (Forbidden)\r\n| eErrorCode              | Examples                        \
+    \                    |\r\n| ----------------------- | ---------------------------------------------------\
     \ |\r\n| FORBIDDEN               | Generic Forbidden                         \
     \          |\r\n| FORBIDDEN_CONFIGURATION | A configured setting prevent access\
     \ to the element  |\r\n| FORBIDDEN_MODULE        | Module is not activated   \
@@ -703,9 +711,11 @@ tags:
     \ can only be generated for **User** type API Key. The **API**, **Delegated**\
     \ and **Special** types keys will never return such codes. (See Authorization\
     \ section for more information). Most users should not be concerned with these\
-    \ status codes.\r\n\r\n| HTTP Status Code | Meaning                          |\
-    \ Detail                                                               |\r\n|\
-    \ ---------------- | -------------------------------- | --------------------------------------------------------------------\
+    \ status codes.\r\n\r\nThese codes are documented in the Activesession getCurrent\
+    \ endpoint only to simplify the documentation but they can be returned in any\
+    \ of the endpoints.\r\n\r\n| HTTP Status Code | Meaning                      \
+    \    | Detail                                                               |\r\
+    \n| ---------------- | -------------------------------- | --------------------------------------------------------------------\
     \ |\r\n| 350              | Authentication required          | User must authenticate\
     \ because session is invalid                    |\r\n| 351              | Phone\
     \ Validation required        | (2FA) User needs to complete a Voice Call or SMS\
@@ -728,6 +738,19 @@ tags:
     \ need to return any data in the body |\r\n"
   name: General_StatusCodes
   x-displayName: Status Codes
+- description: "When the API returns an HTTP status code in the range 200-299, a property\
+    \ could be returned indicating one or more warnings occured. The array contain\
+    \ objects with 2 properties:\r\n- eWarningCode\r\n- sWarningMessage\r\n\r\nWe\
+    \ highly suggest you use **eWarningCode** to do any warning validation logic in\
+    \ your code or to create your own warning message for your users. **sWarningMessage**\
+    \ has more detail for a human to read, but is intended for the developper and\
+    \ is always returned in english.\r\n\r\nHere is the complete list of **eWarningCode**\
+    \ you could receive.\r\n\r\n| eWarningCode         | Examples                \
+    \                                 |\r\n| -------------------- | --------------------------------------------------------\
+    \ |\r\n| MUSTVERIFY           | An object was changed and a verification is recommended\
+    \  |"
+  name: General_WarningCodes
+  x-displayName: Warning Codes
 - description: "## Concept\nA Webhook (also called a web callback or HTTP push API)\
     \ is a way for your application to be notified of an event in real time.\n\nFor\
     \ example, if you send a contract for signing and need to be notified as soon\
@@ -797,6 +820,12 @@ tags:
 - description: Apikey contains detail about an api key used to access the API
   name: Object_Apikey
   x-displayName: Apikey
+- description: Billingentityinternal contains detail about a Billingentityinternal
+  name: Object_Billingentityinternal
+  x-displayName: Billingentityinternal
+- description: Branding contains detail about a company Branding
+  name: Object_Branding
+  x-displayName: Branding
 - description: Ezsignbulksend contains detail about a batch of Ezsignbulksendtransmission
   name: Object_Ezsignbulksend
   x-displayName: Ezsignbulksend
@@ -887,6 +916,10 @@ tags:
     configured notification tests
   name: Object_Notificationsection
   x-displayName: Notificationsection
+- description: Notificationtest contains detail about the notified tests to the users
+    about things to take action on
+  name: Object_Notificationtest
+  x-displayName: Notificationtest
 - description: Period contains detail about accounting periods
   name: Object_Period
   x-displayName: Period
@@ -894,9 +927,18 @@ tags:
     user for 2FA
   name: Object_Secretquestion
   x-displayName: Secretquestion
+- description: Taxassignment contains detail about a tax assignment
+  name: Object_Taxassignment
+  x-displayName: Taxassignment
+- description: Timezone contains detail about a time zone
+  name: Object_Timezone
+  x-displayName: Timezone
 - description: User contains detail about the users in the system
   name: Object_User
   x-displayName: User
+- description: Usergroup contains detail about a group of users
+  name: Object_Usergroup
+  x-displayName: Usergroup
 paths:
   /1/customer/{pksCustomerCode}/endpoint:
     description: ""
@@ -1035,6 +1077,32 @@ paths:
               schema:
                 $ref: '#/components/schemas/activesession-getCurrent-v1-Response'
           description: OK
+        "350":
+          description: The user must authenticate before he can continue with this
+            request
+        "351":
+          description: The user is configured with 2FA and needs to validate its phone
+            number before he can continue with this request
+        "352":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Redirect-sSecretquestionTextX'
+          description: The user is configured with 2FA and needs to answer a Secretquestion
+            before he can continue with this request
+        "353":
+          description: The user must accept clauses before he can continue with this
+            request
+        "354":
+          description: The user's computer must be validated before he can continue
+            with this request
+        "355":
+          description: The user must change its password before he can continue with
+            this request
+        "356":
+          description: The user is not running the latest version of the native application.
+            He must valide or update its version before he can continue with this
+            request
       security:
       - Authorization: []
       summary: Get Current Activesession
@@ -1103,6 +1171,100 @@ paths:
       - Object_Apikey
       x-presentations: []
       x-content-type: application/json
+      x-accepts: application/json
+  /1/object/billingentityinternal/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Billingentityinternal to be used in a dropdown
+        or autocomplete control.
+      operationId: Billingentityinternal_GetAutocomplete_V1
+      parameters:
+      - description: The type of Billingentityinternals to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Billingentityinternals and IDs
+      tags:
+      - Object_Billingentityinternal
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/branding/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Branding to be used in a dropdown or autocomplete
+        control.
+      operationId: Branding_GetAutocomplete_V1
+      parameters:
+      - description: The type of Brandings to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Brandings and IDs
+      tags:
+      - Object_Branding
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsignbulksend:
     description: ""
@@ -3031,6 +3193,53 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose:
+    post:
+      description: ""
+      operationId: Ezsignfolder_Dispose_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-dispose-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-dispose-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Dispose the Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements:
     get:
       description: Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups
@@ -3379,6 +3588,45 @@ paths:
       - Object_Ezsignfolder
       x-presentations:
       - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/ezsignfolder/disposeEzsignfolders:
+    description: ""
+    post:
+      description: ""
+      operationId: Ezsignfolder_DisposeEzsignfolders_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-disposeEzsignfolders-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-disposeEzsignfolders-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The syntax of the request is valid but the request cannot be
+            completed. Look for detail in body.
+      security:
+      - Authorization: []
+      summary: Dispose Ezsignfolders
+      tags:
+      - Object_Ezsignfolder
+      x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
   /1/object/ezsignfolder/getList:
@@ -6204,6 +6452,39 @@ paths:
       - Object_Notificationsection
       x-presentations: []
       x-accepts: application/json
+  /1/object/notificationtest/{pkiNotificationtestID}/getElements:
+    get:
+      description: ""
+      operationId: Notificationtest_GetElements_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiNotificationtestID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiNotificationtestID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/notificationtest-getElements-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The element you are trying to work on does not exist
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Notificationtest's Elements
+      tags:
+      - Object_Notificationtest
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/period/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -6299,6 +6580,194 @@ paths:
       - Object_Secretquestion
       x-presentations: []
       x-accepts: application/json
+  /1/object/taxassignment/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Taxassignment to be used in a dropdown or autocomplete
+        control.
+      operationId: Taxassignment_GetAutocomplete_V1
+      parameters:
+      - description: The type of Taxassignments to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AllButNonrecoverable
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Taxassignments and IDs
+      tags:
+      - Object_Taxassignment
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/timezone/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Timezone to be used in a dropdown or autocomplete
+        control.
+      operationId: Timezone_GetAutocomplete_V1
+      parameters:
+      - description: The type of Timezones to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - Active
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Timezones and IDs
+      tags:
+      - Object_Timezone
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/user/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of User to be used in a dropdown or autocomplete control.
+      operationId: User_GetAutocomplete_V1
+      parameters:
+      - description: The type of Users to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AllActive
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Users and IDs
+      tags:
+      - Object_User
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/usergroup/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Usergroup to be used in a dropdown or autocomplete
+        control.
+      operationId: Usergroup_GetAutocomplete_V1
+      parameters:
+      - description: The type of Usergroups to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Usergroups and IDs
+      tags:
+      - Object_Usergroup
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
 components:
   examples:
     PdfAsBase64:
@@ -6375,6 +6844,29 @@ components:
         Look for detail in body. If the error is recoverable sTemporaryFileUrl will
         be set and you can use this url to try a new request without sending the file
         over again
+    Response-Redirect-350:
+      description: The user must authenticate before he can continue with this request
+    Response-Redirect-351:
+      description: The user is configured with 2FA and needs to validate its phone
+        number before he can continue with this request
+    Response-Redirect-352:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Redirect-sSecretquestionTextX'
+      description: The user is configured with 2FA and needs to answer a Secretquestion
+        before he can continue with this request
+    Response-Redirect-353:
+      description: The user must accept clauses before he can continue with this request
+    Response-Redirect-354:
+      description: The user's computer must be validated before he can continue with
+        this request
+    Response-Redirect-355:
+      description: The user must change its password before he can continue with this
+        request
+    Response-Redirect-356:
+      description: The user is not running the latest version of the native application.
+        He must valide or update its version before he can continue with this request
     Response-Webhook-202:
       description: The Webhook event notification was successfully received by the
         receiving web server.
@@ -6402,10 +6894,12 @@ components:
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         fkiApikeyID:
           description: The unique ID of the Apikey
           example: 99
+          minimum: 0
           type: integer
         sUserLoginname:
           description: The Login name of the User.
@@ -6486,6 +6980,7 @@ components:
           description: The error code. See documentation for valid values
           type: string
       required:
+      - eErrorCode
       - sErrorMessage
       type: object
     Common-Response-Error-sTemporaryFileUrl:
@@ -6521,6 +7016,29 @@ components:
         description: List of valid enum values
         type: object
       description: List of filters that can be used in *sFilter* (Enum types)
+      type: object
+    Common-Response-Redirect-sSecretquestionTextX:
+      description: 352 Redirect Message containing secret question
+      properties:
+        sSecretquestionTextX:
+          description: The text of the Secretquestion in the language of the requester
+          example: The name of the hospital in which you were born
+          type: string
+      required:
+      - sSecretquestionTextX
+      type: object
+    Common-Response-Warning:
+      description: Generic Warning Message
+      properties:
+        sWarningMessage:
+          description: More detail about the warning
+          type: string
+        eWarningCode:
+          description: The warning code. See documentation for valid values
+          type: string
+      required:
+      - eWarningCode
+      - sWarningMessage
       type: object
     Common-Response-objDebug:
       description: This is a generic debug object that is returned by all API requests
@@ -6681,6 +7199,10 @@ components:
       description: If the Ezsigndocument contains an Ezsignform or not
       example: true
       type: boolean
+    Computed-bEzsignfolderIsdisposable:
+      description: If the Ezsigndocument can be disposed
+      example: false
+      type: boolean
     Computed-bEzsigntemplateIncomplete:
       description: Indicate the Ezsigntemplate is incomplete and cannot be used
       example: false
@@ -6694,10 +7216,9 @@ components:
         archived.
       example: 2020-12-31 23:59:59
       type: string
-    Computed-dtEzsignfolderScheduleddestruction:
-      description: The scheduled date and time at which the Ezsignfolder should be
-        Destroyed.
-      example: 2020-12-31 23:59:59
+    Computed-dtEzsignfolderScheduleddispose:
+      description: The scheduled date at which the Ezsignfolder should be Disposed.
+      example: 2020-12-31
       type: string
     Computed-iEzsigndocumentStepformcurrent:
       description: The current step in the form filling phase
@@ -6807,6 +7328,7 @@ components:
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         sEzsignfoldersignerassociationstatusLastname:
           description: The last name of the Ezsignsigner
@@ -6832,6 +7354,7 @@ components:
         pkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         eEzsignfolderStep:
           $ref: '#/components/schemas/Field-eEzsignfolderStep'
@@ -6860,6 +7383,7 @@ components:
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         sContactFirstname:
           description: The First name of the contact
@@ -6910,10 +7434,12 @@ components:
         pkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         fkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         sEzsigndocumentName:
           description: The name of the document that will be presented to Ezsignfoldersignerassociations
@@ -6975,10 +7501,12 @@ components:
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         sContactFirstname:
           description: The First name of the contact
@@ -7005,6 +7533,7 @@ components:
         pkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         sEzsignfolderDescription:
           description: The description of the Ezsignfolder
@@ -7026,10 +7555,12 @@ components:
         fkiEzsigntemplatepackagesignerID:
           description: The unique ID of the Ezsigntemplatepackagesigner
           example: 174
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         sEzsigntemplatepackagesignerDescription:
           description: The description of the Ezsigntemplatepackagesigner
@@ -7056,6 +7587,7 @@ components:
         pkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         sUserLastname:
           description: The Last name of the user
@@ -7077,6 +7609,10 @@ components:
       - sEmailAddress
       - sUserFirstname
       - sUserLastname
+      type: object
+    Custom-Variableobject-Response:
+      additionalProperties: true
+      description: A Variable object without predefined property names
       type: object
     Custom-WordPositionOccurence-Response:
       description: A Word Position Object
@@ -7184,6 +7720,10 @@ components:
       description: Whether the Ezsigntemplatesignature has a custom date format or
         not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
       type: boolean
+    Field-bUserInterfacedark:
+      description: Whether to use a dark mode interface
+      example: false
+      type: boolean
     Field-dFranchisereferalincomeAgentamount:
       description: The amount that will be given to the agent
       example: "800.00"
@@ -7272,6 +7812,7 @@ components:
       - DeclinedToSign
       - PrematurelyEnded
       - Completed
+      - Disposed
       example: Completed
       type: string
     Field-eEzsigndocumentlogType:
@@ -7499,6 +8040,15 @@ components:
       - International
       example: Local
       type: string
+    Field-eUserEzsignsendreminderfrequency:
+      description: Frequency at which reminders will be sent to signers that haven't
+        signed the documents
+      enum:
+      - None
+      - Daily
+      - Weekly
+      example: None
+      type: string
     Field-eUserType:
       description: The user type of the User.
       enum:
@@ -7529,27 +8079,33 @@ components:
       description: The order in which the Ezsigntemplate or Ezsigntemplatepackage
         will be presented to the signatory in the Ezsignfolder.
       example: 1
+      minimum: 0
       type: integer
     Field-iEzsignbulksendtransmissionErrors:
       description: The number of errors during the Ezsignbulksendtransmission
       example: 1
+      minimum: 0
       type: integer
     Field-iEzsigndocumentOrder:
       description: The order in which the Ezsigndocument will be presented to the
         signatory in the Ezsignfolder.
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigndocumentPagetotal:
       description: The number of pages in the Ezsigndocument.
       example: 4
+      minimum: 1
       type: integer
     Field-iEzsigndocumentSignaturesigned:
       description: The number of signatures that were signed in the document.
       example: 3
+      minimum: 0
       type: integer
     Field-iEzsigndocumentSignaturetotal:
       description: The number of total signatures that were requested in the Ezsigndocument.
       example: 4
+      minimum: 0
       type: integer
     Field-iEzsignformfieldHeight:
       description: |
@@ -7565,6 +8121,7 @@ components:
         | Text                      | 22           |
         | Textarea                  | 22-65535     |
       example: 22
+      minimum: 0
       type: integer
     Field-iEzsignformfieldWidth:
       description: |-
@@ -7580,6 +8137,7 @@ components:
         | Text                      | 22-65535     |
         | Textarea                  | 22-65535     |
       example: 102
+      minimum: 0
       type: integer
     Field-iEzsignformfieldX:
       description: "The X coordinate (Horizontal) where to put the Ezsignformfield\
@@ -7587,6 +8145,7 @@ components:
         \ So for example, if you want to put the Ezsignformfield 2 inches from the\
         \ left border of the page, you would use \"200\" for the X coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsignformfieldY:
       description: "The Y coordinate (Vertical) where to put the Ezsignformfield on\
@@ -7594,16 +8153,19 @@ components:
         \ for example, if you want to put the Ezsignformfield 3 inches from the top\
         \ border of the page, you would use \"300\" for the Y coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iEzsignformfieldgroupFilledmax:
       description: The maximum number of Ezsignformfield that must be filled in the
         Ezsignformfieldgroup
       example: 2
+      minimum: 0
       type: integer
     Field-iEzsignformfieldgroupFilledmin:
       description: The minimum number of Ezsignformfield that must be filled in the
         Ezsignformfieldgroup
       example: 1
+      minimum: 0
       type: integer
     Field-iEzsignformfieldgroupMaxlength:
       description: |-
@@ -7611,31 +8173,38 @@ components:
 
         This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
       example: 75
+      minimum: 0
       type: integer
     Field-iEzsignformfieldgroupStep:
       description: The step when the Ezsignsigner will be invited to fill the form
         fields
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsignpageHeightimage:
       description: The Height of the page's image in pixels calculated at 100 DPI
       example: 1100
+      minimum: 0
       type: integer
     Field-iEzsignpageHeightpdf:
       description: The Height of the page in points calculated at 72 DPI
       example: 792
+      minimum: 0
       type: integer
     Field-iEzsignpagePagenumber:
       description: The page number in the Ezsigndocument
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsignpageWidthimage:
       description: The Width of the page's image in pixels calculated at 100 DPI
       example: 850
+      minimum: 0
       type: integer
     Field-iEzsignpageWidthpdf:
       description: The Width of the page in points calculated at 72 DPI
       example: 612
+      minimum: 0
       type: integer
     Field-iEzsignsignatureStep:
       description: The step when the Ezsignsigner will be invited to sign
@@ -7647,6 +8216,7 @@ components:
         \ example, if you want to put the Ezsignsignature 2 inches from the left border\
         \ of the page, you would use \"200\" for the X coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsignsignatureY:
       description: "The Y coordinate (Vertical) where to put the Ezsignsignature on\
@@ -7654,6 +8224,7 @@ components:
         \ if you want to put the Ezsignsignature 3 inches from the top border of the\
         \ page, you would use \"300\" for the Y coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iEzsignsignaturecustomdateX:
       description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
@@ -7661,6 +8232,7 @@ components:
         \ example, if you want to put the Ezsignsignaturecustomdate block 2 inches\
         \ from the left border of the page, you would use \"200\" for the X coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsignsignaturecustomdateY:
       description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
@@ -7668,30 +8240,37 @@ components:
         \ example, if you want to put the Ezsignsignaturecustomdate block 3 inches\
         \ from the top border of the page, you would use \"300\" for the Y coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iEzsigntemplatedocumentPagetotal:
       description: The number of pages in the Ezsigntemplatedocument.
       example: 5
+      minimum: 1
       type: integer
     Field-iEzsigntemplatedocumentpageHeightimage:
       description: The Height of the page's image in pixels calculated at 100 DPI
       example: 1100
+      minimum: 0
       type: integer
     Field-iEzsigntemplatedocumentpageHeightpdf:
       description: The Height of the page in points calculated at 72 DPI
       example: 792
+      minimum: 0
       type: integer
     Field-iEzsigntemplatedocumentpagePagenumber:
       description: The page number in the Ezsigntemplatedocument
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigntemplatedocumentpageWidthimage:
       description: The Width of the page's image in pixels calculated at 100 DPI
       example: 850
+      minimum: 0
       type: integer
     Field-iEzsigntemplatedocumentpageWidthpdf:
       description: The Width of the page in points calculated at 72 DPI
       example: 612
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldHeight:
       description: |
@@ -7707,6 +8286,7 @@ components:
         | Text                      | 22           |
         | Textarea                  | 22-65535     |
       example: 22
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldWidth:
       description: |-
@@ -7722,6 +8302,7 @@ components:
         | Text                      | 22-65535     |
         | Textarea                  | 22-65535     |
       example: 102
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldX:
       description: "The X coordinate (Horizontal) where to put the Ezsigntemplateformfield\
@@ -7730,6 +8311,7 @@ components:
         \ inches from the left border of the page, you would use \"200\" for the X\
         \ coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldY:
       description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
@@ -7738,16 +8320,19 @@ components:
         \ inches from the top border of the page, you would use \"300\" for the Y\
         \ coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldgroupFilledmax:
       description: The maximum number of Ezsigntemplateformfield that must be filled
         in the Ezsigntemplateformfieldgroup
       example: 2
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldgroupFilledmin:
       description: The minimum number of Ezsigntemplateformfield that must be filled
         in the Ezsigntemplateformfieldgroup
       example: 1
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldgroupMaxlength:
       description: |-
@@ -7755,24 +8340,29 @@ components:
 
         This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
       example: 75
+      minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldgroupStep:
       description: The step when the Ezsigntemplatesigner will be invited to fill
         the form fields
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigntemplatepackagemembershipOrder:
       description: The order in which the Ezsigntemplate will be imported when using
         an Ezsigntemplatepackage.
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigntemplatepackagesignermembershipCopy:
       description: The Copy number in case of multiple copies.
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigntemplatesignatureStep:
       description: The step when the Ezsigntemplatesigner will be invited to sign
       example: 1
+      minimum: 1
       type: integer
     Field-iEzsigntemplatesignatureX:
       description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
@@ -7780,6 +8370,7 @@ components:
         \ example, if you want to put the Ezsigntemplatesignature 2 inches from the\
         \ left border of the page, you would use \"200\" for the X coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsigntemplatesignatureY:
       description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
@@ -7787,6 +8378,7 @@ components:
         \ example, if you want to put the Ezsigntemplatesignature 3 inches from the\
         \ top border of the page, you would use \"300\" for the Y coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iEzsigntemplatesignaturecustomdateX:
       description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
@@ -7794,6 +8386,7 @@ components:
         \ example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches\
         \ from the left border of the page, you would use \"200\" for the X coordinate."
       example: 200
+      minimum: 0
       type: integer
     Field-iEzsigntemplatesignaturecustomdateY:
       description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
@@ -7801,6 +8394,7 @@ components:
         \ example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches\
         \ from the top border of the page, you would use \"300\" for the Y coordinate."
       example: 300
+      minimum: 0
       type: integer
     Field-iPhoneNumber:
       description: "The number of the phone number. (For a North America Number only)\n\
@@ -7811,12 +8405,27 @@ components:
     Field-iRowMax:
       description: The maximum numbers of results to be returned
       example: 100
+      minimum: 1
       type: integer
     Field-iRowOffset:
       description: "The starting element from where to start retrieving the results.\
         \ For example if you started at iRowOffset=0 and asked for iRowMax=100, to\
         \ get the next 100 results, you could specify iRowOffset=100&iRowMax=100,"
       example: 0
+      minimum: 0
+      type: integer
+    Field-iUserInterfacecolor:
+      description: "The int32 representation of the interface color. For example,\
+        \ RGB color #39435B would be 3752795"
+      example: 3752795
+      format: int32
+      minimum: 0
+      type: integer
+    Field-iUserListresult:
+      description: The number of rows to return by default in lists
+      example: 25
+      maximum: 500
+      minimum: 5
       type: integer
     Field-pkiAddresstypeID:
       description: |-
@@ -7832,18 +8441,22 @@ components:
         |4|Invoicing|
         |5|Shipping|
       example: 1
+      minimum: 0
       type: integer
     Field-pkiApikeyID:
       description: The unique ID of the Apikey
       example: 99
+      minimum: 0
       type: integer
     Field-pkiBillingentityinternalID:
       description: The unique ID of the Billingentityinternal.
       example: 1
+      minimum: 0
       type: integer
     Field-pkiContactID:
       description: The unique ID of the Contact
       example: 21
+      minimum: 0
       type: integer
     Field-pkiContacttitleID:
       description: |-
@@ -7858,6 +8471,7 @@ components:
         |4|(Blank)|
         |5|Me (For Notaries)|
       example: 2
+      minimum: 0
       type: integer
     Field-pkiCountryID:
       description: |-
@@ -7870,6 +8484,7 @@ components:
         |1|Canada|
         |2|United-States|
       example: 1
+      minimum: 0
       type: integer
     Field-pkiEmailtypeID:
       description: |-
@@ -7882,118 +8497,147 @@ components:
         |1|Office|
         |2|Home|
       example: 1
+      minimum: 0
       type: integer
     Field-pkiEzsignbulksendID:
       description: The unique ID of the Ezsignbulksend
       example: 8
+      minimum: 0
       type: integer
     Field-pkiEzsignbulksenddocumentmappingID:
       description: The unique ID of the Ezsignbulksenddocumentmapping.
       example: 48
+      minimum: 0
       type: integer
     Field-pkiEzsignbulksendsignermappingID:
       description: The unique ID of the Ezsignbulksendsignermapping
       example: 57
+      minimum: 0
       type: integer
     Field-pkiEzsignbulksendtransmissionID:
       description: The unique ID of the Ezsignbulksendtransmission
       example: 21
+      minimum: 0
       type: integer
     Field-pkiEzsigndocumentID:
       description: The unique ID of the Ezsigndocument
       example: 97
+      minimum: 0
       type: integer
     Field-pkiEzsignfolderID:
       description: The unique ID of the Ezsignfolder
       example: 33
+      minimum: 0
       type: integer
     Field-pkiEzsignfoldersignerassociationID:
       description: The unique ID of the Ezsignfoldersignerassociation
       example: 20
+      minimum: 0
       type: integer
     Field-pkiEzsignfoldertypeID:
       description: The unique ID of the Ezsignfoldertype.
       example: 5
+      minimum: 0
       type: integer
     Field-pkiEzsignformfieldID:
       description: The unique ID of the Ezsignformfield
       example: 32
+      minimum: 0
       type: integer
     Field-pkiEzsignformfieldgroupID:
       description: The unique ID of the Ezsignformfieldgroup
       example: 26
+      minimum: 0
       type: integer
     Field-pkiEzsignformfieldgroupsignerID:
       description: The unique ID of the Ezsignformfieldgroupsigner
       example: 81
+      minimum: 0
       type: integer
     Field-pkiEzsignpageID:
       description: The unique ID of the Ezsignpage
       example: 64
+      minimum: 0
       type: integer
     Field-pkiEzsignsignatureID:
       description: The unique ID of the Ezsignsignature
       example: 49
+      minimum: 0
       type: integer
     Field-pkiEzsignsignaturecustomdateID:
       description: The unique ID of the Ezsignsignaturecustomdate
       example: 27
+      minimum: 0
       type: integer
     Field-pkiEzsignsignerID:
       description: The unique ID of the Ezsignsigner
       example: 89
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplateID:
       description: The unique ID of the Ezsigntemplate
       example: 36
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatedocumentID:
       description: The unique ID of the Ezsigntemplatedocument
       example: 133
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatedocumentpageID:
       description: The unique ID of the Ezsigntemplatedocumentpage
       example: 85
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplateformfieldID:
       description: The unique ID of the Ezsigntemplateformfield
       example: 71
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplateformfieldgroupID:
       description: The unique ID of the Ezsigntemplateformfieldgroup
       example: 64
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplateformfieldgroupsignerID:
       description: The unique ID of the Ezsigntemplateformfieldgroupsigner
       example: 87
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatepackageID:
       description: The unique ID of the Ezsigntemplatepackage
       example: 99
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatepackagemembershipID:
       description: The unique ID of the Ezsigntemplatepackagemembership
       example: 194
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatepackagesignerID:
       description: The unique ID of the Ezsigntemplatepackagesigner
       example: 174
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatepackagesignermembershipID:
       description: The unique ID of the Ezsigntemplatepackagesignermembership
       example: 237
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatesignatureID:
       description: The unique ID of the Ezsigntemplatesignature
       example: 99
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatesignaturecustomdateID:
       description: The unique ID of the Ezsigntemplatesignaturecustomdate
       example: 58
+      minimum: 0
       type: integer
     Field-pkiEzsigntemplatesignerID:
       description: The unique ID of the Ezsigntemplatesigner
       example: 9
+      minimum: 0
       type: integer
     Field-pkiEzsigntsarequirementID:
       description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if a Time\
@@ -8015,18 +8659,22 @@ components:
     Field-pkiFranchisebrokerID:
       description: The unique ID of the Franchisebroker
       example: 61
+      minimum: 0
       type: integer
     Field-pkiFranchiseofficeID:
       description: The unique ID of the Franchisereoffice
       example: 50
+      minimum: 0
       type: integer
     Field-pkiFranchisereferalincomeID:
       description: The unique ID of the Franchisereferalincome
       example: 35
+      minimum: 0
       type: integer
     Field-pkiFranchisereferalincomeprogramID:
       description: The unique ID of the Franchisereferalincomeprogram
       example: 51
+      minimum: 0
       type: integer
     Field-pkiLanguageID:
       description: |-
@@ -8045,22 +8693,27 @@ components:
     Field-pkiModulesectionID:
       description: The unique ID of the Modulesection
       example: 53
+      minimum: 0
       type: integer
     Field-pkiNotificationsectionID:
       description: The unique ID of the Notificationsection
       example: 1
+      minimum: 0
       type: integer
     Field-pkiNotificationsubsectionID:
       description: The unique ID of the Notificationsubsection
       example: 3
+      minimum: 0
       type: integer
     Field-pkiNotificationtestID:
       description: The unique ID of the Notificationtest
       example: 14
+      minimum: 0
       type: integer
     Field-pkiPeriodID:
       description: The unique ID of the Period
       example: 21
+      minimum: 0
       type: integer
     Field-pkiPhonetypeID:
       description: |-
@@ -8077,6 +8730,7 @@ components:
         |5|Pager|
         |6|Toll Free|
       example: 1
+      minimum: 0
       type: integer
     Field-pkiProvinceID:
       description: |-
@@ -8152,6 +8806,7 @@ components:
         |63|(United-States) Wisconsin|
         |64|(United-States) Wyoming|
       example: 11
+      minimum: 0
       type: integer
     Field-pkiSecretquestionID:
       description: |-
@@ -8184,6 +8839,7 @@ components:
         |21|Your boat's name|
         |22|Date of Birth (YYYY-MM-DD)|
       example: 7
+      minimum: 0
       type: integer
     Field-pkiTaxassignmentID:
       description: |-
@@ -8210,11 +8866,17 @@ components:
         |15|GST + RST (MB) Non-Recoverable|
       example: 1
       maximum: 15
-      minimum: 1
+      minimum: 0
+      type: integer
+    Field-pkiTimezoneID:
+      description: The unique ID of the Timezone
+      example: 247
+      minimum: 0
       type: integer
     Field-pkiUserID:
       description: The unique ID of the User
       example: 70
+      minimum: 0
       type: integer
     Field-pkiUserlogintypeID:
       description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
@@ -8231,6 +8893,7 @@ components:
         \ able to sign \"In-Person\" and will need to authenticate using SMS or Phone\
         \ call. No email will be sent for invitation to sign. **Additional fee applies**|"
       example: 2
+      minimum: 0
       type: integer
     Field-pkiWebsitetypeID:
       description: |-
@@ -8245,6 +8908,7 @@ components:
         |3|Facebook|
         |4|Survey|
       example: 1
+      minimum: 0
       type: integer
     Field-pksCustomerCode:
       description: The customer code assigned to your account
@@ -8485,6 +9149,10 @@ components:
         \ x123"
       example: "514"
       type: string
+    Field-sSecretquestionTextX:
+      description: The text of the Secretquestion in the language of the requester
+      example: The name of the hospital in which you were born
+      type: string
     Field-sUserFirstname:
       description: The First name of the user
       example: John
@@ -8500,6 +9168,10 @@ components:
     Field-sUserlogintypeDescriptionX:
       description: The description of the Userlogintype in the language of the requester
       example: Email and phone or SMS
+      type: string
+    Field-sVariableobjectProperty:
+      description: The name of the Property used in the Variableobject
+      example: PropertyName1
       type: string
     Field-sWebsiteAddress:
       description: The URL of the website.
@@ -8657,6 +9329,7 @@ components:
         pkiApikeyID:
           description: The unique ID of the Apikey
           example: 99
+          minimum: 0
           type: integer
         sApikeyDescriptionX:
           description: The description of the Apikey in the language of the requester
@@ -8673,6 +9346,12 @@ components:
         pkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
+          type: integer
+        fkiTimezoneID:
+          description: The unique ID of the Timezone
+          example: 247
+          minimum: 0
           type: integer
         sAvatarUrl:
           description: The url of the picture used as avatar
@@ -8690,7 +9369,31 @@ components:
           description: The email address.
           example: example@domain.com
           type: string
+        eUserEzsignsendreminderfrequency:
+          $ref: '#/components/schemas/Field-eUserEzsignsendreminderfrequency'
+        iUserInterfacecolor:
+          description: "The int32 representation of the interface color. For example,\
+            \ RGB color #39435B would be 3752795"
+          example: 3752795
+          format: int32
+          minimum: 0
+          type: integer
+        bUserInterfacedark:
+          description: Whether to use a dark mode interface
+          example: false
+          type: boolean
+        iUserListresult:
+          description: The number of rows to return by default in lists
+          example: 25
+          maximum: 500
+          minimum: 5
+          type: integer
       required:
+      - bUserInterfacedark
+      - eUserEzsignsendreminderfrequency
+      - fkiTimezoneID
+      - iUserInterfacecolor
+      - iUserListresult
       - pkiUserID
       - sAvatarUrl
       - sEmailAddress
@@ -8725,6 +9428,7 @@ components:
             |4|Invoicing|
             |5|Shipping|
           example: 1
+          minimum: 0
           type: integer
         sAddressCivic:
           description: The Civic number.
@@ -8816,6 +9520,7 @@ components:
             |63|(United-States) Wisconsin|
             |64|(United-States) Wyoming|
           example: 11
+          minimum: 0
           type: integer
         fkiCountryID:
           description: |-
@@ -8828,6 +9533,7 @@ components:
             |1|Canada|
             |2|United-States|
           example: 1
+          minimum: 0
           type: integer
         sAddressZip:
           description: |-
@@ -8857,10 +9563,12 @@ components:
         pkiApikeyID:
           description: The unique ID of the Apikey
           example: 99
+          minimum: 0
           type: integer
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         objApikeyDescription:
           $ref: '#/components/schemas/Multilingual-ApikeyDescription'
@@ -8887,6 +9595,7 @@ components:
         pkiApikeyID:
           description: The unique ID of the Apikey
           example: 99
+          minimum: 0
           type: integer
         objAudit:
           $ref: '#/components/schemas/Common-Audit'
@@ -8997,6 +9706,7 @@ components:
             |4|(Blank)|
             |5|Me (For Notaries)|
           example: 2
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -9095,6 +9805,7 @@ components:
             |1|Office|
             |2|Home|
           example: 1
+          minimum: 0
           type: integer
         sEmailAddress:
           description: The email address.
@@ -9162,10 +9873,12 @@ components:
         pkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         sEzsignbulksendDescription:
           description: The description of the Ezsignbulksend
@@ -9217,10 +9930,12 @@ components:
         pkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -9271,10 +9986,12 @@ components:
         pkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -9352,6 +10069,7 @@ components:
             \ authenticate using SMS or Phone call. No email will be sent for invitation\
             \ to sign. **Additional fee applies**|"
           example: 2
+          minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
           description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
@@ -9536,18 +10254,22 @@ components:
         pkiEzsignbulksenddocumentmappingID:
           description: The unique ID of the Ezsignbulksenddocumentmapping.
           example: 48
+          minimum: 0
           type: integer
         fkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
       required:
       - fkiEzsignbulksendID
@@ -9564,23 +10286,28 @@ components:
         pkiEzsignbulksenddocumentmappingID:
           description: The unique ID of the Ezsignbulksenddocumentmapping.
           example: 48
+          minimum: 0
           type: integer
         fkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         iEzsignbulksenddocumentmappingOrder:
           description: The order in which the Ezsigntemplate or Ezsigntemplatepackage
             will be presented to the signatory in the Ezsignfolder.
           example: 1
+          minimum: 0
           type: integer
       required:
       - fkiEzsignbulksendID
@@ -9645,14 +10372,17 @@ components:
         pkiEzsignbulksendsignermappingID:
           description: The unique ID of the Ezsignbulksendsignermapping
           example: 57
+          minimum: 0
           type: integer
         fkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         sEzsignbulksendsignermappingDescription:
           description: The description of the Ezsignbulksendsignermapping
@@ -9674,14 +10404,17 @@ components:
         pkiEzsignbulksendsignermappingID:
           description: The unique ID of the Ezsignbulksendsignermapping
           example: 57
+          minimum: 0
           type: integer
         fkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         sEzsignbulksendsignermappingDescription:
           description: The description of the Ezsignbulksendsignermapping
@@ -9750,10 +10483,12 @@ components:
         pkiEzsignbulksendtransmissionID:
           description: The unique ID of the Ezsignbulksendtransmission
           example: 21
+          minimum: 0
           type: integer
         fkiEzsignbulksendID:
           description: The unique ID of the Ezsignbulksend
           example: 8
+          minimum: 0
           type: integer
         sEzsignbulksendtransmissionDescription:
           description: The description of the Ezsignbulksendtransmission
@@ -9762,6 +10497,7 @@ components:
         iEzsignbulksendtransmissionErrors:
           description: The number of errors during the Ezsignbulksendtransmission
           example: 1
+          minimum: 0
           type: integer
         objAudit:
           $ref: '#/components/schemas/Common-Audit'
@@ -9812,18 +10548,22 @@ components:
         pkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         fkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -9924,6 +10664,7 @@ components:
         fkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
@@ -9951,6 +10692,7 @@ components:
         pkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         eEzsigndocumentStep:
           $ref: '#/components/schemas/Field-eEzsigndocumentStep'
@@ -9967,18 +10709,22 @@ components:
           description: The order in which the Ezsigndocument will be presented to
             the signatory in the Ezsignfolder.
           example: 1
+          minimum: 1
           type: integer
         iEzsigndocumentPagetotal:
           description: The number of pages in the Ezsigndocument.
           example: 4
+          minimum: 1
           type: integer
         iEzsigndocumentSignaturesigned:
           description: The number of signatures that were signed in the document.
           example: 3
+          minimum: 0
           type: integer
         iEzsigndocumentSignaturetotal:
           description: The number of total signatures that were requested in the Ezsigndocument.
           example: 4
+          minimum: 0
           type: integer
         sEzsigndocumentMD5initial:
           description: MD5 Hash of the initial PDF Document before signatures were
@@ -10026,6 +10772,7 @@ components:
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         a_sEzsigntemplatesigner:
           items:
@@ -10051,6 +10798,7 @@ components:
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         a_sEzsigntemplatesigner:
           items:
@@ -10389,10 +11137,12 @@ components:
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         fkiEzsignsignerID:
           description: The unique ID of the Ezsignsigner
           example: 89
+          minimum: 0
           type: integer
         dtEzsigndocumentlogDatetime:
           description: The date and time at which the event was logged
@@ -10435,10 +11185,12 @@ components:
         pkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         eEzsignfoldertypePrivacylevel:
           $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
@@ -10500,10 +11252,12 @@ components:
         pkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
           description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
@@ -10549,10 +11303,12 @@ components:
         pkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         sEzsignfoldertypeNameX:
           description: The name of the Ezsignfoldertype in the language of the requester
@@ -10561,6 +11317,7 @@ components:
         fkiBillingentityinternalID:
           description: The unique ID of the Billingentityinternal.
           example: 1
+          minimum: 0
           type: integer
         sBillingentityinternalDescriptionX:
           description: The description of the Billingentityinternal in the language
@@ -10597,6 +11354,10 @@ components:
           description: Note about the Ezsignfolder
           example: This is a note
           type: string
+        bEzsignfolderIsdisposable:
+          description: If the Ezsigndocument can be disposed
+          example: false
+          type: boolean
         eEzsignfolderSendreminderfrequency:
           $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
         dtEzsignfolderDuedate:
@@ -10614,10 +11375,9 @@ components:
             be archived.
           example: 2020-12-31 23:59:59
           type: string
-        dtEzsignfolderScheduleddestruction:
-          description: The scheduled date and time at which the Ezsignfolder should
-            be Destroyed.
-          example: 2020-12-31 23:59:59
+        dtEzsignfolderScheduleddispose:
+          description: The scheduled date at which the Ezsignfolder should be Disposed.
+          example: 2020-12-31
           type: string
         eEzsignfolderStep:
           $ref: '#/components/schemas/Field-eEzsignfolderStep'
@@ -10629,9 +11389,8 @@ components:
         objAudit:
           $ref: '#/components/schemas/Common-Audit'
       required:
+      - bEzsignfolderIsdisposable
       - dtEzsignfolderClose
-      - dtEzsignfolderScheduledarchive
-      - dtEzsignfolderScheduleddestruction
       - eEzsignfolderSendreminderfrequency
       - eEzsignfolderStep
       - fkiBillingentityinternalID
@@ -10747,6 +11506,31 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for DELETE /1/object/ezsignfolder/{pkiEzsignfolderID}"
       type: object
+    ezsignfolder-dispose-v1-Request:
+      description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose\n\
+        \nIntentionally empty for future-proofing"
+      type: object
+    ezsignfolder-dispose-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose"
+      type: object
+    ezsignfolder-disposeEzsignfolders-v1-Request:
+      description: Request for POST /1/object/ezsignfolder/disposeEzsignfolders
+      properties:
+        a_pkiEzsignfolderID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          maxItems: 500
+          type: array
+      required:
+      - a_pkiEzsignfolderID
+      type: object
+    ezsignfolder-disposeEzsignfolders-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/ezsignfolder/disposeEzsignfolders
+      type: object
     ezsignfolder-editObject-v1-Request:
       description: "Request for PUT /1/object/ezsignfolder/{pkiEzsignfolderID}"
       properties:
@@ -10856,6 +11640,7 @@ components:
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
@@ -10933,14 +11718,17 @@ components:
         pkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         fkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         fkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         bEzsignfoldersignerassociationReceivecopy:
           description: If this flag is true. The signatory will receive a copy of
@@ -10962,10 +11750,12 @@ components:
         pkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         fkiEzsignfolderID:
           description: The unique ID of the Ezsignfolder
           example: 33
+          minimum: 0
           type: integer
         bEzsignfoldersignerassociationReceivecopy:
           description: If this flag is true. The signatory will receive a copy of
@@ -10989,6 +11779,7 @@ components:
         pkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -11132,6 +11923,7 @@ components:
         pkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         eEzsignfoldertypePrivacylevel:
           $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
@@ -11166,10 +11958,12 @@ components:
         pkiEzsignformfieldID:
           description: The unique ID of the Ezsignformfield
           example: 32
+          minimum: 0
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the Ezsigndocument
           example: 1
+          minimum: 1
           type: integer
         sEzsignformfieldLabel:
           description: The Label for the Ezsignformfield
@@ -11188,6 +11982,7 @@ components:
             \ So for example, if you want to put the Ezsignformfield 2 inches from\
             \ the left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignformfieldY:
           description: "The Y coordinate (Vertical) where to put the Ezsignformfield\
@@ -11195,6 +11990,7 @@ components:
             \ So for example, if you want to put the Ezsignformfield 3 inches from\
             \ the top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsignformfieldWidth:
           description: |-
@@ -11210,6 +12006,7 @@ components:
             | Text                      | 22-65535     |
             | Textarea                  | 22-65535     |
           example: 102
+          minimum: 0
           type: integer
         iEzsignformfieldHeight:
           description: |
@@ -11225,6 +12022,7 @@ components:
             | Text                      | 22           |
             | Textarea                  | 22-65535     |
           example: 22
+          minimum: 0
           type: integer
         bEzsignformfieldSelected:
           description: |-
@@ -11257,10 +12055,12 @@ components:
         pkiEzsignformfieldID:
           description: The unique ID of the Ezsignformfield
           example: 32
+          minimum: 0
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the Ezsigndocument
           example: 1
+          minimum: 1
           type: integer
         sEzsignformfieldLabel:
           description: The Label for the Ezsignformfield
@@ -11279,6 +12079,7 @@ components:
             \ So for example, if you want to put the Ezsignformfield 2 inches from\
             \ the left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignformfieldY:
           description: "The Y coordinate (Vertical) where to put the Ezsignformfield\
@@ -11286,6 +12087,7 @@ components:
             \ So for example, if you want to put the Ezsignformfield 3 inches from\
             \ the top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsignformfieldWidth:
           description: |-
@@ -11301,6 +12103,7 @@ components:
             | Text                      | 22-65535     |
             | Textarea                  | 22-65535     |
           example: 102
+          minimum: 0
           type: integer
         iEzsignformfieldHeight:
           description: |
@@ -11316,6 +12119,7 @@ components:
             | Text                      | 22           |
             | Textarea                  | 22-65535     |
           example: 22
+          minimum: 0
           type: integer
         bEzsignformfieldSelected:
           description: |-
@@ -11350,10 +12154,12 @@ components:
         pkiEzsignformfieldgroupID:
           description: The unique ID of the Ezsignformfieldgroup
           example: 26
+          minimum: 0
           type: integer
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         eEzsignformfieldgroupType:
           $ref: '#/components/schemas/Field-eEzsignformfieldgroupType'
@@ -11367,6 +12173,7 @@ components:
           description: The step when the Ezsignsigner will be invited to fill the
             form fields
           example: 1
+          minimum: 1
           type: integer
         sEzsignformfieldgroupDefaultvalue:
           description: The default value for the Ezsignformfieldgroup
@@ -11376,11 +12183,13 @@ components:
           description: The minimum number of Ezsignformfield that must be filled in
             the Ezsignformfieldgroup
           example: 1
+          minimum: 0
           type: integer
         iEzsignformfieldgroupFilledmax:
           description: The maximum number of Ezsignformfield that must be filled in
             the Ezsignformfieldgroup
           example: 2
+          minimum: 0
           type: integer
         bEzsignformfieldgroupReadonly:
           description: Whether the Ezsignformfieldgroup is read only or not.
@@ -11391,6 +12200,7 @@ components:
 
             This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
           example: 75
+          minimum: 0
           type: integer
         bEzsignformfieldgroupEncrypted:
           description: |-
@@ -11435,10 +12245,12 @@ components:
         pkiEzsignformfieldgroupID:
           description: The unique ID of the Ezsignformfieldgroup
           example: 26
+          minimum: 0
           type: integer
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         eEzsignformfieldgroupType:
           $ref: '#/components/schemas/Field-eEzsignformfieldgroupType'
@@ -11452,6 +12264,7 @@ components:
           description: The step when the Ezsignsigner will be invited to fill the
             form fields
           example: 1
+          minimum: 1
           type: integer
         sEzsignformfieldgroupDefaultvalue:
           description: The default value for the Ezsignformfieldgroup
@@ -11461,11 +12274,13 @@ components:
           description: The minimum number of Ezsignformfield that must be filled in
             the Ezsignformfieldgroup
           example: 1
+          minimum: 0
           type: integer
         iEzsignformfieldgroupFilledmax:
           description: The maximum number of Ezsignformfield that must be filled in
             the Ezsignformfieldgroup
           example: 2
+          minimum: 0
           type: integer
         bEzsignformfieldgroupReadonly:
           description: Whether the Ezsignformfieldgroup is read only or not.
@@ -11476,6 +12291,7 @@ components:
 
             This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
           example: 75
+          minimum: 0
           type: integer
         bEzsignformfieldgroupEncrypted:
           description: |-
@@ -11580,10 +12396,12 @@ components:
         pkiEzsignformfieldgroupsignerID:
           description: The unique ID of the Ezsignformfieldgroupsigner
           example: 81
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
       required:
       - fkiEzsignfoldersignerassociationID
@@ -11600,10 +12418,12 @@ components:
         pkiEzsignformfieldgroupsignerID:
           description: The unique ID of the Ezsignformfieldgroupsigner
           example: 81
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
       required:
       - fkiEzsignfoldersignerassociationID
@@ -11621,27 +12441,33 @@ components:
         pkiEzsignpageID:
           description: The unique ID of the Ezsignpage
           example: 64
+          minimum: 0
           type: integer
         iEzsignpageWidthimage:
           description: The Width of the page's image in pixels calculated at 100 DPI
           example: 850
+          minimum: 0
           type: integer
         iEzsignpageHeightimage:
           description: The Height of the page's image in pixels calculated at 100
             DPI
           example: 1100
+          minimum: 0
           type: integer
         iEzsignpageWidthpdf:
           description: The Width of the page in points calculated at 72 DPI
           example: 612
+          minimum: 0
           type: integer
         iEzsignpageHeightpdf:
           description: The Height of the page in points calculated at 72 DPI
           example: 792
+          minimum: 0
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the Ezsigndocument
           example: 1
+          minimum: 1
           type: integer
         sImageUrl:
           description: |-
@@ -11669,14 +12495,17 @@ components:
         pkiEzsignsignatureID:
           description: The unique ID of the Ezsignsignature
           example: 49
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the Ezsigndocument
           example: 1
+          minimum: 1
           type: integer
         iEzsignsignatureX:
           description: "The X coordinate (Horizontal) where to put the Ezsignsignature\
@@ -11684,6 +12513,7 @@ components:
             \ for example, if you want to put the Ezsignsignature 2 inches from the\
             \ left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignsignatureY:
           description: "The Y coordinate (Vertical) where to put the Ezsignsignature\
@@ -11691,6 +12521,7 @@ components:
             \ for example, if you want to put the Ezsignsignature 3 inches from the\
             \ top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsignsignatureStep:
           description: The step when the Ezsignsigner will be invited to sign
@@ -11701,6 +12532,7 @@ components:
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         tEzsignsignatureTooltip:
           description: A tooltip that will be presented to Ezsignsigner about the
@@ -11732,18 +12564,22 @@ components:
         pkiEzsignsignatureID:
           description: The unique ID of the Ezsignsignature
           example: 49
+          minimum: 0
           type: integer
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
+          minimum: 0
           type: integer
         iEzsignpagePagenumber:
           description: The page number in the Ezsigndocument
           example: 1
+          minimum: 1
           type: integer
         iEzsignsignatureX:
           description: "The X coordinate (Horizontal) where to put the Ezsignsignature\
@@ -11751,6 +12587,7 @@ components:
             \ for example, if you want to put the Ezsignsignature 2 inches from the\
             \ left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignsignatureY:
           description: "The Y coordinate (Vertical) where to put the Ezsignsignature\
@@ -11758,6 +12595,7 @@ components:
             \ for example, if you want to put the Ezsignsignature 3 inches from the\
             \ top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsignsignatureStep:
           description: The step when the Ezsignsigner will be invited to sign
@@ -11908,6 +12746,7 @@ components:
         pkiEzsignsignaturecustomdateID:
           description: The unique ID of the Ezsignsignaturecustomdate
           example: 27
+          minimum: 0
           type: integer
         iEzsignsignaturecustomdateX:
           description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
@@ -11916,6 +12755,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignsignaturecustomdateY:
           description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
@@ -11924,6 +12764,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         sEzsignsignaturecustomdateFormat:
           description: "The custom date format to use\n\nYou can use the codes below\
@@ -11965,6 +12806,7 @@ components:
         pkiEzsignsignaturecustomdateID:
           description: The unique ID of the Ezsignsignaturecustomdate
           example: 27
+          minimum: 0
           type: integer
         iEzsignsignaturecustomdateX:
           description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
@@ -11973,6 +12815,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsignsignaturecustomdateY:
           description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
@@ -11981,6 +12824,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         sEzsignsignaturecustomdateFormat:
           description: "The custom date format to use\n\nYou can use the codes below\
@@ -12041,6 +12885,7 @@ components:
             \ authenticate using SMS or Phone call. No email will be sent for invitation\
             \ to sign. **Additional fee applies**|"
           example: 2
+          minimum: 0
           type: integer
         fkiTaxassignmentID:
           description: |-
@@ -12067,7 +12912,7 @@ components:
             |15|GST + RST (MB) Non-Recoverable|
           example: 1
           maximum: 15
-          minimum: 1
+          minimum: 0
           type: integer
         fkiSecretquestionID:
           description: |-
@@ -12100,6 +12945,7 @@ components:
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
           example: 7
+          minimum: 0
           type: integer
         eEzsignsignerLogintype:
           deprecated: true
@@ -12200,6 +13046,7 @@ components:
         pkiEzsignsignerID:
           description: The unique ID of the Ezsignsigner
           example: 89
+          minimum: 0
           type: integer
         fkiTaxassignmentID:
           description: |-
@@ -12226,7 +13073,7 @@ components:
             |15|GST + RST (MB) Non-Recoverable|
           example: 1
           maximum: 15
-          minimum: 1
+          minimum: 0
           type: integer
         fkiSecretquestionID:
           description: |-
@@ -12259,6 +13106,7 @@ components:
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
           example: 7
+          minimum: 0
           type: integer
         fkiUserlogintypeID:
           description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
@@ -12276,6 +13124,7 @@ components:
             \ authenticate using SMS or Phone call. No email will be sent for invitation\
             \ to sign. **Additional fee applies**|"
           example: 2
+          minimum: 0
           type: integer
         sUserlogintypeDescriptionX:
           description: The description of the Userlogintype in the language of the
@@ -12301,6 +13150,7 @@ components:
         pkiContactID:
           description: The unique ID of the Contact
           example: 21
+          minimum: 0
           type: integer
         sContactFirstname:
           description: The First name of the contact
@@ -12356,10 +13206,12 @@ components:
         pkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -12382,6 +13234,7 @@ components:
         iEzsigntemplatedocumentPagetotal:
           description: The number of pages in the Ezsigntemplatedocument.
           example: 5
+          minimum: 1
           type: integer
         iEzsigntemplateSignaturetotal:
           description: The number of total signatures in the Ezsigntemplate.
@@ -12412,10 +13265,12 @@ components:
         pkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -12457,14 +13312,17 @@ components:
         pkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -12588,18 +13446,22 @@ components:
         pkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         sEzsigntemplatedocumentName:
           description: The name of the Ezsigntemplatedocument.
@@ -12675,10 +13537,12 @@ components:
         pkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         sEzsigntemplatedocumentName:
           description: The name of the Ezsigntemplatedocument.
@@ -12687,6 +13551,7 @@ components:
         iEzsigntemplatedocumentPagetotal:
           description: The number of pages in the Ezsigntemplatedocument.
           example: 5
+          minimum: 1
           type: integer
         iEzsigntemplatedocumentSignaturetotal:
           description: The number of total signatures in the Ezsigntemplate.
@@ -12798,6 +13663,7 @@ components:
     ezsigntemplatedocument-editObject-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
+      - $ref: '#/components/schemas/ezsigntemplatedocument_editObject_v1_Response_allOf'
       description: "Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}"
       type: object
     ezsigntemplatedocument-getEzsigntemplatedocumentpages-v1-Response:
@@ -12915,27 +13781,33 @@ components:
         pkiEzsigntemplatedocumentpageID:
           description: The unique ID of the Ezsigntemplatedocumentpage
           example: 85
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpageWidthimage:
           description: The Width of the page's image in pixels calculated at 100 DPI
           example: 850
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpageHeightimage:
           description: The Height of the page's image in pixels calculated at 100
             DPI
           example: 1100
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpageWidthpdf:
           description: The Width of the page in points calculated at 72 DPI
           example: 612
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpageHeightpdf:
           description: The Height of the page in points calculated at 72 DPI
           example: 792
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
+          minimum: 1
           type: integer
         sImageUrl:
           description: |-
@@ -12964,10 +13836,12 @@ components:
         pkiEzsigntemplateformfieldID:
           description: The unique ID of the Ezsigntemplateformfield
           example: 71
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
+          minimum: 1
           type: integer
         sEzsigntemplateformfieldLabel:
           description: The Label for the Ezsigntemplateformfield
@@ -12987,6 +13861,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
@@ -12995,6 +13870,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldWidth:
           description: |-
@@ -13010,6 +13886,7 @@ components:
             | Text                      | 22-65535     |
             | Textarea                  | 22-65535     |
           example: 102
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldHeight:
           description: |
@@ -13025,6 +13902,7 @@ components:
             | Text                      | 22           |
             | Textarea                  | 22-65535     |
           example: 22
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldSelected:
           description: |-
@@ -13052,10 +13930,12 @@ components:
         pkiEzsigntemplateformfieldID:
           description: The unique ID of the Ezsigntemplateformfield
           example: 71
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
+          minimum: 1
           type: integer
         sEzsigntemplateformfieldLabel:
           description: The Label for the Ezsigntemplateformfield
@@ -13075,6 +13955,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
@@ -13083,6 +13964,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldWidth:
           description: |-
@@ -13098,6 +13980,7 @@ components:
             | Text                      | 22-65535     |
             | Textarea                  | 22-65535     |
           example: 102
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldHeight:
           description: |
@@ -13113,6 +13996,7 @@ components:
             | Text                      | 22           |
             | Textarea                  | 22-65535     |
           example: 22
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldSelected:
           description: |-
@@ -13141,10 +14025,12 @@ components:
         pkiEzsigntemplateformfieldgroupID:
           description: The unique ID of the Ezsigntemplateformfieldgroup
           example: 64
+          minimum: 0
           type: integer
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         eEzsigntemplateformfieldgroupType:
           $ref: '#/components/schemas/Field-eEzsigntemplateformfieldgroupType'
@@ -13158,6 +14044,7 @@ components:
           description: The step when the Ezsigntemplatesigner will be invited to fill
             the form fields
           example: 1
+          minimum: 1
           type: integer
         sEzsigntemplateformfieldgroupDefaultvalue:
           description: The default value for the Ezsigntemplateformfieldgroup
@@ -13167,11 +14054,13 @@ components:
           description: The minimum number of Ezsigntemplateformfield that must be
             filled in the Ezsigntemplateformfieldgroup
           example: 1
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldgroupFilledmax:
           description: The maximum number of Ezsigntemplateformfield that must be
             filled in the Ezsigntemplateformfieldgroup
           example: 2
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldgroupReadonly:
           description: Whether the Ezsigntemplateformfieldgroup is read only or not.
@@ -13182,6 +14071,7 @@ components:
 
             This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
           example: 75
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldgroupEncrypted:
           description: |-
@@ -13225,10 +14115,12 @@ components:
         pkiEzsigntemplateformfieldgroupID:
           description: The unique ID of the Ezsigntemplateformfieldgroup
           example: 64
+          minimum: 0
           type: integer
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         eEzsigntemplateformfieldgroupType:
           $ref: '#/components/schemas/Field-eEzsigntemplateformfieldgroupType'
@@ -13242,6 +14134,7 @@ components:
           description: The step when the Ezsigntemplatesigner will be invited to fill
             the form fields
           example: 1
+          minimum: 1
           type: integer
         sEzsigntemplateformfieldgroupDefaultvalue:
           description: The default value for the Ezsigntemplateformfieldgroup
@@ -13251,11 +14144,13 @@ components:
           description: The minimum number of Ezsigntemplateformfield that must be
             filled in the Ezsigntemplateformfieldgroup
           example: 1
+          minimum: 0
           type: integer
         iEzsigntemplateformfieldgroupFilledmax:
           description: The maximum number of Ezsigntemplateformfield that must be
             filled in the Ezsigntemplateformfieldgroup
           example: 2
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldgroupReadonly:
           description: Whether the Ezsigntemplateformfieldgroup is read only or not.
@@ -13266,6 +14161,7 @@ components:
 
             This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**
           example: 75
+          minimum: 0
           type: integer
         bEzsigntemplateformfieldgroupEncrypted:
           description: |-
@@ -13369,10 +14265,12 @@ components:
         pkiEzsigntemplateformfieldgroupsignerID:
           description: The unique ID of the Ezsigntemplateformfieldgroupsigner
           example: 87
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
       required:
       - fkiEzsigntemplatesignerID
@@ -13389,10 +14287,12 @@ components:
         pkiEzsigntemplateformfieldgroupsignerID:
           description: The unique ID of the Ezsigntemplateformfieldgroupsigner
           example: 87
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
       required:
       - fkiEzsigntemplatesignerID
@@ -13409,10 +14309,12 @@ components:
         pkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -13463,10 +14365,12 @@ components:
         pkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -13512,10 +14416,12 @@ components:
         pkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -13674,14 +14580,17 @@ components:
         pkiEzsigntemplatepackagemembershipID:
           description: The unique ID of the Ezsigntemplatepackagemembership
           example: 194
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
       required:
       - fkiEzsigntemplateID
@@ -13699,19 +14608,23 @@ components:
         pkiEzsigntemplatepackagemembershipID:
           description: The unique ID of the Ezsigntemplatepackagemembership
           example: 194
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         iEzsigntemplatepackagemembershipOrder:
           description: The order in which the Ezsigntemplate will be imported when
             using an Ezsigntemplatepackage.
           example: 1
+          minimum: 1
           type: integer
       required:
       - fkiEzsigntemplateID
@@ -13787,10 +14700,12 @@ components:
         pkiEzsigntemplatepackagesignerID:
           description: The unique ID of the Ezsigntemplatepackagesigner
           example: 174
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         sEzsigntemplatepackagesignerDescription:
           description: The description of the Ezsigntemplatepackagesigner
@@ -13812,10 +14727,12 @@ components:
         pkiEzsigntemplatepackagesignerID:
           description: The unique ID of the Ezsigntemplatepackagesigner
           example: 174
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackageID:
           description: The unique ID of the Ezsigntemplatepackage
           example: 99
+          minimum: 0
           type: integer
         sEzsigntemplatepackagesignerDescription:
           description: The description of the Ezsigntemplatepackagesigner
@@ -13913,22 +14830,27 @@ components:
         pkiEzsigntemplatepackagesignermembershipID:
           description: The unique ID of the Ezsigntemplatepackagesignermembership
           example: 237
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackagemembershipID:
           description: The unique ID of the Ezsigntemplatepackagemembership
           example: 194
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackagesignerID:
           description: The unique ID of the Ezsigntemplatepackagesigner
           example: 174
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         iEzsigntemplatepackagesignermembershipCopy:
           description: The Copy number in case of multiple copies.
           example: 1
+          minimum: 1
           type: integer
       required:
       - fkiEzsigntemplatepackagemembershipID
@@ -13947,22 +14869,27 @@ components:
         pkiEzsigntemplatepackagesignermembershipID:
           description: The unique ID of the Ezsigntemplatepackagesignermembership
           example: 237
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackagemembershipID:
           description: The unique ID of the Ezsigntemplatepackagemembership
           example: 194
+          minimum: 0
           type: integer
         fkiEzsigntemplatepackagesignerID:
           description: The unique ID of the Ezsigntemplatepackagesigner
           example: 174
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         iEzsigntemplatepackagesignermembershipCopy:
           description: The Copy number in case of multiple copies.
           example: 1
+          minimum: 1
           type: integer
       required:
       - fkiEzsigntemplatepackagemembershipID
@@ -14044,18 +14971,22 @@ components:
         pkiEzsigntemplatesignatureID:
           description: The unique ID of the Ezsigntemplatesignature
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
+          minimum: 1
           type: integer
         iEzsigntemplatesignatureX:
           description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
@@ -14063,6 +14994,7 @@ components:
             \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
             \ from the left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplatesignatureY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
@@ -14070,10 +15002,12 @@ components:
             \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
             \ from the top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsigntemplatesignatureStep:
           description: The step when the Ezsigntemplatesigner will be invited to sign
           example: 1
+          minimum: 1
           type: integer
         eEzsigntemplatesignatureType:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureType'
@@ -14107,18 +15041,22 @@ components:
         pkiEzsigntemplatesignatureID:
           description: The unique ID of the Ezsigntemplatesignature
           example: 99
+          minimum: 0
           type: integer
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
+          minimum: 0
           type: integer
         fkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
+          minimum: 1
           type: integer
         iEzsigntemplatesignatureX:
           description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
@@ -14126,6 +15064,7 @@ components:
             \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
             \ from the left border of the page, you would use \"200\" for the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplatesignatureY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
@@ -14133,10 +15072,12 @@ components:
             \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
             \ from the top border of the page, you would use \"300\" for the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         iEzsigntemplatesignatureStep:
           description: The step when the Ezsigntemplatesigner will be invited to sign
           example: 1
+          minimum: 1
           type: integer
         eEzsigntemplatesignatureType:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureType'
@@ -14230,6 +15171,7 @@ components:
         pkiEzsigntemplatesignaturecustomdateID:
           description: The unique ID of the Ezsigntemplatesignaturecustomdate
           example: 58
+          minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
           description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
@@ -14238,6 +15180,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
@@ -14246,6 +15189,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         sEzsigntemplatesignaturecustomdateFormat:
           description: "The custom date format to use\n\nYou can use the codes below\
@@ -14287,6 +15231,7 @@ components:
         pkiEzsigntemplatesignaturecustomdateID:
           description: The unique ID of the Ezsigntemplatesignaturecustomdate
           example: 58
+          minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
           description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
@@ -14295,6 +15240,7 @@ components:
             \ 2 inches from the left border of the page, you would use \"200\" for\
             \ the X coordinate."
           example: 200
+          minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
           description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
@@ -14303,6 +15249,7 @@ components:
             \ 3 inches from the top border of the page, you would use \"300\" for\
             \ the Y coordinate."
           example: 300
+          minimum: 0
           type: integer
         sEzsigntemplatesignaturecustomdateFormat:
           description: "The custom date format to use\n\nYou can use the codes below\
@@ -14345,10 +15292,12 @@ components:
         pkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         sEzsigntemplatesignerDescription:
           description: The description of the Ezsigntemplatesigner
@@ -14370,10 +15319,12 @@ components:
         pkiEzsigntemplatesignerID:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
+          minimum: 0
           type: integer
         fkiEzsigntemplateID:
           description: The unique ID of the Ezsigntemplate
           example: 36
+          minimum: 0
           type: integer
         sEzsigntemplatesignerDescription:
           description: The description of the Ezsigntemplatesigner
@@ -14467,18 +15418,22 @@ components:
         pkiFranchisereferalincomeID:
           description: The unique ID of the Franchisereferalincome
           example: 35
+          minimum: 0
           type: integer
         fkiFranchisebrokerID:
           description: The unique ID of the Franchisebroker
           example: 61
+          minimum: 0
           type: integer
         fkiFranchisereferalincomeprogramID:
           description: The unique ID of the Franchisereferalincomeprogram
           example: 51
+          minimum: 0
           type: integer
         fkiPeriodID:
           description: The unique ID of the Period
           example: 21
+          minimum: 0
           type: integer
         dFranchisereferalincomeLoan:
           description: The loan amount
@@ -14507,6 +15462,7 @@ components:
         fkiFranchiseofficeID:
           description: The unique ID of the Franchisereoffice
           example: 50
+          minimum: 0
           type: integer
         sFranchisereferalincomeRemoteid:
           description: ""
@@ -14623,10 +15579,12 @@ components:
         pkiNotificationsubsectionID:
           description: The unique ID of the Notificationsubsection
           example: 3
+          minimum: 0
           type: integer
         fkiNotificationsectionID:
           description: The unique ID of the Notificationsection
           example: 1
+          minimum: 0
           type: integer
         sNotificationsubsectionNameX:
           description: The name of the Notificationsubsection in the language of the
@@ -14644,10 +15602,12 @@ components:
         pkiNotificationtestID:
           description: The unique ID of the Notificationtest
           example: 14
+          minimum: 0
           type: integer
         fkiNotificationsubsectionID:
           description: The unique ID of the Notificationsubsection
           example: 3
+          minimum: 0
           type: integer
         sNotificationtestFunction:
           description: The function name of the Notificationtest
@@ -14662,6 +15622,38 @@ components:
       - pkiNotificationtestID
       - sNotificationtestFunction
       - sNotificationtestNameX
+      type: object
+    notificationtest-getElements-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/notificationtest_getElements_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements"
+      type: object
+    notificationtest-getElements-v1-Response-mPayload:
+      description: "Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements"
+      properties:
+        pkiNotificationtestID:
+          description: The unique ID of the Notificationtest
+          example: 14
+          minimum: 0
+          type: integer
+        sNotificationtestFunction:
+          description: The function name of the Notificationtest
+          example: Default
+          type: string
+        a_sVariableobjectProperty:
+          items:
+            $ref: '#/components/schemas/Field-sVariableobjectProperty'
+          type: array
+        a_objVariableobject:
+          items:
+            $ref: '#/components/schemas/Custom-Variableobject-Response'
+          type: array
+      required:
+      - a_objVariableobject
+      - a_sProperty
+      - pkiNotificationtestID
+      - sNotificationtestFunction
       type: object
     phone-Request:
       description: A Phone Object
@@ -14681,6 +15673,7 @@ components:
             |5|Pager|
             |6|Toll Free|
           example: 1
+          minimum: 0
           type: integer
         ePhoneType:
           $ref: '#/components/schemas/Field-ePhoneType'
@@ -14728,6 +15721,7 @@ components:
         pkiUserID:
           description: The unique ID of the User
           example: 70
+          minimum: 0
           type: integer
         fkiLanguageID:
           description: |-
@@ -14934,6 +15928,7 @@ components:
             |3|Facebook|
             |4|Survey|
           example: 1
+          minimum: 0
           type: integer
         sWebsiteAddress:
           description: The URL of the website.
@@ -15697,6 +16692,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatedocument_editObject_v1_Response_allOf:
+      properties:
+        a_objWarning:
+          items:
+            $ref: '#/components/schemas/Common-Response-Warning'
+          type: array
+      type: object
     ezsigntemplatedocument_getEzsigntemplatedocumentpages_v1_Response_allOf:
       properties:
         mPayload:
@@ -16000,6 +17002,13 @@ components:
       required:
       - mPayload
       type: object
+    notificationtest_getElements_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/notificationtest-getElements-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     user_createEzsignuser_v1_Response_allOf:
       properties:
         mPayload:
@@ -16081,6 +17090,7 @@ x-tagGroups:
   - General_Security
   - General_Conventions
   - General_StatusCodes
+  - General_WarningCodes
   - General_ErrorCodes
   - General_Webhooks
   - General_Changelog
@@ -16095,6 +17105,8 @@ x-tagGroups:
   tags:
   - Object_Activesession
   - Object_Apikey
+  - Object_Billingentityinternal
+  - Object_Branding
   - Object_Ezsignbulksend
   - Object_Ezsignbulksenddocumentmapping
   - Object_Ezsignbulksendsignermapping
@@ -16119,9 +17131,13 @@ x-tagGroups:
   - Object_Franchiseoffice
   - Object_Franchisereferalincome
   - Object_Notificationsection
+  - Object_Notificationtest
   - Object_Period
   - Object_Secretquestion
+  - Object_Taxassignment
+  - Object_Timezone
   - Object_User
+  - Object_Usergroup
 x-presentations:
 - Ezsign
 

@@ -71,4 +71,11 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
+| **350** | The user must authenticate before he can continue with this request |  -  |
+| **351** | The user is configured with 2FA and needs to validate its phone number before he can continue with this request |  -  |
+| **352** | The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request |  -  |
+| **353** | The user must accept clauses before he can continue with this request |  -  |
+| **354** | The user&#39;s computer must be validated before he can continue with this request |  -  |
+| **355** | The user must change its password before he can continue with this request |  -  |
+| **356** | The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request |  -  |
 
