@@ -1,8 +1,8 @@
 # ezmax-java
 
 eZmax API Definition (Full)
-- API version: 1.1.8
-  - Build date: 2022-06-20T16:59:39.826205Z[Etc/UTC]
+- API version: 1.1.9
+  - Build date: 2022-06-20T19:46:17.886368Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.1.8</version>
+  <version>1.1.9</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ezmax:ezmax-java:1.1.8"
+     implementation "com.ezmax:ezmax-java:1.1.9"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.1.8.jar`
+* `target/ezmax-java-1.1.9.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

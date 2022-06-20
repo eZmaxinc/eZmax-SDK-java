@@ -14,8 +14,8 @@ An Ezsigndocument Object and children to create a complete structure
 |**sEzsigndocumentName** | **String** | The name of the document that will be presented to Ezsignfoldersignerassociations |  |
 |**pkiEzsigndocumentID** | **Integer** | The unique ID of the Ezsigndocument |  |
 |**eEzsigndocumentStep** | **FieldEEzsigndocumentStep** |  |  |
-|**dtEzsigndocumentFirstsend** | **String** | The date and time when the Ezsigndocument was first sent. |  |
-|**dtEzsigndocumentLastsend** | **String** | The date and time when the Ezsigndocument was sent the last time. |  |
+|**dtEzsigndocumentFirstsend** | **String** | The date and time when the Ezsigndocument was first sent. |  [optional] |
+|**dtEzsigndocumentLastsend** | **String** | The date and time when the Ezsigndocument was sent the last time. |  [optional] |
 |**iEzsigndocumentOrder** | **Integer** | The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder. |  |
 |**iEzsigndocumentPagetotal** | **Integer** | The number of pages in the Ezsigndocument. |  |
 |**iEzsigndocumentSignaturesigned** | **Integer** | The number of signatures that were signed in the document. |  |

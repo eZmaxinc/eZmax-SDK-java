@@ -24,7 +24,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**dtEzsignfolderScheduledarchive** | **String** | The scheduled date and time at which the Ezsignfolder should be archived. |  [optional] |
 |**dtEzsignfolderScheduleddispose** | **String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional] |
 |**eEzsignfolderStep** | **FieldEEzsignfolderStep** |  |  |
-|**dtEzsignfolderClose** | **String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. |  |
+|**dtEzsignfolderClose** | **String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. |  [optional] |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
 
 

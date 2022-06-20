@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.8
+  version: 1.1.9
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,15 +68,20 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.8] - 2022-06-20\n\n#### Added\n- GET /1/object/activesession/getCurrent\
+    \n## 1.1.X Releases\n### [1.1.9] - 2022-06-20\n\n#### Changed\n- Property dtEzsigndocumentFirstsend\
+    \ in Ezsigndocument is no longer required\n- Property dtEzsigndocumentLastsend\
+    \ in Ezsigndocument is no longer required\n- Property dtEzsignfolderClose in Ezsignfolder\
+    \ is no longer required\n\n### [1.1.8] - 2022-06-20\n\n#### Added\n- GET /1/object/activesession/getCurrent\
     \ fkiTimezoneID, eUserEzsignsendreminderfrequency, iUserInterfacecolor, bUserInterfacedark\
     \ and iUserListresult\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\n\
     - GET /1/object/branding/getAutocomplete/{sSelector}\n- GET /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\
     - GET /1/object/taxassignment/getAutocomplete/{sSelector}\n- GET /1/object/timezone/getAutocomplete/{sSelector}\n\
     - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
-    - Warning Code MUSTVERIFY added to documentation\n\n### [1.1.7] - 2022-05-17\n\
-    \n#### Added\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- DELETE\
-    \ /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
+    - Warning Code MUSTVERIFY added to documentation\n \n#### Changed\n- Property\
+    \ dtEzsignfolderScheduledarchive in Ezsignfolder is no longer required\n- Property\
+    \ dtEzsignfolderScheduleddispose in Ezsignfolder is no longer required\n\n###\
+    \ [1.1.7] - 2022-05-17\n\n#### Added\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
+    - DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
     - DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\n\
     - DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}\n- DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\n\
     - DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- DELETE\
@@ -10745,8 +10750,6 @@ components:
       required:
       - bEzsigndocumentEzsignform
       - dtEzsigndocumentDuedate
-      - dtEzsigndocumentFirstsend
-      - dtEzsigndocumentLastsend
       - eEzsigndocumentStep
       - fkiEzsignfolderID
       - fkiLanguageID
@@ -11390,7 +11393,6 @@ components:
           $ref: '#/components/schemas/Common-Audit'
       required:
       - bEzsignfolderIsdisposable
-      - dtEzsignfolderClose
       - eEzsignfolderSendreminderfrequency
       - eEzsignfolderStep
       - fkiBillingentityinternalID
