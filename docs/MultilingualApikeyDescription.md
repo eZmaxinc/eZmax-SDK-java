@@ -2,7 +2,7 @@
 
 # MultilingualApikeyDescription
 
-Description of the API Key  
+Description of the API Key
 
 ## Properties
 

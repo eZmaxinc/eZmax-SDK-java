@@ -147,7 +147,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 <a name="ezsigntemplatesignatureEditObjectV1"></a>
 # **ezsigntemplatesignatureEditObjectV1**
@@ -219,8 +219,8 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
-| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 <a name="ezsigntemplatesignatureGetObjectV1"></a>
 # **ezsigntemplatesignatureGetObjectV1**
@@ -290,5 +290,5 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 

@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a name="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
-> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Periods and IDs
 
@@ -38,10 +38,11 @@ public class Example {
 
     ObjectPeriodApi apiInstance = new ObjectPeriodApi(defaultClient);
     String sSelector = "ActiveNormal"; // String | The types of Periods to return
+    String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+      CommonGetAutocompleteV1Response result = apiInstance.periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectPeriodApi#periodGetAutocompleteV1");
@@ -59,6 +60,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sSelector** | **String**| The types of Periods to return | [enum: ActiveNormal, ActiveNormalAndEndOfYear, AllNormal, AllNormalAndEndOfYear] |
+| **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 

@@ -8,7 +8,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersigneras
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjEzsignfoldersignerassociation** | [**List&lt;EzsignfoldersignerassociationResponseCompound&gt;**](EzsignfoldersignerassociationResponseCompound.md) |  |  |
+|**aObjEzsignfoldersignerassociation** | [**List&lt;CustomEzsignfoldersignerassociationActionableElementResponse&gt;**](CustomEzsignfoldersignerassociationActionableElementResponse.md) |  |  |
 
 
 

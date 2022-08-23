@@ -25,6 +25,7 @@ An Ezsignfolder Object and children to create a complete structure
 |**dtEzsignfolderScheduleddispose** | **String** | The scheduled date at which the Ezsignfolder should be Disposed. |  [optional] |
 |**eEzsignfolderStep** | **FieldEEzsignfolderStep** |  |  |
 |**dtEzsignfolderClose** | **String** | The date and time at which the folder was closed. Either by applying the last signature or by completing it prematurely. |  [optional] |
+|**tEzsignfolderMessage** | **String** | A custom text message that will be added to the email sent. |  |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
 
 

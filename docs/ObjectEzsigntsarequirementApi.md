@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a name="ezsigntsarequirementGetAutocompleteV1"></a>
 # **ezsigntsarequirementGetAutocompleteV1**
-> CommonGetAutocompleteDisabledV1Response ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, sQuery, acceptLanguage)
+> CommonGetAutocompleteDisabledV1Response ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntsarequirements and IDs
 
@@ -39,10 +39,11 @@ public class Example {
     ObjectEzsigntsarequirementApi apiInstance = new ObjectEzsigntsarequirementApi(defaultClient);
     String sSelector = "User"; // String | The type of Ezsigntsarequirements to return
     Integer fkiEzsignfoldertypeID = 56; // Integer | 
+    String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteDisabledV1Response result = apiInstance.ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, sQuery, acceptLanguage);
+      CommonGetAutocompleteDisabledV1Response result = apiInstance.ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntsarequirementApi#ezsigntsarequirementGetAutocompleteV1");
@@ -61,6 +62,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **sSelector** | **String**| The type of Ezsigntsarequirements to return | [enum: User, Usergroup] |
 | **fkiEzsignfoldertypeID** | **Integer**|  | [optional] |
+| **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
@@ -81,5 +83,5 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 

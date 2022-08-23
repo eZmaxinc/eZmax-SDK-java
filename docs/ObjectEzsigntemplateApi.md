@@ -149,7 +149,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 <a name="ezsigntemplateEditObjectV1"></a>
 # **ezsigntemplateEditObjectV1**
@@ -221,12 +221,12 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
-| **422** | The syntax of the request is valid but the request cannot be completed. Look for detail in body. |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 <a name="ezsigntemplateGetAutocompleteV1"></a>
 # **ezsigntemplateGetAutocompleteV1**
-> CommonGetAutocompleteV1Response ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Ezsigntemplate and IDs
 
@@ -255,10 +255,11 @@ public class Example {
 
     ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
     String sSelector = "All"; // String | The type of Ezsigntemplate to return
+    String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.ezsigntemplateGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+      CommonGetAutocompleteV1Response result = apiInstance.ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV1");
@@ -276,6 +277,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sSelector** | **String**| The type of Ezsigntemplate to return | [enum: All] |
+| **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 
@@ -373,7 +375,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **406** | One of the accept header is not defined or invalid. |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a name="ezsigntemplateGetObjectV1"></a>
 # **ezsigntemplateGetObjectV1**
@@ -443,5 +445,5 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The element you are trying to work on does not exist |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 

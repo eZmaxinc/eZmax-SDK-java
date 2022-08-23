@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a name="taxassignmentGetAutocompleteV1"></a>
 # **taxassignmentGetAutocompleteV1**
-> CommonGetAutocompleteV1Response taxassignmentGetAutocompleteV1(sSelector, sQuery, acceptLanguage)
+> CommonGetAutocompleteV1Response taxassignmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Taxassignments and IDs
 
@@ -38,10 +38,11 @@ public class Example {
 
     ObjectTaxassignmentApi apiInstance = new ObjectTaxassignmentApi(defaultClient);
     String sSelector = "All"; // String | The type of Taxassignments to return
+    String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      CommonGetAutocompleteV1Response result = apiInstance.taxassignmentGetAutocompleteV1(sSelector, sQuery, acceptLanguage);
+      CommonGetAutocompleteV1Response result = apiInstance.taxassignmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectTaxassignmentApi#taxassignmentGetAutocompleteV1");
@@ -59,6 +60,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sSelector** | **String**| The type of Taxassignments to return | [enum: All, AllButNonrecoverable] |
+| **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 

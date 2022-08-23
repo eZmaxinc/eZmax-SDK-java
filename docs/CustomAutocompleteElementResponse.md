@@ -12,6 +12,7 @@ Generic AutocompleteElement Response
 |**sLabel** | **String** | The Description of the element |  |
 |**sValue** | **String** | The Unique ID of the element |  |
 |**mValue** | **String** | The Unique ID of the element |  [optional] |
+|**bActive** | **Boolean** | Indicates if the element is active |  |
 
 
 
