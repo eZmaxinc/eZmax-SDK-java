@@ -12,6 +12,7 @@ An Ezsignbulksend Object and children to create a complete structure
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  |
 |**fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| |  |
 |**sLanguageNameX** | **String** | The Name of the Language in the language of the requester |  |
+|**eEzsignfoldertypePrivacylevel** | **FieldEEzsignfoldertypePrivacylevel** |  |  |
 |**sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester |  |
 |**sEzsignbulksendDescription** | **String** | The description of the Ezsignbulksend |  |
 |**tEzsignbulksendNote** | **String** | Note about the Ezsignbulksend |  |

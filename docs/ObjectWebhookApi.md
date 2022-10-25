@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**webhookGetHistoryV1**](ObjectWebhookApi.md#webhookGetHistoryV1) | **GET** /1/object/webhook/{pkiWebhookID}/getHistory | Retrieve the logs for recent Webhook calls |
 | [**webhookGetListV1**](ObjectWebhookApi.md#webhookGetListV1) | **GET** /1/object/webhook/getList | Retrieve Webhook list |
 | [**webhookGetObjectV1**](ObjectWebhookApi.md#webhookGetObjectV1) | **GET** /1/object/webhook/{pkiWebhookID} | Retrieve an existing Webhook |
-| [**webhookTestUrlV1**](ObjectWebhookApi.md#webhookTestUrlV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url |
+| [**webhookTestV1**](ObjectWebhookApi.md#webhookTestV1) | **POST** /1/object/webhook/{pkiWebhookID}/test | Test the Webhook by calling the Url |
 
 
 <a name="webhookCreateObjectV1"></a>
@@ -295,6 +295,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **429** | Too Many Requests |  -  |
 
 <a name="webhookGetListV1"></a>
 # **webhookGetListV1**
@@ -444,9 +445,9 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="webhookTestUrlV1"></a>
-# **webhookTestUrlV1**
-> WebhookTestV1Response webhookTestUrlV1(pkiWebhookID)
+<a name="webhookTestV1"></a>
+# **webhookTestV1**
+> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -475,11 +476,12 @@ public class Example {
 
     ObjectWebhookApi apiInstance = new ObjectWebhookApi(defaultClient);
     Integer pkiWebhookID = 56; // Integer | 
+    Object body = null; // Object | 
     try {
-      WebhookTestV1Response result = apiInstance.webhookTestUrlV1(pkiWebhookID);
+      WebhookTestV1Response result = apiInstance.webhookTestV1(pkiWebhookID, body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectWebhookApi#webhookTestUrlV1");
+      System.err.println("Exception when calling ObjectWebhookApi#webhookTestV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -494,6 +496,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pkiWebhookID** | **Integer**|  | |
+| **body** | **Object**|  | |
 
 ### Return type
 
@@ -505,7 +508,7 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

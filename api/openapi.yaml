@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.10
+  version: 1.1.11
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,9 +68,38 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.10] - 2022-08-23\n\n#### Added\n- DELETE /1/object/webhook/{pkiWebhookID}\n\
-    - GET /1/object/branding/{pkiBrandingID}\n- GET /1/object/branding/getList\n-\
-    \ GET /1/object/department/getAutocomplete/{sSelector}\n- GET /1/object/department/getMembers\n\
+    \n## 1.1.X Releases\n### [1.1.11] - 2022-09-\n\n#### Added\n\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
+    - GET /1/object/ezmaxinvoicing/getProvisional\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\n\
+    - GET /2/object/billingentityinternal/getAutocomplete/{sSelector}\n- GET /2/object/branding/getAutocomplete/{sSelector}\n\
+    - GET /2/object/department/getAutocomplete/{sSelector}\n- GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
+    - GET /2/object/ezsignfoldertype/getAutocomplete/{sSelector}\n- GET /2/object/ezsigntemplate/getAutocomplete/{sSelector}\n\
+    - GET /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\n- GET /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}\n\
+    - GET /2/object/secretquestion/getAutocomplete/{sSelector}\n- GET /2/object/taxassignment/getAutocomplete/{sSelector}\n\
+    - GET /2/object/timezone/getAutocomplete/{sSelector}\n- GET /2/object/user/getAutocomplete/{sSelector}\n\
+    - GET /2/object/usergroup/getAutocomplete/{sSelector}\n- Accepted value 'Attachments'\
+    \ for field eEzsigntemplatesignatureType\n- Added property eEzsignfoldertypePrivacylevel\
+    \ in object ezsignbulksend-Response\n- Added properties bEzsignfoldertypeIncludeproofsigner\
+    \ and bEzsignfoldertypeIncludeproofuser in object ezsignfoldertype-Request and\
+    \ ezsignfoldertype-Response\n- Added properties bEzsigntemplatesignatureRequired,\
+    \ eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription,\
+    \ iEzsigntemplatesignatureValidationstep in object ezsigntemplatesignature-Response\
+    \ and ezsigntemplatesignature-Response\n- Added selector ClonableUsers in /1/object/user/getAutocomplete/{sSelector}\n\
+    - New 422 error code UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED\n- New 429 error\
+    \ codes TOOMANYREQUESTS and TOOMANYREQUESTS_THIRDPARTY\n- Rename sImageUrl to\
+    \ sComputedImageurl in object ezsigntemplatedocumentpage-Response and ezsignpage-Response\n\
+    \n#### Deprecated\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\n\
+    - GET /1/object/branding/getAutocomplete/{sSelector}\n- GET /1/object/department/getAutocomplete/{sSelector}\n\
+    - GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\n\
+    - GET /1/object/ezsigntemplate/getAutocomplete/{sSelector}\n- GET /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\n\
+    - GET /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}\n- GET /1/object/secretquestion/getAutocomplete/{sSelector}\n\
+    - GET /1/object/taxassignment/getAutocomplete/{sSelector}\n- GET /1/object/timezone/getAutocomplete/{sSelector}\n\
+    - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
+    \n#### Fixed\n- (CSharpSDK) We now use the correct encoding of the fingerprint\
+    \ for signing requests\n- (CSharkSDK) We can now use variable properties object\
+    \ i.e: /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\n### [1.1.10]\
+    \ - 2022-08-23\n\n#### Added\n- DELETE /1/object/webhook/{pkiWebhookID}\n- GET\
+    \ /1/object/branding/{pkiBrandingID}\n- GET /1/object/branding/getList\n- GET\
+    \ /1/object/department/getAutocomplete/{sSelector}\n- GET /1/object/department/getMembers\n\
     - GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\n- GET /1/object/webhook/{pkiWebhookID}\n\
     - GET /1/object/webhook/{pkiWebhookID}/getHistory\n- GET /1/object/webhook/getList\n\
     - POST /1/object/branding\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\n\
@@ -436,23 +465,26 @@ tags:
     \ vs \"es\"             |\r\n\r\n### HTTP 422 (Unprocessable entity)\r\n| eErrorCode\
     \                             | Examples                                     \
     \                          |\r\n| -------------------------------------- | ----------------------------------------------------------------------\
-    \ |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE       | The element cannot be deleted\
-    \                                          |\r\n| UNPROCESSABLEENTITY_CANNOTMODIFY\
-    \       | The element cannot be modified                                     \
-    \    |\r\n| UNPROCESSABLEENTITY_CHANGEPASSWORD_INVALID_CURRENT   | The old password\
-    \ supplied does not match the user's current password |\r\n| UNPROCESSABLEENTITY_CHANGEPASSWORD_SAME\
-    \    | The new password is the same as the old password |\r\n| UNPROCESSABLEENTITY_DATA_MISSING\
-    \       | Some data is missing                                               \
-    \    |\r\n| UNPROCESSABLEENTITY_DATA_VALIDATION    | The data fails some validation\
-    \                                         |\r\n| UNPROCESSABLEENTITY_DATA_OUTOFBOUND\
-    \    | The data contains a value that is out of bound                        \
-    \ |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
-    \ at supplied url                           |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
-    \        | The request was valid, but no action was necessary                \
-    \     |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a\
-    \ state that allows the action (Sending a document without signature, downloading\
-    \ an unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_FORM           | The pdf\
-    \ document contains a form                                       |\r\n| UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE\
+    \ |\r\n| UNPROCESSABLEENTITY_ACTIVESESSION_ALREADY_CLONING | The user is already\
+    \ cloning another user                    |\r\n| UNPROCESSABLEENTITY_CANNOTDELETE\
+    \       | The element cannot be deleted                                      \
+    \    |\r\n| UNPROCESSABLEENTITY_CANNOTMODIFY       | The element cannot be modified\
+    \                                         |\r\n| UNPROCESSABLEENTITY_CHANGEPASSWORD_INVALID_CURRENT\
+    \   | The old password supplied does not match the user's current password |\r\
+    \n| UNPROCESSABLEENTITY_CHANGEPASSWORD_SAME    | The new password is the same\
+    \ as the old password |\r\n| UNPROCESSABLEENTITY_DATA_MISSING       | Some data\
+    \ is missing                                                   |\r\n| UNPROCESSABLEENTITY_DATA_VALIDATION\
+    \    | The data fails some validation                                        \
+    \ |\r\n| UNPROCESSABLEENTITY_DATA_OUTOFBOUND    | The data contains a value that\
+    \ is out of bound                         |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \     | We cannot retrieve ressource at supplied url                         \
+    \  |\r\n| UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED    | The Ezsignsigner is connected\
+    \                                    |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO  \
+    \      | The request was valid, but no action was necessary                  \
+    \   |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a state\
+    \ that allows the action (Sending a document without signature, downloading an\
+    \ unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_FORM           | The pdf document\
+    \ contains a form                                       |\r\n| UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE\
     \ | The pdf document contains a form and signature(s)                  |\r\n|\
     \ UNPROCESSABLEENTITY_PDF_INCOMPATIBLE   | The pdf document cannot be signed \
     \                                     |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
@@ -464,13 +496,20 @@ tags:
     \ form and cannot be signed                |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH\
     \  | The number of pages between the document and the template do not match |\r\
     \n| UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD | The field is not modifiable in the\
-    \ current state                       |\r\n\r\n\r\n### HTTP 500 (Internal Server\
-    \ Error)\r\n| eErrorCode     | Examples                  |\r\n| --------------\
-    \ | ------------------------- |\r\n| ERROR_INTERNAL | Unhandled error on server\
-    \ |\r\n\r\n### HTTP 501 (Not Implemented)\r\n| eErrorCode           | Examples\
-    \                                                 |\r\n| --------------------\
-    \ | -------------------------------------------------------- |\r\n| ERROR_NOTIMPLEMENTED\
-    \ | Endpoint not yet available in your region or environment |"
+    \ current state                       |\r\n\r\n### HTTP 429 (Too Many Requests)\r\
+    \n| eErrorCode                             | Examples                        \
+    \                                       |\r\n| --------------------------------------\
+    \ | ---------------------------------------------------------------------- |\r\
+    \n| TOOMANYREQUESTS                        | The client reached the maximum number\
+    \ of requests allowed in the specific time |\r\n| TOOMANYREQUESTS_THIRDPARTY \
+    \            | Our server encountered a 'Too Many Requests' error from a third\
+    \ party |\r\n\r\n### HTTP 500 (Internal Server Error)\r\n| eErrorCode     | Examples\
+    \                  |\r\n| -------------- | ------------------------- |\r\n| ERROR_INTERNAL\
+    \ | Unhandled error on server |\r\n\r\n### HTTP 501 (Not Implemented)\r\n| eErrorCode\
+    \           | Examples                                                 |\r\n|\
+    \ -------------------- | --------------------------------------------------------\
+    \ |\r\n| ERROR_NOTIMPLEMENTED | Endpoint not yet available in your region or environment\
+    \ |"
   name: General_ErrorCodes
   x-displayName: Error Codes
 - description: "We publish everything related to our API on github at this location:\
@@ -861,6 +900,9 @@ tags:
 - description: Department contains detail about a Department
   name: Object_Department
   x-displayName: Department
+- description: Ezmaxinvoicing contains detail about a Ezmaxinvoicing
+  name: Object_Ezmaxinvoicing
+  x-displayName: Ezmaxinvoicing
 - description: Ezsignbulksend contains detail about a batch of Ezsignbulksendtransmission
   name: Object_Ezsignbulksend
   x-displayName: Ezsignbulksend
@@ -1211,9 +1253,70 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/billingentityinternal/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Billingentityinternal to be used in a dropdown
+        or autocomplete control.
+      operationId: Billingentityinternal_GetAutocomplete_V2
+      parameters:
+      - description: The type of Billingentityinternals to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/billingentityinternal-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Billingentityinternals and IDs
+      tags:
+      - Object_Billingentityinternal
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/billingentityinternal/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Billingentityinternal to be used in a dropdown
         or autocomplete control.
       operationId: Billingentityinternal_GetAutocomplete_V1
@@ -1268,8 +1371,7 @@ paths:
       summary: Retrieve Billingentityinternals and IDs
       tags:
       - Object_Billingentityinternal
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/branding:
     description: ""
@@ -1373,9 +1475,70 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/branding/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Branding to be used in a dropdown or autocomplete
+        control.
+      operationId: Branding_GetAutocomplete_V2
+      parameters:
+      - description: The type of Brandings to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/branding-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Brandings and IDs
+      tags:
+      - Object_Branding
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/branding/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Branding to be used in a dropdown or autocomplete
         control.
       operationId: Branding_GetAutocomplete_V1
@@ -1430,8 +1593,7 @@ paths:
       summary: Retrieve Brandings and IDs
       tags:
       - Object_Branding
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/branding/getList:
     description: ""
@@ -1558,9 +1720,72 @@ paths:
       - Object_Department
       x-presentations: []
       x-accepts: application/json
+  /2/object/department/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Department to be used in a dropdown or autocomplete
+        control.
+      operationId: Department_GetAutocomplete_V2
+      parameters:
+      - description: The type of Departments to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AllButDepartmentZero
+          - Company
+          - CompanyButDepartmentZero
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/department-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Departments and IDs
+      tags:
+      - Object_Department
+      x-presentations: []
+      x-accepts: application/json
   /1/object/department/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Department to be used in a dropdown or autocomplete
         control.
       operationId: Department_GetAutocomplete_V1
@@ -1619,6 +1844,188 @@ paths:
       tags:
       - Object_Department
       x-presentations: []
+      x-accepts: application/json
+  /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezmaxinvoicing_GetObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxinvoicingID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzmaxinvoicingID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezmaxinvoicing-getObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezmaxinvoicing
+      tags:
+      - Object_Ezmaxinvoicing
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezmaxinvoicing_GetAutocomplete_V2
+      parameters:
+      - description: The type of Ezmaxinvoicings to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezmaxinvoicing-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezmaxinvoicings and IDs
+      tags:
+      - Object_Ezmaxinvoicing
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      deprecated: true
+      description: Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezmaxinvoicing_GetAutocomplete_V1
+      parameters:
+      - description: The type of Ezmaxinvoicings to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display. Active is the default
+          value.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-getAutocomplete-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezmaxinvoicings and IDs
+      tags:
+      - Object_Ezmaxinvoicing
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/ezmaxinvoicing/getProvisional:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezmaxinvoicing_GetProvisional_V1
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezmaxinvoicing-getProvisional-v1-Response'
+          description: Successful response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve provisional Ezmaxinvoicing
+      tags:
+      - Object_Ezmaxinvoicing
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/ezsignbulksend:
     description: ""
@@ -4431,6 +4838,54 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/forceDisconnect:
+    post:
+      description: ""
+      operationId: Ezsignfoldersignerassociation_ForceDisconnect_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfoldersignerassociation-forceDisconnect-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-forceDisconnect-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Disconnects the Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/getInPersonLoginUrl:
     get:
       description: |-
@@ -4584,9 +5039,71 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignfoldertype/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Ezsignfoldertype to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezsignfoldertype_GetAutocomplete_V2
+      parameters:
+      - description: The type of Ezsignfoldertypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - Active
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldertype-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfoldertypes and IDs
+      tags:
+      - Object_Ezsignfoldertype
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete
         control.
       operationId: Ezsignfoldertype_GetAutocomplete_V1
@@ -4642,8 +5159,7 @@ paths:
       summary: Retrieve Ezsignfoldertypes and IDs
       tags:
       - Object_Ezsignfoldertype
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/ezsignfoldertype/getList:
     description: ""
@@ -5247,9 +5763,70 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplate/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Ezsigntemplate to be used in a dropdown or autocomplete
+        control.
+      operationId: Ezsigntemplate_GetAutocomplete_V2
+      parameters:
+      - description: The type of Ezsigntemplates to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplate-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsigntemplates and IDs
+      tags:
+      - Object_Ezsigntemplate
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplate/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Ezsigntemplate to be used in a dropdown or autocomplete
         control.
       operationId: Ezsigntemplate_GetAutocomplete_V1
@@ -5304,8 +5881,7 @@ paths:
       summary: Retrieve Ezsigntemplate and IDs
       tags:
       - Object_Ezsigntemplate
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/ezsigntemplate/getList:
     description: ""
@@ -6141,9 +6717,71 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Ezsigntemplatepackage to be used in a dropdown
+        or autocomplete control.
+      operationId: Ezsigntemplatepackage_GetAutocomplete_V2
+      parameters:
+      - description: The type of Ezsigntemplatepackages to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AllMultipleCopiesDisabled
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackage-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsigntemplatepackages and IDs
+      tags:
+      - Object_Ezsigntemplatepackage
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Ezsigntemplatepackage to be used in a dropdown
         or autocomplete control.
       operationId: Ezsigntemplatepackage_GetAutocomplete_V1
@@ -6199,8 +6837,7 @@ paths:
       summary: Retrieve Ezsigntemplatepackages and IDs
       tags:
       - Object_Ezsigntemplatepackage
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackage/getList:
     description: ""
@@ -6916,9 +7553,77 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Ezsigntsarequirement to be used in a dropdown or
+        autocomplete control.
+      operationId: Ezsigntsarequirement_GetAutocomplete_V2
+      parameters:
+      - description: The type of Ezsigntsarequirements to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - User
+          - Usergroup
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: fkiEzsignfoldertypeID
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+        style: form
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntsarequirement-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsigntsarequirements and IDs
+      tags:
+      - Object_Ezsigntsarequirement
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Ezsigntsarequirement to be used in a dropdown or
         autocomplete control.
       operationId: Ezsigntsarequirement_GetAutocomplete_V1
@@ -7307,9 +8012,69 @@ paths:
       - Object_Period
       x-presentations: []
       x-accepts: application/json
+  /2/object/secretquestion/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Secretquestion to be used in a dropdown or autocomplete
+        control.
+      operationId: Secretquestion_GetAutocomplete_V2
+      parameters:
+      - description: The type of Secretquestions to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/secretquestion-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Secretquestions and IDs
+      tags:
+      - Object_Secretquestion
+      x-presentations: []
+      x-accepts: application/json
   /1/object/secretquestion/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Secretquestions to be used in a dropdown or autocomplete
         control.
       operationId: Secretquestion_GetAutocomplete_V1
@@ -7366,9 +8131,70 @@ paths:
       - Object_Secretquestion
       x-presentations: []
       x-accepts: application/json
+  /2/object/taxassignment/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Taxassignment to be used in a dropdown or autocomplete
+        control.
+      operationId: Taxassignment_GetAutocomplete_V2
+      parameters:
+      - description: The type of Taxassignments to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AllButNonrecoverable
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/taxassignment-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Taxassignments and IDs
+      tags:
+      - Object_Taxassignment
+      x-presentations: []
+      x-accepts: application/json
   /1/object/taxassignment/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Taxassignment to be used in a dropdown or autocomplete
         control.
       operationId: Taxassignment_GetAutocomplete_V1
@@ -7426,9 +8252,70 @@ paths:
       - Object_Taxassignment
       x-presentations: []
       x-accepts: application/json
+  /2/object/timezone/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Timezone to be used in a dropdown or autocomplete
+        control.
+      operationId: Timezone_GetAutocomplete_V2
+      parameters:
+      - description: The type of Timezones to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - Active
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/timezone-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Timezones and IDs
+      tags:
+      - Object_Timezone
+      x-presentations: []
+      x-accepts: application/json
   /1/object/timezone/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Timezone to be used in a dropdown or autocomplete
         control.
       operationId: Timezone_GetAutocomplete_V1
@@ -7486,9 +8373,73 @@ paths:
       - Object_Timezone
       x-presentations: []
       x-accepts: application/json
+  /2/object/user/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of User to be used in a dropdown or autocomplete control.
+      operationId: User_GetAutocomplete_V2
+      parameters:
+      - description: The type of Users to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          - AgentBrokerEmployeeEzsignUserNormal
+          - ClonableUsers
+          - Normal
+          - NormalEzsignSigner
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Users and IDs
+      tags:
+      - Object_User
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/user/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of User to be used in a dropdown or autocomplete control.
       operationId: User_GetAutocomplete_V1
       parameters:
@@ -7501,6 +8452,7 @@ paths:
           enum:
           - All
           - AgentBrokerEmployeeEzsignUserNormal
+          - ClonableUsers
           - Normal
           - NormalEzsignSigner
           type: string
@@ -7545,12 +8497,72 @@ paths:
       summary: Retrieve Users and IDs
       tags:
       - Object_User
+      x-presentations: []
+      x-accepts: application/json
+  /2/object/usergroup/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Usergroup to be used in a dropdown or autocomplete
+        control.
+      operationId: Usergroup_GetAutocomplete_V2
+      parameters:
+      - description: The type of Usergroups to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/usergroup-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Usergroups and IDs
+      tags:
+      - Object_Usergroup
       x-presentations:
       - Ezsign
       x-accepts: application/json
   /1/object/usergroup/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Usergroup to be used in a dropdown or autocomplete
         control.
       operationId: Usergroup_GetAutocomplete_V1
@@ -7605,8 +8617,7 @@ paths:
       summary: Retrieve Usergroups and IDs
       tags:
       - Object_Usergroup
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/webhook:
     description: ""
@@ -7780,6 +8791,12 @@ paths:
                 $ref: '#/components/schemas/Common-Response-Error'
           description: The request failed. The element on which you were trying to
             work does not exists. Look for detail about the error in the body
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error-TooManyRequests'
+          description: Too Many Requests
       security:
       - Authorization: []
       summary: Retrieve the logs for recent Webhook calls
@@ -7791,7 +8808,7 @@ paths:
   /1/object/webhook/{pkiWebhookID}/test:
     post:
       description: ""
-      operationId: Webhook_TestUrl_V1
+      operationId: Webhook_Test_V1
       parameters:
       - explode: false
         in: path
@@ -7800,6 +8817,12 @@ paths:
         schema:
           $ref: '#/components/schemas/Field-pkiWebhookID'
         style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/webhook-test-v1-Request'
+        required: true
       responses:
         "200":
           content:
@@ -7821,6 +8844,7 @@ paths:
       - Object_Webhook
       x-presentations:
       - Ezsign
+      x-content-type: application/json
       x-accepts: application/json
   /1/object/webhook/getList:
     description: ""
@@ -8005,6 +9029,12 @@ components:
         condition. Look for detail about the error in the body. If the error is recoverable
         sTemporaryFileUrl will be set and you can use this url to try a new request
         without sending the file over again
+    Response-Error-429:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Common-Response-Error-TooManyRequests'
+      description: Too Many Requests
     Response-Redirect-350:
       description: The user must authenticate before he can continue with this request
     Response-Redirect-351:
@@ -8143,6 +9173,12 @@ components:
       required:
       - eErrorCode
       - sErrorMessage
+      type: object
+    Common-Response-Error-TooManyRequests:
+      allOf:
+      - type: object
+      - $ref: '#/components/schemas/Common-Response-Error'
+      description: Generic Error Message
       type: object
     Common-Response-Error-sTemporaryFileUrl:
       allOf:
@@ -8405,6 +9441,10 @@ components:
       description: The number of total signatures that were requested in the Ezsignfolder
       example: 4
       type: integer
+    Computed-iEzsigntemplateFormfieldtotal:
+      description: The number of total form fields in the Ezsigntemplate.
+      example: 8
+      type: integer
     Computed-iEzsigntemplateSignaturetotal:
       description: The number of total signatures in the Ezsigntemplate.
       example: 8
@@ -8420,6 +9460,10 @@ components:
     Computed-sBrandingLogourl:
       description: The url of the picture used as logo in the Branding
       example: http://www.example.com/logo.jpg
+      type: string
+    Computed-sUserName:
+      description: The description of the User in the language of the requester
+      example: Default
       type: string
     Computed-sWebhookEvent:
       description: The concatenated string to describe the Webhook event
@@ -8455,6 +9499,22 @@ components:
       - $ref: '#/components/schemas/Custom_AutocompleteElementDisabled_Response_allOf'
       - $ref: '#/components/schemas/Custom-AutocompleteElement-Response'
       description: Generic AutocompleteElement Response with a bDisabled Flag
+      type: object
+    Custom-ContactName-Response:
+      description: A Custom ContactName Object
+      properties:
+        sContactFirstname:
+          description: The First name of the contact
+          example: John
+          type: string
+        sContactLastname:
+          description: The Last name of the contact
+          example: Doe
+          type: string
+        sContactCompany:
+          description: The Company name of the contact
+          example: eZmax Solutions Inc.
+          type: string
       type: object
     Custom-DropdownElement-Request:
       description: Generic DropdownElement Request
@@ -8493,6 +9553,38 @@ components:
       - $ref: '#/components/schemas/Custom-DropdownElement-Response'
       description: A Generic DropdownElement Object and children to create a complete
         structure
+      type: object
+    Custom-EzmaxinvoicingEzsigndocument-Response:
+      allOf:
+      - $ref: '#/components/schemas/Custom_EzmaxinvoicingEzsigndocument_Response_allOf'
+      description: An EzmaxinvoicingEzsigndocument object containing information about
+        the Ezmaxinvoicing for an Ezsigndocument
+      type: object
+    Custom-EzmaxinvoicingEzsignfolder-Response:
+      allOf:
+      - $ref: '#/components/schemas/Custom_EzmaxinvoicingEzsignfolder_Response_allOf'
+      description: An EzmaxinvoicingEzsignfolder object containing information about
+        the Ezmaxinvoicing for an Ezsignfolder
+      type: object
+    Custom-Ezmaxpricing-Response:
+      description: A Custom Ezmaxpricing Object
+      properties:
+        pkiEzmaxpricingID:
+          description: The unique ID of the Ezmaxpricing
+          example: 28
+          minimum: 1
+          type: integer
+        dtEzmaxpricingStart:
+          description: The start date of the Ezmaxpricing
+          example: 2020-12-31
+          type: string
+        dtEzmaxpricingEnd:
+          description: The end date of the Ezmaxpricing
+          example: 2020-12-31
+          type: string
+      required:
+      - dtEzmaxpricingStart
+      - pkiEzmaxpricingID
       type: object
     Custom-EzsignfoldersignerassociationActionableElement-Response:
       allOf:
@@ -8863,8 +9955,60 @@ components:
       description: Whether the active session is in debug or not
       example: false
       type: boolean
+    Field-bBillingentityinternalIsactive:
+      description: Whether the Billingentityinternal is active or not
+      example: true
+      type: boolean
     Field-bBrandingIsactive:
       description: Whether the Branding is active or not
+      example: true
+      type: boolean
+    Field-bDepartmentIsactive:
+      description: Whether the Department is active or not
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingIsactive:
+      description: Whether the Ezmaxinvoicing is active or not
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingRebateEzsignallagents:
+      description: Whether the rebate for eZsign is for all agents
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingagentBillableezmax:
+      description: Whether it is billable for eZmax
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingagentBillableezsign:
+      description: Whether it is billable for eZsign
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingagentEzsignaccount:
+      description: Whether the agent has an eZsign account
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingcontractEzsignallagents:
+      description: Whether eZsign is for all agents
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingsummaryexternaldetailAdjustment:
+      description: Whether it's an adjustment
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingsummaryglobalAdjustment:
+      description: Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicingsummaryinternaldetailAdjustment:
+      description: Whether if it's an adjustment
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicinguserBillableezsign:
+      description: Whether it is billable for eZsign
+      example: true
+      type: boolean
+    Field-bEzmaxinvoicinguserEzsignaccount:
+      description: Whether there is an eZsign account
       example: true
       type: boolean
     Field-bEzsignbulksendIsactive:
@@ -8875,9 +10019,27 @@ components:
       description: Whether the Ezsigntemplatepackage was automatically modified and
         needs a manual validation
       type: boolean
+    Field-bEzsignfolderMfaused:
+      description: Whether the MFA was used or not for the Ezsignfolder
+      example: true
+      type: boolean
+    Field-bEzsignfolderPaymentused:
+      description: Whether there was a signature is of type payment
+      example: true
+      type: boolean
     Field-bEzsignfoldersignerassociationReceivecopy:
       description: If this flag is true. The signatory will receive a copy of every
         signed Ezsigndocument even if it ain't required to sign the document.
+      type: boolean
+    Field-bEzsignfoldertypeIncludeproofsigner:
+      description: Whether we include the proof with the signed Ezsigndocument for
+        Ezsignsigners
+      example: true
+      type: boolean
+    Field-bEzsignfoldertypeIncludeproofuser:
+      description: Whether we include the proof with the signed Ezsigndocument for
+        users
+      example: true
       type: boolean
     Field-bEzsignfoldertypeIsactive:
       description: Whether the Ezsignfoldertype is active or not
@@ -8960,6 +10122,10 @@ components:
       description: Whether the Ezsigntemplate can be accessed by admin users only
         (eUserType=Normal)
       type: boolean
+    Field-bEzsigntemplateIsactive:
+      description: Whether the Ezsigntemplate is active or not
+      example: true
+      type: boolean
     Field-bEzsigntemplateformfieldSelected:
       description: |-
         Whether the Ezsigntemplateformfield is selected or not by default.
@@ -8990,9 +10156,42 @@ components:
       description: Whether the Ezsigntemplatesignature has a custom date format or
         not. (Only possible when eEzsigntemplatesignatureType is **Name** or **Handwritten**)
       type: boolean
+    Field-bEzsigntemplatesignatureRequired:
+      description: Whether the Ezsigntemplatesignature is required or not. This field
+        is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType
+        = Attachments.
+      type: boolean
+    Field-bEzsigntsarequirementBillable:
+      description: Whether the TSA requirement is billable or not
+      example: true
+      type: boolean
+    Field-bEzsigntsarequirementIsactive:
+      description: Whether the Ezsigntsarequirement is active or not
+      example: true
+      type: boolean
+    Field-bSecretquestionIsactive:
+      description: Whether the Secretquestion is active or not
+      example: true
+      type: boolean
+    Field-bTaxassignmentIsactive:
+      description: Whether the Taxassignment is active or not
+      example: true
+      type: boolean
+    Field-bTimezoneIsactive:
+      description: Whether the Timezone is active or not
+      example: true
+      type: boolean
     Field-bUserInterfacedark:
       description: Whether to use a dark mode interface
       example: false
+      type: boolean
+    Field-bUserIsactive:
+      description: Whether the User is active or not
+      example: true
+      type: boolean
+    Field-bUsergroupIsactive:
+      description: Whether the Usergroup is active or not
+      example: true
       type: boolean
     Field-bWebhookIsactive:
       description: Whether the Webhook is active or not
@@ -9003,21 +10202,140 @@ components:
         Not recommended to skip for production use
       example: false
       type: boolean
+    Field-dEzmaxinvoicingRebatecontractlength:
+      description: The percentage of rebate depending of the contract length
+      example: "1.00"
+      pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingRebatepaymenttype:
+      description: The percentage of rebate depending of the payment type
+      example: "1.00"
+      pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingcommissionAmount:
+      description: The amount of Ezmaxinvoicingcommission
+      example: "450.34"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingcontract121qa:
+      description: The price for 121QA
+      example: "295.48"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingcontractLicense:
+      description: The price of the license
+      example: "335.42"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryexternaldetailCountreal:
+      description: The count item invoiced for the product
+      example: "815.61"
+      pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryexternaldetailRebate:
+      description: The rebate for the product
+      example: "608.18"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryexternaldetailSubtotal:
+      description: The subtotal invoiced for the product
+      example: "382.88"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryexternaldetailTotal:
+      description: The total invoiced for the product
+      example: "869.71"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalCountbilled:
+      description: The The count item billed
+      example: "581.56"
+      pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalCountreal:
+      description: The The count item calculated
+      example: "649.08"
+      pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalNet:
+      description: The net amount of the Ezmaxinvoicingsummaryglobal
+      example: "521.71"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalPartner:
+      description: The amount of commission for the partner
+      example: "266.49"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalRebateamount:
+      description: The rebate amount for the Ezmaxinvoicingsummaryglobal
+      example: "0.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalRebatepercent:
+      description: The rebate percentage of the Ezmaxinvoicingsummaryglobal
+      example: "0.00"
+      pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalRebatetotal:
+      description: The rebate amount total for the Ezmaxinvoicingsummaryglobal
+      example: "2.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalRepresentative:
+      description: The amount of commission for the representative
+      example: "685.88"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalSubtotal:
+      description: The Ezmaxinvoicingsummaryglobal subtotal
+      example: "200.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryglobalTotal:
+      description: The Ezmaxinvoicingsummaryglobal total
+      example: "198.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryinternaldetailCountreal:
+      description: The count item invoiced for the product
+      example: "350.32"
+      pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryinternaldetailRebate:
+      description: The rebate for the product
+      example: "560.81"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryinternaldetailSubtotal:
+      description: The subtotal invoiced for the product
+      example: "625.41"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxinvoicingsummaryinternaldetailTotal:
+      description: The total invoiced for the product
+      example: "510.77"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
     Field-dFranchisereferalincomeAgentamount:
       description: The amount that will be given to the agent
       example: "800.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeFranchiseamount:
       description: The amount that will be given to the franchise
       example: "275.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeFranchisoramount:
       description: The amount that will be kept by the franchisor
       example: "385.00"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeLoan:
       description: The loan amount
       example: "500275.62"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dtContactBirthdate:
       description: The Birth Date of the contact
@@ -9026,6 +10344,38 @@ components:
     Field-dtCreatedDate:
       description: The date and time at which the object was created
       example: 2020-12-31 23:59:59
+      type: string
+    Field-dtEzmaxinvoicingcommissionEnd:
+      description: The end date for the Ezmaxinvoicingcommission
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxinvoicingcommissionStart:
+      description: The start date for the Ezmaxinvoicingcommission
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxinvoicingcontractEnd:
+      description: The end date of the Ezmaxinvoicingcontract
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxinvoicingcontractStart:
+      description: The start date of the Ezmaxinvoicingcontract
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxinvoicingsummaryglobalEnd:
+      description: The end date for the Ezmaxinvoicingsummaryglobal
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxinvoicingsummaryglobalStart:
+      description: The start date for the Ezmaxinvoicingsummaryglobal
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxpricingEnd:
+      description: The end date of the Ezmaxpricing
+      example: 2020-12-31
+      type: string
+    Field-dtEzmaxpricingStart:
+      description: The start date of the Ezmaxpricing
+      example: 2020-12-31
       type: string
     Field-dtEzsigndocumentDuedate:
       description: The maximum date and time at which the Ezsigndocument can be signed.
@@ -9098,6 +10448,46 @@ components:
       - JPEG
       - PNG
       example: Default
+      type: string
+    Field-eEzmaxinvoicingPaymenttype:
+      description: The Ezmaxinvoicing payment type
+      enum:
+      - Cheque
+      - CreditCard
+      - DirectDebit
+      example: Cheque
+      type: string
+    Field-eEzmaxinvoicingagentVariationezmax:
+      description: Variation type for eZmax
+      enum:
+      - Charge
+      - Refund
+      - Same
+      example: Charge
+      type: string
+    Field-eEzmaxinvoicingagentVariationezsign:
+      description: Variation type for eZsign
+      enum:
+      - Charge
+      - Refund
+      - Same
+      example: Charge
+      type: string
+    Field-eEzmaxinvoicingcontractPaymenttype:
+      description: The Ezmaxinvoicingcontract payment type
+      enum:
+      - Cheque
+      - CreditCard
+      - DirectDebit
+      example: Cheque
+      type: string
+    Field-eEzmaxinvoicinguserVariationezsign:
+      description: The variation type for eZsign
+      enum:
+      - Charge
+      - Refund
+      - Same
+      example: Charge
       type: string
     Field-eEzsigndocumentStep:
       description: The signature step of the Ezsigndocument.
@@ -9299,6 +10689,14 @@ components:
       - Checkbox
       example: Text
       type: string
+    Field-eEzsigntemplatesignatureAttachmentnamesource:
+      description: The source of the name of the attachment added to the Ezsigntemplatesignature
+      enum:
+      - Description
+      - Customer
+      - DescriptionCustomer
+      example: Description
+      type: string
     Field-eEzsigntemplatesignatureFont:
       description: |-
         The font of the signature.
@@ -9322,20 +10720,20 @@ components:
       example: TopLeft
       type: string
     Field-eEzsigntemplatesignatureType:
-      description: |-
-        The type of signature.
-
-        1. **Acknowledgement** is for an acknowledgment of receipt.
-        2. **City** is to request the city where the document is signed.
-        2. **Handwritten** is for a handwritten kind of signature where users needs to "draw" their signature on screen.
-        3. **Initials** is a simple "click to add initials" block.
-        4. **Name** is a simple "Click to sign" block. This is the most common block of signature.
+      description: "The type of signature.\n\n1. **Acknowledgement** is for an acknowledgment\
+        \ of receipt.\n2. **City** is to request the city where the document is signed.\n\
+        3. **Handwritten** is for a handwritten kind of signature where users needs\
+        \ to \"draw\" their signature on screen.\n4. **Initials** is a simple \"click\
+        \ to add initials\" block.\n5. **Name** is a simple \"Click to sign\" block.\
+        \ This is the most common block of signature.\n6. **Attachments** is to ask\
+        \ for files as attachment that may be validate in another step.    "
       enum:
       - Acknowledgement
       - City
       - Handwritten
       - Initials
       - Name
+      - Attachments
       example: Name
       type: string
     Field-eModuleInternalname:
@@ -9459,6 +10857,82 @@ components:
         into integer
       example: 0
       maximum: 16777215
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingContractlength:
+      description: The length of the contract in years
+      example: 1
+      minimum: 1
+      type: integer
+    Field-iEzmaxinvoicingDays:
+      description: The number of days invoiced
+      example: 28
+      minimum: 1
+      type: integer
+    Field-iEzmaxinvoicingagentCloned:
+      description: The number of times this user was cloned
+      example: 157
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentCommissioncalculation:
+      description: The number of commission calculations
+      example: 107
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentEzsigndocument:
+      description: The number of ezsign documents
+      example: 160
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentInscription:
+      description: The number of inscriptions
+      example: 113
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentInscriptionactive:
+      description: The number of active inscriptions
+      example: 51
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentInvoice:
+      description: The number of invoices
+      example: 30
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentOtherincome:
+      description: The number of otherincomes
+      example: 198
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentSale:
+      description: The number of sales
+      example: 213
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingagentSession:
+      description: The number of sessions
+      example: 42
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingcommissionDays:
+      description: This is the number of days during the month on which the Ezmaxinvoigcommission
+        applies
+      example: 30
+      minimum: 0
+      type: integer
+    Field-iEzmaxinvoicingcontractLength:
+      description: The length in years of the Ezmaxinvoicingcontract
+      example: 3
+      minimum: 1
+      type: integer
+    Field-iEzmaxinvoicingsummaryglobalDays:
+      description: The number of days for the Ezmaxinvoicingsummaryglobal
+      example: 30
+      minimum: 1
+      type: integer
+    Field-iEzmaxinvoicinguserEzsigndocument:
+      description: The number of ezsign documents
+      example: 243
       minimum: 0
       type: integer
     Field-iEzsignbulksenddocumentmappingOrder:
@@ -9775,6 +11249,11 @@ components:
       example: 1
       minimum: 1
       type: integer
+    Field-iEzsigntemplatesignatureValidationstep:
+      description: The step when the Ezsigntemplatesigner will be invited to validate
+        the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+      example: 1
+      type: integer
     Field-iEzsigntemplatesignatureX:
       description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
         \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
@@ -9864,6 +11343,11 @@ components:
       example: 99
       minimum: 0
       type: integer
+    Field-pkiBillingentityexternalID:
+      description: The unique ID of the Billingentityexternal
+      example: 83
+      minimum: 1
+      type: integer
     Field-pkiBillingentityinternalID:
       description: The unique ID of the Billingentityinternal.
       example: 1
@@ -9939,6 +11423,75 @@ components:
       description: The unique ID of the Employee.
       example: 31
       minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingID:
+      description: The unique ID of the Ezmaxinvoicing
+      example: 28
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingagentID:
+      description: The unique ID of the Ezmaxinvoicingagent
+      example: 181
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingcommissionID:
+      description: The unique ID of the Ezmaxinvoicingcommission
+      example: 36
+      type: integer
+    Field-pkiEzmaxinvoicingcontractID:
+      description: The unique ID of the Ezmaxinvoicingcontract
+      example: 28
+      minimum: 1
+      type: integer
+    Field-pkiEzmaxinvoicingsummaryexternalID:
+      description: The unique ID of the Ezmaxinvoicingsummaryexternal
+      example: 177
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingsummaryexternaldetailID:
+      description: The unique ID of the Ezmaxinvoicingsummaryexternaldetail
+      example: 163
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingsummaryglobalID:
+      description: The unique ID of the Ezmaxinvoicingsummaryglobal
+      example: 241
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingsummaryinternalID:
+      description: The unique ID of the Ezmaxinvoicingsummaryinternal
+      example: 57
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicingsummaryinternaldetailID:
+      description: The unique ID of the Ezmaxinvoicingsummaryinternaldetail
+      example: 73
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxinvoicinguserID:
+      description: The unique ID of the Ezmaxinvoicinguser
+      example: 202
+      minimum: 0
+      type: integer
+    Field-pkiEzmaxpartnerID:
+      description: The unique ID of the Ezmaxpartner
+      example: 12
+      minimum: 1
+      type: integer
+    Field-pkiEzmaxpricingID:
+      description: The unique ID of the Ezmaxpricing
+      example: 28
+      minimum: 1
+      type: integer
+    Field-pkiEzmaxproductID:
+      description: The unique ID of the Ezmaxproduct
+      example: 172
+      minimum: 1
+      type: integer
+    Field-pkiEzmaxrepresentativeID:
+      description: The unique ID of the Ezmaxrepresentative
+      example: 21
+      minimum: 1
       type: integer
     Field-pkiEzsignbulksendID:
       description: The unique ID of the Ezsignbulksend
@@ -10282,6 +11835,11 @@ components:
       example: 7
       minimum: 0
       type: integer
+    Field-pkiSystemconfigurationtypeID:
+      description: The unique ID of the Systemconfigurationtype
+      example: 28
+      minimum: 1
+      type: integer
     Field-pkiTaxassignmentID:
       description: |-
         The unique ID of the Taxassignment.
@@ -10401,6 +11959,10 @@ components:
       description: The description of the Apikey in the language of the requester
       example: Project X
       type: string
+    Field-sBillingentityexternalDescription:
+      description: The description of the Billingentityexternal
+      example: Default
+      type: string
     Field-sBillingentityinternalDescriptionX:
       description: The description of the Billingentityinternal in the language of
         the requester
@@ -10441,6 +12003,31 @@ components:
     Field-sEmailAddress:
       description: The email address.
       example: email@example.com
+      type: string
+    Field-sEzmaxinvoicingsummaryexternalDescription:
+      description: The description of the Ezmaxinvoicingsummaryexternal
+      example: Company Demo
+      maxLength: 70
+      type: string
+    Field-sEzmaxinvoicingsummaryinternalDescription1:
+      description: The Ezmaxinvoicingsummaryinternal description in french
+      example: Défaut
+      maxLength: 70
+      type: string
+    Field-sEzmaxinvoicingsummaryinternalDescription2:
+      description: The Ezmaxinvoicingsummaryinternal description in english
+      example: Défault
+      maxLength: 70
+      type: string
+    Field-sEzmaxinvoicingsummaryinternalDescriptionX:
+      description: The Ezmaxinvoicingsummaryinternal description in the language of
+        the requester
+      example: Défaut
+      maxLength: 70
+      type: string
+    Field-sEzmaxproductDescriptionX:
+      description: The description of the Ezmaxproduct in the language of the requester
+      example: eZmax (License)
       type: string
     Field-sEzsignbulksendDescription:
       description: The description of the Ezsignbulksend
@@ -10566,6 +12153,11 @@ components:
       description: The description of the Ezsigntemplatepackagesigner
       example: Customer
       type: string
+    Field-sEzsigntemplatesignatureAttachmentdescription:
+      description: The description attached to the attachment name added in Ezsigntemplatesignature
+        of eEzsigntemplatesignatureType Attachments
+      example: Attachment
+      type: string
     Field-sEzsigntemplatesigner:
       description: The First name of the user
       example: John
@@ -10647,6 +12239,19 @@ components:
     Field-sSecretquestionTextX:
       description: The text of the Secretquestion in the language of the requester
       example: The name of the hospital in which you were born
+      type: string
+    Field-sSystemconfigurationtypeDescriptionX:
+      description: The description of the Systemconfigurationtype in the language
+        of the requester
+      example: eZsign (Pro)
+      type: string
+    Field-sTaxassignmentDescriptionX:
+      description: The description of the Taxassignment  in the language of the requester
+      example: Default
+      type: string
+    Field-sTimezoneName:
+      description: The description of the Timezone in the language of the requester
+      example: Default
       type: string
     Field-sUserFirstname:
       description: The First name of the user
@@ -10737,6 +12342,11 @@ components:
       description: The Json containing the Webhook call and return
       example: "{}"
       type: string
+    Field-yyyymmEzmaxinvoicing:
+      description: The YYYYMM period of the Ezmaxinvoicing
+      example: 2022-01
+      maxLength: 7
+      type: string
     File-Csv:
       description: A Comma separated values text file
       type: string
@@ -10783,6 +12393,20 @@ components:
         sBrandingDescription2:
           description: The description of the Branding in English
           example: Company X
+          type: string
+      type: object
+    Multilingual-EzmaxinvoicingsummaryinternalDescription:
+      description: Description of the Ezmaxinvoicingsummaryinternal
+      properties:
+        sEzmaxinvoicingsummaryinternalDescription1:
+          description: The Ezmaxinvoicingsummaryinternal description in french
+          example: Défaut
+          maxLength: 70
+          type: string
+        sEzmaxinvoicingsummaryinternalDescription2:
+          description: The Ezmaxinvoicingsummaryinternal description in english
+          example: Défault
+          maxLength: 70
           type: string
       type: object
     Multilingual-EzsignfoldertypeName:
@@ -10878,11 +12502,17 @@ components:
           maxLength: 6
           minLength: 2
           type: string
+        fkiSystemconfigurationtypeID:
+          description: The unique ID of the Systemconfigurationtype
+          example: 28
+          minimum: 1
+          type: integer
       required:
       - bActivesessionDebug
       - eActivesessionUsertype
       - eActivesessionWeekdaystart
       - fkiLanguageID
+      - pkiSystemconfigurationtypeID
       - pksCustomerCode
       - sCompanyNameX
       - sDepartmentNameX
@@ -11261,6 +12891,67 @@ components:
       - $ref: '#/components/schemas/attempt-Response'
       description: An Attempt object and children to create a complete structure
       type: object
+    billingentityinternal-AutocompleteElement-Response:
+      description: A Billingentityinternal AutocompleteElement Response
+      properties:
+        sBillingentityinternalDescriptionX:
+          description: The description of the Billingentityinternal in the language
+            of the requester
+          example: Default
+          type: string
+        pkiBillingentityinternalID:
+          description: The unique ID of the Billingentityinternal.
+          example: 1
+          minimum: 0
+          type: integer
+        bBillingentityinternalIsactive:
+          description: Whether the Billingentityinternal is active or not
+          example: true
+          type: boolean
+      required:
+      - bBillingentityinternalIsactive
+      - pkiBillingentityinternalID
+      - sBillingentityinternalDescriptionX
+      type: object
+    billingentityinternal-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/billingentityinternal_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/billingentityinternal/getAutocomplete
+      type: object
+    billingentityinternal-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/billingentityinternal/getAutocomplete
+      properties:
+        a_objBillingentityinternal:
+          description: "An array of Billingentityinternal object containing the description,\
+            \ ID and active status about the element."
+          items:
+            $ref: '#/components/schemas/billingentityinternal-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objBillingentityinternal
+      type: object
+    branding-AutocompleteElement-Response:
+      description: Branding AutocompleteElement Response
+      properties:
+        sBrandingDescriptionX:
+          description: The Description of the Branding in the language of the requester
+          example: Company X
+          type: string
+        pkiBrandingID:
+          description: The unique ID of the Branding
+          example: 78
+          minimum: 0
+          type: integer
+        bBrandingIsactive:
+          description: Whether the Branding is active or not
+          example: true
+          type: boolean
+      required:
+      - bBrandingIsactive
+      - pkiBrandingID
+      - sBrandingDescriptionX
+      type: object
     branding-ListElement:
       description: A Branding List Element
       properties:
@@ -11535,6 +13226,24 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for PUT /1/object/branding/{pkiBrandingID}"
       type: object
+    branding-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/branding_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/branding/getAutocomplete
+      type: object
+    branding-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/branding/getAutocomplete
+      properties:
+        a_objBranding:
+          description: "An array of Branding object containing the description, ID\
+            \ and active status about the element."
+          items:
+            $ref: '#/components/schemas/branding-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objBranding
+      type: object
     branding-getList-v1-Response:
       allOf:
       - $ref: '#/components/schemas/branding_getList_v1_Response_allOf'
@@ -11659,6 +13368,49 @@ components:
       description: A Contactinformations Object and children to create a complete
         structure
       type: object
+    department-AutocompleteElement-Response:
+      description: A Department AutocompleteElement Response
+      properties:
+        sCompanyNameX:
+          description: The Name of the Company in the language of the requester
+          example: Acme inc.
+          type: string
+        sDepartmentNameX:
+          description: The Name of the Department in the language of the requester
+          example: Head Office
+          type: string
+        pkiDepartmentID:
+          description: The unique ID of the Department
+          example: 21
+          minimum: 0
+          type: integer
+        bDepartmentIsactive:
+          description: Whether the Department is active or not
+          example: true
+          type: boolean
+      required:
+      - bDepartmentIsactive
+      - pkiDepartmentID
+      - sCompanyNameX
+      - sDepartmentNameX
+      type: object
+    department-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/department_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/department/getAutocomplete
+      type: object
+    department-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/department/getAutocomplete
+      properties:
+        a_objDepartment:
+          description: An array of Department autocomplete element response.
+          items:
+            $ref: '#/components/schemas/department-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objDepartment
+      type: object
     department-getMembers-v1-Response:
       allOf:
       - $ref: '#/components/schemas/department_getMembers_v1_Response_allOf'
@@ -11713,6 +13465,761 @@ components:
       allOf:
       - $ref: '#/components/schemas/email-Request'
       description: An Email Object and children to create a complete structure
+      type: object
+    ezmaxinvoicing-AutocompleteElement-Response:
+      description: A Ezmaxinvoicing AutocompleteElement Response
+      properties:
+        yyyymmEzmaxinvoicing:
+          description: The YYYYMM period of the Ezmaxinvoicing
+          example: 2022-01
+          maxLength: 7
+          type: string
+        pkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        bEzmaxinvoicingIsactive:
+          description: Whether the Ezmaxinvoicing is active or not
+          example: true
+          type: boolean
+      required:
+      - bEzmaxinvoicingIsactive
+      - pkiEzmaxinvoicingID
+      - yyyymmEzmaxinvoicing
+      type: object
+    ezmaxinvoicing-Response:
+      description: A Ezmaxinvoicing Object
+      properties:
+        pkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingcontractID:
+          description: The unique ID of the Ezmaxinvoicingcontract
+          example: 28
+          minimum: 1
+          type: integer
+        fkiEzmaxpricingID:
+          description: The unique ID of the Ezmaxpricing
+          example: 28
+          minimum: 1
+          type: integer
+        fkiSystemconfigurationtypeID:
+          description: The unique ID of the Systemconfigurationtype
+          example: 28
+          minimum: 1
+          type: integer
+        sSystemconfigurationtypeDescriptionX:
+          description: The description of the Systemconfigurationtype in the language
+            of the requester
+          example: eZsign (Pro)
+          type: string
+        yyyymmEzmaxinvoicing:
+          description: The YYYYMM period of the Ezmaxinvoicing
+          example: 2022-01
+          maxLength: 7
+          type: string
+        iEzmaxinvoicingDays:
+          description: The number of days invoiced
+          example: 28
+          minimum: 1
+          type: integer
+        eEzmaxinvoicingPaymenttype:
+          $ref: '#/components/schemas/Field-eEzmaxinvoicingPaymenttype'
+        dEzmaxinvoicingRebatepaymenttype:
+          description: The percentage of rebate depending of the payment type
+          example: "1.00"
+          pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+          type: string
+        iEzmaxinvoicingContractlength:
+          description: The length of the contract in years
+          example: 1
+          minimum: 1
+          type: integer
+        dEzmaxinvoicingRebatecontractlength:
+          description: The percentage of rebate depending of the contract length
+          example: "1.00"
+          pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+          type: string
+        bEzmaxinvoicingRebateEzsignallagents:
+          description: Whether the rebate for eZsign is for all agents
+          example: true
+          type: boolean
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - bEzmaxinvoicingRebateEzsignallagents
+      - dEzmaxinvoicingRebatecontractlength
+      - dEzmaxinvoicingRebatepaymenttype
+      - eEzmaxinvoicingPaymenttype
+      - fkiEzmaxinvoicingcontractID
+      - fkiEzmaxpricingID
+      - fkiSystemconfigurationtypeID
+      - iEzmaxinvoicingContractlength
+      - iEzmaxinvoicingDays
+      - sSystemconfigurationtypeDescriptionX
+      - yyyymmEzmaxinvoicing
+      type: object
+    ezmaxinvoicing-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicing_ResponseCompound_allOf'
+      description: A Ezmaxinvoicing Object
+      type: object
+    ezmaxinvoicing-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/ezmaxinvoicing/getAutocomplete
+      type: object
+    ezmaxinvoicing-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/ezmaxinvoicing/getAutocomplete
+      properties:
+        a_objEzmaxinvoicing:
+          description: An array of Ezmaxinvoicing autocomplete element response.
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicing-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objEzmaxinvoicing
+      type: object
+    ezmaxinvoicing-getObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing_getObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"
+      type: object
+    ezmaxinvoicing-getObject-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing-ResponseCompound'
+      description: "Payload for GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"
+      type: object
+    ezmaxinvoicing-getProvisional-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing_getProvisional_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /1/object/ezmaxinvoicing/getProvisional
+      type: object
+    ezmaxinvoicing-getProvisional-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing-ResponseCompound'
+      description: Payload for GET /1/object/ezmaxinvoicing/getProvisional
+      type: object
+    ezmaxinvoicingagent-Response:
+      description: A Ezmaxinvoicingagent Object
+      properties:
+        pkiEzmaxinvoicingagentID:
+          description: The unique ID of the Ezmaxinvoicingagent
+          example: 181
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiBillingentityinternalID:
+          description: The unique ID of the Billingentityinternal.
+          example: 1
+          minimum: 0
+          type: integer
+        sBillingentityinternalDescriptionX:
+          description: The description of the Billingentityinternal in the language
+            of the requester
+          example: Default
+          type: string
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentSession:
+          description: The number of sessions
+          example: 42
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentCloned:
+          description: The number of times this user was cloned
+          example: 157
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentInvoice:
+          description: The number of invoices
+          example: 30
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentInscription:
+          description: The number of inscriptions
+          example: 113
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentInscriptionactive:
+          description: The number of active inscriptions
+          example: 51
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentSale:
+          description: The number of sales
+          example: 213
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentOtherincome:
+          description: The number of otherincomes
+          example: 198
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentCommissioncalculation:
+          description: The number of commission calculations
+          example: 107
+          minimum: 0
+          type: integer
+        iEzmaxinvoicingagentEzsigndocument:
+          description: The number of ezsign documents
+          example: 160
+          minimum: 0
+          type: integer
+        bEzmaxinvoicingagentEzsignaccount:
+          description: Whether the agent has an eZsign account
+          example: true
+          type: boolean
+        bEzmaxinvoicingagentBillableezmax:
+          description: Whether it is billable for eZmax
+          example: true
+          type: boolean
+        eEzmaxinvoicingagentVariationezmax:
+          $ref: '#/components/schemas/Field-eEzmaxinvoicingagentVariationezmax'
+        bEzmaxinvoicingagentBillableezsign:
+          description: Whether it is billable for eZsign
+          example: true
+          type: boolean
+        eEzmaxinvoicingagentVariationezsign:
+          $ref: '#/components/schemas/Field-eEzmaxinvoicingagentVariationezsign'
+      required:
+      - bEzmaxinvoicingagentBillableezmax
+      - bEzmaxinvoicingagentBillableezsign
+      - bEzmaxinvoicingagentEzsignaccount
+      - eEzmaxinvoicingagentVariationezmax
+      - eEzmaxinvoicingagentVariationezsign
+      - fkiBillingentityinternalID
+      - iEzmaxinvoicingagentCloned
+      - iEzmaxinvoicingagentCommissioncalculation
+      - iEzmaxinvoicingagentEzsigndocument
+      - iEzmaxinvoicingagentInscription
+      - iEzmaxinvoicingagentInscriptionactive
+      - iEzmaxinvoicingagentInvoice
+      - iEzmaxinvoicingagentOtherincome
+      - iEzmaxinvoicingagentSale
+      - iEzmaxinvoicingagentSession
+      - sBillingentityinternalDescriptionX
+      type: object
+    ezmaxinvoicingagent-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingagent-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingagent_ResponseCompound_allOf'
+      description: A Ezmaxinvoicingagent Object
+      type: object
+    ezmaxinvoicingcommission-Response:
+      description: A Ezmaxinvoicingcommission Object
+      properties:
+        pkiEzmaxinvoicingcommissionID:
+          description: The unique ID of the Ezmaxinvoicingcommission
+          example: 36
+          type: integer
+        fkiEzmaxinvoicingsummaryglobalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryglobal
+          example: 241
+          minimum: 0
+          type: integer
+        fkiEzmaxpartnerID:
+          description: The unique ID of the Ezmaxpartner
+          example: 12
+          minimum: 1
+          type: integer
+        fkiEzmaxrepresentativeID:
+          description: The unique ID of the Ezmaxrepresentative
+          example: 21
+          minimum: 1
+          type: integer
+        dtEzmaxinvoicingcommissionStart:
+          description: The start date for the Ezmaxinvoicingcommission
+          example: 2020-12-31
+          type: string
+        dtEzmaxinvoicingcommissionEnd:
+          description: The end date for the Ezmaxinvoicingcommission
+          example: 2020-12-31
+          type: string
+        iEzmaxinvoicingcommissionDays:
+          description: This is the number of days during the month on which the Ezmaxinvoigcommission
+            applies
+          example: 30
+          minimum: 0
+          type: integer
+        dEzmaxinvoicingcommissionAmount:
+          description: The amount of Ezmaxinvoicingcommission
+          example: "450.34"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+      required:
+      - dEzmaxinvoicingcommissionAmount
+      - dtEzmaxinvoicingcommissionEnd
+      - dtEzmaxinvoicingcommissionStart
+      - iEzmaxinvoicingcommissionDays
+      type: object
+    ezmaxinvoicingcommission-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingcommission-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingcommission_ResponseCompound_allOf'
+      description: A Ezmaxinvoicingcommission Object
+      required:
+      - objContactName
+      type: object
+    ezmaxinvoicingcontract-Response:
+      description: A Ezmaxinvoicingcontract Object
+      properties:
+        pkiEzmaxinvoicingcontractID:
+          description: The unique ID of the Ezmaxinvoicingcontract
+          example: 28
+          minimum: 1
+          type: integer
+        eEzmaxinvoicingcontractPaymenttype:
+          $ref: '#/components/schemas/Field-eEzmaxinvoicingcontractPaymenttype'
+        iEzmaxinvoicingcontractLength:
+          description: The length in years of the Ezmaxinvoicingcontract
+          example: 3
+          minimum: 1
+          type: integer
+        dtEzmaxinvoicingcontractStart:
+          description: The start date of the Ezmaxinvoicingcontract
+          example: 2020-12-31
+          type: string
+        dtEzmaxinvoicingcontractEnd:
+          description: The end date of the Ezmaxinvoicingcontract
+          example: 2020-12-31
+          type: string
+        dEzmaxinvoicingcontractLicense:
+          description: The price of the license
+          example: "335.42"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingcontract121qa:
+          description: The price for 121QA
+          example: "295.48"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        bEzmaxinvoicingcontractEzsignallagents:
+          description: Whether eZsign is for all agents
+          example: true
+          type: boolean
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - bEzmaxinvoicingcontractEzsignallagents
+      - dEzmaxinvoicingcontract121qa
+      - dEzmaxinvoicingcontractLicense
+      - dtEzmaxinvoicingcontractEnd
+      - dtEzmaxinvoicingcontractStart
+      - eEzmaxinvoicingcontractPaymenttype
+      - iEzmaxinvoicingcontractLength
+      - objAudit
+      - pkiEzmaxinvoicingcontractID
+      type: object
+    ezmaxinvoicingcontract-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingcontract-Response'
+      - type: object
+      description: A Ezmaxinvoicingcontract Object
+      type: object
+    ezmaxinvoicingsummaryexternal-Response:
+      description: A Ezmaxinvoicingsummaryexternal Object
+      properties:
+        pkiEzmaxinvoicingsummaryexternalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryexternal
+          example: 177
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiBillingentityexternalID:
+          description: The unique ID of the Billingentityexternal
+          example: 83
+          minimum: 1
+          type: integer
+        sBillingentityexternalDescription:
+          description: The description of the Billingentityexternal
+          example: Default
+          type: string
+        sEzmaxinvoicingsummaryexternalDescription:
+          description: The description of the Ezmaxinvoicingsummaryexternal
+          example: Company Demo
+          maxLength: 70
+          type: string
+      required:
+      - fkiBillingentityexternalID
+      - sBillingentityexternalDescription
+      - sEzmaxinvoicingsummaryexternalDescription
+      type: object
+    ezmaxinvoicingsummaryexternal-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryexternal-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryexternal_ResponseCompound_allOf'
+      description: A Ezmaxinvoicingsummaryexternal Object
+      type: object
+    ezmaxinvoicingsummaryexternaldetail-Response:
+      description: A Ezmaxinvoicingsummaryexternaldetail Object
+      properties:
+        pkiEzmaxinvoicingsummaryexternaldetailID:
+          description: The unique ID of the Ezmaxinvoicingsummaryexternaldetail
+          example: 163
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingsummaryexternalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryexternal
+          example: 177
+          minimum: 0
+          type: integer
+        fkiEzmaxproductID:
+          description: The unique ID of the Ezmaxproduct
+          example: 172
+          minimum: 1
+          type: integer
+        sEzmaxproductDescriptionX:
+          description: The description of the Ezmaxproduct in the language of the
+            requester
+          example: eZmax (License)
+          type: string
+        dEzmaxinvoicingsummaryexternaldetailCountreal:
+          description: The count item invoiced for the product
+          example: "815.61"
+          pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryexternaldetailSubtotal:
+          description: The subtotal invoiced for the product
+          example: "382.88"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryexternaldetailRebate:
+          description: The rebate for the product
+          example: "608.18"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryexternaldetailTotal:
+          description: The total invoiced for the product
+          example: "869.71"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        bEzmaxinvoicingsummaryexternaldetailAdjustment:
+          description: Whether it's an adjustment
+          example: true
+          type: boolean
+      required:
+      - bEzmaxinvoicingsummaryexternaldetailAdjustment
+      - dEzmaxinvoicingsummaryexternaldetailCountreal
+      - dEzmaxinvoicingsummaryexternaldetailRebate
+      - dEzmaxinvoicingsummaryexternaldetailSubtotal
+      - dEzmaxinvoicingsummaryexternaldetailTotal
+      - fkiEzmaxproductID
+      - sEzmaxproductDescriptionX
+      type: object
+    ezmaxinvoicingsummaryexternaldetail-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryexternaldetail-Response'
+      - type: object
+      description: A Ezmaxinvoicingsummaryexternaldetail Object
+      type: object
+    ezmaxinvoicingsummaryglobal-Response:
+      description: A Ezmaxinvoicingsummaryglobal Object
+      properties:
+        pkiEzmaxinvoicingsummaryglobalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryglobal
+          example: 241
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiEzmaxproductID:
+          description: The unique ID of the Ezmaxproduct
+          example: 172
+          minimum: 1
+          type: integer
+        sEzmaxproductDescriptionX:
+          description: The description of the Ezmaxproduct in the language of the
+            requester
+          example: eZmax (License)
+          type: string
+        dtEzmaxinvoicingsummaryglobalStart:
+          description: The start date for the Ezmaxinvoicingsummaryglobal
+          example: 2020-12-31
+          type: string
+        dtEzmaxinvoicingsummaryglobalEnd:
+          description: The end date for the Ezmaxinvoicingsummaryglobal
+          example: 2020-12-31
+          type: string
+        iEzmaxinvoicingsummaryglobalDays:
+          description: The number of days for the Ezmaxinvoicingsummaryglobal
+          example: 30
+          minimum: 1
+          type: integer
+        dEzmaxinvoicingsummaryglobalCountreal:
+          description: The The count item calculated
+          example: "649.08"
+          pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalCountbilled:
+          description: The The count item billed
+          example: "581.56"
+          pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalSubtotal:
+          description: The Ezmaxinvoicingsummaryglobal subtotal
+          example: "200.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalRebateamount:
+          description: The rebate amount for the Ezmaxinvoicingsummaryglobal
+          example: "0.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalRebatepercent:
+          description: The rebate percentage of the Ezmaxinvoicingsummaryglobal
+          example: "0.00"
+          pattern: "^-{0,1}[\\d]{1,3}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalRebatetotal:
+          description: The rebate amount total for the Ezmaxinvoicingsummaryglobal
+          example: "2.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalTotal:
+          description: The Ezmaxinvoicingsummaryglobal total
+          example: "198.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalRepresentative:
+          description: The amount of commission for the representative
+          example: "685.88"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalPartner:
+          description: The amount of commission for the partner
+          example: "266.49"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryglobalNet:
+          description: The net amount of the Ezmaxinvoicingsummaryglobal
+          example: "521.71"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        bEzmaxinvoicingsummaryglobalAdjustment:
+          description: Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
+          example: true
+          type: boolean
+      required:
+      - bEzmaxinvoicingsummaryglobalAdjustment
+      - dEzmaxinvoicingsummaryglobalCountbilled
+      - dEzmaxinvoicingsummaryglobalCountreal
+      - dEzmaxinvoicingsummaryglobalRebateamount
+      - dEzmaxinvoicingsummaryglobalRebatepercent
+      - dEzmaxinvoicingsummaryglobalRebatetotal
+      - dEzmaxinvoicingsummaryglobalSubtotal
+      - dEzmaxinvoicingsummaryglobalTotal
+      - dtEzmaxinvoicingsummaryglobalEnd
+      - dtEzmaxinvoicingsummaryglobalStart
+      - fkiEzmaxproductID
+      - iEzmaxinvoicingsummaryglobalDays
+      - sEzmaxproductDescriptionX
+      type: object
+    ezmaxinvoicingsummaryglobal-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryglobal-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryglobal_ResponseCompound_allOf'
+      description: A Ezmaxinvoicingsummaryglobal Object
+      type: object
+    ezmaxinvoicingsummaryinternal-Response:
+      description: A Ezmaxinvoicingsummaryinternal Object
+      properties:
+        pkiEzmaxinvoicingsummaryinternalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryinternal
+          example: 57
+          minimum: 0
+          type: integer
+        objEzmaxinvoicingsummaryinternalDescription:
+          $ref: '#/components/schemas/Multilingual-EzmaxinvoicingsummaryinternalDescription'
+        sEzmaxinvoicingsummaryinternalDescriptionX:
+          description: The Ezmaxinvoicingsummaryinternal description in the language
+            of the requester
+          example: Défaut
+          maxLength: 70
+          type: string
+        fkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiBillingentityinternalID:
+          description: The unique ID of the Billingentityinternal.
+          example: 1
+          minimum: 0
+          type: integer
+        sBillingentityinternalDescriptionX:
+          description: The description of the Billingentityinternal in the language
+            of the requester
+          example: Default
+          type: string
+      required:
+      - fkiBillingentityinternalID
+      - objEzmaxinvoicingsummaryinternalDescription
+      - sBillingentityinternalDescriptionX
+      - sEzmaxinvoicingsummaryinternalDescriptionX
+      type: object
+    ezmaxinvoicingsummaryinternal-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryinternal-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryinternal_ResponseCompound_allOf'
+      description: A Ezmaxinvoicingsummaryinternal Object
+      type: object
+    ezmaxinvoicingsummaryinternaldetail-Response:
+      description: A Ezmaxinvoicingsummaryinternaldetail Object
+      properties:
+        pkiEzmaxinvoicingsummaryinternaldetailID:
+          description: The unique ID of the Ezmaxinvoicingsummaryinternaldetail
+          example: 73
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingsummaryinternalID:
+          description: The unique ID of the Ezmaxinvoicingsummaryinternal
+          example: 57
+          minimum: 0
+          type: integer
+        fkiEzmaxproductID:
+          description: The unique ID of the Ezmaxproduct
+          example: 172
+          minimum: 1
+          type: integer
+        sEzmaxproductDescriptionX:
+          description: The description of the Ezmaxproduct in the language of the
+            requester
+          example: eZmax (License)
+          type: string
+        fkiBillingentityexternalID:
+          description: The unique ID of the Billingentityexternal
+          example: 83
+          minimum: 1
+          type: integer
+        sBillingentityexternalDescription:
+          description: The description of the Billingentityexternal
+          example: Default
+          type: string
+        dEzmaxinvoicingsummaryinternaldetailCountreal:
+          description: The count item invoiced for the product
+          example: "350.32"
+          pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryinternaldetailSubtotal:
+          description: The subtotal invoiced for the product
+          example: "625.41"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryinternaldetailRebate:
+          description: The rebate for the product
+          example: "560.81"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        dEzmaxinvoicingsummaryinternaldetailTotal:
+          description: The total invoiced for the product
+          example: "510.77"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        bEzmaxinvoicingsummaryinternaldetailAdjustment:
+          description: Whether if it's an adjustment
+          example: true
+          type: boolean
+      required:
+      - bEzmaxinvoicingsummaryinternaldetailAdjustment
+      - dEzmaxinvoicingsummaryinternaldetailCountreal
+      - dEzmaxinvoicingsummaryinternaldetailRebate
+      - dEzmaxinvoicingsummaryinternaldetailSubtotal
+      - dEzmaxinvoicingsummaryinternaldetailTotal
+      - fkiBillingentityexternalID
+      - fkiEzmaxproductID
+      - sBillingentityexternalDescription
+      - sEzmaxproductDescriptionX
+      type: object
+    ezmaxinvoicingsummaryinternaldetail-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicingsummaryinternaldetail-Response'
+      - type: object
+      description: A Ezmaxinvoicingsummaryinternaldetail Object
+      type: object
+    ezmaxinvoicinguser-Response:
+      description: A Ezmaxinvoicinguser Object
+      properties:
+        pkiEzmaxinvoicinguserID:
+          description: The unique ID of the Ezmaxinvoicinguser
+          example: 202
+          minimum: 0
+          type: integer
+        fkiEzmaxinvoicingID:
+          description: The unique ID of the Ezmaxinvoicing
+          example: 28
+          minimum: 0
+          type: integer
+        fkiBillingentityinternalID:
+          description: The unique ID of the Billingentityinternal.
+          example: 1
+          minimum: 0
+          type: integer
+        sBillingentityinternalDescriptionX:
+          description: The description of the Billingentityinternal in the language
+            of the requester
+          example: Default
+          type: string
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        iEzmaxinvoicinguserEzsigndocument:
+          description: The number of ezsign documents
+          example: 243
+          minimum: 0
+          type: integer
+        bEzmaxinvoicinguserEzsignaccount:
+          description: Whether there is an eZsign account
+          example: true
+          type: boolean
+        bEzmaxinvoicinguserBillableezsign:
+          description: Whether it is billable for eZsign
+          example: true
+          type: boolean
+        eEzmaxinvoicinguserVariationezsign:
+          $ref: '#/components/schemas/Field-eEzmaxinvoicinguserVariationezsign'
+      required:
+      - bEzmaxinvoicinguserBillableezsign
+      - bEzmaxinvoicinguserEzsignaccount
+      - eEzmaxinvoicinguserVariationezsign
+      - fkiBillingentityinternalID
+      - fkiUserID
+      - iEzmaxinvoicinguserEzsigndocument
+      - sBillingentityinternalDescriptionX
+      type: object
+    ezmaxinvoicinguser-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicinguser-Response'
+      - $ref: '#/components/schemas/ezmaxinvoicingagent_ResponseCompound_allOf'
+      description: A Ezmaxinvoicinguser Object
       type: object
     ezsign-suggestSigners-v1-Response:
       allOf:
@@ -11907,6 +14414,8 @@ components:
           description: The Name of the Language in the language of the requester
           example: English
           type: string
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
         sEzsignfoldertypeNameX:
           description: The name of the Ezsignfoldertype in the language of the requester
           example: Default
@@ -11932,6 +14441,7 @@ components:
       required:
       - bEzsignbulksendIsactive
       - bEzsignbulksendNeedvalidation
+      - eEzsignfoldertypePrivacylevel
       - fkiEzsignfoldertypeID
       - fkiLanguageID
       - objAudit
@@ -13859,6 +16369,15 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
       type: object
+    ezsignfoldersignerassociation-forceDisconnect-v1-Request:
+      description: "Request for POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociation}/forceDisconnect\n\
+        \nIntentionally empty for future-proofing"
+      type: object
+    ezsignfoldersignerassociation-forceDisconnect-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociation}/forceDisconnect"
+      type: object
     ezsignfoldersignerassociation-getInPersonLoginUrl-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldersignerassociation_getInPersonLoginUrl_v1_Response_allOf'
@@ -13885,6 +16404,30 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
       description: "Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
+      type: object
+    ezsignfoldertype-AutocompleteElement-Response:
+      description: A Ezsignfoldertype AutocompleteElement Response
+      properties:
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsignfoldertypeNameX:
+          description: The name of the Ezsignfoldertype in the language of the requester
+          example: Default
+          type: string
+        pkiEzsignfoldertypeID:
+          description: The unique ID of the Ezsignfoldertype.
+          example: 5
+          minimum: 0
+          type: integer
+        bEzsignfoldertypeIsactive:
+          description: Whether the Ezsignfoldertype is active or not
+          example: true
+          type: boolean
+      required:
+      - bEzsignfoldertypeIsactive
+      - eEzsignfoldertypePrivacylevel
+      - pkiEzsignfoldertypeID
+      - sEzsignfoldertypeNameX
       type: object
     ezsignfoldertype-ListElement:
       description: An Ezsignfoldertype List Element
@@ -14042,11 +16585,23 @@ components:
           description: Whether we send the summary to the colleagues
           example: false
           type: boolean
+        bEzsignfoldertypeIncludeproofsigner:
+          description: Whether we include the proof with the signed Ezsigndocument
+            for Ezsignsigners
+          example: true
+          type: boolean
+        bEzsignfoldertypeIncludeproofuser:
+          description: Whether we include the proof with the signed Ezsigndocument
+            for users
+          example: true
+          type: boolean
         bEzsignfoldertypeIsactive:
           description: Whether the Ezsignfoldertype is active or not
           example: true
           type: boolean
       required:
+      - bEzsignfoldertypeIncludeproofsigner
+      - bEzsignfoldertypeIncludeproofuser
       - bEzsignfoldertypeIsactive
       - bEzsignfoldertypeSendattatchmentsigner
       - bEzsignfoldertypeSendsignedtocolleague
@@ -14222,11 +16777,23 @@ components:
           description: Whether we send the summary to the colleagues
           example: false
           type: boolean
+        bEzsignfoldertypeIncludeproofsigner:
+          description: Whether we include the proof with the signed Ezsigndocument
+            for Ezsignsigners
+          example: true
+          type: boolean
+        bEzsignfoldertypeIncludeproofuser:
+          description: Whether we include the proof with the signed Ezsigndocument
+            for users
+          example: true
+          type: boolean
         bEzsignfoldertypeIsactive:
           description: Whether the Ezsignfoldertype is active or not
           example: true
           type: boolean
       required:
+      - bEzsignfoldertypeIncludeproofsigner
+      - bEzsignfoldertypeIncludeproofuser
       - bEzsignfoldertypeIsactive
       - bEzsignfoldertypeSendattatchmentsigner
       - bEzsignfoldertypeSendsignedtocolleague
@@ -14292,6 +16859,23 @@ components:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for PUT /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"
+      type: object
+    ezsignfoldertype-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/ezsignfoldertype/getAutocomplete
+      type: object
+    ezsignfoldertype-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/ezsignfoldertype/getAutocomplete
+      properties:
+        a_objEzsignfoldertype:
+          description: An array of Ezsignfoldertype autocomplete element response.
+          items:
+            $ref: '#/components/schemas/ezsignfoldertype-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objEzsignfoldertype
       type: object
     ezsignfoldertype-getList-v1-Response:
       allOf:
@@ -14505,7 +17089,6 @@ components:
       - iEzsignpagePagenumber
       - pkiEzsignformfieldID
       - sEzsignformfieldLabel
-      - sEzsignformfieldValue
       type: object
     ezsignformfield-ResponseCompound:
       allOf:
@@ -14685,7 +17268,6 @@ components:
       - iEzsignformfieldgroupFilledmin
       - iEzsignformfieldgroupStep
       - pkiEzsignformfieldgroupID
-      - sEzsignformfieldgroupDefaultvalue
       - sEzsignformfieldgroupLabel
       type: object
     ezsignformfieldgroup-ResponseCompound:
@@ -14833,7 +17415,7 @@ components:
           example: 1
           minimum: 1
           type: integer
-        sImageUrl:
+        sComputedImageurl:
           description: |-
             The Url to the Ezsignpage's rasterized image.
 
@@ -14846,7 +17428,7 @@ components:
       - iEzsignpageWidthimage
       - iEzsignpageWidthpdf
       - pkiEzsignpageID
-      - sImageUrl
+      - sComputedImageurl
       type: object
     ezsignpage-ResponseCompound:
       allOf:
@@ -15606,6 +18188,30 @@ components:
       - sContactFirstname
       - sContactLastname
       type: object
+    ezsigntemplate-AutocompleteElement-Response:
+      description: A Ezsigntemplate AutocompleteElement Response
+      properties:
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsigntemplateDescription:
+          description: The description of the Ezsigntemplate
+          example: Standard Contract
+          type: string
+        pkiEzsigntemplateID:
+          description: The unique ID of the Ezsigntemplate
+          example: 36
+          minimum: 0
+          type: integer
+        bEzsigntemplateIsactive:
+          description: Whether the Ezsigntemplate is active or not
+          example: true
+          type: boolean
+      required:
+      - bEzsigntemplateIsactive
+      - eEzsignfoldertypePrivacylevel
+      - pkiEzsigntemplateID
+      - sEzsigntemplateDescription
+      type: object
     ezsigntemplate-ListElement:
       description: A Ezsigntemplate List Element
       properties:
@@ -15646,6 +18252,10 @@ components:
           description: The number of total signatures in the Ezsigntemplate.
           example: 8
           type: integer
+        iEzsigntemplateFormfieldtotal:
+          description: The number of total form fields in the Ezsigntemplate.
+          example: 8
+          type: integer
         bEzsigntemplateIncomplete:
           description: Indicate the Ezsigntemplate is incomplete and cannot be used
           example: false
@@ -15658,8 +18268,6 @@ components:
       - bEzsigntemplateIncomplete
       - fkiEzsignfoldertypeID
       - fkiLanguageID
-      - iEzsigntemplateSignaturetotal
-      - iEzsigntemplatedocumentPagetotal
       - pkiEzsigntemplateID
       - sEzsignfoldertypeNameX
       - sEzsigntemplateDescription
@@ -15822,6 +18430,23 @@ components:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for PUT /1/object/ezsigntemplate/{pkiEzsigntemplateID}"
+      type: object
+    ezsigntemplate-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplate_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/ezsigntemplate/getAutocomplete
+      type: object
+    ezsigntemplate-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/ezsigntemplate/getAutocomplete
+      properties:
+        a_objEzsigntemplate:
+          description: An array of Ezsigntemplate autocomplete element response.
+          items:
+            $ref: '#/components/schemas/ezsigntemplate-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objEzsigntemplate
       type: object
     ezsigntemplate-getList-v1-Response:
       allOf:
@@ -16215,7 +18840,7 @@ components:
           example: 1
           minimum: 1
           type: integer
-        sImageUrl:
+        sComputedImageurl:
           description: |-
             The Url to the Ezsigntemplatedocumentpage's rasterized image.
 
@@ -16228,7 +18853,7 @@ components:
       - iEzsigntemplatedocumentpageWidthimage
       - iEzsigntemplatedocumentpageWidthpdf
       - pkiEzsigntemplatedocumentpageID
-      - sImageUrl
+      - sComputedImageurl
       type: object
     ezsigntemplatedocumentpage-ResponseCompound:
       allOf:
@@ -16418,7 +19043,6 @@ components:
       - iEzsigntemplateformfieldY
       - pkiEzsigntemplateformfieldID
       - sEzsigntemplateformfieldLabel
-      - sEzsigntemplateformfieldValue
       type: object
     ezsigntemplateformfield-ResponseCompound:
       allOf:
@@ -16597,7 +19221,6 @@ components:
       - iEzsigntemplateformfieldgroupFilledmin
       - iEzsigntemplateformfieldgroupStep
       - pkiEzsigntemplateformfieldgroupID
-      - sEzsigntemplateformfieldgroupDefaultvalue
       - sEzsigntemplateformfieldgroupLabel
       type: object
     ezsigntemplateformfieldgroup-ResponseCompound:
@@ -16708,6 +19331,34 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplateformfieldgroupsigner-Response'
       description: An Ezsigntemplateformfieldgroupsigner Object and children
+      type: object
+    ezsigntemplatepackage-AutocompleteElement-Response:
+      description: A Ezsigntemplatepackage AutocompleteElement Response
+      properties:
+        eEzsignfoldertypePrivacylevel:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
+        sEzsigntemplatepackageDescription:
+          description: The description of the Ezsigntemplatepackage
+          example: Package for new clients
+          type: string
+        pkiEzsigntemplatepackageID:
+          description: The unique ID of the Ezsigntemplatepackage
+          example: 99
+          minimum: 0
+          type: integer
+        bEzsigntemplatepackageIsactive:
+          description: Whether the Ezsigntemplatepackage is active or not
+          example: true
+          type: boolean
+        bDisabled:
+          description: Indicates if the element is disabled in the context
+          type: boolean
+      required:
+      - bDisabled
+      - bEzsigntemplatepackageIsactive
+      - eEzsignfoldertypePrivacylevel
+      - pkiEzsigntemplatepackageID
+      - sEzsigntemplatepackageDescription
       type: object
     ezsigntemplatepackage-ListElement:
       description: An Ezsigntemplatepackage List Element
@@ -16959,6 +19610,23 @@ components:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}"
+      type: object
+    ezsigntemplatepackage-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackage_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/ezsigntemplatepackage/getAutocomplete
+      type: object
+    ezsigntemplatepackage-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/ezsigntemplatepackage/getAutocomplete
+      properties:
+        a_objEzsigntemplatepackage:
+          description: An array of Ezsigntemplatepackage autocomplete element response.
+          items:
+            $ref: '#/components/schemas/ezsigntemplatepackage-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objEzsigntemplatepackage
       type: object
     ezsigntemplatepackage-getList-v1-Response:
       allOf:
@@ -17392,72 +20060,7 @@ components:
           example: 9
           minimum: 0
           type: integer
-        iEzsigntemplatedocumentpagePagenumber:
-          description: The page number in the Ezsigntemplatedocument
-          example: 1
-          minimum: 1
-          type: integer
-        iEzsigntemplatesignatureX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
-            \ from the left border of the page, you would use \"200\" for the X coordinate."
-          example: 200
-          minimum: 0
-          type: integer
-        iEzsigntemplatesignatureY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
-            \ from the top border of the page, you would use \"300\" for the Y coordinate."
-          example: 300
-          minimum: 0
-          type: integer
-        iEzsigntemplatesignatureStep:
-          description: The step when the Ezsigntemplatesigner will be invited to sign
-          example: 1
-          minimum: 1
-          type: integer
-        eEzsigntemplatesignatureType:
-          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureType'
-        tEzsigntemplatesignatureTooltip:
-          description: A tooltip that will be presented to Ezsigntemplatesigner about
-            the Ezsigntemplatesignature
-          example: Please sign here if you agree to the terms
-          type: string
-        eEzsigntemplatesignatureTooltipposition:
-          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureTooltipposition'
-        eEzsigntemplatesignatureFont:
-          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureFont'
-      required:
-      - eEzsigntemplatesignatureType
-      - fkiEzsigntemplatedocumentID
-      - fkiEzsigntemplatesignerID
-      - iEzsigntemplatedocumentpagePagenumber
-      - iEzsigntemplatesignatureStep
-      - iEzsigntemplatesignatureX
-      - iEzsigntemplatesignatureY
-      type: object
-    ezsigntemplatesignature-RequestCompound:
-      allOf:
-      - $ref: '#/components/schemas/ezsigntemplatesignature-Request'
-      - $ref: '#/components/schemas/ezsigntemplatesignature_RequestCompound_allOf'
-      description: A Ezsigntemplatesignature Object and children
-      type: object
-    ezsigntemplatesignature-Response:
-      description: A Ezsigntemplatesignature Object
-      properties:
-        pkiEzsigntemplatesignatureID:
-          description: The unique ID of the Ezsigntemplatesignature
-          example: 99
-          minimum: 0
-          type: integer
-        fkiEzsigntemplatedocumentID:
-          description: The unique ID of the Ezsigntemplatedocument
-          example: 133
-          minimum: 0
-          type: integer
-        fkiEzsigntemplatesignerID:
+        fkiEzsigntemplatesignerIDValidation:
           description: The unique ID of the Ezsigntemplatesigner
           example: 9
           minimum: 0
@@ -17499,6 +20102,115 @@ components:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureTooltipposition'
         eEzsigntemplatesignatureFont:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureFont'
+        bEzsigntemplatesignatureRequired:
+          description: Whether the Ezsigntemplatesignature is required or not. This
+            field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType
+            = Attachments.
+          type: boolean
+        eEzsigntemplatesignatureAttachmentnamesource:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureAttachmentnamesource'
+        sEzsigntemplatesignatureAttachmentdescription:
+          description: The description attached to the attachment name added in Ezsigntemplatesignature
+            of eEzsigntemplatesignatureType Attachments
+          example: Attachment
+          type: string
+        iEzsigntemplatesignatureValidationstep:
+          description: The step when the Ezsigntemplatesigner will be invited to validate
+            the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+          example: 1
+          type: integer
+      required:
+      - eEzsigntemplatesignatureType
+      - fkiEzsigntemplatedocumentID
+      - fkiEzsigntemplatesignerID
+      - iEzsigntemplatedocumentpagePagenumber
+      - iEzsigntemplatesignatureStep
+      - iEzsigntemplatesignatureX
+      - iEzsigntemplatesignatureY
+      type: object
+    ezsigntemplatesignature-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatesignature-Request'
+      - $ref: '#/components/schemas/ezsigntemplatesignature_RequestCompound_allOf'
+      description: A Ezsigntemplatesignature Object and children
+      type: object
+    ezsigntemplatesignature-Response:
+      description: A Ezsigntemplatesignature Object
+      properties:
+        pkiEzsigntemplatesignatureID:
+          description: The unique ID of the Ezsigntemplatesignature
+          example: 99
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatedocumentID:
+          description: The unique ID of the Ezsigntemplatedocument
+          example: 133
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatesignerID:
+          description: The unique ID of the Ezsigntemplatesigner
+          example: 9
+          minimum: 0
+          type: integer
+        fkiEzsigntemplatesignerIDValidation:
+          description: The unique ID of the Ezsigntemplatesigner
+          example: 9
+          minimum: 0
+          type: integer
+        iEzsigntemplatedocumentpagePagenumber:
+          description: The page number in the Ezsigntemplatedocument
+          example: 1
+          minimum: 1
+          type: integer
+        iEzsigntemplatesignatureX:
+          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
+            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
+            \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
+            \ from the left border of the page, you would use \"200\" for the X coordinate."
+          example: 200
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignatureY:
+          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
+            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
+            \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
+            \ from the top border of the page, you would use \"300\" for the Y coordinate."
+          example: 300
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignatureStep:
+          description: The step when the Ezsigntemplatesigner will be invited to sign
+          example: 1
+          minimum: 1
+          type: integer
+        eEzsigntemplatesignatureType:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureType'
+        tEzsigntemplatesignatureTooltip:
+          description: A tooltip that will be presented to Ezsigntemplatesigner about
+            the Ezsigntemplatesignature
+          example: Please sign here if you agree to the terms
+          type: string
+        eEzsigntemplatesignatureTooltipposition:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureTooltipposition'
+        eEzsigntemplatesignatureFont:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureFont'
+        iEzsigntemplatesignatureValidationstep:
+          description: The step when the Ezsigntemplatesigner will be invited to validate
+            the Ezsigntemplatesignature of eEzsigntemplatesignatureType Attachments
+          example: 1
+          type: integer
+        sEzsigntemplatesignatureAttachmentdescription:
+          description: The description attached to the attachment name added in Ezsigntemplatesignature
+            of eEzsigntemplatesignatureType Attachments
+          example: Attachment
+          type: string
+        eEzsigntemplatesignatureAttachmentnamesource:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignatureAttachmentnamesource'
+        bEzsigntemplatesignatureRequired:
+          description: Whether the Ezsigntemplatesignature is required or not. This
+            field is relevant only with Ezsigntemplatesignature with eEzsigntemplatesignatureType
+            = Attachments.
+          type: boolean
       required:
       - eEzsigntemplatesignatureType
       - fkiEzsigntemplatedocumentID
@@ -17821,6 +20533,61 @@ components:
       - $ref: '#/components/schemas/ezsigntemplatesigner-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}"
       type: object
+    ezsigntsarequirement-AutocompleteElement-Response:
+      description: A Ezsigntsarequirement AutocompleteElement Response
+      properties:
+        sEzsigntsarequirementDescriptionX:
+          description: The description of the Ezsigntsarequirement in the language
+            of the requester
+          example: Default
+          type: string
+        pkiEzsigntsarequirementID:
+          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
+            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
+            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
+            \ requested. This will make all signatures a lot faster since no round-trip\
+            \ to the TSA server will be required. Timestamping will be made using\
+            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
+            \ Authority will be requested but is not mandatory. In the very improbable\
+            \ case it cannot be completed, the timestamping will be made using eZsign\
+            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
+            \ from a Time Stamping Authority will be requested and is mandatory. In\
+            \ the very improbable case it cannot be completed, the signature will\
+            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          example: 1
+          maximum: 3
+          minimum: 1
+          type: integer
+        bEzsigntsarequirementIsactive:
+          description: Whether the Ezsigntsarequirement is active or not
+          example: true
+          type: boolean
+        bDisabled:
+          description: Indicates if the element is disabled in the context
+          type: boolean
+      required:
+      - bDisabled
+      - bEzsigntsarequirementIsactive
+      - pkiEzsigntsarequirementID
+      - sEzsigntsarequirementDescriptionX
+      type: object
+    ezsigntsarequirement-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntsarequirement_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/ezsigntsarequirement/getAutocomplete
+      type: object
+    ezsigntsarequirement-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/ezsigntsarequirement/getAutocomplete
+      properties:
+        a_objEzsigntsarequirement:
+          description: An array of Ezsigntsarequirement autocomplete element response.
+          items:
+            $ref: '#/components/schemas/ezsigntsarequirement-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objEzsigntsarequirement
+      type: object
     franchisereferalincome-Request:
       description: An Franchisereferalincome Object
       properties:
@@ -17847,18 +20614,22 @@ components:
         dFranchisereferalincomeLoan:
           description: The loan amount
           example: "500275.62"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeFranchiseamount:
           description: The amount that will be given to the franchise
           example: "275.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeFranchisoramount:
           description: The amount that will be kept by the franchisor
           example: "385.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeAgentamount:
           description: The amount that will be given to the agent
           example: "800.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dtFranchisereferalincomeDisbursed:
           description: The date the amounts were disbursed
@@ -18134,6 +20905,195 @@ components:
       - $ref: '#/components/schemas/phone-Request'
       description: A Phone Object and children to create a complete structure
       type: object
+    secretquestion-AutocompleteElement-Response:
+      description: A Secretquestion AutocompleteElement Response
+      properties:
+        sSecretquestionTextX:
+          description: The text of the Secretquestion in the language of the requester
+          example: The name of the hospital in which you were born
+          type: string
+        pkiSecretquestionID:
+          description: |-
+            The unique ID of the Secretquestion.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|The name of the hospital in which you were born|
+            |2|The name of your grade school|
+            |3|The last name of your favorite teacher|
+            |4|Your favorite sports team|
+            |5|Your favorite TV show|
+            |6|Your favorite movie|
+            |7|The name of the street on which you grew up|
+            |8|The name of your first employer|
+            |9|Your first car|
+            |10|Your favorite food|
+            |11|The name of your first pet|
+            |12|Favorite musician/band|
+            |13|What instrument you play|
+            |14|Your father's middle name|
+            |15|Your mother's maiden name|
+            |16|Name of your eldest child|
+            |17|Your spouse's middle name|
+            |18|Favorite restaurant|
+            |19|Childhood nickname|
+            |20|Favorite vacation destination|
+            |21|Your boat's name|
+            |22|Date of Birth (YYYY-MM-DD)|
+          example: 7
+          minimum: 0
+          type: integer
+        bSecretquestionIsactive:
+          description: Whether the Secretquestion is active or not
+          example: true
+          type: boolean
+      required:
+      - bSecretquestionIsactive
+      - pkiSecretquestionID
+      - sSecretquestionTextX
+      type: object
+    secretquestion-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/secretquestion_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/secretquestion/getAutocomplete
+      type: object
+    secretquestion-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/secretquestion/getAutocomplete
+      properties:
+        a_objSecretquestion:
+          description: An array of Secretquestion autocomplete element response.
+          items:
+            $ref: '#/components/schemas/secretquestion-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objSecretquestion
+      type: object
+    taxassignment-AutocompleteElement-Response:
+      description: A Taxassignment AutocompleteElement Response
+      properties:
+        sTaxassignmentDescriptionX:
+          description: The description of the Taxassignment  in the language of the
+            requester
+          example: Default
+          type: string
+        pkiTaxassignmentID:
+          description: |-
+            The unique ID of the Taxassignment.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No tax|
+            |2|GST|
+            |3|HST (ON)|
+            |4|HST (NB)|
+            |5|HST (NS)|
+            |6|HST (NL)|
+            |7|HST (PE)|
+            |8|GST + QST (QC)|
+            |9|GST + QST (QC) Non-Recoverable|
+            |10|GST + PST (BC)|
+            |11|GST + PST (SK)|
+            |12|GST + RST (MB)|
+            |13|GST + PST (BC) Non-Recoverable|
+            |14|GST + PST (SK) Non-Recoverable|
+            |15|GST + RST (MB) Non-Recoverable|
+          example: 1
+          maximum: 15
+          minimum: 0
+          type: integer
+        bTaxassignmentIsactive:
+          description: Whether the Taxassignment is active or not
+          example: true
+          type: boolean
+      required:
+      - bTaxassignmentIsactive
+      - pkiTaxassignmentID
+      - sTaxassignmentDescriptionX
+      type: object
+    taxassignment-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/taxassignment_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/taxassignment/getAutocomplete
+      type: object
+    taxassignment-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/taxassignment/getAutocomplete
+      properties:
+        a_objTaxassignment:
+          description: An array of Taxassignment autocomplete element response.
+          items:
+            $ref: '#/components/schemas/taxassignment-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objTaxassignment
+      type: object
+    timezone-AutocompleteElement-Response:
+      description: A Timezone AutocompleteElement Response
+      properties:
+        sTimezoneName:
+          description: The description of the Timezone in the language of the requester
+          example: Default
+          type: string
+        pkiTimezoneID:
+          description: The unique ID of the Timezone
+          example: 247
+          minimum: 0
+          type: integer
+        bTimezoneIsactive:
+          description: Whether the Timezone is active or not
+          example: true
+          type: boolean
+      required:
+      - bTimezoneIsactive
+      - pkiTimezoneID
+      - sTimezoneName
+      type: object
+    timezone-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/timezone_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/timezone/getAutocomplete
+      type: object
+    timezone-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/timezone/getAutocomplete
+      properties:
+        a_objTimezone:
+          description: An array of Timezone autocomplete element response.
+          items:
+            $ref: '#/components/schemas/timezone-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objTimezone
+      type: object
+    user-AutocompleteElement-Response:
+      description: A User AutocompleteElement Response
+      properties:
+        eUserType:
+          $ref: '#/components/schemas/Field-eUserType'
+        sUserName:
+          description: The description of the User in the language of the requester
+          example: Default
+          type: string
+        pkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        bUserIsactive:
+          description: Whether the User is active or not
+          example: true
+          type: boolean
+      required:
+      - bUserIsactive
+      - eUserType
+      - pkiUserID
+      - sUserName
+      type: object
     user-Response:
       description: A User Object
       properties:
@@ -18276,6 +21236,61 @@ components:
       required:
       - a_sEmailAddressFailure
       - a_sEmailAddressSuccess
+      type: object
+    user-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/user_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/user/getAutocomplete
+      type: object
+    user-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/user/getAutocomplete
+      properties:
+        a_objUser:
+          description: An array of User autocomplete element response.
+          items:
+            $ref: '#/components/schemas/user-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objUser
+      type: object
+    usergroup-AutocompleteElement-Response:
+      description: A Usergroup AutocompleteElement Response
+      properties:
+        sUsergroupNameX:
+          description: The Name of the Usergroup in the language of the requester
+          example: Administration
+          type: string
+        pkiUsergroupID:
+          description: The unique ID of the Usergroup
+          example: 89
+          minimum: 0
+          type: integer
+        bUsergroupIsactive:
+          description: Whether the Usergroup is active or not
+          example: true
+          type: boolean
+      required:
+      - bUsergroupIsactive
+      - pkiUsergroupID
+      - sUsergroupNameX
+      type: object
+    usergroup-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/usergroup_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/usergroup/getAutocomplete
+      type: object
+    usergroup-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/usergroup/getAutocomplete
+      properties:
+        a_objUsergroup:
+          description: An array of Usergroup autocomplete element response.
+          items:
+            $ref: '#/components/schemas/usergroup-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objUsergroup
       type: object
     webhook-ListElement:
       description: A Webhook List Element
@@ -18522,6 +21537,10 @@ components:
       - $ref: '#/components/schemas/webhook-ResponseCompound'
       description: "Payload for GET /1/object/webhook/{pkiWebhookID}"
       type: object
+    webhook-test-v1-Request:
+      description: "Request for POST /1/object/webhook/{pkiWebhookID}/test\n\nIntentionally\
+        \ empty for future-proofing"
+      type: object
     webhook-test-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
@@ -18607,6 +21626,65 @@ components:
           type: boolean
       required:
       - bDisabled
+      type: object
+    Custom_EzmaxinvoicingEzsigndocument_Response_allOf:
+      properties:
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+        sName:
+          type: string
+        sEzsignfolderDescription:
+          description: The description of the Ezsignfolder
+          example: Test eZsign Folder
+          type: string
+        sEzsigndocumentName:
+          description: The name of the document that will be presented to Ezsignfoldersignerassociations
+          example: "Contract #123"
+          type: string
+        bEzsignfolderAllowed:
+          type: boolean
+      required:
+      - bEzsignfolderAllowed
+      - fkiEzsignfolderID
+      - sEzsigndocumentName
+      - sEzsignfolderDescription
+      - sName
+      type: object
+    Custom_EzmaxinvoicingEzsignfolder_Response_allOf:
+      properties:
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+        sEzsignfolderDescription:
+          description: The description of the Ezsignfolder
+          example: Test eZsign Folder
+          type: string
+        bEzsigntsarequirementBillable:
+          description: Whether the TSA requirement is billable or not
+          example: true
+          type: boolean
+        bEzsignfolderMfaused:
+          description: Whether the MFA was used or not for the Ezsignfolder
+          example: true
+          type: boolean
+        bEzsignfolderPaymentused:
+          description: Whether there was a signature is of type payment
+          example: true
+          type: boolean
+        bEzsignfolderAllowed:
+          type: boolean
+      required:
+      - bEzsignfolderAllowed
+      - bEzsignfolderMfaused
+      - bEzsignfolderPaymentused
+      - bEzsigntsarequirementBillable
+      - fkiEzsignfolderID
+      - sEzsignfolderDescription
       type: object
     Custom_EzsignfoldersignerassociationActionableElement_Response_allOf:
       properties:
@@ -18741,6 +21819,13 @@ components:
       required:
       - mPayload
       type: object
+    billingentityinternal_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/billingentityinternal-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     branding_ResponseCompound_allOf:
       properties:
         sBrandingLogourl:
@@ -18752,6 +21837,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/branding-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    branding_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/branding-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -18809,12 +21901,123 @@ components:
       - a_objPhone
       - a_objWebsite
       type: object
+    department_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/department-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     department_getMembers_v1_Response_allOf:
       properties:
         mPayload:
           $ref: '#/components/schemas/department-getMembers-v1-Response-mPayload'
       required:
       - mPayload
+      type: object
+    ezmaxinvoicing_ResponseCompound_allOf:
+      properties:
+        objEzmaxinvoicingcontract:
+          $ref: '#/components/schemas/ezmaxinvoicingcontract-ResponseCompound'
+        objEzmaxpricing:
+          $ref: '#/components/schemas/Custom-Ezmaxpricing-Response'
+        a_objEzmaxinvoicingsummaryglobal:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingsummaryglobal-ResponseCompound'
+          type: array
+        a_objEzmaxinvoicingsummaryexternal:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingsummaryexternal-ResponseCompound'
+          type: array
+        a_objEzmaxinvoicingsummaryinternal:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingsummaryinternal-ResponseCompound'
+          type: array
+        a_objEzmaxinvoicingagent:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingagent-ResponseCompound'
+          type: array
+        a_objEzmaxinvoicinguser:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicinguser-ResponseCompound'
+          type: array
+        a_objEzmaxinvoicingezsignfolder:
+          items:
+            $ref: '#/components/schemas/Custom-EzmaxinvoicingEzsignfolder-Response'
+          type: array
+        a_objEzmaxinvoicingezsigndocument:
+          items:
+            $ref: '#/components/schemas/Custom-EzmaxinvoicingEzsigndocument-Response'
+          type: array
+      required:
+      - a_objEzmaxinvoicingagent
+      - a_objEzmaxinvoicingezsigndocument
+      - a_objEzmaxinvoicingezsignfolder
+      - a_objEzmaxinvoicingsummaryexternal
+      - a_objEzmaxinvoicingsummaryglobal
+      - a_objEzmaxinvoicingsummaryinternal
+      - a_objEzmaxinvoicinguser
+      - objEzmaxinvoicingcontract
+      - objEzmaxpricing
+      type: object
+    ezmaxinvoicing_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezmaxinvoicing-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezmaxinvoicing_getObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezmaxinvoicing-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezmaxinvoicing_getProvisional_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezmaxinvoicing-getProvisional-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezmaxinvoicingagent_ResponseCompound_allOf:
+      properties:
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+      required:
+      - objContactName
+      type: object
+    ezmaxinvoicingcommission_ResponseCompound_allOf:
+      properties:
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+      type: object
+    ezmaxinvoicingsummaryexternal_ResponseCompound_allOf:
+      properties:
+        a_objEzmaxinvoicingsummaryexternaldetail:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingsummaryexternaldetail-ResponseCompound'
+          type: array
+      required:
+      - a_objEzmaxinvoicingsummaryexternaldetail
+      type: object
+    ezmaxinvoicingsummaryglobal_ResponseCompound_allOf:
+      properties:
+        a_objEzmaxinvoicingcommission:
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingcommission-ResponseCompound'
+          type: array
+      type: object
+    ezmaxinvoicingsummaryinternal_ResponseCompound_allOf:
+      properties:
+        a_objEzmaxinvoicingsummaryinternaldetail:
+          description: ""
+          items:
+            $ref: '#/components/schemas/ezmaxinvoicingsummaryinternaldetail-ResponseCompound'
+          type: array
+      required:
+      - a_objEzmaxinvoicingsummaryinternaldetail
       type: object
     ezsign_suggestSigners_v1_Response_allOf:
       properties:
@@ -19213,6 +22416,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsignfoldertype_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldertype-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsignfoldertype_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -19379,6 +22589,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigntemplate-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigntemplate_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplate-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -19549,6 +22766,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatepackage_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackage-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatepackage_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -19704,6 +22928,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntsarequirement_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntsarequirement-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     franchisereferalincome_RequestCompound_allOf:
       properties:
         objAddress:
@@ -19743,10 +22974,45 @@ components:
       required:
       - mPayload
       type: object
+    secretquestion_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/secretquestion-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    taxassignment_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/taxassignment-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    timezone_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/timezone-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     user_createEzsignuser_v1_Response_allOf:
       properties:
         mPayload:
           $ref: '#/components/schemas/user-createEzsignuser-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    user_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/user-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    usergroup_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/usergroup-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -19888,6 +23154,7 @@ x-tagGroups:
   - Object_Billingentityinternal
   - Object_Branding
   - Object_Department
+  - Object_Ezmaxinvoicing
   - Object_Ezsignbulksend
   - Object_Ezsignbulksenddocumentmapping
   - Object_Ezsignbulksendsignermapping
