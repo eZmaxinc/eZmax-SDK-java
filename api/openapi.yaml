@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.11
+  version: 1.1.12
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,7 +68,7 @@ tags:
     * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
     * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
     \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.11] - 2022-09-\n\n#### Added\n\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
+    \n## 1.1.X Releases\n### [1.1.12] - 2022-10-26  \n\n#### Added\n\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
     - GET /1/object/ezmaxinvoicing/getProvisional\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\n\
     - GET /2/object/billingentityinternal/getAutocomplete/{sSelector}\n- GET /2/object/branding/getAutocomplete/{sSelector}\n\
     - GET /2/object/department/getAutocomplete/{sSelector}\n- GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
@@ -96,10 +96,10 @@ tags:
     - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
     \n#### Fixed\n- (CSharpSDK) We now use the correct encoding of the fingerprint\
     \ for signing requests\n- (CSharkSDK) We can now use variable properties object\
-    \ i.e: /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\n### [1.1.10]\
-    \ - 2022-08-23\n\n#### Added\n- DELETE /1/object/webhook/{pkiWebhookID}\n- GET\
-    \ /1/object/branding/{pkiBrandingID}\n- GET /1/object/branding/getList\n- GET\
-    \ /1/object/department/getAutocomplete/{sSelector}\n- GET /1/object/department/getMembers\n\
+    \ i.e: /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\n### [1.1.11]\
+    \ - Skipped\n\n### [1.1.10] - 2022-08-23\n\n#### Added\n- DELETE /1/object/webhook/{pkiWebhookID}\n\
+    - GET /1/object/branding/{pkiBrandingID}\n- GET /1/object/branding/getList\n-\
+    \ GET /1/object/department/getAutocomplete/{sSelector}\n- GET /1/object/department/getMembers\n\
     - GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\n- GET /1/object/webhook/{pkiWebhookID}\n\
     - GET /1/object/webhook/{pkiWebhookID}/getHistory\n- GET /1/object/webhook/getList\n\
     - POST /1/object/branding\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\n\
@@ -17489,9 +17489,9 @@ components:
           $ref: '#/components/schemas/Field-eEzsignsignatureTooltipposition'
         eEzsignsignatureFont:
           $ref: '#/components/schemas/Field-eEzsignsignatureFont'
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
+        fkiEzsignfoldersignerassociationIDValidation:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
           minimum: 0
           type: integer
         bEzsignsignatureRequired:
