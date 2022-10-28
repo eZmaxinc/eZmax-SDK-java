@@ -23,7 +23,7 @@ An Ezsignsignature Object
 |**sEzsignsignatureAttachmentdescription** | **String** | The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments |  [optional] |
 |**eEzsignsignatureAttachmentnamesource** | **FieldEEzsignsignatureAttachmentnamesource** |  |  [optional] |
 |**bEzsignsignatureRequired** | **Boolean** | Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments. |  [optional] |
-|**fkiUserID** | **Integer** | The unique ID of the User |  [optional] |
+|**fkiEzsignfoldersignerassociationIDValidation** | **Integer** | The unique ID of the Ezsignfoldersignerassociation |  [optional] |
 
 
 

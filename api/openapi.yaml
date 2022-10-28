@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.12
+  version: 1.1.13
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -49,221 +49,260 @@ servers:
 security:
 - Authorization: []
 tags:
-- description: "All notable changes to this project will be documented in this section.\n\
-    \nVersion numbers are using **MAJOR**.**MINOR**.**PATCH** numbering format for\
-    \ example 1.2.23\n\n**MAJOR** will be incremented only if there is an incompatible\
-    \ breaking change. New distinct documentation and specification files will be\
-    \ published.\n\n**MINOR** will be incremented only if a function becomes deprecated\
-    \ or deleted (after being deprecated in a previous version)\n\n**PATCH** will\
-    \ be incremented everytime changes and additions are released.\n\nYou can always\
-    \ safely update to newer **PATCH** version if you stay in the same **MAJOR**.**MINOR**\
-    \ prefix.\n\nYou can safely update to a newer **MINOR** version as long as you\
-    \ don't jump more than a version at a time. For example, let say there is a function\
-    \ named \"foo\" in version 1.0.23. We might deprecate this function in version\
-    \ 1.1.1 but you can continue using it. We might decide to remove it in version\
-    \ 1.2.1 so then you would have a breaking change if you try to update to version\
-    \ 1.2.1 without having fixed the issue with your deprecated \"foo\" function.\n\
-    \nFor each version, there will be the list of changes:\n* **Early Adopters** for\
-    \ new features not officially considered final and ready for production use.\n\
-    * **Added** for new features.\n* **Changed** for changes in existing functionality.\n\
-    * **Deprecated** for soon-to-be removed features.\n* **Removed** for now removed\
-    \ features.\n* **Fixed** for any bug fixes.\n* **Security** in case of vulnerabilities.\n\
-    \n## 1.1.X Releases\n### [1.1.12] - 2022-10-26  \n\n#### Added\n\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezmaxinvoicing/getProvisional\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\n\
-    - GET /2/object/billingentityinternal/getAutocomplete/{sSelector}\n- GET /2/object/branding/getAutocomplete/{sSelector}\n\
-    - GET /2/object/department/getAutocomplete/{sSelector}\n- GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n\
-    - GET /2/object/ezsignfoldertype/getAutocomplete/{sSelector}\n- GET /2/object/ezsigntemplate/getAutocomplete/{sSelector}\n\
-    - GET /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\n- GET /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}\n\
-    - GET /2/object/secretquestion/getAutocomplete/{sSelector}\n- GET /2/object/taxassignment/getAutocomplete/{sSelector}\n\
-    - GET /2/object/timezone/getAutocomplete/{sSelector}\n- GET /2/object/user/getAutocomplete/{sSelector}\n\
-    - GET /2/object/usergroup/getAutocomplete/{sSelector}\n- Accepted value 'Attachments'\
-    \ for field eEzsigntemplatesignatureType\n- Added property eEzsignfoldertypePrivacylevel\
-    \ in object ezsignbulksend-Response\n- Added properties bEzsignfoldertypeIncludeproofsigner\
-    \ and bEzsignfoldertypeIncludeproofuser in object ezsignfoldertype-Request and\
-    \ ezsignfoldertype-Response\n- Added properties bEzsigntemplatesignatureRequired,\
-    \ eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription,\
-    \ iEzsigntemplatesignatureValidationstep in object ezsigntemplatesignature-Response\
-    \ and ezsigntemplatesignature-Response\n- Added selector ClonableUsers in /1/object/user/getAutocomplete/{sSelector}\n\
-    - New 422 error code UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED\n- New 429 error\
-    \ codes TOOMANYREQUESTS and TOOMANYREQUESTS_THIRDPARTY\n- Rename sImageUrl to\
-    \ sComputedImageurl in object ezsigntemplatedocumentpage-Response and ezsignpage-Response\n\
-    \n#### Deprecated\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\n\
-    - GET /1/object/branding/getAutocomplete/{sSelector}\n- GET /1/object/department/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezsigntemplate/getAutocomplete/{sSelector}\n- GET /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}\n- GET /1/object/secretquestion/getAutocomplete/{sSelector}\n\
-    - GET /1/object/taxassignment/getAutocomplete/{sSelector}\n- GET /1/object/timezone/getAutocomplete/{sSelector}\n\
-    - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
-    \n#### Fixed\n- (CSharpSDK) We now use the correct encoding of the fingerprint\
-    \ for signing requests\n- (CSharkSDK) We can now use variable properties object\
-    \ i.e: /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\n### [1.1.11]\
-    \ - Skipped\n\n### [1.1.10] - 2022-08-23\n\n#### Added\n- DELETE /1/object/webhook/{pkiWebhookID}\n\
-    - GET /1/object/branding/{pkiBrandingID}\n- GET /1/object/branding/getList\n-\
-    \ GET /1/object/department/getAutocomplete/{sSelector}\n- GET /1/object/department/getMembers\n\
-    - GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\n- GET /1/object/webhook/{pkiWebhookID}\n\
-    - GET /1/object/webhook/{pkiWebhookID}/getHistory\n- GET /1/object/webhook/getList\n\
-    - POST /1/object/branding\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\n\
-    - POST /1/object/ezsignfoldertype\n- POST /1/object/webhook\n- POST /1/object/webhook/{pkiWebhookID}/test\n\
-    - POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send\n- PUT /1/object/branding/{pkiBrandingID}\n\
-    - PUT /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\n- PUT /1/object/webhook/{pkiWebhookID}\n\
-    - New supported eEzsignsignatureType: Attachments\n- Object Custom-EzsignfoldersignerassociationActionableElement-Response\n\
-    - Properties fkiUserID, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource,\
+- description: "All notable changes to this project will be documented in this section.\r\
+    \n\r\nVersion numbers are using **MAJOR**.**MINOR**.**PATCH** numbering format\
+    \ for example 1.2.23\r\n\r\n**MAJOR** will be incremented only if there is an\
+    \ incompatible breaking change. New distinct documentation and specification files\
+    \ will be published.\r\n\r\n**MINOR** will be incremented only if a function becomes\
+    \ deprecated or deleted (after being deprecated in a previous version)\r\n\r\n\
+    **PATCH** will be incremented everytime changes and additions are released.\r\n\
+    \r\nYou can always safely update to newer **PATCH** version if you stay in the\
+    \ same **MAJOR**.**MINOR** prefix.\r\n\r\nYou can safely update to a newer **MINOR**\
+    \ version as long as you don't jump more than a version at a time. For example,\
+    \ let say there is a function named \"foo\" in version 1.0.23. We might deprecate\
+    \ this function in version 1.1.1 but you can continue using it. We might decide\
+    \ to remove it in version 1.2.1 so then you would have a breaking change if you\
+    \ try to update to version 1.2.1 without having fixed the issue with your deprecated\
+    \ \"foo\" function.\r\n\r\nFor each version, there will be the list of changes:\r\
+    \n* **Early Adopters** for new features not officially considered final and ready\
+    \ for production use.\r\n* **Added** for new features.\r\n* **Changed** for changes\
+    \ in existing functionality.\r\n* **Deprecated** for soon-to-be removed features.\r\
+    \n* **Removed** for now removed features.\r\n* **Fixed** for any bug fixes.\r\n\
+    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.13]\
+    \ - 2022-10-28\r\n\r\n#### Added\r\n\r\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/ezmaxinvoicing/getProvisional\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
+    \n- GET /2/object/billingentityinternal/getAutocomplete/{sSelector}\r\n- GET /2/object/branding/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/department/getAutocomplete/{sSelector}\r\n- GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/ezsignfoldertype/getAutocomplete/{sSelector}\r\n- GET /2/object/ezsigntemplate/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\r\n- GET /2/object/ezsigntsarequirement/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/secretquestion/getAutocomplete/{sSelector}\r\n- GET /2/object/taxassignment/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/timezone/getAutocomplete/{sSelector}\r\n- GET /2/object/user/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/usergroup/getAutocomplete/{sSelector}\r\n- GET /2/object/branding/{pkiBrandingID}\r\
+    \n- GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\n- GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}\r\
+    \n- GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
+    \n- GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\r\
+    \n- GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}\r\
+    \n- GET /2/object/ezsigndocument/{pkiEzsigndocumentID}\r\n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}\r\
+    \n- GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\r\
+    \n- GET /2/object/ezsignsignature/{pkiEzsignsignatureID}\r\n- GET /2/object/ezsigntemplate/{pkiEzsigntemplateID}\r\
+    \n- GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\r\n- GET\
+    \ /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\r\
+    \n- GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\r\n- GET\
+    \ /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\r\
+    \n- GET /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\r\
+    \n- GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\r\
+    \n- GET /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\n-\
+    \ GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\r\n- GET /2/object/webhook/{pkiWebhookID}\r\
+    \n- Accepted value 'Attachments' for field eEzsigntemplatesignatureType\r\n- Added\
+    \ property eEzsignfoldertypePrivacylevel in object ezsignbulksend-Response\r\n\
+    - Added properties bEzsignfoldertypeIncludeproofsigner and bEzsignfoldertypeIncludeproofuser\
+    \ in object ezsignfoldertype-Request and ezsignfoldertype-Response\r\n- Added\
+    \ properties bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource,\
+    \ sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep\
+    \ in object ezsigntemplatesignature-Response and ezsigntemplatesignature-Response\r\
+    \n- Added selector ClonableUsers in /1/object/user/getAutocomplete/{sSelector}\r\
+    \n- New 422 error code UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED\r\n- New 429\
+    \ error codes TOOMANYREQUESTS and TOOMANYREQUESTS_THIRDPARTY\r\n- Rename sImageUrl\
+    \ to sComputedImageurl in object ezsigntemplatedocumentpage-Response and ezsignpage-Response\r\
+    \n\r\n#### Deprecated\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/branding/getAutocomplete/{sSelector}\r\n- GET /1/object/department/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/ezsigntemplate/getAutocomplete/{sSelector}\r\n- GET /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}\r\n- GET /1/object/secretquestion/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/taxassignment/getAutocomplete/{sSelector}\r\n- GET /1/object/timezone/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/user/getAutocomplete/{sSelector}\r\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/branding/{pkiBrandingID}\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
+    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
+    \n- GET /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\r\
+    \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}\r\
+    \n- GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\r\
+    \n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}\r\n- GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\r\n- GET\
+    \ /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\r\
+    \n- GET /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\r\n- GET\
+    \ /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\r\
+    \n- GET /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\r\
+    \n- GET /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\r\
+    \n- GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\n-\
+    \ GET /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\r\n- GET /1/object/webhook/{pkiWebhookID}\r\
+    \n\r\n#### Fixed\r\n- (CSharpSDK) We now use the correct encoding of the fingerprint\
+    \ for signing requests\r\n- (CSharkSDK) We can now use variable properties object\
+    \ i.e: /1/object/notificationtest/{pkiNotificationtestID}/getElements\r\n\r\n\
+    ### [1.1.12] - Skipped\r\n\r\n### [1.1.11] - Skipped\r\n\r\n### [1.1.10] - 2022-08-23\r\
+    \n\r\n#### Added\r\n- DELETE /1/object/webhook/{pkiWebhookID}\r\n- GET /1/object/branding/{pkiBrandingID}\r\
+    \n- GET /1/object/branding/getList\r\n- GET /1/object/department/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/department/getMembers\r\n- GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\
+    \n- GET /1/object/webhook/{pkiWebhookID}\r\n- GET /1/object/webhook/{pkiWebhookID}/getHistory\r\
+    \n- GET /1/object/webhook/getList\r\n- POST /1/object/branding\r\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\r\
+    \n- POST /1/object/ezsignfoldertype\r\n- POST /1/object/webhook\r\n- POST /1/object/webhook/{pkiWebhookID}/test\r\
+    \n- POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send\r\n- PUT /1/object/branding/{pkiBrandingID}\r\
+    \n- PUT /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- PUT /1/object/webhook/{pkiWebhookID}\r\
+    \n- New supported eEzsignsignatureType: Attachments\r\n- Object Custom-EzsignfoldersignerassociationActionableElement-Response\r\
+    \n- Properties fkiUserID, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource,\
     \ sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep in object\
-    \ ezsignsignature-Request\n- Properties fkiUserID, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource,\
-    \ sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep in object\
-    \ ezsignsignature-Response\n- Properties objNotificationsubsectionName and sNotificationsectionNameX\
-    \ in object notificationsubsection-Response\n- Properties objNotificationtestName\
-    \ and sNotificationtestNameX in object notificationtest-Response\n- Properties\
-    \ sBrandingDescriptionX, sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX,\
-    \ sUsergroupNameX and sUsergroupNameXRestricted in object ezsignfoldertype-Response\n\
-    - Property bActive in getAutocomplete endpoints\n- Property dtEzsignformCompleted\
-    \ in object ezsigndocument-Response\n- Property tEzsignfoldersignerassociationMessage\
-    \ in object ezsignfoldersignerassociation-Request (Optional)\n- Property tEzsignfoldersignerassociationMessage\
-    \ in object ezsignfoldersignerassociation-Response (Mandatory)\n- Query parameter\
-    \ eFilterActive in getAutocomplete endpoints\n\n### Changed\n- The return object\
-    \ for route GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\
-    \ is now of type Custom-EzsignfoldersignerassociationActionableElement-Response\n\
-    \n#### Deprecated\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send\n\n\
-    ### [1.1.9] - 2022-06-20\n\n#### Changed\n- Property dtEzsigndocumentFirstsend\
-    \ in Ezsigndocument is no longer required\n- Property dtEzsigndocumentLastsend\
-    \ in Ezsigndocument is no longer required\n- Property dtEzsignfolderClose in Ezsignfolder\
-    \ is no longer required\n\n### [1.1.8] - 2022-06-20\n\n#### Added\n- GET /1/object/activesession/getCurrent\
-    \ fkiTimezoneID, eUserEzsignsendreminderfrequency, iUserInterfacecolor, bUserInterfacedark\
-    \ and iUserListresult\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\n\
-    - GET /1/object/branding/getAutocomplete/{sSelector}\n- GET /1/object/notificationtest/{pkiNotificationtestID}/getElements\n\
-    - GET /1/object/taxassignment/getAutocomplete/{sSelector}\n- GET /1/object/timezone/getAutocomplete/{sSelector}\n\
-    - GET /1/object/user/getAutocomplete/{sSelector}\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\n\
-    - Warning Code MUSTVERIFY added to documentation\n \n#### Changed\n- Property\
-    \ dtEzsignfolderScheduledarchive in Ezsignfolder is no longer required\n- Property\
-    \ dtEzsignfolderScheduleddispose in Ezsignfolder is no longer required\n\n###\
-    \ [1.1.7] - 2022-05-17\n\n#### Added\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
-    - DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\n\
-    - DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}\n- DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\n\
-    - DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- DELETE\
-    \ /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\n\
-    - DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\n\
-    - DELETE /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n- DELETE\
-    \ /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- GET /1/module/ezsign/suggestSigners\n\
-    - GET /1/module/ezsign/suggestTemplates\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate\n\
-    - GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\n\
-    - GET /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\n\
-    - GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors\n\
-    - GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures eEzsignsignatureFont,\
-    \ tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\n\
-    - GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector} sValue\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}\
-    \ eEzsignsignatureFont, tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\n\
-    - GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}\n- GET /1/object/ezsigntemplate/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezsigntemplate/getList\n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\n\
-    - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions\n\
-    - GET /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\n\
-    - GET /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- GET /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\n\
-    - GET /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - GET /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\n\
-    - GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n- GET\
-    \ /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- GET /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}\n\
-    - GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests\n\
-    - GET /1/object/secretquestion/getAutocomplete/{sSelector}\n- PATCH /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\n\
-    - POST /1/object/ezsignbulksend\n- POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission\n\
-    - POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder\n- POST /1/object/ezsignbulksenddocumentmapping\n\
-    - POST /1/object/ezsignbulksendsignermapping\n- POST /2/object/ezsigndocument\
-    \ eEzsigndocumentSource=Ezsigntemplate and fkiEzsigntemplateID\n- POST /1/object/ezsigndocument\
-    \ eEzsigndocumentForm and fkiEzsignfoldersignerassociationID\n- POST\_/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend\n\
-    - POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\n\
-    - POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder\n- POST /1/object/ezsignsignature\
-    \ eEzsignsignatureFont, tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\n\
-    - POST /2/object/ezsignsignature eEzsignsignatureFont, tEzsignsignatureTooltip\
-    \ and eEzsignsignatureTooltipposition\n- POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign\n\
-    - POST /1/object/ezsigntemplate\n- POST /1/object/ezsigntemplatedocument\n- POST\
-    \ /1/object/ezsigntemplateformfieldgroup\n- POST /1/object/ezsigntemplatepackage\n\
-    - POST /1/object/ezsigntemplatepackagemembership\n- POST /1/object/ezsigntemplatepackagesigner\n\
-    - POST /1/object/ezsigntemplatepackagesignermembership\n- POST /1/object/ezsigntemplatesignature\n\
-    - POST /1/object/ezsigntemplatesigner\n- PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures eEzsignsignatureFont,\
-    \ tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\n- PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - PUT /1/object/ezsignsignature/{pkiEzsignsignatureID} eEzsignsignatureFont, tEzsignsignatureTooltip\
-    \ and eEzsignsignatureTooltipposition\n- PUT /1/object/ezsigntemplate\n- PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\n\
-    - PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups\n\
-    - PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\n\
-    - PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\n\
-    - PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\n\
-    - PUT /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - PUT /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n- PUT\
-    \ /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- Error Code UNPROCESSABLEENTITY_DATA_MISSING\
-    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_FORM\n- Error Code\
-    \ UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE\n\n#### Deprecated\n- /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\
-    \ mValue\n\n### [1.1.6] - 2022-03-04\n\n#### Added\n- DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\n\
-    - GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\n- GET\
-    \ /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}\n\
-    - POST /1/object/ezsignformfieldgroup\n- POST /2/object/apikey\n- POST /2/object/ezsigndocument\n\
-    - POST /2/object/ezsignfolder\n- POST /2/object/ezsignfoldersignerassociation\n\
-    - POST /2/object/ezsignsignature\n- POST /2/object/franchisereferalincome\n- PUT\
-    \ /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups\n\
-    \n#### Changed\n- Audit in return response has been hierarchized\n\n#### Deprecated\n\
-    - POST /1/object/apikey\n- POST /1/object/ezsigndocument\n- POST /1/object/ezsignfolder\n\
-    - POST /1/object/ezsignfoldersignerassociation\n- POST /1/object/ezsignsignature\n\
-    - POST /1/object/franchisereferalincome\n\n### [1.1.4] - 2022-02-24\n\n#### Added\n\
-    - GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}\
-    \ Added status\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
+    \ ezsignsignature-Request\r\n- Properties fkiUserID, bEzsignsignatureRequired,\
+    \ eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription,\
+    \ iEzsignsignatureValidationstep in object ezsignsignature-Response\r\n- Properties\
+    \ objNotificationsubsectionName and sNotificationsectionNameX in object notificationsubsection-Response\r\
+    \n- Properties objNotificationtestName and sNotificationtestNameX in object notificationtest-Response\r\
+    \n- Properties sBrandingDescriptionX, sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX,\
+    \ sUsergroupNameX and sUsergroupNameXRestricted in object ezsignfoldertype-Response\r\
+    \n- Property bActive in getAutocomplete endpoints\r\n- Property dtEzsignformCompleted\
+    \ in object ezsigndocument-Response\r\n- Property tEzsignfoldersignerassociationMessage\
+    \ in object ezsignfoldersignerassociation-Request (Optional)\r\n- Property tEzsignfoldersignerassociationMessage\
+    \ in object ezsignfoldersignerassociation-Response (Mandatory)\r\n- Query parameter\
+    \ eFilterActive in getAutocomplete endpoints\r\n\r\n### Changed\r\n- The return\
+    \ object for route GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\
+    \ is now of type Custom-EzsignfoldersignerassociationActionableElement-Response\r\
+    \n\r\n#### Deprecated\r\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send\r\
+    \n\r\n### [1.1.9] - 2022-06-20\r\n\r\n#### Changed\r\n- Property dtEzsigndocumentFirstsend\
+    \ in Ezsigndocument is no longer required\r\n- Property dtEzsigndocumentLastsend\
+    \ in Ezsigndocument is no longer required\r\n- Property dtEzsignfolderClose in\
+    \ Ezsignfolder is no longer required\r\n\r\n### [1.1.8] - 2022-06-20\r\n\r\n####\
+    \ Added\r\n- GET /1/object/activesession/getCurrent fkiTimezoneID, eUserEzsignsendreminderfrequency,\
+    \ iUserInterfacecolor, bUserInterfacedark and iUserListresult\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/branding/getAutocomplete/{sSelector}\r\n- GET /1/object/notificationtest/{pkiNotificationtestID}/getElements\r\
+    \n- GET /1/object/taxassignment/getAutocomplete/{sSelector}\r\n- GET /1/object/timezone/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/user/getAutocomplete/{sSelector}\r\n- GET /1/object/usergroup/getAutocomplete/{sSelector}\r\
+    \n- Warning Code MUSTVERIFY added to documentation\r\n \r\n#### Changed\r\n- Property\
+    \ dtEzsignfolderScheduledarchive in Ezsignfolder is no longer required\r\n- Property\
+    \ dtEzsignfolderScheduleddispose in Ezsignfolder is no longer required\r\n\r\n\
+    ### [1.1.7] - 2022-05-17\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\
+    \n- DELETE /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
+    \n- DELETE /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\r\
+    \n- DELETE /1/object/ezsigntemplate/{pkiEzsigntemplateID}\r\n- DELETE /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\r\
+    \n- DELETE /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\r\n- DELETE\
+    \ /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\r\
+    \n- DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\r\
+    \n- DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\r\
+    \n- DELETE /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\n\
+    - DELETE /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\r\n- GET /1/module/ezsign/suggestSigners\r\
+    \n- GET /1/module/ezsign/suggestTemplates\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate\r\
+    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData\r\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
+    \n- GET /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}\r\
+    \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors\r\
+    \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures eEzsignsignatureFont,\
+    \ tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements\r\
+    \n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector} sValue\r\n- GET\
+    \ /1/object/ezsignsignature/{pkiEzsignsignatureID} eEzsignsignatureFont, tEzsignsignatureTooltip\
+    \ and eEzsignsignatureTooltipposition\r\n- GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}\r\
+    \n- GET /1/object/ezsigntemplate/getAutocomplete/{sSelector}\r\n- GET /1/object/ezsigntemplate/getList\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\r\n- GET\
+    \ /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures\r\
+    \n- GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions\r\
+    \n- GET /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\r\
+    \n- GET /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\r\n- GET\
+    \ /1/object/ezsigntemplatepackage/getAutocomplete/{sSelector}\r\n- GET /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\r\
+    \n- GET /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\r\
+    \n- GET /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}\r\
+    \n- GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\n-\
+    \ GET /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\r\n- GET /1/object/ezsigntsarequirement/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests\r\
+    \n- GET /1/object/secretquestion/getAutocomplete/{sSelector}\r\n- PATCH /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\r\
+    \n- POST /1/object/ezsignbulksend\r\n- POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission\r\
+    \n- POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder\r\n- POST /1/object/ezsignbulksenddocumentmapping\r\
+    \n- POST /1/object/ezsignbulksendsignermapping\r\n- POST /2/object/ezsigndocument\
+    \ eEzsigndocumentSource=Ezsigntemplate and fkiEzsigntemplateID\r\n- POST /1/object/ezsigndocument\
+    \ eEzsigndocumentForm and fkiEzsignfoldersignerassociationID\r\n- POST\_/1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend\r\
+    \n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive\r\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage\r\
+    \n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder\r\n- POST /1/object/ezsignsignature\
+    \ eEzsignsignatureFont, tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\r\
+    \n- POST /2/object/ezsignsignature eEzsignsignatureFont, tEzsignsignatureTooltip\
+    \ and eEzsignsignatureTooltipposition\r\n- POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign\r\
+    \n- POST /1/object/ezsigntemplate\r\n- POST /1/object/ezsigntemplatedocument\r\
+    \n- POST /1/object/ezsigntemplateformfieldgroup\r\n- POST /1/object/ezsigntemplatepackage\r\
+    \n- POST /1/object/ezsigntemplatepackagemembership\r\n- POST /1/object/ezsigntemplatepackagesigner\r\
+    \n- POST /1/object/ezsigntemplatepackagesignermembership\r\n- POST /1/object/ezsigntemplatesignature\r\
+    \n- POST /1/object/ezsigntemplatesigner\r\n- PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\
+    \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures eEzsignsignatureFont,\
+    \ tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\r\n- PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- PUT /1/object/ezsignsignature/{pkiEzsignsignatureID} eEzsignsignatureFont,\
+    \ tEzsignsignatureTooltip and eEzsignsignatureTooltipposition\r\n- PUT /1/object/ezsigntemplate\r\
+    \n- PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}\r\n- PUT\
+    \ /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups\r\
+    \n- PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\r\
+    \n- PUT /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}\r\
+    \n- PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\r\n- PUT\
+    \ /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\r\
+    \n- PUT /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\r\
+    \n- PUT /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\r\n-\
+    \ PUT /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\r\n- Error Code\
+    \ UNPROCESSABLEENTITY_DATA_MISSING added to documentation\r\n- Error Code UNPROCESSABLEENTITY_PDF_FORM\r\
+    \n- Error Code UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE\r\n\r\n#### Deprecated\r\
+    \n- /1/object/ezsignfoldertype/getAutocomplete/{sSelector} mValue\r\n\r\n### [1.1.6]\
+    \ - 2022-03-04\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\r\
+    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures\r\n\
+    - GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\r\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}\r\
+    \n- POST /1/object/ezsignformfieldgroup\r\n- POST /2/object/apikey\r\n- POST /2/object/ezsigndocument\r\
+    \n- POST /2/object/ezsignfolder\r\n- POST /2/object/ezsignfoldersignerassociation\r\
+    \n- POST /2/object/ezsignsignature\r\n- POST /2/object/franchisereferalincome\r\
+    \n- PUT /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups\r\
+    \n\r\n#### Changed\r\n- Audit in return response has been hierarchized\r\n\r\n\
+    #### Deprecated\r\n- POST /1/object/apikey\r\n- POST /1/object/ezsigndocument\r\
+    \n- POST /1/object/ezsignfolder\r\n- POST /1/object/ezsignfoldersignerassociation\r\
+    \n- POST /1/object/ezsignsignature\r\n- POST /1/object/franchisereferalincome\r\
+    \n\r\n### [1.1.4] - 2022-02-24\r\n\r\n#### Added\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID} Added status\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID} Added fkiBillingentityinternalID,\
     \ dtEzsignfolderDuedate, sBillingentityinternalDescriptionX, sEzsignfoldertypeNameX,\
     \ sEzsigntsarequirementDescriptionX, dtEzsignfolderScheduledarchive and dtEzsignfolderScheduleddestruction\
-    \ properties\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
-    - GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
-    - PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely\n\
-    - POST /1/object/ezsignsignature bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\n\
-    - PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n- PUT\
-    \ /1/object/ezsignfolder/{pkiEzsignfolderID}\n- Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
-    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added\
-    \ to documentation\n- Error Code UNPROCESSABLEENTITY_DATA_VALIDATION added to\
-    \ documentation\n- Error Code UNPROCESSABLEENTITY_DATA_OUTOFBOUND added to documentation\n\
-    \n### [1.1.3] - 2021-12-17\n\n#### Added\n- GET /1/object/ezsignbulksend/getList\n\
-    - GET /1/object/ezsigntemplatepackage/getList\n- POST /1/object/ezsignfoldersignerassociation\
-    \ bEzsignfoldersignerassociationReceivecopy property\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
-    \ added to documentation\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
-    \ to documentation\n\n#### Changed\n- Changed all the OneOf used back to nullable\
-    \ types. When the generators will support 3.1 nullable polymorphism documentation\
-    \ will be improved\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
-    \ was invalid when url parameters contained utf8 special chars\n- (CsharpSDK)\
-    \ OneOf not supported for polymorphism was preventing compilation\n- \n### [1.1.2]\
-    \ - 2021-10-26\n\n#### Added\n- GET /1/object/ezsignfolder/getList eEzsignfoldertypePrivacylevel\
-    \ property\n- POST /1/object/ezsigndocument returns a sTemporaryFileUrl on error\
-    \ 422 if error is recoverable\n- POST /1/object/ezsigndocument sEzsigndocumentUrl\
-    \ property\n- POST /1/object/ezsigndocument eEzsigndocumentSource property now\
-    \ accept \"Url\" as the source\n- POST /1/object/ezsigndocument bEzsigndocumentForcerepair\
-    \ property\n- Support for \"rg\" operator in date fields in sFilter\n- Range operator\
-    \ added to convention section of the documentation\n\n### [1.1.1] - 2021-10-22\n\
-    \n#### Added\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n- GET /1/module/list/listpresentation/{sListName}\n\
-    - POST /1/module/list/listpresentation/{sListName}\n- Variables convention documentation\
-    \ now contains type \"m\" for mixed type\n- POST /1/object/ezsigndocument/ sEzsigndocumentPassword\
-    \ property\n- Support for \"in\" operator for integer fields in sFilter\n- Support\
-    \ for \"in\" operator for enum fields in sFilter\n\n### [1.1.0] - 2021-10-19\n\
-    \n#### Added\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\n\
-    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\n\
-    - GET /1/object/ezsignfolder/getList\n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\n\
-    - GET /1/object/ezsignfoldertype/getList\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\n\
-    - POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\n- Status\
-    \ Code 406 added to documentation\n- Status Code 501 added to documentation\n\
-    - Error Code NOTACCEPTABLE_CONTENT added to documentation\n- Error Code NOTACCEPTABLE_LANGUAGE\
-    \ added to documentation\n- Error Code ERROR_NOTIMPLEMENTED added to documentation\n\
-    - Variables convention added to documentation\n- List Filter convention added\
-    \ to documentation\n\n#### Deprecated\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\n\
-    \ \n#### Removed\n- Support for typescript-angular\n- Support for typescript-aurelia\n\
-    - Support for typescript-fetch\n- Support for typescript-jquery\n- Support for\
-    \ typescript-node\n\n#### Fixed\n- (AxiosSDK) Fingerprint header on GET requests\
-    \ was invalid when url parameters were used\n\n## 1.0.X Releases\nDocumentation\
-    \ and changelog for version 1.0x can be found here: [1.0.x Releases Documentation\
-    \ (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
+    \ properties\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\r\
+    \n- GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}\r\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely\r\
+    \n- POST /1/object/ezsignsignature bEzsignsignatureCustomdate and a_objEzsignsignaturecustomdate\r\
+    \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\r\n\
+    - PUT /1/object/ezsignfolder/{pkiEzsignfolderID}\r\n- Error Code UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
+    \ added to documentation\r\n- Error Code UNPROCESSABLEENTITY_CANNOTMODIFY added\
+    \ to documentation\r\n- Error Code UNPROCESSABLEENTITY_DATA_VALIDATION added to\
+    \ documentation\r\n- Error Code UNPROCESSABLEENTITY_DATA_OUTOFBOUND added to documentation\r\
+    \n\r\n### [1.1.3] - 2021-12-17\r\n\r\n#### Added\r\n- GET /1/object/ezsignbulksend/getList\r\
+    \n- GET /1/object/ezsigntemplatepackage/getList\r\n- POST /1/object/ezsignfoldersignerassociation\
+    \ bEzsignfoldersignerassociationReceivecopy property\r\n- Error Code UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
+    \ added to documentation\r\n- Error Code UNPROCESSABLEENTITY_PDF_REPAIRABLE added\
+    \ to documentation\r\n\r\n#### Changed\r\n- Changed all the OneOf used back to\
+    \ nullable types. When the generators will support 3.1 nullable polymorphism documentation\
+    \ will be improved\r\n\r\n#### Fixed\r\n- (AxiosSDK) Fingerprint header on GET\
+    \ requests was invalid when url parameters contained utf8 special chars\r\n- (CsharpSDK)\
+    \ OneOf not supported for polymorphism was preventing compilation\r\n- \r\n###\
+    \ [1.1.2] - 2021-10-26\r\n\r\n#### Added\r\n- GET /1/object/ezsignfolder/getList\
+    \ eEzsignfoldertypePrivacylevel property\r\n- POST /1/object/ezsigndocument returns\
+    \ a sTemporaryFileUrl on error 422 if error is recoverable\r\n- POST /1/object/ezsigndocument\
+    \ sEzsigndocumentUrl property\r\n- POST /1/object/ezsigndocument eEzsigndocumentSource\
+    \ property now accept \"Url\" as the source\r\n- POST /1/object/ezsigndocument\
+    \ bEzsigndocumentForcerepair property\r\n- Support for \"rg\" operator in date\
+    \ fields in sFilter\r\n- Range operator added to convention section of the documentation\r\
+    \n\r\n### [1.1.1] - 2021-10-22\r\n\r\n#### Added\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\r\
+    \n- GET /1/module/list/listpresentation/{sListName}\r\n- POST /1/module/list/listpresentation/{sListName}\r\
+    \n- Variables convention documentation now contains type \"m\" for mixed type\r\
+    \n- POST /1/object/ezsigndocument/ sEzsigndocumentPassword property\r\n- Support\
+    \ for \"in\" operator for integer fields in sFilter\r\n- Support for \"in\" operator\
+    \ for enum fields in sFilter\r\n\r\n### [1.1.0] - 2021-10-19\r\n\r\n#### Added\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages\r\n- GET\
+    \ /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData\r\
+    \n- GET /1/object/ezsignfolder/getList\r\n- GET /1/object/ezsignfoldertype/getAutocomplete/{sSelector}\r\
+    \n- GET /1/object/ezsignfoldertype/getList\r\n- POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplate\r\
+    \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions\r\n\
+    - Status Code 406 added to documentation\r\n- Status Code 501 added to documentation\r\
+    \n- Error Code NOTACCEPTABLE_CONTENT added to documentation\r\n- Error Code NOTACCEPTABLE_LANGUAGE\
+    \ added to documentation\r\n- Error Code ERROR_NOTIMPLEMENTED added to documentation\r\
+    \n- Variables convention added to documentation\r\n- List Filter convention added\
+    \ to documentation\r\n\r\n#### Deprecated\r\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate\r\
+    \n \r\n#### Removed\r\n- Support for typescript-angular\r\n- Support for typescript-aurelia\r\
+    \n- Support for typescript-fetch\r\n- Support for typescript-jquery\r\n- Support\
+    \ for typescript-node\r\n\r\n#### Fixed\r\n- (AxiosSDK) Fingerprint header on\
+    \ GET requests was invalid when url parameters were used\r\n\r\n## 1.0.X Releases\r\
+    \nDocumentation and changelog for version 1.0x can be found here: [1.0.x Releases\
+    \ Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
   name: General_Changelog
   x-displayName: Changelog
 - description: "## Variables\n\nWe use a custom type base naming convention for variables.\n\
@@ -1016,6 +1055,10 @@ tags:
 - description: Usergroup contains detail about a group of users
   name: Object_Usergroup
   x-displayName: Usergroup
+- description: Versionhistory contains detail about changes in the system and important
+    messages
+  name: Object_Versionhistory
+  x-displayName: Versionhistory
 - description: Webhook contains detail about a webhook
   name: Object_Webhook
   x-displayName: Webhook
@@ -1400,9 +1443,45 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/branding/{pkiBrandingID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Branding_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiBrandingID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiBrandingID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/branding-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Branding
+      tags:
+      - Object_Branding
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/branding/{pkiBrandingID}:
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Branding_GetObject_V1
       parameters:
@@ -1432,8 +1511,7 @@ paths:
       summary: Retrieve an existing Branding
       tags:
       - Object_Branding
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -1845,9 +1923,44 @@ paths:
       - Object_Department
       x-presentations: []
       x-accepts: application/json
+  /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
+    get:
+      description: ""
+      operationId: Ezmaxinvoicing_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzmaxinvoicingID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzmaxinvoicingID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezmaxinvoicing-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezmaxinvoicing
+      tags:
+      - Object_Ezmaxinvoicing
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezmaxinvoicing_GetObject_V1
       parameters:
@@ -1877,8 +1990,7 @@ paths:
       summary: Retrieve an existing Ezmaxinvoicing
       tags:
       - Object_Ezmaxinvoicing
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
     description: ""
@@ -2054,6 +2166,40 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignbulksend/{pkiEzsignbulksendID}:
+    get:
+      description: ""
+      operationId: Ezsignbulksend_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignbulksendID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignbulksendID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksend-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignbulksend
+      tags:
+      - Object_Ezsignbulksend
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}:
     delete:
       description: ""
@@ -2097,6 +2243,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignbulksend_GetObject_V1
       parameters:
@@ -2126,8 +2273,7 @@ paths:
       summary: Retrieve an existing Ezsignbulksend
       tags:
       - Object_Ezsignbulksend
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -2544,6 +2690,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}:
+    get:
+      description: ""
+      operationId: Ezsignbulksenddocumentmapping_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignbulksenddocumentmappingID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignbulksenddocumentmappingID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksenddocumentmapping-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignbulksenddocumentmapping
+      tags:
+      - Object_Ezsignbulksenddocumentmapping
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}:
     delete:
       description: ""
@@ -2579,6 +2758,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignbulksenddocumentmapping_GetObject_V1
       parameters:
@@ -2636,6 +2816,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}:
+    get:
+      description: ""
+      operationId: Ezsignbulksendsignermapping_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignbulksendsignermappingID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignbulksendsignermappingID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksendsignermapping-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignbulksendsignermapping
+      tags:
+      - Object_Ezsignbulksendsignermapping
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}:
     delete:
       description: ""
@@ -2671,6 +2884,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignbulksendsignermapping_GetObject_V1
       parameters:
@@ -2702,9 +2916,44 @@ paths:
       - Object_Ezsignbulksendsignermapping
       x-presentations: []
       x-accepts: application/json
+  /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}:
+    get:
+      description: ""
+      operationId: Ezsignbulksendtransmission_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignbulksendtransmissionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignbulksendtransmissionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignbulksendtransmission-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignbulksendtransmission
+      tags:
+      - Object_Ezsignbulksendtransmission
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}:
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignbulksendtransmission_GetObject_V1
       parameters:
@@ -2734,8 +2983,7 @@ paths:
       summary: Retrieve an existing Ezsignbulksendtransmission
       tags:
       - Object_Ezsignbulksendtransmission
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors:
     get:
@@ -2916,6 +3164,40 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigndocument/{pkiEzsigndocumentID}:
+    get:
+      description: ""
+      operationId: Ezsigndocument_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}:
     delete:
       description: ""
@@ -2959,6 +3241,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       operationId: Ezsigndocument_GetObject_V1
       parameters:
       - explode: false
@@ -2987,8 +3270,7 @@ paths:
       summary: Retrieve an existing Ezsigndocument
       tags:
       - Object_Ezsigndocument
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     patch:
       description: ""
@@ -3782,6 +4064,40 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignfolder/{pkiEzsignfolderID}:
+    get:
+      description: ""
+      operationId: Ezsignfolder_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}:
     delete:
       operationId: Ezsignfolder_DeleteObject_V1
@@ -3824,6 +4140,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       operationId: Ezsignfolder_GetObject_V1
       parameters:
       - explode: false
@@ -3852,8 +4169,7 @@ paths:
       summary: Retrieve an existing Ezsignfolder
       tags:
       - Object_Ezsignfolder
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -4716,6 +5032,40 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
+    get:
+      description: ""
+      operationId: Ezsignfoldersignerassociation_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
     delete:
       description: ""
@@ -4759,6 +5109,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignfoldersignerassociation_GetObject_V1
       parameters:
@@ -4788,8 +5139,7 @@ paths:
       summary: Retrieve an existing Ezsignfoldersignerassociation
       tags:
       - Object_Ezsignfoldersignerassociation
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -4957,9 +5307,44 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}:
+    get:
+      description: ""
+      operationId: Ezsignfoldertype_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldertypeID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldertype-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignfoldertype
+      tags:
+      - Object_Ezsignfoldertype
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}:
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignfoldertype_GetObject_V1
       parameters:
@@ -4989,8 +5374,7 @@ paths:
       summary: Retrieve an existing Ezsignfoldertype
       tags:
       - Object_Ezsignfoldertype
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -5270,6 +5654,40 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}:
+    get:
+      description: ""
+      operationId: Ezsignformfieldgroup_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignformfieldgroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignformfieldgroupID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignformfieldgroup-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignformfieldgroup
+      tags:
+      - Object_Ezsignformfieldgroup
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}:
     delete:
       description: ""
@@ -5313,6 +5731,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       operationId: Ezsignformfieldgroup_GetObject_V1
       parameters:
       - explode: false
@@ -5341,8 +5760,7 @@ paths:
       summary: Retrieve an existing Ezsignformfieldgroup
       tags:
       - Object_Ezsignformfieldgroup
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -5452,6 +5870,40 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsignsignature/{pkiEzsignsignatureID}:
+    get:
+      description: ""
+      operationId: Ezsignsignature_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignature-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignature
+      tags:
+      - Object_Ezsignsignature
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}:
     delete:
       description: ""
@@ -5495,6 +5947,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsignsignature_GetObject_V1
       parameters:
@@ -5524,8 +5977,7 @@ paths:
       summary: Retrieve an existing Ezsignsignature
       tags:
       - Object_Ezsignsignature
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -5648,6 +6100,40 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplate/{pkiEzsigntemplateID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplate_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplateID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplateID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplate-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplate
+      tags:
+      - Object_Ezsigntemplate
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplate/{pkiEzsigntemplateID}:
     delete:
       description: ""
@@ -5684,6 +6170,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplate_GetObject_V1
       parameters:
@@ -5713,8 +6200,7 @@ paths:
       summary: Retrieve an existing Ezsigntemplate
       tags:
       - Object_Ezsigntemplate
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -6013,9 +6499,44 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatedocument_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatedocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatedocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatedocument-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatedocument
+      tags:
+      - Object_Ezsigntemplatedocument
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}:
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatedocument_GetObject_V1
       parameters:
@@ -6045,8 +6566,7 @@ paths:
       summary: Retrieve an existing Ezsigntemplatedocument
       tags:
       - Object_Ezsigntemplatedocument
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     patch:
       description: ""
@@ -6416,6 +6936,40 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplateformfieldgroup_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplateformfieldgroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplateformfieldgroupID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplateformfieldgroup-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplateformfieldgroup
+      tags:
+      - Object_Ezsigntemplateformfieldgroup
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}:
     delete:
       description: ""
@@ -6452,6 +7006,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplateformfieldgroup_GetObject_V1
       parameters:
@@ -6481,8 +7036,7 @@ paths:
       summary: Retrieve an existing Ezsigntemplateformfieldgroup
       tags:
       - Object_Ezsigntemplateformfieldgroup
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -6557,6 +7111,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatepackage_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatepackageID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatepackageID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackage-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatepackage
+      tags:
+      - Object_Ezsigntemplatepackage
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}:
     delete:
       description: ""
@@ -6592,6 +7179,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatepackage_GetObject_V1
       parameters:
@@ -6966,6 +7554,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatepackagemembership_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatepackagemembershipID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatepackagemembershipID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackagemembership-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatepackagemembership
+      tags:
+      - Object_Ezsigntemplatepackagemembership
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}:
     delete:
       description: ""
@@ -7001,6 +7622,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatepackagemembership_GetObject_V1
       parameters:
@@ -7058,6 +7680,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatepackagesigner_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatepackagesignerID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatepackagesignerID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackagesigner-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatepackagesigner
+      tags:
+      - Object_Ezsigntemplatepackagesigner
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}:
     delete:
       description: ""
@@ -7093,6 +7748,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatepackagesigner_GetObject_V1
       parameters:
@@ -7203,6 +7859,39 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatepackagesignermembership_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatepackagesignermembershipID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatepackagesignermembershipID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatepackagesignermembership
+      tags:
+      - Object_Ezsigntemplatepackagesignermembership
+      x-presentations: []
+      x-accepts: application/json
   /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}:
     delete:
       description: ""
@@ -7238,6 +7927,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatepackagesignermembership_GetObject_V1
       parameters:
@@ -7296,6 +7986,40 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}:
+    get:
+      description: ""
+      operationId: Ezsigntemplatesignature_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatesignatureID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatesignatureID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatesignature-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatesignature
+      tags:
+      - Object_Ezsigntemplatesignature
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}:
     delete:
       description: ""
@@ -7332,6 +8056,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatesignature_GetObject_V1
       parameters:
@@ -7361,8 +8086,7 @@ paths:
       summary: Retrieve an existing Ezsigntemplatesignature
       tags:
       - Object_Ezsigntemplatesignature
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -7438,6 +8162,41 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsigntemplatesigner_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplatesignerID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplatesignerID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplatesigner-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigntemplatesigner
+      tags:
+      - Object_Ezsigntemplatesigner
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
   /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}:
     delete:
       description: ""
@@ -7474,6 +8233,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Ezsigntemplatesigner_GetObject_V1
       parameters:
@@ -7503,8 +8263,7 @@ paths:
       summary: Retrieve an existing Ezsigntemplatesigner
       tags:
       - Object_Ezsigntemplatesigner
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -8619,6 +9378,39 @@ paths:
       - Object_Usergroup
       x-presentations: []
       x-accepts: application/json
+  /2/object/versionhistory/{pkiVersionhistoryID}:
+    get:
+      description: ""
+      operationId: Versionhistory_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiVersionhistoryID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiVersionhistoryID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/versionhistory-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Versionhistory
+      tags:
+      - Object_Versionhistory
+      x-presentations: []
+      x-accepts: application/json
   /1/object/webhook:
     description: ""
     post:
@@ -8645,6 +9437,40 @@ paths:
       x-presentations:
       - Ezsign
       x-content-type: application/json
+      x-accepts: application/json
+  /2/object/webhook/{pkiWebhookID}:
+    get:
+      description: ""
+      operationId: Webhook_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiWebhookID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiWebhookID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/webhook-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Webhook
+      tags:
+      - Object_Webhook
+      x-presentations:
+      - Ezsign
       x-accepts: application/json
   /1/object/webhook/{pkiWebhookID}:
     delete:
@@ -8682,6 +9508,7 @@ paths:
       x-accepts: application/json
     description: ""
     get:
+      deprecated: true
       description: ""
       operationId: Webhook_GetObject_V1
       parameters:
@@ -8711,8 +9538,7 @@ paths:
       summary: Retrieve an existing Webhook
       tags:
       - Object_Webhook
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-accepts: application/json
     put:
       description: ""
@@ -10193,6 +11019,9 @@ components:
       description: Whether the Usergroup is active or not
       example: true
       type: boolean
+    Field-bVersionhistoryDraft:
+      description: Whether the Versionhistory is published or still a draft
+      type: boolean
     Field-bWebhookIsactive:
       description: Whether the Webhook is active or not
       example: true
@@ -10414,6 +11243,15 @@ components:
     Field-dtModifiedDate:
       description: The date and time at which the object was last modified
       example: 2020-12-31 23:59:59
+      type: string
+    Field-dtVersionhistoryDate:
+      description: The date  at which the Versionhistory was published or should be
+        published
+      example: 2020-12-31
+      type: string
+    Field-dtVersionhistoryDateend:
+      description: The date  at which the Versionhistory will no longer be visible
+      example: 2020-12-31
       type: string
     Field-dtWebhooklogDate:
       description: The date and time at which the Webhooklog happened.
@@ -10795,6 +11633,25 @@ components:
       - VetrxManufacturer
       - VetrxVendor
       example: RewardDistributorServer
+      type: string
+    Field-eVersionhistoryType:
+      description: The type of Versionhistory.
+      enum:
+      - AgentBroker
+      - NewFeature
+      - Correction
+      - Modification
+      - ImportantMessage
+      example: NewFeature
+      type: string
+    Field-eVersionhistoryUsertype:
+      description: The Usertype by which the Versionhistory should be visible
+      enum:
+      - ""
+      - AgentBroker
+      - EzsignUser
+      - Normal
+      example: Normal
       type: string
     Field-eWebhookEzsignevent:
       description: This Ezsign Event. This property will be set only if the Module
@@ -11684,6 +12541,11 @@ components:
       maximum: 2
       minimum: 1
       type: integer
+    Field-pkiModuleID:
+      description: The unique ID of the Module
+      example: 40
+      minimum: 0
+      type: integer
     Field-pkiModulesectionID:
       description: The unique ID of the Modulesection
       example: 53
@@ -11897,6 +12759,11 @@ components:
         \ able to sign \"In-Person\" and will need to authenticate using SMS or Phone\
         \ call. No email will be sent for invitation to sign. **Additional fee applies**|"
       example: 2
+      minimum: 0
+      type: integer
+    Field-pkiVersionhistoryID:
+      description: The unique ID of the Versionhistory
+      example: 42
       minimum: 0
       type: integer
     Field-pkiWebhookID:
@@ -12181,6 +13048,14 @@ components:
       description: The Name of the Language in the language of the requester
       example: English
       type: string
+    Field-sModuleNameX:
+      description: The Name of the Module in the language of the requester
+      example: Purchase
+      type: string
+    Field-sModulesectionNameX:
+      description: The Name of the Modulesection in the language of the requester
+      example: Access
+      type: string
     Field-sNotificationsectionNameX:
       description: The name of the Notificationsection in the language of the requester
       example: Homepage
@@ -12338,6 +13213,14 @@ components:
       description: Comment about the transaction
       example: This is a comment
       type: string
+    Field-tVersionhistoryDetail1:
+      description: Detail of the Versionhistory in French
+      example: Message important
+      type: string
+    Field-tVersionhistoryDetail2:
+      description: Detail of the Versionhistory in English
+      example: Important message
+      type: string
     Field-tWebhooklogJson:
       description: The Json containing the Webhook call and return
       example: "{}"
@@ -12443,6 +13326,18 @@ components:
         sNotificationtestName2:
           description: The name of the Notificationtest in English
           example: Default
+          type: string
+      type: object
+    Multilingual-VersionhistoryDetail:
+      description: Detail of the Versionhistory
+      properties:
+        tVersionhistoryDetail1:
+          description: Detail of the Versionhistory in French
+          example: Message important
+          type: string
+        tVersionhistoryDetail2:
+          description: Detail of the Versionhistory in English
+          example: Important message
           type: string
       type: object
     Webhook-Ezsign-DocumentCompleted:
@@ -13267,6 +14162,20 @@ components:
       - $ref: '#/components/schemas/branding-ResponseCompound'
       description: "Payload for GET /1/object/branding/{pkiBrandingID}"
       type: object
+    branding-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/branding_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/branding/{pkiBrandingID}"
+      type: object
+    branding-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/branding/{pkiBrandingID}"
+      properties:
+        objBranding:
+          $ref: '#/components/schemas/branding-ResponseCompound'
+      required:
+      - objBranding
+      type: object
     contact-Request:
       description: A Contact Object
       properties:
@@ -13595,6 +14504,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezmaxinvoicing-ResponseCompound'
       description: "Payload for GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"
+      type: object
+    ezmaxinvoicing-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezmaxinvoicing_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"
+      type: object
+    ezmaxinvoicing-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}"
+      properties:
+        objEzmaxinvoicing:
+          $ref: '#/components/schemas/ezmaxinvoicing-ResponseCompound'
+      required:
+      - objEzmaxinvoicing
       type: object
     ezmaxinvoicing-getProvisional-v1-Response:
       allOf:
@@ -14640,6 +15563,20 @@ components:
       - $ref: '#/components/schemas/ezsignbulksend-ResponseCompound'
       description: "Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}"
       type: object
+    ezsignbulksend-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksend_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}"
+      type: object
+    ezsignbulksend-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}"
+      properties:
+        objEzsignbulksend:
+          $ref: '#/components/schemas/ezsignbulksend-ResponseCompound'
+      required:
+      - objEzsignbulksend
+      type: object
     ezsignbulksend-reorder-v1-Request:
       description: "Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder"
       properties:
@@ -14773,6 +15710,20 @@ components:
       - $ref: '#/components/schemas/ezsignbulksenddocumentmapping-ResponseCompound'
       description: "Payload for GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}"
       type: object
+    ezsignbulksenddocumentmapping-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksenddocumentmapping_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}"
+      type: object
+    ezsignbulksenddocumentmapping-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}"
+      properties:
+        objEzsignbulksenddocumentmapping:
+          $ref: '#/components/schemas/ezsignbulksenddocumentmapping-ResponseCompound'
+      required:
+      - objEzsignbulksenddocumentmapping
+      type: object
     ezsignbulksendsignermapping-Request:
       description: A Ezsignbulksendsignermapping Object
       properties:
@@ -14884,6 +15835,20 @@ components:
       - $ref: '#/components/schemas/ezsignbulksendsignermapping-ResponseCompound'
       description: "Payload for GET /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}"
       type: object
+    ezsignbulksendsignermapping-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksendsignermapping_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}"
+      type: object
+    ezsignbulksendsignermapping-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}"
+      properties:
+        objEzsignbulksendsignermapping:
+          $ref: '#/components/schemas/ezsignbulksendsignermapping-ResponseCompound'
+      required:
+      - objEzsignbulksendsignermapping
+      type: object
     ezsignbulksendtransmission-Response:
       description: An Ezsignbulksendtransmission Object
       properties:
@@ -14948,6 +15913,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignbulksendtransmission-ResponseCompound'
       description: "Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}"
+      type: object
+    ezsignbulksendtransmission-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignbulksendtransmission_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}"
+      type: object
+    ezsignbulksendtransmission-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}"
+      properties:
+        objEzsignbulksendtransmission:
+          $ref: '#/components/schemas/ezsignbulksendtransmission-ResponseCompound'
+      required:
+      - objEzsignbulksendtransmission
       type: object
     ezsigndocument-Request:
       description: An Ezsigndocument Object
@@ -15464,6 +16443,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigndocument-ResponseCompound'
       description: "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}"
+      type: object
+    ezsigndocument-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}"
+      type: object
+    ezsigndocument-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}"
+      properties:
+        objEzsigndocument:
+          $ref: '#/components/schemas/ezsigndocument-ResponseCompound'
+      required:
+      - objEzsigndocument
       type: object
     ezsigndocument-getTemporaryProof-v1-Response:
       allOf:
@@ -16048,6 +17041,20 @@ components:
       - $ref: '#/components/schemas/ezsignfolder-ResponseCompound'
       description: "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}"
       type: object
+    ezsignfolder-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignfolder/{pkiEzsignfolderID}"
+      type: object
+    ezsignfolder-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignfolder/{pkiEzsignfolderID}"
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-ResponseCompound'
+      required:
+      - objEzsignfolder
+      type: object
     ezsignfolder-importEzsignfoldersignerassociations-v1-Request:
       description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations"
       properties:
@@ -16404,6 +17411,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
       description: "Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
+      type: object
+    ezsignfoldersignerassociation-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldersignerassociation_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
+      type: object
+    ezsignfoldersignerassociation-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
+      properties:
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
+      required:
+      - objEzsignfoldersignerassociation
       type: object
     ezsignfoldertype-AutocompleteElement-Response:
       description: A Ezsignfoldertype AutocompleteElement Response
@@ -16900,6 +17921,20 @@ components:
       - $ref: '#/components/schemas/ezsignfoldertype-ResponseCompound'
       description: "Payload for GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"
       type: object
+    ezsignfoldertype-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfoldertype_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"
+      type: object
+    ezsignfoldertype-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}"
+      properties:
+        objEzsignfoldertype:
+          $ref: '#/components/schemas/ezsignfoldertype-ResponseCompound'
+      required:
+      - objEzsignfoldertype
+      type: object
     ezsignformfield-Request:
       description: A Ezsignformfield Object
       properties:
@@ -17336,6 +18371,20 @@ components:
       - $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
       description: "Payload for GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}"
       type: object
+    ezsignformfieldgroup-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignformfieldgroup_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}"
+      type: object
+    ezsignformfieldgroup-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}"
+      properties:
+        objEzsignformfieldgroup:
+          $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
+      required:
+      - objEzsignformfieldgroup
+      type: object
     ezsignformfieldgroupsigner-Request:
       description: A Ezsignformfieldgroupsigner Object
       properties:
@@ -17595,9 +18644,9 @@ components:
           description: Whether the Ezsignsignature is required or not. This field
             is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.
           type: boolean
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
+        fkiEzsignfoldersignerassociationIDValidation:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
           minimum: 0
           type: integer
       required:
@@ -17702,6 +18751,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsignsignature-ResponseCompound'
       description: "Payload for GET /1/object/ezsignsignature/{pkiEzsignsignatureID}"
+      type: object
+    ezsignsignature-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignature_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignsignature/{pkiEzsignsignatureID}"
+      type: object
+    ezsignsignature-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignsignature/{pkiEzsignsignatureID}"
+      properties:
+        objEzsignsignature:
+          $ref: '#/components/schemas/ezsignsignature-ResponseCompound'
+      required:
+      - objEzsignsignature
       type: object
     ezsignsignature-sign-v1-Request:
       description: "Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
@@ -18471,6 +19534,20 @@ components:
       - $ref: '#/components/schemas/ezsigntemplate-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}"
       type: object
+    ezsigntemplate-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplate_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplate/{pkiEzsigntemplateID}"
+      type: object
+    ezsigntemplate-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplate/{pkiEzsigntemplateID}"
+      properties:
+        objEzsigntemplate:
+          $ref: '#/components/schemas/ezsigntemplate-ResponseCompound'
+      required:
+      - objEzsigntemplate
+      type: object
     ezsigntemplatedocument-Request:
       description: A Ezsigntemplatedocument Object
       properties:
@@ -18755,6 +19832,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatedocument-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}"
+      type: object
+    ezsigntemplatedocument-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatedocument_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}"
+      type: object
+    ezsigntemplatedocument-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}"
+      properties:
+        objEzsigntemplatedocument:
+          $ref: '#/components/schemas/ezsigntemplatedocument-ResponseCompound'
+      required:
+      - objEzsigntemplatedocument
       type: object
     ezsigntemplatedocument-getWordsPositions-v1-Request:
       description: "Request for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions"
@@ -19288,6 +20379,20 @@ components:
       - $ref: '#/components/schemas/ezsigntemplateformfieldgroup-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}"
       type: object
+    ezsigntemplateformfieldgroup-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplateformfieldgroup_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}"
+      type: object
+    ezsigntemplateformfieldgroup-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}"
+      properties:
+        objEzsigntemplateformfieldgroup:
+          $ref: '#/components/schemas/ezsigntemplateformfieldgroup-ResponseCompound'
+      required:
+      - objEzsigntemplateformfieldgroup
+      type: object
     ezsigntemplateformfieldgroupsigner-Request:
       description: A Ezsigntemplateformfieldgroupsigner Object
       properties:
@@ -19651,6 +20756,20 @@ components:
       - $ref: '#/components/schemas/ezsigntemplatepackage-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}"
       type: object
+    ezsigntemplatepackage-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackage_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}"
+      type: object
+    ezsigntemplatepackage-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}"
+      properties:
+        objEzsigntemplatepackage:
+          $ref: '#/components/schemas/ezsigntemplatepackage-ResponseCompound'
+      required:
+      - objEzsigntemplatepackage
+      type: object
     ezsigntemplatepackagemembership-Request:
       description: A Ezsigntemplatepackagemembership Object
       properties:
@@ -19770,6 +20889,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatepackagemembership-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}"
+      type: object
+    ezsigntemplatepackagemembership-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackagemembership_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}"
+      type: object
+    ezsigntemplatepackagemembership-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}"
+      properties:
+        objEzsigntemplatepackagemembership:
+          $ref: '#/components/schemas/ezsigntemplatepackagemembership-ResponseCompound'
+      required:
+      - objEzsigntemplatepackagemembership
       type: object
     ezsigntemplatepackagesigner-Request:
       description: A Ezsigntemplatepackagesigner Object
@@ -19900,6 +21033,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatepackagesigner-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}"
+      type: object
+    ezsigntemplatepackagesigner-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackagesigner_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}"
+      type: object
+    ezsigntemplatepackagesigner-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}"
+      properties:
+        objEzsigntemplatepackagesigner:
+          $ref: '#/components/schemas/ezsigntemplatepackagesigner-ResponseCompound'
+      required:
+      - objEzsigntemplatepackagesigner
       type: object
     ezsigntemplatepackagesignermembership-Request:
       description: A Ezsigntemplatepackagesignermembership Object
@@ -20041,6 +21188,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}"
+      type: object
+    ezsigntemplatepackagesignermembership-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatepackagesignermembership_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}"
+      type: object
+    ezsigntemplatepackagesignermembership-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}"
+      properties:
+        objEzsigntemplatepackagesignermembership:
+          $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-ResponseCompound'
+      required:
+      - objEzsigntemplatepackagesignermembership
       type: object
     ezsigntemplatesignature-Request:
       description: A Ezsigntemplatesignature Object
@@ -20285,6 +21446,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatesignature-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
+      type: object
+    ezsigntemplatesignature-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatesignature_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
+      type: object
+    ezsigntemplatesignature-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
+      properties:
+        objEzsigntemplatesignature:
+          $ref: '#/components/schemas/ezsigntemplatesignature-ResponseCompound'
+      required:
+      - objEzsigntemplatesignature
       type: object
     ezsigntemplatesignaturecustomdate-Request:
       description: An Ezsigntemplatesignaturecustomdate Object
@@ -20532,6 +21707,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/ezsigntemplatesigner-ResponseCompound'
       description: "Payload for GET /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}"
+      type: object
+    ezsigntemplatesigner-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplatesigner_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}"
+      type: object
+    ezsigntemplatesigner-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}"
+      properties:
+        objEzsigntemplatesigner:
+          $ref: '#/components/schemas/ezsigntemplatesigner-ResponseCompound'
+      required:
+      - objEzsigntemplatesigner
       type: object
     ezsigntsarequirement-AutocompleteElement-Response:
       description: A Ezsigntsarequirement AutocompleteElement Response
@@ -21292,6 +22481,77 @@ components:
       required:
       - a_objUsergroup
       type: object
+    versionhistory-Response:
+      description: A Versionhistory Object
+      properties:
+        pkiVersionhistoryID:
+          description: The unique ID of the Versionhistory
+          example: 42
+          minimum: 0
+          type: integer
+        fkiModuleID:
+          description: The unique ID of the Module
+          example: 40
+          minimum: 0
+          type: integer
+        fkiModulesectionID:
+          description: The unique ID of the Modulesection
+          example: 53
+          minimum: 0
+          type: integer
+        sModuleNameX:
+          description: The Name of the Module in the language of the requester
+          example: Purchase
+          type: string
+        sModulesectionNameX:
+          description: The Name of the Modulesection in the language of the requester
+          example: Access
+          type: string
+        eVersionhistoryUsertype:
+          $ref: '#/components/schemas/Field-eVersionhistoryUsertype'
+        objVersionhistoryDetail:
+          $ref: '#/components/schemas/Multilingual-VersionhistoryDetail'
+        dtVersionhistoryDate:
+          description: The date  at which the Versionhistory was published or should
+            be published
+          example: 2020-12-31
+          type: string
+        dtVersionhistoryDateend:
+          description: The date  at which the Versionhistory will no longer be visible
+          example: 2020-12-31
+          type: string
+        eVersionhistoryType:
+          $ref: '#/components/schemas/Field-eVersionhistoryType'
+        bVersionhistoryDraft:
+          description: Whether the Versionhistory is published or still a draft
+          type: boolean
+      required:
+      - bVersionhistoryDraft
+      - dtVersionhistoryDate
+      - eVersionhistoryType
+      - objVersionhistoryDetail
+      - pkiVersionhistoryID
+      type: object
+    versionhistory-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/versionhistory-Response'
+      - type: object
+      description: A Versionhistory Object
+      type: object
+    versionhistory-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/versionhistory_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/versionhistory/{pkiVersionhistoryID}"
+      type: object
+    versionhistory-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/versionhistory/{pkiVersionhistoryID}"
+      properties:
+        objVersionhistory:
+          $ref: '#/components/schemas/versionhistory-ResponseCompound'
+      required:
+      - objVersionhistory
+      type: object
     webhook-ListElement:
       description: A Webhook List Element
       properties:
@@ -21445,13 +22705,8 @@ components:
     webhook-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/webhook-Response'
-      - type: object
+      - $ref: '#/components/schemas/webhook_ResponseCompound_allOf'
       description: A Webhook Object
-      properties:
-        sWebhookEvent:
-          description: The concatenated string to describe the Webhook event
-          example: Ezsign-DocumentCompleted
-          type: string
       required:
       - sWebhookEvent
       type: object
@@ -21536,6 +22791,20 @@ components:
       allOf:
       - $ref: '#/components/schemas/webhook-ResponseCompound'
       description: "Payload for GET /1/object/webhook/{pkiWebhookID}"
+      type: object
+    webhook-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/webhook_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/webhook/{pkiWebhookID}"
+      type: object
+    webhook-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/webhook/{pkiWebhookID}"
+      properties:
+        objWebhook:
+          $ref: '#/components/schemas/webhook-ResponseCompound'
+      required:
+      - objWebhook
       type: object
     webhook-test-v1-Request:
       description: "Request for POST /1/object/webhook/{pkiWebhookID}/test\n\nIntentionally\
@@ -21870,6 +23139,13 @@ components:
       required:
       - mPayload
       type: object
+    branding_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/branding-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     contact_RequestCompound_allOf:
       properties:
         objContactinformations:
@@ -21971,6 +23247,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezmaxinvoicing-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezmaxinvoicing_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezmaxinvoicing-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22098,6 +23381,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsignbulksend_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksend-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsignbulksenddocumentmapping_ResponseCompound_allOf:
       properties:
         objEzsigntemplate:
@@ -22119,6 +23409,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsignbulksenddocumentmapping_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksenddocumentmapping-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsignbulksendsignermapping_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -22130,6 +23427,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignbulksendsignermapping-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignbulksendsignermapping_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksendsignermapping-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22153,6 +23457,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignbulksendtransmission-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignbulksendtransmission_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignbulksendtransmission-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22262,6 +23573,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigndocument_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigndocument_getTemporaryProof_v1_Response_allOf:
       properties:
         mPayload:
@@ -22344,6 +23662,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsignfolder_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsignfolder_importEzsignfoldersignerassociations_v1_Response_allOf:
       properties:
         mPayload:
@@ -22398,6 +23723,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsignfoldersignerassociation_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsignfoldertype_RequestCompound_allOf:
       properties:
         a_fkiUserIDSigned:
@@ -22444,6 +23776,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignfoldertype-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignfoldertype_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfoldertype-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22494,6 +23833,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignformfieldgroup-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignformfieldgroup_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignformfieldgroup-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22549,6 +23895,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsignsignature-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsignsignature_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignature-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22622,6 +23975,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplate_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplate-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatedocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -22675,6 +24035,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigntemplatedocument-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigntemplatedocument_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatedocument-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22738,6 +24105,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplateformfieldgroup_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplateformfieldgroup-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatepackage_ResponseCompound_allOf:
       properties:
         a_objEzsigntemplatepackagesigner:
@@ -22796,6 +24170,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatepackage_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackage-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatepackagemembership_ResponseCompound_allOf:
       properties:
         objEzsigntemplate:
@@ -22822,6 +24203,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatepackagemembership_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackagemembership-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatepackagesigner_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -22843,6 +24231,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatepackagesigner_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackagesigner-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatepackagesignermembership_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -22861,6 +24256,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigntemplatepackagesignermembership_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -22914,6 +24316,13 @@ components:
       required:
       - mPayload
       type: object
+    ezsigntemplatesignature_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatesignature-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     ezsigntemplatesigner_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -22925,6 +24334,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/ezsigntemplatesigner-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    ezsigntemplatesigner_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplatesigner-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -23016,6 +24432,20 @@ components:
       required:
       - mPayload
       type: object
+    versionhistory_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/versionhistory-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    webhook_ResponseCompound_allOf:
+      properties:
+        sWebhookEvent:
+          description: The concatenated string to describe the Webhook event
+          example: Ezsign-DocumentCompleted
+          type: string
+      type: object
     webhook_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23059,6 +24489,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/webhook-getObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    webhook_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/webhook-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -23186,6 +24623,7 @@ x-tagGroups:
   - Object_Timezone
   - Object_User
   - Object_Usergroup
+  - Object_Versionhistory
   - Object_Webhook
 x-presentations:
 - Ezsign

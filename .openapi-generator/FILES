@@ -51,6 +51,9 @@ docs/BrandingGetListV1ResponseMPayloadAllOf.md
 docs/BrandingGetObjectV1Response.md
 docs/BrandingGetObjectV1ResponseAllOf.md
 docs/BrandingGetObjectV1ResponseMPayload.md
+docs/BrandingGetObjectV2Response.md
+docs/BrandingGetObjectV2ResponseAllOf.md
+docs/BrandingGetObjectV2ResponseMPayload.md
 docs/BrandingListElement.md
 docs/BrandingRequest.md
 docs/BrandingRequestCompound.md
@@ -138,6 +141,9 @@ docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
 docs/EzmaxinvoicingGetObjectV1Response.md
 docs/EzmaxinvoicingGetObjectV1ResponseAllOf.md
 docs/EzmaxinvoicingGetObjectV1ResponseMPayload.md
+docs/EzmaxinvoicingGetObjectV2Response.md
+docs/EzmaxinvoicingGetObjectV2ResponseAllOf.md
+docs/EzmaxinvoicingGetObjectV2ResponseMPayload.md
 docs/EzmaxinvoicingGetProvisionalV1Response.md
 docs/EzmaxinvoicingGetProvisionalV1ResponseAllOf.md
 docs/EzmaxinvoicingGetProvisionalV1ResponseMPayload.md
@@ -197,6 +203,9 @@ docs/EzsignbulksendGetListV1ResponseMPayloadAllOf.md
 docs/EzsignbulksendGetObjectV1Response.md
 docs/EzsignbulksendGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendGetObjectV2Response.md
+docs/EzsignbulksendGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendListElement.md
 docs/EzsignbulksendReorderV1Request.md
 docs/EzsignbulksendReorderV1Response.md
@@ -213,6 +222,9 @@ docs/EzsignbulksenddocumentmappingDeleteObjectV1Response.md
 docs/EzsignbulksenddocumentmappingGetObjectV1Response.md
 docs/EzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.md
 docs/EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.md
+docs/EzsignbulksenddocumentmappingGetObjectV2Response.md
+docs/EzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.md
+docs/EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.md
 docs/EzsignbulksenddocumentmappingRequest.md
 docs/EzsignbulksenddocumentmappingRequestCompound.md
 docs/EzsignbulksenddocumentmappingResponse.md
@@ -226,6 +238,9 @@ docs/EzsignbulksendsignermappingDeleteObjectV1Response.md
 docs/EzsignbulksendsignermappingGetObjectV1Response.md
 docs/EzsignbulksendsignermappingGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendsignermappingGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendsignermappingGetObjectV2Response.md
+docs/EzsignbulksendsignermappingGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendsignermappingGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendsignermappingRequest.md
 docs/EzsignbulksendsignermappingRequestCompound.md
 docs/EzsignbulksendsignermappingResponse.md
@@ -236,6 +251,9 @@ docs/EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload.md
 docs/EzsignbulksendtransmissionGetObjectV1Response.md
 docs/EzsignbulksendtransmissionGetObjectV1ResponseAllOf.md
 docs/EzsignbulksendtransmissionGetObjectV1ResponseMPayload.md
+docs/EzsignbulksendtransmissionGetObjectV2Response.md
+docs/EzsignbulksendtransmissionGetObjectV2ResponseAllOf.md
+docs/EzsignbulksendtransmissionGetObjectV2ResponseMPayload.md
 docs/EzsignbulksendtransmissionResponse.md
 docs/EzsignbulksendtransmissionResponseCompound.md
 docs/EzsignbulksendtransmissionResponseCompoundAllOf.md
@@ -282,6 +300,9 @@ docs/EzsigndocumentGetFormDataV1ResponseMPayload.md
 docs/EzsigndocumentGetObjectV1Response.md
 docs/EzsigndocumentGetObjectV1ResponseAllOf.md
 docs/EzsigndocumentGetObjectV1ResponseMPayload.md
+docs/EzsigndocumentGetObjectV2Response.md
+docs/EzsigndocumentGetObjectV2ResponseAllOf.md
+docs/EzsigndocumentGetObjectV2ResponseMPayload.md
 docs/EzsigndocumentGetTemporaryProofV1Response.md
 docs/EzsigndocumentGetTemporaryProofV1ResponseAllOf.md
 docs/EzsigndocumentGetTemporaryProofV1ResponseMPayload.md
@@ -334,6 +355,9 @@ docs/EzsignfolderGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfolderGetObjectV1Response.md
 docs/EzsignfolderGetObjectV1ResponseAllOf.md
 docs/EzsignfolderGetObjectV1ResponseMPayload.md
+docs/EzsignfolderGetObjectV2Response.md
+docs/EzsignfolderGetObjectV2ResponseAllOf.md
+docs/EzsignfolderGetObjectV2ResponseMPayload.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1Request.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1Response.md
 docs/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.md
@@ -372,6 +396,9 @@ docs/EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV1Response.md
 docs/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
+docs/EzsignfoldersignerassociationGetObjectV2Response.md
+docs/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.md
+docs/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
@@ -396,6 +423,9 @@ docs/EzsignfoldertypeGetListV1ResponseMPayloadAllOf.md
 docs/EzsignfoldertypeGetObjectV1Response.md
 docs/EzsignfoldertypeGetObjectV1ResponseAllOf.md
 docs/EzsignfoldertypeGetObjectV1ResponseMPayload.md
+docs/EzsignfoldertypeGetObjectV2Response.md
+docs/EzsignfoldertypeGetObjectV2ResponseAllOf.md
+docs/EzsignfoldertypeGetObjectV2ResponseMPayload.md
 docs/EzsignfoldertypeListElement.md
 docs/EzsignfoldertypeRequest.md
 docs/EzsignfoldertypeRequestCompound.md
@@ -416,6 +446,9 @@ docs/EzsignformfieldgroupEditObjectV1Response.md
 docs/EzsignformfieldgroupGetObjectV1Response.md
 docs/EzsignformfieldgroupGetObjectV1ResponseAllOf.md
 docs/EzsignformfieldgroupGetObjectV1ResponseMPayload.md
+docs/EzsignformfieldgroupGetObjectV2Response.md
+docs/EzsignformfieldgroupGetObjectV2ResponseAllOf.md
+docs/EzsignformfieldgroupGetObjectV2ResponseMPayload.md
 docs/EzsignformfieldgroupRequest.md
 docs/EzsignformfieldgroupRequestCompound.md
 docs/EzsignformfieldgroupRequestCompoundAllOf.md
@@ -442,6 +475,9 @@ docs/EzsignsignatureEditObjectV1Response.md
 docs/EzsignsignatureGetObjectV1Response.md
 docs/EzsignsignatureGetObjectV1ResponseAllOf.md
 docs/EzsignsignatureGetObjectV1ResponseMPayload.md
+docs/EzsignsignatureGetObjectV2Response.md
+docs/EzsignsignatureGetObjectV2ResponseAllOf.md
+docs/EzsignsignatureGetObjectV2ResponseMPayload.md
 docs/EzsignsignatureRequest.md
 docs/EzsignsignatureRequestCompound.md
 docs/EzsignsignatureRequestCompoundAllOf.md
@@ -481,6 +517,9 @@ docs/EzsigntemplateGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplateGetObjectV1Response.md
 docs/EzsigntemplateGetObjectV1ResponseAllOf.md
 docs/EzsigntemplateGetObjectV1ResponseMPayload.md
+docs/EzsigntemplateGetObjectV2Response.md
+docs/EzsigntemplateGetObjectV2ResponseAllOf.md
+docs/EzsigntemplateGetObjectV2ResponseMPayload.md
 docs/EzsigntemplateListElement.md
 docs/EzsigntemplateRequest.md
 docs/EzsigntemplateRequestCompound.md
@@ -514,6 +553,9 @@ docs/EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload.md
 docs/EzsigntemplatedocumentGetObjectV1Response.md
 docs/EzsigntemplatedocumentGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatedocumentGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatedocumentGetObjectV2Response.md
+docs/EzsigntemplatedocumentGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatedocumentGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1Request.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1Response.md
 docs/EzsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.md
@@ -540,6 +582,9 @@ docs/EzsigntemplateformfieldgroupEditObjectV1Response.md
 docs/EzsigntemplateformfieldgroupGetObjectV1Response.md
 docs/EzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.md
 docs/EzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.md
+docs/EzsigntemplateformfieldgroupGetObjectV2Response.md
+docs/EzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.md
+docs/EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.md
 docs/EzsigntemplateformfieldgroupRequest.md
 docs/EzsigntemplateformfieldgroupRequestCompound.md
 docs/EzsigntemplateformfieldgroupRequestCompoundAllOf.md
@@ -572,6 +617,9 @@ docs/EzsigntemplatepackageGetListV1ResponseMPayloadAllOf.md
 docs/EzsigntemplatepackageGetObjectV1Response.md
 docs/EzsigntemplatepackageGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackageGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackageGetObjectV2Response.md
+docs/EzsigntemplatepackageGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackageGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackageListElement.md
 docs/EzsigntemplatepackageRequest.md
 docs/EzsigntemplatepackageRequestCompound.md
@@ -586,6 +634,9 @@ docs/EzsigntemplatepackagemembershipDeleteObjectV1Response.md
 docs/EzsigntemplatepackagemembershipGetObjectV1Response.md
 docs/EzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagemembershipGetObjectV2Response.md
+docs/EzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagemembershipRequest.md
 docs/EzsigntemplatepackagemembershipRequestCompound.md
 docs/EzsigntemplatepackagemembershipResponse.md
@@ -603,6 +654,9 @@ docs/EzsigntemplatepackagesignerEditObjectV1Response.md
 docs/EzsigntemplatepackagesignerGetObjectV1Response.md
 docs/EzsigntemplatepackagesignerGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagesignerGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagesignerGetObjectV2Response.md
+docs/EzsigntemplatepackagesignerGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagesignerGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagesignerRequest.md
 docs/EzsigntemplatepackagesignerRequestCompound.md
 docs/EzsigntemplatepackagesignerResponse.md
@@ -617,6 +671,9 @@ docs/EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1Response.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2Response.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatepackagesignermembershipRequest.md
 docs/EzsigntemplatepackagesignermembershipRequestCompound.md
 docs/EzsigntemplatepackagesignermembershipResponse.md
@@ -631,6 +688,9 @@ docs/EzsigntemplatesignatureEditObjectV1Response.md
 docs/EzsigntemplatesignatureGetObjectV1Response.md
 docs/EzsigntemplatesignatureGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatesignatureGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatesignatureGetObjectV2Response.md
+docs/EzsigntemplatesignatureGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatesignatureGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatesignatureRequest.md
 docs/EzsigntemplatesignatureRequestCompound.md
 docs/EzsigntemplatesignatureRequestCompoundAllOf.md
@@ -651,6 +711,9 @@ docs/EzsigntemplatesignerEditObjectV1Response.md
 docs/EzsigntemplatesignerGetObjectV1Response.md
 docs/EzsigntemplatesignerGetObjectV1ResponseAllOf.md
 docs/EzsigntemplatesignerGetObjectV1ResponseMPayload.md
+docs/EzsigntemplatesignerGetObjectV2Response.md
+docs/EzsigntemplatesignerGetObjectV2ResponseAllOf.md
+docs/EzsigntemplatesignerGetObjectV2ResponseMPayload.md
 docs/EzsigntemplatesignerRequest.md
 docs/EzsigntemplatesignerRequestCompound.md
 docs/EzsigntemplatesignerResponse.md
@@ -692,6 +755,8 @@ docs/FieldENotificationpreferenceStatus.md
 docs/FieldEPhoneType.md
 docs/FieldEUserEzsignsendreminderfrequency.md
 docs/FieldEUserType.md
+docs/FieldEVersionhistoryType.md
+docs/FieldEVersionhistoryUsertype.md
 docs/FieldEWebhookEzsignevent.md
 docs/FieldEWebhookManagementevent.md
 docs/FieldEWebhookModule.md
@@ -717,6 +782,7 @@ docs/MultilingualEzmaxinvoicingsummaryinternalDescription.md
 docs/MultilingualEzsignfoldertypeName.md
 docs/MultilingualNotificationsubsectionName.md
 docs/MultilingualNotificationtestName.md
+docs/MultilingualVersionhistoryDetail.md
 docs/NotificationsectionGetNotificationtestsV1Response.md
 docs/NotificationsectionGetNotificationtestsV1ResponseAllOf.md
 docs/NotificationsectionGetNotificationtestsV1ResponseMPayload.md
@@ -762,6 +828,7 @@ docs/ObjectTaxassignmentApi.md
 docs/ObjectTimezoneApi.md
 docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
+docs/ObjectVersionhistoryApi.md
 docs/ObjectWebhookApi.md
 docs/PhoneRequest.md
 docs/PhoneRequestCompound.md
@@ -791,6 +858,11 @@ docs/UsergroupAutocompleteElementResponse.md
 docs/UsergroupGetAutocompleteV2Response.md
 docs/UsergroupGetAutocompleteV2ResponseAllOf.md
 docs/UsergroupGetAutocompleteV2ResponseMPayload.md
+docs/VersionhistoryGetObjectV2Response.md
+docs/VersionhistoryGetObjectV2ResponseAllOf.md
+docs/VersionhistoryGetObjectV2ResponseMPayload.md
+docs/VersionhistoryResponse.md
+docs/VersionhistoryResponseCompound.md
 docs/WebhookCreateObjectV1Request.md
 docs/WebhookCreateObjectV1Response.md
 docs/WebhookCreateObjectV1ResponseAllOf.md
@@ -813,11 +885,15 @@ docs/WebhookGetListV1ResponseMPayloadAllOf.md
 docs/WebhookGetObjectV1Response.md
 docs/WebhookGetObjectV1ResponseAllOf.md
 docs/WebhookGetObjectV1ResponseMPayload.md
+docs/WebhookGetObjectV2Response.md
+docs/WebhookGetObjectV2ResponseAllOf.md
+docs/WebhookGetObjectV2ResponseMPayload.md
 docs/WebhookListElement.md
 docs/WebhookRequest.md
 docs/WebhookRequestCompound.md
 docs/WebhookResponse.md
 docs/WebhookResponseCompound.md
+docs/WebhookResponseCompoundAllOf.md
 docs/WebhookTestV1Response.md
 docs/WebhookUserUserCreated.md
 docs/WebhookUserUserCreatedAllOf.md
@@ -872,6 +948,7 @@ src/main/java/com/ezmax/api/ObjectTaxassignmentApi.java
 src/main/java/com/ezmax/api/ObjectTimezoneApi.java
 src/main/java/com/ezmax/api/ObjectUserApi.java
 src/main/java/com/ezmax/api/ObjectUsergroupApi.java
+src/main/java/com/ezmax/api/ObjectVersionhistoryApi.java
 src/main/java/com/ezmax/api/ObjectWebhookApi.java
 src/main/java/com/ezmax/api/model/AbstractOpenApiSchema.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1Response.java
@@ -919,6 +996,9 @@ src/main/java/com/ezmax/api/model/BrandingGetListV1ResponseMPayloadAllOf.java
 src/main/java/com/ezmax/api/model/BrandingGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/BrandingGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/BrandingGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/BrandingGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/BrandingGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/BrandingGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/BrandingListElement.java
 src/main/java/com/ezmax/api/model/BrandingRequest.java
 src/main/java/com/ezmax/api/model/BrandingRequestCompound.java
@@ -1006,6 +1086,9 @@ src/main/java/com/ezmax/api/model/EzmaxinvoicingGetAutocompleteV2ResponseMPayloa
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1Response.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1ResponseMPayload.java
@@ -1065,6 +1148,9 @@ src/main/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseMPayloadAllOf.j
 src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksendListElement.java
 src/main/java/com/ezmax/api/model/EzsignbulksendReorderV1Request.java
 src/main/java/com/ezmax/api/model/EzsignbulksendReorderV1Response.java
@@ -1081,6 +1167,9 @@ src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingDeleteObjectV1Res
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingRequest.java
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignbulksenddocumentmappingResponse.java
@@ -1094,6 +1183,9 @@ src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingDeleteObjectV1Respo
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingRequest.java
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignbulksendsignermappingResponse.java
@@ -1104,6 +1196,9 @@ src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetFormsDataV1Respon
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionResponse.java
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignbulksendtransmissionResponseCompoundAllOf.java
@@ -1150,6 +1245,9 @@ src/main/java/com/ezmax/api/model/EzsigndocumentGetFormDataV1ResponseMPayload.ja
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigndocumentGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1Response.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseMPayload.java
@@ -1202,6 +1300,9 @@ src/main/java/com/ezmax/api/model/EzsignfolderGetListV1ResponseMPayloadAllOf.jav
 src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfolderGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOf.java
@@ -1240,6 +1341,9 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginU
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequest.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
@@ -1264,6 +1368,9 @@ src/main/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseMPayloadAllOf
 src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeListElement.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeRequest.java
 src/main/java/com/ezmax/api/model/EzsignfoldertypeRequestCompound.java
@@ -1284,6 +1391,9 @@ src/main/java/com/ezmax/api/model/EzsignformfieldgroupEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupRequest.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignformfieldgroupRequestCompoundAllOf.java
@@ -1310,6 +1420,9 @@ src/main/java/com/ezmax/api/model/EzsignsignatureEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsignsignatureGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequest.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignsignatureRequestCompoundAllOf.java
@@ -1349,6 +1462,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplateGetListV1ResponseMPayloadAllOf.j
 src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplateGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplateListElement.java
 src/main/java/com/ezmax/api/model/EzsigntemplateRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplateRequestCompound.java
@@ -1382,6 +1498,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatesignatu
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1Request.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1ResponseAllOf.java
@@ -1408,6 +1527,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupEditObjectV1Respon
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequestCompoundAllOf.java
@@ -1440,6 +1562,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseMPayload
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageListElement.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackageRequestCompound.java
@@ -1454,6 +1579,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipDeleteObjectV1R
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagemembershipResponse.java
@@ -1471,6 +1599,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerEditObjectV1Respons
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignerResponse.java
@@ -1485,6 +1616,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipDeleteObj
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipResponse.java
@@ -1499,6 +1633,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatesignatureEditObjectV1Response.ja
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignatureRequestCompoundAllOf.java
@@ -1519,6 +1656,9 @@ src/main/java/com/ezmax/api/model/EzsigntemplatesignerEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerRequest.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsigntemplatesignerResponse.java
@@ -1560,6 +1700,8 @@ src/main/java/com/ezmax/api/model/FieldENotificationpreferenceStatus.java
 src/main/java/com/ezmax/api/model/FieldEPhoneType.java
 src/main/java/com/ezmax/api/model/FieldEUserEzsignsendreminderfrequency.java
 src/main/java/com/ezmax/api/model/FieldEUserType.java
+src/main/java/com/ezmax/api/model/FieldEVersionhistoryType.java
+src/main/java/com/ezmax/api/model/FieldEVersionhistoryUsertype.java
 src/main/java/com/ezmax/api/model/FieldEWebhookEzsignevent.java
 src/main/java/com/ezmax/api/model/FieldEWebhookManagementevent.java
 src/main/java/com/ezmax/api/model/FieldEWebhookModule.java
@@ -1582,6 +1724,7 @@ src/main/java/com/ezmax/api/model/MultilingualEzmaxinvoicingsummaryinternalDescr
 src/main/java/com/ezmax/api/model/MultilingualEzsignfoldertypeName.java
 src/main/java/com/ezmax/api/model/MultilingualNotificationsubsectionName.java
 src/main/java/com/ezmax/api/model/MultilingualNotificationtestName.java
+src/main/java/com/ezmax/api/model/MultilingualVersionhistoryDetail.java
 src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1Response.java
 src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseMPayload.java
@@ -1618,6 +1761,11 @@ src/main/java/com/ezmax/api/model/UsergroupAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/UsergroupGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseAllOf.java
 src/main/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseMPayload.java
+src/main/java/com/ezmax/api/model/VersionhistoryGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/VersionhistoryGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/VersionhistoryGetObjectV2ResponseMPayload.java
+src/main/java/com/ezmax/api/model/VersionhistoryResponse.java
+src/main/java/com/ezmax/api/model/VersionhistoryResponseCompound.java
 src/main/java/com/ezmax/api/model/WebhookCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/WebhookCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/WebhookCreateObjectV1ResponseAllOf.java
@@ -1640,11 +1788,15 @@ src/main/java/com/ezmax/api/model/WebhookGetListV1ResponseMPayloadAllOf.java
 src/main/java/com/ezmax/api/model/WebhookGetObjectV1Response.java
 src/main/java/com/ezmax/api/model/WebhookGetObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/WebhookGetObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/WebhookGetObjectV2Response.java
+src/main/java/com/ezmax/api/model/WebhookGetObjectV2ResponseAllOf.java
+src/main/java/com/ezmax/api/model/WebhookGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/WebhookListElement.java
 src/main/java/com/ezmax/api/model/WebhookRequest.java
 src/main/java/com/ezmax/api/model/WebhookRequestCompound.java
 src/main/java/com/ezmax/api/model/WebhookResponse.java
 src/main/java/com/ezmax/api/model/WebhookResponseCompound.java
+src/main/java/com/ezmax/api/model/WebhookResponseCompoundAllOf.java
 src/main/java/com/ezmax/api/model/WebhookTestV1Response.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreated.java
 src/main/java/com/ezmax/api/model/WebhookUserUserCreatedAllOf.java
@@ -1707,6 +1859,7 @@ src/test/java/com/ezmax/api/ObjectTaxassignmentApiTest.java
 src/test/java/com/ezmax/api/ObjectTimezoneApiTest.java
 src/test/java/com/ezmax/api/ObjectUserApiTest.java
 src/test/java/com/ezmax/api/ObjectUsergroupApiTest.java
+src/test/java/com/ezmax/api/ObjectVersionhistoryApiTest.java
 src/test/java/com/ezmax/api/ObjectWebhookApiTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayloadTest.java
@@ -1753,6 +1906,9 @@ src/test/java/com/ezmax/api/model/BrandingGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/BrandingGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/BrandingGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/BrandingGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/BrandingGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/BrandingGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/BrandingGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/BrandingListElementTest.java
 src/test/java/com/ezmax/api/model/BrandingRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/BrandingRequestTest.java
@@ -1840,6 +1996,9 @@ src/test/java/com/ezmax/api/model/EzmaxinvoicingGetAutocompleteV2ResponseTest.ja
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzmaxinvoicingGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzmaxinvoicingGetProvisionalV1ResponseTest.java
@@ -1899,6 +2058,9 @@ src/test/java/com/ezmax/api/model/EzsignbulksendGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendListElementTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendReorderV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendReorderV1ResponseTest.java
@@ -1915,6 +2077,9 @@ src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingDeleteObjectV1Res
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksenddocumentmappingResponseCompoundAllOfTest.java
@@ -1928,6 +2093,9 @@ src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingDeleteObjectV1Respo
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendsignermappingResponseCompoundTest.java
@@ -1938,6 +2106,9 @@ src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetFormsDataV1Respon
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignbulksendtransmissionResponseTest.java
@@ -1984,6 +2155,9 @@ src/test/java/com/ezmax/api/model/EzsigndocumentGetFormDataV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigndocumentGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigndocumentGetTemporaryProofV1ResponseTest.java
@@ -2036,6 +2210,9 @@ src/test/java/com/ezmax/api/model/EzsignfolderGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayloadTest.java
@@ -2074,6 +2251,9 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetInPersonLoginU
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestTest.java
@@ -2098,6 +2278,9 @@ src/test/java/com/ezmax/api/model/EzsignfoldertypeGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldertypeGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeListElementTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldertypeRequestCompoundTest.java
@@ -2118,6 +2301,9 @@ src/test/java/com/ezmax/api/model/EzsignformfieldgroupEditObjectV1ResponseTest.j
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignformfieldgroupGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignformfieldgroupRequestTest.java
@@ -2144,6 +2330,9 @@ src/test/java/com/ezmax/api/model/EzsignsignatureEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsignsignatureGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsignsignatureRequestTest.java
@@ -2183,6 +2372,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplateGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateListElementTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateRequestTest.java
@@ -2216,6 +2408,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetEzsigntemplatesignatu
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatedocumentGetWordsPositionsV1ResponseTest.java
@@ -2242,6 +2437,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupEditObjectV1Respon
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplateformfieldgroupRequestTest.java
@@ -2274,6 +2472,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetListV1ResponseTest.jav
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackageGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageListElementTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackageRequestTest.java
@@ -2288,6 +2489,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipDeleteObjectV1R
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagemembershipResponseCompoundAllOfTest.java
@@ -2305,6 +2509,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerEditObjectV1Respons
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignerResponseCompoundTest.java
@@ -2319,6 +2526,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipDeleteObj
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatepackagesignermembershipResponseCompoundTest.java
@@ -2333,6 +2543,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatesignatureEditObjectV1ResponseTes
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignatureGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignatureRequestTest.java
@@ -2353,6 +2566,9 @@ src/test/java/com/ezmax/api/model/EzsigntemplatesignerEditObjectV1ResponseTest.j
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/EzsigntemplatesignerGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerRequestTest.java
 src/test/java/com/ezmax/api/model/EzsigntemplatesignerResponseCompoundTest.java
@@ -2394,6 +2610,8 @@ src/test/java/com/ezmax/api/model/FieldENotificationpreferenceStatusTest.java
 src/test/java/com/ezmax/api/model/FieldEPhoneTypeTest.java
 src/test/java/com/ezmax/api/model/FieldEUserEzsignsendreminderfrequencyTest.java
 src/test/java/com/ezmax/api/model/FieldEUserTypeTest.java
+src/test/java/com/ezmax/api/model/FieldEVersionhistoryTypeTest.java
+src/test/java/com/ezmax/api/model/FieldEVersionhistoryUsertypeTest.java
 src/test/java/com/ezmax/api/model/FieldEWebhookEzsigneventTest.java
 src/test/java/com/ezmax/api/model/FieldEWebhookManagementeventTest.java
 src/test/java/com/ezmax/api/model/FieldEWebhookModuleTest.java
@@ -2416,6 +2634,7 @@ src/test/java/com/ezmax/api/model/MultilingualEzmaxinvoicingsummaryinternalDescr
 src/test/java/com/ezmax/api/model/MultilingualEzsignfoldertypeNameTest.java
 src/test/java/com/ezmax/api/model/MultilingualNotificationsubsectionNameTest.java
 src/test/java/com/ezmax/api/model/MultilingualNotificationtestNameTest.java
+src/test/java/com/ezmax/api/model/MultilingualVersionhistoryDetailTest.java
 src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/NotificationsectionGetNotificationtestsV1ResponseTest.java
@@ -2452,6 +2671,11 @@ src/test/java/com/ezmax/api/model/UsergroupAutocompleteElementResponseTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseTest.java
+src/test/java/com/ezmax/api/model/VersionhistoryGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/VersionhistoryGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/VersionhistoryGetObjectV2ResponseTest.java
+src/test/java/com/ezmax/api/model/VersionhistoryResponseCompoundTest.java
+src/test/java/com/ezmax/api/model/VersionhistoryResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/WebhookCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/WebhookCreateObjectV1ResponseMPayloadTest.java
@@ -2474,9 +2698,13 @@ src/test/java/com/ezmax/api/model/WebhookGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookGetObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/WebhookGetObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/WebhookGetObjectV1ResponseTest.java
+src/test/java/com/ezmax/api/model/WebhookGetObjectV2ResponseAllOfTest.java
+src/test/java/com/ezmax/api/model/WebhookGetObjectV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/WebhookGetObjectV2ResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookListElementTest.java
 src/test/java/com/ezmax/api/model/WebhookRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/WebhookRequestTest.java
+src/test/java/com/ezmax/api/model/WebhookResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/WebhookResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/WebhookResponseTest.java
 src/test/java/com/ezmax/api/model/WebhookTestV1ResponseTest.java
