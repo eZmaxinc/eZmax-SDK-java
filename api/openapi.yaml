@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.13
+  version: 1.1.14
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,8 +68,12 @@ tags:
     \ for production use.\r\n* **Added** for new features.\r\n* **Changed** for changes\
     \ in existing functionality.\r\n* **Deprecated** for soon-to-be removed features.\r\
     \n* **Removed** for now removed features.\r\n* **Fixed** for any bug fixes.\r\n\
-    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.13]\
-    \ - 2022-10-28\r\n\r\n#### Added\r\n\r\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\
+    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.14]\
+    \ - 2022-11-01\r\n\r\n#### Added\r\n- GET /2/object/period/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/franchisebroker/getAutocomplete/{sSelector}\r\n- GET /2/object/franchiseoffice/getAutocomplete/{sSelector}\r\
+    \n\r\n#### Deprecated\r\n- GET /1/object/period/getAutocomplete/{sSelector}\r\n\
+    - GET /1/object/franchisebroker/getAutocomplete/{sSelector}\r\n- GET /1/object/franchiseoffice/getAutocomplete/{sSelector}\r\
+    \n\r\n### [1.1.13] - 2022-10-28\r\n\r\n#### Added\r\n\r\n- GET /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/ezmaxinvoicing/getProvisional\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
     \n- GET /2/object/billingentityinternal/getAutocomplete/{sSelector}\r\n- GET /2/object/branding/getAutocomplete/{sSelector}\r\
     \n- GET /2/object/department/getAutocomplete/{sSelector}\r\n- GET /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}\r\
@@ -8454,9 +8458,70 @@ paths:
       - Object_Ezsigntsarequirement
       x-presentations: []
       x-accepts: application/json
+  /2/object/franchisebroker/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Franchisebroker to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchisebroker_GetAutocomplete_V2
+      parameters:
+      - description: The type of Franchisebrokers to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchisebroker-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchisebrokers and IDs
+      tags:
+      - Object_Franchisebroker
+      x-presentations:
+      - RemaxQC
+      x-accepts: application/json
   /1/object/franchisebroker/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Franchisebrokers to be used in a dropdown or autocomplete
         control.
       operationId: Franchisebroker_GetAutocomplete_V1
@@ -8514,9 +8579,70 @@ paths:
       - Object_Franchisebroker
       x-presentations: []
       x-accepts: application/json
+  /2/object/franchiseoffice/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Franchiseoffice to be used in a dropdown or autocomplete
+        control.
+      operationId: Franchiseoffice_GetAutocomplete_V2
+      parameters:
+      - description: The type of Franchiseoffices to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/franchiseoffice-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Franchiseoffices and IDs
+      tags:
+      - Object_Franchiseoffice
+      x-presentations:
+      - RemaxQC
+      x-accepts: application/json
   /1/object/franchiseoffice/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Franchiseoffices to be used in a dropdown or autocomplete
         control.
       operationId: Franchiseoffice_GetAutocomplete_V1
@@ -8709,9 +8835,73 @@ paths:
       x-presentations:
       - Ezsign
       x-accepts: application/json
+  /2/object/period/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Period to be used in a dropdown or autocomplete
+        control.
+      operationId: Period_GetAutocomplete_V2
+      parameters:
+      - description: The type of Periods to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - ActiveNormal
+          - ActiveNormalAndEndOfYear
+          - AllNormal
+          - AllNormalAndEndOfYear
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/period-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Periods and IDs
+      tags:
+      - Object_Period
+      x-presentations:
+      - RemaxQC
+      x-accepts: application/json
   /1/object/period/getAutocomplete/{sSelector}:
     description: ""
     get:
+      deprecated: true
       description: Get the list of Periods to be used in a dropdown or autocomplete
         control.
       operationId: Period_GetAutocomplete_V1
@@ -10995,6 +11185,18 @@ components:
       description: Whether the Ezsigntsarequirement is active or not
       example: true
       type: boolean
+    Field-bFranchisebrokerIsactive:
+      description: Whether the Franchisebroker is active or not
+      example: true
+      type: boolean
+    Field-bFranchiseofficeIsactive:
+      description: Whether the Franchiseoffice is active or not
+      example: true
+      type: boolean
+    Field-bPeriodIsactive:
+      description: Whether the Period is active or not
+      example: true
+      type: boolean
     Field-bSecretquestionIsactive:
       description: Whether the Secretquestion is active or not
       example: true
@@ -13044,6 +13246,14 @@ components:
         \ eq 'Other' and eField4 eq 'Paid' and sField5 like '%needle%' and iField6\
         \ in '1,2,3' and dtField7 rg '=m,=3mm'"
       type: string
+    Field-sFranchisebrokerName:
+      description: The name of the Franchisebroker in the language of the requester
+      example: Default
+      type: string
+    Field-sFranchiseofficeDescription:
+      description: The description of the Franchiseoffice in the language of the requester
+      example: Default
+      type: string
     Field-sLanguageNameX:
       description: The Name of the Language in the language of the requester
       example: English
@@ -13087,6 +13297,10 @@ components:
     Field-sNotificationtestNameX:
       description: The name of the Notificationtest in the language of the requester
       example: Default
+      type: string
+    Field-sPeriodYYYYMM:
+      description: The period YYYYMM
+      example: 2202-12
       type: string
     Field-sPhoneE164:
       description: A phone number in E.164 Format
@@ -18784,12 +18998,8 @@ components:
       type: object
     ezsignsignature-sign-v1-Response:
       allOf:
-      - $ref: '#/components/schemas/ezsignsignature_sign_v1_Response_allOf'
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
-      type: object
-    ezsignsignature-sign-v1-Response-mPayload:
-      description: "Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
       type: object
     ezsignsignaturecustomdate-Request:
       description: An Ezsignsignaturecustomdate Object
@@ -21777,6 +21987,83 @@ components:
       required:
       - a_objEzsigntsarequirement
       type: object
+    franchisebroker-AutocompleteElement-Response:
+      description: A Franchisebroker AutocompleteElement Response
+      properties:
+        sFranchisebrokerName:
+          description: The name of the Franchisebroker in the language of the requester
+          example: Default
+          type: string
+        pkiFranchisebrokerID:
+          description: The unique ID of the Franchisebroker
+          example: 61
+          minimum: 0
+          type: integer
+        bFranchisebrokerIsactive:
+          description: Whether the Franchisebroker is active or not
+          example: true
+          type: boolean
+      required:
+      - bFranchisebrokerIsactive
+      - pkiFranchisebrokerID
+      - sFranchisebrokerName
+      type: object
+    franchisebroker-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/franchisebroker_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/franchisebroker/getAutocomplete
+      type: object
+    franchisebroker-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/franchisebroker/getAutocomplete
+      properties:
+        a_objFranchisebroker:
+          description: An array of Franchisebroker autocomplete element response.
+          items:
+            $ref: '#/components/schemas/franchisebroker-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objfranchisebroker
+      type: object
+    franchiseoffice-AutocompleteElement-Response:
+      description: A Franchiseoffice AutocompleteElement Response
+      properties:
+        sFranchiseofficeDescription:
+          description: The description of the Franchiseoffice in the language of the
+            requester
+          example: Default
+          type: string
+        pkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          minimum: 0
+          type: integer
+        bFranchiseofficeIsactive:
+          description: Whether the Franchiseoffice is active or not
+          example: true
+          type: boolean
+      required:
+      - bFranchiseofficeIsactive
+      - pkiFranchiseofficeID
+      - sFranchiseofficeDescription
+      type: object
+    franchiseoffice-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/franchiseoffice_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/franchiseoffice/getAutocomplete
+      type: object
+    franchiseoffice-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/franchiseoffice/getAutocomplete
+      properties:
+        a_objFranchiseoffice:
+          description: An array of Franchiseoffice autocomplete element response.
+          items:
+            $ref: '#/components/schemas/franchiseoffice-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objfranchiseoffice
+      type: object
     franchisereferalincome-Request:
       description: An Franchisereferalincome Object
       properties:
@@ -22033,6 +22320,44 @@ components:
       - a_sProperty
       - pkiNotificationtestID
       - sNotificationtestFunction
+      type: object
+    period-AutocompleteElement-Response:
+      description: A Period AutocompleteElement Response
+      properties:
+        sPeriodYYYYMM:
+          description: The period YYYYMM
+          example: 2202-12
+          type: string
+        pkiPeriodID:
+          description: The unique ID of the Period
+          example: 21
+          minimum: 0
+          type: integer
+        bPeriodIsactive:
+          description: Whether the Period is active or not
+          example: true
+          type: boolean
+      required:
+      - bPeriodIsactive
+      - pkiPeriodID
+      - sPeriodYYYYMM
+      type: object
+    period-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/period_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/period/getAutocomplete
+      type: object
+    period-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/period/getAutocomplete
+      properties:
+        a_objPeriod:
+          description: An array of Period autocomplete element response.
+          items:
+            $ref: '#/components/schemas/period-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objperiod
       type: object
     phone-Request:
       description: A Phone Object
@@ -23905,14 +24230,6 @@ components:
       required:
       - mPayload
       type: object
-    ezsignsignature_sign_v1_Response_allOf:
-      properties:
-        mPayload:
-          description: "Payload for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
-          type: object
-      required:
-      - mPayload
-      type: object
     ezsignsigner_RequestCompound_allOf:
       properties:
         objContact:
@@ -24351,6 +24668,20 @@ components:
       required:
       - mPayload
       type: object
+    franchisebroker_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/franchisebroker-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    franchiseoffice_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/franchiseoffice-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
     franchisereferalincome_RequestCompound_allOf:
       properties:
         objAddress:
@@ -24387,6 +24718,13 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/notificationtest-getElements-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+    period_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/period-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -24627,4 +24965,5 @@ x-tagGroups:
   - Object_Webhook
 x-presentations:
 - Ezsign
+- RemaxQC
 
