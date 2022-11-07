@@ -377,6 +377,8 @@ docs/EzsignfolderSendV1Request.md
 docs/EzsignfolderSendV1Response.md
 docs/EzsignfolderSendV2Request.md
 docs/EzsignfolderSendV2Response.md
+docs/EzsignfolderSendV3Request.md
+docs/EzsignfolderSendV3Response.md
 docs/EzsignfolderUnsendV1Response.md
 docs/EzsignfoldersignerassociationCreateObjectV1Request.md
 docs/EzsignfoldersignerassociationCreateObjectV1Response.md
@@ -399,9 +401,12 @@ docs/EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md
 docs/EzsignfoldersignerassociationGetObjectV2Response.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.md
 docs/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.md
+docs/EzsignfoldersignerassociationPatchObjectV1Request.md
+docs/EzsignfoldersignerassociationPatchObjectV1Response.md
 docs/EzsignfoldersignerassociationRequest.md
 docs/EzsignfoldersignerassociationRequestCompound.md
 docs/EzsignfoldersignerassociationRequestCompoundAllOf.md
+docs/EzsignfoldersignerassociationRequestPatch.md
 docs/EzsignfoldersignerassociationResponse.md
 docs/EzsignfoldersignerassociationResponseCompound.md
 docs/EzsignfoldersignerassociationResponseCompoundAllOf.md
@@ -1333,6 +1338,8 @@ src/main/java/com/ezmax/api/model/EzsignfolderSendV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderSendV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderSendV2Request.java
 src/main/java/com/ezmax/api/model/EzsignfolderSendV2Response.java
+src/main/java/com/ezmax/api/model/EzsignfolderSendV3Request.java
+src/main/java/com/ezmax/api/model/EzsignfolderSendV3Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderUnsendV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1Response.java
@@ -1355,9 +1362,12 @@ src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOf.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationPatchObjectV1Request.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationPatchObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequest.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompound.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOf.java
+src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestPatch.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponse.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompound.java
 src/main/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundAllOf.java
@@ -2254,6 +2264,8 @@ src/test/java/com/ezmax/api/model/EzsignfolderSendV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderSendV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderSendV2RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderSendV2ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderSendV3RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfolderSendV3ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderUnsendV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationCreateObjectV1ResponseAllOfTest.java
@@ -2276,8 +2288,11 @@ src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV1Respon
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationGetObjectV2ResponseTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationPatchObjectV1RequestTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationPatchObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestCompoundTest.java
+src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestPatchTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationRequestTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundAllOfTest.java
 src/test/java/com/ezmax/api/model/EzsignfoldersignerassociationResponseCompoundTest.java

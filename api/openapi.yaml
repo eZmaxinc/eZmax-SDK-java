@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.14
+  version: 1.1.15
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,8 +68,13 @@ tags:
     \ for production use.\r\n* **Added** for new features.\r\n* **Changed** for changes\
     \ in existing functionality.\r\n* **Deprecated** for soon-to-be removed features.\r\
     \n* **Removed** for now removed features.\r\n* **Fixed** for any bug fixes.\r\n\
-    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.14]\
-    \ - 2022-11-01\r\n\r\n#### Added\r\n- GET /2/object/period/getAutocomplete/{sSelector}\r\
+    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.15]\
+    \ - 2022-11-07\r\n\r\n#### Added\r\n- PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    \n- POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send\r\n- Enum value 'PendingSend'\
+    \ for eEzsignfolderStep\r\n- Property bEzsignfoldersignerassociationDelayedsend\
+    \ in ezsignfoldersignerassociation-Response\r\n- Property dtEzsignfolderDelayedsenddate\
+    \ in ezsignfolder-Response\r\n\r\n#### Deprecated\r\n- POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send\r\
+    \n\r\n\r\n### [1.1.14] - 2022-11-01\r\n\r\n#### Added\r\n- GET /2/object/period/getAutocomplete/{sSelector}\r\
     \n- GET /2/object/franchisebroker/getAutocomplete/{sSelector}\r\n- GET /2/object/franchiseoffice/getAutocomplete/{sSelector}\r\
     \n\r\n#### Deprecated\r\n- GET /1/object/period/getAutocomplete/{sSelector}\r\n\
     - GET /1/object/franchisebroker/getAutocomplete/{sSelector}\r\n- GET /1/object/franchiseoffice/getAutocomplete/{sSelector}\r\
@@ -4687,8 +4692,57 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /3/object/ezsignfolder/{pkiEzsignfolderID}/send:
+    post:
+      description: ""
+      operationId: Ezsignfolder_Send_V3
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfolder-send-v3-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-send-v3-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Send the Ezsignfolder to the signatories for signature
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
   /2/object/ezsignfolder/{pkiEzsignfolderID}/send:
     post:
+      deprecated: true
       description: ""
       operationId: Ezsignfolder_Send_V2
       parameters:
@@ -4731,8 +4785,7 @@ paths:
       summary: Send the Ezsignfolder to the signatories for signature
       tags:
       - Object_Ezsignfolder
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/send:
@@ -5144,6 +5197,52 @@ paths:
       tags:
       - Object_Ezsignfoldersignerassociation
       x-presentations: []
+      x-accepts: application/json
+    patch:
+      operationId: Ezsignfoldersignerassociation_PatchObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfoldersignerassociationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignfoldersignerassociation-patchObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfoldersignerassociation-patchObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Patch an existing Ezsignfoldersignerassociation
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
       x-accepts: application/json
     put:
       description: ""
@@ -8723,7 +8822,8 @@ paths:
       summary: Create a new Franchisereferalincome
       tags:
       - Object_Franchisereferalincome
-      x-presentations: []
+      x-presentations:
+      - RemaxQC
       x-content-type: application/json
       x-accepts: application/json
   /1/object/franchisereferalincome:
@@ -11043,6 +11143,9 @@ components:
       description: Whether there was a signature is of type payment
       example: true
       type: boolean
+    Field-bEzsignfoldersignerassociationDelayedsend:
+      description: If this flag is true the signatory is part of a delayed send.
+      type: boolean
     Field-bEzsignfoldersignerassociationReceivecopy:
       description: If this flag is true. The signatory will receive a copy of every
         signed Ezsigndocument even if it ain't required to sign the document.
@@ -11351,22 +11454,18 @@ components:
     Field-dFranchisereferalincomeAgentamount:
       description: The amount that will be given to the agent
       example: "800.00"
-      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeFranchiseamount:
       description: The amount that will be given to the franchise
       example: "275.00"
-      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeFranchisoramount:
       description: The amount that will be kept by the franchisor
       example: "385.00"
-      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeLoan:
       description: The loan amount
       example: "500275.62"
-      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dtContactBirthdate:
       description: The Birth Date of the contact
@@ -11425,13 +11524,17 @@ components:
       example: 2020-12-31 23:59:59
       type: string
     Field-dtEzsignfolderClose:
-      description: The date and time at which the folder was closed. Either by applying
-        the last signature or by completing it prematurely.
+      description: The date and time at which the Ezsignfolder was closed. Either
+        by applying the last signature or by completing it prematurely.
       example: 2020-12-31 23:59:59
       type: string
+    Field-dtEzsignfolderDelayedsenddate:
+      description: The date and time at which the Ezsignfolder will be sent in the
+        future.
+      example: 2020-12-31T23:59:59.000Z
+      type: string
     Field-dtEzsignfolderSentdate:
-      description: The date and time at which the Ezsign folder was sent the last
-        time.
+      description: The date and time at which the Ezsignfolder was sent the last time.
       example: 2020-12-31T23:59:59.000Z
       type: string
     Field-dtEzsignformCompleted:
@@ -11582,6 +11685,7 @@ components:
       description: The signature step of the Ezsignfolder.
       enum:
       - Unsent
+      - PendingSend
       - Sent
       - PartiallySigned
       - Expired
@@ -16825,7 +16929,7 @@ components:
           example: 2020-12-31 23:59:59
           type: string
         dtEzsignfolderSentdate:
-          description: The date and time at which the Ezsign folder was sent the last
+          description: The date and time at which the Ezsignfolder was sent the last
             time.
           example: 2020-12-31T23:59:59.000Z
           type: string
@@ -16976,13 +17080,18 @@ components:
           type: boolean
         eEzsignfolderSendreminderfrequency:
           $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
+        dtEzsignfolderDelayedsenddate:
+          description: The date and time at which the Ezsignfolder will be sent in
+            the future.
+          example: 2020-12-31T23:59:59.000Z
+          type: string
         dtEzsignfolderDuedate:
           description: The maximum date and time at which the Ezsignfolder can be
             signed.
           example: 2020-12-31 23:59:59
           type: string
         dtEzsignfolderSentdate:
-          description: The date and time at which the Ezsign folder was sent the last
+          description: The date and time at which the Ezsignfolder was sent the last
             time.
           example: 2020-12-31T23:59:59.000Z
           type: string
@@ -16998,8 +17107,8 @@ components:
         eEzsignfolderStep:
           $ref: '#/components/schemas/Field-eEzsignfolderStep'
         dtEzsignfolderClose:
-          description: The date and time at which the folder was closed. Either by
-            applying the last signature or by completing it prematurely.
+          description: The date and time at which the Ezsignfolder was closed. Either
+            by applying the last signature or by completing it prematurely.
           example: 2020-12-31 23:59:59
           type: string
         tEzsignfolderMessage:
@@ -17392,6 +17501,32 @@ components:
       - $ref: '#/components/schemas/Common-Response'
       description: "Response for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send"
       type: object
+    ezsignfolder-send-v3-Request:
+      description: "Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send"
+      properties:
+        tEzsignfolderMessage:
+          description: A custom text message that will be added to the email sent.
+          example: "Hi everyone,\n\nThis is the document I need you to review.\n\n\
+            Could you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          type: string
+        dtEzsignfolderDelayedsenddate:
+          description: The date and time at which the Ezsignfolder will be sent in
+            the future.
+          example: 2020-12-31T23:59:59.000Z
+          type: string
+        a_fkiEzsignfoldersignerassociationID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          type: array
+      required:
+      - a_fkiEzsignfoldersignerassociationID
+      - tEzsignfolderMessage
+      type: object
+    ezsignfolder-send-v3-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send"
+      type: object
     ezsignfolder-unsend-v1-Request:
       description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n\
         \nIntentionally empty for future-proofing"
@@ -17438,6 +17573,15 @@ components:
       description: An Ezsignfoldersignerassociation Object and children to create
         a complete structure
       type: object
+    ezsignfoldersignerassociation-RequestPatch:
+      description: An Ezsignfoldersignerassociation Object
+      properties:
+        tEzsignfoldersignerassociationMessage:
+          description: A custom text message that will be added to the email sent.
+          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
+            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          type: string
+      type: object
     ezsignfoldersignerassociation-Response:
       description: An Ezsignfoldersignerassociation Object
       properties:
@@ -17451,6 +17595,9 @@ components:
           example: 33
           minimum: 0
           type: integer
+        bEzsignfoldersignerassociationDelayedsend:
+          description: If this flag is true the signatory is part of a delayed send.
+          type: boolean
         bEzsignfoldersignerassociationReceivecopy:
           description: If this flag is true. The signatory will receive a copy of
             every signed Ezsigndocument even if it ain't required to sign the document.
@@ -17461,6 +17608,7 @@ components:
             \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
           type: string
       required:
+      - bEzsignfoldersignerassociationDelayedsend
       - bEzsignfoldersignerassociationReceivecopy
       - fkiEzsignfolderID
       - pkiEzsignfoldersignerassociationID
@@ -17639,6 +17787,19 @@ components:
           $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
       required:
       - objEzsignfoldersignerassociation
+      type: object
+    ezsignfoldersignerassociation-patchObject-v1-Request:
+      description: "Request for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
+      properties:
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestPatch'
+      required:
+      - objEzsignfoldersignerassociation
+      type: object
+    ezsignfoldersignerassociation-patchObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
       type: object
     ezsignfoldertype-AutocompleteElement-Response:
       description: A Ezsignfoldertype AutocompleteElement Response
@@ -22090,22 +22251,18 @@ components:
         dFranchisereferalincomeLoan:
           description: The loan amount
           example: "500275.62"
-          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeFranchiseamount:
           description: The amount that will be given to the franchise
           example: "275.00"
-          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeFranchisoramount:
           description: The amount that will be kept by the franchisor
           example: "385.00"
-          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dFranchisereferalincomeAgentamount:
           description: The amount that will be given to the agent
           example: "800.00"
-          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
           type: string
         dtFranchisereferalincomeDisbursed:
           description: The date the amounts were disbursed
