@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.15
+  version: 1.1.16
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -68,8 +68,11 @@ tags:
     \ for production use.\r\n* **Added** for new features.\r\n* **Changed** for changes\
     \ in existing functionality.\r\n* **Deprecated** for soon-to-be removed features.\r\
     \n* **Removed** for now removed features.\r\n* **Fixed** for any bug fixes.\r\n\
-    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.15]\
-    \ - 2022-11-07\r\n\r\n#### Added\r\n- PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
+    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.16]\
+    \ - 2022-11-10\r\n\r\n#### Added\r\n- POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy\r\
+    \n- Properties fkiEzsignfoldersignerassociationIDDeclinedtosign and tEzsigndocumentDeclinedtosignreason\
+    \ in ezsigndocument-Response\r\n\r\n### [1.1.15] - 2022-11-07\r\n\r\n#### Added\r\
+    \n- PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
     \n- POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send\r\n- Enum value 'PendingSend'\
     \ for eEzsignfolderStep\r\n- Property bEzsignfoldersignerassociationDelayedsend\
     \ in ezsignfoldersignerassociation-Response\r\n- Property dtEzsignfolderDelayedsenddate\
@@ -6352,6 +6355,47 @@ paths:
       - Ezsign
       x-content-type: application/json
       x-accepts: application/json
+  /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy:
+    post:
+      description: ""
+      operationId: Ezsigntemplate_Copy_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigntemplateID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigntemplateID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigntemplate-copy-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigntemplate-copy-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Copy the Ezsigntemplate
+      tags:
+      - Object_Ezsigntemplate
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
   /2/object/ezsigntemplate/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -10690,6 +10734,11 @@ components:
           example: 28
           minimum: 1
           type: integer
+        dEzmaxpricingRebateezsignallagents:
+          description: The rebate offered when eZsign is taken for all agents
+          example: "90.00"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
         dtEzmaxpricingStart:
           description: The start date of the Ezmaxpricing
           example: 2020-12-31
@@ -10699,6 +10748,7 @@ components:
           example: 2020-12-31
           type: string
       required:
+      - dEzmaxpricingRebateezsignallagents
       - dtEzmaxpricingStart
       - pkiEzmaxpricingID
       type: object
@@ -11449,6 +11499,11 @@ components:
     Field-dEzmaxinvoicingsummaryinternaldetailTotal:
       description: The total invoiced for the product
       example: "510.77"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
+    Field-dEzmaxpricingRebateezsignallagents:
+      description: The rebate offered when eZsign is taken for all agents
+      example: "90.00"
       pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dFranchisereferalincomeAgentamount:
@@ -13494,6 +13549,11 @@ components:
     Field-tEzsignbulksendNote:
       description: Note about the Ezsignbulksend
       example: This is a note
+      type: string
+    Field-tEzsigndocumentDeclinedtosignreason:
+      description: A custom text message that will contain the refusal message if
+        the Ezsigndocument is declined to sign
+      example: The conditions in the contract are different than those discuted
       type: string
     Field-tEzsignfolderMessage:
       description: A custom text message that will be added to the email sent.
@@ -16370,6 +16430,11 @@ components:
           example: 33
           minimum: 0
           type: integer
+        fkiEzsignfoldersignerassociationIDDeclinedtosign:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
+          minimum: 0
+          type: integer
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
             signed.
@@ -16438,6 +16503,11 @@ components:
           description: MD5 Hash of the initial PDF Document before signatures were
             applied to it.
           example: 012345678901234567890123456789AB
+          type: string
+        tEzsigndocumentDeclinedtosignreason:
+          description: A custom text message that will contain the refusal message
+            if the Ezsigndocument is declined to sign
+          example: The conditions in the contract are different than those discuted
           type: string
         sEzsigndocumentMD5signed:
           description: MD5 Hash of the final PDF Document after all signatures were
@@ -19816,6 +19886,36 @@ components:
       - $ref: '#/components/schemas/ezsigntemplate-Response'
       - $ref: '#/components/schemas/ezsigntemplate_ResponseCompound_allOf'
       description: A Ezsigntemplate Object
+      type: object
+    ezsigntemplate-copy-v1-Request:
+      description: "Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy"
+      properties:
+        a_fkiEzsignfoldertypeID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+          type: array
+      required:
+      - a_fkiEzsignfoldertypeID
+      type: object
+    ezsigntemplate-copy-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigntemplate_copy_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy"
+      type: object
+    ezsigntemplate-copy-v1-Response-mPayload:
+      description: "Payload for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy"
+      properties:
+        a_pkiEzsigntemplateID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be copied.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsigntemplateID'
+          type: array
+      required:
+      - a_pkiEzsigntemplateID
       type: object
     ezsigntemplate-createObject-v1-Request:
       description: Request for POST /1/object/ezsigntemplate
@@ -24411,6 +24511,13 @@ components:
           type: array
       required:
       - a_objEzsigntemplatesigner
+      type: object
+    ezsigntemplate_copy_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigntemplate-copy-v1-Response-mPayload'
+      required:
+      - mPayload
       type: object
     ezsigntemplate_createObject_v1_Response_allOf:
       properties:
