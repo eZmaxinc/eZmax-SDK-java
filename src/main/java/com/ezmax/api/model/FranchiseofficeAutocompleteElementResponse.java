@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Franchiseoffice AutocompleteElement Response
  */
 @ApiModel(description = "A Franchiseoffice AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T19:55:24.444529730Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
 public class FranchiseofficeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION = "sFranchiseofficeDescription";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION)

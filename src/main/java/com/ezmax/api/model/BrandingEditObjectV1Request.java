@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Request for PUT /1/object/branding/{pkiBrandingID}
  */
 @ApiModel(description = "Request for PUT /1/object/branding/{pkiBrandingID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T19:55:24.444529730Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
 public class BrandingEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
