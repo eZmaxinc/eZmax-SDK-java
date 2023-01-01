@@ -1,8 +1,8 @@
 # ezmax-java
 
 eZmax API Definition (Full)
-- API version: 1.1.16
-  - Build date: 2022-11-10T15:21:40.493145Z[Etc/UTC]
+- API version: 1.1.17
+  - Build date: 2023-01-01T19:55:24.444529730Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.1.16</version>
+  <version>1.1.17</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ezmax:ezmax-java:1.1.16"
+     implementation "com.ezmax:ezmax-java:1.1.17"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.1.16.jar`
+* `target/ezmax-java-1.1.17.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -124,6 +124,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
+*ModuleCommunicationApi* | [**communicationGetCommunicationCountV1**](docs/ModuleCommunicationApi.md#communicationGetCommunicationCountV1) | **GET** /1/module/communication/getCommunicationCount | Get the number of communication
+*ModuleCommunicationApi* | [**communicationGetCommunicationListV1**](docs/ModuleCommunicationApi.md#communicationGetCommunicationListV1) | **GET** /1/module/communication/getCommunicationList | Retrieve communication list
 *ModuleEzsignApi* | [**ezsignSuggestSignersV1**](docs/ModuleEzsignApi.md#ezsignSuggestSignersV1) | **GET** /1/module/ezsign/suggestSigners | Suggest signers
 *ModuleEzsignApi* | [**ezsignSuggestTemplatesV1**](docs/ModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates
 *ModuleUserApi* | [**userCreateEzsignuserV1**](docs/ModuleUserApi.md#userCreateEzsignuserV1) | **POST** /1/module/user/createezsignuser | Create a new User of type Ezsignuser
@@ -139,6 +141,7 @@ Class | Method | HTTP request | Description
 *ObjectBrandingApi* | [**brandingGetListV1**](docs/ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list
 *ObjectBrandingApi* | [**brandingGetObjectV1**](docs/ObjectBrandingApi.md#brandingGetObjectV1) | **GET** /1/object/branding/{pkiBrandingID} | Retrieve an existing Branding
 *ObjectBrandingApi* | [**brandingGetObjectV2**](docs/ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding
+*ObjectCommunicationApi* | [**communicationGetObjectV2**](docs/ObjectCommunicationApi.md#communicationGetObjectV2) | **GET** /2/object/communication/{pkiCommunicationID} | Retrieve an existing Communication
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV1**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV1) | **GET** /1/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDepartmentApi* | [**departmentGetAutocompleteV2**](docs/ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs
 *ObjectDepartmentApi* | [**departmentGetMembersV1**](docs/ObjectDepartmentApi.md#departmentGetMembersV1) | **GET** /1/object/department/{pkiDepartmentID}/getMembers | Retrieve an existing Department&#39;s members
@@ -408,6 +411,29 @@ Class | Method | HTTP request | Description
  - [CommonResponseRedirectSSecretquestionTextX](docs/CommonResponseRedirectSSecretquestionTextX.md)
  - [CommonResponseWarning](docs/CommonResponseWarning.md)
  - [CommonWebhook](docs/CommonWebhook.md)
+ - [CommunicationGetCountV1Response](docs/CommunicationGetCountV1Response.md)
+ - [CommunicationGetCountV1ResponseAllOf](docs/CommunicationGetCountV1ResponseAllOf.md)
+ - [CommunicationGetCountV1ResponseMPayload](docs/CommunicationGetCountV1ResponseMPayload.md)
+ - [CommunicationGetListV1Response](docs/CommunicationGetListV1Response.md)
+ - [CommunicationGetListV1ResponseAllOf](docs/CommunicationGetListV1ResponseAllOf.md)
+ - [CommunicationGetListV1ResponseMPayload](docs/CommunicationGetListV1ResponseMPayload.md)
+ - [CommunicationGetObjectV2Response](docs/CommunicationGetObjectV2Response.md)
+ - [CommunicationGetObjectV2ResponseAllOf](docs/CommunicationGetObjectV2ResponseAllOf.md)
+ - [CommunicationGetObjectV2ResponseMPayload](docs/CommunicationGetObjectV2ResponseMPayload.md)
+ - [CommunicationListElement](docs/CommunicationListElement.md)
+ - [CommunicationResponse](docs/CommunicationResponse.md)
+ - [CommunicationResponseCompound](docs/CommunicationResponseCompound.md)
+ - [CommunicationResponseCompoundAllOf](docs/CommunicationResponseCompoundAllOf.md)
+ - [CommunicationattachmentResponse](docs/CommunicationattachmentResponse.md)
+ - [CommunicationattachmentResponseCompound](docs/CommunicationattachmentResponseCompound.md)
+ - [CommunicationexternalimageResponse](docs/CommunicationexternalimageResponse.md)
+ - [CommunicationexternalimageResponseCompound](docs/CommunicationexternalimageResponseCompound.md)
+ - [CommunicationexternalrecipientResponse](docs/CommunicationexternalrecipientResponse.md)
+ - [CommunicationexternalrecipientResponseCompound](docs/CommunicationexternalrecipientResponseCompound.md)
+ - [CommunicationimageResponse](docs/CommunicationimageResponse.md)
+ - [CommunicationimageResponseCompound](docs/CommunicationimageResponseCompound.md)
+ - [CommunicationrecipientResponse](docs/CommunicationrecipientResponse.md)
+ - [CommunicationrecipientResponseCompound](docs/CommunicationrecipientResponseCompound.md)
  - [ContactRequest](docs/ContactRequest.md)
  - [ContactRequestCompound](docs/ContactRequestCompound.md)
  - [ContactRequestCompoundAllOf](docs/ContactRequestCompoundAllOf.md)
@@ -1059,6 +1085,10 @@ Class | Method | HTTP request | Description
  - [FieldEActivesessionUsertype](docs/FieldEActivesessionUsertype.md)
  - [FieldEActivesessionWeekdaystart](docs/FieldEActivesessionWeekdaystart.md)
  - [FieldEBrandingLogo](docs/FieldEBrandingLogo.md)
+ - [FieldECommunicationEmailimportance](docs/FieldECommunicationEmailimportance.md)
+ - [FieldECommunicationType](docs/FieldECommunicationType.md)
+ - [FieldECommunicationexternalrecipientType](docs/FieldECommunicationexternalrecipientType.md)
+ - [FieldECommunicationrecipientType](docs/FieldECommunicationrecipientType.md)
  - [FieldEEzmaxinvoicingPaymenttype](docs/FieldEEzmaxinvoicingPaymenttype.md)
  - [FieldEEzmaxinvoicingagentVariationezmax](docs/FieldEEzmaxinvoicingagentVariationezmax.md)
  - [FieldEEzmaxinvoicingagentVariationezsign](docs/FieldEEzmaxinvoicingagentVariationezsign.md)
@@ -1136,6 +1166,8 @@ Class | Method | HTTP request | Description
  - [PeriodGetAutocompleteV2ResponseMPayload](docs/PeriodGetAutocompleteV2ResponseMPayload.md)
  - [PhoneRequest](docs/PhoneRequest.md)
  - [PhoneRequestCompound](docs/PhoneRequestCompound.md)
+ - [PhoneResponse](docs/PhoneResponse.md)
+ - [PhoneResponseCompound](docs/PhoneResponseCompound.md)
  - [SecretquestionAutocompleteElementResponse](docs/SecretquestionAutocompleteElementResponse.md)
  - [SecretquestionGetAutocompleteV2Response](docs/SecretquestionGetAutocompleteV2Response.md)
  - [SecretquestionGetAutocompleteV2ResponseAllOf](docs/SecretquestionGetAutocompleteV2ResponseAllOf.md)

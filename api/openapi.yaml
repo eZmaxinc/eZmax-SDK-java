@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.1.16
+  version: 1.1.17
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -56,20 +56,20 @@ tags:
     \ will be published.\r\n\r\n**MINOR** will be incremented only if a function becomes\
     \ deprecated or deleted (after being deprecated in a previous version)\r\n\r\n\
     **PATCH** will be incremented everytime changes and additions are released.\r\n\
-    \r\nYou can always safely update to newer **PATCH** version if you stay in the\
-    \ same **MAJOR**.**MINOR** prefix.\r\n\r\nYou can safely update to a newer **MINOR**\
-    \ version as long as you don't jump more than a version at a time. For example,\
-    \ let say there is a function named \"foo\" in version 1.0.23. We might deprecate\
-    \ this function in version 1.1.1 but you can continue using it. We might decide\
-    \ to remove it in version 1.2.1 so then you would have a breaking change if you\
-    \ try to update to version 1.2.1 without having fixed the issue with your deprecated\
-    \ \"foo\" function.\r\n\r\nFor each version, there will be the list of changes:\r\
-    \n* **Early Adopters** for new features not officially considered final and ready\
-    \ for production use.\r\n* **Added** for new features.\r\n* **Changed** for changes\
-    \ in existing functionality.\r\n* **Deprecated** for soon-to-be removed features.\r\
-    \n* **Removed** for now removed features.\r\n* **Fixed** for any bug fixes.\r\n\
-    * **Security** in case of vulnerabilities.\r\n\r\n## 1.1.X Releases\r\n### [1.1.16]\
-    \ - 2022-11-10\r\n\r\n#### Added\r\n- POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy\r\
+    \r\nFor each version, there will be the list of changes:\r\n* **Early Adopters**\
+    \ for new features not officially considered final and ready for production use.\r\
+    \n* **Added** for new features.\r\n* **Changed** for changes in existing functionality.\r\
+    \n* **Deprecated** for soon-to-be removed features.\r\n* **Removed** for now removed\
+    \ features.\r\n* **Fixed** for any bug fixes.\r\n* **Security** in case of vulnerabilities.\r\
+    \n\r\n**Removal lifecycle**<br>\r\nOnce a function becomes **Deprecated**, we\
+    \ monitor its usage to track how many users are still using it.\r\nAfter a long\
+    \ period of time, if a minority of users are still using the function, we might\
+    \ ask users to update to the newer version of the function and give them ample\
+    \ time to do so.\r\nOnly after that delay expires (or no more users are still\
+    \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
+    \n### [1.1.17] - 2022-12\r\n\r\n#### Added\r\n- GET /1/module/communication/getCount\r\
+    \n- GET /1/module/communication/getList\r\n- GET /2/object/communication/{pkiCommunicationID}\r\
+    \n\r\n### [1.1.16] - 2022-11-10\r\n\r\n#### Added\r\n- POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy\r\
     \n- Properties fkiEzsignfoldersignerassociationIDDeclinedtosign and tEzsigndocumentDeclinedtosignreason\
     \ in ezsigndocument-Response\r\n\r\n### [1.1.15] - 2022-11-07\r\n\r\n#### Added\r\
     \n- PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\r\
@@ -563,44 +563,29 @@ tags:
     \ |"
   name: General_ErrorCodes
   x-displayName: Error Codes
-- description: "We publish everything related to our API on github at this location:\
-    \ <a href=\"https://github.com/eZmaxinc\" target=\"_blank\">https://github.com/eZmaxinc</a>.\
-    \ You'll find git repos for the specification, documentation, SDKs and samples.\n\
-    \nDocumentation, SDKs and samples are provided in english only for easier maintenance,\
-    \ but we also have french speaking integrators that can help you out.\n\nMost\
-    \ of our SDKs provide language specific documentation, but you'll find more details\
-    \ on this page about the general use of the API. Both the SDK's specific document\
-    \ (if you choose to use a SDK) and this documentation can be used in complementarity.\n\
-    \nIf you find any mistake or omission in the documentation, please notify us.\
-    \ We'll quickly fix the issue.\n\n## Onboarding\nWe highly recommend to schedule\
-    \ an online meeting with your technical team and an eZmax integrator. During this\
-    \ meeting, we go through requirements, business logic, configuration, api key\
-    \ generation, and we go through the list of functions you might need to implement\
-    \ to achieve your goals. Make sure you take this opportunity to speed up your\
-    \ integration project.\n\nIf you need help understanding how to use this API,\
-    \ don't waste too much time searching in it. Contact support-api@ezmax.ca, we're\
-    \ here to help. We are developpers so we know programmers don't like to waste\
-    \ time in documentation. If you don't find what you need in the documentation,\
-    \ let us know, we'll improve it and put you rapidly up on track.\n\n## Open API\n\
-    We highly believe in open standards and open source. We have adopted the Open\
-    \ API vision where all of the functionnalities of our applications are accessible\
-    \ with open source definition files. We use our own public API's to build our\
-    \ interfaces so you can do pretty much everything we can do. Open API has a rich\
-    \ toolset from editor, generators, mock servers, validators, etc. Learn more at\
-    \ <a href=\"https://www.openapis.org/\" target=\"_blank\">OpenAPI Initiative</a>\n\
-    \nIf you need  our Open API Spec file to use in your toolset, here is a direct\
-    \ link to it: <a href=\"https://raw.githubusercontent.com/eZmaxinc/eZmax-API/master/specs/ezmax.v1.1.json\"\
-    \ target=\"_blank\">ezmax.v1.1.json</a>\n\n## SDK\nWe provide SDKs for customers.\
-    \ They are generated using <a href=\"https://openapi-generator.tech/\" target=\"\
-    _blank\">OpenAPI Generator</a>, we encourage customers to use them as we also\
-    \ provide samples for them. You can choose to build your own implementation manually\
-    \ or can use any compatible OpenAPI 3.0 generator like <a href=\"https://openapi-generator.tech/\"\
-    \ target=\"_blank\">OpenAPI Generator</a>, <a href=\"https://swagger.io/tools/swagger-codegen/\"\
-    \ target=\"_blank\">Swagger Codegen</a> or any commercial generators.\n\nWe try\
-    \ to make it as easy as possible for you to use our SDKs so we publish packages\
-    \ on NPM and Composer. If you don't find your favorite language supported or it\
-    \ we could make your like easier by automating package distribution, let us know\
-    \ !"
+- description: |-
+    We publish everything related to our API on github at this location: <a href="https://github.com/eZmaxinc" target="_blank">https://github.com/eZmaxinc</a>. You'll find git repos for the specification, documentation, SDKs and samples.
+
+    Documentation, SDKs and samples are provided in english only for easier maintenance, but we also have french speaking integrators that can help you out.
+
+    Most of our SDKs provide language specific documentation, but you'll find more details on this page about the general use of the API. Both the SDK's specific document (if you choose to use a SDK) and this documentation can be used in complementarity.
+
+    If you find any mistake or omission in the documentation, please notify us. We'll quickly fix the issue.
+
+    ## Onboarding
+    We highly recommend to schedule an online meeting with your technical team and an eZmax integrator. During this meeting, we go through requirements, business logic, configuration, api key generation, and we go through the list of functions you might need to implement to achieve your goals. Make sure you take this opportunity to speed up your integration project.
+
+    If you need help understanding how to use this API, don't waste too much time searching in it. Contact support-api@ezmax.ca, we're here to help. We are developpers so we know programmers don't like to waste time in documentation. If you don't find what you need in the documentation, let us know, we'll improve it and put you rapidly up on track.
+
+    ## Open API
+    We highly believe in open standards and open source. We have adopted the Open API vision where all of the functionnalities of our applications are accessible with open source definition files. We use our own public API's to build our interfaces so you can do pretty much everything we can do. Open API has a rich toolset from editor, generators, mock servers, validators, etc. Learn more at <a href="https://www.openapis.org/" target="_blank">OpenAPI Initiative</a>
+
+    If you need  our Open API Spec file to use in your toolset, here is a direct link to it: <a href="https://raw.githubusercontent.com/eZmaxinc/eZmax-API/master/specs/ezmax.v1.1.json" target="_blank">ezmax.v1.1.json</a>
+
+    ## SDK
+    We provide SDKs for customers. They are generated using <a href="https://openapi-generator.tech/" target="_blank">OpenAPI Generator</a>, we encourage customers to use them as we also provide samples for them. You can choose to build your own implementation manually or can use any compatible OpenAPI 3.0 generator like <a href="https://openapi-generator.tech/" target="_blank">OpenAPI Generator</a>, <a href="https://swagger.io/tools/swagger-codegen/" target="_blank">Swagger Codegen</a> or any commercial generators.
+
+    We try to make it as easy as possible for you to use our SDKs so we publish packages on NPM and Composer. If you don't find your favorite language supported or it we could make your like easier by automating package distribution, let us know !
   name: General_Introduction
   x-displayName: Introduction
 - description: "## Authorization\n\nExcept for a few functions that do not require\
@@ -873,63 +858,58 @@ tags:
     \  |"
   name: General_WarningCodes
   x-displayName: Warning Codes
-- description: "## Concept\nA Webhook (also called a web callback or HTTP push API)\
-    \ is a way for your application to be notified of an event in real time.\n\nFor\
-    \ example, if you send a contract for signing and need to be notified as soon\
-    \ as it get signed.\n\nYou could program a loop to query the document status every\
-    \ 5 minutes for many days until you receive a response saying the document is\
-    \ signed. This is a bad approach as it will waste a lot of resources everytime\
-    \ you make a call to the API for no reason.\n\nA better approach would be to configure\
-    \ a webhook in the eZmax's administration console to watch for a specific event.\
-    \ In this exemple, the event to monitor is \"DocumentCompleted\" from the module\
-    \ \"Ezsign\". This way, as soon as the document gets signed, a request will be\
-    \ made to YOUR server to let you know about the event that just happened.\n\n\
-    When you configure eZmax to notify you of events, you must provide your server's\
-    \ URL and a fallback email address. The URL provided must use HTTPS for security\
-    \ reasons.\n\n### Types of Webhook:\nLook for purple indicators with the word\
-    \ \"EVENT\" throughout the documentation to see currently available Webhooks events\
-    \ you can subscribe to. If you have a need for an event that is not available,\
-    \ please send a feature request to technical support.\n\n### Important:\n- The\
-    \ event will be delivered using a POST request.\n- Your server will need to reply\
-    \ with a HTTP Status Code 202 or 204 to let eZmax know you've accepted the message\
-    \ and we shall not try to deliver the message again. If the server does not respond\
-    \ with a 202 or 204 Code, the message will be sent over and over until all tries\
-    \ are exhausted.\n- The 202 or 204 response must be returned in less than 30 seconds\
-    \ otherwise a timeout will occur and the event will be retried following the retry\
-    \ schedule.\n- Make sure to secure your Webhook receiving URL to make sure someone\
-    \ does not send forged messages to your application. You can do this by providing\
-    \ a secure token in your URL, for example \"?token=mysecuretoken1234\", or by\
-    \ validating the webhook message's signature.\n\n### Testing\nIn eZmax's administration\
-    \ module, you'll find a \"Test\" button that you can use as many time as you need\
-    \ to test your server code easily with a sample event.\n\n## Retries\neZmax will\
-    \ attempt to deliver the event to your server instantly but will retry many times\
-    \ if your server does not respond successfully for some reason (see schedule below).\
-    \ After all attempts are exhausted, the event will be forwarded to the configured\
-    \ fallback email in the same format as the webhook. The email body will contain\
-    \ the JSON request in the same format as the webhook. This way, you'll be able\
-    \ to send the request to your server using <a href=\"https://www.postman.com/\"\
-    \ target=\"_blank\">Postman</a>, <a href=\"https://curl.se/\" target=\"_blank\"\
-    >Curl</a> or similar tool.\n\n### Retry Delivery schedule\nThis is the approximate\
-    \ retry schedule. Since there is a 30 seconds timeout on each try, there could\
-    \ be a cumulative overhead up to 3½ minutes.\n\n| Minutes after previous step\
-    \ | Minutes after event | Method |\n| :-------------------------: | :-----------------:\
-    \ | ------ |\n| N/A                         | 0                   | HTTPS  |\n\
-    | 1                           | 1                   | HTTPS  |\n| 5          \
-    \                 | 6                   | HTTPS  |\n| 15                     \
-    \     | 21                  | HTTPS  |\n| 15                          | 36   \
-    \               | HTTPS  |\n| 15                          | 51               \
-    \   | HTTPS  |\n| 15                          | 66                  | HTTPS  |\n\
-    | 0                           | 66                  | Email  |\n\n### Failed attempt\
-    \ reporting\nIf you don't receive the event on the first attempt, there will be\
-    \ debugging information about each previous attempt in the body of the event.\
-    \ You'll be able to see the timestamp of each previous attempt and the return\
-    \ code returned by your server or a timeout indication if your server hasn't replied.\n"
+- description: |
+    ## Concept
+    A Webhook (also called a web callback or HTTP push API) is a way for your application to be notified of an event in real time.
+
+    For example, if you send a contract for signing and need to be notified as soon as it get signed.
+
+    You could program a loop to query the document status every 5 minutes for many days until you receive a response saying the document is signed. This is a bad approach as it will waste a lot of resources everytime you make a call to the API for no reason.
+
+    A better approach would be to configure a webhook in the eZmax's administration console to watch for a specific event. In this exemple, the event to monitor is "DocumentCompleted" from the module "Ezsign". This way, as soon as the document gets signed, a request will be made to YOUR server to let you know about the event that just happened.
+
+    When you configure eZmax to notify you of events, you must provide your server's URL and a fallback email address. The URL provided must use HTTPS for security reasons.
+
+    ### Types of Webhook:
+    Look for purple indicators with the word "EVENT" throughout the documentation to see currently available Webhooks events you can subscribe to. If you have a need for an event that is not available, please send a feature request to technical support.
+
+    ### Important:
+    - The event will be delivered using a POST request.
+    - Your server will need to reply with a HTTP Status Code 202 or 204 to let eZmax know you've accepted the message and we shall not try to deliver the message again. If the server does not respond with a 202 or 204 Code, the message will be sent over and over until all tries are exhausted.
+    - The 202 or 204 response must be returned in less than 30 seconds otherwise a timeout will occur and the event will be retried following the retry schedule.
+    - Make sure to secure your Webhook receiving URL to make sure someone does not send forged messages to your application. You can do this by providing a secure token in your URL, for example "?token=mysecuretoken1234", or by validating the webhook message's signature.
+
+    ### Testing
+    In eZmax's administration module, you'll find a "Test" button that you can use as many time as you need to test your server code easily with a sample event.
+
+    ## Retries
+    eZmax will attempt to deliver the event to your server instantly but will retry many times if your server does not respond successfully for some reason (see schedule below). After all attempts are exhausted, the event will be forwarded to the configured fallback email in the same format as the webhook. The email body will contain the JSON request in the same format as the webhook. This way, you'll be able to send the request to your server using <a href="https://www.postman.com/" target="_blank">Postman</a>, <a href="https://curl.se/" target="_blank">Curl</a> or similar tool.
+
+    ### Retry Delivery schedule
+    This is the approximate retry schedule. Since there is a 30 seconds timeout on each try, there could be a cumulative overhead up to 3½ minutes.
+
+    | Minutes after previous step | Minutes after event | Method |
+    | :-------------------------: | :-----------------: | ------ |
+    | N/A                         | 0                   | HTTPS  |
+    | 1                           | 1                   | HTTPS  |
+    | 5                           | 6                   | HTTPS  |
+    | 15                          | 21                  | HTTPS  |
+    | 15                          | 36                  | HTTPS  |
+    | 15                          | 51                  | HTTPS  |
+    | 15                          | 66                  | HTTPS  |
+    | 0                           | 66                  | Email  |
+
+    ### Failed attempt reporting
+    If you don't receive the event on the first attempt, there will be debugging information about each previous attempt in the body of the event. You'll be able to see the timestamp of each previous attempt and the return code returned by your server or a timeout indication if your server hasn't replied.
   name: General_Webhooks
   x-displayName: Webhooks
 - description: Customer contains details about the customer code assigned to your
     account
   name: Global_Customer
   x-displayName: Customer
+- description: Communication module contains actions related to Communication
+  name: Module_Communication
+  x-displayName: Communication
 - description: Ezsign contains actions related to Ezsign
   name: Module_Ezsign
   x-displayName: Ezsign
@@ -948,6 +928,9 @@ tags:
 - description: Branding contains detail about a company Branding
   name: Object_Branding
   x-displayName: Branding
+- description: Communication contains detail about a Communication
+  name: Object_Communication
+  x-displayName: Communication
 - description: Department contains detail about a Department
   name: Object_Department
   x-displayName: Department
@@ -1091,8 +1074,10 @@ paths:
         schema:
           $ref: '#/components/schemas/Field-pksCustomerCode'
         style: simple
-      - description: "The infrastructure product Code\n\nIf undefined, \"appcluster01\"\
-          \ is assumed"
+      - description: |-
+          The infrastructure product Code
+
+          If undefined, "appcluster01" is assumed
         explode: true
         in: query
         name: sInfrastructureproductCode
@@ -1122,6 +1107,94 @@ paths:
       summary: Get customer endpoint
       tags:
       - Global_Customer
+      x-presentations: []
+      x-accepts: application/json
+  /1/module/communication/getCommunicationCount:
+    get:
+      description: Get the number of communication in specified module
+      operationId: Communication_getCommunicationCount_V1
+      parameters:
+      - description: Specify the requested module
+        explode: true
+        in: query
+        name: eCommunicationModule
+        required: true
+        schema:
+          enum:
+          - Ezsignfolder
+          type: string
+        style: form
+      - description: The unique ID of the Ezsignfolder
+        explode: true
+        in: query
+        name: pkiEzsignfolderID
+        required: false
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/communication-getCount-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Get the number of communication
+      tags:
+      - Module_Communication
+      x-presentations: []
+      x-accepts: application/json
+  /1/module/communication/getCommunicationList:
+    get:
+      description: Retrieve communication list
+      operationId: Communication_getCommunicationList_V1
+      parameters:
+      - description: Specify the requested module
+        explode: true
+        in: query
+        name: eCommunicationModule
+        required: true
+        schema:
+          enum:
+          - Ezsignfolder
+          type: string
+        style: form
+      - description: The unique ID of the Ezsignfolder
+        explode: true
+        in: query
+        name: pkiEzsignfolderID
+        required: false
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/communication-getList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve communication list
+      tags:
+      - Module_Communication
       x-presentations: []
       x-accepts: application/json
   /1/module/ezsign/suggestSigners:
@@ -1776,6 +1849,40 @@ paths:
       - Object_Branding
       x-presentations:
       - Ezsign
+      x-accepts: application/json
+  /2/object/communication/{pkiCommunicationID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Communication_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiCommunicationID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiCommunicationID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/communication-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Communication
+      tags:
+      - Object_Communication
+      x-presentations: []
       x-accepts: application/json
   /1/object/department/{pkiDepartmentID}/getMembers:
     get:
@@ -3832,13 +3939,12 @@ paths:
             text/csv:
               examples:
                 Example:
-                  value: "sep=,\n\"sEzsignformfieldgroupLabel.sEzsignformfieldLabel1\"\
-                    ,\"sEzsignformfieldgroupLabel.sEzsignformfieldLabel2\",\"sEzsignformfieldgroupLabel.sEzsignformfieldLabel3\"\
-                    ,\"sEzsignformfieldgroupLabel.sEzsignformfieldLabel4\"\n\"sEzsignformfieldValue01\"\
-                    ,\"sEzsignformfieldValue02\",\"sEzsignformfieldValue03\",\"sEzsignformfieldValue04\"\
-                    \n\"sEzsignformfieldValue11\",\"sEzsignformfieldValue12\",\"sEzsignformfieldValue13\"\
-                    ,\"sEzsignformfieldValue14\"\n\"sEzsignformfieldValue21\",\"sEzsignformfieldValue22\"\
-                    ,\"sEzsignformfieldValue23\",\"sEzsignformfieldValue24\""
+                  value: |-
+                    sep=,
+                    "sEzsignformfieldgroupLabel.sEzsignformfieldLabel1","sEzsignformfieldgroupLabel.sEzsignformfieldLabel2","sEzsignformfieldgroupLabel.sEzsignformfieldLabel3","sEzsignformfieldgroupLabel.sEzsignformfieldLabel4"
+                    "sEzsignformfieldValue01","sEzsignformfieldValue02","sEzsignformfieldValue03","sEzsignformfieldValue04"
+                    "sEzsignformfieldValue11","sEzsignformfieldValue12","sEzsignformfieldValue13","sEzsignformfieldValue14"
+                    "sEzsignformfieldValue21","sEzsignformfieldValue22","sEzsignformfieldValue23","sEzsignformfieldValue24"
               schema:
                 $ref: '#/components/schemas/File-Csv'
           description: Successful response
@@ -3964,12 +4070,14 @@ paths:
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend:
     post:
-      description: "Once an Ezsigndocument has been sent to signatories, it cannot\
-        \ be modified.\n\nUsing this endpoint, you can unsend the Ezsigndocument and\
-        \ make it modifiable again.\n\nSignatories will receive an email informing\
-        \ them the signature process was aborted and they might receive a new invitation\
-        \ to sign.\n\n⚠️ Warning: Any signature previously made by signatories on\
-        \ this Ezsigndocumentswill be lost."
+      description: |-
+        Once an Ezsigndocument has been sent to signatories, it cannot be modified.
+
+        Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.
+
+        Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.
+
+        ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
       operationId: Ezsigndocument_Unsend_V1
       parameters:
       - explode: false
@@ -4841,12 +4949,14 @@ paths:
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend:
     post:
-      description: "Once an Ezsignfolder has been sent to signatories, it cannot be\
-        \ modified.\n\nUsing this endpoint, you can unsend the Ezsignfolder and make\
-        \ it modifiable again.\n\nSignatories will receive an email informing them\
-        \ the signature process was aborted and they might receive a new invitation\
-        \ to sign.\n\n⚠️ Warning: Any signature previously made by signatories on\
-        \ \"Non-completed\" Ezsigndocuments will be lost."
+      description: |-
+        Once an Ezsignfolder has been sent to signatories, it cannot be modified.
+
+        Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.
+
+        Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.
+
+        ⚠️ Warning: Any signature previously made by signatories on "Non-completed" Ezsigndocuments will be lost.
       operationId: Ezsignfolder_Unsend_V1
       parameters:
       - explode: false
@@ -10226,9 +10336,10 @@ components:
         by the receiving web server.
   schemas:
     Common-Audit:
-      description: "Gives informations about the user that created the object and\
-        \ the last user to have modified it.\n\nIf the object was never modified after\
-        \ creation, objAuditdetailModified won't be returned.\n"
+      description: |
+        Gives informations about the user that created the object and the last user to have modified it.
+
+        If the object was never modified after creation, objAuditdetailModified won't be returned.
       properties:
         objAuditdetailCreated:
           $ref: '#/components/schemas/Common-Auditdetail'
@@ -10238,9 +10349,10 @@ components:
       - objAuditdetailCreated
       type: object
     Common-Auditdetail:
-      description: "Gives informations about the user that created the object or the\
-        \ last user to have modified it.\n\nIf the object was never modified after\
-        \ creation, both Created and Modified informations will be the same.\n"
+      description: |
+        Gives informations about the user that created the object or the last user to have modified it.
+
+        If the object was never modified after creation, both Created and Modified informations will be the same.
       properties:
         fkiUserID:
           description: The unique ID of the User
@@ -10452,10 +10564,12 @@ components:
           example: 2
           type: integer
         a_RequiredPermission:
-          description: "An array of permissions required to access this function.\n\
-            \nIf the value \"0\" is present in the array, anyone can call this function.\n\
-            \nYou must have one of the permission to access the function. You don't\
-            \ need to have all of them."
+          description: |-
+            An array of permissions required to access this function.
+
+            If the value "0" is present in the array, anyone can call this function.
+
+            You must have one of the permission to access the function. You don't need to have all of them.
           items:
             example: 117
             type: integer
@@ -10564,6 +10678,10 @@ components:
       description: Indicate the Ezsigntemplate is incomplete and cannot be used
       example: false
       type: boolean
+    Computed-dtCommunicationSentdate:
+      description: The send date and time at which the Communication was sent.
+      example: 2020-12-31 23:59:59
+      type: string
     Computed-dtEzsignfolderDuedate:
       description: The maximum date and time at which the Ezsignfolder can be signed.
       example: 2020-12-31 23:59:59
@@ -10577,6 +10695,10 @@ components:
       description: The scheduled date at which the Ezsignfolder should be Disposed.
       example: 2020-12-31
       type: string
+    Computed-iCommunicationCount:
+      description: The number of total signatures in the Ezsigntemplate.
+      example: 8
+      type: integer
     Computed-iEzsigndocumentStepformcurrent:
       description: The current step in the form filling phase
       example: 1
@@ -10769,8 +10891,16 @@ components:
           type: integer
         tEzsignfoldersignerassociationMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
       required:
       - fkiEzsignfoldersignerassociationID
@@ -11119,6 +11249,10 @@ components:
       type: object
     Field-bActivesessionDebug:
       description: Whether the active session is in debug or not
+      example: false
+      type: boolean
+    Field-bActivesessionIssuperadmin:
+      description: Whether the active session is superadmin or not
       example: false
       type: boolean
     Field-bBillingentityinternalIsactive:
@@ -11647,6 +11781,38 @@ components:
       - PNG
       example: Default
       type: string
+    Field-eCommunicationEmailimportance:
+      description: The importance of Email for the Communication
+      enum:
+      - High
+      - Normal
+      - Low
+      example: Normal
+      type: string
+    Field-eCommunicationType:
+      description: The Type for the Communication
+      enum:
+      - Email
+      - Fax
+      - Sms
+      example: Email
+      type: string
+    Field-eCommunicationexternalrecipientType:
+      description: The Type of Communicationexternalrecipient
+      enum:
+      - To
+      - Cc
+      - Bcc
+      example: To
+      type: string
+    Field-eCommunicationrecipientType:
+      description: The Type for the Communicationrecipient
+      enum:
+      - To
+      - Cc
+      - Bcc
+      example: To
+      type: string
     Field-eEzmaxinvoicingPaymenttype:
       description: The Ezmaxinvoicing payment type
       enum:
@@ -11725,6 +11891,7 @@ components:
       - SignatureAttachmentRefused
       - SignatureAttachmentDeleted
       - DeclinedToSign
+      - DelayedSendEmail
       example: Createpage
       type: string
     Field-eEzsignfolderSendreminderfrequency:
@@ -11951,10 +12118,11 @@ components:
       example: Show
       type: string
     Field-ePhoneType:
-      description: "The type of phone number.\n\n**Local** refers to a north American\
-        \ phone number. You would then need to specify sPhoneRegion, sPhoneExchange,\
-        \ sPhoneNumber.\n**International** would be used for numbers outside of north\
-        \ america. You would then need to specify sPhoneInternational"
+      description: |-
+        The type of phone number.
+
+        **Local** refers to a north American phone number. You would then need to specify sPhoneRegion, sPhoneExchange, sPhoneNumber.
+        **International** would be used for numbers outside of north america. You would then need to specify sPhoneInternational
       enum:
       - Local
       - International
@@ -12238,18 +12406,18 @@ components:
       minimum: 0
       type: integer
     Field-iEzsignformfieldX:
-      description: "The X coordinate (Horizontal) where to put the Ezsignformfield\
-        \ on the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch).\
-        \ So for example, if you want to put the Ezsignformfield 2 inches from the\
-        \ left border of the page, you would use \"200\" for the X coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsignformfieldY:
-      description: "The Y coordinate (Vertical) where to put the Ezsignformfield on\
-        \ the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-        \ for example, if you want to put the Ezsignformfield 3 inches from the top\
-        \ border of the page, you would use \"300\" for the Y coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
@@ -12314,34 +12482,34 @@ components:
       example: 1
       type: integer
     Field-iEzsignsignatureX:
-      description: "The X coordinate (Horizontal) where to put the Ezsignsignature\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsignsignature 2 inches from the left border\
-        \ of the page, you would use \"200\" for the X coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsignsignature on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsignsignatureY:
-      description: "The Y coordinate (Vertical) where to put the Ezsignsignature on\
-        \ the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for example,\
-        \ if you want to put the Ezsignsignature 3 inches from the top border of the\
-        \ page, you would use \"300\" for the Y coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsignsignature on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
     Field-iEzsignsignaturecustomdateX:
-      description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsignsignaturecustomdate block 2 inches\
-        \ from the left border of the page, you would use \"200\" for the X coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsignsignaturecustomdateY:
-      description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsignsignaturecustomdate block 3 inches\
-        \ from the top border of the page, you would use \"300\" for the Y coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
@@ -12408,20 +12576,18 @@ components:
       minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldX:
-      description: "The X coordinate (Horizontal) where to put the Ezsigntemplateformfield\
-        \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot per\
-        \ inch). So for example, if you want to put the Ezsigntemplateformfield 2\
-        \ inches from the left border of the page, you would use \"200\" for the X\
-        \ coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsigntemplateformfieldY:
-      description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
-        \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot per\
-        \ inch). So for example, if you want to put the Ezsigntemplateformfield 3\
-        \ inches from the top border of the page, you would use \"300\" for the Y\
-        \ coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
@@ -12473,41 +12639,42 @@ components:
       example: 1
       type: integer
     Field-iEzsigntemplatesignatureX:
-      description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsigntemplatesignature 2 inches from the\
-        \ left border of the page, you would use \"200\" for the X coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsigntemplatesignatureY:
-      description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsigntemplatesignature 3 inches from the\
-        \ top border of the page, you would use \"300\" for the Y coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
     Field-iEzsigntemplatesignaturecustomdateX:
-      description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches\
-        \ from the left border of the page, you would use \"200\" for the X coordinate."
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use "200" for the X coordinate.
       example: 200
       minimum: 0
       type: integer
     Field-iEzsigntemplatesignaturecustomdateY:
-      description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
-        \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So for\
-        \ example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches\
-        \ from the top border of the page, you would use \"300\" for the Y coordinate."
+      description: |-
+        The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use "300" for the Y coordinate.
       example: 300
       minimum: 0
       type: integer
     Field-iPhoneNumber:
-      description: "The number of the phone number. (For a North America Number only)\n\
-        \nThe number is the \"1516\" section in this sample phone number: (514) 990-1516\
-        \ x123"
+      description: |-
+        The number of the phone number. (For a North America Number only)
+
+        The number is the "1516" section in this sample phone number: (514) 990-1516 x123
       example: "1516"
       type: string
     Field-iRowMax:
@@ -12556,9 +12723,24 @@ components:
       example: 1
       minimum: 0
       type: integer
+    Field-pkiAgentincorporationID:
+      description: The unique ID of the Agentincorporation.
+      example: 1
+      minimum: 0
+      type: integer
     Field-pkiApikeyID:
       description: The unique ID of the Apikey
       example: 99
+      minimum: 0
+      type: integer
+    Field-pkiAssistantID:
+      description: The unique ID of the Assistant.
+      example: 1
+      minimum: 0
+      type: integer
+    Field-pkiAttachmentID:
+      description: The unique ID of the Attachment.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiBillingentityexternalID:
@@ -12579,6 +12761,32 @@ components:
     Field-pkiBrokerID:
       description: The unique ID of the Broker.
       example: 26
+      minimum: 0
+      type: integer
+    Field-pkiCommunicationID:
+      description: The unique ID of the Communication.
+      example: 1
+      minimum: 0
+      type: integer
+    Field-pkiCommunicationattachmentID:
+      description: The unique ID of the Communicationattachment
+      example: 203
+      type: integer
+    Field-pkiCommunicationexternalimageID:
+      description: The unique ID of the Communicationexternalimage
+      example: 211
+      type: integer
+    Field-pkiCommunicationexternalrecipientID:
+      description: The unique ID of the Communicationexternalrecipient
+      example: 9
+      type: integer
+    Field-pkiCommunicationimageID:
+      description: The unique ID of the Communicationimage
+      example: 164
+      type: integer
+    Field-pkiCommunicationrecipientID:
+      description: The unique ID of the Communicationrecipient.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiContactID:
@@ -12640,6 +12848,16 @@ components:
     Field-pkiEmployeeID:
       description: The unique ID of the Employee.
       example: 31
+      minimum: 0
+      type: integer
+    Field-pkiExternalbrokerID:
+      description: The unique ID of the Externalbroker.
+      example: 1
+      minimum: 0
+      type: integer
+    Field-pkiEzcomagentID:
+      description: The unique ID of the Ezcomagent.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiEzmaxinvoicingID:
@@ -12852,18 +13070,17 @@ components:
       minimum: 0
       type: integer
     Field-pkiEzsigntsarequirementID:
-      description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if a Time\
-        \ Stamping Authority should add a timestamp on each of the signature.\nValid\
-        \ values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will requested.\
-        \ This will make all signatures a lot faster since no round-trip to the TSA\
-        \ server will be required. Timestamping will be made using eZsign server's\
-        \ time.|\n|2|Best effort. Timestamping from a Time Stamping Authority will\
-        \ be requested but is not mandatory. In the very improbable case it cannot\
-        \ be completed, the timestamping will be made using eZsign server's time.\
-        \ **Additional fee applies**|\n|3|Mandatory. Timestamping from a Time Stamping\
-        \ Authority will be requested and is mandatory. In the very improbable case\
-        \ it cannot be completed, the signature will fail and the user will be asked\
-        \ to retry. **Additional fee applies**|"
+      description: |-
+        The unique ID of the Ezsigntsarequirement.
+
+        Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+        Valid values:
+
+        |Value|Description|
+        |-|-|
+        |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+        |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+        |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
       example: 1
       maximum: 3
       minimum: 1
@@ -12886,6 +13103,15 @@ components:
     Field-pkiFranchisereferalincomeprogramID:
       description: The unique ID of the Franchisereferalincomeprogram
       example: 51
+      minimum: 0
+      type: integer
+    Field-pkiImageID:
+      description: The unique ID of the Image
+      example: 164
+      type: integer
+    Field-pkiInvoiceID:
+      description: The unique ID of the Invoice.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiLanguageID:
@@ -12912,6 +13138,11 @@ components:
       example: 53
       minimum: 0
       type: integer
+    Field-pkiNotaryID:
+      description: The unique ID of the Notary.
+      example: 1
+      minimum: 0
+      type: integer
     Field-pkiNotificationsectionID:
       description: The unique ID of the Notificationsection
       example: 1
@@ -12930,6 +13161,11 @@ components:
     Field-pkiPeriodID:
       description: The unique ID of the Period
       example: 21
+      minimum: 0
+      type: integer
+    Field-pkiPhoneID:
+      description: The unique ID of the Phone.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiPhonetypeID:
@@ -13025,6 +13261,16 @@ components:
       example: 11
       minimum: 0
       type: integer
+    Field-pkiRewardmemberID:
+      description: The unique ID of the Rewardmember.
+      example: 1
+      minimum: 0
+      type: integer
+    Field-pkiSalarypreparationID:
+      description: The unique ID of the Salarypreparation.
+      example: 1
+      minimum: 0
+      type: integer
     Field-pkiSecretquestionID:
       description: |-
         The unique ID of the Secretquestion.
@@ -13056,6 +13302,11 @@ components:
         |21|Your boat's name|
         |22|Date of Birth (YYYY-MM-DD)|
       example: 7
+      minimum: 0
+      type: integer
+    Field-pkiSupplierID:
+      description: The unique ID of the Supplier.
+      example: 1
       minimum: 0
       type: integer
     Field-pkiSystemconfigurationtypeID:
@@ -13106,19 +13357,18 @@ components:
       minimum: 0
       type: integer
     Field-pkiUserlogintypeID:
-      description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
-        |-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link by\
-        \ email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive a secure\
-        \ link by email and will need to authenticate using SMS or Phone call. **Additional\
-        \ fee applies**|\n|3|**Email and secret question**|The Ezsignsigner will receive\
-        \ a secure link by email and will need to authenticate using a predefined\
-        \ question and answer|\n|4|**In person only**|The Ezsignsigner will only be\
-        \ able to sign \"In-Person\" and there won't be any authentication. No email\
-        \ will be sent for invitation to sign. Make sure you evaluate the risk of\
-        \ signature denial and at minimum, we recommend you use a handwritten signature\
-        \ type|\n|5|**In person with phone or SMS**|The Ezsignsigner will only be\
-        \ able to sign \"In-Person\" and will need to authenticate using SMS or Phone\
-        \ call. No email will be sent for invitation to sign. **Additional fee applies**|"
+      description: |-
+        The unique ID of the Userlogintype
+
+        Valid values:
+
+        |Value|Description|Detail|
+        |-|-|-|
+        |1|**Email Only**|The Ezsignsigner will receive a secure link by email|
+        |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|
+        |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|
+        |4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|
+        |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
       example: 2
       minimum: 0
       type: integer
@@ -13207,6 +13457,26 @@ components:
     Field-sBrandingDescriptionX:
       description: The Description of the Branding in the language of the requester
       example: Company X
+      type: string
+    Field-sCommunicationSubject:
+      description: The Subject of the Communication
+      example: This is an example of subject
+      type: string
+    Field-sCommunicationattachmentName:
+      description: The name of the Communicationattachment
+      example: File.pdf
+      type: string
+    Field-sCommunicationexternalimageMD5:
+      description: MD5 Hash of the Communicationexternalimage.
+      example: 012345678901234567890123456789AB
+      type: string
+    Field-sCommunicationexternalrecipientName:
+      description: The Name of the Communicationexternalrecipient
+      example: John Doe
+      type: string
+    Field-sCommunicationimageName:
+      description: The Name of the Communicationimage
+      example: Picture.jpg
       type: string
     Field-sCompanyNameX:
       description: The Name of the Company in the language of the requester
@@ -13304,8 +13574,10 @@ components:
       example: Default
       type: string
     Field-sEzsignformfieldEnteredvalue:
-      description: "This is the value enterred for the Ezsignformfield\n\nThis can\
-        \ only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**"
+      description: |-
+        This is the value enterred for the Ezsignformfield
+
+        This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
       example: Montreal
       type: string
     Field-sEzsignformfieldLabel:
@@ -13352,10 +13624,7 @@ components:
       example: Peanuts
       type: string
     Field-sEzsigntemplateformfieldValue:
-      description: |-
-        The value for the Ezsigntemplateformfield
-
-        This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
+      description: The value for the Ezsigntemplateformfield
       example: "Yes"
       type: string
     Field-sEzsigntemplateformfieldgroupDefaultvalue:
@@ -13467,21 +13736,30 @@ components:
       pattern: "^\\+[1-9]\\d{1,14}$"
       type: string
     Field-sPhoneExchange:
-      description: "The exchange of the phone number. (For a North America Number\
-        \ only)\n\nThe exchange is the \"990\" section in this sample phone number:\
-        \ (514) 990-1516 x123"
+      description: |-
+        The exchange of the phone number. (For a North America Number only)
+
+        The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
       example: "990"
       type: string
     Field-sPhoneExtension:
-      description: "The extension of the phone number.\n\nThe extension is the \"\
-        123\" section in this sample phone number: (514) 990-1516 x123.\n\nIt can\
-        \ also be used with international phone numbers"
+      description: |-
+        The extension of the phone number.
+
+        The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+        It can also be used with international phone numbers
       example: "123"
       type: string
+    Field-sPhoneInternational:
+      description: The international phone number.
+      example: "15149901516"
+      type: string
     Field-sPhoneRegion:
-      description: "The region of the phone number. (For a North America Number only)\n\
-        \nThe region is the \"514\" section in this sample phone number: (514) 990-1516\
-        \ x123"
+      description: |-
+        The region of the phone number. (For a North America Number only)
+
+        The region is the "514" section in this sample phone number: (514) 990-1516 x123
       example: "514"
       type: string
     Field-sSecretquestionTextX:
@@ -13543,8 +13821,16 @@ components:
       type: string
     Field-tExtraMessage:
       description: A custom text message that will be added to the email sent.
-      example: "Hi John,\n\nThis is the document I need you to review.\n\nCould you\
-        \ sign it before Monday please.\n\nBest Regards.\n\nMary"
+      example: |-
+        Hi John,
+
+        This is the document I need you to review.
+
+        Could you sign it before Monday please.
+
+        Best Regards.
+
+        Mary
       type: string
     Field-tEzsignbulksendNote:
       description: Note about the Ezsignbulksend
@@ -13557,8 +13843,16 @@ components:
       type: string
     Field-tEzsignfolderMessage:
       description: A custom text message that will be added to the email sent.
-      example: "Hi everyone,\n\nThis is the document I need you to review.\n\nCould\
-        \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+      example: |-
+        Hi everyone,
+
+        This is the document I need you to review.
+
+        Could you sign it before Monday please.
+
+        Best Regards.
+
+        Mary
       type: string
     Field-tEzsignfolderNote:
       description: Note about the Ezsignfolder
@@ -13566,8 +13860,16 @@ components:
       type: string
     Field-tEzsignfoldersignerassociationMessage:
       description: A custom text message that will be added to the email sent.
-      example: "Hi John,\n\nThis is the document I need you to review.\n\nCould you\
-        \ sign it before Monday please.\n\nBest Regards.\n\nMary"
+      example: |-
+        Hi John,
+
+        This is the document I need you to review.
+
+        Could you sign it before Monday please.
+
+        Best Regards.
+
+        Mary
       type: string
     Field-tEzsignformfieldgroupTooltip:
       description: A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
@@ -13769,6 +14071,10 @@ components:
           description: Whether the active session is in debug or not
           example: false
           type: boolean
+        bActivesessionIssuperadmin:
+          description: Whether the active session is superadmin or not
+          example: false
+          type: boolean
         pksCustomerCode:
           description: The customer code assigned to your account
           example: demo
@@ -13782,6 +14088,7 @@ components:
           type: integer
       required:
       - bActivesessionDebug
+      - bActivesessionIssuperadmin
       - eActivesessionUsertype
       - eActivesessionWeekdaystart
       - fkiLanguageID
@@ -14103,6 +14410,7 @@ components:
         a_objApikey:
           items:
             $ref: '#/components/schemas/apikey-ResponseCompound'
+          minItems: 1
           type: array
       required:
       - a_objApikey
@@ -14113,6 +14421,7 @@ components:
         a_objApikey:
           items:
             $ref: '#/components/schemas/apikey-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objApikey
@@ -14129,6 +14438,7 @@ components:
         a_objApikey:
           items:
             $ref: '#/components/schemas/apikey-ResponseCompound'
+          minItems: 1
           type: array
       required:
       - a_objApikey
@@ -14310,6 +14620,8 @@ components:
             \ need to match image type selected in eBrandingLogo if you supply an\
             \ image. If you select 'Default', the logo will be deleted and the default\
             \ one will be used."
+          example: !!binary |-
+            eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BuZ0FzQmFzZTY0L3ZhbHVlIn0=
           format: byte
           type: string
         iBrandingColortext:
@@ -14462,6 +14774,7 @@ components:
         a_objBranding:
           items:
             $ref: '#/components/schemas/branding-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objBranding
@@ -14482,6 +14795,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiBrandingID'
+          minItems: 1
           type: array
       required:
       - a_pkiBrandingID
@@ -14553,6 +14867,330 @@ components:
           $ref: '#/components/schemas/branding-ResponseCompound'
       required:
       - objBranding
+      type: object
+    communication-ListElement:
+      description: A Communication List Element
+      properties:
+        pkiCommunicationID:
+          description: The unique ID of the Communication.
+          example: 1
+          minimum: 0
+          type: integer
+        eCommunicationEmailimportance:
+          $ref: '#/components/schemas/Field-eCommunicationEmailimportance'
+        eCommunicationType:
+          $ref: '#/components/schemas/Field-eCommunicationType'
+        sCommunicationSubject:
+          description: The Subject of the Communication
+          example: This is an example of subject
+          type: string
+        dtCommunicationSentdate:
+          description: The send date and time at which the Communication was sent.
+          example: 2020-12-31 23:59:59
+          type: string
+        objContactFrom:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+      required:
+      - dtCommunicationSentdate
+      - eCommunicationType
+      - objContactFrom
+      - pkiCommunicationID
+      - sCommunicationSubject
+      type: object
+    communication-Response:
+      description: A Communication Object
+      properties:
+        pkiCommunicationID:
+          description: The unique ID of the Communication.
+          example: 1
+          minimum: 0
+          type: integer
+        eCommunicationEmailimportance:
+          $ref: '#/components/schemas/Field-eCommunicationEmailimportance'
+        eCommunicationType:
+          $ref: '#/components/schemas/Field-eCommunicationType'
+        sCommunicationSubject:
+          description: The Subject of the Communication
+          example: This is an example of subject
+          type: string
+        dtCommunicationSentdate:
+          description: The send date and time at which the Communication was sent.
+          example: 2020-12-31 23:59:59
+          type: string
+        objContactFrom:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+      required:
+      - a_objCommunicationrecipient
+      - dtCommunicationSentdate
+      - eCommunicationType
+      - objContactFrom
+      - pkiCommunicationID
+      - sCommunicationSubject
+      type: object
+    communication-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communication-Response'
+      - $ref: '#/components/schemas/communication_ResponseCompound_allOf'
+      description: A Communication Object
+      type: object
+    communication-getCount-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/communication_getCount_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /1/module/communication/getCount
+      type: object
+    communication-getCount-v1-Response-mPayload:
+      description: Payload for GET /1/module/communication/getCount
+      properties:
+        iCommunicationCount:
+          description: The number of total signatures in the Ezsigntemplate.
+          example: 8
+          type: integer
+      required:
+      - iCommunicationCount
+      type: object
+    communication-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/communication_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /1/module/communication/getList
+      type: object
+    communication-getList-v1-Response-mPayload:
+      description: Payload for GET /1/module/communication/getList
+      properties:
+        a_objCommunication:
+          items:
+            $ref: '#/components/schemas/communication-ListElement'
+          type: array
+      required:
+      - a_objCommunication
+      type: object
+    communication-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/communication_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/communication/{pkiCommunicationID}"
+      type: object
+    communication-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/communication/{pkiCommunicationID}"
+      properties:
+        objCommunication:
+          $ref: '#/components/schemas/communication-ResponseCompound'
+      required:
+      - objCommunication
+      type: object
+    communicationattachment-Response:
+      description: A Communicationattachment Object
+      properties:
+        pkiCommunicationattachmentID:
+          description: The unique ID of the Communicationattachment
+          example: 203
+          type: integer
+        fkiAttachmentID:
+          description: The unique ID of the Attachment.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiInvoiceID:
+          description: The unique ID of the Invoice.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiSalarypreparationID:
+          description: The unique ID of the Salarypreparation.
+          example: 1
+          minimum: 0
+          type: integer
+        sCommunicationattachmentName:
+          description: The name of the Communicationattachment
+          example: File.pdf
+          type: string
+      required:
+      - pkiCommunicationattachmentID
+      - sCommunicationattachmentName
+      type: object
+    communicationattachment-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationattachment-Response'
+      - type: object
+      description: A Communicationattachment Object
+      type: object
+    communicationexternalimage-Response:
+      description: A Communicationexternalimage Object
+      properties:
+        pkiCommunicationexternalimageID:
+          description: The unique ID of the Communicationexternalimage
+          example: 211
+          type: integer
+        sCommunicationexternalimageMD5:
+          description: MD5 Hash of the Communicationexternalimage.
+          example: 012345678901234567890123456789AB
+          type: string
+      required:
+      - pkiCommunicationexternalimageID
+      - sCommunicationexternalimageMD5
+      type: object
+    communicationexternalimage-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationexternalimage-Response'
+      - type: object
+      description: A Communicationexternalimage Object
+      type: object
+    communicationexternalrecipient-Response:
+      description: A Communicationexternalrecipient Object
+      properties:
+        pkiCommunicationexternalrecipientID:
+          description: The unique ID of the Communicationexternalrecipient
+          example: 9
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+        objPhoneSms:
+          $ref: '#/components/schemas/phone-ResponseCompound'
+        eCommunicationexternalrecipientType:
+          $ref: '#/components/schemas/Field-eCommunicationexternalrecipientType'
+        sCommunicationexternalrecipientName:
+          description: The Name of the Communicationexternalrecipient
+          example: John Doe
+          type: string
+      required:
+      - eCommunicationexternalrecipientType
+      - pkiCommunicationexternalrecipientID
+      - sCommunicationexternalrecipientName
+      type: object
+    communicationexternalrecipient-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationexternalrecipient-Response'
+      - type: object
+      description: A Communicationexternalrecipient Object
+      type: object
+    communicationimage-Response:
+      description: A Communicationimage Object
+      properties:
+        pkiCommunicationimageID:
+          description: The unique ID of the Communicationimage
+          example: 164
+          type: integer
+        fkiImageID:
+          description: The unique ID of the Image
+          example: 164
+          type: integer
+        sCommunicationimageName:
+          description: The Name of the Communicationimage
+          example: Picture.jpg
+          type: string
+      required:
+      - fkiImageID
+      - pkiCommunicationimageID
+      - sCommunicationName
+      type: object
+    communicationimage-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationimage-Response'
+      - type: object
+      description: A Communicationimage Object
+      type: object
+    communicationrecipient-Response:
+      description: A Communicationrecipient Object
+      properties:
+        pkiCommunicationrecipientID:
+          description: The unique ID of the Communicationrecipient.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiContactID:
+          description: The unique ID of the Contact
+          example: 21
+          minimum: 0
+          type: integer
+        fkiCustomerID:
+          description: The unique ID of the Customer.
+          example: 18
+          minimum: 0
+          type: integer
+        fkiEmployeeID:
+          description: The unique ID of the Employee.
+          example: 31
+          minimum: 0
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          minimum: 0
+          type: integer
+        fkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+        eCommunicationrecipientType:
+          $ref: '#/components/schemas/Field-eCommunicationrecipientType'
+        fkiAgentincorporationID:
+          description: The unique ID of the Agentincorporation.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiAssistantID:
+          description: The unique ID of the Assistant.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiExternalbrokerID:
+          description: The unique ID of the Externalbroker.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiEzcomagentID:
+          description: The unique ID of the Ezcomagent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiNotaryID:
+          description: The unique ID of the Notary.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiRewardmemberID:
+          description: The unique ID of the Rewardmember.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiSupplierID:
+          description: The unique ID of the Supplier.
+          example: 1
+          minimum: 0
+          type: integer
+        objPhoneSms:
+          $ref: '#/components/schemas/phone-ResponseCompound'
+      required:
+      - pkiCommunicationrecipientID
+      type: object
+    communicationrecipient-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationrecipient-Response'
+      - type: object
+      description: A Communicationreciient Object
       type: object
     contact-Request:
       description: A Contact Object
@@ -15762,36 +16400,33 @@ components:
       description: "Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission"
       properties:
         fkiUserlogintypeID:
-          description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
-            |-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link\
-            \ by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive\
-            \ a secure link by email and will need to authenticate using SMS or Phone\
-            \ call. **Additional fee applies**|\n|3|**Email and secret question**|The\
-            \ Ezsignsigner will receive a secure link by email and will need to authenticate\
-            \ using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner\
-            \ will only be able to sign \"In-Person\" and there won't be any authentication.\
-            \ No email will be sent for invitation to sign. Make sure you evaluate\
-            \ the risk of signature denial and at minimum, we recommend you use a\
-            \ handwritten signature type|\n|5|**In person with phone or SMS**|The\
-            \ Ezsignsigner will only be able to sign \"In-Person\" and will need to\
-            \ authenticate using SMS or Phone call. No email will be sent for invitation\
-            \ to sign. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Userlogintype
+
+            Valid values:
+
+            |Value|Description|Detail|
+            |-|-|-|
+            |1|**Email Only**|The Ezsignsigner will receive a secure link by email|
+            |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|
+            |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|
+            |4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|
+            |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
           example: 2
           minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -15809,8 +16444,16 @@ components:
           $ref: '#/components/schemas/Field-eEzsignfolderSendreminderfrequency'
         tExtraMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
         sCsvBase64:
           description: The Base64 encoded binary content of the CSV file.
@@ -15844,6 +16487,7 @@ components:
         a_objEzsignbulksend:
           items:
             $ref: '#/components/schemas/ezsignbulksend-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignbulksend
@@ -15864,6 +16508,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignbulksendID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignbulksendID
@@ -16048,6 +16693,7 @@ components:
         a_objEzsignbulksenddocumentmapping:
           items:
             $ref: '#/components/schemas/ezsignbulksenddocumentmapping-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignbulksenddocumentmapping
@@ -16068,6 +16714,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignbulksenddocumentmappingID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignbulksenddocumentmappingID
@@ -16173,6 +16820,7 @@ components:
         a_objEzsignbulksendsignermapping:
           items:
             $ref: '#/components/schemas/ezsignbulksendsignermapping-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignbulksendsignermapping
@@ -16193,6 +16841,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignbulksendsignermappingID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignbulksendsignermappingID
@@ -16360,6 +17009,8 @@ components:
             The Base64 encoded binary content of the document.
 
             This field is Required when eEzsigndocumentSource = Base64.
+          example: !!binary |-
+            eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BkZkFzQmFzZTY0L3ZhbHVlIn0=
           format: byte
           type: string
         sEzsigndocumentUrl:
@@ -16553,10 +17204,12 @@ components:
         a_sEzsigntemplatesigner:
           items:
             $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
+          minItems: 1
           type: array
         a_pkiEzsignfoldersignerassociationID:
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfoldersignerassociationID
@@ -16618,6 +17271,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigndocumentID
@@ -16628,6 +17282,7 @@ components:
         a_objEzsigndocument:
           items:
             $ref: '#/components/schemas/ezsigndocument-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigndocument
@@ -16648,6 +17303,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigndocumentID
@@ -16710,8 +17366,10 @@ components:
       - a_pkiEzsignsignatureID
       type: object
     ezsigndocument-endPrematurely-v1-Request:
-      description: "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely
+
+        Intentionally empty for future-proofing
       type: object
     ezsigndocument-endPrematurely-v1-Response:
       allOf:
@@ -16874,9 +17532,9 @@ components:
           - Words
           type: string
         bWordCaseSensitive:
-          description: "IF *true*, words will be searched case-sensitive and results\
-            \ will be returned case-sensitive.\nIF *false*, words will be searched\
-            \ case-insensitive and results will be returned case-insensitive."
+          description: |-
+            IF *true*, words will be searched case-sensitive and results will be returned case-sensitive.
+            IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
           type: boolean
         a_sWord:
           description: Array of words to find in the document
@@ -16913,8 +17571,10 @@ components:
       description: "Response for PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}"
       type: object
     ezsigndocument-unsend-v1-Request:
-      description: "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend
+
+        Intentionally empty for future-proofing
       type: object
     ezsigndocument-unsend-v1-Response:
       allOf:
@@ -17050,18 +17710,17 @@ components:
           minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -17115,18 +17774,17 @@ components:
           example: Default
           type: string
         fkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -17183,8 +17841,16 @@ components:
           type: string
         tEzsignfolderMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi everyone,\n\nThis is the document I need you to review.\n\n\
-            Could you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi everyone,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
         objAudit:
           $ref: '#/components/schemas/Common-Audit'
@@ -17210,8 +17876,10 @@ components:
       description: An Ezsignfolder Object and children to create a complete structure
       type: object
     ezsignfolder-archive-v1-Request:
-      description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/archive
+
+        Intentionally empty for future-proofing
       type: object
     ezsignfolder-archive-v1-Response:
       allOf:
@@ -17224,6 +17892,7 @@ components:
         a_pkiEzsigndocumentID:
           items:
             $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+          minItems: 1
           type: array
         a_eDocumentType:
           description: |-
@@ -17267,6 +17936,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfolderID
@@ -17277,6 +17947,7 @@ components:
         a_objEzsignfolder:
           items:
             $ref: '#/components/schemas/ezsignfolder-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignfolder
@@ -17297,6 +17968,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfolderID
@@ -17307,8 +17979,10 @@ components:
       description: "Response for DELETE /1/object/ezsignfolder/{pkiEzsignfolderID}"
       type: object
     ezsignfolder-dispose-v1-Request:
-      description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/dispose
+
+        Intentionally empty for future-proofing
       type: object
     ezsignfolder-dispose-v1-Response:
       allOf:
@@ -17322,6 +17996,7 @@ components:
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfolderID'
           maxItems: 500
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfolderID
@@ -17520,6 +18195,7 @@ components:
         a_pkiEzsigndocumentID:
           items:
             $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigndocumentID
@@ -17534,8 +18210,16 @@ components:
       properties:
         tExtraMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
       required:
       - tExtraMessage
@@ -17550,8 +18234,16 @@ components:
       properties:
         tEzsignfolderMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi everyone,\n\nThis is the document I need you to review.\n\n\
-            Could you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi everyone,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
         a_fkiEzsignfoldersignerassociationID:
           items:
@@ -17576,8 +18268,16 @@ components:
       properties:
         tEzsignfolderMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi everyone,\n\nThis is the document I need you to review.\n\n\
-            Could you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi everyone,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
         dtEzsignfolderDelayedsenddate:
           description: The date and time at which the Ezsignfolder will be sent in
@@ -17598,8 +18298,10 @@ components:
       description: "Response for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send"
       type: object
     ezsignfolder-unsend-v1-Request:
-      description: "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend
+
+        Intentionally empty for future-proofing
       type: object
     ezsignfolder-unsend-v1-Response:
       allOf:
@@ -17630,8 +18332,16 @@ components:
           type: boolean
         tEzsignfoldersignerassociationMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
       required:
       - fkiEzsignfolderID
@@ -17648,8 +18358,16 @@ components:
       properties:
         tEzsignfoldersignerassociationMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
       type: object
     ezsignfoldersignerassociation-Response:
@@ -17674,8 +18392,16 @@ components:
           type: boolean
         tEzsignfoldersignerassociationMessage:
           description: A custom text message that will be added to the email sent.
-          example: "Hi John,\n\nThis is the document I need you to review.\n\nCould\
-            \ you sign it before Monday please.\n\nBest Regards.\n\nMary"
+          example: |-
+            Hi John,
+
+            This is the document I need you to review.
+
+            Could you sign it before Monday please.
+
+            Best Regards.
+
+            Mary
           type: string
       required:
       - bEzsignfoldersignerassociationDelayedsend
@@ -17756,6 +18482,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfoldersignerassociationID
@@ -17766,6 +18493,7 @@ components:
         a_objEzsignfoldersignerassociation:
           items:
             $ref: '#/components/schemas/ezsignfoldersignerassociation-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignfoldersignerassociation
@@ -17786,6 +18514,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfoldersignerassociationID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfoldersignerassociationID
@@ -17809,8 +18538,10 @@ components:
       description: "Response for PUT /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}"
       type: object
     ezsignfoldersignerassociation-forceDisconnect-v1-Request:
-      description: "Request for POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociation}/forceDisconnect\n\
-        \nIntentionally empty for future-proofing"
+      description: |-
+        Request for POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociation}/forceDisconnect
+
+        Intentionally empty for future-proofing
       type: object
     ezsignfoldersignerassociation-forceDisconnect-v1-Response:
       allOf:
@@ -17950,18 +18681,17 @@ components:
           minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -18120,18 +18850,17 @@ components:
           minimum: 0
           type: integer
         fkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -18289,6 +19018,7 @@ components:
         a_objEzsignfoldertype:
           items:
             $ref: '#/components/schemas/ezsignfoldertype-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignfoldertype
@@ -18309,6 +19039,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignfoldertypeID
@@ -18405,18 +19136,18 @@ components:
           example: "Yes"
           type: string
         iEzsignformfieldX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignformfield\
-            \ on the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch).\
-            \ So for example, if you want to put the Ezsignformfield 2 inches from\
-            \ the left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignformfieldY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignformfield\
-            \ on the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch).\
-            \ So for example, if you want to put the Ezsignformfield 3 inches from\
-            \ the top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -18459,9 +19190,10 @@ components:
             This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
           type: boolean
         sEzsignformfieldEnteredvalue:
-          description: "This is the value enterred for the Ezsignformfield\n\nThis\
-            \ can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text**\
-            \ or **Textarea**"
+          description: |-
+            This is the value enterred for the Ezsignformfield
+
+            This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
           example: Montreal
           type: string
       required:
@@ -18502,18 +19234,18 @@ components:
           example: "Yes"
           type: string
         iEzsignformfieldX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignformfield\
-            \ on the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch).\
-            \ So for example, if you want to put the Ezsignformfield 2 inches from\
-            \ the left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignformfieldY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignformfield\
-            \ on the Ezsignpage.\n\nCoordinate is calculated at 100dpi (dot per inch).\
-            \ So for example, if you want to put the Ezsignformfield 3 inches from\
-            \ the top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -18556,9 +19288,10 @@ components:
             This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
           type: boolean
         sEzsignformfieldEnteredvalue:
-          description: "This is the value enterred for the Ezsignformfield\n\nThis\
-            \ can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text**\
-            \ or **Textarea**"
+          description: |-
+            This is the value enterred for the Ezsignformfield
+
+            This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
           example: Montreal
           type: string
       required:
@@ -18763,6 +19496,7 @@ components:
         a_objEzsignformfieldgroup:
           items:
             $ref: '#/components/schemas/ezsignformfieldgroup-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignformfieldgroup
@@ -18783,6 +19517,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignformfieldgroupID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignformfieldgroupID
@@ -18948,18 +19683,18 @@ components:
           minimum: 1
           type: integer
         iEzsignsignatureX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignsignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignature 2 inches from the\
-            \ left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignsignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignsignatureY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignsignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignature 3 inches from the\
-            \ top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignsignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -19043,18 +19778,18 @@ components:
           minimum: 1
           type: integer
         iEzsignsignatureX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignsignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignature 2 inches from the\
-            \ left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignsignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignsignatureY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignsignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignature 3 inches from the\
-            \ top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignsignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -19134,6 +19869,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignsignatureID
@@ -19144,6 +19880,7 @@ components:
         a_objEzsignsignature:
           items:
             $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsignsignature
@@ -19164,6 +19901,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsignsignatureID
@@ -19215,8 +19953,10 @@ components:
       description: "Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign"
       properties:
         sValue:
-          description: "The value required for the Ezsignsignature.\n\nThis can only\
-            \ be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**"
+          description: |-
+            The value required for the Ezsignsignature.
+
+            This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
           type: string
         bIsAutomatic:
           description: "Indicates if the Ezsignsignature was part of an automatic\
@@ -19241,20 +19981,18 @@ components:
           minimum: 0
           type: integer
         iEzsignsignaturecustomdateX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignaturecustomdate block\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignsignaturecustomdateY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignaturecustomdate block\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -19301,20 +20039,18 @@ components:
           minimum: 0
           type: integer
         iEzsignsignaturecustomdateX:
-          description: "The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignaturecustomdate block\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsignsignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsignsignaturecustomdateY:
-          description: "The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsignsignaturecustomdate block\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsignsignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignaturecustomdate block 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -19362,20 +20098,18 @@ components:
         sEzsignsignerSecretanswer: This Is My Secret Answer
       properties:
         fkiUserlogintypeID:
-          description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
-            |-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link\
-            \ by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive\
-            \ a secure link by email and will need to authenticate using SMS or Phone\
-            \ call. **Additional fee applies**|\n|3|**Email and secret question**|The\
-            \ Ezsignsigner will receive a secure link by email and will need to authenticate\
-            \ using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner\
-            \ will only be able to sign \"In-Person\" and there won't be any authentication.\
-            \ No email will be sent for invitation to sign. Make sure you evaluate\
-            \ the risk of signature denial and at minimum, we recommend you use a\
-            \ handwritten signature type|\n|5|**In person with phone or SMS**|The\
-            \ Ezsignsigner will only be able to sign \"In-Person\" and will need to\
-            \ authenticate using SMS or Phone call. No email will be sent for invitation\
-            \ to sign. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Userlogintype
+
+            Valid values:
+
+            |Value|Description|Detail|
+            |-|-|-|
+            |1|**Email Only**|The Ezsignsigner will receive a secure link by email|
+            |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|
+            |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|
+            |4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|
+            |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
           example: 2
           minimum: 0
           type: integer
@@ -19441,20 +20175,14 @@ components:
           type: integer
         eEzsignsignerLogintype:
           deprecated: true
-          description: "The method the Ezsignsigner will authenticate to the signing\
-            \ platform.\n\n1. **Password** means the Ezsignsigner will receive a secure\
-            \ link by email.\n2. **PasswordPhone** means the Ezsignsigner will receive\
-            \ a secure link by email and will need to authenticate using SMS or Phone\
-            \ call. **Additional fee applies**.\n3. **PasswordQuestion** means the\
-            \ Ezsignsigner will receive a secure link by email and will need to authenticate\
-            \ using a predefined question and answer.\n4. **InPersonPhone** means\
-            \ the Ezsignsigner will only be able to sign \"In-Person\" and will need\
-            \ to authenticate using SMS or Phone call. No email will be sent for invitation\
-            \ to sign. **Additional fee applies**.\n5. **InPerson** means the Ezsignsigner\
-            \ will only be able to sign \"In-Person\" and there won't be any authentication.\
-            \ No email will be sent for invitation to sign. Make sure you evaluate\
-            \ the risk of signature denial and at minimum, we recommend you use a\
-            \ handwritten signature type."
+          description: |-
+            The method the Ezsignsigner will authenticate to the signing platform.
+
+            1. **Password** means the Ezsignsigner will receive a secure link by email.
+            2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**.
+            3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer.
+            4. **InPersonPhone** means the Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**.
+            5. **InPerson** means the Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
           enum:
           - Password
           - PasswordPhone
@@ -19511,9 +20239,12 @@ components:
           pattern: "^\\+[1-9]\\d{1,14}$"
           type: string
         sPhoneExtension:
-          description: "The extension of the phone number.\n\nThe extension is the\
-            \ \"123\" section in this sample phone number: (514) 990-1516 x123.\n\n\
-            It can also be used with international phone numbers"
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
           example: "123"
           type: string
         sPhoneE164Cell:
@@ -19601,20 +20332,18 @@ components:
           minimum: 0
           type: integer
         fkiUserlogintypeID:
-          description: "The unique ID of the Userlogintype\n\nValid values:\n\n|Value|Description|Detail|\n\
-            |-|-|-|\n|1|**Email Only**|The Ezsignsigner will receive a secure link\
-            \ by email|\n|2|**Email and phone or SMS**|The Ezsignsigner will receive\
-            \ a secure link by email and will need to authenticate using SMS or Phone\
-            \ call. **Additional fee applies**|\n|3|**Email and secret question**|The\
-            \ Ezsignsigner will receive a secure link by email and will need to authenticate\
-            \ using a predefined question and answer|\n|4|**In person only**|The Ezsignsigner\
-            \ will only be able to sign \"In-Person\" and there won't be any authentication.\
-            \ No email will be sent for invitation to sign. Make sure you evaluate\
-            \ the risk of signature denial and at minimum, we recommend you use a\
-            \ handwritten signature type|\n|5|**In person with phone or SMS**|The\
-            \ Ezsignsigner will only be able to sign \"In-Person\" and will need to\
-            \ authenticate using SMS or Phone call. No email will be sent for invitation\
-            \ to sign. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Userlogintype
+
+            Valid values:
+
+            |Value|Description|Detail|
+            |-|-|-|
+            |1|**Email Only**|The Ezsignsigner will receive a secure link by email|
+            |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|
+            |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|
+            |4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|
+            |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
           example: 2
           minimum: 0
           type: integer
@@ -19676,9 +20405,12 @@ components:
           pattern: "^\\+[1-9]\\d{1,14}$"
           type: string
         sPhoneExtension:
-          description: "The extension of the phone number.\n\nThe extension is the\
-            \ \"123\" section in this sample phone number: (514) 990-1516 x123.\n\n\
-            It can also be used with international phone numbers"
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
           example: "123"
           type: string
         sPhoneE164Cell:
@@ -19893,6 +20625,7 @@ components:
         a_fkiEzsignfoldertypeID:
           items:
             $ref: '#/components/schemas/Field-pkiEzsignfoldertypeID'
+          minItems: 1
           type: array
       required:
       - a_fkiEzsignfoldertypeID
@@ -19923,6 +20656,7 @@ components:
         a_objEzsigntemplate:
           items:
             $ref: '#/components/schemas/ezsigntemplate-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplate
@@ -19943,6 +20677,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplateID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplateID
@@ -20063,6 +20798,8 @@ components:
             The Base64 encoded binary content of the document.
 
             This field is Required when eEzsigntemplatedocumentSource = Base64.
+          example: !!binary |-
+            eyIkcmVmIjoiIy9jb21wb25lbnRzL2V4YW1wbGVzL1BkZkFzQmFzZTY0L3ZhbHVlIn0=
           format: byte
           type: string
         sEzsigntemplatedocumentUrl:
@@ -20155,6 +20892,7 @@ components:
         a_objEzsigntemplatedocument:
           items:
             $ref: '#/components/schemas/ezsigntemplatedocument-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatedocument
@@ -20175,6 +20913,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplatedocumentID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplatedocumentID
@@ -20330,9 +21069,9 @@ components:
           - Words
           type: string
         bWordCaseSensitive:
-          description: "IF *true*, words will be searched case-sensitive and results\
-            \ will be returned case-sensitive.\nIF *false*, words will be searched\
-            \ case-insensitive and results will be returned case-insensitive."
+          description: |-
+            IF *true*, words will be searched case-sensitive and results will be returned case-sensitive.
+            IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.
           type: boolean
         a_sWord:
           description: Array of words to find in the document
@@ -20441,27 +21180,22 @@ components:
           example: Peanuts
           type: string
         sEzsigntemplateformfieldValue:
-          description: |-
-            The value for the Ezsigntemplateformfield
-
-            This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
+          description: The value for the Ezsigntemplateformfield
           example: "Yes"
           type: string
         iEzsigntemplateformfieldX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplateformfield\
-            \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot\
-            \ per inch). So for example, if you want to put the Ezsigntemplateformfield\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplateformfieldY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
-            \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot\
-            \ per inch). So for example, if you want to put the Ezsigntemplateformfield\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -20535,27 +21269,22 @@ components:
           example: Peanuts
           type: string
         sEzsigntemplateformfieldValue:
-          description: |-
-            The value for the Ezsigntemplateformfield
-
-            This can only be set if eEzsigntemplateformfieldgroupType is Checkbox or Radio
+          description: The value for the Ezsigntemplateformfield
           example: "Yes"
           type: string
         iEzsigntemplateformfieldX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplateformfield\
-            \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot\
-            \ per inch). So for example, if you want to put the Ezsigntemplateformfield\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplateformfieldY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplateformfield\
-            \ on the Ezsigntemplatepage.\n\nCoordinate is calculated at 100dpi (dot\
-            \ per inch). So for example, if you want to put the Ezsigntemplateformfield\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -20797,6 +21526,7 @@ components:
         a_objEzsigntemplateformfieldgroup:
           items:
             $ref: '#/components/schemas/ezsigntemplateformfieldgroup-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplateformfieldgroup
@@ -20817,6 +21547,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplateformfieldgroupID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplateformfieldgroupID
@@ -21119,6 +21850,7 @@ components:
         a_objEzsigntemplatepackage:
           items:
             $ref: '#/components/schemas/ezsigntemplatepackage-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatepackage
@@ -21139,6 +21871,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplatepackageID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplatepackageID
@@ -21311,6 +22044,7 @@ components:
         a_objEzsigntemplatepackagemembership:
           items:
             $ref: '#/components/schemas/ezsigntemplatepackagemembership-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatepackagemembership
@@ -21436,6 +22170,7 @@ components:
         a_objEzsigntemplatepackagesigner:
           items:
             $ref: '#/components/schemas/ezsigntemplatepackagesigner-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatepackagesigner
@@ -21456,6 +22191,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplatepackagesignerID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplatepackagesignerID
@@ -21604,6 +22340,7 @@ components:
         a_objEzsigntemplatepackagesignermembership:
           items:
             $ref: '#/components/schemas/ezsigntemplatepackagesignermembership-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatepackagesignermembership
@@ -21624,6 +22361,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplatepackagesignermembershipID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplatepackagesignermembershipID
@@ -21703,18 +22441,18 @@ components:
           minimum: 1
           type: integer
         iEzsigntemplatesignatureX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
-            \ from the left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplatesignatureY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
-            \ from the top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -21795,18 +22533,18 @@ components:
           minimum: 1
           type: integer
         iEzsigntemplatesignatureX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 2 inches\
-            \ from the left border of the page, you would use \"200\" for the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplatesignatureY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignature\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignature 3 inches\
-            \ from the top border of the page, you would use \"300\" for the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplatesignature on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignature 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -21865,6 +22603,7 @@ components:
         a_objEzsigntemplatesignature:
           items:
             $ref: '#/components/schemas/ezsigntemplatesignature-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatesignature
@@ -21885,6 +22624,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiEzsigntemplatesignatureID'
+          minItems: 1
           type: array
       required:
       - a_pkiEzsigntemplatesignatureID
@@ -21941,20 +22681,18 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignaturecustomdate\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignaturecustomdate\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -22001,20 +22739,18 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
-          description: "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignaturecustomdate\
-            \ 2 inches from the left border of the page, you would use \"200\" for\
-            \ the X coordinate."
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use "200" for the X coordinate.
           example: 200
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
-          description: "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate\
-            \ on the page.\n\nCoordinate is calculated at 100dpi (dot per inch). So\
-            \ for example, if you want to put the Ezsigntemplatesignaturecustomdate\
-            \ 3 inches from the top border of the page, you would use \"300\" for\
-            \ the Y coordinate."
+          description: |-
+            The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
           minimum: 0
           type: integer
@@ -22114,6 +22850,7 @@ components:
         a_objEzsigntemplatesigner:
           items:
             $ref: '#/components/schemas/ezsigntemplatesigner-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objEzsigntemplatesigner
@@ -22202,18 +22939,17 @@ components:
           example: Default
           type: string
         pkiEzsigntsarequirementID:
-          description: "The unique ID of the Ezsigntsarequirement.\n\nDetermine if\
-            \ a Time Stamping Authority should add a timestamp on each of the signature.\n\
-            Valid values:\n\n|Value|Description|\n|-|-|\n|1|No. TSA Timestamping will\
-            \ requested. This will make all signatures a lot faster since no round-trip\
-            \ to the TSA server will be required. Timestamping will be made using\
-            \ eZsign server's time.|\n|2|Best effort. Timestamping from a Time Stamping\
-            \ Authority will be requested but is not mandatory. In the very improbable\
-            \ case it cannot be completed, the timestamping will be made using eZsign\
-            \ server's time. **Additional fee applies**|\n|3|Mandatory. Timestamping\
-            \ from a Time Stamping Authority will be requested and is mandatory. In\
-            \ the very improbable case it cannot be completed, the signature will\
-            \ fail and the user will be asked to retry. **Additional fee applies**|"
+          description: |-
+            The unique ID of the Ezsigntsarequirement.
+
+            Determine if a Time Stamping Authority should add a timestamp on each of the signature.
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.|
+            |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**|
+            |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
           example: 1
           maximum: 3
           minimum: 1
@@ -22425,6 +23161,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiFranchisereferalincomeID'
+          minItems: 1
           type: array
       required:
       - a_pkiFranchisereferalincomeID
@@ -22435,6 +23172,7 @@ components:
         a_objFranchisereferalincome:
           items:
             $ref: '#/components/schemas/franchisereferalincome-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objFranchisereferalincome
@@ -22455,6 +23193,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiFranchisereferalincomeID'
+          minItems: 1
           type: array
       required:
       - a_pkiFranchisereferalincomeID
@@ -22639,21 +23378,24 @@ components:
         ePhoneType:
           $ref: '#/components/schemas/Field-ePhoneType'
         sPhoneRegion:
-          description: "The region of the phone number. (For a North America Number\
-            \ only)\n\nThe region is the \"514\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The region of the phone number. (For a North America Number only)
+
+            The region is the "514" section in this sample phone number: (514) 990-1516 x123
           example: "514"
           type: string
         sPhoneExchange:
-          description: "The exchange of the phone number. (For a North America Number\
-            \ only)\n\nThe exchange is the \"990\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The exchange of the phone number. (For a North America Number only)
+
+            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
           example: "990"
           type: string
         sPhoneNumber:
-          description: "The number of the phone number. (For a North America Number\
-            \ only)\n\nThe number is the \"1516\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The number of the phone number. (For a North America Number only)
+
+            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
           example: "1516"
           type: string
         sPhoneInternational:
@@ -22662,9 +23404,12 @@ components:
           pattern: "^\\+[1-9]\\d{1,14}$"
           type: string
         sPhoneExtension:
-          description: "The extension of the phone number.\n\nThe extension is the\
-            \ \"123\" section in this sample phone number: (514) 990-1516 x123.\n\n\
-            It can also be used with international phone numbers"
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
           example: "123"
           type: string
       required:
@@ -22674,6 +23419,76 @@ components:
     phone-RequestCompound:
       allOf:
       - $ref: '#/components/schemas/phone-Request'
+      description: A Phone Object and children to create a complete structure
+      type: object
+    phone-Response:
+      description: A Phone Object
+      properties:
+        pkiPhoneID:
+          description: The unique ID of the Phone.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiPhonetypeID:
+          description: |-
+            The unique ID of the Phonetype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+            |3|Mobile|
+            |4|Fax|
+            |5|Pager|
+            |6|Toll Free|
+          example: 1
+          minimum: 0
+          type: integer
+        ePhoneType:
+          $ref: '#/components/schemas/Field-ePhoneType'
+        sPhoneRegion:
+          description: |-
+            The region of the phone number. (For a North America Number only)
+
+            The region is the "514" section in this sample phone number: (514) 990-1516 x123
+          example: "514"
+          type: string
+        sPhoneExchange:
+          description: |-
+            The exchange of the phone number. (For a North America Number only)
+
+            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
+          example: "990"
+          type: string
+        iPhoneNumber:
+          description: |-
+            The number of the phone number. (For a North America Number only)
+
+            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
+          example: "1516"
+          type: string
+        sPhoneExtension:
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
+          example: "123"
+          type: string
+        sPhoneInternational:
+          description: The international phone number.
+          example: "15149901516"
+          type: string
+      required:
+      - fkiPhonetypeID
+      - pkiPhoneID
+      type: object
+    phone-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/phone-Response'
       description: A Phone Object and children to create a complete structure
       type: object
     secretquestion-AutocompleteElement-Response:
@@ -22947,27 +23762,33 @@ components:
           example: email@example.com
           type: string
         sPhoneRegion:
-          description: "The region of the phone number. (For a North America Number\
-            \ only)\n\nThe region is the \"514\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The region of the phone number. (For a North America Number only)
+
+            The region is the "514" section in this sample phone number: (514) 990-1516 x123
           example: "514"
           type: string
         sPhoneExchange:
-          description: "The exchange of the phone number. (For a North America Number\
-            \ only)\n\nThe exchange is the \"990\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The exchange of the phone number. (For a North America Number only)
+
+            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
           example: "990"
           type: string
         sPhoneNumber:
-          description: "The number of the phone number. (For a North America Number\
-            \ only)\n\nThe number is the \"1516\" section in this sample phone number:\
-            \ (514) 990-1516 x123"
+          description: |-
+            The number of the phone number. (For a North America Number only)
+
+            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
           example: "1516"
           type: string
         sPhoneExtension:
-          description: "The extension of the phone number.\n\nThe extension is the\
-            \ \"123\" section in this sample phone number: (514) 990-1516 x123.\n\n\
-            It can also be used with international phone numbers"
+          description: |-
+            The extension of the phone number.
+
+            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
+
+            It can also be used with international phone numbers
           example: "123"
           type: string
       required:
@@ -23298,6 +24119,7 @@ components:
         a_objWebhook:
           items:
             $ref: '#/components/schemas/webhook-RequestCompound'
+          minItems: 1
           type: array
       required:
       - a_objWebhook
@@ -23318,6 +24140,7 @@ components:
             They are returned in the same order as the array containing the objects to be created that was sent in the request.
           items:
             $ref: '#/components/schemas/Field-pkiWebhookID'
+          minItems: 1
           type: array
       required:
       - a_pkiWebhookID
@@ -23389,8 +24212,10 @@ components:
       - objWebhook
       type: object
     webhook-test-v1-Request:
-      description: "Request for POST /1/object/webhook/{pkiWebhookID}/test\n\nIntentionally\
-        \ empty for future-proofing"
+      description: |-
+        Request for POST /1/object/webhook/{pkiWebhookID}/test
+
+        Intentionally empty for future-proofing
       type: object
     webhook-test-v1-Response:
       allOf:
@@ -23436,6 +24261,7 @@ components:
           example: http://www.example.com/document.pdf
           type: string
       type: object
+      example: null
     Common_Response_objDebugPayload_getList_allOf:
       properties:
         a_Filter:
@@ -23450,6 +24276,7 @@ components:
       - a_Filter
       - a_OrderBy
       type: object
+      example: null
     Common_getAutocomplete_v1_Response_allOf:
       properties:
         mPayload:
@@ -23460,6 +24287,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     Common_getAutocompleteDisabled_v1_Response_allOf:
       properties:
         mPayload:
@@ -23470,6 +24298,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     Custom_AutocompleteElementDisabled_Response_allOf:
       properties:
         bDisabled:
@@ -23478,6 +24307,7 @@ components:
       required:
       - bDisabled
       type: object
+      example: null
     Custom_EzmaxinvoicingEzsigndocument_Response_allOf:
       properties:
         fkiEzsignfolderID:
@@ -23504,6 +24334,7 @@ components:
       - sEzsignfolderDescription
       - sName
       type: object
+      example: null
     Custom_EzmaxinvoicingEzsignfolder_Response_allOf:
       properties:
         fkiEzsignfolderID:
@@ -23537,6 +24368,7 @@ components:
       - fkiEzsignfolderID
       - sEzsignfolderDescription
       type: object
+      example: null
     Custom_EzsignfoldersignerassociationActionableElement_Response_allOf:
       properties:
         bEzsignfoldersignerassociationHasactionableelementsCurrent:
@@ -23551,6 +24383,7 @@ components:
       - bEzsignfoldersignerassociationHasactionableelementsCurrent
       - bEzsignfoldersignerassociationHasctionableelementsFuture
       type: object
+      example: null
     Custom_Notificationsubsectiongetnotificationtests_Response_allOf:
       properties:
         a_objNotificationtest:
@@ -23560,6 +24393,7 @@ components:
       required:
       - a_objNotificationtest
       type: object
+      example: null
     Custom_Notificationtestgetnotificationtests_Response_allOf:
       properties:
         eNotificationpreferenceStatus:
@@ -23572,6 +24406,7 @@ components:
       - eNotificationpreferenceStatus
       - iNotificationtest
       type: object
+      example: null
     Custom_Webhook_Response_allOf:
       properties:
         pksCustomerCode:
@@ -23587,6 +24422,7 @@ components:
       - bWebhookTest
       - pksCustomerCode
       type: object
+      example: null
     Custom_Webhooklog_Response_allOf:
       properties:
         dtWebhooklogDate:
@@ -23601,6 +24437,7 @@ components:
       - dtWebhooklogDate
       - tWebhooklogJson
       type: object
+      example: null
     Webhook_Ezsign_DocumentCompleted_allOf:
       properties:
         objEzsigndocument:
@@ -23608,6 +24445,7 @@ components:
       required:
       - objEzsigndocument
       type: object
+      example: null
     Webhook_Ezsign_FolderCompleted_allOf:
       properties:
         objEzsignfolder:
@@ -23615,6 +24453,7 @@ components:
       required:
       - objEzsignfolder
       type: object
+      example: null
     Webhook_User_UserCreated_allOf:
       properties:
         objUser:
@@ -23622,6 +24461,7 @@ components:
       required:
       - objUser
       type: object
+      example: null
     activesession_ResponseCompound_allOf:
       properties:
         a_pkiPermissionID:
@@ -23649,6 +24489,7 @@ components:
       - a_pkiPermissionID
       - objUserReal
       type: object
+      example: null
     activesession_getCurrent_v1_Response_allOf:
       properties:
         mPayload:
@@ -23656,6 +24497,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     apikey_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23663,6 +24505,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     apikey_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -23670,6 +24513,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     billingentityinternal_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -23677,6 +24521,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     branding_ResponseCompound_allOf:
       properties:
         sBrandingLogourl:
@@ -23684,6 +24529,7 @@ components:
           example: http://www.example.com/logo.jpg
           type: string
       type: object
+      example: null
     branding_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23691,6 +24537,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     branding_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -23698,6 +24545,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     branding_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -23705,6 +24553,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     branding_getList_v1_Response_mPayload_allOf:
       properties:
         a_objBranding:
@@ -23714,6 +24563,7 @@ components:
       required:
       - a_objBranding
       type: object
+      example: null
     branding_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23721,6 +24571,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     branding_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -23728,6 +24579,61 @@ components:
       required:
       - mPayload
       type: object
+      example: null
+    communication_ResponseCompound_allOf:
+      properties:
+        a_objCommunicationattachment:
+          items:
+            $ref: '#/components/schemas/communicationattachment-ResponseCompound'
+          type: array
+        a_objCommunicationrecipient:
+          items:
+            $ref: '#/components/schemas/communicationrecipient-ResponseCompound'
+          type: array
+        a_objCommunicationexternalrecipient:
+          items:
+            $ref: '#/components/schemas/communicationexternalrecipient-ResponseCompound'
+          type: array
+        a_objCommunicationimage:
+          items:
+            $ref: '#/components/schemas/communicationimage-ResponseCompound'
+          type: array
+        a_objCommunicationexternalimage:
+          items:
+            $ref: '#/components/schemas/communicationexternalimage-ResponseCompound'
+          type: array
+      required:
+      - a_objCommunicationattachment
+      - a_objCommunicationexternalimage
+      - a_objCommunicationexternalrecipient
+      - a_objCommunicationimage
+      - a_objCommunicationrecipient
+      type: object
+      example: null
+    communication_getCount_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/communication-getCount-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    communication_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/communication-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    communication_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/communication-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
     contact_RequestCompound_allOf:
       properties:
         objContactinformations:
@@ -23735,6 +24641,7 @@ components:
       required:
       - objContactinformations
       type: object
+      example: null
     contactinformations_RequestCompound_allOf:
       properties:
         a_objAddress:
@@ -23759,6 +24666,7 @@ components:
       - a_objPhone
       - a_objWebsite
       type: object
+      example: null
     department_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -23766,6 +24674,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     department_getMembers_v1_Response_allOf:
       properties:
         mPayload:
@@ -23773,6 +24682,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezmaxinvoicing_ResponseCompound_allOf:
       properties:
         objEzmaxinvoicingcontract:
@@ -23818,6 +24728,7 @@ components:
       - objEzmaxinvoicingcontract
       - objEzmaxpricing
       type: object
+      example: null
     ezmaxinvoicing_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -23825,6 +24736,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezmaxinvoicing_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23832,6 +24744,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezmaxinvoicing_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -23839,6 +24752,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezmaxinvoicing_getProvisional_v1_Response_allOf:
       properties:
         mPayload:
@@ -23846,6 +24760,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezmaxinvoicingagent_ResponseCompound_allOf:
       properties:
         objContactName:
@@ -23853,11 +24768,13 @@ components:
       required:
       - objContactName
       type: object
+      example: null
     ezmaxinvoicingcommission_ResponseCompound_allOf:
       properties:
         objContactName:
           $ref: '#/components/schemas/Custom-ContactName-Response'
       type: object
+      example: null
     ezmaxinvoicingsummaryexternal_ResponseCompound_allOf:
       properties:
         a_objEzmaxinvoicingsummaryexternaldetail:
@@ -23867,6 +24784,7 @@ components:
       required:
       - a_objEzmaxinvoicingsummaryexternaldetail
       type: object
+      example: null
     ezmaxinvoicingsummaryglobal_ResponseCompound_allOf:
       properties:
         a_objEzmaxinvoicingcommission:
@@ -23874,6 +24792,7 @@ components:
             $ref: '#/components/schemas/ezmaxinvoicingcommission-ResponseCompound'
           type: array
       type: object
+      example: null
     ezmaxinvoicingsummaryinternal_ResponseCompound_allOf:
       properties:
         a_objEzmaxinvoicingsummaryinternaldetail:
@@ -23884,6 +24803,7 @@ components:
       required:
       - a_objEzmaxinvoicingsummaryinternaldetail
       type: object
+      example: null
     ezsign_suggestSigners_v1_Response_allOf:
       properties:
         mPayload:
@@ -23891,6 +24811,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsign_suggestTemplates_v1_Response_allOf:
       properties:
         mPayload:
@@ -23898,6 +24819,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_ResponseCompound_allOf:
       properties:
         a_objEzsignbulksenddocumentmapping:
@@ -23912,6 +24834,7 @@ components:
       - a_objEzsignbulksenddocumentmapping
       - a_objEzsignbulksendsignermapping
       type: object
+      example: null
     ezsignbulksend_createEzsignbulksendtransmission_v1_Response_allOf:
       properties:
         mPayload:
@@ -23919,6 +24842,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23926,6 +24850,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_getEzsignbulksendtransmissions_v1_Response_allOf:
       properties:
         mPayload:
@@ -23933,6 +24858,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_getFormsData_v1_Response_allOf:
       properties:
         mPayload:
@@ -23940,6 +24866,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -23947,6 +24874,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignbulksend:
@@ -23956,6 +24884,7 @@ components:
       required:
       - a_objEzsignbulksend
       type: object
+      example: null
     ezsignbulksend_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23963,6 +24892,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksend_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -23970,6 +24900,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksenddocumentmapping_ResponseCompound_allOf:
       properties:
         objEzsigntemplate:
@@ -23977,6 +24908,7 @@ components:
         objEzsigntemplatepackage:
           $ref: '#/components/schemas/ezsigntemplatepackage-ResponseCompound'
       type: object
+      example: null
     ezsignbulksenddocumentmapping_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23984,6 +24916,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksenddocumentmapping_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -23991,6 +24924,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksenddocumentmapping_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -23998,6 +24932,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendsignermapping_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24005,6 +24940,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendsignermapping_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24012,6 +24948,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendsignermapping_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24019,6 +24956,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendtransmission_ResponseCompound_allOf:
       properties:
         a_objEzsignfoldertransmission:
@@ -24028,6 +24966,7 @@ components:
       required:
       - a_objEzsignfoldertransmission
       type: object
+      example: null
     ezsignbulksendtransmission_getFormsData_v1_Response_allOf:
       properties:
         mPayload:
@@ -24035,6 +24974,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendtransmission_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24042,6 +24982,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignbulksendtransmission_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24049,6 +24990,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_ResponseCompound_allOf:
       properties:
         iEzsigndocumentStepformtotal:
@@ -24078,6 +25020,7 @@ components:
       - iEzsigndocumentStepsignatureCurrent
       - iEzsigndocumentStepsignaturetotal
       type: object
+      example: null
     ezsigndocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24085,6 +25028,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24092,6 +25036,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_editEzsignformfieldgroups_v1_Response_allOf:
       properties:
         mPayload:
@@ -24099,6 +25044,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_editEzsignsignatures_v1_Response_allOf:
       properties:
         mPayload:
@@ -24106,6 +25052,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getActionableElements_v1_Response_allOf:
       properties:
         mPayload:
@@ -24113,6 +25060,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getDownloadUrl_v1_Response_allOf:
       properties:
         mPayload:
@@ -24120,6 +25068,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getEzsignformfieldgroups_v1_Response_allOf:
       properties:
         mPayload:
@@ -24127,6 +25076,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getEzsignpages_v1_Response_allOf:
       properties:
         mPayload:
@@ -24134,6 +25084,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getEzsignsignatures_v1_Response_allOf:
       properties:
         mPayload:
@@ -24141,6 +25092,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getFormData_v1_Response_allOf:
       properties:
         mPayload:
@@ -24148,6 +25100,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24155,6 +25108,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24162,6 +25116,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getTemporaryProof_v1_Response_allOf:
       properties:
         mPayload:
@@ -24169,6 +25124,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigndocument_getWordsPositions_v1_Response_allOf:
       properties:
         mPayload:
@@ -24179,6 +25135,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24186,6 +25143,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24193,6 +25151,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getActionableElements_v1_Response_allOf:
       properties:
         mPayload:
@@ -24200,6 +25159,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getEzsigndocuments_v1_Response_allOf:
       properties:
         mPayload:
@@ -24207,6 +25167,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getEzsignfoldersignerassociations_v1_Response_allOf:
       properties:
         mPayload:
@@ -24214,6 +25175,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getFormsData_v1_Response_allOf:
       properties:
         mPayload:
@@ -24221,6 +25183,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -24228,6 +25191,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignfolder:
@@ -24237,6 +25201,7 @@ components:
       required:
       - a_objEzsignfolder
       type: object
+      example: null
     ezsignfolder_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24244,6 +25209,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24251,6 +25217,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_importEzsignfoldersignerassociations_v1_Response_allOf:
       properties:
         mPayload:
@@ -24258,6 +25225,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfolder_importEzsigntemplatepackage_v1_Response_allOf:
       properties:
         mPayload:
@@ -24265,11 +25233,13 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldersignerassociation_RequestCompound_allOf:
       properties:
         objEzsignsigner:
           $ref: '#/components/schemas/ezsignsigner-RequestCompound'
       type: object
+      example: null
     ezsignfoldersignerassociation_ResponseCompound_allOf:
       properties:
         objUser:
@@ -24277,6 +25247,7 @@ components:
         objEzsignsigner:
           $ref: '#/components/schemas/ezsignsigner-ResponseCompound'
       type: object
+      example: null
     ezsignfoldersignerassociation_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24284,6 +25255,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldersignerassociation_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24291,6 +25263,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldersignerassociation_getInPersonLoginUrl_v1_Response_allOf:
       properties:
         mPayload:
@@ -24298,6 +25271,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldersignerassociation_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24305,6 +25279,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldersignerassociation_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24312,6 +25287,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldertype_RequestCompound_allOf:
       properties:
         a_fkiUserIDSigned:
@@ -24323,6 +25299,7 @@ components:
             $ref: '#/components/schemas/Field-pkiUserID'
           type: array
       type: object
+      example: null
     ezsignfoldertype_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24330,6 +25307,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldertype_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24337,6 +25315,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldertype_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -24344,6 +25323,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldertype_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsignfoldertype:
@@ -24354,6 +25334,7 @@ components:
       required:
       - a_objEzsignfoldertype
       type: object
+      example: null
     ezsignfoldertype_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24361,6 +25342,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignfoldertype_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24368,6 +25350,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignformfieldgroup_RequestCompound_allOf:
       properties:
         a_objEzsignformfieldgroupsigner:
@@ -24386,6 +25369,7 @@ components:
       - a_objEzsignformfield
       - a_objEzsignformfieldgroupsigner
       type: object
+      example: null
     ezsignformfieldgroup_ResponseCompound_allOf:
       properties:
         a_objEzsignformfield:
@@ -24404,6 +25388,7 @@ components:
       - a_objEzsignformfield
       - a_objEzsignformfieldgroupsigner
       type: object
+      example: null
     ezsignformfieldgroup_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24411,6 +25396,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignformfieldgroup_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24418,6 +25404,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignformfieldgroup_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24425,6 +25412,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignsignature_RequestCompound_allOf:
       properties:
         bEzsignsignatureCustomdate:
@@ -24442,6 +25430,7 @@ components:
             $ref: '#/components/schemas/ezsignsignaturecustomdate-RequestCompound'
           type: array
       type: object
+      example: null
     ezsignsignature_ResponseCompound_allOf:
       properties:
         bEzsignsignatureCustomdate:
@@ -24459,6 +25448,7 @@ components:
             $ref: '#/components/schemas/ezsignsignaturecustomdate-ResponseCompound'
           type: array
       type: object
+      example: null
     ezsignsignature_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24466,6 +25456,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignsignature_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24473,6 +25464,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignsignature_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24480,6 +25472,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignsignature_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24487,6 +25480,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsignsigner_RequestCompound_allOf:
       properties:
         objContact:
@@ -24494,6 +25488,7 @@ components:
       required:
       - objContact
       type: object
+      example: null
     ezsignsigner_ResponseCompound_allOf:
       properties:
         objContact:
@@ -24501,6 +25496,7 @@ components:
       required:
       - objContact
       type: object
+      example: null
     ezsigntemplate_ResponseCompound_allOf:
       properties:
         objEzsigntemplatedocument:
@@ -24512,6 +25508,7 @@ components:
       required:
       - a_objEzsigntemplatesigner
       type: object
+      example: null
     ezsigntemplate_copy_v1_Response_allOf:
       properties:
         mPayload:
@@ -24519,6 +25516,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplate_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24526,6 +25524,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplate_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24533,6 +25532,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplate_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -24540,6 +25540,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplate_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsigntemplate:
@@ -24549,6 +25550,7 @@ components:
       required:
       - a_objEzsigntemplate
       type: object
+      example: null
     ezsigntemplate_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24556,6 +25558,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplate_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24563,6 +25566,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24570,6 +25574,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_editEzsigntemplateformfieldgroups_v1_Response_allOf:
       properties:
         mPayload:
@@ -24577,6 +25582,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_editEzsigntemplatesignatures_v1_Response_allOf:
       properties:
         mPayload:
@@ -24584,6 +25590,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_editObject_v1_Response_allOf:
       properties:
         a_objWarning:
@@ -24591,6 +25598,7 @@ components:
             $ref: '#/components/schemas/Common-Response-Warning'
           type: array
       type: object
+      example: null
     ezsigntemplatedocument_getEzsigntemplatedocumentpages_v1_Response_allOf:
       properties:
         mPayload:
@@ -24598,6 +25606,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_getEzsigntemplateformfieldgroups_v1_Response_allOf:
       properties:
         mPayload:
@@ -24605,6 +25614,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_getEzsigntemplatesignatures_v1_Response_allOf:
       properties:
         mPayload:
@@ -24612,6 +25622,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24619,6 +25630,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24626,6 +25638,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatedocument_getWordsPositions_v1_Response_allOf:
       properties:
         mPayload:
@@ -24636,6 +25649,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplateformfieldgroup_RequestCompound_allOf:
       properties:
         a_objEzsigntemplateformfieldgroupsigner:
@@ -24654,6 +25668,7 @@ components:
       - a_objEzsigntemplateformfield
       - a_objEzsigntemplateformfieldgroupsigner
       type: object
+      example: null
     ezsigntemplateformfieldgroup_ResponseCompound_allOf:
       properties:
         a_objEzsigntemplateformfieldgroupsigner:
@@ -24672,6 +25687,7 @@ components:
       - a_objEzsigntemplateformfield
       - a_objEzsigntemplateformfieldgroupsigner
       type: object
+      example: null
     ezsigntemplateformfieldgroup_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24679,6 +25695,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplateformfieldgroup_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24686,6 +25703,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplateformfieldgroup_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24693,6 +25711,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_ResponseCompound_allOf:
       properties:
         a_objEzsigntemplatepackagesigner:
@@ -24707,6 +25726,7 @@ components:
       - a_objEzsigntemplatepackagemembership
       - a_objEzsigntemplatepackagesigner
       type: object
+      example: null
     ezsigntemplatepackage_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24714,6 +25734,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_editEzsigntemplatepackagesigners_v1_Response_allOf:
       properties:
         mPayload:
@@ -24721,6 +25742,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24728,6 +25750,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -24735,6 +25758,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_getList_v1_Response_mPayload_allOf:
       properties:
         a_objEzsigntemplatepackage:
@@ -24744,6 +25768,7 @@ components:
       required:
       - a_objEzsigntemplatepackage
       type: object
+      example: null
     ezsigntemplatepackage_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24751,6 +25776,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackage_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24758,6 +25784,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagemembership_ResponseCompound_allOf:
       properties:
         objEzsigntemplate:
@@ -24770,6 +25797,7 @@ components:
       - a_objEzsigntemplatepackagesignermembership
       - objEzsigntemplate
       type: object
+      example: null
     ezsigntemplatepackagemembership_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24777,6 +25805,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagemembership_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24784,6 +25813,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagemembership_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24791,6 +25821,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesigner_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24798,6 +25829,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesigner_deleteObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24805,6 +25837,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesigner_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24812,6 +25845,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesigner_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24819,6 +25853,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesignermembership_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24826,6 +25861,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesignermembership_deleteObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24833,6 +25869,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesignermembership_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24840,6 +25877,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatepackagesignermembership_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24847,6 +25885,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesignature_RequestCompound_allOf:
       properties:
         bEzsigntemplatesignatureCustomdate:
@@ -24865,6 +25904,7 @@ components:
             $ref: '#/components/schemas/ezsigntemplatesignaturecustomdate-RequestCompound'
           type: array
       type: object
+      example: null
     ezsigntemplatesignature_ResponseCompound_allOf:
       properties:
         bEzsigntemplatesignatureCustomdate:
@@ -24883,6 +25923,7 @@ components:
             $ref: '#/components/schemas/ezsigntemplatesignaturecustomdate-ResponseCompound'
           type: array
       type: object
+      example: null
     ezsigntemplatesignature_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24890,6 +25931,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesignature_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24897,6 +25939,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesignature_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24904,6 +25947,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesigner_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24911,6 +25955,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesigner_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24918,6 +25963,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntemplatesigner_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24925,6 +25971,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     ezsigntsarequirement_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24932,6 +25979,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     franchisebroker_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24939,6 +25987,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     franchiseoffice_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24946,6 +25995,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     franchisereferalincome_RequestCompound_allOf:
       properties:
         objAddress:
@@ -24957,6 +26007,7 @@ components:
       required:
       - a_objContact
       type: object
+      example: null
     franchisereferalincome_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -24964,6 +26015,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     franchisereferalincome_createObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -24971,6 +26023,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     notificationsection_getNotificationtests_v1_Response_allOf:
       properties:
         mPayload:
@@ -24978,6 +26031,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     notificationtest_getElements_v1_Response_allOf:
       properties:
         mPayload:
@@ -24985,6 +26039,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     period_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24992,6 +26047,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     secretquestion_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -24999,6 +26055,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     taxassignment_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -25006,6 +26063,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     timezone_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -25013,6 +26071,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     user_createEzsignuser_v1_Response_allOf:
       properties:
         mPayload:
@@ -25020,6 +26079,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     user_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -25027,6 +26087,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     usergroup_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -25034,6 +26095,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     versionhistory_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -25041,6 +26103,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     webhook_ResponseCompound_allOf:
       properties:
         sWebhookEvent:
@@ -25048,6 +26111,7 @@ components:
           example: Ezsign-DocumentCompleted
           type: string
       type: object
+      example: null
     webhook_createObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -25055,6 +26119,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     webhook_getHistory_v1_Response_allOf:
       properties:
         mPayload:
@@ -25062,6 +26127,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     webhook_getHistory_v1_Response_mPayload_allOf:
       properties:
         a_objWebhooklog:
@@ -25071,6 +26137,7 @@ components:
       required:
       - a_objWebhooklog
       type: object
+      example: null
     webhook_getList_v1_Response_allOf:
       properties:
         mPayload:
@@ -25078,6 +26145,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     webhook_getList_v1_Response_mPayload_allOf:
       properties:
         a_objWebhook:
@@ -25087,6 +26155,7 @@ components:
       required:
       - a_objWebhook
       type: object
+      example: null
     webhook_getObject_v1_Response_allOf:
       properties:
         mPayload:
@@ -25094,6 +26163,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
     webhook_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -25101,6 +26171,7 @@ components:
       required:
       - mPayload
       type: object
+      example: null
   securitySchemes:
     Authorization:
       description: ""
@@ -25184,6 +26255,7 @@ x-tagGroups:
   - Global_Customer
 - name: Module
   tags:
+  - Module_Communication
   - Module_Ezsign
   - Module_User
 - name: Object
@@ -25192,6 +26264,7 @@ x-tagGroups:
   - Object_Apikey
   - Object_Billingentityinternal
   - Object_Branding
+  - Object_Communication
   - Object_Department
   - Object_Ezmaxinvoicing
   - Object_Ezsignbulksend
