@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * An Ezsigndocument Object
  */
 @ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class EzsigndocumentRequestPatch {
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)

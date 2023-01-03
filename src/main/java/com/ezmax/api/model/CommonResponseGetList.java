@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * All API response will inherit this based Response
  */
 @ApiModel(description = "All API response will inherit this based Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class CommonResponseGetList {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

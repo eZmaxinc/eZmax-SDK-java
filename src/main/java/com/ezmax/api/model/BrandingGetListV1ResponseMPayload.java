@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/branding/getList
  */
 @ApiModel(description = "Payload for GET /1/object/branding/getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class BrandingGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BRANDING = "a_objBranding";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BRANDING)

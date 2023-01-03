@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Payload for POST /1/object/ezsigntemplateformfieldgroup
  */
 @ApiModel(description = "Payload for POST /1/object/ezsigntemplateformfieldgroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "a_pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)

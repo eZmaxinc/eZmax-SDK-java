@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
  */
 @ApiModel(description = "A Ezsignfoldersignerassociation->User Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)

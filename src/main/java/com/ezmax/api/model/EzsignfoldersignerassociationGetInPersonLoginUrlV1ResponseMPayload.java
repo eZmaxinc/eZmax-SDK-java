@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
  */
 @ApiModel(description = "Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_LOGIN_URL = "sLoginUrl";
   @SerializedName(SERIALIZED_NAME_S_LOGIN_URL)

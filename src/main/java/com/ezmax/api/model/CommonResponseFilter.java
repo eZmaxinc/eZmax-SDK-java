@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Definition of Filters for getList
  */
 @ApiModel(description = "Definition of Filters for getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class CommonResponseFilter {
   public static final String SERIALIZED_NAME_A_AUTO_TYPE = "a_AutoType";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE)

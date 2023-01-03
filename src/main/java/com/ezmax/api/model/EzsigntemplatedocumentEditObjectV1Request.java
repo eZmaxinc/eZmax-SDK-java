@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
 @ApiModel(description = "Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
 public class EzsigntemplatedocumentEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT = "objEzsigntemplatedocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT)
