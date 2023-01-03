@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * A Communicationrecipient Object
  */
 @ApiModel(description = "A Communicationrecipient Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class CommunicationrecipientResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D = "pkiCommunicationrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D)

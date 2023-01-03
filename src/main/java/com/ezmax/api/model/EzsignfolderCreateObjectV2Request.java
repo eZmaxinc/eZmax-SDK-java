@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Request for POST /2/object/ezsignfolder
  */
 @ApiModel(description = "Request for POST /2/object/ezsignfolder")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)

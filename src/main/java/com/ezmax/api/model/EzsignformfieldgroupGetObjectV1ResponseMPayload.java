@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
  */
 @ApiModel(description = "Payload for GET /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsignformfieldgroupGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)

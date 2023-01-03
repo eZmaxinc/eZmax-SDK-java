@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
  */
 @ApiModel(description = "Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP = "a_objEzsigntemplateformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP)

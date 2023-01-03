@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Communicationexternalimage Object
  */
 @ApiModel(description = "A Communicationexternalimage Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class CommunicationexternalimageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALIMAGE_I_D = "pkiCommunicationexternalimageID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALIMAGE_I_D)

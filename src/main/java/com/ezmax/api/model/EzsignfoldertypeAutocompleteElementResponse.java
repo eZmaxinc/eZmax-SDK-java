@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * A Ezsignfoldertype AutocompleteElement Response
  */
 @ApiModel(description = "A Ezsignfoldertype AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsignfoldertypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)

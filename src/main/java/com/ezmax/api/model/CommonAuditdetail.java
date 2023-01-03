@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
  */
 @ApiModel(description = "Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class CommonAuditdetail {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations
  */
 @ApiModel(description = "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)

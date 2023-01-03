@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfoldersignerassociation Object
  */
 @ApiModel(description = "An Ezsignfoldersignerassociation Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestPatch {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)

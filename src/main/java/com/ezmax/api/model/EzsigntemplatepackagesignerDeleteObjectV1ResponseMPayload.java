@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Payload for DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}
  */
 @ApiModel(description = "Payload for DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-01T20:33:46.172972014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T17:09:39.725139908Z[Etc/UTC]")
 public class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
