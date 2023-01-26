@@ -16,7 +16,6 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommunicationGetCountV1Response;
-import com.ezmax.api.model.CommunicationGetListV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,32 +33,17 @@ public class ModuleCommunicationApiTest {
     private final ModuleCommunicationApi api = new ModuleCommunicationApi();
 
     /**
-     * Get the number of communication
+     * Retrieve Communication count
      *
-     * Get the number of communication in specified module
+     * 
      *
      * @throws ApiException if the Api call fails
      */
     @Test
     public void communicationGetCommunicationCountV1Test() throws ApiException {
-        String eCommunicationModule = null;
+        String eCommunicationObjecttype = null;
         Integer pkiEzsignfolderID = null;
-        CommunicationGetCountV1Response response = api.communicationGetCommunicationCountV1(eCommunicationModule, pkiEzsignfolderID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve communication list
-     *
-     * Retrieve communication list
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void communicationGetCommunicationListV1Test() throws ApiException {
-        String eCommunicationModule = null;
-        Integer pkiEzsignfolderID = null;
-        CommunicationGetListV1Response response = api.communicationGetCommunicationListV1(eCommunicationModule, pkiEzsignfolderID);
+        CommunicationGetCountV1Response response = api.communicationGetCommunicationCountV1(eCommunicationObjecttype, pkiEzsignfolderID);
         // TODO: test validations
     }
 

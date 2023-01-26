@@ -187,6 +187,14 @@ public class EzmaxinvoicingsummaryglobalResponseCompoundTest {
     }
 
     /**
+     * Test the property 'tEzmaxproductHelpX'
+     */
+    @Test
+    public void tEzmaxproductHelpXTest() {
+        // TODO: test tEzmaxproductHelpX
+    }
+
+    /**
      * Test the property 'aObjEzmaxinvoicingcommission'
      */
     @Test

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * BrandingGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class BrandingGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_BRANDING = "a_objBranding";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BRANDING)

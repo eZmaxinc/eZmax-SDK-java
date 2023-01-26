@@ -9,16 +9,16 @@ A Communication Object
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiCommunicationID** | **Integer** | The unique ID of the Communication. |  |
-|**eCommunicationEmailimportance** | **FieldECommunicationEmailimportance** |  |  [optional] |
+|**eCommunicationImportance** | **FieldECommunicationImportance** |  |  |
 |**eCommunicationType** | **FieldECommunicationType** |  |  |
-|**sCommunicationSubject** | **String** | The Subject of the Communication |  |
-|**dtCommunicationSentdate** | **String** | The send date and time at which the Communication was sent. |  |
+|**sCommunicationSubject** | **String** | The subject of the Communication |  |
+|**eCommunicationDirection** | **ComputedECommunicationDirection** |  |  |
+|**iCommunicationrecipientCount** | **Integer** | The count of Communicationrecipient |  |
 |**objContactFrom** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |
+|**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
 |**aObjCommunicationattachment** | [**List&lt;CommunicationattachmentResponseCompound&gt;**](CommunicationattachmentResponseCompound.md) |  |  |
 |**aObjCommunicationrecipient** | [**List&lt;CommunicationrecipientResponseCompound&gt;**](CommunicationrecipientResponseCompound.md) |  |  |
 |**aObjCommunicationexternalrecipient** | [**List&lt;CommunicationexternalrecipientResponseCompound&gt;**](CommunicationexternalrecipientResponseCompound.md) |  |  |
-|**aObjCommunicationimage** | [**List&lt;CommunicationimageResponseCompound&gt;**](CommunicationimageResponseCompound.md) |  |  |
-|**aObjCommunicationexternalimage** | [**List&lt;CommunicationexternalimageResponseCompound&gt;**](CommunicationexternalimageResponseCompound.md) |  |  |
 
 
 

@@ -15,8 +15,10 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.DescriptionstaticResponseCompound;
+import com.ezmax.api.model.EmailstaticResponseCompound;
 import com.ezmax.api.model.FieldECommunicationexternalrecipientType;
-import com.ezmax.api.model.PhoneResponseCompound;
+import com.ezmax.api.model.PhonestaticResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,27 +53,27 @@ import eZmaxAPI.JSON;
  * A Communicationexternalrecipient Object
  */
 @ApiModel(description = "A Communicationexternalrecipient Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationexternalrecipientResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D = "pkiCommunicationexternalrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D)
   private Integer pkiCommunicationexternalrecipientID;
 
-  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
-  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  private String sEmailAddress;
-
-  public static final String SERIALIZED_NAME_OBJ_PHONE_SMS = "objPhoneSms";
-  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_SMS)
-  private PhoneResponseCompound objPhoneSms;
-
   public static final String SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE = "eCommunicationexternalrecipientType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE)
   private FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType;
 
-  public static final String SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME = "sCommunicationexternalrecipientName";
-  @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME)
-  private String sCommunicationexternalrecipientName;
+  public static final String SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC = "objDescriptionstatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC)
+  private DescriptionstaticResponseCompound objDescriptionstatic;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAILSTATIC = "objEmailstatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAILSTATIC)
+  private EmailstaticResponseCompound objEmailstatic;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONESTATIC = "objPhonestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONESTATIC)
+  private PhonestaticResponseCompound objPhonestatic;
 
   public CommunicationexternalrecipientResponseCompound() {
   }
@@ -99,52 +101,6 @@ public class CommunicationexternalrecipientResponseCompound {
   }
 
 
-  public CommunicationexternalrecipientResponseCompound sEmailAddress(String sEmailAddress) {
-    
-    this.sEmailAddress = sEmailAddress;
-    return this;
-  }
-
-   /**
-   * The email address.
-   * @return sEmailAddress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@example.com", value = "The email address.")
-
-  public String getsEmailAddress() {
-    return sEmailAddress;
-  }
-
-
-  public void setsEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-
-  public CommunicationexternalrecipientResponseCompound objPhoneSms(PhoneResponseCompound objPhoneSms) {
-    
-    this.objPhoneSms = objPhoneSms;
-    return this;
-  }
-
-   /**
-   * Get objPhoneSms
-   * @return objPhoneSms
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public PhoneResponseCompound getObjPhoneSms() {
-    return objPhoneSms;
-  }
-
-
-  public void setObjPhoneSms(PhoneResponseCompound objPhoneSms) {
-    this.objPhoneSms = objPhoneSms;
-  }
-
-
   public CommunicationexternalrecipientResponseCompound eCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
     
     this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
@@ -168,26 +124,72 @@ public class CommunicationexternalrecipientResponseCompound {
   }
 
 
-  public CommunicationexternalrecipientResponseCompound sCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
+  public CommunicationexternalrecipientResponseCompound objDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
     
-    this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+    this.objDescriptionstatic = objDescriptionstatic;
     return this;
   }
 
    /**
-   * The Name of the Communicationexternalrecipient
-   * @return sCommunicationexternalrecipientName
+   * Get objDescriptionstatic
+   * @return objDescriptionstatic
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John Doe", required = true, value = "The Name of the Communicationexternalrecipient")
+  @ApiModelProperty(required = true, value = "")
 
-  public String getsCommunicationexternalrecipientName() {
-    return sCommunicationexternalrecipientName;
+  public DescriptionstaticResponseCompound getObjDescriptionstatic() {
+    return objDescriptionstatic;
   }
 
 
-  public void setsCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
-    this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+  public void setObjDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
+    this.objDescriptionstatic = objDescriptionstatic;
+  }
+
+
+  public CommunicationexternalrecipientResponseCompound objEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    
+    this.objEmailstatic = objEmailstatic;
+    return this;
+  }
+
+   /**
+   * Get objEmailstatic
+   * @return objEmailstatic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public EmailstaticResponseCompound getObjEmailstatic() {
+    return objEmailstatic;
+  }
+
+
+  public void setObjEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    this.objEmailstatic = objEmailstatic;
+  }
+
+
+  public CommunicationexternalrecipientResponseCompound objPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    
+    this.objPhonestatic = objPhonestatic;
+    return this;
+  }
+
+   /**
+   * Get objPhonestatic
+   * @return objPhonestatic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PhonestaticResponseCompound getObjPhonestatic() {
+    return objPhonestatic;
+  }
+
+
+  public void setObjPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    this.objPhonestatic = objPhonestatic;
   }
 
 
@@ -202,15 +204,15 @@ public class CommunicationexternalrecipientResponseCompound {
     }
     CommunicationexternalrecipientResponseCompound communicationexternalrecipientResponseCompound = (CommunicationexternalrecipientResponseCompound) o;
     return Objects.equals(this.pkiCommunicationexternalrecipientID, communicationexternalrecipientResponseCompound.pkiCommunicationexternalrecipientID) &&
-        Objects.equals(this.sEmailAddress, communicationexternalrecipientResponseCompound.sEmailAddress) &&
-        Objects.equals(this.objPhoneSms, communicationexternalrecipientResponseCompound.objPhoneSms) &&
         Objects.equals(this.eCommunicationexternalrecipientType, communicationexternalrecipientResponseCompound.eCommunicationexternalrecipientType) &&
-        Objects.equals(this.sCommunicationexternalrecipientName, communicationexternalrecipientResponseCompound.sCommunicationexternalrecipientName);
+        Objects.equals(this.objDescriptionstatic, communicationexternalrecipientResponseCompound.objDescriptionstatic) &&
+        Objects.equals(this.objEmailstatic, communicationexternalrecipientResponseCompound.objEmailstatic) &&
+        Objects.equals(this.objPhonestatic, communicationexternalrecipientResponseCompound.objPhonestatic);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationexternalrecipientID, sEmailAddress, objPhoneSms, eCommunicationexternalrecipientType, sCommunicationexternalrecipientName);
+    return Objects.hash(pkiCommunicationexternalrecipientID, eCommunicationexternalrecipientType, objDescriptionstatic, objEmailstatic, objPhonestatic);
   }
 
   @Override
@@ -218,10 +220,10 @@ public class CommunicationexternalrecipientResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationexternalrecipientResponseCompound {\n");
     sb.append("    pkiCommunicationexternalrecipientID: ").append(toIndentedString(pkiCommunicationexternalrecipientID)).append("\n");
-    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
-    sb.append("    objPhoneSms: ").append(toIndentedString(objPhoneSms)).append("\n");
     sb.append("    eCommunicationexternalrecipientType: ").append(toIndentedString(eCommunicationexternalrecipientType)).append("\n");
-    sb.append("    sCommunicationexternalrecipientName: ").append(toIndentedString(sCommunicationexternalrecipientName)).append("\n");
+    sb.append("    objDescriptionstatic: ").append(toIndentedString(objDescriptionstatic)).append("\n");
+    sb.append("    objEmailstatic: ").append(toIndentedString(objEmailstatic)).append("\n");
+    sb.append("    objPhonestatic: ").append(toIndentedString(objPhonestatic)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -245,16 +247,16 @@ public class CommunicationexternalrecipientResponseCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCommunicationexternalrecipientID");
-    openapiFields.add("sEmailAddress");
-    openapiFields.add("objPhoneSms");
     openapiFields.add("eCommunicationexternalrecipientType");
-    openapiFields.add("sCommunicationexternalrecipientName");
+    openapiFields.add("objDescriptionstatic");
+    openapiFields.add("objEmailstatic");
+    openapiFields.add("objPhonestatic");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCommunicationexternalrecipientID");
     openapiRequiredFields.add("eCommunicationexternalrecipientType");
-    openapiRequiredFields.add("sCommunicationexternalrecipientName");
+    openapiRequiredFields.add("objDescriptionstatic");
   }
 
  /**
@@ -284,15 +286,15 @@ public class CommunicationexternalrecipientResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      // validate the required field `objDescriptionstatic`
+      DescriptionstaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objDescriptionstatic"));
+      // validate the optional field `objEmailstatic`
+      if (jsonObj.get("objEmailstatic") != null && !jsonObj.get("objEmailstatic").isJsonNull()) {
+        EmailstaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objEmailstatic"));
       }
-      // validate the optional field `objPhoneSms`
-      if (jsonObj.get("objPhoneSms") != null && !jsonObj.get("objPhoneSms").isJsonNull()) {
-        PhoneResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objPhoneSms"));
-      }
-      if (!jsonObj.get("sCommunicationexternalrecipientName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationexternalrecipientName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationexternalrecipientName").toString()));
+      // validate the optional field `objPhonestatic`
+      if (jsonObj.get("objPhonestatic") != null && !jsonObj.get("objPhonestatic").isJsonNull()) {
+        PhonestaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objPhonestatic"));
       }
   }
 

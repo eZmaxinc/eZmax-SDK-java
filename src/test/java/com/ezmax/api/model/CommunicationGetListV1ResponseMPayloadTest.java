@@ -50,4 +50,20 @@ public class CommunicationGetListV1ResponseMPayloadTest {
         // TODO: test aObjCommunication
     }
 
+    /**
+     * Test the property 'iRowReturned'
+     */
+    @Test
+    public void iRowReturnedTest() {
+        // TODO: test iRowReturned
+    }
+
+    /**
+     * Test the property 'iRowFiltered'
+     */
+    @Test
+    public void iRowFilteredTest() {
+        // TODO: test iRowFiltered
+    }
+
 }

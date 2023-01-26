@@ -15,8 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.FieldECommunicationEmailimportance;
+import com.ezmax.api.model.ComputedECommunicationDirection;
+import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,31 +52,55 @@ import eZmaxAPI.JSON;
  * A Communication List Element
  */
 @ApiModel(description = "A Communication List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationListElement {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
   private Integer pkiCommunicationID;
 
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE = "eCommunicationEmailimportance";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE)
-  private FieldECommunicationEmailimportance eCommunicationEmailimportance;
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTION_I_D = "fkiInscriptionID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
+  private Integer fkiInscriptionID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D = "fkiInscriptionnotauthenticatedID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D)
+  private Integer fkiInscriptionnotauthenticatedID;
+
+  public static final String SERIALIZED_NAME_DT_CREATED_DATE = "dtCreatedDate";
+  @SerializedName(SERIALIZED_NAME_DT_CREATED_DATE)
+  private String dtCreatedDate;
+
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_DIRECTION = "eCommunicationDirection";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_DIRECTION)
+  private ComputedECommunicationDirection eCommunicationDirection;
+
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
+  private FieldECommunicationImportance eCommunicationImportance;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
   private FieldECommunicationType eCommunicationType;
 
+  public static final String SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT = "iCommunicationrecipientCount";
+  @SerializedName(SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT)
+  private Integer iCommunicationrecipientCount;
+
   public static final String SERIALIZED_NAME_S_COMMUNICATION_SUBJECT = "sCommunicationSubject";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
   private String sCommunicationSubject;
 
-  public static final String SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE = "dtCommunicationSentdate";
-  @SerializedName(SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE)
-  private String dtCommunicationSentdate;
+  public static final String SERIALIZED_NAME_S_COMMUNICATION_SENDER = "sCommunicationSender";
+  @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SENDER)
+  private String sCommunicationSender;
 
-  public static final String SERIALIZED_NAME_OBJ_CONTACT_FROM = "objContactFrom";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_FROM)
-  private CustomContactNameResponse objContactFrom;
+  public static final String SERIALIZED_NAME_S_COMMUNICATION_RECIPIENT = "sCommunicationRecipient";
+  @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_RECIPIENT)
+  private String sCommunicationRecipient;
 
   public CommunicationListElement() {
   }
@@ -105,26 +129,144 @@ public class CommunicationListElement {
   }
 
 
-  public CommunicationListElement eCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
+  public CommunicationListElement fkiEzsignfolderID(Integer fkiEzsignfolderID) {
     
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
 
    /**
-   * Get eCommunicationEmailimportance
-   * @return eCommunicationEmailimportance
+   * The unique ID of the Ezsignfolder
+   * minimum: 0
+   * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "33", value = "The unique ID of the Ezsignfolder")
 
-  public FieldECommunicationEmailimportance geteCommunicationEmailimportance() {
-    return eCommunicationEmailimportance;
+  public Integer getFkiEzsignfolderID() {
+    return fkiEzsignfolderID;
   }
 
 
-  public void seteCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public CommunicationListElement fkiInscriptionID(Integer fkiInscriptionID) {
+    
+    this.fkiInscriptionID = fkiInscriptionID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Inscription.
+   * minimum: 0
+   * @return fkiInscriptionID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "17", value = "The unique ID of the Inscription.")
+
+  public Integer getFkiInscriptionID() {
+    return fkiInscriptionID;
+  }
+
+
+  public void setFkiInscriptionID(Integer fkiInscriptionID) {
+    this.fkiInscriptionID = fkiInscriptionID;
+  }
+
+
+  public CommunicationListElement fkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+    
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Inscriptionnotauthenticated.
+   * minimum: 0
+   * @return fkiInscriptionnotauthenticatedID
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "24", value = "The unique ID of the Inscriptionnotauthenticated.")
+
+  public Integer getFkiInscriptionnotauthenticatedID() {
+    return fkiInscriptionnotauthenticatedID;
+  }
+
+
+  public void setFkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+  }
+
+
+  public CommunicationListElement dtCreatedDate(String dtCreatedDate) {
+    
+    this.dtCreatedDate = dtCreatedDate;
+    return this;
+  }
+
+   /**
+   * The date and time at which the object was created
+   * @return dtCreatedDate
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the object was created")
+
+  public String getDtCreatedDate() {
+    return dtCreatedDate;
+  }
+
+
+  public void setDtCreatedDate(String dtCreatedDate) {
+    this.dtCreatedDate = dtCreatedDate;
+  }
+
+
+  public CommunicationListElement eCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
+    
+    this.eCommunicationDirection = eCommunicationDirection;
+    return this;
+  }
+
+   /**
+   * Get eCommunicationDirection
+   * @return eCommunicationDirection
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public ComputedECommunicationDirection geteCommunicationDirection() {
+    return eCommunicationDirection;
+  }
+
+
+  public void seteCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
+    this.eCommunicationDirection = eCommunicationDirection;
+  }
+
+
+  public CommunicationListElement eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
+    
+    this.eCommunicationImportance = eCommunicationImportance;
+    return this;
+  }
+
+   /**
+   * Get eCommunicationImportance
+   * @return eCommunicationImportance
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public FieldECommunicationImportance geteCommunicationImportance() {
+    return eCommunicationImportance;
+  }
+
+
+  public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
+    this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
@@ -151,6 +293,29 @@ public class CommunicationListElement {
   }
 
 
+  public CommunicationListElement iCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
+    return this;
+  }
+
+   /**
+   * The count of Communicationrecipient
+   * @return iCommunicationrecipientCount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "8", required = true, value = "The count of Communicationrecipient")
+
+  public Integer getiCommunicationrecipientCount() {
+    return iCommunicationrecipientCount;
+  }
+
+
+  public void setiCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
+  }
+
+
   public CommunicationListElement sCommunicationSubject(String sCommunicationSubject) {
     
     this.sCommunicationSubject = sCommunicationSubject;
@@ -158,11 +323,11 @@ public class CommunicationListElement {
   }
 
    /**
-   * The Subject of the Communication
+   * The subject of the Communication
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The Subject of the Communication")
+  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The subject of the Communication")
 
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
@@ -174,49 +339,49 @@ public class CommunicationListElement {
   }
 
 
-  public CommunicationListElement dtCommunicationSentdate(String dtCommunicationSentdate) {
+  public CommunicationListElement sCommunicationSender(String sCommunicationSender) {
     
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+    this.sCommunicationSender = sCommunicationSender;
     return this;
   }
 
    /**
-   * The send date and time at which the Communication was sent.
-   * @return dtCommunicationSentdate
+   * The sender name of the Communication
+   * @return sCommunicationSender
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The send date and time at which the Communication was sent.")
+  @ApiModelProperty(example = "John Doe", required = true, value = "The sender name of the Communication")
 
-  public String getDtCommunicationSentdate() {
-    return dtCommunicationSentdate;
+  public String getsCommunicationSender() {
+    return sCommunicationSender;
   }
 
 
-  public void setDtCommunicationSentdate(String dtCommunicationSentdate) {
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+  public void setsCommunicationSender(String sCommunicationSender) {
+    this.sCommunicationSender = sCommunicationSender;
   }
 
 
-  public CommunicationListElement objContactFrom(CustomContactNameResponse objContactFrom) {
+  public CommunicationListElement sCommunicationRecipient(String sCommunicationRecipient) {
     
-    this.objContactFrom = objContactFrom;
+    this.sCommunicationRecipient = sCommunicationRecipient;
     return this;
   }
 
    /**
-   * Get objContactFrom
-   * @return objContactFrom
+   * The recipients&#39; name of the Communication
+   * @return sCommunicationRecipient
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "Jane Doe", required = true, value = "The recipients' name of the Communication")
 
-  public CustomContactNameResponse getObjContactFrom() {
-    return objContactFrom;
+  public String getsCommunicationRecipient() {
+    return sCommunicationRecipient;
   }
 
 
-  public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
-    this.objContactFrom = objContactFrom;
+  public void setsCommunicationRecipient(String sCommunicationRecipient) {
+    this.sCommunicationRecipient = sCommunicationRecipient;
   }
 
 
@@ -231,16 +396,22 @@ public class CommunicationListElement {
     }
     CommunicationListElement communicationListElement = (CommunicationListElement) o;
     return Objects.equals(this.pkiCommunicationID, communicationListElement.pkiCommunicationID) &&
-        Objects.equals(this.eCommunicationEmailimportance, communicationListElement.eCommunicationEmailimportance) &&
+        Objects.equals(this.fkiEzsignfolderID, communicationListElement.fkiEzsignfolderID) &&
+        Objects.equals(this.fkiInscriptionID, communicationListElement.fkiInscriptionID) &&
+        Objects.equals(this.fkiInscriptionnotauthenticatedID, communicationListElement.fkiInscriptionnotauthenticatedID) &&
+        Objects.equals(this.dtCreatedDate, communicationListElement.dtCreatedDate) &&
+        Objects.equals(this.eCommunicationDirection, communicationListElement.eCommunicationDirection) &&
+        Objects.equals(this.eCommunicationImportance, communicationListElement.eCommunicationImportance) &&
         Objects.equals(this.eCommunicationType, communicationListElement.eCommunicationType) &&
+        Objects.equals(this.iCommunicationrecipientCount, communicationListElement.iCommunicationrecipientCount) &&
         Objects.equals(this.sCommunicationSubject, communicationListElement.sCommunicationSubject) &&
-        Objects.equals(this.dtCommunicationSentdate, communicationListElement.dtCommunicationSentdate) &&
-        Objects.equals(this.objContactFrom, communicationListElement.objContactFrom);
+        Objects.equals(this.sCommunicationSender, communicationListElement.sCommunicationSender) &&
+        Objects.equals(this.sCommunicationRecipient, communicationListElement.sCommunicationRecipient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationID, eCommunicationEmailimportance, eCommunicationType, sCommunicationSubject, dtCommunicationSentdate, objContactFrom);
+    return Objects.hash(pkiCommunicationID, fkiEzsignfolderID, fkiInscriptionID, fkiInscriptionnotauthenticatedID, dtCreatedDate, eCommunicationDirection, eCommunicationImportance, eCommunicationType, iCommunicationrecipientCount, sCommunicationSubject, sCommunicationSender, sCommunicationRecipient);
   }
 
   @Override
@@ -248,11 +419,17 @@ public class CommunicationListElement {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationListElement {\n");
     sb.append("    pkiCommunicationID: ").append(toIndentedString(pkiCommunicationID)).append("\n");
-    sb.append("    eCommunicationEmailimportance: ").append(toIndentedString(eCommunicationEmailimportance)).append("\n");
+    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    fkiInscriptionID: ").append(toIndentedString(fkiInscriptionID)).append("\n");
+    sb.append("    fkiInscriptionnotauthenticatedID: ").append(toIndentedString(fkiInscriptionnotauthenticatedID)).append("\n");
+    sb.append("    dtCreatedDate: ").append(toIndentedString(dtCreatedDate)).append("\n");
+    sb.append("    eCommunicationDirection: ").append(toIndentedString(eCommunicationDirection)).append("\n");
+    sb.append("    eCommunicationImportance: ").append(toIndentedString(eCommunicationImportance)).append("\n");
     sb.append("    eCommunicationType: ").append(toIndentedString(eCommunicationType)).append("\n");
+    sb.append("    iCommunicationrecipientCount: ").append(toIndentedString(iCommunicationrecipientCount)).append("\n");
     sb.append("    sCommunicationSubject: ").append(toIndentedString(sCommunicationSubject)).append("\n");
-    sb.append("    dtCommunicationSentdate: ").append(toIndentedString(dtCommunicationSentdate)).append("\n");
-    sb.append("    objContactFrom: ").append(toIndentedString(objContactFrom)).append("\n");
+    sb.append("    sCommunicationSender: ").append(toIndentedString(sCommunicationSender)).append("\n");
+    sb.append("    sCommunicationRecipient: ").append(toIndentedString(sCommunicationRecipient)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -276,19 +453,29 @@ public class CommunicationListElement {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCommunicationID");
-    openapiFields.add("eCommunicationEmailimportance");
+    openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("fkiInscriptionID");
+    openapiFields.add("fkiInscriptionnotauthenticatedID");
+    openapiFields.add("dtCreatedDate");
+    openapiFields.add("eCommunicationDirection");
+    openapiFields.add("eCommunicationImportance");
     openapiFields.add("eCommunicationType");
+    openapiFields.add("iCommunicationrecipientCount");
     openapiFields.add("sCommunicationSubject");
-    openapiFields.add("dtCommunicationSentdate");
-    openapiFields.add("objContactFrom");
+    openapiFields.add("sCommunicationSender");
+    openapiFields.add("sCommunicationRecipient");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCommunicationID");
+    openapiRequiredFields.add("dtCreatedDate");
+    openapiRequiredFields.add("eCommunicationDirection");
+    openapiRequiredFields.add("eCommunicationImportance");
     openapiRequiredFields.add("eCommunicationType");
+    openapiRequiredFields.add("iCommunicationrecipientCount");
     openapiRequiredFields.add("sCommunicationSubject");
-    openapiRequiredFields.add("dtCommunicationSentdate");
-    openapiRequiredFields.add("objContactFrom");
+    openapiRequiredFields.add("sCommunicationSender");
+    openapiRequiredFields.add("sCommunicationRecipient");
   }
 
  /**
@@ -318,14 +505,18 @@ public class CommunicationListElement {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (!jsonObj.get("dtCreatedDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCreatedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCreatedDate").toString()));
+      }
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
-      if (!jsonObj.get("dtCommunicationSentdate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtCommunicationSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCommunicationSentdate").toString()));
+      if (!jsonObj.get("sCommunicationSender").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSender").toString()));
       }
-      // validate the required field `objContactFrom`
-      CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactFrom"));
+      if (!jsonObj.get("sCommunicationRecipient").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationRecipient` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationRecipient").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

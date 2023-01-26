@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely
  */
 @ApiModel(description = "Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/endPrematurely")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzsigndocumentEndPrematurelyV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

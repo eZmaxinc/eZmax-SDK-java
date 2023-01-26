@@ -15,8 +15,11 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.DescriptionstaticResponseCompound;
+import com.ezmax.api.model.EmailstaticResponseCompound;
+import com.ezmax.api.model.FieldECommunicationrecipientObjecttype;
 import com.ezmax.api.model.FieldECommunicationrecipientType;
-import com.ezmax.api.model.PhoneResponseCompound;
+import com.ezmax.api.model.PhonestaticResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,11 +54,15 @@ import eZmaxAPI.JSON;
  * A Communicationrecipient Object
  */
 @ApiModel(description = "A Communicationrecipient Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationrecipientResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D = "pkiCommunicationrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D)
   private Integer pkiCommunicationrecipientID;
+
+  public static final String SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_OBJECTTYPE = "eCommunicationrecipientObjecttype";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_OBJECTTYPE)
+  private FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -89,14 +96,6 @@ public class CommunicationrecipientResponse {
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
 
-  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
-  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  private String sEmailAddress;
-
-  public static final String SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_TYPE = "eCommunicationrecipientType";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_TYPE)
-  private FieldECommunicationrecipientType eCommunicationrecipientType;
-
   public static final String SERIALIZED_NAME_FKI_AGENTINCORPORATION_I_D = "fkiAgentincorporationID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENTINCORPORATION_I_D)
   private Integer fkiAgentincorporationID;
@@ -125,9 +124,21 @@ public class CommunicationrecipientResponse {
   @SerializedName(SERIALIZED_NAME_FKI_SUPPLIER_I_D)
   private Integer fkiSupplierID;
 
-  public static final String SERIALIZED_NAME_OBJ_PHONE_SMS = "objPhoneSms";
-  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_SMS)
-  private PhoneResponseCompound objPhoneSms;
+  public static final String SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_TYPE = "eCommunicationrecipientType";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONRECIPIENT_TYPE)
+  private FieldECommunicationrecipientType eCommunicationrecipientType;
+
+  public static final String SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC = "objDescriptionstatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC)
+  private DescriptionstaticResponseCompound objDescriptionstatic;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAILSTATIC = "objEmailstatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAILSTATIC)
+  private EmailstaticResponseCompound objEmailstatic;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONESTATIC = "objPhonestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONESTATIC)
+  private PhonestaticResponseCompound objPhonestatic;
 
   public CommunicationrecipientResponse() {
   }
@@ -153,6 +164,29 @@ public class CommunicationrecipientResponse {
 
   public void setPkiCommunicationrecipientID(Integer pkiCommunicationrecipientID) {
     this.pkiCommunicationrecipientID = pkiCommunicationrecipientID;
+  }
+
+
+  public CommunicationrecipientResponse eCommunicationrecipientObjecttype(FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype) {
+    
+    this.eCommunicationrecipientObjecttype = eCommunicationrecipientObjecttype;
+    return this;
+  }
+
+   /**
+   * Get eCommunicationrecipientObjecttype
+   * @return eCommunicationrecipientObjecttype
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FieldECommunicationrecipientObjecttype geteCommunicationrecipientObjecttype() {
+    return eCommunicationrecipientObjecttype;
+  }
+
+
+  public void seteCommunicationrecipientObjecttype(FieldECommunicationrecipientObjecttype eCommunicationrecipientObjecttype) {
+    this.eCommunicationrecipientObjecttype = eCommunicationrecipientObjecttype;
   }
 
 
@@ -348,52 +382,6 @@ public class CommunicationrecipientResponse {
   }
 
 
-  public CommunicationrecipientResponse sEmailAddress(String sEmailAddress) {
-    
-    this.sEmailAddress = sEmailAddress;
-    return this;
-  }
-
-   /**
-   * The email address.
-   * @return sEmailAddress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@example.com", value = "The email address.")
-
-  public String getsEmailAddress() {
-    return sEmailAddress;
-  }
-
-
-  public void setsEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-
-  public CommunicationrecipientResponse eCommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
-    
-    this.eCommunicationrecipientType = eCommunicationrecipientType;
-    return this;
-  }
-
-   /**
-   * Get eCommunicationrecipientType
-   * @return eCommunicationrecipientType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public FieldECommunicationrecipientType geteCommunicationrecipientType() {
-    return eCommunicationrecipientType;
-  }
-
-
-  public void seteCommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
-    this.eCommunicationrecipientType = eCommunicationrecipientType;
-  }
-
-
   public CommunicationrecipientResponse fkiAgentincorporationID(Integer fkiAgentincorporationID) {
     
     this.fkiAgentincorporationID = fkiAgentincorporationID;
@@ -562,26 +550,95 @@ public class CommunicationrecipientResponse {
   }
 
 
-  public CommunicationrecipientResponse objPhoneSms(PhoneResponseCompound objPhoneSms) {
+  public CommunicationrecipientResponse eCommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
     
-    this.objPhoneSms = objPhoneSms;
+    this.eCommunicationrecipientType = eCommunicationrecipientType;
     return this;
   }
 
    /**
-   * Get objPhoneSms
-   * @return objPhoneSms
+   * Get eCommunicationrecipientType
+   * @return eCommunicationrecipientType
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public FieldECommunicationrecipientType geteCommunicationrecipientType() {
+    return eCommunicationrecipientType;
+  }
+
+
+  public void seteCommunicationrecipientType(FieldECommunicationrecipientType eCommunicationrecipientType) {
+    this.eCommunicationrecipientType = eCommunicationrecipientType;
+  }
+
+
+  public CommunicationrecipientResponse objDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
+    
+    this.objDescriptionstatic = objDescriptionstatic;
+    return this;
+  }
+
+   /**
+   * Get objDescriptionstatic
+   * @return objDescriptionstatic
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public DescriptionstaticResponseCompound getObjDescriptionstatic() {
+    return objDescriptionstatic;
+  }
+
+
+  public void setObjDescriptionstatic(DescriptionstaticResponseCompound objDescriptionstatic) {
+    this.objDescriptionstatic = objDescriptionstatic;
+  }
+
+
+  public CommunicationrecipientResponse objEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    
+    this.objEmailstatic = objEmailstatic;
+    return this;
+  }
+
+   /**
+   * Get objEmailstatic
+   * @return objEmailstatic
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public PhoneResponseCompound getObjPhoneSms() {
-    return objPhoneSms;
+  public EmailstaticResponseCompound getObjEmailstatic() {
+    return objEmailstatic;
   }
 
 
-  public void setObjPhoneSms(PhoneResponseCompound objPhoneSms) {
-    this.objPhoneSms = objPhoneSms;
+  public void setObjEmailstatic(EmailstaticResponseCompound objEmailstatic) {
+    this.objEmailstatic = objEmailstatic;
+  }
+
+
+  public CommunicationrecipientResponse objPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    
+    this.objPhonestatic = objPhonestatic;
+    return this;
+  }
+
+   /**
+   * Get objPhonestatic
+   * @return objPhonestatic
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PhonestaticResponseCompound getObjPhonestatic() {
+    return objPhonestatic;
+  }
+
+
+  public void setObjPhonestatic(PhonestaticResponseCompound objPhonestatic) {
+    this.objPhonestatic = objPhonestatic;
   }
 
 
@@ -596,6 +653,7 @@ public class CommunicationrecipientResponse {
     }
     CommunicationrecipientResponse communicationrecipientResponse = (CommunicationrecipientResponse) o;
     return Objects.equals(this.pkiCommunicationrecipientID, communicationrecipientResponse.pkiCommunicationrecipientID) &&
+        Objects.equals(this.eCommunicationrecipientObjecttype, communicationrecipientResponse.eCommunicationrecipientObjecttype) &&
         Objects.equals(this.fkiAgentID, communicationrecipientResponse.fkiAgentID) &&
         Objects.equals(this.fkiBrokerID, communicationrecipientResponse.fkiBrokerID) &&
         Objects.equals(this.fkiContactID, communicationrecipientResponse.fkiContactID) &&
@@ -604,8 +662,6 @@ public class CommunicationrecipientResponse {
         Objects.equals(this.fkiEzsignsignerID, communicationrecipientResponse.fkiEzsignsignerID) &&
         Objects.equals(this.fkiFranchiseofficeID, communicationrecipientResponse.fkiFranchiseofficeID) &&
         Objects.equals(this.fkiUserID, communicationrecipientResponse.fkiUserID) &&
-        Objects.equals(this.sEmailAddress, communicationrecipientResponse.sEmailAddress) &&
-        Objects.equals(this.eCommunicationrecipientType, communicationrecipientResponse.eCommunicationrecipientType) &&
         Objects.equals(this.fkiAgentincorporationID, communicationrecipientResponse.fkiAgentincorporationID) &&
         Objects.equals(this.fkiAssistantID, communicationrecipientResponse.fkiAssistantID) &&
         Objects.equals(this.fkiExternalbrokerID, communicationrecipientResponse.fkiExternalbrokerID) &&
@@ -613,12 +669,15 @@ public class CommunicationrecipientResponse {
         Objects.equals(this.fkiNotaryID, communicationrecipientResponse.fkiNotaryID) &&
         Objects.equals(this.fkiRewardmemberID, communicationrecipientResponse.fkiRewardmemberID) &&
         Objects.equals(this.fkiSupplierID, communicationrecipientResponse.fkiSupplierID) &&
-        Objects.equals(this.objPhoneSms, communicationrecipientResponse.objPhoneSms);
+        Objects.equals(this.eCommunicationrecipientType, communicationrecipientResponse.eCommunicationrecipientType) &&
+        Objects.equals(this.objDescriptionstatic, communicationrecipientResponse.objDescriptionstatic) &&
+        Objects.equals(this.objEmailstatic, communicationrecipientResponse.objEmailstatic) &&
+        Objects.equals(this.objPhonestatic, communicationrecipientResponse.objPhonestatic);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationrecipientID, fkiAgentID, fkiBrokerID, fkiContactID, fkiCustomerID, fkiEmployeeID, fkiEzsignsignerID, fkiFranchiseofficeID, fkiUserID, sEmailAddress, eCommunicationrecipientType, fkiAgentincorporationID, fkiAssistantID, fkiExternalbrokerID, fkiEzcomagentID, fkiNotaryID, fkiRewardmemberID, fkiSupplierID, objPhoneSms);
+    return Objects.hash(pkiCommunicationrecipientID, eCommunicationrecipientObjecttype, fkiAgentID, fkiBrokerID, fkiContactID, fkiCustomerID, fkiEmployeeID, fkiEzsignsignerID, fkiFranchiseofficeID, fkiUserID, fkiAgentincorporationID, fkiAssistantID, fkiExternalbrokerID, fkiEzcomagentID, fkiNotaryID, fkiRewardmemberID, fkiSupplierID, eCommunicationrecipientType, objDescriptionstatic, objEmailstatic, objPhonestatic);
   }
 
   @Override
@@ -626,6 +685,7 @@ public class CommunicationrecipientResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationrecipientResponse {\n");
     sb.append("    pkiCommunicationrecipientID: ").append(toIndentedString(pkiCommunicationrecipientID)).append("\n");
+    sb.append("    eCommunicationrecipientObjecttype: ").append(toIndentedString(eCommunicationrecipientObjecttype)).append("\n");
     sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
     sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
     sb.append("    fkiContactID: ").append(toIndentedString(fkiContactID)).append("\n");
@@ -634,8 +694,6 @@ public class CommunicationrecipientResponse {
     sb.append("    fkiEzsignsignerID: ").append(toIndentedString(fkiEzsignsignerID)).append("\n");
     sb.append("    fkiFranchiseofficeID: ").append(toIndentedString(fkiFranchiseofficeID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
-    sb.append("    eCommunicationrecipientType: ").append(toIndentedString(eCommunicationrecipientType)).append("\n");
     sb.append("    fkiAgentincorporationID: ").append(toIndentedString(fkiAgentincorporationID)).append("\n");
     sb.append("    fkiAssistantID: ").append(toIndentedString(fkiAssistantID)).append("\n");
     sb.append("    fkiExternalbrokerID: ").append(toIndentedString(fkiExternalbrokerID)).append("\n");
@@ -643,7 +701,10 @@ public class CommunicationrecipientResponse {
     sb.append("    fkiNotaryID: ").append(toIndentedString(fkiNotaryID)).append("\n");
     sb.append("    fkiRewardmemberID: ").append(toIndentedString(fkiRewardmemberID)).append("\n");
     sb.append("    fkiSupplierID: ").append(toIndentedString(fkiSupplierID)).append("\n");
-    sb.append("    objPhoneSms: ").append(toIndentedString(objPhoneSms)).append("\n");
+    sb.append("    eCommunicationrecipientType: ").append(toIndentedString(eCommunicationrecipientType)).append("\n");
+    sb.append("    objDescriptionstatic: ").append(toIndentedString(objDescriptionstatic)).append("\n");
+    sb.append("    objEmailstatic: ").append(toIndentedString(objEmailstatic)).append("\n");
+    sb.append("    objPhonestatic: ").append(toIndentedString(objPhonestatic)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -667,6 +728,7 @@ public class CommunicationrecipientResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCommunicationrecipientID");
+    openapiFields.add("eCommunicationrecipientObjecttype");
     openapiFields.add("fkiAgentID");
     openapiFields.add("fkiBrokerID");
     openapiFields.add("fkiContactID");
@@ -675,8 +737,6 @@ public class CommunicationrecipientResponse {
     openapiFields.add("fkiEzsignsignerID");
     openapiFields.add("fkiFranchiseofficeID");
     openapiFields.add("fkiUserID");
-    openapiFields.add("sEmailAddress");
-    openapiFields.add("eCommunicationrecipientType");
     openapiFields.add("fkiAgentincorporationID");
     openapiFields.add("fkiAssistantID");
     openapiFields.add("fkiExternalbrokerID");
@@ -684,11 +744,16 @@ public class CommunicationrecipientResponse {
     openapiFields.add("fkiNotaryID");
     openapiFields.add("fkiRewardmemberID");
     openapiFields.add("fkiSupplierID");
-    openapiFields.add("objPhoneSms");
+    openapiFields.add("eCommunicationrecipientType");
+    openapiFields.add("objDescriptionstatic");
+    openapiFields.add("objEmailstatic");
+    openapiFields.add("objPhonestatic");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCommunicationrecipientID");
+    openapiRequiredFields.add("eCommunicationrecipientType");
+    openapiRequiredFields.add("objDescriptionstatic");
   }
 
  /**
@@ -718,12 +783,15 @@ public class CommunicationrecipientResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      // validate the required field `objDescriptionstatic`
+      DescriptionstaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objDescriptionstatic"));
+      // validate the optional field `objEmailstatic`
+      if (jsonObj.get("objEmailstatic") != null && !jsonObj.get("objEmailstatic").isJsonNull()) {
+        EmailstaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objEmailstatic"));
       }
-      // validate the optional field `objPhoneSms`
-      if (jsonObj.get("objPhoneSms") != null && !jsonObj.get("objPhoneSms").isJsonNull()) {
-        PhoneResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objPhoneSms"));
+      // validate the optional field `objPhonestatic`
+      if (jsonObj.get("objPhonestatic") != null && !jsonObj.get("objPhonestatic").isJsonNull()) {
+        PhonestaticResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objPhonestatic"));
       }
   }
 

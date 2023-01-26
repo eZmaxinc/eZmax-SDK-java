@@ -13,13 +13,13 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CommunicationattachmentResponseCompound;
-import com.ezmax.api.model.CommunicationexternalimageResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
-import com.ezmax.api.model.CommunicationimageResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
+import com.ezmax.api.model.ComputedECommunicationDirection;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.FieldECommunicationEmailimportance;
+import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -58,11 +58,11 @@ public class CommunicationResponseCompoundTest {
     }
 
     /**
-     * Test the property 'eCommunicationEmailimportance'
+     * Test the property 'eCommunicationImportance'
      */
     @Test
-    public void eCommunicationEmailimportanceTest() {
-        // TODO: test eCommunicationEmailimportance
+    public void eCommunicationImportanceTest() {
+        // TODO: test eCommunicationImportance
     }
 
     /**
@@ -82,11 +82,19 @@ public class CommunicationResponseCompoundTest {
     }
 
     /**
-     * Test the property 'dtCommunicationSentdate'
+     * Test the property 'eCommunicationDirection'
      */
     @Test
-    public void dtCommunicationSentdateTest() {
-        // TODO: test dtCommunicationSentdate
+    public void eCommunicationDirectionTest() {
+        // TODO: test eCommunicationDirection
+    }
+
+    /**
+     * Test the property 'iCommunicationrecipientCount'
+     */
+    @Test
+    public void iCommunicationrecipientCountTest() {
+        // TODO: test iCommunicationrecipientCount
     }
 
     /**
@@ -95,6 +103,14 @@ public class CommunicationResponseCompoundTest {
     @Test
     public void objContactFromTest() {
         // TODO: test objContactFrom
+    }
+
+    /**
+     * Test the property 'objAudit'
+     */
+    @Test
+    public void objAuditTest() {
+        // TODO: test objAudit
     }
 
     /**
@@ -119,22 +135,6 @@ public class CommunicationResponseCompoundTest {
     @Test
     public void aObjCommunicationexternalrecipientTest() {
         // TODO: test aObjCommunicationexternalrecipient
-    }
-
-    /**
-     * Test the property 'aObjCommunicationimage'
-     */
-    @Test
-    public void aObjCommunicationimageTest() {
-        // TODO: test aObjCommunicationimage
-    }
-
-    /**
-     * Test the property 'aObjCommunicationexternalimage'
-     */
-    @Test
-    public void aObjCommunicationexternalimageTest() {
-        // TODO: test aObjCommunicationexternalimage
     }
 
 }

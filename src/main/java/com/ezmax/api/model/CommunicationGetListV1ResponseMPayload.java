@@ -49,14 +49,22 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for GET /1/module/communication/getList
+ * Payload for GET /1/object/communication/getList
  */
-@ApiModel(description = "Payload for GET /1/module/communication/getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/object/communication/getList")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATION = "a_objCommunication";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATION)
   private List<CommunicationListElement> aObjCommunication = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
 
   public CommunicationGetListV1ResponseMPayload() {
   }
@@ -89,6 +97,52 @@ public class CommunicationGetListV1ResponseMPayload {
   }
 
 
+  public CommunicationGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+   /**
+   * The number of rows returned
+   * @return iRowReturned
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "100", required = true, value = "The number of rows returned")
+
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public CommunicationGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+   /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "533", required = true, value = "The number of rows matching your filters (if any) or the total number of rows")
+
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -99,12 +153,14 @@ public class CommunicationGetListV1ResponseMPayload {
       return false;
     }
     CommunicationGetListV1ResponseMPayload communicationGetListV1ResponseMPayload = (CommunicationGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjCommunication, communicationGetListV1ResponseMPayload.aObjCommunication);
+    return Objects.equals(this.aObjCommunication, communicationGetListV1ResponseMPayload.aObjCommunication) &&
+        Objects.equals(this.iRowReturned, communicationGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, communicationGetListV1ResponseMPayload.iRowFiltered);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjCommunication);
+    return Objects.hash(aObjCommunication, iRowReturned, iRowFiltered);
   }
 
   @Override
@@ -112,6 +168,8 @@ public class CommunicationGetListV1ResponseMPayload {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationGetListV1ResponseMPayload {\n");
     sb.append("    aObjCommunication: ").append(toIndentedString(aObjCommunication)).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,10 +193,14 @@ public class CommunicationGetListV1ResponseMPayload {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objCommunication");
+    openapiFields.add("iRowReturned");
+    openapiFields.add("iRowFiltered");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objCommunication");
+    openapiRequiredFields.add("iRowReturned");
+    openapiRequiredFields.add("iRowFiltered");
   }
 
  /**

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /2/object/webhook/{pkiWebhookID}
  */
 @ApiModel(description = "Payload for GET /2/object/webhook/{pkiWebhookID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class WebhookGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)

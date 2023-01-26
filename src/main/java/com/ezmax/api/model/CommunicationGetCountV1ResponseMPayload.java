@@ -46,10 +46,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Payload for GET /1/module/communication/getCount
+ * Payload for GET /1/module/communication/getCommunicationCount
  */
-@ApiModel(description = "Payload for GET /1/module/communication/getCount")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@ApiModel(description = "Payload for GET /1/module/communication/getCommunicationCount")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationGetCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_COMMUNICATION_COUNT = "iCommunicationCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_COUNT)
@@ -65,11 +65,11 @@ public class CommunicationGetCountV1ResponseMPayload {
   }
 
    /**
-   * The number of total signatures in the Ezsigntemplate.
+   * The count of Communication.
    * @return iCommunicationCount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The number of total signatures in the Ezsigntemplate.")
+  @ApiModelProperty(example = "8", required = true, value = "The count of Communication.")
 
   public Integer getiCommunicationCount() {
     return iCommunicationCount;

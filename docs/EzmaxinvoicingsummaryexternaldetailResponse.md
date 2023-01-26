@@ -17,6 +17,7 @@ A Ezmaxinvoicingsummaryexternaldetail Object
 |**dEzmaxinvoicingsummaryexternaldetailRebate** | **String** | The rebate for the product |  |
 |**dEzmaxinvoicingsummaryexternaldetailTotal** | **String** | The total invoiced for the product |  |
 |**bEzmaxinvoicingsummaryexternaldetailAdjustment** | **Boolean** | Whether it&#39;s an adjustment |  |
+|**tEzmaxproductHelpX** | **String** | The help message of the Ezmaxproduct in the language of the requester |  |
 
 
 

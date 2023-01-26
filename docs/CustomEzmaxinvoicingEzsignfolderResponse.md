@@ -13,7 +13,7 @@ An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoi
 |**bEzsigntsarequirementBillable** | **Boolean** | Whether the TSA requirement is billable or not |  |
 |**bEzsignfolderMfaused** | **Boolean** | Whether the MFA was used or not for the Ezsignfolder |  |
 |**bEzsignfolderPaymentused** | **Boolean** | Whether there was a signature is of type payment |  |
-|**bEzsignfolderAllowed** | **Boolean** |  |  |
+|**bEzsignfolderAllowed** | **Boolean** | Whether you have access to the Ezsignfolder or not |  |
 
 
 

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Name of the Ezsignfoldertype
  */
 @ApiModel(description = "Name of the Ezsignfoldertype")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class MultilingualEzsignfoldertypeName {
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME1 = "sEzsignfoldertypeName1";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME1)

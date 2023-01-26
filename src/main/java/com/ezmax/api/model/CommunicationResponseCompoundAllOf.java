@@ -16,9 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommunicationattachmentResponseCompound;
-import com.ezmax.api.model.CommunicationexternalimageResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
-import com.ezmax.api.model.CommunicationimageResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -55,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * CommunicationResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT = "a_objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT)
@@ -68,14 +66,6 @@ public class CommunicationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALRECIPIENT = "a_objCommunicationexternalrecipient";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALRECIPIENT)
   private List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONIMAGE = "a_objCommunicationimage";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONIMAGE)
-  private List<CommunicationimageResponseCompound> aObjCommunicationimage = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALIMAGE = "a_objCommunicationexternalimage";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALIMAGE)
-  private List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage = new ArrayList<>();
 
   public CommunicationResponseCompoundAllOf() {
   }
@@ -164,62 +154,6 @@ public class CommunicationResponseCompoundAllOf {
   }
 
 
-  public CommunicationResponseCompoundAllOf aObjCommunicationimage(List<CommunicationimageResponseCompound> aObjCommunicationimage) {
-    
-    this.aObjCommunicationimage = aObjCommunicationimage;
-    return this;
-  }
-
-  public CommunicationResponseCompoundAllOf addAObjCommunicationimageItem(CommunicationimageResponseCompound aObjCommunicationimageItem) {
-    this.aObjCommunicationimage.add(aObjCommunicationimageItem);
-    return this;
-  }
-
-   /**
-   * Get aObjCommunicationimage
-   * @return aObjCommunicationimage
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<CommunicationimageResponseCompound> getaObjCommunicationimage() {
-    return aObjCommunicationimage;
-  }
-
-
-  public void setaObjCommunicationimage(List<CommunicationimageResponseCompound> aObjCommunicationimage) {
-    this.aObjCommunicationimage = aObjCommunicationimage;
-  }
-
-
-  public CommunicationResponseCompoundAllOf aObjCommunicationexternalimage(List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage) {
-    
-    this.aObjCommunicationexternalimage = aObjCommunicationexternalimage;
-    return this;
-  }
-
-  public CommunicationResponseCompoundAllOf addAObjCommunicationexternalimageItem(CommunicationexternalimageResponseCompound aObjCommunicationexternalimageItem) {
-    this.aObjCommunicationexternalimage.add(aObjCommunicationexternalimageItem);
-    return this;
-  }
-
-   /**
-   * Get aObjCommunicationexternalimage
-   * @return aObjCommunicationexternalimage
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<CommunicationexternalimageResponseCompound> getaObjCommunicationexternalimage() {
-    return aObjCommunicationexternalimage;
-  }
-
-
-  public void setaObjCommunicationexternalimage(List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage) {
-    this.aObjCommunicationexternalimage = aObjCommunicationexternalimage;
-  }
-
-
 
   @Override
   public boolean equals(Object o) {
@@ -232,14 +166,12 @@ public class CommunicationResponseCompoundAllOf {
     CommunicationResponseCompoundAllOf communicationResponseCompoundAllOf = (CommunicationResponseCompoundAllOf) o;
     return Objects.equals(this.aObjCommunicationattachment, communicationResponseCompoundAllOf.aObjCommunicationattachment) &&
         Objects.equals(this.aObjCommunicationrecipient, communicationResponseCompoundAllOf.aObjCommunicationrecipient) &&
-        Objects.equals(this.aObjCommunicationexternalrecipient, communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient) &&
-        Objects.equals(this.aObjCommunicationimage, communicationResponseCompoundAllOf.aObjCommunicationimage) &&
-        Objects.equals(this.aObjCommunicationexternalimage, communicationResponseCompoundAllOf.aObjCommunicationexternalimage);
+        Objects.equals(this.aObjCommunicationexternalrecipient, communicationResponseCompoundAllOf.aObjCommunicationexternalrecipient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient, aObjCommunicationimage, aObjCommunicationexternalimage);
+    return Objects.hash(aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient);
   }
 
   @Override
@@ -249,8 +181,6 @@ public class CommunicationResponseCompoundAllOf {
     sb.append("    aObjCommunicationattachment: ").append(toIndentedString(aObjCommunicationattachment)).append("\n");
     sb.append("    aObjCommunicationrecipient: ").append(toIndentedString(aObjCommunicationrecipient)).append("\n");
     sb.append("    aObjCommunicationexternalrecipient: ").append(toIndentedString(aObjCommunicationexternalrecipient)).append("\n");
-    sb.append("    aObjCommunicationimage: ").append(toIndentedString(aObjCommunicationimage)).append("\n");
-    sb.append("    aObjCommunicationexternalimage: ").append(toIndentedString(aObjCommunicationexternalimage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -276,16 +206,12 @@ public class CommunicationResponseCompoundAllOf {
     openapiFields.add("a_objCommunicationattachment");
     openapiFields.add("a_objCommunicationrecipient");
     openapiFields.add("a_objCommunicationexternalrecipient");
-    openapiFields.add("a_objCommunicationimage");
-    openapiFields.add("a_objCommunicationexternalimage");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objCommunicationattachment");
     openapiRequiredFields.add("a_objCommunicationrecipient");
     openapiRequiredFields.add("a_objCommunicationexternalrecipient");
-    openapiRequiredFields.add("a_objCommunicationimage");
-    openapiRequiredFields.add("a_objCommunicationexternalimage");
   }
 
  /**
@@ -344,26 +270,6 @@ public class CommunicationResponseCompoundAllOf {
       // validate the required field `a_objCommunicationexternalrecipient` (array)
       for (int i = 0; i < jsonArrayaObjCommunicationexternalrecipient.size(); i++) {
         CommunicationexternalrecipientResponseCompound.validateJsonObject(jsonArrayaObjCommunicationexternalrecipient.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationimage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationimage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationimage").toString()));
-      }
-
-      JsonArray jsonArrayaObjCommunicationimage = jsonObj.getAsJsonArray("a_objCommunicationimage");
-      // validate the required field `a_objCommunicationimage` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationimage.size(); i++) {
-        CommunicationimageResponseCompound.validateJsonObject(jsonArrayaObjCommunicationimage.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationexternalimage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationexternalimage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalimage").toString()));
-      }
-
-      JsonArray jsonArrayaObjCommunicationexternalimage = jsonObj.getAsJsonArray("a_objCommunicationexternalimage");
-      // validate the required field `a_objCommunicationexternalimage` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationexternalimage.size(); i++) {
-        CommunicationexternalimageResponseCompound.validateJsonObject(jsonArrayaObjCommunicationexternalimage.get(i).getAsJsonObject());
       };
   }
 

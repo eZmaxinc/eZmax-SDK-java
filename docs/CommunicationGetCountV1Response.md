@@ -2,7 +2,7 @@
 
 # CommunicationGetCountV1Response
 
-Response for GET /1/module/communication/getCount
+Response for GET /1/module/communication/getCommunicationCount
 
 ## Properties
 

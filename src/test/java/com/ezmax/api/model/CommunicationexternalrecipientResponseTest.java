@@ -13,8 +13,10 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.DescriptionstaticResponseCompound;
+import com.ezmax.api.model.EmailstaticResponseCompound;
 import com.ezmax.api.model.FieldECommunicationexternalrecipientType;
-import com.ezmax.api.model.PhoneResponseCompound;
+import com.ezmax.api.model.PhonestaticResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,22 +52,6 @@ public class CommunicationexternalrecipientResponseTest {
     }
 
     /**
-     * Test the property 'sEmailAddress'
-     */
-    @Test
-    public void sEmailAddressTest() {
-        // TODO: test sEmailAddress
-    }
-
-    /**
-     * Test the property 'objPhoneSms'
-     */
-    @Test
-    public void objPhoneSmsTest() {
-        // TODO: test objPhoneSms
-    }
-
-    /**
      * Test the property 'eCommunicationexternalrecipientType'
      */
     @Test
@@ -74,11 +60,27 @@ public class CommunicationexternalrecipientResponseTest {
     }
 
     /**
-     * Test the property 'sCommunicationexternalrecipientName'
+     * Test the property 'objDescriptionstatic'
      */
     @Test
-    public void sCommunicationexternalrecipientNameTest() {
-        // TODO: test sCommunicationexternalrecipientName
+    public void objDescriptionstaticTest() {
+        // TODO: test objDescriptionstatic
+    }
+
+    /**
+     * Test the property 'objEmailstatic'
+     */
+    @Test
+    public void objEmailstaticTest() {
+        // TODO: test objEmailstatic
+    }
+
+    /**
+     * Test the property 'objPhonestatic'
+     */
+    @Test
+    public void objPhonestaticTest() {
+        // TODO: test objPhonestatic
     }
 
 }

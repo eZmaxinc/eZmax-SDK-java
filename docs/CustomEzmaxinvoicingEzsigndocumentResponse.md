@@ -12,7 +12,7 @@ An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinv
 |**sName** | **String** |  |  |
 |**sEzsignfolderDescription** | **String** | The description of the Ezsignfolder |  |
 |**sEzsigndocumentName** | **String** | The name of the document that will be presented to Ezsignfoldersignerassociations |  |
-|**bEzsignfolderAllowed** | **Boolean** |  |  |
+|**bEzsignfolderAllowed** | **Boolean** | Whether you have access to the Ezsignfolder or not |  |
 
 
 

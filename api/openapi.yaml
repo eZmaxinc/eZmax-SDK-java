@@ -67,8 +67,11 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
-    \n### [1.1.17] - 2022-12\r\n\r\n#### Added\r\n- GET /1/module/communication/getCount\r\
-    \n- GET /1/module/communication/getList\r\n- GET /2/object/communication/{pkiCommunicationID}\r\
+    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/paymentterm/{pkiPaymenttermID}\r\
+    \n- GET /1/module/communication/getCount\r\n- GET /1/object/communication/getList\r\
+    \n- GET /1/object/paymentterm/getList\r\n- GET /2/object/communication/{pkiCommunicationID}\r\
+    \n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\n- GET /2/object/paymentterm/getAutocomplete/{sSelector}\
+    \ \r\n- POST /1/object/paymentterm\r\n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\
     \n\r\n### [1.1.16] - 2022-11-10\r\n\r\n#### Added\r\n- POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy\r\
     \n- Properties fkiEzsignfoldersignerassociationIDDeclinedtosign and tEzsigndocumentDeclinedtosignreason\
     \ in ezsigndocument-Response\r\n\r\n### [1.1.15] - 2022-11-07\r\n\r\n#### Added\r\
@@ -1031,6 +1034,9 @@ tags:
     about things to take action on
   name: Object_Notificationtest
   x-displayName: Notificationtest
+- description: Paymentterm contains detail about a payment term
+  name: Object_Paymentterm
+  x-displayName: Paymentterm
 - description: Period contains detail about accounting periods
   name: Object_Period
   x-displayName: Period
@@ -1109,15 +1115,15 @@ paths:
       - Global_Customer
       x-presentations: []
       x-accepts: application/json
-  /1/module/communication/getCommunicationCount:
+  /1/module/communication/getCount:
     get:
-      description: Get the number of communication in specified module
+      description: ""
       operationId: Communication_getCommunicationCount_V1
       parameters:
-      - description: Specify the requested module
+      - description: The object type for the Communication
         explode: true
         in: query
-        name: eCommunicationModule
+        name: eCommunicationObjecttype
         required: true
         schema:
           enum:
@@ -1148,51 +1154,7 @@ paths:
             work does not exists. Look for detail about the error in the body
       security:
       - Authorization: []
-      summary: Get the number of communication
-      tags:
-      - Module_Communication
-      x-presentations: []
-      x-accepts: application/json
-  /1/module/communication/getCommunicationList:
-    get:
-      description: Retrieve communication list
-      operationId: Communication_getCommunicationList_V1
-      parameters:
-      - description: Specify the requested module
-        explode: true
-        in: query
-        name: eCommunicationModule
-        required: true
-        schema:
-          enum:
-          - Ezsignfolder
-          type: string
-        style: form
-      - description: The unique ID of the Ezsignfolder
-        explode: true
-        in: query
-        name: pkiEzsignfolderID
-        required: false
-        schema:
-          type: integer
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/communication-getList-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Retrieve communication list
+      summary: Retrieve Communication count
       tags:
       - Module_Communication
       x-presentations: []
@@ -1880,6 +1842,101 @@ paths:
       security:
       - Authorization: []
       summary: Retrieve an existing Communication
+      tags:
+      - Object_Communication
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/communication/getList:
+    description: ""
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eCommunicationImportance | High<br>Normal<br>Low |
+        | eCommunicationType | Email<br>Fax<br>Sms |
+        | eCommunicationDirection | Inbound<br>Outbound |
+      operationId: Communication_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiCommunicationID_ASC
+          - pkiCommunicationID_DESC
+          - fkiEzsignfolderID_ASC
+          - fkiEzsignfolderID_DESC
+          - dtCreatedDate_ASC
+          - dtCreatedDate_DESC
+          - eCommunicationDirection_ASC
+          - eCommunicationDirection_DESC
+          - eCommunicationImportance_ASC
+          - eCommunicationImportance_DESC
+          - eCommunicationType_ASC
+          - eCommunicationType_DESC
+          - iCommunicationrecipientCount_ASC
+          - iCommunicationrecipientCount_DESC
+          - sCommunicationSubject_ASC
+          - sCommunicationSubject_DESC
+          - sCommunicationSender_ASC
+          - sCommunicationSender_DESC
+          - sCommunicationRecipient_ASC
+          - sCommunicationRecipient_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/communication-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
       tags:
       - Object_Communication
       x-presentations: []
@@ -9089,6 +9146,294 @@ paths:
       x-presentations:
       - Ezsign
       x-accepts: application/json
+  /1/object/paymentterm:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Paymentterm_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/paymentterm-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-createObject-v1-Response'
+          description: Successful response
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Create a new Paymentterm
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/paymentterm/{pkiPaymenttermID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Paymentterm_GetObject_V2
+      parameters:
+      - explode: false
+        in: path
+        name: pkiPaymenttermID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiPaymenttermID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Paymentterm
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/paymentterm/{pkiPaymenttermID}:
+    delete:
+      description: ""
+      operationId: Paymentterm_DeleteObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiPaymenttermID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiPaymenttermID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Paymentterm
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+    put:
+      description: ""
+      operationId: Paymentterm_EditObject_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiPaymenttermID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiPaymenttermID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/paymentterm-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Edit an existing Paymentterm
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/paymentterm/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Paymentterm to be used in a dropdown or autocomplete
+        control.
+      operationId: Paymentterm_GetAutocomplete_V2
+      parameters:
+      - description: The type of Paymentterms to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Paymentterms and IDs
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/paymentterm/getList:
+    description: ""
+    get:
+      operationId: Paymentterm_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiPaymenttermID_ASC
+          - pkiPaymenttermID_DESC
+          - sPaymenttermCode_ASC
+          - sPaymenttermCode_DESC
+          - sPaymenttermDescriptionX_ASC
+          - sPaymenttermDescriptionX_DESC
+          - bPaymenttermIsactive_ASC
+          - bPaymenttermIsactive_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/paymentterm-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Paymentterm list
+      tags:
+      - Object_Paymentterm
+      x-presentations: []
+      x-accepts: application/json
   /2/object/period/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -10678,10 +11023,6 @@ components:
       description: Indicate the Ezsigntemplate is incomplete and cannot be used
       example: false
       type: boolean
-    Computed-dtCommunicationSentdate:
-      description: The send date and time at which the Communication was sent.
-      example: 2020-12-31 23:59:59
-      type: string
     Computed-dtEzsignfolderDuedate:
       description: The maximum date and time at which the Ezsignfolder can be signed.
       example: 2020-12-31 23:59:59
@@ -10695,8 +11036,19 @@ components:
       description: The scheduled date at which the Ezsignfolder should be Disposed.
       example: 2020-12-31
       type: string
+    Computed-eCommunicationDirection:
+      description: The direction of the Communication
+      enum:
+      - Outbound
+      - Inbound
+      example: Outbound
+      type: string
     Computed-iCommunicationCount:
-      description: The number of total signatures in the Ezsigntemplate.
+      description: The count of Communication.
+      example: 8
+      type: integer
+    Computed-iCommunicationrecipientCount:
+      description: The count of Communicationrecipient
       example: 8
       type: integer
     Computed-iEzsigndocumentStepformcurrent:
@@ -10742,6 +11094,14 @@ components:
     Computed-sBrandingLogourl:
       description: The url of the picture used as logo in the Branding
       example: http://www.example.com/logo.jpg
+      type: string
+    Computed-sCommunicationRecipient:
+      description: The recipients' name of the Communication
+      example: Jane Doe
+      type: string
+    Computed-sCommunicationSender:
+      description: The sender name of the Communication
+      example: John Doe
       type: string
     Computed-sUserName:
       description: The description of the User in the language of the requester
@@ -11071,6 +11431,8 @@ components:
         sEzsignformfieldgroupLabel:
           description: The Label for the Ezsignformfieldgroup
           example: Allergies
+          maxLength: 50
+          minLength: 1
           type: string
         a_objEzsignformfield:
           items:
@@ -11480,6 +11842,10 @@ components:
       description: Whether the Franchiseoffice is active or not
       example: true
       type: boolean
+    Field-bPaymenttermIsactive:
+      description: Whether the Paymentterm is active or not
+      example: true
+      type: boolean
     Field-bPeriodIsactive:
       description: Whether the Period is active or not
       example: true
@@ -11566,12 +11932,12 @@ components:
       pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
       type: string
     Field-dEzmaxinvoicingsummaryglobalCountbilled:
-      description: The The count item billed
+      description: The count item billed
       example: "581.56"
       pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
       type: string
     Field-dEzmaxinvoicingsummaryglobalCountreal:
-      description: The The count item calculated
+      description: The count item calculated
       example: "649.08"
       pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
       type: string
@@ -11781,8 +12147,8 @@ components:
       - PNG
       example: Default
       type: string
-    Field-eCommunicationEmailimportance:
-      description: The importance of Email for the Communication
+    Field-eCommunicationImportance:
+      description: The importance of the Communication
       enum:
       - High
       - Normal
@@ -11790,7 +12156,7 @@ components:
       example: Normal
       type: string
     Field-eCommunicationType:
-      description: The Type for the Communication
+      description: The type of the Communication
       enum:
       - Email
       - Fax
@@ -11798,15 +12164,36 @@ components:
       example: Email
       type: string
     Field-eCommunicationexternalrecipientType:
-      description: The Type of Communicationexternalrecipient
+      description: The type of Communicationexternalrecipient
       enum:
       - To
       - Cc
       - Bcc
       example: To
       type: string
+    Field-eCommunicationrecipientObjecttype:
+      description: The object type for the Communicationrecipient
+      enum:
+      - Agent
+      - Agentincorporation
+      - Assistant
+      - Broker
+      - Contact
+      - Customer
+      - Employee
+      - Externalbroker
+      - Ezcomagent
+      - Ezcomcompany
+      - Ezsignsigner
+      - Franchiseoffice
+      - Notary
+      - Rewardmember
+      - Supplier
+      - User
+      example: User
+      type: string
     Field-eCommunicationrecipientType:
-      description: The Type for the Communicationrecipient
+      description: The type for the Communicationrecipient
       enum:
       - To
       - Cc
@@ -12772,17 +13159,9 @@ components:
       description: The unique ID of the Communicationattachment
       example: 203
       type: integer
-    Field-pkiCommunicationexternalimageID:
-      description: The unique ID of the Communicationexternalimage
-      example: 211
-      type: integer
     Field-pkiCommunicationexternalrecipientID:
       description: The unique ID of the Communicationexternalrecipient
       example: 9
-      type: integer
-    Field-pkiCommunicationimageID:
-      description: The unique ID of the Communicationimage
-      example: 164
       type: integer
     Field-pkiCommunicationrecipientID:
       description: The unique ID of the Communicationrecipient.
@@ -12830,6 +13209,16 @@ components:
     Field-pkiDepartmentID:
       description: The unique ID of the Department
       example: 21
+      minimum: 0
+      type: integer
+    Field-pkiDescriptionstaticID:
+      description: The unique ID of the Descriptionstatic
+      example: 37
+      minimum: 0
+      type: integer
+    Field-pkiEmailstaticID:
+      description: The unique ID of the Emailstatic
+      example: 99
       minimum: 0
       type: integer
     Field-pkiEmailtypeID:
@@ -13105,9 +13494,15 @@ components:
       example: 51
       minimum: 0
       type: integer
-    Field-pkiImageID:
-      description: The unique ID of the Image
-      example: 164
+    Field-pkiInscriptionID:
+      description: The unique ID of the Inscription.
+      example: 17
+      minimum: 0
+      type: integer
+    Field-pkiInscriptionnotauthenticatedID:
+      description: The unique ID of the Inscriptionnotauthenticated.
+      example: 24
+      minimum: 0
       type: integer
     Field-pkiInvoiceID:
       description: The unique ID of the Invoice.
@@ -13158,12 +13553,16 @@ components:
       example: 14
       minimum: 0
       type: integer
+    Field-pkiPaymenttermID:
+      description: The unique ID of the Paymentterm
+      example: 46
+      type: integer
     Field-pkiPeriodID:
       description: The unique ID of the Period
       example: 21
       minimum: 0
       type: integer
-    Field-pkiPhoneID:
+    Field-pkiPhonestaticID:
       description: The unique ID of the Phone.
       example: 1
       minimum: 0
@@ -13459,24 +13858,12 @@ components:
       example: Company X
       type: string
     Field-sCommunicationSubject:
-      description: The Subject of the Communication
+      description: The subject of the Communication
       example: This is an example of subject
       type: string
     Field-sCommunicationattachmentName:
       description: The name of the Communicationattachment
       example: File.pdf
-      type: string
-    Field-sCommunicationexternalimageMD5:
-      description: MD5 Hash of the Communicationexternalimage.
-      example: 012345678901234567890123456789AB
-      type: string
-    Field-sCommunicationexternalrecipientName:
-      description: The Name of the Communicationexternalrecipient
-      example: John Doe
-      type: string
-    Field-sCommunicationimageName:
-      description: The Name of the Communicationimage
-      example: Picture.jpg
       type: string
     Field-sCompanyNameX:
       description: The Name of the Company in the language of the requester
@@ -13498,7 +13885,15 @@ components:
       description: The Name of the Department in the language of the requester
       example: Head Office
       type: string
+    Field-sDescriptionstaticDescription:
+      description: The description of the Descriptionstatic
+      example: Static description
+      type: string
     Field-sEmailAddress:
+      description: The email address.
+      example: email@example.com
+      type: string
+    Field-sEmailstaticAddress:
       description: The email address.
       example: email@example.com
       type: string
@@ -13598,6 +13993,8 @@ components:
     Field-sEzsignformfieldgroupLabel:
       description: The Label for the Ezsignformfieldgroup
       example: Allergies
+      maxLength: 50
+      minLength: 1
       type: string
     Field-sEzsignformfieldgroupRegexp:
       description: |-
@@ -13634,6 +14031,8 @@ components:
     Field-sEzsigntemplateformfieldgroupLabel:
       description: The Label for the Ezsigntemplateformfieldgroup
       example: Allergies
+      maxLength: 50
+      minLength: 1
       type: string
     Field-sEzsigntemplateformfieldgroupRegexp:
       description: |-
@@ -13726,8 +14125,27 @@ components:
       description: The name of the Notificationtest in the language of the requester
       example: Default
       type: string
+    Field-sPaymenttermCode:
+      description: The code of the Paymentterm
+      example: "0030"
+      maxLength: 4
+      type: string
+    Field-sPaymenttermDescription1:
+      description: The description of the Paymentterm in french
+      example: Net 30 jours
+      maxLength: 40
+      type: string
+    Field-sPaymenttermDescription2:
+      description: The description of the Paymentterm in english
+      example: Net 30 days
+      maxLength: 40
+      type: string
+    Field-sPaymenttermDescriptionX:
+      description: The description of the Paymentterm in the language of the requester
+      example: Net 30 days
+      type: string
     Field-sPeriodYYYYMM:
-      description: The period YYYYMM
+      description: The YYYYMM of the Period
       example: 2202-12
       type: string
     Field-sPhoneE164:
@@ -13751,16 +14169,22 @@ components:
         It can also be used with international phone numbers
       example: "123"
       type: string
-    Field-sPhoneInternational:
-      description: The international phone number.
-      example: "15149901516"
-      type: string
     Field-sPhoneRegion:
       description: |-
         The region of the phone number. (For a North America Number only)
 
         The region is the "514" section in this sample phone number: (514) 990-1516 x123
       example: "514"
+      type: string
+    Field-sPhonestaticE164:
+      description: A phone number in E.164 Format
+      example: +15149901516
+      pattern: "^\\+[1-9]\\d{1,14}$"
+      type: string
+    Field-sPhonestaticExtension:
+      description: The extension of the phone number.
+      example: "123"
+      pattern: ^\d
       type: string
     Field-sSecretquestionTextX:
       description: The text of the Secretquestion in the language of the requester
@@ -13831,6 +14255,10 @@ components:
         Best Regards.
 
         Mary
+      type: string
+    Field-tEzmaxproductHelpX:
+      description: The help message of the Ezmaxproduct in the language of the requester
+      example: This is an exemple of help message
       type: string
     Field-tEzsignbulksendNote:
       description: Note about the Ezsignbulksend
@@ -14006,6 +14434,20 @@ components:
         sNotificationtestName2:
           description: The name of the Notificationtest in English
           example: Default
+          type: string
+      type: object
+    Multilingual-PaymenttermDescription:
+      description: Description of the Paymentterm
+      properties:
+        sPaymenttermDescription1:
+          description: The description of the Paymentterm in french
+          example: Net 30 jours
+          maxLength: 40
+          type: string
+        sPaymenttermDescription2:
+          description: The description of the Paymentterm in english
+          example: Net 30 days
+          maxLength: 40
           type: string
       type: object
     Multilingual-VersionhistoryDetail:
@@ -14876,25 +15318,57 @@ components:
           example: 1
           minimum: 0
           type: integer
-        eCommunicationEmailimportance:
-          $ref: '#/components/schemas/Field-eCommunicationEmailimportance'
-        eCommunicationType:
-          $ref: '#/components/schemas/Field-eCommunicationType'
-        sCommunicationSubject:
-          description: The Subject of the Communication
-          example: This is an example of subject
-          type: string
-        dtCommunicationSentdate:
-          description: The send date and time at which the Communication was sent.
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+        fkiInscriptionID:
+          description: The unique ID of the Inscription.
+          example: 17
+          minimum: 0
+          type: integer
+        fkiInscriptionnotauthenticatedID:
+          description: The unique ID of the Inscriptionnotauthenticated.
+          example: 24
+          minimum: 0
+          type: integer
+        dtCreatedDate:
+          description: The date and time at which the object was created
           example: 2020-12-31 23:59:59
           type: string
-        objContactFrom:
-          $ref: '#/components/schemas/Custom-ContactName-Response'
+        eCommunicationDirection:
+          $ref: '#/components/schemas/Computed-eCommunicationDirection'
+        eCommunicationImportance:
+          $ref: '#/components/schemas/Field-eCommunicationImportance'
+        eCommunicationType:
+          $ref: '#/components/schemas/Field-eCommunicationType'
+        iCommunicationrecipientCount:
+          description: The count of Communicationrecipient
+          example: 8
+          type: integer
+        sCommunicationSubject:
+          description: The subject of the Communication
+          example: This is an example of subject
+          type: string
+        sCommunicationSender:
+          description: The sender name of the Communication
+          example: John Doe
+          type: string
+        sCommunicationRecipient:
+          description: The recipients' name of the Communication
+          example: Jane Doe
+          type: string
       required:
-      - dtCommunicationSentdate
+      - dtCreatedDate
+      - eCommunicationDirection
+      - eCommunicationImportance
       - eCommunicationType
-      - objContactFrom
+      - iCommunicationrecipientCount
       - pkiCommunicationID
+      - pkiCommunicationID
+      - sCommunicationRecipient
+      - sCommunicationSender
       - sCommunicationSubject
       type: object
     communication-Response:
@@ -14905,24 +15379,30 @@ components:
           example: 1
           minimum: 0
           type: integer
-        eCommunicationEmailimportance:
-          $ref: '#/components/schemas/Field-eCommunicationEmailimportance'
+        eCommunicationImportance:
+          $ref: '#/components/schemas/Field-eCommunicationImportance'
         eCommunicationType:
           $ref: '#/components/schemas/Field-eCommunicationType'
         sCommunicationSubject:
-          description: The Subject of the Communication
+          description: The subject of the Communication
           example: This is an example of subject
           type: string
-        dtCommunicationSentdate:
-          description: The send date and time at which the Communication was sent.
-          example: 2020-12-31 23:59:59
-          type: string
+        eCommunicationDirection:
+          $ref: '#/components/schemas/Computed-eCommunicationDirection'
+        iCommunicationrecipientCount:
+          description: The count of Communicationrecipient
+          example: 8
+          type: integer
         objContactFrom:
           $ref: '#/components/schemas/Custom-ContactName-Response'
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
       required:
-      - a_objCommunicationrecipient
-      - dtCommunicationSentdate
+      - eCommunicationDirection
+      - eCommunicationImportance
       - eCommunicationType
+      - iCommunicationrecipientCount
+      - objAudit
       - objContactFrom
       - pkiCommunicationID
       - sCommunicationSubject
@@ -14937,13 +15417,13 @@ components:
       allOf:
       - $ref: '#/components/schemas/communication_getCount_v1_Response_allOf'
       - $ref: '#/components/schemas/Common-Response'
-      description: Response for GET /1/module/communication/getCount
+      description: Response for GET /1/module/communication/getCommunicationCount
       type: object
     communication-getCount-v1-Response-mPayload:
-      description: Payload for GET /1/module/communication/getCount
+      description: Payload for GET /1/module/communication/getCommunicationCount
       properties:
         iCommunicationCount:
-          description: The number of total signatures in the Ezsigntemplate.
+          description: The count of Communication.
           example: 8
           type: integer
       required:
@@ -14952,18 +15432,14 @@ components:
     communication-getList-v1-Response:
       allOf:
       - $ref: '#/components/schemas/communication_getList_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: Response for GET /1/module/communication/getList
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/communication/getList
       type: object
     communication-getList-v1-Response-mPayload:
-      description: Payload for GET /1/module/communication/getList
-      properties:
-        a_objCommunication:
-          items:
-            $ref: '#/components/schemas/communication-ListElement'
-          type: array
-      required:
-      - a_objCommunication
+      allOf:
+      - $ref: '#/components/schemas/communication_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/communication/getList
       type: object
     communication-getObject-v2-Response:
       allOf:
@@ -15015,27 +15491,6 @@ components:
       - type: object
       description: A Communicationattachment Object
       type: object
-    communicationexternalimage-Response:
-      description: A Communicationexternalimage Object
-      properties:
-        pkiCommunicationexternalimageID:
-          description: The unique ID of the Communicationexternalimage
-          example: 211
-          type: integer
-        sCommunicationexternalimageMD5:
-          description: MD5 Hash of the Communicationexternalimage.
-          example: 012345678901234567890123456789AB
-          type: string
-      required:
-      - pkiCommunicationexternalimageID
-      - sCommunicationexternalimageMD5
-      type: object
-    communicationexternalimage-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/communicationexternalimage-Response'
-      - type: object
-      description: A Communicationexternalimage Object
-      type: object
     communicationexternalrecipient-Response:
       description: A Communicationexternalrecipient Object
       properties:
@@ -15043,54 +15498,24 @@ components:
           description: The unique ID of the Communicationexternalrecipient
           example: 9
           type: integer
-        sEmailAddress:
-          description: The email address.
-          example: email@example.com
-          type: string
-        objPhoneSms:
-          $ref: '#/components/schemas/phone-ResponseCompound'
         eCommunicationexternalrecipientType:
           $ref: '#/components/schemas/Field-eCommunicationexternalrecipientType'
-        sCommunicationexternalrecipientName:
-          description: The Name of the Communicationexternalrecipient
-          example: John Doe
-          type: string
+        objDescriptionstatic:
+          $ref: '#/components/schemas/descriptionstatic-ResponseCompound'
+        objEmailstatic:
+          $ref: '#/components/schemas/emailstatic-ResponseCompound'
+        objPhonestatic:
+          $ref: '#/components/schemas/phonestatic-ResponseCompound'
       required:
       - eCommunicationexternalrecipientType
+      - objDescriptionstatic
       - pkiCommunicationexternalrecipientID
-      - sCommunicationexternalrecipientName
       type: object
     communicationexternalrecipient-ResponseCompound:
       allOf:
       - $ref: '#/components/schemas/communicationexternalrecipient-Response'
       - type: object
       description: A Communicationexternalrecipient Object
-      type: object
-    communicationimage-Response:
-      description: A Communicationimage Object
-      properties:
-        pkiCommunicationimageID:
-          description: The unique ID of the Communicationimage
-          example: 164
-          type: integer
-        fkiImageID:
-          description: The unique ID of the Image
-          example: 164
-          type: integer
-        sCommunicationimageName:
-          description: The Name of the Communicationimage
-          example: Picture.jpg
-          type: string
-      required:
-      - fkiImageID
-      - pkiCommunicationimageID
-      - sCommunicationName
-      type: object
-    communicationimage-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/communicationimage-Response'
-      - type: object
-      description: A Communicationimage Object
       type: object
     communicationrecipient-Response:
       description: A Communicationrecipient Object
@@ -15100,6 +15525,8 @@ components:
           example: 1
           minimum: 0
           type: integer
+        eCommunicationrecipientObjecttype:
+          $ref: '#/components/schemas/Field-eCommunicationrecipientObjecttype'
         fkiAgentID:
           description: The unique ID of the Agent.
           example: 1
@@ -15140,12 +15567,6 @@ components:
           example: 70
           minimum: 0
           type: integer
-        sEmailAddress:
-          description: The email address.
-          example: email@example.com
-          type: string
-        eCommunicationrecipientType:
-          $ref: '#/components/schemas/Field-eCommunicationrecipientType'
         fkiAgentincorporationID:
           description: The unique ID of the Agentincorporation.
           example: 1
@@ -15181,9 +15602,17 @@ components:
           example: 1
           minimum: 0
           type: integer
-        objPhoneSms:
-          $ref: '#/components/schemas/phone-ResponseCompound'
+        eCommunicationrecipientType:
+          $ref: '#/components/schemas/Field-eCommunicationrecipientType'
+        objDescriptionstatic:
+          $ref: '#/components/schemas/descriptionstatic-ResponseCompound'
+        objEmailstatic:
+          $ref: '#/components/schemas/emailstatic-ResponseCompound'
+        objPhonestatic:
+          $ref: '#/components/schemas/phonestatic-ResponseCompound'
       required:
+      - eCommunicationrecipientType
+      - objDescriptionstatic
       - pkiCommunicationrecipientID
       type: object
     communicationrecipient-ResponseCompound:
@@ -15362,6 +15791,27 @@ components:
             $ref: '#/components/schemas/Field-pkiEmployeeID'
           type: array
       type: object
+    descriptionstatic-Response:
+      description: A Descriptionstatic Object
+      properties:
+        pkiDescriptionstaticID:
+          description: The unique ID of the Descriptionstatic
+          example: 37
+          minimum: 0
+          type: integer
+        sDescriptionstaticDescription:
+          description: The description of the Descriptionstatic
+          example: Static description
+          type: string
+      required:
+      - pkiDescriptionstaticID
+      - sDescriptionstaticDescription
+      type: object
+    descriptionstatic-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/descriptionstatic-Response'
+      description: A Descriptionstatic Object and children to create a complete structure
+      type: object
     email-Request:
       description: An Email Object
       properties:
@@ -15390,6 +15840,27 @@ components:
       allOf:
       - $ref: '#/components/schemas/email-Request'
       description: An Email Object and children to create a complete structure
+      type: object
+    emailstatic-Response:
+      description: An Emailstatic Object
+      properties:
+        pkiEmailstaticID:
+          description: The unique ID of the Emailstatic
+          example: 99
+          minimum: 0
+          type: integer
+        sEmailstaticAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+      required:
+      - pkiEmailstaticID
+      - sEmailstaticAddress
+      type: object
+    emailstatic-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/emailstatic-Response'
+      description: An Emailstatic Object and children to create a complete structure
       type: object
     ezmaxinvoicing-AutocompleteElement-Response:
       description: A Ezmaxinvoicing AutocompleteElement Response
@@ -15860,6 +16331,11 @@ components:
           description: Whether it's an adjustment
           example: true
           type: boolean
+        tEzmaxproductHelpX:
+          description: The help message of the Ezmaxproduct in the language of the
+            requester
+          example: This is an exemple of help message
+          type: string
       required:
       - bEzmaxinvoicingsummaryexternaldetailAdjustment
       - dEzmaxinvoicingsummaryexternaldetailCountreal
@@ -15868,6 +16344,7 @@ components:
       - dEzmaxinvoicingsummaryexternaldetailTotal
       - fkiEzmaxproductID
       - sEzmaxproductDescriptionX
+      - tEzmaxproductHelpX
       type: object
     ezmaxinvoicingsummaryexternaldetail-ResponseCompound:
       allOf:
@@ -15912,12 +16389,12 @@ components:
           minimum: 1
           type: integer
         dEzmaxinvoicingsummaryglobalCountreal:
-          description: The The count item calculated
+          description: The count item calculated
           example: "649.08"
           pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
           type: string
         dEzmaxinvoicingsummaryglobalCountbilled:
-          description: The The count item billed
+          description: The count item billed
           example: "581.56"
           pattern: "^-{0,1}[\\d]{1,6}?\\.[\\d]{2}$"
           type: string
@@ -15965,6 +16442,11 @@ components:
           description: Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
           example: true
           type: boolean
+        tEzmaxproductHelpX:
+          description: The help message of the Ezmaxproduct in the language of the
+            requester
+          example: This is an exemple of help message
+          type: string
       required:
       - bEzmaxinvoicingsummaryglobalAdjustment
       - dEzmaxinvoicingsummaryglobalCountbilled
@@ -15979,6 +16461,7 @@ components:
       - fkiEzmaxproductID
       - iEzmaxinvoicingsummaryglobalDays
       - sEzmaxproductDescriptionX
+      - tEzmaxproductHelpX
       type: object
     ezmaxinvoicingsummaryglobal-ResponseCompound:
       allOf:
@@ -16085,6 +16568,11 @@ components:
           description: Whether if it's an adjustment
           example: true
           type: boolean
+        tEzmaxproductHelpX:
+          description: The help message of the Ezmaxproduct in the language of the
+            requester
+          example: This is an exemple of help message
+          type: string
       required:
       - bEzmaxinvoicingsummaryinternaldetailAdjustment
       - dEzmaxinvoicingsummaryinternaldetailCountreal
@@ -16095,6 +16583,7 @@ components:
       - fkiEzmaxproductID
       - sBillingentityexternalDescription
       - sEzmaxproductDescriptionX
+      - tEzmaxproductHelpX
       type: object
     ezmaxinvoicingsummaryinternaldetail-ResponseCompound:
       allOf:
@@ -19328,6 +19817,8 @@ components:
         sEzsignformfieldgroupLabel:
           description: The Label for the Ezsignformfieldgroup
           example: Allergies
+          maxLength: 50
+          minLength: 1
           type: string
         iEzsignformfieldgroupStep:
           description: The step when the Ezsignsigner will be invited to fill the
@@ -19419,6 +19910,8 @@ components:
         sEzsignformfieldgroupLabel:
           description: The Label for the Ezsignformfieldgroup
           example: Allergies
+          maxLength: 50
+          minLength: 1
           type: string
         iEzsignformfieldgroupStep:
           description: The step when the Ezsignsigner will be invited to fill the
@@ -21360,6 +21853,8 @@ components:
         sEzsigntemplateformfieldgroupLabel:
           description: The Label for the Ezsigntemplateformfieldgroup
           example: Allergies
+          maxLength: 50
+          minLength: 1
           type: string
         iEzsigntemplateformfieldgroupStep:
           description: The step when the Ezsigntemplatesigner will be invited to fill
@@ -21450,6 +21945,8 @@ components:
         sEzsigntemplateformfieldgroupLabel:
           description: The Label for the Ezsigntemplateformfieldgroup
           example: Allergies
+          maxLength: 50
+          minLength: 1
           type: string
         iEzsigntemplateformfieldgroupStep:
           description: The step when the Ezsigntemplatesigner will be invited to fill
@@ -23317,11 +23814,211 @@ components:
       - pkiNotificationtestID
       - sNotificationtestFunction
       type: object
+    paymentterm-AutocompleteElement-Response:
+      description: A Paymentterm AutocompleteElement Response
+      properties:
+        pkiPaymenttermID:
+          description: The unique ID of the Paymentterm
+          example: 46
+          type: integer
+        sPaymenttermDescriptionX:
+          description: The description of the Paymentterm in the language of the requester
+          example: Net 30 days
+          type: string
+        bPaymenttermIsactive:
+          description: Whether the Paymentterm is active or not
+          example: true
+          type: boolean
+      required:
+      - bPaymenttermIsactive
+      - pkiPaymenttermID
+      - sPaymenttermDescriptionX
+      type: object
+    paymentterm-ListElement:
+      description: A Paymentterm List Element
+      properties:
+        pkiPaymenttermID:
+          description: The unique ID of the Paymentterm
+          example: 46
+          type: integer
+        sPaymenttermCode:
+          description: The code of the Paymentterm
+          example: "0030"
+          maxLength: 4
+          type: string
+        sPaymenttermDescriptionX:
+          description: The description of the Paymentterm in the language of the requester
+          example: Net 30 days
+          type: string
+        bPaymenttermIsactive:
+          description: Whether the Paymentterm is active or not
+          example: true
+          type: boolean
+      required:
+      - bPaymenttermIsactive
+      - pkiPaymenttermID
+      - sPaymenttermCode
+      - sPaymenttermDescriptionX
+      type: object
+    paymentterm-Request:
+      description: A Paymentterm Object
+      properties:
+        pkiPaymenttermID:
+          description: The unique ID of the Paymentterm
+          example: 46
+          type: integer
+        sPaymenttermCode:
+          description: The code of the Paymentterm
+          example: "0030"
+          maxLength: 4
+          type: string
+        objPaymenttermDescription:
+          $ref: '#/components/schemas/Multilingual-PaymenttermDescription'
+        bPaymenttermIsactive:
+          description: Whether the Paymentterm is active or not
+          example: true
+          type: boolean
+      required:
+      - bPaymenttermIsactive
+      - objPaymenttermDescription
+      - sPaymenttermCode
+      type: object
+    paymentterm-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm-Request'
+      - type: object
+      description: A Paymentterm Object and children
+      type: object
+    paymentterm-Response:
+      description: A Paymentterm Object
+      properties:
+        pkiPaymenttermID:
+          description: The unique ID of the Paymentterm
+          example: 46
+          type: integer
+        sPaymenttermCode:
+          description: The code of the Paymentterm
+          example: "0030"
+          maxLength: 4
+          type: string
+        objPaymenttermDescription:
+          $ref: '#/components/schemas/Multilingual-PaymenttermDescription'
+        bPaymenttermIsactive:
+          description: Whether the Paymentterm is active or not
+          example: true
+          type: boolean
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - bPaymenttermIsactive
+      - objAudit
+      - objPaymenttermDescription
+      - pkiPaymenttermID
+      - sPaymenttermCode
+      type: object
+    paymentterm-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm-Response'
+      - type: object
+      description: A Paymentterm Object
+      type: object
+    paymentterm-createObject-v1-Request:
+      description: Request for POST /1/object/paymentterm
+      properties:
+        a_objPaymentterm:
+          items:
+            $ref: '#/components/schemas/paymentterm-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objPaymentterm
+      type: object
+    paymentterm-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm_createObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/paymentterm
+      type: object
+    paymentterm-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/paymentterm
+      properties:
+        a_pkiPaymenttermID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiPaymenttermID'
+          type: array
+      required:
+      - a_pkiPaymenttermID
+      type: object
+    paymentterm-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/paymentterm/{pkiPaymenttermID}"
+      type: object
+    paymentterm-editObject-v1-Request:
+      description: "Request for PUT /1/object/paymentterm/{pkiPaymenttermID}"
+      properties:
+        objPaymentterm:
+          $ref: '#/components/schemas/paymentterm-RequestCompound'
+      required:
+      - objPaymentterm
+      type: object
+    paymentterm-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PUT /1/object/paymentterm/{pkiPaymenttermID}"
+      type: object
+    paymentterm-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/paymentterm/getAutocomplete
+      type: object
+    paymentterm-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/paymentterm/getAutocomplete
+      properties:
+        a_objPaymentterm:
+          description: An array of Paymentterm autocomplete element response.
+          items:
+            $ref: '#/components/schemas/paymentterm-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objpaymentterm
+      type: object
+    paymentterm-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/paymentterm/getList
+      type: object
+    paymentterm-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/paymentterm/getList
+      type: object
+    paymentterm-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/paymentterm_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/paymentterm/{pkiPaymenttermID}"
+      type: object
+    paymentterm-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/paymentterm/{pkiPaymenttermID}"
+      properties:
+        objPaymentterm:
+          $ref: '#/components/schemas/paymentterm-ResponseCompound'
+      required:
+      - objPaymentterm
+      type: object
     period-AutocompleteElement-Response:
       description: A Period AutocompleteElement Response
       properties:
         sPeriodYYYYMM:
-          description: The period YYYYMM
+          description: The YYYYMM of the Period
           example: 2202-12
           type: string
         pkiPeriodID:
@@ -23421,75 +24118,31 @@ components:
       - $ref: '#/components/schemas/phone-Request'
       description: A Phone Object and children to create a complete structure
       type: object
-    phone-Response:
-      description: A Phone Object
+    phonestatic-Response:
+      description: A Phonestatic Object
       properties:
-        pkiPhoneID:
+        pkiPhonestaticID:
           description: The unique ID of the Phone.
           example: 1
           minimum: 0
           type: integer
-        fkiPhonetypeID:
-          description: |-
-            The unique ID of the Phonetype.
-
-            Valid values:
-
-            |Value|Description|
-            |-|-|
-            |1|Office|
-            |2|Home|
-            |3|Mobile|
-            |4|Fax|
-            |5|Pager|
-            |6|Toll Free|
-          example: 1
-          minimum: 0
-          type: integer
-        ePhoneType:
-          $ref: '#/components/schemas/Field-ePhoneType'
-        sPhoneRegion:
-          description: |-
-            The region of the phone number. (For a North America Number only)
-
-            The region is the "514" section in this sample phone number: (514) 990-1516 x123
-          example: "514"
+        sPhonestaticE164:
+          description: A phone number in E.164 Format
+          example: +15149901516
+          pattern: "^\\+[1-9]\\d{1,14}$"
           type: string
-        sPhoneExchange:
-          description: |-
-            The exchange of the phone number. (For a North America Number only)
-
-            The exchange is the "990" section in this sample phone number: (514) 990-1516 x123
-          example: "990"
-          type: string
-        iPhoneNumber:
-          description: |-
-            The number of the phone number. (For a North America Number only)
-
-            The number is the "1516" section in this sample phone number: (514) 990-1516 x123
-          example: "1516"
-          type: string
-        sPhoneExtension:
-          description: |-
-            The extension of the phone number.
-
-            The extension is the "123" section in this sample phone number: (514) 990-1516 x123.
-
-            It can also be used with international phone numbers
+        sPhonestaticExtension:
+          description: The extension of the phone number.
           example: "123"
-          type: string
-        sPhoneInternational:
-          description: The international phone number.
-          example: "15149901516"
+          pattern: ^\d
           type: string
       required:
-      - fkiPhonetypeID
-      - pkiPhoneID
+      - pkiPhonestaticID
       type: object
-    phone-ResponseCompound:
+    phonestatic-ResponseCompound:
       allOf:
-      - $ref: '#/components/schemas/phone-Response'
-      description: A Phone Object and children to create a complete structure
+      - $ref: '#/components/schemas/phonestatic-Response'
+      description: A Phonestatic Object and children to create a complete structure
       type: object
     secretquestion-AutocompleteElement-Response:
       description: A Secretquestion AutocompleteElement Response
@@ -24326,6 +24979,7 @@ components:
           example: "Contract #123"
           type: string
         bEzsignfolderAllowed:
+          description: Whether you have access to the Ezsignfolder or not
           type: boolean
       required:
       - bEzsignfolderAllowed
@@ -24359,6 +25013,7 @@ components:
           example: true
           type: boolean
         bEzsignfolderAllowed:
+          description: Whether you have access to the Ezsignfolder or not
           type: boolean
       required:
       - bEzsignfolderAllowed
@@ -24594,19 +25249,9 @@ components:
           items:
             $ref: '#/components/schemas/communicationexternalrecipient-ResponseCompound'
           type: array
-        a_objCommunicationimage:
-          items:
-            $ref: '#/components/schemas/communicationimage-ResponseCompound'
-          type: array
-        a_objCommunicationexternalimage:
-          items:
-            $ref: '#/components/schemas/communicationexternalimage-ResponseCompound'
-          type: array
       required:
       - a_objCommunicationattachment
-      - a_objCommunicationexternalimage
       - a_objCommunicationexternalrecipient
-      - a_objCommunicationimage
       - a_objCommunicationrecipient
       type: object
       example: null
@@ -24624,6 +25269,16 @@ components:
           $ref: '#/components/schemas/communication-getList-v1-Response-mPayload'
       required:
       - mPayload
+      type: object
+      example: null
+    communication_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objCommunication:
+          items:
+            $ref: '#/components/schemas/communication-ListElement'
+          type: array
+      required:
+      - a_objCommunication
       type: object
       example: null
     communication_getObject_v2_Response_allOf:
@@ -26040,6 +26695,48 @@ components:
       - mPayload
       type: object
       example: null
+    paymentterm_createObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/paymentterm-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    paymentterm_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/paymentterm-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    paymentterm_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/paymentterm-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    paymentterm_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objPaymentterm:
+          items:
+            $ref: '#/components/schemas/paymentterm-ListElement'
+          type: array
+      required:
+      - a_objPaymentterm
+      type: object
+      example: null
+    paymentterm_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/paymentterm-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
     period_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -26292,6 +26989,7 @@ x-tagGroups:
   - Object_Franchisereferalincome
   - Object_Notificationsection
   - Object_Notificationtest
+  - Object_Paymentterm
   - Object_Period
   - Object_Secretquestion
   - Object_Taxassignment

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Ezmaxinvoicingsummaryexternaldetail Object
  */
 @ApiModel(description = "A Ezmaxinvoicingsummaryexternaldetail Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryexternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D)
@@ -86,6 +86,10 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
   public static final String SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_ADJUSTMENT = "bEzmaxinvoicingsummaryexternaldetailAdjustment";
   @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_ADJUSTMENT)
   private Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment;
+
+  public static final String SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X = "tEzmaxproductHelpX";
+  @SerializedName(SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X)
+  private String tEzmaxproductHelpX;
 
   public EzmaxinvoicingsummaryexternaldetailResponseCompound() {
   }
@@ -300,6 +304,29 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
   }
 
 
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound tEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+    return this;
+  }
+
+   /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   * @return tEzmaxproductHelpX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "This is an exemple of help message", required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
+
+  public String gettEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+
+
+  public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -318,12 +345,13 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
         Objects.equals(this.dEzmaxinvoicingsummaryexternaldetailSubtotal, ezmaxinvoicingsummaryexternaldetailResponseCompound.dEzmaxinvoicingsummaryexternaldetailSubtotal) &&
         Objects.equals(this.dEzmaxinvoicingsummaryexternaldetailRebate, ezmaxinvoicingsummaryexternaldetailResponseCompound.dEzmaxinvoicingsummaryexternaldetailRebate) &&
         Objects.equals(this.dEzmaxinvoicingsummaryexternaldetailTotal, ezmaxinvoicingsummaryexternaldetailResponseCompound.dEzmaxinvoicingsummaryexternaldetailTotal) &&
-        Objects.equals(this.bEzmaxinvoicingsummaryexternaldetailAdjustment, ezmaxinvoicingsummaryexternaldetailResponseCompound.bEzmaxinvoicingsummaryexternaldetailAdjustment);
+        Objects.equals(this.bEzmaxinvoicingsummaryexternaldetailAdjustment, ezmaxinvoicingsummaryexternaldetailResponseCompound.bEzmaxinvoicingsummaryexternaldetailAdjustment) &&
+        Objects.equals(this.tEzmaxproductHelpX, ezmaxinvoicingsummaryexternaldetailResponseCompound.tEzmaxproductHelpX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzmaxinvoicingsummaryexternaldetailID, fkiEzmaxinvoicingsummaryexternalID, fkiEzmaxproductID, sEzmaxproductDescriptionX, dEzmaxinvoicingsummaryexternaldetailCountreal, dEzmaxinvoicingsummaryexternaldetailSubtotal, dEzmaxinvoicingsummaryexternaldetailRebate, dEzmaxinvoicingsummaryexternaldetailTotal, bEzmaxinvoicingsummaryexternaldetailAdjustment);
+    return Objects.hash(pkiEzmaxinvoicingsummaryexternaldetailID, fkiEzmaxinvoicingsummaryexternalID, fkiEzmaxproductID, sEzmaxproductDescriptionX, dEzmaxinvoicingsummaryexternaldetailCountreal, dEzmaxinvoicingsummaryexternaldetailSubtotal, dEzmaxinvoicingsummaryexternaldetailRebate, dEzmaxinvoicingsummaryexternaldetailTotal, bEzmaxinvoicingsummaryexternaldetailAdjustment, tEzmaxproductHelpX);
   }
 
   @Override
@@ -339,6 +367,7 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     sb.append("    dEzmaxinvoicingsummaryexternaldetailRebate: ").append(toIndentedString(dEzmaxinvoicingsummaryexternaldetailRebate)).append("\n");
     sb.append("    dEzmaxinvoicingsummaryexternaldetailTotal: ").append(toIndentedString(dEzmaxinvoicingsummaryexternaldetailTotal)).append("\n");
     sb.append("    bEzmaxinvoicingsummaryexternaldetailAdjustment: ").append(toIndentedString(bEzmaxinvoicingsummaryexternaldetailAdjustment)).append("\n");
+    sb.append("    tEzmaxproductHelpX: ").append(toIndentedString(tEzmaxproductHelpX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -370,6 +399,7 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     openapiFields.add("dEzmaxinvoicingsummaryexternaldetailRebate");
     openapiFields.add("dEzmaxinvoicingsummaryexternaldetailTotal");
     openapiFields.add("bEzmaxinvoicingsummaryexternaldetailAdjustment");
+    openapiFields.add("tEzmaxproductHelpX");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -380,6 +410,7 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     openapiRequiredFields.add("dEzmaxinvoicingsummaryexternaldetailRebate");
     openapiRequiredFields.add("dEzmaxinvoicingsummaryexternaldetailTotal");
     openapiRequiredFields.add("bEzmaxinvoicingsummaryexternaldetailAdjustment");
+    openapiRequiredFields.add("tEzmaxproductHelpX");
   }
 
  /**
@@ -423,6 +454,9 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
       }
       if (!jsonObj.get("dEzmaxinvoicingsummaryexternaldetailTotal").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryexternaldetailTotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryexternaldetailTotal").toString()));
+      }
+      if (!jsonObj.get("tEzmaxproductHelpX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzmaxproductHelpX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzmaxproductHelpX").toString()));
       }
   }
 

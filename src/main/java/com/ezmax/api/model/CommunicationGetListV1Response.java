@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonResponseObjDebug;
-import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.CommonResponseObjDebugPayloadGetList;
 import com.ezmax.api.model.CommunicationGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,10 +49,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for GET /1/module/communication/getList
+ * Response for GET /1/object/communication/getList
  */
-@ApiModel(description = "Response for GET /1/module/communication/getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@ApiModel(description = "Response for GET /1/object/communication/getList")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationGetListV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
@@ -60,7 +60,7 @@ public class CommunicationGetListV1Response {
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  private CommonResponseObjDebugPayload objDebugPayload;
+  private CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
@@ -92,7 +92,7 @@ public class CommunicationGetListV1Response {
   }
 
 
-  public CommunicationGetListV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public CommunicationGetListV1Response objDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     
     this.objDebugPayload = objDebugPayload;
     return this;
@@ -105,12 +105,12 @@ public class CommunicationGetListV1Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public CommonResponseObjDebugPayload getObjDebugPayload() {
+  public CommonResponseObjDebugPayloadGetList getObjDebugPayload() {
     return objDebugPayload;
   }
 
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
@@ -227,7 +227,7 @@ public class CommunicationGetListV1Response {
       CommunicationGetListV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
       // validate the optional field `objDebugPayload`
       if (jsonObj.get("objDebugPayload") != null && !jsonObj.get("objDebugPayload").isJsonNull()) {
-        CommonResponseObjDebugPayload.validateJsonObject(jsonObj.getAsJsonObject("objDebugPayload"));
+        CommonResponseObjDebugPayloadGetList.validateJsonObject(jsonObj.getAsJsonObject("objDebugPayload"));
       }
       // validate the optional field `objDebug`
       if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {

@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
  */
 @ApiModel(description = "Payload for GET /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzsigntemplatesignatureGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)

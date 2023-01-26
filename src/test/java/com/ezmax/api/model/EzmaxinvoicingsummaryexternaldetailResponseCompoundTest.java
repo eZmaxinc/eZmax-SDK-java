@@ -111,4 +111,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompoundTest {
         // TODO: test bEzmaxinvoicingsummaryexternaldetailAdjustment
     }
 
+    /**
+     * Test the property 'tEzmaxproductHelpX'
+     */
+    @Test
+    public void tEzmaxproductHelpXTest() {
+        // TODO: test tEzmaxproductHelpX
+    }
+
 }

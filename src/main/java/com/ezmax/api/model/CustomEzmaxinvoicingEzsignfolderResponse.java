@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder
  */
 @ApiModel(description = "An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -201,11 +201,11 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   }
 
    /**
-   * Get bEzsignfolderAllowed
+   * Whether you have access to the Ezsignfolder or not
    * @return bEzsignfolderAllowed
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Whether you have access to the Ezsignfolder or not")
 
   public Boolean getbEzsignfolderAllowed() {
     return bEzsignfolderAllowed;

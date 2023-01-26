@@ -13,8 +13,8 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.FieldECommunicationEmailimportance;
+import com.ezmax.api.model.ComputedECommunicationDirection;
+import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,11 +51,51 @@ public class CommunicationListElementTest {
     }
 
     /**
-     * Test the property 'eCommunicationEmailimportance'
+     * Test the property 'fkiEzsignfolderID'
      */
     @Test
-    public void eCommunicationEmailimportanceTest() {
-        // TODO: test eCommunicationEmailimportance
+    public void fkiEzsignfolderIDTest() {
+        // TODO: test fkiEzsignfolderID
+    }
+
+    /**
+     * Test the property 'fkiInscriptionID'
+     */
+    @Test
+    public void fkiInscriptionIDTest() {
+        // TODO: test fkiInscriptionID
+    }
+
+    /**
+     * Test the property 'fkiInscriptionnotauthenticatedID'
+     */
+    @Test
+    public void fkiInscriptionnotauthenticatedIDTest() {
+        // TODO: test fkiInscriptionnotauthenticatedID
+    }
+
+    /**
+     * Test the property 'dtCreatedDate'
+     */
+    @Test
+    public void dtCreatedDateTest() {
+        // TODO: test dtCreatedDate
+    }
+
+    /**
+     * Test the property 'eCommunicationDirection'
+     */
+    @Test
+    public void eCommunicationDirectionTest() {
+        // TODO: test eCommunicationDirection
+    }
+
+    /**
+     * Test the property 'eCommunicationImportance'
+     */
+    @Test
+    public void eCommunicationImportanceTest() {
+        // TODO: test eCommunicationImportance
     }
 
     /**
@@ -67,6 +107,14 @@ public class CommunicationListElementTest {
     }
 
     /**
+     * Test the property 'iCommunicationrecipientCount'
+     */
+    @Test
+    public void iCommunicationrecipientCountTest() {
+        // TODO: test iCommunicationrecipientCount
+    }
+
+    /**
      * Test the property 'sCommunicationSubject'
      */
     @Test
@@ -75,19 +123,19 @@ public class CommunicationListElementTest {
     }
 
     /**
-     * Test the property 'dtCommunicationSentdate'
+     * Test the property 'sCommunicationSender'
      */
     @Test
-    public void dtCommunicationSentdateTest() {
-        // TODO: test dtCommunicationSentdate
+    public void sCommunicationSenderTest() {
+        // TODO: test sCommunicationSender
     }
 
     /**
-     * Test the property 'objContactFrom'
+     * Test the property 'sCommunicationRecipient'
      */
     @Test
-    public void objContactFromTest() {
-        // TODO: test objContactFrom
+    public void sCommunicationRecipientTest() {
+        // TODO: test sCommunicationRecipient
     }
 
 }

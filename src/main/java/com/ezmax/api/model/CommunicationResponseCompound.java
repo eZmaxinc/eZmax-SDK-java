@@ -15,13 +15,13 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CommunicationattachmentResponseCompound;
-import com.ezmax.api.model.CommunicationexternalimageResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
-import com.ezmax.api.model.CommunicationimageResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
+import com.ezmax.api.model.ComputedECommunicationDirection;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.FieldECommunicationEmailimportance;
+import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -59,15 +59,15 @@ import eZmaxAPI.JSON;
  * A Communication Object
  */
 @ApiModel(description = "A Communication Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
   private Integer pkiCommunicationID;
 
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE = "eCommunicationEmailimportance";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE)
-  private FieldECommunicationEmailimportance eCommunicationEmailimportance;
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
+  private FieldECommunicationImportance eCommunicationImportance;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
@@ -77,13 +77,21 @@ public class CommunicationResponseCompound {
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
   private String sCommunicationSubject;
 
-  public static final String SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE = "dtCommunicationSentdate";
-  @SerializedName(SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE)
-  private String dtCommunicationSentdate;
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_DIRECTION = "eCommunicationDirection";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_DIRECTION)
+  private ComputedECommunicationDirection eCommunicationDirection;
+
+  public static final String SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT = "iCommunicationrecipientCount";
+  @SerializedName(SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT)
+  private Integer iCommunicationrecipientCount;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT_FROM = "objContactFrom";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_FROM)
   private CustomContactNameResponse objContactFrom;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT = "a_objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT)
@@ -96,14 +104,6 @@ public class CommunicationResponseCompound {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALRECIPIENT = "a_objCommunicationexternalrecipient";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALRECIPIENT)
   private List<CommunicationexternalrecipientResponseCompound> aObjCommunicationexternalrecipient = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONIMAGE = "a_objCommunicationimage";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONIMAGE)
-  private List<CommunicationimageResponseCompound> aObjCommunicationimage = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALIMAGE = "a_objCommunicationexternalimage";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONEXTERNALIMAGE)
-  private List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage = new ArrayList<>();
 
   public CommunicationResponseCompound() {
   }
@@ -132,26 +132,26 @@ public class CommunicationResponseCompound {
   }
 
 
-  public CommunicationResponseCompound eCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
+  public CommunicationResponseCompound eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+    this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
 
    /**
-   * Get eCommunicationEmailimportance
-   * @return eCommunicationEmailimportance
+   * Get eCommunicationImportance
+   * @return eCommunicationImportance
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public FieldECommunicationEmailimportance geteCommunicationEmailimportance() {
-    return eCommunicationEmailimportance;
+  public FieldECommunicationImportance geteCommunicationImportance() {
+    return eCommunicationImportance;
   }
 
 
-  public void seteCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+  public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
+    this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
@@ -185,11 +185,11 @@ public class CommunicationResponseCompound {
   }
 
    /**
-   * The Subject of the Communication
+   * The subject of the Communication
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The Subject of the Communication")
+  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The subject of the Communication")
 
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
@@ -201,26 +201,49 @@ public class CommunicationResponseCompound {
   }
 
 
-  public CommunicationResponseCompound dtCommunicationSentdate(String dtCommunicationSentdate) {
+  public CommunicationResponseCompound eCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
     
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+    this.eCommunicationDirection = eCommunicationDirection;
     return this;
   }
 
    /**
-   * The send date and time at which the Communication was sent.
-   * @return dtCommunicationSentdate
+   * Get eCommunicationDirection
+   * @return eCommunicationDirection
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The send date and time at which the Communication was sent.")
+  @ApiModelProperty(required = true, value = "")
 
-  public String getDtCommunicationSentdate() {
-    return dtCommunicationSentdate;
+  public ComputedECommunicationDirection geteCommunicationDirection() {
+    return eCommunicationDirection;
   }
 
 
-  public void setDtCommunicationSentdate(String dtCommunicationSentdate) {
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+  public void seteCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
+    this.eCommunicationDirection = eCommunicationDirection;
+  }
+
+
+  public CommunicationResponseCompound iCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
+    return this;
+  }
+
+   /**
+   * The count of Communicationrecipient
+   * @return iCommunicationrecipientCount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "8", required = true, value = "The count of Communicationrecipient")
+
+  public Integer getiCommunicationrecipientCount() {
+    return iCommunicationrecipientCount;
+  }
+
+
+  public void setiCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
   }
 
 
@@ -244,6 +267,29 @@ public class CommunicationResponseCompound {
 
   public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
     this.objContactFrom = objContactFrom;
+  }
+
+
+  public CommunicationResponseCompound objAudit(CommonAudit objAudit) {
+    
+    this.objAudit = objAudit;
+    return this;
+  }
+
+   /**
+   * Get objAudit
+   * @return objAudit
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
   }
 
 
@@ -331,62 +377,6 @@ public class CommunicationResponseCompound {
   }
 
 
-  public CommunicationResponseCompound aObjCommunicationimage(List<CommunicationimageResponseCompound> aObjCommunicationimage) {
-    
-    this.aObjCommunicationimage = aObjCommunicationimage;
-    return this;
-  }
-
-  public CommunicationResponseCompound addAObjCommunicationimageItem(CommunicationimageResponseCompound aObjCommunicationimageItem) {
-    this.aObjCommunicationimage.add(aObjCommunicationimageItem);
-    return this;
-  }
-
-   /**
-   * Get aObjCommunicationimage
-   * @return aObjCommunicationimage
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<CommunicationimageResponseCompound> getaObjCommunicationimage() {
-    return aObjCommunicationimage;
-  }
-
-
-  public void setaObjCommunicationimage(List<CommunicationimageResponseCompound> aObjCommunicationimage) {
-    this.aObjCommunicationimage = aObjCommunicationimage;
-  }
-
-
-  public CommunicationResponseCompound aObjCommunicationexternalimage(List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage) {
-    
-    this.aObjCommunicationexternalimage = aObjCommunicationexternalimage;
-    return this;
-  }
-
-  public CommunicationResponseCompound addAObjCommunicationexternalimageItem(CommunicationexternalimageResponseCompound aObjCommunicationexternalimageItem) {
-    this.aObjCommunicationexternalimage.add(aObjCommunicationexternalimageItem);
-    return this;
-  }
-
-   /**
-   * Get aObjCommunicationexternalimage
-   * @return aObjCommunicationexternalimage
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<CommunicationexternalimageResponseCompound> getaObjCommunicationexternalimage() {
-    return aObjCommunicationexternalimage;
-  }
-
-
-  public void setaObjCommunicationexternalimage(List<CommunicationexternalimageResponseCompound> aObjCommunicationexternalimage) {
-    this.aObjCommunicationexternalimage = aObjCommunicationexternalimage;
-  }
-
-
 
   @Override
   public boolean equals(Object o) {
@@ -398,21 +388,21 @@ public class CommunicationResponseCompound {
     }
     CommunicationResponseCompound communicationResponseCompound = (CommunicationResponseCompound) o;
     return Objects.equals(this.pkiCommunicationID, communicationResponseCompound.pkiCommunicationID) &&
-        Objects.equals(this.eCommunicationEmailimportance, communicationResponseCompound.eCommunicationEmailimportance) &&
+        Objects.equals(this.eCommunicationImportance, communicationResponseCompound.eCommunicationImportance) &&
         Objects.equals(this.eCommunicationType, communicationResponseCompound.eCommunicationType) &&
         Objects.equals(this.sCommunicationSubject, communicationResponseCompound.sCommunicationSubject) &&
-        Objects.equals(this.dtCommunicationSentdate, communicationResponseCompound.dtCommunicationSentdate) &&
+        Objects.equals(this.eCommunicationDirection, communicationResponseCompound.eCommunicationDirection) &&
+        Objects.equals(this.iCommunicationrecipientCount, communicationResponseCompound.iCommunicationrecipientCount) &&
         Objects.equals(this.objContactFrom, communicationResponseCompound.objContactFrom) &&
+        Objects.equals(this.objAudit, communicationResponseCompound.objAudit) &&
         Objects.equals(this.aObjCommunicationattachment, communicationResponseCompound.aObjCommunicationattachment) &&
         Objects.equals(this.aObjCommunicationrecipient, communicationResponseCompound.aObjCommunicationrecipient) &&
-        Objects.equals(this.aObjCommunicationexternalrecipient, communicationResponseCompound.aObjCommunicationexternalrecipient) &&
-        Objects.equals(this.aObjCommunicationimage, communicationResponseCompound.aObjCommunicationimage) &&
-        Objects.equals(this.aObjCommunicationexternalimage, communicationResponseCompound.aObjCommunicationexternalimage);
+        Objects.equals(this.aObjCommunicationexternalrecipient, communicationResponseCompound.aObjCommunicationexternalrecipient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationID, eCommunicationEmailimportance, eCommunicationType, sCommunicationSubject, dtCommunicationSentdate, objContactFrom, aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient, aObjCommunicationimage, aObjCommunicationexternalimage);
+    return Objects.hash(pkiCommunicationID, eCommunicationImportance, eCommunicationType, sCommunicationSubject, eCommunicationDirection, iCommunicationrecipientCount, objContactFrom, objAudit, aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient);
   }
 
   @Override
@@ -420,16 +410,16 @@ public class CommunicationResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationResponseCompound {\n");
     sb.append("    pkiCommunicationID: ").append(toIndentedString(pkiCommunicationID)).append("\n");
-    sb.append("    eCommunicationEmailimportance: ").append(toIndentedString(eCommunicationEmailimportance)).append("\n");
+    sb.append("    eCommunicationImportance: ").append(toIndentedString(eCommunicationImportance)).append("\n");
     sb.append("    eCommunicationType: ").append(toIndentedString(eCommunicationType)).append("\n");
     sb.append("    sCommunicationSubject: ").append(toIndentedString(sCommunicationSubject)).append("\n");
-    sb.append("    dtCommunicationSentdate: ").append(toIndentedString(dtCommunicationSentdate)).append("\n");
+    sb.append("    eCommunicationDirection: ").append(toIndentedString(eCommunicationDirection)).append("\n");
+    sb.append("    iCommunicationrecipientCount: ").append(toIndentedString(iCommunicationrecipientCount)).append("\n");
     sb.append("    objContactFrom: ").append(toIndentedString(objContactFrom)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    aObjCommunicationattachment: ").append(toIndentedString(aObjCommunicationattachment)).append("\n");
     sb.append("    aObjCommunicationrecipient: ").append(toIndentedString(aObjCommunicationrecipient)).append("\n");
     sb.append("    aObjCommunicationexternalrecipient: ").append(toIndentedString(aObjCommunicationexternalrecipient)).append("\n");
-    sb.append("    aObjCommunicationimage: ").append(toIndentedString(aObjCommunicationimage)).append("\n");
-    sb.append("    aObjCommunicationexternalimage: ").append(toIndentedString(aObjCommunicationexternalimage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -453,29 +443,30 @@ public class CommunicationResponseCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCommunicationID");
-    openapiFields.add("eCommunicationEmailimportance");
+    openapiFields.add("eCommunicationImportance");
     openapiFields.add("eCommunicationType");
     openapiFields.add("sCommunicationSubject");
-    openapiFields.add("dtCommunicationSentdate");
+    openapiFields.add("eCommunicationDirection");
+    openapiFields.add("iCommunicationrecipientCount");
     openapiFields.add("objContactFrom");
+    openapiFields.add("objAudit");
     openapiFields.add("a_objCommunicationattachment");
     openapiFields.add("a_objCommunicationrecipient");
     openapiFields.add("a_objCommunicationexternalrecipient");
-    openapiFields.add("a_objCommunicationimage");
-    openapiFields.add("a_objCommunicationexternalimage");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCommunicationID");
+    openapiRequiredFields.add("eCommunicationImportance");
     openapiRequiredFields.add("eCommunicationType");
     openapiRequiredFields.add("sCommunicationSubject");
-    openapiRequiredFields.add("dtCommunicationSentdate");
+    openapiRequiredFields.add("eCommunicationDirection");
+    openapiRequiredFields.add("iCommunicationrecipientCount");
     openapiRequiredFields.add("objContactFrom");
+    openapiRequiredFields.add("objAudit");
     openapiRequiredFields.add("a_objCommunicationattachment");
     openapiRequiredFields.add("a_objCommunicationrecipient");
     openapiRequiredFields.add("a_objCommunicationexternalrecipient");
-    openapiRequiredFields.add("a_objCommunicationimage");
-    openapiRequiredFields.add("a_objCommunicationexternalimage");
   }
 
  /**
@@ -508,11 +499,10 @@ public class CommunicationResponseCompound {
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
-      if (!jsonObj.get("dtCommunicationSentdate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtCommunicationSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCommunicationSentdate").toString()));
-      }
       // validate the required field `objContactFrom`
       CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactFrom"));
+      // validate the required field `objAudit`
+      CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationattachment").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));
@@ -542,26 +532,6 @@ public class CommunicationResponseCompound {
       // validate the required field `a_objCommunicationexternalrecipient` (array)
       for (int i = 0; i < jsonArrayaObjCommunicationexternalrecipient.size(); i++) {
         CommunicationexternalrecipientResponseCompound.validateJsonObject(jsonArrayaObjCommunicationexternalrecipient.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationimage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationimage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationimage").toString()));
-      }
-
-      JsonArray jsonArrayaObjCommunicationimage = jsonObj.getAsJsonArray("a_objCommunicationimage");
-      // validate the required field `a_objCommunicationimage` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationimage.size(); i++) {
-        CommunicationimageResponseCompound.validateJsonObject(jsonArrayaObjCommunicationimage.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationexternalimage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationexternalimage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalimage").toString()));
-      }
-
-      JsonArray jsonArrayaObjCommunicationexternalimage = jsonObj.getAsJsonArray("a_objCommunicationexternalimage");
-      // validate the required field `a_objCommunicationexternalimage` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationexternalimage.size(); i++) {
-        CommunicationexternalimageResponseCompound.validateJsonObject(jsonArrayaObjCommunicationexternalimage.get(i).getAsJsonObject());
       };
   }
 

@@ -15,8 +15,10 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.ComputedECommunicationDirection;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.FieldECommunicationEmailimportance;
+import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,15 +54,15 @@ import eZmaxAPI.JSON;
  * A Communication Object
  */
 @ApiModel(description = "A Communication Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CommunicationResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
   private Integer pkiCommunicationID;
 
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE = "eCommunicationEmailimportance";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_EMAILIMPORTANCE)
-  private FieldECommunicationEmailimportance eCommunicationEmailimportance;
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
+  private FieldECommunicationImportance eCommunicationImportance;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
@@ -70,13 +72,21 @@ public class CommunicationResponse {
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
   private String sCommunicationSubject;
 
-  public static final String SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE = "dtCommunicationSentdate";
-  @SerializedName(SERIALIZED_NAME_DT_COMMUNICATION_SENTDATE)
-  private String dtCommunicationSentdate;
+  public static final String SERIALIZED_NAME_E_COMMUNICATION_DIRECTION = "eCommunicationDirection";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_DIRECTION)
+  private ComputedECommunicationDirection eCommunicationDirection;
+
+  public static final String SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT = "iCommunicationrecipientCount";
+  @SerializedName(SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT)
+  private Integer iCommunicationrecipientCount;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT_FROM = "objContactFrom";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_FROM)
   private CustomContactNameResponse objContactFrom;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
 
   public CommunicationResponse() {
   }
@@ -105,26 +115,26 @@ public class CommunicationResponse {
   }
 
 
-  public CommunicationResponse eCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
+  public CommunicationResponse eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+    this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
 
    /**
-   * Get eCommunicationEmailimportance
-   * @return eCommunicationEmailimportance
+   * Get eCommunicationImportance
+   * @return eCommunicationImportance
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public FieldECommunicationEmailimportance geteCommunicationEmailimportance() {
-    return eCommunicationEmailimportance;
+  public FieldECommunicationImportance geteCommunicationImportance() {
+    return eCommunicationImportance;
   }
 
 
-  public void seteCommunicationEmailimportance(FieldECommunicationEmailimportance eCommunicationEmailimportance) {
-    this.eCommunicationEmailimportance = eCommunicationEmailimportance;
+  public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
+    this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
@@ -158,11 +168,11 @@ public class CommunicationResponse {
   }
 
    /**
-   * The Subject of the Communication
+   * The subject of the Communication
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The Subject of the Communication")
+  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The subject of the Communication")
 
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
@@ -174,26 +184,49 @@ public class CommunicationResponse {
   }
 
 
-  public CommunicationResponse dtCommunicationSentdate(String dtCommunicationSentdate) {
+  public CommunicationResponse eCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
     
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+    this.eCommunicationDirection = eCommunicationDirection;
     return this;
   }
 
    /**
-   * The send date and time at which the Communication was sent.
-   * @return dtCommunicationSentdate
+   * Get eCommunicationDirection
+   * @return eCommunicationDirection
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The send date and time at which the Communication was sent.")
+  @ApiModelProperty(required = true, value = "")
 
-  public String getDtCommunicationSentdate() {
-    return dtCommunicationSentdate;
+  public ComputedECommunicationDirection geteCommunicationDirection() {
+    return eCommunicationDirection;
   }
 
 
-  public void setDtCommunicationSentdate(String dtCommunicationSentdate) {
-    this.dtCommunicationSentdate = dtCommunicationSentdate;
+  public void seteCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
+    this.eCommunicationDirection = eCommunicationDirection;
+  }
+
+
+  public CommunicationResponse iCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
+    return this;
+  }
+
+   /**
+   * The count of Communicationrecipient
+   * @return iCommunicationrecipientCount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "8", required = true, value = "The count of Communicationrecipient")
+
+  public Integer getiCommunicationrecipientCount() {
+    return iCommunicationrecipientCount;
+  }
+
+
+  public void setiCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
+    this.iCommunicationrecipientCount = iCommunicationrecipientCount;
   }
 
 
@@ -220,6 +253,29 @@ public class CommunicationResponse {
   }
 
 
+  public CommunicationResponse objAudit(CommonAudit objAudit) {
+    
+    this.objAudit = objAudit;
+    return this;
+  }
+
+   /**
+   * Get objAudit
+   * @return objAudit
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -231,16 +287,18 @@ public class CommunicationResponse {
     }
     CommunicationResponse communicationResponse = (CommunicationResponse) o;
     return Objects.equals(this.pkiCommunicationID, communicationResponse.pkiCommunicationID) &&
-        Objects.equals(this.eCommunicationEmailimportance, communicationResponse.eCommunicationEmailimportance) &&
+        Objects.equals(this.eCommunicationImportance, communicationResponse.eCommunicationImportance) &&
         Objects.equals(this.eCommunicationType, communicationResponse.eCommunicationType) &&
         Objects.equals(this.sCommunicationSubject, communicationResponse.sCommunicationSubject) &&
-        Objects.equals(this.dtCommunicationSentdate, communicationResponse.dtCommunicationSentdate) &&
-        Objects.equals(this.objContactFrom, communicationResponse.objContactFrom);
+        Objects.equals(this.eCommunicationDirection, communicationResponse.eCommunicationDirection) &&
+        Objects.equals(this.iCommunicationrecipientCount, communicationResponse.iCommunicationrecipientCount) &&
+        Objects.equals(this.objContactFrom, communicationResponse.objContactFrom) &&
+        Objects.equals(this.objAudit, communicationResponse.objAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationID, eCommunicationEmailimportance, eCommunicationType, sCommunicationSubject, dtCommunicationSentdate, objContactFrom);
+    return Objects.hash(pkiCommunicationID, eCommunicationImportance, eCommunicationType, sCommunicationSubject, eCommunicationDirection, iCommunicationrecipientCount, objContactFrom, objAudit);
   }
 
   @Override
@@ -248,11 +306,13 @@ public class CommunicationResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationResponse {\n");
     sb.append("    pkiCommunicationID: ").append(toIndentedString(pkiCommunicationID)).append("\n");
-    sb.append("    eCommunicationEmailimportance: ").append(toIndentedString(eCommunicationEmailimportance)).append("\n");
+    sb.append("    eCommunicationImportance: ").append(toIndentedString(eCommunicationImportance)).append("\n");
     sb.append("    eCommunicationType: ").append(toIndentedString(eCommunicationType)).append("\n");
     sb.append("    sCommunicationSubject: ").append(toIndentedString(sCommunicationSubject)).append("\n");
-    sb.append("    dtCommunicationSentdate: ").append(toIndentedString(dtCommunicationSentdate)).append("\n");
+    sb.append("    eCommunicationDirection: ").append(toIndentedString(eCommunicationDirection)).append("\n");
+    sb.append("    iCommunicationrecipientCount: ").append(toIndentedString(iCommunicationrecipientCount)).append("\n");
     sb.append("    objContactFrom: ").append(toIndentedString(objContactFrom)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -276,19 +336,24 @@ public class CommunicationResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCommunicationID");
-    openapiFields.add("eCommunicationEmailimportance");
+    openapiFields.add("eCommunicationImportance");
     openapiFields.add("eCommunicationType");
     openapiFields.add("sCommunicationSubject");
-    openapiFields.add("dtCommunicationSentdate");
+    openapiFields.add("eCommunicationDirection");
+    openapiFields.add("iCommunicationrecipientCount");
     openapiFields.add("objContactFrom");
+    openapiFields.add("objAudit");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCommunicationID");
+    openapiRequiredFields.add("eCommunicationImportance");
     openapiRequiredFields.add("eCommunicationType");
     openapiRequiredFields.add("sCommunicationSubject");
-    openapiRequiredFields.add("dtCommunicationSentdate");
+    openapiRequiredFields.add("eCommunicationDirection");
+    openapiRequiredFields.add("iCommunicationrecipientCount");
     openapiRequiredFields.add("objContactFrom");
+    openapiRequiredFields.add("objAudit");
   }
 
  /**
@@ -321,11 +386,10 @@ public class CommunicationResponse {
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
-      if (!jsonObj.get("dtCommunicationSentdate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtCommunicationSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCommunicationSentdate").toString()));
-      }
       // validate the required field `objContactFrom`
       CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactFrom"));
+      // validate the required field `objAudit`
+      CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

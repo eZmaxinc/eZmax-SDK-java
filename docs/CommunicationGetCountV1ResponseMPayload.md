@@ -2,13 +2,13 @@
 
 # CommunicationGetCountV1ResponseMPayload
 
-Payload for GET /1/module/communication/getCount
+Payload for GET /1/module/communication/getCommunicationCount
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**iCommunicationCount** | **Integer** | The number of total signatures in the Ezsigntemplate. |  |
+|**iCommunicationCount** | **Integer** | The count of Communication. |  |
 
 
 

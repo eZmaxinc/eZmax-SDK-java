@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Ezmaxinvoicingsummaryglobal Object
  */
 @ApiModel(description = "A Ezmaxinvoicingsummaryglobal Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryglobalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
@@ -122,6 +122,10 @@ public class EzmaxinvoicingsummaryglobalResponse {
   public static final String SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYGLOBAL_ADJUSTMENT = "bEzmaxinvoicingsummaryglobalAdjustment";
   @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYGLOBAL_ADJUSTMENT)
   private Boolean bEzmaxinvoicingsummaryglobalAdjustment;
+
+  public static final String SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X = "tEzmaxproductHelpX";
+  @SerializedName(SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X)
+  private String tEzmaxproductHelpX;
 
   public EzmaxinvoicingsummaryglobalResponse() {
   }
@@ -298,11 +302,11 @@ public class EzmaxinvoicingsummaryglobalResponse {
   }
 
    /**
-   * The The count item calculated
+   * The count item calculated
    * @return dEzmaxinvoicingsummaryglobalCountreal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "649.08", required = true, value = "The The count item calculated")
+  @ApiModelProperty(example = "649.08", required = true, value = "The count item calculated")
 
   public String getdEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
@@ -321,11 +325,11 @@ public class EzmaxinvoicingsummaryglobalResponse {
   }
 
    /**
-   * The The count item billed
+   * The count item billed
    * @return dEzmaxinvoicingsummaryglobalCountbilled
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "581.56", required = true, value = "The The count item billed")
+  @ApiModelProperty(example = "581.56", required = true, value = "The count item billed")
 
   public String getdEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
@@ -544,6 +548,29 @@ public class EzmaxinvoicingsummaryglobalResponse {
   }
 
 
+  public EzmaxinvoicingsummaryglobalResponse tEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+    return this;
+  }
+
+   /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   * @return tEzmaxproductHelpX
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "This is an exemple of help message", required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
+
+  public String gettEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+
+
+  public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -571,12 +598,13 @@ public class EzmaxinvoicingsummaryglobalResponse {
         Objects.equals(this.dEzmaxinvoicingsummaryglobalRepresentative, ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalRepresentative) &&
         Objects.equals(this.dEzmaxinvoicingsummaryglobalPartner, ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalPartner) &&
         Objects.equals(this.dEzmaxinvoicingsummaryglobalNet, ezmaxinvoicingsummaryglobalResponse.dEzmaxinvoicingsummaryglobalNet) &&
-        Objects.equals(this.bEzmaxinvoicingsummaryglobalAdjustment, ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment);
+        Objects.equals(this.bEzmaxinvoicingsummaryglobalAdjustment, ezmaxinvoicingsummaryglobalResponse.bEzmaxinvoicingsummaryglobalAdjustment) &&
+        Objects.equals(this.tEzmaxproductHelpX, ezmaxinvoicingsummaryglobalResponse.tEzmaxproductHelpX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID, fkiEzmaxproductID, sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment);
+    return Objects.hash(pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID, fkiEzmaxproductID, sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment, tEzmaxproductHelpX);
   }
 
   @Override
@@ -601,6 +629,7 @@ public class EzmaxinvoicingsummaryglobalResponse {
     sb.append("    dEzmaxinvoicingsummaryglobalPartner: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalPartner)).append("\n");
     sb.append("    dEzmaxinvoicingsummaryglobalNet: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalNet)).append("\n");
     sb.append("    bEzmaxinvoicingsummaryglobalAdjustment: ").append(toIndentedString(bEzmaxinvoicingsummaryglobalAdjustment)).append("\n");
+    sb.append("    tEzmaxproductHelpX: ").append(toIndentedString(tEzmaxproductHelpX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -641,6 +670,7 @@ public class EzmaxinvoicingsummaryglobalResponse {
     openapiFields.add("dEzmaxinvoicingsummaryglobalPartner");
     openapiFields.add("dEzmaxinvoicingsummaryglobalNet");
     openapiFields.add("bEzmaxinvoicingsummaryglobalAdjustment");
+    openapiFields.add("tEzmaxproductHelpX");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -657,6 +687,7 @@ public class EzmaxinvoicingsummaryglobalResponse {
     openapiRequiredFields.add("dEzmaxinvoicingsummaryglobalRebatetotal");
     openapiRequiredFields.add("dEzmaxinvoicingsummaryglobalTotal");
     openapiRequiredFields.add("bEzmaxinvoicingsummaryglobalAdjustment");
+    openapiRequiredFields.add("tEzmaxproductHelpX");
   }
 
  /**
@@ -724,6 +755,9 @@ public class EzmaxinvoicingsummaryglobalResponse {
       }
       if ((jsonObj.get("dEzmaxinvoicingsummaryglobalNet") != null && !jsonObj.get("dEzmaxinvoicingsummaryglobalNet").isJsonNull()) && !jsonObj.get("dEzmaxinvoicingsummaryglobalNet").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalNet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalNet").toString()));
+      }
+      if (!jsonObj.get("tEzmaxproductHelpX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzmaxproductHelpX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzmaxproductHelpX").toString()));
       }
   }
 

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Period AutocompleteElement Response
  */
 @ApiModel(description = "A Period AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class PeriodAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M = "sPeriodYYYYMM";
   @SerializedName(SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M)
@@ -73,11 +73,11 @@ public class PeriodAutocompleteElementResponse {
   }
 
    /**
-   * The period YYYYMM
+   * The YYYYMM of the Period
    * @return sPeriodYYYYMM
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2202-12", required = true, value = "The period YYYYMM")
+  @ApiModelProperty(example = "2202-12", required = true, value = "The YYYYMM of the Period")
 
   public String getsPeriodYYYYMM() {
     return sPeriodYYYYMM;

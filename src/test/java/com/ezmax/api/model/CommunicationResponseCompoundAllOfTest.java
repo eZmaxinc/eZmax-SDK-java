@@ -14,9 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommunicationattachmentResponseCompound;
-import com.ezmax.api.model.CommunicationexternalimageResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
-import com.ezmax.api.model.CommunicationimageResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -68,22 +66,6 @@ public class CommunicationResponseCompoundAllOfTest {
     @Test
     public void aObjCommunicationexternalrecipientTest() {
         // TODO: test aObjCommunicationexternalrecipient
-    }
-
-    /**
-     * Test the property 'aObjCommunicationimage'
-     */
-    @Test
-    public void aObjCommunicationimageTest() {
-        // TODO: test aObjCommunicationimage
-    }
-
-    /**
-     * Test the property 'aObjCommunicationexternalimage'
-     */
-    @Test
-    public void aObjCommunicationexternalimageTest() {
-        // TODO: test aObjCommunicationexternalimage
     }
 
 }

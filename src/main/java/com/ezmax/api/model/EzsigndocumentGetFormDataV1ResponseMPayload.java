@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
  */
 @ApiModel(description = "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzsigndocumentGetFormDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT = "objFormDataDocument";
   @SerializedName(SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT)

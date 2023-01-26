@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Generic AutocompleteElement Response with a bDisabled Flag
  */
 @ApiModel(description = "Generic AutocompleteElement Response with a bDisabled Flag")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class CustomAutocompleteElementDisabledResponse {
   public static final String SERIALIZED_NAME_B_DISABLED = "bDisabled";
   @SerializedName(SERIALIZED_NAME_B_DISABLED)

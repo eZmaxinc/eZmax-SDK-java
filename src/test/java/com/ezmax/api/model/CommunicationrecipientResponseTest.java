@@ -13,8 +13,11 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.DescriptionstaticResponseCompound;
+import com.ezmax.api.model.EmailstaticResponseCompound;
+import com.ezmax.api.model.FieldECommunicationrecipientObjecttype;
 import com.ezmax.api.model.FieldECommunicationrecipientType;
-import com.ezmax.api.model.PhoneResponseCompound;
+import com.ezmax.api.model.PhonestaticResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,6 +50,14 @@ public class CommunicationrecipientResponseTest {
     @Test
     public void pkiCommunicationrecipientIDTest() {
         // TODO: test pkiCommunicationrecipientID
+    }
+
+    /**
+     * Test the property 'eCommunicationrecipientObjecttype'
+     */
+    @Test
+    public void eCommunicationrecipientObjecttypeTest() {
+        // TODO: test eCommunicationrecipientObjecttype
     }
 
     /**
@@ -114,22 +125,6 @@ public class CommunicationrecipientResponseTest {
     }
 
     /**
-     * Test the property 'sEmailAddress'
-     */
-    @Test
-    public void sEmailAddressTest() {
-        // TODO: test sEmailAddress
-    }
-
-    /**
-     * Test the property 'eCommunicationrecipientType'
-     */
-    @Test
-    public void eCommunicationrecipientTypeTest() {
-        // TODO: test eCommunicationrecipientType
-    }
-
-    /**
      * Test the property 'fkiAgentincorporationID'
      */
     @Test
@@ -186,11 +181,35 @@ public class CommunicationrecipientResponseTest {
     }
 
     /**
-     * Test the property 'objPhoneSms'
+     * Test the property 'eCommunicationrecipientType'
      */
     @Test
-    public void objPhoneSmsTest() {
-        // TODO: test objPhoneSms
+    public void eCommunicationrecipientTypeTest() {
+        // TODO: test eCommunicationrecipientType
+    }
+
+    /**
+     * Test the property 'objDescriptionstatic'
+     */
+    @Test
+    public void objDescriptionstaticTest() {
+        // TODO: test objDescriptionstatic
+    }
+
+    /**
+     * Test the property 'objEmailstatic'
+     */
+    @Test
+    public void objEmailstaticTest() {
+        // TODO: test objEmailstatic
+    }
+
+    /**
+     * Test the property 'objPhonestatic'
+     */
+    @Test
+    public void objPhonestaticTest() {
+        // TODO: test objPhonestatic
     }
 
 }

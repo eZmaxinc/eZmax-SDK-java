@@ -9,6 +9,7 @@ A Communicationrecipient Object
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiCommunicationrecipientID** | **Integer** | The unique ID of the Communicationrecipient. |  |
+|**eCommunicationrecipientObjecttype** | **FieldECommunicationrecipientObjecttype** |  |  [optional] |
 |**fkiAgentID** | **Integer** | The unique ID of the Agent. |  [optional] |
 |**fkiBrokerID** | **Integer** | The unique ID of the Broker. |  [optional] |
 |**fkiContactID** | **Integer** | The unique ID of the Contact |  [optional] |
@@ -17,8 +18,6 @@ A Communicationrecipient Object
 |**fkiEzsignsignerID** | **Integer** | The unique ID of the Ezsignsigner |  [optional] |
 |**fkiFranchiseofficeID** | **Integer** | The unique ID of the Franchisereoffice |  [optional] |
 |**fkiUserID** | **Integer** | The unique ID of the User |  [optional] |
-|**sEmailAddress** | **String** | The email address. |  [optional] |
-|**eCommunicationrecipientType** | **FieldECommunicationrecipientType** |  |  [optional] |
 |**fkiAgentincorporationID** | **Integer** | The unique ID of the Agentincorporation. |  [optional] |
 |**fkiAssistantID** | **Integer** | The unique ID of the Assistant. |  [optional] |
 |**fkiExternalbrokerID** | **Integer** | The unique ID of the Externalbroker. |  [optional] |
@@ -26,7 +25,10 @@ A Communicationrecipient Object
 |**fkiNotaryID** | **Integer** | The unique ID of the Notary. |  [optional] |
 |**fkiRewardmemberID** | **Integer** | The unique ID of the Rewardmember. |  [optional] |
 |**fkiSupplierID** | **Integer** | The unique ID of the Supplier. |  [optional] |
-|**objPhoneSms** | [**PhoneResponseCompound**](PhoneResponseCompound.md) |  |  [optional] |
+|**eCommunicationrecipientType** | **FieldECommunicationrecipientType** |  |  |
+|**objDescriptionstatic** | [**DescriptionstaticResponseCompound**](DescriptionstaticResponseCompound.md) |  |  |
+|**objEmailstatic** | [**EmailstaticResponseCompound**](EmailstaticResponseCompound.md) |  |  [optional] |
+|**objPhonestatic** | [**PhonestaticResponseCompound**](PhonestaticResponseCompound.md) |  |  [optional] |
 
 
 

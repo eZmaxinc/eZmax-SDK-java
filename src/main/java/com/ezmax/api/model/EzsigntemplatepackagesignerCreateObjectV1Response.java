@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Response for POST /1/object/ezsigntemplatepackagesigner
  */
 @ApiModel(description = "Response for POST /1/object/ezsigntemplatepackagesigner")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzsigntemplatepackagesignerCreateObjectV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)

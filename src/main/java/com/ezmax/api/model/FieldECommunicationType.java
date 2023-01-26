@@ -25,7 +25,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The Type for the Communication
+ * The type of the Communication
  */
 @JsonAdapter(FieldECommunicationType.Adapter.class)
 public enum FieldECommunicationType {

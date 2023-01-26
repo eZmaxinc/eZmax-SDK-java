@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * EzmaxinvoicingsummaryinternalResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T19:05:29.285156139Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryinternalResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNALDETAIL = "a_objEzmaxinvoicingsummaryinternaldetail";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNALDETAIL)

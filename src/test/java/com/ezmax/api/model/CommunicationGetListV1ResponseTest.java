@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonResponseObjDebug;
-import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.CommonResponseObjDebugPayloadGetList;
 import com.ezmax.api.model.CommunicationGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
