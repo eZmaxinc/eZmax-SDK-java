@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Ezsignbulksendsignermapping Object
  */
 @ApiModel(description = "A Ezsignbulksendsignermapping Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class EzsignbulksendsignermappingRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)

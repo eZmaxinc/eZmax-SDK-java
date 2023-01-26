@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for POST /2/object/secretquestion/getAutocomplete
  */
 @ApiModel(description = "Payload for POST /2/object/secretquestion/getAutocomplete")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class SecretquestionGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SECRETQUESTION = "a_objSecretquestion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SECRETQUESTION)

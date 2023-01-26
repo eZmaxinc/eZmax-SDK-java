@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  */
 @ApiModel(description = "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/module/communication/getCommunicationCount
  */
 @ApiModel(description = "Payload for GET /1/module/communication/getCommunicationCount")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class CommunicationGetCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_COMMUNICATION_COUNT = "iCommunicationCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_COUNT)

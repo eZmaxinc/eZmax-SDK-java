@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend
  */
 @ApiModel(description = "Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class EzsigndocumentUnsendV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

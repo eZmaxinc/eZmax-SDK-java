@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
  * A Phonestatic Object
  */
 @ApiModel(description = "A Phonestatic Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class PhonestaticResponse {
   public static final String SERIALIZED_NAME_PKI_PHONESTATIC_I_D = "pkiPhonestaticID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONESTATIC_I_D)

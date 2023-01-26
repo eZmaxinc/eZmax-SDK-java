@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for POST /2/object/department/getAutocomplete
  */
 @ApiModel(description = "Payload for POST /2/object/department/getAutocomplete")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class DepartmentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_DEPARTMENT = "a_objDepartment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DEPARTMENT)

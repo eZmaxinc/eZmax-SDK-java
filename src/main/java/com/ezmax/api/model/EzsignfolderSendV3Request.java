@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
 @ApiModel(description = "Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)

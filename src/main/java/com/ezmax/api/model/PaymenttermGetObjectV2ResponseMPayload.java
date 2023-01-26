@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /2/object/paymentterm/{pkiPaymenttermID}
  */
 @ApiModel(description = "Payload for GET /2/object/paymentterm/{pkiPaymenttermID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class PaymenttermGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM = "objPaymentterm";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM)

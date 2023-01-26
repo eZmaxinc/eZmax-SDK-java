@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  */
 @ApiModel(description = "An Ezsignfolder Object in the context of an Ezsignbulksendtransmission")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class CustomEzsignfoldertransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)

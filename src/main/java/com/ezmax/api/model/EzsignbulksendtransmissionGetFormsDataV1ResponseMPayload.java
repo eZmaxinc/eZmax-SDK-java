@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
  * Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
  */
 @ApiModel(description = "Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T16:53:08.977937635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
 public class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER = "a_objFormsDataFolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER)
