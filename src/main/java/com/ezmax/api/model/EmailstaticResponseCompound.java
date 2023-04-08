@@ -46,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Emailstatic Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T21:18:02.097019897Z[Etc/UTC]")
 public class EmailstaticResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EMAILSTATIC_I_D = "pkiEmailstaticID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAILSTATIC_I_D)

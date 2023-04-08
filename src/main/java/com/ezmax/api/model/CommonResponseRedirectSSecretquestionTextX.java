@@ -46,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * 352 Redirect Message containing secret question
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T21:18:02.097019897Z[Etc/UTC]")
 public class CommonResponseRedirectSSecretquestionTextX {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)

@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T21:18:02.097019897Z[Etc/UTC]")
 public class EzmaxinvoicingagentResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)

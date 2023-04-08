@@ -46,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T21:18:02.097019897Z[Etc/UTC]")
 public class MultilingualVariableexpenseDescription {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1 = "sVariableexpenseDescription1";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1)
