@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/module/ezsign/suggestSigners
  */
-@ApiModel(description = "Payload for GET /1/module/ezsign/suggestSigners")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignSuggestSignersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -77,6 +74,9 @@ public class EzsignSuggestSignersV1ResponseMPayload {
   }
 
   public EzsignSuggestSignersV1ResponseMPayload addAObjEzsignfoldersignerassociationItem(EzsignfoldersignerassociationResponseCompound aObjEzsignfoldersignerassociationItem) {
+    if (this.aObjEzsignfoldersignerassociation == null) {
+      this.aObjEzsignfoldersignerassociation = new ArrayList<>();
+    }
     this.aObjEzsignfoldersignerassociation.add(aObjEzsignfoldersignerassociationItem);
     return this;
   }
@@ -86,7 +86,6 @@ public class EzsignSuggestSignersV1ResponseMPayload {
    * @return aObjEzsignfoldersignerassociation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignfoldersignerassociationResponseCompound> getaObjEzsignfoldersignerassociation() {
     return aObjEzsignfoldersignerassociation;
@@ -105,6 +104,9 @@ public class EzsignSuggestSignersV1ResponseMPayload {
   }
 
   public EzsignSuggestSignersV1ResponseMPayload addAObjUserTeamItem(CustomUserResponse aObjUserTeamItem) {
+    if (this.aObjUserTeam == null) {
+      this.aObjUserTeam = new ArrayList<>();
+    }
     this.aObjUserTeam.add(aObjUserTeamItem);
     return this;
   }
@@ -114,7 +116,6 @@ public class EzsignSuggestSignersV1ResponseMPayload {
    * @return aObjUserTeam
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomUserResponse> getaObjUserTeam() {
     return aObjUserTeam;
@@ -133,6 +134,9 @@ public class EzsignSuggestSignersV1ResponseMPayload {
   }
 
   public EzsignSuggestSignersV1ResponseMPayload addAObjUserItem(CustomUserResponse aObjUserItem) {
+    if (this.aObjUser == null) {
+      this.aObjUser = new ArrayList<>();
+    }
     this.aObjUser.add(aObjUserItem);
     return this;
   }
@@ -142,7 +146,6 @@ public class EzsignSuggestSignersV1ResponseMPayload {
    * @return aObjUser
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomUserResponse> getaObjUser() {
     return aObjUser;

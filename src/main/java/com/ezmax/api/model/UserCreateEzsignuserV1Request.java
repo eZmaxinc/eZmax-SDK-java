@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/module/user/createEzsignuser
  */
-@ApiModel(description = "Request for POST /1/module/user/createEzsignuser")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -99,7 +96,6 @@ public class UserCreateEzsignuserV1Request {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -122,7 +118,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sUserFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the user")
 
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -145,7 +140,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sUserLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the user")
 
   public String getsUserLastname() {
     return sUserLastname;
@@ -168,7 +162,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sEmailAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email address.")
 
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -191,7 +184,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sPhoneRegion
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "514", required = true, value = "The region of the phone number. (For a North America Number only)  The region is the \"514\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneRegion() {
     return sPhoneRegion;
@@ -214,7 +206,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sPhoneExchange
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "990", required = true, value = "The exchange of the phone number. (For a North America Number only)  The exchange is the \"990\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneExchange() {
     return sPhoneExchange;
@@ -237,7 +228,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sPhoneNumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1516", required = true, value = "The number of the phone number. (For a North America Number only)  The number is the \"1516\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneNumber() {
     return sPhoneNumber;
@@ -260,7 +250,6 @@ public class UserCreateEzsignuserV1Request {
    * @return sPhoneExtension
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "123", value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
 
   public String getsPhoneExtension() {
     return sPhoneExtension;

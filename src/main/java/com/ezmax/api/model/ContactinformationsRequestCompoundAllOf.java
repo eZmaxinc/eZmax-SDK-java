@@ -24,8 +24,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * ContactinformationsRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ContactinformationsRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
@@ -82,6 +80,9 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   public ContactinformationsRequestCompoundAllOf addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
+    if (this.aObjAddress == null) {
+      this.aObjAddress = new ArrayList<>();
+    }
     this.aObjAddress.add(aObjAddressItem);
     return this;
   }
@@ -91,7 +92,6 @@ public class ContactinformationsRequestCompoundAllOf {
    * @return aObjAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<AddressRequestCompound> getaObjAddress() {
     return aObjAddress;
@@ -110,6 +110,9 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   public ContactinformationsRequestCompoundAllOf addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
+    if (this.aObjPhone == null) {
+      this.aObjPhone = new ArrayList<>();
+    }
     this.aObjPhone.add(aObjPhoneItem);
     return this;
   }
@@ -119,7 +122,6 @@ public class ContactinformationsRequestCompoundAllOf {
    * @return aObjPhone
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<PhoneRequestCompound> getaObjPhone() {
     return aObjPhone;
@@ -138,6 +140,9 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   public ContactinformationsRequestCompoundAllOf addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
+    if (this.aObjEmail == null) {
+      this.aObjEmail = new ArrayList<>();
+    }
     this.aObjEmail.add(aObjEmailItem);
     return this;
   }
@@ -147,7 +152,6 @@ public class ContactinformationsRequestCompoundAllOf {
    * @return aObjEmail
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EmailRequestCompound> getaObjEmail() {
     return aObjEmail;
@@ -166,6 +170,9 @@ public class ContactinformationsRequestCompoundAllOf {
   }
 
   public ContactinformationsRequestCompoundAllOf addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
+    if (this.aObjWebsite == null) {
+      this.aObjWebsite = new ArrayList<>();
+    }
     this.aObjWebsite.add(aObjWebsiteItem);
     return this;
   }
@@ -175,7 +182,6 @@ public class ContactinformationsRequestCompoundAllOf {
    * @return aObjWebsite
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<WebsiteRequestCompound> getaObjWebsite() {
     return aObjWebsite;

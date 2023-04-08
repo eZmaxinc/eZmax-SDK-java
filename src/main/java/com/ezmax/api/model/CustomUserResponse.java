@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@ApiModel(description = "A User Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomUserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -82,7 +79,6 @@ public class CustomUserResponse {
    * @return pkiUserID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
 
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -105,7 +101,6 @@ public class CustomUserResponse {
    * @return sUserLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the user")
 
   public String getsUserLastname() {
     return sUserLastname;
@@ -128,7 +123,6 @@ public class CustomUserResponse {
    * @return sUserFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the user")
 
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -151,7 +145,6 @@ public class CustomUserResponse {
    * @return sEmailAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email address.")
 
   public String getsEmailAddress() {
     return sEmailAddress;

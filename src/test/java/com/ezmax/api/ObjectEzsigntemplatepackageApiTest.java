@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteDisabledV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Response;
@@ -25,7 +24,6 @@ import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetListV1Response;
-import com.ezmax.api.model.EzsigntemplatepackageGetObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetObjectV2Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -111,23 +109,6 @@ public class ObjectEzsigntemplatepackageApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplatepackageGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteDisabledV1Response response = api.ezsigntemplatepackageGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve Ezsigntemplatepackages and IDs
-     *
-     * Get the list of Ezsigntemplatepackage to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void ezsigntemplatepackageGetAutocompleteV2Test() throws ApiException {
         String sSelector = null;
         String eFilterActive = null;
@@ -152,20 +133,6 @@ public class ObjectEzsigntemplatepackageApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         EzsigntemplatepackageGetListV1Response response = api.ezsigntemplatepackageGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatepackage
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplatepackageGetObjectV1Test() throws ApiException {
-        Integer pkiEzsigntemplatepackageID = null;
-        EzsigntemplatepackageGetObjectV1Response response = api.ezsigntemplatepackageGetObjectV1(pkiEzsigntemplatepackageID);
         // TODO: test validations
     }
 

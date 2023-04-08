@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
  */
-@ApiModel(description = "Request for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -110,7 +107,7 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
 
   public static final String SERIALIZED_NAME_A_S_WORD = "a_sWord";
   @SerializedName(SERIALIZED_NAME_A_S_WORD)
-  private List<String> aSWord = null;
+  private List<String> aSWord;
 
   public EzsigntemplatedocumentGetWordsPositionsV1Request() {
   }
@@ -126,7 +123,6 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
    * @return eGet
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.")
 
   public EGetEnum geteGet() {
     return eGet;
@@ -149,7 +145,6 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
    * @return bWordCaseSensitive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "IF *true*, words will be searched case-sensitive and results will be returned case-sensitive. IF *false*, words will be searched case-insensitive and results will be returned case-insensitive.")
 
   public Boolean getbWordCaseSensitive() {
     return bWordCaseSensitive;
@@ -180,7 +175,6 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
    * @return aSWord
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of words to find in the document")
 
   public List<String> getaSWord() {
     return aSWord;

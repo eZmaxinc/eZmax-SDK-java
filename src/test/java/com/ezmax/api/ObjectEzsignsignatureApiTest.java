@@ -22,7 +22,7 @@ import com.ezmax.api.model.EzsignsignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureEditObjectV1Response;
-import com.ezmax.api.model.EzsignsignatureGetObjectV1Response;
+import com.ezmax.api.model.EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureSignV1Request;
 import com.ezmax.api.model.EzsignsignatureSignV1Response;
@@ -100,16 +100,15 @@ public class ObjectEzsignsignatureApiTest {
     }
 
     /**
-     * Retrieve an existing Ezsignsignature
+     * Retrieve all automatic Ezsignsignatures
      *
-     * 
+     * Return all the Ezsignsignatures that can be signed by the current user
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsignsignatureGetObjectV1Test() throws ApiException {
-        Integer pkiEzsignsignatureID = null;
-        EzsignsignatureGetObjectV1Response response = api.ezsignsignatureGetObjectV1(pkiEzsignsignatureID);
+    public void ezsignsignatureGetEzsignsignaturesAutomaticV1Test() throws ApiException {
+        EzsignsignatureGetEzsignsignaturesAutomaticV1Response response = api.ezsignsignatureGetEzsignsignaturesAutomaticV1();
         // TODO: test validations
     }
 

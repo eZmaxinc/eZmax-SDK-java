@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Emailstatic Object
  */
-@ApiModel(description = "An Emailstatic Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EmailstaticResponse {
   public static final String SERIALIZED_NAME_PKI_EMAILSTATIC_I_D = "pkiEmailstaticID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAILSTATIC_I_D)
@@ -74,7 +71,6 @@ public class EmailstaticResponse {
    * @return pkiEmailstaticID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Emailstatic")
 
   public Integer getPkiEmailstaticID() {
     return pkiEmailstaticID;
@@ -97,7 +93,6 @@ public class EmailstaticResponse {
    * @return sEmailstaticAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email address.")
 
   public String getsEmailstaticAddress() {
     return sEmailstaticAddress;

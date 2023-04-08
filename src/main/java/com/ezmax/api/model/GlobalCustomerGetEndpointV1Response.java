@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/customer/{pksCustomerCode}/endpoint
  */
-@ApiModel(description = "Response for GET /1/customer/{pksCustomerCode}/endpoint")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class GlobalCustomerGetEndpointV1Response {
   public static final String SERIALIZED_NAME_S_ENDPOINT_U_R_L = "sEndpointURL";
   @SerializedName(SERIALIZED_NAME_S_ENDPOINT_U_R_L)
@@ -69,7 +66,6 @@ public class GlobalCustomerGetEndpointV1Response {
    * @return sEndpointURL
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The endpoint's URL")
 
   public String getsEndpointURL() {
     return sEndpointURL;

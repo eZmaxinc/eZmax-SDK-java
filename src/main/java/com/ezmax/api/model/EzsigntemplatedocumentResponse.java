@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@ApiModel(description = "A Ezsigntemplatedocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -71,6 +68,10 @@ public class EzsigntemplatedocumentResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_SIGNATURETOTAL)
   private Integer iEzsigntemplatedocumentSignaturetotal;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigntemplatedocumentHassignedsignatures";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES)
+  private Boolean bEzsigntemplatedocumentHassignedsignatures;
+
   public EzsigntemplatedocumentResponse() {
   }
 
@@ -86,7 +87,6 @@ public class EzsigntemplatedocumentResponse {
    * @return pkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "133", required = true, value = "The unique ID of the Ezsigntemplatedocument")
 
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
@@ -110,7 +110,6 @@ public class EzsigntemplatedocumentResponse {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "36", required = true, value = "The unique ID of the Ezsigntemplate")
 
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -133,7 +132,6 @@ public class EzsigntemplatedocumentResponse {
    * @return sEzsigntemplatedocumentName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Standard Contract", required = true, value = "The name of the Ezsigntemplatedocument.")
 
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
@@ -157,7 +155,6 @@ public class EzsigntemplatedocumentResponse {
    * @return iEzsigntemplatedocumentPagetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The number of pages in the Ezsigntemplatedocument.")
 
   public Integer getiEzsigntemplatedocumentPagetotal() {
     return iEzsigntemplatedocumentPagetotal;
@@ -180,7 +177,6 @@ public class EzsigntemplatedocumentResponse {
    * @return iEzsigntemplatedocumentSignaturetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The number of total signatures in the Ezsigntemplate.")
 
   public Integer getiEzsigntemplatedocumentSignaturetotal() {
     return iEzsigntemplatedocumentSignaturetotal;
@@ -189,6 +185,28 @@ public class EzsigntemplatedocumentResponse {
 
   public void setiEzsigntemplatedocumentSignaturetotal(Integer iEzsigntemplatedocumentSignaturetotal) {
     this.iEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
+  }
+
+
+  public EzsigntemplatedocumentResponse bEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
+    
+    this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
+    return this;
+  }
+
+   /**
+   * If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
+   * @return bEzsigntemplatedocumentHassignedsignatures
+  **/
+  @javax.annotation.Nonnull
+
+  public Boolean getbEzsigntemplatedocumentHassignedsignatures() {
+    return bEzsigntemplatedocumentHassignedsignatures;
+  }
+
+
+  public void setbEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
+    this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
   }
 
 
@@ -206,12 +224,13 @@ public class EzsigntemplatedocumentResponse {
         Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatedocumentResponse.fkiEzsigntemplateID) &&
         Objects.equals(this.sEzsigntemplatedocumentName, ezsigntemplatedocumentResponse.sEzsigntemplatedocumentName) &&
         Objects.equals(this.iEzsigntemplatedocumentPagetotal, ezsigntemplatedocumentResponse.iEzsigntemplatedocumentPagetotal) &&
-        Objects.equals(this.iEzsigntemplatedocumentSignaturetotal, ezsigntemplatedocumentResponse.iEzsigntemplatedocumentSignaturetotal);
+        Objects.equals(this.iEzsigntemplatedocumentSignaturetotal, ezsigntemplatedocumentResponse.iEzsigntemplatedocumentSignaturetotal) &&
+        Objects.equals(this.bEzsigntemplatedocumentHassignedsignatures, ezsigntemplatedocumentResponse.bEzsigntemplatedocumentHassignedsignatures);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatedocumentID, fkiEzsigntemplateID, sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal);
+    return Objects.hash(pkiEzsigntemplatedocumentID, fkiEzsigntemplateID, sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal, bEzsigntemplatedocumentHassignedsignatures);
   }
 
   @Override
@@ -223,6 +242,7 @@ public class EzsigntemplatedocumentResponse {
     sb.append("    sEzsigntemplatedocumentName: ").append(toIndentedString(sEzsigntemplatedocumentName)).append("\n");
     sb.append("    iEzsigntemplatedocumentPagetotal: ").append(toIndentedString(iEzsigntemplatedocumentPagetotal)).append("\n");
     sb.append("    iEzsigntemplatedocumentSignaturetotal: ").append(toIndentedString(iEzsigntemplatedocumentSignaturetotal)).append("\n");
+    sb.append("    bEzsigntemplatedocumentHassignedsignatures: ").append(toIndentedString(bEzsigntemplatedocumentHassignedsignatures)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -250,6 +270,7 @@ public class EzsigntemplatedocumentResponse {
     openapiFields.add("sEzsigntemplatedocumentName");
     openapiFields.add("iEzsigntemplatedocumentPagetotal");
     openapiFields.add("iEzsigntemplatedocumentSignaturetotal");
+    openapiFields.add("bEzsigntemplatedocumentHassignedsignatures");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -258,6 +279,7 @@ public class EzsigntemplatedocumentResponse {
     openapiRequiredFields.add("sEzsigntemplatedocumentName");
     openapiRequiredFields.add("iEzsigntemplatedocumentPagetotal");
     openapiRequiredFields.add("iEzsigntemplatedocumentSignaturetotal");
+    openapiRequiredFields.add("bEzsigntemplatedocumentHassignedsignatures");
   }
 
  /**

@@ -24,8 +24,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@ApiModel(description = "An Ezsignsignature Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -134,7 +131,6 @@ public class EzsignsignatureRequest {
    * @return pkiEzsignsignatureID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "49", value = "The unique ID of the Ezsignsignature")
 
   public Integer getPkiEzsignsignatureID() {
     return pkiEzsignsignatureID;
@@ -158,7 +154,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "20", required = true, value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -182,7 +177,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigndocument")
 
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -206,7 +200,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
 
   public Integer getiEzsignsignatureX() {
     return iEzsignsignatureX;
@@ -230,7 +223,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
@@ -253,7 +245,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign")
 
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;
@@ -276,7 +267,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignsignatureType geteEzsignsignatureType() {
     return eEzsignsignatureType;
@@ -300,7 +290,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -323,7 +312,6 @@ public class EzsignsignatureRequest {
    * @return tEzsignsignatureTooltip
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Please sign here if you agree to the terms", value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
 
   public String gettEzsignsignatureTooltip() {
     return tEzsignsignatureTooltip;
@@ -346,7 +334,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureTooltipposition
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
     return eEzsignsignatureTooltipposition;
@@ -369,7 +356,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureFont
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
     return eEzsignsignatureFont;
@@ -393,7 +379,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsignfoldersignerassociationIDValidation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "20", value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationIDValidation() {
     return fkiEzsignfoldersignerassociationIDValidation;
@@ -416,7 +401,6 @@ public class EzsignsignatureRequest {
    * @return bEzsignsignatureRequired
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.")
 
   public Boolean getbEzsignsignatureRequired() {
     return bEzsignsignatureRequired;
@@ -439,7 +423,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureAttachmentnamesource
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureAttachmentnamesource geteEzsignsignatureAttachmentnamesource() {
     return eEzsignsignatureAttachmentnamesource;
@@ -462,7 +445,6 @@ public class EzsignsignatureRequest {
    * @return sEzsignsignatureAttachmentdescription
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Attachment", value = "The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments")
 
   public String getsEzsignsignatureAttachmentdescription() {
     return sEzsignsignatureAttachmentdescription;
@@ -485,7 +467,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureValidationstep
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments")
 
   public Integer getiEzsignsignatureValidationstep() {
     return iEzsignsignatureValidationstep;

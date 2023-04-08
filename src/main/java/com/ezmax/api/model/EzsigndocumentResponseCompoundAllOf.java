@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigndocumentResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigndocumentResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
@@ -87,7 +85,6 @@ public class EzsigndocumentResponseCompoundAllOf {
    * @return iEzsigndocumentStepformtotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the form filling phase")
 
   public Integer getiEzsigndocumentStepformtotal() {
     return iEzsigndocumentStepformtotal;
@@ -110,7 +107,6 @@ public class EzsigndocumentResponseCompoundAllOf {
    * @return iEzsigndocumentStepformcurrent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The current step in the form filling phase")
 
   public Integer getiEzsigndocumentStepformcurrent() {
     return iEzsigndocumentStepformcurrent;
@@ -133,7 +129,6 @@ public class EzsigndocumentResponseCompoundAllOf {
    * @return iEzsigndocumentStepsignaturetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The total number of steps in the signature filling phase")
 
   public Integer getiEzsigndocumentStepsignaturetotal() {
     return iEzsigndocumentStepsignaturetotal;
@@ -156,7 +151,6 @@ public class EzsigndocumentResponseCompoundAllOf {
    * @return iEzsigndocumentStepsignatureCurrent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0", required = true, value = "The current step in the signature phase")
 
   public Integer getiEzsigndocumentStepsignatureCurrent() {
     return iEzsigndocumentStepsignatureCurrent;
@@ -175,6 +169,9 @@ public class EzsigndocumentResponseCompoundAllOf {
   }
 
   public EzsigndocumentResponseCompoundAllOf addAObjEzsignfoldersignerassociationstatusItem(CustomEzsignfoldersignerassociationstatusResponse aObjEzsignfoldersignerassociationstatusItem) {
+    if (this.aObjEzsignfoldersignerassociationstatus == null) {
+      this.aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
+    }
     this.aObjEzsignfoldersignerassociationstatus.add(aObjEzsignfoldersignerassociationstatusItem);
     return this;
   }
@@ -184,7 +181,6 @@ public class EzsigndocumentResponseCompoundAllOf {
    * @return aObjEzsignfoldersignerassociationstatus
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
     return aObjEzsignfoldersignerassociationstatus;

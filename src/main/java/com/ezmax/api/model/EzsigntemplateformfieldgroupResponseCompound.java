@@ -26,8 +26,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,8 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroup Object and children
  */
-@ApiModel(description = "A Ezsigntemplateformfieldgroup Object and children")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)
@@ -125,7 +122,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT = "a_objDropdownElement";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT)
-  private List<CustomDropdownElementResponseCompound> aObjDropdownElement = null;
+  private List<CustomDropdownElementResponseCompound> aObjDropdownElement;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELD = "a_objEzsigntemplateformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELD)
@@ -146,7 +143,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return pkiEzsigntemplateformfieldgroupID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "64", required = true, value = "The unique ID of the Ezsigntemplateformfieldgroup")
 
   public Integer getPkiEzsigntemplateformfieldgroupID() {
     return pkiEzsigntemplateformfieldgroupID;
@@ -170,7 +166,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return fkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "133", required = true, value = "The unique ID of the Ezsigntemplatedocument")
 
   public Integer getFkiEzsigntemplatedocumentID() {
     return fkiEzsigntemplatedocumentID;
@@ -193,7 +188,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return eEzsigntemplateformfieldgroupType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsigntemplateformfieldgroupType geteEzsigntemplateformfieldgroupType() {
     return eEzsigntemplateformfieldgroupType;
@@ -216,7 +210,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return eEzsigntemplateformfieldgroupSignerrequirement
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsigntemplateformfieldgroupSignerrequirement geteEzsigntemplateformfieldgroupSignerrequirement() {
     return eEzsigntemplateformfieldgroupSignerrequirement;
@@ -239,7 +232,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return sEzsigntemplateformfieldgroupLabel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Allergies", required = true, value = "The Label for the Ezsigntemplateformfieldgroup")
 
   public String getsEzsigntemplateformfieldgroupLabel() {
     return sEzsigntemplateformfieldgroupLabel;
@@ -263,7 +255,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return iEzsigntemplateformfieldgroupStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsigntemplatesigner will be invited to fill the form fields")
 
   public Integer getiEzsigntemplateformfieldgroupStep() {
     return iEzsigntemplateformfieldgroupStep;
@@ -286,7 +277,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return sEzsigntemplateformfieldgroupDefaultvalue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Foo", value = "The default value for the Ezsigntemplateformfieldgroup")
 
   public String getsEzsigntemplateformfieldgroupDefaultvalue() {
     return sEzsigntemplateformfieldgroupDefaultvalue;
@@ -310,7 +300,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return iEzsigntemplateformfieldgroupFilledmin
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The minimum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup")
 
   public Integer getiEzsigntemplateformfieldgroupFilledmin() {
     return iEzsigntemplateformfieldgroupFilledmin;
@@ -334,7 +323,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return iEzsigntemplateformfieldgroupFilledmax
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The maximum number of Ezsigntemplateformfield that must be filled in the Ezsigntemplateformfieldgroup")
 
   public Integer getiEzsigntemplateformfieldgroupFilledmax() {
     return iEzsigntemplateformfieldgroupFilledmax;
@@ -357,7 +345,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return bEzsigntemplateformfieldgroupReadonly
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplateformfieldgroup is read only or not.")
 
   public Boolean getbEzsigntemplateformfieldgroupReadonly() {
     return bEzsigntemplateformfieldgroupReadonly;
@@ -381,7 +368,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return iEzsigntemplateformfieldgroupMaxlength
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "75", value = "The maximum length for the value in the Ezsigntemplateformfieldgroup  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**")
 
   public Integer getiEzsigntemplateformfieldgroupMaxlength() {
     return iEzsigntemplateformfieldgroupMaxlength;
@@ -404,7 +390,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return bEzsigntemplateformfieldgroupEncrypted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsigntemplateformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**")
 
   public Boolean getbEzsigntemplateformfieldgroupEncrypted() {
     return bEzsigntemplateformfieldgroupEncrypted;
@@ -427,7 +412,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return sEzsigntemplateformfieldgroupRegexp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/", value = "A regular expression to indicate what values are acceptable for the Ezsigntemplateformfieldgroup.  This can only be set if eEzsigntemplateformfieldgroupType is **Text** or **Textarea**")
 
   public String getsEzsigntemplateformfieldgroupRegexp() {
     return sEzsigntemplateformfieldgroupRegexp;
@@ -450,7 +434,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return tEzsigntemplateformfieldgroupTooltip
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Please enter a valid email address", value = "A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup")
 
   public String gettEzsigntemplateformfieldgroupTooltip() {
     return tEzsigntemplateformfieldgroupTooltip;
@@ -473,7 +456,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return eEzsigntemplateformfieldgroupTooltipposition
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsigntemplateformfieldgroupTooltipposition geteEzsigntemplateformfieldgroupTooltipposition() {
     return eEzsigntemplateformfieldgroupTooltipposition;
@@ -492,6 +474,9 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   }
 
   public EzsigntemplateformfieldgroupResponseCompound addAObjEzsigntemplateformfieldgroupsignerItem(EzsigntemplateformfieldgroupsignerResponseCompound aObjEzsigntemplateformfieldgroupsignerItem) {
+    if (this.aObjEzsigntemplateformfieldgroupsigner == null) {
+      this.aObjEzsigntemplateformfieldgroupsigner = new ArrayList<>();
+    }
     this.aObjEzsigntemplateformfieldgroupsigner.add(aObjEzsigntemplateformfieldgroupsignerItem);
     return this;
   }
@@ -501,7 +486,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return aObjEzsigntemplateformfieldgroupsigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplateformfieldgroupsignerResponseCompound> getaObjEzsigntemplateformfieldgroupsigner() {
     return aObjEzsigntemplateformfieldgroupsigner;
@@ -532,7 +516,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return aObjDropdownElement
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<CustomDropdownElementResponseCompound> getaObjDropdownElement() {
     return aObjDropdownElement;
@@ -551,6 +534,9 @@ public class EzsigntemplateformfieldgroupResponseCompound {
   }
 
   public EzsigntemplateformfieldgroupResponseCompound addAObjEzsigntemplateformfieldItem(EzsigntemplateformfieldResponseCompound aObjEzsigntemplateformfieldItem) {
+    if (this.aObjEzsigntemplateformfield == null) {
+      this.aObjEzsigntemplateformfield = new ArrayList<>();
+    }
     this.aObjEzsigntemplateformfield.add(aObjEzsigntemplateformfieldItem);
     return this;
   }
@@ -560,7 +546,6 @@ public class EzsigntemplateformfieldgroupResponseCompound {
    * @return aObjEzsigntemplateformfield
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplateformfieldResponseCompound> getaObjEzsigntemplateformfield() {
     return aObjEzsigntemplateformfield;

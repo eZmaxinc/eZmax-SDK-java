@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignbulksendResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING = "a_objEzsignbulksenddocumentmapping";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING)
@@ -72,6 +70,9 @@ public class EzsignbulksendResponseCompoundAllOf {
   }
 
   public EzsignbulksendResponseCompoundAllOf addAObjEzsignbulksenddocumentmappingItem(EzsignbulksenddocumentmappingResponseCompound aObjEzsignbulksenddocumentmappingItem) {
+    if (this.aObjEzsignbulksenddocumentmapping == null) {
+      this.aObjEzsignbulksenddocumentmapping = new ArrayList<>();
+    }
     this.aObjEzsignbulksenddocumentmapping.add(aObjEzsignbulksenddocumentmappingItem);
     return this;
   }
@@ -81,7 +82,6 @@ public class EzsignbulksendResponseCompoundAllOf {
    * @return aObjEzsignbulksenddocumentmapping
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignbulksenddocumentmappingResponseCompound> getaObjEzsignbulksenddocumentmapping() {
     return aObjEzsignbulksenddocumentmapping;
@@ -100,6 +100,9 @@ public class EzsignbulksendResponseCompoundAllOf {
   }
 
   public EzsignbulksendResponseCompoundAllOf addAObjEzsignbulksendsignermappingItem(EzsignbulksendsignermappingResponse aObjEzsignbulksendsignermappingItem) {
+    if (this.aObjEzsignbulksendsignermapping == null) {
+      this.aObjEzsignbulksendsignermapping = new ArrayList<>();
+    }
     this.aObjEzsignbulksendsignermapping.add(aObjEzsignbulksendsignermappingItem);
     return this;
   }
@@ -109,7 +112,6 @@ public class EzsignbulksendResponseCompoundAllOf {
    * @return aObjEzsignbulksendsignermapping
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignbulksendsignermappingResponse> getaObjEzsignbulksendsignermapping() {
     return aObjEzsignbulksendsignermapping;

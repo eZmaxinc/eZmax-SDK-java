@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * CustomEzmaxinvoicingEzsignfolderResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -89,7 +87,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -112,7 +109,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -135,7 +131,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return bEzsigntsarequirementBillable
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the TSA requirement is billable or not")
 
   public Boolean getbEzsigntsarequirementBillable() {
     return bEzsigntsarequirementBillable;
@@ -158,7 +153,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return bEzsignfolderMfaused
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the MFA was used or not for the Ezsignfolder")
 
   public Boolean getbEzsignfolderMfaused() {
     return bEzsignfolderMfaused;
@@ -181,7 +175,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return bEzsignfolderPaymentused
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether there was a signature is of type payment")
 
   public Boolean getbEzsignfolderPaymentused() {
     return bEzsignfolderPaymentused;
@@ -204,7 +197,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
    * @return bEzsignfolderAllowed
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether you have access to the Ezsignfolder or not")
 
   public Boolean getbEzsignfolderAllowed() {
     return bEzsignfolderAllowed;

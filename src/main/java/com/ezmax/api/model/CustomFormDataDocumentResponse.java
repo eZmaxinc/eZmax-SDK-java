@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Document Object 
  */
-@ApiModel(description = "A form Data Document Object ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -89,7 +86,6 @@ public class CustomFormDataDocumentResponse {
    * @return pkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
@@ -113,7 +109,6 @@ public class CustomFormDataDocumentResponse {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -136,7 +131,6 @@ public class CustomFormDataDocumentResponse {
    * @return sEzsigndocumentName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Contract #123", required = true, value = "The name of the document that will be presented to Ezsignfoldersignerassociations")
 
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
@@ -159,7 +153,6 @@ public class CustomFormDataDocumentResponse {
    * @return dtModifiedDate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the object was last modified")
 
   public String getDtModifiedDate() {
     return dtModifiedDate;
@@ -178,6 +171,9 @@ public class CustomFormDataDocumentResponse {
   }
 
   public CustomFormDataDocumentResponse addAObjFormDataSignerItem(CustomFormDataSignerResponse aObjFormDataSignerItem) {
+    if (this.aObjFormDataSigner == null) {
+      this.aObjFormDataSigner = new ArrayList<>();
+    }
     this.aObjFormDataSigner.add(aObjFormDataSignerItem);
     return this;
   }
@@ -187,7 +183,6 @@ public class CustomFormDataDocumentResponse {
    * @return aObjFormDataSigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomFormDataSignerResponse> getaObjFormDataSigner() {
     return aObjFormDataSigner;

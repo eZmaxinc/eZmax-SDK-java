@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;User Object and children to create a complete structure
  */
-@ApiModel(description = "An Activesession->User Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -107,7 +104,6 @@ public class ActivesessionResponseCompoundUser {
    * @return pkiUserID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
 
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -131,7 +127,6 @@ public class ActivesessionResponseCompoundUser {
    * @return fkiTimezoneID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "247", required = true, value = "The unique ID of the Timezone")
 
   public Integer getFkiTimezoneID() {
     return fkiTimezoneID;
@@ -154,7 +149,6 @@ public class ActivesessionResponseCompoundUser {
    * @return sAvatarUrl
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "http://www.website.com/avatar.jpg", required = true, value = "The url of the picture used as avatar")
 
   public String getsAvatarUrl() {
     return sAvatarUrl;
@@ -177,7 +171,6 @@ public class ActivesessionResponseCompoundUser {
    * @return sUserFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the user")
 
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -200,7 +193,6 @@ public class ActivesessionResponseCompoundUser {
    * @return sUserLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the user")
 
   public String getsUserLastname() {
     return sUserLastname;
@@ -223,7 +215,6 @@ public class ActivesessionResponseCompoundUser {
    * @return sEmailAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email address.")
 
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -246,7 +237,6 @@ public class ActivesessionResponseCompoundUser {
    * @return eUserEzsignsendreminderfrequency
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEUserEzsignsendreminderfrequency geteUserEzsignsendreminderfrequency() {
     return eUserEzsignsendreminderfrequency;
@@ -270,7 +260,6 @@ public class ActivesessionResponseCompoundUser {
    * @return iUserInterfacecolor
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3752795", required = true, value = "The int32 representation of the interface color. For example, RGB color #39435B would be 3752795")
 
   public Integer getiUserInterfacecolor() {
     return iUserInterfacecolor;
@@ -293,7 +282,6 @@ public class ActivesessionResponseCompoundUser {
    * @return bUserInterfacedark
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether to use a dark mode interface")
 
   public Boolean getbUserInterfacedark() {
     return bUserInterfacedark;
@@ -318,7 +306,6 @@ public class ActivesessionResponseCompoundUser {
    * @return iUserListresult
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "25", required = true, value = "The number of rows to return by default in lists")
 
   public Integer getiUserListresult() {
     return iUserListresult;

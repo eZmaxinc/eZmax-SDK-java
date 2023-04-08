@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A webhook object
  */
-@ApiModel(description = "A webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class WebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -112,7 +109,6 @@ public class WebhookResponse {
    * @return pkiWebhookID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "77", required = true, value = "The unique ID of the Webhook")
 
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
@@ -135,7 +131,6 @@ public class WebhookResponse {
    * @return sWebhookDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Import into our system", required = true, value = "The description of the Webhook")
 
   public String getsWebhookDescription() {
     return sWebhookDescription;
@@ -159,7 +154,6 @@ public class WebhookResponse {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "5", value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -182,7 +176,6 @@ public class WebhookResponse {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Default", value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -205,7 +198,6 @@ public class WebhookResponse {
    * @return eWebhookModule
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
@@ -228,7 +220,6 @@ public class WebhookResponse {
    * @return eWebhookEzsignevent
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
@@ -251,7 +242,6 @@ public class WebhookResponse {
    * @return eWebhookManagementevent
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
@@ -274,7 +264,6 @@ public class WebhookResponse {
    * @return sWebhookUrl
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "https://www.example.com", required = true, value = "The URL of the Webhook callback")
 
   public String getsWebhookUrl() {
     return sWebhookUrl;
@@ -297,7 +286,6 @@ public class WebhookResponse {
    * @return sWebhookEmailfailed
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email that will receive the Webhook in case all attempts fail")
 
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
@@ -320,7 +308,6 @@ public class WebhookResponse {
    * @return bWebhookIsactive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Whether the Webhook is active or not")
 
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
@@ -343,7 +330,6 @@ public class WebhookResponse {
    * @return bWebhookSkipsslvalidation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Wheter the server's SSL certificate should be validated or not. Not recommended to skip for production use")
 
   public Boolean getbWebhookSkipsslvalidation() {
     return bWebhookSkipsslvalidation;

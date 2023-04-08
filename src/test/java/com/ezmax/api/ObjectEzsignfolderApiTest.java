@@ -28,8 +28,11 @@ import com.ezmax.api.model.EzsignfolderDisposeV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
+import com.ezmax.api.model.EzsignfolderGetCommunicationCountV1Response;
+import com.ezmax.api.model.EzsignfolderGetCommunicationListV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
+import com.ezmax.api.model.EzsignfolderGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
@@ -192,6 +195,34 @@ public class ObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetCommunicationCountV1Response response = api.ezsignfolderGetCommunicationCountV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Communication list
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetCommunicationListV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetCommunicationListV1Response response = api.ezsignfolderGetCommunicationListV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
      *
      * 
@@ -216,6 +247,20 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetEzsignfoldersignerassociationsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderGetEzsignfoldersignerassociationsV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetEzsignsignaturesAutomaticV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetEzsignsignaturesAutomaticV1Response response = api.ezsignfolderGetEzsignsignaturesAutomaticV1(pkiEzsignfolderID);
         // TODO: test validations
     }
 

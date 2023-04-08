@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplateCopyV1Request;
 import com.ezmax.api.model.EzsigntemplateCopyV1Response;
@@ -100,23 +99,6 @@ public class ObjectEzsigntemplateApiTest {
         Integer pkiEzsigntemplateID = null;
         EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = null;
         EzsigntemplateEditObjectV1Response response = api.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve Ezsigntemplate and IDs
-     *
-     * Get the list of Ezsigntemplate to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplateGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.ezsigntemplateGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
         // TODO: test validations
     }
 

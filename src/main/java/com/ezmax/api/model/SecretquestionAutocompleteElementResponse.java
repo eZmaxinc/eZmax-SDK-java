@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Secretquestion AutocompleteElement Response
  */
-@ApiModel(description = "A Secretquestion AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class SecretquestionAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)
@@ -77,7 +74,6 @@ public class SecretquestionAutocompleteElementResponse {
    * @return sSecretquestionTextX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "The name of the hospital in which you were born", required = true, value = "The text of the Secretquestion in the language of the requester")
 
   public String getsSecretquestionTextX() {
     return sSecretquestionTextX;
@@ -101,7 +97,6 @@ public class SecretquestionAutocompleteElementResponse {
    * @return pkiSecretquestionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "7", required = true, value = "The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)|")
 
   public Integer getPkiSecretquestionID() {
     return pkiSecretquestionID;
@@ -124,7 +119,6 @@ public class SecretquestionAutocompleteElementResponse {
    * @return bSecretquestionIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Secretquestion is active or not")
 
   public Boolean getbSecretquestionIsactive() {
     return bSecretquestionIsactive;

@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@ApiModel(description = "Payload for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -70,7 +67,6 @@ public class EzsigndocumentGetObjectV2ResponseMPayload {
    * @return objEzsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public EzsigndocumentResponseCompound getObjEzsigndocument() {
     return objEzsigndocument;

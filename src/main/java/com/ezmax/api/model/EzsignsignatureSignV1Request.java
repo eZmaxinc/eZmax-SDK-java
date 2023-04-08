@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@ApiModel(description = "Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
@@ -73,7 +70,6 @@ public class EzsignsignatureSignV1Request {
    * @return sValue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**")
 
   public String getsValue() {
     return sValue;
@@ -96,7 +92,6 @@ public class EzsignsignatureSignV1Request {
    * @return bIsAutomatic
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. ")
 
   public Boolean getbIsAutomatic() {
     return bIsAutomatic;

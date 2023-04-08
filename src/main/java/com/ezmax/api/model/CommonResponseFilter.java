@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -50,16 +48,15 @@ import eZmaxAPI.JSON;
 /**
  * Definition of Filters for getList
  */
-@ApiModel(description = "Definition of Filters for getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseFilter {
   public static final String SERIALIZED_NAME_A_AUTO_TYPE = "a_AutoType";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE)
-  private Map<String, String> aAutoType = null;
+  private Map<String, String> aAutoType = new HashMap<>();
 
   public static final String SERIALIZED_NAME_A_ENUM = "a_Enum";
   @SerializedName(SERIALIZED_NAME_A_ENUM)
-  private Map<String, Map<String, String>> aEnum = null;
+  private Map<String, Map<String, String>> aEnum = new HashMap<>();
 
   public CommonResponseFilter() {
   }
@@ -83,7 +80,6 @@ public class CommonResponseFilter {
    * @return aAutoType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of filters that can be used in *sFilter* (Automatic types)")
 
   public Map<String, String> getaAutoType() {
     return aAutoType;
@@ -114,7 +110,6 @@ public class CommonResponseFilter {
    * @return aEnum
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of filters that can be used in *sFilter* (Enum types)")
 
   public Map<String, Map<String, String>> getaEnum() {
     return aEnum;

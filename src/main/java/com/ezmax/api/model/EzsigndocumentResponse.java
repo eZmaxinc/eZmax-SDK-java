@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -125,9 +122,17 @@ public class EzsigndocumentResponse {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_EZSIGNFORM)
   private Boolean bEzsigndocumentEzsignform;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigndocumentHassignedsignatures";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES)
+  private Boolean bEzsigndocumentHassignedsignatures;
+
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID = "sEzsigndocumentExternalid";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
+  private String sEzsigndocumentExternalid;
 
   public EzsigndocumentResponse() {
   }
@@ -144,7 +149,6 @@ public class EzsigndocumentResponse {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -168,7 +172,6 @@ public class EzsigndocumentResponse {
    * @return fkiEzsignfoldersignerassociationIDDeclinedtosign
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "20", value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationIDDeclinedtosign() {
     return fkiEzsignfoldersignerassociationIDDeclinedtosign;
@@ -191,7 +194,6 @@ public class EzsigndocumentResponse {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The maximum date and time at which the Ezsigndocument can be signed.")
 
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -214,7 +216,6 @@ public class EzsigndocumentResponse {
    * @return dtEzsignformCompleted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The date and time at which the Ezsignform has been completed.")
 
   public String getDtEzsignformCompleted() {
     return dtEzsignformCompleted;
@@ -239,7 +240,6 @@ public class EzsigndocumentResponse {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -262,7 +262,6 @@ public class EzsigndocumentResponse {
    * @return sEzsigndocumentName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Contract #123", required = true, value = "The name of the document that will be presented to Ezsignfoldersignerassociations")
 
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
@@ -286,7 +285,6 @@ public class EzsigndocumentResponse {
    * @return pkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
@@ -309,7 +307,6 @@ public class EzsigndocumentResponse {
    * @return eEzsigndocumentStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsigndocumentStep geteEzsigndocumentStep() {
     return eEzsigndocumentStep;
@@ -332,7 +329,6 @@ public class EzsigndocumentResponse {
    * @return dtEzsigndocumentFirstsend
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The date and time when the Ezsigndocument was first sent.")
 
   public String getDtEzsigndocumentFirstsend() {
     return dtEzsigndocumentFirstsend;
@@ -355,7 +351,6 @@ public class EzsigndocumentResponse {
    * @return dtEzsigndocumentLastsend
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The date and time when the Ezsigndocument was sent the last time.")
 
   public String getDtEzsigndocumentLastsend() {
     return dtEzsigndocumentLastsend;
@@ -379,7 +374,6 @@ public class EzsigndocumentResponse {
    * @return iEzsigndocumentOrder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.")
 
   public Integer getiEzsigndocumentOrder() {
     return iEzsigndocumentOrder;
@@ -403,7 +397,6 @@ public class EzsigndocumentResponse {
    * @return iEzsigndocumentPagetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "4", required = true, value = "The number of pages in the Ezsigndocument.")
 
   public Integer getiEzsigndocumentPagetotal() {
     return iEzsigndocumentPagetotal;
@@ -427,7 +420,6 @@ public class EzsigndocumentResponse {
    * @return iEzsigndocumentSignaturesigned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3", required = true, value = "The number of signatures that were signed in the document.")
 
   public Integer getiEzsigndocumentSignaturesigned() {
     return iEzsigndocumentSignaturesigned;
@@ -451,7 +443,6 @@ public class EzsigndocumentResponse {
    * @return iEzsigndocumentSignaturetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "4", required = true, value = "The number of total signatures that were requested in the Ezsigndocument.")
 
   public Integer getiEzsigndocumentSignaturetotal() {
     return iEzsigndocumentSignaturetotal;
@@ -474,7 +465,6 @@ public class EzsigndocumentResponse {
    * @return sEzsigndocumentMD5initial
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "012345678901234567890123456789AB", required = true, value = "MD5 Hash of the initial PDF Document before signatures were applied to it.")
 
   public String getsEzsigndocumentMD5initial() {
     return sEzsigndocumentMD5initial;
@@ -497,7 +487,6 @@ public class EzsigndocumentResponse {
    * @return tEzsigndocumentDeclinedtosignreason
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "The conditions in the contract are different than those discuted", value = "A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign")
 
   public String gettEzsigndocumentDeclinedtosignreason() {
     return tEzsigndocumentDeclinedtosignreason;
@@ -520,7 +509,6 @@ public class EzsigndocumentResponse {
    * @return sEzsigndocumentMD5signed
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "012345678901234567890123456789AB", required = true, value = "MD5 Hash of the final PDF Document after all signatures were applied to it.")
 
   public String getsEzsigndocumentMD5signed() {
     return sEzsigndocumentMD5signed;
@@ -543,7 +531,6 @@ public class EzsigndocumentResponse {
    * @return bEzsigndocumentEzsignform
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "If the Ezsigndocument contains an Ezsignform or not")
 
   public Boolean getbEzsigndocumentEzsignform() {
     return bEzsigndocumentEzsignform;
@@ -552,6 +539,28 @@ public class EzsigndocumentResponse {
 
   public void setbEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
     this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+  }
+
+
+  public EzsigndocumentResponse bEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
+    
+    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
+    return this;
+  }
+
+   /**
+   * If the Ezsigndocument contains signed signatures (From internal or external sources)
+   * @return bEzsigndocumentHassignedsignatures
+  **/
+  @javax.annotation.Nonnull
+
+  public Boolean getbEzsigndocumentHassignedsignatures() {
+    return bEzsigndocumentHassignedsignatures;
+  }
+
+
+  public void setbEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
+    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
   }
 
 
@@ -566,7 +575,6 @@ public class EzsigndocumentResponse {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -575,6 +583,28 @@ public class EzsigndocumentResponse {
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
+  }
+
+
+  public EzsigndocumentResponse sEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
+    return this;
+  }
+
+   /**
+   * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   * @return sEzsigndocumentExternalid
+  **/
+  @javax.annotation.Nonnull
+
+  public String getsEzsigndocumentExternalid() {
+    return sEzsigndocumentExternalid;
+  }
+
+
+  public void setsEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
   }
 
 
@@ -606,12 +636,14 @@ public class EzsigndocumentResponse {
         Objects.equals(this.tEzsigndocumentDeclinedtosignreason, ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason) &&
         Objects.equals(this.sEzsigndocumentMD5signed, ezsigndocumentResponse.sEzsigndocumentMD5signed) &&
         Objects.equals(this.bEzsigndocumentEzsignform, ezsigndocumentResponse.bEzsigndocumentEzsignform) &&
-        Objects.equals(this.objAudit, ezsigndocumentResponse.objAudit);
+        Objects.equals(this.bEzsigndocumentHassignedsignatures, ezsigndocumentResponse.bEzsigndocumentHassignedsignatures) &&
+        Objects.equals(this.objAudit, ezsigndocumentResponse.objAudit) &&
+        Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentResponse.sEzsigndocumentExternalid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, pkiEzsigndocumentID, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, objAudit);
+    return Objects.hash(fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, pkiEzsigndocumentID, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid);
   }
 
   @Override
@@ -636,7 +668,9 @@ public class EzsigndocumentResponse {
     sb.append("    tEzsigndocumentDeclinedtosignreason: ").append(toIndentedString(tEzsigndocumentDeclinedtosignreason)).append("\n");
     sb.append("    sEzsigndocumentMD5signed: ").append(toIndentedString(sEzsigndocumentMD5signed)).append("\n");
     sb.append("    bEzsigndocumentEzsignform: ").append(toIndentedString(bEzsigndocumentEzsignform)).append("\n");
+    sb.append("    bEzsigndocumentHassignedsignatures: ").append(toIndentedString(bEzsigndocumentHassignedsignatures)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -677,7 +711,9 @@ public class EzsigndocumentResponse {
     openapiFields.add("tEzsigndocumentDeclinedtosignreason");
     openapiFields.add("sEzsigndocumentMD5signed");
     openapiFields.add("bEzsigndocumentEzsignform");
+    openapiFields.add("bEzsigndocumentHassignedsignatures");
     openapiFields.add("objAudit");
+    openapiFields.add("sEzsigndocumentExternalid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -694,7 +730,9 @@ public class EzsigndocumentResponse {
     openapiRequiredFields.add("sEzsigndocumentMD5initial");
     openapiRequiredFields.add("sEzsigndocumentMD5signed");
     openapiRequiredFields.add("bEzsigndocumentEzsignform");
+    openapiRequiredFields.add("bEzsigndocumentHassignedsignatures");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("sEzsigndocumentExternalid");
   }
 
  /**
@@ -750,6 +788,9 @@ public class EzsigndocumentResponse {
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
+      if (!jsonObj.get("sEzsigndocumentExternalid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentExternalid").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

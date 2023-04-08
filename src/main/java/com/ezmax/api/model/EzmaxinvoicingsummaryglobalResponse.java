@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@ApiModel(description = "A Ezmaxinvoicingsummaryglobal Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryglobalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
@@ -142,7 +139,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return pkiEzmaxinvoicingsummaryglobalID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "241", value = "The unique ID of the Ezmaxinvoicingsummaryglobal")
 
   public Integer getPkiEzmaxinvoicingsummaryglobalID() {
     return pkiEzmaxinvoicingsummaryglobalID;
@@ -166,7 +162,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Ezmaxinvoicing")
 
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -190,7 +185,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return fkiEzmaxproductID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "172", required = true, value = "The unique ID of the Ezmaxproduct")
 
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
@@ -213,7 +207,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return sEzmaxproductDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "eZmax (License)", required = true, value = "The description of the Ezmaxproduct in the language of the requester")
 
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
@@ -236,7 +229,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dtEzmaxinvoicingsummaryglobalStart
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The start date for the Ezmaxinvoicingsummaryglobal")
 
   public String getDtEzmaxinvoicingsummaryglobalStart() {
     return dtEzmaxinvoicingsummaryglobalStart;
@@ -259,7 +251,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dtEzmaxinvoicingsummaryglobalEnd
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The end date for the Ezmaxinvoicingsummaryglobal")
 
   public String getDtEzmaxinvoicingsummaryglobalEnd() {
     return dtEzmaxinvoicingsummaryglobalEnd;
@@ -283,7 +274,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return iEzmaxinvoicingsummaryglobalDays
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "30", required = true, value = "The number of days for the Ezmaxinvoicingsummaryglobal")
 
   public Integer getiEzmaxinvoicingsummaryglobalDays() {
     return iEzmaxinvoicingsummaryglobalDays;
@@ -306,7 +296,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalCountreal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "649.08", required = true, value = "The count item calculated")
 
   public String getdEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
@@ -329,7 +318,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalCountbilled
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "581.56", required = true, value = "The count item billed")
 
   public String getdEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
@@ -352,7 +340,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalSubtotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200.00", required = true, value = "The Ezmaxinvoicingsummaryglobal subtotal")
 
   public String getdEzmaxinvoicingsummaryglobalSubtotal() {
     return dEzmaxinvoicingsummaryglobalSubtotal;
@@ -375,7 +362,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebateamount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.00", required = true, value = "The rebate amount for the Ezmaxinvoicingsummaryglobal")
 
   public String getdEzmaxinvoicingsummaryglobalRebateamount() {
     return dEzmaxinvoicingsummaryglobalRebateamount;
@@ -398,7 +384,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebatepercent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.00", required = true, value = "The rebate percentage of the Ezmaxinvoicingsummaryglobal")
 
   public String getdEzmaxinvoicingsummaryglobalRebatepercent() {
     return dEzmaxinvoicingsummaryglobalRebatepercent;
@@ -421,7 +406,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebatetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2.00", required = true, value = "The rebate amount total for the Ezmaxinvoicingsummaryglobal")
 
   public String getdEzmaxinvoicingsummaryglobalRebatetotal() {
     return dEzmaxinvoicingsummaryglobalRebatetotal;
@@ -444,7 +428,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalTotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "198.00", required = true, value = "The Ezmaxinvoicingsummaryglobal total")
 
   public String getdEzmaxinvoicingsummaryglobalTotal() {
     return dEzmaxinvoicingsummaryglobalTotal;
@@ -467,7 +450,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRepresentative
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "685.88", value = "The amount of commission for the representative")
 
   public String getdEzmaxinvoicingsummaryglobalRepresentative() {
     return dEzmaxinvoicingsummaryglobalRepresentative;
@@ -490,7 +472,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalPartner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "266.49", value = "The amount of commission for the partner")
 
   public String getdEzmaxinvoicingsummaryglobalPartner() {
     return dEzmaxinvoicingsummaryglobalPartner;
@@ -513,7 +494,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalNet
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "521.71", value = "The net amount of the Ezmaxinvoicingsummaryglobal")
 
   public String getdEzmaxinvoicingsummaryglobalNet() {
     return dEzmaxinvoicingsummaryglobalNet;
@@ -536,7 +516,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return bEzmaxinvoicingsummaryglobalAdjustment
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether it is adjustment for the Ezmaxinvoicingsummaryglobal")
 
   public Boolean getbEzmaxinvoicingsummaryglobalAdjustment() {
     return bEzmaxinvoicingsummaryglobalAdjustment;
@@ -559,7 +538,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return tEzmaxproductHelpX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an exemple of help message", required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
 
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;

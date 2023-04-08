@@ -30,10 +30,13 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
+import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetFormDataV1Response;
 import com.ezmax.api.model.EzsigndocumentGetObjectV1Response;
@@ -179,6 +182,21 @@ public class ObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Flatten
+     *
+     * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentFlattenV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        Object body = null;
+        EzsigndocumentFlattenV1Response response = api.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve actionable elements for the Ezsigndocument
      *
      * Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
@@ -208,6 +226,20 @@ public class ObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsignannotations
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsignannotationsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetEzsignannotationsV1Response response = api.ezsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups
      *
      * 
@@ -232,6 +264,20 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentGetEzsignpagesV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentGetEzsignpagesV1Response response = api.ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsignsignaturesAutomaticV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetEzsignsignaturesAutomaticV1Response response = api.ezsigndocumentGetEzsignsignaturesAutomaticV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
 

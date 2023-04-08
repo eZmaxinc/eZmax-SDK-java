@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignformfield Object
  */
-@ApiModel(description = "A Ezsignformfield Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -106,7 +103,6 @@ public class EzsignformfieldRequest {
    * @return pkiEzsignformfieldID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "32", value = "The unique ID of the Ezsignformfield")
 
   public Integer getPkiEzsignformfieldID() {
     return pkiEzsignformfieldID;
@@ -130,7 +126,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigndocument")
 
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -153,7 +148,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldLabel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Peanuts", required = true, value = "The Label for the Ezsignformfield")
 
   public String getsEzsignformfieldLabel() {
     return sEzsignformfieldLabel;
@@ -176,7 +170,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldValue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Yes", value = "The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio")
 
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;
@@ -200,7 +193,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
 
   public Integer getiEzsignformfieldX() {
     return iEzsignformfieldX;
@@ -224,7 +216,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsignformfieldY() {
     return iEzsignformfieldY;
@@ -248,7 +239,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldWidth
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "102", required = true, value = "The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |")
 
   public Integer getiEzsignformfieldWidth() {
     return iEzsignformfieldWidth;
@@ -272,7 +262,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldHeight
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "22", required = true, value = "The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | ")
 
   public Integer getiEzsignformfieldHeight() {
     return iEzsignformfieldHeight;
@@ -295,7 +284,6 @@ public class EzsignformfieldRequest {
    * @return bEzsignformfieldSelected
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**")
 
   public Boolean getbEzsignformfieldSelected() {
     return bEzsignformfieldSelected;
@@ -318,7 +306,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldEnteredvalue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Montreal", value = "This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**")
 
   public String getsEzsignformfieldEnteredvalue() {
     return sEzsignformfieldEnteredvalue;

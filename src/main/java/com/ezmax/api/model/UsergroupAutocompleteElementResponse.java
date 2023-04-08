@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup AutocompleteElement Response
  */
-@ApiModel(description = "A Usergroup AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class UsergroupAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
@@ -77,7 +74,6 @@ public class UsergroupAutocompleteElementResponse {
    * @return sUsergroupNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Administration", required = true, value = "The Name of the Usergroup in the language of the requester")
 
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -101,7 +97,6 @@ public class UsergroupAutocompleteElementResponse {
    * @return pkiUsergroupID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Usergroup")
 
   public Integer getPkiUsergroupID() {
     return pkiUsergroupID;
@@ -124,7 +119,6 @@ public class UsergroupAutocompleteElementResponse {
    * @return bUsergroupIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Usergroup is active or not")
 
   public Boolean getbUsergroupIsactive() {
     return bUsergroupIsactive;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend List Element
  */
-@ApiModel(description = "An Ezsignbulksend List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -110,7 +107,6 @@ public class EzsignbulksendListElement {
    * @return pkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The unique ID of the Ezsignbulksend")
 
   public Integer getPkiEzsignbulksendID() {
     return pkiEzsignbulksendID;
@@ -134,7 +130,6 @@ public class EzsignbulksendListElement {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -157,7 +152,6 @@ public class EzsignbulksendListElement {
    * @return sEzsignbulksendDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Bulk Send", required = true, value = "The description of the Ezsignbulksend")
 
   public String getsEzsignbulksendDescription() {
     return sEzsignbulksendDescription;
@@ -180,7 +174,6 @@ public class EzsignbulksendListElement {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -203,7 +196,6 @@ public class EzsignbulksendListElement {
    * @return bEzsignbulksendNeedvalidation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
 
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
@@ -226,7 +218,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignbulksendtransmission
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsignbulksendtransmissions in the Ezsignbulksend")
 
   public Integer getiEzsignbulksendtransmission() {
     return iEzsignbulksendtransmission;
@@ -249,7 +240,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignfolder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsignfolders in the Ezsignbulksend")
 
   public Integer getiEzsignfolder() {
     return iEzsignfolder;
@@ -272,7 +262,6 @@ public class EzsignbulksendListElement {
    * @return iEzsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsigndocuments in the Ezsignbulksend")
 
   public Integer getiEzsigndocument() {
     return iEzsigndocument;
@@ -295,7 +284,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignsignature
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsignsignature in the Ezsignbulksend")
 
   public Integer getiEzsignsignature() {
     return iEzsignsignature;
@@ -318,7 +306,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignsignatureSigned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of already signed Ezsignsignature blocks in the Ezsignbulksend")
 
   public Integer getiEzsignsignatureSigned() {
     return iEzsignsignatureSigned;
@@ -341,7 +328,6 @@ public class EzsignbulksendListElement {
    * @return bEzsignbulksendIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Ezsignbulksend is active or not")
 
   public Boolean getbEzsignbulksendIsactive() {
     return bEzsignbulksendIsactive;

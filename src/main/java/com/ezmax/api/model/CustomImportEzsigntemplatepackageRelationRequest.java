@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
  */
-@ApiModel(description = "The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomImportEzsigntemplatepackageRelationRequest {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "fkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
@@ -78,7 +75,6 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
    * @return fkiEzsigntemplatepackagesignerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "174", value = "The unique ID of the Ezsigntemplatepackagesigner")
 
   public Integer getFkiEzsigntemplatepackagesignerID() {
     return fkiEzsigntemplatepackagesignerID;
@@ -102,7 +98,6 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
    * @return fkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "20", required = true, value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -125,7 +120,6 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
    * @return sEzsigntemplatepackagesignerDescription
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Customer", value = "The description of the Ezsigntemplatepackagesigner")
 
   public String getsEzsigntemplatepackagesignerDescription() {
     return sEzsigntemplatepackagesignerDescription;

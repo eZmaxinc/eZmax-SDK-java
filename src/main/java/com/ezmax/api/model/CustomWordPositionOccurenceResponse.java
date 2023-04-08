@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
@@ -78,7 +75,6 @@ public class CustomWordPositionOccurenceResponse {
    * @return iPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The page where the word occurence was found")
 
   public Integer getiPage() {
     return iPage;
@@ -102,7 +98,6 @@ public class CustomWordPositionOccurenceResponse {
    * @return iX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The X coordinate (Horizontal) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).")
 
   public Integer getiX() {
     return iX;
@@ -126,7 +121,6 @@ public class CustomWordPositionOccurenceResponse {
    * @return iY
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).")
 
   public Integer getiY() {
     return iY;

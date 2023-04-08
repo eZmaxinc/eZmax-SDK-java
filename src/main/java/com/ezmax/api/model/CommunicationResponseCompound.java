@@ -20,16 +20,16 @@ import com.ezmax.api.model.CommunicationattachmentResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
 import com.ezmax.api.model.ComputedECommunicationDirection;
-import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.DescriptionstaticResponse;
+import com.ezmax.api.model.EmailstaticResponse;
 import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
+import com.ezmax.api.model.PhonestaticResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,8 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communication Object
  */
-@ApiModel(description = "A Communication Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommunicationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -77,6 +76,10 @@ public class CommunicationResponseCompound {
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
   private String sCommunicationSubject;
 
+  public static final String SERIALIZED_NAME_S_COMMUNICATION_BODYURL = "sCommunicationBodyurl";
+  @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_BODYURL)
+  private String sCommunicationBodyurl;
+
   public static final String SERIALIZED_NAME_E_COMMUNICATION_DIRECTION = "eCommunicationDirection";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_DIRECTION)
   private ComputedECommunicationDirection eCommunicationDirection;
@@ -85,9 +88,17 @@ public class CommunicationResponseCompound {
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT)
   private Integer iCommunicationrecipientCount;
 
-  public static final String SERIALIZED_NAME_OBJ_CONTACT_FROM = "objContactFrom";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_FROM)
-  private CustomContactNameResponse objContactFrom;
+  public static final String SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC_SENDER = "objDescriptionstaticSender";
+  @SerializedName(SERIALIZED_NAME_OBJ_DESCRIPTIONSTATIC_SENDER)
+  private DescriptionstaticResponse objDescriptionstaticSender;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAILSTATIC_SENDER = "objEmailstaticSender";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAILSTATIC_SENDER)
+  private EmailstaticResponse objEmailstaticSender;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONESTATIC_SENDER = "objPhonestaticSender";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONESTATIC_SENDER)
+  private PhonestaticResponse objPhonestaticSender;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
@@ -120,7 +131,6 @@ public class CommunicationResponseCompound {
    * @return pkiCommunicationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Communication.")
 
   public Integer getPkiCommunicationID() {
     return pkiCommunicationID;
@@ -143,7 +153,6 @@ public class CommunicationResponseCompound {
    * @return eCommunicationImportance
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldECommunicationImportance geteCommunicationImportance() {
     return eCommunicationImportance;
@@ -166,7 +175,6 @@ public class CommunicationResponseCompound {
    * @return eCommunicationType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldECommunicationType geteCommunicationType() {
     return eCommunicationType;
@@ -189,7 +197,6 @@ public class CommunicationResponseCompound {
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an example of subject", required = true, value = "The subject of the Communication")
 
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
@@ -198,6 +205,28 @@ public class CommunicationResponseCompound {
 
   public void setsCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
+  }
+
+
+  public CommunicationResponseCompound sCommunicationBodyurl(String sCommunicationBodyurl) {
+    
+    this.sCommunicationBodyurl = sCommunicationBodyurl;
+    return this;
+  }
+
+   /**
+   * The url of the body used as body in the Communication
+   * @return sCommunicationBodyurl
+  **/
+  @javax.annotation.Nullable
+
+  public String getsCommunicationBodyurl() {
+    return sCommunicationBodyurl;
+  }
+
+
+  public void setsCommunicationBodyurl(String sCommunicationBodyurl) {
+    this.sCommunicationBodyurl = sCommunicationBodyurl;
   }
 
 
@@ -212,7 +241,6 @@ public class CommunicationResponseCompound {
    * @return eCommunicationDirection
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public ComputedECommunicationDirection geteCommunicationDirection() {
     return eCommunicationDirection;
@@ -235,7 +263,6 @@ public class CommunicationResponseCompound {
    * @return iCommunicationrecipientCount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The count of Communicationrecipient")
 
   public Integer getiCommunicationrecipientCount() {
     return iCommunicationrecipientCount;
@@ -247,26 +274,69 @@ public class CommunicationResponseCompound {
   }
 
 
-  public CommunicationResponseCompound objContactFrom(CustomContactNameResponse objContactFrom) {
+  public CommunicationResponseCompound objDescriptionstaticSender(DescriptionstaticResponse objDescriptionstaticSender) {
     
-    this.objContactFrom = objContactFrom;
+    this.objDescriptionstaticSender = objDescriptionstaticSender;
     return this;
   }
 
    /**
-   * Get objContactFrom
-   * @return objContactFrom
+   * Get objDescriptionstaticSender
+   * @return objDescriptionstaticSender
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
 
-  public CustomContactNameResponse getObjContactFrom() {
-    return objContactFrom;
+  public DescriptionstaticResponse getObjDescriptionstaticSender() {
+    return objDescriptionstaticSender;
   }
 
 
-  public void setObjContactFrom(CustomContactNameResponse objContactFrom) {
-    this.objContactFrom = objContactFrom;
+  public void setObjDescriptionstaticSender(DescriptionstaticResponse objDescriptionstaticSender) {
+    this.objDescriptionstaticSender = objDescriptionstaticSender;
+  }
+
+
+  public CommunicationResponseCompound objEmailstaticSender(EmailstaticResponse objEmailstaticSender) {
+    
+    this.objEmailstaticSender = objEmailstaticSender;
+    return this;
+  }
+
+   /**
+   * Get objEmailstaticSender
+   * @return objEmailstaticSender
+  **/
+  @javax.annotation.Nullable
+
+  public EmailstaticResponse getObjEmailstaticSender() {
+    return objEmailstaticSender;
+  }
+
+
+  public void setObjEmailstaticSender(EmailstaticResponse objEmailstaticSender) {
+    this.objEmailstaticSender = objEmailstaticSender;
+  }
+
+
+  public CommunicationResponseCompound objPhonestaticSender(PhonestaticResponse objPhonestaticSender) {
+    
+    this.objPhonestaticSender = objPhonestaticSender;
+    return this;
+  }
+
+   /**
+   * Get objPhonestaticSender
+   * @return objPhonestaticSender
+  **/
+  @javax.annotation.Nullable
+
+  public PhonestaticResponse getObjPhonestaticSender() {
+    return objPhonestaticSender;
+  }
+
+
+  public void setObjPhonestaticSender(PhonestaticResponse objPhonestaticSender) {
+    this.objPhonestaticSender = objPhonestaticSender;
   }
 
 
@@ -281,7 +351,6 @@ public class CommunicationResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -300,6 +369,9 @@ public class CommunicationResponseCompound {
   }
 
   public CommunicationResponseCompound addAObjCommunicationattachmentItem(CommunicationattachmentResponseCompound aObjCommunicationattachmentItem) {
+    if (this.aObjCommunicationattachment == null) {
+      this.aObjCommunicationattachment = new ArrayList<>();
+    }
     this.aObjCommunicationattachment.add(aObjCommunicationattachmentItem);
     return this;
   }
@@ -309,7 +381,6 @@ public class CommunicationResponseCompound {
    * @return aObjCommunicationattachment
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationattachmentResponseCompound> getaObjCommunicationattachment() {
     return aObjCommunicationattachment;
@@ -328,6 +399,9 @@ public class CommunicationResponseCompound {
   }
 
   public CommunicationResponseCompound addAObjCommunicationrecipientItem(CommunicationrecipientResponseCompound aObjCommunicationrecipientItem) {
+    if (this.aObjCommunicationrecipient == null) {
+      this.aObjCommunicationrecipient = new ArrayList<>();
+    }
     this.aObjCommunicationrecipient.add(aObjCommunicationrecipientItem);
     return this;
   }
@@ -337,7 +411,6 @@ public class CommunicationResponseCompound {
    * @return aObjCommunicationrecipient
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationrecipientResponseCompound> getaObjCommunicationrecipient() {
     return aObjCommunicationrecipient;
@@ -356,6 +429,9 @@ public class CommunicationResponseCompound {
   }
 
   public CommunicationResponseCompound addAObjCommunicationexternalrecipientItem(CommunicationexternalrecipientResponseCompound aObjCommunicationexternalrecipientItem) {
+    if (this.aObjCommunicationexternalrecipient == null) {
+      this.aObjCommunicationexternalrecipient = new ArrayList<>();
+    }
     this.aObjCommunicationexternalrecipient.add(aObjCommunicationexternalrecipientItem);
     return this;
   }
@@ -365,7 +441,6 @@ public class CommunicationResponseCompound {
    * @return aObjCommunicationexternalrecipient
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationexternalrecipientResponseCompound> getaObjCommunicationexternalrecipient() {
     return aObjCommunicationexternalrecipient;
@@ -391,9 +466,12 @@ public class CommunicationResponseCompound {
         Objects.equals(this.eCommunicationImportance, communicationResponseCompound.eCommunicationImportance) &&
         Objects.equals(this.eCommunicationType, communicationResponseCompound.eCommunicationType) &&
         Objects.equals(this.sCommunicationSubject, communicationResponseCompound.sCommunicationSubject) &&
+        Objects.equals(this.sCommunicationBodyurl, communicationResponseCompound.sCommunicationBodyurl) &&
         Objects.equals(this.eCommunicationDirection, communicationResponseCompound.eCommunicationDirection) &&
         Objects.equals(this.iCommunicationrecipientCount, communicationResponseCompound.iCommunicationrecipientCount) &&
-        Objects.equals(this.objContactFrom, communicationResponseCompound.objContactFrom) &&
+        Objects.equals(this.objDescriptionstaticSender, communicationResponseCompound.objDescriptionstaticSender) &&
+        Objects.equals(this.objEmailstaticSender, communicationResponseCompound.objEmailstaticSender) &&
+        Objects.equals(this.objPhonestaticSender, communicationResponseCompound.objPhonestaticSender) &&
         Objects.equals(this.objAudit, communicationResponseCompound.objAudit) &&
         Objects.equals(this.aObjCommunicationattachment, communicationResponseCompound.aObjCommunicationattachment) &&
         Objects.equals(this.aObjCommunicationrecipient, communicationResponseCompound.aObjCommunicationrecipient) &&
@@ -402,7 +480,7 @@ public class CommunicationResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationID, eCommunicationImportance, eCommunicationType, sCommunicationSubject, eCommunicationDirection, iCommunicationrecipientCount, objContactFrom, objAudit, aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient);
+    return Objects.hash(pkiCommunicationID, eCommunicationImportance, eCommunicationType, sCommunicationSubject, sCommunicationBodyurl, eCommunicationDirection, iCommunicationrecipientCount, objDescriptionstaticSender, objEmailstaticSender, objPhonestaticSender, objAudit, aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationexternalrecipient);
   }
 
   @Override
@@ -413,9 +491,12 @@ public class CommunicationResponseCompound {
     sb.append("    eCommunicationImportance: ").append(toIndentedString(eCommunicationImportance)).append("\n");
     sb.append("    eCommunicationType: ").append(toIndentedString(eCommunicationType)).append("\n");
     sb.append("    sCommunicationSubject: ").append(toIndentedString(sCommunicationSubject)).append("\n");
+    sb.append("    sCommunicationBodyurl: ").append(toIndentedString(sCommunicationBodyurl)).append("\n");
     sb.append("    eCommunicationDirection: ").append(toIndentedString(eCommunicationDirection)).append("\n");
     sb.append("    iCommunicationrecipientCount: ").append(toIndentedString(iCommunicationrecipientCount)).append("\n");
-    sb.append("    objContactFrom: ").append(toIndentedString(objContactFrom)).append("\n");
+    sb.append("    objDescriptionstaticSender: ").append(toIndentedString(objDescriptionstaticSender)).append("\n");
+    sb.append("    objEmailstaticSender: ").append(toIndentedString(objEmailstaticSender)).append("\n");
+    sb.append("    objPhonestaticSender: ").append(toIndentedString(objPhonestaticSender)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    aObjCommunicationattachment: ").append(toIndentedString(aObjCommunicationattachment)).append("\n");
     sb.append("    aObjCommunicationrecipient: ").append(toIndentedString(aObjCommunicationrecipient)).append("\n");
@@ -446,9 +527,12 @@ public class CommunicationResponseCompound {
     openapiFields.add("eCommunicationImportance");
     openapiFields.add("eCommunicationType");
     openapiFields.add("sCommunicationSubject");
+    openapiFields.add("sCommunicationBodyurl");
     openapiFields.add("eCommunicationDirection");
     openapiFields.add("iCommunicationrecipientCount");
-    openapiFields.add("objContactFrom");
+    openapiFields.add("objDescriptionstaticSender");
+    openapiFields.add("objEmailstaticSender");
+    openapiFields.add("objPhonestaticSender");
     openapiFields.add("objAudit");
     openapiFields.add("a_objCommunicationattachment");
     openapiFields.add("a_objCommunicationrecipient");
@@ -462,7 +546,6 @@ public class CommunicationResponseCompound {
     openapiRequiredFields.add("sCommunicationSubject");
     openapiRequiredFields.add("eCommunicationDirection");
     openapiRequiredFields.add("iCommunicationrecipientCount");
-    openapiRequiredFields.add("objContactFrom");
     openapiRequiredFields.add("objAudit");
     openapiRequiredFields.add("a_objCommunicationattachment");
     openapiRequiredFields.add("a_objCommunicationrecipient");
@@ -499,8 +582,21 @@ public class CommunicationResponseCompound {
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
-      // validate the required field `objContactFrom`
-      CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactFrom"));
+      if ((jsonObj.get("sCommunicationBodyurl") != null && !jsonObj.get("sCommunicationBodyurl").isJsonNull()) && !jsonObj.get("sCommunicationBodyurl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationBodyurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationBodyurl").toString()));
+      }
+      // validate the optional field `objDescriptionstaticSender`
+      if (jsonObj.get("objDescriptionstaticSender") != null && !jsonObj.get("objDescriptionstaticSender").isJsonNull()) {
+        DescriptionstaticResponse.validateJsonObject(jsonObj.getAsJsonObject("objDescriptionstaticSender"));
+      }
+      // validate the optional field `objEmailstaticSender`
+      if (jsonObj.get("objEmailstaticSender") != null && !jsonObj.get("objEmailstaticSender").isJsonNull()) {
+        EmailstaticResponse.validateJsonObject(jsonObj.getAsJsonObject("objEmailstaticSender"));
+      }
+      // validate the optional field `objPhonestaticSender`
+      if (jsonObj.get("objPhonestaticSender") != null && !jsonObj.get("objPhonestaticSender").isJsonNull()) {
+        PhonestaticResponse.validateJsonObject(jsonObj.getAsJsonObject("objPhonestaticSender"));
+      }
       // validate the required field `objAudit`
       CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
       // ensure the json data is an array

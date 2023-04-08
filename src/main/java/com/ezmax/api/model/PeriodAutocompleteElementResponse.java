@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Period AutocompleteElement Response
  */
-@ApiModel(description = "A Period AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class PeriodAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M = "sPeriodYYYYMM";
   @SerializedName(SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M)
@@ -77,7 +74,6 @@ public class PeriodAutocompleteElementResponse {
    * @return sPeriodYYYYMM
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2202-12", required = true, value = "The YYYYMM of the Period")
 
   public String getsPeriodYYYYMM() {
     return sPeriodYYYYMM;
@@ -101,7 +97,6 @@ public class PeriodAutocompleteElementResponse {
    * @return pkiPeriodID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "21", required = true, value = "The unique ID of the Period")
 
   public Integer getPkiPeriodID() {
     return pkiPeriodID;
@@ -124,7 +119,6 @@ public class PeriodAutocompleteElementResponse {
    * @return bPeriodIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Period is active or not")
 
   public Boolean getbPeriodIsactive() {
     return bPeriodIsactive;

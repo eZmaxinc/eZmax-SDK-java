@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@ApiModel(description = "A Ezsignbulksenddocumentmapping Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
@@ -96,7 +93,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return pkiEzsignbulksenddocumentmappingID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "48", required = true, value = "The unique ID of the Ezsignbulksenddocumentmapping.")
 
   public Integer getPkiEzsignbulksenddocumentmappingID() {
     return pkiEzsignbulksenddocumentmappingID;
@@ -120,7 +116,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return fkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The unique ID of the Ezsignbulksend")
 
   public Integer getFkiEzsignbulksendID() {
     return fkiEzsignbulksendID;
@@ -144,7 +139,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return fkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "99", value = "The unique ID of the Ezsigntemplatepackage")
 
   public Integer getFkiEzsigntemplatepackageID() {
     return fkiEzsigntemplatepackageID;
@@ -168,7 +162,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "36", value = "The unique ID of the Ezsigntemplate")
 
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -192,7 +185,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return iEzsignbulksenddocumentmappingOrder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.")
 
   public Integer getiEzsignbulksenddocumentmappingOrder() {
     return iEzsignbulksenddocumentmappingOrder;
@@ -215,7 +207,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return objEzsigntemplate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsigntemplateResponseCompound getObjEzsigntemplate() {
     return objEzsigntemplate;
@@ -238,7 +229,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
    * @return objEzsigntemplatepackage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsigntemplatepackageResponseCompound getObjEzsigntemplatepackage() {
     return objEzsigntemplatepackage;

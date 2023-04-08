@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * CommunicationResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommunicationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT = "a_objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT)
@@ -77,6 +75,9 @@ public class CommunicationResponseCompoundAllOf {
   }
 
   public CommunicationResponseCompoundAllOf addAObjCommunicationattachmentItem(CommunicationattachmentResponseCompound aObjCommunicationattachmentItem) {
+    if (this.aObjCommunicationattachment == null) {
+      this.aObjCommunicationattachment = new ArrayList<>();
+    }
     this.aObjCommunicationattachment.add(aObjCommunicationattachmentItem);
     return this;
   }
@@ -86,7 +87,6 @@ public class CommunicationResponseCompoundAllOf {
    * @return aObjCommunicationattachment
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationattachmentResponseCompound> getaObjCommunicationattachment() {
     return aObjCommunicationattachment;
@@ -105,6 +105,9 @@ public class CommunicationResponseCompoundAllOf {
   }
 
   public CommunicationResponseCompoundAllOf addAObjCommunicationrecipientItem(CommunicationrecipientResponseCompound aObjCommunicationrecipientItem) {
+    if (this.aObjCommunicationrecipient == null) {
+      this.aObjCommunicationrecipient = new ArrayList<>();
+    }
     this.aObjCommunicationrecipient.add(aObjCommunicationrecipientItem);
     return this;
   }
@@ -114,7 +117,6 @@ public class CommunicationResponseCompoundAllOf {
    * @return aObjCommunicationrecipient
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationrecipientResponseCompound> getaObjCommunicationrecipient() {
     return aObjCommunicationrecipient;
@@ -133,6 +135,9 @@ public class CommunicationResponseCompoundAllOf {
   }
 
   public CommunicationResponseCompoundAllOf addAObjCommunicationexternalrecipientItem(CommunicationexternalrecipientResponseCompound aObjCommunicationexternalrecipientItem) {
+    if (this.aObjCommunicationexternalrecipient == null) {
+      this.aObjCommunicationexternalrecipient = new ArrayList<>();
+    }
     this.aObjCommunicationexternalrecipient.add(aObjCommunicationexternalrecipientItem);
     return this;
   }
@@ -142,7 +147,6 @@ public class CommunicationResponseCompoundAllOf {
    * @return aObjCommunicationexternalrecipient
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CommunicationexternalrecipientResponseCompound> getaObjCommunicationexternalrecipient() {
     return aObjCommunicationexternalrecipient;

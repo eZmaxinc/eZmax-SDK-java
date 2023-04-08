@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignbulksenddocumentmappingResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATE = "objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATE)
@@ -74,7 +72,6 @@ public class EzsignbulksenddocumentmappingResponseCompoundAllOf {
    * @return objEzsigntemplate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsigntemplateResponseCompound getObjEzsigntemplate() {
     return objEzsigntemplate;
@@ -97,7 +94,6 @@ public class EzsignbulksenddocumentmappingResponseCompoundAllOf {
    * @return objEzsigntemplatepackage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsigntemplatepackageResponseCompound getObjEzsigntemplatepackage() {
     return objEzsigntemplatepackage;

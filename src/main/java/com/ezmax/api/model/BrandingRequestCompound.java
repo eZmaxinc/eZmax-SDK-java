@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object and children
  */
-@ApiModel(description = "A Branding Object and children")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class BrandingRequestCompound {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -112,7 +109,6 @@ public class BrandingRequestCompound {
    * @return pkiBrandingID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "78", value = "The unique ID of the Branding")
 
   public Integer getPkiBrandingID() {
     return pkiBrandingID;
@@ -135,7 +131,6 @@ public class BrandingRequestCompound {
    * @return objBrandingDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualBrandingDescription getObjBrandingDescription() {
     return objBrandingDescription;
@@ -158,7 +153,6 @@ public class BrandingRequestCompound {
    * @return eBrandingLogo
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEBrandingLogo geteBrandingLogo() {
     return eBrandingLogo;
@@ -181,7 +175,6 @@ public class BrandingRequestCompound {
    * @return sBrandingBase64
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[B@5b080f3a", value = "The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select 'Default', the logo will be deleted and the default one will be used.")
 
   public byte[] getsBrandingBase64() {
     return sBrandingBase64;
@@ -206,7 +199,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortext
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3752795", required = true, value = "The color of the text. This is a RGB color converted into integer")
 
   public Integer getiBrandingColortext() {
     return iBrandingColortext;
@@ -231,7 +223,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortextlinkbox
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0", required = true, value = "The color of the text in the link box. This is a RGB color converted into integer")
 
   public Integer getiBrandingColortextlinkbox() {
     return iBrandingColortextlinkbox;
@@ -256,7 +247,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortextbutton
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "16777215", required = true, value = "The color of the text in the button. This is a RGB color converted into integer")
 
   public Integer getiBrandingColortextbutton() {
     return iBrandingColortextbutton;
@@ -281,7 +271,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackground
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "15658734", required = true, value = "The color of the background. This is a RGB color converted into integer")
 
   public Integer getiBrandingColorbackground() {
     return iBrandingColorbackground;
@@ -306,7 +295,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackgroundbutton
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "13577007", required = true, value = "The color of the background of the button. This is a RGB color converted into integer")
 
   public Integer getiBrandingColorbackgroundbutton() {
     return iBrandingColorbackgroundbutton;
@@ -331,7 +319,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackgroundsmallbox
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "16777215", required = true, value = "The color of the background of the small box. This is a RGB color converted into integer")
 
   public Integer getiBrandingColorbackgroundsmallbox() {
     return iBrandingColorbackgroundsmallbox;
@@ -354,7 +341,6 @@ public class BrandingRequestCompound {
    * @return bBrandingIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Branding is active or not")
 
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;

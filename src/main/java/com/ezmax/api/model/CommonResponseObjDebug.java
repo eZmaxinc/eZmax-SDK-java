@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a generic debug object that is returned by all API requests
  */
-@ApiModel(description = "This is a generic debug object that is returned by all API requests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -88,7 +85,6 @@ public class CommonResponseObjDebug {
    * @return sMemoryUsage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The peak memory allocated during the API request execution. Formatted as a human readable string")
 
   public String getsMemoryUsage() {
     return sMemoryUsage;
@@ -111,7 +107,6 @@ public class CommonResponseObjDebug {
    * @return sRunTime
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total server execution time of the API request execution. Formatted as a human readable string")
 
   public String getsRunTime() {
     return sRunTime;
@@ -134,7 +129,6 @@ public class CommonResponseObjDebug {
    * @return iSQLSelects
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The number of SQL SELECT queries that were sent to the database server during the API request execution")
 
   public Integer getiSQLSelects() {
     return iSQLSelects;
@@ -157,7 +151,6 @@ public class CommonResponseObjDebug {
    * @return iSQLQueries
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The number of SQL INSERT/UPDATE/DELETE queries that were sent to the database server during the API request execution")
 
   public Integer getiSQLQueries() {
     return iSQLQueries;
@@ -176,6 +169,9 @@ public class CommonResponseObjDebug {
   }
 
   public CommonResponseObjDebug addAObjSQLQueryItem(CommonResponseObjSQLQuery aObjSQLQueryItem) {
+    if (this.aObjSQLQuery == null) {
+      this.aObjSQLQuery = new ArrayList<>();
+    }
     this.aObjSQLQuery.add(aObjSQLQueryItem);
     return this;
   }
@@ -185,7 +181,6 @@ public class CommonResponseObjDebug {
    * @return aObjSQLQuery
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of the SQL Queries that were executed during the API request execution")
 
   public List<CommonResponseObjSQLQuery> getaObjSQLQuery() {
     return aObjSQLQuery;

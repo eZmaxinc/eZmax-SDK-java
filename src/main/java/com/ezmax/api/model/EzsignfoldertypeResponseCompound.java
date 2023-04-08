@@ -24,8 +24,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@ApiModel(description = "A Ezsignfoldertype Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfoldertypeResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -195,11 +192,11 @@ public class EzsignfoldertypeResponseCompound {
 
   public static final String SERIALIZED_NAME_A_FKI_USER_I_D_SIGNED = "a_fkiUserIDSigned";
   @SerializedName(SERIALIZED_NAME_A_FKI_USER_I_D_SIGNED)
-  private List<Integer> aFkiUserIDSigned = null;
+  private List<Integer> aFkiUserIDSigned;
 
   public static final String SERIALIZED_NAME_A_FKI_USER_I_D_SUMMARY = "a_fkiUserIDSummary";
   @SerializedName(SERIALIZED_NAME_A_FKI_USER_I_D_SUMMARY)
-  private List<Integer> aFkiUserIDSummary = null;
+  private List<Integer> aFkiUserIDSummary;
 
   public EzsignfoldertypeResponseCompound() {
   }
@@ -216,7 +213,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return pkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getPkiEzsignfoldertypeID() {
     return pkiEzsignfoldertypeID;
@@ -239,7 +235,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return objEzsignfoldertypeName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualEzsignfoldertypeName getObjEzsignfoldertypeName() {
     return objEzsignfoldertypeName;
@@ -263,7 +258,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return fkiBrandingID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "78", required = true, value = "The unique ID of the Branding")
 
   public Integer getFkiBrandingID() {
     return fkiBrandingID;
@@ -287,7 +281,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Billingentityinternal.")
 
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -311,7 +304,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return fkiUsergroupID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", value = "The unique ID of the Usergroup")
 
   public Integer getFkiUsergroupID() {
     return fkiUsergroupID;
@@ -335,7 +327,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return fkiUsergroupIDRestricted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", value = "The unique ID of the Usergroup")
 
   public Integer getFkiUsergroupIDRestricted() {
     return fkiUsergroupIDRestricted;
@@ -360,7 +351,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
 
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -383,7 +373,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sBrandingDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Company X", required = true, value = "The Description of the Branding in the language of the requester")
 
   public String getsBrandingDescriptionX() {
     return sBrandingDescriptionX;
@@ -406,7 +395,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Default", value = "The description of the Billingentityinternal in the language of the requester")
 
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -429,7 +417,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sEzsigntsarequirementDescriptionX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Default", value = "The description of the Ezsigntsarequirement in the language of the requester")
 
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
@@ -452,7 +439,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sEmailAddressSigned
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@example.com", value = "The email address.")
 
   public String getsEmailAddressSigned() {
     return sEmailAddressSigned;
@@ -475,7 +461,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sEmailAddressSummary
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@example.com", value = "The email address.")
 
   public String getsEmailAddressSummary() {
     return sEmailAddressSummary;
@@ -498,7 +483,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sUsergroupNameX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Administration", value = "The Name of the Usergroup in the language of the requester")
 
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -521,7 +505,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return sUsergroupNameXRestricted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Administration", value = "The Name of the Usergroup in the language of the requester")
 
   public String getsUsergroupNameXRestricted() {
     return sUsergroupNameXRestricted;
@@ -544,7 +527,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return eEzsignfoldertypePrivacylevel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -567,7 +549,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return eEzsignfoldertypeSendreminderfrequency
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignfoldertypeSendreminderfrequency geteEzsignfoldertypeSendreminderfrequency() {
     return eEzsignfoldertypeSendreminderfrequency;
@@ -592,7 +573,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return iEzsignfoldertypeArchivaldays
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "30", required = true, value = "The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype")
 
   public Integer getiEzsignfoldertypeArchivaldays() {
     return iEzsignfoldertypeArchivaldays;
@@ -615,7 +595,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return eEzsignfoldertypeDisposal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfoldertypeDisposal geteEzsignfoldertypeDisposal() {
     return eEzsignfoldertypeDisposal;
@@ -640,7 +619,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return iEzsignfoldertypeDisposaldays
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "365", value = "The number of days after the archival before the disposal of the Ezsignfolder")
 
   public Integer getiEzsignfoldertypeDisposaldays() {
     return iEzsignfoldertypeDisposaldays;
@@ -665,7 +643,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return iEzsignfoldertypeDeadlinedays
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The number of days to get all Ezsignsignatures")
 
   public Integer getiEzsignfoldertypeDeadlinedays() {
     return iEzsignfoldertypeDeadlinedays;
@@ -688,7 +665,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendattatchmentsigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the Ezsigndocument and the proof as attachment in the email")
 
   public Boolean getbEzsignfoldertypeSendattatchmentsigner() {
     return bEzsignfoldertypeSendattatchmentsigner;
@@ -711,7 +687,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsignedtodocumentowner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the signed Ezsigndocument to the Ezsigndocument's owner")
 
   public Boolean getbEzsignfoldertypeSendsignedtodocumentowner() {
     return bEzsignfoldertypeSendsignedtodocumentowner;
@@ -734,7 +709,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsignedtofolderowner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the signed Ezsigndocument to the Ezsignfolder's owner")
 
   public Boolean getbEzsignfoldertypeSendsignedtofolderowner() {
     return bEzsignfoldertypeSendsignedtofolderowner;
@@ -757,7 +731,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsignedtofullgroup
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders")
 
   public Boolean getbEzsignfoldertypeSendsignedtofullgroup() {
     return bEzsignfoldertypeSendsignedtofullgroup;
@@ -780,7 +753,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsignedtolimitedgroup
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders")
 
   public Boolean getbEzsignfoldertypeSendsignedtolimitedgroup() {
     return bEzsignfoldertypeSendsignedtolimitedgroup;
@@ -803,7 +775,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsignedtocolleague
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the signed Ezsigndocument to the colleagues")
 
   public Boolean getbEzsignfoldertypeSendsignedtocolleague() {
     return bEzsignfoldertypeSendsignedtocolleague;
@@ -826,7 +797,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsummarytodocumentowner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the summary to the Ezsigndocument's owner")
 
   public Boolean getbEzsignfoldertypeSendsummarytodocumentowner() {
     return bEzsignfoldertypeSendsummarytodocumentowner;
@@ -849,7 +819,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsummarytofolderowner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the summary to the Ezsignfolder's owner")
 
   public Boolean getbEzsignfoldertypeSendsummarytofolderowner() {
     return bEzsignfoldertypeSendsummarytofolderowner;
@@ -872,7 +841,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsummarytofullgroup
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Whether we send the summary to the Usergroup that has acces to all Ezsignfolders")
 
   public Boolean getbEzsignfoldertypeSendsummarytofullgroup() {
     return bEzsignfoldertypeSendsummarytofullgroup;
@@ -895,7 +863,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsummarytolimitedgroup
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders")
 
   public Boolean getbEzsignfoldertypeSendsummarytolimitedgroup() {
     return bEzsignfoldertypeSendsummarytolimitedgroup;
@@ -918,7 +885,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeSendsummarytocolleague
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether we send the summary to the colleagues")
 
   public Boolean getbEzsignfoldertypeSendsummarytocolleague() {
     return bEzsignfoldertypeSendsummarytocolleague;
@@ -941,7 +907,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeIncludeproofsigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether we include the proof with the signed Ezsigndocument for Ezsignsigners")
 
   public Boolean getbEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
@@ -964,7 +929,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeIncludeproofuser
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether we include the proof with the signed Ezsigndocument for users")
 
   public Boolean getbEzsignfoldertypeIncludeproofuser() {
     return bEzsignfoldertypeIncludeproofuser;
@@ -987,7 +951,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return bEzsignfoldertypeIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Ezsignfoldertype is active or not")
 
   public Boolean getbEzsignfoldertypeIsactive() {
     return bEzsignfoldertypeIsactive;
@@ -1018,7 +981,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return aFkiUserIDSigned
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiUserIDSigned() {
     return aFkiUserIDSigned;
@@ -1049,7 +1011,6 @@ public class EzsignfoldertypeResponseCompound {
    * @return aFkiUserIDSummary
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiUserIDSummary() {
     return aFkiUserIDSummary;

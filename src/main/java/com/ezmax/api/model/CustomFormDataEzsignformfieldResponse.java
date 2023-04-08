@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object
  */
-@ApiModel(description = "An Ezsignformfield Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomFormDataEzsignformfieldResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
@@ -73,7 +70,6 @@ public class CustomFormDataEzsignformfieldResponse {
    * @return sEzsignformfieldLabel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Peanuts", required = true, value = "The Label for the Ezsignformfield")
 
   public String getsEzsignformfieldLabel() {
     return sEzsignformfieldLabel;
@@ -96,7 +92,6 @@ public class CustomFormDataEzsignformfieldResponse {
    * @return sEzsignformfieldValue
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Yes", required = true, value = "The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio")
 
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;

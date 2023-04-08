@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  */
-@ApiModel(description = "Response for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfoldersignerassociationPatchObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -75,7 +72,6 @@ public class EzsignfoldersignerassociationPatchObjectV1Response {
    * @return objDebugPayload
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
@@ -98,7 +94,6 @@ public class EzsignfoldersignerassociationPatchObjectV1Response {
    * @return objDebug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public CommonResponseObjDebug getObjDebug() {
     return objDebug;

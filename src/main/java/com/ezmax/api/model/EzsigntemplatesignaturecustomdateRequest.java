@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatesignaturecustomdate Object
  */
-@ApiModel(description = "An Ezsigntemplatesignaturecustomdate Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatesignaturecustomdateRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D = "pkiEzsigntemplatesignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D)
@@ -82,7 +79,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
    * @return pkiEzsigntemplatesignaturecustomdateID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "58", value = "The unique ID of the Ezsigntemplatesignaturecustomdate")
 
   public Integer getPkiEzsigntemplatesignaturecustomdateID() {
     return pkiEzsigntemplatesignaturecustomdateID;
@@ -106,7 +102,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
    * @return iEzsigntemplatesignaturecustomdateX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
 
   public Integer getiEzsigntemplatesignaturecustomdateX() {
     return iEzsigntemplatesignaturecustomdateX;
@@ -130,7 +125,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
    * @return iEzsigntemplatesignaturecustomdateY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsigntemplatesignaturecustomdateY() {
     return iEzsigntemplatesignaturecustomdateY;
@@ -153,7 +147,6 @@ public class EzsigntemplatesignaturecustomdateRequest {
    * @return sEzsigntemplatesignaturecustomdateFormat
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}", required = true, value = "The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \"Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\" would become \"Signature date: 01/06/2022 08:07\"  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | ")
 
   public String getsEzsigntemplatesignaturecustomdateFormat() {
     return sEzsigntemplatesignaturecustomdateFormat;

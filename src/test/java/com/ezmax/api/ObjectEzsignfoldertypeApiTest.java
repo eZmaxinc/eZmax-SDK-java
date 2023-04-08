@@ -22,7 +22,6 @@ import com.ezmax.api.model.EzsignfoldertypeEditObjectV1Request;
 import com.ezmax.api.model.EzsignfoldertypeEditObjectV1Response;
 import com.ezmax.api.model.EzsignfoldertypeGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
-import com.ezmax.api.model.EzsignfoldertypeGetObjectV1Response;
 import com.ezmax.api.model.EzsignfoldertypeGetObjectV2Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -120,20 +119,6 @@ public class ObjectEzsignfoldertypeApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         EzsignfoldertypeGetListV1Response response = api.ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsignfoldertype
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignfoldertypeGetObjectV1Test() throws ApiException {
-        Integer pkiEzsignfoldertypeID = null;
-        EzsignfoldertypeGetObjectV1Response response = api.ezsignfoldertypeGetObjectV1(pkiEzsignfoldertypeID);
         // TODO: test validations
     }
 

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
  */
-@ApiModel(description = "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderBatchDownloadV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D = "a_pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D)
@@ -120,6 +117,9 @@ public class EzsignfolderBatchDownloadV1Request {
   }
 
   public EzsignfolderBatchDownloadV1Request addAPkiEzsigndocumentIDItem(Integer aPkiEzsigndocumentIDItem) {
+    if (this.aPkiEzsigndocumentID == null) {
+      this.aPkiEzsigndocumentID = new ArrayList<>();
+    }
     this.aPkiEzsigndocumentID.add(aPkiEzsigndocumentIDItem);
     return this;
   }
@@ -129,7 +129,6 @@ public class EzsignfolderBatchDownloadV1Request {
    * @return aPkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<Integer> getaPkiEzsigndocumentID() {
     return aPkiEzsigndocumentID;
@@ -148,6 +147,9 @@ public class EzsignfolderBatchDownloadV1Request {
   }
 
   public EzsignfolderBatchDownloadV1Request addAEDocumentTypeItem(AEDocumentTypeEnum aEDocumentTypeItem) {
+    if (this.aEDocumentType == null) {
+      this.aEDocumentType = new ArrayList<>();
+    }
     this.aEDocumentType.add(aEDocumentTypeItem);
     return this;
   }
@@ -157,7 +159,6 @@ public class EzsignfolderBatchDownloadV1Request {
    * @return aEDocumentType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The type of document to retrieve.  1. **Signed** Is the final document once all signatures were applied. 2. **Proofdocument** Is the evidence report. 3. **Proof** Is the complete evidence archive including all of the above and more.")
 
   public List<AEDocumentTypeEnum> getaEDocumentType() {
     return aEDocumentType;

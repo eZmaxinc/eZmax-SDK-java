@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * ActivesessionResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ActivesessionResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
@@ -84,6 +82,9 @@ public class ActivesessionResponseCompoundAllOf {
   }
 
   public ActivesessionResponseCompoundAllOf addAPkiPermissionIDItem(Integer aPkiPermissionIDItem) {
+    if (this.aPkiPermissionID == null) {
+      this.aPkiPermissionID = new ArrayList<>();
+    }
     this.aPkiPermissionID.add(aPkiPermissionIDItem);
     return this;
   }
@@ -93,7 +94,6 @@ public class ActivesessionResponseCompoundAllOf {
    * @return aPkiPermissionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
 
   public List<Integer> getaPkiPermissionID() {
     return aPkiPermissionID;
@@ -116,7 +116,6 @@ public class ActivesessionResponseCompoundAllOf {
    * @return objUserReal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public ActivesessionResponseCompoundUser getObjUserReal() {
     return objUserReal;
@@ -139,7 +138,6 @@ public class ActivesessionResponseCompoundAllOf {
    * @return objUserCloned
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ActivesessionResponseCompoundUser getObjUserCloned() {
     return objUserCloned;
@@ -162,7 +160,6 @@ public class ActivesessionResponseCompoundAllOf {
    * @return objApikey
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ActivesessionResponseCompoundApikey getObjApikey() {
     return objApikey;
@@ -181,6 +178,9 @@ public class ActivesessionResponseCompoundAllOf {
   }
 
   public ActivesessionResponseCompoundAllOf addAEModuleInternalnameItem(String aEModuleInternalnameItem) {
+    if (this.aEModuleInternalname == null) {
+      this.aEModuleInternalname = new ArrayList<>();
+    }
     this.aEModuleInternalname.add(aEModuleInternalnameItem);
     return this;
   }
@@ -190,7 +190,6 @@ public class ActivesessionResponseCompoundAllOf {
    * @return aEModuleInternalname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
 
   public List<String> getaEModuleInternalname() {
     return aEModuleInternalname;

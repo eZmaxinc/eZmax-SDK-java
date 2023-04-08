@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternaldetail Object
  */
-@ApiModel(description = "A Ezmaxinvoicingsummaryinternaldetail Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryinternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D)
@@ -114,7 +111,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return pkiEzmaxinvoicingsummaryinternaldetailID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "73", value = "The unique ID of the Ezmaxinvoicingsummaryinternaldetail")
 
   public Integer getPkiEzmaxinvoicingsummaryinternaldetailID() {
     return pkiEzmaxinvoicingsummaryinternaldetailID;
@@ -138,7 +134,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return fkiEzmaxinvoicingsummaryinternalID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "57", value = "The unique ID of the Ezmaxinvoicingsummaryinternal")
 
   public Integer getFkiEzmaxinvoicingsummaryinternalID() {
     return fkiEzmaxinvoicingsummaryinternalID;
@@ -162,7 +157,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return fkiEzmaxproductID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "172", required = true, value = "The unique ID of the Ezmaxproduct")
 
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
@@ -185,7 +179,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return sEzmaxproductDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "eZmax (License)", required = true, value = "The description of the Ezmaxproduct in the language of the requester")
 
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
@@ -209,7 +202,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return fkiBillingentityexternalID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "83", required = true, value = "The unique ID of the Billingentityexternal")
 
   public Integer getFkiBillingentityexternalID() {
     return fkiBillingentityexternalID;
@@ -232,7 +224,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return sBillingentityexternalDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Billingentityexternal")
 
   public String getsBillingentityexternalDescription() {
     return sBillingentityexternalDescription;
@@ -255,7 +246,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return dEzmaxinvoicingsummaryinternaldetailCountreal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "350.32", required = true, value = "The count item invoiced for the product")
 
   public String getdEzmaxinvoicingsummaryinternaldetailCountreal() {
     return dEzmaxinvoicingsummaryinternaldetailCountreal;
@@ -278,7 +268,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return dEzmaxinvoicingsummaryinternaldetailSubtotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "625.41", required = true, value = "The subtotal invoiced for the product")
 
   public String getdEzmaxinvoicingsummaryinternaldetailSubtotal() {
     return dEzmaxinvoicingsummaryinternaldetailSubtotal;
@@ -301,7 +290,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return dEzmaxinvoicingsummaryinternaldetailRebate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "560.81", required = true, value = "The rebate for the product")
 
   public String getdEzmaxinvoicingsummaryinternaldetailRebate() {
     return dEzmaxinvoicingsummaryinternaldetailRebate;
@@ -324,7 +312,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return dEzmaxinvoicingsummaryinternaldetailTotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "510.77", required = true, value = "The total invoiced for the product")
 
   public String getdEzmaxinvoicingsummaryinternaldetailTotal() {
     return dEzmaxinvoicingsummaryinternaldetailTotal;
@@ -347,7 +334,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return bEzmaxinvoicingsummaryinternaldetailAdjustment
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether if it's an adjustment")
 
   public Boolean getbEzmaxinvoicingsummaryinternaldetailAdjustment() {
     return bEzmaxinvoicingsummaryinternaldetailAdjustment;
@@ -370,7 +356,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
    * @return tEzmaxproductHelpX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is an exemple of help message", required = true, value = "The help message of the Ezmaxproduct in the language of the requester")
 
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;

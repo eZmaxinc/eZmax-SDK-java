@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@ApiModel(description = "A Webhook List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -104,7 +101,6 @@ public class WebhookListElement {
    * @return pkiWebhookID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "77", required = true, value = "The unique ID of the Webhook")
 
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
@@ -127,7 +123,6 @@ public class WebhookListElement {
    * @return sWebhookDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Import into our system", required = true, value = "The description of the Webhook")
 
   public String getsWebhookDescription() {
     return sWebhookDescription;
@@ -150,7 +145,6 @@ public class WebhookListElement {
    * @return sWebhookUrl
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "https://www.example.com", required = true, value = "The URL of the Webhook callback")
 
   public String getsWebhookUrl() {
     return sWebhookUrl;
@@ -173,7 +167,6 @@ public class WebhookListElement {
    * @return sWebhookEvent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Ezsign-DocumentCompleted", required = true, value = "The concatenated string to describe the Webhook event")
 
   public String getsWebhookEvent() {
     return sWebhookEvent;
@@ -196,7 +189,6 @@ public class WebhookListElement {
    * @return sWebhookEmailfailed
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "email@example.com", required = true, value = "The email that will receive the Webhook in case all attempts fail")
 
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
@@ -219,7 +211,6 @@ public class WebhookListElement {
    * @return eWebhookModule
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
@@ -242,7 +233,6 @@ public class WebhookListElement {
    * @return eWebhookEzsignevent
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
@@ -265,7 +255,6 @@ public class WebhookListElement {
    * @return eWebhookManagementevent
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
@@ -288,7 +277,6 @@ public class WebhookListElement {
    * @return bWebhookIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Webhook is active or not")
 
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;

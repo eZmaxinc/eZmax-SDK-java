@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object in the context of getNotificationtests
  */
-@ApiModel(description = "A Notificationtest Object in the context of getNotificationtests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomNotificationtestgetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -96,7 +93,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return pkiNotificationtestID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "14", required = true, value = "The unique ID of the Notificationtest")
 
   public Integer getPkiNotificationtestID() {
     return pkiNotificationtestID;
@@ -119,7 +115,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return objNotificationtestName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualNotificationtestName getObjNotificationtestName() {
     return objNotificationtestName;
@@ -143,7 +138,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return fkiNotificationsubsectionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3", required = true, value = "The unique ID of the Notificationsubsection")
 
   public Integer getFkiNotificationsubsectionID() {
     return fkiNotificationsubsectionID;
@@ -166,7 +160,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return sNotificationtestFunction
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The function name of the Notificationtest")
 
   public String getsNotificationtestFunction() {
     return sNotificationtestFunction;
@@ -189,7 +182,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return sNotificationtestNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Notificationtest in the language of the requester")
 
   public String getsNotificationtestNameX() {
     return sNotificationtestNameX;
@@ -212,7 +204,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return eNotificationpreferenceStatus
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldENotificationpreferenceStatus geteNotificationpreferenceStatus() {
     return eNotificationpreferenceStatus;
@@ -235,7 +226,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return iNotificationtest
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "27", required = true, value = "The number of elements returned by the Notificationtest")
 
   public Integer getiNotificationtest() {
     return iNotificationtest;

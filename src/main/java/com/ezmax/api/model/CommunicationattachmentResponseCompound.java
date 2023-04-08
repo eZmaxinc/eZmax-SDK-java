@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationattachment Object
  */
-@ApiModel(description = "A Communicationattachment Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommunicationattachmentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D = "pkiCommunicationattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D)
@@ -85,7 +82,6 @@ public class CommunicationattachmentResponseCompound {
    * @return pkiCommunicationattachmentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "203", required = true, value = "The unique ID of the Communicationattachment")
 
   public Integer getPkiCommunicationattachmentID() {
     return pkiCommunicationattachmentID;
@@ -109,7 +105,6 @@ public class CommunicationattachmentResponseCompound {
    * @return fkiAttachmentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Attachment.")
 
   public Integer getFkiAttachmentID() {
     return fkiAttachmentID;
@@ -133,7 +128,6 @@ public class CommunicationattachmentResponseCompound {
    * @return fkiInvoiceID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Invoice.")
 
   public Integer getFkiInvoiceID() {
     return fkiInvoiceID;
@@ -157,7 +151,6 @@ public class CommunicationattachmentResponseCompound {
    * @return fkiSalarypreparationID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Salarypreparation.")
 
   public Integer getFkiSalarypreparationID() {
     return fkiSalarypreparationID;
@@ -180,7 +173,6 @@ public class CommunicationattachmentResponseCompound {
    * @return sCommunicationattachmentName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "File.pdf", required = true, value = "The name of the Communicationattachment")
 
   public String getsCommunicationattachmentName() {
     return sCommunicationattachmentName;

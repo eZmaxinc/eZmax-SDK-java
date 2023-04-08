@@ -25,7 +25,6 @@ import com.ezmax.api.model.WebhookEditObjectV1Request;
 import com.ezmax.api.model.WebhookEditObjectV1Response;
 import com.ezmax.api.model.WebhookGetHistoryV1Response;
 import com.ezmax.api.model.WebhookGetListV1Response;
-import com.ezmax.api.model.WebhookGetObjectV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
 import com.ezmax.api.model.WebhookTestV1Response;
 import org.junit.jupiter.api.Disabled;
@@ -117,20 +116,6 @@ public class ObjectWebhookApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         WebhookGetListV1Response response = api.webhookGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Webhook
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void webhookGetObjectV1Test() throws ApiException {
-        Integer pkiWebhookID = null;
-        WebhookGetObjectV1Response response = api.webhookGetObjectV1(pkiWebhookID);
         // TODO: test validations
     }
 

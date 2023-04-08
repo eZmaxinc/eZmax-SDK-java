@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@ApiModel(description = "A Phone Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class PhoneRequestCompound {
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
@@ -95,7 +92,6 @@ public class PhoneRequestCompound {
    * @return fkiPhonetypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|")
 
   public Integer getFkiPhonetypeID() {
     return fkiPhonetypeID;
@@ -118,7 +114,6 @@ public class PhoneRequestCompound {
    * @return ePhoneType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEPhoneType getePhoneType() {
     return ePhoneType;
@@ -141,7 +136,6 @@ public class PhoneRequestCompound {
    * @return sPhoneRegion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "514", value = "The region of the phone number. (For a North America Number only)  The region is the \"514\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneRegion() {
     return sPhoneRegion;
@@ -164,7 +158,6 @@ public class PhoneRequestCompound {
    * @return sPhoneExchange
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "990", value = "The exchange of the phone number. (For a North America Number only)  The exchange is the \"990\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneExchange() {
     return sPhoneExchange;
@@ -187,7 +180,6 @@ public class PhoneRequestCompound {
    * @return sPhoneNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1516", value = "The number of the phone number. (For a North America Number only)  The number is the \"1516\" section in this sample phone number: (514) 990-1516 x123")
 
   public String getsPhoneNumber() {
     return sPhoneNumber;
@@ -210,7 +202,6 @@ public class PhoneRequestCompound {
    * @return sPhoneInternational
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
 
   public String getsPhoneInternational() {
     return sPhoneInternational;
@@ -233,7 +224,6 @@ public class PhoneRequestCompound {
    * @return sPhoneExtension
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "123", value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
 
   public String getsPhoneExtension() {
     return sPhoneExtension;

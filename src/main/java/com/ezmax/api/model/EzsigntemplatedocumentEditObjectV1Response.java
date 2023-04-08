@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
-@ApiModel(description = "Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentEditObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -66,7 +63,7 @@ public class EzsigntemplatedocumentEditObjectV1Response {
 
   public static final String SERIALIZED_NAME_A_OBJ_WARNING = "a_objWarning";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WARNING)
-  private List<CommonResponseWarning> aObjWarning = null;
+  private List<CommonResponseWarning> aObjWarning;
 
   public EzsigntemplatedocumentEditObjectV1Response() {
   }
@@ -82,7 +79,6 @@ public class EzsigntemplatedocumentEditObjectV1Response {
    * @return objDebugPayload
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
@@ -105,7 +101,6 @@ public class EzsigntemplatedocumentEditObjectV1Response {
    * @return objDebug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public CommonResponseObjDebug getObjDebug() {
     return objDebug;
@@ -136,7 +131,6 @@ public class EzsigntemplatedocumentEditObjectV1Response {
    * @return aObjWarning
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<CommonResponseWarning> getaObjWarning() {
     return aObjWarning;

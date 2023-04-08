@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@ApiModel(description = "A User Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -96,7 +93,6 @@ public class UserResponse {
    * @return pkiUserID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "70", required = true, value = "The unique ID of the User")
 
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -121,7 +117,6 @@ public class UserResponse {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -144,7 +139,6 @@ public class UserResponse {
    * @return eUserType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEUserType geteUserType() {
     return eUserType;
@@ -167,7 +161,6 @@ public class UserResponse {
    * @return sUserFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the user")
 
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -190,7 +183,6 @@ public class UserResponse {
    * @return sUserLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the user")
 
   public String getsUserLastname() {
     return sUserLastname;
@@ -213,7 +205,6 @@ public class UserResponse {
    * @return sUserLoginname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "JohnDoe", required = true, value = "The Login name of the User.")
 
   public String getsUserLoginname() {
     return sUserLoginname;
@@ -236,7 +227,6 @@ public class UserResponse {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;

@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignsignatureResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignatureResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -59,7 +57,7 @@ public class EzsignsignatureResponseCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
-  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = null;
+  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
 
   public EzsignsignatureResponseCompoundAllOf() {
   }
@@ -75,7 +73,6 @@ public class EzsignsignatureResponseCompoundAllOf {
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
 
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -106,7 +103,6 @@ public class EzsignsignatureResponseCompoundAllOf {
    * @return aObjEzsignsignaturecustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
 
   public List<EzsignsignaturecustomdateResponseCompound> getaObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;

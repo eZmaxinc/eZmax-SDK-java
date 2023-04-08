@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatepackage/getList
  */
-@ApiModel(description = "Payload for GET /1/object/ezsigntemplatepackage/getList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatepackageGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -76,6 +73,9 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
   }
 
   public EzsigntemplatepackageGetListV1ResponseMPayload addAObjEzsigntemplatepackageItem(EzsigntemplatepackageListElement aObjEzsigntemplatepackageItem) {
+    if (this.aObjEzsigntemplatepackage == null) {
+      this.aObjEzsigntemplatepackage = new ArrayList<>();
+    }
     this.aObjEzsigntemplatepackage.add(aObjEzsigntemplatepackageItem);
     return this;
   }
@@ -85,7 +85,6 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
    * @return aObjEzsigntemplatepackage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplatepackageListElement> getaObjEzsigntemplatepackage() {
     return aObjEzsigntemplatepackage;
@@ -108,7 +107,6 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
    * @return iRowReturned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "100", required = true, value = "The number of rows returned")
 
   public Integer getiRowReturned() {
     return iRowReturned;
@@ -131,7 +129,6 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
    * @return iRowFiltered
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "533", required = true, value = "The number of rows matching your filters (if any) or the total number of rows")
 
   public Integer getiRowFiltered() {
     return iRowFiltered;

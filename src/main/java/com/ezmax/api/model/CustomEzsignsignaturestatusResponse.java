@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
-@ApiModel(description = "A Ezsignsignaturestatus Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -128,7 +125,6 @@ public class CustomEzsignsignaturestatusResponse {
    * @return eEzsignsignaturestatusSteptype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Type of step")
 
   public EEzsignsignaturestatusSteptypeEnum geteEzsignsignaturestatusSteptype() {
     return eEzsignsignaturestatusSteptype;
@@ -151,7 +147,6 @@ public class CustomEzsignsignaturestatusResponse {
    * @return iEzsignsignaturestatusStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step at which the Ezsignsigner will be invited to sign or fill the form fields")
 
   public Integer getiEzsignsignaturestatusStep() {
     return iEzsignsignaturestatusStep;
@@ -174,7 +169,6 @@ public class CustomEzsignsignaturestatusResponse {
    * @return iEzsignsignaturestatusTotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The total number of signature or form fields the Ezsignsigner must process at the current step")
 
   public Integer getiEzsignsignaturestatusTotal() {
     return iEzsignsignaturestatusTotal;
@@ -197,7 +191,6 @@ public class CustomEzsignsignaturestatusResponse {
    * @return iEzsignsignaturestatusSigned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The number of signature or form fields the Ezsignsigner has already processed at the current step")
 
   public Integer getiEzsignsignaturestatusSigned() {
     return iEzsignsignaturestatusSigned;

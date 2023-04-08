@@ -20,7 +20,6 @@ import com.ezmax.api.model.EzsigntemplatesignerCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatesignerDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatesignerEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatesignerEditObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatesignerGetObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatesignerGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -78,20 +77,6 @@ public class ObjectEzsigntemplatesignerApiTest {
         Integer pkiEzsigntemplatesignerID = null;
         EzsigntemplatesignerEditObjectV1Request ezsigntemplatesignerEditObjectV1Request = null;
         EzsigntemplatesignerEditObjectV1Response response = api.ezsigntemplatesignerEditObjectV1(pkiEzsigntemplatesignerID, ezsigntemplatesignerEditObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatesigner
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplatesignerGetObjectV1Test() throws ApiException {
-        Integer pkiEzsigntemplatesignerID = null;
-        EzsigntemplatesignerGetObjectV1Response response = api.ezsigntemplatesignerGetObjectV1(pkiEzsigntemplatesignerID);
         // TODO: test validations
     }
 

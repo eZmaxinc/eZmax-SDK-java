@@ -15,8 +15,8 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignbulksendtransmissionGetFormsDataV1Response;
-import com.ezmax.api.model.EzsignbulksendtransmissionGetObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendtransmissionGetObjectV2Response;
 import java.io.File;
 import org.junit.jupiter.api.Disabled;
@@ -50,6 +50,20 @@ public class ObjectEzsignbulksendtransmissionApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Test() throws ApiException {
+        Integer pkiEzsignbulksendtransmissionID = null;
+        EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response response = api.ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsignbulksendtransmission&#39;s forms data
      *
      * 
@@ -60,20 +74,6 @@ public class ObjectEzsignbulksendtransmissionApiTest {
     public void ezsignbulksendtransmissionGetFormsDataV1Test() throws ApiException {
         Integer pkiEzsignbulksendtransmissionID = null;
         EzsignbulksendtransmissionGetFormsDataV1Response response = api.ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendtransmission
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignbulksendtransmissionGetObjectV1Test() throws ApiException {
-        Integer pkiEzsignbulksendtransmissionID = null;
-        EzsignbulksendtransmissionGetObjectV1Response response = api.ezsignbulksendtransmissionGetObjectV1(pkiEzsignbulksendtransmissionID);
         // TODO: test validations
     }
 

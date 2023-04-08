@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,24 +48,23 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/department/{pkiDepartmentID}/getMembers
  */
-@ApiModel(description = "Payload for GET /1/object/department/{pkiDepartmentID}/getMembers")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class DepartmentGetMembersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_FKI_AGENT_I_D = "a_fkiAgentID";
   @SerializedName(SERIALIZED_NAME_A_FKI_AGENT_I_D)
-  private List<Integer> aFkiAgentID = null;
+  private List<Integer> aFkiAgentID;
 
   public static final String SERIALIZED_NAME_A_FKI_BROKER_I_D = "a_fkiBrokerID";
   @SerializedName(SERIALIZED_NAME_A_FKI_BROKER_I_D)
-  private List<Integer> aFkiBrokerID = null;
+  private List<Integer> aFkiBrokerID;
 
   public static final String SERIALIZED_NAME_A_FKI_CUSTOMER_I_D = "a_fkiCustomerID";
   @SerializedName(SERIALIZED_NAME_A_FKI_CUSTOMER_I_D)
-  private List<Integer> aFkiCustomerID = null;
+  private List<Integer> aFkiCustomerID;
 
   public static final String SERIALIZED_NAME_A_FKI_EMPLOYEE_I_D = "a_fkiEmployeeID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EMPLOYEE_I_D)
-  private List<Integer> aFkiEmployeeID = null;
+  private List<Integer> aFkiEmployeeID;
 
   public DepartmentGetMembersV1ResponseMPayload() {
   }
@@ -91,7 +88,6 @@ public class DepartmentGetMembersV1ResponseMPayload {
    * @return aFkiAgentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiAgentID() {
     return aFkiAgentID;
@@ -122,7 +118,6 @@ public class DepartmentGetMembersV1ResponseMPayload {
    * @return aFkiBrokerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiBrokerID() {
     return aFkiBrokerID;
@@ -153,7 +148,6 @@ public class DepartmentGetMembersV1ResponseMPayload {
    * @return aFkiCustomerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiCustomerID() {
     return aFkiCustomerID;
@@ -184,7 +178,6 @@ public class DepartmentGetMembersV1ResponseMPayload {
    * @return aFkiEmployeeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Integer> getaFkiEmployeeID() {
     return aFkiEmployeeID;

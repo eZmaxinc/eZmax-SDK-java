@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object and children to create a complete structure
  */
-@ApiModel(description = "An Ezsignbulksendtransmission Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendtransmissionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)
@@ -94,7 +91,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return pkiEzsignbulksendtransmissionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "21", required = true, value = "The unique ID of the Ezsignbulksendtransmission")
 
   public Integer getPkiEzsignbulksendtransmissionID() {
     return pkiEzsignbulksendtransmissionID;
@@ -118,7 +114,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return fkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The unique ID of the Ezsignbulksend")
 
   public Integer getFkiEzsignbulksendID() {
     return fkiEzsignbulksendID;
@@ -141,7 +136,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return sEzsignbulksendtransmissionDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Bulk Send Transmission #1", required = true, value = "The description of the Ezsignbulksendtransmission")
 
   public String getsEzsignbulksendtransmissionDescription() {
     return sEzsignbulksendtransmissionDescription;
@@ -165,7 +159,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return iEzsignbulksendtransmissionErrors
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The number of errors during the Ezsignbulksendtransmission")
 
   public Integer getiEzsignbulksendtransmissionErrors() {
     return iEzsignbulksendtransmissionErrors;
@@ -188,7 +181,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -207,6 +199,9 @@ public class EzsignbulksendtransmissionResponseCompound {
   }
 
   public EzsignbulksendtransmissionResponseCompound addAObjEzsignfoldertransmissionItem(CustomEzsignfoldertransmissionResponse aObjEzsignfoldertransmissionItem) {
+    if (this.aObjEzsignfoldertransmission == null) {
+      this.aObjEzsignfoldertransmission = new ArrayList<>();
+    }
     this.aObjEzsignfoldertransmission.add(aObjEzsignfoldertransmissionItem);
     return this;
   }
@@ -216,7 +211,6 @@ public class EzsignbulksendtransmissionResponseCompound {
    * @return aObjEzsignfoldertransmission
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzsignfoldertransmissionResponse> getaObjEzsignfoldertransmission() {
     return aObjEzsignfoldertransmission;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationtest
  */
-@ApiModel(description = "Name of the Notificationtest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class MultilingualNotificationtestName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1 = "sNotificationtestName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1)
@@ -73,7 +70,6 @@ public class MultilingualNotificationtestName {
    * @return sNotificationtestName1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Default", value = "The name of the Notificationtest in French")
 
   public String getsNotificationtestName1() {
     return sNotificationtestName1;
@@ -96,7 +92,6 @@ public class MultilingualNotificationtestName {
    * @return sNotificationtestName2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Default", value = "The name of the Notificationtest in English")
 
   public String getsNotificationtestName2() {
     return sNotificationtestName2;

@@ -28,8 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignbulksendtransmissionGetFormsDataV1Response;
-import com.ezmax.api.model.EzsignbulksendtransmissionGetObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendtransmissionGetObjectV2Response;
 import java.io.File;
 
@@ -214,6 +214,133 @@ public class ObjectEzsignbulksendtransmissionApi {
         return localVarCall;
     }
     /**
+     * Build call for ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Call(Integer pkiEzsignbulksendtransmissionID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic"
+            .replace("{" + "pkiEzsignbulksendtransmissionID" + "}", localVarApiClient.escapeString(pkiEzsignbulksendtransmissionID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ValidateBeforeCall(Integer pkiEzsignbulksendtransmissionID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
+        if (pkiEzsignbulksendtransmissionID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(Async)");
+        }
+
+        return ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Call(pkiEzsignbulksendtransmissionID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @return EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(Integer pkiEzsignbulksendtransmissionID) throws ApiException {
+        ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response> localVarResp = ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithHttpInfo(pkiEzsignbulksendtransmissionID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @return ApiResponse&lt;EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response> ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1WithHttpInfo(Integer pkiEzsignbulksendtransmissionID) throws ApiException {
+        okhttp3.Call localVarCall = ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ValidateBeforeCall(pkiEzsignbulksendtransmissionID, null);
+        Type localVarReturnType = new TypeToken<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures (asynchronously)
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     * @param pkiEzsignbulksendtransmissionID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Async(Integer pkiEzsignbulksendtransmissionID, final ApiCallback<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1ValidateBeforeCall(pkiEzsignbulksendtransmissionID, _callback);
+        Type localVarReturnType = new TypeToken<EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for ezsignbulksendtransmissionGetFormsDataV1
      * @param pkiEzsignbulksendtransmissionID  (required)
      * @param _callback Callback for upload/download progress
@@ -346,142 +473,6 @@ public class ObjectEzsignbulksendtransmissionApi {
 
         okhttp3.Call localVarCall = ezsignbulksendtransmissionGetFormsDataV1ValidateBeforeCall(pkiEzsignbulksendtransmissionID, _callback);
         Type localVarReturnType = new TypeToken<EzsignbulksendtransmissionGetFormsDataV1Response>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for ezsignbulksendtransmissionGetObjectV1
-     * @param pkiEzsignbulksendtransmissionID  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-     </table>
-     * @deprecated
-     */
-    @Deprecated
-    public okhttp3.Call ezsignbulksendtransmissionGetObjectV1Call(Integer pkiEzsignbulksendtransmissionID, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}"
-            .replace("{" + "pkiEzsignbulksendtransmissionID" + "}", localVarApiClient.escapeString(pkiEzsignbulksendtransmissionID.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @Deprecated
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignbulksendtransmissionGetObjectV1ValidateBeforeCall(Integer pkiEzsignbulksendtransmissionID, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'pkiEzsignbulksendtransmissionID' is set
-        if (pkiEzsignbulksendtransmissionID == null) {
-            throw new ApiException("Missing the required parameter 'pkiEzsignbulksendtransmissionID' when calling ezsignbulksendtransmissionGetObjectV1(Async)");
-        }
-
-        return ezsignbulksendtransmissionGetObjectV1Call(pkiEzsignbulksendtransmissionID, _callback);
-
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendtransmission
-     * 
-     * @param pkiEzsignbulksendtransmissionID  (required)
-     * @return EzsignbulksendtransmissionGetObjectV1Response
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-     </table>
-     * @deprecated
-     */
-    @Deprecated
-    public EzsignbulksendtransmissionGetObjectV1Response ezsignbulksendtransmissionGetObjectV1(Integer pkiEzsignbulksendtransmissionID) throws ApiException {
-        ApiResponse<EzsignbulksendtransmissionGetObjectV1Response> localVarResp = ezsignbulksendtransmissionGetObjectV1WithHttpInfo(pkiEzsignbulksendtransmissionID);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendtransmission
-     * 
-     * @param pkiEzsignbulksendtransmissionID  (required)
-     * @return ApiResponse&lt;EzsignbulksendtransmissionGetObjectV1Response&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-     </table>
-     * @deprecated
-     */
-    @Deprecated
-    public ApiResponse<EzsignbulksendtransmissionGetObjectV1Response> ezsignbulksendtransmissionGetObjectV1WithHttpInfo(Integer pkiEzsignbulksendtransmissionID) throws ApiException {
-        okhttp3.Call localVarCall = ezsignbulksendtransmissionGetObjectV1ValidateBeforeCall(pkiEzsignbulksendtransmissionID, null);
-        Type localVarReturnType = new TypeToken<EzsignbulksendtransmissionGetObjectV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendtransmission (asynchronously)
-     * 
-     * @param pkiEzsignbulksendtransmissionID  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-     </table>
-     * @deprecated
-     */
-    @Deprecated
-    public okhttp3.Call ezsignbulksendtransmissionGetObjectV1Async(Integer pkiEzsignbulksendtransmissionID, final ApiCallback<EzsignbulksendtransmissionGetObjectV1Response> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = ezsignbulksendtransmissionGetObjectV1ValidateBeforeCall(pkiEzsignbulksendtransmissionID, _callback);
-        Type localVarReturnType = new TypeToken<EzsignbulksendtransmissionGetObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

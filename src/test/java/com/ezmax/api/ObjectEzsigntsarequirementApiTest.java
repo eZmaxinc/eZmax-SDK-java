@@ -14,8 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteDisabledV1Response;
-import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntsarequirementGetAutocompleteV2Response;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -33,24 +31,6 @@ import java.util.Map;
 public class ObjectEzsigntsarequirementApiTest {
 
     private final ObjectEzsigntsarequirementApi api = new ObjectEzsigntsarequirementApi();
-
-    /**
-     * Retrieve Ezsigntsarequirements and IDs
-     *
-     * Get the list of Ezsigntsarequirement to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntsarequirementGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        Integer fkiEzsignfoldertypeID = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteDisabledV1Response response = api.ezsigntsarequirementGetAutocompleteV1(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
 
     /**
      * Retrieve Ezsigntsarequirements and IDs

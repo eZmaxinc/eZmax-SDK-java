@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object
  */
-@ApiModel(description = "An Ezsignsigner Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
@@ -86,7 +83,6 @@ public class EzsignsignerResponse {
    * @return pkiEzsignsignerID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "89", required = true, value = "The unique ID of the Ezsignsigner")
 
   public Integer getPkiEzsignsignerID() {
     return pkiEzsignsignerID;
@@ -111,7 +107,6 @@ public class EzsignsignerResponse {
    * @return fkiTaxassignmentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|")
 
   public Integer getFkiTaxassignmentID() {
     return fkiTaxassignmentID;
@@ -135,7 +130,6 @@ public class EzsignsignerResponse {
    * @return fkiSecretquestionID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7", value = "The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father's middle name| |15|Your mother's maiden name| |16|Name of your eldest child| |17|Your spouse's middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat's name| |22|Date of Birth (YYYY-MM-DD)|")
 
   public Integer getFkiSecretquestionID() {
     return fkiSecretquestionID;
@@ -159,7 +153,6 @@ public class EzsignsignerResponse {
    * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|")
 
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
@@ -182,7 +175,6 @@ public class EzsignsignerResponse {
    * @return sUserlogintypeDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Email and phone or SMS", required = true, value = "The description of the Userlogintype in the language of the requester")
 
   public String getsUserlogintypeDescriptionX() {
     return sUserlogintypeDescriptionX;

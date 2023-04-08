@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
  */
-@ApiModel(description = "Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class NotificationtestGetElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -64,7 +61,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
 
   public static final String SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY = "a_sVariableobjectProperty";
   @SerializedName(SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY)
-  private List<String> aSVariableobjectProperty = null;
+  private List<String> aSVariableobjectProperty;
 
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT = "a_objVariableobject";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT)
@@ -85,7 +82,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
    * @return pkiNotificationtestID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "14", required = true, value = "The unique ID of the Notificationtest")
 
   public Integer getPkiNotificationtestID() {
     return pkiNotificationtestID;
@@ -108,7 +104,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
    * @return sNotificationtestFunction
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The function name of the Notificationtest")
 
   public String getsNotificationtestFunction() {
     return sNotificationtestFunction;
@@ -139,7 +134,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
    * @return aSVariableobjectProperty
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<String> getaSVariableobjectProperty() {
     return aSVariableobjectProperty;
@@ -158,6 +152,9 @@ public class NotificationtestGetElementsV1ResponseMPayload {
   }
 
   public NotificationtestGetElementsV1ResponseMPayload addAObjVariableobjectItem(Map<String, Object> aObjVariableobjectItem) {
+    if (this.aObjVariableobject == null) {
+      this.aObjVariableobject = new ArrayList<>();
+    }
     this.aObjVariableobject.add(aObjVariableobjectItem);
     return this;
   }
@@ -167,7 +164,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
    * @return aObjVariableobject
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<Map<String, Object>> getaObjVariableobject() {
     return aObjVariableobject;

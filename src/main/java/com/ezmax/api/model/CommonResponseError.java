@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@ApiModel(description = "Generic Error Message")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseError {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -73,7 +70,6 @@ public class CommonResponseError {
    * @return sErrorMessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "More detail about the error")
 
   public String getsErrorMessage() {
     return sErrorMessage;
@@ -96,7 +92,6 @@ public class CommonResponseError {
    * @return eErrorCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The error code. See documentation for valid values")
 
   public String geteErrorCode() {
     return eErrorCode;

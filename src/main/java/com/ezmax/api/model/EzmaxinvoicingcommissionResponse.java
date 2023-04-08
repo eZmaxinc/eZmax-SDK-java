@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcommission Object
  */
-@ApiModel(description = "A Ezmaxinvoicingcommission Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingcommissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D = "pkiEzmaxinvoicingcommissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D)
@@ -97,7 +94,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return pkiEzmaxinvoicingcommissionID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "36", value = "The unique ID of the Ezmaxinvoicingcommission")
 
   public Integer getPkiEzmaxinvoicingcommissionID() {
     return pkiEzmaxinvoicingcommissionID;
@@ -121,7 +117,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return fkiEzmaxinvoicingsummaryglobalID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "241", value = "The unique ID of the Ezmaxinvoicingsummaryglobal")
 
   public Integer getFkiEzmaxinvoicingsummaryglobalID() {
     return fkiEzmaxinvoicingsummaryglobalID;
@@ -145,7 +140,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return fkiEzmaxpartnerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "12", value = "The unique ID of the Ezmaxpartner")
 
   public Integer getFkiEzmaxpartnerID() {
     return fkiEzmaxpartnerID;
@@ -169,7 +163,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return fkiEzmaxrepresentativeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "21", value = "The unique ID of the Ezmaxrepresentative")
 
   public Integer getFkiEzmaxrepresentativeID() {
     return fkiEzmaxrepresentativeID;
@@ -192,7 +185,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return dtEzmaxinvoicingcommissionStart
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The start date for the Ezmaxinvoicingcommission")
 
   public String getDtEzmaxinvoicingcommissionStart() {
     return dtEzmaxinvoicingcommissionStart;
@@ -215,7 +207,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return dtEzmaxinvoicingcommissionEnd
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The end date for the Ezmaxinvoicingcommission")
 
   public String getDtEzmaxinvoicingcommissionEnd() {
     return dtEzmaxinvoicingcommissionEnd;
@@ -239,7 +230,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return iEzmaxinvoicingcommissionDays
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "30", required = true, value = "This is the number of days during the month on which the Ezmaxinvoigcommission applies")
 
   public Integer getiEzmaxinvoicingcommissionDays() {
     return iEzmaxinvoicingcommissionDays;
@@ -262,7 +252,6 @@ public class EzmaxinvoicingcommissionResponse {
    * @return dEzmaxinvoicingcommissionAmount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "450.34", required = true, value = "The amount of Ezmaxinvoicingcommission")
 
   public String getdEzmaxinvoicingcommissionAmount() {
     return dEzmaxinvoicingcommissionAmount;

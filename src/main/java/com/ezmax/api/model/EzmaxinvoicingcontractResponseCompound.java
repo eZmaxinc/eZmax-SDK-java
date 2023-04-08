@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcontract Object
  */
-@ApiModel(description = "A Ezmaxinvoicingcontract Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingcontractResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D = "pkiEzmaxinvoicingcontractID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D)
@@ -104,7 +101,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return pkiEzmaxinvoicingcontractID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "28", required = true, value = "The unique ID of the Ezmaxinvoicingcontract")
 
   public Integer getPkiEzmaxinvoicingcontractID() {
     return pkiEzmaxinvoicingcontractID;
@@ -127,7 +123,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return eEzmaxinvoicingcontractPaymenttype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzmaxinvoicingcontractPaymenttype geteEzmaxinvoicingcontractPaymenttype() {
     return eEzmaxinvoicingcontractPaymenttype;
@@ -151,7 +146,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return iEzmaxinvoicingcontractLength
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3", required = true, value = "The length in years of the Ezmaxinvoicingcontract")
 
   public Integer getiEzmaxinvoicingcontractLength() {
     return iEzmaxinvoicingcontractLength;
@@ -174,7 +168,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return dtEzmaxinvoicingcontractStart
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The start date of the Ezmaxinvoicingcontract")
 
   public String getDtEzmaxinvoicingcontractStart() {
     return dtEzmaxinvoicingcontractStart;
@@ -197,7 +190,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return dtEzmaxinvoicingcontractEnd
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The end date of the Ezmaxinvoicingcontract")
 
   public String getDtEzmaxinvoicingcontractEnd() {
     return dtEzmaxinvoicingcontractEnd;
@@ -220,7 +212,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return dEzmaxinvoicingcontractLicense
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "335.42", required = true, value = "The price of the license")
 
   public String getdEzmaxinvoicingcontractLicense() {
     return dEzmaxinvoicingcontractLicense;
@@ -243,7 +234,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return dEzmaxinvoicingcontract121qa
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "295.48", required = true, value = "The price for 121QA")
 
   public String getdEzmaxinvoicingcontract121qa() {
     return dEzmaxinvoicingcontract121qa;
@@ -266,7 +256,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return bEzmaxinvoicingcontractEzsignallagents
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether eZsign is for all agents")
 
   public Boolean getbEzmaxinvoicingcontractEzsignallagents() {
     return bEzmaxinvoicingcontractEzsignallagents;
@@ -289,7 +278,6 @@ public class EzmaxinvoicingcontractResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;

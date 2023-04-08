@@ -18,7 +18,6 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipDeleteObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatepackagesignermembershipGetObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,20 +60,6 @@ public class ObjectEzsigntemplatepackagesignermembershipApiTest {
     public void ezsigntemplatepackagesignermembershipDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatepackagesignermembershipID = null;
         EzsigntemplatepackagesignermembershipDeleteObjectV1Response response = api.ezsigntemplatepackagesignermembershipDeleteObjectV1(pkiEzsigntemplatepackagesignermembershipID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatepackagesignermembership
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplatepackagesignermembershipGetObjectV1Test() throws ApiException {
-        Integer pkiEzsigntemplatepackagesignermembershipID = null;
-        EzsigntemplatepackagesignermembershipGetObjectV1Response response = api.ezsigntemplatepackagesignermembershipGetObjectV1(pkiEzsigntemplatepackagesignermembershipID);
         // TODO: test validations
     }
 

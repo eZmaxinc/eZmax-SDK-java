@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend Object
  */
-@ApiModel(description = "An Ezsignbulksend Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -112,7 +109,6 @@ public class EzsignbulksendResponse {
    * @return pkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The unique ID of the Ezsignbulksend")
 
   public Integer getPkiEzsignbulksendID() {
     return pkiEzsignbulksendID;
@@ -136,7 +132,6 @@ public class EzsignbulksendResponse {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -161,7 +156,6 @@ public class EzsignbulksendResponse {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -184,7 +178,6 @@ public class EzsignbulksendResponse {
    * @return sLanguageNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "English", required = true, value = "The Name of the Language in the language of the requester")
 
   public String getsLanguageNameX() {
     return sLanguageNameX;
@@ -207,7 +200,6 @@ public class EzsignbulksendResponse {
    * @return eEzsignfoldertypePrivacylevel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -230,7 +222,6 @@ public class EzsignbulksendResponse {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -253,7 +244,6 @@ public class EzsignbulksendResponse {
    * @return sEzsignbulksendDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Bulk Send", required = true, value = "The description of the Ezsignbulksend")
 
   public String getsEzsignbulksendDescription() {
     return sEzsignbulksendDescription;
@@ -276,7 +266,6 @@ public class EzsignbulksendResponse {
    * @return tEzsignbulksendNote
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is a note", required = true, value = "Note about the Ezsignbulksend")
 
   public String gettEzsignbulksendNote() {
     return tEzsignbulksendNote;
@@ -299,7 +288,6 @@ public class EzsignbulksendResponse {
    * @return bEzsignbulksendNeedvalidation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation")
 
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
@@ -322,7 +310,6 @@ public class EzsignbulksendResponse {
    * @return bEzsignbulksendIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Ezsignbulksend is active or not")
 
   public Boolean getbEzsignbulksendIsactive() {
     return bEzsignbulksendIsactive;
@@ -345,7 +332,6 @@ public class EzsignbulksendResponse {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;

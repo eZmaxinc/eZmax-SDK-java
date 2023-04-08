@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@ApiModel(description = "A Ezsigntsarequirement AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
@@ -81,7 +78,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return sEzsigntsarequirementDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Ezsigntsarequirement in the language of the requester")
 
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
@@ -106,7 +102,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return pkiEzsigntsarequirementID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
 
   public Integer getPkiEzsigntsarequirementID() {
     return pkiEzsigntsarequirementID;
@@ -129,7 +124,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return bEzsigntsarequirementIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Ezsigntsarequirement is active or not")
 
   public Boolean getbEzsigntsarequirementIsactive() {
     return bEzsigntsarequirementIsactive;
@@ -152,7 +146,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return bDisabled
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Indicates if the element is disabled in the context")
 
   public Boolean getbDisabled() {
     return bDisabled;

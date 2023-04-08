@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@ApiModel(description = "A Word Position Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -76,7 +73,6 @@ public class CustomWordPositionWordResponse {
    * @return sWord
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The searched word")
 
   public String getsWord() {
     return sWord;
@@ -95,6 +91,9 @@ public class CustomWordPositionWordResponse {
   }
 
   public CustomWordPositionWordResponse addAObjWordPositionOccurenceItem(CustomWordPositionOccurenceResponse aObjWordPositionOccurenceItem) {
+    if (this.aObjWordPositionOccurence == null) {
+      this.aObjWordPositionOccurence = new ArrayList<>();
+    }
     this.aObjWordPositionOccurence.add(aObjWordPositionOccurenceItem);
     return this;
   }
@@ -104,7 +103,6 @@ public class CustomWordPositionWordResponse {
    * @return aObjWordPositionOccurence
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The found occurences for the seached word")
 
   public List<CustomWordPositionOccurenceResponse> getaObjWordPositionOccurence() {
     return aObjWordPositionOccurence;

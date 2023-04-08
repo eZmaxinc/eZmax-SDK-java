@@ -25,8 +25,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -53,8 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreciient Object
  */
-@ApiModel(description = "A Communicationreciient Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommunicationrecipientResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D = "pkiCommunicationrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D)
@@ -155,7 +152,6 @@ public class CommunicationrecipientResponseCompound {
    * @return pkiCommunicationrecipientID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Communicationrecipient.")
 
   public Integer getPkiCommunicationrecipientID() {
     return pkiCommunicationrecipientID;
@@ -178,7 +174,6 @@ public class CommunicationrecipientResponseCompound {
    * @return eCommunicationrecipientObjecttype
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldECommunicationrecipientObjecttype geteCommunicationrecipientObjecttype() {
     return eCommunicationrecipientObjecttype;
@@ -202,7 +197,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAgentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Agent.")
 
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -226,7 +220,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiBrokerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "26", value = "The unique ID of the Broker.")
 
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -250,7 +243,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiContactID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "21", value = "The unique ID of the Contact")
 
   public Integer getFkiContactID() {
     return fkiContactID;
@@ -274,7 +266,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiCustomerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "18", value = "The unique ID of the Customer.")
 
   public Integer getFkiCustomerID() {
     return fkiCustomerID;
@@ -298,7 +289,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEmployeeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "31", value = "The unique ID of the Employee.")
 
   public Integer getFkiEmployeeID() {
     return fkiEmployeeID;
@@ -322,7 +312,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEzsignsignerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", value = "The unique ID of the Ezsignsigner")
 
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
@@ -346,7 +335,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiFranchiseofficeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "50", value = "The unique ID of the Franchisereoffice")
 
   public Integer getFkiFranchiseofficeID() {
     return fkiFranchiseofficeID;
@@ -370,7 +358,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", value = "The unique ID of the User")
 
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -394,7 +381,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAgentincorporationID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Agentincorporation.")
 
   public Integer getFkiAgentincorporationID() {
     return fkiAgentincorporationID;
@@ -418,7 +404,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAssistantID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Assistant.")
 
   public Integer getFkiAssistantID() {
     return fkiAssistantID;
@@ -442,7 +427,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiExternalbrokerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Externalbroker.")
 
   public Integer getFkiExternalbrokerID() {
     return fkiExternalbrokerID;
@@ -466,7 +450,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEzcomagentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Ezcomagent.")
 
   public Integer getFkiEzcomagentID() {
     return fkiEzcomagentID;
@@ -490,7 +473,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiNotaryID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Notary.")
 
   public Integer getFkiNotaryID() {
     return fkiNotaryID;
@@ -514,7 +496,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiRewardmemberID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Rewardmember.")
 
   public Integer getFkiRewardmemberID() {
     return fkiRewardmemberID;
@@ -538,7 +519,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiSupplierID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Supplier.")
 
   public Integer getFkiSupplierID() {
     return fkiSupplierID;
@@ -561,7 +541,6 @@ public class CommunicationrecipientResponseCompound {
    * @return eCommunicationrecipientType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldECommunicationrecipientType geteCommunicationrecipientType() {
     return eCommunicationrecipientType;
@@ -584,7 +563,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objDescriptionstatic
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public DescriptionstaticResponseCompound getObjDescriptionstatic() {
     return objDescriptionstatic;
@@ -607,7 +585,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objEmailstatic
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EmailstaticResponseCompound getObjEmailstatic() {
     return objEmailstatic;
@@ -630,7 +607,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objPhonestatic
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public PhonestaticResponseCompound getObjPhonestatic() {
     return objPhonestatic;

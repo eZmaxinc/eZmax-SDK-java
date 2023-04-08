@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigntemplatepackageGetListV1ResponseMPayloadAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -67,6 +65,9 @@ public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
   }
 
   public EzsigntemplatepackageGetListV1ResponseMPayloadAllOf addAObjEzsigntemplatepackageItem(EzsigntemplatepackageListElement aObjEzsigntemplatepackageItem) {
+    if (this.aObjEzsigntemplatepackage == null) {
+      this.aObjEzsigntemplatepackage = new ArrayList<>();
+    }
     this.aObjEzsigntemplatepackage.add(aObjEzsigntemplatepackageItem);
     return this;
   }
@@ -76,7 +77,6 @@ public class EzsigntemplatepackageGetListV1ResponseMPayloadAllOf {
    * @return aObjEzsigntemplatepackage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplatepackageListElement> getaObjEzsigntemplatepackage() {
     return aObjEzsigntemplatepackage;

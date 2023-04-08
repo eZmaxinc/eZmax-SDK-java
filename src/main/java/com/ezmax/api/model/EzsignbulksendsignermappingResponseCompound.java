@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksendsignermapping Object
  */
-@ApiModel(description = "A Ezsignbulksendsignermapping Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendsignermappingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
@@ -82,7 +79,6 @@ public class EzsignbulksendsignermappingResponseCompound {
    * @return pkiEzsignbulksendsignermappingID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "57", required = true, value = "The unique ID of the Ezsignbulksendsignermapping")
 
   public Integer getPkiEzsignbulksendsignermappingID() {
     return pkiEzsignbulksendsignermappingID;
@@ -106,7 +102,6 @@ public class EzsignbulksendsignermappingResponseCompound {
    * @return fkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "8", required = true, value = "The unique ID of the Ezsignbulksend")
 
   public Integer getFkiEzsignbulksendID() {
     return fkiEzsignbulksendID;
@@ -130,7 +125,6 @@ public class EzsignbulksendsignermappingResponseCompound {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", value = "The unique ID of the User")
 
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -153,7 +147,6 @@ public class EzsignbulksendsignermappingResponseCompound {
    * @return sEzsignbulksendsignermappingDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Supervisor", required = true, value = "The description of the Ezsignbulksendsignermapping")
 
   public String getsEzsignbulksendsignermappingDescription() {
     return sEzsignbulksendsignermappingDescription;

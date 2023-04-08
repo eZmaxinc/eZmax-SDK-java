@@ -17,7 +17,6 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzmaxinvoicingGetAutocompleteV2Response;
-import com.ezmax.api.model.EzmaxinvoicingGetObjectV1Response;
 import com.ezmax.api.model.EzmaxinvoicingGetObjectV2Response;
 import com.ezmax.api.model.EzmaxinvoicingGetProvisionalV1Response;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -68,20 +67,6 @@ public class ObjectEzmaxinvoicingApiTest {
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
         EzmaxinvoicingGetAutocompleteV2Response response = api.ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezmaxinvoicing
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezmaxinvoicingGetObjectV1Test() throws ApiException {
-        Integer pkiEzmaxinvoicingID = null;
-        EzmaxinvoicingGetObjectV1Response response = api.ezmaxinvoicingGetObjectV1(pkiEzmaxinvoicingID);
         // TODO: test validations
     }
 

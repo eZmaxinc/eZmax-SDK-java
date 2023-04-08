@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DepartmentGetAutocompleteV2Response;
 import com.ezmax.api.model.DepartmentGetMembersV1Response;
@@ -34,23 +33,6 @@ import java.util.Map;
 public class ObjectDepartmentApiTest {
 
     private final ObjectDepartmentApi api = new ObjectDepartmentApi();
-
-    /**
-     * Retrieve Departments and IDs
-     *
-     * Get the list of Department to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void departmentGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.departmentGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
 
     /**
      * Retrieve Departments and IDs

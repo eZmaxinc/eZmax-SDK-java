@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
  */
-@ApiModel(description = "Payload for GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION = "a_objNotificationsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION)
@@ -68,6 +65,9 @@ public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   }
 
   public NotificationsectionGetNotificationtestsV1ResponseMPayload addAObjNotificationsubsectionItem(CustomNotificationsubsectiongetnotificationtestsResponse aObjNotificationsubsectionItem) {
+    if (this.aObjNotificationsubsection == null) {
+      this.aObjNotificationsubsection = new ArrayList<>();
+    }
     this.aObjNotificationsubsection.add(aObjNotificationsubsectionItem);
     return this;
   }
@@ -77,7 +77,6 @@ public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
    * @return aObjNotificationsubsection
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomNotificationsubsectiongetnotificationtestsResponse> getaObjNotificationsubsection() {
     return aObjNotificationsubsection;

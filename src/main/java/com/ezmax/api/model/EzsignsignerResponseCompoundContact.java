@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-@ApiModel(description = "A Ezsignsigner->Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignerResponseCompoundContact {
   public static final String SERIALIZED_NAME_PKI_CONTACT_I_D = "pkiContactID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACT_I_D)
@@ -98,7 +95,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return pkiContactID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "21", required = true, value = "The unique ID of the Contact")
 
   public Integer getPkiContactID() {
     return pkiContactID;
@@ -121,7 +117,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sContactFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the contact")
 
   public String getsContactFirstname() {
     return sContactFirstname;
@@ -144,7 +139,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sContactLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the contact")
 
   public String getsContactLastname() {
     return sContactLastname;
@@ -169,7 +163,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -192,7 +185,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sEmailAddress
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@example.com", value = "The email address.")
 
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -215,7 +207,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sPhoneE164
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
 
   public String getsPhoneE164() {
     return sPhoneE164;
@@ -238,7 +229,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sPhoneExtension
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "123", value = "The extension of the phone number.  The extension is the \"123\" section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers")
 
   public String getsPhoneExtension() {
     return sPhoneExtension;
@@ -261,7 +251,6 @@ public class EzsignsignerResponseCompoundContact {
    * @return sPhoneE164Cell
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "+15149901516", value = "A phone number in E.164 Format")
 
   public String getsPhoneE164Cell() {
     return sPhoneE164Cell;

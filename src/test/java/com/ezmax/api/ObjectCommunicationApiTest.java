@@ -15,10 +15,7 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.CommunicationGetListV1Response;
 import com.ezmax.api.model.CommunicationGetObjectV2Response;
-import java.io.File;
-import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,24 +31,6 @@ import java.util.Map;
 public class ObjectCommunicationApiTest {
 
     private final ObjectCommunicationApi api = new ObjectCommunicationApi();
-
-    /**
-     * Retrieve Communication list
-     *
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eCommunicationImportance | High&lt;br&gt;Normal&lt;br&gt;Low | | eCommunicationType | Email&lt;br&gt;Fax&lt;br&gt;Sms | | eCommunicationDirection | Inbound&lt;br&gt;Outbound |
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void communicationGetListV1Test() throws ApiException {
-        String eOrderBy = null;
-        Integer iRowMax = null;
-        Integer iRowOffset = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        String sFilter = null;
-        CommunicationGetListV1Response response = api.communicationGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
 
     /**
      * Retrieve an existing Communication

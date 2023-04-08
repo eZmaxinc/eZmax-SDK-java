@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/billingentityinternal/getAutocomplete
  */
-@ApiModel(description = "Payload for POST /2/object/billingentityinternal/getAutocomplete")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class BillingentityinternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
@@ -68,6 +65,9 @@ public class BillingentityinternalGetAutocompleteV2ResponseMPayload {
   }
 
   public BillingentityinternalGetAutocompleteV2ResponseMPayload addAObjBillingentityinternalItem(BillingentityinternalAutocompleteElementResponse aObjBillingentityinternalItem) {
+    if (this.aObjBillingentityinternal == null) {
+      this.aObjBillingentityinternal = new ArrayList<>();
+    }
     this.aObjBillingentityinternal.add(aObjBillingentityinternalItem);
     return this;
   }
@@ -77,7 +77,6 @@ public class BillingentityinternalGetAutocompleteV2ResponseMPayload {
    * @return aObjBillingentityinternal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of Billingentityinternal object containing the description, ID and active status about the element.")
 
   public List<BillingentityinternalAutocompleteElementResponse> getaObjBillingentityinternal() {
     return aObjBillingentityinternal;

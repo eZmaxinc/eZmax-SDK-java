@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.EzsigntemplatedocumentResponse;
 import com.ezmax.api.model.EzsigntemplatesignerResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -20,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -105,6 +104,14 @@ public class EzsigntemplateGetObjectV1ResponseMPayloadTest {
     @Test
     public void sEzsignfoldertypeNameXTest() {
         // TODO: test sEzsignfoldertypeNameX
+    }
+
+    /**
+     * Test the property 'objAudit'
+     */
+    @Test
+    public void objAuditTest() {
+        // TODO: test objAudit
     }
 
     /**

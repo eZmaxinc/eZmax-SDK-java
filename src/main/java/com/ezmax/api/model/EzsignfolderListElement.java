@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder List Element
  */
-@ApiModel(description = "An Ezsignfolder List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -120,7 +117,6 @@ public class EzsignfolderListElement {
    * @return pkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -144,7 +140,6 @@ public class EzsignfolderListElement {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -167,7 +162,6 @@ public class EzsignfolderListElement {
    * @return eEzsignfoldertypePrivacylevel
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -190,7 +184,6 @@ public class EzsignfolderListElement {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -213,7 +206,6 @@ public class EzsignfolderListElement {
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -236,7 +228,6 @@ public class EzsignfolderListElement {
    * @return eEzsignfolderStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
@@ -259,7 +250,6 @@ public class EzsignfolderListElement {
    * @return dtCreatedDate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the object was created")
 
   public String getDtCreatedDate() {
     return dtCreatedDate;
@@ -282,7 +272,6 @@ public class EzsignfolderListElement {
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31T23:59:59.000Z", value = "The date and time at which the Ezsignfolder was sent the last time.")
 
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
@@ -305,7 +294,6 @@ public class EzsignfolderListElement {
    * @return dtEzsignfolderDuedate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The maximum date and time at which the Ezsignfolder can be signed.")
 
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
@@ -328,7 +316,6 @@ public class EzsignfolderListElement {
    * @return iEzsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder")
 
   public Integer getiEzsigndocument() {
     return iEzsigndocument;
@@ -351,7 +338,6 @@ public class EzsignfolderListElement {
    * @return iEzsigndocumentEdm
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsigndocument in the folder that were saved in the edm system")
 
   public Integer getiEzsigndocumentEdm() {
     return iEzsigndocumentEdm;
@@ -374,7 +360,6 @@ public class EzsignfolderListElement {
    * @return iEzsignsignature
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of signature blocks in all Ezsigndocuments in the folder")
 
   public Integer getiEzsignsignature() {
     return iEzsignsignature;
@@ -397,7 +382,6 @@ public class EzsignfolderListElement {
    * @return iEzsignsignatureSigned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of already signed signature blocks in all Ezsigndocuments in the folder")
 
   public Integer getiEzsignsignatureSigned() {
     return iEzsignsignatureSigned;

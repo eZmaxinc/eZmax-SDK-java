@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Taxassignment AutocompleteElement Response
  */
-@ApiModel(description = "A Taxassignment AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class TaxassignmentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X = "sTaxassignmentDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X)
@@ -77,7 +74,6 @@ public class TaxassignmentAutocompleteElementResponse {
    * @return sTaxassignmentDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Taxassignment  in the language of the requester")
 
   public String getsTaxassignmentDescriptionX() {
     return sTaxassignmentDescriptionX;
@@ -102,7 +98,6 @@ public class TaxassignmentAutocompleteElementResponse {
    * @return pkiTaxassignmentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|")
 
   public Integer getPkiTaxassignmentID() {
     return pkiTaxassignmentID;
@@ -125,7 +120,6 @@ public class TaxassignmentAutocompleteElementResponse {
    * @return bTaxassignmentIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Taxassignment is active or not")
 
   public Boolean getbTaxassignmentIsactive() {
     return bTaxassignmentIsactive;

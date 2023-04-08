@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigntemplateResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT = "objEzsigntemplatedocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT)
@@ -76,7 +74,6 @@ public class EzsigntemplateResponseCompoundAllOf {
    * @return objEzsigntemplatedocument
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsigntemplatedocumentResponse getObjEzsigntemplatedocument() {
     return objEzsigntemplatedocument;
@@ -95,6 +92,9 @@ public class EzsigntemplateResponseCompoundAllOf {
   }
 
   public EzsigntemplateResponseCompoundAllOf addAObjEzsigntemplatesignerItem(EzsigntemplatesignerResponseCompound aObjEzsigntemplatesignerItem) {
+    if (this.aObjEzsigntemplatesigner == null) {
+      this.aObjEzsigntemplatesigner = new ArrayList<>();
+    }
     this.aObjEzsigntemplatesigner.add(aObjEzsigntemplatesignerItem);
     return this;
   }
@@ -104,7 +104,6 @@ public class EzsigntemplateResponseCompoundAllOf {
    * @return aObjEzsigntemplatesigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplatesignerResponseCompound> getaObjEzsigntemplatesigner() {
     return aObjEzsigntemplatesigner;

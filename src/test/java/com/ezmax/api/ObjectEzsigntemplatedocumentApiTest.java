@@ -24,10 +24,10 @@ import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1R
 import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response;
-import com.ezmax.api.model.EzsigntemplatedocumentGetObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentGetWordsPositionsV1Response;
@@ -109,6 +109,21 @@ public class ObjectEzsigntemplatedocumentApiTest {
     }
 
     /**
+     * Flatten
+     *
+     * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatedocumentFlattenV1Test() throws ApiException {
+        Integer pkiEzsigntemplatedocumentID = null;
+        Object body = null;
+        EzsigntemplatedocumentFlattenV1Response response = api.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpages
      *
      * 
@@ -147,20 +162,6 @@ public class ObjectEzsigntemplatedocumentApiTest {
     public void ezsigntemplatedocumentGetEzsigntemplatesignaturesV1Test() throws ApiException {
         Integer pkiEzsigntemplatedocumentID = null;
         EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response response = api.ezsigntemplatedocumentGetEzsigntemplatesignaturesV1(pkiEzsigntemplatedocumentID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplatedocument
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplatedocumentGetObjectV1Test() throws ApiException {
-        Integer pkiEzsigntemplatedocumentID = null;
-        EzsigntemplatedocumentGetObjectV1Response response = api.ezsigntemplatedocumentGetObjectV1(pkiEzsigntemplatedocumentID);
         // TODO: test validations
     }
 

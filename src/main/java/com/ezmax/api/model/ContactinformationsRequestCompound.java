@@ -24,8 +24,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@ApiModel(description = "A Contactinformations Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -103,7 +100,6 @@ public class ContactinformationsRequestCompound {
    * @return iAddressDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiAddressDefault() {
     return iAddressDefault;
@@ -126,7 +122,6 @@ public class ContactinformationsRequestCompound {
    * @return iPhoneDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiPhoneDefault() {
     return iPhoneDefault;
@@ -149,7 +144,6 @@ public class ContactinformationsRequestCompound {
    * @return iEmailDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiEmailDefault() {
     return iEmailDefault;
@@ -172,7 +166,6 @@ public class ContactinformationsRequestCompound {
    * @return iWebsiteDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiWebsiteDefault() {
     return iWebsiteDefault;
@@ -191,6 +184,9 @@ public class ContactinformationsRequestCompound {
   }
 
   public ContactinformationsRequestCompound addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
+    if (this.aObjAddress == null) {
+      this.aObjAddress = new ArrayList<>();
+    }
     this.aObjAddress.add(aObjAddressItem);
     return this;
   }
@@ -200,7 +196,6 @@ public class ContactinformationsRequestCompound {
    * @return aObjAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<AddressRequestCompound> getaObjAddress() {
     return aObjAddress;
@@ -219,6 +214,9 @@ public class ContactinformationsRequestCompound {
   }
 
   public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
+    if (this.aObjPhone == null) {
+      this.aObjPhone = new ArrayList<>();
+    }
     this.aObjPhone.add(aObjPhoneItem);
     return this;
   }
@@ -228,7 +226,6 @@ public class ContactinformationsRequestCompound {
    * @return aObjPhone
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<PhoneRequestCompound> getaObjPhone() {
     return aObjPhone;
@@ -247,6 +244,9 @@ public class ContactinformationsRequestCompound {
   }
 
   public ContactinformationsRequestCompound addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
+    if (this.aObjEmail == null) {
+      this.aObjEmail = new ArrayList<>();
+    }
     this.aObjEmail.add(aObjEmailItem);
     return this;
   }
@@ -256,7 +256,6 @@ public class ContactinformationsRequestCompound {
    * @return aObjEmail
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EmailRequestCompound> getaObjEmail() {
     return aObjEmail;
@@ -275,6 +274,9 @@ public class ContactinformationsRequestCompound {
   }
 
   public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
+    if (this.aObjWebsite == null) {
+      this.aObjWebsite = new ArrayList<>();
+    }
     this.aObjWebsite.add(aObjWebsiteItem);
     return this;
   }
@@ -284,7 +286,6 @@ public class ContactinformationsRequestCompound {
    * @return aObjWebsite
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<WebsiteRequestCompound> getaObjWebsite() {
     return aObjWebsite;

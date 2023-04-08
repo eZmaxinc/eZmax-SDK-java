@@ -14,8 +14,16 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
+import com.ezmax.api.model.BillingentityinternalDeleteObjectV1Response;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.BillingentityinternalGetListV1Response;
+import com.ezmax.api.model.BillingentityinternalGetObjectV2Response;
+import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -34,19 +42,45 @@ public class ObjectBillingentityinternalApiTest {
     private final ObjectBillingentityinternalApi api = new ObjectBillingentityinternalApi();
 
     /**
-     * Retrieve Billingentityinternals and IDs
+     * Create a new Billingentityinternal
      *
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
+     * The endpoint allows to create one or many elements at once.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void billingentityinternalGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.billingentityinternalGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public void billingentityinternalCreateObjectV1Test() throws ApiException {
+        BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request = null;
+        BillingentityinternalCreateObjectV1Response response = api.billingentityinternalCreateObjectV1(billingentityinternalCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Delete an existing Billingentityinternal
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void billingentityinternalDeleteObjectV1Test() throws ApiException {
+        Integer pkiBillingentityinternalID = null;
+        BillingentityinternalDeleteObjectV1Response response = api.billingentityinternalDeleteObjectV1(pkiBillingentityinternalID);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit an existing Billingentityinternal
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void billingentityinternalEditObjectV1Test() throws ApiException {
+        Integer pkiBillingentityinternalID = null;
+        BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = null;
+        BillingentityinternalEditObjectV1Response response = api.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -64,6 +98,38 @@ public class ObjectBillingentityinternalApiTest {
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
         BillingentityinternalGetAutocompleteV2Response response = api.billingentityinternalGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Billingentityinternal list
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void billingentityinternalGetListV1Test() throws ApiException {
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        BillingentityinternalGetListV1Response response = api.billingentityinternalGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void billingentityinternalGetObjectV2Test() throws ApiException {
+        Integer pkiBillingentityinternalID = null;
+        BillingentityinternalGetObjectV2Response response = api.billingentityinternalGetObjectV2(pkiBillingentityinternalID);
         // TODO: test validations
     }
 

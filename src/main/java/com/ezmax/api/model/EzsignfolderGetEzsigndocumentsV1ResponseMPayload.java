@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments
  */
-@ApiModel(description = "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsigndocuments")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
@@ -68,6 +65,9 @@ public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
   }
 
   public EzsignfolderGetEzsigndocumentsV1ResponseMPayload addAObjEzsigndocumentItem(EzsigndocumentResponseCompound aObjEzsigndocumentItem) {
+    if (this.aObjEzsigndocument == null) {
+      this.aObjEzsigndocument = new ArrayList<>();
+    }
     this.aObjEzsigndocument.add(aObjEzsigndocumentItem);
     return this;
   }
@@ -77,7 +77,6 @@ public class EzsignfolderGetEzsigndocumentsV1ResponseMPayload {
    * @return aObjEzsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigndocumentResponseCompound> getaObjEzsigndocument() {
     return aObjEzsigndocument;

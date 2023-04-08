@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@ApiModel(description = "An Ezsigndocument Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigndocumentRequestPatch {
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
@@ -73,7 +70,6 @@ public class EzsigndocumentRequestPatch {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The maximum date and time at which the Ezsigndocument can be signed.")
 
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -96,7 +92,6 @@ public class EzsigndocumentRequestPatch {
    * @return sEzsigndocumentName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Contract #123", value = "The name of the document that will be presented to Ezsignfoldersignerassociations")
 
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;

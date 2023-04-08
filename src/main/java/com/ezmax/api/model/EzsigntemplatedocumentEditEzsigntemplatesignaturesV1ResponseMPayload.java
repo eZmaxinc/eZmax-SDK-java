@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
  */
-@ApiModel(description = "Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "a_pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -67,6 +64,9 @@ public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayloa
   }
 
   public EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayload addAPkiEzsigntemplatesignatureIDItem(Integer aPkiEzsigntemplatesignatureIDItem) {
+    if (this.aPkiEzsigntemplatesignatureID == null) {
+      this.aPkiEzsigntemplatesignatureID = new ArrayList<>();
+    }
     this.aPkiEzsigntemplatesignatureID.add(aPkiEzsigntemplatesignatureIDItem);
     return this;
   }
@@ -76,7 +76,6 @@ public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1ResponseMPayloa
    * @return aPkiEzsigntemplatesignatureID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<Integer> getaPkiEzsigntemplatesignatureID() {
     return aPkiEzsigntemplatesignatureID;

@@ -23,9 +23,9 @@ import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendEditObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendEditObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
+import com.ezmax.api.model.EzsignbulksendGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignbulksendGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
-import com.ezmax.api.model.EzsignbulksendGetObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendGetObjectV2Response;
 import com.ezmax.api.model.EzsignbulksendReorderV1Request;
 import com.ezmax.api.model.EzsignbulksendReorderV1Response;
@@ -133,6 +133,20 @@ public class ObjectEzsignbulksendApiTest {
     }
 
     /**
+     * Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures
+     *
+     * Return the Ezsignsignatures that can be signed by the current user at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignbulksendGetEzsignsignaturesAutomaticV1Test() throws ApiException {
+        Integer pkiEzsignbulksendID = null;
+        EzsignbulksendGetEzsignsignaturesAutomaticV1Response response = api.ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsignbulksend&#39;s forms data
      *
      * 
@@ -161,20 +175,6 @@ public class ObjectEzsignbulksendApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         EzsignbulksendGetListV1Response response = api.ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksend
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignbulksendGetObjectV1Test() throws ApiException {
-        Integer pkiEzsignbulksendID = null;
-        EzsignbulksendGetObjectV1Response response = api.ezsignbulksendGetObjectV1(pkiEzsignbulksendID);
         // TODO: test validations
     }
 

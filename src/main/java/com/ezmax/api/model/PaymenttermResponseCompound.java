@@ -16,14 +16,13 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.FieldEPaymenttermType;
 import com.ezmax.api.model.MultilingualPaymenttermDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@ApiModel(description = "A Paymentterm Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class PaymenttermResponseCompound {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -60,6 +58,14 @@ public class PaymenttermResponseCompound {
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
   private String sPaymenttermCode;
+
+  public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
+  @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
+  private FieldEPaymenttermType ePaymenttermType;
+
+  public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
+  @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
+  private Integer iPaymenttermDay;
 
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
@@ -87,7 +93,6 @@ public class PaymenttermResponseCompound {
    * @return pkiPaymenttermID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "46", required = true, value = "The unique ID of the Paymentterm")
 
   public Integer getPkiPaymenttermID() {
     return pkiPaymenttermID;
@@ -110,7 +115,6 @@ public class PaymenttermResponseCompound {
    * @return sPaymenttermCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0030", required = true, value = "The code of the Paymentterm")
 
   public String getsPaymenttermCode() {
     return sPaymenttermCode;
@@ -119,6 +123,52 @@ public class PaymenttermResponseCompound {
 
   public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
+  }
+
+
+  public PaymenttermResponseCompound ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    
+    this.ePaymenttermType = ePaymenttermType;
+    return this;
+  }
+
+   /**
+   * Get ePaymenttermType
+   * @return ePaymenttermType
+  **/
+  @javax.annotation.Nonnull
+
+  public FieldEPaymenttermType getePaymenttermType() {
+    return ePaymenttermType;
+  }
+
+
+  public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    this.ePaymenttermType = ePaymenttermType;
+  }
+
+
+  public PaymenttermResponseCompound iPaymenttermDay(Integer iPaymenttermDay) {
+    
+    this.iPaymenttermDay = iPaymenttermDay;
+    return this;
+  }
+
+   /**
+   * The day of the Paymentterm
+   * minimum: 0
+   * maximum: 255
+   * @return iPaymenttermDay
+  **/
+  @javax.annotation.Nonnull
+
+  public Integer getiPaymenttermDay() {
+    return iPaymenttermDay;
+  }
+
+
+  public void setiPaymenttermDay(Integer iPaymenttermDay) {
+    this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
@@ -133,7 +183,6 @@ public class PaymenttermResponseCompound {
    * @return objPaymenttermDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualPaymenttermDescription getObjPaymenttermDescription() {
     return objPaymenttermDescription;
@@ -156,7 +205,6 @@ public class PaymenttermResponseCompound {
    * @return bPaymenttermIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Paymentterm is active or not")
 
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
@@ -179,7 +227,6 @@ public class PaymenttermResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -203,6 +250,8 @@ public class PaymenttermResponseCompound {
     PaymenttermResponseCompound paymenttermResponseCompound = (PaymenttermResponseCompound) o;
     return Objects.equals(this.pkiPaymenttermID, paymenttermResponseCompound.pkiPaymenttermID) &&
         Objects.equals(this.sPaymenttermCode, paymenttermResponseCompound.sPaymenttermCode) &&
+        Objects.equals(this.ePaymenttermType, paymenttermResponseCompound.ePaymenttermType) &&
+        Objects.equals(this.iPaymenttermDay, paymenttermResponseCompound.iPaymenttermDay) &&
         Objects.equals(this.objPaymenttermDescription, paymenttermResponseCompound.objPaymenttermDescription) &&
         Objects.equals(this.bPaymenttermIsactive, paymenttermResponseCompound.bPaymenttermIsactive) &&
         Objects.equals(this.objAudit, paymenttermResponseCompound.objAudit);
@@ -210,7 +259,7 @@ public class PaymenttermResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiPaymenttermID, sPaymenttermCode, objPaymenttermDescription, bPaymenttermIsactive, objAudit);
+    return Objects.hash(pkiPaymenttermID, sPaymenttermCode, ePaymenttermType, iPaymenttermDay, objPaymenttermDescription, bPaymenttermIsactive, objAudit);
   }
 
   @Override
@@ -219,6 +268,8 @@ public class PaymenttermResponseCompound {
     sb.append("class PaymenttermResponseCompound {\n");
     sb.append("    pkiPaymenttermID: ").append(toIndentedString(pkiPaymenttermID)).append("\n");
     sb.append("    sPaymenttermCode: ").append(toIndentedString(sPaymenttermCode)).append("\n");
+    sb.append("    ePaymenttermType: ").append(toIndentedString(ePaymenttermType)).append("\n");
+    sb.append("    iPaymenttermDay: ").append(toIndentedString(iPaymenttermDay)).append("\n");
     sb.append("    objPaymenttermDescription: ").append(toIndentedString(objPaymenttermDescription)).append("\n");
     sb.append("    bPaymenttermIsactive: ").append(toIndentedString(bPaymenttermIsactive)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
@@ -246,6 +297,8 @@ public class PaymenttermResponseCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiPaymenttermID");
     openapiFields.add("sPaymenttermCode");
+    openapiFields.add("ePaymenttermType");
+    openapiFields.add("iPaymenttermDay");
     openapiFields.add("objPaymenttermDescription");
     openapiFields.add("bPaymenttermIsactive");
     openapiFields.add("objAudit");
@@ -254,6 +307,8 @@ public class PaymenttermResponseCompound {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiPaymenttermID");
     openapiRequiredFields.add("sPaymenttermCode");
+    openapiRequiredFields.add("ePaymenttermType");
+    openapiRequiredFields.add("iPaymenttermDay");
     openapiRequiredFields.add("objPaymenttermDescription");
     openapiRequiredFields.add("bPaymenttermIsactive");
     openapiRequiredFields.add("objAudit");

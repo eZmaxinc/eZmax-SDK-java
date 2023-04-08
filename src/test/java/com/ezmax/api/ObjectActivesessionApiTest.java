@@ -15,7 +15,11 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.ActivesessionGetCurrentV1Response;
+import com.ezmax.api.model.ActivesessionGetListV1Response;
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseRedirectSSecretquestionTextX;
+import java.io.File;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -42,6 +46,22 @@ public class ObjectActivesessionApiTest {
     @Test
     public void activesessionGetCurrentV1Test() throws ApiException {
         ActivesessionGetCurrentV1Response response = api.activesessionGetCurrentV1();
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Activesession list
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void activesessionGetListV1Test() throws ApiException {
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        ActivesessionGetListV1Response response = api.activesessionGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
         // TODO: test validations
     }
 

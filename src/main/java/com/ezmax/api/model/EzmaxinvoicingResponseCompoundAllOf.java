@@ -29,8 +29,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * EzmaxinvoicingResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT = "objEzmaxinvoicingcontract";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT)
@@ -111,7 +109,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return objEzmaxinvoicingcontract
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public EzmaxinvoicingcontractResponseCompound getObjEzmaxinvoicingcontract() {
     return objEzmaxinvoicingcontract;
@@ -134,7 +131,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return objEzmaxpricing
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CustomEzmaxpricingResponse getObjEzmaxpricing() {
     return objEzmaxpricing;
@@ -153,6 +149,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingsummaryglobalItem(EzmaxinvoicingsummaryglobalResponseCompound aObjEzmaxinvoicingsummaryglobalItem) {
+    if (this.aObjEzmaxinvoicingsummaryglobal == null) {
+      this.aObjEzmaxinvoicingsummaryglobal = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingsummaryglobal.add(aObjEzmaxinvoicingsummaryglobalItem);
     return this;
   }
@@ -162,7 +161,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingsummaryglobal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicingsummaryglobalResponseCompound> getaObjEzmaxinvoicingsummaryglobal() {
     return aObjEzmaxinvoicingsummaryglobal;
@@ -181,6 +179,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingsummaryexternalItem(EzmaxinvoicingsummaryexternalResponseCompound aObjEzmaxinvoicingsummaryexternalItem) {
+    if (this.aObjEzmaxinvoicingsummaryexternal == null) {
+      this.aObjEzmaxinvoicingsummaryexternal = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingsummaryexternal.add(aObjEzmaxinvoicingsummaryexternalItem);
     return this;
   }
@@ -190,7 +191,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingsummaryexternal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicingsummaryexternalResponseCompound> getaObjEzmaxinvoicingsummaryexternal() {
     return aObjEzmaxinvoicingsummaryexternal;
@@ -209,6 +209,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingsummaryinternalItem(EzmaxinvoicingsummaryinternalResponseCompound aObjEzmaxinvoicingsummaryinternalItem) {
+    if (this.aObjEzmaxinvoicingsummaryinternal == null) {
+      this.aObjEzmaxinvoicingsummaryinternal = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingsummaryinternal.add(aObjEzmaxinvoicingsummaryinternalItem);
     return this;
   }
@@ -218,7 +221,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingsummaryinternal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicingsummaryinternalResponseCompound> getaObjEzmaxinvoicingsummaryinternal() {
     return aObjEzmaxinvoicingsummaryinternal;
@@ -237,6 +239,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingagentItem(EzmaxinvoicingagentResponseCompound aObjEzmaxinvoicingagentItem) {
+    if (this.aObjEzmaxinvoicingagent == null) {
+      this.aObjEzmaxinvoicingagent = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingagent.add(aObjEzmaxinvoicingagentItem);
     return this;
   }
@@ -246,7 +251,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingagent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicingagentResponseCompound> getaObjEzmaxinvoicingagent() {
     return aObjEzmaxinvoicingagent;
@@ -265,6 +269,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicinguserItem(EzmaxinvoicinguserResponseCompound aObjEzmaxinvoicinguserItem) {
+    if (this.aObjEzmaxinvoicinguser == null) {
+      this.aObjEzmaxinvoicinguser = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicinguser.add(aObjEzmaxinvoicinguserItem);
     return this;
   }
@@ -274,7 +281,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicinguser
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicinguserResponseCompound> getaObjEzmaxinvoicinguser() {
     return aObjEzmaxinvoicinguser;
@@ -293,6 +299,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingezsignfolderItem(CustomEzmaxinvoicingEzsignfolderResponse aObjEzmaxinvoicingezsignfolderItem) {
+    if (this.aObjEzmaxinvoicingezsignfolder == null) {
+      this.aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingezsignfolder.add(aObjEzmaxinvoicingezsignfolderItem);
     return this;
   }
@@ -302,7 +311,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingezsignfolder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzmaxinvoicingEzsignfolderResponse> getaObjEzmaxinvoicingezsignfolder() {
     return aObjEzmaxinvoicingezsignfolder;
@@ -321,6 +329,9 @@ public class EzmaxinvoicingResponseCompoundAllOf {
   }
 
   public EzmaxinvoicingResponseCompoundAllOf addAObjEzmaxinvoicingezsigndocumentItem(CustomEzmaxinvoicingEzsigndocumentResponse aObjEzmaxinvoicingezsigndocumentItem) {
+    if (this.aObjEzmaxinvoicingezsigndocument == null) {
+      this.aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingezsigndocument.add(aObjEzmaxinvoicingezsigndocumentItem);
     return this;
   }
@@ -330,7 +341,6 @@ public class EzmaxinvoicingResponseCompoundAllOf {
    * @return aObjEzmaxinvoicingezsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzmaxinvoicingEzsigndocumentResponse> getaObjEzmaxinvoicingezsigndocument() {
     return aObjEzmaxinvoicingezsigndocument;

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Website Object
  */
-@ApiModel(description = "A Website Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class WebsiteRequest {
   public static final String SERIALIZED_NAME_FKI_WEBSITETYPE_I_D = "fkiWebsitetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITETYPE_I_D)
@@ -74,7 +71,6 @@ public class WebsiteRequest {
    * @return fkiWebsitetypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|")
 
   public Integer getFkiWebsitetypeID() {
     return fkiWebsitetypeID;
@@ -97,7 +93,6 @@ public class WebsiteRequest {
    * @return sWebsiteAddress
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "https://www.example.com", required = true, value = "The URL of the website.")
 
   public String getsWebsiteAddress() {
     return sWebsiteAddress;

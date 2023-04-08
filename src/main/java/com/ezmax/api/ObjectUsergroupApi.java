@@ -27,9 +27,18 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
+import com.ezmax.api.model.UsergroupCreateObjectV1Request;
+import com.ezmax.api.model.UsergroupCreateObjectV1Response;
+import com.ezmax.api.model.UsergroupDeleteObjectV1Response;
+import com.ezmax.api.model.UsergroupEditObjectV1Request;
+import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupGetAutocompleteV2Response;
+import com.ezmax.api.model.UsergroupGetListV1Response;
+import com.ezmax.api.model.UsergroupGetMembersV1Response;
+import com.ezmax.api.model.UsergroupGetObjectV2Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -76,11 +85,131 @@ public class ObjectUsergroupApi {
     }
 
     /**
-     * Build call for usergroupGetAutocompleteV1
-     * @param sSelector The type of Usergroups to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * Build call for usergroupCreateObjectV1
+     * @param usergroupCreateObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupCreateObjectV1Call(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = usergroupCreateObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/usergroup";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call usergroupCreateObjectV1ValidateBeforeCall(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'usergroupCreateObjectV1Request' is set
+        if (usergroupCreateObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'usergroupCreateObjectV1Request' when calling usergroupCreateObjectV1(Async)");
+        }
+
+        return usergroupCreateObjectV1Call(usergroupCreateObjectV1Request, _callback);
+
+    }
+
+    /**
+     * Create a new Usergroup
+     * The endpoint allows to create one or many elements at once.
+     * @param usergroupCreateObjectV1Request  (required)
+     * @return UsergroupCreateObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public UsergroupCreateObjectV1Response usergroupCreateObjectV1(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request) throws ApiException {
+        ApiResponse<UsergroupCreateObjectV1Response> localVarResp = usergroupCreateObjectV1WithHttpInfo(usergroupCreateObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Usergroup
+     * The endpoint allows to create one or many elements at once.
+     * @param usergroupCreateObjectV1Request  (required)
+     * @return ApiResponse&lt;UsergroupCreateObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UsergroupCreateObjectV1Response> usergroupCreateObjectV1WithHttpInfo(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = usergroupCreateObjectV1ValidateBeforeCall(usergroupCreateObjectV1Request, null);
+        Type localVarReturnType = new TypeToken<UsergroupCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a new Usergroup (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param usergroupCreateObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupCreateObjectV1Async(UsergroupCreateObjectV1Request usergroupCreateObjectV1Request, final ApiCallback<UsergroupCreateObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = usergroupCreateObjectV1ValidateBeforeCall(usergroupCreateObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for usergroupDeleteObjectV1
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -88,11 +217,10 @@ public class ObjectUsergroupApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public okhttp3.Call usergroupGetAutocompleteV1Call(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call usergroupDeleteObjectV1Call(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -109,26 +237,14 @@ public class ObjectUsergroupApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/1/object/usergroup/getAutocomplete/{sSelector}"
-            .replace("{" + "sSelector" + "}", localVarApiClient.escapeString(sSelector.toString()));
+        String localVarPath = "/1/object/usergroup/{pkiUsergroupID}"
+            .replace("{" + "pkiUsergroupID" + "}", localVarApiClient.escapeString(pkiUsergroupID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (eFilterActive != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eFilterActive", eFilterActive));
-        }
-
-        if (sQuery != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sQuery", sQuery));
-        }
-
-        if (acceptLanguage != null) {
-            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
-        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -146,73 +262,61 @@ public class ObjectUsergroupApi {
         }
 
         String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
-    @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call usergroupGetAutocompleteV1ValidateBeforeCall(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'sSelector' is set
-        if (sSelector == null) {
-            throw new ApiException("Missing the required parameter 'sSelector' when calling usergroupGetAutocompleteV1(Async)");
+    private okhttp3.Call usergroupDeleteObjectV1ValidateBeforeCall(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUsergroupID' is set
+        if (pkiUsergroupID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUsergroupID' when calling usergroupDeleteObjectV1(Async)");
         }
 
-        return usergroupGetAutocompleteV1Call(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        return usergroupDeleteObjectV1Call(pkiUsergroupID, _callback);
 
     }
 
     /**
-     * Retrieve Usergroups and IDs
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return CommonGetAutocompleteV1Response
+     * Delete an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return UsergroupDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public CommonGetAutocompleteV1Response usergroupGetAutocompleteV1(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = usergroupGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public UsergroupDeleteObjectV1Response usergroupDeleteObjectV1(Integer pkiUsergroupID) throws ApiException {
+        ApiResponse<UsergroupDeleteObjectV1Response> localVarResp = usergroupDeleteObjectV1WithHttpInfo(pkiUsergroupID);
         return localVarResp.getData();
     }
 
     /**
-     * Retrieve Usergroups and IDs
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse&lt;CommonGetAutocompleteV1Response&gt;
+     * Delete an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return ApiResponse&lt;UsergroupDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public ApiResponse<CommonGetAutocompleteV1Response> usergroupGetAutocompleteV1WithHttpInfo(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        okhttp3.Call localVarCall = usergroupGetAutocompleteV1ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, null);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+    public ApiResponse<UsergroupDeleteObjectV1Response> usergroupDeleteObjectV1WithHttpInfo(Integer pkiUsergroupID) throws ApiException {
+        okhttp3.Call localVarCall = usergroupDeleteObjectV1ValidateBeforeCall(pkiUsergroupID, null);
+        Type localVarReturnType = new TypeToken<UsergroupDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Retrieve Usergroups and IDs (asynchronously)
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Usergroups to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * Delete an existing Usergroup (asynchronously)
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -220,14 +324,154 @@ public class ObjectUsergroupApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public okhttp3.Call usergroupGetAutocompleteV1Async(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
+    public okhttp3.Call usergroupDeleteObjectV1Async(Integer pkiUsergroupID, final ApiCallback<UsergroupDeleteObjectV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = usergroupGetAutocompleteV1ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+        okhttp3.Call localVarCall = usergroupDeleteObjectV1ValidateBeforeCall(pkiUsergroupID, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupDeleteObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for usergroupEditObjectV1
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param usergroupEditObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupEditObjectV1Call(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = usergroupEditObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/usergroup/{pkiUsergroupID}"
+            .replace("{" + "pkiUsergroupID" + "}", localVarApiClient.escapeString(pkiUsergroupID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call usergroupEditObjectV1ValidateBeforeCall(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUsergroupID' is set
+        if (pkiUsergroupID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUsergroupID' when calling usergroupEditObjectV1(Async)");
+        }
+
+        // verify the required parameter 'usergroupEditObjectV1Request' is set
+        if (usergroupEditObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'usergroupEditObjectV1Request' when calling usergroupEditObjectV1(Async)");
+        }
+
+        return usergroupEditObjectV1Call(pkiUsergroupID, usergroupEditObjectV1Request, _callback);
+
+    }
+
+    /**
+     * Edit an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param usergroupEditObjectV1Request  (required)
+     * @return UsergroupEditObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UsergroupEditObjectV1Response usergroupEditObjectV1(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
+        ApiResponse<UsergroupEditObjectV1Response> localVarResp = usergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param usergroupEditObjectV1Request  (required)
+     * @return ApiResponse&lt;UsergroupEditObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UsergroupEditObjectV1Response> usergroupEditObjectV1WithHttpInfo(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = usergroupEditObjectV1ValidateBeforeCall(pkiUsergroupID, usergroupEditObjectV1Request, null);
+        Type localVarReturnType = new TypeToken<UsergroupEditObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Edit an existing Usergroup (asynchronously)
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param usergroupEditObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupEditObjectV1Async(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final ApiCallback<UsergroupEditObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = usergroupEditObjectV1ValidateBeforeCall(pkiUsergroupID, usergroupEditObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -375,6 +619,418 @@ public class ObjectUsergroupApi {
 
         okhttp3.Call localVarCall = usergroupGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<UsergroupGetAutocompleteV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for usergroupGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/usergroup/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call usergroupGetListV1ValidateBeforeCall(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        return usergroupGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Usergroup list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return UsergroupGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public UsergroupGetListV1Response usergroupGetListV1(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        ApiResponse<UsergroupGetListV1Response> localVarResp = usergroupGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Usergroup list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;UsergroupGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UsergroupGetListV1Response> usergroupGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = usergroupGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<UsergroupGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Usergroup list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetListV1Async(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback<UsergroupGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = usergroupGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupGetListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for usergroupGetMembersV1
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetMembersV1Call(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/usergroup/{pkiUsergroupID}/getMembers"
+            .replace("{" + "pkiUsergroupID" + "}", localVarApiClient.escapeString(pkiUsergroupID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call usergroupGetMembersV1ValidateBeforeCall(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUsergroupID' is set
+        if (pkiUsergroupID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUsergroupID' when calling usergroupGetMembersV1(Async)");
+        }
+
+        return usergroupGetMembersV1Call(pkiUsergroupID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return UsergroupGetMembersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UsergroupGetMembersV1Response usergroupGetMembersV1(Integer pkiUsergroupID) throws ApiException {
+        ApiResponse<UsergroupGetMembersV1Response> localVarResp = usergroupGetMembersV1WithHttpInfo(pkiUsergroupID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return ApiResponse&lt;UsergroupGetMembersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UsergroupGetMembersV1Response> usergroupGetMembersV1WithHttpInfo(Integer pkiUsergroupID) throws ApiException {
+        okhttp3.Call localVarCall = usergroupGetMembersV1ValidateBeforeCall(pkiUsergroupID, null);
+        Type localVarReturnType = new TypeToken<UsergroupGetMembersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members (asynchronously)
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetMembersV1Async(Integer pkiUsergroupID, final ApiCallback<UsergroupGetMembersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = usergroupGetMembersV1ValidateBeforeCall(pkiUsergroupID, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupGetMembersV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for usergroupGetObjectV2
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetObjectV2Call(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/2/object/usergroup/{pkiUsergroupID}"
+            .replace("{" + "pkiUsergroupID" + "}", localVarApiClient.escapeString(pkiUsergroupID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call usergroupGetObjectV2ValidateBeforeCall(Integer pkiUsergroupID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUsergroupID' is set
+        if (pkiUsergroupID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUsergroupID' when calling usergroupGetObjectV2(Async)");
+        }
+
+        return usergroupGetObjectV2Call(pkiUsergroupID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return UsergroupGetObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UsergroupGetObjectV2Response usergroupGetObjectV2(Integer pkiUsergroupID) throws ApiException {
+        ApiResponse<UsergroupGetObjectV2Response> localVarResp = usergroupGetObjectV2WithHttpInfo(pkiUsergroupID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Usergroup
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @return ApiResponse&lt;UsergroupGetObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UsergroupGetObjectV2Response> usergroupGetObjectV2WithHttpInfo(Integer pkiUsergroupID) throws ApiException {
+        okhttp3.Call localVarCall = usergroupGetObjectV2ValidateBeforeCall(pkiUsergroupID, null);
+        Type localVarReturnType = new TypeToken<UsergroupGetObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Usergroup (asynchronously)
+     * 
+     * @param pkiUsergroupID The unique ID of the Usergroup (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call usergroupGetObjectV2Async(Integer pkiUsergroupID, final ApiCallback<UsergroupGetObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = usergroupGetObjectV2ValidateBeforeCall(pkiUsergroupID, _callback);
+        Type localVarReturnType = new TypeToken<UsergroupGetObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

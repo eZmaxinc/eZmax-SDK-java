@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsigntemplateformfieldgroupRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER = "a_objEzsigntemplateformfieldgroupsigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER)
@@ -61,7 +59,7 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
 
   public static final String SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT = "a_objDropdownElement";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DROPDOWN_ELEMENT)
-  private List<CustomDropdownElementRequestCompound> aObjDropdownElement = null;
+  private List<CustomDropdownElementRequestCompound> aObjDropdownElement;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELD = "a_objEzsigntemplateformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELD)
@@ -77,6 +75,9 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
   }
 
   public EzsigntemplateformfieldgroupRequestCompoundAllOf addAObjEzsigntemplateformfieldgroupsignerItem(EzsigntemplateformfieldgroupsignerRequestCompound aObjEzsigntemplateformfieldgroupsignerItem) {
+    if (this.aObjEzsigntemplateformfieldgroupsigner == null) {
+      this.aObjEzsigntemplateformfieldgroupsigner = new ArrayList<>();
+    }
     this.aObjEzsigntemplateformfieldgroupsigner.add(aObjEzsigntemplateformfieldgroupsignerItem);
     return this;
   }
@@ -86,7 +87,6 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
    * @return aObjEzsigntemplateformfieldgroupsigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplateformfieldgroupsignerRequestCompound> getaObjEzsigntemplateformfieldgroupsigner() {
     return aObjEzsigntemplateformfieldgroupsigner;
@@ -117,7 +117,6 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
    * @return aObjDropdownElement
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<CustomDropdownElementRequestCompound> getaObjDropdownElement() {
     return aObjDropdownElement;
@@ -136,6 +135,9 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
   }
 
   public EzsigntemplateformfieldgroupRequestCompoundAllOf addAObjEzsigntemplateformfieldItem(EzsigntemplateformfieldRequestCompound aObjEzsigntemplateformfieldItem) {
+    if (this.aObjEzsigntemplateformfield == null) {
+      this.aObjEzsigntemplateformfield = new ArrayList<>();
+    }
     this.aObjEzsigntemplateformfield.add(aObjEzsigntemplateformfieldItem);
     return this;
   }
@@ -145,7 +147,6 @@ public class EzsigntemplateformfieldgroupRequestCompoundAllOf {
    * @return aObjEzsigntemplateformfield
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplateformfieldRequestCompound> getaObjEzsigntemplateformfield() {
     return aObjEzsigntemplateformfield;

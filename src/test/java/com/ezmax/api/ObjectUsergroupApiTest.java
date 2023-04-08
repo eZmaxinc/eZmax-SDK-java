@@ -14,9 +14,18 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
+import com.ezmax.api.model.UsergroupCreateObjectV1Request;
+import com.ezmax.api.model.UsergroupCreateObjectV1Response;
+import com.ezmax.api.model.UsergroupDeleteObjectV1Response;
+import com.ezmax.api.model.UsergroupEditObjectV1Request;
+import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupGetAutocompleteV2Response;
+import com.ezmax.api.model.UsergroupGetListV1Response;
+import com.ezmax.api.model.UsergroupGetMembersV1Response;
+import com.ezmax.api.model.UsergroupGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,19 +43,45 @@ public class ObjectUsergroupApiTest {
     private final ObjectUsergroupApi api = new ObjectUsergroupApi();
 
     /**
-     * Retrieve Usergroups and IDs
+     * Create a new Usergroup
      *
-     * Get the list of Usergroup to be used in a dropdown or autocomplete control.
+     * The endpoint allows to create one or many elements at once.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void usergroupGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.usergroupGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public void usergroupCreateObjectV1Test() throws ApiException {
+        UsergroupCreateObjectV1Request usergroupCreateObjectV1Request = null;
+        UsergroupCreateObjectV1Response response = api.usergroupCreateObjectV1(usergroupCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Delete an existing Usergroup
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupDeleteObjectV1Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupDeleteObjectV1Response response = api.usergroupDeleteObjectV1(pkiUsergroupID);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit an existing Usergroup
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupEditObjectV1Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupEditObjectV1Request usergroupEditObjectV1Request = null;
+        UsergroupEditObjectV1Response response = api.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -64,6 +99,50 @@ public class ObjectUsergroupApiTest {
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
         UsergroupGetAutocompleteV2Response response = api.usergroupGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Usergroup list
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupGetListV1Test() throws ApiException {
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        UsergroupGetListV1Response response = api.usergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s members
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupGetMembersV1Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupGetMembersV1Response response = api.usergroupGetMembersV1(pkiUsergroupID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Usergroup
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupGetObjectV2Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupGetObjectV2Response response = api.usergroupGetObjectV2(pkiUsergroupID);
         // TODO: test validations
     }
 

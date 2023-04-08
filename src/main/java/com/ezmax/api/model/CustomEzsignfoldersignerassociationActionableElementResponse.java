@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociation Object with actionable elements
  */
-@ApiModel(description = "A Ezsignfoldersignerassociation Object with actionable elements")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationActionableElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -104,7 +101,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return pkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "20", required = true, value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getPkiEzsignfoldersignerassociationID() {
     return pkiEzsignfoldersignerassociationID;
@@ -128,7 +124,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -151,7 +146,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return bEzsignfoldersignerassociationDelayedsend
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "If this flag is true the signatory is part of a delayed send.")
 
   public Boolean getbEzsignfoldersignerassociationDelayedsend() {
     return bEzsignfoldersignerassociationDelayedsend;
@@ -174,7 +168,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return bEzsignfoldersignerassociationReceivecopy
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain't required to sign the document.")
 
   public Boolean getbEzsignfoldersignerassociationReceivecopy() {
     return bEzsignfoldersignerassociationReceivecopy;
@@ -197,7 +190,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return tEzsignfoldersignerassociationMessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Hi John,  This is the document I need you to review.  Could you sign it before Monday please.  Best Regards.  Mary", required = true, value = "A custom text message that will be added to the email sent.")
 
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
@@ -220,7 +212,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return objUser
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
     return objUser;
@@ -243,7 +234,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return objEzsignsigner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public EzsignsignerResponseCompound getObjEzsignsigner() {
     return objEzsignsigner;
@@ -266,7 +256,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return bEzsignfoldersignerassociationHasactionableelementsCurrent
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Indicates if the Ezsignfoldersignerassociation has actionable elements in the current step")
 
   public Boolean getbEzsignfoldersignerassociationHasactionableelementsCurrent() {
     return bEzsignfoldersignerassociationHasactionableelementsCurrent;
@@ -289,7 +278,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * @return bEzsignfoldersignerassociationHasactionableelementsFuture
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step")
 
   public Boolean getbEzsignfoldersignerassociationHasactionableelementsFuture() {
     return bEzsignfoldersignerassociationHasactionableelementsFuture;

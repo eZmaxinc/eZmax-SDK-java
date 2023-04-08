@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements
  */
-@ApiModel(description = "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderGetActionableElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
@@ -73,6 +70,9 @@ public class EzsignfolderGetActionableElementsV1ResponseMPayload {
   }
 
   public EzsignfolderGetActionableElementsV1ResponseMPayload addAObjEzsignsignatureItem(EzsignsignatureResponseCompound aObjEzsignsignatureItem) {
+    if (this.aObjEzsignsignature == null) {
+      this.aObjEzsignsignature = new ArrayList<>();
+    }
     this.aObjEzsignsignature.add(aObjEzsignsignatureItem);
     return this;
   }
@@ -82,7 +82,6 @@ public class EzsignfolderGetActionableElementsV1ResponseMPayload {
    * @return aObjEzsignsignature
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignsignatureResponseCompound> getaObjEzsignsignature() {
     return aObjEzsignsignature;
@@ -101,6 +100,9 @@ public class EzsignfolderGetActionableElementsV1ResponseMPayload {
   }
 
   public EzsignfolderGetActionableElementsV1ResponseMPayload addAObjEzsignformfieldgroupItem(EzsignformfieldgroupResponseCompound aObjEzsignformfieldgroupItem) {
+    if (this.aObjEzsignformfieldgroup == null) {
+      this.aObjEzsignformfieldgroup = new ArrayList<>();
+    }
     this.aObjEzsignformfieldgroup.add(aObjEzsignformfieldgroupItem);
     return this;
   }
@@ -110,7 +112,6 @@ public class EzsignfolderGetActionableElementsV1ResponseMPayload {
    * @return aObjEzsignformfieldgroup
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsignformfieldgroupResponseCompound> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;

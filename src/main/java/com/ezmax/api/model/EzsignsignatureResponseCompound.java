@@ -25,8 +25,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,8 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@ApiModel(description = "An Ezsignsignature Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignsignatureResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -128,7 +125,7 @@ public class EzsignsignatureResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
-  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = null;
+  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
 
   public EzsignsignatureResponseCompound() {
   }
@@ -145,7 +142,6 @@ public class EzsignsignatureResponseCompound {
    * @return pkiEzsignsignatureID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "49", required = true, value = "The unique ID of the Ezsignsignature")
 
   public Integer getPkiEzsignsignatureID() {
     return pkiEzsignsignatureID;
@@ -169,7 +165,6 @@ public class EzsignsignatureResponseCompound {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "97", required = true, value = "The unique ID of the Ezsigndocument")
 
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -193,7 +188,6 @@ public class EzsignsignatureResponseCompound {
    * @return fkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "20", required = true, value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -217,7 +211,6 @@ public class EzsignsignatureResponseCompound {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigndocument")
 
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -241,7 +234,6 @@ public class EzsignsignatureResponseCompound {
    * @return iEzsignsignatureX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "200", required = true, value = "The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \"200\" for the X coordinate.")
 
   public Integer getiEzsignsignatureX() {
     return iEzsignsignatureX;
@@ -265,7 +257,6 @@ public class EzsignsignatureResponseCompound {
    * @return iEzsignsignatureY
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "300", required = true, value = "The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \"300\" for the Y coordinate.")
 
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
@@ -288,7 +279,6 @@ public class EzsignsignatureResponseCompound {
    * @return iEzsignsignatureStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The step when the Ezsignsigner will be invited to sign")
 
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;
@@ -311,7 +301,6 @@ public class EzsignsignatureResponseCompound {
    * @return eEzsignsignatureType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignsignatureType geteEzsignsignatureType() {
     return eEzsignsignatureType;
@@ -334,7 +323,6 @@ public class EzsignsignatureResponseCompound {
    * @return tEzsignsignatureTooltip
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Please sign here if you agree to the terms", value = "A tooltip that will be presented to Ezsignsigner about the Ezsignsignature")
 
   public String gettEzsignsignatureTooltip() {
     return tEzsignsignatureTooltip;
@@ -357,7 +345,6 @@ public class EzsignsignatureResponseCompound {
    * @return eEzsignsignatureTooltipposition
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
     return eEzsignsignatureTooltipposition;
@@ -380,7 +367,6 @@ public class EzsignsignatureResponseCompound {
    * @return eEzsignsignatureFont
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
     return eEzsignsignatureFont;
@@ -403,7 +389,6 @@ public class EzsignsignatureResponseCompound {
    * @return iEzsignsignatureValidationstep
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments")
 
   public Integer getiEzsignsignatureValidationstep() {
     return iEzsignsignatureValidationstep;
@@ -426,7 +411,6 @@ public class EzsignsignatureResponseCompound {
    * @return sEzsignsignatureAttachmentdescription
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Attachment", value = "The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments")
 
   public String getsEzsignsignatureAttachmentdescription() {
     return sEzsignsignatureAttachmentdescription;
@@ -449,7 +433,6 @@ public class EzsignsignatureResponseCompound {
    * @return eEzsignsignatureAttachmentnamesource
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEEzsignsignatureAttachmentnamesource geteEzsignsignatureAttachmentnamesource() {
     return eEzsignsignatureAttachmentnamesource;
@@ -472,7 +455,6 @@ public class EzsignsignatureResponseCompound {
    * @return bEzsignsignatureRequired
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType = Attachments.")
 
   public Boolean getbEzsignsignatureRequired() {
     return bEzsignsignatureRequired;
@@ -496,7 +478,6 @@ public class EzsignsignatureResponseCompound {
    * @return fkiEzsignfoldersignerassociationIDValidation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "20", value = "The unique ID of the Ezsignfoldersignerassociation")
 
   public Integer getFkiEzsignfoldersignerassociationIDValidation() {
     return fkiEzsignfoldersignerassociationIDValidation;
@@ -519,7 +500,6 @@ public class EzsignsignatureResponseCompound {
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)")
 
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -550,7 +530,6 @@ public class EzsignsignatureResponseCompound {
    * @return aObjEzsignsignaturecustomdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don't want to have a date at all.")
 
   public List<EzsignsignaturecustomdateResponseCompound> getaObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;

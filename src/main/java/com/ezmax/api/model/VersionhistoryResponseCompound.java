@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@ApiModel(description = "A Versionhistory Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class VersionhistoryResponseCompound {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
@@ -113,7 +110,6 @@ public class VersionhistoryResponseCompound {
    * @return pkiVersionhistoryID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "42", required = true, value = "The unique ID of the Versionhistory")
 
   public Integer getPkiVersionhistoryID() {
     return pkiVersionhistoryID;
@@ -137,7 +133,6 @@ public class VersionhistoryResponseCompound {
    * @return fkiModuleID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "40", value = "The unique ID of the Module")
 
   public Integer getFkiModuleID() {
     return fkiModuleID;
@@ -161,7 +156,6 @@ public class VersionhistoryResponseCompound {
    * @return fkiModulesectionID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "53", value = "The unique ID of the Modulesection")
 
   public Integer getFkiModulesectionID() {
     return fkiModulesectionID;
@@ -184,7 +178,6 @@ public class VersionhistoryResponseCompound {
    * @return sModuleNameX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Purchase", value = "The Name of the Module in the language of the requester")
 
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -207,7 +200,6 @@ public class VersionhistoryResponseCompound {
    * @return sModulesectionNameX
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Access", value = "The Name of the Modulesection in the language of the requester")
 
   public String getsModulesectionNameX() {
     return sModulesectionNameX;
@@ -230,7 +222,6 @@ public class VersionhistoryResponseCompound {
    * @return eVersionhistoryUsertype
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public FieldEVersionhistoryUsertype geteVersionhistoryUsertype() {
     return eVersionhistoryUsertype;
@@ -253,7 +244,6 @@ public class VersionhistoryResponseCompound {
    * @return objVersionhistoryDetail
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualVersionhistoryDetail getObjVersionhistoryDetail() {
     return objVersionhistoryDetail;
@@ -276,7 +266,6 @@ public class VersionhistoryResponseCompound {
    * @return dtVersionhistoryDate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31", required = true, value = "The date  at which the Versionhistory was published or should be published")
 
   public String getDtVersionhistoryDate() {
     return dtVersionhistoryDate;
@@ -299,7 +288,6 @@ public class VersionhistoryResponseCompound {
    * @return dtVersionhistoryDateend
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31", value = "The date  at which the Versionhistory will no longer be visible")
 
   public String getDtVersionhistoryDateend() {
     return dtVersionhistoryDateend;
@@ -322,7 +310,6 @@ public class VersionhistoryResponseCompound {
    * @return eVersionhistoryType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEVersionhistoryType geteVersionhistoryType() {
     return eVersionhistoryType;
@@ -345,7 +332,6 @@ public class VersionhistoryResponseCompound {
    * @return bVersionhistoryDraft
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Versionhistory is published or still a draft")
 
   public Boolean getbVersionhistoryDraft() {
     return bVersionhistoryDraft;

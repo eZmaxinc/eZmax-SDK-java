@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocumentpage Object and children to create a complete structure
  */
-@ApiModel(description = "An Ezsigntemplatedocumentpage Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentpageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "pkiEzsigntemplatedocumentpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
@@ -94,7 +91,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return pkiEzsigntemplatedocumentpageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "85", required = true, value = "The unique ID of the Ezsigntemplatedocumentpage")
 
   public Integer getPkiEzsigntemplatedocumentpageID() {
     return pkiEzsigntemplatedocumentpageID;
@@ -118,7 +114,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return iEzsigntemplatedocumentpageWidthimage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "850", required = true, value = "The Width of the page's image in pixels calculated at 100 DPI")
 
   public Integer getiEzsigntemplatedocumentpageWidthimage() {
     return iEzsigntemplatedocumentpageWidthimage;
@@ -142,7 +137,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return iEzsigntemplatedocumentpageHeightimage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1100", required = true, value = "The Height of the page's image in pixels calculated at 100 DPI")
 
   public Integer getiEzsigntemplatedocumentpageHeightimage() {
     return iEzsigntemplatedocumentpageHeightimage;
@@ -166,7 +160,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return iEzsigntemplatedocumentpageWidthpdf
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "612", required = true, value = "The Width of the page in points calculated at 72 DPI")
 
   public Integer getiEzsigntemplatedocumentpageWidthpdf() {
     return iEzsigntemplatedocumentpageWidthpdf;
@@ -190,7 +183,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return iEzsigntemplatedocumentpageHeightpdf
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "792", required = true, value = "The Height of the page in points calculated at 72 DPI")
 
   public Integer getiEzsigntemplatedocumentpageHeightpdf() {
     return iEzsigntemplatedocumentpageHeightpdf;
@@ -214,7 +206,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return iEzsigntemplatedocumentpagePagenumber
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The page number in the Ezsigntemplatedocument")
 
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
@@ -237,7 +228,6 @@ public class EzsigntemplatedocumentpageResponseCompound {
    * @return sComputedImageurl
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The Url to the Ezsigntemplatedocumentpage's rasterized image.  Url will expire after 5 minutes.")
 
   public String getsComputedImageurl() {
     return sComputedImageurl;

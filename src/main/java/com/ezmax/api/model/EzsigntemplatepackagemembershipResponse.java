@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@ApiModel(description = "A Ezsigntemplatepackagemembership Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatepackagemembershipResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
@@ -82,7 +79,6 @@ public class EzsigntemplatepackagemembershipResponse {
    * @return pkiEzsigntemplatepackagemembershipID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "194", required = true, value = "The unique ID of the Ezsigntemplatepackagemembership")
 
   public Integer getPkiEzsigntemplatepackagemembershipID() {
     return pkiEzsigntemplatepackagemembershipID;
@@ -106,7 +102,6 @@ public class EzsigntemplatepackagemembershipResponse {
    * @return fkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Ezsigntemplatepackage")
 
   public Integer getFkiEzsigntemplatepackageID() {
     return fkiEzsigntemplatepackageID;
@@ -130,7 +125,6 @@ public class EzsigntemplatepackagemembershipResponse {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "36", required = true, value = "The unique ID of the Ezsigntemplate")
 
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -154,7 +148,6 @@ public class EzsigntemplatepackagemembershipResponse {
    * @return iEzsigntemplatepackagemembershipOrder
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.")
 
   public Integer getiEzsigntemplatepackagemembershipOrder() {
     return iEzsigntemplatepackagemembershipOrder;

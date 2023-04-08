@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Definition of objSQLQuery Object
  */
-@ApiModel(description = "Definition of objSQLQuery Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseObjSQLQuery {
   public static final String SERIALIZED_NAME_S_QUERY = "sQuery";
   @SerializedName(SERIALIZED_NAME_S_QUERY)
@@ -73,7 +70,6 @@ public class CommonResponseObjSQLQuery {
    * @return sQuery
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The SQL Query")
 
   public String getsQuery() {
     return sQuery;
@@ -96,7 +92,6 @@ public class CommonResponseObjSQLQuery {
    * @return fDuration
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Execution time of the SQL Query in seconds")
 
   public Float getfDuration() {
     return fDuration;

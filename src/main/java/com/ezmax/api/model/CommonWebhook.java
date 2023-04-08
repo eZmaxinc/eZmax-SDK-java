@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@ApiModel(description = "This is the base Webhook object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonWebhook {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -77,7 +74,6 @@ public class CommonWebhook {
    * @return objWebhook
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CustomWebhookResponse getObjWebhook() {
     return objWebhook;
@@ -96,6 +92,9 @@ public class CommonWebhook {
   }
 
   public CommonWebhook addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+    if (this.aObjAttempt == null) {
+      this.aObjAttempt = new ArrayList<>();
+    }
     this.aObjAttempt.add(aObjAttemptItem);
     return this;
   }
@@ -105,7 +104,6 @@ public class CommonWebhook {
    * @return aObjAttempt
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array containing details of previous attempts that were made to deliver the message. The array is empty if it's the first attempt.")
 
   public List<AttemptResponseCompound> getaObjAttempt() {
     return aObjAttempt;

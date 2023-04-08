@@ -18,16 +18,16 @@ import com.ezmax.api.model.CommunicationattachmentResponseCompound;
 import com.ezmax.api.model.CommunicationexternalrecipientResponseCompound;
 import com.ezmax.api.model.CommunicationrecipientResponseCompound;
 import com.ezmax.api.model.ComputedECommunicationDirection;
-import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.DescriptionstaticResponse;
+import com.ezmax.api.model.EmailstaticResponse;
 import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
+import com.ezmax.api.model.PhonestaticResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,6 +82,14 @@ public class CommunicationResponseCompoundTest {
     }
 
     /**
+     * Test the property 'sCommunicationBodyurl'
+     */
+    @Test
+    public void sCommunicationBodyurlTest() {
+        // TODO: test sCommunicationBodyurl
+    }
+
+    /**
      * Test the property 'eCommunicationDirection'
      */
     @Test
@@ -98,11 +106,27 @@ public class CommunicationResponseCompoundTest {
     }
 
     /**
-     * Test the property 'objContactFrom'
+     * Test the property 'objDescriptionstaticSender'
      */
     @Test
-    public void objContactFromTest() {
-        // TODO: test objContactFrom
+    public void objDescriptionstaticSenderTest() {
+        // TODO: test objDescriptionstaticSender
+    }
+
+    /**
+     * Test the property 'objEmailstaticSender'
+     */
+    @Test
+    public void objEmailstaticSenderTest() {
+        // TODO: test objEmailstaticSender
+    }
+
+    /**
+     * Test the property 'objPhonestaticSender'
+     */
+    @Test
+    public void objPhonestaticSenderTest() {
+        // TODO: test objPhonestaticSender
     }
 
     /**

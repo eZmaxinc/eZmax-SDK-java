@@ -18,7 +18,6 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendsignermappingCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendsignermappingCreateObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendsignermappingDeleteObjectV1Response;
-import com.ezmax.api.model.EzsignbulksendsignermappingGetObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendsignermappingGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,20 +60,6 @@ public class ObjectEzsignbulksendsignermappingApiTest {
     public void ezsignbulksendsignermappingDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksendsignermappingID = null;
         EzsignbulksendsignermappingDeleteObjectV1Response response = api.ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsignbulksendsignermapping
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignbulksendsignermappingGetObjectV1Test() throws ApiException {
-        Integer pkiEzsignbulksendsignermappingID = null;
-        EzsignbulksendsignermappingGetObjectV1Response response = api.ezsignbulksendsignermappingGetObjectV1(pkiEzsignbulksendsignermappingID);
         // TODO: test validations
     }
 

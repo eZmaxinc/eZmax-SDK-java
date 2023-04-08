@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object
  */
-@ApiModel(description = "An Apikey Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ApikeyResponse {
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
@@ -83,7 +80,6 @@ public class ApikeyResponse {
    * @return objApikeyDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public MultilingualApikeyDescription getObjApikeyDescription() {
     return objApikeyDescription;
@@ -106,7 +102,6 @@ public class ApikeyResponse {
    * @return sComputedToken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The secret token for the API key.  This will be returned only on creation.")
 
   public String getsComputedToken() {
     return sComputedToken;
@@ -130,7 +125,6 @@ public class ApikeyResponse {
    * @return pkiApikeyID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Apikey")
 
   public Integer getPkiApikeyID() {
     return pkiApikeyID;
@@ -153,7 +147,6 @@ public class ApikeyResponse {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;

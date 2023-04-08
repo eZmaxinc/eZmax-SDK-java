@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentlog Object
  */
-@ApiModel(description = "An Ezsigndocumentlog Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigndocumentlogResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -99,7 +96,6 @@ public class EzsigndocumentlogResponse {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "70", value = "The unique ID of the User")
 
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -123,7 +119,6 @@ public class EzsigndocumentlogResponse {
    * @return fkiEzsignsignerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "89", value = "The unique ID of the Ezsignsigner")
 
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
@@ -146,7 +141,6 @@ public class EzsigndocumentlogResponse {
    * @return dtEzsigndocumentlogDatetime
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The date and time at which the event was logged")
 
   public String getDtEzsigndocumentlogDatetime() {
     return dtEzsigndocumentlogDatetime;
@@ -169,7 +163,6 @@ public class EzsigndocumentlogResponse {
    * @return eEzsigndocumentlogType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsigndocumentlogType geteEzsigndocumentlogType() {
     return eEzsigndocumentlogType;
@@ -192,7 +185,6 @@ public class EzsigndocumentlogResponse {
    * @return sEzsigndocumentlogDetail
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Page 1 MD5: a56bbc742ba2a4d074f2493550cf6ea5", required = true, value = "The detail of the Ezsigndocumentlog")
 
   public String getsEzsigndocumentlogDetail() {
     return sEzsigndocumentlogDetail;
@@ -215,7 +207,6 @@ public class EzsigndocumentlogResponse {
    * @return sEzsigndocumentlogLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The last name of the User or Ezsignsigner")
 
   public String getsEzsigndocumentlogLastname() {
     return sEzsigndocumentlogLastname;
@@ -238,7 +229,6 @@ public class EzsigndocumentlogResponse {
    * @return sEzsigndocumentlogFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The first name of the User or Ezsignsigner")
 
   public String getsEzsigndocumentlogFirstname() {
     return sEzsigndocumentlogFirstname;
@@ -261,7 +251,6 @@ public class EzsigndocumentlogResponse {
    * @return sEzsigndocumentlogIP
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "127.0.0.1", required = true, value = "Represent an IP address.")
 
   public String getsEzsigndocumentlogIP() {
     return sEzsigndocumentlogIP;

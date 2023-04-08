@@ -27,8 +27,16 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
+import com.ezmax.api.model.BillingentityinternalDeleteObjectV1Response;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
+import com.ezmax.api.model.BillingentityinternalGetListV1Response;
+import com.ezmax.api.model.BillingentityinternalGetObjectV2Response;
+import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
@@ -76,11 +84,131 @@ public class ObjectBillingentityinternalApi {
     }
 
     /**
-     * Build call for billingentityinternalGetAutocompleteV1
-     * @param sSelector The type of Billingentityinternals to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * Build call for billingentityinternalCreateObjectV1
+     * @param billingentityinternalCreateObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalCreateObjectV1Call(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = billingentityinternalCreateObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/billingentityinternal";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call billingentityinternalCreateObjectV1ValidateBeforeCall(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'billingentityinternalCreateObjectV1Request' is set
+        if (billingentityinternalCreateObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'billingentityinternalCreateObjectV1Request' when calling billingentityinternalCreateObjectV1(Async)");
+        }
+
+        return billingentityinternalCreateObjectV1Call(billingentityinternalCreateObjectV1Request, _callback);
+
+    }
+
+    /**
+     * Create a new Billingentityinternal
+     * The endpoint allows to create one or many elements at once.
+     * @param billingentityinternalCreateObjectV1Request  (required)
+     * @return BillingentityinternalCreateObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public BillingentityinternalCreateObjectV1Response billingentityinternalCreateObjectV1(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request) throws ApiException {
+        ApiResponse<BillingentityinternalCreateObjectV1Response> localVarResp = billingentityinternalCreateObjectV1WithHttpInfo(billingentityinternalCreateObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Billingentityinternal
+     * The endpoint allows to create one or many elements at once.
+     * @param billingentityinternalCreateObjectV1Request  (required)
+     * @return ApiResponse&lt;BillingentityinternalCreateObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BillingentityinternalCreateObjectV1Response> billingentityinternalCreateObjectV1WithHttpInfo(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = billingentityinternalCreateObjectV1ValidateBeforeCall(billingentityinternalCreateObjectV1Request, null);
+        Type localVarReturnType = new TypeToken<BillingentityinternalCreateObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a new Billingentityinternal (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param billingentityinternalCreateObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalCreateObjectV1Async(BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request, final ApiCallback<BillingentityinternalCreateObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = billingentityinternalCreateObjectV1ValidateBeforeCall(billingentityinternalCreateObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<BillingentityinternalCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for billingentityinternalDeleteObjectV1
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -88,11 +216,10 @@ public class ObjectBillingentityinternalApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public okhttp3.Call billingentityinternalGetAutocompleteV1Call(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call billingentityinternalDeleteObjectV1Call(Integer pkiBillingentityinternalID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -109,26 +236,14 @@ public class ObjectBillingentityinternalApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/1/object/billingentityinternal/getAutocomplete/{sSelector}"
-            .replace("{" + "sSelector" + "}", localVarApiClient.escapeString(sSelector.toString()));
+        String localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}"
+            .replace("{" + "pkiBillingentityinternalID" + "}", localVarApiClient.escapeString(pkiBillingentityinternalID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        if (eFilterActive != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eFilterActive", eFilterActive));
-        }
-
-        if (sQuery != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sQuery", sQuery));
-        }
-
-        if (acceptLanguage != null) {
-            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
-        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -146,73 +261,61 @@ public class ObjectBillingentityinternalApi {
         }
 
         String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
-    @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call billingentityinternalGetAutocompleteV1ValidateBeforeCall(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'sSelector' is set
-        if (sSelector == null) {
-            throw new ApiException("Missing the required parameter 'sSelector' when calling billingentityinternalGetAutocompleteV1(Async)");
+    private okhttp3.Call billingentityinternalDeleteObjectV1ValidateBeforeCall(Integer pkiBillingentityinternalID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBillingentityinternalID' is set
+        if (pkiBillingentityinternalID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalDeleteObjectV1(Async)");
         }
 
-        return billingentityinternalGetAutocompleteV1Call(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        return billingentityinternalDeleteObjectV1Call(pkiBillingentityinternalID, _callback);
 
     }
 
     /**
-     * Retrieve Billingentityinternals and IDs
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return CommonGetAutocompleteV1Response
+     * Delete an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return BillingentityinternalDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public CommonGetAutocompleteV1Response billingentityinternalGetAutocompleteV1(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        ApiResponse<CommonGetAutocompleteV1Response> localVarResp = billingentityinternalGetAutocompleteV1WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public BillingentityinternalDeleteObjectV1Response billingentityinternalDeleteObjectV1(Integer pkiBillingentityinternalID) throws ApiException {
+        ApiResponse<BillingentityinternalDeleteObjectV1Response> localVarResp = billingentityinternalDeleteObjectV1WithHttpInfo(pkiBillingentityinternalID);
         return localVarResp.getData();
     }
 
     /**
-     * Retrieve Billingentityinternals and IDs
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
-     * @return ApiResponse&lt;CommonGetAutocompleteV1Response&gt;
+     * Delete an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return ApiResponse&lt;BillingentityinternalDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public ApiResponse<CommonGetAutocompleteV1Response> billingentityinternalGetAutocompleteV1WithHttpInfo(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        okhttp3.Call localVarCall = billingentityinternalGetAutocompleteV1ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, null);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+    public ApiResponse<BillingentityinternalDeleteObjectV1Response> billingentityinternalDeleteObjectV1WithHttpInfo(Integer pkiBillingentityinternalID) throws ApiException {
+        okhttp3.Call localVarCall = billingentityinternalDeleteObjectV1ValidateBeforeCall(pkiBillingentityinternalID, null);
+        Type localVarReturnType = new TypeToken<BillingentityinternalDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Retrieve Billingentityinternals and IDs (asynchronously)
-     * Get the list of Billingentityinternal to be used in a dropdown or autocomplete control.
-     * @param sSelector The type of Billingentityinternals to return (required)
-     * @param eFilterActive Specify which results we want to display. (optional, default to Active)
-     * @param sQuery Allow to filter the returned results (optional)
-     * @param acceptLanguage  (optional)
+     * Delete an existing Billingentityinternal (asynchronously)
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -220,14 +323,154 @@ public class ObjectBillingentityinternalApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
-     * @deprecated
      */
-    @Deprecated
-    public okhttp3.Call billingentityinternalGetAutocompleteV1Async(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<CommonGetAutocompleteV1Response> _callback) throws ApiException {
+    public okhttp3.Call billingentityinternalDeleteObjectV1Async(Integer pkiBillingentityinternalID, final ApiCallback<BillingentityinternalDeleteObjectV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = billingentityinternalGetAutocompleteV1ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
-        Type localVarReturnType = new TypeToken<CommonGetAutocompleteV1Response>(){}.getType();
+        okhttp3.Call localVarCall = billingentityinternalDeleteObjectV1ValidateBeforeCall(pkiBillingentityinternalID, _callback);
+        Type localVarReturnType = new TypeToken<BillingentityinternalDeleteObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for billingentityinternalEditObjectV1
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param billingentityinternalEditObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalEditObjectV1Call(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = billingentityinternalEditObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/billingentityinternal/{pkiBillingentityinternalID}"
+            .replace("{" + "pkiBillingentityinternalID" + "}", localVarApiClient.escapeString(pkiBillingentityinternalID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call billingentityinternalEditObjectV1ValidateBeforeCall(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBillingentityinternalID' is set
+        if (pkiBillingentityinternalID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalEditObjectV1(Async)");
+        }
+
+        // verify the required parameter 'billingentityinternalEditObjectV1Request' is set
+        if (billingentityinternalEditObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'billingentityinternalEditObjectV1Request' when calling billingentityinternalEditObjectV1(Async)");
+        }
+
+        return billingentityinternalEditObjectV1Call(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, _callback);
+
+    }
+
+    /**
+     * Edit an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param billingentityinternalEditObjectV1Request  (required)
+     * @return BillingentityinternalEditObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+        ApiResponse<BillingentityinternalEditObjectV1Response> localVarResp = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param billingentityinternalEditObjectV1Request  (required)
+     * @return ApiResponse&lt;BillingentityinternalEditObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1WithHttpInfo(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, null);
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Edit an existing Billingentityinternal (asynchronously)
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param billingentityinternalEditObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalEditObjectV1Async(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<BillingentityinternalEditObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -375,6 +618,291 @@ public class ObjectBillingentityinternalApi {
 
         okhttp3.Call localVarCall = billingentityinternalGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<BillingentityinternalGetAutocompleteV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for billingentityinternalGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalGetListV1Call(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/billingentityinternal/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call billingentityinternalGetListV1ValidateBeforeCall(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback _callback) throws ApiException {
+        return billingentityinternalGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Billingentityinternal list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return BillingentityinternalGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public BillingentityinternalGetListV1Response billingentityinternalGetListV1(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        ApiResponse<BillingentityinternalGetListV1Response> localVarResp = billingentityinternalGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Billingentityinternal list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;BillingentityinternalGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BillingentityinternalGetListV1Response> billingentityinternalGetListV1WithHttpInfo(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = billingentityinternalGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<BillingentityinternalGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Billingentityinternal list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalGetListV1Async(String eOrderBy, Integer iRowMax, Integer iRowOffset, HeaderAcceptLanguage acceptLanguage, String sFilter, final ApiCallback<BillingentityinternalGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = billingentityinternalGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<BillingentityinternalGetListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for billingentityinternalGetObjectV2
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalGetObjectV2Call(Integer pkiBillingentityinternalID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/2/object/billingentityinternal/{pkiBillingentityinternalID}"
+            .replace("{" + "pkiBillingentityinternalID" + "}", localVarApiClient.escapeString(pkiBillingentityinternalID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call billingentityinternalGetObjectV2ValidateBeforeCall(Integer pkiBillingentityinternalID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBillingentityinternalID' is set
+        if (pkiBillingentityinternalID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBillingentityinternalID' when calling billingentityinternalGetObjectV2(Async)");
+        }
+
+        return billingentityinternalGetObjectV2Call(pkiBillingentityinternalID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return BillingentityinternalGetObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public BillingentityinternalGetObjectV2Response billingentityinternalGetObjectV2(Integer pkiBillingentityinternalID) throws ApiException {
+        ApiResponse<BillingentityinternalGetObjectV2Response> localVarResp = billingentityinternalGetObjectV2WithHttpInfo(pkiBillingentityinternalID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @return ApiResponse&lt;BillingentityinternalGetObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BillingentityinternalGetObjectV2Response> billingentityinternalGetObjectV2WithHttpInfo(Integer pkiBillingentityinternalID) throws ApiException {
+        okhttp3.Call localVarCall = billingentityinternalGetObjectV2ValidateBeforeCall(pkiBillingentityinternalID, null);
+        Type localVarReturnType = new TypeToken<BillingentityinternalGetObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Billingentityinternal (asynchronously)
+     * 
+     * @param pkiBillingentityinternalID The unique ID of the Billingentityinternal (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call billingentityinternalGetObjectV2Async(Integer pkiBillingentityinternalID, final ApiCallback<BillingentityinternalGetObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = billingentityinternalGetObjectV2ValidateBeforeCall(pkiBillingentityinternalID, _callback);
+        Type localVarReturnType = new TypeToken<BillingentityinternalGetObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

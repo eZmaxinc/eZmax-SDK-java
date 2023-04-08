@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder
  */
-@ApiModel(description = "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/reorder")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderReorderV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D = "a_pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D)
@@ -67,6 +64,9 @@ public class EzsignfolderReorderV1Request {
   }
 
   public EzsignfolderReorderV1Request addAPkiEzsigndocumentIDItem(Integer aPkiEzsigndocumentIDItem) {
+    if (this.aPkiEzsigndocumentID == null) {
+      this.aPkiEzsigndocumentID = new ArrayList<>();
+    }
     this.aPkiEzsigndocumentID.add(aPkiEzsigndocumentIDItem);
     return this;
   }
@@ -76,7 +76,6 @@ public class EzsignfolderReorderV1Request {
    * @return aPkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<Integer> getaPkiEzsigndocumentID() {
     return aPkiEzsigndocumentID;

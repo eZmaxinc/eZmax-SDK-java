@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@ApiModel(description = "A Ezmaxinvoicingagent Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingagentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
@@ -153,7 +150,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return pkiEzmaxinvoicingagentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "181", value = "The unique ID of the Ezmaxinvoicingagent")
 
   public Integer getPkiEzmaxinvoicingagentID() {
     return pkiEzmaxinvoicingagentID;
@@ -177,7 +173,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Ezmaxinvoicing")
 
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -201,7 +196,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Billingentityinternal.")
 
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -224,7 +218,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Billingentityinternal in the language of the requester")
 
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -248,7 +241,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return fkiAgentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Agent.")
 
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -272,7 +264,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return fkiBrokerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "26", value = "The unique ID of the Broker.")
 
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -296,7 +287,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentSession
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "42", required = true, value = "The number of sessions")
 
   public Integer getiEzmaxinvoicingagentSession() {
     return iEzmaxinvoicingagentSession;
@@ -320,7 +310,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentCloned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "157", required = true, value = "The number of times this user was cloned")
 
   public Integer getiEzmaxinvoicingagentCloned() {
     return iEzmaxinvoicingagentCloned;
@@ -344,7 +333,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentInvoice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "30", required = true, value = "The number of invoices")
 
   public Integer getiEzmaxinvoicingagentInvoice() {
     return iEzmaxinvoicingagentInvoice;
@@ -368,7 +356,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentInscription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "113", required = true, value = "The number of inscriptions")
 
   public Integer getiEzmaxinvoicingagentInscription() {
     return iEzmaxinvoicingagentInscription;
@@ -392,7 +379,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentInscriptionactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "51", required = true, value = "The number of active inscriptions")
 
   public Integer getiEzmaxinvoicingagentInscriptionactive() {
     return iEzmaxinvoicingagentInscriptionactive;
@@ -416,7 +402,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentSale
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "213", required = true, value = "The number of sales")
 
   public Integer getiEzmaxinvoicingagentSale() {
     return iEzmaxinvoicingagentSale;
@@ -440,7 +425,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentOtherincome
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "198", required = true, value = "The number of otherincomes")
 
   public Integer getiEzmaxinvoicingagentOtherincome() {
     return iEzmaxinvoicingagentOtherincome;
@@ -464,7 +448,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentCommissioncalculation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "107", required = true, value = "The number of commission calculations")
 
   public Integer getiEzmaxinvoicingagentCommissioncalculation() {
     return iEzmaxinvoicingagentCommissioncalculation;
@@ -488,7 +471,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return iEzmaxinvoicingagentEzsigndocument
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "160", required = true, value = "The number of ezsign documents")
 
   public Integer getiEzmaxinvoicingagentEzsigndocument() {
     return iEzmaxinvoicingagentEzsigndocument;
@@ -511,7 +493,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return bEzmaxinvoicingagentEzsignaccount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the agent has an eZsign account")
 
   public Boolean getbEzmaxinvoicingagentEzsignaccount() {
     return bEzmaxinvoicingagentEzsignaccount;
@@ -534,7 +515,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return bEzmaxinvoicingagentBillableezmax
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether it is billable for eZmax")
 
   public Boolean getbEzmaxinvoicingagentBillableezmax() {
     return bEzmaxinvoicingagentBillableezmax;
@@ -557,7 +537,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return eEzmaxinvoicingagentVariationezmax
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzmaxinvoicingagentVariationezmax geteEzmaxinvoicingagentVariationezmax() {
     return eEzmaxinvoicingagentVariationezmax;
@@ -580,7 +559,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return bEzmaxinvoicingagentBillableezsign
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether it is billable for eZsign")
 
   public Boolean getbEzmaxinvoicingagentBillableezsign() {
     return bEzmaxinvoicingagentBillableezsign;
@@ -603,7 +581,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return eEzmaxinvoicingagentVariationezsign
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzmaxinvoicingagentVariationezsign geteEzmaxinvoicingagentVariationezsign() {
     return eEzmaxinvoicingagentVariationezsign;
@@ -626,7 +603,6 @@ public class EzmaxinvoicingagentResponseCompound {
    * @return objContactName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CustomContactNameResponse getObjContactName() {
     return objContactName;

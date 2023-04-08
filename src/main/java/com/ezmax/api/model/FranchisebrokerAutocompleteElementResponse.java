@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisebroker AutocompleteElement Response
  */
-@ApiModel(description = "A Franchisebroker AutocompleteElement Response")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class FranchisebrokerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEBROKER_NAME = "sFranchisebrokerName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEBROKER_NAME)
@@ -77,7 +74,6 @@ public class FranchisebrokerAutocompleteElementResponse {
    * @return sFranchisebrokerName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Franchisebroker in the language of the requester")
 
   public String getsFranchisebrokerName() {
     return sFranchisebrokerName;
@@ -101,7 +97,6 @@ public class FranchisebrokerAutocompleteElementResponse {
    * @return pkiFranchisebrokerID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "61", required = true, value = "The unique ID of the Franchisebroker")
 
   public Integer getPkiFranchisebrokerID() {
     return pkiFranchisebrokerID;
@@ -124,7 +119,6 @@ public class FranchisebrokerAutocompleteElementResponse {
    * @return bFranchisebrokerIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Franchisebroker is active or not")
 
   public Boolean getbFranchisebrokerIsactive() {
     return bFranchisebrokerIsactive;

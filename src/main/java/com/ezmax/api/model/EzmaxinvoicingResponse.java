@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing Object
  */
-@ApiModel(description = "A Ezmaxinvoicing Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -120,7 +117,6 @@ public class EzmaxinvoicingResponse {
    * @return pkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Ezmaxinvoicing")
 
   public Integer getPkiEzmaxinvoicingID() {
     return pkiEzmaxinvoicingID;
@@ -144,7 +140,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiEzmaxinvoicingcontractID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "28", required = true, value = "The unique ID of the Ezmaxinvoicingcontract")
 
   public Integer getFkiEzmaxinvoicingcontractID() {
     return fkiEzmaxinvoicingcontractID;
@@ -168,7 +163,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiEzmaxpricingID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "28", required = true, value = "The unique ID of the Ezmaxpricing")
 
   public Integer getFkiEzmaxpricingID() {
     return fkiEzmaxpricingID;
@@ -192,7 +186,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiSystemconfigurationtypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "28", required = true, value = "The unique ID of the Systemconfigurationtype")
 
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
@@ -215,7 +208,6 @@ public class EzmaxinvoicingResponse {
    * @return sSystemconfigurationtypeDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "eZsign (Pro)", required = true, value = "The description of the Systemconfigurationtype in the language of the requester")
 
   public String getsSystemconfigurationtypeDescriptionX() {
     return sSystemconfigurationtypeDescriptionX;
@@ -238,7 +230,6 @@ public class EzmaxinvoicingResponse {
    * @return yyyymmEzmaxinvoicing
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2022-01", required = true, value = "The YYYYMM period of the Ezmaxinvoicing")
 
   public String getYyyymmEzmaxinvoicing() {
     return yyyymmEzmaxinvoicing;
@@ -262,7 +253,6 @@ public class EzmaxinvoicingResponse {
    * @return iEzmaxinvoicingDays
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "28", required = true, value = "The number of days invoiced")
 
   public Integer getiEzmaxinvoicingDays() {
     return iEzmaxinvoicingDays;
@@ -285,7 +275,6 @@ public class EzmaxinvoicingResponse {
    * @return eEzmaxinvoicingPaymenttype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzmaxinvoicingPaymenttype geteEzmaxinvoicingPaymenttype() {
     return eEzmaxinvoicingPaymenttype;
@@ -308,7 +297,6 @@ public class EzmaxinvoicingResponse {
    * @return dEzmaxinvoicingRebatepaymenttype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1.00", required = true, value = "The percentage of rebate depending of the payment type")
 
   public String getdEzmaxinvoicingRebatepaymenttype() {
     return dEzmaxinvoicingRebatepaymenttype;
@@ -332,7 +320,6 @@ public class EzmaxinvoicingResponse {
    * @return iEzmaxinvoicingContractlength
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The length of the contract in years")
 
   public Integer getiEzmaxinvoicingContractlength() {
     return iEzmaxinvoicingContractlength;
@@ -355,7 +342,6 @@ public class EzmaxinvoicingResponse {
    * @return dEzmaxinvoicingRebatecontractlength
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1.00", required = true, value = "The percentage of rebate depending of the contract length")
 
   public String getdEzmaxinvoicingRebatecontractlength() {
     return dEzmaxinvoicingRebatecontractlength;
@@ -378,7 +364,6 @@ public class EzmaxinvoicingResponse {
    * @return bEzmaxinvoicingRebateEzsignallagents
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the rebate for eZsign is for all agents")
 
   public Boolean getbEzmaxinvoicingRebateEzsignallagents() {
     return bEzmaxinvoicingRebateEzsignallagents;
@@ -401,7 +386,6 @@ public class EzmaxinvoicingResponse {
    * @return objAudit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;

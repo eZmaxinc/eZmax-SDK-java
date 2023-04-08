@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroupsigner Object
  */
-@ApiModel(description = "A Ezsigntemplateformfieldgroupsigner Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D = "pkiEzsigntemplateformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D)
@@ -74,7 +71,6 @@ public class EzsigntemplateformfieldgroupsignerResponse {
    * @return pkiEzsigntemplateformfieldgroupsignerID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "87", required = true, value = "The unique ID of the Ezsigntemplateformfieldgroupsigner")
 
   public Integer getPkiEzsigntemplateformfieldgroupsignerID() {
     return pkiEzsigntemplateformfieldgroupsignerID;
@@ -98,7 +94,6 @@ public class EzsigntemplateformfieldgroupsignerResponse {
    * @return fkiEzsigntemplatesignerID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "9", required = true, value = "The unique ID of the Ezsigntemplatesigner")
 
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;

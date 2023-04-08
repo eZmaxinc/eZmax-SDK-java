@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * CommonResponseObjDebugPayloadGetListAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetListAllOf {
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
@@ -75,7 +73,6 @@ public class CommonResponseObjDebugPayloadGetListAllOf {
    * @return aFilter
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonResponseFilter getaFilter() {
     return aFilter;
@@ -94,6 +91,9 @@ public class CommonResponseObjDebugPayloadGetListAllOf {
   }
 
   public CommonResponseObjDebugPayloadGetListAllOf putAOrderByItem(String key, String aOrderByItem) {
+    if (this.aOrderBy == null) {
+      this.aOrderBy = new HashMap<>();
+    }
     this.aOrderBy.put(key, aOrderByItem);
     return this;
   }
@@ -103,7 +103,6 @@ public class CommonResponseObjDebugPayloadGetListAllOf {
    * @return aOrderBy
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "List of available values for *eOrderBy*")
 
   public Map<String, String> getaOrderBy() {
     return aOrderBy;

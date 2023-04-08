@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
  */
-@ApiModel(description = "Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -95,7 +92,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \"In-Person\" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \"In-Person\" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|")
 
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
@@ -120,7 +116,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
 
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -143,7 +138,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return sEzsignbulksendtransmissionDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Bulk Send Transmission #1", required = true, value = "The description of the Ezsignbulksendtransmission")
 
   public String getsEzsignbulksendtransmissionDescription() {
     return sEzsignbulksendtransmissionDescription;
@@ -166,7 +160,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The maximum date and time at which the Ezsigndocument can be signed.")
 
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -189,7 +182,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return eEzsignfolderSendreminderfrequency
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
     return eEzsignfolderSendreminderfrequency;
@@ -212,7 +204,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return tExtraMessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Hi John,  This is the document I need you to review.  Could you sign it before Monday please.  Best Regards.  Mary", required = true, value = "A custom text message that will be added to the email sent.")
 
   public String gettExtraMessage() {
     return tExtraMessage;
@@ -235,7 +226,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return sCsvBase64
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The Base64 encoded binary content of the CSV file.")
 
   public byte[] getsCsvBase64() {
     return sCsvBase64;

@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/module/ezsign/suggestTemplates
  */
-@ApiModel(description = "Payload for GET /1/module/ezsign/suggestTemplates")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignSuggestTemplatesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE = "a_objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE)
@@ -73,6 +70,9 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   }
 
   public EzsignSuggestTemplatesV1ResponseMPayload addAObjEzsigntemplateItem(EzsigntemplateResponseCompound aObjEzsigntemplateItem) {
+    if (this.aObjEzsigntemplate == null) {
+      this.aObjEzsigntemplate = new ArrayList<>();
+    }
     this.aObjEzsigntemplate.add(aObjEzsigntemplateItem);
     return this;
   }
@@ -82,7 +82,6 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
    * @return aObjEzsigntemplate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplateResponseCompound> getaObjEzsigntemplate() {
     return aObjEzsigntemplate;
@@ -101,6 +100,9 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   }
 
   public EzsignSuggestTemplatesV1ResponseMPayload addAObjEzsigntemplatepackageItem(EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackageItem) {
+    if (this.aObjEzsigntemplatepackage == null) {
+      this.aObjEzsigntemplatepackage = new ArrayList<>();
+    }
     this.aObjEzsigntemplatepackage.add(aObjEzsigntemplatepackageItem);
     return this;
   }
@@ -110,7 +112,6 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
    * @return aObjEzsigntemplatepackage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzsigntemplatepackageResponseCompound> getaObjEzsigntemplatepackage() {
     return aObjEzsigntemplatepackage;

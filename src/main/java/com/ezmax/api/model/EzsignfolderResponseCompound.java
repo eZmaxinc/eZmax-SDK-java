@@ -23,8 +23,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@ApiModel(description = "An Ezsignfolder Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -134,6 +131,10 @@ public class EzsignfolderResponseCompound {
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
 
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID = "sEzsignfolderExternalid";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID)
+  private String sEzsignfolderExternalid;
+
   public EzsignfolderResponseCompound() {
   }
 
@@ -149,7 +150,6 @@ public class EzsignfolderResponseCompound {
    * @return pkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -173,7 +173,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -196,7 +195,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -220,7 +218,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Billingentityinternal.")
 
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -243,7 +240,6 @@ public class EzsignfolderResponseCompound {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Billingentityinternal in the language of the requester")
 
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -268,7 +264,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server's time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server's time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|")
 
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -291,7 +286,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsigntsarequirementDescriptionX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Ezsigntsarequirement in the language of the requester")
 
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
@@ -314,7 +308,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Test eZsign Folder", required = true, value = "The description of the Ezsignfolder")
 
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -337,7 +330,6 @@ public class EzsignfolderResponseCompound {
    * @return tEzsignfolderNote
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "This is a note", required = true, value = "Note about the Ezsignfolder")
 
   public String gettEzsignfolderNote() {
     return tEzsignfolderNote;
@@ -360,7 +352,6 @@ public class EzsignfolderResponseCompound {
    * @return bEzsignfolderIsdisposable
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "If the Ezsigndocument can be disposed")
 
   public Boolean getbEzsignfolderIsdisposable() {
     return bEzsignfolderIsdisposable;
@@ -383,7 +374,6 @@ public class EzsignfolderResponseCompound {
    * @return eEzsignfolderSendreminderfrequency
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
     return eEzsignfolderSendreminderfrequency;
@@ -406,7 +396,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderDelayedsenddate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31T23:59:59.000Z", value = "The date and time at which the Ezsignfolder will be sent in the future.")
 
   public String getDtEzsignfolderDelayedsenddate() {
     return dtEzsignfolderDelayedsenddate;
@@ -429,7 +418,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderDuedate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The maximum date and time at which the Ezsignfolder can be signed.")
 
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
@@ -452,7 +440,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31T23:59:59.000Z", value = "The date and time at which the Ezsignfolder was sent the last time.")
 
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
@@ -475,7 +462,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderScheduledarchive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The scheduled date and time at which the Ezsignfolder should be archived.")
 
   public String getDtEzsignfolderScheduledarchive() {
     return dtEzsignfolderScheduledarchive;
@@ -498,7 +484,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderScheduleddispose
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31", value = "The scheduled date at which the Ezsignfolder should be Disposed.")
 
   public String getDtEzsignfolderScheduleddispose() {
     return dtEzsignfolderScheduleddispose;
@@ -521,7 +506,6 @@ public class EzsignfolderResponseCompound {
    * @return eEzsignfolderStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
@@ -544,7 +528,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderClose
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-31 23:59:59", value = "The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.")
 
   public String getDtEzsignfolderClose() {
     return dtEzsignfolderClose;
@@ -567,7 +550,6 @@ public class EzsignfolderResponseCompound {
    * @return tEzsignfolderMessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Hi everyone,  This is the document I need you to review.  Could you sign it before Monday please.  Best Regards.  Mary", required = true, value = "A custom text message that will be added to the email sent.")
 
   public String gettEzsignfolderMessage() {
     return tEzsignfolderMessage;
@@ -590,7 +572,6 @@ public class EzsignfolderResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -599,6 +580,28 @@ public class EzsignfolderResponseCompound {
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
+  }
+
+
+  public EzsignfolderResponseCompound sEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+    return this;
+  }
+
+   /**
+   * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   * @return sEzsignfolderExternalid
+  **/
+  @javax.annotation.Nonnull
+
+  public String getsEzsignfolderExternalid() {
+    return sEzsignfolderExternalid;
+  }
+
+
+  public void setsEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
   }
 
 
@@ -631,12 +634,13 @@ public class EzsignfolderResponseCompound {
         Objects.equals(this.eEzsignfolderStep, ezsignfolderResponseCompound.eEzsignfolderStep) &&
         Objects.equals(this.dtEzsignfolderClose, ezsignfolderResponseCompound.dtEzsignfolderClose) &&
         Objects.equals(this.tEzsignfolderMessage, ezsignfolderResponseCompound.tEzsignfolderMessage) &&
-        Objects.equals(this.objAudit, ezsignfolderResponseCompound.objAudit);
+        Objects.equals(this.objAudit, ezsignfolderResponseCompound.objAudit) &&
+        Objects.equals(this.sEzsignfolderExternalid, ezsignfolderResponseCompound.sEzsignfolderExternalid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid);
   }
 
   @Override
@@ -663,6 +667,7 @@ public class EzsignfolderResponseCompound {
     sb.append("    dtEzsignfolderClose: ").append(toIndentedString(dtEzsignfolderClose)).append("\n");
     sb.append("    tEzsignfolderMessage: ").append(toIndentedString(tEzsignfolderMessage)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    sEzsignfolderExternalid: ").append(toIndentedString(sEzsignfolderExternalid)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -705,6 +710,7 @@ public class EzsignfolderResponseCompound {
     openapiFields.add("dtEzsignfolderClose");
     openapiFields.add("tEzsignfolderMessage");
     openapiFields.add("objAudit");
+    openapiFields.add("sEzsignfolderExternalid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -722,6 +728,7 @@ public class EzsignfolderResponseCompound {
     openapiRequiredFields.add("eEzsignfolderStep");
     openapiRequiredFields.add("tEzsignfolderMessage");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("sEzsignfolderExternalid");
   }
 
  /**
@@ -789,6 +796,9 @@ public class EzsignfolderResponseCompound {
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
+      if (!jsonObj.get("sEzsignfolderExternalid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderExternalid").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate Object and children
  */
-@ApiModel(description = "A Ezsigntemplate Object and children")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -86,7 +83,6 @@ public class EzsigntemplateRequestCompound {
    * @return pkiEzsigntemplateID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "36", value = "The unique ID of the Ezsigntemplate")
 
   public Integer getPkiEzsigntemplateID() {
     return pkiEzsigntemplateID;
@@ -110,7 +106,6 @@ public class EzsigntemplateRequestCompound {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -135,7 +130,6 @@ public class EzsigntemplateRequestCompound {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -158,7 +152,6 @@ public class EzsigntemplateRequestCompound {
    * @return sEzsigntemplateDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Standard Contract", required = true, value = "The description of the Ezsigntemplate")
 
   public String getsEzsigntemplateDescription() {
     return sEzsigntemplateDescription;
@@ -181,7 +174,6 @@ public class EzsigntemplateRequestCompound {
    * @return bEzsigntemplateAdminonly
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Ezsigntemplate can be accessed by admin users only (eUserType=Normal)")
 
   public Boolean getbEzsigntemplateAdminonly() {
     return bEzsigntemplateAdminonly;

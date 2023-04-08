@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@ApiModel(description = "Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderSendV2Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -80,7 +77,6 @@ public class EzsignfolderSendV2Request {
    * @return tEzsignfolderMessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Hi everyone,  This is the document I need you to review.  Could you sign it before Monday please.  Best Regards.  Mary", required = true, value = "A custom text message that will be added to the email sent.")
 
   public String gettEzsignfolderMessage() {
     return tEzsignfolderMessage;
@@ -99,6 +95,9 @@ public class EzsignfolderSendV2Request {
   }
 
   public EzsignfolderSendV2Request addAFkiEzsignfoldersignerassociationIDItem(Integer aFkiEzsignfoldersignerassociationIDItem) {
+    if (this.aFkiEzsignfoldersignerassociationID == null) {
+      this.aFkiEzsignfoldersignerassociationID = new ArrayList<>();
+    }
     this.aFkiEzsignfoldersignerassociationID.add(aFkiEzsignfoldersignerassociationIDItem);
     return this;
   }
@@ -108,7 +107,6 @@ public class EzsignfolderSendV2Request {
    * @return aFkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<Integer> getaFkiEzsignfoldersignerassociationID() {
     return aFkiEzsignfoldersignerassociationID;
@@ -127,6 +125,9 @@ public class EzsignfolderSendV2Request {
   }
 
   public EzsignfolderSendV2Request addAObjEzsignfoldersignerassociationmessageItem(CustomEzsignfoldersignerassociationmessageRequest aObjEzsignfoldersignerassociationmessageItem) {
+    if (this.aObjEzsignfoldersignerassociationmessage == null) {
+      this.aObjEzsignfoldersignerassociationmessage = new ArrayList<>();
+    }
     this.aObjEzsignfoldersignerassociationmessage.add(aObjEzsignfoldersignerassociationmessageItem);
     return this;
   }
@@ -136,7 +137,6 @@ public class EzsignfolderSendV2Request {
    * @return aObjEzsignfoldersignerassociationmessage
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzsignfoldersignerassociationmessageRequest> getaObjEzsignfoldersignerassociationmessage() {
     return aObjEzsignfoldersignerassociationmessage;

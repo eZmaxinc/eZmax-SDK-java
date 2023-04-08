@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatepackage List Element
  */
-@ApiModel(description = "An Ezsigntemplatepackage List Element")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatepackageListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -98,7 +95,6 @@ public class EzsigntemplatepackageListElement {
    * @return pkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Ezsigntemplatepackage")
 
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
@@ -122,7 +118,6 @@ public class EzsigntemplatepackageListElement {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "5", required = true, value = "The unique ID of the Ezsignfoldertype.")
 
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -147,7 +142,6 @@ public class EzsigntemplatepackageListElement {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -170,7 +164,6 @@ public class EzsigntemplatepackageListElement {
    * @return sEzsigntemplatepackageDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Package for new clients", required = true, value = "The description of the Ezsigntemplatepackage")
 
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
@@ -193,7 +186,6 @@ public class EzsigntemplatepackageListElement {
    * @return bEzsigntemplatepackageNeedvalidation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Whether the Ezsignbulksend was automatically modified and needs a manual validation")
 
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
@@ -216,7 +208,6 @@ public class EzsigntemplatepackageListElement {
    * @return iEzsigntemplatepackagemembership
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage")
 
   public Integer getiEzsigntemplatepackagemembership() {
     return iEzsigntemplatepackagemembership;
@@ -239,7 +230,6 @@ public class EzsigntemplatepackageListElement {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The name of the Ezsignfoldertype in the language of the requester")
 
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -262,7 +252,6 @@ public class EzsigntemplatepackageListElement {
    * @return bEzsigntemplatepackageIsactive
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "true", required = true, value = "Whether the Ezsigntemplatepackage is active or not")
 
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;

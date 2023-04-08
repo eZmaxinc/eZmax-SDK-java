@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * CommonResponseErrorSTemporaryFileUrlAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseErrorSTemporaryFileUrlAllOf {
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
@@ -68,7 +66,6 @@ public class CommonResponseErrorSTemporaryFileUrlAllOf {
    * @return sTemporaryFileUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://www.example.com/document.pdf", value = "The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.")
 
   public String getsTemporaryFileUrl() {
     return sTemporaryFileUrl;

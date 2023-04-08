@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryexternal Object
  */
-@ApiModel(description = "A Ezmaxinvoicingsummaryexternal Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryexternalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D = "pkiEzmaxinvoicingsummaryexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D)
@@ -93,7 +90,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return pkiEzmaxinvoicingsummaryexternalID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "177", value = "The unique ID of the Ezmaxinvoicingsummaryexternal")
 
   public Integer getPkiEzmaxinvoicingsummaryexternalID() {
     return pkiEzmaxinvoicingsummaryexternalID;
@@ -117,7 +113,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Ezmaxinvoicing")
 
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -141,7 +136,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return fkiBillingentityexternalID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "83", required = true, value = "The unique ID of the Billingentityexternal")
 
   public Integer getFkiBillingentityexternalID() {
     return fkiBillingentityexternalID;
@@ -164,7 +158,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return sBillingentityexternalDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Default", required = true, value = "The description of the Billingentityexternal")
 
   public String getsBillingentityexternalDescription() {
     return sBillingentityexternalDescription;
@@ -187,7 +180,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return sEzmaxinvoicingsummaryexternalDescription
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Company Demo", required = true, value = "The description of the Ezmaxinvoicingsummaryexternal")
 
   public String getsEzmaxinvoicingsummaryexternalDescription() {
     return sEzmaxinvoicingsummaryexternalDescription;
@@ -206,6 +198,9 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
   }
 
   public EzmaxinvoicingsummaryexternalResponseCompound addAObjEzmaxinvoicingsummaryexternaldetailItem(EzmaxinvoicingsummaryexternaldetailResponseCompound aObjEzmaxinvoicingsummaryexternaldetailItem) {
+    if (this.aObjEzmaxinvoicingsummaryexternaldetail == null) {
+      this.aObjEzmaxinvoicingsummaryexternaldetail = new ArrayList<>();
+    }
     this.aObjEzmaxinvoicingsummaryexternaldetail.add(aObjEzmaxinvoicingsummaryexternaldetailItem);
     return this;
   }
@@ -215,7 +210,6 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
    * @return aObjEzmaxinvoicingsummaryexternaldetail
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<EzmaxinvoicingsummaryexternaldetailResponseCompound> getaObjEzmaxinvoicingsummaryexternaldetail() {
     return aObjEzmaxinvoicingsummaryexternaldetail;

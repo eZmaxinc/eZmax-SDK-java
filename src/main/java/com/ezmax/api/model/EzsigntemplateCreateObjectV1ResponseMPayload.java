@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplate
  */
-@ApiModel(description = "Payload for POST /1/object/ezsigntemplate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplateCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATE_I_D = "a_pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATE_I_D)
@@ -67,6 +64,9 @@ public class EzsigntemplateCreateObjectV1ResponseMPayload {
   }
 
   public EzsigntemplateCreateObjectV1ResponseMPayload addAPkiEzsigntemplateIDItem(Integer aPkiEzsigntemplateIDItem) {
+    if (this.aPkiEzsigntemplateID == null) {
+      this.aPkiEzsigntemplateID = new ArrayList<>();
+    }
     this.aPkiEzsigntemplateID.add(aPkiEzsigntemplateIDItem);
     return this;
   }
@@ -76,7 +76,6 @@ public class EzsigntemplateCreateObjectV1ResponseMPayload {
    * @return aPkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.")
 
   public List<Integer> getaPkiEzsigntemplateID() {
     return aPkiEzsigntemplateID;

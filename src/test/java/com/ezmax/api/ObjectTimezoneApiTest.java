@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.TimezoneGetAutocompleteV2Response;
 import org.junit.jupiter.api.Disabled;
@@ -32,23 +31,6 @@ import java.util.Map;
 public class ObjectTimezoneApiTest {
 
     private final ObjectTimezoneApi api = new ObjectTimezoneApi();
-
-    /**
-     * Retrieve Timezones and IDs
-     *
-     * Get the list of Timezone to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void timezoneGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.timezoneGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
 
     /**
      * Retrieve Timezones and IDs

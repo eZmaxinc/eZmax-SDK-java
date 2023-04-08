@@ -20,9 +20,7 @@ import com.ezmax.api.model.BrandingEditObjectV1Request;
 import com.ezmax.api.model.BrandingEditObjectV1Response;
 import com.ezmax.api.model.BrandingGetAutocompleteV2Response;
 import com.ezmax.api.model.BrandingGetListV1Response;
-import com.ezmax.api.model.BrandingGetObjectV1Response;
 import com.ezmax.api.model.BrandingGetObjectV2Response;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -79,23 +77,6 @@ public class ObjectBrandingApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void brandingGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.brandingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve Brandings and IDs
-     *
-     * Get the list of Branding to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
     public void brandingGetAutocompleteV2Test() throws ApiException {
         String sSelector = null;
         String eFilterActive = null;
@@ -120,20 +101,6 @@ public class ObjectBrandingApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         BrandingGetListV1Response response = api.brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Branding
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void brandingGetObjectV1Test() throws ApiException {
-        Integer pkiBrandingID = null;
-        BrandingGetObjectV1Response response = api.brandingGetObjectV1(pkiBrandingID);
         // TODO: test validations
     }
 

@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession Object
  */
-@ApiModel(description = "An Activesession Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -103,7 +100,6 @@ public class ActivesessionResponse {
    * @return eActivesessionUsertype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEActivesessionUsertype geteActivesessionUsertype() {
     return eActivesessionUsertype;
@@ -126,7 +122,6 @@ public class ActivesessionResponse {
    * @return eActivesessionWeekdaystart
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
     return eActivesessionWeekdaystart;
@@ -151,7 +146,6 @@ public class ActivesessionResponse {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -174,7 +168,6 @@ public class ActivesessionResponse {
    * @return sCompanyNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Acme inc.", required = true, value = "The Name of the Company in the language of the requester")
 
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -197,7 +190,6 @@ public class ActivesessionResponse {
    * @return sDepartmentNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Head Office", required = true, value = "The Name of the Department in the language of the requester")
 
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -220,7 +212,6 @@ public class ActivesessionResponse {
    * @return bActivesessionDebug
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether the active session is in debug or not")
 
   public Boolean getbActivesessionDebug() {
     return bActivesessionDebug;
@@ -243,7 +234,6 @@ public class ActivesessionResponse {
    * @return bActivesessionIssuperadmin
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether the active session is superadmin or not")
 
   public Boolean getbActivesessionIssuperadmin() {
     return bActivesessionIssuperadmin;
@@ -266,7 +256,6 @@ public class ActivesessionResponse {
    * @return pksCustomerCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "demo", required = true, value = "The customer code assigned to your account")
 
   public String getPksCustomerCode() {
     return pksCustomerCode;
@@ -290,7 +279,6 @@ public class ActivesessionResponse {
    * @return fkiSystemconfigurationtypeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Systemconfigurationtype")
 
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;

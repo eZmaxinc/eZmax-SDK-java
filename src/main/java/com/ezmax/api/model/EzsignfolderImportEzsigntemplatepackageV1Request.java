@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-@ApiModel(description = "Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsignfolderImportEzsigntemplatepackageV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -81,7 +78,6 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
    * @return fkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "99", required = true, value = "The unique ID of the Ezsigntemplatepackage")
 
   public Integer getFkiEzsigntemplatepackageID() {
     return fkiEzsigntemplatepackageID;
@@ -104,7 +100,6 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2020-12-31 23:59:59", required = true, value = "The maximum date and time at which the Ezsigndocument can be signed.")
 
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -123,6 +118,9 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
   }
 
   public EzsignfolderImportEzsigntemplatepackageV1Request addAObjImportEzsigntemplatepackageRelationItem(CustomImportEzsigntemplatepackageRelationRequest aObjImportEzsigntemplatepackageRelationItem) {
+    if (this.aObjImportEzsigntemplatepackageRelation == null) {
+      this.aObjImportEzsigntemplatepackageRelation = new ArrayList<>();
+    }
     this.aObjImportEzsigntemplatepackageRelation.add(aObjImportEzsigntemplatepackageRelationItem);
     return this;
   }
@@ -132,7 +130,6 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
    * @return aObjImportEzsigntemplatepackageRelation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomImportEzsigntemplatepackageRelationRequest> getaObjImportEzsigntemplatepackageRelation() {
     return aObjImportEzsigntemplatepackageRelation;

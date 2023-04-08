@@ -38,6 +38,12 @@ A Ezsigntemplatedocument Object
 | Name | Value |
 |---- | -----|
 | PDF | &quot;Pdf&quot; |
+| DOC | &quot;Doc&quot; |
+| DOCX | &quot;Docx&quot; |
+| XLS | &quot;Xls&quot; |
+| XLSX | &quot;Xlsx&quot; |
+| PPT | &quot;Ppt&quot; |
+| PPTX | &quot;Pptx&quot; |
 
 
 

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object and children
  */
-@ApiModel(description = "A Ezsigntemplatedocument Object and children")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class EzsigntemplatedocumentRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -129,7 +126,19 @@ public class EzsigntemplatedocumentRequestCompound {
    */
   @JsonAdapter(EEzsigntemplatedocumentFormatEnum.Adapter.class)
   public enum EEzsigntemplatedocumentFormatEnum {
-    PDF("Pdf");
+    PDF("Pdf"),
+    
+    DOC("Doc"),
+    
+    DOCX("Docx"),
+    
+    XLS("Xls"),
+    
+    XLSX("Xlsx"),
+    
+    PPT("Ppt"),
+    
+    PPTX("Pptx");
 
     private String value;
 
@@ -255,7 +264,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return pkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "133", value = "The unique ID of the Ezsigntemplatedocument")
 
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
@@ -279,7 +287,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "36", required = true, value = "The unique ID of the Ezsigntemplate")
 
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -303,7 +310,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "97", value = "The unique ID of the Ezsigndocument")
 
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -327,7 +333,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return fkiEzsigntemplatesignerID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9", value = "The unique ID of the Ezsigntemplatesigner")
 
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
@@ -350,7 +355,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return sEzsigntemplatedocumentName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Standard Contract", required = true, value = "The name of the Ezsigntemplatedocument.")
 
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
@@ -373,7 +377,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return eEzsigntemplatedocumentSource
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Indicates where to look for the document binary content.")
 
   public EEzsigntemplatedocumentSourceEnum geteEzsigntemplatedocumentSource() {
     return eEzsigntemplatedocumentSource;
@@ -396,7 +399,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return eEzsigntemplatedocumentFormat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Indicates the format of the template.")
 
   public EEzsigntemplatedocumentFormatEnum geteEzsigntemplatedocumentFormat() {
     return eEzsigntemplatedocumentFormat;
@@ -419,7 +421,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return sEzsigntemplatedocumentBase64
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[B@6b54655f", value = "The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource = Base64.")
 
   public byte[] getsEzsigntemplatedocumentBase64() {
     return sEzsigntemplatedocumentBase64;
@@ -442,7 +443,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return sEzsigntemplatedocumentUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://www.example.com/template.pdf", value = "The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource = Url.")
 
   public String getsEzsigntemplatedocumentUrl() {
     return sEzsigntemplatedocumentUrl;
@@ -465,7 +465,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return bEzsigntemplatedocumentForcerepair
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Try to repair the document or flatten it if it cannot be used for electronic signature.")
 
   public Boolean getbEzsigntemplatedocumentForcerepair() {
     return bEzsigntemplatedocumentForcerepair;
@@ -488,7 +487,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return eEzsigntemplatedocumentForm
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**")
 
   public EEzsigntemplatedocumentFormEnum geteEzsigntemplatedocumentForm() {
     return eEzsigntemplatedocumentForm;
@@ -511,7 +509,6 @@ public class EzsigntemplatedocumentRequestCompound {
    * @return sEzsigntemplatedocumentPassword
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "SecretPassword123", value = "If the source template is password protected, the password to open/modify it.")
 
   public String getsEzsigntemplatedocumentPassword() {
     return sEzsigntemplatedocumentPassword;

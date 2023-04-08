@@ -20,7 +20,6 @@ import com.ezmax.api.model.EzsigntemplateformfieldgroupCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupEditObjectV1Response;
-import com.ezmax.api.model.EzsigntemplateformfieldgroupGetObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -78,20 +77,6 @@ public class ObjectEzsigntemplateformfieldgroupApiTest {
         Integer pkiEzsigntemplateformfieldgroupID = null;
         EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request = null;
         EzsigntemplateformfieldgroupEditObjectV1Response response = api.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplateformfieldgroup
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplateformfieldgroupGetObjectV1Test() throws ApiException {
-        Integer pkiEzsigntemplateformfieldgroupID = null;
-        EzsigntemplateformfieldgroupGetObjectV1Response response = api.ezsigntemplateformfieldgroupGetObjectV1(pkiEzsigntemplateformfieldgroupID);
         // TODO: test validations
     }
 

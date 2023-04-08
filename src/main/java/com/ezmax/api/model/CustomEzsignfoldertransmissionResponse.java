@@ -22,8 +22,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,12 +50,15 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  */
-@ApiModel(description = "An Ezsignfolder Object in the context of an Ezsignbulksendtransmission")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CustomEzsignfoldertransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
   private Integer pkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
+  private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_STEP = "eEzsignfolderStep";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
@@ -90,7 +91,6 @@ public class CustomEzsignfoldertransmissionResponse {
    * @return pkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "33", required = true, value = "The unique ID of the Ezsignfolder")
 
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -99,6 +99,28 @@ public class CustomEzsignfoldertransmissionResponse {
 
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
+  }
+
+
+  public CustomEzsignfoldertransmissionResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
+    
+    this.sEzsignfolderDescription = sEzsignfolderDescription;
+    return this;
+  }
+
+   /**
+   * The description of the Ezsignfolder
+   * @return sEzsignfolderDescription
+  **/
+  @javax.annotation.Nonnull
+
+  public String getsEzsignfolderDescription() {
+    return sEzsignfolderDescription;
+  }
+
+
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
+    this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
@@ -113,7 +135,6 @@ public class CustomEzsignfoldertransmissionResponse {
    * @return eEzsignfolderStep
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
@@ -136,7 +157,6 @@ public class CustomEzsignfoldertransmissionResponse {
    * @return iEzsignfolderSignaturetotal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "4", required = true, value = "The number of total signatures that were requested in the Ezsignfolder")
 
   public Integer getiEzsignfolderSignaturetotal() {
     return iEzsignfolderSignaturetotal;
@@ -159,7 +179,6 @@ public class CustomEzsignfoldertransmissionResponse {
    * @return iEzsignfolderSignaturesigned
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "3", required = true, value = "The number of signatures that were signed in the Ezsignfolder.")
 
   public Integer getiEzsignfolderSignaturesigned() {
     return iEzsignfolderSignaturesigned;
@@ -178,6 +197,9 @@ public class CustomEzsignfoldertransmissionResponse {
   }
 
   public CustomEzsignfoldertransmissionResponse addAObjEzsignfoldertransmissionSignerItem(CustomEzsignfoldertransmissionSignerResponse aObjEzsignfoldertransmissionSignerItem) {
+    if (this.aObjEzsignfoldertransmissionSigner == null) {
+      this.aObjEzsignfoldertransmissionSigner = new ArrayList<>();
+    }
     this.aObjEzsignfoldertransmissionSigner.add(aObjEzsignfoldertransmissionSignerItem);
     return this;
   }
@@ -187,7 +209,6 @@ public class CustomEzsignfoldertransmissionResponse {
    * @return aObjEzsignfoldertransmissionSigner
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public List<CustomEzsignfoldertransmissionSignerResponse> getaObjEzsignfoldertransmissionSigner() {
     return aObjEzsignfoldertransmissionSigner;
@@ -210,6 +231,7 @@ public class CustomEzsignfoldertransmissionResponse {
     }
     CustomEzsignfoldertransmissionResponse customEzsignfoldertransmissionResponse = (CustomEzsignfoldertransmissionResponse) o;
     return Objects.equals(this.pkiEzsignfolderID, customEzsignfoldertransmissionResponse.pkiEzsignfolderID) &&
+        Objects.equals(this.sEzsignfolderDescription, customEzsignfoldertransmissionResponse.sEzsignfolderDescription) &&
         Objects.equals(this.eEzsignfolderStep, customEzsignfoldertransmissionResponse.eEzsignfolderStep) &&
         Objects.equals(this.iEzsignfolderSignaturetotal, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal) &&
         Objects.equals(this.iEzsignfolderSignaturesigned, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned) &&
@@ -218,7 +240,7 @@ public class CustomEzsignfoldertransmissionResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, eEzsignfolderStep, iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner);
+    return Objects.hash(pkiEzsignfolderID, sEzsignfolderDescription, eEzsignfolderStep, iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner);
   }
 
   @Override
@@ -226,6 +248,7 @@ public class CustomEzsignfoldertransmissionResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomEzsignfoldertransmissionResponse {\n");
     sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
+    sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
     sb.append("    iEzsignfolderSignaturetotal: ").append(toIndentedString(iEzsignfolderSignaturetotal)).append("\n");
     sb.append("    iEzsignfolderSignaturesigned: ").append(toIndentedString(iEzsignfolderSignaturesigned)).append("\n");
@@ -253,6 +276,7 @@ public class CustomEzsignfoldertransmissionResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignfolderID");
+    openapiFields.add("sEzsignfolderDescription");
     openapiFields.add("eEzsignfolderStep");
     openapiFields.add("iEzsignfolderSignaturetotal");
     openapiFields.add("iEzsignfolderSignaturesigned");
@@ -261,6 +285,7 @@ public class CustomEzsignfoldertransmissionResponse {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignfolderID");
+    openapiRequiredFields.add("sEzsignfolderDescription");
     openapiRequiredFields.add("eEzsignfolderStep");
     openapiRequiredFields.add("iEzsignfolderSignaturetotal");
     openapiRequiredFields.add("iEzsignfolderSignaturesigned");
@@ -293,6 +318,9 @@ public class CustomEzsignfoldertransmissionResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfoldertransmissionSigner").isJsonArray()) {

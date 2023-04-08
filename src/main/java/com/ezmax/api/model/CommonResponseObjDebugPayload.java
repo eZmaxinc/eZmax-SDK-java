@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,8 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@ApiModel(description = "This is a debug object containing debugging information on the actual function")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -79,7 +76,6 @@ public class CommonResponseObjDebugPayload {
    * @return iVersionMin
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "The minimum version of the function that can be called")
 
   public Integer getiVersionMin() {
     return iVersionMin;
@@ -102,7 +98,6 @@ public class CommonResponseObjDebugPayload {
    * @return iVersionMax
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The maximum version of the function that can be called")
 
   public Integer getiVersionMax() {
     return iVersionMax;
@@ -121,6 +116,9 @@ public class CommonResponseObjDebugPayload {
   }
 
   public CommonResponseObjDebugPayload addARequiredPermissionItem(Integer aRequiredPermissionItem) {
+    if (this.aRequiredPermission == null) {
+      this.aRequiredPermission = new ArrayList<>();
+    }
     this.aRequiredPermission.add(aRequiredPermissionItem);
     return this;
   }
@@ -130,7 +128,6 @@ public class CommonResponseObjDebugPayload {
    * @return aRequiredPermission
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of permissions required to access this function.  If the value \"0\" is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don't need to have all of them.")
 
   public List<Integer> getaRequiredPermission() {
     return aRequiredPermission;

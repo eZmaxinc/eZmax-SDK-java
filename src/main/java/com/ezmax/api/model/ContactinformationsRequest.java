@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -48,8 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@ApiModel(description = "A Contactinformations Object")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ContactinformationsRequest {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -81,7 +78,6 @@ public class ContactinformationsRequest {
    * @return iAddressDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiAddressDefault() {
     return iAddressDefault;
@@ -104,7 +100,6 @@ public class ContactinformationsRequest {
    * @return iPhoneDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiPhoneDefault() {
     return iPhoneDefault;
@@ -127,7 +122,6 @@ public class ContactinformationsRequest {
    * @return iEmailDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiEmailDefault() {
     return iEmailDefault;
@@ -150,7 +144,6 @@ public class ContactinformationsRequest {
    * @return iWebsiteDefault
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.")
 
   public Integer getiWebsiteDefault() {
     return iWebsiteDefault;

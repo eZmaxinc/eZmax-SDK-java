@@ -24,8 +24,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@ApiModel(description = "Payload for GET /1/object/activesession/getCurrent")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -127,7 +124,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return eActivesessionUsertype
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEActivesessionUsertype geteActivesessionUsertype() {
     return eActivesessionUsertype;
@@ -150,7 +146,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return eActivesessionWeekdaystart
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
     return eActivesessionWeekdaystart;
@@ -175,7 +170,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -198,7 +192,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return sCompanyNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Acme inc.", required = true, value = "The Name of the Company in the language of the requester")
 
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -221,7 +214,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return sDepartmentNameX
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Head Office", required = true, value = "The Name of the Department in the language of the requester")
 
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -244,7 +236,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return bActivesessionDebug
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether the active session is in debug or not")
 
   public Boolean getbActivesessionDebug() {
     return bActivesessionDebug;
@@ -267,7 +258,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return bActivesessionIssuperadmin
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "false", required = true, value = "Whether the active session is superadmin or not")
 
   public Boolean getbActivesessionIssuperadmin() {
     return bActivesessionIssuperadmin;
@@ -290,7 +280,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return pksCustomerCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "demo", required = true, value = "The customer code assigned to your account")
 
   public String getPksCustomerCode() {
     return pksCustomerCode;
@@ -314,7 +303,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return fkiSystemconfigurationtypeID
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "28", value = "The unique ID of the Systemconfigurationtype")
 
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
@@ -333,6 +321,9 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
   public ActivesessionGetCurrentV1ResponseMPayload addAPkiPermissionIDItem(Integer aPkiPermissionIDItem) {
+    if (this.aPkiPermissionID == null) {
+      this.aPkiPermissionID = new ArrayList<>();
+    }
     this.aPkiPermissionID.add(aPkiPermissionIDItem);
     return this;
   }
@@ -342,7 +333,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return aPkiPermissionID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An array of permissions granted to the user or api key")
 
   public List<Integer> getaPkiPermissionID() {
     return aPkiPermissionID;
@@ -365,7 +355,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return objUserReal
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public ActivesessionResponseCompoundUser getObjUserReal() {
     return objUserReal;
@@ -388,7 +377,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return objUserCloned
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ActivesessionResponseCompoundUser getObjUserCloned() {
     return objUserCloned;
@@ -411,7 +399,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return objApikey
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ActivesessionResponseCompoundApikey getObjApikey() {
     return objApikey;
@@ -430,6 +417,9 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
   public ActivesessionGetCurrentV1ResponseMPayload addAEModuleInternalnameItem(String aEModuleInternalnameItem) {
+    if (this.aEModuleInternalname == null) {
+      this.aEModuleInternalname = new ArrayList<>();
+    }
     this.aEModuleInternalname.add(aEModuleInternalnameItem);
     return this;
   }
@@ -439,7 +429,6 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * @return aEModuleInternalname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.")
 
   public List<String> getaEModuleInternalname() {
     return aEModuleInternalname;

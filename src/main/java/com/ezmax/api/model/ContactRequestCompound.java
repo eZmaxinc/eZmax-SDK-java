@@ -21,8 +21,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -49,8 +47,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contact Object and children to create a complete structure
  */
-@ApiModel(description = "A Contact Object and children to create a complete structure")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T17:12:36.837807381Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T19:33:54.306225141Z[Etc/UTC]")
 public class ContactRequestCompound {
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
@@ -95,7 +92,6 @@ public class ContactRequestCompound {
    * @return fkiContacttitleID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|")
 
   public Integer getFkiContacttitleID() {
     return fkiContacttitleID;
@@ -120,7 +116,6 @@ public class ContactRequestCompound {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2", required = true, value = "The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|")
 
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -143,7 +138,6 @@ public class ContactRequestCompound {
    * @return sContactFirstname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "John", required = true, value = "The First name of the contact")
 
   public String getsContactFirstname() {
     return sContactFirstname;
@@ -166,7 +160,6 @@ public class ContactRequestCompound {
    * @return sContactLastname
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Doe", required = true, value = "The Last name of the contact")
 
   public String getsContactLastname() {
     return sContactLastname;
@@ -189,7 +182,6 @@ public class ContactRequestCompound {
    * @return sContactCompany
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "eZmax Solutions Inc.", required = true, value = "The Company name of the contact")
 
   public String getsContactCompany() {
     return sContactCompany;
@@ -212,7 +204,6 @@ public class ContactRequestCompound {
    * @return dtContactBirthdate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1980-01-01", value = "The Birth Date of the contact")
 
   public String getDtContactBirthdate() {
     return dtContactBirthdate;
@@ -235,7 +226,6 @@ public class ContactRequestCompound {
    * @return objContactinformations
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public ContactinformationsRequestCompound getObjContactinformations() {
     return objContactinformations;
