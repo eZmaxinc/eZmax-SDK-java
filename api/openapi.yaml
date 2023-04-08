@@ -15560,6 +15560,7 @@ components:
       - '*'
       - en
       - fr
+      example: en
       type: string
     Multilingual-ApikeyDescription:
       description: Description of the API Key
