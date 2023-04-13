@@ -66,46 +66,38 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
-    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
-    \n- DELETE /1/object/paymentterm/{pkiPaymenttermID}\r\n- GET /1/object/activesession/getList\r\
-    \n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
+    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
+    \n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- DELETE /1/object/paymentterm/{pkiPaymenttermID}\r\
+    \n- DELETE /1/object/usergroup/{pkiUsergroupID}\r\n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\
+    \n- GET /1/object/activesession/getList\r\n- GET /1/object/billingentityinternal/getList\r\
+    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic\r\
-    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic\r\
-    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations\r\n\
-    - GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount\r\n- GET\
-    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList\r\n- GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic\r\
-    \n- GET /2/object/ezsignannotation/{pkiEzsignannotationID}\r\n- GET /1/object/paymentterm/getList\r\
-    \n- GET /2/object/communication/{pkiCommunicationID}\r\n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\
-    \n- GET /2/object/paymentterm/getAutocomplete/{sSelector} \r\n- POST /1/object/ezsignannotation\r\
-    \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten\r\n- POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten\r\
-    \n- POST /1/object/paymentterm\r\n- PUT /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
-    \n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
-    \n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\n- POST /1/object/usergroup\r\
-    \n- DEL /1/object/usergroup/{pkiUsergroupID}\r\n- PUT /1/object/usergroup/{pkiUsergroupID}\r\
-    \n- GET /2/object/usergroup/{pkiUsergroupID}\r\n- GET /rest/1/object/usergroup/{pkiUsergroupID}/getMembers\r\
-    \n- POST /1/object/billingentityinternal\r\n- DEL /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
-    \n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- GET\
-    \ /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- GET /1/object/billingentityinternal/getList\r\
-    \n- GET /1/object/usergroup/getList\r\n- GET /2/object/billingentityexternal/getAutocomplete/{sSelector}\
-    \ \r\n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector} \r\n- New 403 error\
-    \ code FORBIDDEN_PERMISSION\r\n- New 422 error code UNPROCESSABLEENTITY_PDF_SIGNATURE\r\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount\r\n-\
+    \ GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList\r\n- GET\
+    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic\r\n\
+    - GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic\r\n- GET /1/object/paymentterm/getList\r\
+    \n- GET /1/object/usergroup/{pkiUsergroupID}/getMembers\r\n- GET /1/object/usergroup/getList\r\
+    \n- GET /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- GET\
+    \ /2/object/billingentityexternal/getAutocomplete/{sSelector} \r\n- GET /2/object/communication/{pkiCommunicationID}\r\
+    \n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector} \r\n- GET /2/object/ezsignannotation/{pkiEzsignannotationID}\r\
+    \n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\n- GET /2/object/paymentterm/getAutocomplete/{sSelector}\
+    \ \r\n- GET /2/object/usergroup/{pkiUsergroupID}\r\n- POST /1/object/billingentityinternal\r\
+    \n- POST /1/object/ezsignannotation\r\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten\r\
+    \n- POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten\r\
+    \n- POST /1/object/paymentterm\r\n- POST /1/object/usergroup\r\n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
+    \n- PUT /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
+    \n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\n- PUT /1/object/usergroup/{pkiUsergroupID}\r\
+    \n- New 403 error code FORBIDDEN_PERMISSION\r\n- New 422 error code UNPROCESSABLEENTITY_PDF_SIGNATURE\r\
     \n- Added property bEzsigndocumentHassignedsignatures in object ezsigndocument-Response\r\
     \n- Added property bEzsigntemplatedocumentHassignedsignatures in object ezsigntemplatedocument-Response\r\
-    \n- Added property sCommunicationBodyurl in object communication-Response\r\n\
-    - Added property sEzsignfolderDescription in object Custom-Ezsignfoldertransmission-Response\r\
+    \n- Added property sEzsignfolderDescription in object Custom-Ezsignfoldertransmission-Response\r\
     \n- Added property sEzsigndocumentExternalid in object ezsigndocument-Request\r\
     \n- Added property sEzsigndocumentExternalid in object ezsigndocument-Response\r\
     \n- Added property sEzsignfolderExternalid in object ezsignfolder-Request\r\n\
-    - Added property sEzsignfolderExternalid in object ezsignfolder-Response\r\n-\
-    \ Added property ePaymenttermType in object paymentterm-AutocompleteElement-Response\r\
-    \n- Added property iPaymenttermDay in object paymentterm-AutocompleteElement-Response\r\
-    \n- Added property ePaymenttermType in object paymentterm-ListElement\r\n- Added\
-    \ property iPaymenttermDay in object paymentterm-ListElement\r\n- Added property\
-    \ ePaymenttermType in object paymentterm-Request\r\n- Added property iPaymenttermDay\
-    \ in object paymentterm-Request\r\n- Added property ePaymenttermType in object\
-    \ paymentterm-Response\r\n- Added property iPaymenttermDay in object paymentterm-Response\r\
-    \n \r\n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
+    - Added property sEzsignfolderExternalid in object ezsignfolder-Response\r\n \r\
+    \n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/branding/{pkiBrandingID}\r\n- GET /1/object/branding/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/department/getAutocomplete/{sSelector}\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
     \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
@@ -532,7 +524,7 @@ tags:
     \n\r\nWe highly suggest you use **eErrorCode** to do any error validation logic\
     \ in your code or to create your own error message for your users. **sErrorMessage**\
     \ has more detail for a human to read, but is intended for the developper and\
-    \ is always returned in english.\r\n\r\nHere is the complete list of **eErrorCode**\
+    \ is always returned in English.\r\n\r\nHere is the complete list of **eErrorCode**\
     \ you could receive for each HTTP status code and examples of situations where\
     \ they could be returned.\r\n\r\n### HTTP 400 (Bad Request)\r\n| eErrorCode  \
     \         | Examples                                                         \
@@ -624,7 +616,7 @@ tags:
 - description: |-
     We publish everything related to our API on github at this location: <a href="https://github.com/eZmaxinc" target="_blank">https://github.com/eZmaxinc</a>. You'll find git repos for the specification, documentation, SDKs and samples.
 
-    Documentation, SDKs and samples are provided in english only for easier maintenance, but we also have french speaking integrators that can help you out.
+    Documentation, SDKs and samples are provided in English only for easier maintenance, but we also have French speaking integrators that can help you out.
 
     Most of our SDKs provide language specific documentation, but you'll find more details on this page about the general use of the API. Both the SDK's specific document (if you choose to use a SDK) and this documentation can be used in complementarity.
 
@@ -909,7 +901,7 @@ tags:
     \ highly suggest you use **eWarningCode** to do any warning validation logic in\
     \ your code or to create your own warning message for your users. **sWarningMessage**\
     \ has more detail for a human to read, but is intended for the developper and\
-    \ is always returned in english.\r\n\r\nHere is the complete list of **eWarningCode**\
+    \ is always returned in English.\r\n\r\nHere is the complete list of **eWarningCode**\
     \ you could receive.\r\n\r\n| eWarningCode         | Examples                \
     \                                 |\r\n| -------------------- | --------------------------------------------------------\
     \ |\r\n| MUSTVERIFY           | An object was changed and a verification is recommended\
@@ -9661,7 +9653,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-content-type: application/json
@@ -9700,7 +9692,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -9744,7 +9736,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -9794,7 +9786,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-content-type: application/json
@@ -9858,7 +9850,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -9941,7 +9933,7 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - All
+      - Management_PaymentTerms
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -14145,7 +14137,7 @@ components:
       type: integer
     Field-iPaymenttermDay:
       description: The day of the Paymentterm
-      example: 5
+      example: 30
       maximum: 255
       minimum: 0
       type: integer
@@ -14878,7 +14870,8 @@ components:
     Field-pkiUsergroupID:
       description: The unique ID of the Usergroup
       example: 2
-      minimum: 0
+      maximum: 255
+      minimum: 1
       type: integer
     Field-pkiUserlogintypeID:
       description: |-
@@ -15062,12 +15055,12 @@ components:
       maxLength: 70
       type: string
     Field-sEzmaxinvoicingsummaryinternalDescription1:
-      description: The Ezmaxinvoicingsummaryinternal description in french
+      description: The Ezmaxinvoicingsummaryinternal description in French
       example: Défaut
       maxLength: 70
       type: string
     Field-sEzmaxinvoicingsummaryinternalDescription2:
-      description: The Ezmaxinvoicingsummaryinternal description in english
+      description: The Ezmaxinvoicingsummaryinternal description in English
       example: Défault
       maxLength: 70
       type: string
@@ -15299,12 +15292,12 @@ components:
       pattern: "^[A-Z0-9]{1,4}$"
       type: string
     Field-sPaymenttermDescription1:
-      description: The description of the Paymentterm in french
+      description: The description of the Paymentterm in French
       example: Net 30 jours
       pattern: "^.{1,40}$"
       type: string
     Field-sPaymenttermDescription2:
-      description: The description of the Paymentterm in english
+      description: The description of the Paymentterm in English
       example: Net 30 days
       pattern: "^.{1,40}$"
       type: string
@@ -15397,6 +15390,7 @@ components:
     Field-sUsergroupNameX:
       description: The Name of the Usergroup in the language of the requester
       example: Administration
+      pattern: "^.{0,50}$"
       type: string
     Field-sUserlogintypeDescriptionX:
       description: The description of the Userlogintype in the language of the requester
@@ -15604,12 +15598,12 @@ components:
       description: Description of the Ezmaxinvoicingsummaryinternal
       properties:
         sEzmaxinvoicingsummaryinternalDescription1:
-          description: The Ezmaxinvoicingsummaryinternal description in french
+          description: The Ezmaxinvoicingsummaryinternal description in French
           example: Défaut
           maxLength: 70
           type: string
         sEzmaxinvoicingsummaryinternalDescription2:
-          description: The Ezmaxinvoicingsummaryinternal description in english
+          description: The Ezmaxinvoicingsummaryinternal description in English
           example: Défault
           maxLength: 70
           type: string
@@ -15654,12 +15648,12 @@ components:
       description: Description of the Paymentterm
       properties:
         sPaymenttermDescription1:
-          description: The description of the Paymentterm in french
+          description: The description of the Paymentterm in French
           example: Net 30 jours
           pattern: "^.{1,40}$"
           type: string
         sPaymenttermDescription2:
-          description: The description of the Paymentterm in english
+          description: The description of the Paymentterm in English
           example: Net 30 days
           pattern: "^.{1,40}$"
           type: string
@@ -20807,12 +20801,14 @@ components:
         fkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         fkiUsergroupIDRestricted:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         fkiEzsigntsarequirementID:
           description: |-
@@ -20976,12 +20972,14 @@ components:
         fkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         fkiUsergroupIDRestricted:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         fkiEzsigntsarequirementID:
           description: |-
@@ -21024,10 +21022,12 @@ components:
         sUsergroupNameX:
           description: The Name of the Usergroup in the language of the requester
           example: Administration
+          pattern: "^.{0,50}$"
           type: string
         sUsergroupNameXRestricted:
           description: The Name of the Usergroup in the language of the requester
           example: Administration
+          pattern: "^.{0,50}$"
           type: string
         eEzsignfoldertypePrivacylevel:
           $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
@@ -25474,7 +25474,7 @@ components:
           $ref: '#/components/schemas/Field-ePaymenttermType'
         iPaymenttermDay:
           description: The day of the Paymentterm
-          example: 5
+          example: 30
           maximum: 255
           minimum: 0
           type: integer
@@ -25511,7 +25511,7 @@ components:
           $ref: '#/components/schemas/Field-ePaymenttermType'
         iPaymenttermDay:
           description: The day of the Paymentterm
-          example: 5
+          example: 30
           maximum: 255
           minimum: 0
           type: integer
@@ -25550,7 +25550,7 @@ components:
           $ref: '#/components/schemas/Field-ePaymenttermType'
         iPaymenttermDay:
           description: The day of the Paymentterm
-          example: 5
+          example: 30
           maximum: 255
           minimum: 0
           type: integer
@@ -26217,11 +26217,13 @@ components:
         sUsergroupNameX:
           description: The Name of the Usergroup in the language of the requester
           example: Administration
+          pattern: "^.{0,50}$"
           type: string
         pkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         bUsergroupIsactive:
           description: Whether the Usergroup is active or not
@@ -26238,11 +26240,13 @@ components:
         pkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         sUsergroupNameX:
           description: The Name of the Usergroup in the language of the requester
           example: Administration
+          pattern: "^.{0,50}$"
           type: string
       required:
       - pkiUsergroupID
@@ -26254,7 +26258,8 @@ components:
         pkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         objUsergroupName:
           $ref: '#/components/schemas/Multilingual-UsergroupName'
@@ -26273,7 +26278,8 @@ components:
         pkiUsergroupID:
           description: The unique ID of the Usergroup
           example: 2
-          minimum: 0
+          maximum: 255
+          minimum: 1
           type: integer
         objUsergroupName:
           $ref: '#/components/schemas/Multilingual-UsergroupName'

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T22:30:59.118663682Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-13T16:19:54.758185701Z[Etc/UTC]")
 public class EzsignfoldertypeRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -270,7 +270,8 @@ public class EzsignfoldertypeRequest {
 
    /**
    * The unique ID of the Usergroup
-   * minimum: 0
+   * minimum: 1
+   * maximum: 255
    * @return fkiUsergroupID
   **/
   @javax.annotation.Nullable
@@ -293,7 +294,8 @@ public class EzsignfoldertypeRequest {
 
    /**
    * The unique ID of the Usergroup
-   * minimum: 0
+   * minimum: 1
+   * maximum: 255
    * @return fkiUsergroupIDRestricted
   **/
   @javax.annotation.Nullable

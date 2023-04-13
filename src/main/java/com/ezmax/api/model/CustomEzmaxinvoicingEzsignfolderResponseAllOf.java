@@ -46,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * CustomEzmaxinvoicingEzsignfolderResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T22:30:59.118663682Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-13T16:19:54.758185701Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsignfolderResponseAllOf {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)

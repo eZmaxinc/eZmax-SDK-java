@@ -46,7 +46,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-08T22:30:59.118663682Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-13T16:19:54.758185701Z[Etc/UTC]")
 public class MultilingualPaymenttermDescription {
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1 = "sPaymenttermDescription1";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1)
@@ -66,7 +66,7 @@ public class MultilingualPaymenttermDescription {
   }
 
    /**
-   * The description of the Paymentterm in french
+   * The description of the Paymentterm in French
    * @return sPaymenttermDescription1
   **/
   @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MultilingualPaymenttermDescription {
   }
 
    /**
-   * The description of the Paymentterm in english
+   * The description of the Paymentterm in English
    * @return sPaymenttermDescription2
   **/
   @javax.annotation.Nullable

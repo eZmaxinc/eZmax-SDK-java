@@ -8,8 +8,8 @@ Description of the Paymentterm
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**sPaymenttermDescription1** | **String** | The description of the Paymentterm in french |  [optional] |
-|**sPaymenttermDescription2** | **String** | The description of the Paymentterm in english |  [optional] |
+|**sPaymenttermDescription1** | **String** | The description of the Paymentterm in French |  [optional] |
+|**sPaymenttermDescription2** | **String** | The description of the Paymentterm in English |  [optional] |
 
 
 
