@@ -16,7 +16,6 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
-import com.ezmax.api.model.BillingentityinternalDeleteObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
 import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
@@ -52,20 +51,6 @@ public class ObjectBillingentityinternalApiTest {
     public void billingentityinternalCreateObjectV1Test() throws ApiException {
         BillingentityinternalCreateObjectV1Request billingentityinternalCreateObjectV1Request = null;
         BillingentityinternalCreateObjectV1Response response = api.billingentityinternalCreateObjectV1(billingentityinternalCreateObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Delete an existing Billingentityinternal
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void billingentityinternalDeleteObjectV1Test() throws ApiException {
-        Integer pkiBillingentityinternalID = null;
-        BillingentityinternalDeleteObjectV1Response response = api.billingentityinternalDeleteObjectV1(pkiBillingentityinternalID);
         // TODO: test validations
     }
 

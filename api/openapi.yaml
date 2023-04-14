@@ -66,11 +66,9 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
-    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
-    \n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- DELETE /1/object/paymentterm/{pkiPaymenttermID}\r\
-    \n- DELETE /1/object/usergroup/{pkiUsergroupID}\r\n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\
-    \n- GET /1/object/activesession/getList\r\n- GET /1/object/billingentityinternal/getList\r\
-    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
+    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
+    \n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\n- GET /1/object/activesession/getList\r\
+    \n- GET /1/object/billingentityinternal/getList\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations\r\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic\r\
@@ -78,14 +76,13 @@ tags:
     \ GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList\r\n- GET\
     \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic\r\n\
     - GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic\r\n- GET /1/object/paymentterm/getList\r\
-    \n- GET /1/object/usergroup/{pkiUsergroupID}/getMembers\r\n- GET /1/object/usergroup/getList\r\
-    \n- GET /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- GET\
-    \ /2/object/billingentityexternal/getAutocomplete/{sSelector} \r\n- GET /2/object/communication/{pkiCommunicationID}\r\
-    \n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector} \r\n- GET /2/object/ezsignannotation/{pkiEzsignannotationID}\r\
-    \n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\n- GET /2/object/paymentterm/getAutocomplete/{sSelector}\
-    \ \r\n- GET /2/object/usergroup/{pkiUsergroupID}\r\n- POST /1/object/billingentityinternal\r\
-    \n- POST /1/object/ezsignannotation\r\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten\r\
-    \n- POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten\r\
+    \n- GET /1/object/usergroup/getList\r\n- GET /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\
+    \n- GET /2/object/billingentityexternal/getAutocomplete/{sSelector} \r\n- GET\
+    \ /2/object/communication/{pkiCommunicationID}\r\n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector}\
+    \ \r\n- GET /2/object/ezsignannotation/{pkiEzsignannotationID}\r\n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\
+    \n- GET /2/object/paymentterm/getAutocomplete/{sSelector} \r\n- GET /2/object/usergroup/{pkiUsergroupID}\r\
+    \n- POST /1/object/billingentityinternal\r\n- POST /1/object/ezsignannotation\r\
+    \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten\r\n- POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten\r\
     \n- POST /1/object/paymentterm\r\n- POST /1/object/usergroup\r\n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
     \n- PUT /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
     \n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\n- PUT /1/object/usergroup/{pkiUsergroupID}\r\
@@ -194,9 +191,9 @@ tags:
     ### [1.1.12] - Skipped\r\n\r\n### [1.1.11] - Skipped\r\n\r\n### [1.1.10] - 2022-08-23\r\
     \n\r\n#### Added\r\n- DELETE /1/object/webhook/{pkiWebhookID}\r\n- GET /1/object/branding/{pkiBrandingID}\r\
     \n- GET /1/object/branding/getList\r\n- GET /1/object/department/getAutocomplete/{sSelector}\r\
-    \n- GET /1/object/department/getMembers\r\n- GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\
-    \n- GET /1/object/webhook/{pkiWebhookID}\r\n- GET /1/object/webhook/{pkiWebhookID}/getHistory\r\
-    \n- GET /1/object/webhook/getList\r\n- POST /1/object/branding\r\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\r\
+    \n- GET /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- GET /1/object/webhook/{pkiWebhookID}\r\
+    \n- GET /1/object/webhook/{pkiWebhookID}/getHistory\r\n- GET /1/object/webhook/getList\r\
+    \n- POST /1/object/branding\r\n- POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations\r\
     \n- POST /1/object/ezsignfoldertype\r\n- POST /1/object/webhook\r\n- POST /1/object/webhook/{pkiWebhookID}/test\r\
     \n- POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send\r\n- PUT /1/object/branding/{pkiBrandingID}\r\
     \n- PUT /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}\r\n- PUT /1/object/webhook/{pkiWebhookID}\r\
@@ -1535,7 +1532,7 @@ paths:
       - Object_Billingentityexternal
       x-apikeyrequire: true
       x-permissions:
-      - All
+      - EzmaxInvoicing_Access
       x-usertypeextra: []
       x-presentations: []
       x-accepts: application/json
@@ -1609,43 +1606,6 @@ paths:
       x-presentations: []
       x-accepts: application/json
   /1/object/billingentityinternal/{pkiBillingentityinternalID}:
-    delete:
-      description: ""
-      operationId: Billingentityinternal_DeleteObject_V1
-      parameters:
-      - description: The unique ID of the Billingentityinternal
-        explode: false
-        in: path
-        name: pkiBillingentityinternalID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiBillingentityinternalID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/billingentityinternal-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Delete an existing Billingentityinternal
-      tags:
-      - Object_Billingentityinternal
-      x-apikeyrequire: true
-      x-permissions:
-      - Management_Billingentities
-      x-usertypeextra: []
-      x-presentations: []
-      x-accepts: application/json
     description: ""
     put:
       description: ""
@@ -1755,10 +1715,9 @@ paths:
       summary: Retrieve Billingentityinternals and IDs
       tags:
       - Object_Billingentityinternal
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-permissions:
-      - All
+      - EzmaxInvoicing_Access
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2152,43 +2111,6 @@ paths:
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
-  /1/object/department/{pkiDepartmentID}/getMembers:
-    get:
-      description: ""
-      operationId: Department_GetMembers_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiDepartmentID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiDepartmentID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/department-getMembers-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Department's members
-      tags:
-      - Object_Department
-      x-presentations: []
-      x-permissions:
-      - All
-      x-usertypeextra: []
-      x-apikeyrequire: true
-      x-accepts: application/json
   /2/object/department/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -2286,10 +2208,9 @@ paths:
       summary: Retrieve an existing Ezmaxinvoicing
       tags:
       - Object_Ezmaxinvoicing
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-permissions:
-      - All
+      - EzmaxInvoicing_Access
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2350,10 +2271,9 @@ paths:
       summary: Retrieve Ezmaxinvoicings and IDs
       tags:
       - Object_Ezmaxinvoicing
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-permissions:
-      - All
+      - Management_Billingentities
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2417,7 +2337,7 @@ paths:
       - Object_Ezmaxinvoicing
       x-presentations: []
       x-permissions:
-      - All
+      - Management_Billingentities
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2445,10 +2365,9 @@ paths:
       summary: Retrieve provisional Ezmaxinvoicing
       tags:
       - Object_Ezmaxinvoicing
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-permissions:
-      - All
+      - EzmaxInvoicing_Access
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2511,7 +2430,8 @@ paths:
       - Object_Ezmaxproduct
       x-apikeyrequire: true
       x-permissions:
-      - All
+      - EzmaxInvoicing_Access
+      - Management_Billingentities
       x-usertypeextra: []
       x-presentations: []
       x-accepts: application/json
@@ -9697,49 +9617,6 @@ paths:
       x-apikeyrequire: true
       x-accepts: application/json
   /1/object/paymentterm/{pkiPaymenttermID}:
-    delete:
-      description: ""
-      operationId: Paymentterm_DeleteObject_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiPaymenttermID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiPaymenttermID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/paymentterm-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request was syntactically valid but failed because of an
-            interdependance condition. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Delete an existing Paymentterm
-      tags:
-      - Object_Paymentterm
-      x-presentations: []
-      x-permissions:
-      - Management_PaymentTerms
-      x-usertypeextra: []
-      x-apikeyrequire: true
-      x-accepts: application/json
     description: ""
     put:
       description: ""
@@ -9850,7 +9727,8 @@ paths:
       - Object_Paymentterm
       x-presentations: []
       x-permissions:
-      - Management_PaymentTerms
+      - RemaxFranchise_CreationModification
+      - Purchases_CreationModification
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -10417,43 +10295,6 @@ paths:
       x-presentations: []
       x-accepts: application/json
   /1/object/usergroup/{pkiUsergroupID}:
-    delete:
-      description: ""
-      operationId: Usergroup_DeleteObject_V1
-      parameters:
-      - description: The unique ID of the Usergroup
-        explode: false
-        in: path
-        name: pkiUsergroupID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiUsergroupID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/usergroup-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Delete an existing Usergroup
-      tags:
-      - Object_Usergroup
-      x-apikeyrequire: true
-      x-permissions:
-      - Management_Usergroup
-      x-usertypeextra: []
-      x-presentations: []
-      x-accepts: application/json
     description: ""
     put:
       description: ""
@@ -10505,44 +10346,6 @@ paths:
       x-usertypeextra: []
       x-presentations: []
       x-content-type: application/json
-      x-accepts: application/json
-  /1/object/usergroup/{pkiUsergroupID}/getMembers:
-    description: ""
-    get:
-      operationId: Usergroup_GetMembers_V1
-      parameters:
-      - description: The unique ID of the Usergroup
-        explode: false
-        in: path
-        name: pkiUsergroupID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiUsergroupID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/usergroup-getMembers-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Usergroup's members
-      tags:
-      - Object_Usergroup
-      x-apikeyrequire: true
-      x-permissions:
-      - Management_Usergroup
-      x-usertypeextra: []
-      x-presentations: []
       x-accepts: application/json
   /2/object/usergroup/getAutocomplete/{sSelector}:
     description: ""
@@ -10601,10 +10404,9 @@ paths:
       summary: Retrieve Usergroups and IDs
       tags:
       - Object_Usergroup
-      x-presentations:
-      - Ezsign
+      x-presentations: []
       x-permissions:
-      - All
+      - ElectronicSignature_CreationModificationFolderTypes
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -10750,41 +10552,6 @@ paths:
       x-presentations: []
       x-accepts: application/json
   /1/object/variableexpense/{pkiVariableexpenseID}:
-    delete:
-      description: ""
-      operationId: Variableexpense_DeleteObject_V1
-      parameters:
-      - description: The unique ID of the Variableexpense
-        explode: false
-        in: path
-        name: pkiVariableexpenseID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiVariableexpenseID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/variableexpense-deleteObject-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Delete an existing Variableexpense
-      tags:
-      - Object_Variableexpense
-      x-permissions:
-      - Management_VariableExpenses
-      x-presentations: []
-      x-accepts: application/json
     description: ""
     put:
       description: ""
@@ -10893,7 +10660,7 @@ paths:
       tags:
       - Object_Variableexpense
       x-permissions:
-      - All
+      - Purchases_CreationModification
       x-presentations: []
       x-accepts: application/json
   /1/object/variableexpense/getList:
@@ -16361,11 +16128,6 @@ components:
       required:
       - a_pkiBillingentityinternalID
       type: object
-    billingentityinternal-deleteObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for DELETE /1/object/billingentityinternal/{pkiBillingentityinternalID}"
-      type: object
     billingentityinternal-editObject-v1-Request:
       description: "Request for PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}"
       properties:
@@ -17138,32 +16900,6 @@ components:
           type: array
       required:
       - a_objDepartment
-      type: object
-    department-getMembers-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/department_getMembers_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for GET /1/object/department/{pkiDepartmentID}/getMembers"
-      type: object
-    department-getMembers-v1-Response-mPayload:
-      description: "Payload for GET /1/object/department/{pkiDepartmentID}/getMembers"
-      properties:
-        a_fkiAgentID:
-          items:
-            $ref: '#/components/schemas/Field-pkiAgentID'
-          type: array
-        a_fkiBrokerID:
-          items:
-            $ref: '#/components/schemas/Field-pkiBrokerID'
-          type: array
-        a_fkiCustomerID:
-          items:
-            $ref: '#/components/schemas/Field-pkiCustomerID'
-          type: array
-        a_fkiEmployeeID:
-          items:
-            $ref: '#/components/schemas/Field-pkiEmployeeID'
-          type: array
       type: object
     descriptionstatic-Response:
       description: A Descriptionstatic Object
@@ -25608,11 +25344,6 @@ components:
       required:
       - a_pkiPaymenttermID
       type: object
-    paymentterm-deleteObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for DELETE /1/object/paymentterm/{pkiPaymenttermID}"
-      type: object
     paymentterm-editObject-v1-Request:
       description: "Request for PUT /1/object/paymentterm/{pkiPaymenttermID}"
       properties:
@@ -26324,11 +26055,6 @@ components:
       required:
       - a_pkiUsergroupID
       type: object
-    usergroup-deleteObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for DELETE /1/object/usergroup/{pkiUsergroupID}"
-      type: object
     usergroup-editObject-v1-Request:
       description: "Request for PUT /1/object/usergroup/{pkiUsergroupID}"
       properties:
@@ -26370,20 +26096,6 @@ components:
       - $ref: '#/components/schemas/usergroup_getList_v1_Response_mPayload_allOf'
       - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
       description: Payload for GET /1/object/usergroup/getList
-      type: object
-    usergroup-getMembers-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/usergroup_getMembers_v1_Response_allOf'
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for GET /1/object/usergroup/{pkiUsergroupID}/getMembers"
-      type: object
-    usergroup-getMembers-v1-Response-mPayload:
-      description: "Response for GET /1/object/usergroup/{pkiUsergroupID}/GetMembers"
-      properties:
-        a_fkiUserID:
-          items:
-            $ref: '#/components/schemas/Field-pkiUserID'
-          type: array
       type: object
     usergroup-getObject-v2-Response:
       allOf:
@@ -26548,11 +26260,6 @@ components:
           type: array
       required:
       - a_pkiVariableexpenseID
-      type: object
-    variableexpense-deleteObject-v1-Response:
-      allOf:
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for DELETE /1/object/variableexpense/{pkiVariableexpenseID}"
       type: object
     variableexpense-editObject-v1-Request:
       description: "Request for PUT /1/object/variableexpense/{pkiVariableexpenseID}"
@@ -27386,14 +27093,6 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/department-getAutocomplete-v2-Response-mPayload'
-      required:
-      - mPayload
-      type: object
-      example: null
-    department_getMembers_v1_Response_allOf:
-      properties:
-        mPayload:
-          $ref: '#/components/schemas/department-getMembers-v1-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -28845,14 +28544,6 @@ components:
           type: array
       required:
       - a_objUsergroup
-      type: object
-      example: null
-    usergroup_getMembers_v1_Response_allOf:
-      properties:
-        mPayload:
-          $ref: '#/components/schemas/usergroup-getMembers-v1-Response-mPayload'
-      required:
-      - mPayload
       type: object
       example: null
     usergroup_getObject_v2_Response_allOf:

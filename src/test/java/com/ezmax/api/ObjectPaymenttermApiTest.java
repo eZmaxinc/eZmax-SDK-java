@@ -19,7 +19,6 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Request;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Response;
-import com.ezmax.api.model.PaymenttermDeleteObjectV1Response;
 import com.ezmax.api.model.PaymenttermEditObjectV1Request;
 import com.ezmax.api.model.PaymenttermEditObjectV1Response;
 import com.ezmax.api.model.PaymenttermGetAutocompleteV2Response;
@@ -52,20 +51,6 @@ public class ObjectPaymenttermApiTest {
     public void paymenttermCreateObjectV1Test() throws ApiException {
         PaymenttermCreateObjectV1Request paymenttermCreateObjectV1Request = null;
         PaymenttermCreateObjectV1Response response = api.paymenttermCreateObjectV1(paymenttermCreateObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Delete an existing Paymentterm
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void paymenttermDeleteObjectV1Test() throws ApiException {
-        Integer pkiPaymenttermID = null;
-        PaymenttermDeleteObjectV1Response response = api.paymenttermDeleteObjectV1(pkiPaymenttermID);
         // TODO: test validations
     }
 

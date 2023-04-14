@@ -19,12 +19,10 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UsergroupCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupCreateObjectV1Response;
-import com.ezmax.api.model.UsergroupDeleteObjectV1Response;
 import com.ezmax.api.model.UsergroupEditObjectV1Request;
 import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupGetAutocompleteV2Response;
 import com.ezmax.api.model.UsergroupGetListV1Response;
-import com.ezmax.api.model.UsergroupGetMembersV1Response;
 import com.ezmax.api.model.UsergroupGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -53,20 +51,6 @@ public class ObjectUsergroupApiTest {
     public void usergroupCreateObjectV1Test() throws ApiException {
         UsergroupCreateObjectV1Request usergroupCreateObjectV1Request = null;
         UsergroupCreateObjectV1Response response = api.usergroupCreateObjectV1(usergroupCreateObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Delete an existing Usergroup
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void usergroupDeleteObjectV1Test() throws ApiException {
-        Integer pkiUsergroupID = null;
-        UsergroupDeleteObjectV1Response response = api.usergroupDeleteObjectV1(pkiUsergroupID);
         // TODO: test validations
     }
 
@@ -117,18 +101,6 @@ public class ObjectUsergroupApiTest {
         HeaderAcceptLanguage acceptLanguage = null;
         String sFilter = null;
         UsergroupGetListV1Response response = api.usergroupGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Usergroup&#39;s members
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void usergroupGetMembersV1Test() throws ApiException {
-        Integer pkiUsergroupID = null;
-        UsergroupGetMembersV1Response response = api.usergroupGetMembersV1(pkiUsergroupID);
         // TODO: test validations
     }
 

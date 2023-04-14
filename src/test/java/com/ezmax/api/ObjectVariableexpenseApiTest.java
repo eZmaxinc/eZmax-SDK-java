@@ -19,7 +19,6 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Request;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Response;
-import com.ezmax.api.model.VariableexpenseDeleteObjectV1Response;
 import com.ezmax.api.model.VariableexpenseEditObjectV1Request;
 import com.ezmax.api.model.VariableexpenseEditObjectV1Response;
 import com.ezmax.api.model.VariableexpenseGetAutocompleteV2Response;
@@ -52,20 +51,6 @@ public class ObjectVariableexpenseApiTest {
     public void variableexpenseCreateObjectV1Test() throws ApiException {
         VariableexpenseCreateObjectV1Request variableexpenseCreateObjectV1Request = null;
         VariableexpenseCreateObjectV1Response response = api.variableexpenseCreateObjectV1(variableexpenseCreateObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Delete an existing Variableexpense
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void variableexpenseDeleteObjectV1Test() throws ApiException {
-        Integer pkiVariableexpenseID = null;
-        VariableexpenseDeleteObjectV1Response response = api.variableexpenseDeleteObjectV1(pkiVariableexpenseID);
         // TODO: test validations
     }
 

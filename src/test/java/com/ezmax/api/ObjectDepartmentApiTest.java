@@ -14,9 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DepartmentGetAutocompleteV2Response;
-import com.ezmax.api.model.DepartmentGetMembersV1Response;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -48,20 +46,6 @@ public class ObjectDepartmentApiTest {
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
         DepartmentGetAutocompleteV2Response response = api.departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Department&#39;s members
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void departmentGetMembersV1Test() throws ApiException {
-        Integer pkiDepartmentID = null;
-        DepartmentGetMembersV1Response response = api.departmentGetMembersV1(pkiDepartmentID);
         // TODO: test validations
     }
 

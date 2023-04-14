@@ -40,7 +40,6 @@ docs/BillingentityinternalCreateObjectV1Request.md
 docs/BillingentityinternalCreateObjectV1Response.md
 docs/BillingentityinternalCreateObjectV1ResponseAllOf.md
 docs/BillingentityinternalCreateObjectV1ResponseMPayload.md
-docs/BillingentityinternalDeleteObjectV1Response.md
 docs/BillingentityinternalEditObjectV1Request.md
 docs/BillingentityinternalEditObjectV1Response.md
 docs/BillingentityinternalGetAutocompleteV2Response.md
@@ -163,9 +162,6 @@ docs/DepartmentAutocompleteElementResponse.md
 docs/DepartmentGetAutocompleteV2Response.md
 docs/DepartmentGetAutocompleteV2ResponseAllOf.md
 docs/DepartmentGetAutocompleteV2ResponseMPayload.md
-docs/DepartmentGetMembersV1Response.md
-docs/DepartmentGetMembersV1ResponseAllOf.md
-docs/DepartmentGetMembersV1ResponseMPayload.md
 docs/DescriptionstaticResponse.md
 docs/DescriptionstaticResponseCompound.md
 docs/EmailRequest.md
@@ -902,7 +898,6 @@ docs/PaymenttermCreateObjectV1Request.md
 docs/PaymenttermCreateObjectV1Response.md
 docs/PaymenttermCreateObjectV1ResponseAllOf.md
 docs/PaymenttermCreateObjectV1ResponseMPayload.md
-docs/PaymenttermDeleteObjectV1Response.md
 docs/PaymenttermEditObjectV1Request.md
 docs/PaymenttermEditObjectV1Response.md
 docs/PaymenttermGetAutocompleteV2Response.md
@@ -957,7 +952,6 @@ docs/UsergroupCreateObjectV1Request.md
 docs/UsergroupCreateObjectV1Response.md
 docs/UsergroupCreateObjectV1ResponseAllOf.md
 docs/UsergroupCreateObjectV1ResponseMPayload.md
-docs/UsergroupDeleteObjectV1Response.md
 docs/UsergroupEditObjectV1Request.md
 docs/UsergroupEditObjectV1Response.md
 docs/UsergroupGetAutocompleteV2Response.md
@@ -967,9 +961,6 @@ docs/UsergroupGetListV1Response.md
 docs/UsergroupGetListV1ResponseAllOf.md
 docs/UsergroupGetListV1ResponseMPayload.md
 docs/UsergroupGetListV1ResponseMPayloadAllOf.md
-docs/UsergroupGetMembersV1Response.md
-docs/UsergroupGetMembersV1ResponseAllOf.md
-docs/UsergroupGetMembersV1ResponseMPayload.md
 docs/UsergroupGetObjectV2Response.md
 docs/UsergroupGetObjectV2ResponseAllOf.md
 docs/UsergroupGetObjectV2ResponseMPayload.md
@@ -983,7 +974,6 @@ docs/VariableexpenseCreateObjectV1Request.md
 docs/VariableexpenseCreateObjectV1Response.md
 docs/VariableexpenseCreateObjectV1ResponseAllOf.md
 docs/VariableexpenseCreateObjectV1ResponseMPayload.md
-docs/VariableexpenseDeleteObjectV1Response.md
 docs/VariableexpenseEditObjectV1Request.md
 docs/VariableexpenseEditObjectV1Response.md
 docs/VariableexpenseGetAutocompleteV2Response.md
@@ -1132,7 +1122,6 @@ src/main/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1Request.jav
 src/main/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1ResponseMPayload.java
-src/main/java/com/ezmax/api/model/BillingentityinternalDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/BillingentityinternalEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/BillingentityinternalEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/BillingentityinternalGetAutocompleteV2Response.java
@@ -1255,9 +1244,6 @@ src/main/java/com/ezmax/api/model/DepartmentAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/DepartmentGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/DepartmentGetAutocompleteV2ResponseAllOf.java
 src/main/java/com/ezmax/api/model/DepartmentGetAutocompleteV2ResponseMPayload.java
-src/main/java/com/ezmax/api/model/DepartmentGetMembersV1Response.java
-src/main/java/com/ezmax/api/model/DepartmentGetMembersV1ResponseAllOf.java
-src/main/java/com/ezmax/api/model/DepartmentGetMembersV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/DescriptionstaticResponse.java
 src/main/java/com/ezmax/api/model/DescriptionstaticResponseCompound.java
 src/main/java/com/ezmax/api/model/EmailRequest.java
@@ -1945,7 +1931,6 @@ src/main/java/com/ezmax/api/model/PaymenttermCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/PaymenttermCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/PaymenttermCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/PaymenttermCreateObjectV1ResponseMPayload.java
-src/main/java/com/ezmax/api/model/PaymenttermDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/PaymenttermEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/PaymenttermEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/PaymenttermGetAutocompleteV2Response.java
@@ -2000,7 +1985,6 @@ src/main/java/com/ezmax/api/model/UsergroupCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/UsergroupCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/UsergroupCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/UsergroupCreateObjectV1ResponseMPayload.java
-src/main/java/com/ezmax/api/model/UsergroupDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/UsergroupEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/UsergroupEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/UsergroupGetAutocompleteV2Response.java
@@ -2010,9 +1994,6 @@ src/main/java/com/ezmax/api/model/UsergroupGetListV1Response.java
 src/main/java/com/ezmax/api/model/UsergroupGetListV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/UsergroupGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/UsergroupGetListV1ResponseMPayloadAllOf.java
-src/main/java/com/ezmax/api/model/UsergroupGetMembersV1Response.java
-src/main/java/com/ezmax/api/model/UsergroupGetMembersV1ResponseAllOf.java
-src/main/java/com/ezmax/api/model/UsergroupGetMembersV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/UsergroupGetObjectV2Response.java
 src/main/java/com/ezmax/api/model/UsergroupGetObjectV2ResponseAllOf.java
 src/main/java/com/ezmax/api/model/UsergroupGetObjectV2ResponseMPayload.java
@@ -2026,7 +2007,6 @@ src/main/java/com/ezmax/api/model/VariableexpenseCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/VariableexpenseCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/VariableexpenseCreateObjectV1ResponseAllOf.java
 src/main/java/com/ezmax/api/model/VariableexpenseCreateObjectV1ResponseMPayload.java
-src/main/java/com/ezmax/api/model/VariableexpenseDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/VariableexpenseEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/VariableexpenseEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/VariableexpenseGetAutocompleteV2Response.java
@@ -2182,7 +2162,6 @@ src/test/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1RequestTest
 src/test/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/BillingentityinternalCreateObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/BillingentityinternalDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/BillingentityinternalEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/BillingentityinternalEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/BillingentityinternalGetAutocompleteV2ResponseAllOfTest.java
@@ -2305,9 +2284,6 @@ src/test/java/com/ezmax/api/model/DepartmentAutocompleteElementResponseTest.java
 src/test/java/com/ezmax/api/model/DepartmentGetAutocompleteV2ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/DepartmentGetAutocompleteV2ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/DepartmentGetAutocompleteV2ResponseTest.java
-src/test/java/com/ezmax/api/model/DepartmentGetMembersV1ResponseAllOfTest.java
-src/test/java/com/ezmax/api/model/DepartmentGetMembersV1ResponseMPayloadTest.java
-src/test/java/com/ezmax/api/model/DepartmentGetMembersV1ResponseTest.java
 src/test/java/com/ezmax/api/model/DescriptionstaticResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/DescriptionstaticResponseTest.java
 src/test/java/com/ezmax/api/model/EmailRequestCompoundTest.java
@@ -2995,7 +2971,6 @@ src/test/java/com/ezmax/api/model/PaymenttermCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/PaymenttermCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/PaymenttermCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/PaymenttermCreateObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/PaymenttermDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/PaymenttermEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/PaymenttermEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/PaymenttermGetAutocompleteV2ResponseAllOfTest.java
@@ -3050,7 +3025,6 @@ src/test/java/com/ezmax/api/model/UsergroupCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/UsergroupCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/UsergroupCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UsergroupCreateObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/UsergroupDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UsergroupEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/UsergroupEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetAutocompleteV2ResponseAllOfTest.java
@@ -3060,9 +3034,6 @@ src/test/java/com/ezmax/api/model/UsergroupGetListV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetListV1ResponseMPayloadAllOfTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetListV1ResponseTest.java
-src/test/java/com/ezmax/api/model/UsergroupGetMembersV1ResponseAllOfTest.java
-src/test/java/com/ezmax/api/model/UsergroupGetMembersV1ResponseMPayloadTest.java
-src/test/java/com/ezmax/api/model/UsergroupGetMembersV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetObjectV2ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetObjectV2ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UsergroupGetObjectV2ResponseTest.java
@@ -3076,7 +3047,6 @@ src/test/java/com/ezmax/api/model/VariableexpenseCreateObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseCreateObjectV1ResponseAllOfTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseCreateObjectV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseCreateObjectV1ResponseTest.java
-src/test/java/com/ezmax/api/model/VariableexpenseDeleteObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseEditObjectV1RequestTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseEditObjectV1ResponseTest.java
 src/test/java/com/ezmax/api/model/VariableexpenseGetAutocompleteV2ResponseAllOfTest.java
