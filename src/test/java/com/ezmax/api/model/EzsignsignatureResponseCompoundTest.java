@@ -13,6 +13,8 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
@@ -173,6 +175,22 @@ public class EzsignsignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'dtEzsignsignatureDate'
+     */
+    @Test
+    public void dtEzsignsignatureDateTest() {
+        // TODO: test dtEzsignsignatureDate
+    }
+
+    /**
+     * Test the property 'objContactName'
+     */
+    @Test
+    public void objContactNameTest() {
+        // TODO: test objContactName
+    }
+
+    /**
      * Test the property 'bEzsignsignatureCustomdate'
      */
     @Test
@@ -186,6 +204,14 @@ public class EzsignsignatureResponseCompoundTest {
     @Test
     public void aObjEzsignsignaturecustomdateTest() {
         // TODO: test aObjEzsignsignaturecustomdate
+    }
+
+    /**
+     * Test the property 'objCreditcardtransaction'
+     */
+    @Test
+    public void objCreditcardtransactionTest() {
+        // TODO: test objCreditcardtransaction
     }
 
 }

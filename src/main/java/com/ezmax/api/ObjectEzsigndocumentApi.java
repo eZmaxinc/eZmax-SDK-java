@@ -45,6 +45,7 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
+import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
@@ -1483,6 +1484,137 @@ public class ObjectEzsigndocumentApi {
 
         okhttp3.Call localVarCall = ezsigndocumentGetActionableElementsV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentGetActionableElementsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigndocumentGetCompletedElementsV1
+     * @param pkiEzsigndocumentID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentGetCompletedElementsV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements"
+            .replace("{" + "pkiEzsigndocumentID" + "}", localVarApiClient.escapeString(pkiEzsigndocumentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigndocumentGetCompletedElementsV1ValidateBeforeCall(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsigndocumentID' is set
+        if (pkiEzsigndocumentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetCompletedElementsV1(Async)");
+        }
+
+        return ezsigndocumentGetCompletedElementsV1Call(pkiEzsigndocumentID, _callback);
+
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @return EzsigndocumentGetCompletedElementsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigndocumentGetCompletedElementsV1Response ezsigndocumentGetCompletedElementsV1(Integer pkiEzsigndocumentID) throws ApiException {
+        ApiResponse<EzsigndocumentGetCompletedElementsV1Response> localVarResp = ezsigndocumentGetCompletedElementsV1WithHttpInfo(pkiEzsigndocumentID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @return ApiResponse&lt;EzsigndocumentGetCompletedElementsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigndocumentGetCompletedElementsV1Response> ezsigndocumentGetCompletedElementsV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentGetCompletedElementsV1ValidateBeforeCall(pkiEzsigndocumentID, null);
+        Type localVarReturnType = new TypeToken<EzsigndocumentGetCompletedElementsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument (asynchronously)
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     * @param pkiEzsigndocumentID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentGetCompletedElementsV1Async(Integer pkiEzsigndocumentID, final ApiCallback<EzsigndocumentGetCompletedElementsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigndocumentGetCompletedElementsV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
+        Type localVarReturnType = new TypeToken<EzsigndocumentGetCompletedElementsV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

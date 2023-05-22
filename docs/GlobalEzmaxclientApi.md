@@ -7,7 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**globalEzmaxclientVersionV1**](GlobalEzmaxclientApi.md#globalEzmaxclientVersionV1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient |
 
 
-<a name="globalEzmaxclientVersionV1"></a>
+<a id="globalEzmaxclientVersionV1"></a>
 # **globalEzmaxclientVersionV1**
 > GlobalEzmaxclientVersionV1Response globalEzmaxclientVersionV1(pksEzmaxclientOs)
 

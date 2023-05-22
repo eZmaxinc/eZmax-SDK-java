@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatedocumentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -87,7 +91,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return pkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
   }
@@ -110,7 +113,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
@@ -132,7 +134,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return sEzsigntemplatedocumentName
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
   }
@@ -155,7 +156,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return iEzsigntemplatedocumentPagetotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentPagetotal() {
     return iEzsigntemplatedocumentPagetotal;
   }
@@ -177,7 +177,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return iEzsigntemplatedocumentSignaturetotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentSignaturetotal() {
     return iEzsigntemplatedocumentSignaturetotal;
   }
@@ -199,7 +198,6 @@ public class EzsigntemplatedocumentResponseCompound {
    * @return bEzsigntemplatedocumentHassignedsignatures
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplatedocumentHassignedsignatures() {
     return bEzsigntemplatedocumentHassignedsignatures;
   }

@@ -31,7 +31,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfolderUnsendV1**](ObjectEzsignfolderApi.md#ezsignfolderUnsendV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/unsend | Unsend the Ezsignfolder |
 
 
-<a name="ezsignfolderArchiveV1"></a>
+<a id="ezsignfolderArchiveV1"></a>
 # **ezsignfolderArchiveV1**
 > EzsignfolderArchiveV1Response ezsignfolderArchiveV1(pkiEzsignfolderID, body)
 
@@ -104,7 +104,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderBatchDownloadV1"></a>
+<a id="ezsignfolderBatchDownloadV1"></a>
 # **ezsignfolderBatchDownloadV1**
 > File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
 
@@ -176,7 +176,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderCreateObjectV1"></a>
+<a id="ezsignfolderCreateObjectV1"></a>
 # **ezsignfolderCreateObjectV1**
 > EzsignfolderCreateObjectV1Response ezsignfolderCreateObjectV1(ezsignfolderCreateObjectV1Request)
 
@@ -245,7 +245,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="ezsignfolderCreateObjectV2"></a>
+<a id="ezsignfolderCreateObjectV2"></a>
 # **ezsignfolderCreateObjectV2**
 > EzsignfolderCreateObjectV2Response ezsignfolderCreateObjectV2(ezsignfolderCreateObjectV2Request)
 
@@ -314,7 +314,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="ezsignfolderDeleteObjectV1"></a>
+<a id="ezsignfolderDeleteObjectV1"></a>
 # **ezsignfolderDeleteObjectV1**
 > EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
 
@@ -383,7 +383,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderDisposeEzsignfoldersV1"></a>
+<a id="ezsignfolderDisposeEzsignfoldersV1"></a>
 # **ezsignfolderDisposeEzsignfoldersV1**
 > EzsignfolderDisposeEzsignfoldersV1Response ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
 
@@ -454,7 +454,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderDisposeV1"></a>
+<a id="ezsignfolderDisposeV1"></a>
 # **ezsignfolderDisposeV1**
 > EzsignfolderDisposeV1Response ezsignfolderDisposeV1(pkiEzsignfolderID, body)
 
@@ -527,7 +527,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderEditObjectV1"></a>
+<a id="ezsignfolderEditObjectV1"></a>
 # **ezsignfolderEditObjectV1**
 > EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request)
 
@@ -600,7 +600,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetActionableElementsV1"></a>
+<a id="ezsignfolderGetActionableElementsV1"></a>
 # **ezsignfolderGetActionableElementsV1**
 > EzsignfolderGetActionableElementsV1Response ezsignfolderGetActionableElementsV1(pkiEzsignfolderID)
 
@@ -671,7 +671,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetCommunicationCountV1"></a>
+<a id="ezsignfolderGetCommunicationCountV1"></a>
 # **ezsignfolderGetCommunicationCountV1**
 > EzsignfolderGetCommunicationCountV1Response ezsignfolderGetCommunicationCountV1(pkiEzsignfolderID)
 
@@ -741,7 +741,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetCommunicationListV1"></a>
+<a id="ezsignfolderGetCommunicationListV1"></a>
 # **ezsignfolderGetCommunicationListV1**
 > EzsignfolderGetCommunicationListV1Response ezsignfolderGetCommunicationListV1(pkiEzsignfolderID)
 
@@ -811,7 +811,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetEzsigndocumentsV1"></a>
+<a id="ezsignfolderGetEzsigndocumentsV1"></a>
 # **ezsignfolderGetEzsigndocumentsV1**
 > EzsignfolderGetEzsigndocumentsV1Response ezsignfolderGetEzsigndocumentsV1(pkiEzsignfolderID)
 
@@ -881,7 +881,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetEzsignfoldersignerassociationsV1"></a>
+<a id="ezsignfolderGetEzsignfoldersignerassociationsV1"></a>
 # **ezsignfolderGetEzsignfoldersignerassociationsV1**
 > EzsignfolderGetEzsignfoldersignerassociationsV1Response ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID)
 
@@ -951,7 +951,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignfolderGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignfolderGetEzsignsignaturesAutomaticV1**
 > EzsignfolderGetEzsignsignaturesAutomaticV1Response ezsignfolderGetEzsignsignaturesAutomaticV1(pkiEzsignfolderID)
 
@@ -1021,7 +1021,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetFormsDataV1"></a>
+<a id="ezsignfolderGetFormsDataV1"></a>
 # **ezsignfolderGetFormsDataV1**
 > EzsignfolderGetFormsDataV1Response ezsignfolderGetFormsDataV1(pkiEzsignfolderID)
 
@@ -1093,7 +1093,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetListV1"></a>
+<a id="ezsignfolderGetListV1"></a>
 # **ezsignfolderGetListV1**
 > EzsignfolderGetListV1Response ezsignfolderGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -1124,8 +1124,8 @@ public class Example {
 
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     String eOrderBy = "pkiEzsignfolderID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -1146,9 +1146,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtDueDate_ASC, dtDueDate_DESC, iTotalDocument_ASC, iTotalDocument_DESC, iTotalDocumentEdm_ASC, iTotalDocumentEdm_DESC, iTotalSignature_ASC, iTotalSignature_DESC, iTotalSignatureSigned_ASC, iTotalSignatureSigned_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfolderID_ASC, pkiEzsignfolderID_DESC, sEzsignfolderDescription_ASC, sEzsignfolderDescription_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfolderStep_ASC, eEzsignfolderStep_DESC, dtEzsignfolderSentdate_ASC, dtEzsignfolderSentdate_DESC, dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -1171,7 +1171,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="ezsignfolderGetObjectV1"></a>
+<a id="ezsignfolderGetObjectV1"></a>
 # **ezsignfolderGetObjectV1**
 > EzsignfolderGetObjectV1Response ezsignfolderGetObjectV1(pkiEzsignfolderID)
 
@@ -1239,7 +1239,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderGetObjectV2"></a>
+<a id="ezsignfolderGetObjectV2"></a>
 # **ezsignfolderGetObjectV2**
 > EzsignfolderGetObjectV2Response ezsignfolderGetObjectV2(pkiEzsignfolderID)
 
@@ -1309,7 +1309,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderImportEzsignfoldersignerassociationsV1"></a>
+<a id="ezsignfolderImportEzsignfoldersignerassociationsV1"></a>
 # **ezsignfolderImportEzsignfoldersignerassociationsV1**
 > EzsignfolderImportEzsignfoldersignerassociationsV1Response ezsignfolderImportEzsignfoldersignerassociationsV1(pkiEzsignfolderID, ezsignfolderImportEzsignfoldersignerassociationsV1Request)
 
@@ -1383,7 +1383,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderImportEzsigntemplatepackageV1"></a>
+<a id="ezsignfolderImportEzsigntemplatepackageV1"></a>
 # **ezsignfolderImportEzsigntemplatepackageV1**
 > EzsignfolderImportEzsigntemplatepackageV1Response ezsignfolderImportEzsigntemplatepackageV1(pkiEzsignfolderID, ezsignfolderImportEzsigntemplatepackageV1Request)
 
@@ -1456,7 +1456,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderReorderV1"></a>
+<a id="ezsignfolderReorderV1"></a>
 # **ezsignfolderReorderV1**
 > EzsignfolderReorderV1Response ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
 
@@ -1527,7 +1527,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderSendV1"></a>
+<a id="ezsignfolderSendV1"></a>
 # **ezsignfolderSendV1**
 > EzsignfolderSendV1Response ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
 
@@ -1600,7 +1600,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderSendV2"></a>
+<a id="ezsignfolderSendV2"></a>
 # **ezsignfolderSendV2**
 > EzsignfolderSendV2Response ezsignfolderSendV2(pkiEzsignfolderID, ezsignfolderSendV2Request)
 
@@ -1673,7 +1673,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderSendV3"></a>
+<a id="ezsignfolderSendV3"></a>
 # **ezsignfolderSendV3**
 > EzsignfolderSendV3Response ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
 
@@ -1746,7 +1746,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfolderUnsendV1"></a>
+<a id="ezsignfolderUnsendV1"></a>
 # **ezsignfolderUnsendV1**
 > EzsignfolderUnsendV1Response ezsignfolderUnsendV1(pkiEzsignfolderID, body)
 

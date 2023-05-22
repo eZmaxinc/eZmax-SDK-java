@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
@@ -78,7 +82,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return sEzsigntsarequirementDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
   }
@@ -102,7 +105,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return pkiEzsigntsarequirementID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntsarequirementID() {
     return pkiEzsigntsarequirementID;
   }
@@ -124,7 +126,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return bEzsigntsarequirementIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntsarequirementIsactive() {
     return bEzsigntsarequirementIsactive;
   }
@@ -146,7 +147,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
    * @return bDisabled
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbDisabled() {
     return bDisabled;
   }

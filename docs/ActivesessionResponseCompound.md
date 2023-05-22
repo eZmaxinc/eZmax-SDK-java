@@ -9,6 +9,7 @@ Payload for GET /1/object/activesession/getCurrent
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**eActivesessionUsertype** | **FieldEActivesessionUsertype** |  |  |
+|**eActivesessionOrigin** | **FieldEActivesessionOrigin** |  |  |
 |**eActivesessionWeekdaystart** | **FieldEActivesessionWeekdaystart** |  |  |
 |**fkiLanguageID** | **Integer** | The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English| |  |
 |**sCompanyNameX** | **String** | The Name of the Company in the language of the requester |  |

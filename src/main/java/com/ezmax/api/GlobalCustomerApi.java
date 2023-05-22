@@ -87,7 +87,9 @@ public class GlobalCustomerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call globalCustomerGetEndpointV1Call(String pksCustomerCode, String sInfrastructureproductCode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -137,6 +139,7 @@ public class GlobalCustomerApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call globalCustomerGetEndpointV1ValidateBeforeCall(String pksCustomerCode, String sInfrastructureproductCode, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pksCustomerCode' is set
@@ -161,7 +164,9 @@ public class GlobalCustomerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public GlobalCustomerGetEndpointV1Response globalCustomerGetEndpointV1(String pksCustomerCode, String sInfrastructureproductCode) throws ApiException {
         ApiResponse<GlobalCustomerGetEndpointV1Response> localVarResp = globalCustomerGetEndpointV1WithHttpInfo(pksCustomerCode, sInfrastructureproductCode);
         return localVarResp.getData();
@@ -180,7 +185,9 @@ public class GlobalCustomerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<GlobalCustomerGetEndpointV1Response> globalCustomerGetEndpointV1WithHttpInfo(String pksCustomerCode, String sInfrastructureproductCode) throws ApiException {
         okhttp3.Call localVarCall = globalCustomerGetEndpointV1ValidateBeforeCall(pksCustomerCode, sInfrastructureproductCode, null);
         Type localVarReturnType = new TypeToken<GlobalCustomerGetEndpointV1Response>(){}.getType();
@@ -201,7 +208,9 @@ public class GlobalCustomerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call globalCustomerGetEndpointV1Async(String pksCustomerCode, String sInfrastructureproductCode, final ApiCallback<GlobalCustomerGetEndpointV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = globalCustomerGetEndpointV1ValidateBeforeCall(pksCustomerCode, sInfrastructureproductCode, _callback);

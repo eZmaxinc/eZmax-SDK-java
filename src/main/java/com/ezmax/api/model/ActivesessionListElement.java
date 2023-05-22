@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Activesession List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class ActivesessionListElement {
   public static final String SERIALIZED_NAME_PKI_ACTIVESESSION_I_D = "pkiActivesessionID";
   @SerializedName(SERIALIZED_NAME_PKI_ACTIVESESSION_I_D)
@@ -110,7 +114,6 @@ public class ActivesessionListElement {
    * @return pkiActivesessionID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiActivesessionID() {
     return pkiActivesessionID;
   }
@@ -133,7 +136,6 @@ public class ActivesessionListElement {
    * @return fkiUserID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -157,7 +159,6 @@ public class ActivesessionListElement {
    * @return fkiComputerID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiComputerID() {
     return fkiComputerID;
   }
@@ -181,7 +182,6 @@ public class ActivesessionListElement {
    * @return fkiCompanyID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiCompanyID() {
     return fkiCompanyID;
   }
@@ -204,7 +204,6 @@ public class ActivesessionListElement {
    * @return fkiDepartmentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiDepartmentID() {
     return fkiDepartmentID;
   }
@@ -226,7 +225,6 @@ public class ActivesessionListElement {
    * @return sCompanyNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsCompanyNameX() {
     return sCompanyNameX;
   }
@@ -248,7 +246,6 @@ public class ActivesessionListElement {
    * @return sDepartmentNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
   }
@@ -270,7 +267,6 @@ public class ActivesessionListElement {
    * @return sActivesessionLoginname
   **/
   @javax.annotation.Nonnull
-
   public String getsActivesessionLoginname() {
     return sActivesessionLoginname;
   }
@@ -292,7 +288,6 @@ public class ActivesessionListElement {
    * @return sComputerDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsComputerDescription() {
     return sComputerDescription;
   }
@@ -314,7 +309,6 @@ public class ActivesessionListElement {
    * @return dtActivesessionFirsthit
   **/
   @javax.annotation.Nonnull
-
   public String getDtActivesessionFirsthit() {
     return dtActivesessionFirsthit;
   }
@@ -336,7 +330,6 @@ public class ActivesessionListElement {
    * @return dtActivesessionLasthit
   **/
   @javax.annotation.Nonnull
-
   public String getDtActivesessionLasthit() {
     return dtActivesessionLasthit;
   }
@@ -358,7 +351,6 @@ public class ActivesessionListElement {
    * @return sActivesessionIP
   **/
   @javax.annotation.Nonnull
-
   public String getsActivesessionIP() {
     return sActivesessionIP;
   }

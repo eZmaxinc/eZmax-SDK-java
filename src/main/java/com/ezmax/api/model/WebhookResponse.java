@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class WebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -109,7 +113,6 @@ public class WebhookResponse {
    * @return pkiWebhookID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
   }
@@ -131,7 +134,6 @@ public class WebhookResponse {
    * @return sWebhookDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookDescription() {
     return sWebhookDescription;
   }
@@ -154,7 +156,6 @@ public class WebhookResponse {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -176,7 +177,6 @@ public class WebhookResponse {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -198,7 +198,6 @@ public class WebhookResponse {
    * @return eWebhookModule
   **/
   @javax.annotation.Nonnull
-
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
   }
@@ -220,7 +219,6 @@ public class WebhookResponse {
    * @return eWebhookEzsignevent
   **/
   @javax.annotation.Nullable
-
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
   }
@@ -242,7 +240,6 @@ public class WebhookResponse {
    * @return eWebhookManagementevent
   **/
   @javax.annotation.Nullable
-
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
   }
@@ -264,7 +261,6 @@ public class WebhookResponse {
    * @return sWebhookUrl
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookUrl() {
     return sWebhookUrl;
   }
@@ -286,7 +282,6 @@ public class WebhookResponse {
    * @return sWebhookEmailfailed
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
   }
@@ -308,7 +303,6 @@ public class WebhookResponse {
    * @return bWebhookIsactive
   **/
   @javax.annotation.Nullable
-
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
   }
@@ -330,7 +324,6 @@ public class WebhookResponse {
    * @return bWebhookSkipsslvalidation
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbWebhookSkipsslvalidation() {
     return bWebhookSkipsslvalidation;
   }

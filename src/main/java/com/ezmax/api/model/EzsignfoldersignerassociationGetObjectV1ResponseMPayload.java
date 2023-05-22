@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -93,7 +97,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return pkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignfoldersignerassociationID() {
     return pkiEzsignfoldersignerassociationID;
   }
@@ -116,7 +119,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
   }
@@ -138,7 +140,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return bEzsignfoldersignerassociationDelayedsend
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldersignerassociationDelayedsend() {
     return bEzsignfoldersignerassociationDelayedsend;
   }
@@ -160,7 +161,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return bEzsignfoldersignerassociationReceivecopy
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldersignerassociationReceivecopy() {
     return bEzsignfoldersignerassociationReceivecopy;
   }
@@ -182,7 +182,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return tEzsignfoldersignerassociationMessage
   **/
   @javax.annotation.Nonnull
-
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
   }
@@ -204,7 +203,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return objUser
   **/
   @javax.annotation.Nullable
-
   public EzsignfoldersignerassociationResponseCompoundUser getObjUser() {
     return objUser;
   }
@@ -226,7 +224,6 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
    * @return objEzsignsigner
   **/
   @javax.annotation.Nullable
-
   public EzsignsignerResponseCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }

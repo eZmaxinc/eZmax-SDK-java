@@ -33,6 +33,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -47,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentlog Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigndocumentlogResponseCompound {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -96,7 +100,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -119,7 +122,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return fkiEzsignsignerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
   }
@@ -141,7 +143,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return dtEzsigndocumentlogDatetime
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzsigndocumentlogDatetime() {
     return dtEzsigndocumentlogDatetime;
   }
@@ -163,7 +164,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return eEzsigndocumentlogType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsigndocumentlogType geteEzsigndocumentlogType() {
     return eEzsigndocumentlogType;
   }
@@ -185,7 +185,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return sEzsigndocumentlogDetail
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentlogDetail() {
     return sEzsigndocumentlogDetail;
   }
@@ -207,7 +206,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return sEzsigndocumentlogLastname
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentlogLastname() {
     return sEzsigndocumentlogLastname;
   }
@@ -229,7 +227,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return sEzsigndocumentlogFirstname
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentlogFirstname() {
     return sEzsigndocumentlogFirstname;
   }
@@ -251,7 +248,6 @@ public class EzsigndocumentlogResponseCompound {
    * @return sEzsigndocumentlogIP
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentlogIP() {
     return sEzsigndocumentlogIP;
   }

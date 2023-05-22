@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -150,7 +154,6 @@ public class EzsignfolderResponseCompound {
    * @return pkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
   }
@@ -173,7 +176,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -195,7 +197,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -218,7 +219,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
   }
@@ -240,7 +240,6 @@ public class EzsignfolderResponseCompound {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
   }
@@ -264,7 +263,6 @@ public class EzsignfolderResponseCompound {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
   }
@@ -286,7 +284,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsigntsarequirementDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
   }
@@ -308,7 +305,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsignfolderDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
   }
@@ -330,7 +326,6 @@ public class EzsignfolderResponseCompound {
    * @return tEzsignfolderNote
   **/
   @javax.annotation.Nonnull
-
   public String gettEzsignfolderNote() {
     return tEzsignfolderNote;
   }
@@ -352,7 +347,6 @@ public class EzsignfolderResponseCompound {
    * @return bEzsignfolderIsdisposable
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfolderIsdisposable() {
     return bEzsignfolderIsdisposable;
   }
@@ -374,7 +368,6 @@ public class EzsignfolderResponseCompound {
    * @return eEzsignfolderSendreminderfrequency
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
     return eEzsignfolderSendreminderfrequency;
   }
@@ -396,7 +389,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderDelayedsenddate
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderDelayedsenddate() {
     return dtEzsignfolderDelayedsenddate;
   }
@@ -418,7 +410,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderDuedate
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
   }
@@ -440,7 +431,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderSentdate
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
   }
@@ -462,7 +452,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderScheduledarchive
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderScheduledarchive() {
     return dtEzsignfolderScheduledarchive;
   }
@@ -484,7 +473,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderScheduleddispose
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderScheduleddispose() {
     return dtEzsignfolderScheduleddispose;
   }
@@ -506,7 +494,6 @@ public class EzsignfolderResponseCompound {
    * @return eEzsignfolderStep
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
   }
@@ -528,7 +515,6 @@ public class EzsignfolderResponseCompound {
    * @return dtEzsignfolderClose
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignfolderClose() {
     return dtEzsignfolderClose;
   }
@@ -550,7 +536,6 @@ public class EzsignfolderResponseCompound {
    * @return tEzsignfolderMessage
   **/
   @javax.annotation.Nonnull
-
   public String gettEzsignfolderMessage() {
     return tEzsignfolderMessage;
   }
@@ -572,7 +557,6 @@ public class EzsignfolderResponseCompound {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-
   public CommonAudit getObjAudit() {
     return objAudit;
   }
@@ -594,7 +578,6 @@ public class EzsignfolderResponseCompound {
    * @return sEzsignfolderExternalid
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignfolderExternalid() {
     return sEzsignfolderExternalid;
   }

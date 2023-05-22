@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission |
 
 
-<a name="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
+<a id="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
 # **ezsignbulksendtransmissionGetCsvErrorsV1**
 > String ezsignbulksendtransmissionGetCsvErrorsV1(pkiEzsignbulksendtransmissionID)
 
@@ -82,7 +82,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**
 > EzsignbulksendtransmissionGetEzsignsignaturesAutomaticV1Response ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendtransmissionID)
 
@@ -152,7 +152,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendtransmissionGetFormsDataV1"></a>
+<a id="ezsignbulksendtransmissionGetFormsDataV1"></a>
 # **ezsignbulksendtransmissionGetFormsDataV1**
 > EzsignbulksendtransmissionGetFormsDataV1Response ezsignbulksendtransmissionGetFormsDataV1(pkiEzsignbulksendtransmissionID)
 
@@ -224,7 +224,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendtransmissionGetObjectV2"></a>
+<a id="ezsignbulksendtransmissionGetObjectV2"></a>
 # **ezsignbulksendtransmissionGetObjectV2**
 > EzsignbulksendtransmissionGetObjectV2Response ezsignbulksendtransmissionGetObjectV2(pkiEzsignbulksendtransmissionID)
 

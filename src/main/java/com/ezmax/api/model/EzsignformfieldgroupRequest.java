@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -126,7 +130,6 @@ public class EzsignformfieldgroupRequest {
    * @return pkiEzsignformfieldgroupID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsignformfieldgroupID() {
     return pkiEzsignformfieldgroupID;
   }
@@ -149,7 +152,6 @@ public class EzsignformfieldgroupRequest {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
   }
@@ -171,7 +173,6 @@ public class EzsignformfieldgroupRequest {
    * @return eEzsignformfieldgroupType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignformfieldgroupType geteEzsignformfieldgroupType() {
     return eEzsignformfieldgroupType;
   }
@@ -193,7 +194,6 @@ public class EzsignformfieldgroupRequest {
    * @return eEzsignformfieldgroupSignerrequirement
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignformfieldgroupSignerrequirement geteEzsignformfieldgroupSignerrequirement() {
     return eEzsignformfieldgroupSignerrequirement;
   }
@@ -215,7 +215,6 @@ public class EzsignformfieldgroupRequest {
    * @return sEzsignformfieldgroupLabel
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignformfieldgroupLabel() {
     return sEzsignformfieldgroupLabel;
   }
@@ -238,7 +237,6 @@ public class EzsignformfieldgroupRequest {
    * @return iEzsignformfieldgroupStep
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldgroupStep() {
     return iEzsignformfieldgroupStep;
   }
@@ -260,7 +258,6 @@ public class EzsignformfieldgroupRequest {
    * @return sEzsignformfieldgroupDefaultvalue
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignformfieldgroupDefaultvalue() {
     return sEzsignformfieldgroupDefaultvalue;
   }
@@ -283,7 +280,6 @@ public class EzsignformfieldgroupRequest {
    * @return iEzsignformfieldgroupFilledmin
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldgroupFilledmin() {
     return iEzsignformfieldgroupFilledmin;
   }
@@ -306,7 +302,6 @@ public class EzsignformfieldgroupRequest {
    * @return iEzsignformfieldgroupFilledmax
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldgroupFilledmax() {
     return iEzsignformfieldgroupFilledmax;
   }
@@ -328,7 +323,6 @@ public class EzsignformfieldgroupRequest {
    * @return bEzsignformfieldgroupReadonly
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignformfieldgroupReadonly() {
     return bEzsignformfieldgroupReadonly;
   }
@@ -351,7 +345,6 @@ public class EzsignformfieldgroupRequest {
    * @return iEzsignformfieldgroupMaxlength
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsignformfieldgroupMaxlength() {
     return iEzsignformfieldgroupMaxlength;
   }
@@ -373,7 +366,6 @@ public class EzsignformfieldgroupRequest {
    * @return bEzsignformfieldgroupEncrypted
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignformfieldgroupEncrypted() {
     return bEzsignformfieldgroupEncrypted;
   }
@@ -395,7 +387,6 @@ public class EzsignformfieldgroupRequest {
    * @return sEzsignformfieldgroupRegexp
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignformfieldgroupRegexp() {
     return sEzsignformfieldgroupRegexp;
   }
@@ -417,7 +408,6 @@ public class EzsignformfieldgroupRequest {
    * @return tEzsignformfieldgroupTooltip
   **/
   @javax.annotation.Nullable
-
   public String gettEzsignformfieldgroupTooltip() {
     return tEzsignformfieldgroupTooltip;
   }
@@ -439,7 +429,6 @@ public class EzsignformfieldgroupRequest {
    * @return eEzsignformfieldgroupTooltipposition
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsignformfieldgroupTooltipposition geteEzsignformfieldgroupTooltipposition() {
     return eEzsignformfieldgroupTooltipposition;
   }

@@ -7,7 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**fontGetAutocompleteV2**](ObjectFontApi.md#fontGetAutocompleteV2) | **GET** /2/object/font/getAutocomplete/{sSelector} | Retrieve Fonts and IDs |
 
 
-<a name="fontGetAutocompleteV2"></a>
+<a id="fontGetAutocompleteV2"></a>
 # **fontGetAutocompleteV2**
 > FontGetAutocompleteV2Response fontGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

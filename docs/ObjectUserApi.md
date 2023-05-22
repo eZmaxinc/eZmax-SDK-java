@@ -7,7 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs |
 
 
-<a name="userGetAutocompleteV2"></a>
+<a id="userGetAutocompleteV2"></a>
 # **userGetAutocompleteV2**
 > UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -59,7 +59,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, ClonableUsers, Normal, NormalEzsignSigner] |
+| **sSelector** | **String**| The type of Users to return | [enum: All, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, ClonableUsers, EzsignuserBuiltIn, Normal, NormalEzsignSigner] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |

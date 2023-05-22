@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class BrandingRequestCompound {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -109,7 +113,6 @@ public class BrandingRequestCompound {
    * @return pkiBrandingID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiBrandingID() {
     return pkiBrandingID;
   }
@@ -131,7 +134,6 @@ public class BrandingRequestCompound {
    * @return objBrandingDescription
   **/
   @javax.annotation.Nonnull
-
   public MultilingualBrandingDescription getObjBrandingDescription() {
     return objBrandingDescription;
   }
@@ -153,7 +155,6 @@ public class BrandingRequestCompound {
    * @return eBrandingLogo
   **/
   @javax.annotation.Nonnull
-
   public FieldEBrandingLogo geteBrandingLogo() {
     return eBrandingLogo;
   }
@@ -175,7 +176,6 @@ public class BrandingRequestCompound {
    * @return sBrandingBase64
   **/
   @javax.annotation.Nullable
-
   public byte[] getsBrandingBase64() {
     return sBrandingBase64;
   }
@@ -199,7 +199,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortext
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColortext() {
     return iBrandingColortext;
   }
@@ -223,7 +222,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortextlinkbox
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColortextlinkbox() {
     return iBrandingColortextlinkbox;
   }
@@ -247,7 +245,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColortextbutton
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColortextbutton() {
     return iBrandingColortextbutton;
   }
@@ -271,7 +268,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackground
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColorbackground() {
     return iBrandingColorbackground;
   }
@@ -295,7 +291,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackgroundbutton
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColorbackgroundbutton() {
     return iBrandingColorbackgroundbutton;
   }
@@ -319,7 +314,6 @@ public class BrandingRequestCompound {
    * @return iBrandingColorbackgroundsmallbox
   **/
   @javax.annotation.Nonnull
-
   public Integer getiBrandingColorbackgroundsmallbox() {
     return iBrandingColorbackgroundsmallbox;
   }
@@ -341,7 +335,6 @@ public class BrandingRequestCompound {
    * @return bBrandingIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
   }

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -35,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignsignatureResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignsignatureResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
@@ -58,6 +63,10 @@ public class EzsignsignatureResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
   private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
+
+  public static final String SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTION = "objCreditcardtransaction";
+  @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTION)
+  private CustomCreditcardtransactionResponse objCreditcardtransaction;
 
   public EzsignsignatureResponseCompoundAllOf() {
   }
@@ -73,7 +82,6 @@ public class EzsignsignatureResponseCompoundAllOf {
    * @return bEzsignsignatureCustomdate
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
   }
@@ -103,7 +111,6 @@ public class EzsignsignatureResponseCompoundAllOf {
    * @return aObjEzsignsignaturecustomdate
   **/
   @javax.annotation.Nullable
-
   public List<EzsignsignaturecustomdateResponseCompound> getaObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;
   }
@@ -111,6 +118,27 @@ public class EzsignsignatureResponseCompoundAllOf {
 
   public void setaObjEzsignsignaturecustomdate(List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate) {
     this.aObjEzsignsignaturecustomdate = aObjEzsignsignaturecustomdate;
+  }
+
+
+  public EzsignsignatureResponseCompoundAllOf objCreditcardtransaction(CustomCreditcardtransactionResponse objCreditcardtransaction) {
+    
+    this.objCreditcardtransaction = objCreditcardtransaction;
+    return this;
+  }
+
+   /**
+   * Get objCreditcardtransaction
+   * @return objCreditcardtransaction
+  **/
+  @javax.annotation.Nullable
+  public CustomCreditcardtransactionResponse getObjCreditcardtransaction() {
+    return objCreditcardtransaction;
+  }
+
+
+  public void setObjCreditcardtransaction(CustomCreditcardtransactionResponse objCreditcardtransaction) {
+    this.objCreditcardtransaction = objCreditcardtransaction;
   }
 
 
@@ -125,12 +153,13 @@ public class EzsignsignatureResponseCompoundAllOf {
     }
     EzsignsignatureResponseCompoundAllOf ezsignsignatureResponseCompoundAllOf = (EzsignsignatureResponseCompoundAllOf) o;
     return Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureResponseCompoundAllOf.bEzsignsignatureCustomdate) &&
-        Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate);
+        Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureResponseCompoundAllOf.aObjEzsignsignaturecustomdate) &&
+        Objects.equals(this.objCreditcardtransaction, ezsignsignatureResponseCompoundAllOf.objCreditcardtransaction);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate);
+    return Objects.hash(bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, objCreditcardtransaction);
   }
 
   @Override
@@ -139,6 +168,7 @@ public class EzsignsignatureResponseCompoundAllOf {
     sb.append("class EzsignsignatureResponseCompoundAllOf {\n");
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
+    sb.append("    objCreditcardtransaction: ").append(toIndentedString(objCreditcardtransaction)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -163,6 +193,7 @@ public class EzsignsignatureResponseCompoundAllOf {
     openapiFields = new HashSet<String>();
     openapiFields.add("bEzsignsignatureCustomdate");
     openapiFields.add("a_objEzsignsignaturecustomdate");
+    openapiFields.add("objCreditcardtransaction");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -201,6 +232,10 @@ public class EzsignsignatureResponseCompoundAllOf {
             EzsignsignaturecustomdateResponseCompound.validateJsonObject(jsonArrayaObjEzsignsignaturecustomdate.get(i).getAsJsonObject());
           };
         }
+      }
+      // validate the optional field `objCreditcardtransaction`
+      if (jsonObj.get("objCreditcardtransaction") != null && !jsonObj.get("objCreditcardtransaction").isJsonNull()) {
+        CustomCreditcardtransactionResponse.validateJsonObject(jsonObj.getAsJsonObject("objCreditcardtransaction"));
       }
   }
 

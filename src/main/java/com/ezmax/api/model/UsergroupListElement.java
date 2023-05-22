@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class UsergroupListElement {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -55,6 +59,10 @@ public class UsergroupListElement {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
   private String sUsergroupNameX;
+
+  public static final String SERIALIZED_NAME_I_COUNT_USER = "iCountUser";
+  @SerializedName(SERIALIZED_NAME_I_COUNT_USER)
+  private Integer iCountUser;
 
   public UsergroupListElement() {
   }
@@ -72,7 +80,6 @@ public class UsergroupListElement {
    * @return pkiUsergroupID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiUsergroupID() {
     return pkiUsergroupID;
   }
@@ -94,7 +101,6 @@ public class UsergroupListElement {
    * @return sUsergroupNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
   }
@@ -102,6 +108,29 @@ public class UsergroupListElement {
 
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
+  }
+
+
+  public UsergroupListElement iCountUser(Integer iCountUser) {
+    
+    this.iCountUser = iCountUser;
+    return this;
+  }
+
+   /**
+   * Numer of user in group
+   * minimum: 0
+   * maximum: 16777215
+   * @return iCountUser
+  **/
+  @javax.annotation.Nonnull
+  public Integer getiCountUser() {
+    return iCountUser;
+  }
+
+
+  public void setiCountUser(Integer iCountUser) {
+    this.iCountUser = iCountUser;
   }
 
 
@@ -116,12 +145,13 @@ public class UsergroupListElement {
     }
     UsergroupListElement usergroupListElement = (UsergroupListElement) o;
     return Objects.equals(this.pkiUsergroupID, usergroupListElement.pkiUsergroupID) &&
-        Objects.equals(this.sUsergroupNameX, usergroupListElement.sUsergroupNameX);
+        Objects.equals(this.sUsergroupNameX, usergroupListElement.sUsergroupNameX) &&
+        Objects.equals(this.iCountUser, usergroupListElement.iCountUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupID, sUsergroupNameX);
+    return Objects.hash(pkiUsergroupID, sUsergroupNameX, iCountUser);
   }
 
   @Override
@@ -130,6 +160,7 @@ public class UsergroupListElement {
     sb.append("class UsergroupListElement {\n");
     sb.append("    pkiUsergroupID: ").append(toIndentedString(pkiUsergroupID)).append("\n");
     sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
+    sb.append("    iCountUser: ").append(toIndentedString(iCountUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -154,11 +185,13 @@ public class UsergroupListElement {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiUsergroupID");
     openapiFields.add("sUsergroupNameX");
+    openapiFields.add("iCountUser");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiUsergroupID");
     openapiRequiredFields.add("sUsergroupNameX");
+    openapiRequiredFields.add("iCountUser");
   }
 
  /**

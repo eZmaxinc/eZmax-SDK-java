@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatesignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -131,7 +135,6 @@ public class EzsigntemplatesignatureRequest {
    * @return pkiEzsigntemplatesignatureID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsigntemplatesignatureID() {
     return pkiEzsigntemplatesignatureID;
   }
@@ -154,7 +157,6 @@ public class EzsigntemplatesignatureRequest {
    * @return fkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntemplatedocumentID() {
     return fkiEzsigntemplatedocumentID;
   }
@@ -177,7 +179,6 @@ public class EzsigntemplatesignatureRequest {
    * @return fkiEzsigntemplatesignerID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
   }
@@ -200,7 +201,6 @@ public class EzsigntemplatesignatureRequest {
    * @return fkiEzsigntemplatesignerIDValidation
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntemplatesignerIDValidation() {
     return fkiEzsigntemplatesignerIDValidation;
   }
@@ -223,7 +223,6 @@ public class EzsigntemplatesignatureRequest {
    * @return iEzsigntemplatedocumentpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
   }
@@ -246,7 +245,6 @@ public class EzsigntemplatesignatureRequest {
    * @return iEzsigntemplatesignatureX
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatesignatureX() {
     return iEzsigntemplatesignatureX;
   }
@@ -269,7 +267,6 @@ public class EzsigntemplatesignatureRequest {
    * @return iEzsigntemplatesignatureY
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatesignatureY() {
     return iEzsigntemplatesignatureY;
   }
@@ -292,7 +289,6 @@ public class EzsigntemplatesignatureRequest {
    * @return iEzsigntemplatesignatureStep
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatesignatureStep() {
     return iEzsigntemplatesignatureStep;
   }
@@ -314,7 +310,6 @@ public class EzsigntemplatesignatureRequest {
    * @return eEzsigntemplatesignatureType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsigntemplatesignatureType geteEzsigntemplatesignatureType() {
     return eEzsigntemplatesignatureType;
   }
@@ -336,7 +331,6 @@ public class EzsigntemplatesignatureRequest {
    * @return tEzsigntemplatesignatureTooltip
   **/
   @javax.annotation.Nullable
-
   public String gettEzsigntemplatesignatureTooltip() {
     return tEzsigntemplatesignatureTooltip;
   }
@@ -358,7 +352,6 @@ public class EzsigntemplatesignatureRequest {
    * @return eEzsigntemplatesignatureTooltipposition
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsigntemplatesignatureTooltipposition geteEzsigntemplatesignatureTooltipposition() {
     return eEzsigntemplatesignatureTooltipposition;
   }
@@ -380,7 +373,6 @@ public class EzsigntemplatesignatureRequest {
    * @return eEzsigntemplatesignatureFont
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsigntemplatesignatureFont geteEzsigntemplatesignatureFont() {
     return eEzsigntemplatesignatureFont;
   }
@@ -402,7 +394,6 @@ public class EzsigntemplatesignatureRequest {
    * @return bEzsigntemplatesignatureRequired
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsigntemplatesignatureRequired() {
     return bEzsigntemplatesignatureRequired;
   }
@@ -424,7 +415,6 @@ public class EzsigntemplatesignatureRequest {
    * @return eEzsigntemplatesignatureAttachmentnamesource
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsigntemplatesignatureAttachmentnamesource geteEzsigntemplatesignatureAttachmentnamesource() {
     return eEzsigntemplatesignatureAttachmentnamesource;
   }
@@ -446,7 +436,6 @@ public class EzsigntemplatesignatureRequest {
    * @return sEzsigntemplatesignatureAttachmentdescription
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplatesignatureAttachmentdescription() {
     return sEzsigntemplatesignatureAttachmentdescription;
   }
@@ -468,7 +457,6 @@ public class EzsigntemplatesignatureRequest {
    * @return iEzsigntemplatesignatureValidationstep
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsigntemplatesignatureValidationstep() {
     return iEzsigntemplatesignatureValidationstep;
   }

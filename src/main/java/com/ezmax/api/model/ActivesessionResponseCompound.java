@@ -17,6 +17,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
 import com.ezmax.api.model.ActivesessionResponseCompoundUser;
+import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
@@ -38,6 +39,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -52,11 +57,15 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class ActivesessionResponseCompound {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
   private FieldEActivesessionUsertype eActivesessionUsertype;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN = "eActivesessionOrigin";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN)
+  private FieldEActivesessionOrigin eActivesessionOrigin;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
@@ -124,7 +133,6 @@ public class ActivesessionResponseCompound {
    * @return eActivesessionUsertype
   **/
   @javax.annotation.Nonnull
-
   public FieldEActivesessionUsertype geteActivesessionUsertype() {
     return eActivesessionUsertype;
   }
@@ -132,6 +140,27 @@ public class ActivesessionResponseCompound {
 
   public void seteActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
+  }
+
+
+  public ActivesessionResponseCompound eActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
+    
+    this.eActivesessionOrigin = eActivesessionOrigin;
+    return this;
+  }
+
+   /**
+   * Get eActivesessionOrigin
+   * @return eActivesessionOrigin
+  **/
+  @javax.annotation.Nonnull
+  public FieldEActivesessionOrigin geteActivesessionOrigin() {
+    return eActivesessionOrigin;
+  }
+
+
+  public void seteActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
+    this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
 
@@ -146,7 +175,6 @@ public class ActivesessionResponseCompound {
    * @return eActivesessionWeekdaystart
   **/
   @javax.annotation.Nonnull
-
   public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
     return eActivesessionWeekdaystart;
   }
@@ -170,7 +198,6 @@ public class ActivesessionResponseCompound {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
   }
@@ -192,7 +219,6 @@ public class ActivesessionResponseCompound {
    * @return sCompanyNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsCompanyNameX() {
     return sCompanyNameX;
   }
@@ -214,7 +240,6 @@ public class ActivesessionResponseCompound {
    * @return sDepartmentNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
   }
@@ -236,7 +261,6 @@ public class ActivesessionResponseCompound {
    * @return bActivesessionDebug
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbActivesessionDebug() {
     return bActivesessionDebug;
   }
@@ -258,7 +282,6 @@ public class ActivesessionResponseCompound {
    * @return bActivesessionIssuperadmin
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbActivesessionIssuperadmin() {
     return bActivesessionIssuperadmin;
   }
@@ -280,7 +303,6 @@ public class ActivesessionResponseCompound {
    * @return pksCustomerCode
   **/
   @javax.annotation.Nonnull
-
   public String getPksCustomerCode() {
     return pksCustomerCode;
   }
@@ -303,7 +325,6 @@ public class ActivesessionResponseCompound {
    * @return fkiSystemconfigurationtypeID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
   }
@@ -333,7 +354,6 @@ public class ActivesessionResponseCompound {
    * @return aPkiPermissionID
   **/
   @javax.annotation.Nonnull
-
   public List<Integer> getaPkiPermissionID() {
     return aPkiPermissionID;
   }
@@ -355,7 +375,6 @@ public class ActivesessionResponseCompound {
    * @return objUserReal
   **/
   @javax.annotation.Nonnull
-
   public ActivesessionResponseCompoundUser getObjUserReal() {
     return objUserReal;
   }
@@ -377,7 +396,6 @@ public class ActivesessionResponseCompound {
    * @return objUserCloned
   **/
   @javax.annotation.Nullable
-
   public ActivesessionResponseCompoundUser getObjUserCloned() {
     return objUserCloned;
   }
@@ -399,7 +417,6 @@ public class ActivesessionResponseCompound {
    * @return objApikey
   **/
   @javax.annotation.Nullable
-
   public ActivesessionResponseCompoundApikey getObjApikey() {
     return objApikey;
   }
@@ -429,7 +446,6 @@ public class ActivesessionResponseCompound {
    * @return aEModuleInternalname
   **/
   @javax.annotation.Nonnull
-
   public List<String> getaEModuleInternalname() {
     return aEModuleInternalname;
   }
@@ -451,6 +467,7 @@ public class ActivesessionResponseCompound {
     }
     ActivesessionResponseCompound activesessionResponseCompound = (ActivesessionResponseCompound) o;
     return Objects.equals(this.eActivesessionUsertype, activesessionResponseCompound.eActivesessionUsertype) &&
+        Objects.equals(this.eActivesessionOrigin, activesessionResponseCompound.eActivesessionOrigin) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionResponseCompound.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionResponseCompound.fkiLanguageID) &&
         Objects.equals(this.sCompanyNameX, activesessionResponseCompound.sCompanyNameX) &&
@@ -468,7 +485,7 @@ public class ActivesessionResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
@@ -476,6 +493,7 @@ public class ActivesessionResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponseCompound {\n");
     sb.append("    eActivesessionUsertype: ").append(toIndentedString(eActivesessionUsertype)).append("\n");
+    sb.append("    eActivesessionOrigin: ").append(toIndentedString(eActivesessionOrigin)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
@@ -512,6 +530,7 @@ public class ActivesessionResponseCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("eActivesessionUsertype");
+    openapiFields.add("eActivesessionOrigin");
     openapiFields.add("eActivesessionWeekdaystart");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sCompanyNameX");
@@ -529,6 +548,7 @@ public class ActivesessionResponseCompound {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("eActivesessionUsertype");
+    openapiRequiredFields.add("eActivesessionOrigin");
     openapiRequiredFields.add("eActivesessionWeekdaystart");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sCompanyNameX");

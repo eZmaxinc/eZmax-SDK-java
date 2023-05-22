@@ -496,8 +496,8 @@ public class ObjectUsergroupApi {
     /**
      * Build call for usergroupGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback Callback for upload/download progress
@@ -585,8 +585,8 @@ public class ObjectUsergroupApi {
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return UsergroupGetListV1Response
@@ -607,8 +607,8 @@ public class ObjectUsergroupApi {
      * Retrieve Usergroup list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse&lt;UsergroupGetListV1Response&gt;
@@ -630,8 +630,8 @@ public class ObjectUsergroupApi {
      * Retrieve Usergroup list (asynchronously)
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback The callback to be executed when the API call finishes

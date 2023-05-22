@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatepackage List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatepackageListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -95,7 +99,6 @@ public class EzsigntemplatepackageListElement {
    * @return pkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
   }
@@ -118,7 +121,6 @@ public class EzsigntemplatepackageListElement {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -142,7 +144,6 @@ public class EzsigntemplatepackageListElement {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
   }
@@ -164,7 +165,6 @@ public class EzsigntemplatepackageListElement {
    * @return sEzsigntemplatepackageDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
   }
@@ -186,7 +186,6 @@ public class EzsigntemplatepackageListElement {
    * @return bEzsigntemplatepackageNeedvalidation
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
   }
@@ -208,7 +207,6 @@ public class EzsigntemplatepackageListElement {
    * @return iEzsigntemplatepackagemembership
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatepackagemembership() {
     return iEzsigntemplatepackagemembership;
   }
@@ -230,7 +228,6 @@ public class EzsigntemplatepackageListElement {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -252,7 +249,6 @@ public class EzsigntemplatepackageListElement {
    * @return bEzsigntemplatepackageIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;
   }

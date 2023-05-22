@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplateformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -99,7 +103,6 @@ public class EzsigntemplateformfieldRequest {
    * @return pkiEzsigntemplateformfieldID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsigntemplateformfieldID() {
     return pkiEzsigntemplateformfieldID;
   }
@@ -122,7 +125,6 @@ public class EzsigntemplateformfieldRequest {
    * @return iEzsigntemplatedocumentpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
   }
@@ -144,7 +146,6 @@ public class EzsigntemplateformfieldRequest {
    * @return sEzsigntemplateformfieldLabel
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplateformfieldLabel() {
     return sEzsigntemplateformfieldLabel;
   }
@@ -166,7 +167,6 @@ public class EzsigntemplateformfieldRequest {
    * @return sEzsigntemplateformfieldValue
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplateformfieldValue() {
     return sEzsigntemplateformfieldValue;
   }
@@ -189,7 +189,6 @@ public class EzsigntemplateformfieldRequest {
    * @return iEzsigntemplateformfieldX
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldX() {
     return iEzsigntemplateformfieldX;
   }
@@ -212,7 +211,6 @@ public class EzsigntemplateformfieldRequest {
    * @return iEzsigntemplateformfieldY
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldY() {
     return iEzsigntemplateformfieldY;
   }
@@ -235,7 +233,6 @@ public class EzsigntemplateformfieldRequest {
    * @return iEzsigntemplateformfieldWidth
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldWidth() {
     return iEzsigntemplateformfieldWidth;
   }
@@ -258,7 +255,6 @@ public class EzsigntemplateformfieldRequest {
    * @return iEzsigntemplateformfieldHeight
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldHeight() {
     return iEzsigntemplateformfieldHeight;
   }
@@ -280,7 +276,6 @@ public class EzsigntemplateformfieldRequest {
    * @return bEzsigntemplateformfieldSelected
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsigntemplateformfieldSelected() {
     return bEzsigntemplateformfieldSelected;
   }

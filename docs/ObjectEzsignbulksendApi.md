@@ -17,7 +17,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend |
 
 
-<a name="ezsignbulksendCreateEzsignbulksendtransmissionV1"></a>
+<a id="ezsignbulksendCreateEzsignbulksendtransmissionV1"></a>
 # **ezsignbulksendCreateEzsignbulksendtransmissionV1**
 > EzsignbulksendCreateEzsignbulksendtransmissionV1Response ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request)
 
@@ -88,7 +88,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendCreateObjectV1"></a>
+<a id="ezsignbulksendCreateObjectV1"></a>
 # **ezsignbulksendCreateObjectV1**
 > EzsignbulksendCreateObjectV1Response ezsignbulksendCreateObjectV1(ezsignbulksendCreateObjectV1Request)
 
@@ -157,7 +157,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="ezsignbulksendDeleteObjectV1"></a>
+<a id="ezsignbulksendDeleteObjectV1"></a>
 # **ezsignbulksendDeleteObjectV1**
 > EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID)
 
@@ -228,7 +228,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendEditObjectV1"></a>
+<a id="ezsignbulksendEditObjectV1"></a>
 # **ezsignbulksendEditObjectV1**
 > EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request)
 
@@ -301,7 +301,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendGetCsvTemplateV1"></a>
+<a id="ezsignbulksendGetCsvTemplateV1"></a>
 # **ezsignbulksendGetCsvTemplateV1**
 > String ezsignbulksendGetCsvTemplateV1(pkiEzsignbulksendID, eCsvSeparator)
 
@@ -375,7 +375,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendGetEzsignbulksendtransmissionsV1"></a>
+<a id="ezsignbulksendGetEzsignbulksendtransmissionsV1"></a>
 # **ezsignbulksendGetEzsignbulksendtransmissionsV1**
 > EzsignbulksendGetEzsignbulksendtransmissionsV1Response ezsignbulksendGetEzsignbulksendtransmissionsV1(pkiEzsignbulksendID)
 
@@ -445,7 +445,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsignbulksendGetEzsignsignaturesAutomaticV1"></a>
 # **ezsignbulksendGetEzsignsignaturesAutomaticV1**
 > EzsignbulksendGetEzsignsignaturesAutomaticV1Response ezsignbulksendGetEzsignsignaturesAutomaticV1(pkiEzsignbulksendID)
 
@@ -515,7 +515,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendGetFormsDataV1"></a>
+<a id="ezsignbulksendGetFormsDataV1"></a>
 # **ezsignbulksendGetFormsDataV1**
 > EzsignbulksendGetFormsDataV1Response ezsignbulksendGetFormsDataV1(pkiEzsignbulksendID)
 
@@ -587,7 +587,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendGetListV1"></a>
+<a id="ezsignbulksendGetListV1"></a>
 # **ezsignbulksendGetListV1**
 > EzsignbulksendGetListV1Response ezsignbulksendGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -618,8 +618,8 @@ public class Example {
 
     ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi(defaultClient);
     String eOrderBy = "pkiEzsignbulksendID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -641,8 +641,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignbulksendID_ASC, pkiEzsignbulksendID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, sEzsignbulksendDescription_ASC, sEzsignbulksendDescription_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, bEzsignbulksendNeedvalidation_ASC, bEzsignbulksendNeedvalidation_DESC, iEzsignbulksendtransmission_ASC, iEzsignbulksendtransmission_DESC, iEzsignfolder_ASC, iEzsignfolder_DESC, iEzsigndocument_ASC, iEzsigndocument_DESC, iEzsignsignature_ASC, iEzsignsignature_DESC, iEzsignsignatureSigned_ASC, iEzsignsignatureSigned_DESC, bEzsignbulksendIsactive_ASC, bEzsignbulksendIsactive_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -665,7 +665,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="ezsignbulksendGetObjectV2"></a>
+<a id="ezsignbulksendGetObjectV2"></a>
 # **ezsignbulksendGetObjectV2**
 > EzsignbulksendGetObjectV2Response ezsignbulksendGetObjectV2(pkiEzsignbulksendID)
 
@@ -735,7 +735,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsignbulksendReorderV1"></a>
+<a id="ezsignbulksendReorderV1"></a>
 # **ezsignbulksendReorderV1**
 > EzsignbulksendReorderV1Response ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request)
 

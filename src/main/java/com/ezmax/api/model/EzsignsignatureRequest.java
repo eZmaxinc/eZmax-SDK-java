@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -131,7 +135,6 @@ public class EzsignsignatureRequest {
    * @return pkiEzsignsignatureID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsignsignatureID() {
     return pkiEzsignsignatureID;
   }
@@ -154,7 +157,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
   }
@@ -177,7 +179,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }
@@ -200,7 +201,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureX
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignsignatureX() {
     return iEzsignsignatureX;
   }
@@ -223,7 +223,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureY
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
   }
@@ -245,7 +244,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureStep
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;
   }
@@ -267,7 +265,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignsignatureType geteEzsignsignatureType() {
     return eEzsignsignatureType;
   }
@@ -290,7 +287,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
   }
@@ -312,7 +308,6 @@ public class EzsignsignatureRequest {
    * @return tEzsignsignatureTooltip
   **/
   @javax.annotation.Nullable
-
   public String gettEzsignsignatureTooltip() {
     return tEzsignsignatureTooltip;
   }
@@ -334,7 +329,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureTooltipposition
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
     return eEzsignsignatureTooltipposition;
   }
@@ -356,7 +350,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureFont
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
     return eEzsignsignatureFont;
   }
@@ -379,7 +372,6 @@ public class EzsignsignatureRequest {
    * @return fkiEzsignfoldersignerassociationIDValidation
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignfoldersignerassociationIDValidation() {
     return fkiEzsignfoldersignerassociationIDValidation;
   }
@@ -401,7 +393,6 @@ public class EzsignsignatureRequest {
    * @return bEzsignsignatureRequired
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignsignatureRequired() {
     return bEzsignsignatureRequired;
   }
@@ -423,7 +414,6 @@ public class EzsignsignatureRequest {
    * @return eEzsignsignatureAttachmentnamesource
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsignsignatureAttachmentnamesource geteEzsignsignatureAttachmentnamesource() {
     return eEzsignsignatureAttachmentnamesource;
   }
@@ -445,7 +435,6 @@ public class EzsignsignatureRequest {
    * @return sEzsignsignatureAttachmentdescription
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignsignatureAttachmentdescription() {
     return sEzsignsignatureAttachmentdescription;
   }
@@ -467,7 +456,6 @@ public class EzsignsignatureRequest {
    * @return iEzsignsignatureValidationstep
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsignsignatureValidationstep() {
     return iEzsignsignatureValidationstep;
   }

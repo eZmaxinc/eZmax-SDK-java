@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocumentpage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatedocumentpageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "pkiEzsigntemplatedocumentpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
@@ -91,7 +95,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return pkiEzsigntemplatedocumentpageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntemplatedocumentpageID() {
     return pkiEzsigntemplatedocumentpageID;
   }
@@ -114,7 +117,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return iEzsigntemplatedocumentpageWidthimage
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpageWidthimage() {
     return iEzsigntemplatedocumentpageWidthimage;
   }
@@ -137,7 +139,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return iEzsigntemplatedocumentpageHeightimage
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpageHeightimage() {
     return iEzsigntemplatedocumentpageHeightimage;
   }
@@ -160,7 +161,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return iEzsigntemplatedocumentpageWidthpdf
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpageWidthpdf() {
     return iEzsigntemplatedocumentpageWidthpdf;
   }
@@ -183,7 +183,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return iEzsigntemplatedocumentpageHeightpdf
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpageHeightpdf() {
     return iEzsigntemplatedocumentpageHeightpdf;
   }
@@ -206,7 +205,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return iEzsigntemplatedocumentpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
   }
@@ -228,7 +226,6 @@ public class EzsigntemplatedocumentpageResponse {
    * @return sComputedImageurl
   **/
   @javax.annotation.Nonnull
-
   public String getsComputedImageurl() {
     return sComputedImageurl;
   }

@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom ContactName Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CustomContactNameResponse {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -74,7 +78,6 @@ public class CustomContactNameResponse {
    * @return sContactFirstname
   **/
   @javax.annotation.Nullable
-
   public String getsContactFirstname() {
     return sContactFirstname;
   }
@@ -96,7 +99,6 @@ public class CustomContactNameResponse {
    * @return sContactLastname
   **/
   @javax.annotation.Nullable
-
   public String getsContactLastname() {
     return sContactLastname;
   }
@@ -118,7 +120,6 @@ public class CustomContactNameResponse {
    * @return sContactCompany
   **/
   @javax.annotation.Nullable
-
   public String getsContactCompany() {
     return sContactCompany;
   }

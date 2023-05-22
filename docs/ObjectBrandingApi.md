@@ -11,7 +11,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
 
 
-<a name="brandingCreateObjectV1"></a>
+<a id="brandingCreateObjectV1"></a>
 # **brandingCreateObjectV1**
 > BrandingCreateObjectV1Response brandingCreateObjectV1(brandingCreateObjectV1Request)
 
@@ -80,7 +80,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="brandingEditObjectV1"></a>
+<a id="brandingEditObjectV1"></a>
 # **brandingEditObjectV1**
 > BrandingEditObjectV1Response brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
 
@@ -152,7 +152,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="brandingGetAutocompleteV2"></a>
+<a id="brandingGetAutocompleteV2"></a>
 # **brandingGetAutocompleteV2**
 > BrandingGetAutocompleteV2Response brandingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -227,7 +227,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="brandingGetListV1"></a>
+<a id="brandingGetListV1"></a>
 # **brandingGetListV1**
 > BrandingGetListV1Response brandingGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -258,8 +258,8 @@ public class Example {
 
     ObjectBrandingApi apiInstance = new ObjectBrandingApi(defaultClient);
     String eOrderBy = "pkiBrandingID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -281,8 +281,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiBrandingID_ASC, pkiBrandingID_DESC, sBrandingDescriptionX_ASC, sBrandingDescriptionX_DESC, iBrandingColortext_ASC, iBrandingColortext_DESC, iBrandingColortextlinkbox_ASC, iBrandingColortextlinkbox_DESC, iBrandingColortextbutton_ASC, iBrandingColortextbutton_DESC, iBrandingColorbackground_ASC, iBrandingColorbackground_DESC, iBrandingColorbackgroundbutton_ASC, iBrandingColorbackgroundbutton_DESC, iBrandingColorbackgroundsmallbox_ASC, iBrandingColorbackgroundsmallbox_DESC, bBrandingIsactive_ASC, bBrandingIsactive_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -305,7 +305,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="brandingGetObjectV2"></a>
+<a id="brandingGetObjectV2"></a>
 # **brandingGetObjectV2**
 > BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
 

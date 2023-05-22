@@ -53,4 +53,12 @@ public class UsergroupListElementTest {
         // TODO: test sUsergroupNameX
     }
 
+    /**
+     * Test the property 'iCountUser'
+     */
+    @Test
+    public void iCountUserTest() {
+        // TODO: test iCountUser
+    }
+
 }

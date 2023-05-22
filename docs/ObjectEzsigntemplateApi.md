@@ -14,7 +14,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
 
 
-<a name="ezsigntemplateCopyV1"></a>
+<a id="ezsigntemplateCopyV1"></a>
 # **ezsigntemplateCopyV1**
 > EzsigntemplateCopyV1Response ezsigntemplateCopyV1(pkiEzsigntemplateID, ezsigntemplateCopyV1Request)
 
@@ -86,7 +86,7 @@ public class Example {
 | **201** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigntemplateCreateObjectV1"></a>
+<a id="ezsigntemplateCreateObjectV1"></a>
 # **ezsigntemplateCreateObjectV1**
 > EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
 
@@ -155,7 +155,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="ezsigntemplateDeleteObjectV1"></a>
+<a id="ezsigntemplateDeleteObjectV1"></a>
 # **ezsigntemplateDeleteObjectV1**
 > EzsigntemplateDeleteObjectV1Response ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID)
 
@@ -225,7 +225,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigntemplateEditObjectV1"></a>
+<a id="ezsigntemplateEditObjectV1"></a>
 # **ezsigntemplateEditObjectV1**
 > EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
 
@@ -298,7 +298,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigntemplateGetAutocompleteV2"></a>
+<a id="ezsigntemplateGetAutocompleteV2"></a>
 # **ezsigntemplateGetAutocompleteV2**
 > EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -373,7 +373,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezsigntemplateGetListV1"></a>
+<a id="ezsigntemplateGetListV1"></a>
 # **ezsigntemplateGetListV1**
 > EzsigntemplateGetListV1Response ezsigntemplateGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -404,8 +404,8 @@ public class Example {
 
     ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
     String eOrderBy = "pkiEzsigntemplateID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -427,8 +427,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplateID_ASC, pkiEzsigntemplateID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiUserIDOwner_ASC, fkiUserIDOwner_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplateType_ASC, eEzsigntemplateType_DESC, sEzsigntemplateTypedescriptionX_ASC, sEzsigntemplateTypedescriptionX_DESC, sEzsigntemplatedocumentDescription_ASC, sEzsigntemplatedocumentDescription_DESC, iEzsigntemplatedocumentPagetotal_ASC, iEzsigntemplatedocumentPagetotal_DESC, iEzsigntemplateSignaturetotal_ASC, iEzsigntemplateSignaturetotal_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -451,7 +451,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="ezsigntemplateGetObjectV1"></a>
+<a id="ezsigntemplateGetObjectV1"></a>
 # **ezsigntemplateGetObjectV1**
 > EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
 
@@ -521,7 +521,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigntemplateGetObjectV2"></a>
+<a id="ezsigntemplateGetObjectV2"></a>
 # **ezsigntemplateGetObjectV2**
 > EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
 

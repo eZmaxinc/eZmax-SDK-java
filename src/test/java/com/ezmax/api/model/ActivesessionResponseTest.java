@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
@@ -45,6 +46,14 @@ public class ActivesessionResponseTest {
     @Test
     public void eActivesessionUsertypeTest() {
         // TODO: test eActivesessionUsertype
+    }
+
+    /**
+     * Test the property 'eActivesessionOrigin'
+     */
+    @Test
+    public void eActivesessionOriginTest() {
+        // TODO: test eActivesessionOrigin
     }
 
     /**

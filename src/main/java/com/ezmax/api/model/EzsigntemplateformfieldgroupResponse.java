@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)
@@ -126,7 +130,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return pkiEzsigntemplateformfieldgroupID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntemplateformfieldgroupID() {
     return pkiEzsigntemplateformfieldgroupID;
   }
@@ -149,7 +152,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return fkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntemplatedocumentID() {
     return fkiEzsigntemplatedocumentID;
   }
@@ -171,7 +173,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return eEzsigntemplateformfieldgroupType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsigntemplateformfieldgroupType geteEzsigntemplateformfieldgroupType() {
     return eEzsigntemplateformfieldgroupType;
   }
@@ -193,7 +194,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return eEzsigntemplateformfieldgroupSignerrequirement
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsigntemplateformfieldgroupSignerrequirement geteEzsigntemplateformfieldgroupSignerrequirement() {
     return eEzsigntemplateformfieldgroupSignerrequirement;
   }
@@ -215,7 +215,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return sEzsigntemplateformfieldgroupLabel
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplateformfieldgroupLabel() {
     return sEzsigntemplateformfieldgroupLabel;
   }
@@ -238,7 +237,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return iEzsigntemplateformfieldgroupStep
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldgroupStep() {
     return iEzsigntemplateformfieldgroupStep;
   }
@@ -260,7 +258,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return sEzsigntemplateformfieldgroupDefaultvalue
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplateformfieldgroupDefaultvalue() {
     return sEzsigntemplateformfieldgroupDefaultvalue;
   }
@@ -283,7 +280,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return iEzsigntemplateformfieldgroupFilledmin
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldgroupFilledmin() {
     return iEzsigntemplateformfieldgroupFilledmin;
   }
@@ -306,7 +302,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return iEzsigntemplateformfieldgroupFilledmax
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigntemplateformfieldgroupFilledmax() {
     return iEzsigntemplateformfieldgroupFilledmax;
   }
@@ -328,7 +323,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return bEzsigntemplateformfieldgroupReadonly
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplateformfieldgroupReadonly() {
     return bEzsigntemplateformfieldgroupReadonly;
   }
@@ -351,7 +345,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return iEzsigntemplateformfieldgroupMaxlength
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsigntemplateformfieldgroupMaxlength() {
     return iEzsigntemplateformfieldgroupMaxlength;
   }
@@ -373,7 +366,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return bEzsigntemplateformfieldgroupEncrypted
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsigntemplateformfieldgroupEncrypted() {
     return bEzsigntemplateformfieldgroupEncrypted;
   }
@@ -395,7 +387,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return sEzsigntemplateformfieldgroupRegexp
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplateformfieldgroupRegexp() {
     return sEzsigntemplateformfieldgroupRegexp;
   }
@@ -417,7 +408,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return tEzsigntemplateformfieldgroupTooltip
   **/
   @javax.annotation.Nullable
-
   public String gettEzsigntemplateformfieldgroupTooltip() {
     return tEzsigntemplateformfieldgroupTooltip;
   }
@@ -439,7 +429,6 @@ public class EzsigntemplateformfieldgroupResponse {
    * @return eEzsigntemplateformfieldgroupTooltipposition
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsigntemplateformfieldgroupTooltipposition geteEzsigntemplateformfieldgroupTooltipposition() {
     return eEzsigntemplateformfieldgroupTooltipposition;
   }

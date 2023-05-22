@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**franchisebrokerGetAutocompleteV2**](ObjectFranchisebrokerApi.md#franchisebrokerGetAutocompleteV2) | **GET** /2/object/franchisebroker/getAutocomplete/{sSelector} | Retrieve Franchisebrokers and IDs |
 
 
-<a name="franchisebrokerGetAutocompleteV1"></a>
+<a id="franchisebrokerGetAutocompleteV1"></a>
 # **franchisebrokerGetAutocompleteV1**
 > CommonGetAutocompleteV1Response franchisebrokerGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -83,7 +83,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="franchisebrokerGetAutocompleteV2"></a>
+<a id="franchisebrokerGetAutocompleteV2"></a>
 # **franchisebrokerGetAutocompleteV2**
 > FranchisebrokerGetAutocompleteV2Response franchisebrokerGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

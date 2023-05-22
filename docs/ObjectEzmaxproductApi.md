@@ -7,7 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezmaxproductGetAutocompleteV2**](ObjectEzmaxproductApi.md#ezmaxproductGetAutocompleteV2) | **GET** /2/object/ezmaxproduct/getAutocomplete/{sSelector} | Retrieve Ezmaxproducts and IDs |
 
 
-<a name="ezmaxproductGetAutocompleteV2"></a>
+<a id="ezmaxproductGetAutocompleteV2"></a>
 # **ezmaxproductGetAutocompleteV2**
 > EzmaxproductGetAutocompleteV2Response ezmaxproductGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

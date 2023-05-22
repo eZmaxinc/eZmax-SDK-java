@@ -14,6 +14,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely |
 | [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
 | [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
+| [**ezsigndocumentGetCompletedElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument |
 | [**ezsigndocumentGetDownloadUrlV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetDownloadUrlV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType} | Retrieve a URL to download documents. |
 | [**ezsigndocumentGetEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignannotationsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations | Retrieve an existing Ezsigndocument&#39;s Ezsignannotations |
 | [**ezsigndocumentGetEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetEzsignformfieldgroupsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups | Retrieve an existing Ezsigndocument&#39;s Ezsignformfieldgroups |
@@ -29,7 +30,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentUnsendV1**](ObjectEzsigndocumentApi.md#ezsigndocumentUnsendV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/unsend | Unsend the Ezsigndocument |
 
 
-<a name="ezsigndocumentApplyEzsigntemplateV1"></a>
+<a id="ezsigndocumentApplyEzsigntemplateV1"></a>
 # **ezsigndocumentApplyEzsigntemplateV1**
 > EzsigndocumentApplyEzsigntemplateV1Response ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
 
@@ -102,7 +103,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentApplyEzsigntemplateV2"></a>
+<a id="ezsigndocumentApplyEzsigntemplateV2"></a>
 # **ezsigndocumentApplyEzsigntemplateV2**
 > EzsigndocumentApplyEzsigntemplateV2Response ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request)
 
@@ -175,7 +176,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentCreateObjectV1"></a>
+<a id="ezsigndocumentCreateObjectV1"></a>
 # **ezsigndocumentCreateObjectV1**
 > EzsigndocumentCreateObjectV1Response ezsigndocumentCreateObjectV1(ezsigndocumentCreateObjectV1Request)
 
@@ -245,7 +246,7 @@ public class Example {
 | **201** | Successful response |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again |  -  |
 
-<a name="ezsigndocumentCreateObjectV2"></a>
+<a id="ezsigndocumentCreateObjectV2"></a>
 # **ezsigndocumentCreateObjectV2**
 > EzsigndocumentCreateObjectV2Response ezsigndocumentCreateObjectV2(ezsigndocumentCreateObjectV2Request)
 
@@ -315,7 +316,7 @@ public class Example {
 | **201** | Successful response |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again |  -  |
 
-<a name="ezsigndocumentDeleteObjectV1"></a>
+<a id="ezsigndocumentDeleteObjectV1"></a>
 # **ezsigndocumentDeleteObjectV1**
 > EzsigndocumentDeleteObjectV1Response ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
 
@@ -386,7 +387,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentEditEzsignformfieldgroupsV1"></a>
+<a id="ezsigndocumentEditEzsignformfieldgroupsV1"></a>
 # **ezsigndocumentEditEzsignformfieldgroupsV1**
 > EzsigndocumentEditEzsignformfieldgroupsV1Response ezsigndocumentEditEzsignformfieldgroupsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV1Request)
 
@@ -459,7 +460,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentEditEzsignsignaturesV1"></a>
+<a id="ezsigndocumentEditEzsignsignaturesV1"></a>
 # **ezsigndocumentEditEzsignsignaturesV1**
 > EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request)
 
@@ -532,7 +533,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentEndPrematurelyV1"></a>
+<a id="ezsigndocumentEndPrematurelyV1"></a>
 # **ezsigndocumentEndPrematurelyV1**
 > EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
 
@@ -605,7 +606,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentFlattenV1"></a>
+<a id="ezsigndocumentFlattenV1"></a>
 # **ezsigndocumentFlattenV1**
 > EzsigndocumentFlattenV1Response ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
 
@@ -678,7 +679,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetActionableElementsV1"></a>
+<a id="ezsigndocumentGetActionableElementsV1"></a>
 # **ezsigndocumentGetActionableElementsV1**
 > EzsigndocumentGetActionableElementsV1Response ezsigndocumentGetActionableElementsV1(pkiEzsigndocumentID)
 
@@ -749,7 +750,78 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetDownloadUrlV1"></a>
+<a id="ezsigndocumentGetCompletedElementsV1"></a>
+# **ezsigndocumentGetCompletedElementsV1**
+> EzsigndocumentGetCompletedElementsV1Response ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID)
+
+Retrieve completed elements for the Ezsigndocument
+
+Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigndocumentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
+    Integer pkiEzsigndocumentID = 56; // Integer | 
+    try {
+      EzsigndocumentGetCompletedElementsV1Response result = apiInstance.ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetCompletedElementsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigndocumentID** | **Integer**|  | |
+
+### Return type
+
+[**EzsigndocumentGetCompletedElementsV1Response**](EzsigndocumentGetCompletedElementsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsigndocumentGetDownloadUrlV1"></a>
 # **ezsigndocumentGetDownloadUrlV1**
 > EzsigndocumentGetDownloadUrlV1Response ezsigndocumentGetDownloadUrlV1(pkiEzsigndocumentID, eDocumentType)
 
@@ -822,7 +894,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetEzsignannotationsV1"></a>
+<a id="ezsigndocumentGetEzsignannotationsV1"></a>
 # **ezsigndocumentGetEzsignannotationsV1**
 > EzsigndocumentGetEzsignannotationsV1Response ezsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID)
 
@@ -893,7 +965,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetEzsignformfieldgroupsV1"></a>
+<a id="ezsigndocumentGetEzsignformfieldgroupsV1"></a>
 # **ezsigndocumentGetEzsignformfieldgroupsV1**
 > EzsigndocumentGetEzsignformfieldgroupsV1Response ezsigndocumentGetEzsignformfieldgroupsV1(pkiEzsigndocumentID)
 
@@ -964,7 +1036,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetEzsignpagesV1"></a>
+<a id="ezsigndocumentGetEzsignpagesV1"></a>
 # **ezsigndocumentGetEzsignpagesV1**
 > EzsigndocumentGetEzsignpagesV1Response ezsigndocumentGetEzsignpagesV1(pkiEzsigndocumentID)
 
@@ -1035,7 +1107,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetEzsignsignaturesAutomaticV1"></a>
+<a id="ezsigndocumentGetEzsignsignaturesAutomaticV1"></a>
 # **ezsigndocumentGetEzsignsignaturesAutomaticV1**
 > EzsigndocumentGetEzsignsignaturesAutomaticV1Response ezsigndocumentGetEzsignsignaturesAutomaticV1(pkiEzsigndocumentID)
 
@@ -1105,7 +1177,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetEzsignsignaturesV1"></a>
+<a id="ezsigndocumentGetEzsignsignaturesV1"></a>
 # **ezsigndocumentGetEzsignsignaturesV1**
 > EzsigndocumentGetEzsignsignaturesV1Response ezsigndocumentGetEzsignsignaturesV1(pkiEzsigndocumentID)
 
@@ -1176,7 +1248,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetFormDataV1"></a>
+<a id="ezsigndocumentGetFormDataV1"></a>
 # **ezsigndocumentGetFormDataV1**
 > EzsigndocumentGetFormDataV1Response ezsigndocumentGetFormDataV1(pkiEzsigndocumentID)
 
@@ -1248,7 +1320,7 @@ public class Example {
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetObjectV1"></a>
+<a id="ezsigndocumentGetObjectV1"></a>
 # **ezsigndocumentGetObjectV1**
 > EzsigndocumentGetObjectV1Response ezsigndocumentGetObjectV1(pkiEzsigndocumentID)
 
@@ -1316,7 +1388,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetObjectV2"></a>
+<a id="ezsigndocumentGetObjectV2"></a>
 # **ezsigndocumentGetObjectV2**
 > EzsigndocumentGetObjectV2Response ezsigndocumentGetObjectV2(pkiEzsigndocumentID)
 
@@ -1386,7 +1458,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetTemporaryProofV1"></a>
+<a id="ezsigndocumentGetTemporaryProofV1"></a>
 # **ezsigndocumentGetTemporaryProofV1**
 > EzsigndocumentGetTemporaryProofV1Response ezsigndocumentGetTemporaryProofV1(pkiEzsigndocumentID)
 
@@ -1457,7 +1529,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentGetWordsPositionsV1"></a>
+<a id="ezsigndocumentGetWordsPositionsV1"></a>
 # **ezsigndocumentGetWordsPositionsV1**
 > EzsigndocumentGetWordsPositionsV1Response ezsigndocumentGetWordsPositionsV1(pkiEzsigndocumentID, ezsigndocumentGetWordsPositionsV1Request)
 
@@ -1530,7 +1602,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentPatchObjectV1"></a>
+<a id="ezsigndocumentPatchObjectV1"></a>
 # **ezsigndocumentPatchObjectV1**
 > EzsigndocumentPatchObjectV1Response ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
 
@@ -1603,7 +1675,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsigndocumentUnsendV1"></a>
+<a id="ezsigndocumentUnsendV1"></a>
 # **ezsigndocumentUnsendV1**
 > EzsigndocumentUnsendV1Response ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
 

@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communication List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CustomCommunicationListElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -102,7 +106,6 @@ public class CustomCommunicationListElementResponse {
    * @return pkiCommunicationID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiCommunicationID() {
     return pkiCommunicationID;
   }
@@ -124,7 +127,6 @@ public class CustomCommunicationListElementResponse {
    * @return dtCreatedDate
   **/
   @javax.annotation.Nonnull
-
   public String getDtCreatedDate() {
     return dtCreatedDate;
   }
@@ -146,7 +148,6 @@ public class CustomCommunicationListElementResponse {
    * @return eCommunicationDirection
   **/
   @javax.annotation.Nonnull
-
   public ComputedECommunicationDirection geteCommunicationDirection() {
     return eCommunicationDirection;
   }
@@ -168,7 +169,6 @@ public class CustomCommunicationListElementResponse {
    * @return eCommunicationImportance
   **/
   @javax.annotation.Nonnull
-
   public FieldECommunicationImportance geteCommunicationImportance() {
     return eCommunicationImportance;
   }
@@ -190,7 +190,6 @@ public class CustomCommunicationListElementResponse {
    * @return eCommunicationType
   **/
   @javax.annotation.Nonnull
-
   public FieldECommunicationType geteCommunicationType() {
     return eCommunicationType;
   }
@@ -212,7 +211,6 @@ public class CustomCommunicationListElementResponse {
    * @return iCommunicationrecipientCount
   **/
   @javax.annotation.Nonnull
-
   public Integer getiCommunicationrecipientCount() {
     return iCommunicationrecipientCount;
   }
@@ -234,7 +232,6 @@ public class CustomCommunicationListElementResponse {
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
   }
@@ -256,7 +253,6 @@ public class CustomCommunicationListElementResponse {
    * @return sCommunicationSender
   **/
   @javax.annotation.Nonnull
-
   public String getsCommunicationSender() {
     return sCommunicationSender;
   }
@@ -278,7 +274,6 @@ public class CustomCommunicationListElementResponse {
    * @return sCommunicationRecipient
   **/
   @javax.annotation.Nonnull
-
   public String getsCommunicationRecipient() {
     return sCommunicationRecipient;
   }

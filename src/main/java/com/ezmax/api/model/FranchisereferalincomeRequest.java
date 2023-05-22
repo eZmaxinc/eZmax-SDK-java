@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Franchisereferalincome Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class FranchisereferalincomeRequest {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -111,7 +115,6 @@ public class FranchisereferalincomeRequest {
    * @return pkiFranchisereferalincomeID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiFranchisereferalincomeID() {
     return pkiFranchisereferalincomeID;
   }
@@ -134,7 +137,6 @@ public class FranchisereferalincomeRequest {
    * @return fkiFranchisebrokerID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiFranchisebrokerID() {
     return fkiFranchisebrokerID;
   }
@@ -157,7 +159,6 @@ public class FranchisereferalincomeRequest {
    * @return fkiFranchisereferalincomeprogramID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiFranchisereferalincomeprogramID() {
     return fkiFranchisereferalincomeprogramID;
   }
@@ -180,7 +181,6 @@ public class FranchisereferalincomeRequest {
    * @return fkiPeriodID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiPeriodID() {
     return fkiPeriodID;
   }
@@ -202,7 +202,6 @@ public class FranchisereferalincomeRequest {
    * @return dFranchisereferalincomeLoan
   **/
   @javax.annotation.Nonnull
-
   public String getdFranchisereferalincomeLoan() {
     return dFranchisereferalincomeLoan;
   }
@@ -224,7 +223,6 @@ public class FranchisereferalincomeRequest {
    * @return dFranchisereferalincomeFranchiseamount
   **/
   @javax.annotation.Nonnull
-
   public String getdFranchisereferalincomeFranchiseamount() {
     return dFranchisereferalincomeFranchiseamount;
   }
@@ -246,7 +244,6 @@ public class FranchisereferalincomeRequest {
    * @return dFranchisereferalincomeFranchisoramount
   **/
   @javax.annotation.Nonnull
-
   public String getdFranchisereferalincomeFranchisoramount() {
     return dFranchisereferalincomeFranchisoramount;
   }
@@ -268,7 +265,6 @@ public class FranchisereferalincomeRequest {
    * @return dFranchisereferalincomeAgentamount
   **/
   @javax.annotation.Nonnull
-
   public String getdFranchisereferalincomeAgentamount() {
     return dFranchisereferalincomeAgentamount;
   }
@@ -290,7 +286,6 @@ public class FranchisereferalincomeRequest {
    * @return dtFranchisereferalincomeDisbursed
   **/
   @javax.annotation.Nonnull
-
   public String getDtFranchisereferalincomeDisbursed() {
     return dtFranchisereferalincomeDisbursed;
   }
@@ -312,7 +307,6 @@ public class FranchisereferalincomeRequest {
    * @return tFranchisereferalincomeComment
   **/
   @javax.annotation.Nonnull
-
   public String gettFranchisereferalincomeComment() {
     return tFranchisereferalincomeComment;
   }
@@ -335,7 +329,6 @@ public class FranchisereferalincomeRequest {
    * @return fkiFranchiseofficeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiFranchiseofficeID() {
     return fkiFranchiseofficeID;
   }
@@ -357,7 +350,6 @@ public class FranchisereferalincomeRequest {
    * @return sFranchisereferalincomeRemoteid
   **/
   @javax.annotation.Nonnull
-
   public String getsFranchisereferalincomeRemoteid() {
     return sFranchisereferalincomeRemoteid;
   }

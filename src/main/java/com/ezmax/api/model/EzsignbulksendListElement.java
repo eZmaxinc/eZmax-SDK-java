@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignbulksendListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -107,7 +111,6 @@ public class EzsignbulksendListElement {
    * @return pkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignbulksendID() {
     return pkiEzsignbulksendID;
   }
@@ -130,7 +133,6 @@ public class EzsignbulksendListElement {
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -152,7 +154,6 @@ public class EzsignbulksendListElement {
    * @return sEzsignbulksendDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignbulksendDescription() {
     return sEzsignbulksendDescription;
   }
@@ -174,7 +175,6 @@ public class EzsignbulksendListElement {
    * @return sEzsignfoldertypeNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -196,7 +196,6 @@ public class EzsignbulksendListElement {
    * @return bEzsignbulksendNeedvalidation
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
   }
@@ -218,7 +217,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignbulksendtransmission
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignbulksendtransmission() {
     return iEzsignbulksendtransmission;
   }
@@ -240,7 +238,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignfolder
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignfolder() {
     return iEzsignfolder;
   }
@@ -262,7 +259,6 @@ public class EzsignbulksendListElement {
    * @return iEzsigndocument
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocument() {
     return iEzsigndocument;
   }
@@ -284,7 +280,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignsignature
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignsignature() {
     return iEzsignsignature;
   }
@@ -306,7 +301,6 @@ public class EzsignbulksendListElement {
    * @return iEzsignsignatureSigned
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignsignatureSigned() {
     return iEzsignsignatureSigned;
   }
@@ -328,7 +322,6 @@ public class EzsignbulksendListElement {
    * @return bEzsignbulksendIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignbulksendIsactive() {
     return bEzsignbulksendIsactive;
   }

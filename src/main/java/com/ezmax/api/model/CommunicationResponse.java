@@ -39,6 +39,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -53,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communication Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CommunicationResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -114,7 +118,6 @@ public class CommunicationResponse {
    * @return pkiCommunicationID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiCommunicationID() {
     return pkiCommunicationID;
   }
@@ -136,7 +139,6 @@ public class CommunicationResponse {
    * @return eCommunicationImportance
   **/
   @javax.annotation.Nonnull
-
   public FieldECommunicationImportance geteCommunicationImportance() {
     return eCommunicationImportance;
   }
@@ -158,7 +160,6 @@ public class CommunicationResponse {
    * @return eCommunicationType
   **/
   @javax.annotation.Nonnull
-
   public FieldECommunicationType geteCommunicationType() {
     return eCommunicationType;
   }
@@ -180,7 +181,6 @@ public class CommunicationResponse {
    * @return sCommunicationSubject
   **/
   @javax.annotation.Nonnull
-
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
   }
@@ -202,7 +202,6 @@ public class CommunicationResponse {
    * @return sCommunicationBodyurl
   **/
   @javax.annotation.Nullable
-
   public String getsCommunicationBodyurl() {
     return sCommunicationBodyurl;
   }
@@ -224,7 +223,6 @@ public class CommunicationResponse {
    * @return eCommunicationDirection
   **/
   @javax.annotation.Nonnull
-
   public ComputedECommunicationDirection geteCommunicationDirection() {
     return eCommunicationDirection;
   }
@@ -246,7 +244,6 @@ public class CommunicationResponse {
    * @return iCommunicationrecipientCount
   **/
   @javax.annotation.Nonnull
-
   public Integer getiCommunicationrecipientCount() {
     return iCommunicationrecipientCount;
   }
@@ -268,7 +265,6 @@ public class CommunicationResponse {
    * @return objDescriptionstaticSender
   **/
   @javax.annotation.Nullable
-
   public DescriptionstaticResponse getObjDescriptionstaticSender() {
     return objDescriptionstaticSender;
   }
@@ -290,7 +286,6 @@ public class CommunicationResponse {
    * @return objEmailstaticSender
   **/
   @javax.annotation.Nullable
-
   public EmailstaticResponse getObjEmailstaticSender() {
     return objEmailstaticSender;
   }
@@ -312,7 +307,6 @@ public class CommunicationResponse {
    * @return objPhonestaticSender
   **/
   @javax.annotation.Nullable
-
   public PhonestaticResponse getObjPhonestaticSender() {
     return objPhonestaticSender;
   }
@@ -334,7 +328,6 @@ public class CommunicationResponse {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-
   public CommonAudit getObjAudit() {
     return objAudit;
   }

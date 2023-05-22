@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
@@ -83,7 +87,6 @@ public class EzsignsignerResponse {
    * @return pkiEzsignsignerID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignsignerID() {
     return pkiEzsignsignerID;
   }
@@ -107,7 +110,6 @@ public class EzsignsignerResponse {
    * @return fkiTaxassignmentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiTaxassignmentID() {
     return fkiTaxassignmentID;
   }
@@ -130,7 +132,6 @@ public class EzsignsignerResponse {
    * @return fkiSecretquestionID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiSecretquestionID() {
     return fkiSecretquestionID;
   }
@@ -153,7 +154,6 @@ public class EzsignsignerResponse {
    * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
   }
@@ -175,7 +175,6 @@ public class EzsignsignerResponse {
    * @return sUserlogintypeDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsUserlogintypeDescriptionX() {
     return sUserlogintypeDescriptionX;
   }

@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**periodGetAutocompleteV2**](ObjectPeriodApi.md#periodGetAutocompleteV2) | **GET** /2/object/period/getAutocomplete/{sSelector} | Retrieve Periods and IDs |
 
 
-<a name="periodGetAutocompleteV1"></a>
+<a id="periodGetAutocompleteV1"></a>
 # **periodGetAutocompleteV1**
 > CommonGetAutocompleteV1Response periodGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -83,7 +83,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="periodGetAutocompleteV2"></a>
+<a id="periodGetAutocompleteV2"></a>
 # **periodGetAutocompleteV2**
 > PeriodGetAutocompleteV2Response periodGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

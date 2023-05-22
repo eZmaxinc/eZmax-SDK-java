@@ -33,6 +33,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -47,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplateAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
@@ -79,7 +83,6 @@ public class EzsigntemplateAutocompleteElementResponse {
    * @return eEzsignfoldertypePrivacylevel
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
   }
@@ -101,7 +104,6 @@ public class EzsigntemplateAutocompleteElementResponse {
    * @return sEzsigntemplateDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplateDescription() {
     return sEzsigntemplateDescription;
   }
@@ -124,7 +126,6 @@ public class EzsigntemplateAutocompleteElementResponse {
    * @return pkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigntemplateID() {
     return pkiEzsigntemplateID;
   }
@@ -146,7 +147,6 @@ public class EzsigntemplateAutocompleteElementResponse {
    * @return bEzsigntemplateIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplateIsactive() {
     return bEzsigntemplateIsactive;
   }

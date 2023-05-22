@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
@@ -167,6 +168,22 @@ public class EzsignsignatureResponseTest {
     @Test
     public void fkiEzsignfoldersignerassociationIDValidationTest() {
         // TODO: test fkiEzsignfoldersignerassociationIDValidation
+    }
+
+    /**
+     * Test the property 'dtEzsignsignatureDate'
+     */
+    @Test
+    public void dtEzsignsignatureDateTest() {
+        // TODO: test dtEzsignsignatureDate
+    }
+
+    /**
+     * Test the property 'objContactName'
+     */
+    @Test
+    public void objContactNameTest() {
+        // TODO: test objContactName
     }
 
 }

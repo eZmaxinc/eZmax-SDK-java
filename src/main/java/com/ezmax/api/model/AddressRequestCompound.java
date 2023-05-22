@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Address Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class AddressRequestCompound {
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)
@@ -95,7 +99,6 @@ public class AddressRequestCompound {
    * @return fkiAddresstypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiAddresstypeID() {
     return fkiAddresstypeID;
   }
@@ -117,7 +120,6 @@ public class AddressRequestCompound {
    * @return sAddressCivic
   **/
   @javax.annotation.Nonnull
-
   public String getsAddressCivic() {
     return sAddressCivic;
   }
@@ -139,7 +141,6 @@ public class AddressRequestCompound {
    * @return sAddressStreet
   **/
   @javax.annotation.Nonnull
-
   public String getsAddressStreet() {
     return sAddressStreet;
   }
@@ -161,7 +162,6 @@ public class AddressRequestCompound {
    * @return sAddressSuite
   **/
   @javax.annotation.Nonnull
-
   public String getsAddressSuite() {
     return sAddressSuite;
   }
@@ -183,7 +183,6 @@ public class AddressRequestCompound {
    * @return sAddressCity
   **/
   @javax.annotation.Nonnull
-
   public String getsAddressCity() {
     return sAddressCity;
   }
@@ -206,7 +205,6 @@ public class AddressRequestCompound {
    * @return fkiProvinceID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiProvinceID() {
     return fkiProvinceID;
   }
@@ -229,7 +227,6 @@ public class AddressRequestCompound {
    * @return fkiCountryID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiCountryID() {
     return fkiCountryID;
   }
@@ -251,7 +248,6 @@ public class AddressRequestCompound {
    * @return sAddressZip
   **/
   @javax.annotation.Nonnull
-
   public String getsAddressZip() {
     return sAddressZip;
   }

@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryglobalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
@@ -139,7 +143,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return pkiEzmaxinvoicingsummaryglobalID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzmaxinvoicingsummaryglobalID() {
     return pkiEzmaxinvoicingsummaryglobalID;
   }
@@ -162,7 +165,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
   }
@@ -185,7 +187,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return fkiEzmaxproductID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
   }
@@ -207,7 +208,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return sEzmaxproductDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
   }
@@ -229,7 +229,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dtEzmaxinvoicingsummaryglobalStart
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzmaxinvoicingsummaryglobalStart() {
     return dtEzmaxinvoicingsummaryglobalStart;
   }
@@ -251,7 +250,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dtEzmaxinvoicingsummaryglobalEnd
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzmaxinvoicingsummaryglobalEnd() {
     return dtEzmaxinvoicingsummaryglobalEnd;
   }
@@ -274,7 +272,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return iEzmaxinvoicingsummaryglobalDays
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingsummaryglobalDays() {
     return iEzmaxinvoicingsummaryglobalDays;
   }
@@ -296,7 +293,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalCountreal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
   }
@@ -318,7 +314,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalCountbilled
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
   }
@@ -340,7 +335,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalSubtotal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalSubtotal() {
     return dEzmaxinvoicingsummaryglobalSubtotal;
   }
@@ -362,7 +356,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebateamount
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalRebateamount() {
     return dEzmaxinvoicingsummaryglobalRebateamount;
   }
@@ -384,7 +377,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebatepercent
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalRebatepercent() {
     return dEzmaxinvoicingsummaryglobalRebatepercent;
   }
@@ -406,7 +398,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRebatetotal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalRebatetotal() {
     return dEzmaxinvoicingsummaryglobalRebatetotal;
   }
@@ -428,7 +419,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalTotal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryglobalTotal() {
     return dEzmaxinvoicingsummaryglobalTotal;
   }
@@ -450,7 +440,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalRepresentative
   **/
   @javax.annotation.Nullable
-
   public String getdEzmaxinvoicingsummaryglobalRepresentative() {
     return dEzmaxinvoicingsummaryglobalRepresentative;
   }
@@ -472,7 +461,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalPartner
   **/
   @javax.annotation.Nullable
-
   public String getdEzmaxinvoicingsummaryglobalPartner() {
     return dEzmaxinvoicingsummaryglobalPartner;
   }
@@ -494,7 +482,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return dEzmaxinvoicingsummaryglobalNet
   **/
   @javax.annotation.Nullable
-
   public String getdEzmaxinvoicingsummaryglobalNet() {
     return dEzmaxinvoicingsummaryglobalNet;
   }
@@ -516,7 +503,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return bEzmaxinvoicingsummaryglobalAdjustment
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingsummaryglobalAdjustment() {
     return bEzmaxinvoicingsummaryglobalAdjustment;
   }
@@ -538,7 +524,6 @@ public class EzmaxinvoicingsummaryglobalResponse {
    * @return tEzmaxproductHelpX
   **/
   @javax.annotation.Nonnull
-
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;
   }

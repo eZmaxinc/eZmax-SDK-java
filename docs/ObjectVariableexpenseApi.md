@@ -11,7 +11,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**variableexpenseGetObjectV2**](ObjectVariableexpenseApi.md#variableexpenseGetObjectV2) | **GET** /2/object/variableexpense/{pkiVariableexpenseID} | Retrieve an existing Variableexpense |
 
 
-<a name="variableexpenseCreateObjectV1"></a>
+<a id="variableexpenseCreateObjectV1"></a>
 # **variableexpenseCreateObjectV1**
 > VariableexpenseCreateObjectV1Response variableexpenseCreateObjectV1(variableexpenseCreateObjectV1Request)
 
@@ -80,7 +80,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="variableexpenseEditObjectV1"></a>
+<a id="variableexpenseEditObjectV1"></a>
 # **variableexpenseEditObjectV1**
 > VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
 
@@ -153,7 +153,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="variableexpenseGetAutocompleteV2"></a>
+<a id="variableexpenseGetAutocompleteV2"></a>
 # **variableexpenseGetAutocompleteV2**
 > VariableexpenseGetAutocompleteV2Response variableexpenseGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -228,7 +228,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="variableexpenseGetListV1"></a>
+<a id="variableexpenseGetListV1"></a>
 # **variableexpenseGetListV1**
 > VariableexpenseGetListV1Response variableexpenseGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -259,8 +259,8 @@ public class Example {
 
     ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi(defaultClient);
     String eOrderBy = "pkiVariableexpenseID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -282,8 +282,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiVariableexpenseID_ASC, pkiVariableexpenseID_DESC, sVariableexpenseCode_ASC, sVariableexpenseCode_DESC, sVariableexpenseDescriptionX_ASC, sVariableexpenseDescriptionX_DESC, eVariableexpenseTaxable_ASC, eVariableexpenseTaxable_DESC, bVariableexpenseIsactive_ASC, bVariableexpenseIsactive_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -306,7 +306,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="variableexpenseGetObjectV2"></a>
+<a id="variableexpenseGetObjectV2"></a>
 # **variableexpenseGetObjectV2**
 > VariableexpenseGetObjectV2Response variableexpenseGetObjectV2(pkiVariableexpenseID)
 

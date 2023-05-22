@@ -37,6 +37,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -51,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -172,7 +176,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
   }
@@ -195,7 +198,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return fkiEzsignfoldersignerassociationIDDeclinedtosign
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignfoldersignerassociationIDDeclinedtosign() {
     return fkiEzsignfoldersignerassociationIDDeclinedtosign;
   }
@@ -217,7 +219,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
   }
@@ -239,7 +240,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return dtEzsignformCompleted
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsignformCompleted() {
     return dtEzsignformCompleted;
   }
@@ -263,7 +263,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
   }
@@ -285,7 +284,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return sEzsigndocumentName
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
   }
@@ -308,7 +306,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return pkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
   }
@@ -330,7 +327,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return eEzsigndocumentStep
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsigndocumentStep geteEzsigndocumentStep() {
     return eEzsigndocumentStep;
   }
@@ -352,7 +348,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return dtEzsigndocumentFirstsend
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsigndocumentFirstsend() {
     return dtEzsigndocumentFirstsend;
   }
@@ -374,7 +369,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return dtEzsigndocumentLastsend
   **/
   @javax.annotation.Nullable
-
   public String getDtEzsigndocumentLastsend() {
     return dtEzsigndocumentLastsend;
   }
@@ -397,7 +391,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentOrder
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentOrder() {
     return iEzsigndocumentOrder;
   }
@@ -420,7 +413,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentPagetotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentPagetotal() {
     return iEzsigndocumentPagetotal;
   }
@@ -443,7 +435,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentSignaturesigned
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentSignaturesigned() {
     return iEzsigndocumentSignaturesigned;
   }
@@ -466,7 +457,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentSignaturetotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentSignaturetotal() {
     return iEzsigndocumentSignaturetotal;
   }
@@ -488,7 +478,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return sEzsigndocumentMD5initial
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentMD5initial() {
     return sEzsigndocumentMD5initial;
   }
@@ -510,7 +499,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return tEzsigndocumentDeclinedtosignreason
   **/
   @javax.annotation.Nullable
-
   public String gettEzsigndocumentDeclinedtosignreason() {
     return tEzsigndocumentDeclinedtosignreason;
   }
@@ -532,7 +520,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return sEzsigndocumentMD5signed
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentMD5signed() {
     return sEzsigndocumentMD5signed;
   }
@@ -554,7 +541,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return bEzsigndocumentEzsignform
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigndocumentEzsignform() {
     return bEzsigndocumentEzsignform;
   }
@@ -576,7 +562,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return bEzsigndocumentHassignedsignatures
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigndocumentHassignedsignatures() {
     return bEzsigndocumentHassignedsignatures;
   }
@@ -598,7 +583,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return objAudit
   **/
   @javax.annotation.Nonnull
-
   public CommonAudit getObjAudit() {
     return objAudit;
   }
@@ -620,7 +604,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return sEzsigndocumentExternalid
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentExternalid() {
     return sEzsigndocumentExternalid;
   }
@@ -642,7 +625,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentStepformtotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentStepformtotal() {
     return iEzsigndocumentStepformtotal;
   }
@@ -664,7 +646,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentStepformcurrent
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentStepformcurrent() {
     return iEzsigndocumentStepformcurrent;
   }
@@ -686,7 +667,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentStepsignaturetotal
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentStepsignaturetotal() {
     return iEzsigndocumentStepsignaturetotal;
   }
@@ -708,7 +688,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return iEzsigndocumentStepsignatureCurrent
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsigndocumentStepsignatureCurrent() {
     return iEzsigndocumentStepsignatureCurrent;
   }
@@ -738,7 +717,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
    * @return aObjEzsignfoldersignerassociationstatus
   **/
   @javax.annotation.Nonnull
-
   public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
     return aObjEzsignfoldersignerassociationstatus;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CustomNotificationtestgetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -93,7 +97,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return pkiNotificationtestID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiNotificationtestID() {
     return pkiNotificationtestID;
   }
@@ -115,7 +118,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return objNotificationtestName
   **/
   @javax.annotation.Nonnull
-
   public MultilingualNotificationtestName getObjNotificationtestName() {
     return objNotificationtestName;
   }
@@ -138,7 +140,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return fkiNotificationsubsectionID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiNotificationsubsectionID() {
     return fkiNotificationsubsectionID;
   }
@@ -160,7 +161,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return sNotificationtestFunction
   **/
   @javax.annotation.Nonnull
-
   public String getsNotificationtestFunction() {
     return sNotificationtestFunction;
   }
@@ -182,7 +182,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return sNotificationtestNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsNotificationtestNameX() {
     return sNotificationtestNameX;
   }
@@ -204,7 +203,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return eNotificationpreferenceStatus
   **/
   @javax.annotation.Nonnull
-
   public FieldENotificationpreferenceStatus geteNotificationpreferenceStatus() {
     return eNotificationpreferenceStatus;
   }
@@ -226,7 +224,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
    * @return iNotificationtest
   **/
   @javax.annotation.Nonnull
-
   public Integer getiNotificationtest() {
     return iNotificationtest;
   }

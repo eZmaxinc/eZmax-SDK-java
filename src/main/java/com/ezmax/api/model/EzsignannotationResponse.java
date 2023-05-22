@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignannotationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
@@ -109,7 +113,6 @@ public class EzsignannotationResponse {
    * @return pkiEzsignannotationID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignannotationID() {
     return pkiEzsignannotationID;
   }
@@ -132,7 +135,6 @@ public class EzsignannotationResponse {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
   }
@@ -154,7 +156,6 @@ public class EzsignannotationResponse {
    * @return eEzsignannotationHorizontalalignment
   **/
   @javax.annotation.Nullable
-
   public EnumHorizontalalignment geteEzsignannotationHorizontalalignment() {
     return eEzsignannotationHorizontalalignment;
   }
@@ -176,7 +177,6 @@ public class EzsignannotationResponse {
    * @return eEzsignannotationVerticalalignment
   **/
   @javax.annotation.Nullable
-
   public EnumVerticalalignment geteEzsignannotationVerticalalignment() {
     return eEzsignannotationVerticalalignment;
   }
@@ -198,7 +198,6 @@ public class EzsignannotationResponse {
    * @return eEzsignannotationType
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignannotationType geteEzsignannotationType() {
     return eEzsignannotationType;
   }
@@ -221,7 +220,6 @@ public class EzsignannotationResponse {
    * @return iEzsignannotationX
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignannotationX() {
     return iEzsignannotationX;
   }
@@ -244,7 +242,6 @@ public class EzsignannotationResponse {
    * @return iEzsignannotationY
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignannotationY() {
     return iEzsignannotationY;
   }
@@ -267,7 +264,6 @@ public class EzsignannotationResponse {
    * @return iEzsignannotationWidth
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsignannotationWidth() {
     return iEzsignannotationWidth;
   }
@@ -290,7 +286,6 @@ public class EzsignannotationResponse {
    * @return iEzsignannotationHeight
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsignannotationHeight() {
     return iEzsignannotationHeight;
   }
@@ -312,7 +307,6 @@ public class EzsignannotationResponse {
    * @return sEzsignannotationText
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignannotationText() {
     return sEzsignannotationText;
   }
@@ -335,7 +329,6 @@ public class EzsignannotationResponse {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }

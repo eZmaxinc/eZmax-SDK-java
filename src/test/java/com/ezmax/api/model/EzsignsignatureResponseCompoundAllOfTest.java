@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -54,6 +55,14 @@ public class EzsignsignatureResponseCompoundAllOfTest {
     @Test
     public void aObjEzsignsignaturecustomdateTest() {
         // TODO: test aObjEzsignsignaturecustomdate
+    }
+
+    /**
+     * Test the property 'objCreditcardtransaction'
+     */
+    @Test
+    public void objCreditcardtransactionTest() {
+        // TODO: test objCreditcardtransaction
     }
 
 }

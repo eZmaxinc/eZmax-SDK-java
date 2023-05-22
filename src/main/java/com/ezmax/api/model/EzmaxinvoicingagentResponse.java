@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzmaxinvoicingagentResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
@@ -145,7 +149,6 @@ public class EzmaxinvoicingagentResponse {
    * @return pkiEzmaxinvoicingagentID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzmaxinvoicingagentID() {
     return pkiEzmaxinvoicingagentID;
   }
@@ -168,7 +171,6 @@ public class EzmaxinvoicingagentResponse {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
   }
@@ -191,7 +193,6 @@ public class EzmaxinvoicingagentResponse {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
   }
@@ -213,7 +214,6 @@ public class EzmaxinvoicingagentResponse {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
   }
@@ -236,7 +236,6 @@ public class EzmaxinvoicingagentResponse {
    * @return fkiAgentID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiAgentID() {
     return fkiAgentID;
   }
@@ -259,7 +258,6 @@ public class EzmaxinvoicingagentResponse {
    * @return fkiBrokerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
   }
@@ -282,7 +280,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentSession
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentSession() {
     return iEzmaxinvoicingagentSession;
   }
@@ -305,7 +302,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentCloned
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentCloned() {
     return iEzmaxinvoicingagentCloned;
   }
@@ -328,7 +324,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentInvoice
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentInvoice() {
     return iEzmaxinvoicingagentInvoice;
   }
@@ -351,7 +346,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentInscription
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentInscription() {
     return iEzmaxinvoicingagentInscription;
   }
@@ -374,7 +368,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentInscriptionactive
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentInscriptionactive() {
     return iEzmaxinvoicingagentInscriptionactive;
   }
@@ -397,7 +390,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentSale
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentSale() {
     return iEzmaxinvoicingagentSale;
   }
@@ -420,7 +412,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentOtherincome
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentOtherincome() {
     return iEzmaxinvoicingagentOtherincome;
   }
@@ -443,7 +434,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentCommissioncalculation
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentCommissioncalculation() {
     return iEzmaxinvoicingagentCommissioncalculation;
   }
@@ -466,7 +456,6 @@ public class EzmaxinvoicingagentResponse {
    * @return iEzmaxinvoicingagentEzsigndocument
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingagentEzsigndocument() {
     return iEzmaxinvoicingagentEzsigndocument;
   }
@@ -488,7 +477,6 @@ public class EzmaxinvoicingagentResponse {
    * @return bEzmaxinvoicingagentEzsignaccount
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingagentEzsignaccount() {
     return bEzmaxinvoicingagentEzsignaccount;
   }
@@ -510,7 +498,6 @@ public class EzmaxinvoicingagentResponse {
    * @return bEzmaxinvoicingagentBillableezmax
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingagentBillableezmax() {
     return bEzmaxinvoicingagentBillableezmax;
   }
@@ -532,7 +519,6 @@ public class EzmaxinvoicingagentResponse {
    * @return eEzmaxinvoicingagentVariationezmax
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzmaxinvoicingagentVariationezmax geteEzmaxinvoicingagentVariationezmax() {
     return eEzmaxinvoicingagentVariationezmax;
   }
@@ -554,7 +540,6 @@ public class EzmaxinvoicingagentResponse {
    * @return bEzmaxinvoicingagentBillableezsign
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingagentBillableezsign() {
     return bEzmaxinvoicingagentBillableezsign;
   }
@@ -576,7 +561,6 @@ public class EzmaxinvoicingagentResponse {
    * @return eEzmaxinvoicingagentVariationezsign
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzmaxinvoicingagentVariationezsign geteEzmaxinvoicingagentVariationezsign() {
     return eEzmaxinvoicingagentVariationezsign;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicinguser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzmaxinvoicinguserResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D = "pkiEzmaxinvoicinguserID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D)
@@ -105,7 +109,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return pkiEzmaxinvoicinguserID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzmaxinvoicinguserID() {
     return pkiEzmaxinvoicinguserID;
   }
@@ -128,7 +131,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return fkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
   }
@@ -151,7 +153,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
   }
@@ -173,7 +174,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return sBillingentityinternalDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
   }
@@ -196,7 +196,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return fkiUserID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -219,7 +218,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return iEzmaxinvoicinguserEzsigndocument
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicinguserEzsigndocument() {
     return iEzmaxinvoicinguserEzsigndocument;
   }
@@ -241,7 +239,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return bEzmaxinvoicinguserEzsignaccount
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicinguserEzsignaccount() {
     return bEzmaxinvoicinguserEzsignaccount;
   }
@@ -263,7 +260,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return bEzmaxinvoicinguserBillableezsign
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicinguserBillableezsign() {
     return bEzmaxinvoicinguserBillableezsign;
   }
@@ -285,7 +281,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return eEzmaxinvoicinguserVariationezsign
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzmaxinvoicinguserVariationezsign geteEzmaxinvoicinguserVariationezsign() {
     return eEzmaxinvoicinguserVariationezsign;
   }
@@ -307,7 +302,6 @@ public class EzmaxinvoicinguserResponseCompound {
    * @return objContactName
   **/
   @javax.annotation.Nonnull
-
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
   }

@@ -33,6 +33,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -47,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -92,7 +96,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return fkiUserlogintypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiUserlogintypeID() {
     return fkiUserlogintypeID;
   }
@@ -116,7 +119,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
   }
@@ -138,7 +140,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return sEzsignbulksendtransmissionDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignbulksendtransmissionDescription() {
     return sEzsignbulksendtransmissionDescription;
   }
@@ -160,7 +161,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
   }
@@ -182,7 +182,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return eEzsignfolderSendreminderfrequency
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
     return eEzsignfolderSendreminderfrequency;
   }
@@ -204,7 +203,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return tExtraMessage
   **/
   @javax.annotation.Nonnull
-
   public String gettExtraMessage() {
     return tExtraMessage;
   }
@@ -226,7 +224,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
    * @return sCsvBase64
   **/
   @javax.annotation.Nonnull
-
   public byte[] getsCsvBase64() {
     return sCsvBase64;
   }

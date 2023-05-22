@@ -36,6 +36,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -50,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CustomNotificationsubsectiongetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
@@ -91,7 +95,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return pkiNotificationsubsectionID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiNotificationsubsectionID() {
     return pkiNotificationsubsectionID;
   }
@@ -114,7 +117,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return fkiNotificationsectionID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiNotificationsectionID() {
     return fkiNotificationsectionID;
   }
@@ -136,7 +138,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return objNotificationsubsectionName
   **/
   @javax.annotation.Nullable
-
   public MultilingualNotificationsubsectionName getObjNotificationsubsectionName() {
     return objNotificationsubsectionName;
   }
@@ -158,7 +159,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return sNotificationsectionNameX
   **/
   @javax.annotation.Nullable
-
   public String getsNotificationsectionNameX() {
     return sNotificationsectionNameX;
   }
@@ -180,7 +180,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return sNotificationsubsectionNameX
   **/
   @javax.annotation.Nonnull
-
   public String getsNotificationsubsectionNameX() {
     return sNotificationsubsectionNameX;
   }
@@ -210,7 +209,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
    * @return aObjNotificationtest
   **/
   @javax.annotation.Nonnull
-
   public List<CustomNotificationtestgetnotificationtestsResponse> getaObjNotificationtest() {
     return aObjNotificationtest;
   }

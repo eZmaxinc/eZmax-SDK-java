@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryinternaldetailResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryinternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D)
@@ -111,7 +115,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return pkiEzmaxinvoicingsummaryinternaldetailID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzmaxinvoicingsummaryinternaldetailID() {
     return pkiEzmaxinvoicingsummaryinternaldetailID;
   }
@@ -134,7 +137,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return fkiEzmaxinvoicingsummaryinternalID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzmaxinvoicingsummaryinternalID() {
     return fkiEzmaxinvoicingsummaryinternalID;
   }
@@ -157,7 +159,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return fkiEzmaxproductID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
   }
@@ -179,7 +180,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return sEzmaxproductDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
   }
@@ -202,7 +202,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return fkiBillingentityexternalID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiBillingentityexternalID() {
     return fkiBillingentityexternalID;
   }
@@ -224,7 +223,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return sBillingentityexternalDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsBillingentityexternalDescription() {
     return sBillingentityexternalDescription;
   }
@@ -246,7 +244,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return dEzmaxinvoicingsummaryinternaldetailCountreal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryinternaldetailCountreal() {
     return dEzmaxinvoicingsummaryinternaldetailCountreal;
   }
@@ -268,7 +265,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return dEzmaxinvoicingsummaryinternaldetailSubtotal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryinternaldetailSubtotal() {
     return dEzmaxinvoicingsummaryinternaldetailSubtotal;
   }
@@ -290,7 +286,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return dEzmaxinvoicingsummaryinternaldetailRebate
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryinternaldetailRebate() {
     return dEzmaxinvoicingsummaryinternaldetailRebate;
   }
@@ -312,7 +307,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return dEzmaxinvoicingsummaryinternaldetailTotal
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingsummaryinternaldetailTotal() {
     return dEzmaxinvoicingsummaryinternaldetailTotal;
   }
@@ -334,7 +328,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return bEzmaxinvoicingsummaryinternaldetailAdjustment
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingsummaryinternaldetailAdjustment() {
     return bEzmaxinvoicingsummaryinternaldetailAdjustment;
   }
@@ -356,7 +349,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
    * @return tEzmaxproductHelpX
   **/
   @javax.annotation.Nonnull
-
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;
   }

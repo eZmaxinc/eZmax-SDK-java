@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezmaxinvoicingGetProvisionalV1**](ObjectEzmaxinvoicingApi.md#ezmaxinvoicingGetProvisionalV1) | **GET** /1/object/ezmaxinvoicing/getProvisional | Retrieve provisional Ezmaxinvoicing |
 
 
-<a name="ezmaxinvoicingGetAutocompleteV1"></a>
+<a id="ezmaxinvoicingGetAutocompleteV1"></a>
 # **ezmaxinvoicingGetAutocompleteV1**
 > CommonGetAutocompleteV1Response ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -85,7 +85,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezmaxinvoicingGetAutocompleteV2"></a>
+<a id="ezmaxinvoicingGetAutocompleteV2"></a>
 # **ezmaxinvoicingGetAutocompleteV2**
 > EzmaxinvoicingGetAutocompleteV2Response ezmaxinvoicingGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -160,7 +160,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezmaxinvoicingGetObjectV2"></a>
+<a id="ezmaxinvoicingGetObjectV2"></a>
 # **ezmaxinvoicingGetObjectV2**
 > EzmaxinvoicingGetObjectV2Response ezmaxinvoicingGetObjectV2(pkiEzmaxinvoicingID)
 
@@ -230,7 +230,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a name="ezmaxinvoicingGetProvisionalV1"></a>
+<a id="ezmaxinvoicingGetProvisionalV1"></a>
 # **ezmaxinvoicingGetProvisionalV1**
 > EzmaxinvoicingGetProvisionalV1Response ezmaxinvoicingGetProvisionalV1()
 

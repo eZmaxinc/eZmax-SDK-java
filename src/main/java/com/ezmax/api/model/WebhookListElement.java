@@ -35,6 +35,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -101,7 +105,6 @@ public class WebhookListElement {
    * @return pkiWebhookID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
   }
@@ -123,7 +126,6 @@ public class WebhookListElement {
    * @return sWebhookDescription
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookDescription() {
     return sWebhookDescription;
   }
@@ -145,7 +147,6 @@ public class WebhookListElement {
    * @return sWebhookUrl
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookUrl() {
     return sWebhookUrl;
   }
@@ -167,7 +168,6 @@ public class WebhookListElement {
    * @return sWebhookEvent
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookEvent() {
     return sWebhookEvent;
   }
@@ -189,7 +189,6 @@ public class WebhookListElement {
    * @return sWebhookEmailfailed
   **/
   @javax.annotation.Nonnull
-
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
   }
@@ -211,7 +210,6 @@ public class WebhookListElement {
    * @return eWebhookModule
   **/
   @javax.annotation.Nonnull
-
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
   }
@@ -233,7 +231,6 @@ public class WebhookListElement {
    * @return eWebhookEzsignevent
   **/
   @javax.annotation.Nullable
-
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
   }
@@ -255,7 +252,6 @@ public class WebhookListElement {
    * @return eWebhookManagementevent
   **/
   @javax.annotation.Nullable
-
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
   }
@@ -277,7 +273,6 @@ public class WebhookListElement {
    * @return bWebhookIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
   }

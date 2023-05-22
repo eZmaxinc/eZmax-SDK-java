@@ -7,7 +7,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**departmentGetAutocompleteV2**](ObjectDepartmentApi.md#departmentGetAutocompleteV2) | **GET** /2/object/department/getAutocomplete/{sSelector} | Retrieve Departments and IDs |
 
 
-<a name="departmentGetAutocompleteV2"></a>
+<a id="departmentGetAutocompleteV2"></a>
 # **departmentGetAutocompleteV2**
 > DepartmentGetAutocompleteV2Response departmentGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 

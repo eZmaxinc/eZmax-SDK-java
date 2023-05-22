@@ -37,6 +37,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -51,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreciient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class CommunicationrecipientResponseCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D = "pkiCommunicationrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D)
@@ -152,7 +156,6 @@ public class CommunicationrecipientResponseCompound {
    * @return pkiCommunicationrecipientID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiCommunicationrecipientID() {
     return pkiCommunicationrecipientID;
   }
@@ -174,7 +177,6 @@ public class CommunicationrecipientResponseCompound {
    * @return eCommunicationrecipientObjecttype
   **/
   @javax.annotation.Nullable
-
   public FieldECommunicationrecipientObjecttype geteCommunicationrecipientObjecttype() {
     return eCommunicationrecipientObjecttype;
   }
@@ -197,7 +199,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAgentID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiAgentID() {
     return fkiAgentID;
   }
@@ -220,7 +221,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiBrokerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
   }
@@ -243,7 +243,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiContactID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiContactID() {
     return fkiContactID;
   }
@@ -266,7 +265,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiCustomerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiCustomerID() {
     return fkiCustomerID;
   }
@@ -289,7 +287,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEmployeeID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEmployeeID() {
     return fkiEmployeeID;
   }
@@ -312,7 +309,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEzsignsignerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
   }
@@ -335,7 +331,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiFranchiseofficeID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiFranchiseofficeID() {
     return fkiFranchiseofficeID;
   }
@@ -358,7 +353,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiUserID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiUserID() {
     return fkiUserID;
   }
@@ -381,7 +375,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAgentincorporationID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiAgentincorporationID() {
     return fkiAgentincorporationID;
   }
@@ -404,7 +397,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiAssistantID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiAssistantID() {
     return fkiAssistantID;
   }
@@ -427,7 +419,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiExternalbrokerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiExternalbrokerID() {
     return fkiExternalbrokerID;
   }
@@ -450,7 +441,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiEzcomagentID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzcomagentID() {
     return fkiEzcomagentID;
   }
@@ -473,7 +463,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiNotaryID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiNotaryID() {
     return fkiNotaryID;
   }
@@ -496,7 +485,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiRewardmemberID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiRewardmemberID() {
     return fkiRewardmemberID;
   }
@@ -519,7 +507,6 @@ public class CommunicationrecipientResponseCompound {
    * @return fkiSupplierID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiSupplierID() {
     return fkiSupplierID;
   }
@@ -541,7 +528,6 @@ public class CommunicationrecipientResponseCompound {
    * @return eCommunicationrecipientType
   **/
   @javax.annotation.Nonnull
-
   public FieldECommunicationrecipientType geteCommunicationrecipientType() {
     return eCommunicationrecipientType;
   }
@@ -563,7 +549,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objDescriptionstatic
   **/
   @javax.annotation.Nonnull
-
   public DescriptionstaticResponseCompound getObjDescriptionstatic() {
     return objDescriptionstatic;
   }
@@ -585,7 +570,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objEmailstatic
   **/
   @javax.annotation.Nullable
-
   public EmailstaticResponseCompound getObjEmailstatic() {
     return objEmailstatic;
   }
@@ -607,7 +591,6 @@ public class CommunicationrecipientResponseCompound {
    * @return objPhonestatic
   **/
   @javax.annotation.Nullable
-
   public PhonestaticResponseCompound getObjPhonestatic() {
     return objPhonestatic;
   }

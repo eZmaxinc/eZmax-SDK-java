@@ -12,7 +12,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfoldertypeGetObjectV2**](ObjectEzsignfoldertypeApi.md#ezsignfoldertypeGetObjectV2) | **GET** /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID} | Retrieve an existing Ezsignfoldertype |
 
 
-<a name="ezsignfoldertypeCreateObjectV1"></a>
+<a id="ezsignfoldertypeCreateObjectV1"></a>
 # **ezsignfoldertypeCreateObjectV1**
 > EzsignfoldertypeCreateObjectV1Response ezsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request)
 
@@ -81,7 +81,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="ezsignfoldertypeEditObjectV1"></a>
+<a id="ezsignfoldertypeEditObjectV1"></a>
 # **ezsignfoldertypeEditObjectV1**
 > EzsignfoldertypeEditObjectV1Response ezsignfoldertypeEditObjectV1(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV1Request)
 
@@ -154,7 +154,7 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a name="ezsignfoldertypeGetAutocompleteV1"></a>
+<a id="ezsignfoldertypeGetAutocompleteV1"></a>
 # **ezsignfoldertypeGetAutocompleteV1**
 > CommonGetAutocompleteV1Response ezsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -229,7 +229,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezsignfoldertypeGetAutocompleteV2"></a>
+<a id="ezsignfoldertypeGetAutocompleteV2"></a>
 # **ezsignfoldertypeGetAutocompleteV2**
 > EzsignfoldertypeGetAutocompleteV2Response ezsignfoldertypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
 
@@ -304,7 +304,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezsignfoldertypeGetListV1"></a>
+<a id="ezsignfoldertypeGetListV1"></a>
 # **ezsignfoldertypeGetListV1**
 > EzsignfoldertypeGetListV1Response ezsignfoldertypeGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
 
@@ -335,8 +335,8 @@ public class Example {
 
     ObjectEzsignfoldertypeApi apiInstance = new ObjectEzsignfoldertypeApi(defaultClient);
     String eOrderBy = "pkiEzsignfoldertypeID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 56; // Integer | 
-    Integer iRowOffset = 56; // Integer | 
+    Integer iRowMax = 10000; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
     try {
@@ -358,8 +358,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsignfoldertypeID_ASC, pkiEzsignfoldertypeID_DESC, eEzsignfoldertypePrivacylevel_ASC, eEzsignfoldertypePrivacylevel_DESC, sEzsignfoldertypeNameX_ASC, sEzsignfoldertypeNameX_DESC, bEzsignfoldertypeIsactive_ASC, bEzsignfoldertypeIsactive_DESC] |
-| **iRowMax** | **Integer**|  | [optional] |
-| **iRowOffset** | **Integer**|  | [optional] |
+| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |
 
@@ -382,7 +382,7 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a name="ezsignfoldertypeGetObjectV2"></a>
+<a id="ezsignfoldertypeGetObjectV2"></a>
 # **ezsignfoldertypeGetObjectV2**
 > EzsignfoldertypeGetObjectV2Response ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID)
 

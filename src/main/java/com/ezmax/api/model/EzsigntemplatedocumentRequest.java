@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatedocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -264,7 +268,6 @@ public class EzsigntemplatedocumentRequest {
    * @return pkiEzsigntemplatedocumentID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
   }
@@ -287,7 +290,6 @@ public class EzsigntemplatedocumentRequest {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
@@ -310,7 +312,6 @@ public class EzsigntemplatedocumentRequest {
    * @return fkiEzsigndocumentID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
   }
@@ -333,7 +334,6 @@ public class EzsigntemplatedocumentRequest {
    * @return fkiEzsigntemplatesignerID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
   }
@@ -355,7 +355,6 @@ public class EzsigntemplatedocumentRequest {
    * @return sEzsigntemplatedocumentName
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
   }
@@ -377,7 +376,6 @@ public class EzsigntemplatedocumentRequest {
    * @return eEzsigntemplatedocumentSource
   **/
   @javax.annotation.Nonnull
-
   public EEzsigntemplatedocumentSourceEnum geteEzsigntemplatedocumentSource() {
     return eEzsigntemplatedocumentSource;
   }
@@ -399,7 +397,6 @@ public class EzsigntemplatedocumentRequest {
    * @return eEzsigntemplatedocumentFormat
   **/
   @javax.annotation.Nullable
-
   public EEzsigntemplatedocumentFormatEnum geteEzsigntemplatedocumentFormat() {
     return eEzsigntemplatedocumentFormat;
   }
@@ -421,7 +418,6 @@ public class EzsigntemplatedocumentRequest {
    * @return sEzsigntemplatedocumentBase64
   **/
   @javax.annotation.Nullable
-
   public byte[] getsEzsigntemplatedocumentBase64() {
     return sEzsigntemplatedocumentBase64;
   }
@@ -443,7 +439,6 @@ public class EzsigntemplatedocumentRequest {
    * @return sEzsigntemplatedocumentUrl
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplatedocumentUrl() {
     return sEzsigntemplatedocumentUrl;
   }
@@ -465,7 +460,6 @@ public class EzsigntemplatedocumentRequest {
    * @return bEzsigntemplatedocumentForcerepair
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsigntemplatedocumentForcerepair() {
     return bEzsigntemplatedocumentForcerepair;
   }
@@ -487,7 +481,6 @@ public class EzsigntemplatedocumentRequest {
    * @return eEzsigntemplatedocumentForm
   **/
   @javax.annotation.Nullable
-
   public EEzsigntemplatedocumentFormEnum geteEzsigntemplatedocumentForm() {
     return eEzsigntemplatedocumentForm;
   }
@@ -509,7 +502,6 @@ public class EzsigntemplatedocumentRequest {
    * @return sEzsigntemplatedocumentPassword
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigntemplatedocumentPassword() {
     return sEzsigntemplatedocumentPassword;
   }

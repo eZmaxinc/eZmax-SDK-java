@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -276,7 +280,6 @@ public class EzsigndocumentRequest {
    * @return pkiEzsigndocumentID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
   }
@@ -299,7 +302,6 @@ public class EzsigndocumentRequest {
    * @return fkiEzsignfolderID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
   }
@@ -322,7 +324,6 @@ public class EzsigndocumentRequest {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
@@ -345,7 +346,6 @@ public class EzsigndocumentRequest {
    * @return fkiEzsignfoldersignerassociationID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
   }
@@ -369,7 +369,6 @@ public class EzsigndocumentRequest {
    * @return fkiLanguageID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
   }
@@ -391,7 +390,6 @@ public class EzsigndocumentRequest {
    * @return eEzsigndocumentSource
   **/
   @javax.annotation.Nonnull
-
   public EEzsigndocumentSourceEnum geteEzsigndocumentSource() {
     return eEzsigndocumentSource;
   }
@@ -413,7 +411,6 @@ public class EzsigndocumentRequest {
    * @return eEzsigndocumentFormat
   **/
   @javax.annotation.Nullable
-
   public EEzsigndocumentFormatEnum geteEzsigndocumentFormat() {
     return eEzsigndocumentFormat;
   }
@@ -435,7 +432,6 @@ public class EzsigndocumentRequest {
    * @return sEzsigndocumentBase64
   **/
   @javax.annotation.Nullable
-
   public byte[] getsEzsigndocumentBase64() {
     return sEzsigndocumentBase64;
   }
@@ -457,7 +453,6 @@ public class EzsigndocumentRequest {
    * @return sEzsigndocumentUrl
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigndocumentUrl() {
     return sEzsigndocumentUrl;
   }
@@ -479,7 +474,6 @@ public class EzsigndocumentRequest {
    * @return bEzsigndocumentForcerepair
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsigndocumentForcerepair() {
     return bEzsigndocumentForcerepair;
   }
@@ -501,7 +495,6 @@ public class EzsigndocumentRequest {
    * @return sEzsigndocumentPassword
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigndocumentPassword() {
     return sEzsigndocumentPassword;
   }
@@ -523,7 +516,6 @@ public class EzsigndocumentRequest {
    * @return eEzsigndocumentForm
   **/
   @javax.annotation.Nullable
-
   public EEzsigndocumentFormEnum geteEzsigndocumentForm() {
     return eEzsigndocumentForm;
   }
@@ -545,7 +537,6 @@ public class EzsigndocumentRequest {
    * @return dtEzsigndocumentDuedate
   **/
   @javax.annotation.Nonnull
-
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
   }
@@ -567,7 +558,6 @@ public class EzsigndocumentRequest {
    * @return sEzsigndocumentName
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
   }
@@ -589,7 +579,6 @@ public class EzsigndocumentRequest {
    * @return sEzsigndocumentExternalid
   **/
   @javax.annotation.Nullable
-
   public String getsEzsigndocumentExternalid() {
     return sEzsigndocumentExternalid;
   }

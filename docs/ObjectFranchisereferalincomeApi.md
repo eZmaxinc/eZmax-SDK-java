@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**franchisereferalincomeCreateObjectV2**](ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome |
 
 
-<a name="franchisereferalincomeCreateObjectV1"></a>
+<a id="franchisereferalincomeCreateObjectV1"></a>
 # **franchisereferalincomeCreateObjectV1**
 > FranchisereferalincomeCreateObjectV1Response franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request)
 
@@ -77,7 +77,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a name="franchisereferalincomeCreateObjectV2"></a>
+<a id="franchisereferalincomeCreateObjectV2"></a>
 # **franchisereferalincomeCreateObjectV2**
 > FranchisereferalincomeCreateObjectV2Response franchisereferalincomeCreateObjectV2(franchisereferalincomeCreateObjectV2Request)
 

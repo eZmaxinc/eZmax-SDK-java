@@ -8,7 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignSuggestTemplatesV1**](ModuleEzsignApi.md#ezsignSuggestTemplatesV1) | **GET** /1/module/ezsign/suggestTemplates | Suggest templates |
 
 
-<a name="ezsignSuggestSignersV1"></a>
+<a id="ezsignSuggestSignersV1"></a>
 # **ezsignSuggestSignersV1**
 > EzsignSuggestSignersV1Response ezsignSuggestSignersV1()
 
@@ -73,7 +73,7 @@ This endpoint does not need any parameter.
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 
-<a name="ezsignSuggestTemplatesV1"></a>
+<a id="ezsignSuggestTemplatesV1"></a>
 # **ezsignSuggestTemplatesV1**
 > EzsignSuggestTemplatesV1Response ezsignSuggestTemplatesV1(fkiEzsignfoldertypeID)
 

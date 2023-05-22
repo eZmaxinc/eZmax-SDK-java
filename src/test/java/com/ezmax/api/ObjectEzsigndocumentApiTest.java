@@ -32,6 +32,7 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
+import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
@@ -207,6 +208,20 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentGetActionableElementsV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentGetActionableElementsV1Response response = api.ezsigndocumentGetActionableElementsV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve completed elements for the Ezsigndocument
+     *
+     * Return the completed Ezsignsignatures, Ezsignformfieldgroups and Ezsignannotations at the current step in the process
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetCompletedElementsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetCompletedElementsV1Response response = api.ezsigndocumentGetCompletedElementsV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
 

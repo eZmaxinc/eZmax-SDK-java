@@ -66,9 +66,29 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
+    \n### [1.1.18] - 2023-04\r\n\r\n#### Added\r\n- DELETE /1/object/userstaged/{pkiUserstagedID}\r\
+    \n- GET /1/object/clonehistory/getList\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\r\
+    \n- GET /1/object/sessionhistory/getList\r\n- GET /1/object/userstaged/getList\r\
+    \n- GET /2/object/userstaged/{pkiUserstagedID}\r\n- POST /1/object/userstaged/{pkiUserstagedID}/map\r\
+    \n- Webhook Ezsignsigner Accept Clause in Ezsignfoldersignerassociation\r\n- Webhook\
+    \ Ezsignsigner Connect in Ezsignfoldersignerassociation\r\n- New 403 error code\
+    \ FORBIDDEN_USER_ORIGIN_EXTERNAL\r\n- Added property dtEzsignsignatureDate in\
+    \ object ezsignsignature-Response\r\n- Added property eActivesessionUsertype in\
+    \ object activesession-Response\r\n- Added property objContactName in object ezsignsignature-Response\r\
+    \n- Added property objCreditcardtransaction in object ezsignsignature-Response\r\
+    \n- Added value AgentBrokerEmployeeNormalBuiltIn for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
+    \n- Added value EzsignuserBuiltIn for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
+    \n- Orders dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC,\
+    \ iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC,\
+    \ iEzsignsignature_DESC, iEzsignsignatureSigned_ASC and iEzsignsignatureSigned_DESC\
+    \ in GET /1/object/ezsignfolder/getList\r\n\r\n#### Removed\r\n- Orders dtDueDate_ASC,\
+    \ dtDueDate_DESC, iTotalDocument_ASC, iTotalDocument_DESC, iTotalDocumentEdm_ASC,\
+    \ iTotalDocumentEdm_DESC, iTotalSignature_ASC, iTotalSignature_DESC, iTotalSignatureSigned_ASC\
+    \ and iTotalSignatureSigned_DESC in GET /1/object/ezsignfolder/getList\r\n- \r\
     \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
-    \n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\n- GET /1/object/activesession/getList\r\
-    \n- GET /1/object/billingentityinternal/getList\r\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
+    \n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\n- GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration\r\
+    \n- GET /1/object/activesession/getList\r\n- GET /1/object/billingentityinternal/getList\r\
+    \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations\r\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic\r\
@@ -86,15 +106,15 @@ tags:
     \n- POST /1/object/paymentterm\r\n- POST /1/object/usergroup\r\n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
     \n- PUT /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
     \n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\n- PUT /1/object/usergroup/{pkiUsergroupID}\r\
-    \n- New 403 error code FORBIDDEN_PERMISSION\r\n- New 422 error code UNPROCESSABLEENTITY_PDF_SIGNATURE\r\
-    \n- Added property bEzsigndocumentHassignedsignatures in object ezsigndocument-Response\r\
-    \n- Added property bEzsigntemplatedocumentHassignedsignatures in object ezsigntemplatedocument-Response\r\
-    \n- Added property sEzsignfolderDescription in object Custom-Ezsignfoldertransmission-Response\r\
-    \n- Added property sEzsigndocumentExternalid in object ezsigndocument-Request\r\
-    \n- Added property sEzsigndocumentExternalid in object ezsigndocument-Response\r\
-    \n- Added property sEzsignfolderExternalid in object ezsignfolder-Request\r\n\
-    - Added property sEzsignfolderExternalid in object ezsignfolder-Response\r\n \r\
-    \n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
+    \n- New 403 error code FORBIDDEN_PERMISSION\r\n- New 403 error code UNPROCESSABLEENTITY_DATA_UNIQUE\r\
+    \n- New 422 error code UNPROCESSABLEENTITY_PDF_SIGNATURE\r\n- Added property bEzsigndocumentHassignedsignatures\
+    \ in object ezsigndocument-Response\r\n- Added property bEzsigntemplatedocumentHassignedsignatures\
+    \ in object ezsigntemplatedocument-Response\r\n- Added property sEzsignfolderDescription\
+    \ in object Custom-Ezsignfoldertransmission-Response\r\n- Added property sEzsigndocumentExternalid\
+    \ in object ezsigndocument-Request\r\n- Added property sEzsigndocumentExternalid\
+    \ in object ezsigndocument-Response\r\n- Added property sEzsignfolderExternalid\
+    \ in object ezsignfolder-Request\r\n- Added property sEzsignfolderExternalid in\
+    \ object ezsignfolder-Response\r\n \r\n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/branding/{pkiBrandingID}\r\n- GET /1/object/branding/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/department/getAutocomplete/{sSelector}\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
     \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
@@ -535,23 +555,24 @@ tags:
     \                      |\r\n| UNAUTHORIZED_BADMFA  | Invalid response to the MFA\
     \ challenge                              |\r\n| UNAUTHORIZED_REQUEST | The request\
     \ is invalid (bad ip source, signature, invalid api key) |\r\n\r\n### HTTP 403\
-    \ (Forbidden)\r\n| eErrorCode              | Examples                        \
-    \                    |\r\n| ----------------------- | ---------------------------------------------------\
-    \ |\r\n| FORBIDDEN               | Generic Forbidden                         \
-    \          |\r\n| FORBIDDEN_CONFIGURATION | A configured setting prevent access\
-    \ to the element  |\r\n| FORBIDDEN_MODULE        | Module is not activated   \
-    \                          |\r\n| FORBIDDEN_NOACCESS      | Not allowed to access\
-    \ the element                   |\r\n| FORBIDDEN_PERMISSION    | Missing a permission\
-    \ to access the route            |\r\n| FORBIDDEN_SUBSCRIPTION  | No subscription,\
-    \ for example to eZsign              |\r\n| FORBIDDEN_USERTYPE      | This type\
-    \ of User is forbidden for the route        |\r\n\r\n### HTTP 404 (Not Found)\r\
-    \n| eErrorCode      | Examples                                    |\r\n| ---------------\
-    \ | ------------------------------------------- |\r\n| NOTFOUND        | Generic\
-    \ not found                           |\r\n| NOTFOUND_OBJECT | Object does not\
-    \ exist in database           |\r\n| NOTFOUND_ROUTE  | The route does not exist\
-    \ (url, API version) |\r\n\r\n### HTTP 405 (Method Not Allowed)\r\n| eErrorCode\
-    \       | Examples                                                           \
-    \           |\r\n| ---------------- | -----------------------------------------------------------------------------\
+    \ (Forbidden)\r\n| eErrorCode                     | Examples                 \
+    \                           |\r\n| ------------------------------ | ---------------------------------------------------\
+    \ |\r\n| FORBIDDEN                      | Generic Forbidden                  \
+    \                 |\r\n| FORBIDDEN_CONFIGURATION        | A configured setting\
+    \ prevent access to the element  |\r\n| FORBIDDEN_MODULE               | Module\
+    \ is not activated                             |\r\n| FORBIDDEN_NOACCESS     \
+    \        | Not allowed to access the element                   |\r\n| FORBIDDEN_PERMISSION\
+    \           | Missing a permission to access the route            |\r\n| FORBIDDEN_SUBSCRIPTION\
+    \         | No subscription, for example to eZsign              |\r\n| FORBIDDEN_USERTYPE\
+    \             | This type of User is forbidden for the route        |\r\n| FORBIDDEN_USER_ORIGIN_EXTERNAL\
+    \ | Can't modify user informations.                     |\r\n\r\n### HTTP 404\
+    \ (Not Found)\r\n| eErrorCode      | Examples                                \
+    \    |\r\n| --------------- | ------------------------------------------- |\r\n\
+    | NOTFOUND        | Generic not found                           |\r\n| NOTFOUND_OBJECT\
+    \ | Object does not exist in database           |\r\n| NOTFOUND_ROUTE  | The route\
+    \ does not exist (url, API version) |\r\n\r\n### HTTP 405 (Method Not Allowed)\r\
+    \n| eErrorCode       | Examples                                              \
+    \                        |\r\n| ---------------- | -----------------------------------------------------------------------------\
     \ |\r\n| METHODNOTALLOWED | The route is valid but the method is not allowed ex:\
     \ POST on a GET only route |\r\n\r\n### HTTP 406 (Not Acceptable)\r\n| eErrorCode\
     \             | Examples                                                     \
@@ -570,34 +591,37 @@ tags:
     \   | The old password supplied does not match the user's current password |\r\
     \n| UNPROCESSABLEENTITY_CHANGEPASSWORD_SAME    | The new password is the same\
     \ as the old password |\r\n| UNPROCESSABLEENTITY_DATA_MISSING       | Some data\
-    \ is missing                                                   |\r\n| UNPROCESSABLEENTITY_DATA_VALIDATION\
-    \    | The data fails some validation                                        \
-    \ |\r\n| UNPROCESSABLEENTITY_DATA_OUTOFBOUND    | The data contains a value that\
-    \ is out of bound                         |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR\
-    \     | We cannot retrieve ressource at supplied url                         \
-    \  |\r\n| UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED    | The Ezsignsigner is connected\
-    \                                    |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO  \
-    \      | The request was valid, but no action was necessary                  \
-    \   |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a state\
-    \ that allows the action (Sending a document without signature, downloading an\
-    \ unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_FORM           | The pdf document\
-    \ contains a form                                       |\r\n| UNPROCESSABLEENTITY_PDF_SIGNATURE\
-    \      | The pdf document contains a signature(s)                            \
-    \   |\r\n| UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE | The pdf document contains\
-    \ a form and signature(s)                  |\r\n| UNPROCESSABLEENTITY_PDF_INCOMPATIBLE\
-    \   | The pdf document cannot be signed                                      |\r\
-    \n| UNPROCESSABLEENTITY_PDF_PASSWORD       | The pdf document contains a password\
-    \ and cannot be signed              |\r\n| UNPROCESSABLEENTITY_PDF_WRONG_PASSWORD\
-    \ | The password cannot open the pdf document since it's incorrect         |\r\
-    \n| UNPROCESSABLEENTITY_PDF_REPAIRABLE     | The pdf document contains errors\
-    \ and can be repaired                   |\r\n| UNPROCESSABLEENTITY_PDF_XFA   \
-    \         | The pdf document contains XFA form and cannot be signed          \
-    \      |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH  | The number of pages between\
-    \ the document and the template do not match |\r\n| UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD\
-    \ | The field is not modifiable in the current state                       |\r\
-    \n\r\n### HTTP 429 (Too Many Requests)\r\n| eErrorCode                       \
-    \      | Examples                                                            \
-    \   |\r\n| -------------------------------------- | ----------------------------------------------------------------------\
+    \ is missing                                                   |\r\n| UNPROCESSABLEENTITY_DATA_UNIQUE\
+    \        | The data fails unique check : value exist in other element        \
+    \     |\r\n| UNPROCESSABLEENTITY_DATA_VALIDATION    | The data fails some validation\
+    \                                         |\r\n| UNPROCESSABLEENTITY_DATA_OUTOFBOUND\
+    \    | The data contains a value that is out of bound                        \
+    \ |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
+    \ at supplied url                           |\r\n| UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED\
+    \    | The Ezsignsigner is connected                                    |\r\n\
+    | UNPROCESSABLEENTITY_NOTHINGTODO        | The request was valid, but no action\
+    \ was necessary                     |\r\n| UNPROCESSABLEENTITY_NOTREADY      \
+    \     | The element is not in a state that allows the action (Sending a document\
+    \ without signature, downloading an unsigned document) |\r\n| UNPROCESSABLEENTITY_PDF_FORM\
+    \           | The pdf document contains a form                               \
+    \        |\r\n| UNPROCESSABLEENTITY_PDF_SIGNATURE      | The pdf document contains\
+    \ a signature(s)                               |\r\n| UNPROCESSABLEENTITY_PDF_FORM_AND_SIGNATURE\
+    \ | The pdf document contains a form and signature(s)                  |\r\n|\
+    \ UNPROCESSABLEENTITY_PDF_INCOMPATIBLE   | The pdf document cannot be signed \
+    \                                     |\r\n| UNPROCESSABLEENTITY_PDF_PASSWORD\
+    \       | The pdf document contains a password and cannot be signed          \
+    \    |\r\n| UNPROCESSABLEENTITY_PDF_WRONG_PASSWORD | The password cannot open\
+    \ the pdf document since it's incorrect         |\r\n| UNPROCESSABLEENTITY_PDF_REPAIRABLE\
+    \     | The pdf document contains errors and can be repaired                 \
+    \  |\r\n| UNPROCESSABLEENTITY_PDF_XFA            | The pdf document contains XFA\
+    \ form and cannot be signed                |\r\n| UNPROCESSABLEENTITY_TEMPLATE_MISMATCH\
+    \  | The number of pages between the document and the template do not match |\r\
+    \n| UNPROCESSABLEENTITY_UNMODIFIABLE_FIELD | The field is not modifiable in the\
+    \ current state                       |\r\n| UNPROCESSABLEENTITY_USER_STAGED \
+    \       | The user can't connect since it's currently staged                 \
+    \     |\r\n\r\n### HTTP 429 (Too Many Requests)\r\n| eErrorCode              \
+    \               | Examples                                                   \
+    \            |\r\n| -------------------------------------- | ----------------------------------------------------------------------\
     \ |\r\n| TOOMANYREQUESTS                        | The client reached the maximum\
     \ number of requests allowed in the specific time |\r\n| TOOMANYREQUESTS_THIRDPARTY\
     \             | Our server encountered a 'Too Many Requests' error from a third\
@@ -918,7 +942,7 @@ tags:
     When you configure eZmax to notify you of events, you must provide your server's URL and a fallback email address. The URL provided must use HTTPS for security reasons.
 
     ### Types of Webhook:
-    Look for purple indicators with the word "EVENT" throughout the documentation to see currently available Webhooks events you can subscribe to. If you have a need for an event that is not available, please send a feature request to technical support.
+    Look for red indicators with the word "EVENT" throughout the documentation to see currently available Webhooks events you can subscribe to. If you have a need for an event that is not available, please send a feature request to technical support.
 
     ### Important:
     - The event will be delivered using a POST request.
@@ -957,6 +981,10 @@ tags:
 - description: Ezmaxclient contains details about the native Ezmax Applications
   name: Global_Ezmaxclient
   x-displayName: Ezmaxclient
+- description: Customer contains details about the customer code assigned to your
+    account
+  name: Global_Ezmaxcustomer
+  x-displayName: Ezmaxcustomer
 - description: Ezsign contains actions related to Ezsign
   name: Module_Ezsign
   x-displayName: Ezsign
@@ -969,15 +997,19 @@ tags:
 - description: Apikey contains detail about an api key used to access the API
   name: Object_Apikey
   x-displayName: Apikey
-- description: Billingentityexternal contains details about Billingentityexternals
+- description: Billingentityexternal is used to automatically send the invoice to
+    a customer's system.
   name: Object_Billingentityexternal
   x-displayName: Billingentityexternal
-- description: Billingentityinternal contains detail about a Billingentityinternal
+- description: Billingentityinternal contains detail about internal cost separation
   name: Object_Billingentityinternal
   x-displayName: Billingentityinternal
 - description: Branding contains detail about a company Branding
   name: Object_Branding
   x-displayName: Branding
+- description: Clonehistory contains details about Clonehistorys
+  name: Object_Clonehistory
+  x-displayName: Clonehistory
 - description: Communication contains detail about a Communication
   name: Object_Communication
   x-displayName: Communication
@@ -1097,6 +1129,9 @@ tags:
     user for 2FA
   name: Object_Secretquestion
   x-displayName: Secretquestion
+- description: Sessionhistory contains detail about the sessions history
+  name: Object_Sessionhistory
+  x-displayName: Sessionhistory
 - description: Taxassignment contains detail about a tax assignment
   name: Object_Taxassignment
   x-displayName: Taxassignment
@@ -1109,6 +1144,9 @@ tags:
 - description: Usergroup contains detail about a group of users
   name: Object_Usergroup
   x-displayName: Usergroup
+- description: Userstaged contains details about Userstageds
+  name: Object_Userstaged
+  x-displayName: Userstaged
 - description: Variableexpense contains detail about a CHANGEME
   name: Object_Variableexpense
   x-displayName: Variableexpense
@@ -1123,6 +1161,7 @@ paths:
   /1/customer/{pksCustomerCode}/endpoint:
     description: ""
     get:
+      deprecated: true
       description: "Retrieve the customer's specific server endpoint where to send\
         \ requests. This will help locate the proper region (ie: sInfrastructureregionCode)\
         \ and the proper environment (ie: sInfrastructureenvironmenttypeDescription)\
@@ -1204,6 +1243,43 @@ paths:
       summary: Retrieve the latest version of the Ezmaxclient
       tags:
       - Global_Ezmaxclient
+      x-presentations: []
+      x-accepts: application/json
+  /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration:
+    description: ""
+    get:
+      description: "Retrieve the ezmaxcustomer's specific configuration. This will\
+        \ help locate the proper region (ie: sInfrastructureregionCode) and the proper\
+        \ environment (ie: sInfrastructureenvironmenttypeDescription) where the customer's\
+        \ data is stored."
+      operationId: Global_Ezmaxcustomer_GetConfiguration_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pksEzmaxcustomerCode
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pksEzmaxcustomerCode'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/global-ezmaxcustomer-getConfiguration-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - {}
+      summary: Get ezmaxcustomer configuration
+      tags:
+      - Global_Ezmaxcustomer
       x-presentations: []
       x-accepts: application/json
   /1/module/ezsign/suggestSigners:
@@ -1718,6 +1794,7 @@ paths:
       x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
+      - ElectronicSignature_CreationModificationFolderTypes
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -2073,6 +2150,102 @@ paths:
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
+  /1/object/clonehistory/getList:
+    description: ""
+    get:
+      description: ""
+      operationId: Clonehistory_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiClonehistoryID_ASC
+          - pkiClonehistoryID_DESC
+          - fkiUserIDCloning_ASC
+          - fkiUserIDCloning_DESC
+          - fkiUserIDCloned_ASC
+          - fkiUserIDCloned_DESC
+          - dtClonehistoryFirsthit_ASC
+          - dtClonehistoryFirsthit_DESC
+          - dtClonehistoryLasthit_ASC
+          - dtClonehistoryLasthit_DESC
+          - sUserLoginnameCloning_ASC
+          - sUserLoginnameCloning_DESC
+          - sUserFirstnameCloning_ASC
+          - sUserFirstnameCloning_DESC
+          - sUserLastnameCloning_ASC
+          - sUserLastnameCloning_DESC
+          - sUserLoginnameCloned_ASC
+          - sUserLoginnameCloned_DESC
+          - sUserFirstnameCloned_ASC
+          - sUserFirstnameCloned_DESC
+          - sUserLastnameCloned_ASC
+          - sUserLastnameCloned_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/clonehistory-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Clonehistory list
+      tags:
+      - Object_Clonehistory
+      x-apikeyrequire: true
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      - Assistant
+      x-presentations: []
+      x-accepts: application/json
   /2/object/communication/{pkiCommunicationID}:
     description: ""
     get:
@@ -2368,6 +2541,7 @@ paths:
       x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
+      - Management_Billingentities
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
@@ -4027,6 +4201,54 @@ paths:
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements:
+    get:
+      description: "Return the completed Ezsignsignatures, Ezsignformfieldgroups and\
+        \ Ezsignannotations at the current step in the process"
+      operationId: Ezsigndocument_GetCompletedElements_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getCompletedElements-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve completed elements for the Ezsigndocument
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      - EzsignSigner
+      x-apikeyrequire: true
+      x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getDownloadUrl/{eDocumentType}:
     get:
       description: |-
@@ -4133,8 +4355,11 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignannotations
       tags:
       - Object_Ezsigndocument
+      x-usertypeextra: []
       x-presentations:
       - Ezsign
+      x-permissions:
+      - All
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups:
     get:
@@ -5681,16 +5906,16 @@ paths:
           - eEzsignfolderStep_DESC
           - dtEzsignfolderSentdate_ASC
           - dtEzsignfolderSentdate_DESC
-          - dtDueDate_ASC
-          - dtDueDate_DESC
-          - iTotalDocument_ASC
-          - iTotalDocument_DESC
-          - iTotalDocumentEdm_ASC
-          - iTotalDocumentEdm_DESC
-          - iTotalSignature_ASC
-          - iTotalSignature_DESC
-          - iTotalSignatureSigned_ASC
-          - iTotalSignatureSigned_DESC
+          - dtEzsignfolderDuedate_ASC
+          - dtEzsignfolderDuedate_DESC
+          - iEzsigndocument_ASC
+          - iEzsigndocument_DESC
+          - iEzsigndocumentEdm_ASC
+          - iEzsigndocumentEdm_DESC
+          - iEzsignsignature_ASC
+          - iEzsignsignature_DESC
+          - iEzsignsignatureSigned_ASC
+          - iEzsignsignatureSigned_DESC
           type: string
         style: form
       - explode: true
@@ -10030,6 +10255,114 @@ paths:
       x-usertypeextra: []
       x-apikeyrequire: true
       x-accepts: application/json
+  /1/object/sessionhistory/getList:
+    description: ""
+    get:
+      operationId: Sessionhistory_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiSessionhistoryID_ASC
+          - pkiSessionhistoryID_DESC
+          - fkiComputerID_ASC
+          - fkiComputerID_DESC
+          - fkiUserID_ASC
+          - fkiUserID_DESC
+          - dtSessionhistoryFirsthit_ASC
+          - dtSessionhistoryFirsthit_DESC
+          - dtSessionhistoryLasthit_ASC
+          - dtSessionhistoryLasthit_DESC
+          - eSessionhistoryEndby_ASC
+          - eSessionhistoryEndby_DESC
+          - sComputerDescription_ASC
+          - sComputerDescription_DESC
+          - sSessionhistoryDuration_ASC
+          - sSessionhistoryDuration_DESC
+          - sSessionhistoryIP_ASC
+          - sSessionhistoryIP_DESC
+          - sUserLoginname_ASC
+          - sUserLoginname_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sessionhistory-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Sessionhistory list
+      tags:
+      - Object_Sessionhistory
+      x-apikeyrequire: true
+      x-usertypeextra: []
+      x-presentations: []
+      x-permissions:
+      - Management_UsersAgentBroker
+      - Management_UsersAssistant
+      - Management_UsersAttendance
+      - Management_UsersEmployee
+      - Management_UsersEzcom
+      - Management_UsersEzsignSigner
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      - Management_UsersRewardMember
+      - Management_UsersRewardRepresentative
+      - Management_UsersRewardCustomer
+      - Management_UsersRewardDistributorServer
+      - Management_UsersSupplier
+      - Management_UsersVetrxCustomer
+      - Management_UsersVetrxcustomergroup
+      - Management_UsersVetrxCustomerServer
+      - Management_UsersVetrxManufacturer
+      - Management_UsersVetrxVendor
+      x-accepts: application/json
   /2/object/taxassignment/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -10173,7 +10506,9 @@ paths:
           enum:
           - All
           - AgentBrokerEmployeeEzsignUserNormal
+          - AgentBrokerEmployeeNormalBuiltIn
           - ClonableUsers
+          - EzsignuserBuiltIn
           - Normal
           - NormalEzsignSigner
           type: string
@@ -10427,6 +10762,8 @@ paths:
           - pkiUsergroupID_DESC
           - sUsergroupNameX_ASC
           - sUsergroupNameX_DESC
+          - iCountUser_ASC
+          - iCountUser_DESC
           type: string
         style: form
       - explode: true
@@ -10483,6 +10820,287 @@ paths:
       x-apikeyrequire: true
       x-permissions:
       - Management_Usergroup
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+  /2/object/userstaged/{pkiUserstagedID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Userstaged_GetObject_V2
+      parameters:
+      - description: The unique ID of the Userstaged
+        explode: false
+        in: path
+        name: pkiUserstagedID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiUserstagedID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/userstaged-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Userstaged
+      tags:
+      - Object_Userstaged
+      x-apikeyrequire: true
+      x-permissions:
+      - Management_UsersAgentBroker
+      - Management_UsersAssistant
+      - Management_UsersAttendance
+      - Management_UsersEmployee
+      - Management_UsersEzcom
+      - Management_UsersEzsignSigner
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      - Management_UsersRewardMember
+      - Management_UsersRewardRepresentative
+      - Management_UsersRewardCustomer
+      - Management_UsersRewardDistributorServer
+      - Management_UsersSupplier
+      - Management_UsersVetrxCustomer
+      - Management_UsersVetrxcustomergroup
+      - Management_UsersVetrxCustomerServer
+      - Management_UsersVetrxManufacturer
+      - Management_UsersVetrxVendor
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/userstaged/{pkiUserstagedID}:
+    delete:
+      description: ""
+      operationId: Userstaged_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Userstaged
+        explode: false
+        in: path
+        name: pkiUserstagedID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiUserstagedID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/userstaged-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Userstaged
+      tags:
+      - Object_Userstaged
+      x-apikeyrequire: true
+      x-permissions:
+      - Management_UsersAgentBroker
+      - Management_UsersAssistant
+      - Management_UsersAttendance
+      - Management_UsersEmployee
+      - Management_UsersEzcom
+      - Management_UsersEzsignSigner
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      - Management_UsersRewardMember
+      - Management_UsersRewardRepresentative
+      - Management_UsersRewardCustomer
+      - Management_UsersRewardDistributorServer
+      - Management_UsersSupplier
+      - Management_UsersVetrxCustomer
+      - Management_UsersVetrxcustomergroup
+      - Management_UsersVetrxCustomerServer
+      - Management_UsersVetrxManufacturer
+      - Management_UsersVetrxVendor
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+  /1/object/userstaged/{pkiUserstagedID}/map:
+    description: ""
+    post:
+      description: ""
+      operationId: Userstaged_Map_V1
+      parameters:
+      - description: The unique ID of the Userstaged
+        explode: false
+        in: path
+        name: pkiUserstagedID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiUserstagedID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/userstaged-map-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/userstaged-map-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Map the Userstaged to an existing user
+      tags:
+      - Object_Userstaged
+      x-apikeyrequire: true
+      x-permissions:
+      - Management_UsersAgentBroker
+      - Management_UsersAssistant
+      - Management_UsersAttendance
+      - Management_UsersEmployee
+      - Management_UsersEzcom
+      - Management_UsersEzsignSigner
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      - Management_UsersRewardMember
+      - Management_UsersRewardRepresentative
+      - Management_UsersRewardCustomer
+      - Management_UsersRewardDistributorServer
+      - Management_UsersSupplier
+      - Management_UsersVetrxCustomer
+      - Management_UsersVetrxcustomergroup
+      - Management_UsersVetrxCustomerServer
+      - Management_UsersVetrxManufacturer
+      - Management_UsersVetrxVendor
+      x-usertypeextra: []
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/userstaged/getList:
+    description: ""
+    get:
+      description: ""
+      operationId: Userstaged_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiUserstagedID_ASC
+          - pkiUserstagedID_DESC
+          - sEmailAddress_ASC
+          - sEmailAddress_DESC
+          - sUserstagedFirstname_ASC
+          - sUserstagedFirstname_DESC
+          - sUserstagedLastname_ASC
+          - sUserstagedLastname_DESC
+          - sUserstagedExternalid_ASC
+          - sUserstagedExternalid_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/userstaged-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Userstaged list
+      tags:
+      - Object_Userstaged
+      x-apikeyrequire: true
+      x-permissions:
+      - Management_UsersAgentBroker
+      - Management_UsersAssistant
+      - Management_UsersAttendance
+      - Management_UsersEmployee
+      - Management_UsersEzcom
+      - Management_UsersEzsignSigner
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      - Management_UsersRewardMember
+      - Management_UsersRewardRepresentative
+      - Management_UsersRewardCustomer
+      - Management_UsersRewardDistributorServer
+      - Management_UsersSupplier
+      - Management_UsersVetrxCustomer
+      - Management_UsersVetrxcustomergroup
+      - Management_UsersVetrxCustomerServer
+      - Management_UsersVetrxManufacturer
+      - Management_UsersVetrxVendor
       x-usertypeextra: []
       x-presentations: []
       x-accepts: application/json
@@ -11701,6 +12319,11 @@ components:
       description: The sender name of the Communication
       example: John Doe
       type: string
+    Computed-sSessionhistoryDuration:
+      description: The duration of the session
+      example: 01:52:01
+      pattern: "^(0[0-9]{1}|\\d{2,}):([0-5][0-9]):([0-5][0-9])$"
+      type: string
     Computed-sUserName:
       description: The description of the User in the language of the requester
       example: Default
@@ -11795,6 +12418,35 @@ components:
           description: The Company name of the contact
           example: eZmax Solutions Inc.
           type: string
+      type: object
+    Custom-Creditcardtransaction-Response:
+      description: A custom Creditcardtransaction Object
+      properties:
+        sCreditcardtypeCodename:
+          description: The codename of the Creditcardtype
+          example: visa
+          pattern: "^[a-zA-Z ]{0,15}$"
+          type: string
+        dCreditcardtransactionAmount:
+          description: The amount of the Creditcardtransaction
+          example: "167.58"
+          pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+          type: string
+        sCreditcardtransactionPartiallydecryptednumber:
+          description: The partially decrypted credit card number used in the Creditcardtransaction
+          example: XXXX XXXX XXXX 1234
+          pattern: "^([X]{4}[ ]){3}(\\d){4}$"
+          type: string
+        sCreditcardtransactionReferencenumber:
+          description: The reference number on the creditcard service for the Creditcardtransaction
+          example: "651447854715478415"
+          pattern: "^[\\d]{18}$"
+          type: string
+      required:
+      - dCreditcardtransactionAmount
+      - sCreditcardtransactionPartiallydecryptednumber
+      - sCreditcardtransactionReferencenumber
+      - sCreditcardtypeCodename
       type: object
     Custom-DropdownElement-Request:
       description: Generic DropdownElement Request
@@ -12658,6 +13310,11 @@ components:
         Not recommended to skip for production use
       example: false
       type: boolean
+    Field-dCreditcardtransactionAmount:
+      description: The amount of the Creditcardtransaction
+      example: "167.58"
+      pattern: "^-{0,1}[\\d]{1,9}?\\.[\\d]{2}$"
+      type: string
     Field-dEzmaxinvoicingRebatecontractlength:
       description: The percentage of rebate depending of the contract length
       example: "1.00"
@@ -12797,12 +13454,22 @@ components:
     Field-dtActivesessionFirsthit:
       description: The first hit of the Activesession
       example: 2020-12-31 23:59:59
-      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$"
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
       type: string
     Field-dtActivesessionLasthit:
       description: The last hit of the Activesession
       example: 2020-12-31 23:59:59
-      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$"
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+      type: string
+    Field-dtClonehistoryFirsthit:
+      description: The firsthit of the Clonehistory
+      example: 2020-12-31 23:59:59
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+      type: string
+    Field-dtClonehistoryLasthit:
+      description: The lasthit of the Clonehistory
+      example: 2020-12-31 23:59:59
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
       type: string
     Field-dtContactBirthdate:
       description: The Birth Date of the contact
@@ -12878,6 +13545,11 @@ components:
       description: The date and time at which the Ezsignform has been completed.
       example: 2020-12-31 23:59:59
       type: string
+    Field-dtEzsignsignatureDate:
+      description: The date the Ezsignsignature was signed
+      example: 2020-12-31 23:59:59
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+      type: string
     Field-dtFranchisereferalincomeDisbursed:
       description: The date the amounts were disbursed
       example: 2020-12-31
@@ -12885,6 +13557,16 @@ components:
     Field-dtModifiedDate:
       description: The date and time at which the object was last modified
       example: 2020-12-31 23:59:59
+      type: string
+    Field-dtSessionhistoryFirsthit:
+      description: The first hit of the Sessionhistory
+      example: 2020-12-31 17:35:37
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+      type: string
+    Field-dtSessionhistoryLasthit:
+      description: The last hit of the Sessionhistory
+      example: 2020-12-31 19:27:38
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
       type: string
     Field-dtVersionhistoryDate:
       description: The date  at which the Versionhistory was published or should be
@@ -12898,6 +13580,13 @@ components:
     Field-dtWebhooklogDate:
       description: The date and time at which the Webhooklog happened.
       example: 2020-12-31 23:59:59
+      type: string
+    Field-eActivesessionOrigin:
+      description: The Origin of User for the Activesession
+      enum:
+      - BuiltIn
+      - External
+      example: BuiltIn
       type: string
     Field-eActivesessionUsertype:
       description: The Type of User for the Activesession
@@ -13318,6 +14007,24 @@ components:
       - International
       example: Local
       type: string
+    Field-eSessionhistoryEndby:
+      description: The Type of the Sessionhistory
+      enum:
+      - Decryption
+      - Hack
+      - Expired
+      - Hijack
+      - DoubleLogon
+      - Garbage
+      - Logoff
+      - BadAuth
+      - Locked
+      - Inactive
+      - InvalidUser
+      - BadUserType
+      - BadIP
+      example: Logoff
+      type: string
     Field-eUserEzsignsendreminderfrequency:
       description: Frequency at which reminders will be sent to signers that haven't
         signed the documents
@@ -13385,6 +14092,8 @@ components:
         is "Ezsign"
       enum:
       - DocumentCompleted
+      - EzsignsignerAcceptclause
+      - EzsignsignerConnect
       - FolderCompleted
       example: FolderCompleted
       type: string
@@ -13440,6 +14149,12 @@ components:
       description: The color of the text in the link box. This is a RGB color converted
         into integer
       example: 0
+      maximum: 16777215
+      minimum: 0
+      type: integer
+    Field-iCountUser:
+      description: Numer of user in group
+      example: 15
       maximum: 16777215
       minimum: 0
       type: integer
@@ -13916,11 +14631,14 @@ components:
       example: "1516"
       type: string
     Field-iRowMax:
+      default: 10000
       description: The maximum numbers of results to be returned
       example: 100
+      maximum: 10000
       minimum: 1
       type: integer
     Field-iRowOffset:
+      default: 0
       description: "The starting element from where to start retrieving the results.\
         \ For example if you started at iRowOffset=0 and asked for iRowMax=100, to\
         \ get the next 100 results, you could specify iRowOffset=100&iRowMax=100,"
@@ -14018,6 +14736,12 @@ components:
       example: 26
       minimum: 0
       type: integer
+    Field-pkiClonehistoryID:
+      description: The unique ID of the Clonehistory
+      example: 12
+      maximum: 16777215
+      minimum: 1
+      type: integer
     Field-pkiCommunicationID:
       description: The unique ID of the Communication.
       example: 1
@@ -14095,6 +14819,12 @@ components:
       description: The unique ID of the Descriptionstatic
       example: 37
       minimum: 0
+      type: integer
+    Field-pkiEmailID:
+      description: The unique ID of the Email
+      example: 22
+      maximum: 16777215
+      minimum: 1
       type: integer
     Field-pkiEmailstaticID:
       description: The unique ID of the Emailstatic
@@ -14582,6 +15312,12 @@ components:
       example: 7
       minimum: 0
       type: integer
+    Field-pkiSessionhistoryID:
+      description: The unique ID of the Sessionhistory
+      example: 259
+      maximum: 4294967295
+      minimum: 1
+      type: integer
     Field-pkiSupplierID:
       description: The unique ID of the Supplier.
       example: 1
@@ -14656,6 +15392,12 @@ components:
       example: 2
       minimum: 0
       type: integer
+    Field-pkiUserstagedID:
+      description: The unique ID of the Userstaged
+      example: 90
+      maximum: 65535
+      minimum: 1
+      type: integer
     Field-pkiVariableexpenseID:
       description: The unique ID of the Variableexpense
       example: 2
@@ -14700,6 +15442,13 @@ components:
       - Windows
       example: Windows
       type: string
+    Field-pksEzmaxcustomerCode:
+      description: The Ezmaxcustomer code
+      example: demo
+      maxLength: 6
+      minLength: 2
+      pattern: "^[a-z\\d]{2,6}$"
+      type: string
     Field-sActivesessionLoginname:
       description: The loginname of the Activesession
       example: doej
@@ -14742,7 +15491,7 @@ components:
       type: string
     Field-sBillingentityexternalDescription:
       description: The description of the Billingentityexternal
-      example: Default
+      example: ACME Inc
       type: string
     Field-sBillingentityinternalDescription1:
       description: The description of the Billingentityinternal in French
@@ -14770,6 +15519,10 @@ components:
     Field-sBrandingDescriptionX:
       description: The Description of the Branding in the language of the requester
       example: Company X
+      type: string
+    Field-sCognitoClientID:
+      description: The ID of the client in Cognito
+      example: 6kivk421lhteuktijfsvv4r1cl
       type: string
     Field-sCommunicationSubject:
       description: The subject of the Communication
@@ -14799,6 +15552,21 @@ components:
     Field-sContactLastname:
       description: The Last name of the contact
       example: Doe
+      type: string
+    Field-sCreditcardtransactionPartiallydecryptednumber:
+      description: The partially decrypted credit card number used in the Creditcardtransaction
+      example: XXXX XXXX XXXX 1234
+      pattern: "^([X]{4}[ ]){3}(\\d){4}$"
+      type: string
+    Field-sCreditcardtransactionReferencenumber:
+      description: The reference number on the creditcard service for the Creditcardtransaction
+      example: "651447854715478415"
+      pattern: "^[\\d]{18}$"
+      type: string
+    Field-sCreditcardtypeCodename:
+      description: The codename of the Creditcardtype
+      example: visa
+      pattern: "^[a-zA-Z ]{0,15}$"
       type: string
     Field-sDepartmentNameX:
       description: The Name of the Department in the language of the requester
@@ -15009,6 +15777,14 @@ components:
       description: The description of the Franchiseoffice in the language of the requester
       example: Default
       type: string
+    Field-sInfrastructureenvironmenttypeDescription:
+      description: The environment type Description
+      example: prod
+      type: string
+    Field-sInfrastructureregionCode:
+      description: The region code
+      example: ca-central-1
+      type: string
     Field-sLanguageNameX:
       description: The Name of the Language in the language of the requester
       example: English
@@ -15162,6 +15938,21 @@ components:
     Field-sUserlogintypeDescriptionX:
       description: The description of the Userlogintype in the language of the requester
       example: Email and phone or SMS
+      type: string
+    Field-sUserstagedExternalid:
+      description: The externalid of the Userstaged
+      example: azuread_6b303ca8-9e34-4c21-9a53-0856342dec5e
+      pattern: "^.{1,60}$"
+      type: string
+    Field-sUserstagedFirstname:
+      description: The firstname of the Userstaged
+      example: Jane
+      pattern: "^.{0,20}$"
+      type: string
+    Field-sUserstagedLastname:
+      description: The lastname of the Userstaged
+      example: Doe
+      pattern: "^.{0,25}$"
       type: string
     Field-sVariableexpenseCode:
       description: The code of the Variableexpense
@@ -15471,6 +16262,18 @@ components:
       - $ref: '#/components/schemas/Common-Webhook'
       description: This is the base Webhook object
       type: object
+    Webhook-Ezsign-EzsignsignerAcceptclause:
+      allOf:
+      - $ref: '#/components/schemas/Webhook_Ezsign_EzsignsignerAcceptclause_allOf'
+      - $ref: '#/components/schemas/Common-Webhook'
+      description: This is the base Webhook object
+      type: object
+    Webhook-Ezsign-EzsignsignerConnect:
+      allOf:
+      - $ref: '#/components/schemas/Webhook_Ezsign_EzsignsignerAcceptclause_allOf'
+      - $ref: '#/components/schemas/Common-Webhook'
+      description: This is the base Webhook object
+      type: object
     Webhook-Ezsign-FolderCompleted:
       allOf:
       - $ref: '#/components/schemas/Webhook_Ezsign_FolderCompleted_allOf'
@@ -15533,12 +16336,12 @@ components:
         dtActivesessionFirsthit:
           description: The first hit of the Activesession
           example: 2020-12-31 23:59:59
-          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$"
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
           type: string
         dtActivesessionLasthit:
           description: The last hit of the Activesession
           example: 2020-12-31 23:59:59
-          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (0[1-9]|1[0-9]|2[0-4]):(0[1-9]|[1-5][0-9]|6[0]):(0[1-9]|[1-5][0-9]|6[0])$"
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
           type: string
         sActivesessionIP:
           description: Represent an IP address.
@@ -15563,6 +16366,8 @@ components:
       properties:
         eActivesessionUsertype:
           $ref: '#/components/schemas/Field-eActivesessionUsertype'
+        eActivesessionOrigin:
+          $ref: '#/components/schemas/Field-eActivesessionOrigin'
         eActivesessionWeekdaystart:
           $ref: '#/components/schemas/Field-eActivesessionWeekdaystart'
         fkiLanguageID:
@@ -15609,6 +16414,7 @@ components:
       required:
       - bActivesessionDebug
       - bActivesessionIssuperadmin
+      - eActivesessionOrigin
       - eActivesessionUsertype
       - eActivesessionWeekdaystart
       - fkiLanguageID
@@ -15991,7 +16797,7 @@ components:
           type: integer
         sBillingentityexternalDescription:
           description: The description of the Billingentityexternal
-          example: Default
+          example: ACME Inc
           type: string
         bBillingentityexternalIsactive:
           description: Whether the Billingentityexternal is active or not
@@ -16022,16 +16828,16 @@ components:
     billingentityinternal-AutocompleteElement-Response:
       description: A Billingentityinternal AutocompleteElement Response
       properties:
-        sBillingentityinternalDescriptionX:
-          description: The description of the Billingentityinternal in the language
-            of the requester
-          example: Default
-          type: string
         pkiBillingentityinternalID:
           description: The unique ID of the Billingentityinternal.
           example: 1
           minimum: 0
           type: integer
+        sBillingentityinternalDescriptionX:
+          description: The description of the Billingentityinternal in the language
+            of the requester
+          example: Default
+          type: string
         bBillingentityinternalIsactive:
           description: Whether the Billingentityinternal is active or not
           example: true
@@ -16527,6 +17333,83 @@ components:
           $ref: '#/components/schemas/branding-ResponseCompound'
       required:
       - objBranding
+      type: object
+    clonehistory-ListElement:
+      description: A Clonehistory List Element
+      properties:
+        pkiClonehistoryID:
+          description: The unique ID of the Clonehistory
+          example: 12
+          maximum: 16777215
+          minimum: 1
+          type: integer
+        fkiUserIDCloning:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiUserIDCloned:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        dtClonehistoryFirsthit:
+          description: The firsthit of the Clonehistory
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        dtClonehistoryLasthit:
+          description: The lasthit of the Clonehistory
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        sUserLoginnameCloning:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        sUserFirstnameCloning:
+          description: The First name of the user
+          example: John
+          type: string
+        sUserLastnameCloning:
+          description: The Last name of the user
+          example: Doe
+          type: string
+        sUserLoginnameCloned:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+        sUserFirstnameCloned:
+          description: The First name of the user
+          example: John
+          type: string
+        sUserLastnameCloned:
+          description: The Last name of the user
+          example: Doe
+          type: string
+      required:
+      - dtClonehistoryFirsthit
+      - fkiUserIDCloned
+      - fkiUserIDCloning
+      - pkiClonehistoryID
+      - sUserFirstnameCloned
+      - sUserFirstnameCloning
+      - sUserLastnameCloned
+      - sUserLastnameCloning
+      - sUserLoginnameCloned
+      - sUserLoginnameCloning
+      type: object
+    clonehistory-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/clonehistory_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/clonehistory/getList
+      type: object
+    clonehistory-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/clonehistory_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/clonehistory/getList
       type: object
     communication-Response:
       description: A Communication Object
@@ -17365,7 +18248,7 @@ components:
           type: integer
         sBillingentityexternalDescription:
           description: The description of the Billingentityexternal
-          example: Default
+          example: ACME Inc
           type: string
         sEzmaxinvoicingsummaryexternalDescription:
           description: The description of the Ezmaxinvoicingsummaryexternal
@@ -17641,7 +18524,7 @@ components:
           type: integer
         sBillingentityexternalDescription:
           description: The description of the Billingentityexternal
-          example: Default
+          example: ACME Inc
           type: string
         dEzmaxinvoicingsummaryinternaldetailCountreal:
           description: The count item invoiced for the product
@@ -19136,6 +20019,27 @@ components:
       type: object
     ezsigndocument-getActionableElements-v1-Response-mPayload:
       description: "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements"
+      properties:
+        a_objEzsignsignature:
+          items:
+            $ref: '#/components/schemas/ezsignsignature-ResponseCompound'
+          type: array
+        a_objEzsignformfieldgroup:
+          items:
+            $ref: '#/components/schemas/ezsignformfieldgroup-ResponseCompound'
+          type: array
+      required:
+      - a_objEzsignformfieldgroup
+      - a_objEzsignsignature
+      type: object
+    ezsigndocument-getCompletedElements-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndocument_getCompletedElements_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements"
+      type: object
+    ezsigndocument-getCompletedElements-v1-Response-mPayload:
+      description: "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements"
       properties:
         a_objEzsignsignature:
           items:
@@ -21681,6 +22585,13 @@ components:
           example: 20
           minimum: 0
           type: integer
+        dtEzsignsignatureDate:
+          description: The date the Ezsignsignature was signed
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
       required:
       - eEzsignsignatureType
       - fkiEzsigndocumentID
@@ -21689,6 +22600,7 @@ components:
       - iEzsignsignatureStep
       - iEzsignsignatureX
       - iEzsignsignatureY
+      - objContactName
       - pkiEzsignsignatureID
       type: object
     ezsignsignature-ResponseCompound:
@@ -25065,6 +25977,41 @@ components:
       required:
       - sEzmaxclientVersion
       type: object
+    global-ezmaxcustomer-getConfiguration-v1-Response:
+      description: "Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration"
+      example:
+        sInfrastructureregionCode: ca-central-1
+        sCognitoClientIDEzmaxpublic: 6kivk421lhteuktijfsvv4r1cl
+        sInfrastructureenvironmenttypeDescription: prod
+        sCognitoClientIDExternal: 6kivk421lhteuktijfsvv4r1cl
+        sInfrastructureregionCodeWeb: ca-central-1
+      properties:
+        sInfrastructureregionCode:
+          description: The region code
+          example: ca-central-1
+          type: string
+        sInfrastructureregionCodeWeb:
+          description: The region code
+          example: ca-central-1
+          type: string
+        sInfrastructureenvironmenttypeDescription:
+          description: The environment type Description
+          example: prod
+          type: string
+        sCognitoClientIDExternal:
+          description: The ID of the client in Cognito
+          example: 6kivk421lhteuktijfsvv4r1cl
+          type: string
+        sCognitoClientIDEzmaxpublic:
+          description: The ID of the client in Cognito
+          example: 6kivk421lhteuktijfsvv4r1cl
+          type: string
+      required:
+      - sCognitoClientIDEzmaxpublic
+      - sInfrastructureenvironmenttypeDescription
+      - sInfrastructureregionCode
+      - sInfrastructureregionCodeWeb
+      type: object
     notificationsection-getNotificationtests-v1-Response:
       allOf:
       - $ref: '#/components/schemas/notificationsection_getNotificationtests_v1_Response_allOf'
@@ -25596,6 +26543,76 @@ components:
       required:
       - a_objSecretquestion
       type: object
+    sessionhistory-ListElement:
+      description: A Sessionhistory List Element
+      properties:
+        pkiSessionhistoryID:
+          description: The unique ID of the Sessionhistory
+          example: 259
+          maximum: 4294967295
+          minimum: 1
+          type: integer
+        fkiComputerID:
+          description: The unique ID of the Computer
+          example: 249
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        dtSessionhistoryFirsthit:
+          description: The first hit of the Sessionhistory
+          example: 2020-12-31 17:35:37
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        dtSessionhistoryLasthit:
+          description: The last hit of the Sessionhistory
+          example: 2020-12-31 19:27:38
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        eSessionhistoryEndby:
+          $ref: '#/components/schemas/Field-eSessionhistoryEndby'
+        sComputerDescription:
+          description: The description of the Computer
+          example: PC001
+          pattern: "^.{0,50}$"
+          type: string
+        sSessionhistoryDuration:
+          description: The duration of the session
+          example: 01:52:01
+          pattern: "^(0[0-9]{1}|\\d{2,}):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+        sSessionhistoryIP:
+          description: Represent an IP address.
+          example: 127.0.0.1
+          type: string
+        sUserLoginname:
+          description: The Login name of the User.
+          example: JohnDoe
+          type: string
+      required:
+      - dtSessionhistoryFirsthit
+      - dtSessionhistoryLasthit
+      - eSessionhistoryEndby
+      - pkiSessionhistoryID
+      - sSessionhistoryDuration
+      - sSessionhistoryIP
+      type: object
+    sessionhistory-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/sessionhistory_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/sessionhistory/getList
+      type: object
+    sessionhistory-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/sessionhistory_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/sessionhistory/getList
+      type: object
     taxassignment-AutocompleteElement-Response:
       description: A Taxassignment AutocompleteElement Response
       properties:
@@ -25979,7 +26996,14 @@ components:
           example: Administration
           pattern: "^.{0,50}$"
           type: string
+        iCountUser:
+          description: Numer of user in group
+          example: 15
+          maximum: 16777215
+          minimum: 0
+          type: integer
       required:
+      - iCountUser
       - pkiUsergroupID
       - sUsergroupNameX
       type: object
@@ -26110,6 +27134,131 @@ components:
           $ref: '#/components/schemas/usergroup-ResponseCompound'
       required:
       - objUsergroup
+      type: object
+    userstaged-ListElement:
+      description: A Userstaged List Element
+      properties:
+        pkiUserstagedID:
+          description: The unique ID of the Userstaged
+          example: 90
+          maximum: 65535
+          minimum: 1
+          type: integer
+        sEmailAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+        sUserstagedFirstname:
+          description: The firstname of the Userstaged
+          example: Jane
+          pattern: "^.{0,20}$"
+          type: string
+        sUserstagedLastname:
+          description: The lastname of the Userstaged
+          example: Doe
+          pattern: "^.{0,25}$"
+          type: string
+        sUserstagedExternalid:
+          description: The externalid of the Userstaged
+          example: azuread_6b303ca8-9e34-4c21-9a53-0856342dec5e
+          pattern: "^.{1,60}$"
+          type: string
+      required:
+      - pkiUserstagedID
+      - sEmailAddress
+      - sUserstagedExternalid
+      - sUserstagedFirstname
+      - sUserstagedLastname
+      type: object
+    userstaged-Response:
+      description: A Userstaged Object
+      properties:
+        pkiUserstagedID:
+          description: The unique ID of the Userstaged
+          example: 90
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiEmailID:
+          description: The unique ID of the Email
+          example: 22
+          maximum: 16777215
+          minimum: 1
+          type: integer
+        sUserstagedFirstname:
+          description: The firstname of the Userstaged
+          example: Jane
+          pattern: "^.{0,20}$"
+          type: string
+        sUserstagedLastname:
+          description: The lastname of the Userstaged
+          example: Doe
+          pattern: "^.{0,25}$"
+          type: string
+        sUserstagedExternalid:
+          description: The externalid of the Userstaged
+          example: azuread_6b303ca8-9e34-4c21-9a53-0856342dec5e
+          pattern: "^.{1,60}$"
+          type: string
+      required:
+      - fkiEmailID
+      - pkiUserstagedID
+      - sUserstagedExternalid
+      - sUserstagedFirstname
+      - sUserstagedLastname
+      type: object
+    userstaged-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/userstaged-Response'
+      - type: object
+      description: A Userstaged Object
+      type: object
+    userstaged-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/userstaged/{pkiUserstagedID}"
+      type: object
+    userstaged-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/userstaged_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/userstaged/getList
+      type: object
+    userstaged-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/userstaged_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/userstaged/getList
+      type: object
+    userstaged-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/userstaged_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/userstaged/{pkiUserstagedID}"
+      type: object
+    userstaged-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/userstaged/{pkiUserstagedID}"
+      properties:
+        objUserstaged:
+          $ref: '#/components/schemas/userstaged-ResponseCompound'
+      required:
+      - objUserstaged
+      type: object
+    userstaged-map-v1-Request:
+      description: "Request for POST /1/object/userstaged/{pkiUserstagedID}/map"
+      properties:
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+      required:
+      - fkiUserID
+      type: object
+    userstaged-map-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/userstaged/{pkiUserstagedID}/map"
       type: object
     variableexpense-AutocompleteElement-Response:
       description: A Variableexpense AutocompleteElement Response
@@ -26850,6 +27999,16 @@ components:
       - objEzsigndocument
       type: object
       example: null
+    Webhook_Ezsign_EzsignsignerAcceptclause_allOf:
+      properties:
+        objEzsignfolder:
+          $ref: '#/components/schemas/ezsignfolder-Response'
+        objEzsignfoldersignerassociation:
+          $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound'
+      required:
+      - objEzsignfoldersignerassociation
+      type: object
+      example: null
     Webhook_Ezsign_FolderCompleted_allOf:
       properties:
         objEzsignfolder:
@@ -27026,6 +28185,24 @@ components:
           $ref: '#/components/schemas/branding-getObject-v2-Response-mPayload'
       required:
       - mPayload
+      type: object
+      example: null
+    clonehistory_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/clonehistory-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    clonehistory_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objClonehistory:
+          items:
+            $ref: '#/components/schemas/clonehistory-ListElement'
+          type: array
+      required:
+      - a_objClonehistory
       type: object
       example: null
     communication_ResponseCompound_allOf:
@@ -27465,6 +28642,14 @@ components:
       - mPayload
       type: object
       example: null
+    ezsigndocument_getCompletedElements_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsigndocument-getCompletedElements-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
     ezsigndocument_getDownloadUrl_v1_Response_allOf:
       properties:
         mPayload:
@@ -27885,6 +29070,8 @@ components:
           items:
             $ref: '#/components/schemas/ezsignsignaturecustomdate-ResponseCompound'
           type: array
+        objCreditcardtransaction:
+          $ref: '#/components/schemas/Custom-Creditcardtransaction-Response'
       type: object
       example: null
     ezsignsignature_createObject_v1_Response_allOf:
@@ -28480,6 +29667,24 @@ components:
       - mPayload
       type: object
       example: null
+    sessionhistory_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/sessionhistory-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    sessionhistory_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objSessionhistory:
+          items:
+            $ref: '#/components/schemas/sessionhistory-ListElement'
+          type: array
+      required:
+      - a_objSessionhistory
+      type: object
+      example: null
     taxassignment_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
@@ -28550,6 +29755,32 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/usergroup-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    userstaged_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/userstaged-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    userstaged_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objUserstaged:
+          items:
+            $ref: '#/components/schemas/userstaged-ListElement'
+          type: array
+      required:
+      - a_objUserstaged
+      type: object
+      example: null
+    userstaged_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/userstaged-getObject-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -28691,6 +29922,44 @@ x-webhooks:
           $ref: '#/components/responses/Response-Webhook-204'
       x-presentations:
       - Ezsign
+  Webhook-Ezsign-EzsignsignerAcceptclause:
+    post:
+      summary: Webhook Ezsignsigner Accept Clause
+      description: This Webhook will be called when an ezsignsigner accept the clauses.
+      operationId: Webhook_Ezsign_EzsignsignerAcceptclause
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook-Ezsign-EzsignsignerAcceptclause'
+      responses:
+        "202":
+          $ref: '#/components/responses/Response-Webhook-202'
+        "204":
+          $ref: '#/components/responses/Response-Webhook-204'
+      x-presentations:
+      - Ezsign
+  Webhook-Ezsign-EzsignsignerConnect:
+    post:
+      summary: Webhook Ezsignsigner Connect
+      description: This Webhook will be called when an ezsignsigner log in.
+      operationId: Webhook_Ezsign_EzsignsignerConnect
+      tags:
+      - Object_Ezsignfoldersignerassociation
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook-Ezsign-EzsignsignerConnect'
+      responses:
+        "202":
+          $ref: '#/components/responses/Response-Webhook-202'
+        "204":
+          $ref: '#/components/responses/Response-Webhook-204'
+      x-presentations:
+      - Ezsign
   Webhook-Ezsign-FolderCompleted:
     post:
       summary: Webhook Folder Completed
@@ -28745,6 +30014,7 @@ x-tagGroups:
 - name: Global
   tags:
   - Global_Customer
+  - Global_Ezmaxcustomer
   - Global_Ezmaxclient
 - name: Module
   tags:
@@ -28757,6 +30027,7 @@ x-tagGroups:
   - Object_Billingentityexternal
   - Object_Billingentityinternal
   - Object_Branding
+  - Object_Clonehistory
   - Object_Communication
   - Object_Department
   - Object_Ezmaxinvoicing
@@ -28790,10 +30061,12 @@ x-tagGroups:
   - Object_Paymentterm
   - Object_Period
   - Object_Secretquestion
+  - Object_Sessionhistory
   - Object_Taxassignment
   - Object_Timezone
   - Object_User
   - Object_Usergroup
+  - Object_Userstaged
   - Object_Variableexpense
   - Object_Versionhistory
   - Object_Webhook

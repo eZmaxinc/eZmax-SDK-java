@@ -222,8 +222,8 @@ public class ObjectActivesessionApi {
     /**
      * Build call for activesessionGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback Callback for upload/download progress
@@ -311,8 +311,8 @@ public class ObjectActivesessionApi {
      * Retrieve Activesession list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ActivesessionGetListV1Response
@@ -333,8 +333,8 @@ public class ObjectActivesessionApi {
      * Retrieve Activesession list
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse&lt;ActivesessionGetListV1Response&gt;
@@ -356,8 +356,8 @@ public class ObjectActivesessionApi {
      * Retrieve Activesession list (asynchronously)
      * 
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback The callback to be executed when the API call finishes

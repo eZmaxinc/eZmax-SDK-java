@@ -38,19 +38,19 @@ public class BillingentityinternalAutocompleteElementResponseTest {
     }
 
     /**
-     * Test the property 'sBillingentityinternalDescriptionX'
-     */
-    @Test
-    public void sBillingentityinternalDescriptionXTest() {
-        // TODO: test sBillingentityinternalDescriptionX
-    }
-
-    /**
      * Test the property 'pkiBillingentityinternalID'
      */
     @Test
     public void pkiBillingentityinternalIDTest() {
         // TODO: test pkiBillingentityinternalID
+    }
+
+    /**
+     * Test the property 'sBillingentityinternalDescriptionX'
+     */
+    @Test
+    public void sBillingentityinternalDescriptionXTest() {
+        // TODO: test sBillingentityinternalDescriptionX
     }
 
     /**

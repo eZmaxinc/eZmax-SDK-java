@@ -31,6 +31,10 @@ public enum FieldEWebhookEzsignevent {
   
   DOCUMENTCOMPLETED("DocumentCompleted"),
   
+  EZSIGNSIGNERACCEPTCLAUSE("EzsignsignerAcceptclause"),
+  
+  EZSIGNSIGNERCONNECT("EzsignsignerConnect"),
+  
   FOLDERCOMPLETED("FolderCompleted");
 
   private String value;

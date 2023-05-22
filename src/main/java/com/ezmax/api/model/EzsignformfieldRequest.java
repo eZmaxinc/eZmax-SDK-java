@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -103,7 +107,6 @@ public class EzsignformfieldRequest {
    * @return pkiEzsignformfieldID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsignformfieldID() {
     return pkiEzsignformfieldID;
   }
@@ -126,7 +129,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignpagePagenumber
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }
@@ -148,7 +150,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldLabel
   **/
   @javax.annotation.Nonnull
-
   public String getsEzsignformfieldLabel() {
     return sEzsignformfieldLabel;
   }
@@ -170,7 +171,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldValue
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;
   }
@@ -193,7 +193,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldX
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldX() {
     return iEzsignformfieldX;
   }
@@ -216,7 +215,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldY
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldY() {
     return iEzsignformfieldY;
   }
@@ -239,7 +237,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldWidth
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldWidth() {
     return iEzsignformfieldWidth;
   }
@@ -262,7 +259,6 @@ public class EzsignformfieldRequest {
    * @return iEzsignformfieldHeight
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignformfieldHeight() {
     return iEzsignformfieldHeight;
   }
@@ -284,7 +280,6 @@ public class EzsignformfieldRequest {
    * @return bEzsignformfieldSelected
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignformfieldSelected() {
     return bEzsignformfieldSelected;
   }
@@ -306,7 +301,6 @@ public class EzsignformfieldRequest {
    * @return sEzsignformfieldEnteredvalue
   **/
   @javax.annotation.Nullable
-
   public String getsEzsignformfieldEnteredvalue() {
     return sEzsignformfieldEnteredvalue;
   }

@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzmaxinvoicingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -117,7 +121,6 @@ public class EzmaxinvoicingResponse {
    * @return pkiEzmaxinvoicingID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzmaxinvoicingID() {
     return pkiEzmaxinvoicingID;
   }
@@ -140,7 +143,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiEzmaxinvoicingcontractID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzmaxinvoicingcontractID() {
     return fkiEzmaxinvoicingcontractID;
   }
@@ -163,7 +165,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiEzmaxpricingID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzmaxpricingID() {
     return fkiEzmaxpricingID;
   }
@@ -186,7 +187,6 @@ public class EzmaxinvoicingResponse {
    * @return fkiSystemconfigurationtypeID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
   }
@@ -208,7 +208,6 @@ public class EzmaxinvoicingResponse {
    * @return sSystemconfigurationtypeDescriptionX
   **/
   @javax.annotation.Nonnull
-
   public String getsSystemconfigurationtypeDescriptionX() {
     return sSystemconfigurationtypeDescriptionX;
   }
@@ -230,7 +229,6 @@ public class EzmaxinvoicingResponse {
    * @return yyyymmEzmaxinvoicing
   **/
   @javax.annotation.Nonnull
-
   public String getYyyymmEzmaxinvoicing() {
     return yyyymmEzmaxinvoicing;
   }
@@ -253,7 +251,6 @@ public class EzmaxinvoicingResponse {
    * @return iEzmaxinvoicingDays
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingDays() {
     return iEzmaxinvoicingDays;
   }
@@ -275,7 +272,6 @@ public class EzmaxinvoicingResponse {
    * @return eEzmaxinvoicingPaymenttype
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzmaxinvoicingPaymenttype geteEzmaxinvoicingPaymenttype() {
     return eEzmaxinvoicingPaymenttype;
   }
@@ -297,7 +293,6 @@ public class EzmaxinvoicingResponse {
    * @return dEzmaxinvoicingRebatepaymenttype
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingRebatepaymenttype() {
     return dEzmaxinvoicingRebatepaymenttype;
   }
@@ -320,7 +315,6 @@ public class EzmaxinvoicingResponse {
    * @return iEzmaxinvoicingContractlength
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzmaxinvoicingContractlength() {
     return iEzmaxinvoicingContractlength;
   }
@@ -342,7 +336,6 @@ public class EzmaxinvoicingResponse {
    * @return dEzmaxinvoicingRebatecontractlength
   **/
   @javax.annotation.Nonnull
-
   public String getdEzmaxinvoicingRebatecontractlength() {
     return dEzmaxinvoicingRebatecontractlength;
   }
@@ -364,7 +357,6 @@ public class EzmaxinvoicingResponse {
    * @return bEzmaxinvoicingRebateEzsignallagents
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzmaxinvoicingRebateEzsignallagents() {
     return bEzmaxinvoicingRebateEzsignallagents;
   }
@@ -386,7 +378,6 @@ public class EzmaxinvoicingResponse {
    * @return objAudit
   **/
   @javax.annotation.Nullable
-
   public CommonAudit getObjAudit() {
     return objAudit;
   }

@@ -2101,8 +2101,8 @@ public class ObjectEzsignfolderApi {
     /**
      * Build call for ezsignfolderGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback Callback for upload/download progress
@@ -2190,8 +2190,8 @@ public class ObjectEzsignfolderApi {
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return EzsignfolderGetListV1Response
@@ -2212,8 +2212,8 @@ public class ObjectEzsignfolderApi {
      * Retrieve Ezsignfolder list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @return ApiResponse&lt;EzsignfolderGetListV1Response&gt;
@@ -2235,8 +2235,8 @@ public class ObjectEzsignfolderApi {
      * Retrieve Ezsignfolder list (asynchronously)
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional)
-     * @param iRowOffset  (optional)
+     * @param iRowMax  (optional, default to 10000)
+     * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
      * @param _callback The callback to be executed when the API call finishes

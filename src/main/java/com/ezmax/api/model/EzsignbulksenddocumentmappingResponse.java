@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
@@ -83,7 +87,6 @@ public class EzsignbulksenddocumentmappingResponse {
    * @return pkiEzsignbulksenddocumentmappingID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiEzsignbulksenddocumentmappingID() {
     return pkiEzsignbulksenddocumentmappingID;
   }
@@ -106,7 +109,6 @@ public class EzsignbulksenddocumentmappingResponse {
    * @return fkiEzsignbulksendID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiEzsignbulksendID() {
     return fkiEzsignbulksendID;
   }
@@ -129,7 +131,6 @@ public class EzsignbulksenddocumentmappingResponse {
    * @return fkiEzsigntemplatepackageID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntemplatepackageID() {
     return fkiEzsigntemplatepackageID;
   }
@@ -152,7 +153,6 @@ public class EzsignbulksenddocumentmappingResponse {
    * @return fkiEzsigntemplateID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
@@ -175,7 +175,6 @@ public class EzsignbulksenddocumentmappingResponse {
    * @return iEzsignbulksenddocumentmappingOrder
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignbulksenddocumentmappingOrder() {
     return iEzsignbulksenddocumentmappingOrder;
   }

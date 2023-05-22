@@ -38,6 +38,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -52,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsignfoldertypeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -193,7 +197,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return pkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
-
   public Integer getPkiEzsignfoldertypeID() {
     return pkiEzsignfoldertypeID;
   }
@@ -215,7 +218,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return objEzsignfoldertypeName
   **/
   @javax.annotation.Nonnull
-
   public MultilingualEzsignfoldertypeName getObjEzsignfoldertypeName() {
     return objEzsignfoldertypeName;
   }
@@ -238,7 +240,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return fkiBrandingID
   **/
   @javax.annotation.Nonnull
-
   public Integer getFkiBrandingID() {
     return fkiBrandingID;
   }
@@ -261,7 +262,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return fkiBillingentityinternalID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
   }
@@ -285,7 +285,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return fkiUsergroupID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiUsergroupID() {
     return fkiUsergroupID;
   }
@@ -309,7 +308,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return fkiUsergroupIDRestricted
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiUsergroupIDRestricted() {
     return fkiUsergroupIDRestricted;
   }
@@ -333,7 +331,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return fkiEzsigntsarequirementID
   **/
   @javax.annotation.Nullable
-
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
   }
@@ -355,7 +352,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return sEmailAddressSigned
   **/
   @javax.annotation.Nullable
-
   public String getsEmailAddressSigned() {
     return sEmailAddressSigned;
   }
@@ -377,7 +373,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return sEmailAddressSummary
   **/
   @javax.annotation.Nullable
-
   public String getsEmailAddressSummary() {
     return sEmailAddressSummary;
   }
@@ -399,7 +394,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return eEzsignfoldertypePrivacylevel
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
   }
@@ -421,7 +415,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return eEzsignfoldertypeSendreminderfrequency
   **/
   @javax.annotation.Nullable
-
   public FieldEEzsignfoldertypeSendreminderfrequency geteEzsignfoldertypeSendreminderfrequency() {
     return eEzsignfoldertypeSendreminderfrequency;
   }
@@ -445,7 +438,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return iEzsignfoldertypeArchivaldays
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignfoldertypeArchivaldays() {
     return iEzsignfoldertypeArchivaldays;
   }
@@ -467,7 +459,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return eEzsignfoldertypeDisposal
   **/
   @javax.annotation.Nonnull
-
   public FieldEEzsignfoldertypeDisposal geteEzsignfoldertypeDisposal() {
     return eEzsignfoldertypeDisposal;
   }
@@ -491,7 +482,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return iEzsignfoldertypeDisposaldays
   **/
   @javax.annotation.Nullable
-
   public Integer getiEzsignfoldertypeDisposaldays() {
     return iEzsignfoldertypeDisposaldays;
   }
@@ -515,7 +505,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return iEzsignfoldertypeDeadlinedays
   **/
   @javax.annotation.Nonnull
-
   public Integer getiEzsignfoldertypeDeadlinedays() {
     return iEzsignfoldertypeDeadlinedays;
   }
@@ -537,7 +526,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendattatchmentsigner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendattatchmentsigner() {
     return bEzsignfoldertypeSendattatchmentsigner;
   }
@@ -559,7 +547,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsignedtodocumentowner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsignedtodocumentowner() {
     return bEzsignfoldertypeSendsignedtodocumentowner;
   }
@@ -581,7 +568,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsignedtofolderowner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsignedtofolderowner() {
     return bEzsignfoldertypeSendsignedtofolderowner;
   }
@@ -603,7 +589,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsignedtofullgroup
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignfoldertypeSendsignedtofullgroup() {
     return bEzsignfoldertypeSendsignedtofullgroup;
   }
@@ -625,7 +610,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsignedtolimitedgroup
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignfoldertypeSendsignedtolimitedgroup() {
     return bEzsignfoldertypeSendsignedtolimitedgroup;
   }
@@ -647,7 +631,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsignedtocolleague
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsignedtocolleague() {
     return bEzsignfoldertypeSendsignedtocolleague;
   }
@@ -669,7 +652,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsummarytodocumentowner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsummarytodocumentowner() {
     return bEzsignfoldertypeSendsummarytodocumentowner;
   }
@@ -691,7 +673,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsummarytofolderowner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsummarytofolderowner() {
     return bEzsignfoldertypeSendsummarytofolderowner;
   }
@@ -713,7 +694,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsummarytofullgroup
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignfoldertypeSendsummarytofullgroup() {
     return bEzsignfoldertypeSendsummarytofullgroup;
   }
@@ -735,7 +715,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsummarytolimitedgroup
   **/
   @javax.annotation.Nullable
-
   public Boolean getbEzsignfoldertypeSendsummarytolimitedgroup() {
     return bEzsignfoldertypeSendsummarytolimitedgroup;
   }
@@ -757,7 +736,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeSendsummarytocolleague
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeSendsummarytocolleague() {
     return bEzsignfoldertypeSendsummarytocolleague;
   }
@@ -779,7 +757,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeIncludeproofsigner
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
   }
@@ -801,7 +778,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeIncludeproofuser
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeIncludeproofuser() {
     return bEzsignfoldertypeIncludeproofuser;
   }
@@ -823,7 +799,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return bEzsignfoldertypeIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignfoldertypeIsactive() {
     return bEzsignfoldertypeIsactive;
   }
@@ -853,7 +828,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return aFkiUserIDSigned
   **/
   @javax.annotation.Nullable
-
   public List<Integer> getaFkiUserIDSigned() {
     return aFkiUserIDSigned;
   }
@@ -883,7 +857,6 @@ public class EzsignfoldertypeRequestCompound {
    * @return aFkiUserIDSummary
   **/
   @javax.annotation.Nullable
-
   public List<Integer> getaFkiUserIDSummary() {
     return aFkiUserIDSummary;
   }

@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
@@ -70,7 +74,6 @@ public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload
    * @return bEzsigntemplatepackageNeedvalidation
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
   }
@@ -92,7 +95,6 @@ public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload
    * @return bEzsignbulksendNeedvalidation
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
   }

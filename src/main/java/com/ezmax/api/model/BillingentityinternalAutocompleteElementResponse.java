@@ -32,6 +32,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -46,15 +50,15 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-14T19:36:47.745067393Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T14:56:27.093149753Z[Etc/UTC]")
 public class BillingentityinternalAutocompleteElementResponse {
-  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
-  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
-  private String sBillingentityinternalDescriptionX;
-
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
   private Integer pkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  private String sBillingentityinternalDescriptionX;
 
   public static final String SERIALIZED_NAME_B_BILLINGENTITYINTERNAL_ISACTIVE = "bBillingentityinternalIsactive";
   @SerializedName(SERIALIZED_NAME_B_BILLINGENTITYINTERNAL_ISACTIVE)
@@ -62,28 +66,6 @@ public class BillingentityinternalAutocompleteElementResponse {
 
   public BillingentityinternalAutocompleteElementResponse() {
   }
-
-  public BillingentityinternalAutocompleteElementResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
-    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-    return this;
-  }
-
-   /**
-   * The description of the Billingentityinternal in the language of the requester
-   * @return sBillingentityinternalDescriptionX
-  **/
-  @javax.annotation.Nonnull
-
-  public String getsBillingentityinternalDescriptionX() {
-    return sBillingentityinternalDescriptionX;
-  }
-
-
-  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-  }
-
 
   public BillingentityinternalAutocompleteElementResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     
@@ -97,7 +79,6 @@ public class BillingentityinternalAutocompleteElementResponse {
    * @return pkiBillingentityinternalID
   **/
   @javax.annotation.Nonnull
-
   public Integer getPkiBillingentityinternalID() {
     return pkiBillingentityinternalID;
   }
@@ -105,6 +86,27 @@ public class BillingentityinternalAutocompleteElementResponse {
 
   public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
+  }
+
+
+  public BillingentityinternalAutocompleteElementResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+    return this;
+  }
+
+   /**
+   * The description of the Billingentityinternal in the language of the requester
+   * @return sBillingentityinternalDescriptionX
+  **/
+  @javax.annotation.Nonnull
+  public String getsBillingentityinternalDescriptionX() {
+    return sBillingentityinternalDescriptionX;
+  }
+
+
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
@@ -119,7 +121,6 @@ public class BillingentityinternalAutocompleteElementResponse {
    * @return bBillingentityinternalIsactive
   **/
   @javax.annotation.Nonnull
-
   public Boolean getbBillingentityinternalIsactive() {
     return bBillingentityinternalIsactive;
   }
@@ -140,22 +141,22 @@ public class BillingentityinternalAutocompleteElementResponse {
       return false;
     }
     BillingentityinternalAutocompleteElementResponse billingentityinternalAutocompleteElementResponse = (BillingentityinternalAutocompleteElementResponse) o;
-    return Objects.equals(this.sBillingentityinternalDescriptionX, billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX) &&
-        Objects.equals(this.pkiBillingentityinternalID, billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID) &&
+    return Objects.equals(this.pkiBillingentityinternalID, billingentityinternalAutocompleteElementResponse.pkiBillingentityinternalID) &&
+        Objects.equals(this.sBillingentityinternalDescriptionX, billingentityinternalAutocompleteElementResponse.sBillingentityinternalDescriptionX) &&
         Objects.equals(this.bBillingentityinternalIsactive, billingentityinternalAutocompleteElementResponse.bBillingentityinternalIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sBillingentityinternalDescriptionX, pkiBillingentityinternalID, bBillingentityinternalIsactive);
+    return Objects.hash(pkiBillingentityinternalID, sBillingentityinternalDescriptionX, bBillingentityinternalIsactive);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalAutocompleteElementResponse {\n");
-    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
     sb.append("    pkiBillingentityinternalID: ").append(toIndentedString(pkiBillingentityinternalID)).append("\n");
+    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
     sb.append("    bBillingentityinternalIsactive: ").append(toIndentedString(bBillingentityinternalIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -179,14 +180,14 @@ public class BillingentityinternalAutocompleteElementResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("sBillingentityinternalDescriptionX");
     openapiFields.add("pkiBillingentityinternalID");
+    openapiFields.add("sBillingentityinternalDescriptionX");
     openapiFields.add("bBillingentityinternalIsactive");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("sBillingentityinternalDescriptionX");
     openapiRequiredFields.add("pkiBillingentityinternalID");
+    openapiRequiredFields.add("sBillingentityinternalDescriptionX");
     openapiRequiredFields.add("bBillingentityinternalIsactive");
   }
 
