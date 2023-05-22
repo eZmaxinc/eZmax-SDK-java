@@ -66,55 +66,50 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
-    \n### [1.1.18] - 2023-04\r\n\r\n#### Added\r\n- DELETE /1/object/userstaged/{pkiUserstagedID}\r\
-    \n- GET /1/object/clonehistory/getList\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\r\
-    \n- GET /1/object/sessionhistory/getList\r\n- GET /1/object/userstaged/getList\r\
-    \n- GET /2/object/userstaged/{pkiUserstagedID}\r\n- POST /1/object/userstaged/{pkiUserstagedID}/map\r\
-    \n- Webhook Ezsignsigner Accept Clause in Ezsignfoldersignerassociation\r\n- Webhook\
-    \ Ezsignsigner Connect in Ezsignfoldersignerassociation\r\n- New 403 error code\
-    \ FORBIDDEN_USER_ORIGIN_EXTERNAL\r\n- Added property dtEzsignsignatureDate in\
-    \ object ezsignsignature-Response\r\n- Added property eActivesessionUsertype in\
-    \ object activesession-Response\r\n- Added property objContactName in object ezsignsignature-Response\r\
-    \n- Added property objCreditcardtransaction in object ezsignsignature-Response\r\
-    \n- Added value AgentBrokerEmployeeNormalBuiltIn for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
-    \n- Added value EzsignuserBuiltIn for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
-    \n- Orders dtEzsignfolderDuedate_ASC, dtEzsignfolderDuedate_DESC, iEzsigndocument_ASC,\
-    \ iEzsigndocument_DESC, iEzsigndocumentEdm_ASC, iEzsigndocumentEdm_DESC, iEzsignsignature_ASC,\
-    \ iEzsignsignature_DESC, iEzsignsignatureSigned_ASC and iEzsignsignatureSigned_DESC\
-    \ in GET /1/object/ezsignfolder/getList\r\n\r\n#### Removed\r\n- Orders dtDueDate_ASC,\
-    \ dtDueDate_DESC, iTotalDocument_ASC, iTotalDocument_DESC, iTotalDocumentEdm_ASC,\
-    \ iTotalDocumentEdm_DESC, iTotalSignature_ASC, iTotalSignature_DESC, iTotalSignatureSigned_ASC\
-    \ and iTotalSignatureSigned_DESC in GET /1/object/ezsignfolder/getList\r\n- \r\
-    \n### [1.1.17] - 2023-01\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
-    \n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\n- GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration\r\
-    \n- GET /1/object/activesession/getList\r\n- GET /1/object/billingentityinternal/getList\r\
+    \n### [1.1.17] - 2023-05-22\r\n\r\n#### Added\r\n- DELETE /1/object/ezsignannotation/{pkiEzsignannotationID}\r\
+    \n- DELETE /1/object/userstaged/{pkiUserstagedID}\r\n- GET /1/ezmaxclient/{pksEzmaxclientOs}/version\r\
+    \n- GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration\r\n- GET /1/object/activesession/getList\r\
+    \n- GET /1/object/billingentityinternal/getList\r\n- GET /1/object/clonehistory/getList\r\
     \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic\r\
-    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations\r\n\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements\r\n\
+    - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignannotations\r\n\
     - GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic\r\
     \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount\r\n-\
     \ GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList\r\n- GET\
     \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic\r\n\
     - GET /1/object/ezsignsignature/getEzsignsignaturesAutomatic\r\n- GET /1/object/paymentterm/getList\r\
-    \n- GET /1/object/usergroup/getList\r\n- GET /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\
-    \n- GET /2/object/billingentityexternal/getAutocomplete/{sSelector} \r\n- GET\
-    \ /2/object/communication/{pkiCommunicationID}\r\n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector}\
+    \n- GET /1/object/usergroup/getList\r\n- GET /1/object/userstaged/getList\r\n\
+    - GET /2/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- GET /2/object/billingentityexternal/getAutocomplete/{sSelector}\
+    \ \r\n- GET /2/object/communication/{pkiCommunicationID}\r\n- GET /2/object/ezmaxproduct/getAutocomplete/{sSelector}\
     \ \r\n- GET /2/object/ezsignannotation/{pkiEzsignannotationID}\r\n- GET /2/object/paymentterm/{pkiPaymenttermID}\r\
-    \n- GET /2/object/paymentterm/getAutocomplete/{sSelector} \r\n- GET /2/object/usergroup/{pkiUsergroupID}\r\
+    \n- GET /2/object/paymentterm/getAutocomplete/{sSelector} \r\n- GET /1/object/sessionhistory/getList\r\
+    \n- GET /2/object/usergroup/{pkiUsergroupID}\r\n- GET /2/object/userstaged/{pkiUserstagedID}\r\
     \n- POST /1/object/billingentityinternal\r\n- POST /1/object/ezsignannotation\r\
     \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten\r\n- POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/flatten\r\
-    \n- POST /1/object/paymentterm\r\n- POST /1/object/usergroup\r\n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\
-    \n- PUT /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
+    \n- POST /1/object/paymentterm\r\n- POST /1/object/usergroup\r\n- POST /1/object/userstaged/{pkiUserstagedID}/map\r\
+    \n- PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}\r\n- PUT\
+    \ /1/object/ezsignannotation/{pkiEzsignannotationID}\r\n- PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations\r\
     \n- PUT /1/object/paymentterm/{pkiPaymenttermID}\r\n- PUT /1/object/usergroup/{pkiUsergroupID}\r\
-    \n- New 403 error code FORBIDDEN_PERMISSION\r\n- New 403 error code UNPROCESSABLEENTITY_DATA_UNIQUE\r\
-    \n- New 422 error code UNPROCESSABLEENTITY_PDF_SIGNATURE\r\n- Added property bEzsigndocumentHassignedsignatures\
+    \n- Webhook Ezsignsigner Accept Clause in Ezsignfoldersignerassociation\r\n- Webhook\
+    \ Ezsignsigner Connect in Ezsignfoldersignerassociation\r\n- New 403 error code\
+    \ FORBIDDEN_PERMISSION\r\n- New 403 error code FORBIDDEN_USER_ORIGIN_EXTERNAL\r\
+    \n- New 403 error code UNPROCESSABLEENTITY_DATA_UNIQUE\r\n- New 422 error code\
+    \ UNPROCESSABLEENTITY_PDF_SIGNATURE\r\n- Added property bEzsigndocumentHassignedsignatures\
     \ in object ezsigndocument-Response\r\n- Added property bEzsigntemplatedocumentHassignedsignatures\
-    \ in object ezsigntemplatedocument-Response\r\n- Added property sEzsignfolderDescription\
-    \ in object Custom-Ezsignfoldertransmission-Response\r\n- Added property sEzsigndocumentExternalid\
+    \ in object ezsigntemplatedocument-Response\r\n- Added property dtEzsignsignatureDate\
+    \ in object ezsignsignature-Response\r\n- Added property eActivesessionUsertype\
+    \ in object activesession-Response\r\n- Added property objCreditcardtransaction\
+    \ in object ezsignsignature-Response\r\n- Added property objContactName in object\
+    \ ezsignsignature-Response\r\n- Added property sEzsignfolderDescription in object\
+    \ Custom-Ezsignfoldertransmission-Response\r\n- Added property sEzsigndocumentExternalid\
     \ in object ezsigndocument-Request\r\n- Added property sEzsigndocumentExternalid\
     \ in object ezsigndocument-Response\r\n- Added property sEzsignfolderExternalid\
     \ in object ezsignfolder-Request\r\n- Added property sEzsignfolderExternalid in\
-    \ object ezsignfolder-Response\r\n \r\n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
+    \ object ezsignfolder-Response\r\n- Added value AgentBrokerEmployeeNormalBuiltIn\
+    \ for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Added value\
+    \ EzsignuserBuiltIn for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
+    \n \r\n### Removed\r\n- GET /1/object/billingentityinternal/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/branding/{pkiBrandingID}\r\n- GET /1/object/branding/getAutocomplete/{sSelector}\r\
     \n- GET /1/object/department/getAutocomplete/{sSelector}\r\n- GET /1/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}\r\
     \n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}\r\n- GET /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}\r\
