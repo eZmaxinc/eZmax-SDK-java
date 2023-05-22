@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Franchisereferalincome Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T16:05:38.176914395Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T21:10:14.895054672Z[Etc/UTC]")
 public class FranchisereferalincomeRequest {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)

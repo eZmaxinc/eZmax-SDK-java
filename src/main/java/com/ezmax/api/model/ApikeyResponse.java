@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T16:05:38.176914395Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T21:10:14.895054672Z[Etc/UTC]")
 public class ApikeyResponse {
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)

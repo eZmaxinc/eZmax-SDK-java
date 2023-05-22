@@ -15310,7 +15310,7 @@ components:
     Field-pkiSessionhistoryID:
       description: The unique ID of the Sessionhistory
       example: 259
-      maximum: 4294967295
+      maximum: 2147483647
       minimum: 1
       type: integer
     Field-pkiSupplierID:
@@ -26544,7 +26544,7 @@ components:
         pkiSessionhistoryID:
           description: The unique ID of the Sessionhistory
           example: 259
-          maximum: 4294967295
+          maximum: 2147483647
           minimum: 1
           type: integer
         fkiComputerID:

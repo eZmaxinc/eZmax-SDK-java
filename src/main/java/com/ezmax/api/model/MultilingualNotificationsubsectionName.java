@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationsubsection
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T16:05:38.176914395Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T21:10:14.895054672Z[Etc/UTC]")
 public class MultilingualNotificationsubsectionName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1 = "sNotificationsubsectionName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1)

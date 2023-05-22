@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfoldersignerassociationResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T16:05:38.176914395Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-22T21:10:14.895054672Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
