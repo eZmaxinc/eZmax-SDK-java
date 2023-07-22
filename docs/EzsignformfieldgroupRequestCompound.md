@@ -23,6 +23,7 @@ An Ezsignformfieldgroup Object and children to create a complete structure
 |**sEzsignformfieldgroupRegexp** | **String** | A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea** |  [optional] |
 |**tEzsignformfieldgroupTooltip** | **String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 |**eEzsignformfieldgroupTooltipposition** | **FieldEEzsignformfieldgroupTooltipposition** |  |  [optional] |
+|**eEzsignformfieldgroupTextvalidation** | **EnumTextvalidation** |  |  [optional] |
 |**aObjEzsignformfieldgroupsigner** | [**List&lt;EzsignformfieldgroupsignerRequestCompound&gt;**](EzsignformfieldgroupsignerRequestCompound.md) |  |  |
 |**aObjDropdownElement** | [**List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequestCompound.md) |  |  [optional] |
 |**aObjEzsignformfield** | [**List&lt;EzsignformfieldRequestCompound&gt;**](EzsignformfieldRequestCompound.md) |  |  |

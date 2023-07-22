@@ -110,7 +110,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi(defaultClient);
-    Integer pkiBillingentityinternalID = 56; // Integer | The unique ID of the Billingentityinternal
+    Integer pkiBillingentityinternalID = 56; // Integer | 
     BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = new BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
     try {
       BillingentityinternalEditObjectV1Response result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
@@ -130,7 +130,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiBillingentityinternalID** | **Integer**| The unique ID of the Billingentityinternal | |
+| **pkiBillingentityinternalID** | **Integer**|  | |
 | **billingentityinternalEditObjectV1Request** | [**BillingentityinternalEditObjectV1Request**](BillingentityinternalEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -336,7 +336,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectBillingentityinternalApi apiInstance = new ObjectBillingentityinternalApi(defaultClient);
-    Integer pkiBillingentityinternalID = 56; // Integer | The unique ID of the Billingentityinternal
+    Integer pkiBillingentityinternalID = 56; // Integer | 
     try {
       BillingentityinternalGetObjectV2Response result = apiInstance.billingentityinternalGetObjectV2(pkiBillingentityinternalID);
       System.out.println(result);
@@ -355,7 +355,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiBillingentityinternalID** | **Integer**| The unique ID of the Billingentityinternal | |
+| **pkiBillingentityinternalID** | **Integer**|  | |
 
 ### Return type
 

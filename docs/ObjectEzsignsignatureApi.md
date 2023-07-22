@@ -8,6 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignsignatureCreateObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV2) | **POST** /2/object/ezsignsignature | Create a new Ezsignsignature |
 | [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature |
 | [**ezsignsignatureEditObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV1) | **PUT** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
+| [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments |
 | [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures |
 | [**ezsignsignatureGetObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV2) | **GET** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
 | [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature |
@@ -286,6 +287,75 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsignsignatureGetEzsignsignatureattachmentV1"></a>
+# **ezsignsignatureGetEzsignsignatureattachmentV1**
+> EzsignsignatureGetEzsignsignatureattachmentV1Response ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID)
+
+Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignsignatureApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
+    Integer pkiEzsignsignatureID = 56; // Integer | 
+    try {
+      EzsignsignatureGetEzsignsignatureattachmentV1Response result = apiInstance.ezsignsignatureGetEzsignsignatureattachmentV1(pkiEzsignsignatureID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetEzsignsignatureattachmentV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignsignatureID** | **Integer**|  | |
+
+### Return type
+
+[**EzsignsignatureGetEzsignsignatureattachmentV1Response**](EzsignsignatureGetEzsignsignatureattachmentV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details

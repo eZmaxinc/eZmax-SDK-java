@@ -18,6 +18,8 @@ A Branding Object
 |**iBrandingColorbackground** | **Integer** | The color of the background. This is a RGB color converted into integer |  |
 |**iBrandingColorbackgroundbutton** | **Integer** | The color of the background of the button. This is a RGB color converted into integer |  |
 |**iBrandingColorbackgroundsmallbox** | **Integer** | The color of the background of the small box. This is a RGB color converted into integer |  |
+|**sBrandingName** | **String** | The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty |  [optional] |
+|**sEmailAddress** | **String** | The email address. |  [optional] |
 |**bBrandingIsactive** | **Boolean** | Whether the Branding is active or not |  |
 
 

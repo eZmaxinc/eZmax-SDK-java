@@ -110,7 +110,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi(defaultClient);
-    Integer pkiVariableexpenseID = 56; // Integer | The unique ID of the Variableexpense
+    Integer pkiVariableexpenseID = 56; // Integer | 
     VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = new VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
     try {
       VariableexpenseEditObjectV1Response result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
@@ -130,7 +130,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiVariableexpenseID** | **Integer**| The unique ID of the Variableexpense | |
+| **pkiVariableexpenseID** | **Integer**|  | |
 | **variableexpenseEditObjectV1Request** | [**VariableexpenseEditObjectV1Request**](VariableexpenseEditObjectV1Request.md)|  | |
 
 ### Return type
@@ -336,7 +336,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectVariableexpenseApi apiInstance = new ObjectVariableexpenseApi(defaultClient);
-    Integer pkiVariableexpenseID = 56; // Integer | The unique ID of the Variableexpense
+    Integer pkiVariableexpenseID = 56; // Integer | 
     try {
       VariableexpenseGetObjectV2Response result = apiInstance.variableexpenseGetObjectV2(pkiVariableexpenseID);
       System.out.println(result);
@@ -355,7 +355,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiVariableexpenseID** | **Integer**| The unique ID of the Variableexpense | |
+| **pkiVariableexpenseID** | **Integer**|  | |
 
 ### Return type
 

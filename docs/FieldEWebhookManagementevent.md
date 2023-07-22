@@ -7,5 +7,7 @@
 
 * `USERCREATED` (value: `"UserCreated"`)
 
+* `USERSTAGEDCREATED` (value: `"UserstagedCreated"`)
+
 
 

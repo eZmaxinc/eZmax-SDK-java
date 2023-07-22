@@ -6,9 +6,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**usergroupCreateObjectV1**](ObjectUsergroupApi.md#usergroupCreateObjectV1) | **POST** /1/object/usergroup | Create a new Usergroup |
 | [**usergroupEditObjectV1**](ObjectUsergroupApi.md#usergroupEditObjectV1) | **PUT** /1/object/usergroup/{pkiUsergroupID} | Edit an existing Usergroup |
+| [**usergroupEditPermissionsV1**](ObjectUsergroupApi.md#usergroupEditPermissionsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editPermissions | Edit multiple Permissions |
+| [**usergroupEditUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupEditUsergroupmembershipsV1) | **PUT** /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships | Edit multiple Usergroupmemberships |
 | [**usergroupGetAutocompleteV2**](ObjectUsergroupApi.md#usergroupGetAutocompleteV2) | **GET** /2/object/usergroup/getAutocomplete/{sSelector} | Retrieve Usergroups and IDs |
 | [**usergroupGetListV1**](ObjectUsergroupApi.md#usergroupGetListV1) | **GET** /1/object/usergroup/getList | Retrieve Usergroup list |
 | [**usergroupGetObjectV2**](ObjectUsergroupApi.md#usergroupGetObjectV2) | **GET** /2/object/usergroup/{pkiUsergroupID} | Retrieve an existing Usergroup |
+| [**usergroupGetPermissionsV1**](ObjectUsergroupApi.md#usergroupGetPermissionsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getPermissions | Retrieve an existing Usergroup&#39;s Permissions |
+| [**usergroupGetUsergroupmembershipsV1**](ObjectUsergroupApi.md#usergroupGetUsergroupmembershipsV1) | **GET** /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships | Retrieve an existing Usergroup&#39;s Usergroupmemberships |
 
 
 <a id="usergroupCreateObjectV1"></a>
@@ -110,7 +114,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
-    Integer pkiUsergroupID = 56; // Integer | The unique ID of the Usergroup
+    Integer pkiUsergroupID = 56; // Integer | 
     UsergroupEditObjectV1Request usergroupEditObjectV1Request = new UsergroupEditObjectV1Request(); // UsergroupEditObjectV1Request | 
     try {
       UsergroupEditObjectV1Response result = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
@@ -130,12 +134,158 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiUsergroupID** | **Integer**| The unique ID of the Usergroup | |
+| **pkiUsergroupID** | **Integer**|  | |
 | **usergroupEditObjectV1Request** | [**UsergroupEditObjectV1Request**](UsergroupEditObjectV1Request.md)|  | |
 
 ### Return type
 
 [**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="usergroupEditPermissionsV1"></a>
+# **usergroupEditPermissionsV1**
+> UsergroupEditPermissionsV1Response usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request)
+
+Edit multiple Permissions
+
+Using this endpoint, you can edit multiple Permissions at the same time.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUsergroupApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
+    Integer pkiUsergroupID = 56; // Integer | 
+    UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request = new UsergroupEditPermissionsV1Request(); // UsergroupEditPermissionsV1Request | 
+    try {
+      UsergroupEditPermissionsV1Response result = apiInstance.usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUsergroupApi#usergroupEditPermissionsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUsergroupID** | **Integer**|  | |
+| **usergroupEditPermissionsV1Request** | [**UsergroupEditPermissionsV1Request**](UsergroupEditPermissionsV1Request.md)|  | |
+
+### Return type
+
+[**UsergroupEditPermissionsV1Response**](UsergroupEditPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="usergroupEditUsergroupmembershipsV1"></a>
+# **usergroupEditUsergroupmembershipsV1**
+> UsergroupEditUsergroupmembershipsV1Response usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request)
+
+Edit multiple Usergroupmemberships
+
+Using this endpoint, you can edit multiple Usergroupmemberships at the same time.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUsergroupApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
+    Integer pkiUsergroupID = 56; // Integer | 
+    UsergroupEditUsergroupmembershipsV1Request usergroupEditUsergroupmembershipsV1Request = new UsergroupEditUsergroupmembershipsV1Request(); // UsergroupEditUsergroupmembershipsV1Request | 
+    try {
+      UsergroupEditUsergroupmembershipsV1Response result = apiInstance.usergroupEditUsergroupmembershipsV1(pkiUsergroupID, usergroupEditUsergroupmembershipsV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUsergroupApi#usergroupEditUsergroupmembershipsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUsergroupID** | **Integer**|  | |
+| **usergroupEditUsergroupmembershipsV1Request** | [**UsergroupEditUsergroupmembershipsV1Request**](UsergroupEditUsergroupmembershipsV1Request.md)|  | |
+
+### Return type
+
+[**UsergroupEditUsergroupmembershipsV1Response**](UsergroupEditUsergroupmembershipsV1Response.md)
 
 ### Authorization
 
@@ -336,7 +486,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
-    Integer pkiUsergroupID = 56; // Integer | The unique ID of the Usergroup
+    Integer pkiUsergroupID = 56; // Integer | 
     try {
       UsergroupGetObjectV2Response result = apiInstance.usergroupGetObjectV2(pkiUsergroupID);
       System.out.println(result);
@@ -355,11 +505,147 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pkiUsergroupID** | **Integer**| The unique ID of the Usergroup | |
+| **pkiUsergroupID** | **Integer**|  | |
 
 ### Return type
 
 [**UsergroupGetObjectV2Response**](UsergroupGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="usergroupGetPermissionsV1"></a>
+# **usergroupGetPermissionsV1**
+> UsergroupGetPermissionsV1Response usergroupGetPermissionsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Permissions
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUsergroupApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
+    Integer pkiUsergroupID = 56; // Integer | 
+    try {
+      UsergroupGetPermissionsV1Response result = apiInstance.usergroupGetPermissionsV1(pkiUsergroupID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUsergroupApi#usergroupGetPermissionsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUsergroupID** | **Integer**|  | |
+
+### Return type
+
+[**UsergroupGetPermissionsV1Response**](UsergroupGetPermissionsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="usergroupGetUsergroupmembershipsV1"></a>
+# **usergroupGetUsergroupmembershipsV1**
+> UsergroupGetUsergroupmembershipsV1Response usergroupGetUsergroupmembershipsV1(pkiUsergroupID)
+
+Retrieve an existing Usergroup&#39;s Usergroupmemberships
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUsergroupApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
+    Integer pkiUsergroupID = 56; // Integer | 
+    try {
+      UsergroupGetUsergroupmembershipsV1Response result = apiInstance.usergroupGetUsergroupmembershipsV1(pkiUsergroupID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUsergroupApi#usergroupGetUsergroupmembershipsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUsergroupID** | **Integer**|  | |
+
+### Return type
+
+[**UsergroupGetUsergroupmembershipsV1Response**](UsergroupGetUsergroupmembershipsV1Response.md)
 
 ### Authorization
 

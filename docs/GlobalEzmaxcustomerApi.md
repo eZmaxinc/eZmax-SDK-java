@@ -21,7 +21,6 @@ Retrieve the ezmaxcustomer&#39;s specific configuration. This will help locate t
 import eZmaxAPI.ApiClient;
 import eZmaxAPI.ApiException;
 import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
 import eZmaxAPI.models.*;
 import com.ezmax.api.GlobalEzmaxcustomerApi;
 
@@ -29,12 +28,6 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
 
     GlobalEzmaxcustomerApi apiInstance = new GlobalEzmaxcustomerApi(defaultClient);
     String pksEzmaxcustomerCode = "pksEzmaxcustomerCode_example"; // String | 
@@ -64,7 +57,7 @@ public class Example {
 
 ### Authorization
 
-[Authorization](../README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 

@@ -9,8 +9,8 @@ A Ezsignfoldersignerassociationstatus Object and children to create a complete s
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**fkiEzsignfoldersignerassociationID** | **Integer** | The unique ID of the Ezsignfoldersignerassociation |  |
-|**sEzsignfoldersignerassociationstatusLastname** | **String** | The last name of the Ezsignsigner |  |
-|**sEzsignfoldersignerassociationstatusFirstname** | **String** | The first name of the Ezsignsigner |  |
+|**sEzsignfoldersignerassociationstatusLastname** | **String** | The last name of the Ezsignsigner |  [optional] |
+|**sEzsignfoldersignerassociationstatusFirstname** | **String** | The first name of the Ezsignsigner |  [optional] |
 |**aObjEzsignsignaturestatus** | [**List&lt;CustomEzsignsignaturestatusResponse&gt;**](CustomEzsignsignaturestatusResponse.md) |  |  |
 
 

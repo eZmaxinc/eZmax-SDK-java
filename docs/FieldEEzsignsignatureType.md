@@ -17,5 +17,11 @@
 
 * `ATTACHMENTS` (value: `"Attachments"`)
 
+* `ATTACHMENTSCONFIRMATION` (value: `"AttachmentsConfirmation"`)
+
+* `FIELDTEXT` (value: `"FieldText"`)
+
+* `FIELDTEXTAREA` (value: `"FieldTextarea"`)
+
 
 
