@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * BillingentityinternalResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
 public class BillingentityinternalResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT = "a_objBillingentityinternalproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/userstaged/{pkiUserstagedID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
 public class UserstagedGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USERSTAGED = "objUserstaged";
   @SerializedName(SERIALIZED_NAME_OBJ_USERSTAGED)

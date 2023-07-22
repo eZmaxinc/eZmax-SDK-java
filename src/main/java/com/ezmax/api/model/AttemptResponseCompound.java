@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attempt object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
 public class AttemptResponseCompound {
   public static final String SERIALIZED_NAME_DT_ATTEMPT_START = "dtAttemptStart";
   @SerializedName(SERIALIZED_NAME_DT_ATTEMPT_START)

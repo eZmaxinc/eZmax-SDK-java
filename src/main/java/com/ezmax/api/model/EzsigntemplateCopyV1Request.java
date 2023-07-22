@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
 public class EzsigntemplateCopyV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D = "a_fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
 public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
