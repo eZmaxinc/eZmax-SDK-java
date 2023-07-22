@@ -18056,6 +18056,7 @@ components:
       description: The mask of the Subnet  in integer form. For example 255.255.255.0
         would be 4294967040
       example: 4294967040
+      format: int64
       maximum: 4294967295
       minimum: 0
       type: integer
@@ -18063,6 +18064,7 @@ components:
       description: The network of the Subnet in integer form. For example 8.8.8.0
         would be 134744064
       example: 134744064
+      format: int64
       maximum: 4294967295
       minimum: 0
       type: integer
@@ -31491,6 +31493,7 @@ components:
           description: The network of the Subnet in integer form. For example 8.8.8.0
             would be 134744064
           example: 134744064
+          format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
@@ -31498,6 +31501,7 @@ components:
           description: The mask of the Subnet  in integer form. For example 255.255.255.0
             would be 4294967040
           example: 4294967040
+          format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
@@ -31537,6 +31541,7 @@ components:
           description: The network of the Subnet in integer form. For example 8.8.8.0
             would be 134744064
           example: 134744064
+          format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
@@ -31544,6 +31549,7 @@ components:
           description: The mask of the Subnet  in integer form. For example 255.255.255.0
             would be 4294967040
           example: 4294967040
+          format: int64
           maximum: 4294967295
           minimum: 0
           type: integer

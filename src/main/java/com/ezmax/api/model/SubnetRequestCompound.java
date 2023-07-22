@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T13:32:26.779643241Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
 public class SubnetRequestCompound {
   public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
@@ -71,11 +71,11 @@ public class SubnetRequestCompound {
 
   public static final String SERIALIZED_NAME_I_SUBNET_NETWORK = "iSubnetNetwork";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_NETWORK)
-  private Integer iSubnetNetwork;
+  private Long iSubnetNetwork;
 
   public static final String SERIALIZED_NAME_I_SUBNET_MASK = "iSubnetMask";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_MASK)
-  private Integer iSubnetMask;
+  private Long iSubnetMask;
 
   public SubnetRequestCompound() {
   }
@@ -168,7 +168,7 @@ public class SubnetRequestCompound {
   }
 
 
-  public SubnetRequestCompound iSubnetNetwork(Integer iSubnetNetwork) {
+  public SubnetRequestCompound iSubnetNetwork(Long iSubnetNetwork) {
     
     this.iSubnetNetwork = iSubnetNetwork;
     return this;
@@ -181,17 +181,17 @@ public class SubnetRequestCompound {
    * @return iSubnetNetwork
   **/
   @javax.annotation.Nonnull
-  public Integer getiSubnetNetwork() {
+  public Long getiSubnetNetwork() {
     return iSubnetNetwork;
   }
 
 
-  public void setiSubnetNetwork(Integer iSubnetNetwork) {
+  public void setiSubnetNetwork(Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
   }
 
 
-  public SubnetRequestCompound iSubnetMask(Integer iSubnetMask) {
+  public SubnetRequestCompound iSubnetMask(Long iSubnetMask) {
     
     this.iSubnetMask = iSubnetMask;
     return this;
@@ -204,12 +204,12 @@ public class SubnetRequestCompound {
    * @return iSubnetMask
   **/
   @javax.annotation.Nonnull
-  public Integer getiSubnetMask() {
+  public Long getiSubnetMask() {
     return iSubnetMask;
   }
 
 
-  public void setiSubnetMask(Integer iSubnetMask) {
+  public void setiSubnetMask(Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
   }
 

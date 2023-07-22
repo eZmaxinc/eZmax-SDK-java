@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/franchisereferalincome
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T13:32:26.779643241Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
 public class FranchisereferalincomeCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_FRANCHISEREFERALINCOME = "a_objFranchisereferalincome";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FRANCHISEREFERALINCOME)

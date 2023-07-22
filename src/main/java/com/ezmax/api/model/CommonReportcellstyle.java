@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Styles applied to a Reportcell 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T13:32:26.779643241Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:06:34.629020232Z[Etc/UTC]")
 public class CommonReportcellstyle {
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP = "bReportcellstyleBordertop";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP)
