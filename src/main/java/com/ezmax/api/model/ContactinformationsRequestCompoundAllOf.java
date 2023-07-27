@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * ContactinformationsRequestCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
 public class ContactinformationsRequestCompoundAllOf {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)

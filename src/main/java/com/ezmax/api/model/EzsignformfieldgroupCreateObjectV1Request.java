@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignformfieldgroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
 public class EzsignformfieldgroupCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)

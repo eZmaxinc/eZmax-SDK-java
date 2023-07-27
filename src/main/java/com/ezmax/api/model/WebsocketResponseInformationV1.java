@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for Websocket Information V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
 public class WebsocketResponseInformationV1 {
   /**
    * The Type of message

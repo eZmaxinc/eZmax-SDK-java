@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
