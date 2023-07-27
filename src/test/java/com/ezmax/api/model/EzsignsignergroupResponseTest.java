@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.MultilingualEzsignsignergroupDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,6 +44,22 @@ public class EzsignsignergroupResponseTest {
     @Test
     public void pkiEzsignsignergroupIDTest() {
         // TODO: test pkiEzsignsignergroupID
+    }
+
+    /**
+     * Test the property 'objEzsignsignergroupDescription'
+     */
+    @Test
+    public void objEzsignsignergroupDescriptionTest() {
+        // TODO: test objEzsignsignergroupDescription
+    }
+
+    /**
+     * Test the property 'sEzsignsignergroupDescriptionX'
+     */
+    @Test
+    public void sEzsignsignergroupDescriptionXTest() {
+        // TODO: test sEzsignsignergroupDescriptionX
     }
 
 }

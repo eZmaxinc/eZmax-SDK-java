@@ -20,10 +20,16 @@ import com.ezmax.api.model.ApikeyEditObjectV1Request;
 import com.ezmax.api.model.ApikeyEditObjectV1Response;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Request;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Response;
+import com.ezmax.api.model.ApikeyGetCorsV1Response;
+import com.ezmax.api.model.ApikeyGetListV1Response;
 import com.ezmax.api.model.ApikeyGetObjectV2Response;
 import com.ezmax.api.model.ApikeyGetPermissionsV1Response;
 import com.ezmax.api.model.ApikeyGetSubnetsV1Response;
+import com.ezmax.api.model.ApikeyRegenerateV1Request;
+import com.ezmax.api.model.ApikeyRegenerateV1Response;
 import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -85,6 +91,36 @@ public class ObjectApikeyApiTest {
     }
 
     /**
+     * Retrieve an existing Apikey&#39;s cors
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void apikeyGetCorsV1Test() throws ApiException {
+        Integer pkiApikeyID = null;
+        ApikeyGetCorsV1Response response = api.apikeyGetCorsV1(pkiApikeyID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Apikey list
+     *
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---|
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void apikeyGetListV1Test() throws ApiException {
+        String eOrderBy = null;
+        Integer iRowMax = null;
+        Integer iRowOffset = null;
+        HeaderAcceptLanguage acceptLanguage = null;
+        String sFilter = null;
+        ApikeyGetListV1Response response = api.apikeyGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Apikey
      *
      * 
@@ -119,6 +155,21 @@ public class ObjectApikeyApiTest {
     public void apikeyGetSubnetsV1Test() throws ApiException {
         Integer pkiApikeyID = null;
         ApikeyGetSubnetsV1Response response = api.apikeyGetSubnetsV1(pkiApikeyID);
+        // TODO: test validations
+    }
+
+    /**
+     * Regenerate the Apikey
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void apikeyRegenerateV1Test() throws ApiException {
+        Integer pkiApikeyID = null;
+        ApikeyRegenerateV1Request apikeyRegenerateV1Request = null;
+        ApikeyRegenerateV1Response response = api.apikeyRegenerateV1(pkiApikeyID, apikeyRegenerateV1Request);
         // TODO: test validations
     }
 

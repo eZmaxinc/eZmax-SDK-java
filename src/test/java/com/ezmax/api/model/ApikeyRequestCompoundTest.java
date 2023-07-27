@@ -70,4 +70,12 @@ public class ApikeyRequestCompoundTest {
         // TODO: test bApikeyIsactive
     }
 
+    /**
+     * Test the property 'bApikeyIssigned'
+     */
+    @Test
+    public void bApikeyIssignedTest() {
+        // TODO: test bApikeyIssigned
+    }
+
 }

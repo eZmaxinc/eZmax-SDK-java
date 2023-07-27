@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.MultilingualApikeyDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class ApikeyResponseCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -66,13 +67,25 @@ public class ApikeyResponseCompound {
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
   private MultilingualApikeyDescription objApikeyDescription;
 
-  public static final String SERIALIZED_NAME_S_COMPUTED_TOKEN = "sComputedToken";
-  @SerializedName(SERIALIZED_NAME_S_COMPUTED_TOKEN)
-  private String sComputedToken;
+  public static final String SERIALIZED_NAME_OBJ_CONTACT_NAME = "objContactName";
+  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_NAME)
+  private CustomContactNameResponse objContactName;
+
+  public static final String SERIALIZED_NAME_S_APIKEY_APIKEY = "sApikeyApikey";
+  @SerializedName(SERIALIZED_NAME_S_APIKEY_APIKEY)
+  private String sApikeyApikey;
+
+  public static final String SERIALIZED_NAME_S_APIKEY_SECRET = "sApikeySecret";
+  @SerializedName(SERIALIZED_NAME_S_APIKEY_SECRET)
+  private String sApikeySecret;
 
   public static final String SERIALIZED_NAME_B_APIKEY_ISACTIVE = "bApikeyIsactive";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISACTIVE)
   private Boolean bApikeyIsactive;
+
+  public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
+  @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)
+  private Boolean bApikeyIssigned;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
@@ -146,24 +159,66 @@ public class ApikeyResponseCompound {
   }
 
 
-  public ApikeyResponseCompound sComputedToken(String sComputedToken) {
+  public ApikeyResponseCompound objContactName(CustomContactNameResponse objContactName) {
     
-    this.sComputedToken = sComputedToken;
+    this.objContactName = objContactName;
     return this;
   }
 
    /**
-   * The secret token for the API key.  This will be returned only on creation.
-   * @return sComputedToken
+   * Get objContactName
+   * @return objContactName
   **/
-  @javax.annotation.Nullable
-  public String getsComputedToken() {
-    return sComputedToken;
+  @javax.annotation.Nonnull
+  public CustomContactNameResponse getObjContactName() {
+    return objContactName;
   }
 
 
-  public void setsComputedToken(String sComputedToken) {
-    this.sComputedToken = sComputedToken;
+  public void setObjContactName(CustomContactNameResponse objContactName) {
+    this.objContactName = objContactName;
+  }
+
+
+  public ApikeyResponseCompound sApikeyApikey(String sApikeyApikey) {
+    
+    this.sApikeyApikey = sApikeyApikey;
+    return this;
+  }
+
+   /**
+   * The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+   * @return sApikeyApikey
+  **/
+  @javax.annotation.Nullable
+  public String getsApikeyApikey() {
+    return sApikeyApikey;
+  }
+
+
+  public void setsApikeyApikey(String sApikeyApikey) {
+    this.sApikeyApikey = sApikeyApikey;
+  }
+
+
+  public ApikeyResponseCompound sApikeySecret(String sApikeySecret) {
+    
+    this.sApikeySecret = sApikeySecret;
+    return this;
+  }
+
+   /**
+   * The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
+   * @return sApikeySecret
+  **/
+  @javax.annotation.Nullable
+  public String getsApikeySecret() {
+    return sApikeySecret;
+  }
+
+
+  public void setsApikeySecret(String sApikeySecret) {
+    this.sApikeySecret = sApikeySecret;
   }
 
 
@@ -185,6 +240,27 @@ public class ApikeyResponseCompound {
 
   public void setbApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
+  }
+
+
+  public ApikeyResponseCompound bApikeyIssigned(Boolean bApikeyIssigned) {
+    
+    this.bApikeyIssigned = bApikeyIssigned;
+    return this;
+  }
+
+   /**
+   * Whether the apikey is signed or not
+   * @return bApikeyIssigned
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbApikeyIssigned() {
+    return bApikeyIssigned;
+  }
+
+
+  public void setbApikeyIssigned(Boolean bApikeyIssigned) {
+    this.bApikeyIssigned = bApikeyIssigned;
   }
 
 
@@ -222,14 +298,17 @@ public class ApikeyResponseCompound {
     return Objects.equals(this.pkiApikeyID, apikeyResponseCompound.pkiApikeyID) &&
         Objects.equals(this.fkiUserID, apikeyResponseCompound.fkiUserID) &&
         Objects.equals(this.objApikeyDescription, apikeyResponseCompound.objApikeyDescription) &&
-        Objects.equals(this.sComputedToken, apikeyResponseCompound.sComputedToken) &&
+        Objects.equals(this.objContactName, apikeyResponseCompound.objContactName) &&
+        Objects.equals(this.sApikeyApikey, apikeyResponseCompound.sApikeyApikey) &&
+        Objects.equals(this.sApikeySecret, apikeyResponseCompound.sApikeySecret) &&
         Objects.equals(this.bApikeyIsactive, apikeyResponseCompound.bApikeyIsactive) &&
+        Objects.equals(this.bApikeyIssigned, apikeyResponseCompound.bApikeyIssigned) &&
         Objects.equals(this.objAudit, apikeyResponseCompound.objAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiApikeyID, fkiUserID, objApikeyDescription, sComputedToken, bApikeyIsactive, objAudit);
+    return Objects.hash(pkiApikeyID, fkiUserID, objApikeyDescription, objContactName, sApikeyApikey, sApikeySecret, bApikeyIsactive, bApikeyIssigned, objAudit);
   }
 
   @Override
@@ -239,8 +318,11 @@ public class ApikeyResponseCompound {
     sb.append("    pkiApikeyID: ").append(toIndentedString(pkiApikeyID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    objApikeyDescription: ").append(toIndentedString(objApikeyDescription)).append("\n");
-    sb.append("    sComputedToken: ").append(toIndentedString(sComputedToken)).append("\n");
+    sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
+    sb.append("    sApikeyApikey: ").append(toIndentedString(sApikeyApikey)).append("\n");
+    sb.append("    sApikeySecret: ").append(toIndentedString(sApikeySecret)).append("\n");
     sb.append("    bApikeyIsactive: ").append(toIndentedString(bApikeyIsactive)).append("\n");
+    sb.append("    bApikeyIssigned: ").append(toIndentedString(bApikeyIssigned)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -267,8 +349,11 @@ public class ApikeyResponseCompound {
     openapiFields.add("pkiApikeyID");
     openapiFields.add("fkiUserID");
     openapiFields.add("objApikeyDescription");
-    openapiFields.add("sComputedToken");
+    openapiFields.add("objContactName");
+    openapiFields.add("sApikeyApikey");
+    openapiFields.add("sApikeySecret");
     openapiFields.add("bApikeyIsactive");
+    openapiFields.add("bApikeyIssigned");
     openapiFields.add("objAudit");
 
     // a set of required properties/fields (JSON key names)
@@ -276,6 +361,7 @@ public class ApikeyResponseCompound {
     openapiRequiredFields.add("pkiApikeyID");
     openapiRequiredFields.add("fkiUserID");
     openapiRequiredFields.add("objApikeyDescription");
+    openapiRequiredFields.add("objContactName");
     openapiRequiredFields.add("bApikeyIsactive");
     openapiRequiredFields.add("objAudit");
   }
@@ -309,8 +395,13 @@ public class ApikeyResponseCompound {
       }
       // validate the required field `objApikeyDescription`
       MultilingualApikeyDescription.validateJsonObject(jsonObj.getAsJsonObject("objApikeyDescription"));
-      if ((jsonObj.get("sComputedToken") != null && !jsonObj.get("sComputedToken").isJsonNull()) && !jsonObj.get("sComputedToken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sComputedToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sComputedToken").toString()));
+      // validate the required field `objContactName`
+      CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactName"));
+      if ((jsonObj.get("sApikeyApikey") != null && !jsonObj.get("sApikeyApikey").isJsonNull()) && !jsonObj.get("sApikeyApikey").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sApikeyApikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sApikeyApikey").toString()));
+      }
+      if ((jsonObj.get("sApikeySecret") != null && !jsonObj.get("sApikeySecret").isJsonNull()) && !jsonObj.get("sApikeySecret").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sApikeySecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sApikeySecret").toString()));
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));

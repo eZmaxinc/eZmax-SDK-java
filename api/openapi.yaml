@@ -81,33 +81,41 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.1.X Releases\r\
-    \n\r\n### [1.1.18] - 2023-07-22\r\n\r\n#### Added\r\n- DELETE /1/object/permission/{pkiPermissionID}\r\
-    \n- DELETE /1/object/signature/{pkiSignatureID}\r\n- DELETE /1/object/subnet/{pkiSubnetID}\r\
-    \n- DELETE /1/object/usergroupmembership/{pkiUsergroupmembershipID}\r\n- DELETE\
-    \ /2/scim/Groups/{groupId}\r\n- DELETE /2/scim/Users/{userId}\r\n- GET /1/object/apikey/{pkiApkiID}\r\
+    \n\r\n### [1.1.19] - 2023-08-\r\n\r\n#### Added\r\n\r\n### [1.1.18] - 2023-07-22\r\
+    \n\r\n#### Added\r\n- DELETE /1/object/cors/{pkiCorsID}\r\n- DELETE /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}\r\
+    \n- DELETE /1/object/permission/{pkiPermissionID}\r\n- DELETE /1/object/signature/{pkiSignatureID}\r\
+    \n- DELETE /1/object/subnet/{pkiSubnetID}\r\n- DELETE /1/object/usergroupmembership/{pkiUsergroupmembershipID}\r\
+    \n- DELETE /2/scim/Groups/{groupId}\r\n- DELETE /2/scim/Users/{userId}\r\n- GET\
+    \ /1/object/apikey/getList\r\n- GET /1/object/apikey/{pkiApkiID}\r\n- GET /1/object/apikey/{pkiApkiID}/getCors\r\
     \n- GET /1/object/apikey/{pkiApkiID}/getPermissions\r\n- GET /1/object/apikey/{pkiApkiID}/getSubnets\r\
-    \n- GET /1/module/report/getReportFromCache/{sReportgroupCacheID}\r\n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment\r\
+    \n- GET /1/module/report/getReportFromCache/{sReportgroupCacheID}\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine\r\
+    \n- GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment\r\
     \n- GET /1/object/modulegroup/getAll/{eContext}\r\n- GET /1/object/user/getList\r\
     \n- GET /1/object/user/{pkiUserID}/getEffectivePermissions\r\n- GET /1/object/user/{pkiUserID}/getPermissions\r\
     \n- GET /1/object/user/{pkiUserID}/getSubnets\r\n- GET /1/object/usergroup/{pkiUsergroupID}/getPermissions\r\
     \n- GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships\r\n- GET\
     \ /1/object/usergroupmembership/{pkiUsergroupmembershipID}\r\n- GET /2/object/company/getAutocomplete/{sSelector}\r\
-    \n- GET /2/object/permission/{pkiPermissionID}\r\n- GET /2/object/signature/{pkiSignatureID}\r\
-    \n- GET /2/object/subnet/{pkiSubnetID} \r\n- GET /2/object/systemconfiguration/{pkiSystemconfigurationID}\r\
-    \n- GET /2/object/user/{pkiUserID}\r\n- GET /2/scim/Groups\r\n- GET /2/scim/Groups/{groupId}\r\
+    \n- GET /2/object/cors/{pkiCorsID}\r\n- GET /2/object/emailtype/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}\r\
+    \n- GET /2/object/permission/{pkiPermissionID}\r\n- GET /2/object/phonetype/getAutocomplete/{sSelector}\r\
+    \n- GET /2/object/signature/{pkiSignatureID}\r\n- GET /2/object/subnet/{pkiSubnetID}\
+    \ \r\n- GET /2/object/systemconfiguration/{pkiSystemconfigurationID}\r\n- GET\
+    \ /2/object/user/{pkiUserID}\r\n- GET /2/scim/Groups\r\n- GET /2/scim/Groups/{groupId}\r\
     \n- GET /2/scim/ServiceProviderConfig\r\n- GET /2/scim/Users\r\n- GET /2/scim/Users/{userId}\r\
-    \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform\r\n-\
-    \ POST /1/object/ezsignpage/{pkiEzsignpageID}/consult\r\n- POST /1/object/permission\r\
-    \n- POST /1/object/signature\r\n- POST /1/object/subnet\r\n- POST /1/object/usergroupmembership\r\
-    \n- POST /1/object/userstaged/{pkiUserstagedID}/createUser\r\n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign\r\
-    \n- POST /1/object/user\r\n- POST /1/report/accountsreceivable/accountsreceivablereport\r\
+    \n- POST /1/object/apikey/{pkiApikeyID}/regenerate\r\n- POST /1/object/cors\r\n\
+    - POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform\r\n- POST\
+    \ /1/object/ezsignpage/{pkiEzsignpageID}/consult\r\n- POST /1/object/ezsignsignergroupmembership\r\
+    \n- POST /1/object/permission\r\n- POST /1/object/signature\r\n- POST /1/object/subnet\r\
+    \n- POST /1/object/usergroupmembership\r\n- POST /1/object/userstaged/{pkiUserstagedID}/createUser\r\
+    \n- POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign\r\n- POST\
+    \ /1/object/user\r\n- POST /1/report/accountsreceivable/accountsreceivablereport\r\
     \n- POST /2/scim/Groups\r\n- POST /2/scim/Users\r\n- PUT /1/object/apikey/{pkiApikeyID}\r\
-    \n- PUT /1/object/apikey/{pkiApikeyID}/editPermissions\r\n- PUT /1/object/permission/{pkiPermissionID}\
-    \  \r\n- PUT /1/object/signature/{pkiSignatureID} \r\n- PUT /1/object/subnet/{pkiSubnetID}\r\
-    \n- PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}\r\n- PUT /1/object/user/{pkiUserID}\r\
-    \n- PUT /1/object/user/{pkiUserID}/editPermissions\r\n- PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions\r\
-    \n- PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships\r\n- PUT\
-    \ /1/object/usergroupmembership/{pkiUsergroupmembershipID}\r\n- PUT /2/scim/Groups/{groupId}\r\
+    \n- PUT /1/object/apikey/{pkiApikeyID}/editPermissions\r\n- PUT /1/object/cors/{pkiCorsID}\r\
+    \n- PUT /1/object/permission/{pkiPermissionID}  \r\n- PUT /1/object/signature/{pkiSignatureID}\
+    \ \r\n- PUT /1/object/subnet/{pkiSubnetID}\r\n- PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}\r\
+    \n- PUT /1/object/user/{pkiUserID}\r\n- PUT /1/object/user/{pkiUserID}/editPermissions\r\
+    \n- PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions\r\n- PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships\r\
+    \n- PUT /1/object/usergroupmembership/{pkiUsergroupmembershipID}\r\n- PUT /2/scim/Groups/{groupId}\r\
     \n- PUT /2/scim/Users/{userId}\r\n- Webhook Userstaged Created in Userstaged\r\
     \n- Websocket RequestServer-GetWebsocketID-V1\r\n- Websocket Response-Error-V1\r\
     \n- Websocket Response-GetWebsocketID-V1\r\n- Websocket Response-Information-V1\r\
@@ -1088,9 +1096,15 @@ tags:
 - description: Company contains details about Companys
   name: Object_Company
   x-displayName: Company
+- description: Cors contains details about Cors
+  name: Object_Cors
+  x-displayName: Cors
 - description: Department contains detail about a Department
   name: Object_Department
   x-displayName: Department
+- description: Emailtype contains details about Emailtypes
+  name: Object_Emailtype
+  x-displayName: Emailtype
 - description: Ezmaxinvoicing contains detail about a Ezmaxinvoicing
   name: Object_Ezmaxinvoicing
   x-displayName: Ezmaxinvoicing
@@ -1137,6 +1151,12 @@ tags:
     a page of a Ezsigndocument
   name: Object_Ezsignsignature
   x-displayName: Ezsignsignature
+- description: Ezsignsignergroup contains details about Ezsignsignergroups
+  name: Object_Ezsignsignergroup
+  x-displayName: Ezsignsignergroup
+- description: Ezsignsignergroupmembership contains details about Ezsignsignergroupmemberships
+  name: Object_Ezsignsignergroupmembership
+  x-displayName: Ezsignsignergroupmembership
 - description: Ezsigntemplate contains detail about Document types and block templates
   name: Object_Ezsigntemplate
   x-displayName: Ezsigntemplate
@@ -1209,6 +1229,9 @@ tags:
 - description: Permission contains details about Permissions
   name: Object_Permission
   x-displayName: Permission
+- description: Phonetype contains details about Phonetypes
+  name: Object_Phonetype
+  x-displayName: Phonetype
 - description: Secretquestion contains detail about questions that can be asked to
     user for 2FA
   name: Object_Secretquestion
@@ -1893,6 +1916,46 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /1/object/apikey/{pkiApikeyID}/getCors:
+    description: ""
+    get:
+      operationId: Apikey_GetCors_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiApikeyID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiApikeyID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-getCors-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Apikey's cors
+      tags:
+      - Object_Apikey
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
   /1/object/apikey/{pkiApikeyID}/getPermissions:
     description: ""
     get:
@@ -1972,6 +2035,143 @@ paths:
       - Management_UsersNormal
       x-usertypeextra: []
       x-presentations: []
+      x-accepts: application/json
+  /1/object/apikey/{pkiApikeyID}/regenerate:
+    post:
+      description: ""
+      operationId: Apikey_Regenerate_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiApikeyID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiApikeyID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/apikey-regenerate-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-regenerate-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Regenerate the Apikey
+      tags:
+      - Object_Apikey
+      x-presentations: []
+      x-permissions:
+      - Management_APIKeyGeneration
+      x-usertypeextra: []
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/apikey/getList:
+    description: ""
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+      operationId: Apikey_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiApikeyID_ASC
+          - pkiApikeyID_DESC
+          - sApikeyDescriptionX_ASC
+          - sApikeyDescriptionX_DESC
+          - bApikeyIssigned_ASC
+          - bApikeyIssigned_DESC
+          - bApikeyIsactive_ASC
+          - bApikeyIsactive_DESC
+          - sUserFirstname_ASC
+          - sUserFirstname_DESC
+          - sUserLastname_ASC
+          - sUserLastname_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowMax'
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-iRowOffset'
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: '#/components/schemas/Field-sFilter'
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/apikey-getList-v1-Response'
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: '#/components/schemas/File-Xlsx'
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Apikey list
+      tags:
+      - Object_Apikey
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - Management_APIKeyGeneration
+      x-usertypeextra: []
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
       x-accepts: application/json
   /2/object/billingentityexternal/getAutocomplete/{sSelector}:
     description: ""
@@ -2797,6 +2997,177 @@ paths:
       x-usertypeextra: []
       x-presentations: []
       x-accepts: application/json
+  /1/object/cors:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Cors_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/cors-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cors-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Cors
+      tags:
+      - Object_Cors
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      x-usertypeextra: []
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/cors/{pkiCorsID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Cors_GetObject_V2
+      parameters:
+      - description: The unique ID of the Cors
+        explode: false
+        in: path
+        name: pkiCorsID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiCorsID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cors-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Cors
+      tags:
+      - Object_Cors
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/cors/{pkiCorsID}:
+    delete:
+      description: ""
+      operationId: Cors_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Cors
+        explode: false
+        in: path
+        name: pkiCorsID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiCorsID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cors-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Cors
+      tags:
+      - Object_Cors
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+    put:
+      description: ""
+      operationId: Cors_EditObject_V1
+      parameters:
+      - description: The unique ID of the Cors
+        explode: false
+        in: path
+        name: pkiCorsID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiCorsID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/cors-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cors-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Edit an existing Cors
+      tags:
+      - Object_Cors
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - Management_UsersEzsignUser
+      - Management_UsersNormal
+      x-usertypeextra: []
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
   /2/object/department/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -2864,6 +3235,72 @@ paths:
       x-apikeyrequire: true
       x-authorizationsources:
       - Headers
+      x-accepts: application/json
+  /2/object/emailtype/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Emailtype to be used in a dropdown or autocomplete
+        control.
+      operationId: Emailtype_GetAutocomplete_V2
+      parameters:
+      - description: The type of Emailtypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/emailtype-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Emailtypes and IDs
+      tags:
+      - Object_Emailtype
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-presentations: []
       x-accepts: application/json
   /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}:
     get:
@@ -6115,6 +6552,47 @@ paths:
       x-authorizationsources:
       - Headers
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine:
+    get:
+      description: ""
+      operationId: Ezsignfolder_GetEzsignfoldersignerassociationsmine_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
+      tags:
+      - Object_Ezsignfolder
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic:
     get:
       description: Return the Ezsignsignatures that can be signed by the current user
@@ -8088,6 +8566,380 @@ paths:
       x-authorizationsources:
       - Headers
       x-accepts: application/json
+  /1/object/ezsignsignergroup:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsignsignergroup_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignergroup-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignergroup
+      tags:
+      - Object_Ezsignsignergroup
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsignsignergroup_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezsignsignergroup
+        explode: false
+        in: path
+        name: pkiEzsignsignergroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignergroup
+      tags:
+      - Object_Ezsignsignergroup
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}:
+    delete:
+      description: ""
+      operationId: Ezsignsignergroup_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignergroup
+        explode: false
+        in: path
+        name: pkiEzsignsignergroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignsignergroup
+      tags:
+      - Object_Ezsignsignergroup
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    description: ""
+    put:
+      description: ""
+      operationId: Ezsignsignergroup_EditObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignergroup
+        explode: false
+        in: path
+        name: pkiEzsignsignergroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignergroup-editObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-editObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Edit an existing Ezsignsignergroup
+      tags:
+      - Object_Ezsignsignergroup
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships:
+    put:
+      description: "Using this endpoint, you can edit multiple Ezsignsignergroupmemberships\
+        \ at the same time."
+      operationId: Ezsignsignergroup_EditEzsignsignergroupmemberships_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignergroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignergroup-editEzsignsignergroupmemberships-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-editEzsignsignergroupmemberships-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Edit multiple Ezsignsignergroupmemberships
+      tags:
+      - Object_Ezsignsignergroup
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships:
+    description: ""
+    get:
+      operationId: Ezsignsignergroup_GetEzsignsignergroupmemberships_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignsignergroupID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroup-getEzsignsignergroupmemberships-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignergroup's Ezsignsignergroupmemberships
+      tags:
+      - Object_Ezsignsignergroup
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/ezsignsignergroupmembership:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsignsignergroupmembership_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsignsignergroupmembership-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroupmembership-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsignsignergroupmembership
+      tags:
+      - Object_Ezsignsignergroupmembership
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsignsignergroupmembership_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezsignsignergroupmembership
+        explode: false
+        in: path
+        name: pkiEzsignsignergroupmembershipID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupmembershipID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroupmembership-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsignsignergroupmembership
+      tags:
+      - Object_Ezsignsignergroupmembership
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+  /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}:
+    delete:
+      description: ""
+      operationId: Ezsignsignergroupmembership_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsignsignergroupmembership
+        explode: false
+        in: path
+        name: pkiEzsignsignergroupmembershipID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignsignergroupmembershipID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignsignergroupmembership-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsignsignergroupmembership
+      tags:
+      - Object_Ezsignsignergroupmembership
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-presentations:
+      - Ezsign
+      x-accepts: application/json
+    description: ""
   /1/object/ezsigntemplate:
     description: ""
     post:
@@ -11477,6 +12329,72 @@ paths:
       x-presentations: []
       x-content-type: application/json
       x-accepts: application/json
+  /2/object/phonetype/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Phonetype to be used in a dropdown or autocomplete
+        control.
+      operationId: Phonetype_GetAutocomplete_V2
+      parameters:
+      - description: The type of Phonetypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/phonetype-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Phonetypes and IDs
+      tags:
+      - Object_Phonetype
+      x-apikeyrequire: true
+      x-authorizationsources:
+      - Headers
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
   /2/object/secretquestion/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -11638,7 +12556,6 @@ paths:
       - Management_UsersAttendance
       - Management_UsersEmployee
       - Management_UsersEzcom
-      - Management_UsersEzsignSigner
       - Management_UsersEzsignUser
       - Management_UsersNormal
       - Management_UsersRewardMember
@@ -11681,7 +12598,6 @@ paths:
       x-permissions:
       - Management_UsersNormal
       - Management_UsersAgentBroker
-      - Management_UsersEzsignSigner
       - Management_UsersEzsignUser
       x-usertypeextra:
       - AgentBroker
@@ -11728,7 +12644,6 @@ paths:
       x-permissions:
       - Management_UsersNormal
       - Management_UsersAgentBroker
-      - Management_UsersEzsignSigner
       - Management_UsersEzsignUser
       x-usertypeextra:
       - AgentBroker
@@ -11773,7 +12688,6 @@ paths:
       x-permissions:
       - Management_UsersNormal
       - Management_UsersAgentBroker
-      - Management_UsersEzsignSigner
       - Management_UsersEzsignUser
       x-usertypeextra:
       - AgentBroker
@@ -11831,7 +12745,6 @@ paths:
       x-permissions:
       - Management_UsersNormal
       - Management_UsersAgentBroker
-      - Management_UsersEzsignSigner
       - Management_UsersEzsignUser
       x-usertypeextra:
       - AgentBroker
@@ -15762,6 +16675,23 @@ components:
       - fkiEzsignfoldersignerassociationID
       - tEzignfoldersignerassociationMessage
       type: object
+    Custom-Ezsignfoldersignerassociationmine-Response:
+      description: A custom Ezsignfoldersignerassociation Object
+      properties:
+        pkiEzsignfoldersignerassociationID:
+          description: The unique ID of the Ezsignfoldersignerassociation
+          example: 20
+          minimum: 0
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+      required:
+      - fkiEzsignfolderID
+      - pkiEzsignfoldersignerassociationID
+      type: object
     Custom-Ezsignfoldersignerassociationstatus-Response:
       description: A Ezsignfoldersignerassociationstatus Object and children to create
         a complete structure
@@ -15772,12 +16702,18 @@ components:
           minimum: 0
           type: integer
         sEzsignfoldersignerassociationstatusLastname:
+          deprecated: true
           description: The last name of the Ezsignsigner
           example: Doe
           type: string
         sEzsignfoldersignerassociationstatusFirstname:
+          deprecated: true
           description: The first name of the Ezsignsigner
           example: John
+          type: string
+        sEzsignfoldersignerassociationstatusDescriptionX:
+          description: The description of the Ezsignsigner
+          example: John Doe
           type: string
         a_objEzsignsignaturestatus:
           items:
@@ -16212,6 +17148,10 @@ components:
       description: Whether the apikey is active or not
       example: true
       type: boolean
+    Field-bApikeyIssigned:
+      description: Whether the apikey is signed or not
+      example: true
+      type: boolean
     Field-bBillingentityexternalIsactive:
       description: Whether the Billingentityexternal is active or not
       example: true
@@ -16234,6 +17174,10 @@ components:
       type: boolean
     Field-bDepartmentIsactive:
       description: Whether the Department is active or not
+      example: true
+      type: boolean
+    Field-bEmailtypeIsactive:
+      description: Whether the Emailtype is active or not
       example: true
       type: boolean
     Field-bEzmaxinvoicingIsactive:
@@ -16481,6 +17425,10 @@ components:
       type: boolean
     Field-bPeriodIsactive:
       description: Whether the Period is active or not
+      example: true
+      type: boolean
+    Field-bPhonetypeIsactive:
+      description: Whether the Phonetype is active or not
       example: true
       type: boolean
     Field-bSecretquestionIsactive:
@@ -18221,6 +19169,12 @@ components:
       example: 2
       minimum: 0
       type: integer
+    Field-pkiCorsID:
+      description: The unique ID of the Cors
+      example: 228
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-pkiCountryID:
       description: |-
         The unique ID of the Country.
@@ -18446,6 +19400,12 @@ components:
       description: The unique ID of the Ezsignsignergroup
       example: 27
       maximum: 65535
+      minimum: 0
+      type: integer
+    Field-pkiEzsignsignergroupmembershipID:
+      description: The unique ID of the Ezsignsignergroupmembership
+      example: 153
+      maximum: 16777215
       minimum: 0
       type: integer
     Field-pkiEzsigntemplateID:
@@ -19043,6 +20003,11 @@ components:
       description: The Last name of the contact
       example: Doe
       type: string
+    Field-sCorsEntryurl:
+      description: The entryurl of the Cors
+      example: Https://www.example.com
+      pattern: "^.{0,2048}$"
+      type: string
     Field-sCreditcardtransactionPartiallydecryptednumber:
       description: The partially decrypted credit card number used in the Creditcardtransaction
       example: XXXX XXXX XXXX 1234
@@ -19068,6 +20033,11 @@ components:
     Field-sEmailstaticAddress:
       description: The email address.
       example: email@example.com
+      type: string
+    Field-sEmailtypeNameX:
+      description: The name of the Emailtype in the language of the requester
+      example: Office
+      pattern: "^.{0,15}$"
       type: string
     Field-sErrorMessage:
       description: The message giving details about the error
@@ -19205,6 +20175,19 @@ components:
       description: The name of the Ezsignsignatureattachment
       example: document.pdf
       pattern: "^.{0,75}$"
+      type: string
+    Field-sEzsignsignergroupDescription1:
+      description: The description of the Ezsignsignergroup in French
+      example: RH
+      type: string
+    Field-sEzsignsignergroupDescription2:
+      description: The description of the Ezsignsignergroup in English
+      example: HR
+      type: string
+    Field-sEzsignsignergroupDescriptionX:
+      description: The Description of the Ezsignsignergroup in the language of the
+        requester
+      example: HR
       type: string
     Field-sEzsigntemplateDescription:
       description: The description of the Ezsigntemplate
@@ -19413,6 +20396,11 @@ components:
       description: The extension of the phone number.
       example: "123"
       pattern: ^\d
+      type: string
+    Field-sPhonetypeNameX:
+      description: The name of the Phonetype in the language of the requester
+      example: Office
+      pattern: "^.{0,20}$"
       type: string
     Field-sReportgroupCacheID:
       description: A cache ID to regenerate the same report without computing the
@@ -19737,6 +20725,18 @@ components:
         sEzsignfoldertypeName2:
           description: The name of the Ezsignfoldertype in English
           example: Recruitment
+          type: string
+      type: object
+    Multilingual-EzsignsignergroupDescription:
+      description: Description of the Ezsignsignergroup
+      properties:
+        sEzsignsignergroupDescription1:
+          description: The description of the Ezsignsignergroup in French
+          example: RH
+          type: string
+        sEzsignsignergroupDescription2:
+          description: The description of the Ezsignsignergroup in English
+          example: HR
           type: string
       type: object
     Multilingual-NotificationsubsectionName:
@@ -20568,6 +21568,42 @@ components:
       - $ref: '#/components/schemas/address-Request'
       description: An Address Object and children to create a complete structure
       type: object
+    apikey-ListElement:
+      description: A Branding List Element
+      properties:
+        pkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          minimum: 0
+          type: integer
+        sApikeyDescriptionX:
+          description: The description of the Apikey in the language of the requester
+          example: Project X
+          type: string
+        sUserFirstname:
+          description: The first name of the user
+          example: John
+          type: string
+        sUserLastname:
+          description: The last name of the user
+          example: Doe
+          type: string
+        bApikeyIsactive:
+          description: Whether the apikey is active or not
+          example: true
+          type: boolean
+        bApikeyIssigned:
+          description: Whether the apikey is signed or not
+          example: true
+          type: boolean
+      required:
+      - bApikeyIsactive
+      - bApikeyIssigned
+      - pkiApikeyID
+      - sApikeyDescriptionX
+      - sUserFirstname
+      - sUserLastname
+      type: object
     apikey-Request:
       description: An Apikey Object
       properties:
@@ -20585,6 +21621,10 @@ components:
           $ref: '#/components/schemas/Multilingual-ApikeyDescription'
         bApikeyIsactive:
           description: Whether the apikey is active or not
+          example: true
+          type: boolean
+        bApikeyIssigned:
+          description: Whether the apikey is signed or not
           example: true
           type: boolean
       required:
@@ -20611,14 +21651,26 @@ components:
           type: integer
         objApikeyDescription:
           $ref: '#/components/schemas/Multilingual-ApikeyDescription'
-        sComputedToken:
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+        sApikeyApikey:
           description: |-
-            The secret token for the API key.
+            The Apikey for the API key.
 
-            This will be returned only on creation.
+            This will be hidden if we are not creating or regenerating the Apikey.
+          type: string
+        sApikeySecret:
+          description: |-
+            The Secret for the API key.
+
+            This will be hidden if we are not creating or regenerating the Apikey.
           type: string
         bApikeyIsactive:
           description: Whether the apikey is active or not
+          example: true
+          type: boolean
+        bApikeyIssigned:
+          description: Whether the apikey is signed or not
           example: true
           type: boolean
         objAudit:
@@ -20628,6 +21680,7 @@ components:
       - fkiUserID
       - objApikeyDescription
       - objAudit
+      - objContactName
       - pkiApikeyID
       type: object
     apikey-ResponseCompound:
@@ -20702,6 +21755,34 @@ components:
       required:
       - a_pkiPermissionID
       type: object
+    apikey-getCors-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/apikey_getCors_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/apikey/{pkiApikeyID}/getCors"
+      type: object
+    apikey-getCors-v1-Response-mPayload:
+      description: "Response for GET /1/object/apikey/{pkiApikeyID}/getCors"
+      properties:
+        a_objCors:
+          items:
+            $ref: '#/components/schemas/cors-ResponseCompound'
+          type: array
+      required:
+      - a_objCors
+      type: object
+    apikey-getList-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/apikey_getList_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: Response for GET /1/object/apikey/getList
+      type: object
+    apikey-getList-v1-Response-mPayload:
+      allOf:
+      - $ref: '#/components/schemas/apikey_getList_v1_Response_mPayload_allOf'
+      - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
+      description: Payload for GET /1/object/apikey/getList
+      type: object
     apikey-getObject-v2-Response:
       allOf:
       - $ref: '#/components/schemas/apikey_getObject_v2_Response_allOf'
@@ -20747,6 +21828,28 @@ components:
           type: array
       required:
       - a_objSubnet
+      type: object
+    apikey-regenerate-v1-Request:
+      description: "Request for POST /1/object/apikey/{pkiApikeyID}/regenerate"
+      properties:
+        bApikeyIssigned:
+          description: Whether the apikey is signed or not
+          example: true
+          type: boolean
+      type: object
+    apikey-regenerate-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/apikey_regenerate_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/apikey/{pkiApikeyID}/regenerate"
+      type: object
+    apikey-regenerate-v1-Response-mPayload:
+      description: "Response for GET /1/object/apikey/{pkiApikeyID}/regenerate"
+      properties:
+        objApikey:
+          $ref: '#/components/schemas/apikey-ResponseCompound'
+      required:
+      - objApikey
       type: object
     attempt-Response:
       description: An Attempt object
@@ -21897,6 +23000,128 @@ components:
       description: A Contactinformations Object and children to create a complete
         structure
       type: object
+    cors-Request:
+      description: A Cors Object
+      properties:
+        pkiCorsID:
+          description: The unique ID of the Cors
+          example: 228
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          minimum: 0
+          type: integer
+        sCorsEntryurl:
+          description: The entryurl of the Cors
+          example: Https://www.example.com
+          pattern: "^.{0,2048}$"
+          type: string
+      required:
+      - fkiApikeyID
+      - sCorsEntryurl
+      type: object
+    cors-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/cors-Request'
+      - type: object
+      description: A Cors Object and children
+      type: object
+    cors-Response:
+      description: A Cors Object
+      properties:
+        pkiCorsID:
+          description: The unique ID of the Cors
+          example: 228
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiApikeyID:
+          description: The unique ID of the Apikey
+          example: 99
+          minimum: 0
+          type: integer
+        sCorsEntryurl:
+          description: The entryurl of the Cors
+          example: Https://www.example.com
+          pattern: "^.{0,2048}$"
+          type: string
+      required:
+      - fkiApikeyID
+      - pkiCorsID
+      - sCorsEntryurl
+      type: object
+    cors-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/cors-Response'
+      - type: object
+      description: A Cors Object
+      type: object
+    cors-createObject-v1-Request:
+      description: Request for POST /1/object/cors
+      properties:
+        a_objCors:
+          items:
+            $ref: '#/components/schemas/cors-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objCors
+      type: object
+    cors-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/cors_createObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/cors
+      type: object
+    cors-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/cors
+      properties:
+        a_pkiCorsID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiCorsID'
+          type: array
+      required:
+      - a_pkiCorsID
+      type: object
+    cors-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/cors/{pkiCorsID}"
+      type: object
+    cors-editObject-v1-Request:
+      description: "Request for PUT /1/object/cors/{pkiCorsID}"
+      properties:
+        objCors:
+          $ref: '#/components/schemas/cors-RequestCompound'
+      required:
+      - objCors
+      type: object
+    cors-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PUT /1/object/cors/{pkiCorsID}"
+      type: object
+    cors-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/cors_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/cors/{pkiCorsID}"
+      type: object
+    cors-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/cors/{pkiCorsID}"
+      properties:
+        objCors:
+          $ref: '#/components/schemas/cors-ResponseCompound'
+      required:
+      - objCors
+      type: object
     department-AutocompleteElement-Response:
       description: A Department AutocompleteElement Response
       properties:
@@ -22052,6 +23277,53 @@ components:
       allOf:
       - $ref: '#/components/schemas/emailstatic-Response'
       description: An Emailstatic Object and children to create a complete structure
+      type: object
+    emailtype-AutocompleteElement-Response:
+      description: A Emailtype AutocompleteElement Response
+      properties:
+        pkiEmailtypeID:
+          description: |-
+            The unique ID of the Emailtype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+          example: 1
+          minimum: 0
+          type: integer
+        sEmailtypeNameX:
+          description: The name of the Emailtype in the language of the requester
+          example: Office
+          pattern: "^.{0,15}$"
+          type: string
+        bEmailtypeIsactive:
+          description: Whether the Emailtype is active or not
+          example: true
+          type: boolean
+      required:
+      - bEmailtypeIsactive
+      - pkiEmailtypeID
+      - sEmailtypeNameX
+      type: object
+    emailtype-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/emailtype_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/emailtype/getAutocomplete
+      type: object
+    emailtype-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/emailtype/getAutocomplete
+      properties:
+        a_objEmailtype:
+          description: An array of Emailtype autocomplete element response.
+          items:
+            $ref: '#/components/schemas/emailtype-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objemailtype
       type: object
     ezmaxinvoicing-AutocompleteElement-Response:
       description: A Ezmaxinvoicing AutocompleteElement Response
@@ -25033,6 +26305,22 @@ components:
       required:
       - a_objEzsignfoldersignerassociation
       type: object
+    ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignfolder_getEzsignfoldersignerassociationsmine_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociationsmine"
+      type: object
+    ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response-mPayload:
+      description: "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociationsmine"
+      properties:
+        a_objEzsignfoldersignerassociation:
+          items:
+            $ref: '#/components/schemas/Custom-Ezsignfoldersignerassociationmine-Response'
+          type: array
+      required:
+      - a_objEzsignfoldersignerassociation
+      type: object
     ezsignfolder-getEzsignsignaturesAutomatic-v1-Response:
       allOf:
       - $ref: '#/components/schemas/ezsignfolder_getEzsignsignaturesAutomatic_v1_Response_allOf'
@@ -25303,12 +26591,6 @@ components:
         fkiUserID:
           description: The unique ID of the User
           example: 70
-          minimum: 0
-          type: integer
-        fkiUsergroupID:
-          description: The unique ID of the Usergroup
-          example: 2
-          maximum: 255
           minimum: 0
           type: integer
         fkiEzsignsignergroupID:
@@ -27582,6 +28864,32 @@ components:
       - sContactFirstname
       - sContactLastname
       type: object
+    ezsignsignergroup-Request:
+      description: A Ezsignsignergroup Object
+      properties:
+        pkiEzsignsignergroupID:
+          description: The unique ID of the Ezsignsignergroup
+          example: 27
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+        objEzsignsignergroupDescription:
+          $ref: '#/components/schemas/Multilingual-EzsignsignergroupDescription'
+      required:
+      - fkiEzsignfolderID
+      - objEzsignsignergroupDescription
+      type: object
+    ezsignsignergroup-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroup-Request'
+      - type: object
+      description: A Ezsignsignergroup Object and children
+      type: object
     ezsignsignergroup-Response:
       description: An Ezsignsignergroup Object
       properties:
@@ -27591,7 +28899,15 @@ components:
           maximum: 65535
           minimum: 0
           type: integer
+        objEzsignsignergroupDescription:
+          $ref: '#/components/schemas/Multilingual-EzsignsignergroupDescription'
+        sEzsignsignergroupDescriptionX:
+          description: The Description of the Ezsignsignergroup in the language of
+            the requester
+          example: HR
+          type: string
       required:
+      - objEzsignsignergroupDescription
       - pkiEzsignsignergroupID
       type: object
     ezsignsignergroup-ResponseCompound:
@@ -27599,6 +28915,248 @@ components:
       - $ref: '#/components/schemas/ezsignsignergroup-Response'
       - type: object
       description: An Ezsignsignergroup Object
+      type: object
+    ezsignsignergroup-createObject-v1-Request:
+      description: Request for POST /1/object/ezsignsignergroup
+      properties:
+        a_objEzsignsignergroup:
+          items:
+            $ref: '#/components/schemas/ezsignsignergroup-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objEzsignsignergroup
+      type: object
+    ezsignsignergroup-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroup_createObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/ezsignsignergroup
+      type: object
+    ezsignsignergroup-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/ezsignsignergroup
+      properties:
+        a_pkiEzsignsignergroupID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignsignergroupID'
+          type: array
+      required:
+      - a_pkiEzsignsignergroupID
+      type: object
+    ezsignsignergroup-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}"
+      type: object
+    ezsignsignergroup-editEzsignsignergroupmemberships-v1-Request:
+      description: "Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships"
+      properties:
+        a_objEzsignsignergroupmembership:
+          items:
+            $ref: '#/components/schemas/ezsignsignergroupmembership-RequestCompound'
+          type: array
+      required:
+      - a_objEzsignsignergroupmembership
+      type: object
+    ezsignsignergroup-editEzsignsignergroupmemberships-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroup_editEzsignsignergroupmemberships_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships"
+      type: object
+    ezsignsignergroup-editEzsignsignergroupmemberships-v1-Response-mPayload:
+      description: "Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsignsignergroupmemberships"
+      properties:
+        a_pkiEzsignsignergroupmembershipID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignsignergroupmembershipID'
+          type: array
+      required:
+      - a_pkiEzsignsignergroupmembershipID
+      type: object
+    ezsignsignergroup-editObject-v1-Request:
+      description: "Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}"
+      properties:
+        objBranding:
+          $ref: '#/components/schemas/ezsignsignergroup-RequestCompound'
+      required:
+      - objEzsignsignergroup
+      type: object
+    ezsignsignergroup-editObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}"
+      type: object
+    ezsignsignergroup-getEzsignsignergroupmemberships-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroup_getEzsignsignergroupmemberships_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships"
+      type: object
+    ezsignsignergroup-getEzsignsignergroupmemberships-v1-Response-mPayload:
+      description: "Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships"
+      properties:
+        a_objEzsignsignergroupmembership:
+          items:
+            $ref: '#/components/schemas/ezsignsignergroupmembership-ResponseCompound'
+          type: array
+      required:
+      - a_objEzsignsignergroupmembership
+      type: object
+    ezsignsignergroup-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroup_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}"
+      type: object
+    ezsignsignergroup-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}"
+      properties:
+        objEzsignsignergroup:
+          $ref: '#/components/schemas/ezsignsignergroup-ResponseCompound'
+      required:
+      - objEzsignsignergroup
+      type: object
+    ezsignsignergroupmembership-Request:
+      description: A Ezsignsignergroupmembership Object
+      properties:
+        pkiEzsignsignergroupmembershipID:
+          description: The unique ID of the Ezsignsignergroupmembership
+          example: 153
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsignsignergroupID:
+          description: The unique ID of the Ezsignsignergroup
+          example: 27
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiUsergroupID:
+          description: The unique ID of the Usergroup
+          example: 2
+          maximum: 255
+          minimum: 0
+          type: integer
+      required:
+      - fkiEzsignsignerID
+      - fkiEzsignsignergroupID
+      - fkiUserID
+      - fkiUsergroupID
+      type: object
+    ezsignsignergroupmembership-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroupmembership-Request'
+      - type: object
+      description: A Ezsignsignergroupmembership Object and children
+      type: object
+    ezsignsignergroupmembership-Response:
+      description: A Ezsignsignergroupmembership Object
+      properties:
+        pkiEzsignsignergroupmembershipID:
+          description: The unique ID of the Ezsignsignergroupmembership
+          example: 153
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsignsignergroupID:
+          description: The unique ID of the Ezsignsignergroup
+          example: 27
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiUsergroupID:
+          description: The unique ID of the Usergroup
+          example: 2
+          maximum: 255
+          minimum: 0
+          type: integer
+      required:
+      - fkiEzsignsignerID
+      - fkiEzsignsignergroupID
+      - fkiUserID
+      - fkiUsergroupID
+      - pkiEzsignsignergroupmembershipID
+      type: object
+    ezsignsignergroupmembership-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroupmembership-Response'
+      - type: object
+      description: A Ezsignsignergroupmembership Object
+      type: object
+    ezsignsignergroupmembership-createObject-v1-Request:
+      description: Request for POST /1/object/ezsignsignergroupmembership
+      properties:
+        a_objEzsignsignergroupmembership:
+          items:
+            $ref: '#/components/schemas/ezsignsignergroupmembership-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objEzsignsignergroupmembership
+      type: object
+    ezsignsignergroupmembership-createObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroupmembership_createObject_v1_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/ezsignsignergroupmembership
+      type: object
+    ezsignsignergroupmembership-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/ezsignsignergroupmembership
+      properties:
+        a_pkiEzsignsignergroupmembershipID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignsignergroupmembershipID'
+          type: array
+      required:
+      - a_pkiEzsignsignergroupmembershipID
+      type: object
+    ezsignsignergroupmembership-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}"
+      type: object
+    ezsignsignergroupmembership-getObject-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignergroupmembership_getObject_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}"
+      type: object
+    ezsignsignergroupmembership-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}"
+      properties:
+        objEzsignsignergroupmembership:
+          $ref: '#/components/schemas/ezsignsignergroupmembership-ResponseCompound'
+      required:
+      - objEzsignsignergroupmembership
       type: object
     ezsigntemplate-AutocompleteElement-Response:
       description: A Ezsigntemplate AutocompleteElement Response
@@ -31221,6 +32779,57 @@ components:
       - $ref: '#/components/schemas/phonestatic-Response'
       description: A Phonestatic Object and children to create a complete structure
       type: object
+    phonetype-AutocompleteElement-Response:
+      description: A Phonetype AutocompleteElement Response
+      properties:
+        pkiPhonetypeID:
+          description: |-
+            The unique ID of the Phonetype.
+
+            Valid values:
+
+            |Value|Description|
+            |-|-|
+            |1|Office|
+            |2|Home|
+            |3|Mobile|
+            |4|Fax|
+            |5|Pager|
+            |6|Toll Free|
+          example: 1
+          minimum: 0
+          type: integer
+        sPhonetypeNameX:
+          description: The name of the Phonetype in the language of the requester
+          example: Office
+          pattern: "^.{0,20}$"
+          type: string
+        bPhonetypeIsactive:
+          description: Whether the Phonetype is active or not
+          example: true
+          type: boolean
+      required:
+      - bPhonetypeIsactive
+      - pkiPhonetypeID
+      - sPhonetypeNameX
+      type: object
+    phonetype-getAutocomplete-v2-Response:
+      allOf:
+      - $ref: '#/components/schemas/phonetype_getAutocomplete_v2_Response_allOf'
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/phonetype/getAutocomplete
+      type: object
+    phonetype-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/phonetype/getAutocomplete
+      properties:
+        a_objPhonetype:
+          description: An array of Phonetype autocomplete element response.
+          items:
+            $ref: '#/components/schemas/phonetype-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objphonetype
+      type: object
     secretquestion-AutocompleteElement-Response:
       description: A Secretquestion AutocompleteElement Response
       properties:
@@ -34241,6 +35850,32 @@ components:
       - mPayload
       type: object
       example: null
+    apikey_getCors_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/apikey-getCors-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    apikey_getList_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/apikey-getList-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    apikey_getList_v1_Response_mPayload_allOf:
+      properties:
+        a_objApikey:
+          items:
+            $ref: '#/components/schemas/apikey-ListElement'
+          type: array
+      required:
+      - a_objApikey
+      type: object
+      example: null
     apikey_getObject_v2_Response_allOf:
       properties:
         mPayload:
@@ -34261,6 +35896,14 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/apikey-getSubnets-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    apikey_regenerate_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/apikey-regenerate-v1-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -34472,10 +36115,34 @@ components:
       - a_objWebsite
       type: object
       example: null
+    cors_createObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/cors-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    cors_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/cors-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
     department_getAutocomplete_v2_Response_allOf:
       properties:
         mPayload:
           $ref: '#/components/schemas/department-getAutocomplete-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    emailtype_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/emailtype-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -35013,6 +36680,14 @@ components:
       - mPayload
       type: object
       example: null
+    ezsignfolder_getEzsignfoldersignerassociationsmine_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
     ezsignfolder_getEzsignsignaturesAutomatic_v1_Response_allOf:
       properties:
         mPayload:
@@ -35091,8 +36766,6 @@ components:
           $ref: '#/components/schemas/ezsignsignergroup-ResponseCompound'
         objUser:
           $ref: '#/components/schemas/ezsignfoldersignerassociation-ResponseCompound-User'
-        objUsergroup:
-          $ref: '#/components/schemas/usergroup-ResponseCompound'
         objEzsignsigner:
           $ref: '#/components/schemas/ezsignsigner-ResponseCompound'
       type: object
@@ -35338,6 +37011,54 @@ components:
           $ref: '#/components/schemas/ezsignsigner-ResponseCompound-Contact'
       required:
       - objContact
+      type: object
+      example: null
+    ezsignsignergroup_createObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroup-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    ezsignsignergroup_editEzsignsignergroupmemberships_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroup-editEzsignsignergroupmemberships-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    ezsignsignergroup_getEzsignsignergroupmemberships_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroup-getEzsignsignergroupmemberships-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    ezsignsignergroup_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroup-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    ezsignsignergroupmembership_createObject_v1_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroupmembership-createObject-v1-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    ezsignsignergroupmembership_getObject_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/ezsignsignergroupmembership-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
       type: object
       example: null
     ezsigntemplate_ResponseCompound_allOf:
@@ -35921,6 +37642,14 @@ components:
       properties:
         mPayload:
           $ref: '#/components/schemas/permission-getObject-v2-Response-mPayload'
+      required:
+      - mPayload
+      type: object
+      example: null
+    phonetype_getAutocomplete_v2_Response_allOf:
+      properties:
+        mPayload:
+          $ref: '#/components/schemas/phonetype-getAutocomplete-v2-Response-mPayload'
       required:
       - mPayload
       type: object
@@ -36580,7 +38309,9 @@ x-tagGroups:
   - Object_Clonehistory
   - Object_Communication
   - Object_Company
+  - Object_Cors
   - Object_Department
+  - Object_Emailtype
   - Object_Ezmaxinvoicing
   - Object_Ezmaxproduct
   - Object_Ezsignbulksend
@@ -36594,6 +38325,8 @@ x-tagGroups:
   - Object_Ezsignformfieldgroup
   - Object_Ezsignpage
   - Object_Ezsignsignature
+  - Object_Ezsignsignergroup
+  - Object_Ezsignsignergroupmembership
   - Object_Ezsigntemplate
   - Object_Ezsigntemplatedocument
   - Object_Ezsigntemplateformfieldgroup
@@ -36614,6 +38347,7 @@ x-tagGroups:
   - Object_Paymentterm
   - Object_Period
   - Object_Permission
+  - Object_Phonetype
   - Object_Secretquestion
   - Object_Sessionhistory
   - Object_Signature

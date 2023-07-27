@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.ezmax.api.model.MultilingualEzsignsignergroupDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,11 +51,19 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class EzsignsignergroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
   private Integer pkiEzsignsignergroupID;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION = "objEzsignsignergroupDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION)
+  private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X = "sEzsignsignergroupDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X)
+  private String sEzsignsignergroupDescriptionX;
 
   public EzsignsignergroupResponse() {
   }
@@ -82,6 +91,48 @@ public class EzsignsignergroupResponse {
   }
 
 
+  public EzsignsignergroupResponse objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+    
+    this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
+    return this;
+  }
+
+   /**
+   * Get objEzsignsignergroupDescription
+   * @return objEzsignsignergroupDescription
+  **/
+  @javax.annotation.Nonnull
+  public MultilingualEzsignsignergroupDescription getObjEzsignsignergroupDescription() {
+    return objEzsignsignergroupDescription;
+  }
+
+
+  public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+    this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
+  }
+
+
+  public EzsignsignergroupResponse sEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+    
+    this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
+    return this;
+  }
+
+   /**
+   * The Description of the Ezsignsignergroup in the language of the requester
+   * @return sEzsignsignergroupDescriptionX
+  **/
+  @javax.annotation.Nullable
+  public String getsEzsignsignergroupDescriptionX() {
+    return sEzsignsignergroupDescriptionX;
+  }
+
+
+  public void setsEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+    this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -92,12 +143,14 @@ public class EzsignsignergroupResponse {
       return false;
     }
     EzsignsignergroupResponse ezsignsignergroupResponse = (EzsignsignergroupResponse) o;
-    return Objects.equals(this.pkiEzsignsignergroupID, ezsignsignergroupResponse.pkiEzsignsignergroupID);
+    return Objects.equals(this.pkiEzsignsignergroupID, ezsignsignergroupResponse.pkiEzsignsignergroupID) &&
+        Objects.equals(this.objEzsignsignergroupDescription, ezsignsignergroupResponse.objEzsignsignergroupDescription) &&
+        Objects.equals(this.sEzsignsignergroupDescriptionX, ezsignsignergroupResponse.sEzsignsignergroupDescriptionX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignergroupID);
+    return Objects.hash(pkiEzsignsignergroupID, objEzsignsignergroupDescription, sEzsignsignergroupDescriptionX);
   }
 
   @Override
@@ -105,6 +158,8 @@ public class EzsignsignergroupResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupResponse {\n");
     sb.append("    pkiEzsignsignergroupID: ").append(toIndentedString(pkiEzsignsignergroupID)).append("\n");
+    sb.append("    objEzsignsignergroupDescription: ").append(toIndentedString(objEzsignsignergroupDescription)).append("\n");
+    sb.append("    sEzsignsignergroupDescriptionX: ").append(toIndentedString(sEzsignsignergroupDescriptionX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,10 +183,13 @@ public class EzsignsignergroupResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignsignergroupID");
+    openapiFields.add("objEzsignsignergroupDescription");
+    openapiFields.add("sEzsignsignergroupDescriptionX");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignsignergroupID");
+    openapiRequiredFields.add("objEzsignsignergroupDescription");
   }
 
  /**
@@ -160,6 +218,11 @@ public class EzsignsignergroupResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      // validate the required field `objEzsignsignergroupDescription`
+      MultilingualEzsignsignergroupDescription.validateJsonObject(jsonObj.getAsJsonObject("objEzsignsignergroupDescription"));
+      if ((jsonObj.get("sEzsignsignergroupDescriptionX") != null && !jsonObj.get("sEzsignsignergroupDescriptionX").isJsonNull()) && !jsonObj.get("sEzsignsignergroupDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignergroupDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignergroupDescriptionX").toString()));
       }
   }
 

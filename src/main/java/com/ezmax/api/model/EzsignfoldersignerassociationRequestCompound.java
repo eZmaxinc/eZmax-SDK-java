@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -60,10 +60,6 @@ public class EzsignfoldersignerassociationRequestCompound {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D = "fkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D)
@@ -129,29 +125,6 @@ public class EzsignfoldersignerassociationRequestCompound {
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
-  }
-
-
-  public EzsignfoldersignerassociationRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
-    
-    this.fkiUsergroupID = fkiUsergroupID;
-    return this;
-  }
-
-   /**
-   * The unique ID of the Usergroup
-   * minimum: 0
-   * maximum: 255
-   * @return fkiUsergroupID
-  **/
-  @javax.annotation.Nullable
-  public Integer getFkiUsergroupID() {
-    return fkiUsergroupID;
-  }
-
-
-  public void setFkiUsergroupID(Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
@@ -275,7 +248,6 @@ public class EzsignfoldersignerassociationRequestCompound {
     EzsignfoldersignerassociationRequestCompound ezsignfoldersignerassociationRequestCompound = (EzsignfoldersignerassociationRequestCompound) o;
     return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationRequestCompound.pkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiUserID, ezsignfoldersignerassociationRequestCompound.fkiUserID) &&
-        Objects.equals(this.fkiUsergroupID, ezsignfoldersignerassociationRequestCompound.fkiUsergroupID) &&
         Objects.equals(this.fkiEzsignsignergroupID, ezsignfoldersignerassociationRequestCompound.fkiEzsignsignergroupID) &&
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationRequestCompound.fkiEzsignfolderID) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationRequestCompound.bEzsignfoldersignerassociationReceivecopy) &&
@@ -285,7 +257,7 @@ public class EzsignfoldersignerassociationRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiUserID, fkiUsergroupID, fkiEzsignsignergroupID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, objEzsignsigner);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiUserID, fkiEzsignsignergroupID, fkiEzsignfolderID, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, objEzsignsigner);
   }
 
   @Override
@@ -294,7 +266,6 @@ public class EzsignfoldersignerassociationRequestCompound {
     sb.append("class EzsignfoldersignerassociationRequestCompound {\n");
     sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
     sb.append("    fkiEzsignsignergroupID: ").append(toIndentedString(fkiEzsignsignergroupID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
@@ -324,7 +295,6 @@ public class EzsignfoldersignerassociationRequestCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignfoldersignerassociationID");
     openapiFields.add("fkiUserID");
-    openapiFields.add("fkiUsergroupID");
     openapiFields.add("fkiEzsignsignergroupID");
     openapiFields.add("fkiEzsignfolderID");
     openapiFields.add("bEzsignfoldersignerassociationReceivecopy");

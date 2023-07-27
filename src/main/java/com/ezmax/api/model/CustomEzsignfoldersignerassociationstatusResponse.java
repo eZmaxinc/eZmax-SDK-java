@@ -53,19 +53,25 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   private Integer fkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_LASTNAME = "sEzsignfoldersignerassociationstatusLastname";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_LASTNAME)
   private String sEzsignfoldersignerassociationstatusLastname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_FIRSTNAME = "sEzsignfoldersignerassociationstatusFirstname";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_FIRSTNAME)
   private String sEzsignfoldersignerassociationstatusFirstname;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_DESCRIPTION_X = "sEzsignfoldersignerassociationstatusDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_DESCRIPTION_X)
+  private String sEzsignfoldersignerassociationstatusDescriptionX;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS = "a_objEzsignsignaturestatus";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS)
@@ -96,6 +102,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
 
+  @Deprecated
   public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
     
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
@@ -105,18 +112,22 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
    /**
    * The last name of the Ezsignsigner
    * @return sEzsignfoldersignerassociationstatusLastname
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
   public String getsEzsignfoldersignerassociationstatusLastname() {
     return sEzsignfoldersignerassociationstatusLastname;
   }
 
 
+  @Deprecated
   public void setsEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
   }
 
 
+  @Deprecated
   public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
     
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
@@ -126,15 +137,39 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
    /**
    * The first name of the Ezsignsigner
    * @return sEzsignfoldersignerassociationstatusFirstname
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
   public String getsEzsignfoldersignerassociationstatusFirstname() {
     return sEzsignfoldersignerassociationstatusFirstname;
   }
 
 
+  @Deprecated
   public void setsEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
+  }
+
+
+  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
+    
+    this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
+    return this;
+  }
+
+   /**
+   * The description of the Ezsignsigner
+   * @return sEzsignfoldersignerassociationstatusDescriptionX
+  **/
+  @javax.annotation.Nullable
+  public String getsEzsignfoldersignerassociationstatusDescriptionX() {
+    return sEzsignfoldersignerassociationstatusDescriptionX;
+  }
+
+
+  public void setsEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
+    this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
   }
 
 
@@ -180,12 +215,13 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return Objects.equals(this.fkiEzsignfoldersignerassociationID, customEzsignfoldersignerassociationstatusResponse.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.sEzsignfoldersignerassociationstatusLastname, customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusLastname) &&
         Objects.equals(this.sEzsignfoldersignerassociationstatusFirstname, customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusFirstname) &&
+        Objects.equals(this.sEzsignfoldersignerassociationstatusDescriptionX, customEzsignfoldersignerassociationstatusResponse.sEzsignfoldersignerassociationstatusDescriptionX) &&
         Objects.equals(this.aObjEzsignsignaturestatus, customEzsignfoldersignerassociationstatusResponse.aObjEzsignsignaturestatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfoldersignerassociationID, sEzsignfoldersignerassociationstatusLastname, sEzsignfoldersignerassociationstatusFirstname, aObjEzsignsignaturestatus);
+    return Objects.hash(fkiEzsignfoldersignerassociationID, sEzsignfoldersignerassociationstatusLastname, sEzsignfoldersignerassociationstatusFirstname, sEzsignfoldersignerassociationstatusDescriptionX, aObjEzsignsignaturestatus);
   }
 
   @Override
@@ -195,6 +231,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    sEzsignfoldersignerassociationstatusLastname: ").append(toIndentedString(sEzsignfoldersignerassociationstatusLastname)).append("\n");
     sb.append("    sEzsignfoldersignerassociationstatusFirstname: ").append(toIndentedString(sEzsignfoldersignerassociationstatusFirstname)).append("\n");
+    sb.append("    sEzsignfoldersignerassociationstatusDescriptionX: ").append(toIndentedString(sEzsignfoldersignerassociationstatusDescriptionX)).append("\n");
     sb.append("    aObjEzsignsignaturestatus: ").append(toIndentedString(aObjEzsignsignaturestatus)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -221,6 +258,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     openapiFields.add("fkiEzsignfoldersignerassociationID");
     openapiFields.add("sEzsignfoldersignerassociationstatusLastname");
     openapiFields.add("sEzsignfoldersignerassociationstatusFirstname");
+    openapiFields.add("sEzsignfoldersignerassociationstatusDescriptionX");
     openapiFields.add("a_objEzsignsignaturestatus");
 
     // a set of required properties/fields (JSON key names)
@@ -261,6 +299,9 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
       }
       if ((jsonObj.get("sEzsignfoldersignerassociationstatusFirstname") != null && !jsonObj.get("sEzsignfoldersignerassociationstatusFirstname").isJsonNull()) && !jsonObj.get("sEzsignfoldersignerassociationstatusFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldersignerassociationstatusFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldersignerassociationstatusFirstname").toString()));
+      }
+      if ((jsonObj.get("sEzsignfoldersignerassociationstatusDescriptionX") != null && !jsonObj.get("sEzsignfoldersignerassociationstatusDescriptionX").isJsonNull()) && !jsonObj.get("sEzsignfoldersignerassociationstatusDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldersignerassociationstatusDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldersignerassociationstatusDescriptionX").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignsignaturestatus").isJsonArray()) {

@@ -65,6 +65,14 @@ public class CustomEzsignfoldersignerassociationstatusResponseTest {
     }
 
     /**
+     * Test the property 'sEzsignfoldersignerassociationstatusDescriptionX'
+     */
+    @Test
+    public void sEzsignfoldersignerassociationstatusDescriptionXTest() {
+        // TODO: test sEzsignfoldersignerassociationstatusDescriptionX
+    }
+
+    /**
      * Test the property 'aObjEzsignsignaturestatus'
      */
     @Test

@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
 import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.ezmax.api.model.EzsignsignergroupResponseCompound;
-import com.ezmax.api.model.UsergroupResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * EzsignfoldersignerassociationResponseCompoundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
@@ -63,10 +62,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
   private EzsignfoldersignerassociationResponseCompoundUser objUser;
-
-  public static final String SERIALIZED_NAME_OBJ_USERGROUP = "objUsergroup";
-  @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP)
-  private UsergroupResponseCompound objUsergroup;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
@@ -117,27 +112,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
   }
 
 
-  public EzsignfoldersignerassociationResponseCompoundAllOf objUsergroup(UsergroupResponseCompound objUsergroup) {
-    
-    this.objUsergroup = objUsergroup;
-    return this;
-  }
-
-   /**
-   * Get objUsergroup
-   * @return objUsergroup
-  **/
-  @javax.annotation.Nullable
-  public UsergroupResponseCompound getObjUsergroup() {
-    return objUsergroup;
-  }
-
-
-  public void setObjUsergroup(UsergroupResponseCompound objUsergroup) {
-    this.objUsergroup = objUsergroup;
-  }
-
-
   public EzsignfoldersignerassociationResponseCompoundAllOf objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
     
     this.objEzsignsigner = objEzsignsigner;
@@ -171,13 +145,12 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
     EzsignfoldersignerassociationResponseCompoundAllOf ezsignfoldersignerassociationResponseCompoundAllOf = (EzsignfoldersignerassociationResponseCompoundAllOf) o;
     return Objects.equals(this.objEzsignsignergroup, ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsignergroup) &&
         Objects.equals(this.objUser, ezsignfoldersignerassociationResponseCompoundAllOf.objUser) &&
-        Objects.equals(this.objUsergroup, ezsignfoldersignerassociationResponseCompoundAllOf.objUsergroup) &&
         Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompoundAllOf.objEzsignsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsignsignergroup, objUser, objUsergroup, objEzsignsigner);
+    return Objects.hash(objEzsignsignergroup, objUser, objEzsignsigner);
   }
 
   @Override
@@ -186,7 +159,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
     sb.append("class EzsignfoldersignerassociationResponseCompoundAllOf {\n");
     sb.append("    objEzsignsignergroup: ").append(toIndentedString(objEzsignsignergroup)).append("\n");
     sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
-    sb.append("    objUsergroup: ").append(toIndentedString(objUsergroup)).append("\n");
     sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -212,7 +184,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
     openapiFields = new HashSet<String>();
     openapiFields.add("objEzsignsignergroup");
     openapiFields.add("objUser");
-    openapiFields.add("objUsergroup");
     openapiFields.add("objEzsignsigner");
 
     // a set of required properties/fields (JSON key names)
@@ -246,10 +217,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOf {
       // validate the optional field `objUser`
       if (jsonObj.get("objUser") != null && !jsonObj.get("objUser").isJsonNull()) {
         EzsignfoldersignerassociationResponseCompoundUser.validateJsonObject(jsonObj.getAsJsonObject("objUser"));
-      }
-      // validate the optional field `objUsergroup`
-      if (jsonObj.get("objUsergroup") != null && !jsonObj.get("objUsergroup").isJsonNull()) {
-        UsergroupResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objUsergroup"));
       }
       // validate the optional field `objEzsignsigner`
       if (jsonObj.get("objEzsignsigner") != null && !jsonObj.get("objEzsignsigner").isJsonNull()) {

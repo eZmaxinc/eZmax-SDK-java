@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.MultilingualApikeyDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -64,11 +65,27 @@ public class ApikeyResponseTest {
     }
 
     /**
-     * Test the property 'sComputedToken'
+     * Test the property 'objContactName'
      */
     @Test
-    public void sComputedTokenTest() {
-        // TODO: test sComputedToken
+    public void objContactNameTest() {
+        // TODO: test objContactName
+    }
+
+    /**
+     * Test the property 'sApikeyApikey'
+     */
+    @Test
+    public void sApikeyApikeyTest() {
+        // TODO: test sApikeyApikey
+    }
+
+    /**
+     * Test the property 'sApikeySecret'
+     */
+    @Test
+    public void sApikeySecretTest() {
+        // TODO: test sApikeySecret
     }
 
     /**
@@ -77,6 +94,14 @@ public class ApikeyResponseTest {
     @Test
     public void bApikeyIsactiveTest() {
         // TODO: test bApikeyIsactive
+    }
+
+    /**
+     * Test the property 'bApikeyIssigned'
+     */
+    @Test
+    public void bApikeyIssignedTest() {
+        // TODO: test bApikeyIssigned
     }
 
     /**

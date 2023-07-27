@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
 import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.ezmax.api.model.EzsignsignergroupResponseCompound;
-import com.ezmax.api.model.UsergroupResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,14 +54,6 @@ public class EzsignfoldersignerassociationResponseCompoundAllOfTest {
     @Test
     public void objUserTest() {
         // TODO: test objUser
-    }
-
-    /**
-     * Test the property 'objUsergroup'
-     */
-    @Test
-    public void objUsergroupTest() {
-        // TODO: test objUsergroup
     }
 
     /**

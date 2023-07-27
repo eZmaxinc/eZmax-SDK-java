@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-22T15:33:11.356591451Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
 public class ApikeyRequest {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -68,6 +68,10 @@ public class ApikeyRequest {
   public static final String SERIALIZED_NAME_B_APIKEY_ISACTIVE = "bApikeyIsactive";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISACTIVE)
   private Boolean bApikeyIsactive;
+
+  public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
+  @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)
+  private Boolean bApikeyIssigned;
 
   public ApikeyRequest() {
   }
@@ -158,6 +162,27 @@ public class ApikeyRequest {
   }
 
 
+  public ApikeyRequest bApikeyIssigned(Boolean bApikeyIssigned) {
+    
+    this.bApikeyIssigned = bApikeyIssigned;
+    return this;
+  }
+
+   /**
+   * Whether the apikey is signed or not
+   * @return bApikeyIssigned
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbApikeyIssigned() {
+    return bApikeyIssigned;
+  }
+
+
+  public void setbApikeyIssigned(Boolean bApikeyIssigned) {
+    this.bApikeyIssigned = bApikeyIssigned;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -171,12 +196,13 @@ public class ApikeyRequest {
     return Objects.equals(this.pkiApikeyID, apikeyRequest.pkiApikeyID) &&
         Objects.equals(this.fkiUserID, apikeyRequest.fkiUserID) &&
         Objects.equals(this.objApikeyDescription, apikeyRequest.objApikeyDescription) &&
-        Objects.equals(this.bApikeyIsactive, apikeyRequest.bApikeyIsactive);
+        Objects.equals(this.bApikeyIsactive, apikeyRequest.bApikeyIsactive) &&
+        Objects.equals(this.bApikeyIssigned, apikeyRequest.bApikeyIssigned);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiApikeyID, fkiUserID, objApikeyDescription, bApikeyIsactive);
+    return Objects.hash(pkiApikeyID, fkiUserID, objApikeyDescription, bApikeyIsactive, bApikeyIssigned);
   }
 
   @Override
@@ -187,6 +213,7 @@ public class ApikeyRequest {
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    objApikeyDescription: ").append(toIndentedString(objApikeyDescription)).append("\n");
     sb.append("    bApikeyIsactive: ").append(toIndentedString(bApikeyIsactive)).append("\n");
+    sb.append("    bApikeyIssigned: ").append(toIndentedString(bApikeyIssigned)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -213,6 +240,7 @@ public class ApikeyRequest {
     openapiFields.add("fkiUserID");
     openapiFields.add("objApikeyDescription");
     openapiFields.add("bApikeyIsactive");
+    openapiFields.add("bApikeyIssigned");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
