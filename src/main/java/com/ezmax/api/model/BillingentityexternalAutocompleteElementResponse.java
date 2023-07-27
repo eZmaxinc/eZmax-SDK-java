@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityexternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
 public class BillingentityexternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D = "pkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D)

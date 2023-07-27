@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * The name of the Usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T18:40:35.791662503Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T19:46:50.488271214Z[Etc/UTC]")
 public class MultilingualUsergroupName {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME1 = "sUsergroupName1";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME1)
