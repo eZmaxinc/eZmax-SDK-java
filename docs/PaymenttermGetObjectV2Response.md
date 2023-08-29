@@ -8,9 +8,9 @@ Response for GET /2/object/paymentterm/{pkiPaymenttermID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**PaymenttermGetObjectV2ResponseMPayload**](PaymenttermGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**PaymenttermGetObjectV2ResponseMPayload**](PaymenttermGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

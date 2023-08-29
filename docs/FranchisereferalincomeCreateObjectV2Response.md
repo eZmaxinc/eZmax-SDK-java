@@ -8,9 +8,9 @@ Response for POST /2/object/franchisereferalincome
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**FranchisereferalincomeCreateObjectV2ResponseMPayload**](FranchisereferalincomeCreateObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**FranchisereferalincomeCreateObjectV2ResponseMPayload**](FranchisereferalincomeCreateObjectV2ResponseMPayload.md) |  |  |
 
 
 

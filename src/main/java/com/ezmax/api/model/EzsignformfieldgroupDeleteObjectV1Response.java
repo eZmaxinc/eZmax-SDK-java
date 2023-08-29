@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for DELETE /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsignformfieldgroupDeleteObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -75,7 +75,7 @@ public class EzsignformfieldgroupDeleteObjectV1Response {
    * Get objDebugPayload
    * @return objDebugPayload
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -159,35 +159,42 @@ public class EzsignformfieldgroupDeleteObjectV1Response {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objDebugPayload");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsignformfieldgroupDeleteObjectV1Response
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldgroupDeleteObjectV1Response
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsignformfieldgroupDeleteObjectV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsignformfieldgroupDeleteObjectV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupDeleteObjectV1Response is not found in the empty JSON string", EzsignformfieldgroupDeleteObjectV1Response.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignformfieldgroupDeleteObjectV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupDeleteObjectV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupDeleteObjectV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-      // validate the optional field `objDebugPayload`
-      if (jsonObj.get("objDebugPayload") != null && !jsonObj.get("objDebugPayload").isJsonNull()) {
-        CommonResponseObjDebugPayload.validateJsonObject(jsonObj.getAsJsonObject("objDebugPayload"));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignformfieldgroupDeleteObjectV1Response.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
       // validate the optional field `objDebug`
       if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
-        CommonResponseObjDebug.validateJsonObject(jsonObj.getAsJsonObject("objDebug"));
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
   }
 
@@ -211,9 +218,9 @@ public class EzsignformfieldgroupDeleteObjectV1Response {
 
            @Override
            public EzsignformfieldgroupDeleteObjectV1Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

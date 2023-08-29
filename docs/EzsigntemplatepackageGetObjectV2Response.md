@@ -8,9 +8,9 @@ Response for GET /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigntemplatepackageGetObjectV2ResponseMPayload**](EzsigntemplatepackageGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigntemplatepackageGetObjectV2ResponseMPayload**](EzsigntemplatepackageGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

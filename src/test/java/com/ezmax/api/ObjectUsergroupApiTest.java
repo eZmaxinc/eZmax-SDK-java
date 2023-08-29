@@ -23,12 +23,15 @@ import com.ezmax.api.model.UsergroupEditObjectV1Request;
 import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Request;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Response;
+import com.ezmax.api.model.UsergroupEditUsergroupdelegationsV1Request;
+import com.ezmax.api.model.UsergroupEditUsergroupdelegationsV1Response;
 import com.ezmax.api.model.UsergroupEditUsergroupmembershipsV1Request;
 import com.ezmax.api.model.UsergroupEditUsergroupmembershipsV1Response;
 import com.ezmax.api.model.UsergroupGetAutocompleteV2Response;
 import com.ezmax.api.model.UsergroupGetListV1Response;
 import com.ezmax.api.model.UsergroupGetObjectV2Response;
 import com.ezmax.api.model.UsergroupGetPermissionsV1Response;
+import com.ezmax.api.model.UsergroupGetUsergroupdelegationsV1Response;
 import com.ezmax.api.model.UsergroupGetUsergroupmembershipsV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -87,6 +90,21 @@ public class ObjectUsergroupApiTest {
         Integer pkiUsergroupID = null;
         UsergroupEditPermissionsV1Request usergroupEditPermissionsV1Request = null;
         UsergroupEditPermissionsV1Response response = api.usergroupEditPermissionsV1(pkiUsergroupID, usergroupEditPermissionsV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit multiple Usergroupdelegations
+     *
+     * Edit multiple Usergroupdelegations
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupEditUsergroupdelegationsV1Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupEditUsergroupdelegationsV1Request usergroupEditUsergroupdelegationsV1Request = null;
+        UsergroupEditUsergroupdelegationsV1Response response = api.usergroupEditUsergroupdelegationsV1(pkiUsergroupID, usergroupEditUsergroupdelegationsV1Request);
         // TODO: test validations
     }
 
@@ -163,6 +181,18 @@ public class ObjectUsergroupApiTest {
     public void usergroupGetPermissionsV1Test() throws ApiException {
         Integer pkiUsergroupID = null;
         UsergroupGetPermissionsV1Response response = api.usergroupGetPermissionsV1(pkiUsergroupID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Usergroup&#39;s Usergroupdelegations
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void usergroupGetUsergroupdelegationsV1Test() throws ApiException {
+        Integer pkiUsergroupID = null;
+        UsergroupGetUsergroupdelegationsV1Response response = api.usergroupGetUsergroupdelegationsV1(pkiUsergroupID);
         // TODO: test validations
     }
 

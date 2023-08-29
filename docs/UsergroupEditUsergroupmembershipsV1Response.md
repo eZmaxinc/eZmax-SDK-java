@@ -8,9 +8,9 @@ Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**UsergroupEditUsergroupmembershipsV1ResponseMPayload**](UsergroupEditUsergroupmembershipsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**UsergroupEditUsergroupmembershipsV1ResponseMPayload**](UsergroupEditUsergroupmembershipsV1ResponseMPayload.md) |  |  |
 
 
 

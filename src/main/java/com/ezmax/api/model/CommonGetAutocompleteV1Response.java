@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.ezmax.api.model.CustomAutocompleteElementResponse;
@@ -25,6 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -55,12 +55,8 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/xxx/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class CommonGetAutocompleteV1Response {
-  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
-  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private List<CustomAutocompleteElementResponse> mPayload = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -69,37 +65,12 @@ public class CommonGetAutocompleteV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private List<CustomAutocompleteElementResponse> mPayload = new ArrayList<>();
+
   public CommonGetAutocompleteV1Response() {
   }
-
-  public CommonGetAutocompleteV1Response mPayload(List<CustomAutocompleteElementResponse> mPayload) {
-    
-    this.mPayload = mPayload;
-    return this;
-  }
-
-  public CommonGetAutocompleteV1Response addMPayloadItem(CustomAutocompleteElementResponse mPayloadItem) {
-    if (this.mPayload == null) {
-      this.mPayload = new ArrayList<>();
-    }
-    this.mPayload.add(mPayloadItem);
-    return this;
-  }
-
-   /**
-   * Generic Autocomplete Response
-   * @return mPayload
-  **/
-  @javax.annotation.Nonnull
-  public List<CustomAutocompleteElementResponse> getmPayload() {
-    return mPayload;
-  }
-
-
-  public void setmPayload(List<CustomAutocompleteElementResponse> mPayload) {
-    this.mPayload = mPayload;
-  }
-
 
   public CommonGetAutocompleteV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
@@ -111,7 +82,7 @@ public class CommonGetAutocompleteV1Response {
    * Get objDebugPayload
    * @return objDebugPayload
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -143,6 +114,35 @@ public class CommonGetAutocompleteV1Response {
   }
 
 
+  public CommonGetAutocompleteV1Response mPayload(List<CustomAutocompleteElementResponse> mPayload) {
+    
+    this.mPayload = mPayload;
+    return this;
+  }
+
+  public CommonGetAutocompleteV1Response addMPayloadItem(CustomAutocompleteElementResponse mPayloadItem) {
+    if (this.mPayload == null) {
+      this.mPayload = new ArrayList<>();
+    }
+    this.mPayload.add(mPayloadItem);
+    return this;
+  }
+
+   /**
+   * Generic Autocomplete Response
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  public List<CustomAutocompleteElementResponse> getmPayload() {
+    return mPayload;
+  }
+
+
+  public void setmPayload(List<CustomAutocompleteElementResponse> mPayload) {
+    this.mPayload = mPayload;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -153,23 +153,23 @@ public class CommonGetAutocompleteV1Response {
       return false;
     }
     CommonGetAutocompleteV1Response commonGetAutocompleteV1Response = (CommonGetAutocompleteV1Response) o;
-    return Objects.equals(this.mPayload, commonGetAutocompleteV1Response.mPayload) &&
-        Objects.equals(this.objDebugPayload, commonGetAutocompleteV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, commonGetAutocompleteV1Response.objDebug);
+    return Objects.equals(this.objDebugPayload, commonGetAutocompleteV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, commonGetAutocompleteV1Response.objDebug) &&
+        Objects.equals(this.mPayload, commonGetAutocompleteV1Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, objDebugPayload, objDebug);
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonGetAutocompleteV1Response {\n");
-    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -192,41 +192,49 @@ public class CommonGetAutocompleteV1Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("mPayload");
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
+    openapiFields.add("mPayload");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objDebugPayload");
     openapiRequiredFields.add("mPayload");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CommonGetAutocompleteV1Response
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CommonGetAutocompleteV1Response
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CommonGetAutocompleteV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!CommonGetAutocompleteV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonGetAutocompleteV1Response is not found in the empty JSON string", CommonGetAutocompleteV1Response.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!CommonGetAutocompleteV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonGetAutocompleteV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonGetAutocompleteV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonGetAutocompleteV1Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
+      // validate the optional field `objDebug`
+      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // ensure the json data is an array
       if (!jsonObj.get("mPayload").isJsonArray()) {
@@ -236,16 +244,8 @@ public class CommonGetAutocompleteV1Response {
       JsonArray jsonArraymPayload = jsonObj.getAsJsonArray("mPayload");
       // validate the required field `mPayload` (array)
       for (int i = 0; i < jsonArraymPayload.size(); i++) {
-        CustomAutocompleteElementResponse.validateJsonObject(jsonArraymPayload.get(i).getAsJsonObject());
+        CustomAutocompleteElementResponse.validateJsonElement(jsonArraymPayload.get(i));
       };
-      // validate the optional field `objDebugPayload`
-      if (jsonObj.get("objDebugPayload") != null && !jsonObj.get("objDebugPayload").isJsonNull()) {
-        CommonResponseObjDebugPayload.validateJsonObject(jsonObj.getAsJsonObject("objDebugPayload"));
-      }
-      // validate the optional field `objDebug`
-      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
-        CommonResponseObjDebug.validateJsonObject(jsonObj.getAsJsonObject("objDebug"));
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -268,9 +268,9 @@ public class CommonGetAutocompleteV1Response {
 
            @Override
            public CommonGetAutocompleteV1Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

@@ -8,9 +8,9 @@ Response for POST /1/object/signature
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**SignatureCreateObjectV1ResponseMPayload**](SignatureCreateObjectV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**SignatureCreateObjectV1ResponseMPayload**](SignatureCreateObjectV1ResponseMPayload.md) |  |  |
 
 
 

@@ -29,6 +29,7 @@ An Ezsignsignature Object and children to create a complete structure
 |**dtEzsignsignatureDate** | **String** | The date the Ezsignsignature was signed |  [optional] |
 |**iEzsignsignatureattachmentCount** | **Integer** | The count of Ezsignsignatureattachment |  [optional] |
 |**sEzsignsignatureDescription** | **String** | The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea** |  [optional] |
+|**iEzsignsignatureMaxlength** | **Integer** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** |  [optional] |
 |**eEzsignsignatureTextvalidation** | **EnumTextvalidation** |  |  [optional] |
 |**sEzsignsignatureRegexp** | **String** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** |  [optional] |
 |**objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |

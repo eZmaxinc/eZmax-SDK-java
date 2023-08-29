@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignfolderResponse;
@@ -26,6 +25,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -56,16 +56,8 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class WebhookEzsignEzsignsignerAcceptclause {
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
-  private EzsignfolderResponse objEzsignfolder;
-
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "objEzsignfoldersignerassociation";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
-  private EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation;
-
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
   private CustomWebhookResponse objWebhook;
@@ -74,50 +66,16 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
   private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
+  private EzsignfolderResponse objEzsignfolder;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "objEzsignfoldersignerassociation";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
+  private EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation;
+
   public WebhookEzsignEzsignsignerAcceptclause() {
   }
-
-  public WebhookEzsignEzsignsignerAcceptclause objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
-    
-    this.objEzsignfolder = objEzsignfolder;
-    return this;
-  }
-
-   /**
-   * Get objEzsignfolder
-   * @return objEzsignfolder
-  **/
-  @javax.annotation.Nullable
-  public EzsignfolderResponse getObjEzsignfolder() {
-    return objEzsignfolder;
-  }
-
-
-  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
-    this.objEzsignfolder = objEzsignfolder;
-  }
-
-
-  public WebhookEzsignEzsignsignerAcceptclause objEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
-    
-    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
-    return this;
-  }
-
-   /**
-   * Get objEzsignfoldersignerassociation
-   * @return objEzsignfoldersignerassociation
-  **/
-  @javax.annotation.Nonnull
-  public EzsignfoldersignerassociationResponseCompound getObjEzsignfoldersignerassociation() {
-    return objEzsignfoldersignerassociation;
-  }
-
-
-  public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
-    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
-  }
-
 
   public WebhookEzsignEzsignsignerAcceptclause objWebhook(CustomWebhookResponse objWebhook) {
     
@@ -169,6 +127,48 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   }
 
 
+  public WebhookEzsignEzsignsignerAcceptclause objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+    
+    this.objEzsignfolder = objEzsignfolder;
+    return this;
+  }
+
+   /**
+   * Get objEzsignfolder
+   * @return objEzsignfolder
+  **/
+  @javax.annotation.Nullable
+  public EzsignfolderResponse getObjEzsignfolder() {
+    return objEzsignfolder;
+  }
+
+
+  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+    this.objEzsignfolder = objEzsignfolder;
+  }
+
+
+  public WebhookEzsignEzsignsignerAcceptclause objEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
+    
+    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+    return this;
+  }
+
+   /**
+   * Get objEzsignfoldersignerassociation
+   * @return objEzsignfoldersignerassociation
+  **/
+  @javax.annotation.Nonnull
+  public EzsignfoldersignerassociationResponseCompound getObjEzsignfoldersignerassociation() {
+    return objEzsignfoldersignerassociation;
+  }
+
+
+  public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
+    this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -179,25 +179,25 @@ public class WebhookEzsignEzsignsignerAcceptclause {
       return false;
     }
     WebhookEzsignEzsignsignerAcceptclause webhookEzsignEzsignsignerAcceptclause = (WebhookEzsignEzsignsignerAcceptclause) o;
-    return Objects.equals(this.objEzsignfolder, webhookEzsignEzsignsignerAcceptclause.objEzsignfolder) &&
-        Objects.equals(this.objEzsignfoldersignerassociation, webhookEzsignEzsignsignerAcceptclause.objEzsignfoldersignerassociation) &&
-        Objects.equals(this.objWebhook, webhookEzsignEzsignsignerAcceptclause.objWebhook) &&
-        Objects.equals(this.aObjAttempt, webhookEzsignEzsignsignerAcceptclause.aObjAttempt);
+    return Objects.equals(this.objWebhook, webhookEzsignEzsignsignerAcceptclause.objWebhook) &&
+        Objects.equals(this.aObjAttempt, webhookEzsignEzsignsignerAcceptclause.aObjAttempt) &&
+        Objects.equals(this.objEzsignfolder, webhookEzsignEzsignsignerAcceptclause.objEzsignfolder) &&
+        Objects.equals(this.objEzsignfoldersignerassociation, webhookEzsignEzsignsignerAcceptclause.objEzsignfoldersignerassociation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsignfolder, objEzsignfoldersignerassociation, objWebhook, aObjAttempt);
+    return Objects.hash(objWebhook, aObjAttempt, objEzsignfolder, objEzsignfoldersignerassociation);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignEzsignsignerAcceptclause {\n");
-    sb.append("    objEzsignfolder: ").append(toIndentedString(objEzsignfolder)).append("\n");
-    sb.append("    objEzsignfoldersignerassociation: ").append(toIndentedString(objEzsignfoldersignerassociation)).append("\n");
     sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
     sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
+    sb.append("    objEzsignfolder: ").append(toIndentedString(objEzsignfolder)).append("\n");
+    sb.append("    objEzsignfoldersignerassociation: ").append(toIndentedString(objEzsignfoldersignerassociation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -220,53 +220,48 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objEzsignfolder");
-    openapiFields.add("objEzsignfoldersignerassociation");
     openapiFields.add("objWebhook");
     openapiFields.add("a_objAttempt");
+    openapiFields.add("objEzsignfolder");
+    openapiFields.add("objEzsignfoldersignerassociation");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objEzsignfoldersignerassociation");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
+    openapiRequiredFields.add("objEzsignfoldersignerassociation");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to WebhookEzsignEzsignsignerAcceptclause
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to WebhookEzsignEzsignsignerAcceptclause
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!WebhookEzsignEzsignsignerAcceptclause.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!WebhookEzsignEzsignsignerAcceptclause.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookEzsignEzsignsignerAcceptclause is not found in the empty JSON string", WebhookEzsignEzsignsignerAcceptclause.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!WebhookEzsignEzsignsignerAcceptclause.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookEzsignEzsignsignerAcceptclause` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookEzsignEzsignsignerAcceptclause` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : WebhookEzsignEzsignsignerAcceptclause.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      // validate the optional field `objEzsignfolder`
-      if (jsonObj.get("objEzsignfolder") != null && !jsonObj.get("objEzsignfolder").isJsonNull()) {
-        EzsignfolderResponse.validateJsonObject(jsonObj.getAsJsonObject("objEzsignfolder"));
-      }
-      // validate the required field `objEzsignfoldersignerassociation`
-      EzsignfoldersignerassociationResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objEzsignfoldersignerassociation"));
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objWebhook`
-      CustomWebhookResponse.validateJsonObject(jsonObj.getAsJsonObject("objWebhook"));
+      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objAttempt").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
@@ -275,8 +270,14 @@ public class WebhookEzsignEzsignsignerAcceptclause {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponseCompound.validateJsonObject(jsonArrayaObjAttempt.get(i).getAsJsonObject());
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
+      // validate the optional field `objEzsignfolder`
+      if (jsonObj.get("objEzsignfolder") != null && !jsonObj.get("objEzsignfolder").isJsonNull()) {
+        EzsignfolderResponse.validateJsonElement(jsonObj.get("objEzsignfolder"));
+      }
+      // validate the required field `objEzsignfoldersignerassociation`
+      EzsignfoldersignerassociationResponseCompound.validateJsonElement(jsonObj.get("objEzsignfoldersignerassociation"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -299,9 +300,9 @@ public class WebhookEzsignEzsignsignerAcceptclause {
 
            @Override
            public WebhookEzsignEzsignsignerAcceptclause read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

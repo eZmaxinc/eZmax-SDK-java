@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload;
@@ -24,6 +23,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocument}/getEzsigntemplateformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
-  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
-  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload;
-
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -67,29 +63,12 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload;
+
   public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response() {
   }
-
-  public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response mPayload(EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload) {
-    
-    this.mPayload = mPayload;
-    return this;
-  }
-
-   /**
-   * Get mPayload
-   * @return mPayload
-  **/
-  @javax.annotation.Nonnull
-  public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload getmPayload() {
-    return mPayload;
-  }
-
-
-  public void setmPayload(EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload) {
-    this.mPayload = mPayload;
-  }
-
 
   public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     
@@ -101,7 +80,7 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
    * Get objDebugPayload
    * @return objDebugPayload
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
   }
@@ -133,6 +112,27 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
   }
 
 
+  public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response mPayload(EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload) {
+    
+    this.mPayload = mPayload;
+    return this;
+  }
+
+   /**
+   * Get mPayload
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload getmPayload() {
+    return mPayload;
+  }
+
+
+  public void setmPayload(EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -143,23 +143,23 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
       return false;
     }
     EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response = (EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response) o;
-    return Objects.equals(this.mPayload, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.mPayload) &&
-        Objects.equals(this.objDebugPayload, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.objDebug);
+    return Objects.equals(this.objDebugPayload, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.objDebug) &&
+        Objects.equals(this.mPayload, ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, objDebugPayload, objDebug);
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {\n");
-    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -182,52 +182,52 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("mPayload");
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
+    openapiFields.add("mPayload");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objDebugPayload");
     openapiRequiredFields.add("mPayload");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response is not found in the empty JSON string", EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      // validate the required field `mPayload`
-      EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload.validateJsonObject(jsonObj.getAsJsonObject("mPayload"));
-      // validate the optional field `objDebugPayload`
-      if (jsonObj.get("objDebugPayload") != null && !jsonObj.get("objDebugPayload").isJsonNull()) {
-        CommonResponseObjDebugPayload.validateJsonObject(jsonObj.getAsJsonObject("objDebugPayload"));
-      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
       // validate the optional field `objDebug`
       if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
-        CommonResponseObjDebug.validateJsonObject(jsonObj.getAsJsonObject("objDebug"));
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
+      // validate the required field `mPayload`
+      EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -250,9 +250,9 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response {
 
            @Override
            public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

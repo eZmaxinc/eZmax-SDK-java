@@ -8,9 +8,9 @@ Response for POST /1/object/ezsigndocument
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigndocumentCreateObjectV1ResponseMPayload**](EzsigndocumentCreateObjectV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigndocumentCreateObjectV1ResponseMPayload**](EzsigndocumentCreateObjectV1ResponseMPayload.md) |  |  |
 
 
 

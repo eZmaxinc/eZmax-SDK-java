@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupType;
@@ -22,9 +23,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for EzsignformfieldgroupResponse
@@ -134,6 +135,14 @@ public class EzsignformfieldgroupResponseTest {
     @Test
     public void bEzsignformfieldgroupEncryptedTest() {
         // TODO: test bEzsignformfieldgroupEncrypted
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldgroupTextvalidation'
+     */
+    @Test
+    public void eEzsignformfieldgroupTextvalidationTest() {
+        // TODO: test eEzsignformfieldgroupTextvalidation
     }
 
     /**

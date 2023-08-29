@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.ClonehistoryListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/clonehistory/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class ClonehistoryGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_CLONEHISTORY = "a_objClonehistory";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_CLONEHISTORY)
-  private List<ClonehistoryListElement> aObjClonehistory = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
   private Integer iRowReturned;
@@ -67,37 +63,12 @@ public class ClonehistoryGetListV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
   private Integer iRowFiltered;
 
+  public static final String SERIALIZED_NAME_A_OBJ_CLONEHISTORY = "a_objClonehistory";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_CLONEHISTORY)
+  private List<ClonehistoryListElement> aObjClonehistory = new ArrayList<>();
+
   public ClonehistoryGetListV1ResponseMPayload() {
   }
-
-  public ClonehistoryGetListV1ResponseMPayload aObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
-    
-    this.aObjClonehistory = aObjClonehistory;
-    return this;
-  }
-
-  public ClonehistoryGetListV1ResponseMPayload addAObjClonehistoryItem(ClonehistoryListElement aObjClonehistoryItem) {
-    if (this.aObjClonehistory == null) {
-      this.aObjClonehistory = new ArrayList<>();
-    }
-    this.aObjClonehistory.add(aObjClonehistoryItem);
-    return this;
-  }
-
-   /**
-   * Get aObjClonehistory
-   * @return aObjClonehistory
-  **/
-  @javax.annotation.Nonnull
-  public List<ClonehistoryListElement> getaObjClonehistory() {
-    return aObjClonehistory;
-  }
-
-
-  public void setaObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
-    this.aObjClonehistory = aObjClonehistory;
-  }
-
 
   public ClonehistoryGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     
@@ -141,6 +112,35 @@ public class ClonehistoryGetListV1ResponseMPayload {
   }
 
 
+  public ClonehistoryGetListV1ResponseMPayload aObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
+    
+    this.aObjClonehistory = aObjClonehistory;
+    return this;
+  }
+
+  public ClonehistoryGetListV1ResponseMPayload addAObjClonehistoryItem(ClonehistoryListElement aObjClonehistoryItem) {
+    if (this.aObjClonehistory == null) {
+      this.aObjClonehistory = new ArrayList<>();
+    }
+    this.aObjClonehistory.add(aObjClonehistoryItem);
+    return this;
+  }
+
+   /**
+   * Get aObjClonehistory
+   * @return aObjClonehistory
+  **/
+  @javax.annotation.Nonnull
+  public List<ClonehistoryListElement> getaObjClonehistory() {
+    return aObjClonehistory;
+  }
+
+
+  public void setaObjClonehistory(List<ClonehistoryListElement> aObjClonehistory) {
+    this.aObjClonehistory = aObjClonehistory;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,23 +151,23 @@ public class ClonehistoryGetListV1ResponseMPayload {
       return false;
     }
     ClonehistoryGetListV1ResponseMPayload clonehistoryGetListV1ResponseMPayload = (ClonehistoryGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjClonehistory, clonehistoryGetListV1ResponseMPayload.aObjClonehistory) &&
-        Objects.equals(this.iRowReturned, clonehistoryGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, clonehistoryGetListV1ResponseMPayload.iRowFiltered);
+    return Objects.equals(this.iRowReturned, clonehistoryGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, clonehistoryGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjClonehistory, clonehistoryGetListV1ResponseMPayload.aObjClonehistory);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjClonehistory, iRowReturned, iRowFiltered);
+    return Objects.hash(iRowReturned, iRowFiltered, aObjClonehistory);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ClonehistoryGetListV1ResponseMPayload {\n");
-    sb.append("    aObjClonehistory: ").append(toIndentedString(aObjClonehistory)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    aObjClonehistory: ").append(toIndentedString(aObjClonehistory)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -190,44 +190,45 @@ public class ClonehistoryGetListV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objClonehistory");
     openapiFields.add("iRowReturned");
     openapiFields.add("iRowFiltered");
+    openapiFields.add("a_objClonehistory");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objClonehistory");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objClonehistory");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ClonehistoryGetListV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ClonehistoryGetListV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ClonehistoryGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ClonehistoryGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ClonehistoryGetListV1ResponseMPayload is not found in the empty JSON string", ClonehistoryGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!ClonehistoryGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ClonehistoryGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ClonehistoryGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ClonehistoryGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objClonehistory").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objClonehistory` to be an array in the JSON string but got `%s`", jsonObj.get("a_objClonehistory").toString()));
@@ -236,7 +237,7 @@ public class ClonehistoryGetListV1ResponseMPayload {
       JsonArray jsonArrayaObjClonehistory = jsonObj.getAsJsonArray("a_objClonehistory");
       // validate the required field `a_objClonehistory` (array)
       for (int i = 0; i < jsonArrayaObjClonehistory.size(); i++) {
-        ClonehistoryListElement.validateJsonObject(jsonArrayaObjClonehistory.get(i).getAsJsonObject());
+        ClonehistoryListElement.validateJsonElement(jsonArrayaObjClonehistory.get(i));
       };
   }
 
@@ -260,9 +261,9 @@ public class ClonehistoryGetListV1ResponseMPayload {
 
            @Override
            public ClonehistoryGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

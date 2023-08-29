@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
+import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequestCompound;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureFont;
@@ -27,6 +27,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -57,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsigntemplatesignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -86,6 +87,14 @@ public class EzsigntemplatesignatureRequestCompound {
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_Y = "iEzsigntemplatesignatureY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_Y)
   private Integer iEzsigntemplatesignatureY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_WIDTH = "iEzsigntemplatesignatureWidth";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_WIDTH)
+  private Integer iEzsigntemplatesignatureWidth;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_HEIGHT = "iEzsigntemplatesignatureHeight";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_HEIGHT)
+  private Integer iEzsigntemplatesignatureHeight;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_STEP = "iEzsigntemplatesignatureStep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_STEP)
@@ -122,6 +131,18 @@ public class EzsigntemplatesignatureRequestCompound {
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_VALIDATIONSTEP = "iEzsigntemplatesignatureValidationstep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_VALIDATIONSTEP)
   private Integer iEzsigntemplatesignatureValidationstep;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_MAXLENGTH = "iEzsigntemplatesignatureMaxlength";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_MAXLENGTH)
+  private Integer iEzsigntemplatesignatureMaxlength;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_REGEXP = "sEzsigntemplatesignatureRegexp";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_REGEXP)
+  private String sEzsigntemplatesignatureRegexp;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION = "eEzsigntemplatesignatureTextvalidation";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION)
+  private EnumTextvalidation eEzsigntemplatesignatureTextvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CUSTOMDATE = "bEzsigntemplatesignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CUSTOMDATE)
@@ -285,6 +306,50 @@ public class EzsigntemplatesignatureRequestCompound {
 
   public void setiEzsigntemplatesignatureY(Integer iEzsigntemplatesignatureY) {
     this.iEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
+  }
+
+
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureWidth(Integer iEzsigntemplatesignatureWidth) {
+    
+    this.iEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
+    return this;
+  }
+
+   /**
+   * The width of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureWidth.
+   * minimum: 0
+   * @return iEzsigntemplatesignatureWidth
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatesignatureWidth() {
+    return iEzsigntemplatesignatureWidth;
+  }
+
+
+  public void setiEzsigntemplatesignatureWidth(Integer iEzsigntemplatesignatureWidth) {
+    this.iEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
+  }
+
+
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureHeight(Integer iEzsigntemplatesignatureHeight) {
+    
+    this.iEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
+    return this;
+  }
+
+   /**
+   * The height of the Ezsigntemplatesignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsigntemplatesignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsigntemplatesignatureHeight.
+   * minimum: 0
+   * @return iEzsigntemplatesignatureHeight
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatesignatureHeight() {
+    return iEzsigntemplatesignatureHeight;
+  }
+
+
+  public void setiEzsigntemplatesignatureHeight(Integer iEzsigntemplatesignatureHeight) {
+    this.iEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
   }
 
 
@@ -478,6 +543,71 @@ public class EzsigntemplatesignatureRequestCompound {
   }
 
 
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureMaxlength(Integer iEzsigntemplatesignatureMaxlength) {
+    
+    this.iEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
+    return this;
+  }
+
+   /**
+   * The maximum length for the value in the Ezsigntemplatesignature  This can only be set if eEzsigntemplatesignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigntemplatesignatureMaxlength
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatesignatureMaxlength() {
+    return iEzsigntemplatesignatureMaxlength;
+  }
+
+
+  public void setiEzsigntemplatesignatureMaxlength(Integer iEzsigntemplatesignatureMaxlength) {
+    this.iEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
+  }
+
+
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureRegexp(String sEzsigntemplatesignatureRegexp) {
+    
+    this.sEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
+    return this;
+  }
+
+   /**
+   * A regular expression to indicate what values are acceptable for the Ezsigntemplatesignature.  This can only be set if eEzsigntemplatesignatureType is **Text** or **Textarea**
+   * @return sEzsigntemplatesignatureRegexp
+  **/
+  @javax.annotation.Nullable
+  public String getsEzsigntemplatesignatureRegexp() {
+    return sEzsigntemplatesignatureRegexp;
+  }
+
+
+  public void setsEzsigntemplatesignatureRegexp(String sEzsigntemplatesignatureRegexp) {
+    this.sEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
+  }
+
+
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureTextvalidation(EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
+    
+    this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
+    return this;
+  }
+
+   /**
+   * Get eEzsigntemplatesignatureTextvalidation
+   * @return eEzsigntemplatesignatureTextvalidation
+  **/
+  @javax.annotation.Nullable
+  public EnumTextvalidation geteEzsigntemplatesignatureTextvalidation() {
+    return eEzsigntemplatesignatureTextvalidation;
+  }
+
+
+  public void seteEzsigntemplatesignatureTextvalidation(EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
+    this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
+  }
+
+
   public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureCustomdate(Boolean bEzsigntemplatesignatureCustomdate) {
     
     this.bEzsigntemplatesignatureCustomdate = bEzsigntemplatesignatureCustomdate;
@@ -545,6 +675,8 @@ public class EzsigntemplatesignatureRequestCompound {
         Objects.equals(this.iEzsigntemplatedocumentpagePagenumber, ezsigntemplatesignatureRequestCompound.iEzsigntemplatedocumentpagePagenumber) &&
         Objects.equals(this.iEzsigntemplatesignatureX, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureX) &&
         Objects.equals(this.iEzsigntemplatesignatureY, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureY) &&
+        Objects.equals(this.iEzsigntemplatesignatureWidth, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureWidth) &&
+        Objects.equals(this.iEzsigntemplatesignatureHeight, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureHeight) &&
         Objects.equals(this.iEzsigntemplatesignatureStep, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureStep) &&
         Objects.equals(this.eEzsigntemplatesignatureType, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureType) &&
         Objects.equals(this.tEzsigntemplatesignatureTooltip, ezsigntemplatesignatureRequestCompound.tEzsigntemplatesignatureTooltip) &&
@@ -554,13 +686,16 @@ public class EzsigntemplatesignatureRequestCompound {
         Objects.equals(this.eEzsigntemplatesignatureAttachmentnamesource, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureAttachmentnamesource) &&
         Objects.equals(this.sEzsigntemplatesignatureAttachmentdescription, ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureAttachmentdescription) &&
         Objects.equals(this.iEzsigntemplatesignatureValidationstep, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureValidationstep) &&
+        Objects.equals(this.iEzsigntemplatesignatureMaxlength, ezsigntemplatesignatureRequestCompound.iEzsigntemplatesignatureMaxlength) &&
+        Objects.equals(this.sEzsigntemplatesignatureRegexp, ezsigntemplatesignatureRequestCompound.sEzsigntemplatesignatureRegexp) &&
+        Objects.equals(this.eEzsigntemplatesignatureTextvalidation, ezsigntemplatesignatureRequestCompound.eEzsigntemplatesignatureTextvalidation) &&
         Objects.equals(this.bEzsigntemplatesignatureCustomdate, ezsigntemplatesignatureRequestCompound.bEzsigntemplatesignatureCustomdate) &&
         Objects.equals(this.aObjEzsigntemplatesignaturecustomdate, ezsigntemplatesignatureRequestCompound.aObjEzsigntemplatesignaturecustomdate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep, bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate);
+    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep, iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation, bEzsigntemplatesignatureCustomdate, aObjEzsigntemplatesignaturecustomdate);
   }
 
   @Override
@@ -574,6 +709,8 @@ public class EzsigntemplatesignatureRequestCompound {
     sb.append("    iEzsigntemplatedocumentpagePagenumber: ").append(toIndentedString(iEzsigntemplatedocumentpagePagenumber)).append("\n");
     sb.append("    iEzsigntemplatesignatureX: ").append(toIndentedString(iEzsigntemplatesignatureX)).append("\n");
     sb.append("    iEzsigntemplatesignatureY: ").append(toIndentedString(iEzsigntemplatesignatureY)).append("\n");
+    sb.append("    iEzsigntemplatesignatureWidth: ").append(toIndentedString(iEzsigntemplatesignatureWidth)).append("\n");
+    sb.append("    iEzsigntemplatesignatureHeight: ").append(toIndentedString(iEzsigntemplatesignatureHeight)).append("\n");
     sb.append("    iEzsigntemplatesignatureStep: ").append(toIndentedString(iEzsigntemplatesignatureStep)).append("\n");
     sb.append("    eEzsigntemplatesignatureType: ").append(toIndentedString(eEzsigntemplatesignatureType)).append("\n");
     sb.append("    tEzsigntemplatesignatureTooltip: ").append(toIndentedString(tEzsigntemplatesignatureTooltip)).append("\n");
@@ -583,6 +720,9 @@ public class EzsigntemplatesignatureRequestCompound {
     sb.append("    eEzsigntemplatesignatureAttachmentnamesource: ").append(toIndentedString(eEzsigntemplatesignatureAttachmentnamesource)).append("\n");
     sb.append("    sEzsigntemplatesignatureAttachmentdescription: ").append(toIndentedString(sEzsigntemplatesignatureAttachmentdescription)).append("\n");
     sb.append("    iEzsigntemplatesignatureValidationstep: ").append(toIndentedString(iEzsigntemplatesignatureValidationstep)).append("\n");
+    sb.append("    iEzsigntemplatesignatureMaxlength: ").append(toIndentedString(iEzsigntemplatesignatureMaxlength)).append("\n");
+    sb.append("    sEzsigntemplatesignatureRegexp: ").append(toIndentedString(sEzsigntemplatesignatureRegexp)).append("\n");
+    sb.append("    eEzsigntemplatesignatureTextvalidation: ").append(toIndentedString(eEzsigntemplatesignatureTextvalidation)).append("\n");
     sb.append("    bEzsigntemplatesignatureCustomdate: ").append(toIndentedString(bEzsigntemplatesignatureCustomdate)).append("\n");
     sb.append("    aObjEzsigntemplatesignaturecustomdate: ").append(toIndentedString(aObjEzsigntemplatesignaturecustomdate)).append("\n");
     sb.append("}");
@@ -614,6 +754,8 @@ public class EzsigntemplatesignatureRequestCompound {
     openapiFields.add("iEzsigntemplatedocumentpagePagenumber");
     openapiFields.add("iEzsigntemplatesignatureX");
     openapiFields.add("iEzsigntemplatesignatureY");
+    openapiFields.add("iEzsigntemplatesignatureWidth");
+    openapiFields.add("iEzsigntemplatesignatureHeight");
     openapiFields.add("iEzsigntemplatesignatureStep");
     openapiFields.add("eEzsigntemplatesignatureType");
     openapiFields.add("tEzsigntemplatesignatureTooltip");
@@ -623,6 +765,9 @@ public class EzsigntemplatesignatureRequestCompound {
     openapiFields.add("eEzsigntemplatesignatureAttachmentnamesource");
     openapiFields.add("sEzsigntemplatesignatureAttachmentdescription");
     openapiFields.add("iEzsigntemplatesignatureValidationstep");
+    openapiFields.add("iEzsigntemplatesignatureMaxlength");
+    openapiFields.add("sEzsigntemplatesignatureRegexp");
+    openapiFields.add("eEzsigntemplatesignatureTextvalidation");
     openapiFields.add("bEzsigntemplatesignatureCustomdate");
     openapiFields.add("a_objEzsigntemplatesignaturecustomdate");
 
@@ -638,37 +783,41 @@ public class EzsigntemplatesignatureRequestCompound {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsigntemplatesignatureRequestCompound
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatesignatureRequestCompound
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsigntemplatesignatureRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsigntemplatesignatureRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatesignatureRequestCompound is not found in the empty JSON string", EzsigntemplatesignatureRequestCompound.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplatesignatureRequestCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatesignatureRequestCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatesignatureRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplatesignatureRequestCompound.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tEzsigntemplatesignatureTooltip") != null && !jsonObj.get("tEzsigntemplatesignatureTooltip").isJsonNull()) && !jsonObj.get("tEzsigntemplatesignatureTooltip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsigntemplatesignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplatesignatureTooltip").toString()));
       }
       if ((jsonObj.get("sEzsigntemplatesignatureAttachmentdescription") != null && !jsonObj.get("sEzsigntemplatesignatureAttachmentdescription").isJsonNull()) && !jsonObj.get("sEzsigntemplatesignatureAttachmentdescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatesignatureAttachmentdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatesignatureAttachmentdescription").toString()));
+      }
+      if ((jsonObj.get("sEzsigntemplatesignatureRegexp") != null && !jsonObj.get("sEzsigntemplatesignatureRegexp").isJsonNull()) && !jsonObj.get("sEzsigntemplatesignatureRegexp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatesignatureRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatesignatureRegexp").toString()));
       }
       if (jsonObj.get("a_objEzsigntemplatesignaturecustomdate") != null && !jsonObj.get("a_objEzsigntemplatesignaturecustomdate").isJsonNull()) {
         JsonArray jsonArrayaObjEzsigntemplatesignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsigntemplatesignaturecustomdate");
@@ -680,7 +829,7 @@ public class EzsigntemplatesignatureRequestCompound {
 
           // validate the optional field `a_objEzsigntemplatesignaturecustomdate` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplatesignaturecustomdate.size(); i++) {
-            EzsigntemplatesignaturecustomdateRequestCompound.validateJsonObject(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i).getAsJsonObject());
+            EzsigntemplatesignaturecustomdateRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i));
           };
         }
       }
@@ -706,9 +855,9 @@ public class EzsigntemplatesignatureRequestCompound {
 
            @Override
            public EzsigntemplatesignatureRequestCompound read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

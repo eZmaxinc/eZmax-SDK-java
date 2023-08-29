@@ -8,9 +8,9 @@ Response for GET /2/object/apikey/{pkiApikeyID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**ApikeyGetObjectV2ResponseMPayload**](ApikeyGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**ApikeyGetObjectV2ResponseMPayload**](ApikeyGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

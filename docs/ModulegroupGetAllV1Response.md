@@ -8,9 +8,9 @@ Response for GET /1/object/modulegroup/getAll
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**ModulegroupGetAllV1ResponseMPayload**](ModulegroupGetAllV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**ModulegroupGetAllV1ResponseMPayload**](ModulegroupGetAllV1ResponseMPayload.md) |  |  |
 
 
 

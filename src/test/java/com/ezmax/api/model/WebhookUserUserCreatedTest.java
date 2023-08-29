@@ -23,10 +23,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for WebhookUserUserCreated
@@ -43,14 +43,6 @@ public class WebhookUserUserCreatedTest {
     }
 
     /**
-     * Test the property 'objUser'
-     */
-    @Test
-    public void objUserTest() {
-        // TODO: test objUser
-    }
-
-    /**
      * Test the property 'objWebhook'
      */
     @Test
@@ -64,6 +56,14 @@ public class WebhookUserUserCreatedTest {
     @Test
     public void aObjAttemptTest() {
         // TODO: test aObjAttempt
+    }
+
+    /**
+     * Test the property 'objUser'
+     */
+    @Test
+    public void objUserTest() {
+        // TODO: test objUser
     }
 
 }

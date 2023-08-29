@@ -8,9 +8,9 @@ Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignformfield
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload**](EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload**](EzsigndocumentGetEzsignformfieldgroupsV1ResponseMPayload.md) |  |  |
 
 
 

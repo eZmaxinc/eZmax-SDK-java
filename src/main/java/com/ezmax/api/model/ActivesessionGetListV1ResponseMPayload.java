@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.ActivesessionListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class ActivesessionGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_ACTIVESESSION = "a_objActivesession";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_ACTIVESESSION)
-  private List<ActivesessionListElement> aObjActivesession = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
   private Integer iRowReturned;
@@ -67,37 +63,12 @@ public class ActivesessionGetListV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
   private Integer iRowFiltered;
 
+  public static final String SERIALIZED_NAME_A_OBJ_ACTIVESESSION = "a_objActivesession";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ACTIVESESSION)
+  private List<ActivesessionListElement> aObjActivesession = new ArrayList<>();
+
   public ActivesessionGetListV1ResponseMPayload() {
   }
-
-  public ActivesessionGetListV1ResponseMPayload aObjActivesession(List<ActivesessionListElement> aObjActivesession) {
-    
-    this.aObjActivesession = aObjActivesession;
-    return this;
-  }
-
-  public ActivesessionGetListV1ResponseMPayload addAObjActivesessionItem(ActivesessionListElement aObjActivesessionItem) {
-    if (this.aObjActivesession == null) {
-      this.aObjActivesession = new ArrayList<>();
-    }
-    this.aObjActivesession.add(aObjActivesessionItem);
-    return this;
-  }
-
-   /**
-   * Get aObjActivesession
-   * @return aObjActivesession
-  **/
-  @javax.annotation.Nonnull
-  public List<ActivesessionListElement> getaObjActivesession() {
-    return aObjActivesession;
-  }
-
-
-  public void setaObjActivesession(List<ActivesessionListElement> aObjActivesession) {
-    this.aObjActivesession = aObjActivesession;
-  }
-
 
   public ActivesessionGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     
@@ -141,6 +112,35 @@ public class ActivesessionGetListV1ResponseMPayload {
   }
 
 
+  public ActivesessionGetListV1ResponseMPayload aObjActivesession(List<ActivesessionListElement> aObjActivesession) {
+    
+    this.aObjActivesession = aObjActivesession;
+    return this;
+  }
+
+  public ActivesessionGetListV1ResponseMPayload addAObjActivesessionItem(ActivesessionListElement aObjActivesessionItem) {
+    if (this.aObjActivesession == null) {
+      this.aObjActivesession = new ArrayList<>();
+    }
+    this.aObjActivesession.add(aObjActivesessionItem);
+    return this;
+  }
+
+   /**
+   * Get aObjActivesession
+   * @return aObjActivesession
+  **/
+  @javax.annotation.Nonnull
+  public List<ActivesessionListElement> getaObjActivesession() {
+    return aObjActivesession;
+  }
+
+
+  public void setaObjActivesession(List<ActivesessionListElement> aObjActivesession) {
+    this.aObjActivesession = aObjActivesession;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,23 +151,23 @@ public class ActivesessionGetListV1ResponseMPayload {
       return false;
     }
     ActivesessionGetListV1ResponseMPayload activesessionGetListV1ResponseMPayload = (ActivesessionGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession) &&
-        Objects.equals(this.iRowReturned, activesessionGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, activesessionGetListV1ResponseMPayload.iRowFiltered);
+    return Objects.equals(this.iRowReturned, activesessionGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, activesessionGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjActivesession, iRowReturned, iRowFiltered);
+    return Objects.hash(iRowReturned, iRowFiltered, aObjActivesession);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetListV1ResponseMPayload {\n");
-    sb.append("    aObjActivesession: ").append(toIndentedString(aObjActivesession)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    aObjActivesession: ").append(toIndentedString(aObjActivesession)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -190,44 +190,45 @@ public class ActivesessionGetListV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objActivesession");
     openapiFields.add("iRowReturned");
     openapiFields.add("iRowFiltered");
+    openapiFields.add("a_objActivesession");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objActivesession");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objActivesession");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ActivesessionGetListV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ActivesessionGetListV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ActivesessionGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ActivesessionGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionGetListV1ResponseMPayload is not found in the empty JSON string", ActivesessionGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!ActivesessionGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ActivesessionGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ActivesessionGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ActivesessionGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objActivesession").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objActivesession` to be an array in the JSON string but got `%s`", jsonObj.get("a_objActivesession").toString()));
@@ -236,7 +237,7 @@ public class ActivesessionGetListV1ResponseMPayload {
       JsonArray jsonArrayaObjActivesession = jsonObj.getAsJsonArray("a_objActivesession");
       // validate the required field `a_objActivesession` (array)
       for (int i = 0; i < jsonArrayaObjActivesession.size(); i++) {
-        ActivesessionListElement.validateJsonObject(jsonArrayaObjActivesession.get(i).getAsJsonObject());
+        ActivesessionListElement.validateJsonElement(jsonArrayaObjActivesession.get(i));
       };
   }
 
@@ -260,9 +261,9 @@ public class ActivesessionGetListV1ResponseMPayload {
 
            @Override
            public ActivesessionGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

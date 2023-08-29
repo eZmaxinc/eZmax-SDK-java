@@ -31,5 +31,7 @@
 
 * `BADIP` (value: `"BadIP"`)
 
+* `FORCEDLOGOFF` (value: `"ForcedLogoff"`)
+
 
 

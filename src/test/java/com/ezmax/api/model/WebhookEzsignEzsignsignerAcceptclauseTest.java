@@ -24,10 +24,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for WebhookEzsignEzsignsignerAcceptclause
@@ -44,22 +44,6 @@ public class WebhookEzsignEzsignsignerAcceptclauseTest {
     }
 
     /**
-     * Test the property 'objEzsignfolder'
-     */
-    @Test
-    public void objEzsignfolderTest() {
-        // TODO: test objEzsignfolder
-    }
-
-    /**
-     * Test the property 'objEzsignfoldersignerassociation'
-     */
-    @Test
-    public void objEzsignfoldersignerassociationTest() {
-        // TODO: test objEzsignfoldersignerassociation
-    }
-
-    /**
      * Test the property 'objWebhook'
      */
     @Test
@@ -73,6 +57,22 @@ public class WebhookEzsignEzsignsignerAcceptclauseTest {
     @Test
     public void aObjAttemptTest() {
         // TODO: test aObjAttempt
+    }
+
+    /**
+     * Test the property 'objEzsignfolder'
+     */
+    @Test
+    public void objEzsignfolderTest() {
+        // TODO: test objEzsignfolder
+    }
+
+    /**
+     * Test the property 'objEzsignfoldersignerassociation'
+     */
+    @Test
+    public void objEzsignfoldersignerassociationTest() {
+        // TODO: test objEzsignfoldersignerassociation
     }
 
 }

@@ -8,9 +8,9 @@ Response for POST /2/object/ezsignfoldersignerassociation
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignfoldersignerassociationCreateObjectV2ResponseMPayload**](EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignfoldersignerassociationCreateObjectV2ResponseMPayload**](EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.md) |  |  |
 
 
 

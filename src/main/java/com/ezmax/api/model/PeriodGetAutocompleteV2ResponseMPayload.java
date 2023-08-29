@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.PeriodAutocompleteElementResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/period/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class PeriodGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PERIOD = "a_objPeriod";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERIOD)
@@ -143,25 +143,26 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to PeriodGetAutocompleteV2ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to PeriodGetAutocompleteV2ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!PeriodGetAutocompleteV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!PeriodGetAutocompleteV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PeriodGetAutocompleteV2ResponseMPayload is not found in the empty JSON string", PeriodGetAutocompleteV2ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!PeriodGetAutocompleteV2ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PeriodGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PeriodGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("a_objPeriod") != null && !jsonObj.get("a_objPeriod").isJsonNull()) {
         JsonArray jsonArrayaObjPeriod = jsonObj.getAsJsonArray("a_objPeriod");
         if (jsonArrayaObjPeriod != null) {
@@ -172,7 +173,7 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
 
           // validate the optional field `a_objPeriod` (array)
           for (int i = 0; i < jsonArrayaObjPeriod.size(); i++) {
-            PeriodAutocompleteElementResponse.validateJsonObject(jsonArrayaObjPeriod.get(i).getAsJsonObject());
+            PeriodAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPeriod.get(i));
           };
         }
       }
@@ -198,9 +199,9 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
 
            @Override
            public PeriodGetAutocompleteV2ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

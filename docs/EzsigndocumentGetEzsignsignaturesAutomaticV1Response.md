@@ -8,9 +8,9 @@ Response for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatu
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload**](EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload**](EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload.md) |  |  |
 
 
 

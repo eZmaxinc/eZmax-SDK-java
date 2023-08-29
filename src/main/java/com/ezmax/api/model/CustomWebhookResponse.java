@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
@@ -24,6 +23,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,16 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class CustomWebhookResponse {
-  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
-  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
-  private String pksCustomerCode;
-
-  public static final String SERIALIZED_NAME_B_WEBHOOK_TEST = "bWebhookTest";
-  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_TEST)
-  private Boolean bWebhookTest;
-
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
   private Integer pkiWebhookID;
@@ -107,50 +99,16 @@ public class CustomWebhookResponse {
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
   private Boolean bWebhookSkipsslvalidation;
 
+  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
+  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
+  private String pksCustomerCode;
+
+  public static final String SERIALIZED_NAME_B_WEBHOOK_TEST = "bWebhookTest";
+  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_TEST)
+  private Boolean bWebhookTest;
+
   public CustomWebhookResponse() {
   }
-
-  public CustomWebhookResponse pksCustomerCode(String pksCustomerCode) {
-    
-    this.pksCustomerCode = pksCustomerCode;
-    return this;
-  }
-
-   /**
-   * The customer code assigned to your account
-   * @return pksCustomerCode
-  **/
-  @javax.annotation.Nonnull
-  public String getPksCustomerCode() {
-    return pksCustomerCode;
-  }
-
-
-  public void setPksCustomerCode(String pksCustomerCode) {
-    this.pksCustomerCode = pksCustomerCode;
-  }
-
-
-  public CustomWebhookResponse bWebhookTest(Boolean bWebhookTest) {
-    
-    this.bWebhookTest = bWebhookTest;
-    return this;
-  }
-
-   /**
-   * Wheter the webhook received is a manual test or a real event
-   * @return bWebhookTest
-  **/
-  @javax.annotation.Nonnull
-  public Boolean getbWebhookTest() {
-    return bWebhookTest;
-  }
-
-
-  public void setbWebhookTest(Boolean bWebhookTest) {
-    this.bWebhookTest = bWebhookTest;
-  }
-
 
   public CustomWebhookResponse pkiWebhookID(Integer pkiWebhookID) {
     
@@ -384,6 +342,48 @@ public class CustomWebhookResponse {
   }
 
 
+  public CustomWebhookResponse pksCustomerCode(String pksCustomerCode) {
+    
+    this.pksCustomerCode = pksCustomerCode;
+    return this;
+  }
+
+   /**
+   * The customer code assigned to your account
+   * @return pksCustomerCode
+  **/
+  @javax.annotation.Nonnull
+  public String getPksCustomerCode() {
+    return pksCustomerCode;
+  }
+
+
+  public void setPksCustomerCode(String pksCustomerCode) {
+    this.pksCustomerCode = pksCustomerCode;
+  }
+
+
+  public CustomWebhookResponse bWebhookTest(Boolean bWebhookTest) {
+    
+    this.bWebhookTest = bWebhookTest;
+    return this;
+  }
+
+   /**
+   * Wheter the webhook received is a manual test or a real event
+   * @return bWebhookTest
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbWebhookTest() {
+    return bWebhookTest;
+  }
+
+
+  public void setbWebhookTest(Boolean bWebhookTest) {
+    this.bWebhookTest = bWebhookTest;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -394,9 +394,7 @@ public class CustomWebhookResponse {
       return false;
     }
     CustomWebhookResponse customWebhookResponse = (CustomWebhookResponse) o;
-    return Objects.equals(this.pksCustomerCode, customWebhookResponse.pksCustomerCode) &&
-        Objects.equals(this.bWebhookTest, customWebhookResponse.bWebhookTest) &&
-        Objects.equals(this.pkiWebhookID, customWebhookResponse.pkiWebhookID) &&
+    return Objects.equals(this.pkiWebhookID, customWebhookResponse.pkiWebhookID) &&
         Objects.equals(this.sWebhookDescription, customWebhookResponse.sWebhookDescription) &&
         Objects.equals(this.fkiEzsignfoldertypeID, customWebhookResponse.fkiEzsignfoldertypeID) &&
         Objects.equals(this.sEzsignfoldertypeNameX, customWebhookResponse.sEzsignfoldertypeNameX) &&
@@ -406,20 +404,20 @@ public class CustomWebhookResponse {
         Objects.equals(this.sWebhookUrl, customWebhookResponse.sWebhookUrl) &&
         Objects.equals(this.sWebhookEmailfailed, customWebhookResponse.sWebhookEmailfailed) &&
         Objects.equals(this.bWebhookIsactive, customWebhookResponse.bWebhookIsactive) &&
-        Objects.equals(this.bWebhookSkipsslvalidation, customWebhookResponse.bWebhookSkipsslvalidation);
+        Objects.equals(this.bWebhookSkipsslvalidation, customWebhookResponse.bWebhookSkipsslvalidation) &&
+        Objects.equals(this.pksCustomerCode, customWebhookResponse.pksCustomerCode) &&
+        Objects.equals(this.bWebhookTest, customWebhookResponse.bWebhookTest);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pksCustomerCode, bWebhookTest, pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookSkipsslvalidation);
+    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookSkipsslvalidation, pksCustomerCode, bWebhookTest);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomWebhookResponse {\n");
-    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
-    sb.append("    bWebhookTest: ").append(toIndentedString(bWebhookTest)).append("\n");
     sb.append("    pkiWebhookID: ").append(toIndentedString(pkiWebhookID)).append("\n");
     sb.append("    sWebhookDescription: ").append(toIndentedString(sWebhookDescription)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
@@ -431,6 +429,8 @@ public class CustomWebhookResponse {
     sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
     sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
+    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
+    sb.append("    bWebhookTest: ").append(toIndentedString(bWebhookTest)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -453,8 +453,6 @@ public class CustomWebhookResponse {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("pksCustomerCode");
-    openapiFields.add("bWebhookTest");
     openapiFields.add("pkiWebhookID");
     openapiFields.add("sWebhookDescription");
     openapiFields.add("fkiEzsignfoldertypeID");
@@ -466,49 +464,49 @@ public class CustomWebhookResponse {
     openapiFields.add("sWebhookEmailfailed");
     openapiFields.add("bWebhookIsactive");
     openapiFields.add("bWebhookSkipsslvalidation");
+    openapiFields.add("pksCustomerCode");
+    openapiFields.add("bWebhookTest");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("pksCustomerCode");
-    openapiRequiredFields.add("bWebhookTest");
     openapiRequiredFields.add("pkiWebhookID");
     openapiRequiredFields.add("sWebhookDescription");
     openapiRequiredFields.add("eWebhookModule");
     openapiRequiredFields.add("sWebhookUrl");
     openapiRequiredFields.add("sWebhookEmailfailed");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
+    openapiRequiredFields.add("pksCustomerCode");
+    openapiRequiredFields.add("bWebhookTest");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CustomWebhookResponse
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CustomWebhookResponse
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CustomWebhookResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!CustomWebhookResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomWebhookResponse is not found in the empty JSON string", CustomWebhookResponse.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!CustomWebhookResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CustomWebhookResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CustomWebhookResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CustomWebhookResponse.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
-      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sWebhookDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookDescription").toString()));
       }
@@ -520,6 +518,9 @@ public class CustomWebhookResponse {
       }
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
+      }
+      if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
       }
   }
 
@@ -543,9 +544,9 @@ public class CustomWebhookResponse {
 
            @Override
            public CustomWebhookResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

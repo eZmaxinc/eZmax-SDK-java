@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.BillingentityinternalListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/billingentityinternal/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class BillingentityinternalGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
-  private List<BillingentityinternalListElement> aObjBillingentityinternal = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
   private Integer iRowReturned;
@@ -67,37 +63,12 @@ public class BillingentityinternalGetListV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
   private Integer iRowFiltered;
 
+  public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
+  private List<BillingentityinternalListElement> aObjBillingentityinternal = new ArrayList<>();
+
   public BillingentityinternalGetListV1ResponseMPayload() {
   }
-
-  public BillingentityinternalGetListV1ResponseMPayload aObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
-    
-    this.aObjBillingentityinternal = aObjBillingentityinternal;
-    return this;
-  }
-
-  public BillingentityinternalGetListV1ResponseMPayload addAObjBillingentityinternalItem(BillingentityinternalListElement aObjBillingentityinternalItem) {
-    if (this.aObjBillingentityinternal == null) {
-      this.aObjBillingentityinternal = new ArrayList<>();
-    }
-    this.aObjBillingentityinternal.add(aObjBillingentityinternalItem);
-    return this;
-  }
-
-   /**
-   * Get aObjBillingentityinternal
-   * @return aObjBillingentityinternal
-  **/
-  @javax.annotation.Nonnull
-  public List<BillingentityinternalListElement> getaObjBillingentityinternal() {
-    return aObjBillingentityinternal;
-  }
-
-
-  public void setaObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
-    this.aObjBillingentityinternal = aObjBillingentityinternal;
-  }
-
 
   public BillingentityinternalGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     
@@ -141,6 +112,35 @@ public class BillingentityinternalGetListV1ResponseMPayload {
   }
 
 
+  public BillingentityinternalGetListV1ResponseMPayload aObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
+    
+    this.aObjBillingentityinternal = aObjBillingentityinternal;
+    return this;
+  }
+
+  public BillingentityinternalGetListV1ResponseMPayload addAObjBillingentityinternalItem(BillingentityinternalListElement aObjBillingentityinternalItem) {
+    if (this.aObjBillingentityinternal == null) {
+      this.aObjBillingentityinternal = new ArrayList<>();
+    }
+    this.aObjBillingentityinternal.add(aObjBillingentityinternalItem);
+    return this;
+  }
+
+   /**
+   * Get aObjBillingentityinternal
+   * @return aObjBillingentityinternal
+  **/
+  @javax.annotation.Nonnull
+  public List<BillingentityinternalListElement> getaObjBillingentityinternal() {
+    return aObjBillingentityinternal;
+  }
+
+
+  public void setaObjBillingentityinternal(List<BillingentityinternalListElement> aObjBillingentityinternal) {
+    this.aObjBillingentityinternal = aObjBillingentityinternal;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,23 +151,23 @@ public class BillingentityinternalGetListV1ResponseMPayload {
       return false;
     }
     BillingentityinternalGetListV1ResponseMPayload billingentityinternalGetListV1ResponseMPayload = (BillingentityinternalGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjBillingentityinternal, billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal) &&
-        Objects.equals(this.iRowReturned, billingentityinternalGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, billingentityinternalGetListV1ResponseMPayload.iRowFiltered);
+    return Objects.equals(this.iRowReturned, billingentityinternalGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, billingentityinternalGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjBillingentityinternal, billingentityinternalGetListV1ResponseMPayload.aObjBillingentityinternal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjBillingentityinternal, iRowReturned, iRowFiltered);
+    return Objects.hash(iRowReturned, iRowFiltered, aObjBillingentityinternal);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalGetListV1ResponseMPayload {\n");
-    sb.append("    aObjBillingentityinternal: ").append(toIndentedString(aObjBillingentityinternal)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    aObjBillingentityinternal: ").append(toIndentedString(aObjBillingentityinternal)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -190,44 +190,45 @@ public class BillingentityinternalGetListV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objBillingentityinternal");
     openapiFields.add("iRowReturned");
     openapiFields.add("iRowFiltered");
+    openapiFields.add("a_objBillingentityinternal");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objBillingentityinternal");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objBillingentityinternal");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to BillingentityinternalGetListV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to BillingentityinternalGetListV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!BillingentityinternalGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!BillingentityinternalGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in BillingentityinternalGetListV1ResponseMPayload is not found in the empty JSON string", BillingentityinternalGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!BillingentityinternalGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityinternalGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityinternalGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : BillingentityinternalGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objBillingentityinternal").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objBillingentityinternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objBillingentityinternal").toString()));
@@ -236,7 +237,7 @@ public class BillingentityinternalGetListV1ResponseMPayload {
       JsonArray jsonArrayaObjBillingentityinternal = jsonObj.getAsJsonArray("a_objBillingentityinternal");
       // validate the required field `a_objBillingentityinternal` (array)
       for (int i = 0; i < jsonArrayaObjBillingentityinternal.size(); i++) {
-        BillingentityinternalListElement.validateJsonObject(jsonArrayaObjBillingentityinternal.get(i).getAsJsonObject());
+        BillingentityinternalListElement.validateJsonElement(jsonArrayaObjBillingentityinternal.get(i));
       };
   }
 
@@ -260,9 +261,9 @@ public class BillingentityinternalGetListV1ResponseMPayload {
 
            @Override
            public BillingentityinternalGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

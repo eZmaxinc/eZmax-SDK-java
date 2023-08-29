@@ -8,9 +8,9 @@ Response for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzmaxinvoicingGetObjectV2ResponseMPayload**](EzmaxinvoicingGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzmaxinvoicingGetObjectV2ResponseMPayload**](EzmaxinvoicingGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

@@ -8,9 +8,9 @@ Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignfolderGetCommunicationListV1ResponseMPayload**](EzsignfolderGetCommunicationListV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignfolderGetCommunicationListV1ResponseMPayload**](EzsignfolderGetCommunicationListV1ResponseMPayload.md) |  |  |
 
 
 

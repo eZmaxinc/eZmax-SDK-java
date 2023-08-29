@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
@@ -26,6 +25,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -128,6 +128,10 @@ public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_VALIDATIONSTEP = "iEzsignsignatureValidationstep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_VALIDATIONSTEP)
   private Integer iEzsignsignatureValidationstep;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_MAXLENGTH = "iEzsignsignatureMaxlength";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_MAXLENGTH)
+  private Integer iEzsignsignatureMaxlength;
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_TEXTVALIDATION = "eEzsignsignatureTextvalidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TEXTVALIDATION)
@@ -527,6 +531,29 @@ public class EzsignsignatureRequest {
   }
 
 
+  public EzsignsignatureRequest iEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
+    
+    this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+    return this;
+  }
+
+   /**
+   * The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsignsignatureMaxlength
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsignsignatureMaxlength() {
+    return iEzsignsignatureMaxlength;
+  }
+
+
+  public void setiEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
+    this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
+  }
+
+
   public EzsignsignatureRequest eEzsignsignatureTextvalidation(EnumTextvalidation eEzsignsignatureTextvalidation) {
     
     this.eEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
@@ -597,13 +624,14 @@ public class EzsignsignatureRequest {
         Objects.equals(this.eEzsignsignatureAttachmentnamesource, ezsignsignatureRequest.eEzsignsignatureAttachmentnamesource) &&
         Objects.equals(this.sEzsignsignatureAttachmentdescription, ezsignsignatureRequest.sEzsignsignatureAttachmentdescription) &&
         Objects.equals(this.iEzsignsignatureValidationstep, ezsignsignatureRequest.iEzsignsignatureValidationstep) &&
+        Objects.equals(this.iEzsignsignatureMaxlength, ezsignsignatureRequest.iEzsignsignatureMaxlength) &&
         Objects.equals(this.eEzsignsignatureTextvalidation, ezsignsignatureRequest.eEzsignsignatureTextvalidation) &&
         Objects.equals(this.sEzsignsignatureRegexp, ezsignsignatureRequest.sEzsignsignatureRegexp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep, eEzsignsignatureTextvalidation, sEzsignsignatureRegexp);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureRegexp);
   }
 
   @Override
@@ -628,6 +656,7 @@ public class EzsignsignatureRequest {
     sb.append("    eEzsignsignatureAttachmentnamesource: ").append(toIndentedString(eEzsignsignatureAttachmentnamesource)).append("\n");
     sb.append("    sEzsignsignatureAttachmentdescription: ").append(toIndentedString(sEzsignsignatureAttachmentdescription)).append("\n");
     sb.append("    iEzsignsignatureValidationstep: ").append(toIndentedString(iEzsignsignatureValidationstep)).append("\n");
+    sb.append("    iEzsignsignatureMaxlength: ").append(toIndentedString(iEzsignsignatureMaxlength)).append("\n");
     sb.append("    eEzsignsignatureTextvalidation: ").append(toIndentedString(eEzsignsignatureTextvalidation)).append("\n");
     sb.append("    sEzsignsignatureRegexp: ").append(toIndentedString(sEzsignsignatureRegexp)).append("\n");
     sb.append("}");
@@ -670,6 +699,7 @@ public class EzsignsignatureRequest {
     openapiFields.add("eEzsignsignatureAttachmentnamesource");
     openapiFields.add("sEzsignsignatureAttachmentdescription");
     openapiFields.add("iEzsignsignatureValidationstep");
+    openapiFields.add("iEzsignsignatureMaxlength");
     openapiFields.add("eEzsignsignatureTextvalidation");
     openapiFields.add("sEzsignsignatureRegexp");
 
@@ -685,32 +715,33 @@ public class EzsignsignatureRequest {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsignsignatureRequest
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureRequest
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsignsignatureRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsignsignatureRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignatureRequest is not found in the empty JSON string", EzsignsignatureRequest.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignsignatureRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignatureRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignatureRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignsignatureRequest.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tEzsignsignatureTooltip") != null && !jsonObj.get("tEzsignsignatureTooltip").isJsonNull()) && !jsonObj.get("tEzsignsignatureTooltip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
       }
@@ -742,9 +773,9 @@ public class EzsignsignatureRequest {
 
            @Override
            public EzsignsignatureRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

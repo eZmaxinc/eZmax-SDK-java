@@ -14,8 +14,8 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
@@ -25,6 +25,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -55,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -140,6 +141,10 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID = "sEzsigndocumentExternalid";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
   private String sEzsigndocumentExternalid;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE = "eEzsigndocumentSteptype";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE)
+  private ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
@@ -614,6 +619,27 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
+    
+    this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
+    return this;
+  }
+
+   /**
+   * Get eEzsigndocumentSteptype
+   * @return eEzsigndocumentSteptype
+  **/
+  @javax.annotation.Nonnull
+  public ComputedEEzsigndocumentSteptype geteEzsigndocumentSteptype() {
+    return eEzsigndocumentSteptype;
+  }
+
+
+  public void seteEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
+    this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
+  }
+
+
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
     
     this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
@@ -758,6 +784,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         Objects.equals(this.bEzsigndocumentHassignedsignatures, ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentHassignedsignatures) &&
         Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit) &&
         Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid) &&
+        Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype) &&
         Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
         Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
         Objects.equals(this.iEzsigndocumentStepsignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignaturetotal) &&
@@ -767,7 +794,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
   }
 
   @Override
@@ -795,6 +822,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("    bEzsigndocumentHassignedsignatures: ").append(toIndentedString(bEzsigndocumentHassignedsignatures)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
+    sb.append("    eEzsigndocumentSteptype: ").append(toIndentedString(eEzsigndocumentSteptype)).append("\n");
     sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
     sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
     sb.append("    iEzsigndocumentStepsignaturetotal: ").append(toIndentedString(iEzsigndocumentStepsignaturetotal)).append("\n");
@@ -843,6 +871,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiFields.add("bEzsigndocumentHassignedsignatures");
     openapiFields.add("objAudit");
     openapiFields.add("sEzsigndocumentExternalid");
+    openapiFields.add("eEzsigndocumentSteptype");
     openapiFields.add("iEzsigndocumentStepformtotal");
     openapiFields.add("iEzsigndocumentStepformcurrent");
     openapiFields.add("iEzsigndocumentStepsignaturetotal");
@@ -860,6 +889,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiRequiredFields.add("iEzsigndocumentPagetotal");
     openapiRequiredFields.add("iEzsigndocumentSignaturesigned");
     openapiRequiredFields.add("iEzsigndocumentSignaturetotal");
+    openapiRequiredFields.add("eEzsigndocumentSteptype");
     openapiRequiredFields.add("iEzsigndocumentStepformtotal");
     openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
     openapiRequiredFields.add("iEzsigndocumentStepsignaturetotal");
@@ -868,32 +898,33 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsigndocumentGetObjectV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentGetObjectV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentGetObjectV1ResponseMPayload is not found in the empty JSON string", EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsigndocumentGetObjectV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentGetObjectV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentGetObjectV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
       }
@@ -920,7 +951,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       }
       // validate the optional field `objAudit`
       if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
-        CommonAudit.validateJsonObject(jsonObj.getAsJsonObject("objAudit"));
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
       }
       if ((jsonObj.get("sEzsigndocumentExternalid") != null && !jsonObj.get("sEzsigndocumentExternalid").isJsonNull()) && !jsonObj.get("sEzsigndocumentExternalid").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentExternalid").toString()));
@@ -933,7 +964,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       JsonArray jsonArrayaObjEzsignfoldersignerassociationstatus = jsonObj.getAsJsonArray("a_objEzsignfoldersignerassociationstatus");
       // validate the required field `a_objEzsignfoldersignerassociationstatus` (array)
       for (int i = 0; i < jsonArrayaObjEzsignfoldersignerassociationstatus.size(); i++) {
-        CustomEzsignfoldersignerassociationstatusResponse.validateJsonObject(jsonArrayaObjEzsignfoldersignerassociationstatus.get(i).getAsJsonObject());
+        CustomEzsignfoldersignerassociationstatusResponse.validateJsonElement(jsonArrayaObjEzsignfoldersignerassociationstatus.get(i));
       };
   }
 
@@ -957,9 +988,9 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
 
            @Override
            public EzsigndocumentGetObjectV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

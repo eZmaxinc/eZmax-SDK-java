@@ -21,10 +21,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for WebhookGetListV1ResponseMPayload
@@ -41,14 +41,6 @@ public class WebhookGetListV1ResponseMPayloadTest {
     }
 
     /**
-     * Test the property 'aObjWebhook'
-     */
-    @Test
-    public void aObjWebhookTest() {
-        // TODO: test aObjWebhook
-    }
-
-    /**
      * Test the property 'iRowReturned'
      */
     @Test
@@ -62,6 +54,14 @@ public class WebhookGetListV1ResponseMPayloadTest {
     @Test
     public void iRowFilteredTest() {
         // TODO: test iRowFiltered
+    }
+
+    /**
+     * Test the property 'aObjWebhook'
+     */
+    @Test
+    public void aObjWebhookTest() {
+        // TODO: test aObjWebhook
     }
 
 }

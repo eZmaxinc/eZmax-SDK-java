@@ -23,12 +23,14 @@ import com.ezmax.api.model.UserEditObjectV1Request;
 import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
+import com.ezmax.api.model.UserGetApikeysV1Response;
 import com.ezmax.api.model.UserGetAutocompleteV2Response;
 import com.ezmax.api.model.UserGetEffectivePermissionsV1Response;
 import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
 import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
+import com.ezmax.api.model.UserSendPasswordResetV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -86,6 +88,18 @@ public class ObjectUserApiTest {
         Integer pkiUserID = null;
         UserEditPermissionsV1Request userEditPermissionsV1Request = null;
         UserEditPermissionsV1Response response = api.userEditPermissionsV1(pkiUserID, userEditPermissionsV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Apikeys
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userGetApikeysV1Test() throws ApiException {
+        Integer pkiUserID = null;
+        UserGetApikeysV1Response response = api.userGetApikeysV1(pkiUserID);
         // TODO: test validations
     }
 
@@ -173,6 +187,21 @@ public class ObjectUserApiTest {
     public void userGetSubnetsV1Test() throws ApiException {
         Integer pkiUserID = null;
         UserGetSubnetsV1Response response = api.userGetSubnetsV1(pkiUserID);
+        // TODO: test validations
+    }
+
+    /**
+     * Send password reset
+     *
+     * Send the password reset email
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userSendPasswordResetV1Test() throws ApiException {
+        Integer pkiUserID = null;
+        Object body = null;
+        UserSendPasswordResetV1Response response = api.userSendPasswordResetV1(pkiUserID, body);
         // TODO: test validations
     }
 

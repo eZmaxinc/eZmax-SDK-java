@@ -20,9 +20,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for CommonResponseErrorSTemporaryFileUrl
@@ -39,14 +39,6 @@ public class CommonResponseErrorSTemporaryFileUrlTest {
     }
 
     /**
-     * Test the property 'sTemporaryFileUrl'
-     */
-    @Test
-    public void sTemporaryFileUrlTest() {
-        // TODO: test sTemporaryFileUrl
-    }
-
-    /**
      * Test the property 'sErrorMessage'
      */
     @Test
@@ -60,6 +52,14 @@ public class CommonResponseErrorSTemporaryFileUrlTest {
     @Test
     public void eErrorCodeTest() {
         // TODO: test eErrorCode
+    }
+
+    /**
+     * Test the property 'sTemporaryFileUrl'
+     */
+    @Test
+    public void sTemporaryFileUrlTest() {
+        // TODO: test sTemporaryFileUrl
     }
 
 }

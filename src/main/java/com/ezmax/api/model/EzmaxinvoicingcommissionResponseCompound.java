@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -22,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcommission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzmaxinvoicingcommissionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D = "pkiEzmaxinvoicingcommissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D)
@@ -366,32 +366,33 @@ public class EzmaxinvoicingcommissionResponseCompound {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzmaxinvoicingcommissionResponseCompound
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingcommissionResponseCompound
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzmaxinvoicingcommissionResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzmaxinvoicingcommissionResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingcommissionResponseCompound is not found in the empty JSON string", EzmaxinvoicingcommissionResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzmaxinvoicingcommissionResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingcommissionResponseCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingcommissionResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzmaxinvoicingcommissionResponseCompound.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtEzmaxinvoicingcommissionStart").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzmaxinvoicingcommissionStart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzmaxinvoicingcommissionStart").toString()));
       }
@@ -402,7 +403,7 @@ public class EzmaxinvoicingcommissionResponseCompound {
         throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingcommissionAmount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingcommissionAmount").toString()));
       }
       // validate the required field `objContactName`
-      CustomContactNameResponse.validateJsonObject(jsonObj.getAsJsonObject("objContactName"));
+      CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -425,9 +426,9 @@ public class EzmaxinvoicingcommissionResponseCompound {
 
            @Override
            public EzmaxinvoicingcommissionResponseCompound read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

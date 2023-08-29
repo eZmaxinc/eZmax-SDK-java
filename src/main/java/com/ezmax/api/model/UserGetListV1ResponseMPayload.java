@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.UserListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/user/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class UserGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_USER = "a_objUser";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_USER)
-  private List<UserListElement> aObjUser = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
   private Integer iRowReturned;
@@ -67,37 +63,12 @@ public class UserGetListV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
   private Integer iRowFiltered;
 
+  public static final String SERIALIZED_NAME_A_OBJ_USER = "a_objUser";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_USER)
+  private List<UserListElement> aObjUser = new ArrayList<>();
+
   public UserGetListV1ResponseMPayload() {
   }
-
-  public UserGetListV1ResponseMPayload aObjUser(List<UserListElement> aObjUser) {
-    
-    this.aObjUser = aObjUser;
-    return this;
-  }
-
-  public UserGetListV1ResponseMPayload addAObjUserItem(UserListElement aObjUserItem) {
-    if (this.aObjUser == null) {
-      this.aObjUser = new ArrayList<>();
-    }
-    this.aObjUser.add(aObjUserItem);
-    return this;
-  }
-
-   /**
-   * Get aObjUser
-   * @return aObjUser
-  **/
-  @javax.annotation.Nonnull
-  public List<UserListElement> getaObjUser() {
-    return aObjUser;
-  }
-
-
-  public void setaObjUser(List<UserListElement> aObjUser) {
-    this.aObjUser = aObjUser;
-  }
-
 
   public UserGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     
@@ -141,6 +112,35 @@ public class UserGetListV1ResponseMPayload {
   }
 
 
+  public UserGetListV1ResponseMPayload aObjUser(List<UserListElement> aObjUser) {
+    
+    this.aObjUser = aObjUser;
+    return this;
+  }
+
+  public UserGetListV1ResponseMPayload addAObjUserItem(UserListElement aObjUserItem) {
+    if (this.aObjUser == null) {
+      this.aObjUser = new ArrayList<>();
+    }
+    this.aObjUser.add(aObjUserItem);
+    return this;
+  }
+
+   /**
+   * Get aObjUser
+   * @return aObjUser
+  **/
+  @javax.annotation.Nonnull
+  public List<UserListElement> getaObjUser() {
+    return aObjUser;
+  }
+
+
+  public void setaObjUser(List<UserListElement> aObjUser) {
+    this.aObjUser = aObjUser;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,23 +151,23 @@ public class UserGetListV1ResponseMPayload {
       return false;
     }
     UserGetListV1ResponseMPayload userGetListV1ResponseMPayload = (UserGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjUser, userGetListV1ResponseMPayload.aObjUser) &&
-        Objects.equals(this.iRowReturned, userGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, userGetListV1ResponseMPayload.iRowFiltered);
+    return Objects.equals(this.iRowReturned, userGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, userGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjUser, userGetListV1ResponseMPayload.aObjUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjUser, iRowReturned, iRowFiltered);
+    return Objects.hash(iRowReturned, iRowFiltered, aObjUser);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserGetListV1ResponseMPayload {\n");
-    sb.append("    aObjUser: ").append(toIndentedString(aObjUser)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    aObjUser: ").append(toIndentedString(aObjUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -190,44 +190,45 @@ public class UserGetListV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objUser");
     openapiFields.add("iRowReturned");
     openapiFields.add("iRowFiltered");
+    openapiFields.add("a_objUser");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objUser");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objUser");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UserGetListV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to UserGetListV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!UserGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!UserGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UserGetListV1ResponseMPayload is not found in the empty JSON string", UserGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!UserGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UserGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objUser").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objUser` to be an array in the JSON string but got `%s`", jsonObj.get("a_objUser").toString()));
@@ -236,7 +237,7 @@ public class UserGetListV1ResponseMPayload {
       JsonArray jsonArrayaObjUser = jsonObj.getAsJsonArray("a_objUser");
       // validate the required field `a_objUser` (array)
       for (int i = 0; i < jsonArrayaObjUser.size(); i++) {
-        UserListElement.validateJsonObject(jsonArrayaObjUser.get(i).getAsJsonObject());
+        UserListElement.validateJsonElement(jsonArrayaObjUser.get(i));
       };
   }
 
@@ -260,9 +261,9 @@ public class UserGetListV1ResponseMPayload {
 
            @Override
            public UserGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

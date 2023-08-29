@@ -8,9 +8,9 @@ Response for GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignbulksendGetFormsDataV1ResponseMPayload**](EzsignbulksendGetFormsDataV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignbulksendGetFormsDataV1ResponseMPayload**](EzsignbulksendGetFormsDataV1ResponseMPayload.md) |  |  |
 
 
 

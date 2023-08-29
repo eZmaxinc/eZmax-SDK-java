@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
@@ -23,10 +24,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for EzsigndocumentGetObjectV1ResponseMPayload
@@ -208,6 +209,14 @@ public class EzsigndocumentGetObjectV1ResponseMPayloadTest {
     @Test
     public void sEzsigndocumentExternalidTest() {
         // TODO: test sEzsigndocumentExternalid
+    }
+
+    /**
+     * Test the property 'eEzsigndocumentSteptype'
+     */
+    @Test
+    public void eEzsigndocumentSteptypeTest() {
+        // TODO: test eEzsigndocumentSteptype
     }
 
     /**

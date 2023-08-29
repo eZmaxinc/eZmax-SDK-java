@@ -8,9 +8,9 @@ Response for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigntemplateCopyV1ResponseMPayload**](EzsigntemplateCopyV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigntemplateCopyV1ResponseMPayload**](EzsigntemplateCopyV1ResponseMPayload.md) |  |  |
 
 
 

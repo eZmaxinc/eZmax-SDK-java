@@ -8,9 +8,9 @@ Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**ApikeyRegenerateV1ResponseMPayload**](ApikeyRegenerateV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**ApikeyRegenerateV1ResponseMPayload**](ApikeyRegenerateV1ResponseMPayload.md) |  |  |
 
 
 

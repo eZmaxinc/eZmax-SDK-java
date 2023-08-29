@@ -8,9 +8,9 @@ Response for GET /1/module/ezsign/suggestTemplates
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignSuggestTemplatesV1ResponseMPayload**](EzsignSuggestTemplatesV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignSuggestTemplatesV1ResponseMPayload**](EzsignSuggestTemplatesV1ResponseMPayload.md) |  |  |
 
 
 

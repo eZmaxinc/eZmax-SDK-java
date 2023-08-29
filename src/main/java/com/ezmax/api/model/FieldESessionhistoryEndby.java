@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
@@ -53,7 +52,9 @@ public enum FieldESessionhistoryEndby {
   
   BADUSERTYPE("BadUserType"),
   
-  BADIP("BadIP");
+  BADIP("BadIP"),
+  
+  FORCEDLOGOFF("ForcedLogoff");
 
   private String value;
 

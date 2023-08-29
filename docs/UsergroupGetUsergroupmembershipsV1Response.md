@@ -8,9 +8,9 @@ Response for GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupmemberships
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**UsergroupGetUsergroupmembershipsV1ResponseMPayload**](UsergroupGetUsergroupmembershipsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**UsergroupGetUsergroupmembershipsV1ResponseMPayload**](UsergroupGetUsergroupmembershipsV1ResponseMPayload.md) |  |  |
 
 
 

@@ -8,9 +8,9 @@ Response for GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepac
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload**](EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload**](EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

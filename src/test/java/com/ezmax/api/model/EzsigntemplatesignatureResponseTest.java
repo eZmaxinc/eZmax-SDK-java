@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureFont;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureTooltipposition;
@@ -23,9 +24,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for EzsigntemplatesignatureResponse
@@ -98,6 +99,22 @@ public class EzsigntemplatesignatureResponseTest {
     }
 
     /**
+     * Test the property 'iEzsigntemplatesignatureWidth'
+     */
+    @Test
+    public void iEzsigntemplatesignatureWidthTest() {
+        // TODO: test iEzsigntemplatesignatureWidth
+    }
+
+    /**
+     * Test the property 'iEzsigntemplatesignatureHeight'
+     */
+    @Test
+    public void iEzsigntemplatesignatureHeightTest() {
+        // TODO: test iEzsigntemplatesignatureHeight
+    }
+
+    /**
      * Test the property 'iEzsigntemplatesignatureStep'
      */
     @Test
@@ -167,6 +184,30 @@ public class EzsigntemplatesignatureResponseTest {
     @Test
     public void bEzsigntemplatesignatureRequiredTest() {
         // TODO: test bEzsigntemplatesignatureRequired
+    }
+
+    /**
+     * Test the property 'iEzsigntemplatesignatureMaxlength'
+     */
+    @Test
+    public void iEzsigntemplatesignatureMaxlengthTest() {
+        // TODO: test iEzsigntemplatesignatureMaxlength
+    }
+
+    /**
+     * Test the property 'sEzsigntemplatesignatureRegexp'
+     */
+    @Test
+    public void sEzsigntemplatesignatureRegexpTest() {
+        // TODO: test sEzsigntemplatesignatureRegexp
+    }
+
+    /**
+     * Test the property 'eEzsigntemplatesignatureTextvalidation'
+     */
+    @Test
+    public void eEzsigntemplatesignatureTextvalidationTest() {
+        // TODO: test eEzsigntemplatesignatureTextvalidation
     }
 
 }

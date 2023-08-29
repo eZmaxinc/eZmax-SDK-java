@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -65,6 +65,10 @@ public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
   private List<Integer> aRequiredPermission = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
+  @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
+  private Boolean bVersionDeprecated;
 
   public CommonResponseObjDebugPayload() {
   }
@@ -140,6 +144,27 @@ public class CommonResponseObjDebugPayload {
   }
 
 
+  public CommonResponseObjDebugPayload bVersionDeprecated(Boolean bVersionDeprecated) {
+    
+    this.bVersionDeprecated = bVersionDeprecated;
+    return this;
+  }
+
+   /**
+   * Wheter the current route is deprecated or not
+   * @return bVersionDeprecated
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbVersionDeprecated() {
+    return bVersionDeprecated;
+  }
+
+
+  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -152,12 +177,13 @@ public class CommonResponseObjDebugPayload {
     CommonResponseObjDebugPayload commonResponseObjDebugPayload = (CommonResponseObjDebugPayload) o;
     return Objects.equals(this.iVersionMin, commonResponseObjDebugPayload.iVersionMin) &&
         Objects.equals(this.iVersionMax, commonResponseObjDebugPayload.iVersionMax) &&
-        Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayload.aRequiredPermission);
+        Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayload.aRequiredPermission) &&
+        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayload.bVersionDeprecated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission);
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated);
   }
 
   @Override
@@ -167,6 +193,7 @@ public class CommonResponseObjDebugPayload {
     sb.append("    iVersionMin: ").append(toIndentedString(iVersionMin)).append("\n");
     sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
     sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
+    sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -192,41 +219,44 @@ public class CommonResponseObjDebugPayload {
     openapiFields.add("iVersionMin");
     openapiFields.add("iVersionMax");
     openapiFields.add("a_RequiredPermission");
+    openapiFields.add("bVersionDeprecated");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("iVersionMin");
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
+    openapiRequiredFields.add("bVersionDeprecated");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CommonResponseObjDebugPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CommonResponseObjDebugPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CommonResponseObjDebugPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!CommonResponseObjDebugPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayload is not found in the empty JSON string", CommonResponseObjDebugPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!CommonResponseObjDebugPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonResponseObjDebugPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the required json array is present
       if (jsonObj.get("a_RequiredPermission") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
@@ -255,9 +285,9 @@ public class CommonResponseObjDebugPayload {
 
            @Override
            public CommonResponseObjDebugPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

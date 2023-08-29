@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.EzsignfolderListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,12 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsignfolderGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
-  private List<EzsignfolderListElement> aObjEzsignfolder = new ArrayList<>();
-
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
   private Integer iRowReturned;
@@ -67,37 +63,12 @@ public class EzsignfolderGetListV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
   private Integer iRowFiltered;
 
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
+  private List<EzsignfolderListElement> aObjEzsignfolder = new ArrayList<>();
+
   public EzsignfolderGetListV1ResponseMPayload() {
   }
-
-  public EzsignfolderGetListV1ResponseMPayload aObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
-    
-    this.aObjEzsignfolder = aObjEzsignfolder;
-    return this;
-  }
-
-  public EzsignfolderGetListV1ResponseMPayload addAObjEzsignfolderItem(EzsignfolderListElement aObjEzsignfolderItem) {
-    if (this.aObjEzsignfolder == null) {
-      this.aObjEzsignfolder = new ArrayList<>();
-    }
-    this.aObjEzsignfolder.add(aObjEzsignfolderItem);
-    return this;
-  }
-
-   /**
-   * Get aObjEzsignfolder
-   * @return aObjEzsignfolder
-  **/
-  @javax.annotation.Nonnull
-  public List<EzsignfolderListElement> getaObjEzsignfolder() {
-    return aObjEzsignfolder;
-  }
-
-
-  public void setaObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
-    this.aObjEzsignfolder = aObjEzsignfolder;
-  }
-
 
   public EzsignfolderGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     
@@ -141,6 +112,35 @@ public class EzsignfolderGetListV1ResponseMPayload {
   }
 
 
+  public EzsignfolderGetListV1ResponseMPayload aObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
+    
+    this.aObjEzsignfolder = aObjEzsignfolder;
+    return this;
+  }
+
+  public EzsignfolderGetListV1ResponseMPayload addAObjEzsignfolderItem(EzsignfolderListElement aObjEzsignfolderItem) {
+    if (this.aObjEzsignfolder == null) {
+      this.aObjEzsignfolder = new ArrayList<>();
+    }
+    this.aObjEzsignfolder.add(aObjEzsignfolderItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignfolder
+   * @return aObjEzsignfolder
+  **/
+  @javax.annotation.Nonnull
+  public List<EzsignfolderListElement> getaObjEzsignfolder() {
+    return aObjEzsignfolder;
+  }
+
+
+  public void setaObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
+    this.aObjEzsignfolder = aObjEzsignfolder;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,23 +151,23 @@ public class EzsignfolderGetListV1ResponseMPayload {
       return false;
     }
     EzsignfolderGetListV1ResponseMPayload ezsignfolderGetListV1ResponseMPayload = (EzsignfolderGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjEzsignfolder, ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder) &&
-        Objects.equals(this.iRowReturned, ezsignfolderGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, ezsignfolderGetListV1ResponseMPayload.iRowFiltered);
+    return Objects.equals(this.iRowReturned, ezsignfolderGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, ezsignfolderGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjEzsignfolder, ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfolder, iRowReturned, iRowFiltered);
+    return Objects.hash(iRowReturned, iRowFiltered, aObjEzsignfolder);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetListV1ResponseMPayload {\n");
-    sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
     sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
     sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -190,44 +190,45 @@ public class EzsignfolderGetListV1ResponseMPayload {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("a_objEzsignfolder");
     openapiFields.add("iRowReturned");
     openapiFields.add("iRowFiltered");
+    openapiFields.add("a_objEzsignfolder");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsignfolder");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objEzsignfolder");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsignfolderGetListV1ResponseMPayload
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderGetListV1ResponseMPayload
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsignfolderGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsignfolderGetListV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfolderGetListV1ResponseMPayload is not found in the empty JSON string", EzsignfolderGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignfolderGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfolderGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfolderGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignfolderGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfolder").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignfolder` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfolder").toString()));
@@ -236,7 +237,7 @@ public class EzsignfolderGetListV1ResponseMPayload {
       JsonArray jsonArrayaObjEzsignfolder = jsonObj.getAsJsonArray("a_objEzsignfolder");
       // validate the required field `a_objEzsignfolder` (array)
       for (int i = 0; i < jsonArrayaObjEzsignfolder.size(); i++) {
-        EzsignfolderListElement.validateJsonObject(jsonArrayaObjEzsignfolder.get(i).getAsJsonObject());
+        EzsignfolderListElement.validateJsonElement(jsonArrayaObjEzsignfolder.get(i));
       };
   }
 
@@ -260,9 +261,9 @@ public class EzsignfolderGetListV1ResponseMPayload {
 
            @Override
            public EzsignfolderGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

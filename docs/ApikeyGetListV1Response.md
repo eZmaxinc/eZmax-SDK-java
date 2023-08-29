@@ -8,9 +8,9 @@ Response for GET /1/object/apikey/getList
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**ApikeyGetListV1ResponseMPayload**](ApikeyGetListV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**ApikeyGetListV1ResponseMPayload**](ApikeyGetListV1ResponseMPayload.md) |  |  |
 
 
 

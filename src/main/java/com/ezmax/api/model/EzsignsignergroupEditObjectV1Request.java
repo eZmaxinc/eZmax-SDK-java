@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.EzsignsignergroupRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -22,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,33 +51,33 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsignsignergroupEditObjectV1Request {
-  public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
-  @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
-  private EzsignsignergroupRequestCompound objBranding;
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
+  private EzsignsignergroupRequestCompound objEzsignsignergroup;
 
   public EzsignsignergroupEditObjectV1Request() {
   }
 
-  public EzsignsignergroupEditObjectV1Request objBranding(EzsignsignergroupRequestCompound objBranding) {
+  public EzsignsignergroupEditObjectV1Request objEzsignsignergroup(EzsignsignergroupRequestCompound objEzsignsignergroup) {
     
-    this.objBranding = objBranding;
+    this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
 
    /**
-   * Get objBranding
-   * @return objBranding
+   * Get objEzsignsignergroup
+   * @return objEzsignsignergroup
   **/
-  @javax.annotation.Nullable
-  public EzsignsignergroupRequestCompound getObjBranding() {
-    return objBranding;
+  @javax.annotation.Nonnull
+  public EzsignsignergroupRequestCompound getObjEzsignsignergroup() {
+    return objEzsignsignergroup;
   }
 
 
-  public void setObjBranding(EzsignsignergroupRequestCompound objBranding) {
-    this.objBranding = objBranding;
+  public void setObjEzsignsignergroup(EzsignsignergroupRequestCompound objEzsignsignergroup) {
+    this.objEzsignsignergroup = objEzsignsignergroup;
   }
 
 
@@ -91,19 +91,19 @@ public class EzsignsignergroupEditObjectV1Request {
       return false;
     }
     EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request = (EzsignsignergroupEditObjectV1Request) o;
-    return Objects.equals(this.objBranding, ezsignsignergroupEditObjectV1Request.objBranding);
+    return Objects.equals(this.objEzsignsignergroup, ezsignsignergroupEditObjectV1Request.objEzsignsignergroup);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objBranding);
+    return Objects.hash(objEzsignsignergroup);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupEditObjectV1Request {\n");
-    sb.append("    objBranding: ").append(toIndentedString(objBranding)).append("\n");
+    sb.append("    objEzsignsignergroup: ").append(toIndentedString(objEzsignsignergroup)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,36 +126,43 @@ public class EzsignsignergroupEditObjectV1Request {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objBranding");
+    openapiFields.add("objEzsignsignergroup");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objEzsignsignergroup");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsignsignergroupEditObjectV1Request
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsignsignergroupEditObjectV1Request
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsignsignergroupEditObjectV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsignsignergroupEditObjectV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignergroupEditObjectV1Request is not found in the empty JSON string", EzsignsignergroupEditObjectV1Request.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignsignergroupEditObjectV1Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignergroupEditObjectV1Request` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignergroupEditObjectV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-      // validate the optional field `objBranding`
-      if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {
-        EzsignsignergroupRequestCompound.validateJsonObject(jsonObj.getAsJsonObject("objBranding"));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsignergroupEditObjectV1Request.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objEzsignsignergroup`
+      EzsignsignergroupRequestCompound.validateJsonElement(jsonObj.get("objEzsignsignergroup"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -178,9 +185,9 @@ public class EzsignsignergroupEditObjectV1Request {
 
            @Override
            public EzsignsignergroupEditObjectV1Request read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

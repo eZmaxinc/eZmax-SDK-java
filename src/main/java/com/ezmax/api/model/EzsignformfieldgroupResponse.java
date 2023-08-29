@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
+import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupType;
@@ -24,6 +24,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -102,6 +103,10 @@ public class EzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED = "bEzsignformfieldgroupEncrypted";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED)
   private Boolean bEzsignformfieldgroupEncrypted;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION = "eEzsignformfieldgroupTextvalidation";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION)
+  private EnumTextvalidation eEzsignformfieldgroupTextvalidation;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP = "sEzsignformfieldgroupRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP)
@@ -342,6 +347,7 @@ public class EzsignformfieldgroupResponse {
    /**
    * The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
    * minimum: 0
+   * maximum: 65535
    * @return iEzsignformfieldgroupMaxlength
   **/
   @javax.annotation.Nullable
@@ -373,6 +379,27 @@ public class EzsignformfieldgroupResponse {
 
   public void setbEzsignformfieldgroupEncrypted(Boolean bEzsignformfieldgroupEncrypted) {
     this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
+  }
+
+
+  public EzsignformfieldgroupResponse eEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
+    
+    this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
+    return this;
+  }
+
+   /**
+   * Get eEzsignformfieldgroupTextvalidation
+   * @return eEzsignformfieldgroupTextvalidation
+  **/
+  @javax.annotation.Nullable
+  public EnumTextvalidation geteEzsignformfieldgroupTextvalidation() {
+    return eEzsignformfieldgroupTextvalidation;
+  }
+
+
+  public void seteEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
+    this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
   }
 
 
@@ -461,6 +488,7 @@ public class EzsignformfieldgroupResponse {
         Objects.equals(this.bEzsignformfieldgroupReadonly, ezsignformfieldgroupResponse.bEzsignformfieldgroupReadonly) &&
         Objects.equals(this.iEzsignformfieldgroupMaxlength, ezsignformfieldgroupResponse.iEzsignformfieldgroupMaxlength) &&
         Objects.equals(this.bEzsignformfieldgroupEncrypted, ezsignformfieldgroupResponse.bEzsignformfieldgroupEncrypted) &&
+        Objects.equals(this.eEzsignformfieldgroupTextvalidation, ezsignformfieldgroupResponse.eEzsignformfieldgroupTextvalidation) &&
         Objects.equals(this.sEzsignformfieldgroupRegexp, ezsignformfieldgroupResponse.sEzsignformfieldgroupRegexp) &&
         Objects.equals(this.tEzsignformfieldgroupTooltip, ezsignformfieldgroupResponse.tEzsignformfieldgroupTooltip) &&
         Objects.equals(this.eEzsignformfieldgroupTooltipposition, ezsignformfieldgroupResponse.eEzsignformfieldgroupTooltipposition);
@@ -468,7 +496,7 @@ public class EzsignformfieldgroupResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldgroupID, fkiEzsigndocumentID, eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted, sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition);
+    return Objects.hash(pkiEzsignformfieldgroupID, fkiEzsigndocumentID, eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted, eEzsignformfieldgroupTextvalidation, sEzsignformfieldgroupRegexp, tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition);
   }
 
   @Override
@@ -487,6 +515,7 @@ public class EzsignformfieldgroupResponse {
     sb.append("    bEzsignformfieldgroupReadonly: ").append(toIndentedString(bEzsignformfieldgroupReadonly)).append("\n");
     sb.append("    iEzsignformfieldgroupMaxlength: ").append(toIndentedString(iEzsignformfieldgroupMaxlength)).append("\n");
     sb.append("    bEzsignformfieldgroupEncrypted: ").append(toIndentedString(bEzsignformfieldgroupEncrypted)).append("\n");
+    sb.append("    eEzsignformfieldgroupTextvalidation: ").append(toIndentedString(eEzsignformfieldgroupTextvalidation)).append("\n");
     sb.append("    sEzsignformfieldgroupRegexp: ").append(toIndentedString(sEzsignformfieldgroupRegexp)).append("\n");
     sb.append("    tEzsignformfieldgroupTooltip: ").append(toIndentedString(tEzsignformfieldgroupTooltip)).append("\n");
     sb.append("    eEzsignformfieldgroupTooltipposition: ").append(toIndentedString(eEzsignformfieldgroupTooltipposition)).append("\n");
@@ -524,6 +553,7 @@ public class EzsignformfieldgroupResponse {
     openapiFields.add("bEzsignformfieldgroupReadonly");
     openapiFields.add("iEzsignformfieldgroupMaxlength");
     openapiFields.add("bEzsignformfieldgroupEncrypted");
+    openapiFields.add("eEzsignformfieldgroupTextvalidation");
     openapiFields.add("sEzsignformfieldgroupRegexp");
     openapiFields.add("tEzsignformfieldgroupTooltip");
     openapiFields.add("eEzsignformfieldgroupTooltipposition");
@@ -542,32 +572,33 @@ public class EzsignformfieldgroupResponse {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzsignformfieldgroupResponse
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldgroupResponse
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzsignformfieldgroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzsignformfieldgroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupResponse is not found in the empty JSON string", EzsignformfieldgroupResponse.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzsignformfieldgroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignformfieldgroupResponse.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
       }
@@ -602,9 +633,9 @@ public class EzsignformfieldgroupResponse {
 
            @Override
            public EzsignformfieldgroupResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

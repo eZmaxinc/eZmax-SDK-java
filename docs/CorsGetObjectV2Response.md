@@ -8,9 +8,9 @@ Response for GET /2/object/cors/{pkiCorsID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**CorsGetObjectV2ResponseMPayload**](CorsGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**CorsGetObjectV2ResponseMPayload**](CorsGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

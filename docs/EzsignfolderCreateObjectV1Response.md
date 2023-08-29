@@ -8,9 +8,9 @@ Response for POST /1/object/ezsignfolder
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignfolderCreateObjectV1ResponseMPayload**](EzsignfolderCreateObjectV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignfolderCreateObjectV1ResponseMPayload**](EzsignfolderCreateObjectV1ResponseMPayload.md) |  |  |
 
 
 

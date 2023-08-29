@@ -36,19 +36,20 @@ import com.ezmax.api.model.UserEditObjectV1Request;
 import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
+import com.ezmax.api.model.UserGetApikeysV1Response;
 import com.ezmax.api.model.UserGetAutocompleteV2Response;
 import com.ezmax.api.model.UserGetEffectivePermissionsV1Response;
 import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
 import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
+import com.ezmax.api.model.UserSendPasswordResetV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
 
 public class ObjectUserApi {
     private ApiClient localVarApiClient;
@@ -489,6 +490,133 @@ public class ObjectUserApi {
 
         okhttp3.Call localVarCall = userEditPermissionsV1ValidateBeforeCall(pkiUserID, userEditPermissionsV1Request, _callback);
         Type localVarReturnType = new TypeToken<UserEditPermissionsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for userGetApikeysV1
+     * @param pkiUserID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetApikeysV1Call(Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/user/{pkiUserID}/getApikeys"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userGetApikeysV1ValidateBeforeCall(Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userGetApikeysV1(Async)");
+        }
+
+        return userGetApikeysV1Call(pkiUserID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Apikeys
+     * 
+     * @param pkiUserID  (required)
+     * @return UserGetApikeysV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserGetApikeysV1Response userGetApikeysV1(Integer pkiUserID) throws ApiException {
+        ApiResponse<UserGetApikeysV1Response> localVarResp = userGetApikeysV1WithHttpInfo(pkiUserID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Apikeys
+     * 
+     * @param pkiUserID  (required)
+     * @return ApiResponse&lt;UserGetApikeysV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserGetApikeysV1Response> userGetApikeysV1WithHttpInfo(Integer pkiUserID) throws ApiException {
+        okhttp3.Call localVarCall = userGetApikeysV1ValidateBeforeCall(pkiUserID, null);
+        Type localVarReturnType = new TypeToken<UserGetApikeysV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Apikeys (asynchronously)
+     * 
+     * @param pkiUserID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetApikeysV1Async(Integer pkiUserID, final ApiCallback<UserGetApikeysV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userGetApikeysV1ValidateBeforeCall(pkiUserID, _callback);
+        Type localVarReturnType = new TypeToken<UserGetApikeysV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1302,6 +1430,147 @@ public class ObjectUserApi {
 
         okhttp3.Call localVarCall = userGetSubnetsV1ValidateBeforeCall(pkiUserID, _callback);
         Type localVarReturnType = new TypeToken<UserGetSubnetsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for userSendPasswordResetV1
+     * @param pkiUserID  (required)
+     * @param body  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userSendPasswordResetV1Call(Integer pkiUserID, Object body, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/1/object/user/{pkiUserID}/sendPasswordReset"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userSendPasswordResetV1ValidateBeforeCall(Integer pkiUserID, Object body, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userSendPasswordResetV1(Async)");
+        }
+
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling userSendPasswordResetV1(Async)");
+        }
+
+        return userSendPasswordResetV1Call(pkiUserID, body, _callback);
+
+    }
+
+    /**
+     * Send password reset
+     * Send the password reset email
+     * @param pkiUserID  (required)
+     * @param body  (required)
+     * @return UserSendPasswordResetV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserSendPasswordResetV1Response userSendPasswordResetV1(Integer pkiUserID, Object body) throws ApiException {
+        ApiResponse<UserSendPasswordResetV1Response> localVarResp = userSendPasswordResetV1WithHttpInfo(pkiUserID, body);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Send password reset
+     * Send the password reset email
+     * @param pkiUserID  (required)
+     * @param body  (required)
+     * @return ApiResponse&lt;UserSendPasswordResetV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserSendPasswordResetV1Response> userSendPasswordResetV1WithHttpInfo(Integer pkiUserID, Object body) throws ApiException {
+        okhttp3.Call localVarCall = userSendPasswordResetV1ValidateBeforeCall(pkiUserID, body, null);
+        Type localVarReturnType = new TypeToken<UserSendPasswordResetV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Send password reset (asynchronously)
+     * Send the password reset email
+     * @param pkiUserID  (required)
+     * @param body  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userSendPasswordResetV1Async(Integer pkiUserID, Object body, final ApiCallback<UserSendPasswordResetV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userSendPasswordResetV1ValidateBeforeCall(pkiUserID, body, _callback);
+        Type localVarReturnType = new TypeToken<UserSendPasswordResetV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

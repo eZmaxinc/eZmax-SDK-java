@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.CommonResponseFilter;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -68,6 +68,10 @@ public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
   private List<Integer> aRequiredPermission = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
+  @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
+  private Boolean bVersionDeprecated;
 
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
@@ -151,6 +155,27 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
 
+  public CommonResponseObjDebugPayloadGetList bVersionDeprecated(Boolean bVersionDeprecated) {
+    
+    this.bVersionDeprecated = bVersionDeprecated;
+    return this;
+  }
+
+   /**
+   * Wheter the current route is deprecated or not
+   * @return bVersionDeprecated
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbVersionDeprecated() {
+    return bVersionDeprecated;
+  }
+
+
+  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+  }
+
+
   public CommonResponseObjDebugPayloadGetList aFilter(CommonResponseFilter aFilter) {
     
     this.aFilter = aFilter;
@@ -214,13 +239,14 @@ public class CommonResponseObjDebugPayloadGetList {
     return Objects.equals(this.iVersionMin, commonResponseObjDebugPayloadGetList.iVersionMin) &&
         Objects.equals(this.iVersionMax, commonResponseObjDebugPayloadGetList.iVersionMax) &&
         Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayloadGetList.aRequiredPermission) &&
+        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayloadGetList.bVersionDeprecated) &&
         Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
         Objects.equals(this.aOrderBy, commonResponseObjDebugPayloadGetList.aOrderBy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, aFilter, aOrderBy);
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, aFilter, aOrderBy);
   }
 
   @Override
@@ -230,6 +256,7 @@ public class CommonResponseObjDebugPayloadGetList {
     sb.append("    iVersionMin: ").append(toIndentedString(iVersionMin)).append("\n");
     sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
     sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
+    sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
     sb.append("    aFilter: ").append(toIndentedString(aFilter)).append("\n");
     sb.append("    aOrderBy: ").append(toIndentedString(aOrderBy)).append("\n");
     sb.append("}");
@@ -257,6 +284,7 @@ public class CommonResponseObjDebugPayloadGetList {
     openapiFields.add("iVersionMin");
     openapiFields.add("iVersionMax");
     openapiFields.add("a_RequiredPermission");
+    openapiFields.add("bVersionDeprecated");
     openapiFields.add("a_Filter");
     openapiFields.add("a_OrderBy");
 
@@ -265,37 +293,39 @@ public class CommonResponseObjDebugPayloadGetList {
     openapiRequiredFields.add("iVersionMin");
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
+    openapiRequiredFields.add("bVersionDeprecated");
     openapiRequiredFields.add("a_Filter");
     openapiRequiredFields.add("a_OrderBy");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CommonResponseObjDebugPayloadGetList
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to CommonResponseObjDebugPayloadGetList
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CommonResponseObjDebugPayloadGetList.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!CommonResponseObjDebugPayloadGetList.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayloadGetList is not found in the empty JSON string", CommonResponseObjDebugPayloadGetList.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!CommonResponseObjDebugPayloadGetList.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayloadGetList` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayloadGetList` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonResponseObjDebugPayloadGetList.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the required json array is present
       if (jsonObj.get("a_RequiredPermission") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
@@ -303,7 +333,7 @@ public class CommonResponseObjDebugPayloadGetList {
         throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
       }
       // validate the required field `a_Filter`
-      CommonResponseFilter.validateJsonObject(jsonObj.getAsJsonObject("a_Filter"));
+      CommonResponseFilter.validateJsonElement(jsonObj.get("a_Filter"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -326,9 +356,9 @@ public class CommonResponseObjDebugPayloadGetList {
 
            @Override
            public CommonResponseObjDebugPayloadGetList read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

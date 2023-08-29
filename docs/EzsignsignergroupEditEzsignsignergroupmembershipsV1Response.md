@@ -8,9 +8,9 @@ Response for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/editEzsign
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload**](EzsignsignergroupEditEzsignsignergroupmembershipsV1ResponseMPayload.md) |  |  |
 
 
 

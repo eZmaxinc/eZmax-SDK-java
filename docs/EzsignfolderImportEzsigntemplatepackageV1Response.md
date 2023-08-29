@@ -8,9 +8,9 @@ Response for POST/1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplate
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload**](EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload**](EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload.md) |  |  |
 
 
 

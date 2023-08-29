@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.VariableexpenseRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class VariableexpenseCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE = "a_objVariableexpense";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE)
@@ -144,32 +144,33 @@ public class VariableexpenseCreateObjectV1Request {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to VariableexpenseCreateObjectV1Request
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to VariableexpenseCreateObjectV1Request
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!VariableexpenseCreateObjectV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!VariableexpenseCreateObjectV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in VariableexpenseCreateObjectV1Request is not found in the empty JSON string", VariableexpenseCreateObjectV1Request.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!VariableexpenseCreateObjectV1Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VariableexpenseCreateObjectV1Request` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VariableexpenseCreateObjectV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VariableexpenseCreateObjectV1Request.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objVariableexpense").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objVariableexpense` to be an array in the JSON string but got `%s`", jsonObj.get("a_objVariableexpense").toString()));
@@ -178,7 +179,7 @@ public class VariableexpenseCreateObjectV1Request {
       JsonArray jsonArrayaObjVariableexpense = jsonObj.getAsJsonArray("a_objVariableexpense");
       // validate the required field `a_objVariableexpense` (array)
       for (int i = 0; i < jsonArrayaObjVariableexpense.size(); i++) {
-        VariableexpenseRequestCompound.validateJsonObject(jsonArrayaObjVariableexpense.get(i).getAsJsonObject());
+        VariableexpenseRequestCompound.validateJsonElement(jsonArrayaObjVariableexpense.get(i));
       };
   }
 
@@ -202,9 +203,9 @@ public class VariableexpenseCreateObjectV1Request {
 
            @Override
            public VariableexpenseCreateObjectV1Request read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

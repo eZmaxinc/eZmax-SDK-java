@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.EzmaxinvoicingsummaryinternaldetailResponseCompound;
 import com.ezmax.api.model.MultilingualEzmaxinvoicingsummaryinternalDescription;
 import com.google.gson.TypeAdapter;
@@ -24,6 +23,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryinternalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "pkiEzmaxinvoicingsummaryinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
@@ -320,34 +320,35 @@ public class EzmaxinvoicingsummaryinternalResponseCompound {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to EzmaxinvoicingsummaryinternalResponseCompound
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingsummaryinternalResponseCompound
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!EzmaxinvoicingsummaryinternalResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!EzmaxinvoicingsummaryinternalResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingsummaryinternalResponseCompound is not found in the empty JSON string", EzmaxinvoicingsummaryinternalResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!EzmaxinvoicingsummaryinternalResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryinternalResponseCompound` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryinternalResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzmaxinvoicingsummaryinternalResponseCompound.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzmaxinvoicingsummaryinternalDescription`
-      MultilingualEzmaxinvoicingsummaryinternalDescription.validateJsonObject(jsonObj.getAsJsonObject("objEzmaxinvoicingsummaryinternalDescription"));
+      MultilingualEzmaxinvoicingsummaryinternalDescription.validateJsonElement(jsonObj.get("objEzmaxinvoicingsummaryinternalDescription"));
       if (!jsonObj.get("sEzmaxinvoicingsummaryinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzmaxinvoicingsummaryinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxinvoicingsummaryinternalDescriptionX").toString()));
       }
@@ -362,7 +363,7 @@ public class EzmaxinvoicingsummaryinternalResponseCompound {
       JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternaldetail = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternaldetail");
       // validate the required field `a_objEzmaxinvoicingsummaryinternaldetail` (array)
       for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.size(); i++) {
-        EzmaxinvoicingsummaryinternaldetailResponseCompound.validateJsonObject(jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.get(i).getAsJsonObject());
+        EzmaxinvoicingsummaryinternaldetailResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.get(i));
       };
   }
 
@@ -386,9 +387,9 @@ public class EzmaxinvoicingsummaryinternalResponseCompound {
 
            @Override
            public EzmaxinvoicingsummaryinternalResponseCompound read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();

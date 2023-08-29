@@ -8,9 +8,9 @@ Response for GET /2/object/signature/{pkiSignatureID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**SignatureGetObjectV2ResponseMPayload**](SignatureGetObjectV2ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**SignatureGetObjectV2ResponseMPayload**](SignatureGetObjectV2ResponseMPayload.md) |  |  |
 
 
 

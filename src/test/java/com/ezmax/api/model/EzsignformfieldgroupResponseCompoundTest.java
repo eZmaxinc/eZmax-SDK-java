@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomDropdownElementResponseCompound;
+import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignformfieldResponseCompound;
 import com.ezmax.api.model.EzsignformfieldgroupsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
@@ -26,10 +27,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for EzsignformfieldgroupResponseCompound
@@ -139,6 +140,14 @@ public class EzsignformfieldgroupResponseCompoundTest {
     @Test
     public void bEzsignformfieldgroupEncryptedTest() {
         // TODO: test bEzsignformfieldgroupEncrypted
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldgroupTextvalidation'
+     */
+    @Test
+    public void eEzsignformfieldgroupTextvalidationTest() {
+        // TODO: test eEzsignformfieldgroupTextvalidation
     }
 
     /**

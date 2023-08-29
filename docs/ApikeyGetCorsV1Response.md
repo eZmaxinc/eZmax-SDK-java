@@ -8,9 +8,9 @@ Response for GET /1/object/apikey/{pkiApikeyID}/getCors
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**ApikeyGetCorsV1ResponseMPayload**](ApikeyGetCorsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**ApikeyGetCorsV1ResponseMPayload**](ApikeyGetCorsV1ResponseMPayload.md) |  |  |
 
 
 

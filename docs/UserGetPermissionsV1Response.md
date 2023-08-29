@@ -8,9 +8,9 @@ Response for GET /1/object/user/{pkiUserID}/getPermissions
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**UserGetPermissionsV1ResponseMPayload**](UserGetPermissionsV1ResponseMPayload.md) |  |  |
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  [optional] |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**UserGetPermissionsV1ResponseMPayload**](UserGetPermissionsV1ResponseMPayload.md) |  |  |
 
 
 

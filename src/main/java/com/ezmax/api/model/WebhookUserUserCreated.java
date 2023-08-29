@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.UserResponseCompound;
@@ -25,6 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -55,12 +55,8 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-27T20:21:45.086864663Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-29T19:56:36.375886991Z[Etc/UTC]")
 public class WebhookUserUserCreated {
-  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
-  @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  private UserResponseCompound objUser;
-
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
   private CustomWebhookResponse objWebhook;
@@ -69,29 +65,12 @@ public class WebhookUserUserCreated {
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
   private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  private UserResponseCompound objUser;
+
   public WebhookUserUserCreated() {
   }
-
-  public WebhookUserUserCreated objUser(UserResponseCompound objUser) {
-    
-    this.objUser = objUser;
-    return this;
-  }
-
-   /**
-   * Get objUser
-   * @return objUser
-  **/
-  @javax.annotation.Nonnull
-  public UserResponseCompound getObjUser() {
-    return objUser;
-  }
-
-
-  public void setObjUser(UserResponseCompound objUser) {
-    this.objUser = objUser;
-  }
-
 
   public WebhookUserUserCreated objWebhook(CustomWebhookResponse objWebhook) {
     
@@ -143,6 +122,27 @@ public class WebhookUserUserCreated {
   }
 
 
+  public WebhookUserUserCreated objUser(UserResponseCompound objUser) {
+    
+    this.objUser = objUser;
+    return this;
+  }
+
+   /**
+   * Get objUser
+   * @return objUser
+  **/
+  @javax.annotation.Nonnull
+  public UserResponseCompound getObjUser() {
+    return objUser;
+  }
+
+
+  public void setObjUser(UserResponseCompound objUser) {
+    this.objUser = objUser;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -153,23 +153,23 @@ public class WebhookUserUserCreated {
       return false;
     }
     WebhookUserUserCreated webhookUserUserCreated = (WebhookUserUserCreated) o;
-    return Objects.equals(this.objUser, webhookUserUserCreated.objUser) &&
-        Objects.equals(this.objWebhook, webhookUserUserCreated.objWebhook) &&
-        Objects.equals(this.aObjAttempt, webhookUserUserCreated.aObjAttempt);
+    return Objects.equals(this.objWebhook, webhookUserUserCreated.objWebhook) &&
+        Objects.equals(this.aObjAttempt, webhookUserUserCreated.aObjAttempt) &&
+        Objects.equals(this.objUser, webhookUserUserCreated.objUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objUser, objWebhook, aObjAttempt);
+    return Objects.hash(objWebhook, aObjAttempt, objUser);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserUserCreated {\n");
-    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
     sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
     sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
+    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -192,48 +192,47 @@ public class WebhookUserUserCreated {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("objUser");
     openapiFields.add("objWebhook");
     openapiFields.add("a_objAttempt");
+    openapiFields.add("objUser");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objUser");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
+    openapiRequiredFields.add("objUser");
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to WebhookUserUserCreated
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to WebhookUserUserCreated
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!WebhookUserUserCreated.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!WebhookUserUserCreated.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookUserUserCreated is not found in the empty JSON string", WebhookUserUserCreated.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
         if (!WebhookUserUserCreated.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookUserUserCreated` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookUserUserCreated` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : WebhookUserUserCreated.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      // validate the required field `objUser`
-      UserResponseCompound.validateJsonObject(jsonObj.getAsJsonObject("objUser"));
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objWebhook`
-      CustomWebhookResponse.validateJsonObject(jsonObj.getAsJsonObject("objWebhook"));
+      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objAttempt").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
@@ -242,8 +241,10 @@ public class WebhookUserUserCreated {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponseCompound.validateJsonObject(jsonArrayaObjAttempt.get(i).getAsJsonObject());
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
+      // validate the required field `objUser`
+      UserResponseCompound.validateJsonElement(jsonObj.get("objUser"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -266,9 +267,9 @@ public class WebhookUserUserCreated {
 
            @Override
            public WebhookUserUserCreated read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();
