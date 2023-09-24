@@ -1,8 +1,8 @@
 # ezmax-java
 
 eZmax API Definition (Full)
-- API version: 1.1.18
-  - Build date: 2023-08-29T19:56:36.375886991Z[Etc/UTC]
+- API version: 1.2.0
+  - Build date: 2023-09-24T21:29:12.733426105Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ezmax</groupId>
   <artifactId>ezmax-java</artifactId>
-  <version>1.1.19</version>
+  <version>1.2.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.ezmax:ezmax-java:1.1.19"
+     implementation "com.ezmax:ezmax-java:1.2.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ezmax-java-1.1.19.jar`
+* `target/ezmax-java-1.2.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -579,6 +579,7 @@ Class | Method | HTTP request | Description
  - [CustomEzsignfoldersignerassociationstatusResponse](docs/CustomEzsignfoldersignerassociationstatusResponse.md)
  - [CustomEzsignfoldertransmissionResponse](docs/CustomEzsignfoldertransmissionResponse.md)
  - [CustomEzsignfoldertransmissionSignerResponse](docs/CustomEzsignfoldertransmissionSignerResponse.md)
+ - [CustomEzsignfoldertypeResponse](docs/CustomEzsignfoldertypeResponse.md)
  - [CustomEzsignformfieldRequest](docs/CustomEzsignformfieldRequest.md)
  - [CustomEzsignformfielderrorResponse](docs/CustomEzsignformfielderrorResponse.md)
  - [CustomEzsignformfielderrortestResponse](docs/CustomEzsignformfielderrortestResponse.md)

@@ -169,6 +169,7 @@ docs/CustomEzsignfoldersignerassociationmineResponse.md
 docs/CustomEzsignfoldersignerassociationstatusResponse.md
 docs/CustomEzsignfoldertransmissionResponse.md
 docs/CustomEzsignfoldertransmissionSignerResponse.md
+docs/CustomEzsignfoldertypeResponse.md
 docs/CustomEzsignformfieldRequest.md
 docs/CustomEzsignformfielderrorResponse.md
 docs/CustomEzsignformfielderrortestResponse.md
@@ -1370,6 +1371,7 @@ src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmineRespons
 src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldertransmissionResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldertransmissionSignerResponse.java
+src/main/java/com/ezmax/api/model/CustomEzsignfoldertypeResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignformfieldRequest.java
 src/main/java/com/ezmax/api/model/CustomEzsignformfielderrorResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignformfielderrortestResponse.java
@@ -2507,6 +2509,7 @@ src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmineRespons
 src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldertransmissionResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldertransmissionSignerResponseTest.java
+src/test/java/com/ezmax/api/model/CustomEzsignfoldertypeResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignformfieldRequestTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignformfielderrorResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignformfielderrortestResponseTest.java
