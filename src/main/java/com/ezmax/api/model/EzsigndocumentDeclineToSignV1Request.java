@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:51:18.288819784Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
 public class EzsigndocumentDeclineToSignV1Request {
   public static final String SERIALIZED_NAME_S_REASON = "sReason";
   @SerializedName(SERIALIZED_NAME_S_REASON)

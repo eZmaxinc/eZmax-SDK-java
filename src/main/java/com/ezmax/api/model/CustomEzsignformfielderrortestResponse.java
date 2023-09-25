@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfielderrortest Object to contain the detail of the test error
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:51:18.288819784Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
 public class CustomEzsignformfielderrortestResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME = "sEzsignformfielderrortestName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME)

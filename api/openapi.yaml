@@ -15171,6 +15171,8 @@ components:
     Response-Redirect-356:
       description: The user is not running the latest version of the native application.
         He must valide or update its version before he can continue with this request
+    Response-Success-204:
+      description: No Content
     Response-Webhook-202:
       description: The Webhook event notification was successfully received by the
         receiving web server.

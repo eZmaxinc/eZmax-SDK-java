@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:51:18.288819784Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
 public class EzsignbulksendEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSEND = "objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSEND)
