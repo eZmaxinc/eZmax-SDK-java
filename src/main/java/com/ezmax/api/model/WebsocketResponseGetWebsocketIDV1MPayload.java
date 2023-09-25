@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:28:51.495500552Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:51:18.288819784Z[Etc/UTC]")
 public class WebsocketResponseGetWebsocketIDV1MPayload {
   public static final String SERIALIZED_NAME_S_WEBSOCKET_I_D = "sWebsocketID";
   @SerializedName(SERIALIZED_NAME_S_WEBSOCKET_I_D)
