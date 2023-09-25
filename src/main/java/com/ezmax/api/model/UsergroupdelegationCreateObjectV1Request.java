@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/usergroupdelegation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:38:30.471291472Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
 public class UsergroupdelegationCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION = "a_objUsergroupdelegation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION)

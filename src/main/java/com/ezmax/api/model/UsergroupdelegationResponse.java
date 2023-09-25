@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:38:30.471291472Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
 public class UsergroupdelegationResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)

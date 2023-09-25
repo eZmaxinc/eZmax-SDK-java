@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:38:30.471291472Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
 public class EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE = "a_eEzsignsignatureType";
   @SerializedName(SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE)
