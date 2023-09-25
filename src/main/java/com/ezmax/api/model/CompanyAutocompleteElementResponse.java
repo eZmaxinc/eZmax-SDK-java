@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Company AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:08:36.313533228Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T00:28:51.495500552Z[Etc/UTC]")
 public class CompanyAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMPANY_I_D = "pkiCompanyID";
   @SerializedName(SERIALIZED_NAME_PKI_COMPANY_I_D)
