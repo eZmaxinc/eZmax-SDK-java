@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:19:53.232565035Z[Etc/UTC]")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart

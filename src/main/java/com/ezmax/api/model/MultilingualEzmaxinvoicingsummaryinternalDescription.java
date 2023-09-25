@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Ezmaxinvoicingsummaryinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:19:53.232565035Z[Etc/UTC]")
 public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1 = "sEzmaxinvoicingsummaryinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1)

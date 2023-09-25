@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/systemconfiguration/{pkiSystemconfigurationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:19:53.232565035Z[Etc/UTC]")
 public class SystemconfigurationGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION = "objSystemconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION)
