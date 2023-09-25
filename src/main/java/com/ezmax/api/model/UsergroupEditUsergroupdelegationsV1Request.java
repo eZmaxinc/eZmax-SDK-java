@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
 public class UsergroupEditUsergroupdelegationsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION = "a_objUsergroupdelegation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION)

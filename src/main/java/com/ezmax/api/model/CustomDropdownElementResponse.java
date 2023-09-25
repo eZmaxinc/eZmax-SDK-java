@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic DropdownElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
 public class CustomDropdownElementResponse {
   public static final String SERIALIZED_NAME_S_LABEL = "sLabel";
   @SerializedName(SERIALIZED_NAME_S_LABEL)

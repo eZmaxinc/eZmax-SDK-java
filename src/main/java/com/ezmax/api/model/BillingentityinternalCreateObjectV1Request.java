@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:26:32.973996052Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T01:49:05.162537169Z[Etc/UTC]")
 public class BillingentityinternalCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
