@@ -99,10 +99,13 @@ tags:
     \ iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp and eEzsigntemplatesignatureTextvalidation\
     \ in ezsigntemplatesignature-Request and ezsigntemplatesignature-Response\r\n\
     - Added property objContactNameDelegation in ezsignsignature-Response\r\n- Added\
-    \ property objEzsignfoldertype in ezsignfolder-Response\r\n- Added properties\
-    \ bEzsignfoldertypeDelegate and bEzsignfoldertypeReassign in Custom-Ezsignfoldertype-Response,\
-    \ ezsignfoldertype-Request and ezsignfoldertype-Response\r\n- Added value AgentBrokerEzsignUserNormal\
-    \ for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Added value\
+    \ property objEzsignfoldertype in ezsignfolder-Response\r\n- Added property bEzsignformfieldAutocomplete\
+    \ in ezsignformfield-Request and ezsignformfield-Responce\r\n- Added property\
+    \ bEzsigntemplateformfieldAutocomplete in ezsigntemplateformfield-Request and\
+    \ ezsigntemplateformfield-Responce\r\n- Added properties bEzsignfoldertypeDelegate\
+    \ and bEzsignfoldertypeReassign in Custom-Ezsignfoldertype-Response, ezsignfoldertype-Request\
+    \ and ezsignfoldertype-Response\r\n- Added value AgentBrokerEzsignUserNormal for\
+    \ sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Added value\
     \ AllButEveryone for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\
     \n- New 401 error code UNAUTHORIZED_REQUEST_APIKEY\r\n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED\
     \ \r\n\r\n## Older Releases\r\nDocumentation and changelog for older releases\
@@ -4870,9 +4873,10 @@ paths:
           The type of document to retrieve.
 
           1. **Initial** Is the initial document before any signature were applied.
-          2. **Signed** Is the final document once all signatures were applied.
-          3. **Proofdocument** Is the evidence report.
-          4. **Proof** Is the complete evidence archive including all of the above and more.
+          2. **SignatureReady** Is the version containing the annotations/form to show the signer.
+          3. **Signed** Is the final document once all signatures were applied.
+          4. **Proofdocument** Is the evidence report.
+          5. **Proof** Is the complete evidence archive including all of the above and more.
         explode: false
         in: path
         name: eDocumentType
@@ -4880,6 +4884,7 @@ paths:
         schema:
           enum:
           - Initial
+          - SignatureReady
           - Signed
           - Proof
           - Proofdocument
@@ -6013,45 +6018,6 @@ paths:
       x-permissions:
       - All
       x-usertypeextra: []
-      x-accepts: application/json
-  /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine:
-    get:
-      description: ""
-      operationId: Ezsignfolder_GetEzsignfoldersignerassociationsmine_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiEzsignfolderID
-        required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response'
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
-      security:
-      - Authorization: []
-      summary: Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-      tags:
-      - Object_Ezsignfolder
-      x-superadmin: false
-      x-presentations:
-      - Ezsign
-      x-permissions:
-      - All
-      x-usertypeextra:
-      - EzsignSigner
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic:
     get:
@@ -16252,23 +16218,6 @@ components:
       - fkiEzsignfoldersignerassociationID
       - tEzignfoldersignerassociationMessage
       type: object
-    Custom-Ezsignfoldersignerassociationmine-Response:
-      description: A custom Ezsignfoldersignerassociation Object
-      properties:
-        pkiEzsignfoldersignerassociationID:
-          description: The unique ID of the Ezsignfoldersignerassociation
-          example: 20
-          minimum: 0
-          type: integer
-        fkiEzsignfolderID:
-          description: The unique ID of the Ezsignfolder
-          example: 33
-          minimum: 0
-          type: integer
-      required:
-      - fkiEzsignfolderID
-      - pkiEzsignfoldersignerassociationID
-      type: object
     Custom-Ezsignfoldersignerassociationstatus-Response:
       description: A Ezsignfoldersignerassociationstatus Object and children to create
         a complete structure
@@ -16370,10 +16319,7 @@ components:
           bEzsignfoldertypeReassign:
             $ref: '#/components/schemas/Field-bEzsignfoldertypeReassign'
         required:
-        - bEzsignfoldertypeIncludeproofsigner
-        - bEzsignfoldertypeIncludeproofuser
         - pkiEzsignfoldertypeID
-        - sEzsignfoldertypeNameX
         type: object
       description: A Custom Ezsignfoldertype Object
       type: object
@@ -17008,6 +16954,12 @@ components:
         only their own Ezsignfolders
       example: false
       type: boolean
+    Field-bEzsignformfieldAutocomplete:
+      description: |-
+        Whether the Ezsignformfield allows the use of the autocomplete of the browser.
+
+        This can only be set if eEzsignformfieldgroupType is **Text**
+      type: boolean
     Field-bEzsignformfieldSelected:
       description: |-
         Whether the Ezsignformfield is selected or not by default.
@@ -17042,6 +16994,12 @@ components:
       description: If the Ezsigntemplatedocument contains signed signatures (From
         internal or external sources)
       example: true
+      type: boolean
+    Field-bEzsigntemplateformfieldAutocomplete:
+      description: |-
+        Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.
+
+        This can only be set if eEzsigntemplateformfieldgroupType is **Text**
       type: boolean
     Field-bEzsigntemplateformfieldSelected:
       description: |-
@@ -26685,27 +26643,6 @@ components:
       required:
       - a_objEzsignfoldersignerassociation
       type: object
-    ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: '#/components/schemas/ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response-mPayload'
-        required:
-        - mPayload
-        type: object
-      - $ref: '#/components/schemas/Common-Response'
-      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociationsmine"
-      type: object
-    ezsignfolder-getEzsignfoldersignerassociationsmine-v1-Response-mPayload:
-      description: "Payload for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignerassociationsmine"
-      properties:
-        a_objEzsignfoldersignerassociation:
-          items:
-            $ref: '#/components/schemas/Custom-Ezsignfoldersignerassociationmine-Response'
-          type: array
-      required:
-      - a_objEzsignfoldersignerassociation
-      type: object
     ezsignfolder-getEzsignsignaturesAutomatic-v1-Response:
       allOf:
       - properties:
@@ -27984,6 +27921,12 @@ components:
           example: 22
           minimum: 0
           type: integer
+        bEzsignformfieldAutocomplete:
+          description: |-
+            Whether the Ezsignformfield allows the use of the autocomplete of the browser.
+
+            This can only be set if eEzsignformfieldgroupType is **Text**
+          type: boolean
         bEzsignformfieldSelected:
           description: |-
             Whether the Ezsignformfield is selected or not by default.
@@ -28082,6 +28025,12 @@ components:
           example: 22
           minimum: 0
           type: integer
+        bEzsignformfieldAutocomplete:
+          description: |-
+            Whether the Ezsignformfield allows the use of the autocomplete of the browser.
+
+            This can only be set if eEzsignformfieldgroupType is **Text**
+          type: boolean
         bEzsignformfieldSelected:
           description: |-
             Whether the Ezsignformfield is selected or not by default.
@@ -28196,7 +28145,6 @@ components:
       - iEzsignformfieldgroupFilledmax
       - iEzsignformfieldgroupFilledmin
       - iEzsignformfieldgroupStep
-      - sEzsignformfieldgroupDefaultvalue
       - sEzsignformfieldgroupLabel
       type: object
     ezsignformfieldgroup-RequestCompound:
@@ -30756,6 +30704,12 @@ components:
           example: 22
           minimum: 0
           type: integer
+        bEzsigntemplateformfieldAutocomplete:
+          description: |-
+            Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.
+
+            This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+          type: boolean
         bEzsigntemplateformfieldSelected:
           description: |-
             Whether the Ezsigntemplateformfield is selected or not by default.
@@ -30845,6 +30799,12 @@ components:
           example: 22
           minimum: 0
           type: integer
+        bEzsigntemplateformfieldAutocomplete:
+          description: |-
+            Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.
+
+            This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+          type: boolean
         bEzsigntemplateformfieldSelected:
           description: |-
             Whether the Ezsigntemplateformfield is selected or not by default.

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
 public class EzsignformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -261,7 +261,7 @@ public class EzsignformfieldgroupRequest {
    * The default value for the Ezsignformfieldgroup
    * @return sEzsignformfieldgroupDefaultvalue
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEzsignformfieldgroupDefaultvalue() {
     return sEzsignformfieldgroupDefaultvalue;
   }
@@ -564,7 +564,6 @@ public class EzsignformfieldgroupRequest {
     openapiRequiredFields.add("eEzsignformfieldgroupSignerrequirement");
     openapiRequiredFields.add("sEzsignformfieldgroupLabel");
     openapiRequiredFields.add("iEzsignformfieldgroupStep");
-    openapiRequiredFields.add("sEzsignformfieldgroupDefaultvalue");
     openapiRequiredFields.add("iEzsignformfieldgroupFilledmin");
     openapiRequiredFields.add("iEzsignformfieldgroupFilledmax");
     openapiRequiredFields.add("bEzsignformfieldgroupReadonly");
@@ -601,7 +600,7 @@ public class EzsignformfieldgroupRequest {
       if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
       }
-      if (!jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonPrimitive()) {
+      if ((jsonObj.get("sEzsignformfieldgroupDefaultvalue") != null && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupDefaultvalue").toString()));
       }
       if ((jsonObj.get("sEzsignformfieldgroupRegexp") != null && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonPrimitive()) {

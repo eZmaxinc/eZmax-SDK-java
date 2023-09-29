@@ -17,7 +17,6 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfolderGetCommunicationListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetCommunicationListV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList | Retrieve Communication list |
 | [**ezsignfolderGetEzsigndocumentsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsigndocumentsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments | Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments |
 | [**ezsignfolderGetEzsignfoldersignerassociationsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations | Retrieve an existing Ezsignfolder&#39;s Ezsignfoldersignerassociations |
-| [**ezsignfolderGetEzsignfoldersignerassociationsmineV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignfoldersignerassociationsmineV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociationsmine | Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder |
 | [**ezsignfolderGetEzsignsignaturesAutomaticV1**](ObjectEzsignfolderApi.md#ezsignfolderGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignfolder&#39;s automatic Ezsignsignatures |
 | [**ezsignfolderGetFormsDataV1**](ObjectEzsignfolderApi.md#ezsignfolderGetFormsDataV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData | Retrieve an existing Ezsignfolder&#39;s forms data |
 | [**ezsignfolderGetListV1**](ObjectEzsignfolderApi.md#ezsignfolderGetListV1) | **GET** /1/object/ezsignfolder/getList | Retrieve Ezsignfolder list |
@@ -936,76 +935,6 @@ public class Example {
 ### Return type
 
 [**EzsignfolderGetEzsignfoldersignerassociationsV1Response**](EzsignfolderGetEzsignfoldersignerassociationsV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-
-<a id="ezsignfolderGetEzsignfoldersignerassociationsmineV1"></a>
-# **ezsignfolderGetEzsignfoldersignerassociationsmineV1**
-> EzsignfolderGetEzsignfoldersignerassociationsmineV1Response ezsignfolderGetEzsignfoldersignerassociationsmineV1(pkiEzsignfolderID)
-
-Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-
-
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsignfolderApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
-    Integer pkiEzsignfolderID = 56; // Integer | 
-    try {
-      EzsignfolderGetEzsignfoldersignerassociationsmineV1Response result = apiInstance.ezsignfolderGetEzsignfoldersignerassociationsmineV1(pkiEzsignfolderID);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetEzsignfoldersignerassociationsmineV1");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pkiEzsignfolderID** | **Integer**|  | |
-
-### Return type
-
-[**EzsignfolderGetEzsignfoldersignerassociationsmineV1Response**](EzsignfolderGetEzsignfoldersignerassociationsmineV1Response.md)
 
 ### Authorization
 

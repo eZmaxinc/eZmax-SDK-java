@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfieldgroupsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupsignerRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D = "pkiEzsigntemplateformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D)

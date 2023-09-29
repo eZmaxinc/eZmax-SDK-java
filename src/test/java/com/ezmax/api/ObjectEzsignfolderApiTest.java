@@ -32,7 +32,6 @@ import com.ezmax.api.model.EzsignfolderGetCommunicationCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationListV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
-import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsmineV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
@@ -248,20 +247,6 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetEzsignfoldersignerassociationsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderGetEzsignfoldersignerassociationsV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsV1(pkiEzsignfolderID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve your own Ezsignfoldersignerassociations from an existing Ezsignfolder
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignfolderGetEzsignfoldersignerassociationsmineV1Test() throws ApiException {
-        Integer pkiEzsignfolderID = null;
-        EzsignfolderGetEzsignfoldersignerassociationsmineV1Response response = api.ezsignfolderGetEzsignfoldersignerassociationsmineV1(pkiEzsignfolderID);
         // TODO: test validations
     }
 

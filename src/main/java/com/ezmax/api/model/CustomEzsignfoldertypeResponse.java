@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
 public class CustomEzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -110,7 +110,7 @@ public class CustomEzsignfoldertypeResponse {
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -131,7 +131,7 @@ public class CustomEzsignfoldertypeResponse {
    * Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
    * @return bEzsignfoldertypeIncludeproofsigner
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
   }
@@ -152,7 +152,7 @@ public class CustomEzsignfoldertypeResponse {
    * Whether we include the proof with the signed Ezsigndocument for users
    * @return bEzsignfoldertypeIncludeproofuser
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeIncludeproofuser() {
     return bEzsignfoldertypeIncludeproofuser;
   }
@@ -270,9 +270,6 @@ public class CustomEzsignfoldertypeResponse {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignfoldertypeID");
-    openapiRequiredFields.add("sEzsignfoldertypeNameX");
-    openapiRequiredFields.add("bEzsignfoldertypeIncludeproofsigner");
-    openapiRequiredFields.add("bEzsignfoldertypeIncludeproofuser");
   }
 
  /**
@@ -303,7 +300,7 @@ public class CustomEzsignfoldertypeResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+      if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
   }

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
 public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -82,6 +82,10 @@ public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT = "iEzsignformfieldHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT)
   private Integer iEzsignformfieldHeight;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE = "bEzsignformfieldAutocomplete";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE)
+  private Boolean bEzsignformfieldAutocomplete;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED = "bEzsignformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED)
@@ -268,6 +272,27 @@ public class EzsignformfieldResponseCompound {
   }
 
 
+  public EzsignformfieldResponseCompound bEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
+    
+    this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
+   * @return bEzsignformfieldAutocomplete
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignformfieldAutocomplete() {
+    return bEzsignformfieldAutocomplete;
+  }
+
+
+  public void setbEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
+    this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
+  }
+
+
   public EzsignformfieldResponseCompound bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
@@ -328,13 +353,14 @@ public class EzsignformfieldResponseCompound {
         Objects.equals(this.iEzsignformfieldY, ezsignformfieldResponseCompound.iEzsignformfieldY) &&
         Objects.equals(this.iEzsignformfieldWidth, ezsignformfieldResponseCompound.iEzsignformfieldWidth) &&
         Objects.equals(this.iEzsignformfieldHeight, ezsignformfieldResponseCompound.iEzsignformfieldHeight) &&
+        Objects.equals(this.bEzsignformfieldAutocomplete, ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete) &&
         Objects.equals(this.bEzsignformfieldSelected, ezsignformfieldResponseCompound.bEzsignformfieldSelected) &&
         Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue);
+    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue);
   }
 
   @Override
@@ -349,6 +375,7 @@ public class EzsignformfieldResponseCompound {
     sb.append("    iEzsignformfieldY: ").append(toIndentedString(iEzsignformfieldY)).append("\n");
     sb.append("    iEzsignformfieldWidth: ").append(toIndentedString(iEzsignformfieldWidth)).append("\n");
     sb.append("    iEzsignformfieldHeight: ").append(toIndentedString(iEzsignformfieldHeight)).append("\n");
+    sb.append("    bEzsignformfieldAutocomplete: ").append(toIndentedString(bEzsignformfieldAutocomplete)).append("\n");
     sb.append("    bEzsignformfieldSelected: ").append(toIndentedString(bEzsignformfieldSelected)).append("\n");
     sb.append("    sEzsignformfieldEnteredvalue: ").append(toIndentedString(sEzsignformfieldEnteredvalue)).append("\n");
     sb.append("}");
@@ -381,6 +408,7 @@ public class EzsignformfieldResponseCompound {
     openapiFields.add("iEzsignformfieldY");
     openapiFields.add("iEzsignformfieldWidth");
     openapiFields.add("iEzsignformfieldHeight");
+    openapiFields.add("bEzsignformfieldAutocomplete");
     openapiFields.add("bEzsignformfieldSelected");
     openapiFields.add("sEzsignformfieldEnteredvalue");
 

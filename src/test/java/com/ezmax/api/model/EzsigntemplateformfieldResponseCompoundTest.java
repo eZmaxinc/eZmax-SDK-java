@@ -102,6 +102,14 @@ public class EzsigntemplateformfieldResponseCompoundTest {
     }
 
     /**
+     * Test the property 'bEzsigntemplateformfieldAutocomplete'
+     */
+    @Test
+    public void bEzsigntemplateformfieldAutocompleteTest() {
+        // TODO: test bEzsigntemplateformfieldAutocomplete
+    }
+
+    /**
      * Test the property 'bEzsigntemplateformfieldSelected'
      */
     @Test

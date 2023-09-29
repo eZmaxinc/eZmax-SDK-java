@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-25T02:49:00.205387936Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
 public class EzsigntemplateformfieldResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -82,6 +82,10 @@ public class EzsigntemplateformfieldResponse {
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_HEIGHT = "iEzsigntemplateformfieldHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_HEIGHT)
   private Integer iEzsigntemplateformfieldHeight;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_AUTOCOMPLETE = "bEzsigntemplateformfieldAutocomplete";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_AUTOCOMPLETE)
+  private Boolean bEzsigntemplateformfieldAutocomplete;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED = "bEzsigntemplateformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED)
@@ -264,6 +268,27 @@ public class EzsigntemplateformfieldResponse {
   }
 
 
+  public EzsigntemplateformfieldResponse bEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
+    
+    this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+   * @return bEzsigntemplateformfieldAutocomplete
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplateformfieldAutocomplete() {
+    return bEzsigntemplateformfieldAutocomplete;
+  }
+
+
+  public void setbEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
+    this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+  }
+
+
   public EzsigntemplateformfieldResponse bEzsigntemplateformfieldSelected(Boolean bEzsigntemplateformfieldSelected) {
     
     this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
@@ -303,12 +328,13 @@ public class EzsigntemplateformfieldResponse {
         Objects.equals(this.iEzsigntemplateformfieldY, ezsigntemplateformfieldResponse.iEzsigntemplateformfieldY) &&
         Objects.equals(this.iEzsigntemplateformfieldWidth, ezsigntemplateformfieldResponse.iEzsigntemplateformfieldWidth) &&
         Objects.equals(this.iEzsigntemplateformfieldHeight, ezsigntemplateformfieldResponse.iEzsigntemplateformfieldHeight) &&
+        Objects.equals(this.bEzsigntemplateformfieldAutocomplete, ezsigntemplateformfieldResponse.bEzsigntemplateformfieldAutocomplete) &&
         Objects.equals(this.bEzsigntemplateformfieldSelected, ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldSelected);
+    return Objects.hash(pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected);
   }
 
   @Override
@@ -323,6 +349,7 @@ public class EzsigntemplateformfieldResponse {
     sb.append("    iEzsigntemplateformfieldY: ").append(toIndentedString(iEzsigntemplateformfieldY)).append("\n");
     sb.append("    iEzsigntemplateformfieldWidth: ").append(toIndentedString(iEzsigntemplateformfieldWidth)).append("\n");
     sb.append("    iEzsigntemplateformfieldHeight: ").append(toIndentedString(iEzsigntemplateformfieldHeight)).append("\n");
+    sb.append("    bEzsigntemplateformfieldAutocomplete: ").append(toIndentedString(bEzsigntemplateformfieldAutocomplete)).append("\n");
     sb.append("    bEzsigntemplateformfieldSelected: ").append(toIndentedString(bEzsigntemplateformfieldSelected)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -354,6 +381,7 @@ public class EzsigntemplateformfieldResponse {
     openapiFields.add("iEzsigntemplateformfieldY");
     openapiFields.add("iEzsigntemplateformfieldWidth");
     openapiFields.add("iEzsigntemplateformfieldHeight");
+    openapiFields.add("bEzsigntemplateformfieldAutocomplete");
     openapiFields.add("bEzsigntemplateformfieldSelected");
 
     // a set of required properties/fields (JSON key names)

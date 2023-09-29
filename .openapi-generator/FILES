@@ -165,7 +165,6 @@ docs/CustomEzsigndocumentEzsignsignaturesAutomaticResponse.md
 docs/CustomEzsignfolderEzsignsignaturesAutomaticResponse.md
 docs/CustomEzsignfoldersignerassociationActionableElementResponse.md
 docs/CustomEzsignfoldersignerassociationmessageRequest.md
-docs/CustomEzsignfoldersignerassociationmineResponse.md
 docs/CustomEzsignfoldersignerassociationstatusResponse.md
 docs/CustomEzsignfoldertransmissionResponse.md
 docs/CustomEzsignfoldertransmissionSignerResponse.md
@@ -381,8 +380,6 @@ docs/EzsignfolderGetEzsigndocumentsV1Response.md
 docs/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.md
 docs/EzsignfolderGetEzsignfoldersignerassociationsV1Response.md
 docs/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md
-docs/EzsignfolderGetEzsignfoldersignerassociationsmineV1Response.md
-docs/EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.md
 docs/EzsignfolderGetEzsignsignaturesAutomaticV1Response.md
 docs/EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload.md
 docs/EzsignfolderGetFormsDataV1Response.md
@@ -1367,7 +1364,6 @@ src/main/java/com/ezmax/api/model/CustomEzsigndocumentEzsignsignaturesAutomaticR
 src/main/java/com/ezmax/api/model/CustomEzsignfolderEzsignsignaturesAutomaticResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationActionableElementResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmessageRequest.java
-src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmineResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldertransmissionResponse.java
 src/main/java/com/ezmax/api/model/CustomEzsignfoldertransmissionSignerResponse.java
@@ -1583,8 +1579,6 @@ src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.java
-src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsmineV1Response.java
-src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignsignaturesAutomaticV1Response.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1Response.java
@@ -2505,7 +2499,6 @@ src/test/java/com/ezmax/api/model/CustomEzsigndocumentEzsignsignaturesAutomaticR
 src/test/java/com/ezmax/api/model/CustomEzsignfolderEzsignsignaturesAutomaticResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationActionableElementResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmessageRequestTest.java
-src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationmineResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldersignerassociationstatusResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldertransmissionResponseTest.java
 src/test/java/com/ezmax/api/model/CustomEzsignfoldertransmissionSignerResponseTest.java
@@ -2721,8 +2714,6 @@ src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseMPaylo
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsigndocumentsV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsV1ResponseTest.java
-src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayloadTest.java
-src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetEzsignsignaturesAutomaticV1ResponseTest.java
 src/test/java/com/ezmax/api/model/EzsignfolderGetFormsDataV1ResponseMPayloadTest.java

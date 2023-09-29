@@ -250,7 +250,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfolderEzsignsignaturesAutomaticResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldersignerassociationActionableElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldersignerassociationmessageRequest.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldersignerassociationmineResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldertransmissionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomEzsignfoldertransmissionSignerResponse.CustomTypeAdapterFactory());
@@ -461,8 +460,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsmineV1Response.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsmineV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignsignaturesAutomaticV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignfolderGetFormsDataV1Response.CustomTypeAdapterFactory());
