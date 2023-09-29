@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T16:57:52.082381355Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
 public class WebsocketRequestServerGetWebsocketIDV1 {
   /**
    * The Type of message

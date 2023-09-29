@@ -1018,6 +1018,7 @@ paths:
       x-superadmin: false
       x-presentations: []
       x-permissions: []
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/ezmaxclient/{pksEzmaxclientOs}/version:
@@ -1056,6 +1057,7 @@ paths:
       x-superadmin: false
       x-presentations: []
       x-permissions: []
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration:
@@ -1096,6 +1098,7 @@ paths:
       x-superadmin: false
       x-presentations: []
       x-permissions: []
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/module/ezsign/suggestSigners:
@@ -1118,6 +1121,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/module/ezsign/suggestTemplates:
@@ -1149,6 +1153,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/module/report/getReportFromCache/{sReportgroupCacheID}:
@@ -1200,6 +1205,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/module/user/createezsignuser:
@@ -1235,6 +1241,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignatureConfiguration_CreateeZsignuser
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -1286,6 +1293,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -1378,6 +1386,7 @@ paths:
       summary: Retrieve Activesession list
       tags:
       - Object_Activesession
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1413,6 +1422,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -1451,6 +1461,7 @@ paths:
       - Object_Apikey
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1503,6 +1514,7 @@ paths:
       - Object_Apikey
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1556,6 +1568,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1595,6 +1608,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1633,6 +1647,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1671,6 +1686,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1716,6 +1732,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -1806,6 +1823,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/billingentityexternal/getAutocomplete/{sSelector}:
@@ -1867,6 +1885,7 @@ paths:
       - Object_Billingentityexternal
       x-permissions:
       - EzmaxInvoicing_Access
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1896,6 +1915,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1935,6 +1955,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -1986,6 +2007,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2053,6 +2075,7 @@ paths:
       x-permissions:
       - EzmaxInvoicing_Access
       - ElectronicSignature_CreationModificationFolderTypes
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/billingentityinternal/getList:
@@ -2127,6 +2150,7 @@ paths:
       - Object_Billingentityinternal
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2159,6 +2183,7 @@ paths:
       - Ezsign
       x-permissions:
       - Branding_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -2199,6 +2224,7 @@ paths:
       - Ezsign
       x-permissions:
       - Branding_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/branding/{pkiBrandingID}:
@@ -2244,6 +2270,7 @@ paths:
       - Ezsign
       x-permissions:
       - Branding_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -2309,6 +2336,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/branding/getList:
@@ -2405,6 +2433,7 @@ paths:
       - Ezsign
       x-permissions:
       - Branding_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/clonehistory/getList:
@@ -2497,6 +2526,7 @@ paths:
       - Object_Clonehistory
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - Assistant
@@ -2539,6 +2569,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/company/getAutocomplete/{sSelector}:
@@ -2600,6 +2631,7 @@ paths:
       - Object_Company
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2630,6 +2662,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2671,6 +2704,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2710,6 +2744,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2762,6 +2797,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -2831,6 +2867,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/emailtype/getAutocomplete/{sSelector}:
@@ -2892,6 +2929,7 @@ paths:
       - Object_Emailtype
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       x-superadmin: false
@@ -2932,6 +2970,7 @@ paths:
       x-presentations: []
       x-permissions:
       - EzmaxInvoicing_Access
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
@@ -2995,6 +3034,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezmaxinvoicing/getAutocomplete/{sSelector}:
@@ -3059,6 +3099,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezmaxinvoicing/getProvisional:
@@ -3090,6 +3131,7 @@ paths:
       x-permissions:
       - EzmaxInvoicing_Access
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/ezmaxproduct/getAutocomplete/{sSelector}:
@@ -3154,6 +3196,7 @@ paths:
       x-permissions:
       - EzmaxInvoicing_Access
       - Management_Billingentities
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -3186,6 +3229,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3225,6 +3269,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}:
@@ -3270,6 +3315,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -3321,6 +3367,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3371,6 +3418,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3435,6 +3483,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions:
@@ -3473,6 +3522,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic:
@@ -3511,6 +3561,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData:
@@ -3567,6 +3618,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder:
@@ -3616,6 +3668,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3719,6 +3772,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksenddocumentmapping:
@@ -3755,6 +3809,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3793,6 +3848,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksenddocumentmapping/{pkiEzsignbulksenddocumentmappingID}:
@@ -3830,6 +3886,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -3860,6 +3917,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -3898,6 +3956,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}:
@@ -3935,6 +3994,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -3974,6 +4034,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors:
@@ -4026,6 +4087,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic:
@@ -4064,6 +4126,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData:
@@ -4120,6 +4183,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/ezsigndocument:
@@ -4159,6 +4223,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4206,6 +4271,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4245,6 +4311,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -4291,6 +4358,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -4328,6 +4396,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     patch:
@@ -4378,6 +4447,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4434,6 +4504,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4492,6 +4563,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4541,6 +4613,7 @@ paths:
       - Object_Ezsigndocument
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       - AgentBroker
@@ -4598,6 +4671,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4650,6 +4724,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4703,6 +4778,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4757,6 +4833,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4803,6 +4880,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -4850,6 +4928,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -4921,6 +5000,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -4962,6 +5042,7 @@ paths:
       summary: Retrieve an existing Ezsigndocument's Ezsignannotations
       tags:
       - Object_Ezsigndocument
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-superadmin: false
@@ -5012,6 +5093,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignpages:
@@ -5056,6 +5138,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -5102,6 +5185,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic:
@@ -5140,6 +5224,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getFormData:
@@ -5207,6 +5292,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof:
@@ -5253,6 +5339,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions:
@@ -5304,6 +5391,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5356,6 +5444,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       - AgentBroker
@@ -5417,6 +5506,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5448,6 +5538,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5486,6 +5577,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5525,6 +5617,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -5570,6 +5663,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -5607,6 +5701,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     put:
@@ -5657,6 +5752,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5709,6 +5805,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5768,6 +5865,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5820,6 +5918,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5866,6 +5965,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount:
@@ -5903,6 +6003,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList:
@@ -5940,6 +6041,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments:
@@ -5978,6 +6080,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -6017,6 +6120,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic:
@@ -6055,6 +6159,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getFormsData:
@@ -6111,6 +6216,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations:
@@ -6169,6 +6275,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6224,6 +6331,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6275,6 +6383,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6327,6 +6436,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6379,6 +6489,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6431,6 +6542,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6490,6 +6602,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6534,6 +6647,7 @@ paths:
       x-presentations: []
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6646,6 +6760,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/ezsignfoldersignerassociation:
@@ -6676,6 +6791,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6714,6 +6830,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6753,6 +6870,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}:
@@ -6798,6 +6916,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -6836,6 +6955,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     patch:
@@ -6885,6 +7005,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6936,6 +7057,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6988,6 +7110,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7037,6 +7160,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldertype:
@@ -7067,6 +7191,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7106,6 +7231,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldertype/{pkiEzsignfoldertypeID}:
@@ -7158,6 +7284,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7224,6 +7351,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
@@ -7289,6 +7417,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldertype/getList:
@@ -7375,6 +7504,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignformfieldgroup:
@@ -7405,6 +7535,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7444,6 +7575,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignformfieldgroup/{pkiEzsignformfieldgroupID}:
@@ -7489,6 +7621,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -7540,6 +7673,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7589,6 +7723,7 @@ paths:
       - Object_Ezsignpage
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-superadmin: false
@@ -7624,6 +7759,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7662,6 +7798,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7701,6 +7838,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignsignature/{pkiEzsignsignatureID}:
@@ -7746,6 +7884,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -7797,6 +7936,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7840,6 +7980,7 @@ paths:
       - Object_Ezsignsignature
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -7895,6 +8036,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - EzsignSigner
       x-content-type: application/json
@@ -7920,6 +8062,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignsignergroup:
@@ -7947,6 +8090,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -7988,6 +8132,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -8027,6 +8172,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -8075,6 +8221,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8125,6 +8272,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -8163,6 +8311,7 @@ paths:
       - Object_Ezsignsignergroup
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -8192,6 +8341,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -8233,6 +8383,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -8272,6 +8423,7 @@ paths:
       - Object_Ezsignsignergroupmembership
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -8306,6 +8458,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8345,6 +8498,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplate/{pkiEzsigntemplateID}:
@@ -8383,6 +8537,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -8421,6 +8576,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     put:
@@ -8471,6 +8627,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8516,6 +8673,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8581,6 +8739,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplate/getList:
@@ -8681,6 +8840,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatedocument:
@@ -8720,6 +8880,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8759,6 +8920,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}:
@@ -8804,6 +8966,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8857,6 +9020,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8909,6 +9073,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -8961,6 +9126,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9015,6 +9181,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9053,6 +9220,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplateformfieldgroups:
@@ -9098,6 +9266,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatesignatures:
@@ -9143,6 +9312,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions:
@@ -9187,6 +9357,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9218,6 +9389,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9257,6 +9429,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}:
@@ -9295,6 +9468,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -9346,6 +9520,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9376,6 +9551,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9414,6 +9590,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}:
@@ -9451,6 +9628,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -9501,6 +9679,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9553,6 +9732,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9619,6 +9799,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackage/getList:
@@ -9717,6 +9898,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackagemembership:
@@ -9753,6 +9935,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9791,6 +9974,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}:
@@ -9828,6 +10012,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -9858,6 +10043,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -9896,6 +10082,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}:
@@ -9933,6 +10120,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -9983,6 +10171,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10020,6 +10209,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10058,6 +10248,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}:
@@ -10095,6 +10286,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -10126,6 +10318,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10165,6 +10358,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}:
@@ -10203,6 +10397,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -10254,6 +10449,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10285,6 +10481,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10325,6 +10522,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}:
@@ -10363,6 +10561,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -10414,6 +10613,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10486,6 +10686,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/font/getAutocomplete/{sSelector}:
@@ -10548,6 +10749,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/franchisebroker/getAutocomplete/{sSelector}:
@@ -10612,6 +10814,7 @@ paths:
       - RemaxQC
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/franchisebroker/getAutocomplete/{sSelector}:
@@ -10677,6 +10880,7 @@ paths:
       x-presentations: []
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/franchiseoffice/getAutocomplete/{sSelector}:
@@ -10742,6 +10946,7 @@ paths:
       x-permissions:
       - Invoicing_Reports
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/franchisereferalincome:
@@ -10772,6 +10977,7 @@ paths:
       - RemaxQC
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10810,6 +11016,7 @@ paths:
       x-presentations: []
       x-permissions:
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -10848,6 +11055,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -10895,6 +11103,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/notificationtest/{pkiNotificationtestID}/getElements:
@@ -10933,6 +11142,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/paymentterm:
@@ -10969,6 +11179,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_PaymentTerms
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -11008,6 +11219,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_PaymentTerms
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/paymentterm/{pkiPaymenttermID}:
@@ -11059,6 +11271,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_PaymentTerms
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -11124,6 +11337,7 @@ paths:
       x-permissions:
       - RemaxFranchise_CreationModification
       - Purchases_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/paymentterm/getList:
@@ -11207,6 +11421,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_PaymentTerms
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/period/getAutocomplete/{sSelector}:
@@ -11283,6 +11498,7 @@ paths:
       - RealEstateReports_OfficeReports
       - Inscription_Inspections
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/period/getAutocomplete/{sSelector}:
@@ -11359,6 +11575,7 @@ paths:
       - RealEstateReports_OfficeReports
       - Inscription_Inspections
       - RemaxFranchise_ReferencedIncomeAccess
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/permission:
@@ -11394,6 +11611,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -11435,6 +11653,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -11474,6 +11693,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -11526,6 +11746,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -11590,6 +11811,7 @@ paths:
       - Object_Phonetype
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       x-superadmin: false
@@ -11656,6 +11878,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/sessionhistory/getList:
@@ -11743,6 +11966,7 @@ paths:
       summary: Retrieve Sessionhistory list
       tags:
       - Object_Sessionhistory
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -11792,6 +12016,7 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -11836,6 +12061,7 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -11878,6 +12104,7 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -11933,6 +12160,7 @@ paths:
       - Management_UsersNormal
       - Management_UsersAgentBroker
       - Management_UsersEzsignUser
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - EzsignSigner
@@ -11973,6 +12201,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12014,6 +12243,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12060,6 +12290,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12112,6 +12343,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12152,6 +12384,7 @@ paths:
       - Object_Systemconfiguration
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra:
       - AgentBroker
       - Assistant
@@ -12206,6 +12439,7 @@ paths:
       - Object_Systemconfiguration
       x-permissions:
       - Management_SystemconfigurationEdit
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12273,6 +12507,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/timezone/getAutocomplete/{sSelector}:
@@ -12337,6 +12572,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/user:
@@ -12368,6 +12604,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12412,6 +12649,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12468,6 +12706,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12521,6 +12760,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12559,6 +12799,7 @@ paths:
       - Object_User
       x-permissions:
       - Management_APIKeyGeneration
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -12601,6 +12842,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12639,6 +12881,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12677,6 +12920,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12728,6 +12972,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12802,6 +13047,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/user/getList:
@@ -12903,6 +13149,7 @@ paths:
       - Management_UsersEmployee
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12932,6 +13179,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -12972,6 +13220,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13023,6 +13272,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13075,6 +13325,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13126,6 +13377,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13179,6 +13431,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13217,6 +13470,7 @@ paths:
       - Object_Usergroup
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13255,6 +13509,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13293,6 +13548,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13359,6 +13615,7 @@ paths:
       x-presentations: []
       x-permissions:
       - ElectronicSignature_CreationModificationFolderTypes
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/usergroup/getList:
@@ -13436,6 +13693,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13465,6 +13723,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13505,6 +13764,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13543,6 +13803,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13594,6 +13855,7 @@ paths:
       - Object_Usergroupdelegation
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13625,6 +13887,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13665,6 +13928,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13703,6 +13967,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13754,6 +14019,7 @@ paths:
       x-permissions:
       - Management_Usergroup
       - Management_UsergroupDelegated
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations: []
@@ -13794,6 +14060,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -13833,6 +14100,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -13881,6 +14149,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -13935,6 +14204,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -14020,6 +14290,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-superadmin: false
       x-presentations:
@@ -14052,6 +14323,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_VariableExpenses
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14091,6 +14363,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_VariableExpenses
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/variableexpense/{pkiVariableexpenseID}:
@@ -14142,6 +14415,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_VariableExpenses
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14206,6 +14480,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Purchases_CreationModification
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/variableexpense/getList:
@@ -14293,6 +14568,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_VariableExpenses
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/versionhistory/{pkiVersionhistoryID}:
@@ -14330,6 +14606,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/webhook:
@@ -14360,6 +14637,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14399,6 +14677,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/webhook/{pkiWebhookID}:
@@ -14437,6 +14716,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     description: ""
@@ -14481,6 +14761,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14537,6 +14818,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/webhook/{pkiWebhookID}/test:
@@ -14581,6 +14863,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14680,6 +14963,7 @@ paths:
       - Ezsign
       x-permissions:
       - Management_Webhook
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/scim/Groups:
@@ -14710,6 +14994,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     post:
@@ -14736,6 +15021,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14762,6 +15048,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     get:
@@ -14790,6 +15077,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     put:
@@ -14824,6 +15112,7 @@ paths:
       x-presentations: []
       x-permissions:
       - Management_Usergroup
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14845,6 +15134,7 @@ paths:
       x-superadmin: false
       x-presentations: []
       x-permissions: []
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
   /2/scim/Users:
@@ -14876,6 +15166,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     post:
@@ -14903,6 +15194,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -14930,6 +15222,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     get:
@@ -14959,6 +15252,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
     put:
@@ -14994,6 +15288,7 @@ paths:
       x-permissions:
       - Management_UsersEzsignUser
       - Management_UsersNormal
+      x-powerautomate: false
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
