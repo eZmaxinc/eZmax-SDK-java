@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/paymentterm/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class PaymenttermGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTTERM = "a_objPaymentterm";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTTERM)
-  private List<PaymenttermAutocompleteElementResponse> aObjPaymentterm;
+  private List<PaymenttermAutocompleteElementResponse> aObjPaymentterm = new ArrayList<>();
 
   public PaymenttermGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
    * An array of Paymentterm autocomplete element response.
    * @return aObjPaymentterm
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<PaymenttermAutocompleteElementResponse> getaObjPaymentterm() {
     return aObjPaymentterm;
   }
@@ -139,6 +139,7 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objPaymentterm");
   }
 
  /**
@@ -161,21 +162,24 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PaymenttermGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objPaymentterm") != null && !jsonObj.get("a_objPaymentterm").isJsonNull()) {
-        JsonArray jsonArrayaObjPaymentterm = jsonObj.getAsJsonArray("a_objPaymentterm");
-        if (jsonArrayaObjPaymentterm != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objPaymentterm").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objPaymentterm` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPaymentterm").toString()));
-          }
 
-          // validate the optional field `a_objPaymentterm` (array)
-          for (int i = 0; i < jsonArrayaObjPaymentterm.size(); i++) {
-            PaymenttermAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPaymentterm.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PaymenttermGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objPaymentterm").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objPaymentterm` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPaymentterm").toString()));
+      }
+
+      JsonArray jsonArrayaObjPaymentterm = jsonObj.getAsJsonArray("a_objPaymentterm");
+      // validate the required field `a_objPaymentterm` (array)
+      for (int i = 0; i < jsonArrayaObjPaymentterm.size(); i++) {
+        PaymenttermAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPaymentterm.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class WebhookResponseCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -347,7 +347,7 @@ public class WebhookResponseCompound {
    * The concatenated string to describe the Webhook event
    * @return sWebhookEvent
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsWebhookEvent() {
     return sWebhookEvent;
   }
@@ -446,7 +446,6 @@ public class WebhookResponseCompound {
     openapiRequiredFields.add("sWebhookUrl");
     openapiRequiredFields.add("sWebhookEmailfailed");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
-    openapiRequiredFields.add("sWebhookEvent");
   }
 
  /**
@@ -489,7 +488,7 @@ public class WebhookResponseCompound {
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
       }
-      if (!jsonObj.get("sWebhookEvent").isJsonPrimitive()) {
+      if ((jsonObj.get("sWebhookEvent") != null && !jsonObj.get("sWebhookEvent").isJsonNull()) && !jsonObj.get("sWebhookEvent").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEvent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEvent").toString()));
       }
   }

@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/font/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class FontGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FONT = "a_objFont";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FONT)
-  private List<FontAutocompleteElementResponse> aObjFont;
+  private List<FontAutocompleteElementResponse> aObjFont = new ArrayList<>();
 
   public FontGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class FontGetAutocompleteV2ResponseMPayload {
    * An array of Font autocomplete element response.
    * @return aObjFont
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<FontAutocompleteElementResponse> getaObjFont() {
     return aObjFont;
   }
@@ -139,6 +139,7 @@ public class FontGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objFont");
   }
 
  /**
@@ -161,21 +162,24 @@ public class FontGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FontGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objFont") != null && !jsonObj.get("a_objFont").isJsonNull()) {
-        JsonArray jsonArrayaObjFont = jsonObj.getAsJsonArray("a_objFont");
-        if (jsonArrayaObjFont != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objFont").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objFont` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFont").toString()));
-          }
 
-          // validate the optional field `a_objFont` (array)
-          for (int i = 0; i < jsonArrayaObjFont.size(); i++) {
-            FontAutocompleteElementResponse.validateJsonElement(jsonArrayaObjFont.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : FontGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objFont").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objFont` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFont").toString()));
+      }
+
+      JsonArray jsonArrayaObjFont = jsonObj.getAsJsonArray("a_objFont");
+      // validate the required field `a_objFont` (array)
+      for (int i = 0; i < jsonArrayaObjFont.size(); i++) {
+        FontAutocompleteElementResponse.validateJsonElement(jsonArrayaObjFont.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -8,7 +8,7 @@ Payload for POST /2/object/period/getAutocomplete
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjPeriod** | [**List&lt;PeriodAutocompleteElementResponse&gt;**](PeriodAutocompleteElementResponse.md) | An array of Period autocomplete element response. |  [optional] |
+|**aObjPeriod** | [**List&lt;PeriodAutocompleteElementResponse&gt;**](PeriodAutocompleteElementResponse.md) | An array of Period autocomplete element response. |  |
 
 
 

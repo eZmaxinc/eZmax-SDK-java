@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxproduct AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class EzmaxproductAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D = "pkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D)

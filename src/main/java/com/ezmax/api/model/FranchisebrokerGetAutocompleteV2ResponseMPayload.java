@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/franchisebroker/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class FranchisebrokerGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FRANCHISEBROKER = "a_objFranchisebroker";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FRANCHISEBROKER)
-  private List<FranchisebrokerAutocompleteElementResponse> aObjFranchisebroker;
+  private List<FranchisebrokerAutocompleteElementResponse> aObjFranchisebroker = new ArrayList<>();
 
   public FranchisebrokerGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class FranchisebrokerGetAutocompleteV2ResponseMPayload {
    * An array of Franchisebroker autocomplete element response.
    * @return aObjFranchisebroker
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<FranchisebrokerAutocompleteElementResponse> getaObjFranchisebroker() {
     return aObjFranchisebroker;
   }
@@ -139,6 +139,7 @@ public class FranchisebrokerGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objFranchisebroker");
   }
 
  /**
@@ -161,21 +162,24 @@ public class FranchisebrokerGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FranchisebrokerGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objFranchisebroker") != null && !jsonObj.get("a_objFranchisebroker").isJsonNull()) {
-        JsonArray jsonArrayaObjFranchisebroker = jsonObj.getAsJsonArray("a_objFranchisebroker");
-        if (jsonArrayaObjFranchisebroker != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objFranchisebroker").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objFranchisebroker` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFranchisebroker").toString()));
-          }
 
-          // validate the optional field `a_objFranchisebroker` (array)
-          for (int i = 0; i < jsonArrayaObjFranchisebroker.size(); i++) {
-            FranchisebrokerAutocompleteElementResponse.validateJsonElement(jsonArrayaObjFranchisebroker.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : FranchisebrokerGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objFranchisebroker").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objFranchisebroker` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFranchisebroker").toString()));
+      }
+
+      JsonArray jsonArrayaObjFranchisebroker = jsonObj.getAsJsonArray("a_objFranchisebroker");
+      // validate the required field `a_objFranchisebroker` (array)
+      for (int i = 0; i < jsonArrayaObjFranchisebroker.size(); i++) {
+        FranchisebrokerAutocompleteElementResponse.validateJsonElement(jsonArrayaObjFranchisebroker.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcommission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class EzmaxinvoicingcommissionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D = "pkiEzmaxinvoicingcommissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D)
@@ -273,7 +273,7 @@ public class EzmaxinvoicingcommissionResponseCompound {
    * Get objContactName
    * @return objContactName
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
   }
@@ -361,7 +361,6 @@ public class EzmaxinvoicingcommissionResponseCompound {
     openapiRequiredFields.add("dtEzmaxinvoicingcommissionEnd");
     openapiRequiredFields.add("iEzmaxinvoicingcommissionDays");
     openapiRequiredFields.add("dEzmaxinvoicingcommissionAmount");
-    openapiRequiredFields.add("objContactName");
   }
 
  /**
@@ -401,8 +400,10 @@ public class EzmaxinvoicingcommissionResponseCompound {
       if (!jsonObj.get("dEzmaxinvoicingcommissionAmount").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingcommissionAmount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingcommissionAmount").toString()));
       }
-      // validate the required field `objContactName`
-      CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
+      // validate the optional field `objContactName`
+      if (jsonObj.get("objContactName") != null && !jsonObj.get("objContactName").isJsonNull()) {
+        CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

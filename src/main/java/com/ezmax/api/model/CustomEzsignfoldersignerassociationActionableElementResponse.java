@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociation Object with actionable elements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationActionableElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -298,7 +298,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
    * Indicates if the Ezsignfoldersignerassociation has actionable elements in a future step
    * @return bEzsignfoldersignerassociationHasactionableelementsFuture
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Boolean getbEzsignfoldersignerassociationHasactionableelementsFuture() {
     return bEzsignfoldersignerassociationHasactionableelementsFuture;
   }
@@ -391,6 +391,7 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     openapiRequiredFields.add("bEzsignfoldersignerassociationReceivecopy");
     openapiRequiredFields.add("tEzsignfoldersignerassociationMessage");
     openapiRequiredFields.add("bEzsignfoldersignerassociationHasactionableelementsCurrent");
+    openapiRequiredFields.add("bEzsignfoldersignerassociationHasactionableelementsFuture");
   }
 
  /**

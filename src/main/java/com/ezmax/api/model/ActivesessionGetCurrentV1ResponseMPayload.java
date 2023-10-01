@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -327,7 +327,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
    * minimum: 1
    * @return fkiSystemconfigurationtypeID
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
   }
@@ -585,6 +585,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     openapiRequiredFields.add("bActivesessionDebug");
     openapiRequiredFields.add("bActivesessionIssuperadmin");
     openapiRequiredFields.add("pksCustomerCode");
+    openapiRequiredFields.add("fkiSystemconfigurationtypeID");
     openapiRequiredFields.add("a_pkiPermissionID");
     openapiRequiredFields.add("objUserReal");
     openapiRequiredFields.add("a_eModuleInternalname");

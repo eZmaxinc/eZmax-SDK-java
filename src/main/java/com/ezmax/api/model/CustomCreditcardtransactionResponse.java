@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Creditcardtransaction Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class CustomCreditcardtransactionResponse {
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
@@ -81,7 +81,7 @@ public class CustomCreditcardtransactionResponse {
    * Get eCreditcardtypeCodename
    * @return eCreditcardtypeCodename
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public FieldECreditcardtypeCodename geteCreditcardtypeCodename() {
     return eCreditcardtypeCodename;
   }
@@ -213,6 +213,7 @@ public class CustomCreditcardtransactionResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eCreditcardtypeCodename");
     openapiRequiredFields.add("dCreditcardtransactionAmount");
     openapiRequiredFields.add("sCreditcardtransactionPartiallydecryptednumber");
     openapiRequiredFields.add("sCreditcardtransactionReferencenumber");

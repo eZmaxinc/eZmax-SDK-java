@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class NotificationtestResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)

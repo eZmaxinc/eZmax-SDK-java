@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/variableexpense/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class VariableexpenseGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE = "a_objVariableexpense";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE)
-  private List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense;
+  private List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense = new ArrayList<>();
 
   public VariableexpenseGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class VariableexpenseGetAutocompleteV2ResponseMPayload {
    * An array of Variableexpense autocomplete element response.
    * @return aObjVariableexpense
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<VariableexpenseAutocompleteElementResponse> getaObjVariableexpense() {
     return aObjVariableexpense;
   }
@@ -139,6 +139,7 @@ public class VariableexpenseGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objVariableexpense");
   }
 
  /**
@@ -161,21 +162,24 @@ public class VariableexpenseGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VariableexpenseGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objVariableexpense") != null && !jsonObj.get("a_objVariableexpense").isJsonNull()) {
-        JsonArray jsonArrayaObjVariableexpense = jsonObj.getAsJsonArray("a_objVariableexpense");
-        if (jsonArrayaObjVariableexpense != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objVariableexpense").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objVariableexpense` to be an array in the JSON string but got `%s`", jsonObj.get("a_objVariableexpense").toString()));
-          }
 
-          // validate the optional field `a_objVariableexpense` (array)
-          for (int i = 0; i < jsonArrayaObjVariableexpense.size(); i++) {
-            VariableexpenseAutocompleteElementResponse.validateJsonElement(jsonArrayaObjVariableexpense.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : VariableexpenseGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objVariableexpense").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objVariableexpense` to be an array in the JSON string but got `%s`", jsonObj.get("a_objVariableexpense").toString()));
+      }
+
+      JsonArray jsonArrayaObjVariableexpense = jsonObj.getAsJsonArray("a_objVariableexpense");
+      // validate the required field `a_objVariableexpense` (array)
+      for (int i = 0; i < jsonArrayaObjVariableexpense.size(); i++) {
+        VariableexpenseAutocompleteElementResponse.validateJsonElement(jsonArrayaObjVariableexpense.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

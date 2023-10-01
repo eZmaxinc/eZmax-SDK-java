@@ -8,7 +8,7 @@ Payload for POST /2/object/variableexpense/getAutocomplete
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjVariableexpense** | [**List&lt;VariableexpenseAutocompleteElementResponse&gt;**](VariableexpenseAutocompleteElementResponse.md) | An array of Variableexpense autocomplete element response. |  [optional] |
+|**aObjVariableexpense** | [**List&lt;VariableexpenseAutocompleteElementResponse&gt;**](VariableexpenseAutocompleteElementResponse.md) | An array of Variableexpense autocomplete element response. |  |
 
 
 

@@ -20,7 +20,7 @@ A Franchisereferalincome Object and children to create a complete structure
 |**tFranchisereferalincomeComment** | **String** | Comment about the transaction |  |
 |**fkiFranchiseofficeID** | **Integer** | The unique ID of the Franchisereoffice |  |
 |**sFranchisereferalincomeRemoteid** | **String** |  |  |
-|**objAddress** | [**AddressRequest**](AddressRequest.md) |  |  |
+|**objAddress** | [**AddressRequest**](AddressRequest.md) |  |  [optional] |
 |**aObjContact** | [**List&lt;ContactRequestCompound&gt;**](ContactRequestCompound.md) |  |  |
 
 

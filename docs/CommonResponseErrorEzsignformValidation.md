@@ -2,6 +2,7 @@
 
 # CommonResponseErrorEzsignformValidation
 
+Generic Error Message
 
 ## Properties
 

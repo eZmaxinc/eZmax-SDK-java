@@ -1293,7 +1293,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -15776,10 +15776,7 @@ components:
       type: object
     Common-Response-Error-EzsignformValidation:
       allOf:
-      - type: object
-      - $ref: '#/components/schemas/Common-Response-Error'
-      - description: Generic Error Message
-        properties:
+      - properties:
           a_objEzsignformfielderror:
             description: ""
             items:
@@ -15788,9 +15785,9 @@ components:
         required:
         - a_objEzsignformfielderror
         type: object
-        example: null
+      - $ref: '#/components/schemas/Common-Response-Error'
+      description: Generic Error Message
       type: object
-      example: null
     Common-Response-Error-TooManyRequests:
       allOf:
       - type: object
@@ -16263,7 +16260,6 @@ components:
       - eCommunicationType
       - iCommunicationrecipientCount
       - pkiCommunicationID
-      - pkiCommunicationID
       - sCommunicationRecipient
       - sCommunicationSender
       - sCommunicationSubject
@@ -16306,9 +16302,9 @@ components:
           type: string
       required:
       - dCreditcardtransactionAmount
+      - eCreditcardtypeCodename
       - sCreditcardtransactionPartiallydecryptednumber
       - sCreditcardtransactionReferencenumber
-      - sCreditcardtypeCodename
       type: object
     Custom-DropdownElement-Request:
       description: Generic DropdownElement Request
@@ -16483,7 +16479,7 @@ components:
             type: boolean
         required:
         - bEzsignfoldersignerassociationHasactionableelementsCurrent
-        - bEzsignfoldersignerassociationHasctionableelementsFuture
+        - bEzsignfoldersignerassociationHasactionableelementsFuture
         type: object
       description: A Ezsignfoldersignerassociation Object with actionable elements
       type: object
@@ -16511,7 +16507,6 @@ components:
           type: string
       required:
       - fkiEzsignfoldersignerassociationID
-      - tEzignfoldersignerassociationMessage
       type: object
     Custom-Ezsignfoldersignerassociationstatus-Response:
       description: A Ezsignfoldersignerassociationstatus Object and children to create
@@ -16928,10 +16923,7 @@ components:
           example: email@example.com
           type: string
       required:
-      - fkiEzsignfoldersignerassociationID
       - pkiUserID
-      - sContactFirstname
-      - sContactLastname
       - sEmailAddress
       - sUserFirstname
       - sUserLastname
@@ -21332,7 +21324,7 @@ components:
       - eActivesessionUsertype
       - eActivesessionWeekdaystart
       - fkiLanguageID
-      - pkiSystemconfigurationtypeID
+      - fkiSystemconfigurationtypeID
       - pksCustomerCode
       - sCompanyNameX
       - sDepartmentNameX
@@ -21361,7 +21353,6 @@ components:
               $ref: '#/components/schemas/Field-eModuleInternalname'
             type: array
         required:
-        - a_Permissions
         - a_eModuleInternalname
         - a_pkiPermissionID
         - objUserReal
@@ -22034,7 +22025,7 @@ components:
             $ref: '#/components/schemas/billingentityexternal-AutocompleteElement-Response'
           type: array
       required:
-      - a_objbillingentityexternal
+      - a_objBillingentityexternal
       type: object
     billingentityinternal-AutocompleteElement-Response:
       description: A Billingentityinternal AutocompleteElement Response
@@ -22609,8 +22600,6 @@ components:
             $ref: '#/components/schemas/Computed-sBrandingLogourl'
         type: object
       description: A Branding Object
-      required:
-      - sBrandingDescriptionX
       type: object
     branding-createObject-v1-Request:
       description: Request for POST /1/object/branding
@@ -23123,7 +23112,7 @@ components:
             $ref: '#/components/schemas/company-AutocompleteElement-Response'
           type: array
       required:
-      - a_objcompany
+      - a_objCompany
       type: object
     contact-Request:
       description: A Contact Object
@@ -23596,7 +23585,7 @@ components:
             $ref: '#/components/schemas/emailtype-AutocompleteElement-Response'
           type: array
       required:
-      - a_objemailtype
+      - a_objEmailtype
       type: object
     ezmaxinvoicing-AutocompleteElement-Response:
       description: A Ezmaxinvoicing AutocompleteElement Response
@@ -23978,8 +23967,6 @@ components:
             $ref: '#/components/schemas/Custom-ContactName-Response'
         type: object
       description: A Ezmaxinvoicingcommission Object
-      required:
-      - objContactName
       type: object
     ezmaxinvoicingcontract-Response:
       description: A Ezmaxinvoicingcontract Object
@@ -24507,7 +24494,7 @@ components:
             $ref: '#/components/schemas/ezmaxproduct-AutocompleteElement-Response'
           type: array
       required:
-      - a_objezmaxproduct
+      - a_objEzmaxproduct
       type: object
     ezsign-suggestSigners-v1-Response:
       allOf:
@@ -26304,7 +26291,6 @@ components:
       required:
       - bWordCaseSensitive
       - eGet
-      - eSearchFor
       type: object
     ezsigndocument-getWordsPositions-v1-Response:
       allOf:
@@ -26349,7 +26335,6 @@ components:
       required:
       - a_objEzsignformfieldgroup
       - bEzsignformIsdraft
-      - iEzsignformStep
       type: object
     ezsigndocument-submitEzsignform-v1-Response:
       allOf:
@@ -30169,7 +30154,6 @@ components:
       - pkiEzsigntemplateID
       - sEzsignfoldertypeNameX
       - sEzsigntemplateDescription
-      - sEzsigntemplatepackageTypedescriptionX
       type: object
     ezsigntemplate-Request:
       description: A Ezsigntemplate Object
@@ -30844,7 +30828,6 @@ components:
       required:
       - bWordCaseSensitive
       - eGet
-      - eSearchFor
       type: object
     ezsigntemplatedocument-getWordsPositions-v1-Response:
       allOf:
@@ -32998,7 +32981,7 @@ components:
             $ref: '#/components/schemas/font-AutocompleteElement-Response'
           type: array
       required:
-      - a_objfont
+      - a_objFont
       type: object
     franchisebroker-AutocompleteElement-Response:
       description: A Franchisebroker AutocompleteElement Response
@@ -33041,7 +33024,7 @@ components:
             $ref: '#/components/schemas/franchisebroker-AutocompleteElement-Response'
           type: array
       required:
-      - a_objfranchisebroker
+      - a_objFranchisebroker
       type: object
     franchiseoffice-AutocompleteElement-Response:
       description: A Franchiseoffice AutocompleteElement Response
@@ -33085,7 +33068,7 @@ components:
             $ref: '#/components/schemas/franchiseoffice-AutocompleteElement-Response'
           type: array
       required:
-      - a_objfranchiseoffice
+      - a_objFranchiseoffice
       type: object
     franchisereferalincome-Request:
       description: An Franchisereferalincome Object
@@ -33152,7 +33135,6 @@ components:
       - fkiFranchiseofficeID
       - fkiFranchisereferalincomeprogramID
       - fkiPeriodID
-      - objAddress
       - sFranchisereferalincomeRemoteid
       - tFranchisereferalincomeComment
       type: object
@@ -33351,8 +33333,6 @@ components:
             type: array
         type: object
       description: A Module Object
-      required:
-      - a_objModulesection
       type: object
     modulegroup-Response:
       description: A Modulegroup Object
@@ -33382,8 +33362,6 @@ components:
             type: array
         type: object
       description: A Modulegroup Object
-      required:
-      - a_objModule
       type: object
     modulegroup-getAll-v1-Response:
       allOf:
@@ -33443,8 +33421,6 @@ components:
             type: array
         type: object
       description: A Modulesection Object
-      required:
-      - a_objPermission
       type: object
     notificationsection-getNotificationtests-v1-Response:
       allOf:
@@ -33560,7 +33536,7 @@ components:
           type: array
       required:
       - a_objVariableobject
-      - a_sProperty
+      - a_sVariableobjectProperty
       - pkiNotificationtestID
       - sNotificationtestFunction
       type: object
@@ -33773,7 +33749,7 @@ components:
             $ref: '#/components/schemas/paymentterm-AutocompleteElement-Response'
           type: array
       required:
-      - a_objpaymentterm
+      - a_objPaymentterm
       type: object
     paymentterm-getList-v1-Response:
       allOf:
@@ -33859,7 +33835,7 @@ components:
             $ref: '#/components/schemas/period-AutocompleteElement-Response'
           type: array
       required:
-      - a_objperiod
+      - a_objPeriod
       type: object
     permission-Request:
       description: A Permission Object
@@ -34235,7 +34211,7 @@ components:
             $ref: '#/components/schemas/phonetype-AutocompleteElement-Response'
           type: array
       required:
-      - a_objphonetype
+      - a_objPhonetype
       type: object
     secretquestion-AutocompleteElement-Response:
       description: A Secretquestion AutocompleteElement Response
@@ -34782,7 +34758,6 @@ components:
       - eSystemconfigurationLanguage2
       - eSystemconfigurationNewexternaluseraction
       - fkiSystemconfigurationtypeID
-      - objSystemconfigurationLanguage
       - pkiSystemconfigurationID
       - sSystemconfigurationtypeDescriptionX
       type: object
@@ -36845,7 +36820,7 @@ components:
             $ref: '#/components/schemas/variableexpense-AutocompleteElement-Response'
           type: array
       required:
-      - a_objvariableexpense
+      - a_objVariableexpense
       type: object
     variableexpense-getList-v1-Response:
       allOf:
@@ -37109,7 +37084,6 @@ components:
           type: boolean
       required:
       - bWebhookSkipsslvalidation
-      - bWebhookTest
       - eWebhookModule
       - pkiWebhookID
       - sWebhookDescription
@@ -37124,8 +37098,6 @@ components:
             $ref: '#/components/schemas/Computed-sWebhookEvent'
         type: object
       description: A Webhook Object
-      required:
-      - sWebhookEvent
       type: object
     webhook-createObject-v1-Request:
       description: Request for POST /1/object/webhook

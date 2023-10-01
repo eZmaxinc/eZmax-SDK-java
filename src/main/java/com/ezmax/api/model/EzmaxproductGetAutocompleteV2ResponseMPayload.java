@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezmaxproduct/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class EzmaxproductGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXPRODUCT = "a_objEzmaxproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXPRODUCT)
-  private List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct;
+  private List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct = new ArrayList<>();
 
   public EzmaxproductGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class EzmaxproductGetAutocompleteV2ResponseMPayload {
    * An array of Ezmaxproduct autocomplete element response.
    * @return aObjEzmaxproduct
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<EzmaxproductAutocompleteElementResponse> getaObjEzmaxproduct() {
     return aObjEzmaxproduct;
   }
@@ -139,6 +139,7 @@ public class EzmaxproductGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objEzmaxproduct");
   }
 
  /**
@@ -161,21 +162,24 @@ public class EzmaxproductGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxproductGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objEzmaxproduct") != null && !jsonObj.get("a_objEzmaxproduct").isJsonNull()) {
-        JsonArray jsonArrayaObjEzmaxproduct = jsonObj.getAsJsonArray("a_objEzmaxproduct");
-        if (jsonArrayaObjEzmaxproduct != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objEzmaxproduct").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxproduct` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxproduct").toString()));
-          }
 
-          // validate the optional field `a_objEzmaxproduct` (array)
-          for (int i = 0; i < jsonArrayaObjEzmaxproduct.size(); i++) {
-            EzmaxproductAutocompleteElementResponse.validateJsonElement(jsonArrayaObjEzmaxproduct.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzmaxproductGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxproduct").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxproduct` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxproduct").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxproduct = jsonObj.getAsJsonArray("a_objEzmaxproduct");
+      // validate the required field `a_objEzmaxproduct` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxproduct.size(); i++) {
+        EzmaxproductAutocompleteElementResponse.validateJsonElement(jsonArrayaObjEzmaxproduct.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

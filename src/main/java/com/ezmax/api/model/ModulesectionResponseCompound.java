@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class ModulesectionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
@@ -72,7 +72,7 @@ public class ModulesectionResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
-  private List<PermissionResponseCompound> aObjPermission = new ArrayList<>();
+  private List<PermissionResponseCompound> aObjPermission;
 
   public ModulesectionResponseCompound() {
   }
@@ -181,7 +181,7 @@ public class ModulesectionResponseCompound {
    * Get aObjPermission
    * @return aObjPermission
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public List<PermissionResponseCompound> getaObjPermission() {
     return aObjPermission;
   }
@@ -257,7 +257,6 @@ public class ModulesectionResponseCompound {
     openapiRequiredFields.add("fkiModuleID");
     openapiRequiredFields.add("sModulesectionInternalname");
     openapiRequiredFields.add("sModulesectionNameX");
-    openapiRequiredFields.add("a_objPermission");
   }
 
  /**
@@ -294,16 +293,20 @@ public class ModulesectionResponseCompound {
       if (!jsonObj.get("sModulesectionNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objPermission").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPermission").toString()));
-      }
+      if (jsonObj.get("a_objPermission") != null && !jsonObj.get("a_objPermission").isJsonNull()) {
+        JsonArray jsonArrayaObjPermission = jsonObj.getAsJsonArray("a_objPermission");
+        if (jsonArrayaObjPermission != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objPermission").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPermission").toString()));
+          }
 
-      JsonArray jsonArrayaObjPermission = jsonObj.getAsJsonArray("a_objPermission");
-      // validate the required field `a_objPermission` (array)
-      for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
-        PermissionResponseCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
-      };
+          // validate the optional field `a_objPermission` (array)
+          for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
+            PermissionResponseCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

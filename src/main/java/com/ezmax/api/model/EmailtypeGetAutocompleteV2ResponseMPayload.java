@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/emailtype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class EmailtypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EMAILTYPE = "a_objEmailtype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAILTYPE)
-  private List<EmailtypeAutocompleteElementResponse> aObjEmailtype;
+  private List<EmailtypeAutocompleteElementResponse> aObjEmailtype = new ArrayList<>();
 
   public EmailtypeGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
    * An array of Emailtype autocomplete element response.
    * @return aObjEmailtype
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<EmailtypeAutocompleteElementResponse> getaObjEmailtype() {
     return aObjEmailtype;
   }
@@ -139,6 +139,7 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objEmailtype");
   }
 
  /**
@@ -161,21 +162,24 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EmailtypeGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objEmailtype") != null && !jsonObj.get("a_objEmailtype").isJsonNull()) {
-        JsonArray jsonArrayaObjEmailtype = jsonObj.getAsJsonArray("a_objEmailtype");
-        if (jsonArrayaObjEmailtype != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objEmailtype").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objEmailtype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEmailtype").toString()));
-          }
 
-          // validate the optional field `a_objEmailtype` (array)
-          for (int i = 0; i < jsonArrayaObjEmailtype.size(); i++) {
-            EmailtypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjEmailtype.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EmailtypeGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEmailtype").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEmailtype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEmailtype").toString()));
+      }
+
+      JsonArray jsonArrayaObjEmailtype = jsonObj.getAsJsonArray("a_objEmailtype");
+      // validate the required field `a_objEmailtype` (array)
+      for (int i = 0; i < jsonArrayaObjEmailtype.size(); i++) {
+        EmailtypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjEmailtype.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

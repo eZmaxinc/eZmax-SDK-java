@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/billingentityexternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL = "a_objBillingentityexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL)
-  private List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal;
+  private List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal = new ArrayList<>();
 
   public BillingentityexternalGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
    * An array of Billingentityexternal autocomplete element response.
    * @return aObjBillingentityexternal
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<BillingentityexternalAutocompleteElementResponse> getaObjBillingentityexternal() {
     return aObjBillingentityexternal;
   }
@@ -139,6 +139,7 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objBillingentityexternal");
   }
 
  /**
@@ -161,21 +162,24 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityexternalGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objBillingentityexternal") != null && !jsonObj.get("a_objBillingentityexternal").isJsonNull()) {
-        JsonArray jsonArrayaObjBillingentityexternal = jsonObj.getAsJsonArray("a_objBillingentityexternal");
-        if (jsonArrayaObjBillingentityexternal != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objBillingentityexternal").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objBillingentityexternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objBillingentityexternal").toString()));
-          }
 
-          // validate the optional field `a_objBillingentityexternal` (array)
-          for (int i = 0; i < jsonArrayaObjBillingentityexternal.size(); i++) {
-            BillingentityexternalAutocompleteElementResponse.validateJsonElement(jsonArrayaObjBillingentityexternal.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : BillingentityexternalGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objBillingentityexternal").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objBillingentityexternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objBillingentityexternal").toString()));
+      }
+
+      JsonArray jsonArrayaObjBillingentityexternal = jsonObj.getAsJsonArray("a_objBillingentityexternal");
+      // validate the required field `a_objBillingentityexternal` (array)
+      for (int i = 0; i < jsonArrayaObjBillingentityexternal.size(); i++) {
+        BillingentityexternalAutocompleteElementResponse.validateJsonElement(jsonArrayaObjBillingentityexternal.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

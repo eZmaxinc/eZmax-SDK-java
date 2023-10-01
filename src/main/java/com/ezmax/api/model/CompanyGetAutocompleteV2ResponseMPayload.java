@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/company/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class CompanyGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMPANY = "a_objCompany";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMPANY)
-  private List<CompanyAutocompleteElementResponse> aObjCompany;
+  private List<CompanyAutocompleteElementResponse> aObjCompany = new ArrayList<>();
 
   public CompanyGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
    * An array of Company autocomplete element response.
    * @return aObjCompany
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<CompanyAutocompleteElementResponse> getaObjCompany() {
     return aObjCompany;
   }
@@ -139,6 +139,7 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objCompany");
   }
 
  /**
@@ -161,21 +162,24 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CompanyGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objCompany") != null && !jsonObj.get("a_objCompany").isJsonNull()) {
-        JsonArray jsonArrayaObjCompany = jsonObj.getAsJsonArray("a_objCompany");
-        if (jsonArrayaObjCompany != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objCompany").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objCompany` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCompany").toString()));
-          }
 
-          // validate the optional field `a_objCompany` (array)
-          for (int i = 0; i < jsonArrayaObjCompany.size(); i++) {
-            CompanyAutocompleteElementResponse.validateJsonElement(jsonArrayaObjCompany.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CompanyGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objCompany").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objCompany` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCompany").toString()));
+      }
+
+      JsonArray jsonArrayaObjCompany = jsonObj.getAsJsonArray("a_objCompany");
+      // validate the required field `a_objCompany` (array)
+      for (int i = 0; i < jsonArrayaObjCompany.size(); i++) {
+        CompanyAutocompleteElementResponse.validateJsonElement(jsonArrayaObjCompany.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

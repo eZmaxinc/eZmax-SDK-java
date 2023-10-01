@@ -17,7 +17,7 @@ Payload for GET /1/object/activesession/getCurrent
 |**bActivesessionDebug** | **Boolean** | Whether the active session is in debug or not |  |
 |**bActivesessionIssuperadmin** | **Boolean** | Whether the active session is superadmin or not |  |
 |**pksCustomerCode** | **String** | The customer code assigned to your account |  |
-|**fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  [optional] |
+|**fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  |
 |**fkiSignatureID** | **Integer** | The unique ID of the Signature |  [optional] |
 |**aPkiPermissionID** | **List&lt;Integer&gt;** | An array of permissions granted to the user or api key |  |
 |**objUserReal** | [**ActivesessionResponseCompoundUser**](ActivesessionResponseCompoundUser.md) |  |  |

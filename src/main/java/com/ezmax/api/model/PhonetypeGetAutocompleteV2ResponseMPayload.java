@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/phonetype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class PhonetypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PHONETYPE = "a_objPhonetype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PHONETYPE)
-  private List<PhonetypeAutocompleteElementResponse> aObjPhonetype;
+  private List<PhonetypeAutocompleteElementResponse> aObjPhonetype = new ArrayList<>();
 
   public PhonetypeGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class PhonetypeGetAutocompleteV2ResponseMPayload {
    * An array of Phonetype autocomplete element response.
    * @return aObjPhonetype
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<PhonetypeAutocompleteElementResponse> getaObjPhonetype() {
     return aObjPhonetype;
   }
@@ -139,6 +139,7 @@ public class PhonetypeGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objPhonetype");
   }
 
  /**
@@ -161,21 +162,24 @@ public class PhonetypeGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PhonetypeGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objPhonetype") != null && !jsonObj.get("a_objPhonetype").isJsonNull()) {
-        JsonArray jsonArrayaObjPhonetype = jsonObj.getAsJsonArray("a_objPhonetype");
-        if (jsonArrayaObjPhonetype != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objPhonetype").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objPhonetype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPhonetype").toString()));
-          }
 
-          // validate the optional field `a_objPhonetype` (array)
-          for (int i = 0; i < jsonArrayaObjPhonetype.size(); i++) {
-            PhonetypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPhonetype.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PhonetypeGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objPhonetype").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objPhonetype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPhonetype").toString()));
+      }
+
+      JsonArray jsonArrayaObjPhonetype = jsonObj.getAsJsonArray("a_objPhonetype");
+      // validate the required field `a_objPhonetype` (array)
+      for (int i = 0; i < jsonArrayaObjPhonetype.size(); i++) {
+        PhonetypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPhonetype.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

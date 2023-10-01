@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class NotificationtestGetElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -64,7 +64,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
 
   public static final String SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY = "a_sVariableobjectProperty";
   @SerializedName(SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY)
-  private List<String> aSVariableobjectProperty;
+  private List<String> aSVariableobjectProperty = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT = "a_objVariableobject";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT)
@@ -134,7 +134,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
    * Get aSVariableobjectProperty
    * @return aSVariableobjectProperty
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<String> getaSVariableobjectProperty() {
     return aSVariableobjectProperty;
   }
@@ -234,6 +234,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiNotificationtestID");
     openapiRequiredFields.add("sNotificationtestFunction");
+    openapiRequiredFields.add("a_sVariableobjectProperty");
     openapiRequiredFields.add("a_objVariableobject");
   }
 
@@ -268,8 +269,10 @@ public class NotificationtestGetElementsV1ResponseMPayload {
       if (!jsonObj.get("sNotificationtestFunction").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sNotificationtestFunction` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationtestFunction").toString()));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("a_sVariableobjectProperty") != null && !jsonObj.get("a_sVariableobjectProperty").isJsonNull() && !jsonObj.get("a_sVariableobjectProperty").isJsonArray()) {
+      // ensure the required json array is present
+      if (jsonObj.get("a_sVariableobjectProperty") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("a_sVariableobjectProperty").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_sVariableobjectProperty` to be an array in the JSON string but got `%s`", jsonObj.get("a_sVariableobjectProperty").toString()));
       }
       // ensure the required json array is present

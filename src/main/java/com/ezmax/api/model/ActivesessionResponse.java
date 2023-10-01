@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -303,7 +303,7 @@ public class ActivesessionResponse {
    * minimum: 1
    * @return fkiSystemconfigurationtypeID
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
   }
@@ -425,6 +425,7 @@ public class ActivesessionResponse {
     openapiRequiredFields.add("bActivesessionDebug");
     openapiRequiredFields.add("bActivesessionIssuperadmin");
     openapiRequiredFields.add("pksCustomerCode");
+    openapiRequiredFields.add("fkiSystemconfigurationtypeID");
   }
 
  /**

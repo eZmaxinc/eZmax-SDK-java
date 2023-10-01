@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -381,7 +381,7 @@ public class FranchisereferalincomeRequestCompound {
    * Get objAddress
    * @return objAddress
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public AddressRequest getObjAddress() {
     return objAddress;
   }
@@ -520,7 +520,6 @@ public class FranchisereferalincomeRequestCompound {
     openapiRequiredFields.add("tFranchisereferalincomeComment");
     openapiRequiredFields.add("fkiFranchiseofficeID");
     openapiRequiredFields.add("sFranchisereferalincomeRemoteid");
-    openapiRequiredFields.add("objAddress");
     openapiRequiredFields.add("a_objContact");
   }
 
@@ -573,8 +572,10 @@ public class FranchisereferalincomeRequestCompound {
       if (!jsonObj.get("sFranchisereferalincomeRemoteid").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sFranchisereferalincomeRemoteid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchisereferalincomeRemoteid").toString()));
       }
-      // validate the required field `objAddress`
-      AddressRequest.validateJsonElement(jsonObj.get("objAddress"));
+      // validate the optional field `objAddress`
+      if (jsonObj.get("objAddress") != null && !jsonObj.get("objAddress").isJsonNull()) {
+        AddressRequest.validateJsonElement(jsonObj.get("objAddress"));
+      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objContact").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objContact` to be an array in the JSON string but got `%s`", jsonObj.get("a_objContact").toString()));

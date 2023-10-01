@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class BillingentityinternalEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL = "objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL)

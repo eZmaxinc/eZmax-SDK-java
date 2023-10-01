@@ -52,11 +52,11 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/period/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class PeriodGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PERIOD = "a_objPeriod";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERIOD)
-  private List<PeriodAutocompleteElementResponse> aObjPeriod;
+  private List<PeriodAutocompleteElementResponse> aObjPeriod = new ArrayList<>();
 
   public PeriodGetAutocompleteV2ResponseMPayload() {
   }
@@ -79,7 +79,7 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
    * An array of Period autocomplete element response.
    * @return aObjPeriod
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public List<PeriodAutocompleteElementResponse> getaObjPeriod() {
     return aObjPeriod;
   }
@@ -139,6 +139,7 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objPeriod");
   }
 
  /**
@@ -161,21 +162,24 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PeriodGetAutocompleteV2ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("a_objPeriod") != null && !jsonObj.get("a_objPeriod").isJsonNull()) {
-        JsonArray jsonArrayaObjPeriod = jsonObj.getAsJsonArray("a_objPeriod");
-        if (jsonArrayaObjPeriod != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objPeriod").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objPeriod` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPeriod").toString()));
-          }
 
-          // validate the optional field `a_objPeriod` (array)
-          for (int i = 0; i < jsonArrayaObjPeriod.size(); i++) {
-            PeriodAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPeriod.get(i));
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PeriodGetAutocompleteV2ResponseMPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objPeriod").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objPeriod` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPeriod").toString()));
+      }
+
+      JsonArray jsonArrayaObjPeriod = jsonObj.getAsJsonArray("a_objPeriod");
+      // validate the required field `a_objPeriod` (array)
+      for (int i = 0; i < jsonArrayaObjPeriod.size(); i++) {
+        PeriodAutocompleteElementResponse.validateJsonElement(jsonArrayaObjPeriod.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

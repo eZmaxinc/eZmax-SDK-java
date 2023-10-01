@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-29T20:03:52.410924679Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
 public class ModuleResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -80,7 +80,7 @@ public class ModuleResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_MODULESECTION = "a_objModulesection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULESECTION)
-  private List<ModulesectionResponseCompound> aObjModulesection = new ArrayList<>();
+  private List<ModulesectionResponseCompound> aObjModulesection;
 
   public ModuleResponseCompound() {
   }
@@ -232,7 +232,7 @@ public class ModuleResponseCompound {
    * Get aObjModulesection
    * @return aObjModulesection
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public List<ModulesectionResponseCompound> getaObjModulesection() {
     return aObjModulesection;
   }
@@ -316,7 +316,6 @@ public class ModuleResponseCompound {
     openapiRequiredFields.add("sModuleNameX");
     openapiRequiredFields.add("bModuleRegistered");
     openapiRequiredFields.add("bModuleRegisteredapi");
-    openapiRequiredFields.add("a_objModulesection");
   }
 
  /**
@@ -353,16 +352,20 @@ public class ModuleResponseCompound {
       if (!jsonObj.get("sModuleNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objModulesection").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objModulesection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objModulesection").toString()));
-      }
+      if (jsonObj.get("a_objModulesection") != null && !jsonObj.get("a_objModulesection").isJsonNull()) {
+        JsonArray jsonArrayaObjModulesection = jsonObj.getAsJsonArray("a_objModulesection");
+        if (jsonArrayaObjModulesection != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objModulesection").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objModulesection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objModulesection").toString()));
+          }
 
-      JsonArray jsonArrayaObjModulesection = jsonObj.getAsJsonArray("a_objModulesection");
-      // validate the required field `a_objModulesection` (array)
-      for (int i = 0; i < jsonArrayaObjModulesection.size(); i++) {
-        ModulesectionResponseCompound.validateJsonElement(jsonArrayaObjModulesection.get(i));
-      };
+          // validate the optional field `a_objModulesection` (array)
+          for (int i = 0; i < jsonArrayaObjModulesection.size(); i++) {
+            ModulesectionResponseCompound.validateJsonElement(jsonArrayaObjModulesection.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
