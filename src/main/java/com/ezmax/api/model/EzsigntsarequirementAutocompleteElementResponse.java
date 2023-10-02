@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T03:20:34.370720798Z[Etc/UTC]")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)

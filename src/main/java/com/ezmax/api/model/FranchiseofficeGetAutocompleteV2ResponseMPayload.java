@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/franchiseoffice/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T03:20:34.370720798Z[Etc/UTC]")
 public class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FRANCHISEOFFICE = "a_objFranchiseoffice";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FRANCHISEOFFICE)

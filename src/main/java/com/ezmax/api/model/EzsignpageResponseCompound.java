@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignpage Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-01T19:35:19.735411211Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T03:20:34.370720798Z[Etc/UTC]")
 public class EzsignpageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D = "pkiEzsignpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D)

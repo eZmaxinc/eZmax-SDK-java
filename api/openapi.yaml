@@ -4223,7 +4223,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -4504,7 +4504,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5000,7 +5000,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra:
       - EzsignSigner
       x-accepts: application/json
@@ -5918,7 +5918,7 @@ paths:
       - Ezsign
       x-permissions:
       - ElectronicSignature_DisposalofeZsignfolders
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6436,7 +6436,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -6791,7 +6791,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -7351,7 +7351,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsignfoldertype/getAutocomplete/{sSelector}:
@@ -10686,7 +10686,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/font/getAutocomplete/{sSelector}:
@@ -13047,7 +13047,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/user/getList:
