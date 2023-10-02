@@ -2,7 +2,7 @@
 
 eZmax API Definition (Full)
 - API version: 1.2.0
-  - Build date: 2023-10-02T03:20:34.370720798Z[Etc/UTC]
+  - Build date: 2023-10-02T23:25:33.309251947Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 

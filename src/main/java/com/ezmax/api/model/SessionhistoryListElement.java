@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Sessionhistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T03:20:34.370720798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T23:25:33.309251947Z[Etc/UTC]")
 public class SessionhistoryListElement {
   public static final String SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D = "pkiSessionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D)

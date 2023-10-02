@@ -8739,7 +8739,7 @@ paths:
       - Ezsign
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/ezsigntemplate/getList:
@@ -12507,7 +12507,7 @@ paths:
       x-presentations: []
       x-permissions:
       - All
-      x-powerautomate: false
+      x-powerautomate: true
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/timezone/getAutocomplete/{sSelector}:
@@ -19328,6 +19328,13 @@ components:
       example: 5
       minimum: 0
       type: integer
+      x-ms-dynamic-values:
+        operationId: Ezsignfoldertype_GetAutocomplete_V2
+        value-path: pkiEzsignfoldertypeID
+        value-title: sEzsignfoldertypeNameX
+        value-collection: mPayload/a_objEzsignfoldertype
+        parameters:
+          sSelector: Active
     Field-pkiEzsignformfieldID:
       description: The unique ID of the Ezsignformfield
       example: 32
@@ -19386,6 +19393,13 @@ components:
       example: 36
       minimum: 0
       type: integer
+      x-ms-dynamic-values:
+        operationId: Ezsigntemplate_GetAutocomplete_V2
+        value-path: pkiEzsigntemplateID
+        value-title: sEzsigntemplateDescription
+        value-collection: mPayload/a_objEzsigntemplate
+        parameters:
+          sSelector: All
     Field-pkiEzsigntemplatedocumentID:
       description: The unique ID of the Ezsigntemplatedocument
       example: 133
@@ -20226,7 +20240,7 @@ components:
     Field-sEzsigntsarequirementDescriptionX:
       description: The description of the Ezsigntsarequirement in the language of
         the requester
-      example: Default
+      example: "No"
       type: string
     Field-sFilter:
       description: The filter to apply to the request to limit results.
@@ -24644,6 +24658,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         sEzsignbulksendDescription:
           description: The description of the Ezsignbulksend
           example: Test eZsign Bulk Send
@@ -24702,6 +24723,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -24759,6 +24787,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -25128,6 +25163,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
       required:
       - fkiEzsignbulksendID
       type: object
@@ -25160,6 +25202,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         iEzsignbulksenddocumentmappingOrder:
           description: The order in which the Ezsigntemplate or Ezsigntemplatepackage
             will be presented to the signatory in the Ezsignfolder.
@@ -25500,6 +25549,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         fkiEzsignfoldersignerassociationID:
           description: The unique ID of the Ezsignfoldersignerassociation
           example: 20
@@ -25778,6 +25834,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         a_sEzsigntemplatesigner:
           items:
             $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
@@ -25806,6 +25869,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         a_sEzsigntemplatesigner:
           items:
             $ref: '#/components/schemas/Field-sEzsigntemplatesigner'
@@ -26413,6 +26483,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         eEzsignfoldertypePrivacylevel:
           $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
         sEzsignfoldertypeNameX:
@@ -26480,6 +26557,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiEzsigntsarequirementID:
           description: |-
             The unique ID of the Ezsigntsarequirement.
@@ -26541,6 +26625,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         objEzsignfoldertype:
           $ref: '#/components/schemas/Custom-Ezsignfoldertype-Response'
         sEzsignfoldertypeNameX:
@@ -26575,7 +26666,7 @@ components:
         sEzsigntsarequirementDescriptionX:
           description: The description of the Ezsigntsarequirement in the language
             of the requester
-          example: Default
+          example: "No"
           type: string
         sEzsignfolderDescription:
           description: The description of the Ezsignfolder
@@ -27573,6 +27664,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         bEzsignfoldertypeIsactive:
           description: Whether the Ezsignfoldertype is active or not
           example: true
@@ -27591,6 +27689,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         eEzsignfoldertypePrivacylevel:
           $ref: '#/components/schemas/Field-eEzsignfoldertypePrivacylevel'
         sEzsignfoldertypeNameX:
@@ -27615,6 +27720,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         objEzsignfoldertypeName:
           $ref: '#/components/schemas/Multilingual-EzsignfoldertypeName'
         fkiBrandingID:
@@ -27805,6 +27917,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         objEzsignfoldertypeName:
           $ref: '#/components/schemas/Multilingual-EzsignfoldertypeName'
         fkiBrandingID:
@@ -27857,7 +27976,7 @@ components:
         sEzsigntsarequirementDescriptionX:
           description: The description of the Ezsigntsarequirement in the language
             of the requester
-          example: Default
+          example: "No"
           type: string
         sEmailAddressSigned:
           description: The email address.
@@ -30085,6 +30204,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         bEzsigntemplateIsactive:
           description: Whether the Ezsigntemplate is active or not
           example: true
@@ -30103,11 +30229,25 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -30163,11 +30303,25 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         fkiEzsignfoldertypeID:
           description: The unique ID of the Ezsignfoldertype.
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -30210,6 +30364,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         fkiEzsigntemplatedocumentID:
           description: The unique ID of the Ezsigntemplatedocument
           example: 133
@@ -30220,6 +30381,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -30462,6 +30630,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         fkiEzsigndocumentID:
           description: The unique ID of the Ezsigndocument
           example: 97
@@ -30561,6 +30736,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         sEzsigntemplatedocumentName:
           description: The name of the Ezsigntemplatedocument.
           example: Standard Contract
@@ -31486,6 +31668,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -31543,6 +31732,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -31595,6 +31791,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         fkiLanguageID:
           description: |-
             The unique ID of the Language.
@@ -31831,6 +32034,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
       required:
       - fkiEzsigntemplateID
       - fkiEzsigntemplatepackageID
@@ -31859,6 +32069,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         iEzsigntemplatepackagemembershipOrder:
           description: The order in which the Ezsigntemplate will be imported when
             using an Ezsigntemplatepackage.
@@ -32753,6 +32970,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         sEzsigntemplatesignerDescription:
           description: The description of the Ezsigntemplatesigner
           example: Customer
@@ -32780,6 +33004,13 @@ components:
           example: 36
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsigntemplate_GetAutocomplete_V2
+            value-path: pkiEzsigntemplateID
+            value-title: sEzsigntemplateDescription
+            value-collection: mPayload/a_objEzsigntemplate
+            parameters:
+              sSelector: All
         sEzsigntemplatesignerDescription:
           description: The description of the Ezsigntemplatesigner
           example: Customer
@@ -32886,7 +33117,7 @@ components:
         sEzsigntsarequirementDescriptionX:
           description: The description of the Ezsigntsarequirement in the language
             of the requester
-          example: Default
+          example: "No"
           type: string
         pkiEzsigntsarequirementID:
           description: |-
@@ -36996,6 +37227,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         sWebhookDescription:
           description: The description of the Webhook
           example: Import into our system
@@ -37054,6 +37292,13 @@ components:
           example: 5
           minimum: 0
           type: integer
+          x-ms-dynamic-values:
+            operationId: Ezsignfoldertype_GetAutocomplete_V2
+            value-path: pkiEzsignfoldertypeID
+            value-title: sEzsignfoldertypeNameX
+            value-collection: mPayload/a_objEzsignfoldertype
+            parameters:
+              sSelector: Active
         sEzsignfoldertypeNameX:
           description: The name of the Ezsignfoldertype in the language of the requester
           example: Default
