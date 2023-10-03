@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
 public class EzsignfolderRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -181,7 +181,7 @@ public class EzsignfolderRequest {
    * Note about the Ezsignfolder
    * @return tEzsignfolderNote
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String gettEzsignfolderNote() {
     return tEzsignfolderNote;
   }
@@ -303,7 +303,6 @@ public class EzsignfolderRequest {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("sEzsignfolderDescription");
-    openapiRequiredFields.add("tEzsignfolderNote");
     openapiRequiredFields.add("eEzsignfolderSendreminderfrequency");
   }
 
@@ -338,7 +337,7 @@ public class EzsignfolderRequest {
       if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
       }
-      if (!jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
+      if ((jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonNull()) && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
       }
       if ((jsonObj.get("sEzsignfolderExternalid") != null && !jsonObj.get("sEzsignfolderExternalid").isJsonNull()) && !jsonObj.get("sEzsignfolderExternalid").isJsonPrimitive()) {

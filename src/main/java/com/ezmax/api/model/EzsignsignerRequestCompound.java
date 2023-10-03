@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
 public class EzsignsignerRequestCompound {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)

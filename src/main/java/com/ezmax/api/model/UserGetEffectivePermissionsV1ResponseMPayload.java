@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/user/{pkiUserID}/getEffectivePermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
 public class UserGetEffectivePermissionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_MODULEGROUP = "a_objModulegroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULEGROUP)

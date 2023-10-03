@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies Sort configuration options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
 public class ScimServiceProviderConfigSort {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)

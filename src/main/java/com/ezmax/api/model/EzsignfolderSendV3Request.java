@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -78,7 +78,7 @@ public class EzsignfolderSendV3Request {
    * A custom text message that will be added to the email sent.
    * @return tEzsignfolderMessage
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String gettEzsignfolderMessage() {
     return tEzsignfolderMessage;
   }
@@ -194,7 +194,6 @@ public class EzsignfolderSendV3Request {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("tEzsignfolderMessage");
     openapiRequiredFields.add("a_fkiEzsignfoldersignerassociationID");
   }
 
@@ -226,7 +225,7 @@ public class EzsignfolderSendV3Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
+      if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
       }
       if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
