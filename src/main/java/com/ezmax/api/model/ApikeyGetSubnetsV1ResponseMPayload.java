@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getSubnets
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T23:25:33.309251947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
 public class ApikeyGetSubnetsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SUBNET = "a_objSubnet";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUBNET)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T23:25:33.309251947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
 public class BrandingCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_BRANDING_I_D = "a_pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_A_PKI_BRANDING_I_D)

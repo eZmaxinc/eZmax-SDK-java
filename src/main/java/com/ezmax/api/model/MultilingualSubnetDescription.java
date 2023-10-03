@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Subnet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-02T23:25:33.309251947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T01:30:34.864709360Z[Etc/UTC]")
 public class MultilingualSubnetDescription {
   public static final String SERIALIZED_NAME_S_SUBNET_DESCRIPTION1 = "sSubnetDescription1";
   @SerializedName(SERIALIZED_NAME_S_SUBNET_DESCRIPTION1)
