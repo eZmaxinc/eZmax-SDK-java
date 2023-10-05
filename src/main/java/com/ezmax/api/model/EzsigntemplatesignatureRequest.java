@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureFont;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureType;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsigntemplatesignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -139,6 +140,10 @@ public class EzsigntemplatesignatureRequest {
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION = "eEzsigntemplatesignatureTextvalidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION)
   private EnumTextvalidation eEzsigntemplatesignatureTextvalidation;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_DEPENDENCYREQUIREMENT = "eEzsigntemplatesignatureDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_DEPENDENCYREQUIREMENT)
+  private FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement;
 
   public EzsigntemplatesignatureRequest() {
   }
@@ -596,6 +601,27 @@ public class EzsigntemplatesignatureRequest {
   }
 
 
+  public EzsigntemplatesignatureRequest eEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+    
+    this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsigntemplatesignatureDependencyrequirement
+   * @return eEzsigntemplatesignatureDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplatesignatureDependencyrequirement geteEzsigntemplatesignatureDependencyrequirement() {
+    return eEzsigntemplatesignatureDependencyrequirement;
+  }
+
+
+  public void seteEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+    this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -626,12 +652,13 @@ public class EzsigntemplatesignatureRequest {
         Objects.equals(this.iEzsigntemplatesignatureValidationstep, ezsigntemplatesignatureRequest.iEzsigntemplatesignatureValidationstep) &&
         Objects.equals(this.iEzsigntemplatesignatureMaxlength, ezsigntemplatesignatureRequest.iEzsigntemplatesignatureMaxlength) &&
         Objects.equals(this.sEzsigntemplatesignatureRegexp, ezsigntemplatesignatureRequest.sEzsigntemplatesignatureRegexp) &&
-        Objects.equals(this.eEzsigntemplatesignatureTextvalidation, ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTextvalidation);
+        Objects.equals(this.eEzsigntemplatesignatureTextvalidation, ezsigntemplatesignatureRequest.eEzsigntemplatesignatureTextvalidation) &&
+        Objects.equals(this.eEzsigntemplatesignatureDependencyrequirement, ezsigntemplatesignatureRequest.eEzsigntemplatesignatureDependencyrequirement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep, iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation);
+    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, bEzsigntemplatesignatureRequired, eEzsigntemplatesignatureAttachmentnamesource, sEzsigntemplatesignatureAttachmentdescription, iEzsigntemplatesignatureValidationstep, iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation, eEzsigntemplatesignatureDependencyrequirement);
   }
 
   @Override
@@ -659,6 +686,7 @@ public class EzsigntemplatesignatureRequest {
     sb.append("    iEzsigntemplatesignatureMaxlength: ").append(toIndentedString(iEzsigntemplatesignatureMaxlength)).append("\n");
     sb.append("    sEzsigntemplatesignatureRegexp: ").append(toIndentedString(sEzsigntemplatesignatureRegexp)).append("\n");
     sb.append("    eEzsigntemplatesignatureTextvalidation: ").append(toIndentedString(eEzsigntemplatesignatureTextvalidation)).append("\n");
+    sb.append("    eEzsigntemplatesignatureDependencyrequirement: ").append(toIndentedString(eEzsigntemplatesignatureDependencyrequirement)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -702,6 +730,7 @@ public class EzsigntemplatesignatureRequest {
     openapiFields.add("iEzsigntemplatesignatureMaxlength");
     openapiFields.add("sEzsigntemplatesignatureRegexp");
     openapiFields.add("eEzsigntemplatesignatureTextvalidation");
+    openapiFields.add("eEzsigntemplatesignatureDependencyrequirement");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

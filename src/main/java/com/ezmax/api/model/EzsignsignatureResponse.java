@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
@@ -56,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsignsignatureResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -149,6 +150,10 @@ public class EzsignsignatureResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_TEXTVALIDATION = "eEzsignsignatureTextvalidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TEXTVALIDATION)
   private EnumTextvalidation eEzsignsignatureTextvalidation;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT = "eEzsignsignatureDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT)
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP = "sEzsignsignatureRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP)
@@ -663,6 +668,27 @@ public class EzsignsignatureResponse {
   }
 
 
+  public EzsignsignatureResponse eEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureDependencyrequirement
+   * @return eEzsignsignatureDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignsignatureDependencyrequirement geteEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+
+
+  public void seteEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
+
   public EzsignsignatureResponse sEzsignsignatureRegexp(String sEzsignsignatureRegexp) {
     
     this.sEzsignsignatureRegexp = sEzsignsignatureRegexp;
@@ -780,6 +806,7 @@ public class EzsignsignatureResponse {
         Objects.equals(this.sEzsignsignatureDescription, ezsignsignatureResponse.sEzsignsignatureDescription) &&
         Objects.equals(this.iEzsignsignatureMaxlength, ezsignsignatureResponse.iEzsignsignatureMaxlength) &&
         Objects.equals(this.eEzsignsignatureTextvalidation, ezsignsignatureResponse.eEzsignsignatureTextvalidation) &&
+        Objects.equals(this.eEzsignsignatureDependencyrequirement, ezsignsignatureResponse.eEzsignsignatureDependencyrequirement) &&
         Objects.equals(this.sEzsignsignatureRegexp, ezsignsignatureResponse.sEzsignsignatureRegexp) &&
         Objects.equals(this.objContactName, ezsignsignatureResponse.objContactName) &&
         Objects.equals(this.objContactNameDelegation, ezsignsignatureResponse.objContactNameDelegation) &&
@@ -788,7 +815,7 @@ public class EzsignsignatureResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
   }
 
   @Override
@@ -818,6 +845,7 @@ public class EzsignsignatureResponse {
     sb.append("    sEzsignsignatureDescription: ").append(toIndentedString(sEzsignsignatureDescription)).append("\n");
     sb.append("    iEzsignsignatureMaxlength: ").append(toIndentedString(iEzsignsignatureMaxlength)).append("\n");
     sb.append("    eEzsignsignatureTextvalidation: ").append(toIndentedString(eEzsignsignatureTextvalidation)).append("\n");
+    sb.append("    eEzsignsignatureDependencyrequirement: ").append(toIndentedString(eEzsignsignatureDependencyrequirement)).append("\n");
     sb.append("    sEzsignsignatureRegexp: ").append(toIndentedString(sEzsignsignatureRegexp)).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
     sb.append("    objContactNameDelegation: ").append(toIndentedString(objContactNameDelegation)).append("\n");
@@ -867,6 +895,7 @@ public class EzsignsignatureResponse {
     openapiFields.add("sEzsignsignatureDescription");
     openapiFields.add("iEzsignsignatureMaxlength");
     openapiFields.add("eEzsignsignatureTextvalidation");
+    openapiFields.add("eEzsignsignatureDependencyrequirement");
     openapiFields.add("sEzsignsignatureRegexp");
     openapiFields.add("objContactName");
     openapiFields.add("objContactNameDelegation");

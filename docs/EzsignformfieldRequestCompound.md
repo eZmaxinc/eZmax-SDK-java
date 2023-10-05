@@ -19,6 +19,8 @@ An Ezsignformfield Object and children to create a complete structure
 |**bEzsignformfieldAutocomplete** | **Boolean** | Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text** |  [optional] |
 |**bEzsignformfieldSelected** | **Boolean** | Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio** |  [optional] |
 |**sEzsignformfieldEnteredvalue** | **String** | This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea** |  [optional] |
+|**eEzsignformfieldDependencyrequirement** | **FieldEEzsignformfieldDependencyrequirement** |  |  [optional] |
+|**aObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyRequestCompound&gt;**](EzsignelementdependencyRequestCompound.md) |  |  [optional] |
 
 
 

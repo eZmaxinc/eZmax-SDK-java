@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsignfolderGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_FORMS_DATA_FOLDER = "objFormsDataFolder";
   @SerializedName(SERIALIZED_NAME_OBJ_FORMS_DATA_FOLDER)

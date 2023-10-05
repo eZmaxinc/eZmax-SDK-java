@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsignformfieldResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -94,6 +95,10 @@ public class EzsignformfieldResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
   private String sEzsignformfieldEnteredvalue;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsignformfieldDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT)
+  private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement;
 
   public EzsignformfieldResponse() {
   }
@@ -335,6 +340,27 @@ public class EzsignformfieldResponse {
   }
 
 
+  public EzsignformfieldResponse eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsignformfieldDependencyrequirement
+   * @return eEzsignformfieldDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignformfieldDependencyrequirement geteEzsignformfieldDependencyrequirement() {
+    return eEzsignformfieldDependencyrequirement;
+  }
+
+
+  public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -355,12 +381,13 @@ public class EzsignformfieldResponse {
         Objects.equals(this.iEzsignformfieldHeight, ezsignformfieldResponse.iEzsignformfieldHeight) &&
         Objects.equals(this.bEzsignformfieldAutocomplete, ezsignformfieldResponse.bEzsignformfieldAutocomplete) &&
         Objects.equals(this.bEzsignformfieldSelected, ezsignformfieldResponse.bEzsignformfieldSelected) &&
-        Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponse.sEzsignformfieldEnteredvalue);
+        Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponse.sEzsignformfieldEnteredvalue) &&
+        Objects.equals(this.eEzsignformfieldDependencyrequirement, ezsignformfieldResponse.eEzsignformfieldDependencyrequirement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue);
+    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement);
   }
 
   @Override
@@ -378,6 +405,7 @@ public class EzsignformfieldResponse {
     sb.append("    bEzsignformfieldAutocomplete: ").append(toIndentedString(bEzsignformfieldAutocomplete)).append("\n");
     sb.append("    bEzsignformfieldSelected: ").append(toIndentedString(bEzsignformfieldSelected)).append("\n");
     sb.append("    sEzsignformfieldEnteredvalue: ").append(toIndentedString(sEzsignformfieldEnteredvalue)).append("\n");
+    sb.append("    eEzsignformfieldDependencyrequirement: ").append(toIndentedString(eEzsignformfieldDependencyrequirement)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -411,6 +439,7 @@ public class EzsignformfieldResponse {
     openapiFields.add("bEzsignformfieldAutocomplete");
     openapiFields.add("bEzsignformfieldSelected");
     openapiFields.add("sEzsignformfieldEnteredvalue");
+    openapiFields.add("eEzsignformfieldDependencyrequirement");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

@@ -13,13 +13,17 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EzsigntemplateelementdependencyResponseCompound;
+import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -115,6 +119,22 @@ public class EzsigntemplateformfieldResponseCompoundTest {
     @Test
     public void bEzsigntemplateformfieldSelectedTest() {
         // TODO: test bEzsigntemplateformfieldSelected
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateformfieldDependencyrequirement'
+     */
+    @Test
+    public void eEzsigntemplateformfieldDependencyrequirementTest() {
+        // TODO: test eEzsigntemplateformfieldDependencyrequirement
+    }
+
+    /**
+     * Test the property 'aObjEzsigntemplateelementdependency'
+     */
+    @Test
+    public void aObjEzsigntemplateelementdependencyTest() {
+        // TODO: test aObjEzsigntemplateelementdependency
     }
 
 }

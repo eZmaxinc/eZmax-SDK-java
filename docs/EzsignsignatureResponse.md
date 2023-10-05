@@ -31,6 +31,7 @@ An Ezsignsignature Object
 |**sEzsignsignatureDescription** | **String** | The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea** |  [optional] |
 |**iEzsignsignatureMaxlength** | **Integer** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** |  [optional] |
 |**eEzsignsignatureTextvalidation** | **EnumTextvalidation** |  |  [optional] |
+|**eEzsignsignatureDependencyrequirement** | **FieldEEzsignsignatureDependencyrequirement** |  |  [optional] |
 |**sEzsignsignatureRegexp** | **String** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** |  [optional] |
 |**objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |
 |**objContactNameDelegation** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  [optional] |

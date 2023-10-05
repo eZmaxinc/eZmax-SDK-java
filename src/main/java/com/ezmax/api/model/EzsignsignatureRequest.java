@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -139,6 +140,10 @@ public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP = "sEzsignsignatureRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP)
   private String sEzsignsignatureRegexp;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT = "eEzsignsignatureDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT)
+  private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement;
 
   public EzsignsignatureRequest() {
   }
@@ -595,6 +600,27 @@ public class EzsignsignatureRequest {
   }
 
 
+  public EzsignsignatureRequest eEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsignsignatureDependencyrequirement
+   * @return eEzsignsignatureDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignsignatureDependencyrequirement geteEzsignsignatureDependencyrequirement() {
+    return eEzsignsignatureDependencyrequirement;
+  }
+
+
+  public void seteEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
+    this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -625,12 +651,13 @@ public class EzsignsignatureRequest {
         Objects.equals(this.iEzsignsignatureValidationstep, ezsignsignatureRequest.iEzsignsignatureValidationstep) &&
         Objects.equals(this.iEzsignsignatureMaxlength, ezsignsignatureRequest.iEzsignsignatureMaxlength) &&
         Objects.equals(this.eEzsignsignatureTextvalidation, ezsignsignatureRequest.eEzsignsignatureTextvalidation) &&
-        Objects.equals(this.sEzsignsignatureRegexp, ezsignsignatureRequest.sEzsignsignatureRegexp);
+        Objects.equals(this.sEzsignsignatureRegexp, ezsignsignatureRequest.sEzsignsignatureRegexp) &&
+        Objects.equals(this.eEzsignsignatureDependencyrequirement, ezsignsignatureRequest.eEzsignsignatureDependencyrequirement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureRegexp);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement);
   }
 
   @Override
@@ -658,6 +685,7 @@ public class EzsignsignatureRequest {
     sb.append("    iEzsignsignatureMaxlength: ").append(toIndentedString(iEzsignsignatureMaxlength)).append("\n");
     sb.append("    eEzsignsignatureTextvalidation: ").append(toIndentedString(eEzsignsignatureTextvalidation)).append("\n");
     sb.append("    sEzsignsignatureRegexp: ").append(toIndentedString(sEzsignsignatureRegexp)).append("\n");
+    sb.append("    eEzsignsignatureDependencyrequirement: ").append(toIndentedString(eEzsignsignatureDependencyrequirement)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -701,6 +729,7 @@ public class EzsignsignatureRequest {
     openapiFields.add("iEzsignsignatureMaxlength");
     openapiFields.add("eEzsignsignatureTextvalidation");
     openapiFields.add("sEzsignsignatureRegexp");
+    openapiFields.add("eEzsignsignatureDependencyrequirement");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

@@ -14,8 +14,10 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EnumTextvalidation;
+import com.ezmax.api.model.EzsignelementdependencyRequestCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateRequestCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
@@ -214,6 +216,14 @@ public class EzsignsignatureRequestCompoundTest {
     }
 
     /**
+     * Test the property 'eEzsignsignatureDependencyrequirement'
+     */
+    @Test
+    public void eEzsignsignatureDependencyrequirementTest() {
+        // TODO: test eEzsignsignatureDependencyrequirement
+    }
+
+    /**
      * Test the property 'bEzsignsignatureCustomdate'
      */
     @Test
@@ -227,6 +237,14 @@ public class EzsignsignatureRequestCompoundTest {
     @Test
     public void aObjEzsignsignaturecustomdateTest() {
         // TODO: test aObjEzsignsignaturecustomdate
+    }
+
+    /**
+     * Test the property 'aObjEzsignelementdependency'
+     */
+    @Test
+    public void aObjEzsignelementdependencyTest() {
+        // TODO: test aObjEzsignelementdependency
     }
 
 }

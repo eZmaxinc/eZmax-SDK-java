@@ -14,13 +14,17 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
+import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -94,6 +98,14 @@ public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
   private String sEzsignformfieldEnteredvalue;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsignformfieldDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT)
+  private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY = "a_objEzsignelementdependency";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY)
+  private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency;
 
   public EzsignformfieldResponseCompound() {
   }
@@ -335,6 +347,56 @@ public class EzsignformfieldResponseCompound {
   }
 
 
+  public EzsignformfieldResponseCompound eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsignformfieldDependencyrequirement
+   * @return eEzsignformfieldDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignformfieldDependencyrequirement geteEzsignformfieldDependencyrequirement() {
+    return eEzsignformfieldDependencyrequirement;
+  }
+
+
+  public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+    this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+  }
+
+
+  public EzsignformfieldResponseCompound aObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
+    
+    this.aObjEzsignelementdependency = aObjEzsignelementdependency;
+    return this;
+  }
+
+  public EzsignformfieldResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponseCompound aObjEzsignelementdependencyItem) {
+    if (this.aObjEzsignelementdependency == null) {
+      this.aObjEzsignelementdependency = new ArrayList<>();
+    }
+    this.aObjEzsignelementdependency.add(aObjEzsignelementdependencyItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsignelementdependency
+   * @return aObjEzsignelementdependency
+  **/
+  @javax.annotation.Nullable
+  public List<EzsignelementdependencyResponseCompound> getaObjEzsignelementdependency() {
+    return aObjEzsignelementdependency;
+  }
+
+
+  public void setaObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
+    this.aObjEzsignelementdependency = aObjEzsignelementdependency;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -355,12 +417,14 @@ public class EzsignformfieldResponseCompound {
         Objects.equals(this.iEzsignformfieldHeight, ezsignformfieldResponseCompound.iEzsignformfieldHeight) &&
         Objects.equals(this.bEzsignformfieldAutocomplete, ezsignformfieldResponseCompound.bEzsignformfieldAutocomplete) &&
         Objects.equals(this.bEzsignformfieldSelected, ezsignformfieldResponseCompound.bEzsignformfieldSelected) &&
-        Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue);
+        Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldResponseCompound.sEzsignformfieldEnteredvalue) &&
+        Objects.equals(this.eEzsignformfieldDependencyrequirement, ezsignformfieldResponseCompound.eEzsignformfieldDependencyrequirement) &&
+        Objects.equals(this.aObjEzsignelementdependency, ezsignformfieldResponseCompound.aObjEzsignelementdependency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue);
+    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement, aObjEzsignelementdependency);
   }
 
   @Override
@@ -378,6 +442,8 @@ public class EzsignformfieldResponseCompound {
     sb.append("    bEzsignformfieldAutocomplete: ").append(toIndentedString(bEzsignformfieldAutocomplete)).append("\n");
     sb.append("    bEzsignformfieldSelected: ").append(toIndentedString(bEzsignformfieldSelected)).append("\n");
     sb.append("    sEzsignformfieldEnteredvalue: ").append(toIndentedString(sEzsignformfieldEnteredvalue)).append("\n");
+    sb.append("    eEzsignformfieldDependencyrequirement: ").append(toIndentedString(eEzsignformfieldDependencyrequirement)).append("\n");
+    sb.append("    aObjEzsignelementdependency: ").append(toIndentedString(aObjEzsignelementdependency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -411,6 +477,8 @@ public class EzsignformfieldResponseCompound {
     openapiFields.add("bEzsignformfieldAutocomplete");
     openapiFields.add("bEzsignformfieldSelected");
     openapiFields.add("sEzsignformfieldEnteredvalue");
+    openapiFields.add("eEzsignformfieldDependencyrequirement");
+    openapiFields.add("a_objEzsignelementdependency");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -459,6 +527,20 @@ public class EzsignformfieldResponseCompound {
       }
       if ((jsonObj.get("sEzsignformfieldEnteredvalue") != null && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldEnteredvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldEnteredvalue").toString()));
+      }
+      if (jsonObj.get("a_objEzsignelementdependency") != null && !jsonObj.get("a_objEzsignelementdependency").isJsonNull()) {
+        JsonArray jsonArrayaObjEzsignelementdependency = jsonObj.getAsJsonArray("a_objEzsignelementdependency");
+        if (jsonArrayaObjEzsignelementdependency != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objEzsignelementdependency").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignelementdependency` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignelementdependency").toString()));
+          }
+
+          // validate the optional field `a_objEzsignelementdependency` (array)
+          for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
+            EzsignelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+          };
+        }
       }
   }
 

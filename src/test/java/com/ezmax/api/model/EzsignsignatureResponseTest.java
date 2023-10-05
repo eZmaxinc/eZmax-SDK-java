@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
@@ -226,6 +227,14 @@ public class EzsignsignatureResponseTest {
     @Test
     public void eEzsignsignatureTextvalidationTest() {
         // TODO: test eEzsignsignatureTextvalidation
+    }
+
+    /**
+     * Test the property 'eEzsignsignatureDependencyrequirement'
+     */
+    @Test
+    public void eEzsignsignatureDependencyrequirementTest() {
+        // TODO: test eEzsignsignatureDependencyrequirement
     }
 
     /**

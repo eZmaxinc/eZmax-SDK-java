@@ -78,7 +78,9 @@ public enum FieldEEzsigndocumentlogType {
   
   REGENERATEPAGE("RegeneratePage"),
   
-  REGENERATEPAGEFORM("RegeneratePageForm");
+  REGENERATEPAGEFORM("RegeneratePageForm"),
+  
+  REASSIGN("Reassign");
 
   private String value;
 

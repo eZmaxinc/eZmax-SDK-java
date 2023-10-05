@@ -16,8 +16,10 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.EnumTextvalidation;
+import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
@@ -233,6 +235,14 @@ public class EzsignsignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'eEzsignsignatureDependencyrequirement'
+     */
+    @Test
+    public void eEzsignsignatureDependencyrequirementTest() {
+        // TODO: test eEzsignsignatureDependencyrequirement
+    }
+
+    /**
      * Test the property 'sEzsignsignatureRegexp'
      */
     @Test
@@ -286,6 +296,14 @@ public class EzsignsignatureResponseCompoundTest {
     @Test
     public void objCreditcardtransactionTest() {
         // TODO: test objCreditcardtransaction
+    }
+
+    /**
+     * Test the property 'aObjEzsignelementdependency'
+     */
+    @Test
+    public void aObjEzsignelementdependencyTest() {
+        // TODO: test aObjEzsignelementdependency
     }
 
 }

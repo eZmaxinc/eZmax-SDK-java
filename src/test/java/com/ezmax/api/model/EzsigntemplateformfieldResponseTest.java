@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -115,6 +116,14 @@ public class EzsigntemplateformfieldResponseTest {
     @Test
     public void bEzsigntemplateformfieldSelectedTest() {
         // TODO: test bEzsigntemplateformfieldSelected
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateformfieldDependencyrequirement'
+     */
+    @Test
+    public void eEzsigntemplateformfieldDependencyrequirementTest() {
+        // TODO: test eEzsigntemplateformfieldDependencyrequirement
     }
 
 }

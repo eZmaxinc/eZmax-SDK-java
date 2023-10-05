@@ -29,6 +29,7 @@ An Ezsignsignature Object
 |**iEzsignsignatureMaxlength** | **Integer** | The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** |  [optional] |
 |**eEzsignsignatureTextvalidation** | **EnumTextvalidation** |  |  [optional] |
 |**sEzsignsignatureRegexp** | **String** | A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom** |  [optional] |
+|**eEzsignsignatureDependencyrequirement** | **FieldEEzsignsignatureDependencyrequirement** |  |  [optional] |
 
 
 

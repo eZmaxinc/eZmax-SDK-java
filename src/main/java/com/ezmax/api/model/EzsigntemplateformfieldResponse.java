@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-03T18:15:42.334779247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
 public class EzsigntemplateformfieldResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -90,6 +91,10 @@ public class EzsigntemplateformfieldResponse {
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED = "bEzsigntemplateformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED)
   private Boolean bEzsigntemplateformfieldSelected;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsigntemplateformfieldDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_DEPENDENCYREQUIREMENT)
+  private FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement;
 
   public EzsigntemplateformfieldResponse() {
   }
@@ -310,6 +315,27 @@ public class EzsigntemplateformfieldResponse {
   }
 
 
+  public EzsigntemplateformfieldResponse eEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+    return this;
+  }
+
+   /**
+   * Get eEzsigntemplateformfieldDependencyrequirement
+   * @return eEzsigntemplateformfieldDependencyrequirement
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplateformfieldDependencyrequirement geteEzsigntemplateformfieldDependencyrequirement() {
+    return eEzsigntemplateformfieldDependencyrequirement;
+  }
+
+
+  public void seteEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -329,12 +355,13 @@ public class EzsigntemplateformfieldResponse {
         Objects.equals(this.iEzsigntemplateformfieldWidth, ezsigntemplateformfieldResponse.iEzsigntemplateformfieldWidth) &&
         Objects.equals(this.iEzsigntemplateformfieldHeight, ezsigntemplateformfieldResponse.iEzsigntemplateformfieldHeight) &&
         Objects.equals(this.bEzsigntemplateformfieldAutocomplete, ezsigntemplateformfieldResponse.bEzsigntemplateformfieldAutocomplete) &&
-        Objects.equals(this.bEzsigntemplateformfieldSelected, ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected);
+        Objects.equals(this.bEzsigntemplateformfieldSelected, ezsigntemplateformfieldResponse.bEzsigntemplateformfieldSelected) &&
+        Objects.equals(this.eEzsigntemplateformfieldDependencyrequirement, ezsigntemplateformfieldResponse.eEzsigntemplateformfieldDependencyrequirement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected);
+    return Objects.hash(pkiEzsigntemplateformfieldID, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement);
   }
 
   @Override
@@ -351,6 +378,7 @@ public class EzsigntemplateformfieldResponse {
     sb.append("    iEzsigntemplateformfieldHeight: ").append(toIndentedString(iEzsigntemplateformfieldHeight)).append("\n");
     sb.append("    bEzsigntemplateformfieldAutocomplete: ").append(toIndentedString(bEzsigntemplateformfieldAutocomplete)).append("\n");
     sb.append("    bEzsigntemplateformfieldSelected: ").append(toIndentedString(bEzsigntemplateformfieldSelected)).append("\n");
+    sb.append("    eEzsigntemplateformfieldDependencyrequirement: ").append(toIndentedString(eEzsigntemplateformfieldDependencyrequirement)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -383,6 +411,7 @@ public class EzsigntemplateformfieldResponse {
     openapiFields.add("iEzsigntemplateformfieldHeight");
     openapiFields.add("bEzsigntemplateformfieldAutocomplete");
     openapiFields.add("bEzsigntemplateformfieldSelected");
+    openapiFields.add("eEzsigntemplateformfieldDependencyrequirement");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
