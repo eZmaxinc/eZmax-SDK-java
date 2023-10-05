@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/disposeEzsignfolders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T17:23:45.233900745Z[Etc/UTC]")
 public class EzsignfolderDisposeEzsignfoldersV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D = "a_pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D)

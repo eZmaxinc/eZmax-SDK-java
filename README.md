@@ -2,7 +2,7 @@
 
 eZmax API Definition (Full)
 - API version: 1.2.0
-  - Build date: 2023-10-05T13:57:46.112747798Z[Etc/UTC]
+  - Build date: 2023-10-05T17:23:45.233900745Z[Etc/UTC]
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -323,6 +323,7 @@ Class | Method | HTTP request | Description
 *ObjectFranchiseofficeApi* | [**franchiseofficeGetAutocompleteV2**](docs/ObjectFranchiseofficeApi.md#franchiseofficeGetAutocompleteV2) | **GET** /2/object/franchiseoffice/getAutocomplete/{sSelector} | Retrieve Franchiseoffices and IDs
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV1**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV1) | **POST** /1/object/franchisereferalincome | Create a new Franchisereferalincome
 *ObjectFranchisereferalincomeApi* | [**franchisereferalincomeCreateObjectV2**](docs/ObjectFranchisereferalincomeApi.md#franchisereferalincomeCreateObjectV2) | **POST** /2/object/franchisereferalincome | Create a new Franchisereferalincome
+*ObjectLanguageApi* | [**languageGetAutocompleteV2**](docs/ObjectLanguageApi.md#languageGetAutocompleteV2) | **GET** /2/object/language/getAutocomplete/{sSelector} | Retrieve Languages and IDs
 *ObjectModulegroupApi* | [**modulegroupGetAllV1**](docs/ObjectModulegroupApi.md#modulegroupGetAllV1) | **GET** /1/object/modulegroup/getAll/{eContext} | Retrieve all Modulegroups
 *ObjectNotificationsectionApi* | [**notificationsectionGetNotificationtestsV1**](docs/ObjectNotificationsectionApi.md#notificationsectionGetNotificationtestsV1) | **GET** /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests | Retrieve an existing Notificationsection&#39;s Notificationtests
 *ObjectNotificationtestApi* | [**notificationtestGetElementsV1**](docs/ObjectNotificationtestApi.md#notificationtestGetElementsV1) | **GET** /1/object/notificationtest/{pkiNotificationtestID}/getElements | Retrieve an existing Notificationtest&#39;s Elements
@@ -1197,6 +1198,9 @@ Class | Method | HTTP request | Description
  - [GlobalEzmaxclientVersionV1Response](docs/GlobalEzmaxclientVersionV1Response.md)
  - [GlobalEzmaxcustomerGetConfigurationV1Response](docs/GlobalEzmaxcustomerGetConfigurationV1Response.md)
  - [HeaderAcceptLanguage](docs/HeaderAcceptLanguage.md)
+ - [LanguageAutocompleteElementResponse](docs/LanguageAutocompleteElementResponse.md)
+ - [LanguageGetAutocompleteV2Response](docs/LanguageGetAutocompleteV2Response.md)
+ - [LanguageGetAutocompleteV2ResponseMPayload](docs/LanguageGetAutocompleteV2ResponseMPayload.md)
  - [ModuleResponse](docs/ModuleResponse.md)
  - [ModuleResponseCompound](docs/ModuleResponseCompound.md)
  - [ModulegroupGetAllV1Response](docs/ModulegroupGetAllV1Response.md)

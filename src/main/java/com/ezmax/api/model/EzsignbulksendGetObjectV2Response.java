@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T17:23:45.233900745Z[Etc/UTC]")
 public class EzsignbulksendGetObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

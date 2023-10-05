@@ -791,6 +791,9 @@ docs/GlobalEzmaxclientVersionV1Response.md
 docs/GlobalEzmaxcustomerApi.md
 docs/GlobalEzmaxcustomerGetConfigurationV1Response.md
 docs/HeaderAcceptLanguage.md
+docs/LanguageAutocompleteElementResponse.md
+docs/LanguageGetAutocompleteV2Response.md
+docs/LanguageGetAutocompleteV2ResponseMPayload.md
 docs/ModuleEzsignApi.md
 docs/ModuleReportApi.md
 docs/ModuleResponse.md
@@ -861,6 +864,7 @@ docs/ObjectFontApi.md
 docs/ObjectFranchisebrokerApi.md
 docs/ObjectFranchiseofficeApi.md
 docs/ObjectFranchisereferalincomeApi.md
+docs/ObjectLanguageApi.md
 docs/ObjectModulegroupApi.md
 docs/ObjectNotificationsectionApi.md
 docs/ObjectNotificationtestApi.md
@@ -1195,6 +1199,7 @@ src/main/java/com/ezmax/api/ObjectFontApi.java
 src/main/java/com/ezmax/api/ObjectFranchisebrokerApi.java
 src/main/java/com/ezmax/api/ObjectFranchiseofficeApi.java
 src/main/java/com/ezmax/api/ObjectFranchisereferalincomeApi.java
+src/main/java/com/ezmax/api/ObjectLanguageApi.java
 src/main/java/com/ezmax/api/ObjectModulegroupApi.java
 src/main/java/com/ezmax/api/ObjectNotificationsectionApi.java
 src/main/java/com/ezmax/api/ObjectNotificationtestApi.java
@@ -2003,6 +2008,9 @@ src/main/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1Response.java
 src/main/java/com/ezmax/api/model/GlobalEzmaxclientVersionV1Response.java
 src/main/java/com/ezmax/api/model/GlobalEzmaxcustomerGetConfigurationV1Response.java
 src/main/java/com/ezmax/api/model/HeaderAcceptLanguage.java
+src/main/java/com/ezmax/api/model/LanguageAutocompleteElementResponse.java
+src/main/java/com/ezmax/api/model/LanguageGetAutocompleteV2Response.java
+src/main/java/com/ezmax/api/model/LanguageGetAutocompleteV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/ModuleResponse.java
 src/main/java/com/ezmax/api/model/ModuleResponseCompound.java
 src/main/java/com/ezmax/api/model/ModulegroupGetAllV1Response.java
@@ -2347,6 +2355,7 @@ src/test/java/com/ezmax/api/ObjectFontApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchisebrokerApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchiseofficeApiTest.java
 src/test/java/com/ezmax/api/ObjectFranchisereferalincomeApiTest.java
+src/test/java/com/ezmax/api/ObjectLanguageApiTest.java
 src/test/java/com/ezmax/api/ObjectModulegroupApiTest.java
 src/test/java/com/ezmax/api/ObjectNotificationsectionApiTest.java
 src/test/java/com/ezmax/api/ObjectNotificationtestApiTest.java
@@ -3154,6 +3163,9 @@ src/test/java/com/ezmax/api/model/GlobalCustomerGetEndpointV1ResponseTest.java
 src/test/java/com/ezmax/api/model/GlobalEzmaxclientVersionV1ResponseTest.java
 src/test/java/com/ezmax/api/model/GlobalEzmaxcustomerGetConfigurationV1ResponseTest.java
 src/test/java/com/ezmax/api/model/HeaderAcceptLanguageTest.java
+src/test/java/com/ezmax/api/model/LanguageAutocompleteElementResponseTest.java
+src/test/java/com/ezmax/api/model/LanguageGetAutocompleteV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/LanguageGetAutocompleteV2ResponseTest.java
 src/test/java/com/ezmax/api/model/ModuleResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/ModuleResponseTest.java
 src/test/java/com/ezmax/api/model/ModulegroupGetAllV1ResponseMPayloadTest.java

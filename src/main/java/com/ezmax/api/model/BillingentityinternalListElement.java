@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T17:23:45.233900745Z[Etc/UTC]")
 public class BillingentityinternalListElement {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)

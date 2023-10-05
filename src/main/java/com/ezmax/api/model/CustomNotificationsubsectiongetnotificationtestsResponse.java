@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T13:57:46.112747798Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-05T17:23:45.233900745Z[Etc/UTC]")
 public class CustomNotificationsubsectiongetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
