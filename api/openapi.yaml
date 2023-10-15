@@ -946,6 +946,9 @@ tags:
 - description: Usergroupmembership contains details about Usergroupmemberships
   name: Object_Usergroupmembership
   x-displayName: Usergroupmembership
+- description: Userlogintype contains details about Userlogintypes
+  name: Object_Userlogintype
+  x-displayName: Userlogintype
 - description: Userstaged contains details about Userstageds
   name: Object_Userstaged
   x-displayName: Userstaged
@@ -9934,6 +9937,7 @@ paths:
         required: true
         schema:
           enum:
+          - All
           - User
           - Usergroup
           type: string
@@ -10356,7 +10360,8 @@ paths:
       summary: Retrieve Languages and IDs
       tags:
       - Object_Language
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-accepts: application/json
   /1/object/modulegroup/getAll/{eContext}:
@@ -12213,14 +12218,12 @@ paths:
         required: true
         schema:
           enum:
-          - All
           - AgentBrokerEmployeeEzsignUserNormal
           - AgentBrokerEmployeeNormalBuiltIn
           - AgentBrokerEzsignuserNormal
           - ClonableUsers
           - EzsignuserBuiltIn
           - Normal
-          - NormalEzsignSigner
           - UsergroupDelegated
           type: string
         style: simple
@@ -13182,6 +13185,67 @@ paths:
       - Management_UsergroupDelegated
       x-usertypeextra: []
       x-content-type: application/json
+      x-accepts: application/json
+  /2/object/userlogintype/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Userlogintype to be used in a dropdown or autocomplete
+        control.
+      operationId: Userlogintype_GetAutocomplete_V2
+      parameters:
+      - description: The type of Userlogintypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: '#/components/schemas/Header-Accept-Language'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/userlogintype-getAutocomplete-v2-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Userlogintypes and IDs
+      tags:
+      - Object_Userlogintype
+      x-permissions:
+      - All
+      x-usertypeextra: []
       x-accepts: application/json
   /2/object/userstaged/{pkiUserstagedID}:
     description: ""
@@ -14629,6 +14693,7 @@ components:
       example: "{\"ID\": 1234, \"TAGS\": [\"tag1\", \"tag2\", \"tag3\"]}"
       pattern: "^.{0,64}$"
       type: string
+      x-ms-visibility: advanced
     Common-Format-IP:
       description: Represent an IP address.
       example: 127.0.0.1
@@ -16503,6 +16568,10 @@ components:
       description: Whether the Usergroup is active or not
       example: true
       type: boolean
+    Field-bUserlogintypeIsactive:
+      description: Whether the Userlogintype is active or not
+      example: true
+      type: boolean
     Field-bVariableexpenseIsactive:
       description: Whether the variableexpense is active or not
       example: true
@@ -17046,6 +17115,8 @@ components:
       - Sendcode
       - Badcode
       - Goodcode
+      - Badresponse
+      - Goodresponse
       - Authentication
       - Createpage
       - Download
@@ -17065,6 +17136,8 @@ components:
       - SignatureAttachmentDeleted
       - DeclinedToSign
       - DelayedSendEmail
+      - AnnotationAdded
+      - Flatten
       - RegeneratePage
       - RegeneratePageForm
       - Reassign
@@ -24730,11 +24803,13 @@ components:
           description: 'Try to repair the document or flatten it if it cannot be used
             for electronic signature. '
           type: boolean
+          x-ms-visibility: advanced
         sEzsigndocumentPassword:
           description: "If the source document is password protected, the password\
             \ to open/modify it."
           example: SecretPassword123
           type: string
+          x-ms-visibility: advanced
         eEzsigndocumentForm:
           description: "If the document contains an existing PDF form this property\
             \ must be set.\r\n**Keep** leaves the form as-is in the document.\r\n\
@@ -24744,6 +24819,7 @@ components:
           - Keep
           - Convert
           type: string
+          x-ms-visibility: advanced
         dtEzsigndocumentDuedate:
           description: The maximum date and time at which the Ezsigndocument can be
             signed.
@@ -24764,6 +24840,7 @@ components:
           example: "{\"ID\": 1234, \"TAGS\": [\"tag1\", \"tag2\", \"tag3\"]}"
           pattern: "^.{0,64}$"
           type: string
+          x-ms-visibility: advanced
       required:
       - dtEzsigndocumentDuedate
       - eEzsigndocumentSource
@@ -24903,6 +24980,7 @@ components:
           example: "{\"ID\": 1234, \"TAGS\": [\"tag1\", \"tag2\", \"tag3\"]}"
           pattern: "^.{0,64}$"
           type: string
+          x-ms-visibility: advanced
       required:
       - dtEzsigndocumentDuedate
       - eEzsigndocumentStep
@@ -25794,6 +25872,7 @@ components:
           example: "{\"ID\": 1234, \"TAGS\": [\"tag1\", \"tag2\", \"tag3\"]}"
           pattern: "^.{0,64}$"
           type: string
+          x-ms-visibility: advanced
       required:
       - eEzsignfolderSendreminderfrequency
       - fkiEzsignfoldertypeID
@@ -25924,6 +26003,7 @@ components:
           example: "{\"ID\": 1234, \"TAGS\": [\"tag1\", \"tag2\", \"tag3\"]}"
           pattern: "^.{0,64}$"
           type: string
+          x-ms-visibility: advanced
       required:
       - pkiEzsignfolderID
       - sEzsignfolderDescription
@@ -35949,6 +36029,61 @@ components:
       required:
       - objUsergroupmembership
       type: object
+    userlogintype-AutocompleteElement-Response:
+      description: A Userlogintype AutocompleteElement Response
+      properties:
+        pkiUserlogintypeID:
+          description: |-
+            The unique ID of the Userlogintype
+
+            Valid values:
+
+            |Value|Description|Detail|
+            |-|-|-|
+            |1|**Email Only**|The Ezsignsigner will receive a secure link by email|
+            |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**|
+            |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer|
+            |4|**In person only**|The Ezsignsigner will only be able to sign "In-Person" and there won't be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type|
+            |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign "In-Person" and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|
+          example: 2
+          minimum: 0
+          type: integer
+        sUserlogintypeDescriptionX:
+          description: The description of the Userlogintype in the language of the
+            requester
+          example: Email and phone or SMS
+          type: string
+        bUserlogintypeIsactive:
+          description: Whether the Userlogintype is active or not
+          example: true
+          type: boolean
+      required:
+      - bUserlogintypeIsactive
+      - pkiUserlogintypeID
+      - sUserlogintypeDescriptionX
+      type: object
+    userlogintype-getAutocomplete-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/userlogintype-getAutocomplete-v2-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for GET /2/object/userlogintype/getAutocomplete
+      type: object
+    userlogintype-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/userlogintype/getAutocomplete
+      properties:
+        a_objUserlogintype:
+          description: An array of Userlogintype autocomplete element response.
+          items:
+            $ref: '#/components/schemas/userlogintype-AutocompleteElement-Response'
+          type: array
+      required:
+      - a_objUserlogintype
+      type: object
     userstaged-ListElement:
       description: A Userstaged List Element
       properties:
@@ -37136,6 +37271,7 @@ x-tagGroups:
   - Object_Usergroup
   - Object_Usergroupdelegation
   - Object_Usergroupmembership
+  - Object_Userlogintype
   - Object_Userstaged
   - Object_Variableexpense
   - Object_Versionhistory

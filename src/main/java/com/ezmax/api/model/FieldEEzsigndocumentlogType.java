@@ -38,6 +38,10 @@ public enum FieldEEzsigndocumentlogType {
   
   GOODCODE("Goodcode"),
   
+  BADRESPONSE("Badresponse"),
+  
+  GOODRESPONSE("Goodresponse"),
+  
   AUTHENTICATION("Authentication"),
   
   CREATEPAGE("Createpage"),
@@ -75,6 +79,10 @@ public enum FieldEEzsigndocumentlogType {
   DECLINEDTOSIGN("DeclinedToSign"),
   
   DELAYEDSENDEMAIL("DelayedSendEmail"),
+  
+  ANNOTATIONADDED("AnnotationAdded"),
+  
+  FLATTEN("Flatten"),
   
   REGENERATEPAGE("RegeneratePage"),
   

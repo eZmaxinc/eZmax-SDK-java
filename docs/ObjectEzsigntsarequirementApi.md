@@ -37,7 +37,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsigntsarequirementApi apiInstance = new ObjectEzsigntsarequirementApi(defaultClient);
-    String sSelector = "User"; // String | The type of Ezsigntsarequirements to return
+    String sSelector = "All"; // String | The type of Ezsigntsarequirements to return
     Integer fkiEzsignfoldertypeID = 56; // Integer | 
     String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
@@ -60,7 +60,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Ezsigntsarequirements to return | [enum: User, Usergroup] |
+| **sSelector** | **String**| The type of Ezsigntsarequirements to return | [enum: All, User, Usergroup] |
 | **fkiEzsignfoldertypeID** | **Integer**|  | [optional] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |

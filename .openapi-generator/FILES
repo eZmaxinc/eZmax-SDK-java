@@ -883,6 +883,7 @@ docs/ObjectUserApi.md
 docs/ObjectUsergroupApi.md
 docs/ObjectUsergroupdelegationApi.md
 docs/ObjectUsergroupmembershipApi.md
+docs/ObjectUserlogintypeApi.md
 docs/ObjectUserstagedApi.md
 docs/ObjectVariableexpenseApi.md
 docs/ObjectVersionhistoryApi.md
@@ -1078,6 +1079,9 @@ docs/UsergroupmembershipRequest.md
 docs/UsergroupmembershipRequestCompound.md
 docs/UsergroupmembershipResponse.md
 docs/UsergroupmembershipResponseCompound.md
+docs/UserlogintypeAutocompleteElementResponse.md
+docs/UserlogintypeGetAutocompleteV2Response.md
+docs/UserlogintypeGetAutocompleteV2ResponseMPayload.md
 docs/UserstagedCreateUserV1Response.md
 docs/UserstagedCreateUserV1ResponseMPayload.md
 docs/UserstagedDeleteObjectV1Response.md
@@ -1218,6 +1222,7 @@ src/main/java/com/ezmax/api/ObjectUserApi.java
 src/main/java/com/ezmax/api/ObjectUsergroupApi.java
 src/main/java/com/ezmax/api/ObjectUsergroupdelegationApi.java
 src/main/java/com/ezmax/api/ObjectUsergroupmembershipApi.java
+src/main/java/com/ezmax/api/ObjectUserlogintypeApi.java
 src/main/java/com/ezmax/api/ObjectUserstagedApi.java
 src/main/java/com/ezmax/api/ObjectVariableexpenseApi.java
 src/main/java/com/ezmax/api/ObjectVersionhistoryApi.java
@@ -2226,6 +2231,9 @@ src/main/java/com/ezmax/api/model/UsergroupmembershipRequest.java
 src/main/java/com/ezmax/api/model/UsergroupmembershipRequestCompound.java
 src/main/java/com/ezmax/api/model/UsergroupmembershipResponse.java
 src/main/java/com/ezmax/api/model/UsergroupmembershipResponseCompound.java
+src/main/java/com/ezmax/api/model/UserlogintypeAutocompleteElementResponse.java
+src/main/java/com/ezmax/api/model/UserlogintypeGetAutocompleteV2Response.java
+src/main/java/com/ezmax/api/model/UserlogintypeGetAutocompleteV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/UserstagedCreateUserV1Response.java
 src/main/java/com/ezmax/api/model/UserstagedCreateUserV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/UserstagedDeleteObjectV1Response.java
@@ -2374,6 +2382,7 @@ src/test/java/com/ezmax/api/ObjectUserApiTest.java
 src/test/java/com/ezmax/api/ObjectUsergroupApiTest.java
 src/test/java/com/ezmax/api/ObjectUsergroupdelegationApiTest.java
 src/test/java/com/ezmax/api/ObjectUsergroupmembershipApiTest.java
+src/test/java/com/ezmax/api/ObjectUserlogintypeApiTest.java
 src/test/java/com/ezmax/api/ObjectUserstagedApiTest.java
 src/test/java/com/ezmax/api/ObjectVariableexpenseApiTest.java
 src/test/java/com/ezmax/api/ObjectVersionhistoryApiTest.java
@@ -3381,6 +3390,9 @@ src/test/java/com/ezmax/api/model/UsergroupmembershipRequestCompoundTest.java
 src/test/java/com/ezmax/api/model/UsergroupmembershipRequestTest.java
 src/test/java/com/ezmax/api/model/UsergroupmembershipResponseCompoundTest.java
 src/test/java/com/ezmax/api/model/UsergroupmembershipResponseTest.java
+src/test/java/com/ezmax/api/model/UserlogintypeAutocompleteElementResponseTest.java
+src/test/java/com/ezmax/api/model/UserlogintypeGetAutocompleteV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/UserlogintypeGetAutocompleteV2ResponseTest.java
 src/test/java/com/ezmax/api/model/UserstagedCreateUserV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/UserstagedCreateUserV1ResponseTest.java
 src/test/java/com/ezmax/api/model/UserstagedDeleteObjectV1ResponseTest.java
