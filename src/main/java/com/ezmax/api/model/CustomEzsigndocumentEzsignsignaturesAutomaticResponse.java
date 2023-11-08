@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)

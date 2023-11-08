@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)

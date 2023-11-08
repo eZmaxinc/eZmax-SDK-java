@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class WebhookResponseCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -305,7 +305,7 @@ public class WebhookResponseCompound {
    * Whether the Webhook is active or not
    * @return bWebhookIsactive
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
   }
@@ -445,6 +445,7 @@ public class WebhookResponseCompound {
     openapiRequiredFields.add("eWebhookModule");
     openapiRequiredFields.add("sWebhookUrl");
     openapiRequiredFields.add("sWebhookEmailfailed");
+    openapiRequiredFields.add("bWebhookIsactive");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
   }
 

@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class EzsignfoldertypeResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)

@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The type for the Communicationrecipient
+ * The type for the Communicationrecipient.  Only used when eCommunicationType is **Email**
  */
 @JsonAdapter(FieldECommunicationrecipientType.Adapter.class)
 public enum FieldECommunicationrecipientType {

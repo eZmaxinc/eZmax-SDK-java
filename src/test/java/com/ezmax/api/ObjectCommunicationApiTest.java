@@ -14,8 +14,8 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.CommunicationGetObjectV2Response;
+import com.ezmax.api.model.CommunicationSendV1Request;
+import com.ezmax.api.model.CommunicationSendV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,16 +33,16 @@ public class ObjectCommunicationApiTest {
     private final ObjectCommunicationApi api = new ObjectCommunicationApi();
 
     /**
-     * Retrieve an existing Communication
+     * Send a new Communication
      *
-     * 
+     * The endpoint allows to send one or many elements at once.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void communicationGetObjectV2Test() throws ApiException {
-        Integer pkiCommunicationID = null;
-        CommunicationGetObjectV2Response response = api.communicationGetObjectV2(pkiCommunicationID);
+    public void communicationSendV1Test() throws ApiException {
+        CommunicationSendV1Request communicationSendV1Request = null;
+        CommunicationSendV1Response response = api.communicationSendV1(communicationSendV1Request);
         // TODO: test validations
     }
 

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryglobalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)

@@ -897,7 +897,7 @@ public class ObjectUserApi {
     /**
      * Build call for userGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -986,7 +986,7 @@ public class ObjectUserApi {
      * Retrieve User list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -1008,7 +1008,7 @@ public class ObjectUserApi {
      * Retrieve User list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -1031,7 +1031,7 @@ public class ObjectUserApi {
      * Retrieve User list (asynchronously)
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eUserType | AgentBroker&lt;br&gt;Assistant&lt;br&gt;Employee&lt;br&gt;EzsignUser&lt;br&gt;Normal | | eUserOrigin | BuiltIn&lt;br&gt;External | | eUserEzsignaccess | No&lt;br&gt;PaidByOffice&lt;br&gt;PerDocument&lt;br&gt;Prepaid |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)

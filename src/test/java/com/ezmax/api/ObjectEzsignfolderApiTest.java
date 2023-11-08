@@ -30,6 +30,8 @@ import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationListV1Response;
+import com.ezmax.api.model.EzsignfolderGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.EzsignfolderGetCommunicationsendersV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsigndocumentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderGetEzsignsignaturesAutomaticV1Response;
@@ -223,6 +225,34 @@ public class ObjectEzsignfolderApiTest {
     }
 
     /**
+     * Retrieve Ezsignfolder&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetCommunicationrecipientsV1Response response = api.ezsignfolderGetCommunicationrecipientsV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Ezsignfolder&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetCommunicationsendersV1Response response = api.ezsignfolderGetCommunicationsendersV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve an existing Ezsignfolder&#39;s Ezsigndocuments
      *
      * 
@@ -281,7 +311,7 @@ public class ObjectEzsignfolderApiTest {
     /**
      * Retrieve Ezsignfolder list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
      *
      * @throws ApiException if the Api call fails
      */

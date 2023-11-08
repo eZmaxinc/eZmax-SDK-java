@@ -484,7 +484,7 @@ public class Example {
 
     ObjectUsergroupApi apiInstance = new ObjectUsergroupApi(defaultClient);
     String eOrderBy = "pkiUsergroupID_ASC"; // String | Specify how you want the results to be sorted
-    Integer iRowMax = 10000; // Integer | 
+    Integer iRowMax = 56; // Integer | 
     Integer iRowOffset = 0; // Integer | 
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     String sFilter = "sFilter_example"; // String | 
@@ -507,7 +507,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiUsergroupID_ASC, pkiUsergroupID_DESC, sUsergroupNameX_ASC, sUsergroupNameX_DESC, iCountUser_ASC, iCountUser_DESC] |
-| **iRowMax** | **Integer**|  | [optional] [default to 10000] |
+| **iRowMax** | **Integer**|  | [optional] |
 | **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 | **sFilter** | **String**|  | [optional] |

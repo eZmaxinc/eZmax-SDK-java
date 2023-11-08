@@ -2,7 +2,7 @@
 
 # EzsignfolderSendV1Response
 
-Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+Response for GET /1/object/attachment/{pkiAttachmentID}/download
 
 ## Properties
 

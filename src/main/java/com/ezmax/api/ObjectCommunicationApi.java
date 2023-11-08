@@ -27,8 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.CommunicationGetObjectV2Response;
+import com.ezmax.api.model.CommunicationSendV1Request;
+import com.ezmax.api.model.CommunicationSendV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -74,19 +74,18 @@ public class ObjectCommunicationApi {
     }
 
     /**
-     * Build call for communicationGetObjectV2
-     * @param pkiCommunicationID  (required)
+     * Build call for communicationSendV1
+     * @param communicationSendV1Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call communicationGetObjectV2Call(Integer pkiCommunicationID, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call communicationSendV1Call(CommunicationSendV1Request communicationSendV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -100,11 +99,10 @@ public class ObjectCommunicationApi {
             basePath = null;
         }
 
-        Object localVarPostBody = null;
+        Object localVarPostBody = communicationSendV1Request;
 
         // create path and map variables
-        String localVarPath = "/2/object/communication/{pkiCommunicationID}"
-            .replace("{" + "pkiCommunicationID" + "}", localVarApiClient.escapeString(pkiCommunicationID.toString()));
+        String localVarPath = "/1/object/communication/send";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -121,6 +119,7 @@ public class ObjectCommunicationApi {
         }
 
         final String[] localVarContentTypes = {
+            "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -128,75 +127,72 @@ public class ObjectCommunicationApi {
         }
 
         String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call communicationGetObjectV2ValidateBeforeCall(Integer pkiCommunicationID, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'pkiCommunicationID' is set
-        if (pkiCommunicationID == null) {
-            throw new ApiException("Missing the required parameter 'pkiCommunicationID' when calling communicationGetObjectV2(Async)");
+    private okhttp3.Call communicationSendV1ValidateBeforeCall(CommunicationSendV1Request communicationSendV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'communicationSendV1Request' is set
+        if (communicationSendV1Request == null) {
+            throw new ApiException("Missing the required parameter 'communicationSendV1Request' when calling communicationSendV1(Async)");
         }
 
-        return communicationGetObjectV2Call(pkiCommunicationID, _callback);
+        return communicationSendV1Call(communicationSendV1Request, _callback);
 
     }
 
     /**
-     * Retrieve an existing Communication
-     * 
-     * @param pkiCommunicationID  (required)
-     * @return CommunicationGetObjectV2Response
+     * Send a new Communication
+     * The endpoint allows to send one or many elements at once.
+     * @param communicationSendV1Request  (required)
+     * @return CommunicationSendV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public CommunicationGetObjectV2Response communicationGetObjectV2(Integer pkiCommunicationID) throws ApiException {
-        ApiResponse<CommunicationGetObjectV2Response> localVarResp = communicationGetObjectV2WithHttpInfo(pkiCommunicationID);
+    public CommunicationSendV1Response communicationSendV1(CommunicationSendV1Request communicationSendV1Request) throws ApiException {
+        ApiResponse<CommunicationSendV1Response> localVarResp = communicationSendV1WithHttpInfo(communicationSendV1Request);
         return localVarResp.getData();
     }
 
     /**
-     * Retrieve an existing Communication
-     * 
-     * @param pkiCommunicationID  (required)
-     * @return ApiResponse&lt;CommunicationGetObjectV2Response&gt;
+     * Send a new Communication
+     * The endpoint allows to send one or many elements at once.
+     * @param communicationSendV1Request  (required)
+     * @return ApiResponse&lt;CommunicationSendV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommunicationGetObjectV2Response> communicationGetObjectV2WithHttpInfo(Integer pkiCommunicationID) throws ApiException {
-        okhttp3.Call localVarCall = communicationGetObjectV2ValidateBeforeCall(pkiCommunicationID, null);
-        Type localVarReturnType = new TypeToken<CommunicationGetObjectV2Response>(){}.getType();
+    public ApiResponse<CommunicationSendV1Response> communicationSendV1WithHttpInfo(CommunicationSendV1Request communicationSendV1Request) throws ApiException {
+        okhttp3.Call localVarCall = communicationSendV1ValidateBeforeCall(communicationSendV1Request, null);
+        Type localVarReturnType = new TypeToken<CommunicationSendV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Retrieve an existing Communication (asynchronously)
-     * 
-     * @param pkiCommunicationID  (required)
+     * Send a new Communication (asynchronously)
+     * The endpoint allows to send one or many elements at once.
+     * @param communicationSendV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call communicationGetObjectV2Async(Integer pkiCommunicationID, final ApiCallback<CommunicationGetObjectV2Response> _callback) throws ApiException {
+    public okhttp3.Call communicationSendV1Async(CommunicationSendV1Request communicationSendV1Request, final ApiCallback<CommunicationSendV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = communicationGetObjectV2ValidateBeforeCall(pkiCommunicationID, _callback);
-        Type localVarReturnType = new TypeToken<CommunicationGetObjectV2Response>(){}.getType();
+        okhttp3.Call localVarCall = communicationSendV1ValidateBeforeCall(communicationSendV1Request, _callback);
+        Type localVarReturnType = new TypeToken<CommunicationSendV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

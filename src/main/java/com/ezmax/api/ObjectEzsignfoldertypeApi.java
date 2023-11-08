@@ -652,7 +652,7 @@ public class ObjectEzsignfoldertypeApi {
     /**
      * Build call for ezsignfoldertypeGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -741,7 +741,7 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertype list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -763,7 +763,7 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertype list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -786,7 +786,7 @@ public class ObjectEzsignfoldertypeApi {
      * Retrieve Ezsignfoldertype list (asynchronously)
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)

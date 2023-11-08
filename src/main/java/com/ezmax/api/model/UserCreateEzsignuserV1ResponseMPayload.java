@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/module/user/createEzsignuser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class UserCreateEzsignuserV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS = "a_sEmailAddressSuccess";
   @SerializedName(SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS)

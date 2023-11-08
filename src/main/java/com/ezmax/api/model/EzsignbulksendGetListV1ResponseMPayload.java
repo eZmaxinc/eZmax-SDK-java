@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignbulksend/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class EzsignbulksendGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)

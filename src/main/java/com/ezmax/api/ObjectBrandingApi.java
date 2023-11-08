@@ -491,7 +491,7 @@ public class ObjectBrandingApi {
     /**
      * Build call for brandingGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -580,7 +580,7 @@ public class ObjectBrandingApi {
      * Retrieve Branding list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -602,7 +602,7 @@ public class ObjectBrandingApi {
      * Retrieve Branding list
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)
@@ -625,7 +625,7 @@ public class ObjectBrandingApi {
      * Retrieve Branding list (asynchronously)
      * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBrandingLogo | Default&lt;br&gt;JPEG&lt;br&gt;PNG |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
-     * @param iRowMax  (optional, default to 10000)
+     * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
      * @param acceptLanguage  (optional)
      * @param sFilter  (optional)

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/cors
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class CorsCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_CORS = "a_objCors";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CORS)

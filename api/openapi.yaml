@@ -82,9 +82,16 @@ tags:
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.2.X Releases\r\
     \n\r\n### [1.2.0] - 2023-09-24\r\n\r\n#### Added\r\n- DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
-    \n- GET /1/object/activesession/getDocumentationUrl\r\n- GET /1/object/user/{pkiUserID}/getApikeys\r\
-    \n- GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations\r\n- GET\
-    \ /2/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\n- POST /1/object/user/{pkiUserID}/sendPasswordReset\r\
+    \n- GET /1/object/activesession/getDocumentationUrl\r\n- GET /1/object/attachment/{pkiAttachmentID}/download\r\
+    \n- GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList\r\n\
+    - GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList\r\
+    \n- GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList\r\n- GET\
+    \ /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList\r\
+    \n- GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList\r\
+    \n- GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList\r\n- GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList\r\
+    \n- GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList\r\
+    \n- GET /1/object/user/{pkiUserID}/getApikeys\r\n- GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations\r\
+    \n- GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\n- POST /1/object/user/{pkiUserID}/sendPasswordReset\r\
     \n- POST /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations\r\n- POST\
     \ /1/object/usergroupdelegation\r\n- PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
     \n- Added avanced search filters sContactFirstname, sContactLastname and sEzsigndocumentName\
@@ -116,9 +123,11 @@ tags:
     \ Custom-Ezsignfoldertype-Response, ezsignfoldertype-Request and ezsignfoldertype-Response\r\
     \n- Added value AgentBrokerEzsignUserNormal for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\
     \n- Added value AllButEveryone for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\
-    \n- New 401 error code UNAUTHORIZED_REQUEST_APIKEY\r\n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED\
-    \ \r\n\r\n## Older Releases\r\nDocumentation and changelog for older releases\
-    \ can be found here\r\n- [1.1.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\r\
+    \n- Added value fkiUserID for sFilter in GET /1/object/ezsignfolder/getList\r\n\
+    - New 401 error code UNAUTHORIZED_REQUEST_APIKEY\r\n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED\
+    \ \r\n- New 422 error code UNPROCESSABLEENTITY_EZSIGNSIGNATURE_SIGNED \r\n\r\n\
+    ## Older Releases\r\nDocumentation and changelog for older releases can be found\
+    \ here\r\n- [1.1.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\r\
     \n- [1.0.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
   name: General_Changelog
   x-displayName: Changelog
@@ -343,7 +352,11 @@ tags:
     \ |\r\n| UNPROCESSABLEENTITY_DOWNLOAD_ERROR     | We cannot retrieve ressource\
     \ at supplied url                           |\r\n| UNPROCESSABLEENTITY_EZSIGNFORM_VALIDATION\
     \     | The validation of the Ezsignform returned some errors                \
-    \           |\r\n| UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED    | The Ezsignsigner\
+    \           |\r\n| UNPROCESSABLEENTITY_EZSIGNELEMENTDEPENDENCY_LOOP | We detected\
+    \ a loop in the Ezsignelementdependcy              |\r\n| UNPROCESSABLEENTITY_EZSIGNELEMENTDEPENDENCY_MISSINGEZSIGNTEMPLATESIGNERREFERENCE\
+    \ | An Ezsignelementdependency has an Ezsigntemplatesigner not assigned |\r\n\
+    | UNPROCESSABLEENTITY_EZSIGNSIGNATURE_SIGNED | The Ezsignsignature is already\
+    \ signed |\r\n| UNPROCESSABLEENTITY_EZSIGNSIGNERCONNECTED    | The Ezsignsigner\
     \ is connected                                    |\r\n| UNPROCESSABLEENTITY_NOTHINGTODO\
     \        | The request was valid, but no action was necessary                \
     \     |\r\n| UNPROCESSABLEENTITY_NOTREADY           | The element is not in a\
@@ -754,6 +767,9 @@ tags:
 - description: Apikey contains detail about an api key used to access the API
   name: Object_Apikey
   x-displayName: Apikey
+- description: Attachment contains detail about an attachment
+  name: Object_Attachment
+  x-displayName: Attachment
 - description: Billingentityexternal is used to automatically send the invoice to
     a customer's system.
   name: Object_Billingentityexternal
@@ -764,6 +780,9 @@ tags:
 - description: Branding contains detail about a company Branding
   name: Object_Branding
   x-displayName: Branding
+- description: Buyercontract contains detail about a company Buyercontract
+  name: Object_Buyercontract
+  x-displayName: Buyercontract
 - description: Clonehistory contains details about Clonehistorys
   name: Object_Clonehistory
   x-displayName: Clonehistory
@@ -779,6 +798,9 @@ tags:
 - description: Department contains detail about a Department
   name: Object_Department
   x-displayName: Department
+- description: Electronicfundstransfer contains detail about an Electronicfundstransfer
+  name: Object_Electronicfundstransfer
+  x-displayName: Electronicfundstransfer
 - description: Emailtype contains details about Emailtypes
   name: Object_Emailtype
   x-displayName: Emailtype
@@ -886,6 +908,18 @@ tags:
     franchise administration module
   name: Object_Franchisereferalincome
   x-displayName: Franchisereferalincome
+- description: Inscription contains detail about an Inscription
+  name: Object_Inscription
+  x-displayName: Inscription
+- description: Inscriptionnotauthenticated contains detail about an Inscriptionnotauthenticated
+  name: Object_Inscriptionnotauthenticated
+  x-displayName: Inscriptionnotauthenticated
+- description: Inscriptiontemp contains detail about an Inscriptiontemp
+  name: Object_Inscriptiontemp
+  x-displayName: Inscriptiontemp
+- description: Invoice contains detail about an Invoice
+  name: Object_Invoice
+  x-displayName: Invoice
 - description: Language contains details about Languages
   name: Object_Language
   x-displayName: Language
@@ -900,7 +934,10 @@ tags:
     about things to take action on
   name: Object_Notificationtest
   x-displayName: Notificationtest
-- description: Paymentterm contains detail about a payment term
+- description: Otherincome contains detail about an Otherincome
+  name: Object_Otherincome
+  x-displayName: Otherincome
+- description: Paymentterm contains detail about a Paymentterm
   name: Object_Paymentterm
   x-displayName: Paymentterm
 - description: Period contains detail about accounting periods
@@ -912,6 +949,9 @@ tags:
 - description: Phonetype contains details about Phonetypes
   name: Object_Phonetype
   x-displayName: Phonetype
+- description: Rejectedoffertopurchase contains detail about a Rejectedoffertopurchase
+  name: Object_Rejectedoffertopurchase
+  x-displayName: Rejectedoffertopurchase
 - description: Secretquestion contains detail about questions that can be asked to
     user for 2FA
   name: Object_Secretquestion
@@ -1783,6 +1823,48 @@ paths:
       - Management_APIKeyGeneration
       x-usertypeextra: []
       x-accepts: application/json
+  /1/object/attachment/{pkiAttachmentID}/download:
+    get:
+      description: "Using this endpoint, you can retrieve the content of an attachment."
+      operationId: Attachment_Download_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiAttachmentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiAttachmentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/attachment-download-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve the content
+      tags:
+      - Object_Attachment
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-accepts: application/json
   /2/object/billingentityexternal/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -2355,6 +2437,41 @@ paths:
       - Branding_CreationModification
       x-usertypeextra: []
       x-accepts: application/json
+  /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Buyercontract_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiBuyercontractID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiBuyercontractID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/buyercontract-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Buyercontract
+      x-permissions:
+      - Inscription_BuyersContracts
+      x-usertypeextra: []
+      x-accepts: application/json
   /1/object/clonehistory/getList:
     description: ""
     get:
@@ -2449,41 +2566,34 @@ paths:
       - AgentBroker
       - Assistant
       x-accepts: application/json
-  /2/object/communication/{pkiCommunicationID}:
+  /1/object/communication/send:
     description: ""
-    get:
-      description: ""
-      operationId: Communication_GetObject_V2
-      parameters:
-      - explode: false
-        in: path
-        name: pkiCommunicationID
+    post:
+      description: The endpoint allows to send one or many elements at once.
+      operationId: Communication_Send_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/communication-send-v1-Request'
         required: true
-        schema:
-          $ref: '#/components/schemas/Field-pkiCommunicationID'
-        style: simple
       responses:
-        "200":
+        "201":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/communication-getObject-v2-Response'
+                $ref: '#/components/schemas/communication-send-v1-Response'
           description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Common-Response-Error'
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body
       security:
       - Authorization: []
-      summary: Retrieve an existing Communication
+      summary: Send a new Communication
       tags:
       - Object_Communication
       x-permissions:
       - All
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
+      x-content-type: application/json
       x-accepts: application/json
   /2/object/company/getAutocomplete/{sSelector}:
     description: ""
@@ -2763,6 +2873,41 @@ paths:
       - Object_Department
       x-permissions:
       - All
+      x-usertypeextra: []
+      x-accepts: application/json
+  /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Eletronicfundstransfer_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiElectronicfundstransferID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiElectronicfundstransferID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/electronicfundstransfer-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Electronicfundstransfer
+      x-permissions:
+      - Payments_ElectronicsFundsTransfer
       x-usertypeextra: []
       x-accepts: application/json
   /2/object/emailtype/getAutocomplete/{sSelector}:
@@ -5711,6 +5856,76 @@ paths:
       - All
       x-usertypeextra: []
       x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients:
+    get:
+      description: ""
+      operationId: Ezsignfolder_getCommunicationrecipients_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getCommunicationrecipients-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfolder's Communicationrecipient
+      tags:
+      - Object_Ezsignfolder
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-accepts: application/json
+  /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders:
+    get:
+      description: ""
+      operationId: Ezsignfolder_getCommunicationsenders_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsignfolderID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsignfolder-getCommunicationsenders-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Ezsignfolder's Communicationsender
+      tags:
+      - Object_Ezsignfolder
+      x-permissions:
+      - All
+      x-usertypeextra: []
+      x-accepts: application/json
   /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsigndocuments:
     get:
       description: ""
@@ -6289,6 +6504,7 @@ paths:
 
         | Variable |
         |---|
+        | fkiUserID |
         | sContactFirstname |
         | sContactLastname |
         | sEzsigndocumentName |
@@ -10303,6 +10519,154 @@ paths:
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
+  /1/object/inscription/{pkiInscriptionID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Inscription_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiInscriptionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiInscriptionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inscription-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Inscription
+      x-permissions:
+      - Inscription_ReadOnlyMode
+      - Inscription_Inspections
+      - Inscription_Deals
+      x-usertypeextra:
+      - AgentBroker
+      x-accepts: application/json
+  /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Inscriptionnotauthenticated_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiInscriptionnotauthenticatedID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiInscriptionnotauthenticatedID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inscriptionnotauthenticated-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Inscriptionnotauthenticated
+      x-permissions:
+      - Inscription_ReadOnlyMode
+      - Inscription_Inspections
+      - Inscription_Deals
+      x-usertypeextra:
+      - AgentBroker
+      x-accepts: application/json
+  /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Inscriptiontemp_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiInscriptiontempID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiInscriptiontempID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inscriptiontemp-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Inscriptiontemp
+      x-permissions:
+      - Inscription_TemporaryListingsAccess
+      x-usertypeextra:
+      - AgentBroker
+      x-accepts: application/json
+  /1/object/invoice/{pkiInvoiceID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Invoice_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiInvoiceID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiInvoiceID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/invoice-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Invoice
+      x-permissions:
+      - Invoicing_Access
+      x-usertypeextra:
+      - AgentBroker
+      x-accepts: application/json
   /2/object/language/getAutocomplete/{sSelector}:
     description: ""
     get:
@@ -10478,6 +10842,42 @@ paths:
       x-permissions:
       - All
       x-usertypeextra: []
+      x-accepts: application/json
+  /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Otherincome_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiOtherincomeID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiOtherincomeID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/otherincome-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Otherincome
+      x-permissions:
+      - Inscription_OtherIncomeAccess
+      x-usertypeextra:
+      - AgentBroker
       x-accepts: application/json
   /1/object/paymentterm:
     description: ""
@@ -11111,6 +11511,42 @@ paths:
       - Object_Phonetype
       x-permissions:
       - All
+      x-usertypeextra:
+      - AgentBroker
+      x-accepts: application/json
+  /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList:
+    get:
+      description: ""
+      operationId: Rejectedoffertopurchase_getCommunicationList_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiRejectedoffertopurchaseID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiRejectedoffertopurchaseID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rejectedoffertopurchase-getCommunicationList-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve Communication list
+      tags:
+      - Object_Rejectedoffertopurchase
+      x-permissions:
+      - Management_RefusedPromisestoPurchase
       x-usertypeextra:
       - AgentBroker
       x-accepts: application/json
@@ -14599,7 +15035,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         sUserLastname:
           description: The last name of the user
@@ -15278,10 +15714,6 @@ components:
       description: The url of the picture used as logo in the Branding
       example: http://www.example.com/logo.jpg
       type: string
-    Computed-sCommunicationBodyurl:
-      description: The url of the body used as body in the Communication
-      example: http://www.example.com/4526.html
-      type: string
     Computed-sCommunicationRecipient:
       description: The recipients' name of the Communication
       example: Jane Doe
@@ -15368,6 +15800,7 @@ components:
         sCommunicationSubject:
           description: The subject of the Communication
           example: This is an example of subject
+          pattern: "^.{0,150}$"
           type: string
         sCommunicationSender:
           description: The sender name of the Communication
@@ -15387,6 +15820,210 @@ components:
       - sCommunicationRecipient
       - sCommunicationSender
       - sCommunicationSubject
+      type: object
+    Custom-Communicationattachment-Request:
+      description: A Custom Communicationattachment Object
+      properties:
+        objCommunicationattachment:
+          $ref: '#/components/schemas/communicationattachment-RequestCompound'
+        objCommunicationexternalattachment:
+          $ref: '#/components/schemas/Common-File'
+      type: object
+    Custom-Communicationrecipientsgroup-Response:
+      description: Generic CommunicationrecipientsGroup Response
+      properties:
+        sCommunicationrecipientsgroupLabel:
+          description: The label for the Communicationrecipientsgroup
+          type: string
+        a_objCommunicationrecipientsrecipient:
+          items:
+            $ref: '#/components/schemas/Custom-Communicationrecipientsrecipient-Response'
+          type: array
+      required:
+      - a_objCommunicationrecipientsrecipient
+      - sCommunicationrecipientsgroupLabel
+      type: object
+    Custom-Communicationrecipientsrecipient-Response:
+      description: Generic AutocompleteElement Response
+      properties:
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiContactID:
+          description: The unique ID of the Contact
+          example: 21
+          minimum: 0
+          type: integer
+        fkiCustomerID:
+          description: The unique ID of the Customer.
+          example: 18
+          minimum: 0
+          type: integer
+        fkiEmployeeID:
+          description: The unique ID of the Employee.
+          example: 31
+          minimum: 0
+          type: integer
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
+          minimum: 0
+          type: integer
+        fkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiAgentincorporationID:
+          description: The unique ID of the Agentincorporation.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiAssistantID:
+          description: The unique ID of the Assistant.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiExternalbrokerID:
+          description: The unique ID of the Externalbroker.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiEzcomagentID:
+          description: The unique ID of the Ezcomagent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiNotaryID:
+          description: The unique ID of the Notary.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiRewardmemberID:
+          description: The unique ID of the Rewardmember.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiSupplierID:
+          description: The unique ID of the Supplier.
+          example: 1
+          minimum: 0
+          type: integer
+        eCommunicationrecipientsrecipientObjecttype:
+          enum:
+          - Agent
+          - Agentincorporation
+          - Assistant
+          - Broker
+          - Contact
+          - Customer
+          - Employee
+          - Externalbroker
+          - Ezcomagent
+          - Ezcomcompany
+          - Ezsignsigner
+          - Franchiseoffice
+          - Notary
+          - Rewardmember
+          - Supplier
+          - User
+          example: User
+          type: string
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+        objEmail:
+          $ref: '#/components/schemas/email-ResponseCompound'
+        objPhoneFax:
+          $ref: '#/components/schemas/phone-ResponseCompound'
+        objPhoneSMS:
+          $ref: '#/components/schemas/phone-ResponseCompound'
+      required:
+      - eCommunicationrecipientsrecipientObjecttype
+      - objContactName
+      type: object
+    Custom-Communicationsender-Request:
+      description: A Communicationsender Object
+      properties:
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiMailboxsharedID:
+          description: The unique ID of the Mailboxshared
+          example: 47
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+      type: object
+    Custom-Communicationsender-Response:
+      description: Generic Communicationsender Response
+      properties:
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+        fkiMailboxsharedID:
+          description: The unique ID of the Mailboxshared
+          example: 47
+          maximum: 255
+          minimum: 0
+          type: integer
+        eCommunicationsenderObjecttype:
+          enum:
+          - Agent
+          - Broker
+          - User
+          - Mailboxshared
+          example: User
+          type: string
+        objContactName:
+          $ref: '#/components/schemas/Custom-ContactName-Response'
+        sEmailAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+        sPhoneE164:
+          description: A phone number in E.164 Format
+          example: +15149901516
+          pattern: "^\\+[1-9]\\d{1,14}$"
+          type: string
+      required:
+      - eCommunicationsenderObjecttype
+      - objContactName
       type: object
     Custom-ContactName-Response:
       description: A Custom ContactName Object
@@ -16943,36 +17580,21 @@ components:
       example: Email
       type: string
     Field-eCommunicationexternalrecipientType:
-      description: The type of Communicationexternalrecipient
+      description: |-
+        The type of Communicationexternalrecipient.
+
+        Only used when eCommunicationType is **Email**
       enum:
       - To
       - Cc
       - Bcc
       example: To
       type: string
-    Field-eCommunicationrecipientObjecttype:
-      description: The object type for the Communicationrecipient
-      enum:
-      - Agent
-      - Agentincorporation
-      - Assistant
-      - Broker
-      - Contact
-      - Customer
-      - Employee
-      - Externalbroker
-      - Ezcomagent
-      - Ezcomcompany
-      - Ezsignsigner
-      - Franchiseoffice
-      - Notary
-      - Rewardmember
-      - Supplier
-      - User
-      example: User
-      type: string
     Field-eCommunicationrecipientType:
-      description: The type for the Communicationrecipient
+      description: |-
+        The type for the Communicationrecipient.
+
+        Only used when eCommunicationType is **Email**
       enum:
       - To
       - Cc
@@ -18182,8 +18804,12 @@ components:
       example: "1516"
       type: string
     Field-iRowMax:
-      default: 10000
-      description: The maximum numbers of results to be returned
+      description: |-
+        The maximum numbers of results to be returned.
+
+        When the content-type is **application/json** there is an implicit default of 10 000.
+
+        When it's **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
       example: 100
       maximum: 10000
       minimum: 1
@@ -18309,6 +18935,12 @@ components:
       example: 26
       minimum: 0
       type: integer
+    Field-pkiBuyercontractID:
+      description: The unique ID of the Buyercontract
+      example: 38
+      maximum: 65535
+      minimum: 1
+      type: integer
     Field-pkiClonehistoryID:
       description: The unique ID of the Clonehistory
       example: 12
@@ -18331,6 +18963,12 @@ components:
     Field-pkiCommunicationrecipientID:
       description: The unique ID of the Communicationrecipient.
       example: 1
+      minimum: 0
+      type: integer
+    Field-pkiCommunicationreferenceID:
+      description: The unique ID of the Communicationreference
+      example: 1263
+      maximum: 4294967295
       minimum: 0
       type: integer
     Field-pkiCompanyID:
@@ -18394,21 +19032,17 @@ components:
       example: 21
       minimum: 0
       type: integer
-    Field-pkiDescriptionstaticID:
-      description: The unique ID of the Descriptionstatic
-      example: 37
-      minimum: 0
+    Field-pkiElectronicfundstransferID:
+      description: The unique ID of the Electronicfundstransfer
+      example: 1262
+      maximum: 65535
+      minimum: 1
       type: integer
     Field-pkiEmailID:
       description: The unique ID of the Email
       example: 22
       maximum: 16777215
       minimum: 1
-      type: integer
-    Field-pkiEmailstaticID:
-      description: The unique ID of the Emailstatic
-      example: 99
-      minimum: 0
       type: integer
     Field-pkiEmailtypeID:
       description: |-
@@ -18722,6 +19356,22 @@ components:
       example: 51
       minimum: 0
       type: integer
+    Field-pkiInscriptionID:
+      description: The unique ID of the Inscription.
+      example: 17
+      minimum: 0
+      type: integer
+    Field-pkiInscriptionnotauthenticatedID:
+      description: The unique ID of the Inscriptionnotauthenticated.
+      example: 24
+      minimum: 0
+      type: integer
+    Field-pkiInscriptiontempID:
+      description: The unique ID of the Inscriptiontemp
+      example: 2445
+      maximum: 16777215
+      minimum: 1
+      type: integer
     Field-pkiInvoiceID:
       description: The unique ID of the Invoice.
       example: 1
@@ -18740,6 +19390,12 @@ components:
       example: 2
       maximum: 2
       minimum: 1
+      type: integer
+    Field-pkiMailboxsharedID:
+      description: The unique ID of the Mailboxshared
+      example: 47
+      maximum: 255
+      minimum: 0
       type: integer
     Field-pkiModuleID:
       description: The unique ID of the Module
@@ -18777,6 +19433,12 @@ components:
       example: 14
       minimum: 0
       type: integer
+    Field-pkiOtherincomeID:
+      description: The unique ID of the Otherincome
+      example: 142
+      maximum: 65535
+      minimum: 1
+      type: integer
     Field-pkiPaymenttermID:
       description: The unique ID of the Paymentterm
       example: 46
@@ -18793,11 +19455,6 @@ components:
       minimum: 0
       type: integer
     Field-pkiPhoneID:
-      description: The unique ID of the Phone.
-      example: 1
-      minimum: 0
-      type: integer
-    Field-pkiPhonestaticID:
       description: The unique ID of the Phone.
       example: 1
       minimum: 0
@@ -18895,6 +19552,12 @@ components:
       example: 11
       minimum: 0
       type: integer
+    Field-pkiRejectedoffertopurchaseID:
+      description: The unique ID of the Rejectedoffertopurchase
+      example: 532
+      maximum: 65535
+      minimum: 1
+      type: integer
     Field-pkiRewardmemberID:
       description: The unique ID of the Rewardmember.
       example: 1
@@ -18935,6 +19598,8 @@ components:
         |20|Favorite vacation destination|
         |21|Your boat's name|
         |22|Date of Birth (YYYY-MM-DD)|
+        |22|Secret Code|
+        |22|Your reference code|
       example: 7
       minimum: 0
       type: integer
@@ -19191,10 +19856,12 @@ components:
     Field-sCommunicationSubject:
       description: The subject of the Communication
       example: This is an example of subject
+      pattern: "^.{0,150}$"
       type: string
-    Field-sCommunicationattachmentName:
-      description: The name of the Communicationattachment
-      example: File.pdf
+    Field-sCommunicationexternalrecipientName:
+      description: The name of the Communicationexternalrecipient
+      example: John Doe
+      pattern: "^.{0,50}$"
       type: string
     Field-sCompanyNameX:
       description: The Name of the Company in the language of the requester
@@ -19236,15 +19903,7 @@ components:
       description: The Name of the Department in the language of the requester
       example: Head Office
       type: string
-    Field-sDescriptionstaticDescription:
-      description: The description of the Descriptionstatic
-      example: Static description
-      type: string
     Field-sEmailAddress:
-      description: The email address.
-      example: email@example.com
-      type: string
-    Field-sEmailstaticAddress:
       description: The email address.
       example: email@example.com
       type: string
@@ -19612,16 +20271,6 @@ components:
         The region is the "514" section in this sample phone number: (514) 990-1516 x123
       example: "514"
       type: string
-    Field-sPhonestaticE164:
-      description: A phone number in E.164 Format
-      example: +15149901516
-      pattern: "^\\+[1-9]\\d{1,14}$"
-      type: string
-    Field-sPhonestaticExtension:
-      description: The extension of the phone number.
-      example: "123"
-      pattern: ^\d$
-      type: string
     Field-sPhonetypeNameX:
       description: The name of the Phonetype in the language of the requester
       example: Office
@@ -19671,7 +20320,7 @@ components:
     Field-sUserLoginname:
       description: The login name of the User.
       example: JohnDoe
-      pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+      pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
       type: string
     Field-sUserSecretresponse:
       description: The answer to the Secretquestion
@@ -21198,6 +21847,11 @@ components:
       required:
       - objApikey
       type: object
+    attachment-download-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send"
+      type: object
     attempt-Response:
       description: An Attempt object
       example:
@@ -21962,6 +22616,29 @@ components:
       required:
       - objBranding
       type: object
+    buyercontract-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/buyercontract-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList"
+      type: object
+    buyercontract-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList"
+      type: object
     clonehistory-ListElement:
       description: A Clonehistory List Element
       properties:
@@ -21994,7 +22671,7 @@ components:
         sUserLoginnameCloning:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         sUserFirstnameCloning:
           description: The first name of the user
@@ -22007,7 +22684,7 @@ components:
         sUserLoginnameCloned:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         sUserFirstnameCloned:
           description: The first name of the user
@@ -22053,8 +22730,8 @@ components:
       - $ref: '#/components/schemas/Common-getList-v1-Response-mPayload'
       description: Payload for GET /1/object/clonehistory/getList
       type: object
-    communication-Response:
-      description: A Communication Object
+    communication-Request:
+      description: Request for POST /1/object/communication
       properties:
         pkiCommunicationID:
           description: The unique ID of the Communication.
@@ -22065,85 +22742,111 @@ components:
           $ref: '#/components/schemas/Field-eCommunicationImportance'
         eCommunicationType:
           $ref: '#/components/schemas/Field-eCommunicationType'
+        objCommunicationsender:
+          $ref: '#/components/schemas/Custom-Communicationsender-Request'
         sCommunicationSubject:
           description: The subject of the Communication
           example: This is an example of subject
+          pattern: "^.{0,150}$"
           type: string
-        sCommunicationBodyurl:
-          description: The url of the body used as body in the Communication
-          example: http://www.example.com/4526.html
+        tCommunicationBody:
+          description: The Body of the Communication
           type: string
-        eCommunicationDirection:
-          $ref: '#/components/schemas/Computed-eCommunicationDirection'
-        iCommunicationrecipientCount:
-          description: The count of Communicationrecipient
-          example: 8
-          type: integer
         bCommunicationPrivate:
           description: Whether the Communication is private or not
           example: false
           type: boolean
-        objDescriptionstaticSender:
-          $ref: '#/components/schemas/descriptionstatic-Response'
-        objEmailstaticSender:
-          $ref: '#/components/schemas/emailstatic-Response'
-        objPhonestaticSender:
-          $ref: '#/components/schemas/phonestatic-Response'
-        objAudit:
-          $ref: '#/components/schemas/Common-Audit'
+        eCommunicationAttachmenttype:
+          description: "How the attachment should be included in the email. \n\nOnly\
+            \ used if eCommunicationType is **Email**"
+          enum:
+          - Attachment
+          - Url
+          type: string
+        iCommunicationAttachmentlinkexpiration:
+          description: "The number of days before the attachment link expired. \n\n\
+            Only used if eCommunicationType is **Email** and eCommunicationattachmentType\
+            \ is **Link**"
+          maximum: 30
+          minimum: 1
+          type: integer
+        bCommunicationReadreceipt:
+          description: Whether we ask for a read receipt or not.
+          type: boolean
       required:
       - bCommunicationPrivate
-      - eCommunicationDirection
-      - eCommunicationImportance
       - eCommunicationType
-      - iCommunicationrecipientCount
-      - objAudit
-      - pkiCommunicationID
-      - sCommunicationSubject
+      - tCommunicationBody
       type: object
-    communication-ResponseCompound:
+    communication-RequestCompound:
       allOf:
-      - $ref: '#/components/schemas/communication-Response'
+      - $ref: '#/components/schemas/communication-Request'
       - properties:
           a_objCommunicationattachment:
             items:
-              $ref: '#/components/schemas/communicationattachment-ResponseCompound'
+              $ref: '#/components/schemas/Custom-Communicationattachment-Request'
+            minItems: 0
             type: array
           a_objCommunicationrecipient:
             items:
-              $ref: '#/components/schemas/communicationrecipient-ResponseCompound'
+              $ref: '#/components/schemas/communicationrecipient-RequestCompound'
+            minItems: 0
+            type: array
+          a_objCommunicationreference:
+            items:
+              $ref: '#/components/schemas/communicationreference-RequestCompound'
+            minItems: 0
             type: array
           a_objCommunicationexternalrecipient:
             items:
-              $ref: '#/components/schemas/communicationexternalrecipient-ResponseCompound'
+              $ref: '#/components/schemas/communicationexternalrecipient-RequestCompound'
+            minItems: 0
             type: array
         required:
         - a_objCommunicationattachment
         - a_objCommunicationexternalrecipient
         - a_objCommunicationrecipient
+        - a_objCommunicationreference
         type: object
-      description: A Communication Object
+      description: Request for POST /1/object/communication
       type: object
-    communication-getObject-v2-Response:
+    communication-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/communication
+      properties:
+        a_pkiCommunicationID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiCommunicationID'
+          type: array
+      required:
+      - a_pkiCommunicationID
+      type: object
+    communication-send-v1-Request:
+      description: Request for POST /1/object/communication
+      properties:
+        a_objCommunication:
+          items:
+            $ref: '#/components/schemas/communication-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objCommunication
+      type: object
+    communication-send-v1-Response:
       allOf:
       - properties:
           mPayload:
-            $ref: '#/components/schemas/communication-getObject-v2-Response-mPayload'
+            $ref: '#/components/schemas/communication-createObject-v1-Response-mPayload'
         required:
         - mPayload
         type: object
       - $ref: '#/components/schemas/Common-Response'
-      description: "Response for GET /2/object/communication/{pkiCommunicationID}"
+      description: Response for POST /1/object/communication
       type: object
-    communication-getObject-v2-Response-mPayload:
-      description: "Payload for GET /2/object/communication/{pkiCommunicationID}"
-      properties:
-        objCommunication:
-          $ref: '#/components/schemas/communication-ResponseCompound'
-      required:
-      - objCommunication
-      type: object
-    communicationattachment-Response:
+    communicationattachment-Request:
       description: A Communicationattachment Object
       properties:
         pkiCommunicationattachmentID:
@@ -22165,53 +22868,46 @@ components:
           example: 1
           minimum: 0
           type: integer
-        sCommunicationattachmentName:
-          description: The name of the Communicationattachment
-          example: File.pdf
-          type: string
-        sDownloadUrl:
-          description: |-
-            The Url to the requested document.
-
-            Url will expire after 3 hours.
-          type: string
-      required:
-      - pkiCommunicationattachmentID
-      - sCommunicationattachmentName
       type: object
-    communicationattachment-ResponseCompound:
+    communicationattachment-RequestCompound:
       allOf:
-      - $ref: '#/components/schemas/communicationattachment-Response'
+      - $ref: '#/components/schemas/communicationattachment-Request'
       - type: object
-      description: A Communicationattachment Object
+      description: A Communicationattachment Object and children
       type: object
-    communicationexternalrecipient-Response:
+    communicationexternalrecipient-Request:
       description: A Communicationexternalrecipient Object
       properties:
         pkiCommunicationexternalrecipientID:
           description: The unique ID of the Communicationexternalrecipient
           example: 9
           type: integer
+        sEmailAddress:
+          description: The email address.
+          example: email@example.com
+          type: string
+        sPhoneE164:
+          description: A phone number in E.164 Format
+          example: +15149901516
+          pattern: "^\\+[1-9]\\d{1,14}$"
+          type: string
         eCommunicationexternalrecipientType:
           $ref: '#/components/schemas/Field-eCommunicationexternalrecipientType'
-        objDescriptionstatic:
-          $ref: '#/components/schemas/descriptionstatic-ResponseCompound'
-        objEmailstatic:
-          $ref: '#/components/schemas/emailstatic-ResponseCompound'
-        objPhonestatic:
-          $ref: '#/components/schemas/phonestatic-ResponseCompound'
+        sCommunicationexternalrecipientName:
+          description: The name of the Communicationexternalrecipient
+          example: John Doe
+          pattern: "^.{0,50}$"
+          type: string
       required:
-      - eCommunicationexternalrecipientType
-      - objDescriptionstatic
-      - pkiCommunicationexternalrecipientID
+      - sCommunicationexternalrecipientName
       type: object
-    communicationexternalrecipient-ResponseCompound:
+    communicationexternalrecipient-RequestCompound:
       allOf:
-      - $ref: '#/components/schemas/communicationexternalrecipient-Response'
+      - $ref: '#/components/schemas/communicationexternalrecipient-Request'
       - type: object
-      description: A Communicationexternalrecipient Object
+      description: A Communicationexternalrecipient Object and children
       type: object
-    communicationrecipient-Response:
+    communicationrecipient-Request:
       description: A Communicationrecipient Object
       properties:
         pkiCommunicationrecipientID:
@@ -22219,21 +22915,19 @@ components:
           example: 1
           minimum: 0
           type: integer
-        eCommunicationrecipientObjecttype:
-          $ref: '#/components/schemas/Field-eCommunicationrecipientObjecttype'
         fkiAgentID:
           description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiAgentincorporationID:
+          description: The unique ID of the Agentincorporation.
           example: 1
           minimum: 0
           type: integer
         fkiBrokerID:
           description: The unique ID of the Broker.
           example: 26
-          minimum: 0
-          type: integer
-        fkiContactID:
-          description: The unique ID of the Contact
-          example: 21
           minimum: 0
           type: integer
         fkiCustomerID:
@@ -22246,26 +22940,6 @@ components:
           example: 31
           minimum: 0
           type: integer
-        fkiEzsignsignerID:
-          description: The unique ID of the Ezsignsigner
-          example: 89
-          minimum: 0
-          type: integer
-        fkiFranchiseofficeID:
-          description: The unique ID of the Franchisereoffice
-          example: 50
-          minimum: 0
-          type: integer
-        fkiUserID:
-          description: The unique ID of the User
-          example: 70
-          minimum: 0
-          type: integer
-        fkiAgentincorporationID:
-          description: The unique ID of the Agentincorporation.
-          example: 1
-          minimum: 0
-          type: integer
         fkiAssistantID:
           description: The unique ID of the Assistant.
           example: 1
@@ -22276,18 +22950,13 @@ components:
           example: 1
           minimum: 0
           type: integer
-        fkiEzcomagentID:
-          description: The unique ID of the Ezcomagent.
-          example: 1
+        fkiEzsignsignerID:
+          description: The unique ID of the Ezsignsigner
+          example: 89
           minimum: 0
           type: integer
         fkiNotaryID:
           description: The unique ID of the Notary.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiRewardmemberID:
-          description: The unique ID of the Rewardmember.
           example: 1
           minimum: 0
           type: integer
@@ -22296,24 +22965,79 @@ components:
           example: 1
           minimum: 0
           type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
         eCommunicationrecipientType:
           $ref: '#/components/schemas/Field-eCommunicationrecipientType'
-        objDescriptionstatic:
-          $ref: '#/components/schemas/descriptionstatic-ResponseCompound'
-        objEmailstatic:
-          $ref: '#/components/schemas/emailstatic-ResponseCompound'
-        objPhonestatic:
-          $ref: '#/components/schemas/phonestatic-ResponseCompound'
-      required:
-      - eCommunicationrecipientType
-      - objDescriptionstatic
-      - pkiCommunicationrecipientID
       type: object
-    communicationrecipient-ResponseCompound:
+    communicationrecipient-RequestCompound:
       allOf:
-      - $ref: '#/components/schemas/communicationrecipient-Response'
+      - $ref: '#/components/schemas/communicationrecipient-Request'
       - type: object
-      description: A Communicationreciient Object
+      description: A Communicationrecipient Object and children
+      type: object
+    communicationreference-Request:
+      description: A Communicationreference Object
+      properties:
+        pkiCommunicationreferenceID:
+          description: The unique ID of the Communicationreference
+          example: 1263
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        fkiBuyercontractID:
+          description: The unique ID of the Buyercontract
+          example: 38
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiEzsignfolderID:
+          description: The unique ID of the Ezsignfolder
+          example: 33
+          minimum: 0
+          type: integer
+        fkiInscriptionID:
+          description: The unique ID of the Inscription.
+          example: 17
+          minimum: 0
+          type: integer
+        fkiInscriptiontempID:
+          description: The unique ID of the Inscriptiontemp
+          example: 2445
+          maximum: 16777215
+          minimum: 1
+          type: integer
+        fkiInvoiceID:
+          description: The unique ID of the Invoice.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiOtherincomeID:
+          description: The unique ID of the Otherincome
+          example: 142
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiElectronicfundstransferID:
+          description: The unique ID of the Electronicfundstransfer
+          example: 1262
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiRejectedoffertopurchaseID:
+          description: The unique ID of the Rejectedoffertopurchase
+          example: 532
+          maximum: 65535
+          minimum: 1
+          type: integer
+      type: object
+    communicationreference-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/communicationreference-Request'
+      description: A Communicationreference Object and children
       type: object
     company-AutocompleteElement-Response:
       description: A Company AutocompleteElement Response
@@ -22667,26 +23391,28 @@ components:
       required:
       - a_objDepartment
       type: object
-    descriptionstatic-Response:
-      description: A Descriptionstatic Object
-      properties:
-        pkiDescriptionstaticID:
-          description: The unique ID of the Descriptionstatic
-          example: 37
-          minimum: 0
-          type: integer
-        sDescriptionstaticDescription:
-          description: The description of the Descriptionstatic
-          example: Static description
-          type: string
-      required:
-      - pkiDescriptionstaticID
-      - sDescriptionstaticDescription
-      type: object
-    descriptionstatic-ResponseCompound:
+    electronicfundstransfer-getCommunicationList-v1-Response:
       allOf:
-      - $ref: '#/components/schemas/descriptionstatic-Response'
-      description: A Descriptionstatic Object and children to create a complete structure
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/electronicfundstransfer-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList"
+      type: object
+    electronicfundstransfer-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList"
       type: object
     email-Request:
       description: An Email Object
@@ -22758,27 +23484,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/email-Response'
       description: An Email Object and children to create a complete structure
-      type: object
-    emailstatic-Response:
-      description: An Emailstatic Object
-      properties:
-        pkiEmailstaticID:
-          description: The unique ID of the Emailstatic
-          example: 99
-          minimum: 0
-          type: integer
-        sEmailstaticAddress:
-          description: The email address.
-          example: email@example.com
-          type: string
-      required:
-      - pkiEmailstaticID
-      - sEmailstaticAddress
-      type: object
-    emailstatic-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/emailstatic-Response'
-      description: An Emailstatic Object and children to create a complete structure
       type: object
     emailtype-AutocompleteElement-Response:
       description: A Emailtype AutocompleteElement Response
@@ -26237,6 +26942,48 @@ components:
         type: object
       description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationList"
       type: object
+    ezsignfolder-getCommunicationrecipients-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsignfolder-getCommunicationrecipients-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients"
+      type: object
+    ezsignfolder-getCommunicationrecipients-v1-Response-mPayload:
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients"
+      properties:
+        a_objCommunicationrecipientsgroup:
+          items:
+            $ref: '#/components/schemas/Custom-Communicationrecipientsgroup-Response'
+          type: array
+      required:
+      - a_objCommunicationrecipientsgroup
+      type: object
+    ezsignfolder-getCommunicationsenders-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsignfolder-getCommunicationsenders-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients"
+      type: object
+    ezsignfolder-getCommunicationsenders-v1-Response-mPayload:
+      description: "Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders"
+      properties:
+        a_objCommunicationsenders:
+          items:
+            $ref: '#/components/schemas/Custom-Communicationsender-Response'
+          type: array
+      required:
+      - a_objCommunicationsenders
+      type: object
     ezsignfolder-getEzsigndocuments-v1-Response:
       allOf:
       - properties:
@@ -26499,7 +27246,7 @@ components:
     ezsignfolder-send-v1-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
-      description: "Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send"
+      description: "Response for GET /1/object/attachment/{pkiAttachmentID}/download"
       type: object
     ezsignfolder-send-v2-Request:
       description: "Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send"
@@ -28872,6 +29619,8 @@ components:
             |20|Favorite vacation destination|
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
+            |22|Secret Code|
+            |22|Your reference code|
           example: 7
           minimum: 0
           type: integer
@@ -29035,6 +29784,8 @@ components:
             |20|Favorite vacation destination|
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
+            |22|Secret Code|
+            |22|Your reference code|
           example: 7
           minimum: 0
           type: integer
@@ -32798,6 +33549,98 @@ components:
       - sInfrastructureregionCode
       - sInfrastructureregionCodeWeb
       type: object
+    inscription-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/inscription-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList"
+      type: object
+    inscription-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList"
+      type: object
+    inscriptionnotauthenticated-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/inscriptionnotauthenticated-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList"
+      type: object
+    inscriptionnotauthenticated-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList"
+      type: object
+    inscriptiontemp-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/inscriptiontemp-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList"
+      type: object
+    inscriptiontemp-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList"
+      type: object
+    invoice-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/invoice-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList"
+      type: object
+    invoice-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList"
+      type: object
     language-AutocompleteElement-Response:
       description: A Language AutocompleteElement Response
       properties:
@@ -33107,6 +33950,29 @@ components:
       - a_sVariableobjectProperty
       - pkiNotificationtestID
       - sNotificationtestFunction
+      type: object
+    otherincome-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/otherincome-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList"
+      type: object
+    otherincome-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList"
       type: object
     paymentterm-AutocompleteElement-Response:
       description: A Paymentterm AutocompleteElement Response
@@ -33699,32 +34565,6 @@ components:
       - $ref: '#/components/schemas/phone-Response'
       description: A Phone Object and children to create a complete structure
       type: object
-    phonestatic-Response:
-      description: A Phonestatic Object
-      properties:
-        pkiPhonestaticID:
-          description: The unique ID of the Phone.
-          example: 1
-          minimum: 0
-          type: integer
-        sPhonestaticE164:
-          description: A phone number in E.164 Format
-          example: +15149901516
-          pattern: "^\\+[1-9]\\d{1,14}$"
-          type: string
-        sPhonestaticExtension:
-          description: The extension of the phone number.
-          example: "123"
-          pattern: ^\d$
-          type: string
-      required:
-      - pkiPhonestaticID
-      type: object
-    phonestatic-ResponseCompound:
-      allOf:
-      - $ref: '#/components/schemas/phonestatic-Response'
-      description: A Phonestatic Object and children to create a complete structure
-      type: object
     phonetype-AutocompleteElement-Response:
       description: A Phonetype AutocompleteElement Response
       properties:
@@ -33781,6 +34621,29 @@ components:
       required:
       - a_objPhonetype
       type: object
+    rejectedoffertopurchase-getCommunicationList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/rejectedoffertopurchase-getCommunicationList-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response_getList'
+      description: "Response for GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList"
+      type: object
+    rejectedoffertopurchase-getCommunicationList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objCommunication:
+            items:
+              $ref: '#/components/schemas/Custom-CommunicationListElement-Response'
+            type: array
+        required:
+        - a_objCommunication
+        type: object
+      description: "Response for GET /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList"
+      type: object
     secretquestion-AutocompleteElement-Response:
       description: A Secretquestion AutocompleteElement Response
       properties:
@@ -33818,6 +34681,8 @@ components:
             |20|Favorite vacation destination|
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
+            |22|Secret Code|
+            |22|Your reference code|
           example: 7
           minimum: 0
           type: integer
@@ -33901,7 +34766,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
       required:
       - dtSessionhistoryFirsthit
@@ -34576,7 +35441,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         bUserIsactive:
           description: Whether the User is active or not
@@ -34707,6 +35572,8 @@ components:
             |20|Favorite vacation destination|
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
+            |22|Secret Code|
+            |22|Your reference code|
           example: 7
           minimum: 0
           type: integer
@@ -34734,7 +35601,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         eUserEzsignaccess:
           $ref: '#/components/schemas/Field-eUserEzsignaccess'
@@ -34902,6 +35769,8 @@ components:
             |20|Favorite vacation destination|
             |21|Your boat's name|
             |22|Date of Birth (YYYY-MM-DD)|
+            |22|Secret Code|
+            |22|Your reference code|
           example: 7
           minimum: 0
           type: integer
@@ -34931,7 +35800,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         eUserEzsignaccess:
           $ref: '#/components/schemas/Field-eUserEzsignaccess'
@@ -35770,7 +36639,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         sEmailAddress:
           description: The email address.
@@ -35930,7 +36799,7 @@ components:
         sUserLoginname:
           description: The login name of the User.
           example: JohnDoe
-          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4})|([a-zA-Z0-9]){1,32})$"
+          pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
           type: string
         sEmailAddress:
           description: The email address.
@@ -36706,6 +37575,7 @@ components:
           example: false
           type: boolean
       required:
+      - bWebhookIsactive
       - bWebhookSkipsslvalidation
       - eWebhookModule
       - pkiWebhookID
@@ -37214,14 +38084,17 @@ x-tagGroups:
   tags:
   - Object_Activesession
   - Object_Apikey
+  - Object_Attachment
   - Object_Billingentityexternal
   - Object_Billingentityinternal
   - Object_Branding
+  - Object_Buyercontract
   - Object_Clonehistory
   - Object_Communication
   - Object_Company
   - Object_Cors
   - Object_Department
+  - Object_Electronicfundstransfer
   - Object_Emailtype
   - Object_Ezmaxinvoicing
   - Object_Ezmaxproduct
@@ -37252,14 +38125,20 @@ x-tagGroups:
   - Object_Franchisebroker
   - Object_Franchiseoffice
   - Object_Franchisereferalincome
+  - Object_Inscription
+  - Object_Inscriptionnotauthenticated
+  - Object_Inscriptiontemp
+  - Object_Invoice
   - Object_Language
   - Object_Modulegroup
   - Object_Notificationsection
   - Object_Notificationtest
+  - Object_Otherincome
   - Object_Paymentterm
   - Object_Period
   - Object_Permission
   - Object_Phonetype
+  - Object_Rejectedoffertopurchase
   - Object_Secretquestion
   - Object_Sessionhistory
   - Object_Signature

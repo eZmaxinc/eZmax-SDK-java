@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-15T19:52:59.424851694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -82,7 +82,7 @@ public class CommonResponseObjDebugPayloadGetList {
 
   public static final String SERIALIZED_NAME_I_ROW_MAX = "iRowMax";
   @SerializedName(SERIALIZED_NAME_I_ROW_MAX)
-  private Integer iRowMax = 10000;
+  private Integer iRowMax;
 
   public static final String SERIALIZED_NAME_I_ROW_OFFSET = "iRowOffset";
   @SerializedName(SERIALIZED_NAME_I_ROW_OFFSET)
@@ -240,7 +240,7 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
    /**
-   * The maximum numbers of results to be returned
+   * The maximum numbers of results to be returned.  When the content-type is **application/json** there is an implicit default of 10 000.  When it&#39;s **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** the is no implicit default so if you do not specify iRowMax, all records will be returned.
    * minimum: 1
    * maximum: 10000
    * @return iRowMax
