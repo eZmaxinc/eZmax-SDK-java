@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/declineToSign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentDeclineToSignV1Request {
   public static final String SERIALIZED_NAME_S_REASON = "sReason";
   @SerializedName(SERIALIZED_NAME_S_REASON)
@@ -59,7 +59,6 @@ public class EzsigndocumentDeclineToSignV1Request {
   }
 
   public EzsigndocumentDeclineToSignV1Request sReason(String sReason) {
-    
     this.sReason = sReason;
     return this;
   }
@@ -72,7 +71,6 @@ public class EzsigndocumentDeclineToSignV1Request {
   public String getsReason() {
     return sReason;
   }
-
 
   public void setsReason(String sReason) {
     this.sReason = sReason;

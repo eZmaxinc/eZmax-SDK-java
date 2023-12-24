@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)
@@ -123,7 +123,6 @@ public class EzsigntemplateformfieldgroupRequest {
   }
 
   public EzsigntemplateformfieldgroupRequest pkiEzsigntemplateformfieldgroupID(Integer pkiEzsigntemplateformfieldgroupID) {
-    
     this.pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID;
     return this;
   }
@@ -138,14 +137,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return pkiEzsigntemplateformfieldgroupID;
   }
 
-
   public void setPkiEzsigntemplateformfieldgroupID(Integer pkiEzsigntemplateformfieldgroupID) {
     this.pkiEzsigntemplateformfieldgroupID = pkiEzsigntemplateformfieldgroupID;
   }
 
 
   public EzsigntemplateformfieldgroupRequest fkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
-    
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
     return this;
   }
@@ -160,14 +157,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return fkiEzsigntemplatedocumentID;
   }
 
-
   public void setFkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
   }
 
 
   public EzsigntemplateformfieldgroupRequest eEzsigntemplateformfieldgroupType(FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType) {
-    
     this.eEzsigntemplateformfieldgroupType = eEzsigntemplateformfieldgroupType;
     return this;
   }
@@ -181,14 +176,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return eEzsigntemplateformfieldgroupType;
   }
 
-
   public void seteEzsigntemplateformfieldgroupType(FieldEEzsigntemplateformfieldgroupType eEzsigntemplateformfieldgroupType) {
     this.eEzsigntemplateformfieldgroupType = eEzsigntemplateformfieldgroupType;
   }
 
 
   public EzsigntemplateformfieldgroupRequest eEzsigntemplateformfieldgroupSignerrequirement(FieldEEzsigntemplateformfieldgroupSignerrequirement eEzsigntemplateformfieldgroupSignerrequirement) {
-    
     this.eEzsigntemplateformfieldgroupSignerrequirement = eEzsigntemplateformfieldgroupSignerrequirement;
     return this;
   }
@@ -202,14 +195,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return eEzsigntemplateformfieldgroupSignerrequirement;
   }
 
-
   public void seteEzsigntemplateformfieldgroupSignerrequirement(FieldEEzsigntemplateformfieldgroupSignerrequirement eEzsigntemplateformfieldgroupSignerrequirement) {
     this.eEzsigntemplateformfieldgroupSignerrequirement = eEzsigntemplateformfieldgroupSignerrequirement;
   }
 
 
   public EzsigntemplateformfieldgroupRequest sEzsigntemplateformfieldgroupLabel(String sEzsigntemplateformfieldgroupLabel) {
-    
     this.sEzsigntemplateformfieldgroupLabel = sEzsigntemplateformfieldgroupLabel;
     return this;
   }
@@ -223,14 +214,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return sEzsigntemplateformfieldgroupLabel;
   }
 
-
   public void setsEzsigntemplateformfieldgroupLabel(String sEzsigntemplateformfieldgroupLabel) {
     this.sEzsigntemplateformfieldgroupLabel = sEzsigntemplateformfieldgroupLabel;
   }
 
 
   public EzsigntemplateformfieldgroupRequest iEzsigntemplateformfieldgroupStep(Integer iEzsigntemplateformfieldgroupStep) {
-    
     this.iEzsigntemplateformfieldgroupStep = iEzsigntemplateformfieldgroupStep;
     return this;
   }
@@ -245,14 +234,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return iEzsigntemplateformfieldgroupStep;
   }
 
-
   public void setiEzsigntemplateformfieldgroupStep(Integer iEzsigntemplateformfieldgroupStep) {
     this.iEzsigntemplateformfieldgroupStep = iEzsigntemplateformfieldgroupStep;
   }
 
 
   public EzsigntemplateformfieldgroupRequest sEzsigntemplateformfieldgroupDefaultvalue(String sEzsigntemplateformfieldgroupDefaultvalue) {
-    
     this.sEzsigntemplateformfieldgroupDefaultvalue = sEzsigntemplateformfieldgroupDefaultvalue;
     return this;
   }
@@ -266,14 +253,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return sEzsigntemplateformfieldgroupDefaultvalue;
   }
 
-
   public void setsEzsigntemplateformfieldgroupDefaultvalue(String sEzsigntemplateformfieldgroupDefaultvalue) {
     this.sEzsigntemplateformfieldgroupDefaultvalue = sEzsigntemplateformfieldgroupDefaultvalue;
   }
 
 
   public EzsigntemplateformfieldgroupRequest iEzsigntemplateformfieldgroupFilledmin(Integer iEzsigntemplateformfieldgroupFilledmin) {
-    
     this.iEzsigntemplateformfieldgroupFilledmin = iEzsigntemplateformfieldgroupFilledmin;
     return this;
   }
@@ -288,14 +273,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return iEzsigntemplateformfieldgroupFilledmin;
   }
 
-
   public void setiEzsigntemplateformfieldgroupFilledmin(Integer iEzsigntemplateformfieldgroupFilledmin) {
     this.iEzsigntemplateformfieldgroupFilledmin = iEzsigntemplateformfieldgroupFilledmin;
   }
 
 
   public EzsigntemplateformfieldgroupRequest iEzsigntemplateformfieldgroupFilledmax(Integer iEzsigntemplateformfieldgroupFilledmax) {
-    
     this.iEzsigntemplateformfieldgroupFilledmax = iEzsigntemplateformfieldgroupFilledmax;
     return this;
   }
@@ -310,14 +293,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return iEzsigntemplateformfieldgroupFilledmax;
   }
 
-
   public void setiEzsigntemplateformfieldgroupFilledmax(Integer iEzsigntemplateformfieldgroupFilledmax) {
     this.iEzsigntemplateformfieldgroupFilledmax = iEzsigntemplateformfieldgroupFilledmax;
   }
 
 
   public EzsigntemplateformfieldgroupRequest bEzsigntemplateformfieldgroupReadonly(Boolean bEzsigntemplateformfieldgroupReadonly) {
-    
     this.bEzsigntemplateformfieldgroupReadonly = bEzsigntemplateformfieldgroupReadonly;
     return this;
   }
@@ -331,14 +312,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return bEzsigntemplateformfieldgroupReadonly;
   }
 
-
   public void setbEzsigntemplateformfieldgroupReadonly(Boolean bEzsigntemplateformfieldgroupReadonly) {
     this.bEzsigntemplateformfieldgroupReadonly = bEzsigntemplateformfieldgroupReadonly;
   }
 
 
   public EzsigntemplateformfieldgroupRequest iEzsigntemplateformfieldgroupMaxlength(Integer iEzsigntemplateformfieldgroupMaxlength) {
-    
     this.iEzsigntemplateformfieldgroupMaxlength = iEzsigntemplateformfieldgroupMaxlength;
     return this;
   }
@@ -354,14 +333,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return iEzsigntemplateformfieldgroupMaxlength;
   }
 
-
   public void setiEzsigntemplateformfieldgroupMaxlength(Integer iEzsigntemplateformfieldgroupMaxlength) {
     this.iEzsigntemplateformfieldgroupMaxlength = iEzsigntemplateformfieldgroupMaxlength;
   }
 
 
   public EzsigntemplateformfieldgroupRequest bEzsigntemplateformfieldgroupEncrypted(Boolean bEzsigntemplateformfieldgroupEncrypted) {
-    
     this.bEzsigntemplateformfieldgroupEncrypted = bEzsigntemplateformfieldgroupEncrypted;
     return this;
   }
@@ -375,14 +352,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return bEzsigntemplateformfieldgroupEncrypted;
   }
 
-
   public void setbEzsigntemplateformfieldgroupEncrypted(Boolean bEzsigntemplateformfieldgroupEncrypted) {
     this.bEzsigntemplateformfieldgroupEncrypted = bEzsigntemplateformfieldgroupEncrypted;
   }
 
 
   public EzsigntemplateformfieldgroupRequest sEzsigntemplateformfieldgroupRegexp(String sEzsigntemplateformfieldgroupRegexp) {
-    
     this.sEzsigntemplateformfieldgroupRegexp = sEzsigntemplateformfieldgroupRegexp;
     return this;
   }
@@ -396,14 +371,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return sEzsigntemplateformfieldgroupRegexp;
   }
 
-
   public void setsEzsigntemplateformfieldgroupRegexp(String sEzsigntemplateformfieldgroupRegexp) {
     this.sEzsigntemplateformfieldgroupRegexp = sEzsigntemplateformfieldgroupRegexp;
   }
 
 
   public EzsigntemplateformfieldgroupRequest eEzsigntemplateformfieldgroupTextvalidation(EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation) {
-    
     this.eEzsigntemplateformfieldgroupTextvalidation = eEzsigntemplateformfieldgroupTextvalidation;
     return this;
   }
@@ -417,14 +390,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return eEzsigntemplateformfieldgroupTextvalidation;
   }
 
-
   public void seteEzsigntemplateformfieldgroupTextvalidation(EnumTextvalidation eEzsigntemplateformfieldgroupTextvalidation) {
     this.eEzsigntemplateformfieldgroupTextvalidation = eEzsigntemplateformfieldgroupTextvalidation;
   }
 
 
   public EzsigntemplateformfieldgroupRequest tEzsigntemplateformfieldgroupTooltip(String tEzsigntemplateformfieldgroupTooltip) {
-    
     this.tEzsigntemplateformfieldgroupTooltip = tEzsigntemplateformfieldgroupTooltip;
     return this;
   }
@@ -438,14 +409,12 @@ public class EzsigntemplateformfieldgroupRequest {
     return tEzsigntemplateformfieldgroupTooltip;
   }
 
-
   public void settEzsigntemplateformfieldgroupTooltip(String tEzsigntemplateformfieldgroupTooltip) {
     this.tEzsigntemplateformfieldgroupTooltip = tEzsigntemplateformfieldgroupTooltip;
   }
 
 
   public EzsigntemplateformfieldgroupRequest eEzsigntemplateformfieldgroupTooltipposition(FieldEEzsigntemplateformfieldgroupTooltipposition eEzsigntemplateformfieldgroupTooltipposition) {
-    
     this.eEzsigntemplateformfieldgroupTooltipposition = eEzsigntemplateformfieldgroupTooltipposition;
     return this;
   }
@@ -458,7 +427,6 @@ public class EzsigntemplateformfieldgroupRequest {
   public FieldEEzsigntemplateformfieldgroupTooltipposition geteEzsigntemplateformfieldgroupTooltipposition() {
     return eEzsigntemplateformfieldgroupTooltipposition;
   }
-
 
   public void seteEzsigntemplateformfieldgroupTooltipposition(FieldEEzsigntemplateformfieldgroupTooltipposition eEzsigntemplateformfieldgroupTooltipposition) {
     this.eEzsigntemplateformfieldgroupTooltipposition = eEzsigntemplateformfieldgroupTooltipposition;
@@ -598,6 +566,10 @@ public class EzsigntemplateformfieldgroupRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsigntemplateformfieldgroupType`
+      FieldEEzsigntemplateformfieldgroupType.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldgroupType"));
+      // validate the required field `eEzsigntemplateformfieldgroupSignerrequirement`
+      FieldEEzsigntemplateformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldgroupSignerrequirement"));
       if (!jsonObj.get("sEzsigntemplateformfieldgroupLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldgroupLabel").toString()));
       }
@@ -607,8 +579,16 @@ public class EzsigntemplateformfieldgroupRequest {
       if ((jsonObj.get("sEzsigntemplateformfieldgroupRegexp") != null && !jsonObj.get("sEzsigntemplateformfieldgroupRegexp").isJsonNull()) && !jsonObj.get("sEzsigntemplateformfieldgroupRegexp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldgroupRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldgroupRegexp").toString()));
       }
+      // validate the optional field `eEzsigntemplateformfieldgroupTextvalidation`
+      if (jsonObj.get("eEzsigntemplateformfieldgroupTextvalidation") != null && !jsonObj.get("eEzsigntemplateformfieldgroupTextvalidation").isJsonNull()) {
+        EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldgroupTextvalidation"));
+      }
       if ((jsonObj.get("tEzsigntemplateformfieldgroupTooltip") != null && !jsonObj.get("tEzsigntemplateformfieldgroupTooltip").isJsonNull()) && !jsonObj.get("tEzsigntemplateformfieldgroupTooltip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsigntemplateformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplateformfieldgroupTooltip").toString()));
+      }
+      // validate the optional field `eEzsigntemplateformfieldgroupTooltipposition`
+      if (jsonObj.get("eEzsigntemplateformfieldgroupTooltipposition") != null && !jsonObj.get("eEzsigntemplateformfieldgroupTooltipposition").isJsonNull()) {
+        FieldEEzsigntemplateformfieldgroupTooltipposition.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldgroupTooltipposition"));
       }
   }
 

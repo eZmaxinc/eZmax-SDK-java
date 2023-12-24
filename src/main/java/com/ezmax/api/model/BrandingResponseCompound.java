@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -117,7 +117,6 @@ public class BrandingResponseCompound {
   }
 
   public BrandingResponseCompound pkiBrandingID(Integer pkiBrandingID) {
-    
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -132,14 +131,12 @@ public class BrandingResponseCompound {
     return pkiBrandingID;
   }
 
-
   public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
   public BrandingResponseCompound fkiEmailID(Integer fkiEmailID) {
-    
     this.fkiEmailID = fkiEmailID;
     return this;
   }
@@ -155,14 +152,12 @@ public class BrandingResponseCompound {
     return fkiEmailID;
   }
 
-
   public void setFkiEmailID(Integer fkiEmailID) {
     this.fkiEmailID = fkiEmailID;
   }
 
 
   public BrandingResponseCompound objBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
-    
     this.objBrandingDescription = objBrandingDescription;
     return this;
   }
@@ -176,14 +171,12 @@ public class BrandingResponseCompound {
     return objBrandingDescription;
   }
 
-
   public void setObjBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
     this.objBrandingDescription = objBrandingDescription;
   }
 
 
   public BrandingResponseCompound sBrandingDescriptionX(String sBrandingDescriptionX) {
-    
     this.sBrandingDescriptionX = sBrandingDescriptionX;
     return this;
   }
@@ -197,14 +190,12 @@ public class BrandingResponseCompound {
     return sBrandingDescriptionX;
   }
 
-
   public void setsBrandingDescriptionX(String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
   }
 
 
   public BrandingResponseCompound sBrandingName(String sBrandingName) {
-    
     this.sBrandingName = sBrandingName;
     return this;
   }
@@ -218,14 +209,12 @@ public class BrandingResponseCompound {
     return sBrandingName;
   }
 
-
   public void setsBrandingName(String sBrandingName) {
     this.sBrandingName = sBrandingName;
   }
 
 
   public BrandingResponseCompound sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -239,14 +228,12 @@ public class BrandingResponseCompound {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public BrandingResponseCompound eBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
-    
     this.eBrandingLogo = eBrandingLogo;
     return this;
   }
@@ -260,14 +247,12 @@ public class BrandingResponseCompound {
     return eBrandingLogo;
   }
 
-
   public void seteBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
   }
 
 
   public BrandingResponseCompound iBrandingColortext(Integer iBrandingColortext) {
-    
     this.iBrandingColortext = iBrandingColortext;
     return this;
   }
@@ -283,14 +268,12 @@ public class BrandingResponseCompound {
     return iBrandingColortext;
   }
 
-
   public void setiBrandingColortext(Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
   }
 
 
   public BrandingResponseCompound iBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
-    
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
     return this;
   }
@@ -306,14 +289,12 @@ public class BrandingResponseCompound {
     return iBrandingColortextlinkbox;
   }
 
-
   public void setiBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
   }
 
 
   public BrandingResponseCompound iBrandingColortextbutton(Integer iBrandingColortextbutton) {
-    
     this.iBrandingColortextbutton = iBrandingColortextbutton;
     return this;
   }
@@ -329,14 +310,12 @@ public class BrandingResponseCompound {
     return iBrandingColortextbutton;
   }
 
-
   public void setiBrandingColortextbutton(Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
   }
 
 
   public BrandingResponseCompound iBrandingColorbackground(Integer iBrandingColorbackground) {
-    
     this.iBrandingColorbackground = iBrandingColorbackground;
     return this;
   }
@@ -352,14 +331,12 @@ public class BrandingResponseCompound {
     return iBrandingColorbackground;
   }
 
-
   public void setiBrandingColorbackground(Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
   }
 
 
   public BrandingResponseCompound iBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
-    
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
     return this;
   }
@@ -375,14 +352,12 @@ public class BrandingResponseCompound {
     return iBrandingColorbackgroundbutton;
   }
 
-
   public void setiBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
   }
 
 
   public BrandingResponseCompound iBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
-    
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
     return this;
   }
@@ -398,14 +373,12 @@ public class BrandingResponseCompound {
     return iBrandingColorbackgroundsmallbox;
   }
 
-
   public void setiBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
   }
 
 
   public BrandingResponseCompound bBrandingIsactive(Boolean bBrandingIsactive) {
-    
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -419,14 +392,12 @@ public class BrandingResponseCompound {
     return bBrandingIsactive;
   }
 
-
   public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
   }
 
 
   public BrandingResponseCompound sBrandingLogourl(String sBrandingLogourl) {
-    
     this.sBrandingLogourl = sBrandingLogourl;
     return this;
   }
@@ -439,7 +410,6 @@ public class BrandingResponseCompound {
   public String getsBrandingLogourl() {
     return sBrandingLogourl;
   }
-
 
   public void setsBrandingLogourl(String sBrandingLogourl) {
     this.sBrandingLogourl = sBrandingLogourl;
@@ -589,6 +559,8 @@ public class BrandingResponseCompound {
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
+      // validate the required field `eBrandingLogo`
+      FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
       if ((jsonObj.get("sBrandingLogourl") != null && !jsonObj.get("sBrandingLogourl").isJsonNull()) && !jsonObj.get("sBrandingLogourl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBrandingLogourl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogourl").toString()));
       }

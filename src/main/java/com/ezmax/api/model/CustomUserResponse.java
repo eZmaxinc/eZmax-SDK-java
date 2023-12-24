@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomUserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -71,7 +71,6 @@ public class CustomUserResponse {
   }
 
   public CustomUserResponse pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -86,14 +85,12 @@ public class CustomUserResponse {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public CustomUserResponse sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -107,14 +104,12 @@ public class CustomUserResponse {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public CustomUserResponse sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -128,14 +123,12 @@ public class CustomUserResponse {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public CustomUserResponse sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -148,7 +141,6 @@ public class CustomUserResponse {
   public String getsEmailAddress() {
     return sEmailAddress;
   }
-
 
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;

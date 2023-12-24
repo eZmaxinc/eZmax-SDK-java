@@ -18,6 +18,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
@@ -36,7 +37,11 @@ public enum FieldEEzsigntemplateformfieldgroupType {
   
   RADIO("Radio"),
   
-  CHECKBOX("Checkbox");
+  CHECKBOX("Checkbox"),
+  
+  NUMBER("Number"),
+  
+  DATE("Date");
 
   private String value;
 
@@ -73,6 +78,11 @@ public enum FieldEEzsigntemplateformfieldgroupType {
       String value = jsonReader.nextString();
       return FieldEEzsigntemplateformfieldgroupType.fromValue(value);
     }
+  }
+
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    String value = jsonElement.getAsString();
+    FieldEEzsigntemplateformfieldgroupType.fromValue(value);
   }
 }
 

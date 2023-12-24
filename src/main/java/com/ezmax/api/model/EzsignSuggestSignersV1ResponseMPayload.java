@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/module/ezsign/suggestSigners
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignSuggestSignersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -71,7 +71,6 @@ public class EzsignSuggestSignersV1ResponseMPayload {
   }
 
   public EzsignSuggestSignersV1ResponseMPayload aObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation) {
-    
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
     return this;
   }
@@ -93,14 +92,12 @@ public class EzsignSuggestSignersV1ResponseMPayload {
     return aObjEzsignfoldersignerassociation;
   }
 
-
   public void setaObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationResponseCompound> aObjEzsignfoldersignerassociation) {
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
   }
 
 
   public EzsignSuggestSignersV1ResponseMPayload aObjUserTeam(List<CustomUserResponse> aObjUserTeam) {
-    
     this.aObjUserTeam = aObjUserTeam;
     return this;
   }
@@ -122,14 +119,12 @@ public class EzsignSuggestSignersV1ResponseMPayload {
     return aObjUserTeam;
   }
 
-
   public void setaObjUserTeam(List<CustomUserResponse> aObjUserTeam) {
     this.aObjUserTeam = aObjUserTeam;
   }
 
 
   public EzsignSuggestSignersV1ResponseMPayload aObjUser(List<CustomUserResponse> aObjUser) {
-    
     this.aObjUser = aObjUser;
     return this;
   }
@@ -150,7 +145,6 @@ public class EzsignSuggestSignersV1ResponseMPayload {
   public List<CustomUserResponse> getaObjUser() {
     return aObjUser;
   }
-
 
   public void setaObjUser(List<CustomUserResponse> aObjUser) {
     this.aObjUser = aObjUser;

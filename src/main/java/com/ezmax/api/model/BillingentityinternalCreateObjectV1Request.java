@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
@@ -62,7 +62,6 @@ public class BillingentityinternalCreateObjectV1Request {
   }
 
   public BillingentityinternalCreateObjectV1Request aObjBillingentityinternal(List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
-    
     this.aObjBillingentityinternal = aObjBillingentityinternal;
     return this;
   }
@@ -83,7 +82,6 @@ public class BillingentityinternalCreateObjectV1Request {
   public List<BillingentityinternalRequestCompound> getaObjBillingentityinternal() {
     return aObjBillingentityinternal;
   }
-
 
   public void setaObjBillingentityinternal(List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
     this.aObjBillingentityinternal = aObjBillingentityinternal;

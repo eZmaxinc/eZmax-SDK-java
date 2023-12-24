@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class OtherincomeGetCommunicationListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATION = "a_objCommunication";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATION)
@@ -62,7 +62,6 @@ public class OtherincomeGetCommunicationListV1ResponseMPayload {
   }
 
   public OtherincomeGetCommunicationListV1ResponseMPayload aObjCommunication(List<CustomCommunicationListElementResponse> aObjCommunication) {
-    
     this.aObjCommunication = aObjCommunication;
     return this;
   }
@@ -83,7 +82,6 @@ public class OtherincomeGetCommunicationListV1ResponseMPayload {
   public List<CustomCommunicationListElementResponse> getaObjCommunication() {
     return aObjCommunication;
   }
-
 
   public void setaObjCommunication(List<CustomCommunicationListElementResponse> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/userstaged/{pkiUserstagedID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserstagedGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USERSTAGED = "objUserstaged";
   @SerializedName(SERIALIZED_NAME_OBJ_USERSTAGED)
@@ -60,7 +60,6 @@ public class UserstagedGetObjectV2ResponseMPayload {
   }
 
   public UserstagedGetObjectV2ResponseMPayload objUserstaged(UserstagedResponseCompound objUserstaged) {
-    
     this.objUserstaged = objUserstaged;
     return this;
   }
@@ -73,7 +72,6 @@ public class UserstagedGetObjectV2ResponseMPayload {
   public UserstagedResponseCompound getObjUserstaged() {
     return objUserstaged;
   }
-
 
   public void setObjUserstaged(UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;

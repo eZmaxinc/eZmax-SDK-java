@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Company AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CompanyAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMPANY_I_D = "pkiCompanyID";
   @SerializedName(SERIALIZED_NAME_PKI_COMPANY_I_D)
@@ -67,7 +67,6 @@ public class CompanyAutocompleteElementResponse {
   }
 
   public CompanyAutocompleteElementResponse pkiCompanyID(Integer pkiCompanyID) {
-    
     this.pkiCompanyID = pkiCompanyID;
     return this;
   }
@@ -83,14 +82,12 @@ public class CompanyAutocompleteElementResponse {
     return pkiCompanyID;
   }
 
-
   public void setPkiCompanyID(Integer pkiCompanyID) {
     this.pkiCompanyID = pkiCompanyID;
   }
 
 
   public CompanyAutocompleteElementResponse sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -104,14 +101,12 @@ public class CompanyAutocompleteElementResponse {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public CompanyAutocompleteElementResponse bCompanyIsactive(Boolean bCompanyIsactive) {
-    
     this.bCompanyIsactive = bCompanyIsactive;
     return this;
   }
@@ -124,7 +119,6 @@ public class CompanyAutocompleteElementResponse {
   public Boolean getbCompanyIsactive() {
     return bCompanyIsactive;
   }
-
 
   public void setbCompanyIsactive(Boolean bCompanyIsactive) {
     this.bCompanyIsactive = bCompanyIsactive;

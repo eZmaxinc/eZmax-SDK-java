@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.AttachmentGetAttachmentlogsV1ResponseMPayload;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
@@ -26,17 +27,17 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for AttachmentDownloadV1Response
+ * Model tests for AttachmentGetAttachmentlogsV1Response
  */
-public class AttachmentDownloadV1ResponseTest {
-    private final AttachmentDownloadV1Response model = new AttachmentDownloadV1Response();
+public class AttachmentGetAttachmentlogsV1ResponseTest {
+    private final AttachmentGetAttachmentlogsV1Response model = new AttachmentGetAttachmentlogsV1Response();
 
     /**
-     * Model tests for AttachmentDownloadV1Response
+     * Model tests for AttachmentGetAttachmentlogsV1Response
      */
     @Test
-    public void testAttachmentDownloadV1Response() {
-        // TODO: test AttachmentDownloadV1Response
+    public void testAttachmentGetAttachmentlogsV1Response() {
+        // TODO: test AttachmentGetAttachmentlogsV1Response
     }
 
     /**
@@ -53,6 +54,14 @@ public class AttachmentDownloadV1ResponseTest {
     @Test
     public void objDebugTest() {
         // TODO: test objDebug
+    }
+
+    /**
+     * Test the property 'mPayload'
+     */
+    @Test
+    public void mPayloadTest() {
+        // TODO: test mPayload
     }
 
 }

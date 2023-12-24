@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP = "objEzsigntemplatepackagemembership";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP)
@@ -60,7 +60,6 @@ public class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
   }
 
   public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload objEzsigntemplatepackagemembership(EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
-    
     this.objEzsigntemplatepackagemembership = objEzsigntemplatepackagemembership;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
   public EzsigntemplatepackagemembershipResponseCompound getObjEzsigntemplatepackagemembership() {
     return objEzsigntemplatepackagemembership;
   }
-
 
   public void setObjEzsigntemplatepackagemembership(EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
     this.objEzsigntemplatepackagemembership = objEzsigntemplatepackagemembership;

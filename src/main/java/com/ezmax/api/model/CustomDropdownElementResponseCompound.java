@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Generic DropdownElement Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomDropdownElementResponseCompound {
   public static final String SERIALIZED_NAME_S_LABEL = "sLabel";
   @SerializedName(SERIALIZED_NAME_S_LABEL)
@@ -63,7 +63,6 @@ public class CustomDropdownElementResponseCompound {
   }
 
   public CustomDropdownElementResponseCompound sLabel(String sLabel) {
-    
     this.sLabel = sLabel;
     return this;
   }
@@ -77,14 +76,12 @@ public class CustomDropdownElementResponseCompound {
     return sLabel;
   }
 
-
   public void setsLabel(String sLabel) {
     this.sLabel = sLabel;
   }
 
 
   public CustomDropdownElementResponseCompound sValue(String sValue) {
-    
     this.sValue = sValue;
     return this;
   }
@@ -97,7 +94,6 @@ public class CustomDropdownElementResponseCompound {
   public String getsValue() {
     return sValue;
   }
-
 
   public void setsValue(String sValue) {
     this.sValue = sValue;

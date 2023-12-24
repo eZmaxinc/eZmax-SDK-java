@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -61,7 +61,6 @@ public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   }
 
   public EzsignfolderImportEzsignfoldersignerassociationsV1Request aFkiEzsignfoldersignerassociationID(Set<Integer> aFkiEzsignfoldersignerassociationID) {
-    
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   public Set<Integer> getaFkiEzsignfoldersignerassociationID() {
     return aFkiEzsignfoldersignerassociationID;
   }
-
 
   public void setaFkiEzsignfoldersignerassociationID(Set<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;

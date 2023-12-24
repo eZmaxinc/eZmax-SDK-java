@@ -49,17 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class GlobalEzmaxclientVersionV1Response {
   public static final String SERIALIZED_NAME_S_EZMAXCLIENT_VERSION = "sEzmaxclientVersion";
   @SerializedName(SERIALIZED_NAME_S_EZMAXCLIENT_VERSION)
   private String sEzmaxclientVersion;
 
+  public static final String SERIALIZED_NAME_S_EZMAXCLIENT_OSLATESTVERSION = "sEzmaxclientOslatestversion";
+  @SerializedName(SERIALIZED_NAME_S_EZMAXCLIENT_OSLATESTVERSION)
+  private String sEzmaxclientOslatestversion = "11";
+
   public GlobalEzmaxclientVersionV1Response() {
   }
 
   public GlobalEzmaxclientVersionV1Response sEzmaxclientVersion(String sEzmaxclientVersion) {
-    
     this.sEzmaxclientVersion = sEzmaxclientVersion;
     return this;
   }
@@ -73,9 +76,27 @@ public class GlobalEzmaxclientVersionV1Response {
     return sEzmaxclientVersion;
   }
 
-
   public void setsEzmaxclientVersion(String sEzmaxclientVersion) {
     this.sEzmaxclientVersion = sEzmaxclientVersion;
+  }
+
+
+  public GlobalEzmaxclientVersionV1Response sEzmaxclientOslatestversion(String sEzmaxclientOslatestversion) {
+    this.sEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
+    return this;
+  }
+
+   /**
+   * The latest OS version of the system running the application at the time of release
+   * @return sEzmaxclientOslatestversion
+  **/
+  @javax.annotation.Nonnull
+  public String getsEzmaxclientOslatestversion() {
+    return sEzmaxclientOslatestversion;
+  }
+
+  public void setsEzmaxclientOslatestversion(String sEzmaxclientOslatestversion) {
+    this.sEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
   }
 
 
@@ -89,12 +110,13 @@ public class GlobalEzmaxclientVersionV1Response {
       return false;
     }
     GlobalEzmaxclientVersionV1Response globalEzmaxclientVersionV1Response = (GlobalEzmaxclientVersionV1Response) o;
-    return Objects.equals(this.sEzmaxclientVersion, globalEzmaxclientVersionV1Response.sEzmaxclientVersion);
+    return Objects.equals(this.sEzmaxclientVersion, globalEzmaxclientVersionV1Response.sEzmaxclientVersion) &&
+        Objects.equals(this.sEzmaxclientOslatestversion, globalEzmaxclientVersionV1Response.sEzmaxclientOslatestversion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sEzmaxclientVersion);
+    return Objects.hash(sEzmaxclientVersion, sEzmaxclientOslatestversion);
   }
 
   @Override
@@ -102,6 +124,7 @@ public class GlobalEzmaxclientVersionV1Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class GlobalEzmaxclientVersionV1Response {\n");
     sb.append("    sEzmaxclientVersion: ").append(toIndentedString(sEzmaxclientVersion)).append("\n");
+    sb.append("    sEzmaxclientOslatestversion: ").append(toIndentedString(sEzmaxclientOslatestversion)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,10 +148,12 @@ public class GlobalEzmaxclientVersionV1Response {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("sEzmaxclientVersion");
+    openapiFields.add("sEzmaxclientOslatestversion");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("sEzmaxclientVersion");
+    openapiRequiredFields.add("sEzmaxclientOslatestversion");
   }
 
  /**
@@ -161,6 +186,9 @@ public class GlobalEzmaxclientVersionV1Response {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzmaxclientVersion").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzmaxclientVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxclientVersion").toString()));
+      }
+      if (!jsonObj.get("sEzmaxclientOslatestversion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzmaxclientOslatestversion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxclientOslatestversion").toString()));
       }
   }
 

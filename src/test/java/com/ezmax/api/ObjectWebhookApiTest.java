@@ -20,12 +20,16 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.WebhookCreateObjectV1Request;
 import com.ezmax.api.model.WebhookCreateObjectV1Response;
+import com.ezmax.api.model.WebhookCreateObjectV2Request;
+import com.ezmax.api.model.WebhookCreateObjectV2Response;
 import com.ezmax.api.model.WebhookDeleteObjectV1Response;
 import com.ezmax.api.model.WebhookEditObjectV1Request;
 import com.ezmax.api.model.WebhookEditObjectV1Response;
 import com.ezmax.api.model.WebhookGetHistoryV1Response;
 import com.ezmax.api.model.WebhookGetListV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
+import com.ezmax.api.model.WebhookRegenerateApikeyV1Request;
+import com.ezmax.api.model.WebhookRegenerateApikeyV1Response;
 import com.ezmax.api.model.WebhookTestV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -54,6 +58,20 @@ public class ObjectWebhookApiTest {
     public void webhookCreateObjectV1Test() throws ApiException {
         WebhookCreateObjectV1Request webhookCreateObjectV1Request = null;
         WebhookCreateObjectV1Response response = api.webhookCreateObjectV1(webhookCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Create a new Webhook
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void webhookCreateObjectV2Test() throws ApiException {
+        WebhookCreateObjectV2Request webhookCreateObjectV2Request = null;
+        WebhookCreateObjectV2Response response = api.webhookCreateObjectV2(webhookCreateObjectV2Request);
         // TODO: test validations
     }
 
@@ -130,6 +148,21 @@ public class ObjectWebhookApiTest {
     public void webhookGetObjectV2Test() throws ApiException {
         Integer pkiWebhookID = null;
         WebhookGetObjectV2Response response = api.webhookGetObjectV2(pkiWebhookID);
+        // TODO: test validations
+    }
+
+    /**
+     * Regenerate the Apikey
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void webhookRegenerateApikeyV1Test() throws ApiException {
+        Integer pkiWebhookID = null;
+        WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request = null;
+        WebhookRegenerateApikeyV1Response response = api.webhookRegenerateApikeyV1(pkiWebhookID, webhookRegenerateApikeyV1Request);
         // TODO: test validations
     }
 

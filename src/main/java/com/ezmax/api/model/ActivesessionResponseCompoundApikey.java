@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;Apikey object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ActivesessionResponseCompoundApikey {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -63,7 +63,6 @@ public class ActivesessionResponseCompoundApikey {
   }
 
   public ActivesessionResponseCompoundApikey pkiApikeyID(Integer pkiApikeyID) {
-    
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -78,14 +77,12 @@ public class ActivesessionResponseCompoundApikey {
     return pkiApikeyID;
   }
 
-
   public void setPkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
   public ActivesessionResponseCompoundApikey sApikeyDescriptionX(String sApikeyDescriptionX) {
-    
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -98,7 +95,6 @@ public class ActivesessionResponseCompoundApikey {
   public String getsApikeyDescriptionX() {
     return sApikeyDescriptionX;
   }
-
 
   public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;

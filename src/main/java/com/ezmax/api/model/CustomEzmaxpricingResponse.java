@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezmaxpricing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzmaxpricingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRICING_I_D = "pkiEzmaxpricingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRICING_I_D)
@@ -71,7 +71,6 @@ public class CustomEzmaxpricingResponse {
   }
 
   public CustomEzmaxpricingResponse pkiEzmaxpricingID(Integer pkiEzmaxpricingID) {
-    
     this.pkiEzmaxpricingID = pkiEzmaxpricingID;
     return this;
   }
@@ -86,14 +85,12 @@ public class CustomEzmaxpricingResponse {
     return pkiEzmaxpricingID;
   }
 
-
   public void setPkiEzmaxpricingID(Integer pkiEzmaxpricingID) {
     this.pkiEzmaxpricingID = pkiEzmaxpricingID;
   }
 
 
   public CustomEzmaxpricingResponse dEzmaxpricingRebateezsignallagents(String dEzmaxpricingRebateezsignallagents) {
-    
     this.dEzmaxpricingRebateezsignallagents = dEzmaxpricingRebateezsignallagents;
     return this;
   }
@@ -107,14 +104,12 @@ public class CustomEzmaxpricingResponse {
     return dEzmaxpricingRebateezsignallagents;
   }
 
-
   public void setdEzmaxpricingRebateezsignallagents(String dEzmaxpricingRebateezsignallagents) {
     this.dEzmaxpricingRebateezsignallagents = dEzmaxpricingRebateezsignallagents;
   }
 
 
   public CustomEzmaxpricingResponse dtEzmaxpricingStart(String dtEzmaxpricingStart) {
-    
     this.dtEzmaxpricingStart = dtEzmaxpricingStart;
     return this;
   }
@@ -128,14 +123,12 @@ public class CustomEzmaxpricingResponse {
     return dtEzmaxpricingStart;
   }
 
-
   public void setDtEzmaxpricingStart(String dtEzmaxpricingStart) {
     this.dtEzmaxpricingStart = dtEzmaxpricingStart;
   }
 
 
   public CustomEzmaxpricingResponse dtEzmaxpricingEnd(String dtEzmaxpricingEnd) {
-    
     this.dtEzmaxpricingEnd = dtEzmaxpricingEnd;
     return this;
   }
@@ -148,7 +141,6 @@ public class CustomEzmaxpricingResponse {
   public String getDtEzmaxpricingEnd() {
     return dtEzmaxpricingEnd;
   }
-
 
   public void setDtEzmaxpricingEnd(String dtEzmaxpricingEnd) {
     this.dtEzmaxpricingEnd = dtEzmaxpricingEnd;

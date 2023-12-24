@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ApikeyRequestCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -76,7 +76,6 @@ public class ApikeyRequestCompound {
   }
 
   public ApikeyRequestCompound pkiApikeyID(Integer pkiApikeyID) {
-    
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -91,14 +90,12 @@ public class ApikeyRequestCompound {
     return pkiApikeyID;
   }
 
-
   public void setPkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
   public ApikeyRequestCompound fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -113,14 +110,12 @@ public class ApikeyRequestCompound {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public ApikeyRequestCompound objApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
-    
     this.objApikeyDescription = objApikeyDescription;
     return this;
   }
@@ -134,14 +129,12 @@ public class ApikeyRequestCompound {
     return objApikeyDescription;
   }
 
-
   public void setObjApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
     this.objApikeyDescription = objApikeyDescription;
   }
 
 
   public ApikeyRequestCompound bApikeyIsactive(Boolean bApikeyIsactive) {
-    
     this.bApikeyIsactive = bApikeyIsactive;
     return this;
   }
@@ -155,14 +148,12 @@ public class ApikeyRequestCompound {
     return bApikeyIsactive;
   }
 
-
   public void setbApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
 
   public ApikeyRequestCompound bApikeyIssigned(Boolean bApikeyIssigned) {
-    
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -175,7 +166,6 @@ public class ApikeyRequestCompound {
   public Boolean getbApikeyIssigned() {
     return bApikeyIssigned;
   }
-
 
   public void setbApikeyIssigned(Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;

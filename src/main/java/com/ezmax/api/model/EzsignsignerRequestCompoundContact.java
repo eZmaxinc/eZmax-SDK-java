@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignerRequestCompoundContact {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -93,7 +93,6 @@ public class EzsignsignerRequestCompoundContact {
   }
 
   public EzsignsignerRequestCompoundContact sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -107,14 +106,12 @@ public class EzsignsignerRequestCompoundContact {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public EzsignsignerRequestCompoundContact sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -128,14 +125,12 @@ public class EzsignsignerRequestCompoundContact {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public EzsignsignerRequestCompoundContact fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -151,14 +146,12 @@ public class EzsignsignerRequestCompoundContact {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsignsignerRequestCompoundContact sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -172,14 +165,12 @@ public class EzsignsignerRequestCompoundContact {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public EzsignsignerRequestCompoundContact sPhoneE164(String sPhoneE164) {
-    
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -193,14 +184,12 @@ public class EzsignsignerRequestCompoundContact {
     return sPhoneE164;
   }
 
-
   public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
   public EzsignsignerRequestCompoundContact sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -214,14 +203,12 @@ public class EzsignsignerRequestCompoundContact {
     return sPhoneExtension;
   }
 
-
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
   public EzsignsignerRequestCompoundContact sPhoneE164Cell(String sPhoneE164Cell) {
-    
     this.sPhoneE164Cell = sPhoneE164Cell;
     return this;
   }
@@ -235,7 +222,6 @@ public class EzsignsignerRequestCompoundContact {
     return sPhoneE164Cell;
   }
 
-
   public void setsPhoneE164Cell(String sPhoneE164Cell) {
     this.sPhoneE164Cell = sPhoneE164Cell;
   }
@@ -243,7 +229,6 @@ public class EzsignsignerRequestCompoundContact {
 
   @Deprecated
   public EzsignsignerRequestCompoundContact sPhoneNumber(String sPhoneNumber) {
-    
     this.sPhoneNumber = sPhoneNumber;
     return this;
   }
@@ -259,7 +244,6 @@ public class EzsignsignerRequestCompoundContact {
     return sPhoneNumber;
   }
 
-
   @Deprecated
   public void setsPhoneNumber(String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
@@ -268,7 +252,6 @@ public class EzsignsignerRequestCompoundContact {
 
   @Deprecated
   public EzsignsignerRequestCompoundContact sPhoneNumberCell(String sPhoneNumberCell) {
-    
     this.sPhoneNumberCell = sPhoneNumberCell;
     return this;
   }
@@ -283,7 +266,6 @@ public class EzsignsignerRequestCompoundContact {
   public String getsPhoneNumberCell() {
     return sPhoneNumberCell;
   }
-
 
   @Deprecated
   public void setsPhoneNumberCell(String sPhoneNumberCell) {

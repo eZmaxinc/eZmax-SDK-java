@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Styles applied to a Reportcell 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportcellstyle {
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP = "bReportcellstyleBordertop";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP)
@@ -91,7 +91,6 @@ public class CommonReportcellstyle {
   }
 
   public CommonReportcellstyle bReportcellstyleBordertop(Boolean bReportcellstyleBordertop) {
-    
     this.bReportcellstyleBordertop = bReportcellstyleBordertop;
     return this;
   }
@@ -105,14 +104,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBordertop;
   }
 
-
   public void setbReportcellstyleBordertop(Boolean bReportcellstyleBordertop) {
     this.bReportcellstyleBordertop = bReportcellstyleBordertop;
   }
 
 
   public CommonReportcellstyle bReportcellstyleBorderbottom(Boolean bReportcellstyleBorderbottom) {
-    
     this.bReportcellstyleBorderbottom = bReportcellstyleBorderbottom;
     return this;
   }
@@ -126,14 +123,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderbottom;
   }
 
-
   public void setbReportcellstyleBorderbottom(Boolean bReportcellstyleBorderbottom) {
     this.bReportcellstyleBorderbottom = bReportcellstyleBorderbottom;
   }
 
 
   public CommonReportcellstyle bReportcellstyleBorderleft(Boolean bReportcellstyleBorderleft) {
-    
     this.bReportcellstyleBorderleft = bReportcellstyleBorderleft;
     return this;
   }
@@ -147,14 +142,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderleft;
   }
 
-
   public void setbReportcellstyleBorderleft(Boolean bReportcellstyleBorderleft) {
     this.bReportcellstyleBorderleft = bReportcellstyleBorderleft;
   }
 
 
   public CommonReportcellstyle bReportcellstyleBorderright(Boolean bReportcellstyleBorderright) {
-    
     this.bReportcellstyleBorderright = bReportcellstyleBorderright;
     return this;
   }
@@ -168,14 +161,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderright;
   }
 
-
   public void setbReportcellstyleBorderright(Boolean bReportcellstyleBorderright) {
     this.bReportcellstyleBorderright = bReportcellstyleBorderright;
   }
 
 
   public CommonReportcellstyle eReportcellHorizontalalignment(EnumHorizontalalignment eReportcellHorizontalalignment) {
-    
     this.eReportcellHorizontalalignment = eReportcellHorizontalalignment;
     return this;
   }
@@ -189,14 +180,12 @@ public class CommonReportcellstyle {
     return eReportcellHorizontalalignment;
   }
 
-
   public void seteReportcellHorizontalalignment(EnumHorizontalalignment eReportcellHorizontalalignment) {
     this.eReportcellHorizontalalignment = eReportcellHorizontalalignment;
   }
 
 
   public CommonReportcellstyle eReportcellVerticalalignment(EnumVerticalalignment eReportcellVerticalalignment) {
-    
     this.eReportcellVerticalalignment = eReportcellVerticalalignment;
     return this;
   }
@@ -210,14 +199,12 @@ public class CommonReportcellstyle {
     return eReportcellVerticalalignment;
   }
 
-
   public void seteReportcellVerticalalignment(EnumVerticalalignment eReportcellVerticalalignment) {
     this.eReportcellVerticalalignment = eReportcellVerticalalignment;
   }
 
 
   public CommonReportcellstyle eReportcellFontweight(EnumFontweight eReportcellFontweight) {
-    
     this.eReportcellFontweight = eReportcellFontweight;
     return this;
   }
@@ -231,14 +218,12 @@ public class CommonReportcellstyle {
     return eReportcellFontweight;
   }
 
-
   public void seteReportcellFontweight(EnumFontweight eReportcellFontweight) {
     this.eReportcellFontweight = eReportcellFontweight;
   }
 
 
   public CommonReportcellstyle eReportcellFontunderline(EnumFontunderline eReportcellFontunderline) {
-    
     this.eReportcellFontunderline = eReportcellFontunderline;
     return this;
   }
@@ -251,7 +236,6 @@ public class CommonReportcellstyle {
   public EnumFontunderline geteReportcellFontunderline() {
     return eReportcellFontunderline;
   }
-
 
   public void seteReportcellFontunderline(EnumFontunderline eReportcellFontunderline) {
     this.eReportcellFontunderline = eReportcellFontunderline;
@@ -366,6 +350,14 @@ public class CommonReportcellstyle {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eReportcellHorizontalalignment`
+      EnumHorizontalalignment.validateJsonElement(jsonObj.get("eReportcellHorizontalalignment"));
+      // validate the required field `eReportcellVerticalalignment`
+      EnumVerticalalignment.validateJsonElement(jsonObj.get("eReportcellVerticalalignment"));
+      // validate the required field `eReportcellFontweight`
+      EnumFontweight.validateJsonElement(jsonObj.get("eReportcellFontweight"));
+      // validate the required field `eReportcellFontunderline`
+      EnumFontunderline.validateJsonElement(jsonObj.get("eReportcellFontunderline"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

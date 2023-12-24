@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/permission/{pkiPermissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PermissionEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_PERMISSION = "objPermission";
   @SerializedName(SERIALIZED_NAME_OBJ_PERMISSION)
@@ -60,7 +60,6 @@ public class PermissionEditObjectV1Request {
   }
 
   public PermissionEditObjectV1Request objPermission(PermissionRequestCompound objPermission) {
-    
     this.objPermission = objPermission;
     return this;
   }
@@ -73,7 +72,6 @@ public class PermissionEditObjectV1Request {
   public PermissionRequestCompound getObjPermission() {
     return objPermission;
   }
-
 
   public void setObjPermission(PermissionRequestCompound objPermission) {
     this.objPermission = objPermission;

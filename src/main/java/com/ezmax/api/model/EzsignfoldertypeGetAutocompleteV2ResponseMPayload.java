@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignfoldertype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
@@ -62,7 +62,6 @@ public class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   }
 
   public EzsignfoldertypeGetAutocompleteV2ResponseMPayload aObjEzsignfoldertype(List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
-    
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   public List<EzsignfoldertypeAutocompleteElementResponse> getaObjEzsignfoldertype() {
     return aObjEzsignfoldertype;
   }
-
 
   public void setaObjEzsignfoldertype(List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;

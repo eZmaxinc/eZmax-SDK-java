@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Userlogintype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserlogintypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D = "pkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D)
@@ -67,7 +67,6 @@ public class UserlogintypeAutocompleteElementResponse {
   }
 
   public UserlogintypeAutocompleteElementResponse pkiUserlogintypeID(Integer pkiUserlogintypeID) {
-    
     this.pkiUserlogintypeID = pkiUserlogintypeID;
     return this;
   }
@@ -82,14 +81,12 @@ public class UserlogintypeAutocompleteElementResponse {
     return pkiUserlogintypeID;
   }
 
-
   public void setPkiUserlogintypeID(Integer pkiUserlogintypeID) {
     this.pkiUserlogintypeID = pkiUserlogintypeID;
   }
 
 
   public UserlogintypeAutocompleteElementResponse sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
-    
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -103,14 +100,12 @@ public class UserlogintypeAutocompleteElementResponse {
     return sUserlogintypeDescriptionX;
   }
 
-
   public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
 
   public UserlogintypeAutocompleteElementResponse bUserlogintypeIsactive(Boolean bUserlogintypeIsactive) {
-    
     this.bUserlogintypeIsactive = bUserlogintypeIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class UserlogintypeAutocompleteElementResponse {
   public Boolean getbUserlogintypeIsactive() {
     return bUserlogintypeIsactive;
   }
-
 
   public void setbUserlogintypeIsactive(Boolean bUserlogintypeIsactive) {
     this.bUserlogintypeIsactive = bUserlogintypeIsactive;

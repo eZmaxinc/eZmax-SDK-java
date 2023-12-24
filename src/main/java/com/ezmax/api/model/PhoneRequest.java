@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PhoneRequest {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
@@ -97,7 +97,6 @@ public class PhoneRequest {
   }
 
   public PhoneRequest pkiPhoneID(Integer pkiPhoneID) {
-    
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -112,14 +111,12 @@ public class PhoneRequest {
     return pkiPhoneID;
   }
 
-
   public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
   public PhoneRequest fkiPhonetypeID(Integer fkiPhonetypeID) {
-    
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -134,7 +131,6 @@ public class PhoneRequest {
     return fkiPhonetypeID;
   }
 
-
   public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
@@ -142,7 +138,6 @@ public class PhoneRequest {
 
   @Deprecated
   public PhoneRequest ePhoneType(FieldEPhoneType ePhoneType) {
-    
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -158,7 +153,6 @@ public class PhoneRequest {
     return ePhoneType;
   }
 
-
   @Deprecated
   public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
@@ -167,7 +161,6 @@ public class PhoneRequest {
 
   @Deprecated
   public PhoneRequest sPhoneRegion(String sPhoneRegion) {
-    
     this.sPhoneRegion = sPhoneRegion;
     return this;
   }
@@ -183,7 +176,6 @@ public class PhoneRequest {
     return sPhoneRegion;
   }
 
-
   @Deprecated
   public void setsPhoneRegion(String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
@@ -192,7 +184,6 @@ public class PhoneRequest {
 
   @Deprecated
   public PhoneRequest sPhoneExchange(String sPhoneExchange) {
-    
     this.sPhoneExchange = sPhoneExchange;
     return this;
   }
@@ -208,7 +199,6 @@ public class PhoneRequest {
     return sPhoneExchange;
   }
 
-
   @Deprecated
   public void setsPhoneExchange(String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
@@ -217,7 +207,6 @@ public class PhoneRequest {
 
   @Deprecated
   public PhoneRequest sPhoneNumber(String sPhoneNumber) {
-    
     this.sPhoneNumber = sPhoneNumber;
     return this;
   }
@@ -233,7 +222,6 @@ public class PhoneRequest {
     return sPhoneNumber;
   }
 
-
   @Deprecated
   public void setsPhoneNumber(String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
@@ -242,7 +230,6 @@ public class PhoneRequest {
 
   @Deprecated
   public PhoneRequest sPhoneInternational(String sPhoneInternational) {
-    
     this.sPhoneInternational = sPhoneInternational;
     return this;
   }
@@ -258,7 +245,6 @@ public class PhoneRequest {
     return sPhoneInternational;
   }
 
-
   @Deprecated
   public void setsPhoneInternational(String sPhoneInternational) {
     this.sPhoneInternational = sPhoneInternational;
@@ -266,7 +252,6 @@ public class PhoneRequest {
 
 
   public PhoneRequest sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -280,14 +265,12 @@ public class PhoneRequest {
     return sPhoneExtension;
   }
 
-
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
   public PhoneRequest sPhoneE164(String sPhoneE164) {
-    
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -300,7 +283,6 @@ public class PhoneRequest {
   public String getsPhoneE164() {
     return sPhoneE164;
   }
-
 
   public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
@@ -411,6 +393,10 @@ public class PhoneRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `ePhoneType`
+      if (jsonObj.get("ePhoneType") != null && !jsonObj.get("ePhoneType").isJsonNull()) {
+        FieldEPhoneType.validateJsonElement(jsonObj.get("ePhoneType"));
+      }
       if ((jsonObj.get("sPhoneRegion") != null && !jsonObj.get("sPhoneRegion").isJsonNull()) && !jsonObj.get("sPhoneRegion").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPhoneRegion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneRegion").toString()));
       }

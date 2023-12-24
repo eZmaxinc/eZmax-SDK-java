@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
@@ -71,7 +71,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
   }
 
   public EzsigntsarequirementAutocompleteElementResponse sEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
-    
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
     return this;
   }
@@ -85,14 +84,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return sEzsigntsarequirementDescriptionX;
   }
 
-
   public void setsEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
   }
 
 
   public EzsigntsarequirementAutocompleteElementResponse pkiEzsigntsarequirementID(Integer pkiEzsigntsarequirementID) {
-    
     this.pkiEzsigntsarequirementID = pkiEzsigntsarequirementID;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return pkiEzsigntsarequirementID;
   }
 
-
   public void setPkiEzsigntsarequirementID(Integer pkiEzsigntsarequirementID) {
     this.pkiEzsigntsarequirementID = pkiEzsigntsarequirementID;
   }
 
 
   public EzsigntsarequirementAutocompleteElementResponse bEzsigntsarequirementIsactive(Boolean bEzsigntsarequirementIsactive) {
-    
     this.bEzsigntsarequirementIsactive = bEzsigntsarequirementIsactive;
     return this;
   }
@@ -129,14 +124,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return bEzsigntsarequirementIsactive;
   }
 
-
   public void setbEzsigntsarequirementIsactive(Boolean bEzsigntsarequirementIsactive) {
     this.bEzsigntsarequirementIsactive = bEzsigntsarequirementIsactive;
   }
 
 
   public EzsigntsarequirementAutocompleteElementResponse bDisabled(Boolean bDisabled) {
-    
     this.bDisabled = bDisabled;
     return this;
   }
@@ -149,7 +142,6 @@ public class EzsigntsarequirementAutocompleteElementResponse {
   public Boolean getbDisabled() {
     return bDisabled;
   }
-
 
   public void setbDisabled(Boolean bDisabled) {
     this.bDisabled = bDisabled;

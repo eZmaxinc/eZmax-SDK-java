@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -118,6 +118,11 @@ public class EzsigndocumentRequest {
         return EEzsigndocumentSourceEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigndocumentSourceEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_SOURCE = "eEzsigndocumentSource";
@@ -178,6 +183,11 @@ public class EzsigndocumentRequest {
         String value =  jsonReader.nextString();
         return EEzsigndocumentFormatEnum.fromValue(value);
       }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigndocumentFormatEnum.fromValue(value);
     }
   }
 
@@ -246,6 +256,11 @@ public class EzsigndocumentRequest {
         return EEzsigndocumentFormEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigndocumentFormEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORM = "eEzsigndocumentForm";
@@ -268,7 +283,6 @@ public class EzsigndocumentRequest {
   }
 
   public EzsigndocumentRequest pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
-    
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -283,14 +297,12 @@ public class EzsigndocumentRequest {
     return pkiEzsigndocumentID;
   }
 
-
   public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
   public EzsigndocumentRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -305,14 +317,12 @@ public class EzsigndocumentRequest {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsigndocumentRequest fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -327,14 +337,12 @@ public class EzsigndocumentRequest {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsigndocumentRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
-    
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -349,14 +357,12 @@ public class EzsigndocumentRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsigndocumentRequest fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -372,14 +378,12 @@ public class EzsigndocumentRequest {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigndocumentRequest eEzsigndocumentSource(EEzsigndocumentSourceEnum eEzsigndocumentSource) {
-    
     this.eEzsigndocumentSource = eEzsigndocumentSource;
     return this;
   }
@@ -393,14 +397,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentSource;
   }
 
-
   public void seteEzsigndocumentSource(EEzsigndocumentSourceEnum eEzsigndocumentSource) {
     this.eEzsigndocumentSource = eEzsigndocumentSource;
   }
 
 
   public EzsigndocumentRequest eEzsigndocumentFormat(EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
-    
     this.eEzsigndocumentFormat = eEzsigndocumentFormat;
     return this;
   }
@@ -414,14 +416,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentFormat;
   }
 
-
   public void seteEzsigndocumentFormat(EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
     this.eEzsigndocumentFormat = eEzsigndocumentFormat;
   }
 
 
   public EzsigndocumentRequest sEzsigndocumentBase64(byte[] sEzsigndocumentBase64) {
-    
     this.sEzsigndocumentBase64 = sEzsigndocumentBase64;
     return this;
   }
@@ -435,14 +435,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentBase64;
   }
 
-
   public void setsEzsigndocumentBase64(byte[] sEzsigndocumentBase64) {
     this.sEzsigndocumentBase64 = sEzsigndocumentBase64;
   }
 
 
   public EzsigndocumentRequest sEzsigndocumentUrl(String sEzsigndocumentUrl) {
-    
     this.sEzsigndocumentUrl = sEzsigndocumentUrl;
     return this;
   }
@@ -456,14 +454,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentUrl;
   }
 
-
   public void setsEzsigndocumentUrl(String sEzsigndocumentUrl) {
     this.sEzsigndocumentUrl = sEzsigndocumentUrl;
   }
 
 
   public EzsigndocumentRequest bEzsigndocumentForcerepair(Boolean bEzsigndocumentForcerepair) {
-    
     this.bEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
     return this;
   }
@@ -477,14 +473,12 @@ public class EzsigndocumentRequest {
     return bEzsigndocumentForcerepair;
   }
 
-
   public void setbEzsigndocumentForcerepair(Boolean bEzsigndocumentForcerepair) {
     this.bEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
   }
 
 
   public EzsigndocumentRequest sEzsigndocumentPassword(String sEzsigndocumentPassword) {
-    
     this.sEzsigndocumentPassword = sEzsigndocumentPassword;
     return this;
   }
@@ -498,14 +492,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentPassword;
   }
 
-
   public void setsEzsigndocumentPassword(String sEzsigndocumentPassword) {
     this.sEzsigndocumentPassword = sEzsigndocumentPassword;
   }
 
 
   public EzsigndocumentRequest eEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
-    
     this.eEzsigndocumentForm = eEzsigndocumentForm;
     return this;
   }
@@ -519,14 +511,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentForm;
   }
 
-
   public void seteEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
     this.eEzsigndocumentForm = eEzsigndocumentForm;
   }
 
 
   public EzsigndocumentRequest dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
-    
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -540,14 +530,12 @@ public class EzsigndocumentRequest {
     return dtEzsigndocumentDuedate;
   }
 
-
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
   public EzsigndocumentRequest sEzsigndocumentName(String sEzsigndocumentName) {
-    
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -561,14 +549,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentName;
   }
 
-
   public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
   public EzsigndocumentRequest sEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
-    
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
     return this;
   }
@@ -581,7 +567,6 @@ public class EzsigndocumentRequest {
   public String getsEzsigndocumentExternalid() {
     return sEzsigndocumentExternalid;
   }
-
 
   public void setsEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
@@ -717,8 +702,14 @@ public class EzsigndocumentRequest {
       if (!jsonObj.get("eEzsigndocumentSource").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentSource").toString()));
       }
+      // validate the required field `eEzsigndocumentSource`
+      EEzsigndocumentSourceEnum.validateJsonElement(jsonObj.get("eEzsigndocumentSource"));
       if ((jsonObj.get("eEzsigndocumentFormat") != null && !jsonObj.get("eEzsigndocumentFormat").isJsonNull()) && !jsonObj.get("eEzsigndocumentFormat").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentFormat").toString()));
+      }
+      // validate the optional field `eEzsigndocumentFormat`
+      if (jsonObj.get("eEzsigndocumentFormat") != null && !jsonObj.get("eEzsigndocumentFormat").isJsonNull()) {
+        EEzsigndocumentFormatEnum.validateJsonElement(jsonObj.get("eEzsigndocumentFormat"));
       }
       if ((jsonObj.get("sEzsigndocumentUrl") != null && !jsonObj.get("sEzsigndocumentUrl").isJsonNull()) && !jsonObj.get("sEzsigndocumentUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentUrl").toString()));
@@ -728,6 +719,10 @@ public class EzsigndocumentRequest {
       }
       if ((jsonObj.get("eEzsigndocumentForm") != null && !jsonObj.get("eEzsigndocumentForm").isJsonNull()) && !jsonObj.get("eEzsigndocumentForm").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsigndocumentForm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigndocumentForm").toString()));
+      }
+      // validate the optional field `eEzsigndocumentForm`
+      if (jsonObj.get("eEzsigndocumentForm") != null && !jsonObj.get("eEzsigndocumentForm").isJsonNull()) {
+        EEzsigndocumentFormEnum.validateJsonElement(jsonObj.get("eEzsigndocumentForm"));
       }
       if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));

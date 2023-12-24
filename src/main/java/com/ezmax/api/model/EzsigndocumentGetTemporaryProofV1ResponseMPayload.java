@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG = "a_objEzsigndocumentlog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG)
@@ -62,7 +62,6 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   }
 
   public EzsigndocumentGetTemporaryProofV1ResponseMPayload aObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
-    
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   public List<EzsigndocumentlogResponseCompound> getaObjEzsigndocumentlog() {
     return aObjEzsigndocumentlog;
   }
-
 
   public void setaObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;

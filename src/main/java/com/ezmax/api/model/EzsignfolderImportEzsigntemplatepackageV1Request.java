@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderImportEzsigntemplatepackageV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -70,7 +70,6 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
   }
 
   public EzsignfolderImportEzsigntemplatepackageV1Request fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -85,14 +84,12 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsignfolderImportEzsigntemplatepackageV1Request dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
-    
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -106,14 +103,12 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
     return dtEzsigndocumentDuedate;
   }
 
-
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
   public EzsignfolderImportEzsigntemplatepackageV1Request aObjImportEzsigntemplatepackageRelation(List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
-    
     this.aObjImportEzsigntemplatepackageRelation = aObjImportEzsigntemplatepackageRelation;
     return this;
   }
@@ -134,7 +129,6 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
   public List<CustomImportEzsigntemplatepackageRelationRequest> getaObjImportEzsigntemplatepackageRelation() {
     return aObjImportEzsigntemplatepackageRelation;
   }
-
 
   public void setaObjImportEzsigntemplatepackageRelation(List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
     this.aObjImportEzsigntemplatepackageRelation = aObjImportEzsigntemplatepackageRelation;

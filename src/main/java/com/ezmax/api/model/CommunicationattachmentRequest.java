@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommunicationattachmentRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D = "pkiCommunicationattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D)
@@ -71,7 +71,6 @@ public class CommunicationattachmentRequest {
   }
 
   public CommunicationattachmentRequest pkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
-    
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
     return this;
   }
@@ -85,14 +84,12 @@ public class CommunicationattachmentRequest {
     return pkiCommunicationattachmentID;
   }
 
-
   public void setPkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
   }
 
 
   public CommunicationattachmentRequest fkiAttachmentID(Integer fkiAttachmentID) {
-    
     this.fkiAttachmentID = fkiAttachmentID;
     return this;
   }
@@ -107,14 +104,12 @@ public class CommunicationattachmentRequest {
     return fkiAttachmentID;
   }
 
-
   public void setFkiAttachmentID(Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
   }
 
 
   public CommunicationattachmentRequest fkiInvoiceID(Integer fkiInvoiceID) {
-    
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -129,14 +124,12 @@ public class CommunicationattachmentRequest {
     return fkiInvoiceID;
   }
 
-
   public void setFkiInvoiceID(Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
   public CommunicationattachmentRequest fkiSalarypreparationID(Integer fkiSalarypreparationID) {
-    
     this.fkiSalarypreparationID = fkiSalarypreparationID;
     return this;
   }
@@ -150,7 +143,6 @@ public class CommunicationattachmentRequest {
   public Integer getFkiSalarypreparationID() {
     return fkiSalarypreparationID;
   }
-
 
   public void setFkiSalarypreparationID(Integer fkiSalarypreparationID) {
     this.fkiSalarypreparationID = fkiSalarypreparationID;

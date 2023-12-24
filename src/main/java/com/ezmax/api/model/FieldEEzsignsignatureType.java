@@ -18,12 +18,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **Attachments** is to ask for files as attachment that may be validate in another step.  7. **FieldText** is to ask for a short text. 8. **Fieldtextarea** is to ask for a text
+ * The type of signature.  1. **Acknowledgement** is for an acknowledgment of receipt. 2. **City** is to request the city where the document is signed. 3. **Handwritten** is for a handwritten kind of signature where users needs to \&quot;draw\&quot; their signature on screen. 4. **Initials** is a simple \&quot;click to add initials\&quot; block. 5. **Name** is a simple \&quot;Click to sign\&quot; block. This is the most common block of signature. 6. **NameReason** is to ask for a signing reason.  7. **Attachments** is to ask for files as attachment that may be validate in another step.  8. **FieldText** is to ask for a short text. 9. **Fieldtextarea** is to ask for a text
  */
 @JsonAdapter(FieldEEzsignsignatureType.Adapter.class)
 public enum FieldEEzsignsignatureType {
@@ -37,6 +38,8 @@ public enum FieldEEzsignsignatureType {
   INITIALS("Initials"),
   
   NAME("Name"),
+  
+  NAMEREASON("NameReason"),
   
   ATTACHMENTS("Attachments"),
   
@@ -81,6 +84,11 @@ public enum FieldEEzsignsignatureType {
       String value = jsonReader.nextString();
       return FieldEEzsignsignatureType.fromValue(value);
     }
+  }
+
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    String value = jsonElement.getAsString();
+    FieldEEzsignsignatureType.fromValue(value);
   }
 }
 

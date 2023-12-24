@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingagentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
@@ -142,7 +142,6 @@ public class EzmaxinvoicingagentResponseCompound {
   }
 
   public EzmaxinvoicingagentResponseCompound pkiEzmaxinvoicingagentID(Integer pkiEzmaxinvoicingagentID) {
-    
     this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
     return this;
   }
@@ -157,14 +156,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return pkiEzmaxinvoicingagentID;
   }
 
-
   public void setPkiEzmaxinvoicingagentID(Integer pkiEzmaxinvoicingagentID) {
     this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
   }
 
 
   public EzmaxinvoicingagentResponseCompound fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
-    
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -179,14 +176,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return fkiEzmaxinvoicingID;
   }
 
-
   public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingagentResponseCompound fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -201,14 +196,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzmaxinvoicingagentResponseCompound sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -222,14 +215,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public EzmaxinvoicingagentResponseCompound fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -244,14 +235,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public EzmaxinvoicingagentResponseCompound fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -266,14 +255,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentSession(Integer iEzmaxinvoicingagentSession) {
-    
     this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
     return this;
   }
@@ -288,14 +275,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentSession;
   }
 
-
   public void setiEzmaxinvoicingagentSession(Integer iEzmaxinvoicingagentSession) {
     this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentCloned(Integer iEzmaxinvoicingagentCloned) {
-    
     this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
     return this;
   }
@@ -310,14 +295,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentCloned;
   }
 
-
   public void setiEzmaxinvoicingagentCloned(Integer iEzmaxinvoicingagentCloned) {
     this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInvoice(Integer iEzmaxinvoicingagentInvoice) {
-    
     this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
     return this;
   }
@@ -332,14 +315,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentInvoice;
   }
 
-
   public void setiEzmaxinvoicingagentInvoice(Integer iEzmaxinvoicingagentInvoice) {
     this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInscription(Integer iEzmaxinvoicingagentInscription) {
-    
     this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
     return this;
   }
@@ -354,14 +335,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentInscription;
   }
 
-
   public void setiEzmaxinvoicingagentInscription(Integer iEzmaxinvoicingagentInscription) {
     this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInscriptionactive(Integer iEzmaxinvoicingagentInscriptionactive) {
-    
     this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
     return this;
   }
@@ -376,14 +355,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentInscriptionactive;
   }
 
-
   public void setiEzmaxinvoicingagentInscriptionactive(Integer iEzmaxinvoicingagentInscriptionactive) {
     this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentSale(Integer iEzmaxinvoicingagentSale) {
-    
     this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
     return this;
   }
@@ -398,14 +375,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentSale;
   }
 
-
   public void setiEzmaxinvoicingagentSale(Integer iEzmaxinvoicingagentSale) {
     this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentOtherincome(Integer iEzmaxinvoicingagentOtherincome) {
-    
     this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
     return this;
   }
@@ -420,14 +395,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentOtherincome;
   }
 
-
   public void setiEzmaxinvoicingagentOtherincome(Integer iEzmaxinvoicingagentOtherincome) {
     this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentCommissioncalculation(Integer iEzmaxinvoicingagentCommissioncalculation) {
-    
     this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
     return this;
   }
@@ -442,14 +415,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentCommissioncalculation;
   }
 
-
   public void setiEzmaxinvoicingagentCommissioncalculation(Integer iEzmaxinvoicingagentCommissioncalculation) {
     this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
   }
 
 
   public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentEzsigndocument(Integer iEzmaxinvoicingagentEzsigndocument) {
-    
     this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
     return this;
   }
@@ -464,14 +435,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return iEzmaxinvoicingagentEzsigndocument;
   }
 
-
   public void setiEzmaxinvoicingagentEzsigndocument(Integer iEzmaxinvoicingagentEzsigndocument) {
     this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
   }
 
 
   public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentEzsignaccount(Boolean bEzmaxinvoicingagentEzsignaccount) {
-    
     this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
     return this;
   }
@@ -485,14 +454,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return bEzmaxinvoicingagentEzsignaccount;
   }
 
-
   public void setbEzmaxinvoicingagentEzsignaccount(Boolean bEzmaxinvoicingagentEzsignaccount) {
     this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
   }
 
 
   public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentBillableezmax(Boolean bEzmaxinvoicingagentBillableezmax) {
-    
     this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
     return this;
   }
@@ -506,14 +473,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return bEzmaxinvoicingagentBillableezmax;
   }
 
-
   public void setbEzmaxinvoicingagentBillableezmax(Boolean bEzmaxinvoicingagentBillableezmax) {
     this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
   }
 
 
   public EzmaxinvoicingagentResponseCompound eEzmaxinvoicingagentVariationezmax(FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
-    
     this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
     return this;
   }
@@ -527,14 +492,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return eEzmaxinvoicingagentVariationezmax;
   }
 
-
   public void seteEzmaxinvoicingagentVariationezmax(FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
     this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
   }
 
 
   public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentBillableezsign(Boolean bEzmaxinvoicingagentBillableezsign) {
-    
     this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
     return this;
   }
@@ -548,14 +511,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return bEzmaxinvoicingagentBillableezsign;
   }
 
-
   public void setbEzmaxinvoicingagentBillableezsign(Boolean bEzmaxinvoicingagentBillableezsign) {
     this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
   }
 
 
   public EzmaxinvoicingagentResponseCompound eEzmaxinvoicingagentVariationezsign(FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
-    
     this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
     return this;
   }
@@ -569,14 +530,12 @@ public class EzmaxinvoicingagentResponseCompound {
     return eEzmaxinvoicingagentVariationezsign;
   }
 
-
   public void seteEzmaxinvoicingagentVariationezsign(FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
     this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
   }
 
 
   public EzmaxinvoicingagentResponseCompound objContactName(CustomContactNameResponse objContactName) {
-    
     this.objContactName = objContactName;
     return this;
   }
@@ -589,7 +548,6 @@ public class EzmaxinvoicingagentResponseCompound {
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
   }
-
 
   public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
@@ -755,6 +713,10 @@ public class EzmaxinvoicingagentResponseCompound {
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }
+      // validate the required field `eEzmaxinvoicingagentVariationezmax`
+      FieldEEzmaxinvoicingagentVariationezmax.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezmax"));
+      // validate the required field `eEzmaxinvoicingagentVariationezsign`
+      FieldEEzmaxinvoicingagentVariationezsign.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezsign"));
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
   }

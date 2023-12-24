@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phonetype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PhonetypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PHONETYPE_I_D = "pkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONETYPE_I_D)
@@ -67,7 +67,6 @@ public class PhonetypeAutocompleteElementResponse {
   }
 
   public PhonetypeAutocompleteElementResponse pkiPhonetypeID(Integer pkiPhonetypeID) {
-    
     this.pkiPhonetypeID = pkiPhonetypeID;
     return this;
   }
@@ -82,14 +81,12 @@ public class PhonetypeAutocompleteElementResponse {
     return pkiPhonetypeID;
   }
 
-
   public void setPkiPhonetypeID(Integer pkiPhonetypeID) {
     this.pkiPhonetypeID = pkiPhonetypeID;
   }
 
 
   public PhonetypeAutocompleteElementResponse sPhonetypeNameX(String sPhonetypeNameX) {
-    
     this.sPhonetypeNameX = sPhonetypeNameX;
     return this;
   }
@@ -103,14 +100,12 @@ public class PhonetypeAutocompleteElementResponse {
     return sPhonetypeNameX;
   }
 
-
   public void setsPhonetypeNameX(String sPhonetypeNameX) {
     this.sPhonetypeNameX = sPhonetypeNameX;
   }
 
 
   public PhonetypeAutocompleteElementResponse bPhonetypeIsactive(Boolean bPhonetypeIsactive) {
-    
     this.bPhonetypeIsactive = bPhonetypeIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class PhonetypeAutocompleteElementResponse {
   public Boolean getbPhonetypeIsactive() {
     return bPhonetypeIsactive;
   }
-
 
   public void setbPhonetypeIsactive(Boolean bPhonetypeIsactive) {
     this.bPhonetypeIsactive = bPhonetypeIsactive;

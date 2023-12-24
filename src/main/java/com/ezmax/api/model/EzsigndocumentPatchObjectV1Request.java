@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PATCH /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentPatchObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -60,7 +60,6 @@ public class EzsigndocumentPatchObjectV1Request {
   }
 
   public EzsigndocumentPatchObjectV1Request objEzsigndocument(EzsigndocumentRequestPatch objEzsigndocument) {
-    
     this.objEzsigndocument = objEzsigndocument;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsigndocumentPatchObjectV1Request {
   public EzsigndocumentRequestPatch getObjEzsigndocument() {
     return objEzsigndocument;
   }
-
 
   public void setObjEzsigndocument(EzsigndocumentRequestPatch objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;

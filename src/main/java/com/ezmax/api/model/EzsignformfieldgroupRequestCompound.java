@@ -58,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignformfieldgroupRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -140,7 +140,6 @@ public class EzsignformfieldgroupRequestCompound {
   }
 
   public EzsignformfieldgroupRequestCompound pkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
-    
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
     return this;
   }
@@ -155,14 +154,12 @@ public class EzsignformfieldgroupRequestCompound {
     return pkiEzsignformfieldgroupID;
   }
 
-
   public void setPkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
   }
 
 
   public EzsignformfieldgroupRequestCompound fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
-    
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -177,14 +174,12 @@ public class EzsignformfieldgroupRequestCompound {
     return fkiEzsigndocumentID;
   }
 
-
   public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
   public EzsignformfieldgroupRequestCompound eEzsignformfieldgroupType(FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
-    
     this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
     return this;
   }
@@ -198,14 +193,12 @@ public class EzsignformfieldgroupRequestCompound {
     return eEzsignformfieldgroupType;
   }
 
-
   public void seteEzsignformfieldgroupType(FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
     this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
   }
 
 
   public EzsignformfieldgroupRequestCompound eEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
-    
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
     return this;
   }
@@ -219,14 +212,12 @@ public class EzsignformfieldgroupRequestCompound {
     return eEzsignformfieldgroupSignerrequirement;
   }
 
-
   public void seteEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
   }
 
 
   public EzsignformfieldgroupRequestCompound sEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
-    
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
     return this;
   }
@@ -240,14 +231,12 @@ public class EzsignformfieldgroupRequestCompound {
     return sEzsignformfieldgroupLabel;
   }
 
-
   public void setsEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
   }
 
 
   public EzsignformfieldgroupRequestCompound iEzsignformfieldgroupStep(Integer iEzsignformfieldgroupStep) {
-    
     this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
     return this;
   }
@@ -262,14 +251,12 @@ public class EzsignformfieldgroupRequestCompound {
     return iEzsignformfieldgroupStep;
   }
 
-
   public void setiEzsignformfieldgroupStep(Integer iEzsignformfieldgroupStep) {
     this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
   }
 
 
   public EzsignformfieldgroupRequestCompound sEzsignformfieldgroupDefaultvalue(String sEzsignformfieldgroupDefaultvalue) {
-    
     this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
     return this;
   }
@@ -283,14 +270,12 @@ public class EzsignformfieldgroupRequestCompound {
     return sEzsignformfieldgroupDefaultvalue;
   }
 
-
   public void setsEzsignformfieldgroupDefaultvalue(String sEzsignformfieldgroupDefaultvalue) {
     this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
   }
 
 
   public EzsignformfieldgroupRequestCompound iEzsignformfieldgroupFilledmin(Integer iEzsignformfieldgroupFilledmin) {
-    
     this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
     return this;
   }
@@ -305,14 +290,12 @@ public class EzsignformfieldgroupRequestCompound {
     return iEzsignformfieldgroupFilledmin;
   }
 
-
   public void setiEzsignformfieldgroupFilledmin(Integer iEzsignformfieldgroupFilledmin) {
     this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
   }
 
 
   public EzsignformfieldgroupRequestCompound iEzsignformfieldgroupFilledmax(Integer iEzsignformfieldgroupFilledmax) {
-    
     this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
     return this;
   }
@@ -327,14 +310,12 @@ public class EzsignformfieldgroupRequestCompound {
     return iEzsignformfieldgroupFilledmax;
   }
 
-
   public void setiEzsignformfieldgroupFilledmax(Integer iEzsignformfieldgroupFilledmax) {
     this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
   }
 
 
   public EzsignformfieldgroupRequestCompound bEzsignformfieldgroupReadonly(Boolean bEzsignformfieldgroupReadonly) {
-    
     this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
     return this;
   }
@@ -348,14 +329,12 @@ public class EzsignformfieldgroupRequestCompound {
     return bEzsignformfieldgroupReadonly;
   }
 
-
   public void setbEzsignformfieldgroupReadonly(Boolean bEzsignformfieldgroupReadonly) {
     this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
   }
 
 
   public EzsignformfieldgroupRequestCompound iEzsignformfieldgroupMaxlength(Integer iEzsignformfieldgroupMaxlength) {
-    
     this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
     return this;
   }
@@ -371,14 +350,12 @@ public class EzsignformfieldgroupRequestCompound {
     return iEzsignformfieldgroupMaxlength;
   }
 
-
   public void setiEzsignformfieldgroupMaxlength(Integer iEzsignformfieldgroupMaxlength) {
     this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
   }
 
 
   public EzsignformfieldgroupRequestCompound bEzsignformfieldgroupEncrypted(Boolean bEzsignformfieldgroupEncrypted) {
-    
     this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
     return this;
   }
@@ -392,14 +369,12 @@ public class EzsignformfieldgroupRequestCompound {
     return bEzsignformfieldgroupEncrypted;
   }
 
-
   public void setbEzsignformfieldgroupEncrypted(Boolean bEzsignformfieldgroupEncrypted) {
     this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
   }
 
 
   public EzsignformfieldgroupRequestCompound sEzsignformfieldgroupRegexp(String sEzsignformfieldgroupRegexp) {
-    
     this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
     return this;
   }
@@ -413,14 +388,12 @@ public class EzsignformfieldgroupRequestCompound {
     return sEzsignformfieldgroupRegexp;
   }
 
-
   public void setsEzsignformfieldgroupRegexp(String sEzsignformfieldgroupRegexp) {
     this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
   }
 
 
   public EzsignformfieldgroupRequestCompound tEzsignformfieldgroupTooltip(String tEzsignformfieldgroupTooltip) {
-    
     this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
     return this;
   }
@@ -434,14 +407,12 @@ public class EzsignformfieldgroupRequestCompound {
     return tEzsignformfieldgroupTooltip;
   }
 
-
   public void settEzsignformfieldgroupTooltip(String tEzsignformfieldgroupTooltip) {
     this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
   }
 
 
   public EzsignformfieldgroupRequestCompound eEzsignformfieldgroupTooltipposition(FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
-    
     this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
     return this;
   }
@@ -455,14 +426,12 @@ public class EzsignformfieldgroupRequestCompound {
     return eEzsignformfieldgroupTooltipposition;
   }
 
-
   public void seteEzsignformfieldgroupTooltipposition(FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
     this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
   }
 
 
   public EzsignformfieldgroupRequestCompound eEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
-    
     this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
     return this;
   }
@@ -476,14 +445,12 @@ public class EzsignformfieldgroupRequestCompound {
     return eEzsignformfieldgroupTextvalidation;
   }
 
-
   public void seteEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
     this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
   }
 
 
   public EzsignformfieldgroupRequestCompound aObjEzsignformfieldgroupsigner(List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner) {
-    
     this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
     return this;
   }
@@ -505,14 +472,12 @@ public class EzsignformfieldgroupRequestCompound {
     return aObjEzsignformfieldgroupsigner;
   }
 
-
   public void setaObjEzsignformfieldgroupsigner(List<EzsignformfieldgroupsignerRequestCompound> aObjEzsignformfieldgroupsigner) {
     this.aObjEzsignformfieldgroupsigner = aObjEzsignformfieldgroupsigner;
   }
 
 
   public EzsignformfieldgroupRequestCompound aObjDropdownElement(List<CustomDropdownElementRequestCompound> aObjDropdownElement) {
-    
     this.aObjDropdownElement = aObjDropdownElement;
     return this;
   }
@@ -534,14 +499,12 @@ public class EzsignformfieldgroupRequestCompound {
     return aObjDropdownElement;
   }
 
-
   public void setaObjDropdownElement(List<CustomDropdownElementRequestCompound> aObjDropdownElement) {
     this.aObjDropdownElement = aObjDropdownElement;
   }
 
 
   public EzsignformfieldgroupRequestCompound aObjEzsignformfield(List<EzsignformfieldRequestCompound> aObjEzsignformfield) {
-    
     this.aObjEzsignformfield = aObjEzsignformfield;
     return this;
   }
@@ -562,7 +525,6 @@ public class EzsignformfieldgroupRequestCompound {
   public List<EzsignformfieldRequestCompound> getaObjEzsignformfield() {
     return aObjEzsignformfield;
   }
-
 
   public void setaObjEzsignformfield(List<EzsignformfieldRequestCompound> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
@@ -712,6 +674,10 @@ public class EzsignformfieldgroupRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignformfieldgroupType`
+      FieldEEzsignformfieldgroupType.validateJsonElement(jsonObj.get("eEzsignformfieldgroupType"));
+      // validate the required field `eEzsignformfieldgroupSignerrequirement`
+      FieldEEzsignformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldgroupSignerrequirement"));
       if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
       }
@@ -723,6 +689,14 @@ public class EzsignformfieldgroupRequestCompound {
       }
       if ((jsonObj.get("tEzsignformfieldgroupTooltip") != null && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonNull()) && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignformfieldgroupTooltip").toString()));
+      }
+      // validate the optional field `eEzsignformfieldgroupTooltipposition`
+      if (jsonObj.get("eEzsignformfieldgroupTooltipposition") != null && !jsonObj.get("eEzsignformfieldgroupTooltipposition").isJsonNull()) {
+        FieldEEzsignformfieldgroupTooltipposition.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTooltipposition"));
+      }
+      // validate the optional field `eEzsignformfieldgroupTextvalidation`
+      if (jsonObj.get("eEzsignformfieldgroupTextvalidation") != null && !jsonObj.get("eEzsignformfieldgroupTextvalidation").isJsonNull()) {
+        EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTextvalidation"));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignformfieldgroupsigner").isJsonArray()) {

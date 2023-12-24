@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/paymentterm/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PaymenttermGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTTERM = "a_objPaymentterm";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTTERM)
@@ -62,7 +62,6 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
   }
 
   public PaymenttermGetAutocompleteV2ResponseMPayload aObjPaymentterm(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm) {
-    
     this.aObjPaymentterm = aObjPaymentterm;
     return this;
   }
@@ -83,7 +82,6 @@ public class PaymenttermGetAutocompleteV2ResponseMPayload {
   public List<PaymenttermAutocompleteElementResponse> getaObjPaymentterm() {
     return aObjPaymentterm;
   }
-
 
   public void setaObjPaymentterm(List<PaymenttermAutocompleteElementResponse> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;

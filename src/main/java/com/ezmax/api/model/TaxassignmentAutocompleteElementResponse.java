@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Taxassignment AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class TaxassignmentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X = "sTaxassignmentDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X)
@@ -67,7 +67,6 @@ public class TaxassignmentAutocompleteElementResponse {
   }
 
   public TaxassignmentAutocompleteElementResponse sTaxassignmentDescriptionX(String sTaxassignmentDescriptionX) {
-    
     this.sTaxassignmentDescriptionX = sTaxassignmentDescriptionX;
     return this;
   }
@@ -81,14 +80,12 @@ public class TaxassignmentAutocompleteElementResponse {
     return sTaxassignmentDescriptionX;
   }
 
-
   public void setsTaxassignmentDescriptionX(String sTaxassignmentDescriptionX) {
     this.sTaxassignmentDescriptionX = sTaxassignmentDescriptionX;
   }
 
 
   public TaxassignmentAutocompleteElementResponse pkiTaxassignmentID(Integer pkiTaxassignmentID) {
-    
     this.pkiTaxassignmentID = pkiTaxassignmentID;
     return this;
   }
@@ -104,14 +101,12 @@ public class TaxassignmentAutocompleteElementResponse {
     return pkiTaxassignmentID;
   }
 
-
   public void setPkiTaxassignmentID(Integer pkiTaxassignmentID) {
     this.pkiTaxassignmentID = pkiTaxassignmentID;
   }
 
 
   public TaxassignmentAutocompleteElementResponse bTaxassignmentIsactive(Boolean bTaxassignmentIsactive) {
-    
     this.bTaxassignmentIsactive = bTaxassignmentIsactive;
     return this;
   }
@@ -124,7 +119,6 @@ public class TaxassignmentAutocompleteElementResponse {
   public Boolean getbTaxassignmentIsactive() {
     return bTaxassignmentIsactive;
   }
-
 
   public void setbTaxassignmentIsactive(Boolean bTaxassignmentIsactive) {
     this.bTaxassignmentIsactive = bTaxassignmentIsactive;

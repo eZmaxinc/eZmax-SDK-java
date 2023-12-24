@@ -49,7 +49,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [enum: iOS, macOS, Windows] |
+| **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [enum: iOS, iPadOS, macOS, Windows] |
 
 ### Return type
 

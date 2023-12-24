@@ -14,7 +14,8 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.AttachmentDownloadV1Response;
+import com.ezmax.api.model.AttachmentGetAttachmentlogsV1Response;
+import com.ezmax.api.model.AttachmentGetDownloadUrlV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -42,7 +43,35 @@ public class ObjectAttachmentApiTest {
     @Test
     public void attachmentDownloadV1Test() throws ApiException {
         Integer pkiAttachmentID = null;
-        AttachmentDownloadV1Response response = api.attachmentDownloadV1(pkiAttachmentID);
+        api.attachmentDownloadV1(pkiAttachmentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve the Attachmentlogs
+     *
+     * Using this endpoint, you can retrieve the Attachmentlogs of an attachment.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void attachmentGetAttachmentlogsV1Test() throws ApiException {
+        Integer pkiAttachmentID = null;
+        AttachmentGetAttachmentlogsV1Response response = api.attachmentGetAttachmentlogsV1(pkiAttachmentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve a URL to download attachments.
+     *
+     * This endpoint returns an URL to download the attachment.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void attachmentGetDownloadUrlV1Test() throws ApiException {
+        Integer pkiAttachmentID = null;
+        AttachmentGetDownloadUrlV1Response response = api.attachmentGetDownloadUrlV1(pkiAttachmentID);
         // TODO: test validations
     }
 

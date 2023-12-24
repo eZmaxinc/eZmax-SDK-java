@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagemembershipResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
@@ -83,7 +83,6 @@ public class EzsigntemplatepackagemembershipResponseCompound {
   }
 
   public EzsigntemplatepackagemembershipResponseCompound pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
-    
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -98,14 +97,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
     return pkiEzsigntemplatepackagemembershipID;
   }
 
-
   public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
   }
 
 
   public EzsigntemplatepackagemembershipResponseCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -120,14 +117,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsigntemplatepackagemembershipResponseCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -142,14 +137,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsigntemplatepackagemembershipResponseCompound iEzsigntemplatepackagemembershipOrder(Integer iEzsigntemplatepackagemembershipOrder) {
-    
     this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
     return this;
   }
@@ -164,14 +157,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
     return iEzsigntemplatepackagemembershipOrder;
   }
 
-
   public void setiEzsigntemplatepackagemembershipOrder(Integer iEzsigntemplatepackagemembershipOrder) {
     this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
   }
 
 
   public EzsigntemplatepackagemembershipResponseCompound objEzsigntemplate(EzsigntemplateResponseCompound objEzsigntemplate) {
-    
     this.objEzsigntemplate = objEzsigntemplate;
     return this;
   }
@@ -185,14 +176,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
     return objEzsigntemplate;
   }
 
-
   public void setObjEzsigntemplate(EzsigntemplateResponseCompound objEzsigntemplate) {
     this.objEzsigntemplate = objEzsigntemplate;
   }
 
 
   public EzsigntemplatepackagemembershipResponseCompound aObjEzsigntemplatepackagesignermembership(List<EzsigntemplatepackagesignermembershipResponseCompound> aObjEzsigntemplatepackagesignermembership) {
-    
     this.aObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;
     return this;
   }
@@ -213,7 +202,6 @@ public class EzsigntemplatepackagemembershipResponseCompound {
   public List<EzsigntemplatepackagesignermembershipResponseCompound> getaObjEzsigntemplatepackagesignermembership() {
     return aObjEzsigntemplatepackagesignermembership;
   }
-
 
   public void setaObjEzsigntemplatepackagesignermembership(List<EzsigntemplatepackagesignermembershipResponseCompound> aObjEzsigntemplatepackagesignermembership) {
     this.aObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;

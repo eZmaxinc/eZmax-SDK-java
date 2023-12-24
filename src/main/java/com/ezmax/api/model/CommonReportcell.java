@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A cell in a Reportrow 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportcell {
   public static final String SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN = "iReportcellColumnspan";
   @SerializedName(SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN)
@@ -63,7 +63,6 @@ public class CommonReportcell {
   }
 
   public CommonReportcell iReportcellColumnspan(Integer iReportcellColumnspan) {
-    
     this.iReportcellColumnspan = iReportcellColumnspan;
     return this;
   }
@@ -77,14 +76,12 @@ public class CommonReportcell {
     return iReportcellColumnspan;
   }
 
-
   public void setiReportcellColumnspan(Integer iReportcellColumnspan) {
     this.iReportcellColumnspan = iReportcellColumnspan;
   }
 
 
   public CommonReportcell iReportcellRowspan(Integer iReportcellRowspan) {
-    
     this.iReportcellRowspan = iReportcellRowspan;
     return this;
   }
@@ -97,7 +94,6 @@ public class CommonReportcell {
   public Integer getiReportcellRowspan() {
     return iReportcellRowspan;
   }
-
 
   public void setiReportcellRowspan(Integer iReportcellRowspan) {
     this.iReportcellRowspan = iReportcellRowspan;

@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -92,7 +92,6 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
   public CommonResponseObjDebugPayloadGetList iVersionMin(Integer iVersionMin) {
-    
     this.iVersionMin = iVersionMin;
     return this;
   }
@@ -106,14 +105,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iVersionMin;
   }
 
-
   public void setiVersionMin(Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
   }
 
 
   public CommonResponseObjDebugPayloadGetList iVersionMax(Integer iVersionMax) {
-    
     this.iVersionMax = iVersionMax;
     return this;
   }
@@ -127,14 +124,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iVersionMax;
   }
 
-
   public void setiVersionMax(Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
   }
 
 
   public CommonResponseObjDebugPayloadGetList aRequiredPermission(List<Integer> aRequiredPermission) {
-    
     this.aRequiredPermission = aRequiredPermission;
     return this;
   }
@@ -156,14 +151,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aRequiredPermission;
   }
 
-
   public void setaRequiredPermission(List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
   }
 
 
   public CommonResponseObjDebugPayloadGetList bVersionDeprecated(Boolean bVersionDeprecated) {
-    
     this.bVersionDeprecated = bVersionDeprecated;
     return this;
   }
@@ -177,14 +170,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return bVersionDeprecated;
   }
 
-
   public void setbVersionDeprecated(Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
   }
 
 
   public CommonResponseObjDebugPayloadGetList aFilter(CommonResponseFilter aFilter) {
-    
     this.aFilter = aFilter;
     return this;
   }
@@ -198,14 +189,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aFilter;
   }
 
-
   public void setaFilter(CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
   }
 
 
   public CommonResponseObjDebugPayloadGetList aOrderBy(Map<String, String> aOrderBy) {
-    
     this.aOrderBy = aOrderBy;
     return this;
   }
@@ -227,14 +216,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aOrderBy;
   }
 
-
   public void setaOrderBy(Map<String, String> aOrderBy) {
     this.aOrderBy = aOrderBy;
   }
 
 
   public CommonResponseObjDebugPayloadGetList iRowMax(Integer iRowMax) {
-    
     this.iRowMax = iRowMax;
     return this;
   }
@@ -250,14 +237,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iRowMax;
   }
 
-
   public void setiRowMax(Integer iRowMax) {
     this.iRowMax = iRowMax;
   }
 
 
   public CommonResponseObjDebugPayloadGetList iRowOffset(Integer iRowOffset) {
-    
     this.iRowOffset = iRowOffset;
     return this;
   }
@@ -271,7 +256,6 @@ public class CommonResponseObjDebugPayloadGetList {
   public Integer getiRowOffset() {
     return iRowOffset;
   }
-
 
   public void setiRowOffset(Integer iRowOffset) {
     this.iRowOffset = iRowOffset;

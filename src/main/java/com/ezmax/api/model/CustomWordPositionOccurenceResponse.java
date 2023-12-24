@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
@@ -67,7 +67,6 @@ public class CustomWordPositionOccurenceResponse {
   }
 
   public CustomWordPositionOccurenceResponse iPage(Integer iPage) {
-    
     this.iPage = iPage;
     return this;
   }
@@ -82,14 +81,12 @@ public class CustomWordPositionOccurenceResponse {
     return iPage;
   }
 
-
   public void setiPage(Integer iPage) {
     this.iPage = iPage;
   }
 
 
   public CustomWordPositionOccurenceResponse iX(Integer iX) {
-    
     this.iX = iX;
     return this;
   }
@@ -104,14 +101,12 @@ public class CustomWordPositionOccurenceResponse {
     return iX;
   }
 
-
   public void setiX(Integer iX) {
     this.iX = iX;
   }
 
 
   public CustomWordPositionOccurenceResponse iY(Integer iY) {
-    
     this.iY = iY;
     return this;
   }
@@ -125,7 +120,6 @@ public class CustomWordPositionOccurenceResponse {
   public Integer getiY() {
     return iY;
   }
-
 
   public void setiY(Integer iY) {
     this.iY = iY;

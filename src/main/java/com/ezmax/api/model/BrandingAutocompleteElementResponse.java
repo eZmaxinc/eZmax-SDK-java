@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Branding AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X = "sBrandingDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X)
@@ -67,7 +67,6 @@ public class BrandingAutocompleteElementResponse {
   }
 
   public BrandingAutocompleteElementResponse sBrandingDescriptionX(String sBrandingDescriptionX) {
-    
     this.sBrandingDescriptionX = sBrandingDescriptionX;
     return this;
   }
@@ -81,14 +80,12 @@ public class BrandingAutocompleteElementResponse {
     return sBrandingDescriptionX;
   }
 
-
   public void setsBrandingDescriptionX(String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
   }
 
 
   public BrandingAutocompleteElementResponse pkiBrandingID(Integer pkiBrandingID) {
-    
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -103,14 +100,12 @@ public class BrandingAutocompleteElementResponse {
     return pkiBrandingID;
   }
 
-
   public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
   public BrandingAutocompleteElementResponse bBrandingIsactive(Boolean bBrandingIsactive) {
-    
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class BrandingAutocompleteElementResponse {
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
   }
-
 
   public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;

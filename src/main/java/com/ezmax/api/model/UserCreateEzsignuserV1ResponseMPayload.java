@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/module/user/createEzsignuser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserCreateEzsignuserV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS = "a_sEmailAddressSuccess";
   @SerializedName(SERIALIZED_NAME_A_S_EMAIL_ADDRESS_SUCCESS)
@@ -65,7 +65,6 @@ public class UserCreateEzsignuserV1ResponseMPayload {
   }
 
   public UserCreateEzsignuserV1ResponseMPayload aSEmailAddressSuccess(List<String> aSEmailAddressSuccess) {
-    
     this.aSEmailAddressSuccess = aSEmailAddressSuccess;
     return this;
   }
@@ -87,14 +86,12 @@ public class UserCreateEzsignuserV1ResponseMPayload {
     return aSEmailAddressSuccess;
   }
 
-
   public void setaSEmailAddressSuccess(List<String> aSEmailAddressSuccess) {
     this.aSEmailAddressSuccess = aSEmailAddressSuccess;
   }
 
 
   public UserCreateEzsignuserV1ResponseMPayload aSEmailAddressFailure(List<String> aSEmailAddressFailure) {
-    
     this.aSEmailAddressFailure = aSEmailAddressFailure;
     return this;
   }
@@ -115,7 +112,6 @@ public class UserCreateEzsignuserV1ResponseMPayload {
   public List<String> getaSEmailAddressFailure() {
     return aSEmailAddressFailure;
   }
-
 
   public void setaSEmailAddressFailure(List<String> aSEmailAddressFailure) {
     this.aSEmailAddressFailure = aSEmailAddressFailure;

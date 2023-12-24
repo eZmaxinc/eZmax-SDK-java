@@ -47,6 +47,14 @@ public class WebsocketResponseErrorV1Test {
     }
 
     /**
+     * Test the property 'sWebsocketChannel'
+     */
+    @Test
+    public void sWebsocketChannelTest() {
+        // TODO: test sWebsocketChannel
+    }
+
+    /**
      * Test the property 'mPayload'
      */
     @Test

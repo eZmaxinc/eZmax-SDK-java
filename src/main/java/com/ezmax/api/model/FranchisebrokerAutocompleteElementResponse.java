@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisebroker AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FranchisebrokerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEBROKER_NAME = "sFranchisebrokerName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEBROKER_NAME)
@@ -67,7 +67,6 @@ public class FranchisebrokerAutocompleteElementResponse {
   }
 
   public FranchisebrokerAutocompleteElementResponse sFranchisebrokerName(String sFranchisebrokerName) {
-    
     this.sFranchisebrokerName = sFranchisebrokerName;
     return this;
   }
@@ -81,14 +80,12 @@ public class FranchisebrokerAutocompleteElementResponse {
     return sFranchisebrokerName;
   }
 
-
   public void setsFranchisebrokerName(String sFranchisebrokerName) {
     this.sFranchisebrokerName = sFranchisebrokerName;
   }
 
 
   public FranchisebrokerAutocompleteElementResponse pkiFranchisebrokerID(Integer pkiFranchisebrokerID) {
-    
     this.pkiFranchisebrokerID = pkiFranchisebrokerID;
     return this;
   }
@@ -103,14 +100,12 @@ public class FranchisebrokerAutocompleteElementResponse {
     return pkiFranchisebrokerID;
   }
 
-
   public void setPkiFranchisebrokerID(Integer pkiFranchisebrokerID) {
     this.pkiFranchisebrokerID = pkiFranchisebrokerID;
   }
 
 
   public FranchisebrokerAutocompleteElementResponse bFranchisebrokerIsactive(Boolean bFranchisebrokerIsactive) {
-    
     this.bFranchisebrokerIsactive = bFranchisebrokerIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class FranchisebrokerAutocompleteElementResponse {
   public Boolean getbFranchisebrokerIsactive() {
     return bFranchisebrokerIsactive;
   }
-
 
   public void setbFranchisebrokerIsactive(Boolean bFranchisebrokerIsactive) {
     this.bFranchisebrokerIsactive = bFranchisebrokerIsactive;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class VariableexpenseAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X = "sVariableexpenseDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X)
@@ -67,7 +67,6 @@ public class VariableexpenseAutocompleteElementResponse {
   }
 
   public VariableexpenseAutocompleteElementResponse sVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
-    
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
     return this;
   }
@@ -81,14 +80,12 @@ public class VariableexpenseAutocompleteElementResponse {
     return sVariableexpenseDescriptionX;
   }
 
-
   public void setsVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
   }
 
 
   public VariableexpenseAutocompleteElementResponse pkiVariableexpenseID(Integer pkiVariableexpenseID) {
-    
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -104,14 +101,12 @@ public class VariableexpenseAutocompleteElementResponse {
     return pkiVariableexpenseID;
   }
 
-
   public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
   public VariableexpenseAutocompleteElementResponse bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
-    
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -124,7 +119,6 @@ public class VariableexpenseAutocompleteElementResponse {
   public Boolean getbVariableexpenseIsactive() {
     return bVariableexpenseIsactive;
   }
-
 
   public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;

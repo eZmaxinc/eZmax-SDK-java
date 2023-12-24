@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendtransmissionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSENDTRANSMISSION = "objEzsignbulksendtransmission";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSENDTRANSMISSION)
@@ -60,7 +60,6 @@ public class EzsignbulksendtransmissionGetObjectV2ResponseMPayload {
   }
 
   public EzsignbulksendtransmissionGetObjectV2ResponseMPayload objEzsignbulksendtransmission(EzsignbulksendtransmissionResponseCompound objEzsignbulksendtransmission) {
-    
     this.objEzsignbulksendtransmission = objEzsignbulksendtransmission;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsignbulksendtransmissionGetObjectV2ResponseMPayload {
   public EzsignbulksendtransmissionResponseCompound getObjEzsignbulksendtransmission() {
     return objEzsignbulksendtransmission;
   }
-
 
   public void setObjEzsignbulksendtransmission(EzsignbulksendtransmissionResponseCompound objEzsignbulksendtransmission) {
     this.objEzsignbulksendtransmission = objEzsignbulksendtransmission;

@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldertypeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -129,6 +129,46 @@ public class EzsignfoldertypeRequestCompound {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTATCHMENTSIGNER)
   private Boolean bEzsignfoldertypeSendattatchmentsigner;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOEZSIGNSIGNER = "bEzsignfoldertypeSendsignedtoezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeSendsignedtoezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOUSER = "bEzsignfoldertypeSendsignedtouser";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOUSER)
+  private Boolean bEzsignfoldertypeSendsignedtouser;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTACHMENTEZSIGNSIGNER = "bEzsignfoldertypeSendattachmentezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTACHMENTEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeSendattachmentezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEZSIGNSIGNER = "bEzsignfoldertypeSendproofezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeSendproofezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTACHMENTUSER = "bEzsignfoldertypeSendattachmentuser";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTACHMENTUSER)
+  private Boolean bEzsignfoldertypeSendattachmentuser;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFUSER = "bEzsignfoldertypeSendproofuser";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFUSER)
+  private Boolean bEzsignfoldertypeSendproofuser;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEMAIL = "bEzsignfoldertypeSendproofemail";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEMAIL)
+  private Boolean bEzsignfoldertypeSendproofemail;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADATTACHMENTEZSIGNSIGNER = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADATTACHMENTEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADPROOFEZSIGNSIGNER = "bEzsignfoldertypeAllowdownloadproofezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADPROOFEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFRECEIVEALLDOCUMENT = "bEzsignfoldertypeSendproofreceivealldocument";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFRECEIVEALLDOCUMENT)
+  private Boolean bEzsignfoldertypeSendproofreceivealldocument;
+
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTODOCUMENTOWNER = "bEzsignfoldertypeSendsignedtodocumentowner";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTODOCUMENTOWNER)
   private Boolean bEzsignfoldertypeSendsignedtodocumentowner;
@@ -193,7 +233,6 @@ public class EzsignfoldertypeRequestCompound {
   }
 
   public EzsignfoldertypeRequestCompound pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
-    
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
     return this;
   }
@@ -208,14 +247,12 @@ public class EzsignfoldertypeRequestCompound {
     return pkiEzsignfoldertypeID;
   }
 
-
   public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
   }
 
 
   public EzsignfoldertypeRequestCompound objEzsignfoldertypeName(MultilingualEzsignfoldertypeName objEzsignfoldertypeName) {
-    
     this.objEzsignfoldertypeName = objEzsignfoldertypeName;
     return this;
   }
@@ -229,14 +266,12 @@ public class EzsignfoldertypeRequestCompound {
     return objEzsignfoldertypeName;
   }
 
-
   public void setObjEzsignfoldertypeName(MultilingualEzsignfoldertypeName objEzsignfoldertypeName) {
     this.objEzsignfoldertypeName = objEzsignfoldertypeName;
   }
 
 
   public EzsignfoldertypeRequestCompound fkiBrandingID(Integer fkiBrandingID) {
-    
     this.fkiBrandingID = fkiBrandingID;
     return this;
   }
@@ -251,14 +286,12 @@ public class EzsignfoldertypeRequestCompound {
     return fkiBrandingID;
   }
 
-
   public void setFkiBrandingID(Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
   }
 
 
   public EzsignfoldertypeRequestCompound fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -273,14 +306,12 @@ public class EzsignfoldertypeRequestCompound {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzsignfoldertypeRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -296,14 +327,12 @@ public class EzsignfoldertypeRequestCompound {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public EzsignfoldertypeRequestCompound fkiUsergroupIDRestricted(Integer fkiUsergroupIDRestricted) {
-    
     this.fkiUsergroupIDRestricted = fkiUsergroupIDRestricted;
     return this;
   }
@@ -319,14 +348,12 @@ public class EzsignfoldertypeRequestCompound {
     return fkiUsergroupIDRestricted;
   }
 
-
   public void setFkiUsergroupIDRestricted(Integer fkiUsergroupIDRestricted) {
     this.fkiUsergroupIDRestricted = fkiUsergroupIDRestricted;
   }
 
 
   public EzsignfoldertypeRequestCompound fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
-    
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -342,14 +369,12 @@ public class EzsignfoldertypeRequestCompound {
     return fkiEzsigntsarequirementID;
   }
 
-
   public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
   public EzsignfoldertypeRequestCompound sEmailAddressSigned(String sEmailAddressSigned) {
-    
     this.sEmailAddressSigned = sEmailAddressSigned;
     return this;
   }
@@ -363,14 +388,12 @@ public class EzsignfoldertypeRequestCompound {
     return sEmailAddressSigned;
   }
 
-
   public void setsEmailAddressSigned(String sEmailAddressSigned) {
     this.sEmailAddressSigned = sEmailAddressSigned;
   }
 
 
   public EzsignfoldertypeRequestCompound sEmailAddressSummary(String sEmailAddressSummary) {
-    
     this.sEmailAddressSummary = sEmailAddressSummary;
     return this;
   }
@@ -384,14 +407,12 @@ public class EzsignfoldertypeRequestCompound {
     return sEmailAddressSummary;
   }
 
-
   public void setsEmailAddressSummary(String sEmailAddressSummary) {
     this.sEmailAddressSummary = sEmailAddressSummary;
   }
 
 
   public EzsignfoldertypeRequestCompound eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -405,14 +426,12 @@ public class EzsignfoldertypeRequestCompound {
     return eEzsignfoldertypePrivacylevel;
   }
 
-
   public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
   public EzsignfoldertypeRequestCompound eEzsignfoldertypeSendreminderfrequency(FieldEEzsignfoldertypeSendreminderfrequency eEzsignfoldertypeSendreminderfrequency) {
-    
     this.eEzsignfoldertypeSendreminderfrequency = eEzsignfoldertypeSendreminderfrequency;
     return this;
   }
@@ -426,14 +445,12 @@ public class EzsignfoldertypeRequestCompound {
     return eEzsignfoldertypeSendreminderfrequency;
   }
 
-
   public void seteEzsignfoldertypeSendreminderfrequency(FieldEEzsignfoldertypeSendreminderfrequency eEzsignfoldertypeSendreminderfrequency) {
     this.eEzsignfoldertypeSendreminderfrequency = eEzsignfoldertypeSendreminderfrequency;
   }
 
 
   public EzsignfoldertypeRequestCompound iEzsignfoldertypeArchivaldays(Integer iEzsignfoldertypeArchivaldays) {
-    
     this.iEzsignfoldertypeArchivaldays = iEzsignfoldertypeArchivaldays;
     return this;
   }
@@ -449,14 +466,12 @@ public class EzsignfoldertypeRequestCompound {
     return iEzsignfoldertypeArchivaldays;
   }
 
-
   public void setiEzsignfoldertypeArchivaldays(Integer iEzsignfoldertypeArchivaldays) {
     this.iEzsignfoldertypeArchivaldays = iEzsignfoldertypeArchivaldays;
   }
 
 
   public EzsignfoldertypeRequestCompound eEzsignfoldertypeDisposal(FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal) {
-    
     this.eEzsignfoldertypeDisposal = eEzsignfoldertypeDisposal;
     return this;
   }
@@ -470,14 +485,12 @@ public class EzsignfoldertypeRequestCompound {
     return eEzsignfoldertypeDisposal;
   }
 
-
   public void seteEzsignfoldertypeDisposal(FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal) {
     this.eEzsignfoldertypeDisposal = eEzsignfoldertypeDisposal;
   }
 
 
   public EzsignfoldertypeRequestCompound iEzsignfoldertypeDisposaldays(Integer iEzsignfoldertypeDisposaldays) {
-    
     this.iEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
     return this;
   }
@@ -493,14 +506,12 @@ public class EzsignfoldertypeRequestCompound {
     return iEzsignfoldertypeDisposaldays;
   }
 
-
   public void setiEzsignfoldertypeDisposaldays(Integer iEzsignfoldertypeDisposaldays) {
     this.iEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
   }
 
 
   public EzsignfoldertypeRequestCompound iEzsignfoldertypeDeadlinedays(Integer iEzsignfoldertypeDeadlinedays) {
-    
     this.iEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
     return this;
   }
@@ -516,14 +527,12 @@ public class EzsignfoldertypeRequestCompound {
     return iEzsignfoldertypeDeadlinedays;
   }
 
-
   public void setiEzsignfoldertypeDeadlinedays(Integer iEzsignfoldertypeDeadlinedays) {
     this.iEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
-    
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
     return this;
   }
@@ -537,14 +546,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeDelegate;
   }
 
-
   public void setbEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
-    
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
     return this;
   }
@@ -558,35 +565,221 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeReassign;
   }
 
-
   public void setbEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendattatchmentsigner(Boolean bEzsignfoldertypeSendattatchmentsigner) {
-    
     this.bEzsignfoldertypeSendattatchmentsigner = bEzsignfoldertypeSendattatchmentsigner;
     return this;
   }
 
    /**
-   * Whether we send the Ezsigndocument and the proof as attachment in the email
+   * THIS FIELD WILL BE DELETED. Whether we send the Ezsigndocument and the proof as attachment in the email
    * @return bEzsignfoldertypeSendattatchmentsigner
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendattatchmentsigner() {
     return bEzsignfoldertypeSendattatchmentsigner;
   }
-
 
   public void setbEzsignfoldertypeSendattatchmentsigner(Boolean bEzsignfoldertypeSendattatchmentsigner) {
     this.bEzsignfoldertypeSendattatchmentsigner = bEzsignfoldertypeSendattatchmentsigner;
   }
 
 
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtoezsignsigner(Boolean bEzsignfoldertypeSendsignedtoezsignsigner) {
+    this.bEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we send an email to Ezsignsigner  when document is completed
+   * @return bEzsignfoldertypeSendsignedtoezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendsignedtoezsignsigner() {
+    return bEzsignfoldertypeSendsignedtoezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeSendsignedtoezsignsigner(Boolean bEzsignfoldertypeSendsignedtoezsignsigner) {
+    this.bEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtouser(Boolean bEzsignfoldertypeSendsignedtouser) {
+    this.bEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
+    return this;
+  }
+
+   /**
+   * Whether we send an email to User who signed when document is completed
+   * @return bEzsignfoldertypeSendsignedtouser
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendsignedtouser() {
+    return bEzsignfoldertypeSendsignedtouser;
+  }
+
+  public void setbEzsignfoldertypeSendsignedtouser(Boolean bEzsignfoldertypeSendsignedtouser) {
+    this.bEzsignfoldertypeSendsignedtouser = bEzsignfoldertypeSendsignedtouser;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendattachmentezsignsigner(Boolean bEzsignfoldertypeSendattachmentezsignsigner) {
+    this.bEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we send the Ezsigndocument in the email to Ezsignsigner
+   * @return bEzsignfoldertypeSendattachmentezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendattachmentezsignsigner() {
+    return bEzsignfoldertypeSendattachmentezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeSendattachmentezsignsigner(Boolean bEzsignfoldertypeSendattachmentezsignsigner) {
+    this.bEzsignfoldertypeSendattachmentezsignsigner = bEzsignfoldertypeSendattachmentezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendproofezsignsigner(Boolean bEzsignfoldertypeSendproofezsignsigner) {
+    this.bEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we send the proof in the email to Ezsignsigner
+   * @return bEzsignfoldertypeSendproofezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendproofezsignsigner() {
+    return bEzsignfoldertypeSendproofezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeSendproofezsignsigner(Boolean bEzsignfoldertypeSendproofezsignsigner) {
+    this.bEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendattachmentuser(Boolean bEzsignfoldertypeSendattachmentuser) {
+    this.bEzsignfoldertypeSendattachmentuser = bEzsignfoldertypeSendattachmentuser;
+    return this;
+  }
+
+   /**
+   * Whether we send the Ezsigndocument in the email to User
+   * @return bEzsignfoldertypeSendattachmentuser
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendattachmentuser() {
+    return bEzsignfoldertypeSendattachmentuser;
+  }
+
+  public void setbEzsignfoldertypeSendattachmentuser(Boolean bEzsignfoldertypeSendattachmentuser) {
+    this.bEzsignfoldertypeSendattachmentuser = bEzsignfoldertypeSendattachmentuser;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendproofuser(Boolean bEzsignfoldertypeSendproofuser) {
+    this.bEzsignfoldertypeSendproofuser = bEzsignfoldertypeSendproofuser;
+    return this;
+  }
+
+   /**
+   * Whether we send the proof in the email to User
+   * @return bEzsignfoldertypeSendproofuser
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendproofuser() {
+    return bEzsignfoldertypeSendproofuser;
+  }
+
+  public void setbEzsignfoldertypeSendproofuser(Boolean bEzsignfoldertypeSendproofuser) {
+    this.bEzsignfoldertypeSendproofuser = bEzsignfoldertypeSendproofuser;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendproofemail(Boolean bEzsignfoldertypeSendproofemail) {
+    this.bEzsignfoldertypeSendproofemail = bEzsignfoldertypeSendproofemail;
+    return this;
+  }
+
+   /**
+   * Whether we send the proof in the email to external recipient
+   * @return bEzsignfoldertypeSendproofemail
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendproofemail() {
+    return bEzsignfoldertypeSendproofemail;
+  }
+
+  public void setbEzsignfoldertypeSendproofemail(Boolean bEzsignfoldertypeSendproofemail) {
+    this.bEzsignfoldertypeSendproofemail = bEzsignfoldertypeSendproofemail;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeAllowdownloadattachmentezsignsigner(Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+   * @return bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAllowdownloadattachmentezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeAllowdownloadattachmentezsignsigner(Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeAllowdownloadproofezsignsigner(Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we allow the proof to be downloaded by an Ezsignsigner
+   * @return bEzsignfoldertypeAllowdownloadproofezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAllowdownloadproofezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeAllowdownloadproofezsignsigner(Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendproofreceivealldocument(Boolean bEzsignfoldertypeSendproofreceivealldocument) {
+    this.bEzsignfoldertypeSendproofreceivealldocument = bEzsignfoldertypeSendproofreceivealldocument;
+    return this;
+  }
+
+   /**
+   * Whether we send the proof to user and Ezsignsigner who receive all documents.
+   * @return bEzsignfoldertypeSendproofreceivealldocument
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendproofreceivealldocument() {
+    return bEzsignfoldertypeSendproofreceivealldocument;
+  }
+
+  public void setbEzsignfoldertypeSendproofreceivealldocument(Boolean bEzsignfoldertypeSendproofreceivealldocument) {
+    this.bEzsignfoldertypeSendproofreceivealldocument = bEzsignfoldertypeSendproofreceivealldocument;
+  }
+
+
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtodocumentowner(Boolean bEzsignfoldertypeSendsignedtodocumentowner) {
-    
     this.bEzsignfoldertypeSendsignedtodocumentowner = bEzsignfoldertypeSendsignedtodocumentowner;
     return this;
   }
@@ -600,14 +793,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsignedtodocumentowner;
   }
 
-
   public void setbEzsignfoldertypeSendsignedtodocumentowner(Boolean bEzsignfoldertypeSendsignedtodocumentowner) {
     this.bEzsignfoldertypeSendsignedtodocumentowner = bEzsignfoldertypeSendsignedtodocumentowner;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtofolderowner(Boolean bEzsignfoldertypeSendsignedtofolderowner) {
-    
     this.bEzsignfoldertypeSendsignedtofolderowner = bEzsignfoldertypeSendsignedtofolderowner;
     return this;
   }
@@ -621,14 +812,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsignedtofolderowner;
   }
 
-
   public void setbEzsignfoldertypeSendsignedtofolderowner(Boolean bEzsignfoldertypeSendsignedtofolderowner) {
     this.bEzsignfoldertypeSendsignedtofolderowner = bEzsignfoldertypeSendsignedtofolderowner;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtofullgroup(Boolean bEzsignfoldertypeSendsignedtofullgroup) {
-    
     this.bEzsignfoldertypeSendsignedtofullgroup = bEzsignfoldertypeSendsignedtofullgroup;
     return this;
   }
@@ -642,20 +831,18 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsignedtofullgroup;
   }
 
-
   public void setbEzsignfoldertypeSendsignedtofullgroup(Boolean bEzsignfoldertypeSendsignedtofullgroup) {
     this.bEzsignfoldertypeSendsignedtofullgroup = bEzsignfoldertypeSendsignedtofullgroup;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtolimitedgroup(Boolean bEzsignfoldertypeSendsignedtolimitedgroup) {
-    
     this.bEzsignfoldertypeSendsignedtolimitedgroup = bEzsignfoldertypeSendsignedtolimitedgroup;
     return this;
   }
 
    /**
-   * Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
+   * THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
    * @return bEzsignfoldertypeSendsignedtolimitedgroup
   **/
   @javax.annotation.Nullable
@@ -663,14 +850,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsignedtolimitedgroup;
   }
 
-
   public void setbEzsignfoldertypeSendsignedtolimitedgroup(Boolean bEzsignfoldertypeSendsignedtolimitedgroup) {
     this.bEzsignfoldertypeSendsignedtolimitedgroup = bEzsignfoldertypeSendsignedtolimitedgroup;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsignedtocolleague(Boolean bEzsignfoldertypeSendsignedtocolleague) {
-    
     this.bEzsignfoldertypeSendsignedtocolleague = bEzsignfoldertypeSendsignedtocolleague;
     return this;
   }
@@ -684,14 +869,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsignedtocolleague;
   }
 
-
   public void setbEzsignfoldertypeSendsignedtocolleague(Boolean bEzsignfoldertypeSendsignedtocolleague) {
     this.bEzsignfoldertypeSendsignedtocolleague = bEzsignfoldertypeSendsignedtocolleague;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsummarytodocumentowner(Boolean bEzsignfoldertypeSendsummarytodocumentowner) {
-    
     this.bEzsignfoldertypeSendsummarytodocumentowner = bEzsignfoldertypeSendsummarytodocumentowner;
     return this;
   }
@@ -705,14 +888,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsummarytodocumentowner;
   }
 
-
   public void setbEzsignfoldertypeSendsummarytodocumentowner(Boolean bEzsignfoldertypeSendsummarytodocumentowner) {
     this.bEzsignfoldertypeSendsummarytodocumentowner = bEzsignfoldertypeSendsummarytodocumentowner;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsummarytofolderowner(Boolean bEzsignfoldertypeSendsummarytofolderowner) {
-    
     this.bEzsignfoldertypeSendsummarytofolderowner = bEzsignfoldertypeSendsummarytofolderowner;
     return this;
   }
@@ -726,14 +907,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsummarytofolderowner;
   }
 
-
   public void setbEzsignfoldertypeSendsummarytofolderowner(Boolean bEzsignfoldertypeSendsummarytofolderowner) {
     this.bEzsignfoldertypeSendsummarytofolderowner = bEzsignfoldertypeSendsummarytofolderowner;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsummarytofullgroup(Boolean bEzsignfoldertypeSendsummarytofullgroup) {
-    
     this.bEzsignfoldertypeSendsummarytofullgroup = bEzsignfoldertypeSendsummarytofullgroup;
     return this;
   }
@@ -747,14 +926,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsummarytofullgroup;
   }
 
-
   public void setbEzsignfoldertypeSendsummarytofullgroup(Boolean bEzsignfoldertypeSendsummarytofullgroup) {
     this.bEzsignfoldertypeSendsummarytofullgroup = bEzsignfoldertypeSendsummarytofullgroup;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsummarytolimitedgroup(Boolean bEzsignfoldertypeSendsummarytolimitedgroup) {
-    
     this.bEzsignfoldertypeSendsummarytolimitedgroup = bEzsignfoldertypeSendsummarytolimitedgroup;
     return this;
   }
@@ -768,14 +945,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsummarytolimitedgroup;
   }
 
-
   public void setbEzsignfoldertypeSendsummarytolimitedgroup(Boolean bEzsignfoldertypeSendsummarytolimitedgroup) {
     this.bEzsignfoldertypeSendsummarytolimitedgroup = bEzsignfoldertypeSendsummarytolimitedgroup;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeSendsummarytocolleague(Boolean bEzsignfoldertypeSendsummarytocolleague) {
-    
     this.bEzsignfoldertypeSendsummarytocolleague = bEzsignfoldertypeSendsummarytocolleague;
     return this;
   }
@@ -789,27 +964,24 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeSendsummarytocolleague;
   }
 
-
   public void setbEzsignfoldertypeSendsummarytocolleague(Boolean bEzsignfoldertypeSendsummarytocolleague) {
     this.bEzsignfoldertypeSendsummarytocolleague = bEzsignfoldertypeSendsummarytocolleague;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeIncludeproofsigner(Boolean bEzsignfoldertypeIncludeproofsigner) {
-    
     this.bEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
     return this;
   }
 
    /**
-   * Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+   * THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
    * @return bEzsignfoldertypeIncludeproofsigner
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeIncludeproofsigner() {
     return bEzsignfoldertypeIncludeproofsigner;
   }
-
 
   public void setbEzsignfoldertypeIncludeproofsigner(Boolean bEzsignfoldertypeIncludeproofsigner) {
     this.bEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
@@ -817,7 +989,6 @@ public class EzsignfoldertypeRequestCompound {
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeIncludeproofuser(Boolean bEzsignfoldertypeIncludeproofuser) {
-    
     this.bEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
     return this;
   }
@@ -831,14 +1002,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeIncludeproofuser;
   }
 
-
   public void setbEzsignfoldertypeIncludeproofuser(Boolean bEzsignfoldertypeIncludeproofuser) {
     this.bEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
   }
 
 
   public EzsignfoldertypeRequestCompound bEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
-    
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
     return this;
   }
@@ -852,14 +1021,12 @@ public class EzsignfoldertypeRequestCompound {
     return bEzsignfoldertypeIsactive;
   }
 
-
   public void setbEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
   }
 
 
   public EzsignfoldertypeRequestCompound aFkiUserIDSigned(List<Integer> aFkiUserIDSigned) {
-    
     this.aFkiUserIDSigned = aFkiUserIDSigned;
     return this;
   }
@@ -881,14 +1048,12 @@ public class EzsignfoldertypeRequestCompound {
     return aFkiUserIDSigned;
   }
 
-
   public void setaFkiUserIDSigned(List<Integer> aFkiUserIDSigned) {
     this.aFkiUserIDSigned = aFkiUserIDSigned;
   }
 
 
   public EzsignfoldertypeRequestCompound aFkiUserIDSummary(List<Integer> aFkiUserIDSummary) {
-    
     this.aFkiUserIDSummary = aFkiUserIDSummary;
     return this;
   }
@@ -909,7 +1074,6 @@ public class EzsignfoldertypeRequestCompound {
   public List<Integer> getaFkiUserIDSummary() {
     return aFkiUserIDSummary;
   }
-
 
   public void setaFkiUserIDSummary(List<Integer> aFkiUserIDSummary) {
     this.aFkiUserIDSummary = aFkiUserIDSummary;
@@ -944,6 +1108,16 @@ public class EzsignfoldertypeRequestCompound {
         Objects.equals(this.bEzsignfoldertypeDelegate, ezsignfoldertypeRequestCompound.bEzsignfoldertypeDelegate) &&
         Objects.equals(this.bEzsignfoldertypeReassign, ezsignfoldertypeRequestCompound.bEzsignfoldertypeReassign) &&
         Objects.equals(this.bEzsignfoldertypeSendattatchmentsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendattatchmentsigner) &&
+        Objects.equals(this.bEzsignfoldertypeSendsignedtoezsignsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtoezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeSendsignedtouser, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtouser) &&
+        Objects.equals(this.bEzsignfoldertypeSendattachmentezsignsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendattachmentezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeSendproofezsignsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendproofezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeSendattachmentuser, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendattachmentuser) &&
+        Objects.equals(this.bEzsignfoldertypeSendproofuser, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendproofuser) &&
+        Objects.equals(this.bEzsignfoldertypeSendproofemail, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendproofemail) &&
+        Objects.equals(this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeAllowdownloadattachmentezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeAllowdownloadproofezsignsigner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeAllowdownloadproofezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeSendproofreceivealldocument, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendproofreceivealldocument) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtodocumentowner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtodocumentowner) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtofolderowner, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtofolderowner) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtofullgroup, ezsignfoldertypeRequestCompound.bEzsignfoldertypeSendsignedtofullgroup) &&
@@ -963,7 +1137,7 @@ public class EzsignfoldertypeRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sEmailAddressSigned, sEmailAddressSummary, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign, bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive, aFkiUserIDSigned, aFkiUserIDSummary);
+    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sEmailAddressSigned, sEmailAddressSummary, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign, bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive, aFkiUserIDSigned, aFkiUserIDSummary);
   }
 
   @Override
@@ -988,6 +1162,16 @@ public class EzsignfoldertypeRequestCompound {
     sb.append("    bEzsignfoldertypeDelegate: ").append(toIndentedString(bEzsignfoldertypeDelegate)).append("\n");
     sb.append("    bEzsignfoldertypeReassign: ").append(toIndentedString(bEzsignfoldertypeReassign)).append("\n");
     sb.append("    bEzsignfoldertypeSendattatchmentsigner: ").append(toIndentedString(bEzsignfoldertypeSendattatchmentsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeSendsignedtoezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendsignedtoezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeSendsignedtouser: ").append(toIndentedString(bEzsignfoldertypeSendsignedtouser)).append("\n");
+    sb.append("    bEzsignfoldertypeSendattachmentezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendattachmentezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeSendproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendproofezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeSendattachmentuser: ").append(toIndentedString(bEzsignfoldertypeSendattachmentuser)).append("\n");
+    sb.append("    bEzsignfoldertypeSendproofuser: ").append(toIndentedString(bEzsignfoldertypeSendproofuser)).append("\n");
+    sb.append("    bEzsignfoldertypeSendproofemail: ").append(toIndentedString(bEzsignfoldertypeSendproofemail)).append("\n");
+    sb.append("    bEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadattachmentezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadproofezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeSendproofreceivealldocument: ").append(toIndentedString(bEzsignfoldertypeSendproofreceivealldocument)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtodocumentowner: ").append(toIndentedString(bEzsignfoldertypeSendsignedtodocumentowner)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtofolderowner: ").append(toIndentedString(bEzsignfoldertypeSendsignedtofolderowner)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtofullgroup: ").append(toIndentedString(bEzsignfoldertypeSendsignedtofullgroup)).append("\n");
@@ -1043,6 +1227,16 @@ public class EzsignfoldertypeRequestCompound {
     openapiFields.add("bEzsignfoldertypeDelegate");
     openapiFields.add("bEzsignfoldertypeReassign");
     openapiFields.add("bEzsignfoldertypeSendattatchmentsigner");
+    openapiFields.add("bEzsignfoldertypeSendsignedtoezsignsigner");
+    openapiFields.add("bEzsignfoldertypeSendsignedtouser");
+    openapiFields.add("bEzsignfoldertypeSendattachmentezsignsigner");
+    openapiFields.add("bEzsignfoldertypeSendproofezsignsigner");
+    openapiFields.add("bEzsignfoldertypeSendattachmentuser");
+    openapiFields.add("bEzsignfoldertypeSendproofuser");
+    openapiFields.add("bEzsignfoldertypeSendproofemail");
+    openapiFields.add("bEzsignfoldertypeAllowdownloadattachmentezsignsigner");
+    openapiFields.add("bEzsignfoldertypeAllowdownloadproofezsignsigner");
+    openapiFields.add("bEzsignfoldertypeSendproofreceivealldocument");
     openapiFields.add("bEzsignfoldertypeSendsignedtodocumentowner");
     openapiFields.add("bEzsignfoldertypeSendsignedtofolderowner");
     openapiFields.add("bEzsignfoldertypeSendsignedtofullgroup");
@@ -1067,14 +1261,12 @@ public class EzsignfoldertypeRequestCompound {
     openapiRequiredFields.add("iEzsignfoldertypeArchivaldays");
     openapiRequiredFields.add("eEzsignfoldertypeDisposal");
     openapiRequiredFields.add("iEzsignfoldertypeDeadlinedays");
-    openapiRequiredFields.add("bEzsignfoldertypeSendattatchmentsigner");
     openapiRequiredFields.add("bEzsignfoldertypeSendsignedtodocumentowner");
     openapiRequiredFields.add("bEzsignfoldertypeSendsignedtofolderowner");
     openapiRequiredFields.add("bEzsignfoldertypeSendsignedtocolleague");
     openapiRequiredFields.add("bEzsignfoldertypeSendsummarytodocumentowner");
     openapiRequiredFields.add("bEzsignfoldertypeSendsummarytofolderowner");
     openapiRequiredFields.add("bEzsignfoldertypeSendsummarytocolleague");
-    openapiRequiredFields.add("bEzsignfoldertypeIncludeproofsigner");
     openapiRequiredFields.add("bEzsignfoldertypeIncludeproofuser");
     openapiRequiredFields.add("bEzsignfoldertypeIsactive");
   }
@@ -1115,6 +1307,14 @@ public class EzsignfoldertypeRequestCompound {
       if ((jsonObj.get("sEmailAddressSummary") != null && !jsonObj.get("sEmailAddressSummary").isJsonNull()) && !jsonObj.get("sEmailAddressSummary").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddressSummary` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddressSummary").toString()));
       }
+      // validate the required field `eEzsignfoldertypePrivacylevel`
+      FieldEEzsignfoldertypePrivacylevel.validateJsonElement(jsonObj.get("eEzsignfoldertypePrivacylevel"));
+      // validate the optional field `eEzsignfoldertypeSendreminderfrequency`
+      if (jsonObj.get("eEzsignfoldertypeSendreminderfrequency") != null && !jsonObj.get("eEzsignfoldertypeSendreminderfrequency").isJsonNull()) {
+        FieldEEzsignfoldertypeSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfoldertypeSendreminderfrequency"));
+      }
+      // validate the required field `eEzsignfoldertypeDisposal`
+      FieldEEzsignfoldertypeDisposal.validateJsonElement(jsonObj.get("eEzsignfoldertypeDisposal"));
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUserIDSigned") != null && !jsonObj.get("a_fkiUserIDSigned").isJsonNull() && !jsonObj.get("a_fkiUserIDSigned").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_fkiUserIDSigned` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSigned").toString()));

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Secretquestion AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SecretquestionAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)
@@ -67,7 +67,6 @@ public class SecretquestionAutocompleteElementResponse {
   }
 
   public SecretquestionAutocompleteElementResponse sSecretquestionTextX(String sSecretquestionTextX) {
-    
     this.sSecretquestionTextX = sSecretquestionTextX;
     return this;
   }
@@ -81,14 +80,12 @@ public class SecretquestionAutocompleteElementResponse {
     return sSecretquestionTextX;
   }
 
-
   public void setsSecretquestionTextX(String sSecretquestionTextX) {
     this.sSecretquestionTextX = sSecretquestionTextX;
   }
 
 
   public SecretquestionAutocompleteElementResponse pkiSecretquestionID(Integer pkiSecretquestionID) {
-    
     this.pkiSecretquestionID = pkiSecretquestionID;
     return this;
   }
@@ -103,14 +100,12 @@ public class SecretquestionAutocompleteElementResponse {
     return pkiSecretquestionID;
   }
 
-
   public void setPkiSecretquestionID(Integer pkiSecretquestionID) {
     this.pkiSecretquestionID = pkiSecretquestionID;
   }
 
 
   public SecretquestionAutocompleteElementResponse bSecretquestionIsactive(Boolean bSecretquestionIsactive) {
-    
     this.bSecretquestionIsactive = bSecretquestionIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class SecretquestionAutocompleteElementResponse {
   public Boolean getbSecretquestionIsactive() {
     return bSecretquestionIsactive;
   }
-
 
   public void setbSecretquestionIsactive(Boolean bSecretquestionIsactive) {
     this.bSecretquestionIsactive = bSecretquestionIsactive;

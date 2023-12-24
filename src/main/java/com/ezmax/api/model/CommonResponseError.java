@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseError {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -64,7 +64,6 @@ public class CommonResponseError {
   }
 
   public CommonResponseError sErrorMessage(String sErrorMessage) {
-    
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -78,14 +77,12 @@ public class CommonResponseError {
     return sErrorMessage;
   }
 
-
   public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
   public CommonResponseError eErrorCode(FieldEErrorCode eErrorCode) {
-    
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -98,7 +95,6 @@ public class CommonResponseError {
   public FieldEErrorCode geteErrorCode() {
     return eErrorCode;
   }
-
 
   public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
@@ -192,6 +188,8 @@ public class CommonResponseError {
       if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
       }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

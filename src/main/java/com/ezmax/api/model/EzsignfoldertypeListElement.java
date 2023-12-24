@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldertype List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldertypeListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -72,7 +72,6 @@ public class EzsignfoldertypeListElement {
   }
 
   public EzsignfoldertypeListElement pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
-    
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
     return this;
   }
@@ -87,14 +86,12 @@ public class EzsignfoldertypeListElement {
     return pkiEzsignfoldertypeID;
   }
 
-
   public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
   }
 
 
   public EzsignfoldertypeListElement eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsignfoldertypeListElement {
     return eEzsignfoldertypePrivacylevel;
   }
 
-
   public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
   public EzsignfoldertypeListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -129,14 +124,12 @@ public class EzsignfoldertypeListElement {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsignfoldertypeListElement bEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
-    
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
     return this;
   }
@@ -149,7 +142,6 @@ public class EzsignfoldertypeListElement {
   public Boolean getbEzsignfoldertypeIsactive() {
     return bEzsignfoldertypeIsactive;
   }
-
 
   public void setbEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
@@ -248,6 +240,8 @@ public class EzsignfoldertypeListElement {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignfoldertypePrivacylevel`
+      FieldEEzsignfoldertypePrivacylevel.validateJsonElement(jsonObj.get("eEzsignfoldertypePrivacylevel"));
       if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }

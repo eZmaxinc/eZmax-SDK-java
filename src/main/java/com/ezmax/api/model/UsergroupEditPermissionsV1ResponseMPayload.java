@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupEditPermissionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
@@ -61,7 +61,6 @@ public class UsergroupEditPermissionsV1ResponseMPayload {
   }
 
   public UsergroupEditPermissionsV1ResponseMPayload aPkiPermissionID(List<Integer> aPkiPermissionID) {
-    
     this.aPkiPermissionID = aPkiPermissionID;
     return this;
   }
@@ -82,7 +81,6 @@ public class UsergroupEditPermissionsV1ResponseMPayload {
   public List<Integer> getaPkiPermissionID() {
     return aPkiPermissionID;
   }
-
 
   public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;

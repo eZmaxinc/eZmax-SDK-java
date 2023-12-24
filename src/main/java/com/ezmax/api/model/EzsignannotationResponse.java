@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignannotationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
@@ -102,7 +102,6 @@ public class EzsignannotationResponse {
   }
 
   public EzsignannotationResponse pkiEzsignannotationID(Integer pkiEzsignannotationID) {
-    
     this.pkiEzsignannotationID = pkiEzsignannotationID;
     return this;
   }
@@ -116,14 +115,12 @@ public class EzsignannotationResponse {
     return pkiEzsignannotationID;
   }
 
-
   public void setPkiEzsignannotationID(Integer pkiEzsignannotationID) {
     this.pkiEzsignannotationID = pkiEzsignannotationID;
   }
 
 
   public EzsignannotationResponse fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
-    
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -138,14 +135,12 @@ public class EzsignannotationResponse {
     return fkiEzsigndocumentID;
   }
 
-
   public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
   public EzsignannotationResponse eEzsignannotationHorizontalalignment(EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
-    
     this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
     return this;
   }
@@ -159,14 +154,12 @@ public class EzsignannotationResponse {
     return eEzsignannotationHorizontalalignment;
   }
 
-
   public void seteEzsignannotationHorizontalalignment(EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
     this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
   }
 
 
   public EzsignannotationResponse eEzsignannotationVerticalalignment(EnumVerticalalignment eEzsignannotationVerticalalignment) {
-    
     this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
     return this;
   }
@@ -180,14 +173,12 @@ public class EzsignannotationResponse {
     return eEzsignannotationVerticalalignment;
   }
 
-
   public void seteEzsignannotationVerticalalignment(EnumVerticalalignment eEzsignannotationVerticalalignment) {
     this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
   }
 
 
   public EzsignannotationResponse eEzsignannotationType(FieldEEzsignannotationType eEzsignannotationType) {
-    
     this.eEzsignannotationType = eEzsignannotationType;
     return this;
   }
@@ -201,14 +192,12 @@ public class EzsignannotationResponse {
     return eEzsignannotationType;
   }
 
-
   public void seteEzsignannotationType(FieldEEzsignannotationType eEzsignannotationType) {
     this.eEzsignannotationType = eEzsignannotationType;
   }
 
 
   public EzsignannotationResponse iEzsignannotationX(Integer iEzsignannotationX) {
-    
     this.iEzsignannotationX = iEzsignannotationX;
     return this;
   }
@@ -223,14 +212,12 @@ public class EzsignannotationResponse {
     return iEzsignannotationX;
   }
 
-
   public void setiEzsignannotationX(Integer iEzsignannotationX) {
     this.iEzsignannotationX = iEzsignannotationX;
   }
 
 
   public EzsignannotationResponse iEzsignannotationY(Integer iEzsignannotationY) {
-    
     this.iEzsignannotationY = iEzsignannotationY;
     return this;
   }
@@ -245,14 +232,12 @@ public class EzsignannotationResponse {
     return iEzsignannotationY;
   }
 
-
   public void setiEzsignannotationY(Integer iEzsignannotationY) {
     this.iEzsignannotationY = iEzsignannotationY;
   }
 
 
   public EzsignannotationResponse iEzsignannotationWidth(Integer iEzsignannotationWidth) {
-    
     this.iEzsignannotationWidth = iEzsignannotationWidth;
     return this;
   }
@@ -267,14 +252,12 @@ public class EzsignannotationResponse {
     return iEzsignannotationWidth;
   }
 
-
   public void setiEzsignannotationWidth(Integer iEzsignannotationWidth) {
     this.iEzsignannotationWidth = iEzsignannotationWidth;
   }
 
 
   public EzsignannotationResponse iEzsignannotationHeight(Integer iEzsignannotationHeight) {
-    
     this.iEzsignannotationHeight = iEzsignannotationHeight;
     return this;
   }
@@ -289,14 +272,12 @@ public class EzsignannotationResponse {
     return iEzsignannotationHeight;
   }
 
-
   public void setiEzsignannotationHeight(Integer iEzsignannotationHeight) {
     this.iEzsignannotationHeight = iEzsignannotationHeight;
   }
 
 
   public EzsignannotationResponse sEzsignannotationText(String sEzsignannotationText) {
-    
     this.sEzsignannotationText = sEzsignannotationText;
     return this;
   }
@@ -310,14 +291,12 @@ public class EzsignannotationResponse {
     return sEzsignannotationText;
   }
 
-
   public void setsEzsignannotationText(String sEzsignannotationText) {
     this.sEzsignannotationText = sEzsignannotationText;
   }
 
 
   public EzsignannotationResponse iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -331,7 +310,6 @@ public class EzsignannotationResponse {
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }
-
 
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -453,6 +431,16 @@ public class EzsignannotationResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `eEzsignannotationHorizontalalignment`
+      if (jsonObj.get("eEzsignannotationHorizontalalignment") != null && !jsonObj.get("eEzsignannotationHorizontalalignment").isJsonNull()) {
+        EnumHorizontalalignment.validateJsonElement(jsonObj.get("eEzsignannotationHorizontalalignment"));
+      }
+      // validate the optional field `eEzsignannotationVerticalalignment`
+      if (jsonObj.get("eEzsignannotationVerticalalignment") != null && !jsonObj.get("eEzsignannotationVerticalalignment").isJsonNull()) {
+        EnumVerticalalignment.validateJsonElement(jsonObj.get("eEzsignannotationVerticalalignment"));
+      }
+      // validate the required field `eEzsignannotationType`
+      FieldEEzsignannotationType.validateJsonElement(jsonObj.get("eEzsignannotationType"));
       if ((jsonObj.get("sEzsignannotationText") != null && !jsonObj.get("sEzsignannotationText").isJsonNull()) && !jsonObj.get("sEzsignannotationText").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignannotationText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignannotationText").toString()));
       }

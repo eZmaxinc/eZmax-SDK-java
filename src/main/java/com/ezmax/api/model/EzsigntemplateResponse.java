@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -92,7 +92,6 @@ public class EzsigntemplateResponse {
   }
 
   public EzsigntemplateResponse pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
-    
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -107,14 +106,12 @@ public class EzsigntemplateResponse {
     return pkiEzsigntemplateID;
   }
 
-
   public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
   public EzsigntemplateResponse fkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
-    
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
     return this;
   }
@@ -129,14 +126,12 @@ public class EzsigntemplateResponse {
     return fkiEzsigntemplatedocumentID;
   }
 
-
   public void setFkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
   }
 
 
   public EzsigntemplateResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -151,14 +146,12 @@ public class EzsigntemplateResponse {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsigntemplateResponse fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -174,14 +167,12 @@ public class EzsigntemplateResponse {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigntemplateResponse sLanguageNameX(String sLanguageNameX) {
-    
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -195,14 +186,12 @@ public class EzsigntemplateResponse {
     return sLanguageNameX;
   }
 
-
   public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
   public EzsigntemplateResponse sEzsigntemplateDescription(String sEzsigntemplateDescription) {
-    
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -216,14 +205,12 @@ public class EzsigntemplateResponse {
     return sEzsigntemplateDescription;
   }
 
-
   public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
   public EzsigntemplateResponse bEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
-    
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
     return this;
   }
@@ -237,14 +224,12 @@ public class EzsigntemplateResponse {
     return bEzsigntemplateAdminonly;
   }
 
-
   public void setbEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
   }
 
 
   public EzsigntemplateResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -258,14 +243,12 @@ public class EzsigntemplateResponse {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsigntemplateResponse objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -278,7 +261,6 @@ public class EzsigntemplateResponse {
   public CommonAudit getObjAudit() {
     return objAudit;
   }
-
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;

@@ -18,12 +18,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The type or eZsign access the User has
+ * The type of eZsign access the User has
  */
 @JsonAdapter(FieldEUserEzsignaccess.Adapter.class)
 public enum FieldEUserEzsignaccess {
@@ -71,6 +72,11 @@ public enum FieldEUserEzsignaccess {
       String value = jsonReader.nextString();
       return FieldEUserEzsignaccess.fromValue(value);
     }
+  }
+
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    String value = jsonElement.getAsString();
+    FieldEUserEzsignaccess.fromValue(value);
   }
 }
 

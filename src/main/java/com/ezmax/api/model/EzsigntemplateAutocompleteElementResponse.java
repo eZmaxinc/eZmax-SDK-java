@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
@@ -72,7 +72,6 @@ public class EzsigntemplateAutocompleteElementResponse {
   }
 
   public EzsigntemplateAutocompleteElementResponse eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return eEzsignfoldertypePrivacylevel;
   }
 
-
   public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
   public EzsigntemplateAutocompleteElementResponse sEzsigntemplateDescription(String sEzsigntemplateDescription) {
-    
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -107,14 +104,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return sEzsigntemplateDescription;
   }
 
-
   public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
   public EzsigntemplateAutocompleteElementResponse pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
-    
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -129,14 +124,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return pkiEzsigntemplateID;
   }
 
-
   public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
   public EzsigntemplateAutocompleteElementResponse bEzsigntemplateIsactive(Boolean bEzsigntemplateIsactive) {
-    
     this.bEzsigntemplateIsactive = bEzsigntemplateIsactive;
     return this;
   }
@@ -149,7 +142,6 @@ public class EzsigntemplateAutocompleteElementResponse {
   public Boolean getbEzsigntemplateIsactive() {
     return bEzsigntemplateIsactive;
   }
-
 
   public void setbEzsigntemplateIsactive(Boolean bEzsigntemplateIsactive) {
     this.bEzsigntemplateIsactive = bEzsigntemplateIsactive;
@@ -248,6 +240,8 @@ public class EzsigntemplateAutocompleteElementResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignfoldertypePrivacylevel`
+      FieldEEzsignfoldertypePrivacylevel.validateJsonElement(jsonObj.get("eEzsignfoldertypePrivacylevel"));
       if (!jsonObj.get("sEzsigntemplateDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateDescription").toString()));
       }

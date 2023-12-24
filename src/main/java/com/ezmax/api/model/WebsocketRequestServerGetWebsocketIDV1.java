@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebsocketRequestServerGetWebsocketIDV1 {
   /**
    * The Type of message
@@ -94,6 +94,11 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
         return EWebsocketMessagetypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EWebsocketMessagetypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE = "eWebsocketMessagetype";
@@ -104,7 +109,6 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
   }
 
   public WebsocketRequestServerGetWebsocketIDV1 eWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
-    
     this.eWebsocketMessagetype = eWebsocketMessagetype;
     return this;
   }
@@ -117,7 +121,6 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
   public EWebsocketMessagetypeEnum geteWebsocketMessagetype() {
     return eWebsocketMessagetype;
   }
-
 
   public void seteWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
@@ -207,6 +210,8 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
       if (!jsonObj.get("eWebsocketMessagetype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eWebsocketMessagetype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eWebsocketMessagetype").toString()));
       }
+      // validate the required field `eWebsocketMessagetype`
+      EWebsocketMessagetypeEnum.validateJsonElement(jsonObj.get("eWebsocketMessagetype"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

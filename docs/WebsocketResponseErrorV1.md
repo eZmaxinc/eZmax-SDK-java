@@ -9,6 +9,7 @@ Response for Websocket Error V1
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**eWebsocketMessagetype** | [**EWebsocketMessagetypeEnum**](#EWebsocketMessagetypeEnum) | The Type of message |  |
+|**sWebsocketChannel** | **String** | The Channel on which to route the websocket message |  |
 |**mPayload** | [**WebsocketResponseErrorV1MPayload**](WebsocketResponseErrorV1MPayload.md) |  |  |
 
 

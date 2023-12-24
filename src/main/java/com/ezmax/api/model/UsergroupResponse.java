@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -64,7 +64,6 @@ public class UsergroupResponse {
   }
 
   public UsergroupResponse pkiUsergroupID(Integer pkiUsergroupID) {
-    
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -80,14 +79,12 @@ public class UsergroupResponse {
     return pkiUsergroupID;
   }
 
-
   public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
   public UsergroupResponse objUsergroupName(MultilingualUsergroupName objUsergroupName) {
-    
     this.objUsergroupName = objUsergroupName;
     return this;
   }
@@ -100,7 +97,6 @@ public class UsergroupResponse {
   public MultilingualUsergroupName getObjUsergroupName() {
     return objUsergroupName;
   }
-
 
   public void setObjUsergroupName(MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;

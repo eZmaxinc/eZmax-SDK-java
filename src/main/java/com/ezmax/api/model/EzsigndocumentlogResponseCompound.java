@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentlog Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentlogResponseCompound {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -88,7 +88,6 @@ public class EzsigndocumentlogResponseCompound {
   }
 
   public EzsigndocumentlogResponseCompound fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -103,14 +102,12 @@ public class EzsigndocumentlogResponseCompound {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public EzsigndocumentlogResponseCompound fkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -125,14 +122,12 @@ public class EzsigndocumentlogResponseCompound {
     return fkiEzsignsignerID;
   }
 
-
   public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
   public EzsigndocumentlogResponseCompound dtEzsigndocumentlogDatetime(String dtEzsigndocumentlogDatetime) {
-    
     this.dtEzsigndocumentlogDatetime = dtEzsigndocumentlogDatetime;
     return this;
   }
@@ -146,14 +141,12 @@ public class EzsigndocumentlogResponseCompound {
     return dtEzsigndocumentlogDatetime;
   }
 
-
   public void setDtEzsigndocumentlogDatetime(String dtEzsigndocumentlogDatetime) {
     this.dtEzsigndocumentlogDatetime = dtEzsigndocumentlogDatetime;
   }
 
 
   public EzsigndocumentlogResponseCompound eEzsigndocumentlogType(FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
-    
     this.eEzsigndocumentlogType = eEzsigndocumentlogType;
     return this;
   }
@@ -167,14 +160,12 @@ public class EzsigndocumentlogResponseCompound {
     return eEzsigndocumentlogType;
   }
 
-
   public void seteEzsigndocumentlogType(FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
     this.eEzsigndocumentlogType = eEzsigndocumentlogType;
   }
 
 
   public EzsigndocumentlogResponseCompound sEzsigndocumentlogDetail(String sEzsigndocumentlogDetail) {
-    
     this.sEzsigndocumentlogDetail = sEzsigndocumentlogDetail;
     return this;
   }
@@ -188,14 +179,12 @@ public class EzsigndocumentlogResponseCompound {
     return sEzsigndocumentlogDetail;
   }
 
-
   public void setsEzsigndocumentlogDetail(String sEzsigndocumentlogDetail) {
     this.sEzsigndocumentlogDetail = sEzsigndocumentlogDetail;
   }
 
 
   public EzsigndocumentlogResponseCompound sEzsigndocumentlogLastname(String sEzsigndocumentlogLastname) {
-    
     this.sEzsigndocumentlogLastname = sEzsigndocumentlogLastname;
     return this;
   }
@@ -209,14 +198,12 @@ public class EzsigndocumentlogResponseCompound {
     return sEzsigndocumentlogLastname;
   }
 
-
   public void setsEzsigndocumentlogLastname(String sEzsigndocumentlogLastname) {
     this.sEzsigndocumentlogLastname = sEzsigndocumentlogLastname;
   }
 
 
   public EzsigndocumentlogResponseCompound sEzsigndocumentlogFirstname(String sEzsigndocumentlogFirstname) {
-    
     this.sEzsigndocumentlogFirstname = sEzsigndocumentlogFirstname;
     return this;
   }
@@ -230,14 +217,12 @@ public class EzsigndocumentlogResponseCompound {
     return sEzsigndocumentlogFirstname;
   }
 
-
   public void setsEzsigndocumentlogFirstname(String sEzsigndocumentlogFirstname) {
     this.sEzsigndocumentlogFirstname = sEzsigndocumentlogFirstname;
   }
 
 
   public EzsigndocumentlogResponseCompound sEzsigndocumentlogIP(String sEzsigndocumentlogIP) {
-    
     this.sEzsigndocumentlogIP = sEzsigndocumentlogIP;
     return this;
   }
@@ -250,7 +235,6 @@ public class EzsigndocumentlogResponseCompound {
   public String getsEzsigndocumentlogIP() {
     return sEzsigndocumentlogIP;
   }
-
 
   public void setsEzsigndocumentlogIP(String sEzsigndocumentlogIP) {
     this.sEzsigndocumentlogIP = sEzsigndocumentlogIP;
@@ -366,6 +350,8 @@ public class EzsigndocumentlogResponseCompound {
       if (!jsonObj.get("dtEzsigndocumentlogDatetime").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentlogDatetime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentlogDatetime").toString()));
       }
+      // validate the required field `eEzsigndocumentlogType`
+      FieldEEzsigndocumentlogType.validateJsonElement(jsonObj.get("eEzsigndocumentlogType"));
       if (!jsonObj.get("sEzsigndocumentlogDetail").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentlogDetail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentlogDetail").toString()));
       }

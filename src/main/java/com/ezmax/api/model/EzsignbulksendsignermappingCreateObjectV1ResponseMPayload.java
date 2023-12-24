@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignbulksendsignermapping
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendsignermappingCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "a_pkiEzsignbulksendsignermappingID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
@@ -61,7 +61,6 @@ public class EzsignbulksendsignermappingCreateObjectV1ResponseMPayload {
   }
 
   public EzsignbulksendsignermappingCreateObjectV1ResponseMPayload aPkiEzsignbulksendsignermappingID(List<Integer> aPkiEzsignbulksendsignermappingID) {
-    
     this.aPkiEzsignbulksendsignermappingID = aPkiEzsignbulksendsignermappingID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsignbulksendsignermappingCreateObjectV1ResponseMPayload {
   public List<Integer> getaPkiEzsignbulksendsignermappingID() {
     return aPkiEzsignbulksendsignermappingID;
   }
-
 
   public void setaPkiEzsignbulksendsignermappingID(List<Integer> aPkiEzsignbulksendsignermappingID) {
     this.aPkiEzsignbulksendsignermappingID = aPkiEzsignbulksendsignermappingID;

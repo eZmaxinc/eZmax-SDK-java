@@ -17,6 +17,7 @@ A Webhook List Element
 |**eWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
 |**bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not |  |
+|**bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not |  |
 
 
 

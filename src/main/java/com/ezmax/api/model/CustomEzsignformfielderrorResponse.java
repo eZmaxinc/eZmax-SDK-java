@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfield Object to contain an error list
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignformfielderrorResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
@@ -66,7 +66,6 @@ public class CustomEzsignformfielderrorResponse {
   }
 
   public CustomEzsignformfielderrorResponse sEzsignformfieldLabel(String sEzsignformfieldLabel) {
-    
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -80,14 +79,12 @@ public class CustomEzsignformfielderrorResponse {
     return sEzsignformfieldLabel;
   }
 
-
   public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
   public CustomEzsignformfielderrorResponse aObjEzsignformfielderrortest(List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
-    
     this.aObjEzsignformfielderrortest = aObjEzsignformfielderrortest;
     return this;
   }
@@ -108,7 +105,6 @@ public class CustomEzsignformfielderrorResponse {
   public List<CustomEzsignformfielderrortestResponse> getaObjEzsignformfielderrortest() {
     return aObjEzsignformfielderrortest;
   }
-
 
   public void setaObjEzsignformfielderrortest(List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
     this.aObjEzsignformfielderrortest = aObjEzsignformfielderrortest;

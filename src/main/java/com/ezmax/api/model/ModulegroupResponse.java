@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulegroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ModulegroupResponse {
   public static final String SERIALIZED_NAME_PKI_MODULEGROUP_I_D = "pkiModulegroupID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULEGROUP_I_D)
@@ -63,7 +63,6 @@ public class ModulegroupResponse {
   }
 
   public ModulegroupResponse pkiModulegroupID(Integer pkiModulegroupID) {
-    
     this.pkiModulegroupID = pkiModulegroupID;
     return this;
   }
@@ -79,14 +78,12 @@ public class ModulegroupResponse {
     return pkiModulegroupID;
   }
 
-
   public void setPkiModulegroupID(Integer pkiModulegroupID) {
     this.pkiModulegroupID = pkiModulegroupID;
   }
 
 
   public ModulegroupResponse sModulegroupNameX(String sModulegroupNameX) {
-    
     this.sModulegroupNameX = sModulegroupNameX;
     return this;
   }
@@ -99,7 +96,6 @@ public class ModulegroupResponse {
   public String getsModulegroupNameX() {
     return sModulegroupNameX;
   }
-
 
   public void setsModulegroupNameX(String sModulegroupNameX) {
     this.sModulegroupNameX = sModulegroupNameX;

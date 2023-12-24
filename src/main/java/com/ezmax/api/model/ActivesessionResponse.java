@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -102,7 +102,6 @@ public class ActivesessionResponse {
   }
 
   public ActivesessionResponse eActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
-    
     this.eActivesessionUsertype = eActivesessionUsertype;
     return this;
   }
@@ -116,14 +115,12 @@ public class ActivesessionResponse {
     return eActivesessionUsertype;
   }
 
-
   public void seteActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
 
   public ActivesessionResponse eActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
-    
     this.eActivesessionOrigin = eActivesessionOrigin;
     return this;
   }
@@ -137,14 +134,12 @@ public class ActivesessionResponse {
     return eActivesessionOrigin;
   }
 
-
   public void seteActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
     this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
 
   public ActivesessionResponse eActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
-    
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
     return this;
   }
@@ -158,14 +153,12 @@ public class ActivesessionResponse {
     return eActivesessionWeekdaystart;
   }
 
-
   public void seteActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
   }
 
 
   public ActivesessionResponse fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -181,14 +174,12 @@ public class ActivesessionResponse {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public ActivesessionResponse sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -202,14 +193,12 @@ public class ActivesessionResponse {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public ActivesessionResponse sDepartmentNameX(String sDepartmentNameX) {
-    
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -223,14 +212,12 @@ public class ActivesessionResponse {
     return sDepartmentNameX;
   }
 
-
   public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
   public ActivesessionResponse bActivesessionDebug(Boolean bActivesessionDebug) {
-    
     this.bActivesessionDebug = bActivesessionDebug;
     return this;
   }
@@ -244,14 +231,12 @@ public class ActivesessionResponse {
     return bActivesessionDebug;
   }
 
-
   public void setbActivesessionDebug(Boolean bActivesessionDebug) {
     this.bActivesessionDebug = bActivesessionDebug;
   }
 
 
   public ActivesessionResponse bActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
-    
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
     return this;
   }
@@ -265,14 +250,12 @@ public class ActivesessionResponse {
     return bActivesessionIssuperadmin;
   }
 
-
   public void setbActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
   }
 
 
   public ActivesessionResponse pksCustomerCode(String pksCustomerCode) {
-    
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
@@ -286,14 +269,12 @@ public class ActivesessionResponse {
     return pksCustomerCode;
   }
 
-
   public void setPksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
   }
 
 
   public ActivesessionResponse fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
-    
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -308,14 +289,12 @@ public class ActivesessionResponse {
     return fkiSystemconfigurationtypeID;
   }
 
-
   public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
   public ActivesessionResponse fkiSignatureID(Integer fkiSignatureID) {
-    
     this.fkiSignatureID = fkiSignatureID;
     return this;
   }
@@ -330,7 +309,6 @@ public class ActivesessionResponse {
   public Integer getFkiSignatureID() {
     return fkiSignatureID;
   }
-
 
   public void setFkiSignatureID(Integer fkiSignatureID) {
     this.fkiSignatureID = fkiSignatureID;
@@ -456,6 +434,12 @@ public class ActivesessionResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eActivesessionUsertype`
+      FieldEActivesessionUsertype.validateJsonElement(jsonObj.get("eActivesessionUsertype"));
+      // validate the required field `eActivesessionOrigin`
+      FieldEActivesessionOrigin.validateJsonElement(jsonObj.get("eActivesessionOrigin"));
+      // validate the required field `eActivesessionWeekdaystart`
+      FieldEActivesessionWeekdaystart.validateJsonElement(jsonObj.get("eActivesessionWeekdaystart"));
       if (!jsonObj.get("sCompanyNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
       }

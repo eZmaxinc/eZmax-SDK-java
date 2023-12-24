@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PaymenttermListElement {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -80,7 +80,6 @@ public class PaymenttermListElement {
   }
 
   public PaymenttermListElement pkiPaymenttermID(Integer pkiPaymenttermID) {
-    
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -94,14 +93,12 @@ public class PaymenttermListElement {
     return pkiPaymenttermID;
   }
 
-
   public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
   public PaymenttermListElement sPaymenttermCode(String sPaymenttermCode) {
-    
     this.sPaymenttermCode = sPaymenttermCode;
     return this;
   }
@@ -115,14 +112,12 @@ public class PaymenttermListElement {
     return sPaymenttermCode;
   }
 
-
   public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
   }
 
 
   public PaymenttermListElement ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
-    
     this.ePaymenttermType = ePaymenttermType;
     return this;
   }
@@ -136,14 +131,12 @@ public class PaymenttermListElement {
     return ePaymenttermType;
   }
 
-
   public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
   }
 
 
   public PaymenttermListElement iPaymenttermDay(Integer iPaymenttermDay) {
-    
     this.iPaymenttermDay = iPaymenttermDay;
     return this;
   }
@@ -159,14 +152,12 @@ public class PaymenttermListElement {
     return iPaymenttermDay;
   }
 
-
   public void setiPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
   public PaymenttermListElement sPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
-    
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
     return this;
   }
@@ -180,14 +171,12 @@ public class PaymenttermListElement {
     return sPaymenttermDescriptionX;
   }
 
-
   public void setsPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
   }
 
 
   public PaymenttermListElement bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
-    
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -200,7 +189,6 @@ public class PaymenttermListElement {
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
   }
-
 
   public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
@@ -310,6 +298,8 @@ public class PaymenttermListElement {
       if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
       }
+      // validate the required field `ePaymenttermType`
+      FieldEPaymenttermType.validateJsonElement(jsonObj.get("ePaymenttermType"));
       if (!jsonObj.get("sPaymenttermDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermDescriptionX").toString()));
       }

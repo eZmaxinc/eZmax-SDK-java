@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalRequestCompound {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
@@ -71,7 +71,6 @@ public class BillingentityinternalRequestCompound {
   }
 
   public BillingentityinternalRequestCompound pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
-    
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -86,14 +85,12 @@ public class BillingentityinternalRequestCompound {
     return pkiBillingentityinternalID;
   }
 
-
   public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
   public BillingentityinternalRequestCompound objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
-    
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
     return this;
   }
@@ -107,14 +104,12 @@ public class BillingentityinternalRequestCompound {
     return objBillingentityinternalDescription;
   }
 
-
   public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
   }
 
 
   public BillingentityinternalRequestCompound aObjBillingentityinternalproduct(List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
-    
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
     return this;
   }
@@ -135,7 +130,6 @@ public class BillingentityinternalRequestCompound {
   public List<BillingentityinternalproductRequestCompound> getaObjBillingentityinternalproduct() {
     return aObjBillingentityinternalproduct;
   }
-
 
   public void setaObjBillingentityinternalproduct(List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;

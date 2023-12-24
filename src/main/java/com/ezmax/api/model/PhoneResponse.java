@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PhoneResponse {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
@@ -77,7 +77,6 @@ public class PhoneResponse {
   }
 
   public PhoneResponse pkiPhoneID(Integer pkiPhoneID) {
-    
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -92,14 +91,12 @@ public class PhoneResponse {
     return pkiPhoneID;
   }
 
-
   public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
   public PhoneResponse fkiPhonetypeID(Integer fkiPhonetypeID) {
-    
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -114,7 +111,6 @@ public class PhoneResponse {
     return fkiPhonetypeID;
   }
 
-
   public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
@@ -122,7 +118,6 @@ public class PhoneResponse {
 
   @Deprecated
   public PhoneResponse ePhoneType(FieldEPhoneType ePhoneType) {
-    
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -138,7 +133,6 @@ public class PhoneResponse {
     return ePhoneType;
   }
 
-
   @Deprecated
   public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
@@ -146,7 +140,6 @@ public class PhoneResponse {
 
 
   public PhoneResponse sPhoneE164(String sPhoneE164) {
-    
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -160,14 +153,12 @@ public class PhoneResponse {
     return sPhoneE164;
   }
 
-
   public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
   public PhoneResponse sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -180,7 +171,6 @@ public class PhoneResponse {
   public String getsPhoneExtension() {
     return sPhoneExtension;
   }
-
 
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
@@ -280,6 +270,10 @@ public class PhoneResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `ePhoneType`
+      if (jsonObj.get("ePhoneType") != null && !jsonObj.get("ePhoneType").isJsonNull()) {
+        FieldEPhoneType.validateJsonElement(jsonObj.get("ePhoneType"));
+      }
       if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
       }

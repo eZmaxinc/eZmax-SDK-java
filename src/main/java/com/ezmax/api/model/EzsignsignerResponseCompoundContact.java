@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignerResponseCompoundContact {
   public static final String SERIALIZED_NAME_PKI_CONTACT_I_D = "pkiContactID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACT_I_D)
@@ -87,7 +87,6 @@ public class EzsignsignerResponseCompoundContact {
   }
 
   public EzsignsignerResponseCompoundContact pkiContactID(Integer pkiContactID) {
-    
     this.pkiContactID = pkiContactID;
     return this;
   }
@@ -102,14 +101,12 @@ public class EzsignsignerResponseCompoundContact {
     return pkiContactID;
   }
 
-
   public void setPkiContactID(Integer pkiContactID) {
     this.pkiContactID = pkiContactID;
   }
 
 
   public EzsignsignerResponseCompoundContact sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -123,14 +120,12 @@ public class EzsignsignerResponseCompoundContact {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public EzsignsignerResponseCompoundContact sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -144,14 +139,12 @@ public class EzsignsignerResponseCompoundContact {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public EzsignsignerResponseCompoundContact fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -167,14 +160,12 @@ public class EzsignsignerResponseCompoundContact {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsignsignerResponseCompoundContact sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -188,14 +179,12 @@ public class EzsignsignerResponseCompoundContact {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public EzsignsignerResponseCompoundContact sPhoneE164(String sPhoneE164) {
-    
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -209,14 +198,12 @@ public class EzsignsignerResponseCompoundContact {
     return sPhoneE164;
   }
 
-
   public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
   public EzsignsignerResponseCompoundContact sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -230,14 +217,12 @@ public class EzsignsignerResponseCompoundContact {
     return sPhoneExtension;
   }
 
-
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
   public EzsignsignerResponseCompoundContact sPhoneE164Cell(String sPhoneE164Cell) {
-    
     this.sPhoneE164Cell = sPhoneE164Cell;
     return this;
   }
@@ -250,7 +235,6 @@ public class EzsignsignerResponseCompoundContact {
   public String getsPhoneE164Cell() {
     return sPhoneE164Cell;
   }
-
 
   public void setsPhoneE164Cell(String sPhoneE164Cell) {
     this.sPhoneE164Cell = sPhoneE164Cell;

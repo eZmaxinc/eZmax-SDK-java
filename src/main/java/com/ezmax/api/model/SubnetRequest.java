@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SubnetRequest {
   public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
@@ -80,7 +80,6 @@ public class SubnetRequest {
   }
 
   public SubnetRequest pkiSubnetID(Integer pkiSubnetID) {
-    
     this.pkiSubnetID = pkiSubnetID;
     return this;
   }
@@ -96,14 +95,12 @@ public class SubnetRequest {
     return pkiSubnetID;
   }
 
-
   public void setPkiSubnetID(Integer pkiSubnetID) {
     this.pkiSubnetID = pkiSubnetID;
   }
 
 
   public SubnetRequest fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -118,14 +115,12 @@ public class SubnetRequest {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public SubnetRequest fkiApikeyID(Integer fkiApikeyID) {
-    
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -140,14 +135,12 @@ public class SubnetRequest {
     return fkiApikeyID;
   }
 
-
   public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
   public SubnetRequest objSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
-    
     this.objSubnetDescription = objSubnetDescription;
     return this;
   }
@@ -161,14 +154,12 @@ public class SubnetRequest {
     return objSubnetDescription;
   }
 
-
   public void setObjSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
     this.objSubnetDescription = objSubnetDescription;
   }
 
 
   public SubnetRequest iSubnetNetwork(Long iSubnetNetwork) {
-    
     this.iSubnetNetwork = iSubnetNetwork;
     return this;
   }
@@ -184,14 +175,12 @@ public class SubnetRequest {
     return iSubnetNetwork;
   }
 
-
   public void setiSubnetNetwork(Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
   }
 
 
   public SubnetRequest iSubnetMask(Long iSubnetMask) {
-    
     this.iSubnetMask = iSubnetMask;
     return this;
   }
@@ -206,7 +195,6 @@ public class SubnetRequest {
   public Long getiSubnetMask() {
     return iSubnetMask;
   }
-
 
   public void setiSubnetMask(Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;

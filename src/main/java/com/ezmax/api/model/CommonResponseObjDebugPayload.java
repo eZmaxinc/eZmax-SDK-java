@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -73,7 +73,6 @@ public class CommonResponseObjDebugPayload {
   }
 
   public CommonResponseObjDebugPayload iVersionMin(Integer iVersionMin) {
-    
     this.iVersionMin = iVersionMin;
     return this;
   }
@@ -87,14 +86,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMin;
   }
 
-
   public void setiVersionMin(Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
   }
 
 
   public CommonResponseObjDebugPayload iVersionMax(Integer iVersionMax) {
-    
     this.iVersionMax = iVersionMax;
     return this;
   }
@@ -108,14 +105,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMax;
   }
 
-
   public void setiVersionMax(Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
   }
 
 
   public CommonResponseObjDebugPayload aRequiredPermission(List<Integer> aRequiredPermission) {
-    
     this.aRequiredPermission = aRequiredPermission;
     return this;
   }
@@ -137,14 +132,12 @@ public class CommonResponseObjDebugPayload {
     return aRequiredPermission;
   }
 
-
   public void setaRequiredPermission(List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
   }
 
 
   public CommonResponseObjDebugPayload bVersionDeprecated(Boolean bVersionDeprecated) {
-    
     this.bVersionDeprecated = bVersionDeprecated;
     return this;
   }
@@ -157,7 +150,6 @@ public class CommonResponseObjDebugPayload {
   public Boolean getbVersionDeprecated() {
     return bVersionDeprecated;
   }
-
 
   public void setbVersionDeprecated(Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;

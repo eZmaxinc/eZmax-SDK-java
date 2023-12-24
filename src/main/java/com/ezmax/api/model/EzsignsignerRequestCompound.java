@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignerRequestCompound {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -115,6 +115,11 @@ public class EzsignsignerRequestCompound {
         return EEzsignsignerLogintypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsignsignerLogintypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
@@ -134,7 +139,6 @@ public class EzsignsignerRequestCompound {
   }
 
   public EzsignsignerRequestCompound fkiUserlogintypeID(Integer fkiUserlogintypeID) {
-    
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -149,14 +153,12 @@ public class EzsignsignerRequestCompound {
     return fkiUserlogintypeID;
   }
 
-
   public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
   public EzsignsignerRequestCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
-    
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -172,14 +174,12 @@ public class EzsignsignerRequestCompound {
     return fkiTaxassignmentID;
   }
 
-
   public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
   public EzsignsignerRequestCompound fkiSecretquestionID(Integer fkiSecretquestionID) {
-    
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -194,7 +194,6 @@ public class EzsignsignerRequestCompound {
     return fkiSecretquestionID;
   }
 
-
   public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
@@ -202,7 +201,6 @@ public class EzsignsignerRequestCompound {
 
   @Deprecated
   public EzsignsignerRequestCompound eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
-    
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
     return this;
   }
@@ -218,7 +216,6 @@ public class EzsignsignerRequestCompound {
     return eEzsignsignerLogintype;
   }
 
-
   @Deprecated
   public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
@@ -226,7 +223,6 @@ public class EzsignsignerRequestCompound {
 
 
   public EzsignsignerRequestCompound sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
-    
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
     return this;
   }
@@ -240,14 +236,12 @@ public class EzsignsignerRequestCompound {
     return sEzsignsignerSecretanswer;
   }
 
-
   public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
   }
 
 
   public EzsignsignerRequestCompound objContact(EzsignsignerRequestCompoundContact objContact) {
-    
     this.objContact = objContact;
     return this;
   }
@@ -260,7 +254,6 @@ public class EzsignsignerRequestCompound {
   public EzsignsignerRequestCompoundContact getObjContact() {
     return objContact;
   }
-
 
   public void setObjContact(EzsignsignerRequestCompoundContact objContact) {
     this.objContact = objContact;
@@ -365,6 +358,10 @@ public class EzsignsignerRequestCompound {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) && !jsonObj.get("eEzsignsignerLogintype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignerLogintype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignerLogintype").toString()));
+      }
+      // validate the optional field `eEzsignsignerLogintype`
+      if (jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) {
+        EEzsignsignerLogintypeEnum.validateJsonElement(jsonObj.get("eEzsignsignerLogintype"));
       }
       if ((jsonObj.get("sEzsignsignerSecretanswer") != null && !jsonObj.get("sEzsignsignerSecretanswer").isJsonNull()) && !jsonObj.get("sEzsignsignerSecretanswer").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignerSecretanswer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignerSecretanswer").toString()));

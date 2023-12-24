@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -59,6 +59,10 @@ public class CustomEzsignfoldertypeResponse {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
   private String sEzsignfoldertypeNameX;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEZSIGNSIGNER = "bEzsignfoldertypeSendproofezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDPROOFEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeSendproofezsignsigner;
+
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_INCLUDEPROOFSIGNER = "bEzsignfoldertypeIncludeproofsigner";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_INCLUDEPROOFSIGNER)
   private Boolean bEzsignfoldertypeIncludeproofsigner;
@@ -66,6 +70,14 @@ public class CustomEzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_INCLUDEPROOFUSER = "bEzsignfoldertypeIncludeproofuser";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_INCLUDEPROOFUSER)
   private Boolean bEzsignfoldertypeIncludeproofuser;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADATTACHMENTEZSIGNSIGNER = "bEzsignfoldertypeAllowdownloadattachmentezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADATTACHMENTEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADPROOFEZSIGNSIGNER = "bEzsignfoldertypeAllowdownloadproofezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADPROOFEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE = "bEzsignfoldertypeDelegate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE)
@@ -79,7 +91,6 @@ public class CustomEzsignfoldertypeResponse {
   }
 
   public CustomEzsignfoldertypeResponse pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
-    
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
     return this;
   }
@@ -94,14 +105,12 @@ public class CustomEzsignfoldertypeResponse {
     return pkiEzsignfoldertypeID;
   }
 
-
   public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
   }
 
 
   public CustomEzsignfoldertypeResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -115,20 +124,37 @@ public class CustomEzsignfoldertypeResponse {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
+  public CustomEzsignfoldertypeResponse bEzsignfoldertypeSendproofezsignsigner(Boolean bEzsignfoldertypeSendproofezsignsigner) {
+    this.bEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we send the proof in the email to Ezsignsigner
+   * @return bEzsignfoldertypeSendproofezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeSendproofezsignsigner() {
+    return bEzsignfoldertypeSendproofezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeSendproofezsignsigner(Boolean bEzsignfoldertypeSendproofezsignsigner) {
+    this.bEzsignfoldertypeSendproofezsignsigner = bEzsignfoldertypeSendproofezsignsigner;
+  }
+
+
   public CustomEzsignfoldertypeResponse bEzsignfoldertypeIncludeproofsigner(Boolean bEzsignfoldertypeIncludeproofsigner) {
-    
     this.bEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
     return this;
   }
 
    /**
-   * Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
+   * THIS FIELD WILL BE DELETED. Whether we include the proof with the signed Ezsigndocument for Ezsignsigners
    * @return bEzsignfoldertypeIncludeproofsigner
   **/
   @javax.annotation.Nullable
@@ -136,14 +162,12 @@ public class CustomEzsignfoldertypeResponse {
     return bEzsignfoldertypeIncludeproofsigner;
   }
 
-
   public void setbEzsignfoldertypeIncludeproofsigner(Boolean bEzsignfoldertypeIncludeproofsigner) {
     this.bEzsignfoldertypeIncludeproofsigner = bEzsignfoldertypeIncludeproofsigner;
   }
 
 
   public CustomEzsignfoldertypeResponse bEzsignfoldertypeIncludeproofuser(Boolean bEzsignfoldertypeIncludeproofuser) {
-    
     this.bEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
     return this;
   }
@@ -157,14 +181,50 @@ public class CustomEzsignfoldertypeResponse {
     return bEzsignfoldertypeIncludeproofuser;
   }
 
-
   public void setbEzsignfoldertypeIncludeproofuser(Boolean bEzsignfoldertypeIncludeproofuser) {
     this.bEzsignfoldertypeIncludeproofuser = bEzsignfoldertypeIncludeproofuser;
   }
 
 
+  public CustomEzsignfoldertypeResponse bEzsignfoldertypeAllowdownloadattachmentezsignsigner(Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
+   * @return bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAllowdownloadattachmentezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeAllowdownloadattachmentezsignsigner(Boolean bEzsignfoldertypeAllowdownloadattachmentezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner = bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
+  }
+
+
+  public CustomEzsignfoldertypeResponse bEzsignfoldertypeAllowdownloadproofezsignsigner(Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+    return this;
+  }
+
+   /**
+   * Whether we allow the proof to be downloaded by an Ezsignsigner
+   * @return bEzsignfoldertypeAllowdownloadproofezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAllowdownloadproofezsignsigner() {
+    return bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeAllowdownloadproofezsignsigner(Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner) {
+    this.bEzsignfoldertypeAllowdownloadproofezsignsigner = bEzsignfoldertypeAllowdownloadproofezsignsigner;
+  }
+
+
   public CustomEzsignfoldertypeResponse bEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
-    
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
     return this;
   }
@@ -178,14 +238,12 @@ public class CustomEzsignfoldertypeResponse {
     return bEzsignfoldertypeDelegate;
   }
 
-
   public void setbEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
   }
 
 
   public CustomEzsignfoldertypeResponse bEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
-    
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
     return this;
   }
@@ -198,7 +256,6 @@ public class CustomEzsignfoldertypeResponse {
   public Boolean getbEzsignfoldertypeReassign() {
     return bEzsignfoldertypeReassign;
   }
-
 
   public void setbEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
@@ -217,15 +274,18 @@ public class CustomEzsignfoldertypeResponse {
     CustomEzsignfoldertypeResponse customEzsignfoldertypeResponse = (CustomEzsignfoldertypeResponse) o;
     return Objects.equals(this.pkiEzsignfoldertypeID, customEzsignfoldertypeResponse.pkiEzsignfoldertypeID) &&
         Objects.equals(this.sEzsignfoldertypeNameX, customEzsignfoldertypeResponse.sEzsignfoldertypeNameX) &&
+        Objects.equals(this.bEzsignfoldertypeSendproofezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeIncludeproofsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeIncludeproofsigner) &&
         Objects.equals(this.bEzsignfoldertypeIncludeproofuser, customEzsignfoldertypeResponse.bEzsignfoldertypeIncludeproofuser) &&
+        Objects.equals(this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeAllowdownloadproofezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeDelegate, customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate) &&
         Objects.equals(this.bEzsignfoldertypeReassign, customEzsignfoldertypeResponse.bEzsignfoldertypeReassign);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, sEzsignfoldertypeNameX, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign);
+    return Objects.hash(pkiEzsignfoldertypeID, sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign);
   }
 
   @Override
@@ -234,8 +294,11 @@ public class CustomEzsignfoldertypeResponse {
     sb.append("class CustomEzsignfoldertypeResponse {\n");
     sb.append("    pkiEzsignfoldertypeID: ").append(toIndentedString(pkiEzsignfoldertypeID)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
+    sb.append("    bEzsignfoldertypeSendproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendproofezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeIncludeproofsigner: ").append(toIndentedString(bEzsignfoldertypeIncludeproofsigner)).append("\n");
     sb.append("    bEzsignfoldertypeIncludeproofuser: ").append(toIndentedString(bEzsignfoldertypeIncludeproofuser)).append("\n");
+    sb.append("    bEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadattachmentezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadproofezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeDelegate: ").append(toIndentedString(bEzsignfoldertypeDelegate)).append("\n");
     sb.append("    bEzsignfoldertypeReassign: ").append(toIndentedString(bEzsignfoldertypeReassign)).append("\n");
     sb.append("}");
@@ -262,8 +325,11 @@ public class CustomEzsignfoldertypeResponse {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignfoldertypeID");
     openapiFields.add("sEzsignfoldertypeNameX");
+    openapiFields.add("bEzsignfoldertypeSendproofezsignsigner");
     openapiFields.add("bEzsignfoldertypeIncludeproofsigner");
     openapiFields.add("bEzsignfoldertypeIncludeproofuser");
+    openapiFields.add("bEzsignfoldertypeAllowdownloadattachmentezsignsigner");
+    openapiFields.add("bEzsignfoldertypeAllowdownloadproofezsignsigner");
     openapiFields.add("bEzsignfoldertypeDelegate");
     openapiFields.add("bEzsignfoldertypeReassign");
 

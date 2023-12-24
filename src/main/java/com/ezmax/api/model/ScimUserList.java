@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimUserList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimUserList {
   public static final String SERIALIZED_NAME_TOTAL_RESULTS = "totalResults";
   @SerializedName(SERIALIZED_NAME_TOTAL_RESULTS)
@@ -78,7 +78,6 @@ public class ScimUserList {
   }
 
   public ScimUserList totalResults(Integer totalResults) {
-    
     this.totalResults = totalResults;
     return this;
   }
@@ -92,14 +91,12 @@ public class ScimUserList {
     return totalResults;
   }
 
-
   public void setTotalResults(Integer totalResults) {
     this.totalResults = totalResults;
   }
 
 
   public ScimUserList itemsPerPage(Integer itemsPerPage) {
-    
     this.itemsPerPage = itemsPerPage;
     return this;
   }
@@ -113,14 +110,12 @@ public class ScimUserList {
     return itemsPerPage;
   }
 
-
   public void setItemsPerPage(Integer itemsPerPage) {
     this.itemsPerPage = itemsPerPage;
   }
 
 
   public ScimUserList startIndex(Integer startIndex) {
-    
     this.startIndex = startIndex;
     return this;
   }
@@ -134,14 +129,12 @@ public class ScimUserList {
     return startIndex;
   }
 
-
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   public ScimUserList schemas(List<String> schemas) {
-    
     this.schemas = schemas;
     return this;
   }
@@ -163,14 +156,12 @@ public class ScimUserList {
     return schemas;
   }
 
-
   public void setSchemas(List<String> schemas) {
     this.schemas = schemas;
   }
 
 
   public ScimUserList resources(List<ScimUser> resources) {
-    
     this.resources = resources;
     return this;
   }
@@ -191,7 +182,6 @@ public class ScimUserList {
   public List<ScimUser> getResources() {
     return resources;
   }
-
 
   public void setResources(List<ScimUser> resources) {
     this.resources = resources;

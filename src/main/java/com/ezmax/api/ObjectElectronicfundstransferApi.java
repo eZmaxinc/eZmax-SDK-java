@@ -74,7 +74,7 @@ public class ObjectElectronicfundstransferApi {
     }
 
     /**
-     * Build call for eletronicfundstransferGetCommunicationListV1
+     * Build call for electronicfundstransferGetCommunicationListV1
      * @param pkiElectronicfundstransferID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -86,7 +86,7 @@ public class ObjectElectronicfundstransferApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call eletronicfundstransferGetCommunicationListV1Call(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call electronicfundstransferGetCommunicationListV1Call(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -132,13 +132,13 @@ public class ObjectElectronicfundstransferApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call eletronicfundstransferGetCommunicationListV1ValidateBeforeCall(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call electronicfundstransferGetCommunicationListV1ValidateBeforeCall(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiElectronicfundstransferID' is set
         if (pkiElectronicfundstransferID == null) {
-            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling eletronicfundstransferGetCommunicationListV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationListV1(Async)");
         }
 
-        return eletronicfundstransferGetCommunicationListV1Call(pkiElectronicfundstransferID, _callback);
+        return electronicfundstransferGetCommunicationListV1Call(pkiElectronicfundstransferID, _callback);
 
     }
 
@@ -155,8 +155,8 @@ public class ObjectElectronicfundstransferApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ElectronicfundstransferGetCommunicationListV1Response eletronicfundstransferGetCommunicationListV1(Integer pkiElectronicfundstransferID) throws ApiException {
-        ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> localVarResp = eletronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID);
+    public ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1(Integer pkiElectronicfundstransferID) throws ApiException {
+        ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> localVarResp = electronicfundstransferGetCommunicationListV1WithHttpInfo(pkiElectronicfundstransferID);
         return localVarResp.getData();
     }
 
@@ -173,8 +173,8 @@ public class ObjectElectronicfundstransferApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> eletronicfundstransferGetCommunicationListV1WithHttpInfo(Integer pkiElectronicfundstransferID) throws ApiException {
-        okhttp3.Call localVarCall = eletronicfundstransferGetCommunicationListV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
+    public ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> electronicfundstransferGetCommunicationListV1WithHttpInfo(Integer pkiElectronicfundstransferID) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationListV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
         Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationListV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -193,9 +193,9 @@ public class ObjectElectronicfundstransferApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call eletronicfundstransferGetCommunicationListV1Async(Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationListV1Response> _callback) throws ApiException {
+    public okhttp3.Call electronicfundstransferGetCommunicationListV1Async(Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationListV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = eletronicfundstransferGetCommunicationListV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationListV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
         Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

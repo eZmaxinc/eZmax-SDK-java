@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/signature/{pkiSignatureID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SignatureEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_SIGNATURE = "objSignature";
   @SerializedName(SERIALIZED_NAME_OBJ_SIGNATURE)
@@ -60,7 +60,6 @@ public class SignatureEditObjectV1Request {
   }
 
   public SignatureEditObjectV1Request objSignature(SignatureRequestCompound objSignature) {
-    
     this.objSignature = objSignature;
     return this;
   }
@@ -73,7 +72,6 @@ public class SignatureEditObjectV1Request {
   public SignatureRequestCompound getObjSignature() {
     return objSignature;
   }
-
 
   public void setObjSignature(SignatureRequestCompound objSignature) {
     this.objSignature = objSignature;

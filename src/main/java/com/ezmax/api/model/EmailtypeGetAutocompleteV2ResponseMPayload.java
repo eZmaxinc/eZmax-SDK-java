@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/emailtype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EmailtypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EMAILTYPE = "a_objEmailtype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAILTYPE)
@@ -62,7 +62,6 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
   }
 
   public EmailtypeGetAutocompleteV2ResponseMPayload aObjEmailtype(List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
-    
     this.aObjEmailtype = aObjEmailtype;
     return this;
   }
@@ -83,7 +82,6 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
   public List<EmailtypeAutocompleteElementResponse> getaObjEmailtype() {
     return aObjEmailtype;
   }
-
 
   public void setaObjEmailtype(List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
     this.aObjEmailtype = aObjEmailtype;

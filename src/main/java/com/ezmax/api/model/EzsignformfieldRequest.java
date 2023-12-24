@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -104,7 +104,6 @@ public class EzsignformfieldRequest {
   }
 
   public EzsignformfieldRequest pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
-    
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -119,14 +118,12 @@ public class EzsignformfieldRequest {
     return pkiEzsignformfieldID;
   }
 
-
   public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
   public EzsignformfieldRequest iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -141,14 +138,12 @@ public class EzsignformfieldRequest {
     return iEzsignpagePagenumber;
   }
 
-
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
   public EzsignformfieldRequest sEzsignformfieldLabel(String sEzsignformfieldLabel) {
-    
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -162,14 +157,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldLabel;
   }
 
-
   public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
   public EzsignformfieldRequest sEzsignformfieldValue(String sEzsignformfieldValue) {
-    
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -183,14 +176,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldValue;
   }
 
-
   public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
   }
 
 
   public EzsignformfieldRequest iEzsignformfieldX(Integer iEzsignformfieldX) {
-    
     this.iEzsignformfieldX = iEzsignformfieldX;
     return this;
   }
@@ -205,14 +196,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldX;
   }
 
-
   public void setiEzsignformfieldX(Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
   }
 
 
   public EzsignformfieldRequest iEzsignformfieldY(Integer iEzsignformfieldY) {
-    
     this.iEzsignformfieldY = iEzsignformfieldY;
     return this;
   }
@@ -227,14 +216,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldY;
   }
 
-
   public void setiEzsignformfieldY(Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
   }
 
 
   public EzsignformfieldRequest iEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
-    
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
     return this;
   }
@@ -249,14 +236,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldWidth;
   }
 
-
   public void setiEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
   }
 
 
   public EzsignformfieldRequest iEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
-    
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
     return this;
   }
@@ -271,14 +256,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldHeight;
   }
 
-
   public void setiEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
   }
 
 
   public EzsignformfieldRequest bEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
-    
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
     return this;
   }
@@ -292,14 +275,12 @@ public class EzsignformfieldRequest {
     return bEzsignformfieldAutocomplete;
   }
 
-
   public void setbEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
   }
 
 
   public EzsignformfieldRequest bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
-    
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -313,14 +294,12 @@ public class EzsignformfieldRequest {
     return bEzsignformfieldSelected;
   }
 
-
   public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
   public EzsignformfieldRequest sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
-    
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -334,14 +313,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldEnteredvalue;
   }
 
-
   public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
 
   public EzsignformfieldRequest eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
-    
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
     return this;
   }
@@ -354,7 +331,6 @@ public class EzsignformfieldRequest {
   public FieldEEzsignformfieldDependencyrequirement geteEzsignformfieldDependencyrequirement() {
     return eEzsignformfieldDependencyrequirement;
   }
-
 
   public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
@@ -487,6 +463,10 @@ public class EzsignformfieldRequest {
       }
       if ((jsonObj.get("sEzsignformfieldEnteredvalue") != null && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldEnteredvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldEnteredvalue").toString()));
+      }
+      // validate the optional field `eEzsignformfieldDependencyrequirement`
+      if (jsonObj.get("eEzsignformfieldDependencyrequirement") != null && !jsonObj.get("eEzsignformfieldDependencyrequirement").isJsonNull()) {
+        FieldEEzsignformfieldDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldDependencyrequirement"));
       }
   }
 

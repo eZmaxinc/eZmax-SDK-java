@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies Sort configuration options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimServiceProviderConfigSort {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
@@ -59,7 +59,6 @@ public class ScimServiceProviderConfigSort {
   }
 
   public ScimServiceProviderConfigSort supported(Boolean supported) {
-    
     this.supported = supported;
     return this;
   }
@@ -72,7 +71,6 @@ public class ScimServiceProviderConfigSort {
   public Boolean getSupported() {
     return supported;
   }
-
 
   public void setSupported(Boolean supported) {
     this.supported = supported;

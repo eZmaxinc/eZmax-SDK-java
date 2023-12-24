@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A forms Data Folder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomFormsDataFolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -70,7 +70,6 @@ public class CustomFormsDataFolderResponse {
   }
 
   public CustomFormsDataFolderResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -85,14 +84,12 @@ public class CustomFormsDataFolderResponse {
     return pkiEzsignfolderID;
   }
 
-
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
   public CustomFormsDataFolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -106,14 +103,12 @@ public class CustomFormsDataFolderResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public CustomFormsDataFolderResponse aObjFormDataDocument(List<CustomFormDataDocumentResponse> aObjFormDataDocument) {
-    
     this.aObjFormDataDocument = aObjFormDataDocument;
     return this;
   }
@@ -134,7 +129,6 @@ public class CustomFormsDataFolderResponse {
   public List<CustomFormDataDocumentResponse> getaObjFormDataDocument() {
     return aObjFormDataDocument;
   }
-
 
   public void setaObjFormDataDocument(List<CustomFormDataDocumentResponse> aObjFormDataDocument) {
     this.aObjFormDataDocument = aObjFormDataDocument;

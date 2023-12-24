@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)
@@ -66,7 +66,6 @@ public class CommonReportrow {
   }
 
   public CommonReportrow aObjReportcell(List<CommonReportcell> aObjReportcell) {
-    
     this.aObjReportcell = aObjReportcell;
     return this;
   }
@@ -88,14 +87,12 @@ public class CommonReportrow {
     return aObjReportcell;
   }
 
-
   public void setaObjReportcell(List<CommonReportcell> aObjReportcell) {
     this.aObjReportcell = aObjReportcell;
   }
 
 
   public CommonReportrow iReportrowHeight(Integer iReportrowHeight) {
-    
     this.iReportrowHeight = iReportrowHeight;
     return this;
   }
@@ -108,7 +105,6 @@ public class CommonReportrow {
   public Integer getiReportrowHeight() {
     return iReportrowHeight;
   }
-
 
   public void setiReportrowHeight(Integer iReportrowHeight) {
     this.iReportrowHeight = iReportrowHeight;

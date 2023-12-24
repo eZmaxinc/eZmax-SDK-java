@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The name of the Usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualUsergroupName {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME1 = "sUsergroupName1";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME1)
@@ -63,7 +63,6 @@ public class MultilingualUsergroupName {
   }
 
   public MultilingualUsergroupName sUsergroupName1(String sUsergroupName1) {
-    
     this.sUsergroupName1 = sUsergroupName1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualUsergroupName {
     return sUsergroupName1;
   }
 
-
   public void setsUsergroupName1(String sUsergroupName1) {
     this.sUsergroupName1 = sUsergroupName1;
   }
 
 
   public MultilingualUsergroupName sUsergroupName2(String sUsergroupName2) {
-    
     this.sUsergroupName2 = sUsergroupName2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualUsergroupName {
   public String getsUsergroupName2() {
     return sUsergroupName2;
   }
-
 
   public void setsUsergroupName2(String sUsergroupName2) {
     this.sUsergroupName2 = sUsergroupName2;

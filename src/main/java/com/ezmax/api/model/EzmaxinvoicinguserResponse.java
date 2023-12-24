@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicinguser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicinguserResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D = "pkiEzmaxinvoicinguserID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D)
@@ -92,7 +92,6 @@ public class EzmaxinvoicinguserResponse {
   }
 
   public EzmaxinvoicinguserResponse pkiEzmaxinvoicinguserID(Integer pkiEzmaxinvoicinguserID) {
-    
     this.pkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
     return this;
   }
@@ -107,14 +106,12 @@ public class EzmaxinvoicinguserResponse {
     return pkiEzmaxinvoicinguserID;
   }
 
-
   public void setPkiEzmaxinvoicinguserID(Integer pkiEzmaxinvoicinguserID) {
     this.pkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
   }
 
 
   public EzmaxinvoicinguserResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
-    
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -129,14 +126,12 @@ public class EzmaxinvoicinguserResponse {
     return fkiEzmaxinvoicingID;
   }
 
-
   public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicinguserResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -151,14 +146,12 @@ public class EzmaxinvoicinguserResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzmaxinvoicinguserResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -172,14 +165,12 @@ public class EzmaxinvoicinguserResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public EzmaxinvoicinguserResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -194,14 +185,12 @@ public class EzmaxinvoicinguserResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public EzmaxinvoicinguserResponse iEzmaxinvoicinguserEzsigndocument(Integer iEzmaxinvoicinguserEzsigndocument) {
-    
     this.iEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
     return this;
   }
@@ -216,14 +205,12 @@ public class EzmaxinvoicinguserResponse {
     return iEzmaxinvoicinguserEzsigndocument;
   }
 
-
   public void setiEzmaxinvoicinguserEzsigndocument(Integer iEzmaxinvoicinguserEzsigndocument) {
     this.iEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
   }
 
 
   public EzmaxinvoicinguserResponse bEzmaxinvoicinguserEzsignaccount(Boolean bEzmaxinvoicinguserEzsignaccount) {
-    
     this.bEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
     return this;
   }
@@ -237,14 +224,12 @@ public class EzmaxinvoicinguserResponse {
     return bEzmaxinvoicinguserEzsignaccount;
   }
 
-
   public void setbEzmaxinvoicinguserEzsignaccount(Boolean bEzmaxinvoicinguserEzsignaccount) {
     this.bEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
   }
 
 
   public EzmaxinvoicinguserResponse bEzmaxinvoicinguserBillableezsign(Boolean bEzmaxinvoicinguserBillableezsign) {
-    
     this.bEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
     return this;
   }
@@ -258,14 +243,12 @@ public class EzmaxinvoicinguserResponse {
     return bEzmaxinvoicinguserBillableezsign;
   }
 
-
   public void setbEzmaxinvoicinguserBillableezsign(Boolean bEzmaxinvoicinguserBillableezsign) {
     this.bEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
   }
 
 
   public EzmaxinvoicinguserResponse eEzmaxinvoicinguserVariationezsign(FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign) {
-    
     this.eEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
     return this;
   }
@@ -278,7 +261,6 @@ public class EzmaxinvoicinguserResponse {
   public FieldEEzmaxinvoicinguserVariationezsign geteEzmaxinvoicinguserVariationezsign() {
     return eEzmaxinvoicinguserVariationezsign;
   }
-
 
   public void seteEzmaxinvoicinguserVariationezsign(FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign) {
     this.eEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
@@ -398,6 +380,8 @@ public class EzmaxinvoicinguserResponse {
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }
+      // validate the required field `eEzmaxinvoicinguserVariationezsign`
+      FieldEEzmaxinvoicinguserVariationezsign.validateJsonElement(jsonObj.get("eEzmaxinvoicinguserVariationezsign"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

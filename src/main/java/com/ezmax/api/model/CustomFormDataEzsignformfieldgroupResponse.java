@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An FormDataSigner-&gt;Ezsignformfieldgroup Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomFormDataEzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL = "sEzsignformfieldgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL)
@@ -66,7 +66,6 @@ public class CustomFormDataEzsignformfieldgroupResponse {
   }
 
   public CustomFormDataEzsignformfieldgroupResponse sEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
-    
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
     return this;
   }
@@ -80,14 +79,12 @@ public class CustomFormDataEzsignformfieldgroupResponse {
     return sEzsignformfieldgroupLabel;
   }
 
-
   public void setsEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
   }
 
 
   public CustomFormDataEzsignformfieldgroupResponse aObjEzsignformfield(List<CustomFormDataEzsignformfieldResponse> aObjEzsignformfield) {
-    
     this.aObjEzsignformfield = aObjEzsignformfield;
     return this;
   }
@@ -108,7 +105,6 @@ public class CustomFormDataEzsignformfieldgroupResponse {
   public List<CustomFormDataEzsignformfieldResponse> getaObjEzsignformfield() {
     return aObjEzsignformfield;
   }
-
 
   public void setaObjEzsignformfield(List<CustomFormDataEzsignformfieldResponse> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;

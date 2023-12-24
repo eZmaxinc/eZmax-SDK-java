@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -84,7 +84,6 @@ public class EzsignfolderRequest {
   }
 
   public EzsignfolderRequest pkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -99,14 +98,12 @@ public class EzsignfolderRequest {
     return pkiEzsignfolderID;
   }
 
-
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
   public EzsignfolderRequest fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -121,14 +118,12 @@ public class EzsignfolderRequest {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsignfolderRequest fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
-    
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -144,14 +139,12 @@ public class EzsignfolderRequest {
     return fkiEzsigntsarequirementID;
   }
 
-
   public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
   public EzsignfolderRequest sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -165,14 +158,12 @@ public class EzsignfolderRequest {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public EzsignfolderRequest tEzsignfolderNote(String tEzsignfolderNote) {
-    
     this.tEzsignfolderNote = tEzsignfolderNote;
     return this;
   }
@@ -186,14 +177,12 @@ public class EzsignfolderRequest {
     return tEzsignfolderNote;
   }
 
-
   public void settEzsignfolderNote(String tEzsignfolderNote) {
     this.tEzsignfolderNote = tEzsignfolderNote;
   }
 
 
   public EzsignfolderRequest eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
-    
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
     return this;
   }
@@ -207,14 +196,12 @@ public class EzsignfolderRequest {
     return eEzsignfolderSendreminderfrequency;
   }
 
-
   public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
 
 
   public EzsignfolderRequest sEzsignfolderExternalid(String sEzsignfolderExternalid) {
-    
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
     return this;
   }
@@ -227,7 +214,6 @@ public class EzsignfolderRequest {
   public String getsEzsignfolderExternalid() {
     return sEzsignfolderExternalid;
   }
-
 
   public void setsEzsignfolderExternalid(String sEzsignfolderExternalid) {
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
@@ -340,6 +326,8 @@ public class EzsignfolderRequest {
       if ((jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonNull()) && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
       }
+      // validate the required field `eEzsignfolderSendreminderfrequency`
+      FieldEEzsignfolderSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfolderSendreminderfrequency"));
       if ((jsonObj.get("sEzsignfolderExternalid") != null && !jsonObj.get("sEzsignfolderExternalid").isJsonNull()) && !jsonObj.get("sEzsignfolderExternalid").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderExternalid").toString()));
       }

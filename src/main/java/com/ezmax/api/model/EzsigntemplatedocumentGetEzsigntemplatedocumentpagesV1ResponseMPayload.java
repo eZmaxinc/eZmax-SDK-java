@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEDOCUMENTPAGE = "a_objEzsigntemplatedocumentpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEDOCUMENTPAGE)
@@ -62,7 +62,6 @@ public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayl
   }
 
   public EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload aObjEzsigntemplatedocumentpage(List<EzsigntemplatedocumentpageResponseCompound> aObjEzsigntemplatedocumentpage) {
-    
     this.aObjEzsigntemplatedocumentpage = aObjEzsigntemplatedocumentpage;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayl
   public List<EzsigntemplatedocumentpageResponseCompound> getaObjEzsigntemplatedocumentpage() {
     return aObjEzsigntemplatedocumentpage;
   }
-
 
   public void setaObjEzsigntemplatedocumentpage(List<EzsigntemplatedocumentpageResponseCompound> aObjEzsigntemplatedocumentpage) {
     this.aObjEzsigntemplatedocumentpage = aObjEzsigntemplatedocumentpage;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Font AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FontAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FONT_NAME = "sFontName";
   @SerializedName(SERIALIZED_NAME_S_FONT_NAME)
@@ -67,7 +67,6 @@ public class FontAutocompleteElementResponse {
   }
 
   public FontAutocompleteElementResponse sFontName(String sFontName) {
-    
     this.sFontName = sFontName;
     return this;
   }
@@ -81,14 +80,12 @@ public class FontAutocompleteElementResponse {
     return sFontName;
   }
 
-
   public void setsFontName(String sFontName) {
     this.sFontName = sFontName;
   }
 
 
   public FontAutocompleteElementResponse pkiFontID(Integer pkiFontID) {
-    
     this.pkiFontID = pkiFontID;
     return this;
   }
@@ -103,14 +100,12 @@ public class FontAutocompleteElementResponse {
     return pkiFontID;
   }
 
-
   public void setPkiFontID(Integer pkiFontID) {
     this.pkiFontID = pkiFontID;
   }
 
 
   public FontAutocompleteElementResponse bFontIsactive(Boolean bFontIsactive) {
-    
     this.bFontIsactive = bFontIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class FontAutocompleteElementResponse {
   public Boolean getbFontIsactive() {
     return bFontIsactive;
   }
-
 
   public void setbFontIsactive(Boolean bFontIsactive) {
     this.bFontIsactive = bFontIsactive;

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatesignatureGetObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -70,7 +70,6 @@ public class EzsigntemplatesignatureGetObjectV2Response {
   }
 
   public EzsigntemplatesignatureGetObjectV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
-    
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -84,14 +83,12 @@ public class EzsigntemplatesignatureGetObjectV2Response {
     return objDebugPayload;
   }
 
-
   public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
   public EzsigntemplatesignatureGetObjectV2Response objDebug(CommonResponseObjDebug objDebug) {
-    
     this.objDebug = objDebug;
     return this;
   }
@@ -105,14 +102,12 @@ public class EzsigntemplatesignatureGetObjectV2Response {
     return objDebug;
   }
 
-
   public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
   public EzsigntemplatesignatureGetObjectV2Response mPayload(EzsigntemplatesignatureGetObjectV2ResponseMPayload mPayload) {
-    
     this.mPayload = mPayload;
     return this;
   }
@@ -125,7 +120,6 @@ public class EzsigntemplatesignatureGetObjectV2Response {
   public EzsigntemplatesignatureGetObjectV2ResponseMPayload getmPayload() {
     return mPayload;
   }
-
 
   public void setmPayload(EzsigntemplatesignatureGetObjectV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;

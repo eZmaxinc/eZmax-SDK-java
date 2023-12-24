@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignsignaturesAutomatic
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE = "a_eEzsignsignatureType";
   @SerializedName(SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE)
@@ -69,7 +69,6 @@ public class EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload {
   }
 
   public EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload aEEzsignsignatureType(Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
-    
     this.aEEzsignsignatureType = aEEzsignsignatureType;
     return this;
   }
@@ -91,14 +90,12 @@ public class EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload {
     return aEEzsignsignatureType;
   }
 
-
   public void setaEEzsignsignatureType(Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
     this.aEEzsignsignatureType = aEEzsignsignatureType;
   }
 
 
   public EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload aObjEzsignfolder(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
-    
     this.aObjEzsignfolder = aObjEzsignfolder;
     return this;
   }
@@ -119,7 +116,6 @@ public class EzsignfolderGetEzsignsignaturesAutomaticV1ResponseMPayload {
   public List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> getaObjEzsignfolder() {
     return aObjEzsignfolder;
   }
-
 
   public void setaObjEzsignfolder(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;

@@ -14,6 +14,8 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.EmailResponseCompound;
+import com.ezmax.api.model.PhoneResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -71,6 +73,14 @@ public class CustomCommunicationsenderResponseTest {
     }
 
     /**
+     * Test the property 'fkiPhonelinesharedID'
+     */
+    @Test
+    public void fkiPhonelinesharedIDTest() {
+        // TODO: test fkiPhonelinesharedID
+    }
+
+    /**
      * Test the property 'eCommunicationsenderObjecttype'
      */
     @Test
@@ -87,19 +97,27 @@ public class CustomCommunicationsenderResponseTest {
     }
 
     /**
-     * Test the property 'sEmailAddress'
+     * Test the property 'objEmail'
      */
     @Test
-    public void sEmailAddressTest() {
-        // TODO: test sEmailAddress
+    public void objEmailTest() {
+        // TODO: test objEmail
     }
 
     /**
-     * Test the property 'sPhoneE164'
+     * Test the property 'objPhoneFax'
      */
     @Test
-    public void sPhoneE164Test() {
-        // TODO: test sPhoneE164
+    public void objPhoneFaxTest() {
+        // TODO: test objPhoneFax
+    }
+
+    /**
+     * Test the property 'objPhoneSMS'
+     */
+    @Test
+    public void objPhoneSMSTest() {
+        // TODO: test objPhoneSMS
     }
 
 }

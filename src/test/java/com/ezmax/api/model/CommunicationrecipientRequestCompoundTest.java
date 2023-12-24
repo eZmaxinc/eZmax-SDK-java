@@ -55,19 +55,19 @@ public class CommunicationrecipientRequestCompoundTest {
     }
 
     /**
-     * Test the property 'fkiAgentincorporationID'
-     */
-    @Test
-    public void fkiAgentincorporationIDTest() {
-        // TODO: test fkiAgentincorporationID
-    }
-
-    /**
      * Test the property 'fkiBrokerID'
      */
     @Test
     public void fkiBrokerIDTest() {
         // TODO: test fkiBrokerID
+    }
+
+    /**
+     * Test the property 'fkiContactID'
+     */
+    @Test
+    public void fkiContactIDTest() {
+        // TODO: test fkiContactID
     }
 
     /**
@@ -132,6 +132,22 @@ public class CommunicationrecipientRequestCompoundTest {
     @Test
     public void fkiUserIDTest() {
         // TODO: test fkiUserID
+    }
+
+    /**
+     * Test the property 'fkiMailboxsharedID'
+     */
+    @Test
+    public void fkiMailboxsharedIDTest() {
+        // TODO: test fkiMailboxsharedID
+    }
+
+    /**
+     * Test the property 'fkiPhonelinesharedID'
+     */
+    @Test
+    public void fkiPhonelinesharedIDTest() {
+        // TODO: test fkiPhonelinesharedID
     }
 
     /**

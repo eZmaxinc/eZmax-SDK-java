@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksend Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -83,7 +83,6 @@ public class EzsignbulksendRequest {
   }
 
   public EzsignbulksendRequest pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
-    
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -98,14 +97,12 @@ public class EzsignbulksendRequest {
     return pkiEzsignbulksendID;
   }
 
-
   public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
   public EzsignbulksendRequest fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -120,14 +117,12 @@ public class EzsignbulksendRequest {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsignbulksendRequest fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -143,14 +138,12 @@ public class EzsignbulksendRequest {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsignbulksendRequest sEzsignbulksendDescription(String sEzsignbulksendDescription) {
-    
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -164,14 +157,12 @@ public class EzsignbulksendRequest {
     return sEzsignbulksendDescription;
   }
 
-
   public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
   public EzsignbulksendRequest tEzsignbulksendNote(String tEzsignbulksendNote) {
-    
     this.tEzsignbulksendNote = tEzsignbulksendNote;
     return this;
   }
@@ -185,14 +176,12 @@ public class EzsignbulksendRequest {
     return tEzsignbulksendNote;
   }
 
-
   public void settEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
   }
 
 
   public EzsignbulksendRequest bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
-    
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -206,14 +195,12 @@ public class EzsignbulksendRequest {
     return bEzsignbulksendNeedvalidation;
   }
 
-
   public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
   public EzsignbulksendRequest bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
-    
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -226,7 +213,6 @@ public class EzsignbulksendRequest {
   public Boolean getbEzsignbulksendIsactive() {
     return bEzsignbulksendIsactive;
   }
-
 
   public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;

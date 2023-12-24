@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupmembershipResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -87,7 +87,6 @@ public class UsergroupmembershipResponseCompound {
   }
 
   public UsergroupmembershipResponseCompound pkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
-    
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
     return this;
   }
@@ -103,14 +102,12 @@ public class UsergroupmembershipResponseCompound {
     return pkiUsergroupmembershipID;
   }
 
-
   public void setPkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
   }
 
 
   public UsergroupmembershipResponseCompound fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -126,14 +123,12 @@ public class UsergroupmembershipResponseCompound {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public UsergroupmembershipResponseCompound fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -148,14 +143,12 @@ public class UsergroupmembershipResponseCompound {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public UsergroupmembershipResponseCompound sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -169,14 +162,12 @@ public class UsergroupmembershipResponseCompound {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UsergroupmembershipResponseCompound sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -190,14 +181,12 @@ public class UsergroupmembershipResponseCompound {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UsergroupmembershipResponseCompound sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -211,14 +200,12 @@ public class UsergroupmembershipResponseCompound {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public UsergroupmembershipResponseCompound sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -232,14 +219,12 @@ public class UsergroupmembershipResponseCompound {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public UsergroupmembershipResponseCompound sUsergroupNameX(String sUsergroupNameX) {
-    
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -252,7 +237,6 @@ public class UsergroupmembershipResponseCompound {
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
   }
-
 
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;

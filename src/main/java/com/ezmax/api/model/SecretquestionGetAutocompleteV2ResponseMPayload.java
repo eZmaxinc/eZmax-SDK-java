@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/secretquestion/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SecretquestionGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SECRETQUESTION = "a_objSecretquestion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SECRETQUESTION)
@@ -62,7 +62,6 @@ public class SecretquestionGetAutocompleteV2ResponseMPayload {
   }
 
   public SecretquestionGetAutocompleteV2ResponseMPayload aObjSecretquestion(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
-    
     this.aObjSecretquestion = aObjSecretquestion;
     return this;
   }
@@ -83,7 +82,6 @@ public class SecretquestionGetAutocompleteV2ResponseMPayload {
   public List<SecretquestionAutocompleteElementResponse> getaObjSecretquestion() {
     return aObjSecretquestion;
   }
-
 
   public void setaObjSecretquestion(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
     this.aObjSecretquestion = aObjSecretquestion;

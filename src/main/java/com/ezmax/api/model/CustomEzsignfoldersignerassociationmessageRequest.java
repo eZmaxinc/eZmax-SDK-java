@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom message Object in the context of an Ezsignfolder&#39;s send function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationmessageRequest {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -63,7 +63,6 @@ public class CustomEzsignfoldersignerassociationmessageRequest {
   }
 
   public CustomEzsignfoldersignerassociationmessageRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
-    
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -78,14 +77,12 @@ public class CustomEzsignfoldersignerassociationmessageRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
   public CustomEzsignfoldersignerassociationmessageRequest tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -98,7 +95,6 @@ public class CustomEzsignfoldersignerassociationmessageRequest {
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
   }
-
 
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;

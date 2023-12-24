@@ -212,6 +212,14 @@ public class EzsigndocumentResponseCompoundTest {
     }
 
     /**
+     * Test the property 'iEzsigndocumentEzsignsignatureattachmenttotal'
+     */
+    @Test
+    public void iEzsigndocumentEzsignsignatureattachmenttotalTest() {
+        // TODO: test iEzsigndocumentEzsignsignatureattachmenttotal
+    }
+
+    /**
      * Test the property 'eEzsigndocumentSteptype'
      */
     @Test

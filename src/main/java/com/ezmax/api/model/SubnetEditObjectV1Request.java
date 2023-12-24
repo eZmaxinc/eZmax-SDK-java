@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/subnet/{pkiSubnetID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SubnetEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_SUBNET = "objSubnet";
   @SerializedName(SERIALIZED_NAME_OBJ_SUBNET)
@@ -60,7 +60,6 @@ public class SubnetEditObjectV1Request {
   }
 
   public SubnetEditObjectV1Request objSubnet(SubnetRequestCompound objSubnet) {
-    
     this.objSubnet = objSubnet;
     return this;
   }
@@ -73,7 +72,6 @@ public class SubnetEditObjectV1Request {
   public SubnetRequestCompound getObjSubnet() {
     return objSubnet;
   }
-
 
   public void setObjSubnet(SubnetRequestCompound objSubnet) {
     this.objSubnet = objSubnet;

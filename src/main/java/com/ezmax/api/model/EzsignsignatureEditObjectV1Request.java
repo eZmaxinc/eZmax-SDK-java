@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignsignature/{pkiEzsignsignatureID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignatureEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)
@@ -60,7 +60,6 @@ public class EzsignsignatureEditObjectV1Request {
   }
 
   public EzsignsignatureEditObjectV1Request objEzsignsignature(EzsignsignatureRequestCompound objEzsignsignature) {
-    
     this.objEzsignsignature = objEzsignsignature;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsignsignatureEditObjectV1Request {
   public EzsignsignatureRequestCompound getObjEzsignsignature() {
     return objEzsignsignature;
   }
-
 
   public void setObjEzsignsignature(EzsignsignatureRequestCompound objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;

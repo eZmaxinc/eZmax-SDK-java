@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A User AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
@@ -72,7 +72,6 @@ public class UserAutocompleteElementResponse {
   }
 
   public UserAutocompleteElementResponse eUserType(FieldEUserType eUserType) {
-    
     this.eUserType = eUserType;
     return this;
   }
@@ -86,14 +85,12 @@ public class UserAutocompleteElementResponse {
     return eUserType;
   }
 
-
   public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
   public UserAutocompleteElementResponse sUserName(String sUserName) {
-    
     this.sUserName = sUserName;
     return this;
   }
@@ -107,14 +104,12 @@ public class UserAutocompleteElementResponse {
     return sUserName;
   }
 
-
   public void setsUserName(String sUserName) {
     this.sUserName = sUserName;
   }
 
 
   public UserAutocompleteElementResponse pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -129,14 +124,12 @@ public class UserAutocompleteElementResponse {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public UserAutocompleteElementResponse bUserIsactive(Boolean bUserIsactive) {
-    
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -149,7 +142,6 @@ public class UserAutocompleteElementResponse {
   public Boolean getbUserIsactive() {
     return bUserIsactive;
   }
-
 
   public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
@@ -248,6 +240,8 @@ public class UserAutocompleteElementResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eUserType`
+      FieldEUserType.validateJsonElement(jsonObj.get("eUserType"));
       if (!jsonObj.get("sUserName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserName").toString()));
       }

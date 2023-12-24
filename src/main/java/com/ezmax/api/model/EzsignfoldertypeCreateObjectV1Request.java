@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldertype
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldertypeCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
@@ -62,7 +62,6 @@ public class EzsignfoldertypeCreateObjectV1Request {
   }
 
   public EzsignfoldertypeCreateObjectV1Request aObjEzsignfoldertype(List<EzsignfoldertypeRequestCompound> aObjEzsignfoldertype) {
-    
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsignfoldertypeCreateObjectV1Request {
   public List<EzsignfoldertypeRequestCompound> getaObjEzsignfoldertype() {
     return aObjEzsignfoldertype;
   }
-
 
   public void setaObjEzsignfoldertype(List<EzsignfoldertypeRequestCompound> aObjEzsignfoldertype) {
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;

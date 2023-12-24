@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/xxx/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonGetAutocompleteV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -72,7 +72,6 @@ public class CommonGetAutocompleteV1Response {
   }
 
   public CommonGetAutocompleteV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
-    
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -86,14 +85,12 @@ public class CommonGetAutocompleteV1Response {
     return objDebugPayload;
   }
 
-
   public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
   public CommonGetAutocompleteV1Response objDebug(CommonResponseObjDebug objDebug) {
-    
     this.objDebug = objDebug;
     return this;
   }
@@ -107,14 +104,12 @@ public class CommonGetAutocompleteV1Response {
     return objDebug;
   }
 
-
   public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
   public CommonGetAutocompleteV1Response mPayload(List<CustomAutocompleteElementResponse> mPayload) {
-    
     this.mPayload = mPayload;
     return this;
   }
@@ -135,7 +130,6 @@ public class CommonGetAutocompleteV1Response {
   public List<CustomAutocompleteElementResponse> getmPayload() {
     return mPayload;
   }
-
 
   public void setmPayload(List<CustomAutocompleteElementResponse> mPayload) {
     this.mPayload = mPayload;

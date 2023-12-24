@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Definition of objSQLQuery Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseObjSQLQuery {
   public static final String SERIALIZED_NAME_S_QUERY = "sQuery";
   @SerializedName(SERIALIZED_NAME_S_QUERY)
@@ -63,7 +63,6 @@ public class CommonResponseObjSQLQuery {
   }
 
   public CommonResponseObjSQLQuery sQuery(String sQuery) {
-    
     this.sQuery = sQuery;
     return this;
   }
@@ -77,14 +76,12 @@ public class CommonResponseObjSQLQuery {
     return sQuery;
   }
 
-
   public void setsQuery(String sQuery) {
     this.sQuery = sQuery;
   }
 
 
   public CommonResponseObjSQLQuery fDuration(Float fDuration) {
-    
     this.fDuration = fDuration;
     return this;
   }
@@ -97,7 +94,6 @@ public class CommonResponseObjSQLQuery {
   public Float getfDuration() {
     return fDuration;
   }
-
 
   public void setfDuration(Float fDuration) {
     this.fDuration = fDuration;

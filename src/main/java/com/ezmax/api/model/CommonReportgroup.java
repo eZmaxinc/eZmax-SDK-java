@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportgroup {
   public static final String SERIALIZED_NAME_A_OBJ_REPORT = "a_objReport";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORT)
@@ -67,7 +67,6 @@ public class CommonReportgroup {
   }
 
   public CommonReportgroup aObjReport(List<CommonReport> aObjReport) {
-    
     this.aObjReport = aObjReport;
     return this;
   }
@@ -89,14 +88,12 @@ public class CommonReportgroup {
     return aObjReport;
   }
 
-
   public void setaObjReport(List<CommonReport> aObjReport) {
     this.aObjReport = aObjReport;
   }
 
 
   public CommonReportgroup aObjReportcellstyleCustom(List<CommonReportcellstyle> aObjReportcellstyleCustom) {
-    
     this.aObjReportcellstyleCustom = aObjReportcellstyleCustom;
     return this;
   }
@@ -117,7 +114,6 @@ public class CommonReportgroup {
   public List<CommonReportcellstyle> getaObjReportcellstyleCustom() {
     return aObjReportcellstyleCustom;
   }
-
 
   public void setaObjReportcellstyleCustom(List<CommonReportcellstyle> aObjReportcellstyleCustom) {
     this.aObjReportcellstyleCustom = aObjReportcellstyleCustom;

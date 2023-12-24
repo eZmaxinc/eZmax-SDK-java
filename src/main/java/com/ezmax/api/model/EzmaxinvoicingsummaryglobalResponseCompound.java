@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryglobalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
@@ -138,7 +138,6 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   }
 
   public EzmaxinvoicingsummaryglobalResponseCompound pkiEzmaxinvoicingsummaryglobalID(Integer pkiEzmaxinvoicingsummaryglobalID) {
-    
     this.pkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
     return this;
   }
@@ -153,14 +152,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return pkiEzmaxinvoicingsummaryglobalID;
   }
 
-
   public void setPkiEzmaxinvoicingsummaryglobalID(Integer pkiEzmaxinvoicingsummaryglobalID) {
     this.pkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
-    
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -175,14 +172,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return fkiEzmaxinvoicingID;
   }
 
-
   public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound fkiEzmaxproductID(Integer fkiEzmaxproductID) {
-    
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -197,14 +192,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return fkiEzmaxproductID;
   }
 
-
   public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
-    
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -218,14 +211,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return sEzmaxproductDescriptionX;
   }
 
-
   public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dtEzmaxinvoicingsummaryglobalStart(String dtEzmaxinvoicingsummaryglobalStart) {
-    
     this.dtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
     return this;
   }
@@ -239,14 +230,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dtEzmaxinvoicingsummaryglobalStart;
   }
 
-
   public void setDtEzmaxinvoicingsummaryglobalStart(String dtEzmaxinvoicingsummaryglobalStart) {
     this.dtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dtEzmaxinvoicingsummaryglobalEnd(String dtEzmaxinvoicingsummaryglobalEnd) {
-    
     this.dtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
     return this;
   }
@@ -260,14 +249,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dtEzmaxinvoicingsummaryglobalEnd;
   }
 
-
   public void setDtEzmaxinvoicingsummaryglobalEnd(String dtEzmaxinvoicingsummaryglobalEnd) {
     this.dtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound iEzmaxinvoicingsummaryglobalDays(Integer iEzmaxinvoicingsummaryglobalDays) {
-    
     this.iEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
     return this;
   }
@@ -282,14 +269,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return iEzmaxinvoicingsummaryglobalDays;
   }
 
-
   public void setiEzmaxinvoicingsummaryglobalDays(Integer iEzmaxinvoicingsummaryglobalDays) {
     this.iEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalCountreal(String dEzmaxinvoicingsummaryglobalCountreal) {
-    
     this.dEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
     return this;
   }
@@ -303,14 +288,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalCountreal;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalCountreal(String dEzmaxinvoicingsummaryglobalCountreal) {
     this.dEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalCountbilled(String dEzmaxinvoicingsummaryglobalCountbilled) {
-    
     this.dEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
     return this;
   }
@@ -324,14 +307,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalCountbilled;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalCountbilled(String dEzmaxinvoicingsummaryglobalCountbilled) {
     this.dEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalSubtotal(String dEzmaxinvoicingsummaryglobalSubtotal) {
-    
     this.dEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
     return this;
   }
@@ -345,14 +326,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalSubtotal;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalSubtotal(String dEzmaxinvoicingsummaryglobalSubtotal) {
     this.dEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebateamount(String dEzmaxinvoicingsummaryglobalRebateamount) {
-    
     this.dEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
     return this;
   }
@@ -366,14 +345,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalRebateamount;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalRebateamount(String dEzmaxinvoicingsummaryglobalRebateamount) {
     this.dEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebatepercent(String dEzmaxinvoicingsummaryglobalRebatepercent) {
-    
     this.dEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
     return this;
   }
@@ -387,14 +364,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalRebatepercent;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalRebatepercent(String dEzmaxinvoicingsummaryglobalRebatepercent) {
     this.dEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebatetotal(String dEzmaxinvoicingsummaryglobalRebatetotal) {
-    
     this.dEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
     return this;
   }
@@ -408,14 +383,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalRebatetotal;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalRebatetotal(String dEzmaxinvoicingsummaryglobalRebatetotal) {
     this.dEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalTotal(String dEzmaxinvoicingsummaryglobalTotal) {
-    
     this.dEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
     return this;
   }
@@ -429,14 +402,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalTotal;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalTotal(String dEzmaxinvoicingsummaryglobalTotal) {
     this.dEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRepresentative(String dEzmaxinvoicingsummaryglobalRepresentative) {
-    
     this.dEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
     return this;
   }
@@ -450,14 +421,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalRepresentative;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalRepresentative(String dEzmaxinvoicingsummaryglobalRepresentative) {
     this.dEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalPartner(String dEzmaxinvoicingsummaryglobalPartner) {
-    
     this.dEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
     return this;
   }
@@ -471,14 +440,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalPartner;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalPartner(String dEzmaxinvoicingsummaryglobalPartner) {
     this.dEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalNet(String dEzmaxinvoicingsummaryglobalNet) {
-    
     this.dEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
     return this;
   }
@@ -492,14 +459,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return dEzmaxinvoicingsummaryglobalNet;
   }
 
-
   public void setdEzmaxinvoicingsummaryglobalNet(String dEzmaxinvoicingsummaryglobalNet) {
     this.dEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound bEzmaxinvoicingsummaryglobalAdjustment(Boolean bEzmaxinvoicingsummaryglobalAdjustment) {
-    
     this.bEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
     return this;
   }
@@ -513,14 +478,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return bEzmaxinvoicingsummaryglobalAdjustment;
   }
 
-
   public void setbEzmaxinvoicingsummaryglobalAdjustment(Boolean bEzmaxinvoicingsummaryglobalAdjustment) {
     this.bEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound tEzmaxproductHelpX(String tEzmaxproductHelpX) {
-    
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;
     return this;
   }
@@ -534,14 +497,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return tEzmaxproductHelpX;
   }
 
-
   public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;
   }
 
 
   public EzmaxinvoicingsummaryglobalResponseCompound aObjEzmaxinvoicingcommission(List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
-    
     this.aObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;
     return this;
   }
@@ -562,7 +523,6 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
   public List<EzmaxinvoicingcommissionResponseCompound> getaObjEzmaxinvoicingcommission() {
     return aObjEzmaxinvoicingcommission;
   }
-
 
   public void setaObjEzmaxinvoicingcommission(List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
     this.aObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingResponse {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -113,7 +113,6 @@ public class BrandingResponse {
   }
 
   public BrandingResponse pkiBrandingID(Integer pkiBrandingID) {
-    
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -128,14 +127,12 @@ public class BrandingResponse {
     return pkiBrandingID;
   }
 
-
   public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
   public BrandingResponse fkiEmailID(Integer fkiEmailID) {
-    
     this.fkiEmailID = fkiEmailID;
     return this;
   }
@@ -151,14 +148,12 @@ public class BrandingResponse {
     return fkiEmailID;
   }
 
-
   public void setFkiEmailID(Integer fkiEmailID) {
     this.fkiEmailID = fkiEmailID;
   }
 
 
   public BrandingResponse objBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
-    
     this.objBrandingDescription = objBrandingDescription;
     return this;
   }
@@ -172,14 +167,12 @@ public class BrandingResponse {
     return objBrandingDescription;
   }
 
-
   public void setObjBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
     this.objBrandingDescription = objBrandingDescription;
   }
 
 
   public BrandingResponse sBrandingDescriptionX(String sBrandingDescriptionX) {
-    
     this.sBrandingDescriptionX = sBrandingDescriptionX;
     return this;
   }
@@ -193,14 +186,12 @@ public class BrandingResponse {
     return sBrandingDescriptionX;
   }
 
-
   public void setsBrandingDescriptionX(String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
   }
 
 
   public BrandingResponse sBrandingName(String sBrandingName) {
-    
     this.sBrandingName = sBrandingName;
     return this;
   }
@@ -214,14 +205,12 @@ public class BrandingResponse {
     return sBrandingName;
   }
 
-
   public void setsBrandingName(String sBrandingName) {
     this.sBrandingName = sBrandingName;
   }
 
 
   public BrandingResponse sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -235,14 +224,12 @@ public class BrandingResponse {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public BrandingResponse eBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
-    
     this.eBrandingLogo = eBrandingLogo;
     return this;
   }
@@ -256,14 +243,12 @@ public class BrandingResponse {
     return eBrandingLogo;
   }
 
-
   public void seteBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
   }
 
 
   public BrandingResponse iBrandingColortext(Integer iBrandingColortext) {
-    
     this.iBrandingColortext = iBrandingColortext;
     return this;
   }
@@ -279,14 +264,12 @@ public class BrandingResponse {
     return iBrandingColortext;
   }
 
-
   public void setiBrandingColortext(Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
   }
 
 
   public BrandingResponse iBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
-    
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
     return this;
   }
@@ -302,14 +285,12 @@ public class BrandingResponse {
     return iBrandingColortextlinkbox;
   }
 
-
   public void setiBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
   }
 
 
   public BrandingResponse iBrandingColortextbutton(Integer iBrandingColortextbutton) {
-    
     this.iBrandingColortextbutton = iBrandingColortextbutton;
     return this;
   }
@@ -325,14 +306,12 @@ public class BrandingResponse {
     return iBrandingColortextbutton;
   }
 
-
   public void setiBrandingColortextbutton(Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
   }
 
 
   public BrandingResponse iBrandingColorbackground(Integer iBrandingColorbackground) {
-    
     this.iBrandingColorbackground = iBrandingColorbackground;
     return this;
   }
@@ -348,14 +327,12 @@ public class BrandingResponse {
     return iBrandingColorbackground;
   }
 
-
   public void setiBrandingColorbackground(Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
   }
 
 
   public BrandingResponse iBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
-    
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
     return this;
   }
@@ -371,14 +348,12 @@ public class BrandingResponse {
     return iBrandingColorbackgroundbutton;
   }
 
-
   public void setiBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
   }
 
 
   public BrandingResponse iBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
-    
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
     return this;
   }
@@ -394,14 +369,12 @@ public class BrandingResponse {
     return iBrandingColorbackgroundsmallbox;
   }
 
-
   public void setiBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
   }
 
 
   public BrandingResponse bBrandingIsactive(Boolean bBrandingIsactive) {
-    
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -414,7 +387,6 @@ public class BrandingResponse {
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
   }
-
 
   public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
@@ -561,6 +533,8 @@ public class BrandingResponse {
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
+      // validate the required field `eBrandingLogo`
+      FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

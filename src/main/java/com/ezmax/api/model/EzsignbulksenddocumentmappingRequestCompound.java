@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
@@ -71,7 +71,6 @@ public class EzsignbulksenddocumentmappingRequestCompound {
   }
 
   public EzsignbulksenddocumentmappingRequestCompound pkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
-    
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsignbulksenddocumentmappingRequestCompound {
     return pkiEzsignbulksenddocumentmappingID;
   }
 
-
   public void setPkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
   }
 
 
   public EzsignbulksenddocumentmappingRequestCompound fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
-    
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsignbulksenddocumentmappingRequestCompound {
     return fkiEzsignbulksendID;
   }
 
-
   public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
   public EzsignbulksenddocumentmappingRequestCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -130,14 +125,12 @@ public class EzsignbulksenddocumentmappingRequestCompound {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsignbulksenddocumentmappingRequestCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -151,7 +144,6 @@ public class EzsignbulksenddocumentmappingRequestCompound {
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
-
 
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;

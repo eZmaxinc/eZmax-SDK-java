@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -70,7 +70,6 @@ public class CustomEzsignformfieldgroupRequest {
   }
 
   public CustomEzsignformfieldgroupRequest pkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
-    
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
     return this;
   }
@@ -85,14 +84,12 @@ public class CustomEzsignformfieldgroupRequest {
     return pkiEzsignformfieldgroupID;
   }
 
-
   public void setPkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
   }
 
 
   public CustomEzsignformfieldgroupRequest sEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
-    
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
     return this;
   }
@@ -106,14 +103,12 @@ public class CustomEzsignformfieldgroupRequest {
     return sEzsignformfieldgroupLabel;
   }
 
-
   public void setsEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
   }
 
 
   public CustomEzsignformfieldgroupRequest aObjEzsignformfield(List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
-    
     this.aObjEzsignformfield = aObjEzsignformfield;
     return this;
   }
@@ -134,7 +129,6 @@ public class CustomEzsignformfieldgroupRequest {
   public List<CustomEzsignformfieldRequest> getaObjEzsignformfield() {
     return aObjEzsignformfield;
   }
-
 
   public void setaObjEzsignformfield(List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;

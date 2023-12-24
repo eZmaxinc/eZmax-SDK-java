@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "a_pkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
@@ -61,7 +61,6 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPay
   }
 
   public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPayload aPkiEzsigntemplatepackagesignerID(List<Integer> aPkiEzsigntemplatepackagesignerID) {
-    
     this.aPkiEzsigntemplatepackagesignerID = aPkiEzsigntemplatepackagesignerID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1ResponseMPay
   public List<Integer> getaPkiEzsigntemplatepackagesignerID() {
     return aPkiEzsigntemplatepackagesignerID;
   }
-
 
   public void setaPkiEzsigntemplatepackagesignerID(List<Integer> aPkiEzsigntemplatepackagesignerID) {
     this.aPkiEzsigntemplatepackagesignerID = aPkiEzsigntemplatepackagesignerID;

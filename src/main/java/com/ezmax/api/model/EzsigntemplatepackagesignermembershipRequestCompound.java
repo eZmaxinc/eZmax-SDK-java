@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesignermembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagesignermembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D = "pkiEzsigntemplatepackagesignermembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D)
@@ -75,7 +75,6 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
   }
 
   public EzsigntemplatepackagesignermembershipRequestCompound pkiEzsigntemplatepackagesignermembershipID(Integer pkiEzsigntemplatepackagesignermembershipID) {
-    
     this.pkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
     return this;
   }
@@ -90,14 +89,12 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return pkiEzsigntemplatepackagesignermembershipID;
   }
 
-
   public void setPkiEzsigntemplatepackagesignermembershipID(Integer pkiEzsigntemplatepackagesignermembershipID) {
     this.pkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
   }
 
 
   public EzsigntemplatepackagesignermembershipRequestCompound fkiEzsigntemplatepackagemembershipID(Integer fkiEzsigntemplatepackagemembershipID) {
-    
     this.fkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -112,14 +109,12 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return fkiEzsigntemplatepackagemembershipID;
   }
 
-
   public void setFkiEzsigntemplatepackagemembershipID(Integer fkiEzsigntemplatepackagemembershipID) {
     this.fkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
   }
 
 
   public EzsigntemplatepackagesignermembershipRequestCompound fkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
-    
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
     return this;
   }
@@ -134,14 +129,12 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return fkiEzsigntemplatepackagesignerID;
   }
 
-
   public void setFkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
   }
 
 
   public EzsigntemplatepackagesignermembershipRequestCompound fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
-    
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
     return this;
   }
@@ -156,14 +149,12 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return fkiEzsigntemplatesignerID;
   }
 
-
   public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
   }
 
 
   public EzsigntemplatepackagesignermembershipRequestCompound iEzsigntemplatepackagesignermembershipCopy(Integer iEzsigntemplatepackagesignermembershipCopy) {
-    
     this.iEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;
     return this;
   }
@@ -177,7 +168,6 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
   public Integer getiEzsigntemplatepackagesignermembershipCopy() {
     return iEzsigntemplatepackagesignermembershipCopy;
   }
-
 
   public void setiEzsigntemplatepackagesignermembershipCopy(Integer iEzsigntemplatepackagesignermembershipCopy) {
     this.iEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;

@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.WebhookCreateObjectV2ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +50,10 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Response for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
+ * Response for POST /2/object/webhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
-public class AttachmentDownloadV1Response {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+public class WebhookCreateObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
   private CommonResponseObjDebugPayload objDebugPayload;
@@ -61,11 +62,14 @@ public class AttachmentDownloadV1Response {
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
 
-  public AttachmentDownloadV1Response() {
+  public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
+  @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  private WebhookCreateObjectV2ResponseMPayload mPayload;
+
+  public WebhookCreateObjectV2Response() {
   }
 
-  public AttachmentDownloadV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
-    
+  public WebhookCreateObjectV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -79,14 +83,12 @@ public class AttachmentDownloadV1Response {
     return objDebugPayload;
   }
 
-
   public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public AttachmentDownloadV1Response objDebug(CommonResponseObjDebug objDebug) {
-    
+  public WebhookCreateObjectV2Response objDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -100,9 +102,27 @@ public class AttachmentDownloadV1Response {
     return objDebug;
   }
 
-
   public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
+  }
+
+
+  public WebhookCreateObjectV2Response mPayload(WebhookCreateObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
+    return this;
+  }
+
+   /**
+   * Get mPayload
+   * @return mPayload
+  **/
+  @javax.annotation.Nonnull
+  public WebhookCreateObjectV2ResponseMPayload getmPayload() {
+    return mPayload;
+  }
+
+  public void setmPayload(WebhookCreateObjectV2ResponseMPayload mPayload) {
+    this.mPayload = mPayload;
   }
 
 
@@ -115,22 +135,24 @@ public class AttachmentDownloadV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AttachmentDownloadV1Response attachmentDownloadV1Response = (AttachmentDownloadV1Response) o;
-    return Objects.equals(this.objDebugPayload, attachmentDownloadV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, attachmentDownloadV1Response.objDebug);
+    WebhookCreateObjectV2Response webhookCreateObjectV2Response = (WebhookCreateObjectV2Response) o;
+    return Objects.equals(this.objDebugPayload, webhookCreateObjectV2Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, webhookCreateObjectV2Response.objDebug) &&
+        Objects.equals(this.mPayload, webhookCreateObjectV2Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AttachmentDownloadV1Response {\n");
+    sb.append("class WebhookCreateObjectV2Response {\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -155,35 +177,37 @@ public class AttachmentDownloadV1Response {
     openapiFields = new HashSet<String>();
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
+    openapiFields.add("mPayload");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("objDebugPayload");
+    openapiRequiredFields.add("mPayload");
   }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AttachmentDownloadV1Response
+  * @throws IOException if the JSON Element is invalid with respect to WebhookCreateObjectV2Response
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!AttachmentDownloadV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AttachmentDownloadV1Response is not found in the empty JSON string", AttachmentDownloadV1Response.openapiRequiredFields.toString()));
+        if (!WebhookCreateObjectV2Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookCreateObjectV2Response is not found in the empty JSON string", WebhookCreateObjectV2Response.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!AttachmentDownloadV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AttachmentDownloadV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!WebhookCreateObjectV2Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookCreateObjectV2Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : AttachmentDownloadV1Response.openapiRequiredFields) {
+      for (String requiredField : WebhookCreateObjectV2Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
@@ -195,28 +219,30 @@ public class AttachmentDownloadV1Response {
       if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
+      // validate the required field `mPayload`
+      WebhookCreateObjectV2ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AttachmentDownloadV1Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AttachmentDownloadV1Response' and its subtypes
+       if (!WebhookCreateObjectV2Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'WebhookCreateObjectV2Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AttachmentDownloadV1Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AttachmentDownloadV1Response.class));
+       final TypeAdapter<WebhookCreateObjectV2Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(WebhookCreateObjectV2Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AttachmentDownloadV1Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<WebhookCreateObjectV2Response>() {
            @Override
-           public void write(JsonWriter out, AttachmentDownloadV1Response value) throws IOException {
+           public void write(JsonWriter out, WebhookCreateObjectV2Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public AttachmentDownloadV1Response read(JsonReader in) throws IOException {
+           public WebhookCreateObjectV2Response read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -227,18 +253,18 @@ public class AttachmentDownloadV1Response {
   }
 
  /**
-  * Create an instance of AttachmentDownloadV1Response given an JSON string
+  * Create an instance of WebhookCreateObjectV2Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AttachmentDownloadV1Response
-  * @throws IOException if the JSON string is invalid with respect to AttachmentDownloadV1Response
+  * @return An instance of WebhookCreateObjectV2Response
+  * @throws IOException if the JSON string is invalid with respect to WebhookCreateObjectV2Response
   */
-  public static AttachmentDownloadV1Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AttachmentDownloadV1Response.class);
+  public static WebhookCreateObjectV2Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, WebhookCreateObjectV2Response.class);
   }
 
  /**
-  * Convert an instance of AttachmentDownloadV1Response to an JSON string
+  * Convert an instance of WebhookCreateObjectV2Response to an JSON string
   *
   * @return JSON string
   */

@@ -45,4 +45,12 @@ public class GlobalEzmaxclientVersionV1ResponseTest {
         // TODO: test sEzmaxclientVersion
     }
 
+    /**
+     * Test the property 'sEzmaxclientOslatestversion'
+     */
+    @Test
+    public void sEzmaxclientOslatestversionTest() {
+        // TODO: test sEzmaxclientOslatestversion
+    }
+
 }

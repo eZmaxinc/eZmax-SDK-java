@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendtransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)
@@ -76,7 +76,6 @@ public class EzsignbulksendtransmissionResponse {
   }
 
   public EzsignbulksendtransmissionResponse pkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
-    
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
     return this;
   }
@@ -91,14 +90,12 @@ public class EzsignbulksendtransmissionResponse {
     return pkiEzsignbulksendtransmissionID;
   }
 
-
   public void setPkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
   }
 
 
   public EzsignbulksendtransmissionResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
-    
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -113,14 +110,12 @@ public class EzsignbulksendtransmissionResponse {
     return fkiEzsignbulksendID;
   }
 
-
   public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
   public EzsignbulksendtransmissionResponse sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
-    
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
     return this;
   }
@@ -134,14 +129,12 @@ public class EzsignbulksendtransmissionResponse {
     return sEzsignbulksendtransmissionDescription;
   }
 
-
   public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
   }
 
 
   public EzsignbulksendtransmissionResponse iEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
-    
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
     return this;
   }
@@ -156,14 +149,12 @@ public class EzsignbulksendtransmissionResponse {
     return iEzsignbulksendtransmissionErrors;
   }
 
-
   public void setiEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
   }
 
 
   public EzsignbulksendtransmissionResponse objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -176,7 +167,6 @@ public class EzsignbulksendtransmissionResponse {
   public CommonAudit getObjAudit() {
     return objAudit;
   }
-
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSEND = "objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSEND)
@@ -60,7 +60,6 @@ public class EzsignbulksendEditObjectV1Request {
   }
 
   public EzsignbulksendEditObjectV1Request objEzsignbulksend(EzsignbulksendRequestCompound objEzsignbulksend) {
-    
     this.objEzsignbulksend = objEzsignbulksend;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsignbulksendEditObjectV1Request {
   public EzsignbulksendRequestCompound getObjEzsignbulksend() {
     return objEzsignbulksend;
   }
-
 
   public void setObjEzsignbulksend(EzsignbulksendRequestCompound objEzsignbulksend) {
     this.objEzsignbulksend = objEzsignbulksend;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -91,7 +91,6 @@ public class EzsigntemplateListElement {
   }
 
   public EzsigntemplateListElement pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
-    
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -106,14 +105,12 @@ public class EzsigntemplateListElement {
     return pkiEzsigntemplateID;
   }
 
-
   public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
   public EzsigntemplateListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -128,14 +125,12 @@ public class EzsigntemplateListElement {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsigntemplateListElement fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -151,14 +146,12 @@ public class EzsigntemplateListElement {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigntemplateListElement sEzsigntemplateDescription(String sEzsigntemplateDescription) {
-    
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -172,14 +165,12 @@ public class EzsigntemplateListElement {
     return sEzsigntemplateDescription;
   }
 
-
   public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
   public EzsigntemplateListElement iEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
-    
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
     return this;
   }
@@ -194,14 +185,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplatedocumentPagetotal;
   }
 
-
   public void setiEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
   }
 
 
   public EzsigntemplateListElement iEzsigntemplateSignaturetotal(Integer iEzsigntemplateSignaturetotal) {
-    
     this.iEzsigntemplateSignaturetotal = iEzsigntemplateSignaturetotal;
     return this;
   }
@@ -215,14 +204,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplateSignaturetotal;
   }
 
-
   public void setiEzsigntemplateSignaturetotal(Integer iEzsigntemplateSignaturetotal) {
     this.iEzsigntemplateSignaturetotal = iEzsigntemplateSignaturetotal;
   }
 
 
   public EzsigntemplateListElement iEzsigntemplateFormfieldtotal(Integer iEzsigntemplateFormfieldtotal) {
-    
     this.iEzsigntemplateFormfieldtotal = iEzsigntemplateFormfieldtotal;
     return this;
   }
@@ -236,14 +223,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplateFormfieldtotal;
   }
 
-
   public void setiEzsigntemplateFormfieldtotal(Integer iEzsigntemplateFormfieldtotal) {
     this.iEzsigntemplateFormfieldtotal = iEzsigntemplateFormfieldtotal;
   }
 
 
   public EzsigntemplateListElement bEzsigntemplateIncomplete(Boolean bEzsigntemplateIncomplete) {
-    
     this.bEzsigntemplateIncomplete = bEzsigntemplateIncomplete;
     return this;
   }
@@ -257,14 +242,12 @@ public class EzsigntemplateListElement {
     return bEzsigntemplateIncomplete;
   }
 
-
   public void setbEzsigntemplateIncomplete(Boolean bEzsigntemplateIncomplete) {
     this.bEzsigntemplateIncomplete = bEzsigntemplateIncomplete;
   }
 
 
   public EzsigntemplateListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -277,7 +260,6 @@ public class EzsigntemplateListElement {
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
-
 
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;

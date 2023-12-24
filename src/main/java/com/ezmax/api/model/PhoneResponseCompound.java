@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PhoneResponseCompound {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
@@ -73,11 +73,14 @@ public class PhoneResponseCompound {
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
   private String sPhoneExtension;
 
+  public static final String SERIALIZED_NAME_B_PHONE_INTERNATIONAL = "bPhoneInternational";
+  @SerializedName(SERIALIZED_NAME_B_PHONE_INTERNATIONAL)
+  private Boolean bPhoneInternational;
+
   public PhoneResponseCompound() {
   }
 
   public PhoneResponseCompound pkiPhoneID(Integer pkiPhoneID) {
-    
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -92,14 +95,12 @@ public class PhoneResponseCompound {
     return pkiPhoneID;
   }
 
-
   public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
   public PhoneResponseCompound fkiPhonetypeID(Integer fkiPhonetypeID) {
-    
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -114,7 +115,6 @@ public class PhoneResponseCompound {
     return fkiPhonetypeID;
   }
 
-
   public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
@@ -122,7 +122,6 @@ public class PhoneResponseCompound {
 
   @Deprecated
   public PhoneResponseCompound ePhoneType(FieldEPhoneType ePhoneType) {
-    
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -138,7 +137,6 @@ public class PhoneResponseCompound {
     return ePhoneType;
   }
 
-
   @Deprecated
   public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
@@ -146,7 +144,6 @@ public class PhoneResponseCompound {
 
 
   public PhoneResponseCompound sPhoneE164(String sPhoneE164) {
-    
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -160,14 +157,12 @@ public class PhoneResponseCompound {
     return sPhoneE164;
   }
 
-
   public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
   public PhoneResponseCompound sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -181,9 +176,27 @@ public class PhoneResponseCompound {
     return sPhoneExtension;
   }
 
-
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
+  }
+
+
+  public PhoneResponseCompound bPhoneInternational(Boolean bPhoneInternational) {
+    this.bPhoneInternational = bPhoneInternational;
+    return this;
+  }
+
+   /**
+   * Indicate the phone number is an international phone number.
+   * @return bPhoneInternational
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbPhoneInternational() {
+    return bPhoneInternational;
+  }
+
+  public void setbPhoneInternational(Boolean bPhoneInternational) {
+    this.bPhoneInternational = bPhoneInternational;
   }
 
 
@@ -201,12 +214,13 @@ public class PhoneResponseCompound {
         Objects.equals(this.fkiPhonetypeID, phoneResponseCompound.fkiPhonetypeID) &&
         Objects.equals(this.ePhoneType, phoneResponseCompound.ePhoneType) &&
         Objects.equals(this.sPhoneE164, phoneResponseCompound.sPhoneE164) &&
-        Objects.equals(this.sPhoneExtension, phoneResponseCompound.sPhoneExtension);
+        Objects.equals(this.sPhoneExtension, phoneResponseCompound.sPhoneExtension) &&
+        Objects.equals(this.bPhoneInternational, phoneResponseCompound.bPhoneInternational);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiPhoneID, fkiPhonetypeID, ePhoneType, sPhoneE164, sPhoneExtension);
+    return Objects.hash(pkiPhoneID, fkiPhonetypeID, ePhoneType, sPhoneE164, sPhoneExtension, bPhoneInternational);
   }
 
   @Override
@@ -218,6 +232,7 @@ public class PhoneResponseCompound {
     sb.append("    ePhoneType: ").append(toIndentedString(ePhoneType)).append("\n");
     sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
     sb.append("    sPhoneExtension: ").append(toIndentedString(sPhoneExtension)).append("\n");
+    sb.append("    bPhoneInternational: ").append(toIndentedString(bPhoneInternational)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -245,6 +260,7 @@ public class PhoneResponseCompound {
     openapiFields.add("ePhoneType");
     openapiFields.add("sPhoneE164");
     openapiFields.add("sPhoneExtension");
+    openapiFields.add("bPhoneInternational");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -280,6 +296,10 @@ public class PhoneResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `ePhoneType`
+      if (jsonObj.get("ePhoneType") != null && !jsonObj.get("ePhoneType").isJsonNull()) {
+        FieldEPhoneType.validateJsonElement(jsonObj.get("ePhoneType"));
+      }
       if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
       }

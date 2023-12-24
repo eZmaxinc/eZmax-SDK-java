@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/period/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PeriodGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PERIOD = "a_objPeriod";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERIOD)
@@ -62,7 +62,6 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
   }
 
   public PeriodGetAutocompleteV2ResponseMPayload aObjPeriod(List<PeriodAutocompleteElementResponse> aObjPeriod) {
-    
     this.aObjPeriod = aObjPeriod;
     return this;
   }
@@ -83,7 +82,6 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
   public List<PeriodAutocompleteElementResponse> getaObjPeriod() {
     return aObjPeriod;
   }
-
 
   public void setaObjPeriod(List<PeriodAutocompleteElementResponse> aObjPeriod) {
     this.aObjPeriod = aObjPeriod;

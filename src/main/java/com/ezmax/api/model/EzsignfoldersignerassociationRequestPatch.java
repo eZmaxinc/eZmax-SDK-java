@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestPatch {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
@@ -59,7 +59,6 @@ public class EzsignfoldersignerassociationRequestPatch {
   }
 
   public EzsignfoldersignerassociationRequestPatch tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -72,7 +71,6 @@ public class EzsignfoldersignerassociationRequestPatch {
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
   }
-
 
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;

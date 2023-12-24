@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentEditEzsignformfieldgroupsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
@@ -62,7 +62,6 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Request {
   }
 
   public EzsigndocumentEditEzsignformfieldgroupsV1Request aObjEzsignformfieldgroup(List<EzsignformfieldgroupRequestCompound> aObjEzsignformfieldgroup) {
-    
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Request {
   public List<EzsignformfieldgroupRequestCompound> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
   }
-
 
   public void setaObjEzsignformfieldgroup(List<EzsignformfieldgroupRequestCompound> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;

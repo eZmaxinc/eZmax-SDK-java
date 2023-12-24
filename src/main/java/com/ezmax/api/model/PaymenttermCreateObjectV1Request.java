@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PaymenttermCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTTERM = "a_objPaymentterm";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTTERM)
@@ -62,7 +62,6 @@ public class PaymenttermCreateObjectV1Request {
   }
 
   public PaymenttermCreateObjectV1Request aObjPaymentterm(List<PaymenttermRequestCompound> aObjPaymentterm) {
-    
     this.aObjPaymentterm = aObjPaymentterm;
     return this;
   }
@@ -83,7 +82,6 @@ public class PaymenttermCreateObjectV1Request {
   public List<PaymenttermRequestCompound> getaObjPaymentterm() {
     return aObjPaymentterm;
   }
-
 
   public void setaObjPaymentterm(List<PaymenttermRequestCompound> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;

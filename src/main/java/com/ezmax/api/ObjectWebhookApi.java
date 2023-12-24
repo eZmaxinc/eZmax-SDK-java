@@ -33,12 +33,16 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.WebhookCreateObjectV1Request;
 import com.ezmax.api.model.WebhookCreateObjectV1Response;
+import com.ezmax.api.model.WebhookCreateObjectV2Request;
+import com.ezmax.api.model.WebhookCreateObjectV2Response;
 import com.ezmax.api.model.WebhookDeleteObjectV1Response;
 import com.ezmax.api.model.WebhookEditObjectV1Request;
 import com.ezmax.api.model.WebhookEditObjectV1Response;
 import com.ezmax.api.model.WebhookGetHistoryV1Response;
 import com.ezmax.api.model.WebhookGetListV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
+import com.ezmax.api.model.WebhookRegenerateApikeyV1Request;
+import com.ezmax.api.model.WebhookRegenerateApikeyV1Response;
 import com.ezmax.api.model.WebhookTestV1Response;
 
 import java.lang.reflect.Type;
@@ -95,7 +99,9 @@ public class ObjectWebhookApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call webhookCreateObjectV1Call(WebhookCreateObjectV1Request webhookCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -141,6 +147,7 @@ public class ObjectWebhookApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call webhookCreateObjectV1ValidateBeforeCall(WebhookCreateObjectV1Request webhookCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'webhookCreateObjectV1Request' is set
@@ -163,7 +170,9 @@ public class ObjectWebhookApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public WebhookCreateObjectV1Response webhookCreateObjectV1(WebhookCreateObjectV1Request webhookCreateObjectV1Request) throws ApiException {
         ApiResponse<WebhookCreateObjectV1Response> localVarResp = webhookCreateObjectV1WithHttpInfo(webhookCreateObjectV1Request);
         return localVarResp.getData();
@@ -180,7 +189,9 @@ public class ObjectWebhookApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<WebhookCreateObjectV1Response> webhookCreateObjectV1WithHttpInfo(WebhookCreateObjectV1Request webhookCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = webhookCreateObjectV1ValidateBeforeCall(webhookCreateObjectV1Request, null);
         Type localVarReturnType = new TypeToken<WebhookCreateObjectV1Response>(){}.getType();
@@ -199,11 +210,136 @@ public class ObjectWebhookApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call webhookCreateObjectV1Async(WebhookCreateObjectV1Request webhookCreateObjectV1Request, final ApiCallback<WebhookCreateObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = webhookCreateObjectV1ValidateBeforeCall(webhookCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<WebhookCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for webhookCreateObjectV2
+     * @param webhookCreateObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookCreateObjectV2Call(WebhookCreateObjectV2Request webhookCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = webhookCreateObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/webhook";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call webhookCreateObjectV2ValidateBeforeCall(WebhookCreateObjectV2Request webhookCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'webhookCreateObjectV2Request' is set
+        if (webhookCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'webhookCreateObjectV2Request' when calling webhookCreateObjectV2(Async)");
+        }
+
+        return webhookCreateObjectV2Call(webhookCreateObjectV2Request, _callback);
+
+    }
+
+    /**
+     * Create a new Webhook
+     * The endpoint allows to create one or many elements at once.
+     * @param webhookCreateObjectV2Request  (required)
+     * @return WebhookCreateObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public WebhookCreateObjectV2Response webhookCreateObjectV2(WebhookCreateObjectV2Request webhookCreateObjectV2Request) throws ApiException {
+        ApiResponse<WebhookCreateObjectV2Response> localVarResp = webhookCreateObjectV2WithHttpInfo(webhookCreateObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Webhook
+     * The endpoint allows to create one or many elements at once.
+     * @param webhookCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;WebhookCreateObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<WebhookCreateObjectV2Response> webhookCreateObjectV2WithHttpInfo(WebhookCreateObjectV2Request webhookCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = webhookCreateObjectV2ValidateBeforeCall(webhookCreateObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<WebhookCreateObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a new Webhook (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param webhookCreateObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookCreateObjectV2Async(WebhookCreateObjectV2Request webhookCreateObjectV2Request, final ApiCallback<WebhookCreateObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = webhookCreateObjectV2ValidateBeforeCall(webhookCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<WebhookCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -897,6 +1033,143 @@ public class ObjectWebhookApi {
 
         okhttp3.Call localVarCall = webhookGetObjectV2ValidateBeforeCall(pkiWebhookID, _callback);
         Type localVarReturnType = new TypeToken<WebhookGetObjectV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for webhookRegenerateApikeyV1
+     * @param pkiWebhookID  (required)
+     * @param webhookRegenerateApikeyV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookRegenerateApikeyV1Call(Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = webhookRegenerateApikeyV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/webhook/{pkiWebhookID}/regenerateApikey"
+            .replace("{" + "pkiWebhookID" + "}", localVarApiClient.escapeString(pkiWebhookID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call webhookRegenerateApikeyV1ValidateBeforeCall(Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiWebhookID' is set
+        if (pkiWebhookID == null) {
+            throw new ApiException("Missing the required parameter 'pkiWebhookID' when calling webhookRegenerateApikeyV1(Async)");
+        }
+
+        // verify the required parameter 'webhookRegenerateApikeyV1Request' is set
+        if (webhookRegenerateApikeyV1Request == null) {
+            throw new ApiException("Missing the required parameter 'webhookRegenerateApikeyV1Request' when calling webhookRegenerateApikeyV1(Async)");
+        }
+
+        return webhookRegenerateApikeyV1Call(pkiWebhookID, webhookRegenerateApikeyV1Request, _callback);
+
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiWebhookID  (required)
+     * @param webhookRegenerateApikeyV1Request  (required)
+     * @return WebhookRegenerateApikeyV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public WebhookRegenerateApikeyV1Response webhookRegenerateApikeyV1(Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) throws ApiException {
+        ApiResponse<WebhookRegenerateApikeyV1Response> localVarResp = webhookRegenerateApikeyV1WithHttpInfo(pkiWebhookID, webhookRegenerateApikeyV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Regenerate the Apikey
+     * 
+     * @param pkiWebhookID  (required)
+     * @param webhookRegenerateApikeyV1Request  (required)
+     * @return ApiResponse&lt;WebhookRegenerateApikeyV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<WebhookRegenerateApikeyV1Response> webhookRegenerateApikeyV1WithHttpInfo(Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) throws ApiException {
+        okhttp3.Call localVarCall = webhookRegenerateApikeyV1ValidateBeforeCall(pkiWebhookID, webhookRegenerateApikeyV1Request, null);
+        Type localVarReturnType = new TypeToken<WebhookRegenerateApikeyV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Regenerate the Apikey (asynchronously)
+     * 
+     * @param pkiWebhookID  (required)
+     * @param webhookRegenerateApikeyV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookRegenerateApikeyV1Async(Integer pkiWebhookID, WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final ApiCallback<WebhookRegenerateApikeyV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = webhookRegenerateApikeyV1ValidateBeforeCall(pkiWebhookID, webhookRegenerateApikeyV1Request, _callback);
+        Type localVarReturnType = new TypeToken<WebhookRegenerateApikeyV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

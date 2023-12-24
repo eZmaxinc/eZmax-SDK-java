@@ -52,8 +52,12 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignatureSignV1Request {
+  public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
+  private Integer fkiEzsignsigningreasonID;
+
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
   private String sValue;
@@ -103,6 +107,11 @@ public class EzsignsignatureSignV1Request {
         return EAttachmentsConfirmationDecisionEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EAttachmentsConfirmationDecisionEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_ATTACHMENTS_CONFIRMATION_DECISION = "eAttachmentsConfirmationDecision";
@@ -128,8 +137,28 @@ public class EzsignsignatureSignV1Request {
   public EzsignsignatureSignV1Request() {
   }
 
+  public EzsignsignatureSignV1Request fkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
+    this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Ezsignsigningreason
+   * minimum: 0
+   * maximum: 255
+   * @return fkiEzsignsigningreasonID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignsigningreasonID() {
+    return fkiEzsignsigningreasonID;
+  }
+
+  public void setFkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
+    this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
+  }
+
+
   public EzsignsignatureSignV1Request sValue(String sValue) {
-    
     this.sValue = sValue;
     return this;
   }
@@ -143,14 +172,12 @@ public class EzsignsignatureSignV1Request {
     return sValue;
   }
 
-
   public void setsValue(String sValue) {
     this.sValue = sValue;
   }
 
 
   public EzsignsignatureSignV1Request eAttachmentsConfirmationDecision(EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
-    
     this.eAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
     return this;
   }
@@ -164,14 +191,12 @@ public class EzsignsignatureSignV1Request {
     return eAttachmentsConfirmationDecision;
   }
 
-
   public void seteAttachmentsConfirmationDecision(EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
     this.eAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
   }
 
 
   public EzsignsignatureSignV1Request sAttachmentsRefusalReason(String sAttachmentsRefusalReason) {
-    
     this.sAttachmentsRefusalReason = sAttachmentsRefusalReason;
     return this;
   }
@@ -185,14 +210,12 @@ public class EzsignsignatureSignV1Request {
     return sAttachmentsRefusalReason;
   }
 
-
   public void setsAttachmentsRefusalReason(String sAttachmentsRefusalReason) {
     this.sAttachmentsRefusalReason = sAttachmentsRefusalReason;
   }
 
 
   public EzsignsignatureSignV1Request sSvg(String sSvg) {
-    
     this.sSvg = sSvg;
     return this;
   }
@@ -206,14 +229,12 @@ public class EzsignsignatureSignV1Request {
     return sSvg;
   }
 
-
   public void setsSvg(String sSvg) {
     this.sSvg = sSvg;
   }
 
 
   public EzsignsignatureSignV1Request aObjFile(List<CommonFile> aObjFile) {
-    
     this.aObjFile = aObjFile;
     return this;
   }
@@ -235,14 +256,12 @@ public class EzsignsignatureSignV1Request {
     return aObjFile;
   }
 
-
   public void setaObjFile(List<CommonFile> aObjFile) {
     this.aObjFile = aObjFile;
   }
 
 
   public EzsignsignatureSignV1Request bIsAutomatic(Boolean bIsAutomatic) {
-    
     this.bIsAutomatic = bIsAutomatic;
     return this;
   }
@@ -255,7 +274,6 @@ public class EzsignsignatureSignV1Request {
   public Boolean getbIsAutomatic() {
     return bIsAutomatic;
   }
-
 
   public void setbIsAutomatic(Boolean bIsAutomatic) {
     this.bIsAutomatic = bIsAutomatic;
@@ -272,7 +290,8 @@ public class EzsignsignatureSignV1Request {
       return false;
     }
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
-    return Objects.equals(this.sValue, ezsignsignatureSignV1Request.sValue) &&
+    return Objects.equals(this.fkiEzsignsigningreasonID, ezsignsignatureSignV1Request.fkiEzsignsigningreasonID) &&
+        Objects.equals(this.sValue, ezsignsignatureSignV1Request.sValue) &&
         Objects.equals(this.eAttachmentsConfirmationDecision, ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision) &&
         Objects.equals(this.sAttachmentsRefusalReason, ezsignsignatureSignV1Request.sAttachmentsRefusalReason) &&
         Objects.equals(this.sSvg, ezsignsignatureSignV1Request.sSvg) &&
@@ -282,13 +301,14 @@ public class EzsignsignatureSignV1Request {
 
   @Override
   public int hashCode() {
-    return Objects.hash(sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, bIsAutomatic);
+    return Objects.hash(fkiEzsignsigningreasonID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, bIsAutomatic);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureSignV1Request {\n");
+    sb.append("    fkiEzsignsigningreasonID: ").append(toIndentedString(fkiEzsignsigningreasonID)).append("\n");
     sb.append("    sValue: ").append(toIndentedString(sValue)).append("\n");
     sb.append("    eAttachmentsConfirmationDecision: ").append(toIndentedString(eAttachmentsConfirmationDecision)).append("\n");
     sb.append("    sAttachmentsRefusalReason: ").append(toIndentedString(sAttachmentsRefusalReason)).append("\n");
@@ -317,6 +337,7 @@ public class EzsignsignatureSignV1Request {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("fkiEzsignsigningreasonID");
     openapiFields.add("sValue");
     openapiFields.add("eAttachmentsConfirmationDecision");
     openapiFields.add("sAttachmentsRefusalReason");
@@ -362,6 +383,10 @@ public class EzsignsignatureSignV1Request {
       }
       if ((jsonObj.get("eAttachmentsConfirmationDecision") != null && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonNull()) && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eAttachmentsConfirmationDecision` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eAttachmentsConfirmationDecision").toString()));
+      }
+      // validate the optional field `eAttachmentsConfirmationDecision`
+      if (jsonObj.get("eAttachmentsConfirmationDecision") != null && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonNull()) {
+        EAttachmentsConfirmationDecisionEnum.validateJsonElement(jsonObj.get("eAttachmentsConfirmationDecision"));
       }
       if ((jsonObj.get("sAttachmentsRefusalReason") != null && !jsonObj.get("sAttachmentsRefusalReason").isJsonNull()) && !jsonObj.get("sAttachmentsRefusalReason").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sAttachmentsRefusalReason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentsRefusalReason").toString()));

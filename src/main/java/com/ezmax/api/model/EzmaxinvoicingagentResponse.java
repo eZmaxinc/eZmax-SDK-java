@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingagentResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
@@ -137,7 +137,6 @@ public class EzmaxinvoicingagentResponse {
   }
 
   public EzmaxinvoicingagentResponse pkiEzmaxinvoicingagentID(Integer pkiEzmaxinvoicingagentID) {
-    
     this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
     return this;
   }
@@ -152,14 +151,12 @@ public class EzmaxinvoicingagentResponse {
     return pkiEzmaxinvoicingagentID;
   }
 
-
   public void setPkiEzmaxinvoicingagentID(Integer pkiEzmaxinvoicingagentID) {
     this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
   }
 
 
   public EzmaxinvoicingagentResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
-    
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -174,14 +171,12 @@ public class EzmaxinvoicingagentResponse {
     return fkiEzmaxinvoicingID;
   }
 
-
   public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingagentResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -196,14 +191,12 @@ public class EzmaxinvoicingagentResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzmaxinvoicingagentResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -217,14 +210,12 @@ public class EzmaxinvoicingagentResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public EzmaxinvoicingagentResponse fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -239,14 +230,12 @@ public class EzmaxinvoicingagentResponse {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public EzmaxinvoicingagentResponse fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -261,14 +250,12 @@ public class EzmaxinvoicingagentResponse {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentSession(Integer iEzmaxinvoicingagentSession) {
-    
     this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
     return this;
   }
@@ -283,14 +270,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentSession;
   }
 
-
   public void setiEzmaxinvoicingagentSession(Integer iEzmaxinvoicingagentSession) {
     this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentCloned(Integer iEzmaxinvoicingagentCloned) {
-    
     this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
     return this;
   }
@@ -305,14 +290,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentCloned;
   }
 
-
   public void setiEzmaxinvoicingagentCloned(Integer iEzmaxinvoicingagentCloned) {
     this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentInvoice(Integer iEzmaxinvoicingagentInvoice) {
-    
     this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
     return this;
   }
@@ -327,14 +310,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentInvoice;
   }
 
-
   public void setiEzmaxinvoicingagentInvoice(Integer iEzmaxinvoicingagentInvoice) {
     this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentInscription(Integer iEzmaxinvoicingagentInscription) {
-    
     this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
     return this;
   }
@@ -349,14 +330,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentInscription;
   }
 
-
   public void setiEzmaxinvoicingagentInscription(Integer iEzmaxinvoicingagentInscription) {
     this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentInscriptionactive(Integer iEzmaxinvoicingagentInscriptionactive) {
-    
     this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
     return this;
   }
@@ -371,14 +350,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentInscriptionactive;
   }
 
-
   public void setiEzmaxinvoicingagentInscriptionactive(Integer iEzmaxinvoicingagentInscriptionactive) {
     this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentSale(Integer iEzmaxinvoicingagentSale) {
-    
     this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
     return this;
   }
@@ -393,14 +370,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentSale;
   }
 
-
   public void setiEzmaxinvoicingagentSale(Integer iEzmaxinvoicingagentSale) {
     this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentOtherincome(Integer iEzmaxinvoicingagentOtherincome) {
-    
     this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
     return this;
   }
@@ -415,14 +390,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentOtherincome;
   }
 
-
   public void setiEzmaxinvoicingagentOtherincome(Integer iEzmaxinvoicingagentOtherincome) {
     this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentCommissioncalculation(Integer iEzmaxinvoicingagentCommissioncalculation) {
-    
     this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
     return this;
   }
@@ -437,14 +410,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentCommissioncalculation;
   }
 
-
   public void setiEzmaxinvoicingagentCommissioncalculation(Integer iEzmaxinvoicingagentCommissioncalculation) {
     this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
   }
 
 
   public EzmaxinvoicingagentResponse iEzmaxinvoicingagentEzsigndocument(Integer iEzmaxinvoicingagentEzsigndocument) {
-    
     this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
     return this;
   }
@@ -459,14 +430,12 @@ public class EzmaxinvoicingagentResponse {
     return iEzmaxinvoicingagentEzsigndocument;
   }
 
-
   public void setiEzmaxinvoicingagentEzsigndocument(Integer iEzmaxinvoicingagentEzsigndocument) {
     this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
   }
 
 
   public EzmaxinvoicingagentResponse bEzmaxinvoicingagentEzsignaccount(Boolean bEzmaxinvoicingagentEzsignaccount) {
-    
     this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
     return this;
   }
@@ -480,14 +449,12 @@ public class EzmaxinvoicingagentResponse {
     return bEzmaxinvoicingagentEzsignaccount;
   }
 
-
   public void setbEzmaxinvoicingagentEzsignaccount(Boolean bEzmaxinvoicingagentEzsignaccount) {
     this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
   }
 
 
   public EzmaxinvoicingagentResponse bEzmaxinvoicingagentBillableezmax(Boolean bEzmaxinvoicingagentBillableezmax) {
-    
     this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
     return this;
   }
@@ -501,14 +468,12 @@ public class EzmaxinvoicingagentResponse {
     return bEzmaxinvoicingagentBillableezmax;
   }
 
-
   public void setbEzmaxinvoicingagentBillableezmax(Boolean bEzmaxinvoicingagentBillableezmax) {
     this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
   }
 
 
   public EzmaxinvoicingagentResponse eEzmaxinvoicingagentVariationezmax(FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
-    
     this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
     return this;
   }
@@ -522,14 +487,12 @@ public class EzmaxinvoicingagentResponse {
     return eEzmaxinvoicingagentVariationezmax;
   }
 
-
   public void seteEzmaxinvoicingagentVariationezmax(FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
     this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
   }
 
 
   public EzmaxinvoicingagentResponse bEzmaxinvoicingagentBillableezsign(Boolean bEzmaxinvoicingagentBillableezsign) {
-    
     this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
     return this;
   }
@@ -543,14 +506,12 @@ public class EzmaxinvoicingagentResponse {
     return bEzmaxinvoicingagentBillableezsign;
   }
 
-
   public void setbEzmaxinvoicingagentBillableezsign(Boolean bEzmaxinvoicingagentBillableezsign) {
     this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
   }
 
 
   public EzmaxinvoicingagentResponse eEzmaxinvoicingagentVariationezsign(FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
-    
     this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
     return this;
   }
@@ -563,7 +524,6 @@ public class EzmaxinvoicingagentResponse {
   public FieldEEzmaxinvoicingagentVariationezsign geteEzmaxinvoicingagentVariationezsign() {
     return eEzmaxinvoicingagentVariationezsign;
   }
-
 
   public void seteEzmaxinvoicingagentVariationezsign(FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
     this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
@@ -725,6 +685,10 @@ public class EzmaxinvoicingagentResponse {
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }
+      // validate the required field `eEzmaxinvoicingagentVariationezmax`
+      FieldEEzmaxinvoicingagentVariationezmax.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezmax"));
+      // validate the required field `eEzmaxinvoicingagentVariationezsign`
+      FieldEEzmaxinvoicingagentVariationezsign.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezsign"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

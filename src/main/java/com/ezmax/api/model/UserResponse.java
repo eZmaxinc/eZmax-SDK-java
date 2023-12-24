@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -210,7 +210,6 @@ public class UserResponse {
   }
 
   public UserResponse pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -225,14 +224,12 @@ public class UserResponse {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public UserResponse fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -247,14 +244,12 @@ public class UserResponse {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public UserResponse fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -269,14 +264,12 @@ public class UserResponse {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public UserResponse fkiAssistantID(Integer fkiAssistantID) {
-    
     this.fkiAssistantID = fkiAssistantID;
     return this;
   }
@@ -291,14 +284,12 @@ public class UserResponse {
     return fkiAssistantID;
   }
 
-
   public void setFkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
   }
 
 
   public UserResponse fkiEmployeeID(Integer fkiEmployeeID) {
-    
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -313,14 +304,12 @@ public class UserResponse {
     return fkiEmployeeID;
   }
 
-
   public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
   public UserResponse fkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
-    
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
     return this;
   }
@@ -336,14 +325,12 @@ public class UserResponse {
     return fkiCompanyIDDefault;
   }
 
-
   public void setFkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
   }
 
 
   public UserResponse sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -357,14 +344,12 @@ public class UserResponse {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public UserResponse fkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
-    
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
     return this;
   }
@@ -379,14 +364,12 @@ public class UserResponse {
     return fkiDepartmentIDDefault;
   }
 
-
   public void setFkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
   }
 
 
   public UserResponse sDepartmentNameX(String sDepartmentNameX) {
-    
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -400,14 +383,12 @@ public class UserResponse {
     return sDepartmentNameX;
   }
 
-
   public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
   public UserResponse fkiTimezoneID(Integer fkiTimezoneID) {
-    
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -422,14 +403,12 @@ public class UserResponse {
     return fkiTimezoneID;
   }
 
-
   public void setFkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
   public UserResponse sTimezoneName(String sTimezoneName) {
-    
     this.sTimezoneName = sTimezoneName;
     return this;
   }
@@ -443,14 +422,12 @@ public class UserResponse {
     return sTimezoneName;
   }
 
-
   public void setsTimezoneName(String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
   }
 
 
   public UserResponse fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -466,14 +443,12 @@ public class UserResponse {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public UserResponse sLanguageNameX(String sLanguageNameX) {
-    
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -487,14 +462,12 @@ public class UserResponse {
     return sLanguageNameX;
   }
 
-
   public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
   public UserResponse objEmail(EmailResponseCompound objEmail) {
-    
     this.objEmail = objEmail;
     return this;
   }
@@ -508,14 +481,12 @@ public class UserResponse {
     return objEmail;
   }
 
-
   public void setObjEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 
 
   public UserResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -530,14 +501,12 @@ public class UserResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public UserResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -551,14 +520,12 @@ public class UserResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public UserResponse objPhoneHome(PhoneResponseCompound objPhoneHome) {
-    
     this.objPhoneHome = objPhoneHome;
     return this;
   }
@@ -572,14 +539,12 @@ public class UserResponse {
     return objPhoneHome;
   }
 
-
   public void setObjPhoneHome(PhoneResponseCompound objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
 
   public UserResponse objPhoneSMS(PhoneResponseCompound objPhoneSMS) {
-    
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
@@ -593,14 +558,12 @@ public class UserResponse {
     return objPhoneSMS;
   }
 
-
   public void setObjPhoneSMS(PhoneResponseCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
 
   public UserResponse fkiSecretquestionID(Integer fkiSecretquestionID) {
-    
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -615,14 +578,12 @@ public class UserResponse {
     return fkiSecretquestionID;
   }
 
-
   public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
   public UserResponse fkiModuleIDForm(Integer fkiModuleIDForm) {
-    
     this.fkiModuleIDForm = fkiModuleIDForm;
     return this;
   }
@@ -637,14 +598,12 @@ public class UserResponse {
     return fkiModuleIDForm;
   }
 
-
   public void setFkiModuleIDForm(Integer fkiModuleIDForm) {
     this.fkiModuleIDForm = fkiModuleIDForm;
   }
 
 
   public UserResponse sModuleNameX(String sModuleNameX) {
-    
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -658,14 +617,12 @@ public class UserResponse {
     return sModuleNameX;
   }
 
-
   public void setsModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
   public UserResponse eUserOrigin(FieldEUserOrigin eUserOrigin) {
-    
     this.eUserOrigin = eUserOrigin;
     return this;
   }
@@ -679,14 +636,12 @@ public class UserResponse {
     return eUserOrigin;
   }
 
-
   public void seteUserOrigin(FieldEUserOrigin eUserOrigin) {
     this.eUserOrigin = eUserOrigin;
   }
 
 
   public UserResponse eUserType(FieldEUserType eUserType) {
-    
     this.eUserType = eUserType;
     return this;
   }
@@ -700,14 +655,12 @@ public class UserResponse {
     return eUserType;
   }
 
-
   public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
   public UserResponse eUserLogintype(FieldEUserLogintype eUserLogintype) {
-    
     this.eUserLogintype = eUserLogintype;
     return this;
   }
@@ -721,14 +674,12 @@ public class UserResponse {
     return eUserLogintype;
   }
 
-
   public void seteUserLogintype(FieldEUserLogintype eUserLogintype) {
     this.eUserLogintype = eUserLogintype;
   }
 
 
   public UserResponse sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -742,14 +693,12 @@ public class UserResponse {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UserResponse sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -763,14 +712,12 @@ public class UserResponse {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UserResponse sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -784,14 +731,12 @@ public class UserResponse {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public UserResponse eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
-    
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -805,14 +750,12 @@ public class UserResponse {
     return eUserEzsignaccess;
   }
 
-
   public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
   public UserResponse dtUserLastlogondate(String dtUserLastlogondate) {
-    
     this.dtUserLastlogondate = dtUserLastlogondate;
     return this;
   }
@@ -826,14 +769,12 @@ public class UserResponse {
     return dtUserLastlogondate;
   }
 
-
   public void setDtUserLastlogondate(String dtUserLastlogondate) {
     this.dtUserLastlogondate = dtUserLastlogondate;
   }
 
 
   public UserResponse dtUserPasswordchanged(String dtUserPasswordchanged) {
-    
     this.dtUserPasswordchanged = dtUserPasswordchanged;
     return this;
   }
@@ -847,14 +788,12 @@ public class UserResponse {
     return dtUserPasswordchanged;
   }
 
-
   public void setDtUserPasswordchanged(String dtUserPasswordchanged) {
     this.dtUserPasswordchanged = dtUserPasswordchanged;
   }
 
 
   public UserResponse dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
-    
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
   }
@@ -868,14 +807,12 @@ public class UserResponse {
     return dtUserEzsignprepaidexpiration;
   }
 
-
   public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
   }
 
 
   public UserResponse bUserIsactive(Boolean bUserIsactive) {
-    
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -889,14 +826,12 @@ public class UserResponse {
     return bUserIsactive;
   }
 
-
   public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 
 
   public UserResponse bUserValidatebyadministration(Boolean bUserValidatebyadministration) {
-    
     this.bUserValidatebyadministration = bUserValidatebyadministration;
     return this;
   }
@@ -910,14 +845,12 @@ public class UserResponse {
     return bUserValidatebyadministration;
   }
 
-
   public void setbUserValidatebyadministration(Boolean bUserValidatebyadministration) {
     this.bUserValidatebyadministration = bUserValidatebyadministration;
   }
 
 
   public UserResponse bUserValidatebydirector(Boolean bUserValidatebydirector) {
-    
     this.bUserValidatebydirector = bUserValidatebydirector;
     return this;
   }
@@ -931,14 +864,12 @@ public class UserResponse {
     return bUserValidatebydirector;
   }
 
-
   public void setbUserValidatebydirector(Boolean bUserValidatebydirector) {
     this.bUserValidatebydirector = bUserValidatebydirector;
   }
 
 
   public UserResponse bUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
-    
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
     return this;
   }
@@ -952,14 +883,12 @@ public class UserResponse {
     return bUserAttachmentautoverified;
   }
 
-
   public void setbUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
   }
 
 
   public UserResponse bUserChangepassword(Boolean bUserChangepassword) {
-    
     this.bUserChangepassword = bUserChangepassword;
     return this;
   }
@@ -973,14 +902,12 @@ public class UserResponse {
     return bUserChangepassword;
   }
 
-
   public void setbUserChangepassword(Boolean bUserChangepassword) {
     this.bUserChangepassword = bUserChangepassword;
   }
 
 
   public UserResponse objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -993,7 +920,6 @@ public class UserResponse {
   public CommonAudit getObjAudit() {
     return objAudit;
   }
-
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
@@ -1237,6 +1163,12 @@ public class UserResponse {
       if ((jsonObj.get("sModuleNameX") != null && !jsonObj.get("sModuleNameX").isJsonNull()) && !jsonObj.get("sModuleNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
       }
+      // validate the required field `eUserOrigin`
+      FieldEUserOrigin.validateJsonElement(jsonObj.get("eUserOrigin"));
+      // validate the required field `eUserType`
+      FieldEUserType.validateJsonElement(jsonObj.get("eUserType"));
+      // validate the required field `eUserLogintype`
+      FieldEUserLogintype.validateJsonElement(jsonObj.get("eUserLogintype"));
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
       }
@@ -1246,6 +1178,8 @@ public class UserResponse {
       if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
+      // validate the required field `eUserEzsignaccess`
+      FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
       if ((jsonObj.get("dtUserLastlogondate") != null && !jsonObj.get("dtUserLastlogondate").isJsonNull()) && !jsonObj.get("dtUserLastlogondate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtUserLastlogondate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtUserLastlogondate").toString()));
       }

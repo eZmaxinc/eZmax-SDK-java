@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocument}/getEzsigntemplateformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP = "a_objEzsigntemplateformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP)
@@ -62,7 +62,6 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPa
   }
 
   public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPayload aObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupResponseCompound> aObjEzsigntemplateformfieldgroup) {
-    
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1ResponseMPa
   public List<EzsigntemplateformfieldgroupResponseCompound> getaObjEzsigntemplateformfieldgroup() {
     return aObjEzsigntemplateformfieldgroup;
   }
-
 
   public void setaObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupResponseCompound> aObjEzsigntemplateformfieldgroup) {
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;

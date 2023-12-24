@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -79,7 +79,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   }
 
   public CustomEzmaxinvoicingEzsignfolderResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -94,14 +93,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public CustomEzmaxinvoicingEzsignfolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -115,14 +112,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public CustomEzmaxinvoicingEzsignfolderResponse bEzsigntsarequirementBillable(Boolean bEzsigntsarequirementBillable) {
-    
     this.bEzsigntsarequirementBillable = bEzsigntsarequirementBillable;
     return this;
   }
@@ -136,14 +131,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsigntsarequirementBillable;
   }
 
-
   public void setbEzsigntsarequirementBillable(Boolean bEzsigntsarequirementBillable) {
     this.bEzsigntsarequirementBillable = bEzsigntsarequirementBillable;
   }
 
 
   public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderMfaused(Boolean bEzsignfolderMfaused) {
-    
     this.bEzsignfolderMfaused = bEzsignfolderMfaused;
     return this;
   }
@@ -157,14 +150,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsignfolderMfaused;
   }
 
-
   public void setbEzsignfolderMfaused(Boolean bEzsignfolderMfaused) {
     this.bEzsignfolderMfaused = bEzsignfolderMfaused;
   }
 
 
   public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderPaymentused(Boolean bEzsignfolderPaymentused) {
-    
     this.bEzsignfolderPaymentused = bEzsignfolderPaymentused;
     return this;
   }
@@ -178,14 +169,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsignfolderPaymentused;
   }
 
-
   public void setbEzsignfolderPaymentused(Boolean bEzsignfolderPaymentused) {
     this.bEzsignfolderPaymentused = bEzsignfolderPaymentused;
   }
 
 
   public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
-    
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;
     return this;
   }
@@ -198,7 +187,6 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
   public Boolean getbEzsignfolderAllowed() {
     return bEzsignfolderAllowed;
   }
-
 
   public void setbEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseErrorEzsignformValidation {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -71,7 +71,6 @@ public class CommonResponseErrorEzsignformValidation {
   }
 
   public CommonResponseErrorEzsignformValidation sErrorMessage(String sErrorMessage) {
-    
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -85,14 +84,12 @@ public class CommonResponseErrorEzsignformValidation {
     return sErrorMessage;
   }
 
-
   public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
   public CommonResponseErrorEzsignformValidation eErrorCode(FieldEErrorCode eErrorCode) {
-    
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -106,14 +103,12 @@ public class CommonResponseErrorEzsignformValidation {
     return eErrorCode;
   }
 
-
   public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
   public CommonResponseErrorEzsignformValidation aObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
-    
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
     return this;
   }
@@ -134,7 +129,6 @@ public class CommonResponseErrorEzsignformValidation {
   public List<CustomEzsignformfielderrorResponse> getaObjEzsignformfielderror() {
     return aObjEzsignformfielderror;
   }
-
 
   public void setaObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
@@ -232,6 +226,8 @@ public class CommonResponseErrorEzsignformValidation {
       if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
       }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignformfielderror").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfielderror` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfielderror").toString()));

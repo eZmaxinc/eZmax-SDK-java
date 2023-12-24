@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignerRequest {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -114,6 +114,11 @@ public class EzsignsignerRequest {
         return EEzsignsignerLogintypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsignsignerLogintypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
@@ -129,7 +134,6 @@ public class EzsignsignerRequest {
   }
 
   public EzsignsignerRequest fkiUserlogintypeID(Integer fkiUserlogintypeID) {
-    
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -144,14 +148,12 @@ public class EzsignsignerRequest {
     return fkiUserlogintypeID;
   }
 
-
   public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
   public EzsignsignerRequest fkiTaxassignmentID(Integer fkiTaxassignmentID) {
-    
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -167,14 +169,12 @@ public class EzsignsignerRequest {
     return fkiTaxassignmentID;
   }
 
-
   public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
   public EzsignsignerRequest fkiSecretquestionID(Integer fkiSecretquestionID) {
-    
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -189,7 +189,6 @@ public class EzsignsignerRequest {
     return fkiSecretquestionID;
   }
 
-
   public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
@@ -197,7 +196,6 @@ public class EzsignsignerRequest {
 
   @Deprecated
   public EzsignsignerRequest eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
-    
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
     return this;
   }
@@ -213,7 +211,6 @@ public class EzsignsignerRequest {
     return eEzsignsignerLogintype;
   }
 
-
   @Deprecated
   public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
@@ -221,7 +218,6 @@ public class EzsignsignerRequest {
 
 
   public EzsignsignerRequest sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
-    
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
     return this;
   }
@@ -234,7 +230,6 @@ public class EzsignsignerRequest {
   public String getsEzsignsignerSecretanswer() {
     return sEzsignsignerSecretanswer;
   }
-
 
   public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
@@ -335,6 +330,10 @@ public class EzsignsignerRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) && !jsonObj.get("eEzsignsignerLogintype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignerLogintype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignerLogintype").toString()));
+      }
+      // validate the optional field `eEzsignsignerLogintype`
+      if (jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) {
+        EEzsignsignerLogintypeEnum.validateJsonElement(jsonObj.get("eEzsignsignerLogintype"));
       }
       if ((jsonObj.get("sEzsignsignerSecretanswer") != null && !jsonObj.get("sEzsignsignerSecretanswer").isJsonNull()) && !jsonObj.get("sEzsignsignerSecretanswer").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignerSecretanswer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignerSecretanswer").toString()));

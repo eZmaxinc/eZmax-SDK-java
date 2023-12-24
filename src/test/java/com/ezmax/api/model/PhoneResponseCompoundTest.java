@@ -78,4 +78,12 @@ public class PhoneResponseCompoundTest {
         // TODO: test sPhoneExtension
     }
 
+    /**
+     * Test the property 'bPhoneInternational'
+     */
+    @Test
+    public void bPhoneInternationalTest() {
+        // TODO: test bPhoneInternational
+    }
+
 }

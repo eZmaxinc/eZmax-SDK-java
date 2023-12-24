@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -93,7 +93,6 @@ public class ContactinformationsRequestCompound {
   }
 
   public ContactinformationsRequestCompound iAddressDefault(Integer iAddressDefault) {
-    
     this.iAddressDefault = iAddressDefault;
     return this;
   }
@@ -107,14 +106,12 @@ public class ContactinformationsRequestCompound {
     return iAddressDefault;
   }
 
-
   public void setiAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
   }
 
 
   public ContactinformationsRequestCompound iPhoneDefault(Integer iPhoneDefault) {
-    
     this.iPhoneDefault = iPhoneDefault;
     return this;
   }
@@ -128,14 +125,12 @@ public class ContactinformationsRequestCompound {
     return iPhoneDefault;
   }
 
-
   public void setiPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
   }
 
 
   public ContactinformationsRequestCompound iEmailDefault(Integer iEmailDefault) {
-    
     this.iEmailDefault = iEmailDefault;
     return this;
   }
@@ -149,14 +144,12 @@ public class ContactinformationsRequestCompound {
     return iEmailDefault;
   }
 
-
   public void setiEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
   }
 
 
   public ContactinformationsRequestCompound iWebsiteDefault(Integer iWebsiteDefault) {
-    
     this.iWebsiteDefault = iWebsiteDefault;
     return this;
   }
@@ -170,14 +163,12 @@ public class ContactinformationsRequestCompound {
     return iWebsiteDefault;
   }
 
-
   public void setiWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
   }
 
 
   public ContactinformationsRequestCompound aObjAddress(List<AddressRequestCompound> aObjAddress) {
-    
     this.aObjAddress = aObjAddress;
     return this;
   }
@@ -199,14 +190,12 @@ public class ContactinformationsRequestCompound {
     return aObjAddress;
   }
 
-
   public void setaObjAddress(List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
   }
 
 
   public ContactinformationsRequestCompound aObjPhone(List<PhoneRequestCompound> aObjPhone) {
-    
     this.aObjPhone = aObjPhone;
     return this;
   }
@@ -228,14 +217,12 @@ public class ContactinformationsRequestCompound {
     return aObjPhone;
   }
 
-
   public void setaObjPhone(List<PhoneRequestCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
   }
 
 
   public ContactinformationsRequestCompound aObjEmail(List<EmailRequestCompound> aObjEmail) {
-    
     this.aObjEmail = aObjEmail;
     return this;
   }
@@ -257,14 +244,12 @@ public class ContactinformationsRequestCompound {
     return aObjEmail;
   }
 
-
   public void setaObjEmail(List<EmailRequestCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
   }
 
 
   public ContactinformationsRequestCompound aObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
-    
     this.aObjWebsite = aObjWebsite;
     return this;
   }
@@ -285,7 +270,6 @@ public class ContactinformationsRequestCompound {
   public List<WebsiteRequestCompound> getaObjWebsite() {
     return aObjWebsite;
   }
-
 
   public void setaObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;

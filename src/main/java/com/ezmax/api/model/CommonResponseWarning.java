@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Warning Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseWarning {
   public static final String SERIALIZED_NAME_S_WARNING_MESSAGE = "sWarningMessage";
   @SerializedName(SERIALIZED_NAME_S_WARNING_MESSAGE)
@@ -63,7 +63,6 @@ public class CommonResponseWarning {
   }
 
   public CommonResponseWarning sWarningMessage(String sWarningMessage) {
-    
     this.sWarningMessage = sWarningMessage;
     return this;
   }
@@ -77,14 +76,12 @@ public class CommonResponseWarning {
     return sWarningMessage;
   }
 
-
   public void setsWarningMessage(String sWarningMessage) {
     this.sWarningMessage = sWarningMessage;
   }
 
 
   public CommonResponseWarning eWarningCode(String eWarningCode) {
-    
     this.eWarningCode = eWarningCode;
     return this;
   }
@@ -97,7 +94,6 @@ public class CommonResponseWarning {
   public String geteWarningCode() {
     return eWarningCode;
   }
-
 
   public void seteWarningCode(String eWarningCode) {
     this.eWarningCode = eWarningCode;

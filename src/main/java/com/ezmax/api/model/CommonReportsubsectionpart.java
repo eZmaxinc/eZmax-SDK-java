@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart
@@ -101,6 +101,11 @@ public class CommonReportsubsectionpart {
         return EReportsubsectionpartTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EReportsubsectionpartTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_REPORTSUBSECTIONPART_TYPE = "eReportsubsectionpartType";
@@ -115,7 +120,6 @@ public class CommonReportsubsectionpart {
   }
 
   public CommonReportsubsectionpart eReportsubsectionpartType(EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
-    
     this.eReportsubsectionpartType = eReportsubsectionpartType;
     return this;
   }
@@ -129,14 +133,12 @@ public class CommonReportsubsectionpart {
     return eReportsubsectionpartType;
   }
 
-
   public void seteReportsubsectionpartType(EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
     this.eReportsubsectionpartType = eReportsubsectionpartType;
   }
 
 
   public CommonReportsubsectionpart aObjReportrow(List<CommonReportrow> aObjReportrow) {
-    
     this.aObjReportrow = aObjReportrow;
     return this;
   }
@@ -157,7 +159,6 @@ public class CommonReportsubsectionpart {
   public List<CommonReportrow> getaObjReportrow() {
     return aObjReportrow;
   }
-
 
   public void setaObjReportrow(List<CommonReportrow> aObjReportrow) {
     this.aObjReportrow = aObjReportrow;
@@ -251,6 +252,8 @@ public class CommonReportsubsectionpart {
       if (!jsonObj.get("eReportsubsectionpartType").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eReportsubsectionpartType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eReportsubsectionpartType").toString()));
       }
+      // validate the required field `eReportsubsectionpartType`
+      EReportsubsectionpartTypeEnum.validateJsonElement(jsonObj.get("eReportsubsectionpartType"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objReportrow").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objReportrow` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportrow").toString()));

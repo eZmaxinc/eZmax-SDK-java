@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityexternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityexternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D = "pkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D)
@@ -67,7 +67,6 @@ public class BillingentityexternalAutocompleteElementResponse {
   }
 
   public BillingentityexternalAutocompleteElementResponse pkiBillingentityexternalID(Integer pkiBillingentityexternalID) {
-    
     this.pkiBillingentityexternalID = pkiBillingentityexternalID;
     return this;
   }
@@ -82,14 +81,12 @@ public class BillingentityexternalAutocompleteElementResponse {
     return pkiBillingentityexternalID;
   }
 
-
   public void setPkiBillingentityexternalID(Integer pkiBillingentityexternalID) {
     this.pkiBillingentityexternalID = pkiBillingentityexternalID;
   }
 
 
   public BillingentityexternalAutocompleteElementResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
-    
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -103,14 +100,12 @@ public class BillingentityexternalAutocompleteElementResponse {
     return sBillingentityexternalDescription;
   }
 
-
   public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
   }
 
 
   public BillingentityexternalAutocompleteElementResponse bBillingentityexternalIsactive(Boolean bBillingentityexternalIsactive) {
-    
     this.bBillingentityexternalIsactive = bBillingentityexternalIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class BillingentityexternalAutocompleteElementResponse {
   public Boolean getbBillingentityexternalIsactive() {
     return bBillingentityexternalIsactive;
   }
-
 
   public void setbBillingentityexternalIsactive(Boolean bBillingentityexternalIsactive) {
     this.bBillingentityexternalIsactive = bBillingentityexternalIsactive;

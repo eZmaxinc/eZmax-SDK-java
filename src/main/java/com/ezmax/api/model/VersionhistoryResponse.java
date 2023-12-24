@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class VersionhistoryResponse {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
@@ -102,7 +102,6 @@ public class VersionhistoryResponse {
   }
 
   public VersionhistoryResponse pkiVersionhistoryID(Integer pkiVersionhistoryID) {
-    
     this.pkiVersionhistoryID = pkiVersionhistoryID;
     return this;
   }
@@ -117,14 +116,12 @@ public class VersionhistoryResponse {
     return pkiVersionhistoryID;
   }
 
-
   public void setPkiVersionhistoryID(Integer pkiVersionhistoryID) {
     this.pkiVersionhistoryID = pkiVersionhistoryID;
   }
 
 
   public VersionhistoryResponse fkiModuleID(Integer fkiModuleID) {
-    
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -139,14 +136,12 @@ public class VersionhistoryResponse {
     return fkiModuleID;
   }
 
-
   public void setFkiModuleID(Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
   public VersionhistoryResponse fkiModulesectionID(Integer fkiModulesectionID) {
-    
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -161,14 +156,12 @@ public class VersionhistoryResponse {
     return fkiModulesectionID;
   }
 
-
   public void setFkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
   public VersionhistoryResponse sModuleNameX(String sModuleNameX) {
-    
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -182,14 +175,12 @@ public class VersionhistoryResponse {
     return sModuleNameX;
   }
 
-
   public void setsModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
   public VersionhistoryResponse sModulesectionNameX(String sModulesectionNameX) {
-    
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -203,14 +194,12 @@ public class VersionhistoryResponse {
     return sModulesectionNameX;
   }
 
-
   public void setsModulesectionNameX(String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 
 
   public VersionhistoryResponse eVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
-    
     this.eVersionhistoryUsertype = eVersionhistoryUsertype;
     return this;
   }
@@ -224,14 +213,12 @@ public class VersionhistoryResponse {
     return eVersionhistoryUsertype;
   }
 
-
   public void seteVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
     this.eVersionhistoryUsertype = eVersionhistoryUsertype;
   }
 
 
   public VersionhistoryResponse objVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
-    
     this.objVersionhistoryDetail = objVersionhistoryDetail;
     return this;
   }
@@ -245,14 +232,12 @@ public class VersionhistoryResponse {
     return objVersionhistoryDetail;
   }
 
-
   public void setObjVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
     this.objVersionhistoryDetail = objVersionhistoryDetail;
   }
 
 
   public VersionhistoryResponse dtVersionhistoryDate(String dtVersionhistoryDate) {
-    
     this.dtVersionhistoryDate = dtVersionhistoryDate;
     return this;
   }
@@ -266,14 +251,12 @@ public class VersionhistoryResponse {
     return dtVersionhistoryDate;
   }
 
-
   public void setDtVersionhistoryDate(String dtVersionhistoryDate) {
     this.dtVersionhistoryDate = dtVersionhistoryDate;
   }
 
 
   public VersionhistoryResponse dtVersionhistoryDateend(String dtVersionhistoryDateend) {
-    
     this.dtVersionhistoryDateend = dtVersionhistoryDateend;
     return this;
   }
@@ -287,14 +270,12 @@ public class VersionhistoryResponse {
     return dtVersionhistoryDateend;
   }
 
-
   public void setDtVersionhistoryDateend(String dtVersionhistoryDateend) {
     this.dtVersionhistoryDateend = dtVersionhistoryDateend;
   }
 
 
   public VersionhistoryResponse eVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
-    
     this.eVersionhistoryType = eVersionhistoryType;
     return this;
   }
@@ -308,14 +289,12 @@ public class VersionhistoryResponse {
     return eVersionhistoryType;
   }
 
-
   public void seteVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
     this.eVersionhistoryType = eVersionhistoryType;
   }
 
 
   public VersionhistoryResponse bVersionhistoryDraft(Boolean bVersionhistoryDraft) {
-    
     this.bVersionhistoryDraft = bVersionhistoryDraft;
     return this;
   }
@@ -328,7 +307,6 @@ public class VersionhistoryResponse {
   public Boolean getbVersionhistoryDraft() {
     return bVersionhistoryDraft;
   }
-
 
   public void setbVersionhistoryDraft(Boolean bVersionhistoryDraft) {
     this.bVersionhistoryDraft = bVersionhistoryDraft;
@@ -455,6 +433,10 @@ public class VersionhistoryResponse {
       if ((jsonObj.get("sModulesectionNameX") != null && !jsonObj.get("sModulesectionNameX").isJsonNull()) && !jsonObj.get("sModulesectionNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
       }
+      // validate the optional field `eVersionhistoryUsertype`
+      if (jsonObj.get("eVersionhistoryUsertype") != null && !jsonObj.get("eVersionhistoryUsertype").isJsonNull()) {
+        FieldEVersionhistoryUsertype.validateJsonElement(jsonObj.get("eVersionhistoryUsertype"));
+      }
       // validate the required field `objVersionhistoryDetail`
       MultilingualVersionhistoryDetail.validateJsonElement(jsonObj.get("objVersionhistoryDetail"));
       if (!jsonObj.get("dtVersionhistoryDate").isJsonPrimitive()) {
@@ -463,6 +445,8 @@ public class VersionhistoryResponse {
       if ((jsonObj.get("dtVersionhistoryDateend") != null && !jsonObj.get("dtVersionhistoryDateend").isJsonNull()) && !jsonObj.get("dtVersionhistoryDateend").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtVersionhistoryDateend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDateend").toString()));
       }
+      // validate the required field `eVersionhistoryType`
+      FieldEVersionhistoryType.validateJsonElement(jsonObj.get("eVersionhistoryType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

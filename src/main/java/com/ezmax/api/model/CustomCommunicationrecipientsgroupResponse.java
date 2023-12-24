@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic CommunicationrecipientsGroup Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationrecipientsgroupResponse {
   public static final String SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL = "sCommunicationrecipientsgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL)
@@ -66,7 +66,6 @@ public class CustomCommunicationrecipientsgroupResponse {
   }
 
   public CustomCommunicationrecipientsgroupResponse sCommunicationrecipientsgroupLabel(String sCommunicationrecipientsgroupLabel) {
-    
     this.sCommunicationrecipientsgroupLabel = sCommunicationrecipientsgroupLabel;
     return this;
   }
@@ -80,14 +79,12 @@ public class CustomCommunicationrecipientsgroupResponse {
     return sCommunicationrecipientsgroupLabel;
   }
 
-
   public void setsCommunicationrecipientsgroupLabel(String sCommunicationrecipientsgroupLabel) {
     this.sCommunicationrecipientsgroupLabel = sCommunicationrecipientsgroupLabel;
   }
 
 
   public CustomCommunicationrecipientsgroupResponse aObjCommunicationrecipientsrecipient(List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
-    
     this.aObjCommunicationrecipientsrecipient = aObjCommunicationrecipientsrecipient;
     return this;
   }
@@ -108,7 +105,6 @@ public class CustomCommunicationrecipientsgroupResponse {
   public List<CustomCommunicationrecipientsrecipientResponse> getaObjCommunicationrecipientsrecipient() {
     return aObjCommunicationrecipientsrecipient;
   }
-
 
   public void setaObjCommunicationrecipientsrecipient(List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
     this.aObjCommunicationrecipientsrecipient = aObjCommunicationrecipientsrecipient;

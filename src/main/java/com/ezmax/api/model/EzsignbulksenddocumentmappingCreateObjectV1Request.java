@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksenddocumentmapping
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING = "a_objEzsignbulksenddocumentmapping";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING)
@@ -62,7 +62,6 @@ public class EzsignbulksenddocumentmappingCreateObjectV1Request {
   }
 
   public EzsignbulksenddocumentmappingCreateObjectV1Request aObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingRequestCompound> aObjEzsignbulksenddocumentmapping) {
-    
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsignbulksenddocumentmappingCreateObjectV1Request {
   public List<EzsignbulksenddocumentmappingRequestCompound> getaObjEzsignbulksenddocumentmapping() {
     return aObjEzsignbulksenddocumentmapping;
   }
-
 
   public void setaObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingRequestCompound> aObjEzsignbulksenddocumentmapping) {
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;

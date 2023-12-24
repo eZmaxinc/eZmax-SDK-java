@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -149,7 +149,6 @@ public class EzsignsignatureRequest {
   }
 
   public EzsignsignatureRequest pkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
-    
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
     return this;
   }
@@ -164,14 +163,12 @@ public class EzsignsignatureRequest {
     return pkiEzsignsignatureID;
   }
 
-
   public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
   }
 
 
   public EzsignsignatureRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
-    
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -186,14 +183,12 @@ public class EzsignsignatureRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsignsignatureRequest iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -208,14 +203,12 @@ public class EzsignsignatureRequest {
     return iEzsignpagePagenumber;
   }
 
-
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureX(Integer iEzsignsignatureX) {
-    
     this.iEzsignsignatureX = iEzsignsignatureX;
     return this;
   }
@@ -230,14 +223,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureX;
   }
 
-
   public void setiEzsignsignatureX(Integer iEzsignsignatureX) {
     this.iEzsignsignatureX = iEzsignsignatureX;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureY(Integer iEzsignsignatureY) {
-    
     this.iEzsignsignatureY = iEzsignsignatureY;
     return this;
   }
@@ -252,14 +243,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureY;
   }
 
-
   public void setiEzsignsignatureY(Integer iEzsignsignatureY) {
     this.iEzsignsignatureY = iEzsignsignatureY;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureWidth(Integer iEzsignsignatureWidth) {
-    
     this.iEzsignsignatureWidth = iEzsignsignatureWidth;
     return this;
   }
@@ -274,14 +263,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureWidth;
   }
 
-
   public void setiEzsignsignatureWidth(Integer iEzsignsignatureWidth) {
     this.iEzsignsignatureWidth = iEzsignsignatureWidth;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureHeight(Integer iEzsignsignatureHeight) {
-    
     this.iEzsignsignatureHeight = iEzsignsignatureHeight;
     return this;
   }
@@ -296,14 +283,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureHeight;
   }
 
-
   public void setiEzsignsignatureHeight(Integer iEzsignsignatureHeight) {
     this.iEzsignsignatureHeight = iEzsignsignatureHeight;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureStep(Integer iEzsignsignatureStep) {
-    
     this.iEzsignsignatureStep = iEzsignsignatureStep;
     return this;
   }
@@ -317,14 +302,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureStep;
   }
 
-
   public void setiEzsignsignatureStep(Integer iEzsignsignatureStep) {
     this.iEzsignsignatureStep = iEzsignsignatureStep;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureType(FieldEEzsignsignatureType eEzsignsignatureType) {
-    
     this.eEzsignsignatureType = eEzsignsignatureType;
     return this;
   }
@@ -338,14 +321,12 @@ public class EzsignsignatureRequest {
     return eEzsignsignatureType;
   }
 
-
   public void seteEzsignsignatureType(FieldEEzsignsignatureType eEzsignsignatureType) {
     this.eEzsignsignatureType = eEzsignsignatureType;
   }
 
 
   public EzsignsignatureRequest fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
-    
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -360,14 +341,12 @@ public class EzsignsignatureRequest {
     return fkiEzsigndocumentID;
   }
 
-
   public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
   public EzsignsignatureRequest tEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
-    
     this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
     return this;
   }
@@ -381,14 +360,12 @@ public class EzsignsignatureRequest {
     return tEzsignsignatureTooltip;
   }
 
-
   public void settEzsignsignatureTooltip(String tEzsignsignatureTooltip) {
     this.tEzsignsignatureTooltip = tEzsignsignatureTooltip;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
-    
     this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
     return this;
   }
@@ -402,14 +379,12 @@ public class EzsignsignatureRequest {
     return eEzsignsignatureTooltipposition;
   }
 
-
   public void seteEzsignsignatureTooltipposition(FieldEEzsignsignatureTooltipposition eEzsignsignatureTooltipposition) {
     this.eEzsignsignatureTooltipposition = eEzsignsignatureTooltipposition;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
-    
     this.eEzsignsignatureFont = eEzsignsignatureFont;
     return this;
   }
@@ -423,14 +398,12 @@ public class EzsignsignatureRequest {
     return eEzsignsignatureFont;
   }
 
-
   public void seteEzsignsignatureFont(FieldEEzsignsignatureFont eEzsignsignatureFont) {
     this.eEzsignsignatureFont = eEzsignsignatureFont;
   }
 
 
   public EzsignsignatureRequest fkiEzsignfoldersignerassociationIDValidation(Integer fkiEzsignfoldersignerassociationIDValidation) {
-    
     this.fkiEzsignfoldersignerassociationIDValidation = fkiEzsignfoldersignerassociationIDValidation;
     return this;
   }
@@ -445,14 +418,12 @@ public class EzsignsignatureRequest {
     return fkiEzsignfoldersignerassociationIDValidation;
   }
 
-
   public void setFkiEzsignfoldersignerassociationIDValidation(Integer fkiEzsignfoldersignerassociationIDValidation) {
     this.fkiEzsignfoldersignerassociationIDValidation = fkiEzsignfoldersignerassociationIDValidation;
   }
 
 
   public EzsignsignatureRequest bEzsignsignatureRequired(Boolean bEzsignsignatureRequired) {
-    
     this.bEzsignsignatureRequired = bEzsignsignatureRequired;
     return this;
   }
@@ -466,14 +437,12 @@ public class EzsignsignatureRequest {
     return bEzsignsignatureRequired;
   }
 
-
   public void setbEzsignsignatureRequired(Boolean bEzsignsignatureRequired) {
     this.bEzsignsignatureRequired = bEzsignsignatureRequired;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureAttachmentnamesource(FieldEEzsignsignatureAttachmentnamesource eEzsignsignatureAttachmentnamesource) {
-    
     this.eEzsignsignatureAttachmentnamesource = eEzsignsignatureAttachmentnamesource;
     return this;
   }
@@ -487,14 +456,12 @@ public class EzsignsignatureRequest {
     return eEzsignsignatureAttachmentnamesource;
   }
 
-
   public void seteEzsignsignatureAttachmentnamesource(FieldEEzsignsignatureAttachmentnamesource eEzsignsignatureAttachmentnamesource) {
     this.eEzsignsignatureAttachmentnamesource = eEzsignsignatureAttachmentnamesource;
   }
 
 
   public EzsignsignatureRequest sEzsignsignatureAttachmentdescription(String sEzsignsignatureAttachmentdescription) {
-    
     this.sEzsignsignatureAttachmentdescription = sEzsignsignatureAttachmentdescription;
     return this;
   }
@@ -508,14 +475,12 @@ public class EzsignsignatureRequest {
     return sEzsignsignatureAttachmentdescription;
   }
 
-
   public void setsEzsignsignatureAttachmentdescription(String sEzsignsignatureAttachmentdescription) {
     this.sEzsignsignatureAttachmentdescription = sEzsignsignatureAttachmentdescription;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureValidationstep(Integer iEzsignsignatureValidationstep) {
-    
     this.iEzsignsignatureValidationstep = iEzsignsignatureValidationstep;
     return this;
   }
@@ -529,14 +494,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureValidationstep;
   }
 
-
   public void setiEzsignsignatureValidationstep(Integer iEzsignsignatureValidationstep) {
     this.iEzsignsignatureValidationstep = iEzsignsignatureValidationstep;
   }
 
 
   public EzsignsignatureRequest iEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
-    
     this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
     return this;
   }
@@ -552,14 +515,12 @@ public class EzsignsignatureRequest {
     return iEzsignsignatureMaxlength;
   }
 
-
   public void setiEzsignsignatureMaxlength(Integer iEzsignsignatureMaxlength) {
     this.iEzsignsignatureMaxlength = iEzsignsignatureMaxlength;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureTextvalidation(EnumTextvalidation eEzsignsignatureTextvalidation) {
-    
     this.eEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
     return this;
   }
@@ -573,14 +534,12 @@ public class EzsignsignatureRequest {
     return eEzsignsignatureTextvalidation;
   }
 
-
   public void seteEzsignsignatureTextvalidation(EnumTextvalidation eEzsignsignatureTextvalidation) {
     this.eEzsignsignatureTextvalidation = eEzsignsignatureTextvalidation;
   }
 
 
   public EzsignsignatureRequest sEzsignsignatureRegexp(String sEzsignsignatureRegexp) {
-    
     this.sEzsignsignatureRegexp = sEzsignsignatureRegexp;
     return this;
   }
@@ -594,14 +553,12 @@ public class EzsignsignatureRequest {
     return sEzsignsignatureRegexp;
   }
 
-
   public void setsEzsignsignatureRegexp(String sEzsignsignatureRegexp) {
     this.sEzsignsignatureRegexp = sEzsignsignatureRegexp;
   }
 
 
   public EzsignsignatureRequest eEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
-    
     this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
     return this;
   }
@@ -614,7 +571,6 @@ public class EzsignsignatureRequest {
   public FieldEEzsignsignatureDependencyrequirement geteEzsignsignatureDependencyrequirement() {
     return eEzsignsignatureDependencyrequirement;
   }
-
 
   public void seteEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
     this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
@@ -770,14 +726,36 @@ public class EzsignsignatureRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignsignatureType`
+      FieldEEzsignsignatureType.validateJsonElement(jsonObj.get("eEzsignsignatureType"));
       if ((jsonObj.get("tEzsignsignatureTooltip") != null && !jsonObj.get("tEzsignsignatureTooltip").isJsonNull()) && !jsonObj.get("tEzsignsignatureTooltip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
+      }
+      // validate the optional field `eEzsignsignatureTooltipposition`
+      if (jsonObj.get("eEzsignsignatureTooltipposition") != null && !jsonObj.get("eEzsignsignatureTooltipposition").isJsonNull()) {
+        FieldEEzsignsignatureTooltipposition.validateJsonElement(jsonObj.get("eEzsignsignatureTooltipposition"));
+      }
+      // validate the optional field `eEzsignsignatureFont`
+      if (jsonObj.get("eEzsignsignatureFont") != null && !jsonObj.get("eEzsignsignatureFont").isJsonNull()) {
+        FieldEEzsignsignatureFont.validateJsonElement(jsonObj.get("eEzsignsignatureFont"));
+      }
+      // validate the optional field `eEzsignsignatureAttachmentnamesource`
+      if (jsonObj.get("eEzsignsignatureAttachmentnamesource") != null && !jsonObj.get("eEzsignsignatureAttachmentnamesource").isJsonNull()) {
+        FieldEEzsignsignatureAttachmentnamesource.validateJsonElement(jsonObj.get("eEzsignsignatureAttachmentnamesource"));
       }
       if ((jsonObj.get("sEzsignsignatureAttachmentdescription") != null && !jsonObj.get("sEzsignsignatureAttachmentdescription").isJsonNull()) && !jsonObj.get("sEzsignsignatureAttachmentdescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignatureAttachmentdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureAttachmentdescription").toString()));
       }
+      // validate the optional field `eEzsignsignatureTextvalidation`
+      if (jsonObj.get("eEzsignsignatureTextvalidation") != null && !jsonObj.get("eEzsignsignatureTextvalidation").isJsonNull()) {
+        EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignsignatureTextvalidation"));
+      }
       if ((jsonObj.get("sEzsignsignatureRegexp") != null && !jsonObj.get("sEzsignsignatureRegexp").isJsonNull()) && !jsonObj.get("sEzsignsignatureRegexp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignatureRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureRegexp").toString()));
+      }
+      // validate the optional field `eEzsignsignatureDependencyrequirement`
+      if (jsonObj.get("eEzsignsignatureDependencyrequirement") != null && !jsonObj.get("eEzsignsignatureDependencyrequirement").isJsonNull()) {
+        FieldEEzsignsignatureDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignsignatureDependencyrequirement"));
       }
   }
 

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A column in a Reportsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportcolumn {
   public static final String SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT = "objReportcellstyleDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT)
@@ -64,7 +64,6 @@ public class CommonReportcolumn {
   }
 
   public CommonReportcolumn objReportcellstyleDefault(CommonReportcellstyle objReportcellstyleDefault) {
-    
     this.objReportcellstyleDefault = objReportcellstyleDefault;
     return this;
   }
@@ -78,14 +77,12 @@ public class CommonReportcolumn {
     return objReportcellstyleDefault;
   }
 
-
   public void setObjReportcellstyleDefault(CommonReportcellstyle objReportcellstyleDefault) {
     this.objReportcellstyleDefault = objReportcellstyleDefault;
   }
 
 
   public CommonReportcolumn iReportcolumnWidth(Integer iReportcolumnWidth) {
-    
     this.iReportcolumnWidth = iReportcolumnWidth;
     return this;
   }
@@ -98,7 +95,6 @@ public class CommonReportcolumn {
   public Integer getiReportcolumnWidth() {
     return iReportcolumnWidth;
   }
-
 
   public void setiReportcolumnWidth(Integer iReportcolumnWidth) {
     this.iReportcolumnWidth = iReportcolumnWidth;

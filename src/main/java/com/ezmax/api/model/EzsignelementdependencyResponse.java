@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignelementdependencyResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D = "pkiEzsignelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D)
@@ -93,7 +93,6 @@ public class EzsignelementdependencyResponse {
   }
 
   public EzsignelementdependencyResponse pkiEzsignelementdependencyID(Integer pkiEzsignelementdependencyID) {
-    
     this.pkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
     return this;
   }
@@ -109,14 +108,12 @@ public class EzsignelementdependencyResponse {
     return pkiEzsignelementdependencyID;
   }
 
-
   public void setPkiEzsignelementdependencyID(Integer pkiEzsignelementdependencyID) {
     this.pkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
   }
 
 
   public EzsignelementdependencyResponse fkiEzsignformfieldID(Integer fkiEzsignformfieldID) {
-    
     this.fkiEzsignformfieldID = fkiEzsignformfieldID;
     return this;
   }
@@ -131,14 +128,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldID;
   }
 
-
   public void setFkiEzsignformfieldID(Integer fkiEzsignformfieldID) {
     this.fkiEzsignformfieldID = fkiEzsignformfieldID;
   }
 
 
   public EzsignelementdependencyResponse fkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
-    
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
     return this;
   }
@@ -153,14 +148,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignsignatureID;
   }
 
-
   public void setFkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
   }
 
 
   public EzsignelementdependencyResponse fkiEzsignformfieldIDValidation(Integer fkiEzsignformfieldIDValidation) {
-    
     this.fkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
     return this;
   }
@@ -175,14 +168,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldIDValidation;
   }
 
-
   public void setFkiEzsignformfieldIDValidation(Integer fkiEzsignformfieldIDValidation) {
     this.fkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
   }
 
 
   public EzsignelementdependencyResponse fkiEzsignformfieldgroupIDValidation(Integer fkiEzsignformfieldgroupIDValidation) {
-    
     this.fkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
     return this;
   }
@@ -197,14 +188,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldgroupIDValidation;
   }
 
-
   public void setFkiEzsignformfieldgroupIDValidation(Integer fkiEzsignformfieldgroupIDValidation) {
     this.fkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
   }
 
 
   public EzsignelementdependencyResponse eEzsignelementdependencyValidation(FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
-    
     this.eEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
     return this;
   }
@@ -218,14 +207,12 @@ public class EzsignelementdependencyResponse {
     return eEzsignelementdependencyValidation;
   }
 
-
   public void seteEzsignelementdependencyValidation(FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
     this.eEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
   }
 
 
   public EzsignelementdependencyResponse bEzsignelementdependencySelected(Boolean bEzsignelementdependencySelected) {
-    
     this.bEzsignelementdependencySelected = bEzsignelementdependencySelected;
     return this;
   }
@@ -239,14 +226,12 @@ public class EzsignelementdependencyResponse {
     return bEzsignelementdependencySelected;
   }
 
-
   public void setbEzsignelementdependencySelected(Boolean bEzsignelementdependencySelected) {
     this.bEzsignelementdependencySelected = bEzsignelementdependencySelected;
   }
 
 
   public EzsignelementdependencyResponse eEzsignelementdependencyOperator(FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
-    
     this.eEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
     return this;
   }
@@ -260,14 +245,12 @@ public class EzsignelementdependencyResponse {
     return eEzsignelementdependencyOperator;
   }
 
-
   public void seteEzsignelementdependencyOperator(FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
     this.eEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
   }
 
 
   public EzsignelementdependencyResponse sEzsignelementdependencyValue(String sEzsignelementdependencyValue) {
-    
     this.sEzsignelementdependencyValue = sEzsignelementdependencyValue;
     return this;
   }
@@ -280,7 +263,6 @@ public class EzsignelementdependencyResponse {
   public String getsEzsignelementdependencyValue() {
     return sEzsignelementdependencyValue;
   }
-
 
   public void setsEzsignelementdependencyValue(String sEzsignelementdependencyValue) {
     this.sEzsignelementdependencyValue = sEzsignelementdependencyValue;
@@ -392,6 +374,12 @@ public class EzsignelementdependencyResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignelementdependencyValidation`
+      FieldEEzsignelementdependencyValidation.validateJsonElement(jsonObj.get("eEzsignelementdependencyValidation"));
+      // validate the optional field `eEzsignelementdependencyOperator`
+      if (jsonObj.get("eEzsignelementdependencyOperator") != null && !jsonObj.get("eEzsignelementdependencyOperator").isJsonNull()) {
+        FieldEEzsignelementdependencyOperator.validateJsonElement(jsonObj.get("eEzsignelementdependencyOperator"));
+      }
       if ((jsonObj.get("sEzsignelementdependencyValue") != null && !jsonObj.get("sEzsignelementdependencyValue").isJsonNull()) && !jsonObj.get("sEzsignelementdependencyValue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignelementdependencyValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignelementdependencyValue").toString()));
       }

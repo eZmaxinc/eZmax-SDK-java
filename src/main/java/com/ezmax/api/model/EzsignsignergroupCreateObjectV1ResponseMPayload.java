@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignsignergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignergroupCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNSIGNERGROUP_I_D = "a_pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNSIGNERGROUP_I_D)
@@ -61,7 +61,6 @@ public class EzsignsignergroupCreateObjectV1ResponseMPayload {
   }
 
   public EzsignsignergroupCreateObjectV1ResponseMPayload aPkiEzsignsignergroupID(List<Integer> aPkiEzsignsignergroupID) {
-    
     this.aPkiEzsignsignergroupID = aPkiEzsignsignergroupID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsignsignergroupCreateObjectV1ResponseMPayload {
   public List<Integer> getaPkiEzsignsignergroupID() {
     return aPkiEzsignsignergroupID;
   }
-
 
   public void setaPkiEzsignsignergroupID(List<Integer> aPkiEzsignsignergroupID) {
     this.aPkiEzsignsignergroupID = aPkiEzsignsignergroupID;

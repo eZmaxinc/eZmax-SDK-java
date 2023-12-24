@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
@@ -62,7 +62,6 @@ public class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
   }
 
   public EzsigndocumentGetEzsignsignaturesV1ResponseMPayload aObjEzsignsignature(List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
-    
     this.aObjEzsignsignature = aObjEzsignsignature;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigndocumentGetEzsignsignaturesV1ResponseMPayload {
   public List<EzsignsignatureResponseCompound> getaObjEzsignsignature() {
     return aObjEzsignsignature;
   }
-
 
   public void setaObjEzsignsignature(List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;

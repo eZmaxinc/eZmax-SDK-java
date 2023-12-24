@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Cors Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CorsResponseCompound {
   public static final String SERIALIZED_NAME_PKI_CORS_I_D = "pkiCorsID";
   @SerializedName(SERIALIZED_NAME_PKI_CORS_I_D)
@@ -67,7 +67,6 @@ public class CorsResponseCompound {
   }
 
   public CorsResponseCompound pkiCorsID(Integer pkiCorsID) {
-    
     this.pkiCorsID = pkiCorsID;
     return this;
   }
@@ -83,14 +82,12 @@ public class CorsResponseCompound {
     return pkiCorsID;
   }
 
-
   public void setPkiCorsID(Integer pkiCorsID) {
     this.pkiCorsID = pkiCorsID;
   }
 
 
   public CorsResponseCompound fkiApikeyID(Integer fkiApikeyID) {
-    
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -105,14 +102,12 @@ public class CorsResponseCompound {
     return fkiApikeyID;
   }
 
-
   public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
   public CorsResponseCompound sCorsEntryurl(String sCorsEntryurl) {
-    
     this.sCorsEntryurl = sCorsEntryurl;
     return this;
   }
@@ -125,7 +120,6 @@ public class CorsResponseCompound {
   public String getsCorsEntryurl() {
     return sCorsEntryurl;
   }
-
 
   public void setsCorsEntryurl(String sCorsEntryurl) {
     this.sCorsEntryurl = sCorsEntryurl;

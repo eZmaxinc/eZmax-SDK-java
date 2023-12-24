@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/company/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CompanyGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMPANY = "a_objCompany";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMPANY)
@@ -62,7 +62,6 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
   }
 
   public CompanyGetAutocompleteV2ResponseMPayload aObjCompany(List<CompanyAutocompleteElementResponse> aObjCompany) {
-    
     this.aObjCompany = aObjCompany;
     return this;
   }
@@ -83,7 +82,6 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
   public List<CompanyAutocompleteElementResponse> getaObjCompany() {
     return aObjCompany;
   }
-
 
   public void setaObjCompany(List<CompanyAutocompleteElementResponse> aObjCompany) {
     this.aObjCompany = aObjCompany;

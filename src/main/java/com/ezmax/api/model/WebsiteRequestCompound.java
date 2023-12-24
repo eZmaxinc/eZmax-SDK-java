@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Website Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebsiteRequestCompound {
   public static final String SERIALIZED_NAME_FKI_WEBSITETYPE_I_D = "fkiWebsitetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITETYPE_I_D)
@@ -63,7 +63,6 @@ public class WebsiteRequestCompound {
   }
 
   public WebsiteRequestCompound fkiWebsitetypeID(Integer fkiWebsitetypeID) {
-    
     this.fkiWebsitetypeID = fkiWebsitetypeID;
     return this;
   }
@@ -78,14 +77,12 @@ public class WebsiteRequestCompound {
     return fkiWebsitetypeID;
   }
 
-
   public void setFkiWebsitetypeID(Integer fkiWebsitetypeID) {
     this.fkiWebsitetypeID = fkiWebsitetypeID;
   }
 
 
   public WebsiteRequestCompound sWebsiteAddress(String sWebsiteAddress) {
-    
     this.sWebsiteAddress = sWebsiteAddress;
     return this;
   }
@@ -98,7 +95,6 @@ public class WebsiteRequestCompound {
   public String getsWebsiteAddress() {
     return sWebsiteAddress;
   }
-
 
   public void setsWebsiteAddress(String sWebsiteAddress) {
     this.sWebsiteAddress = sWebsiteAddress;

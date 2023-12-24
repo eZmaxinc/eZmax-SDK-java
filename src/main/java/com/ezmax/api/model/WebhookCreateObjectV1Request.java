@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/webhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOK = "a_objWebhook";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOK)
@@ -62,7 +62,6 @@ public class WebhookCreateObjectV1Request {
   }
 
   public WebhookCreateObjectV1Request aObjWebhook(List<WebhookRequestCompound> aObjWebhook) {
-    
     this.aObjWebhook = aObjWebhook;
     return this;
   }
@@ -83,7 +82,6 @@ public class WebhookCreateObjectV1Request {
   public List<WebhookRequestCompound> getaObjWebhook() {
     return aObjWebhook;
   }
-
 
   public void setaObjWebhook(List<WebhookRequestCompound> aObjWebhook) {
     this.aObjWebhook = aObjWebhook;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Address Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class AddressRequestCompound {
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)
@@ -87,7 +87,6 @@ public class AddressRequestCompound {
   }
 
   public AddressRequestCompound fkiAddresstypeID(Integer fkiAddresstypeID) {
-    
     this.fkiAddresstypeID = fkiAddresstypeID;
     return this;
   }
@@ -102,14 +101,12 @@ public class AddressRequestCompound {
     return fkiAddresstypeID;
   }
 
-
   public void setFkiAddresstypeID(Integer fkiAddresstypeID) {
     this.fkiAddresstypeID = fkiAddresstypeID;
   }
 
 
   public AddressRequestCompound sAddressCivic(String sAddressCivic) {
-    
     this.sAddressCivic = sAddressCivic;
     return this;
   }
@@ -123,14 +120,12 @@ public class AddressRequestCompound {
     return sAddressCivic;
   }
 
-
   public void setsAddressCivic(String sAddressCivic) {
     this.sAddressCivic = sAddressCivic;
   }
 
 
   public AddressRequestCompound sAddressStreet(String sAddressStreet) {
-    
     this.sAddressStreet = sAddressStreet;
     return this;
   }
@@ -144,14 +139,12 @@ public class AddressRequestCompound {
     return sAddressStreet;
   }
 
-
   public void setsAddressStreet(String sAddressStreet) {
     this.sAddressStreet = sAddressStreet;
   }
 
 
   public AddressRequestCompound sAddressSuite(String sAddressSuite) {
-    
     this.sAddressSuite = sAddressSuite;
     return this;
   }
@@ -165,14 +158,12 @@ public class AddressRequestCompound {
     return sAddressSuite;
   }
 
-
   public void setsAddressSuite(String sAddressSuite) {
     this.sAddressSuite = sAddressSuite;
   }
 
 
   public AddressRequestCompound sAddressCity(String sAddressCity) {
-    
     this.sAddressCity = sAddressCity;
     return this;
   }
@@ -186,14 +177,12 @@ public class AddressRequestCompound {
     return sAddressCity;
   }
 
-
   public void setsAddressCity(String sAddressCity) {
     this.sAddressCity = sAddressCity;
   }
 
 
   public AddressRequestCompound fkiProvinceID(Integer fkiProvinceID) {
-    
     this.fkiProvinceID = fkiProvinceID;
     return this;
   }
@@ -208,14 +197,12 @@ public class AddressRequestCompound {
     return fkiProvinceID;
   }
 
-
   public void setFkiProvinceID(Integer fkiProvinceID) {
     this.fkiProvinceID = fkiProvinceID;
   }
 
 
   public AddressRequestCompound fkiCountryID(Integer fkiCountryID) {
-    
     this.fkiCountryID = fkiCountryID;
     return this;
   }
@@ -230,14 +217,12 @@ public class AddressRequestCompound {
     return fkiCountryID;
   }
 
-
   public void setFkiCountryID(Integer fkiCountryID) {
     this.fkiCountryID = fkiCountryID;
   }
 
 
   public AddressRequestCompound sAddressZip(String sAddressZip) {
-    
     this.sAddressZip = sAddressZip;
     return this;
   }
@@ -250,7 +235,6 @@ public class AddressRequestCompound {
   public String getsAddressZip() {
     return sAddressZip;
   }
-
 
   public void setsAddressZip(String sAddressZip) {
     this.sAddressZip = sAddressZip;

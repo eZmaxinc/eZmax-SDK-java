@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -148,7 +148,6 @@ public class EzsignfolderResponse {
   }
 
   public EzsignfolderResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -163,14 +162,12 @@ public class EzsignfolderResponse {
     return pkiEzsignfolderID;
   }
 
-
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
   public EzsignfolderResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -185,14 +182,12 @@ public class EzsignfolderResponse {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsignfolderResponse objEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
-    
     this.objEzsignfoldertype = objEzsignfoldertype;
     return this;
   }
@@ -206,7 +201,6 @@ public class EzsignfolderResponse {
     return objEzsignfoldertype;
   }
 
-
   public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
   }
@@ -214,7 +208,6 @@ public class EzsignfolderResponse {
 
   @Deprecated
   public EzsignfolderResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -230,7 +223,6 @@ public class EzsignfolderResponse {
     return sEzsignfoldertypeNameX;
   }
 
-
   @Deprecated
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
@@ -238,7 +230,6 @@ public class EzsignfolderResponse {
 
 
   public EzsignfolderResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -253,14 +244,12 @@ public class EzsignfolderResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzsignfolderResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -274,14 +263,12 @@ public class EzsignfolderResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public EzsignfolderResponse fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
-    
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -297,14 +284,12 @@ public class EzsignfolderResponse {
     return fkiEzsigntsarequirementID;
   }
 
-
   public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
   public EzsignfolderResponse sEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
-    
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
     return this;
   }
@@ -318,14 +303,12 @@ public class EzsignfolderResponse {
     return sEzsigntsarequirementDescriptionX;
   }
 
-
   public void setsEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
   }
 
 
   public EzsignfolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -339,14 +322,12 @@ public class EzsignfolderResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public EzsignfolderResponse tEzsignfolderNote(String tEzsignfolderNote) {
-    
     this.tEzsignfolderNote = tEzsignfolderNote;
     return this;
   }
@@ -360,14 +341,12 @@ public class EzsignfolderResponse {
     return tEzsignfolderNote;
   }
 
-
   public void settEzsignfolderNote(String tEzsignfolderNote) {
     this.tEzsignfolderNote = tEzsignfolderNote;
   }
 
 
   public EzsignfolderResponse bEzsignfolderIsdisposable(Boolean bEzsignfolderIsdisposable) {
-    
     this.bEzsignfolderIsdisposable = bEzsignfolderIsdisposable;
     return this;
   }
@@ -381,14 +360,12 @@ public class EzsignfolderResponse {
     return bEzsignfolderIsdisposable;
   }
 
-
   public void setbEzsignfolderIsdisposable(Boolean bEzsignfolderIsdisposable) {
     this.bEzsignfolderIsdisposable = bEzsignfolderIsdisposable;
   }
 
 
   public EzsignfolderResponse eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
-    
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
     return this;
   }
@@ -402,14 +379,12 @@ public class EzsignfolderResponse {
     return eEzsignfolderSendreminderfrequency;
   }
 
-
   public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
-    
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
     return this;
   }
@@ -423,14 +398,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderDelayedsenddate;
   }
 
-
   public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
-    
     this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
     return this;
   }
@@ -444,14 +417,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderDuedate;
   }
 
-
   public void setDtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
     this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
-    
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
     return this;
   }
@@ -465,14 +436,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderSentdate;
   }
 
-
   public void setDtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
-    
     this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
     return this;
   }
@@ -486,14 +455,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderScheduledarchive;
   }
 
-
   public void setDtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
     this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderScheduleddispose(String dtEzsignfolderScheduleddispose) {
-    
     this.dtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
     return this;
   }
@@ -507,14 +474,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderScheduleddispose;
   }
 
-
   public void setDtEzsignfolderScheduleddispose(String dtEzsignfolderScheduleddispose) {
     this.dtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
   }
 
 
   public EzsignfolderResponse eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
-    
     this.eEzsignfolderStep = eEzsignfolderStep;
     return this;
   }
@@ -528,14 +493,12 @@ public class EzsignfolderResponse {
     return eEzsignfolderStep;
   }
 
-
   public void seteEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
   }
 
 
   public EzsignfolderResponse dtEzsignfolderClose(String dtEzsignfolderClose) {
-    
     this.dtEzsignfolderClose = dtEzsignfolderClose;
     return this;
   }
@@ -549,14 +512,12 @@ public class EzsignfolderResponse {
     return dtEzsignfolderClose;
   }
 
-
   public void setDtEzsignfolderClose(String dtEzsignfolderClose) {
     this.dtEzsignfolderClose = dtEzsignfolderClose;
   }
 
 
   public EzsignfolderResponse tEzsignfolderMessage(String tEzsignfolderMessage) {
-    
     this.tEzsignfolderMessage = tEzsignfolderMessage;
     return this;
   }
@@ -570,14 +531,12 @@ public class EzsignfolderResponse {
     return tEzsignfolderMessage;
   }
 
-
   public void settEzsignfolderMessage(String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
   }
 
 
   public EzsignfolderResponse objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -591,14 +550,12 @@ public class EzsignfolderResponse {
     return objAudit;
   }
 
-
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
   public EzsignfolderResponse sEzsignfolderExternalid(String sEzsignfolderExternalid) {
-    
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
     return this;
   }
@@ -611,7 +568,6 @@ public class EzsignfolderResponse {
   public String getsEzsignfolderExternalid() {
     return sEzsignfolderExternalid;
   }
-
 
   public void setsEzsignfolderExternalid(String sEzsignfolderExternalid) {
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
@@ -781,6 +737,10 @@ public class EzsignfolderResponse {
       if ((jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonNull()) && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
       }
+      // validate the optional field `eEzsignfolderSendreminderfrequency`
+      if (jsonObj.get("eEzsignfolderSendreminderfrequency") != null && !jsonObj.get("eEzsignfolderSendreminderfrequency").isJsonNull()) {
+        FieldEEzsignfolderSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfolderSendreminderfrequency"));
+      }
       if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
       }
@@ -795,6 +755,10 @@ public class EzsignfolderResponse {
       }
       if ((jsonObj.get("dtEzsignfolderScheduleddispose") != null && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonNull()) && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderScheduleddispose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduleddispose").toString()));
+      }
+      // validate the optional field `eEzsignfolderStep`
+      if (jsonObj.get("eEzsignfolderStep") != null && !jsonObj.get("eEzsignfolderStep").isJsonNull()) {
+        FieldEEzsignfolderStep.validateJsonElement(jsonObj.get("eEzsignfolderStep"));
       }
       if ((jsonObj.get("dtEzsignfolderClose") != null && !jsonObj.get("dtEzsignfolderClose").isJsonNull()) && !jsonObj.get("dtEzsignfolderClose").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));

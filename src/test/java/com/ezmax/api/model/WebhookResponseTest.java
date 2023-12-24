@@ -113,11 +113,35 @@ public class WebhookResponseTest {
     }
 
     /**
+     * Test the property 'sWebhookApikey'
+     */
+    @Test
+    public void sWebhookApikeyTest() {
+        // TODO: test sWebhookApikey
+    }
+
+    /**
+     * Test the property 'sWebhookSecret'
+     */
+    @Test
+    public void sWebhookSecretTest() {
+        // TODO: test sWebhookSecret
+    }
+
+    /**
      * Test the property 'bWebhookIsactive'
      */
     @Test
     public void bWebhookIsactiveTest() {
         // TODO: test bWebhookIsactive
+    }
+
+    /**
+     * Test the property 'bWebhookIssigned'
+     */
+    @Test
+    public void bWebhookIssignedTest() {
+        // TODO: test bWebhookIssigned
     }
 
     /**

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/webhook/{pkiWebhookID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -60,7 +60,6 @@ public class WebhookEditObjectV1Request {
   }
 
   public WebhookEditObjectV1Request objWebhook(WebhookRequestCompound objWebhook) {
-    
     this.objWebhook = objWebhook;
     return this;
   }
@@ -73,7 +72,6 @@ public class WebhookEditObjectV1Request {
   public WebhookRequestCompound getObjWebhook() {
     return objWebhook;
   }
-
 
   public void setObjWebhook(WebhookRequestCompound objWebhook) {
     this.objWebhook = objWebhook;

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class NotificationtestGetElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -74,7 +74,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
   }
 
   public NotificationtestGetElementsV1ResponseMPayload pkiNotificationtestID(Integer pkiNotificationtestID) {
-    
     this.pkiNotificationtestID = pkiNotificationtestID;
     return this;
   }
@@ -89,14 +88,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return pkiNotificationtestID;
   }
 
-
   public void setPkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
   }
 
 
   public NotificationtestGetElementsV1ResponseMPayload sNotificationtestFunction(String sNotificationtestFunction) {
-    
     this.sNotificationtestFunction = sNotificationtestFunction;
     return this;
   }
@@ -110,14 +107,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return sNotificationtestFunction;
   }
 
-
   public void setsNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
   }
 
 
   public NotificationtestGetElementsV1ResponseMPayload aSVariableobjectProperty(List<String> aSVariableobjectProperty) {
-    
     this.aSVariableobjectProperty = aSVariableobjectProperty;
     return this;
   }
@@ -139,14 +134,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return aSVariableobjectProperty;
   }
 
-
   public void setaSVariableobjectProperty(List<String> aSVariableobjectProperty) {
     this.aSVariableobjectProperty = aSVariableobjectProperty;
   }
 
 
   public NotificationtestGetElementsV1ResponseMPayload aObjVariableobject(List<Map<String, Object>> aObjVariableobject) {
-    
     this.aObjVariableobject = aObjVariableobject;
     return this;
   }
@@ -167,7 +160,6 @@ public class NotificationtestGetElementsV1ResponseMPayload {
   public List<Map<String, Object>> getaObjVariableobject() {
     return aObjVariableobject;
   }
-
 
   public void setaObjVariableobject(List<Map<String, Object>> aObjVariableobject) {
     this.aObjVariableobject = aObjVariableobject;

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/language/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class LanguageGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_LANGUAGE = "a_objLanguage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_LANGUAGE)
@@ -62,7 +62,6 @@ public class LanguageGetAutocompleteV2ResponseMPayload {
   }
 
   public LanguageGetAutocompleteV2ResponseMPayload aObjLanguage(List<LanguageAutocompleteElementResponse> aObjLanguage) {
-    
     this.aObjLanguage = aObjLanguage;
     return this;
   }
@@ -83,7 +82,6 @@ public class LanguageGetAutocompleteV2ResponseMPayload {
   public List<LanguageAutocompleteElementResponse> getaObjLanguage() {
     return aObjLanguage;
   }
-
 
   public void setaObjLanguage(List<LanguageAutocompleteElementResponse> aObjLanguage) {
     this.aObjLanguage = aObjLanguage;

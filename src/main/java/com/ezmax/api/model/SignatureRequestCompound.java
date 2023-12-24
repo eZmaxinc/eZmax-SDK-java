@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
@@ -63,7 +63,6 @@ public class SignatureRequestCompound {
   }
 
   public SignatureRequestCompound pkiSignatureID(Integer pkiSignatureID) {
-    
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -79,14 +78,12 @@ public class SignatureRequestCompound {
     return pkiSignatureID;
   }
 
-
   public void setPkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
   public SignatureRequestCompound tSignatureSvg(String tSignatureSvg) {
-    
     this.tSignatureSvg = tSignatureSvg;
     return this;
   }
@@ -99,7 +96,6 @@ public class SignatureRequestCompound {
   public String gettSignatureSvg() {
     return tSignatureSvg;
   }
-
 
   public void settSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;

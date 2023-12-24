@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Subnet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualSubnetDescription {
   public static final String SERIALIZED_NAME_S_SUBNET_DESCRIPTION1 = "sSubnetDescription1";
   @SerializedName(SERIALIZED_NAME_S_SUBNET_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualSubnetDescription {
   }
 
   public MultilingualSubnetDescription sSubnetDescription1(String sSubnetDescription1) {
-    
     this.sSubnetDescription1 = sSubnetDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualSubnetDescription {
     return sSubnetDescription1;
   }
 
-
   public void setsSubnetDescription1(String sSubnetDescription1) {
     this.sSubnetDescription1 = sSubnetDescription1;
   }
 
 
   public MultilingualSubnetDescription sSubnetDescription2(String sSubnetDescription2) {
-    
     this.sSubnetDescription2 = sSubnetDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualSubnetDescription {
   public String getsSubnetDescription2() {
     return sSubnetDescription2;
   }
-
 
   public void setsSubnetDescription2(String sSubnetDescription2) {
     this.sSubnetDescription2 = sSubnetDescription2;

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignsignergroup/{pkiEzsignsignergroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignergroupGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
@@ -60,7 +60,6 @@ public class EzsignsignergroupGetObjectV2ResponseMPayload {
   }
 
   public EzsignsignergroupGetObjectV2ResponseMPayload objEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
-    
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsignsignergroupGetObjectV2ResponseMPayload {
   public EzsignsignergroupResponseCompound getObjEzsignsignergroup() {
     return objEzsignsignergroup;
   }
-
 
   public void setObjEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;

@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -141,6 +141,10 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
   private String sEzsigndocumentExternalid;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL = "iEzsigndocumentEzsignsignatureattachmenttotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL)
+  private Integer iEzsigndocumentEzsignsignatureattachmenttotal;
+
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE = "eEzsigndocumentSteptype";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE)
   private ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype;
@@ -169,7 +173,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
   public EzsigndocumentGetObjectV1ResponseMPayload pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
-    
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -184,14 +187,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return pkiEzsigndocumentID;
   }
 
-
   public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -206,14 +207,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload fkiEzsignfoldersignerassociationIDDeclinedtosign(Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
-    
     this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
     return this;
   }
@@ -228,14 +227,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return fkiEzsignfoldersignerassociationIDDeclinedtosign;
   }
 
-
   public void setFkiEzsignfoldersignerassociationIDDeclinedtosign(Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
     this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
-    
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -249,14 +246,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return dtEzsigndocumentDuedate;
   }
 
-
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload dtEzsignformCompleted(String dtEzsignformCompleted) {
-    
     this.dtEzsignformCompleted = dtEzsignformCompleted;
     return this;
   }
@@ -270,14 +265,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return dtEzsignformCompleted;
   }
 
-
   public void setDtEzsignformCompleted(String dtEzsignformCompleted) {
     this.dtEzsignformCompleted = dtEzsignformCompleted;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -293,14 +286,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentName(String sEzsigndocumentName) {
-    
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -314,14 +305,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return sEzsigndocumentName;
   }
 
-
   public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentStep(FieldEEzsigndocumentStep eEzsigndocumentStep) {
-    
     this.eEzsigndocumentStep = eEzsigndocumentStep;
     return this;
   }
@@ -335,14 +324,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return eEzsigndocumentStep;
   }
 
-
   public void seteEzsigndocumentStep(FieldEEzsigndocumentStep eEzsigndocumentStep) {
     this.eEzsigndocumentStep = eEzsigndocumentStep;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentFirstsend(String dtEzsigndocumentFirstsend) {
-    
     this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
     return this;
   }
@@ -356,14 +343,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return dtEzsigndocumentFirstsend;
   }
 
-
   public void setDtEzsigndocumentFirstsend(String dtEzsigndocumentFirstsend) {
     this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentLastsend(String dtEzsigndocumentLastsend) {
-    
     this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
     return this;
   }
@@ -377,14 +362,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return dtEzsigndocumentLastsend;
   }
 
-
   public void setDtEzsigndocumentLastsend(String dtEzsigndocumentLastsend) {
     this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentOrder(Integer iEzsigndocumentOrder) {
-    
     this.iEzsigndocumentOrder = iEzsigndocumentOrder;
     return this;
   }
@@ -399,14 +382,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentOrder;
   }
 
-
   public void setiEzsigndocumentOrder(Integer iEzsigndocumentOrder) {
     this.iEzsigndocumentOrder = iEzsigndocumentOrder;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentPagetotal(Integer iEzsigndocumentPagetotal) {
-    
     this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
     return this;
   }
@@ -421,14 +402,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentPagetotal;
   }
 
-
   public void setiEzsigndocumentPagetotal(Integer iEzsigndocumentPagetotal) {
     this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentSignaturesigned(Integer iEzsigndocumentSignaturesigned) {
-    
     this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
     return this;
   }
@@ -443,14 +422,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentSignaturesigned;
   }
 
-
   public void setiEzsigndocumentSignaturesigned(Integer iEzsigndocumentSignaturesigned) {
     this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentSignaturetotal(Integer iEzsigndocumentSignaturetotal) {
-    
     this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
     return this;
   }
@@ -465,14 +442,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentSignaturetotal;
   }
 
-
   public void setiEzsigndocumentSignaturetotal(Integer iEzsigndocumentSignaturetotal) {
     this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentMD5initial(String sEzsigndocumentMD5initial) {
-    
     this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
     return this;
   }
@@ -486,14 +461,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return sEzsigndocumentMD5initial;
   }
 
-
   public void setsEzsigndocumentMD5initial(String sEzsigndocumentMD5initial) {
     this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload tEzsigndocumentDeclinedtosignreason(String tEzsigndocumentDeclinedtosignreason) {
-    
     this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
     return this;
   }
@@ -507,14 +480,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return tEzsigndocumentDeclinedtosignreason;
   }
 
-
   public void settEzsigndocumentDeclinedtosignreason(String tEzsigndocumentDeclinedtosignreason) {
     this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentMD5signed(String sEzsigndocumentMD5signed) {
-    
     this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
     return this;
   }
@@ -528,14 +499,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return sEzsigndocumentMD5signed;
   }
 
-
   public void setsEzsigndocumentMD5signed(String sEzsigndocumentMD5signed) {
     this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload bEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
-    
     this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
     return this;
   }
@@ -549,14 +518,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return bEzsigndocumentEzsignform;
   }
 
-
   public void setbEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
     this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload bEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
-    
     this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
     return this;
   }
@@ -570,14 +537,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return bEzsigndocumentHassignedsignatures;
   }
 
-
   public void setbEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
     this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -591,14 +556,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return objAudit;
   }
 
-
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
-    
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
     return this;
   }
@@ -612,14 +575,32 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return sEzsigndocumentExternalid;
   }
 
-
   public void setsEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
   }
 
 
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentEzsignsignatureattachmenttotal(Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
+    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+    return this;
+  }
+
+   /**
+   * The number of Ezsigndocumentattachment total
+   * minimum: 0
+   * @return iEzsigndocumentEzsignsignatureattachmenttotal
+  **/
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentEzsignsignatureattachmenttotal() {
+    return iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+
+  public void setiEzsigndocumentEzsignsignatureattachmenttotal(Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
+    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+
+
   public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
-    
     this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
     return this;
   }
@@ -633,14 +614,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return eEzsigndocumentSteptype;
   }
 
-
   public void seteEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
     this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
-    
     this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
     return this;
   }
@@ -654,14 +633,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentStepformtotal;
   }
 
-
   public void setiEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
     this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
-    
     this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
     return this;
   }
@@ -675,14 +652,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentStepformcurrent;
   }
 
-
   public void setiEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
     this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
-    
     this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
     return this;
   }
@@ -696,14 +671,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentStepsignaturetotal;
   }
 
-
   public void setiEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
     this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
-    
     this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
     return this;
   }
@@ -717,14 +690,12 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     return iEzsigndocumentStepsignatureCurrent;
   }
 
-
   public void setiEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
     this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
   }
 
 
   public EzsigndocumentGetObjectV1ResponseMPayload aObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
-    
     this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
     return this;
   }
@@ -745,7 +716,6 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
     return aObjEzsignfoldersignerassociationstatus;
   }
-
 
   public void setaObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
     this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
@@ -783,6 +753,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         Objects.equals(this.bEzsigndocumentHassignedsignatures, ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentHassignedsignatures) &&
         Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit) &&
         Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid) &&
+        Objects.equals(this.iEzsigndocumentEzsignsignatureattachmenttotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsignsignatureattachmenttotal) &&
         Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype) &&
         Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
         Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
@@ -793,7 +764,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
   }
 
   @Override
@@ -821,6 +792,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("    bEzsigndocumentHassignedsignatures: ").append(toIndentedString(bEzsigndocumentHassignedsignatures)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
+    sb.append("    iEzsigndocumentEzsignsignatureattachmenttotal: ").append(toIndentedString(iEzsigndocumentEzsignsignatureattachmenttotal)).append("\n");
     sb.append("    eEzsigndocumentSteptype: ").append(toIndentedString(eEzsigndocumentSteptype)).append("\n");
     sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
     sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
@@ -870,6 +842,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiFields.add("bEzsigndocumentHassignedsignatures");
     openapiFields.add("objAudit");
     openapiFields.add("sEzsigndocumentExternalid");
+    openapiFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
     openapiFields.add("eEzsigndocumentSteptype");
     openapiFields.add("iEzsigndocumentStepformtotal");
     openapiFields.add("iEzsigndocumentStepformcurrent");
@@ -888,6 +861,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiRequiredFields.add("iEzsigndocumentPagetotal");
     openapiRequiredFields.add("iEzsigndocumentSignaturesigned");
     openapiRequiredFields.add("iEzsigndocumentSignaturetotal");
+    openapiRequiredFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
     openapiRequiredFields.add("eEzsigndocumentSteptype");
     openapiRequiredFields.add("iEzsigndocumentStepformtotal");
     openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
@@ -933,6 +907,8 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       if (!jsonObj.get("sEzsigndocumentName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentName").toString()));
       }
+      // validate the required field `eEzsigndocumentStep`
+      FieldEEzsigndocumentStep.validateJsonElement(jsonObj.get("eEzsigndocumentStep"));
       if ((jsonObj.get("dtEzsigndocumentFirstsend") != null && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonNull()) && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentFirstsend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentFirstsend").toString()));
       }
@@ -955,6 +931,8 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
       if ((jsonObj.get("sEzsigndocumentExternalid") != null && !jsonObj.get("sEzsigndocumentExternalid").isJsonNull()) && !jsonObj.get("sEzsigndocumentExternalid").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentExternalid").toString()));
       }
+      // validate the required field `eEzsigndocumentSteptype`
+      ComputedEEzsigndocumentSteptype.validateJsonElement(jsonObj.get("eEzsigndocumentSteptype"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfoldersignerassociationstatus").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignfoldersignerassociationstatus` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfoldersignerassociationstatus").toString()));

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfieldgroupsigner Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupsignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D = "pkiEzsigntemplateformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D)
@@ -63,7 +63,6 @@ public class EzsigntemplateformfieldgroupsignerResponseCompound {
   }
 
   public EzsigntemplateformfieldgroupsignerResponseCompound pkiEzsigntemplateformfieldgroupsignerID(Integer pkiEzsigntemplateformfieldgroupsignerID) {
-    
     this.pkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
     return this;
   }
@@ -78,14 +77,12 @@ public class EzsigntemplateformfieldgroupsignerResponseCompound {
     return pkiEzsigntemplateformfieldgroupsignerID;
   }
 
-
   public void setPkiEzsigntemplateformfieldgroupsignerID(Integer pkiEzsigntemplateformfieldgroupsignerID) {
     this.pkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
   }
 
 
   public EzsigntemplateformfieldgroupsignerResponseCompound fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
-    
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
     return this;
   }
@@ -99,7 +96,6 @@ public class EzsigntemplateformfieldgroupsignerResponseCompound {
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
   }
-
 
   public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;

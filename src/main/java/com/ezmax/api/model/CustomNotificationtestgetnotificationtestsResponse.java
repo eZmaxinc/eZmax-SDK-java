@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomNotificationtestgetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -85,7 +85,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
   }
 
   public CustomNotificationtestgetnotificationtestsResponse pkiNotificationtestID(Integer pkiNotificationtestID) {
-    
     this.pkiNotificationtestID = pkiNotificationtestID;
     return this;
   }
@@ -100,14 +99,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return pkiNotificationtestID;
   }
 
-
   public void setPkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse objNotificationtestName(MultilingualNotificationtestName objNotificationtestName) {
-    
     this.objNotificationtestName = objNotificationtestName;
     return this;
   }
@@ -121,14 +118,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return objNotificationtestName;
   }
 
-
   public void setObjNotificationtestName(MultilingualNotificationtestName objNotificationtestName) {
     this.objNotificationtestName = objNotificationtestName;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse fkiNotificationsubsectionID(Integer fkiNotificationsubsectionID) {
-    
     this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
     return this;
   }
@@ -143,14 +138,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return fkiNotificationsubsectionID;
   }
 
-
   public void setFkiNotificationsubsectionID(Integer fkiNotificationsubsectionID) {
     this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse sNotificationtestFunction(String sNotificationtestFunction) {
-    
     this.sNotificationtestFunction = sNotificationtestFunction;
     return this;
   }
@@ -164,14 +157,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return sNotificationtestFunction;
   }
 
-
   public void setsNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse sNotificationtestNameX(String sNotificationtestNameX) {
-    
     this.sNotificationtestNameX = sNotificationtestNameX;
     return this;
   }
@@ -185,14 +176,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return sNotificationtestNameX;
   }
 
-
   public void setsNotificationtestNameX(String sNotificationtestNameX) {
     this.sNotificationtestNameX = sNotificationtestNameX;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse eNotificationpreferenceStatus(FieldENotificationpreferenceStatus eNotificationpreferenceStatus) {
-    
     this.eNotificationpreferenceStatus = eNotificationpreferenceStatus;
     return this;
   }
@@ -206,14 +195,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return eNotificationpreferenceStatus;
   }
 
-
   public void seteNotificationpreferenceStatus(FieldENotificationpreferenceStatus eNotificationpreferenceStatus) {
     this.eNotificationpreferenceStatus = eNotificationpreferenceStatus;
   }
 
 
   public CustomNotificationtestgetnotificationtestsResponse iNotificationtest(Integer iNotificationtest) {
-    
     this.iNotificationtest = iNotificationtest;
     return this;
   }
@@ -226,7 +213,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
   public Integer getiNotificationtest() {
     return iNotificationtest;
   }
-
 
   public void setiNotificationtest(Integer iNotificationtest) {
     this.iNotificationtest = iNotificationtest;
@@ -345,6 +331,8 @@ public class CustomNotificationtestgetnotificationtestsResponse {
       if (!jsonObj.get("sNotificationtestNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sNotificationtestNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationtestNameX").toString()));
       }
+      // validate the required field `eNotificationpreferenceStatus`
+      FieldENotificationpreferenceStatus.validateJsonElement(jsonObj.get("eNotificationpreferenceStatus"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

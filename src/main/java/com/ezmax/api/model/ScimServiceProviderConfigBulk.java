@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies bulk configuration options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimServiceProviderConfigBulk {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
@@ -67,7 +67,6 @@ public class ScimServiceProviderConfigBulk {
   }
 
   public ScimServiceProviderConfigBulk supported(Boolean supported) {
-    
     this.supported = supported;
     return this;
   }
@@ -81,14 +80,12 @@ public class ScimServiceProviderConfigBulk {
     return supported;
   }
 
-
   public void setSupported(Boolean supported) {
     this.supported = supported;
   }
 
 
   public ScimServiceProviderConfigBulk maxOperations(Integer maxOperations) {
-    
     this.maxOperations = maxOperations;
     return this;
   }
@@ -102,14 +99,12 @@ public class ScimServiceProviderConfigBulk {
     return maxOperations;
   }
 
-
   public void setMaxOperations(Integer maxOperations) {
     this.maxOperations = maxOperations;
   }
 
 
   public ScimServiceProviderConfigBulk maxPayloadSize(Integer maxPayloadSize) {
-    
     this.maxPayloadSize = maxPayloadSize;
     return this;
   }
@@ -122,7 +117,6 @@ public class ScimServiceProviderConfigBulk {
   public Integer getMaxPayloadSize() {
     return maxPayloadSize;
   }
-
 
   public void setMaxPayloadSize(Integer maxPayloadSize) {
     this.maxPayloadSize = maxPayloadSize;

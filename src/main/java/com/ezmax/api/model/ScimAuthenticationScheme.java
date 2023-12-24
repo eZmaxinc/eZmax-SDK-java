@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimAuthenticationScheme
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimAuthenticationScheme {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -110,6 +110,11 @@ public class ScimAuthenticationScheme {
         return TypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_TYPE = "type";
@@ -120,7 +125,6 @@ public class ScimAuthenticationScheme {
   }
 
   public ScimAuthenticationScheme description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -134,14 +138,12 @@ public class ScimAuthenticationScheme {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public ScimAuthenticationScheme name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -155,14 +157,12 @@ public class ScimAuthenticationScheme {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ScimAuthenticationScheme type(TypeEnum type) {
-    
     this.type = type;
     return this;
   }
@@ -175,7 +175,6 @@ public class ScimAuthenticationScheme {
   public TypeEnum getType() {
     return type;
   }
-
 
   public void setType(TypeEnum type) {
     this.type = type;
@@ -279,6 +278,8 @@ public class ScimAuthenticationScheme {
       if (!jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
+      // validate the required field `type`
+      TypeEnum.validateJsonElement(jsonObj.get("type"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

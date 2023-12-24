@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom ContactName Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomContactNameResponse {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
@@ -67,7 +67,6 @@ public class CustomContactNameResponse {
   }
 
   public CustomContactNameResponse sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -81,14 +80,12 @@ public class CustomContactNameResponse {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public CustomContactNameResponse sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -102,14 +99,12 @@ public class CustomContactNameResponse {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public CustomContactNameResponse sContactCompany(String sContactCompany) {
-    
     this.sContactCompany = sContactCompany;
     return this;
   }
@@ -122,7 +117,6 @@ public class CustomContactNameResponse {
   public String getsContactCompany() {
     return sContactCompany;
   }
-
 
   public void setsContactCompany(String sContactCompany) {
     this.sContactCompany = sContactCompany;

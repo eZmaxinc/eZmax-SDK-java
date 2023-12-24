@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
@@ -65,7 +65,6 @@ public class EzsignfolderCreateObjectV1Request {
   }
 
   public EzsignfolderCreateObjectV1Request objEzsignfolder(EzsignfolderRequest objEzsignfolder) {
-    
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -79,14 +78,12 @@ public class EzsignfolderCreateObjectV1Request {
     return objEzsignfolder;
   }
 
-
   public void setObjEzsignfolder(EzsignfolderRequest objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
 
   public EzsignfolderCreateObjectV1Request objEzsignfolderCompound(EzsignfolderRequestCompound objEzsignfolderCompound) {
-    
     this.objEzsignfolderCompound = objEzsignfolderCompound;
     return this;
   }
@@ -99,7 +96,6 @@ public class EzsignfolderCreateObjectV1Request {
   public EzsignfolderRequestCompound getObjEzsignfolderCompound() {
     return objEzsignfolderCompound;
   }
-
 
   public void setObjEzsignfolderCompound(EzsignfolderRequestCompound objEzsignfolderCompound) {
     this.objEzsignfolderCompound = objEzsignfolderCompound;

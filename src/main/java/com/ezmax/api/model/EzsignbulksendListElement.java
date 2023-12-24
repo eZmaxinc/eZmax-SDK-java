@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -99,7 +99,6 @@ public class EzsignbulksendListElement {
   }
 
   public EzsignbulksendListElement pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
-    
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -114,14 +113,12 @@ public class EzsignbulksendListElement {
     return pkiEzsignbulksendID;
   }
 
-
   public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
   public EzsignbulksendListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -136,14 +133,12 @@ public class EzsignbulksendListElement {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsignbulksendListElement sEzsignbulksendDescription(String sEzsignbulksendDescription) {
-    
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -157,14 +152,12 @@ public class EzsignbulksendListElement {
     return sEzsignbulksendDescription;
   }
 
-
   public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
   public EzsignbulksendListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -178,14 +171,12 @@ public class EzsignbulksendListElement {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsignbulksendListElement bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
-    
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -199,14 +190,12 @@ public class EzsignbulksendListElement {
     return bEzsignbulksendNeedvalidation;
   }
 
-
   public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
   public EzsignbulksendListElement iEzsignbulksendtransmission(Integer iEzsignbulksendtransmission) {
-    
     this.iEzsignbulksendtransmission = iEzsignbulksendtransmission;
     return this;
   }
@@ -220,14 +209,12 @@ public class EzsignbulksendListElement {
     return iEzsignbulksendtransmission;
   }
 
-
   public void setiEzsignbulksendtransmission(Integer iEzsignbulksendtransmission) {
     this.iEzsignbulksendtransmission = iEzsignbulksendtransmission;
   }
 
 
   public EzsignbulksendListElement iEzsignfolder(Integer iEzsignfolder) {
-    
     this.iEzsignfolder = iEzsignfolder;
     return this;
   }
@@ -241,14 +228,12 @@ public class EzsignbulksendListElement {
     return iEzsignfolder;
   }
 
-
   public void setiEzsignfolder(Integer iEzsignfolder) {
     this.iEzsignfolder = iEzsignfolder;
   }
 
 
   public EzsignbulksendListElement iEzsigndocument(Integer iEzsigndocument) {
-    
     this.iEzsigndocument = iEzsigndocument;
     return this;
   }
@@ -262,14 +247,12 @@ public class EzsignbulksendListElement {
     return iEzsigndocument;
   }
 
-
   public void setiEzsigndocument(Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
   }
 
 
   public EzsignbulksendListElement iEzsignsignature(Integer iEzsignsignature) {
-    
     this.iEzsignsignature = iEzsignsignature;
     return this;
   }
@@ -283,14 +266,12 @@ public class EzsignbulksendListElement {
     return iEzsignsignature;
   }
 
-
   public void setiEzsignsignature(Integer iEzsignsignature) {
     this.iEzsignsignature = iEzsignsignature;
   }
 
 
   public EzsignbulksendListElement iEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
-    
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
     return this;
   }
@@ -304,14 +285,12 @@ public class EzsignbulksendListElement {
     return iEzsignsignatureSigned;
   }
 
-
   public void setiEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
   }
 
 
   public EzsignbulksendListElement bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
-    
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -324,7 +303,6 @@ public class EzsignbulksendListElement {
   public Boolean getbEzsignbulksendIsactive() {
     return bEzsignbulksendIsactive;
   }
-
 
   public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;

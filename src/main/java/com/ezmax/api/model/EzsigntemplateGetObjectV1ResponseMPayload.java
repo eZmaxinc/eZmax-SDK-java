@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -104,7 +104,6 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   }
 
   public EzsigntemplateGetObjectV1ResponseMPayload pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
-    
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -119,14 +118,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return pkiEzsigntemplateID;
   }
 
-
   public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload fkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
-    
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
     return this;
   }
@@ -141,14 +138,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return fkiEzsigntemplatedocumentID;
   }
 
-
   public void setFkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -163,14 +158,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -186,14 +179,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload sLanguageNameX(String sLanguageNameX) {
-    
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -207,14 +198,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return sLanguageNameX;
   }
 
-
   public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload sEzsigntemplateDescription(String sEzsigntemplateDescription) {
-    
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -228,14 +217,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return sEzsigntemplateDescription;
   }
 
-
   public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload bEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
-    
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
     return this;
   }
@@ -249,14 +236,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return bEzsigntemplateAdminonly;
   }
 
-
   public void setbEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -270,14 +255,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -291,14 +274,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return objAudit;
   }
 
-
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload objEzsigntemplatedocument(EzsigntemplatedocumentResponse objEzsigntemplatedocument) {
-    
     this.objEzsigntemplatedocument = objEzsigntemplatedocument;
     return this;
   }
@@ -312,14 +293,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     return objEzsigntemplatedocument;
   }
 
-
   public void setObjEzsigntemplatedocument(EzsigntemplatedocumentResponse objEzsigntemplatedocument) {
     this.objEzsigntemplatedocument = objEzsigntemplatedocument;
   }
 
 
   public EzsigntemplateGetObjectV1ResponseMPayload aObjEzsigntemplatesigner(List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner) {
-    
     this.aObjEzsigntemplatesigner = aObjEzsigntemplatesigner;
     return this;
   }
@@ -340,7 +319,6 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   public List<EzsigntemplatesignerResponseCompound> getaObjEzsigntemplatesigner() {
     return aObjEzsigntemplatesigner;
   }
-
 
   public void setaObjEzsigntemplatesigner(List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner) {
     this.aObjEzsigntemplatesigner = aObjEzsigntemplatesigner;

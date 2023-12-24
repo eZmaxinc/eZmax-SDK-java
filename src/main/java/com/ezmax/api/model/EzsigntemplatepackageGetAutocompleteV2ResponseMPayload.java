@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsigntemplatepackage/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
@@ -62,7 +62,6 @@ public class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
   }
 
   public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload aObjEzsigntemplatepackage(List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
-    
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
   public List<EzsigntemplatepackageAutocompleteElementResponse> getaObjEzsigntemplatepackage() {
     return aObjEzsigntemplatepackage;
   }
-
 
   public void setaObjEzsigntemplatepackage(List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;

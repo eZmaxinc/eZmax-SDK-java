@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplateformfieldgroup/{pkiEzsigntemplateformfieldgroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP = "objEzsigntemplateformfieldgroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP)
@@ -60,7 +60,6 @@ public class EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload {
   }
 
   public EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload objEzsigntemplateformfieldgroup(EzsigntemplateformfieldgroupResponseCompound objEzsigntemplateformfieldgroup) {
-    
     this.objEzsigntemplateformfieldgroup = objEzsigntemplateformfieldgroup;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsigntemplateformfieldgroupGetObjectV2ResponseMPayload {
   public EzsigntemplateformfieldgroupResponseCompound getObjEzsigntemplateformfieldgroup() {
     return objEzsigntemplateformfieldgroup;
   }
-
 
   public void setObjEzsigntemplateformfieldgroup(EzsigntemplateformfieldgroupResponseCompound objEzsigntemplateformfieldgroup) {
     this.objEzsigntemplateformfieldgroup = objEzsigntemplateformfieldgroup;

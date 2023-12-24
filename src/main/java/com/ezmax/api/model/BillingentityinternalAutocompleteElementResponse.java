@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
@@ -67,7 +67,6 @@ public class BillingentityinternalAutocompleteElementResponse {
   }
 
   public BillingentityinternalAutocompleteElementResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
-    
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -82,14 +81,12 @@ public class BillingentityinternalAutocompleteElementResponse {
     return pkiBillingentityinternalID;
   }
 
-
   public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
   public BillingentityinternalAutocompleteElementResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -103,14 +100,12 @@ public class BillingentityinternalAutocompleteElementResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public BillingentityinternalAutocompleteElementResponse bBillingentityinternalIsactive(Boolean bBillingentityinternalIsactive) {
-    
     this.bBillingentityinternalIsactive = bBillingentityinternalIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class BillingentityinternalAutocompleteElementResponse {
   public Boolean getbBillingentityinternalIsactive() {
     return bBillingentityinternalIsactive;
   }
-
 
   public void setbBillingentityinternalIsactive(Boolean bBillingentityinternalIsactive) {
     this.bBillingentityinternalIsactive = bBillingentityinternalIsactive;

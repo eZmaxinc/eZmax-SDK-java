@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
@@ -64,7 +64,6 @@ public class BillingentityinternalResponse {
   }
 
   public BillingentityinternalResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
-    
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -79,14 +78,12 @@ public class BillingentityinternalResponse {
     return pkiBillingentityinternalID;
   }
 
-
   public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
   public BillingentityinternalResponse objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
-    
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
     return this;
   }
@@ -99,7 +96,6 @@ public class BillingentityinternalResponse {
   public MultilingualBillingentityinternalDescription getObjBillingentityinternalDescription() {
     return objBillingentityinternalDescription;
   }
-
 
   public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;

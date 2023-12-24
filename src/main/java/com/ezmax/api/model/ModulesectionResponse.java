@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ModulesectionResponse {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
@@ -71,7 +71,6 @@ public class ModulesectionResponse {
   }
 
   public ModulesectionResponse pkiModulesectionID(Integer pkiModulesectionID) {
-    
     this.pkiModulesectionID = pkiModulesectionID;
     return this;
   }
@@ -86,14 +85,12 @@ public class ModulesectionResponse {
     return pkiModulesectionID;
   }
 
-
   public void setPkiModulesectionID(Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
   }
 
 
   public ModulesectionResponse fkiModuleID(Integer fkiModuleID) {
-    
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -108,14 +105,12 @@ public class ModulesectionResponse {
     return fkiModuleID;
   }
 
-
   public void setFkiModuleID(Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
   public ModulesectionResponse sModulesectionInternalname(String sModulesectionInternalname) {
-    
     this.sModulesectionInternalname = sModulesectionInternalname;
     return this;
   }
@@ -129,14 +124,12 @@ public class ModulesectionResponse {
     return sModulesectionInternalname;
   }
 
-
   public void setsModulesectionInternalname(String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
   }
 
 
   public ModulesectionResponse sModulesectionNameX(String sModulesectionNameX) {
-    
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -149,7 +142,6 @@ public class ModulesectionResponse {
   public String getsModulesectionNameX() {
     return sModulesectionNameX;
   }
-
 
   public void setsModulesectionNameX(String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;

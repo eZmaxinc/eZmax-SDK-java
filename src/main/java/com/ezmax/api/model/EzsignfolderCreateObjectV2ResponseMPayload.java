@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D = "a_pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D)
@@ -61,7 +61,6 @@ public class EzsignfolderCreateObjectV2ResponseMPayload {
   }
 
   public EzsignfolderCreateObjectV2ResponseMPayload aPkiEzsignfolderID(List<Integer> aPkiEzsignfolderID) {
-    
     this.aPkiEzsignfolderID = aPkiEzsignfolderID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsignfolderCreateObjectV2ResponseMPayload {
   public List<Integer> getaPkiEzsignfolderID() {
     return aPkiEzsignfolderID;
   }
-
 
   public void setaPkiEzsignfolderID(List<Integer> aPkiEzsignfolderID) {
     this.aPkiEzsignfolderID = aPkiEzsignfolderID;

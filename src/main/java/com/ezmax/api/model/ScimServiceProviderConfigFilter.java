@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies FILTER options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimServiceProviderConfigFilter {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
@@ -63,7 +63,6 @@ public class ScimServiceProviderConfigFilter {
   }
 
   public ScimServiceProviderConfigFilter supported(Boolean supported) {
-    
     this.supported = supported;
     return this;
   }
@@ -77,14 +76,12 @@ public class ScimServiceProviderConfigFilter {
     return supported;
   }
 
-
   public void setSupported(Boolean supported) {
     this.supported = supported;
   }
 
 
   public ScimServiceProviderConfigFilter maxResults(Integer maxResults) {
-    
     this.maxResults = maxResults;
     return this;
   }
@@ -97,7 +94,6 @@ public class ScimServiceProviderConfigFilter {
   public Integer getMaxResults() {
     return maxResults;
   }
-
 
   public void setMaxResults(Integer maxResults) {
     this.maxResults = maxResults;

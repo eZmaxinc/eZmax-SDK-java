@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationrecipientsrecipientResponse {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -187,6 +187,11 @@ public class CustomCommunicationrecipientsrecipientResponse {
         return ECommunicationrecipientsrecipientObjecttypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ECommunicationrecipientsrecipientObjecttypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_COMMUNICATIONRECIPIENTSRECIPIENT_OBJECTTYPE = "eCommunicationrecipientsrecipientObjecttype";
@@ -213,7 +218,6 @@ public class CustomCommunicationrecipientsrecipientResponse {
   }
 
   public CustomCommunicationrecipientsrecipientResponse fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -228,14 +232,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -250,14 +252,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiContactID(Integer fkiContactID) {
-    
     this.fkiContactID = fkiContactID;
     return this;
   }
@@ -272,14 +272,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiContactID;
   }
 
-
   public void setFkiContactID(Integer fkiContactID) {
     this.fkiContactID = fkiContactID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiCustomerID(Integer fkiCustomerID) {
-    
     this.fkiCustomerID = fkiCustomerID;
     return this;
   }
@@ -294,14 +292,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiCustomerID;
   }
 
-
   public void setFkiCustomerID(Integer fkiCustomerID) {
     this.fkiCustomerID = fkiCustomerID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiEmployeeID(Integer fkiEmployeeID) {
-    
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -316,14 +312,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEmployeeID;
   }
 
-
   public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiEzsignsignerID(Integer fkiEzsignsignerID) {
-    
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -338,14 +332,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEzsignsignerID;
   }
 
-
   public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
-    
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -360,14 +352,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiFranchiseofficeID;
   }
 
-
   public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -382,14 +372,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiAgentincorporationID(Integer fkiAgentincorporationID) {
-    
     this.fkiAgentincorporationID = fkiAgentincorporationID;
     return this;
   }
@@ -404,14 +392,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAgentincorporationID;
   }
 
-
   public void setFkiAgentincorporationID(Integer fkiAgentincorporationID) {
     this.fkiAgentincorporationID = fkiAgentincorporationID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiAssistantID(Integer fkiAssistantID) {
-    
     this.fkiAssistantID = fkiAssistantID;
     return this;
   }
@@ -426,14 +412,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAssistantID;
   }
 
-
   public void setFkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiExternalbrokerID(Integer fkiExternalbrokerID) {
-    
     this.fkiExternalbrokerID = fkiExternalbrokerID;
     return this;
   }
@@ -448,14 +432,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiExternalbrokerID;
   }
 
-
   public void setFkiExternalbrokerID(Integer fkiExternalbrokerID) {
     this.fkiExternalbrokerID = fkiExternalbrokerID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiEzcomagentID(Integer fkiEzcomagentID) {
-    
     this.fkiEzcomagentID = fkiEzcomagentID;
     return this;
   }
@@ -470,14 +452,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEzcomagentID;
   }
 
-
   public void setFkiEzcomagentID(Integer fkiEzcomagentID) {
     this.fkiEzcomagentID = fkiEzcomagentID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiNotaryID(Integer fkiNotaryID) {
-    
     this.fkiNotaryID = fkiNotaryID;
     return this;
   }
@@ -492,14 +472,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiNotaryID;
   }
 
-
   public void setFkiNotaryID(Integer fkiNotaryID) {
     this.fkiNotaryID = fkiNotaryID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiRewardmemberID(Integer fkiRewardmemberID) {
-    
     this.fkiRewardmemberID = fkiRewardmemberID;
     return this;
   }
@@ -514,14 +492,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiRewardmemberID;
   }
 
-
   public void setFkiRewardmemberID(Integer fkiRewardmemberID) {
     this.fkiRewardmemberID = fkiRewardmemberID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse fkiSupplierID(Integer fkiSupplierID) {
-    
     this.fkiSupplierID = fkiSupplierID;
     return this;
   }
@@ -536,14 +512,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiSupplierID;
   }
 
-
   public void setFkiSupplierID(Integer fkiSupplierID) {
     this.fkiSupplierID = fkiSupplierID;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse eCommunicationrecipientsrecipientObjecttype(ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
-    
     this.eCommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
     return this;
   }
@@ -557,14 +531,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return eCommunicationrecipientsrecipientObjecttype;
   }
 
-
   public void seteCommunicationrecipientsrecipientObjecttype(ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
     this.eCommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse objContactName(CustomContactNameResponse objContactName) {
-    
     this.objContactName = objContactName;
     return this;
   }
@@ -578,14 +550,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objContactName;
   }
 
-
   public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse objEmail(EmailResponseCompound objEmail) {
-    
     this.objEmail = objEmail;
     return this;
   }
@@ -599,14 +569,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objEmail;
   }
 
-
   public void setObjEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse objPhoneFax(PhoneResponseCompound objPhoneFax) {
-    
     this.objPhoneFax = objPhoneFax;
     return this;
   }
@@ -620,14 +588,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objPhoneFax;
   }
 
-
   public void setObjPhoneFax(PhoneResponseCompound objPhoneFax) {
     this.objPhoneFax = objPhoneFax;
   }
 
 
   public CustomCommunicationrecipientsrecipientResponse objPhoneSMS(PhoneResponseCompound objPhoneSMS) {
-    
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
@@ -640,7 +606,6 @@ public class CustomCommunicationrecipientsrecipientResponse {
   public PhoneResponseCompound getObjPhoneSMS() {
     return objPhoneSMS;
   }
-
 
   public void setObjPhoneSMS(PhoneResponseCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
@@ -788,6 +753,8 @@ public class CustomCommunicationrecipientsrecipientResponse {
       if (!jsonObj.get("eCommunicationrecipientsrecipientObjecttype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eCommunicationrecipientsrecipientObjecttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationrecipientsrecipientObjecttype").toString()));
       }
+      // validate the required field `eCommunicationrecipientsrecipientObjecttype`
+      ECommunicationrecipientsrecipientObjecttypeEnum.validateJsonElement(jsonObj.get("eCommunicationrecipientsrecipientObjecttype"));
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
       // validate the optional field `objEmail`

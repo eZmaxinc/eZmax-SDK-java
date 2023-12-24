@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/variableexpense/{pkiVariableexpenseID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class VariableexpenseEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE = "objVariableexpense";
   @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE)
@@ -60,7 +60,6 @@ public class VariableexpenseEditObjectV1Request {
   }
 
   public VariableexpenseEditObjectV1Request objVariableexpense(VariableexpenseRequestCompound objVariableexpense) {
-    
     this.objVariableexpense = objVariableexpense;
     return this;
   }
@@ -73,7 +72,6 @@ public class VariableexpenseEditObjectV1Request {
   public VariableexpenseRequestCompound getObjVariableexpense() {
     return objVariableexpense;
   }
-
 
   public void setObjVariableexpense(VariableexpenseRequestCompound objVariableexpense) {
     this.objVariableexpense = objVariableexpense;

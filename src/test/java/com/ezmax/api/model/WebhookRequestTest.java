@@ -113,6 +113,14 @@ public class WebhookRequestTest {
     }
 
     /**
+     * Test the property 'bWebhookIssigned'
+     */
+    @Test
+    public void bWebhookIssignedTest() {
+        // TODO: test bWebhookIssigned
+    }
+
+    /**
      * Test the property 'bWebhookSkipsslvalidation'
      */
     @Test

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SystemconfigurationRequest {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
@@ -95,7 +95,6 @@ public class SystemconfigurationRequest {
   }
 
   public SystemconfigurationRequest pkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
-    
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
     return this;
   }
@@ -111,14 +110,12 @@ public class SystemconfigurationRequest {
     return pkiSystemconfigurationID;
   }
 
-
   public void setPkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
   }
 
 
   public SystemconfigurationRequest eSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
-    
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
     return this;
   }
@@ -132,14 +129,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationNewexternaluseraction;
   }
 
-
   public void seteSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
   }
 
 
   public SystemconfigurationRequest eSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
-    
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
     return this;
   }
@@ -153,14 +148,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationLanguage1;
   }
 
-
   public void seteSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
   }
 
 
   public SystemconfigurationRequest eSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
-    
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
     return this;
   }
@@ -174,14 +167,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationLanguage2;
   }
 
-
   public void seteSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
   }
 
 
   public SystemconfigurationRequest eSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
-    
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
     return this;
   }
@@ -195,14 +186,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationEzsign;
   }
 
-
   public void seteSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
   }
 
 
   public SystemconfigurationRequest bSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
-    
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
     return this;
   }
@@ -216,14 +205,12 @@ public class SystemconfigurationRequest {
     return bSystemconfigurationEzsignpersonnal;
   }
 
-
   public void setbSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
   }
 
 
   public SystemconfigurationRequest bSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
-    
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
     return this;
   }
@@ -237,14 +224,12 @@ public class SystemconfigurationRequest {
     return bSystemconfigurationSspr;
   }
 
-
   public void setbSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
   }
 
 
   public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
-    
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
     return this;
   }
@@ -258,14 +243,12 @@ public class SystemconfigurationRequest {
     return dtSystemconfigurationReadonlyexpirationstart;
   }
 
-
   public void setDtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
   }
 
 
   public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
-    
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
     return this;
   }
@@ -278,7 +261,6 @@ public class SystemconfigurationRequest {
   public String getDtSystemconfigurationReadonlyexpirationend() {
     return dtSystemconfigurationReadonlyexpirationend;
   }
-
 
   public void setDtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
@@ -393,6 +375,16 @@ public class SystemconfigurationRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eSystemconfigurationNewexternaluseraction`
+      FieldESystemconfigurationNewexternaluseraction.validateJsonElement(jsonObj.get("eSystemconfigurationNewexternaluseraction"));
+      // validate the required field `eSystemconfigurationLanguage1`
+      FieldESystemconfigurationLanguage1.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage1"));
+      // validate the required field `eSystemconfigurationLanguage2`
+      FieldESystemconfigurationLanguage2.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage2"));
+      // validate the optional field `eSystemconfigurationEzsign`
+      if (jsonObj.get("eSystemconfigurationEzsign") != null && !jsonObj.get("eSystemconfigurationEzsign").isJsonNull()) {
+        FieldESystemconfigurationEzsign.validateJsonElement(jsonObj.get("eSystemconfigurationEzsign"));
+      }
       if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationstart") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtSystemconfigurationReadonlyexpirationstart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").toString()));
       }

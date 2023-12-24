@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Sessionhistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SessionhistoryListElement {
   public static final String SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D = "pkiSessionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D)
@@ -96,7 +96,6 @@ public class SessionhistoryListElement {
   }
 
   public SessionhistoryListElement pkiSessionhistoryID(Integer pkiSessionhistoryID) {
-    
     this.pkiSessionhistoryID = pkiSessionhistoryID;
     return this;
   }
@@ -112,14 +111,12 @@ public class SessionhistoryListElement {
     return pkiSessionhistoryID;
   }
 
-
   public void setPkiSessionhistoryID(Integer pkiSessionhistoryID) {
     this.pkiSessionhistoryID = pkiSessionhistoryID;
   }
 
 
   public SessionhistoryListElement fkiComputerID(Integer fkiComputerID) {
-    
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -135,14 +132,12 @@ public class SessionhistoryListElement {
     return fkiComputerID;
   }
 
-
   public void setFkiComputerID(Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
 
   public SessionhistoryListElement fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -157,14 +152,12 @@ public class SessionhistoryListElement {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public SessionhistoryListElement dtSessionhistoryFirsthit(String dtSessionhistoryFirsthit) {
-    
     this.dtSessionhistoryFirsthit = dtSessionhistoryFirsthit;
     return this;
   }
@@ -178,14 +171,12 @@ public class SessionhistoryListElement {
     return dtSessionhistoryFirsthit;
   }
 
-
   public void setDtSessionhistoryFirsthit(String dtSessionhistoryFirsthit) {
     this.dtSessionhistoryFirsthit = dtSessionhistoryFirsthit;
   }
 
 
   public SessionhistoryListElement dtSessionhistoryLasthit(String dtSessionhistoryLasthit) {
-    
     this.dtSessionhistoryLasthit = dtSessionhistoryLasthit;
     return this;
   }
@@ -199,14 +190,12 @@ public class SessionhistoryListElement {
     return dtSessionhistoryLasthit;
   }
 
-
   public void setDtSessionhistoryLasthit(String dtSessionhistoryLasthit) {
     this.dtSessionhistoryLasthit = dtSessionhistoryLasthit;
   }
 
 
   public SessionhistoryListElement eSessionhistoryEndby(FieldESessionhistoryEndby eSessionhistoryEndby) {
-    
     this.eSessionhistoryEndby = eSessionhistoryEndby;
     return this;
   }
@@ -220,14 +209,12 @@ public class SessionhistoryListElement {
     return eSessionhistoryEndby;
   }
 
-
   public void seteSessionhistoryEndby(FieldESessionhistoryEndby eSessionhistoryEndby) {
     this.eSessionhistoryEndby = eSessionhistoryEndby;
   }
 
 
   public SessionhistoryListElement sComputerDescription(String sComputerDescription) {
-    
     this.sComputerDescription = sComputerDescription;
     return this;
   }
@@ -241,14 +228,12 @@ public class SessionhistoryListElement {
     return sComputerDescription;
   }
 
-
   public void setsComputerDescription(String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
   }
 
 
   public SessionhistoryListElement sSessionhistoryDuration(String sSessionhistoryDuration) {
-    
     this.sSessionhistoryDuration = sSessionhistoryDuration;
     return this;
   }
@@ -262,14 +247,12 @@ public class SessionhistoryListElement {
     return sSessionhistoryDuration;
   }
 
-
   public void setsSessionhistoryDuration(String sSessionhistoryDuration) {
     this.sSessionhistoryDuration = sSessionhistoryDuration;
   }
 
 
   public SessionhistoryListElement sSessionhistoryIP(String sSessionhistoryIP) {
-    
     this.sSessionhistoryIP = sSessionhistoryIP;
     return this;
   }
@@ -283,14 +266,12 @@ public class SessionhistoryListElement {
     return sSessionhistoryIP;
   }
 
-
   public void setsSessionhistoryIP(String sSessionhistoryIP) {
     this.sSessionhistoryIP = sSessionhistoryIP;
   }
 
 
   public SessionhistoryListElement sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -303,7 +284,6 @@ public class SessionhistoryListElement {
   public String getsUserLoginname() {
     return sUserLoginname;
   }
-
 
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
@@ -428,6 +408,8 @@ public class SessionhistoryListElement {
       if (!jsonObj.get("dtSessionhistoryLasthit").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtSessionhistoryLasthit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSessionhistoryLasthit").toString()));
       }
+      // validate the required field `eSessionhistoryEndby`
+      FieldESessionhistoryEndby.validateJsonElement(jsonObj.get("eSessionhistoryEndby"));
       if ((jsonObj.get("sComputerDescription") != null && !jsonObj.get("sComputerDescription").isJsonNull()) && !jsonObj.get("sComputerDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sComputerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sComputerDescription").toString()));
       }

@@ -226,6 +226,86 @@ public class EzsignfoldertypeResponseTest {
     }
 
     /**
+     * Test the property 'bEzsignfoldertypeSendsignedtoezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeSendsignedtoezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeSendsignedtoezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendsignedtouser'
+     */
+    @Test
+    public void bEzsignfoldertypeSendsignedtouserTest() {
+        // TODO: test bEzsignfoldertypeSendsignedtouser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendattachmentezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeSendattachmentezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeSendattachmentezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendproofezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeSendproofezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeSendproofezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendattachmentuser'
+     */
+    @Test
+    public void bEzsignfoldertypeSendattachmentuserTest() {
+        // TODO: test bEzsignfoldertypeSendattachmentuser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendproofuser'
+     */
+    @Test
+    public void bEzsignfoldertypeSendproofuserTest() {
+        // TODO: test bEzsignfoldertypeSendproofuser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendproofemail'
+     */
+    @Test
+    public void bEzsignfoldertypeSendproofemailTest() {
+        // TODO: test bEzsignfoldertypeSendproofemail
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeAllowdownloadattachmentezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeAllowdownloadproofezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeAllowdownloadproofezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeAllowdownloadproofezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeSendproofreceivealldocument'
+     */
+    @Test
+    public void bEzsignfoldertypeSendproofreceivealldocumentTest() {
+        // TODO: test bEzsignfoldertypeSendproofreceivealldocument
+    }
+
+    /**
      * Test the property 'bEzsignfoldertypeSendsignedtodocumentowner'
      */
     @Test

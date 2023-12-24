@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -65,7 +65,6 @@ public class EzsigndocumentCreateObjectV1Request {
   }
 
   public EzsigndocumentCreateObjectV1Request objEzsigndocument(EzsigndocumentRequest objEzsigndocument) {
-    
     this.objEzsigndocument = objEzsigndocument;
     return this;
   }
@@ -79,14 +78,12 @@ public class EzsigndocumentCreateObjectV1Request {
     return objEzsigndocument;
   }
 
-
   public void setObjEzsigndocument(EzsigndocumentRequest objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
   }
 
 
   public EzsigndocumentCreateObjectV1Request objEzsigndocumentCompound(EzsigndocumentRequestCompound objEzsigndocumentCompound) {
-    
     this.objEzsigndocumentCompound = objEzsigndocumentCompound;
     return this;
   }
@@ -99,7 +96,6 @@ public class EzsigndocumentCreateObjectV1Request {
   public EzsigndocumentRequestCompound getObjEzsigndocumentCompound() {
     return objEzsigndocumentCompound;
   }
-
 
   public void setObjEzsigndocumentCompound(EzsigndocumentRequestCompound objEzsigndocumentCompound) {
     this.objEzsigndocumentCompound = objEzsigndocumentCompound;

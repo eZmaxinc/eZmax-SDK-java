@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -98,7 +98,6 @@ public class UserListElement {
   }
 
   public UserListElement pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -113,14 +112,12 @@ public class UserListElement {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public UserListElement sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -134,14 +131,12 @@ public class UserListElement {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UserListElement sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -155,14 +150,12 @@ public class UserListElement {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UserListElement sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -176,14 +169,12 @@ public class UserListElement {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public UserListElement bUserIsactive(Boolean bUserIsactive) {
-    
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -197,14 +188,12 @@ public class UserListElement {
     return bUserIsactive;
   }
 
-
   public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 
 
   public UserListElement eUserType(FieldEUserType eUserType) {
-    
     this.eUserType = eUserType;
     return this;
   }
@@ -218,14 +207,12 @@ public class UserListElement {
     return eUserType;
   }
 
-
   public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
   public UserListElement eUserOrigin(FieldEUserOrigin eUserOrigin) {
-    
     this.eUserOrigin = eUserOrigin;
     return this;
   }
@@ -239,14 +226,12 @@ public class UserListElement {
     return eUserOrigin;
   }
 
-
   public void seteUserOrigin(FieldEUserOrigin eUserOrigin) {
     this.eUserOrigin = eUserOrigin;
   }
 
 
   public UserListElement eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
-    
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -260,14 +245,12 @@ public class UserListElement {
     return eUserEzsignaccess;
   }
 
-
   public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
   public UserListElement dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
-    
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
   }
@@ -281,14 +264,12 @@ public class UserListElement {
     return dtUserEzsignprepaidexpiration;
   }
 
-
   public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
   }
 
 
   public UserListElement sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -301,7 +282,6 @@ public class UserListElement {
   public String getsEmailAddress() {
     return sEmailAddress;
   }
-
 
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
@@ -432,6 +412,12 @@ public class UserListElement {
       if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
+      // validate the required field `eUserType`
+      FieldEUserType.validateJsonElement(jsonObj.get("eUserType"));
+      // validate the required field `eUserOrigin`
+      FieldEUserOrigin.validateJsonElement(jsonObj.get("eUserOrigin"));
+      // validate the required field `eUserEzsignaccess`
+      FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
       if ((jsonObj.get("dtUserEzsignprepaidexpiration") != null && !jsonObj.get("dtUserEzsignprepaidexpiration").isJsonNull()) && !jsonObj.get("dtUserEzsignprepaidexpiration").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtUserEzsignprepaidexpiration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtUserEzsignprepaidexpiration").toString()));
       }

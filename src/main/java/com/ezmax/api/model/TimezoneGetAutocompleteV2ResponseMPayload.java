@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/timezone/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class TimezoneGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_TIMEZONE = "a_objTimezone";
   @SerializedName(SERIALIZED_NAME_A_OBJ_TIMEZONE)
@@ -62,7 +62,6 @@ public class TimezoneGetAutocompleteV2ResponseMPayload {
   }
 
   public TimezoneGetAutocompleteV2ResponseMPayload aObjTimezone(List<TimezoneAutocompleteElementResponse> aObjTimezone) {
-    
     this.aObjTimezone = aObjTimezone;
     return this;
   }
@@ -83,7 +82,6 @@ public class TimezoneGetAutocompleteV2ResponseMPayload {
   public List<TimezoneAutocompleteElementResponse> getaObjTimezone() {
     return aObjTimezone;
   }
-
 
   public void setaObjTimezone(List<TimezoneAutocompleteElementResponse> aObjTimezone) {
     this.aObjTimezone = aObjTimezone;

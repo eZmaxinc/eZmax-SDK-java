@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Report containing Reportsections 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReport {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSECTION = "a_objReportsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSECTION)
@@ -62,7 +62,6 @@ public class CommonReport {
   }
 
   public CommonReport aObjReportsection(List<CommonReportsection> aObjReportsection) {
-    
     this.aObjReportsection = aObjReportsection;
     return this;
   }
@@ -83,7 +82,6 @@ public class CommonReport {
   public List<CommonReportsection> getaObjReportsection() {
     return aObjReportsection;
   }
-
 
   public void setaObjReportsection(List<CommonReportsection> aObjReportsection) {
     this.aObjReportsection = aObjReportsection;

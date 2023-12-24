@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -69,7 +69,6 @@ public class EzsignfolderSendV3Request {
   }
 
   public EzsignfolderSendV3Request tEzsignfolderMessage(String tEzsignfolderMessage) {
-    
     this.tEzsignfolderMessage = tEzsignfolderMessage;
     return this;
   }
@@ -83,14 +82,12 @@ public class EzsignfolderSendV3Request {
     return tEzsignfolderMessage;
   }
 
-
   public void settEzsignfolderMessage(String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
   }
 
 
   public EzsignfolderSendV3Request dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
-    
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
     return this;
   }
@@ -104,14 +101,12 @@ public class EzsignfolderSendV3Request {
     return dtEzsignfolderDelayedsenddate;
   }
 
-
   public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
   }
 
 
   public EzsignfolderSendV3Request aFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
-    
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -132,7 +127,6 @@ public class EzsignfolderSendV3Request {
   public List<Integer> getaFkiEzsignfoldersignerassociationID() {
     return aFkiEzsignfoldersignerassociationID;
   }
-
 
   public void setaFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;

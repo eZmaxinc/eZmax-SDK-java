@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -90,7 +90,6 @@ public class EzsignfoldersignerassociationResponseCompound {
   }
 
   public EzsignfoldersignerassociationResponseCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
-    
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -105,14 +104,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return pkiEzsignfoldersignerassociationID;
   }
 
-
   public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -127,14 +124,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
-    
     this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
     return this;
   }
@@ -148,14 +143,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return bEzsignfoldersignerassociationDelayedsend;
   }
 
-
   public void setbEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
     this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
-    
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
     return this;
   }
@@ -169,14 +162,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return bEzsignfoldersignerassociationReceivecopy;
   }
 
-
   public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -190,14 +181,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return tEzsignfoldersignerassociationMessage;
   }
 
-
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound objEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
-    
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
@@ -211,14 +200,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return objEzsignsignergroup;
   }
 
-
   public void setObjEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    
     this.objUser = objUser;
     return this;
   }
@@ -232,14 +219,12 @@ public class EzsignfoldersignerassociationResponseCompound {
     return objUser;
   }
 
-
   public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
     this.objUser = objUser;
   }
 
 
   public EzsignfoldersignerassociationResponseCompound objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    
     this.objEzsignsigner = objEzsignsigner;
     return this;
   }
@@ -252,7 +237,6 @@ public class EzsignfoldersignerassociationResponseCompound {
   public EzsignsignerResponseCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }
-
 
   public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;

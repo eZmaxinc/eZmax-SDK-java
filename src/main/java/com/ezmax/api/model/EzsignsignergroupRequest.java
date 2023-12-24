@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignergroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
@@ -68,7 +68,6 @@ public class EzsignsignergroupRequest {
   }
 
   public EzsignsignergroupRequest pkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
-    
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
     return this;
   }
@@ -84,14 +83,12 @@ public class EzsignsignergroupRequest {
     return pkiEzsignsignergroupID;
   }
 
-
   public void setPkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
 
   public EzsignsignergroupRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -106,14 +103,12 @@ public class EzsignsignergroupRequest {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsignsignergroupRequest objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
-    
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
     return this;
   }
@@ -126,7 +121,6 @@ public class EzsignsignergroupRequest {
   public MultilingualEzsignsignergroupDescription getObjEzsignsignergroupDescription() {
     return objEzsignsignergroupDescription;
   }
-
 
   public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;

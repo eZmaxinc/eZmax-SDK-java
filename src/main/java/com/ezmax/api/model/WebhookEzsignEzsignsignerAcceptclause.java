@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookEzsignEzsignsignerAcceptclause {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -77,7 +77,6 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   }
 
   public WebhookEzsignEzsignsignerAcceptclause objWebhook(CustomWebhookResponse objWebhook) {
-    
     this.objWebhook = objWebhook;
     return this;
   }
@@ -91,14 +90,12 @@ public class WebhookEzsignEzsignsignerAcceptclause {
     return objWebhook;
   }
 
-
   public void setObjWebhook(CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
   }
 
 
   public WebhookEzsignEzsignsignerAcceptclause aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
-    
     this.aObjAttempt = aObjAttempt;
     return this;
   }
@@ -120,14 +117,12 @@ public class WebhookEzsignEzsignsignerAcceptclause {
     return aObjAttempt;
   }
 
-
   public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
 
   public WebhookEzsignEzsignsignerAcceptclause objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
-    
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -141,14 +136,12 @@ public class WebhookEzsignEzsignsignerAcceptclause {
     return objEzsignfolder;
   }
 
-
   public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
 
   public WebhookEzsignEzsignsignerAcceptclause objEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
-    
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
     return this;
   }
@@ -161,7 +154,6 @@ public class WebhookEzsignEzsignsignerAcceptclause {
   public EzsignfoldersignerassociationResponseCompound getObjEzsignfoldersignerassociation() {
     return objEzsignfoldersignerassociation;
   }
-
 
   public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;

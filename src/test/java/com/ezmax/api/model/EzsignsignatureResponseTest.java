@@ -70,6 +70,22 @@ public class EzsignsignatureResponseTest {
     }
 
     /**
+     * Test the property 'fkiEzsignsigningreasonID'
+     */
+    @Test
+    public void fkiEzsignsigningreasonIDTest() {
+        // TODO: test fkiEzsignsigningreasonID
+    }
+
+    /**
+     * Test the property 'sEzsignsigningreasonDescriptionX'
+     */
+    @Test
+    public void sEzsignsigningreasonDescriptionXTest() {
+        // TODO: test sEzsignsigningreasonDescriptionX
+    }
+
+    /**
      * Test the property 'iEzsignpagePagenumber'
      */
     @Test

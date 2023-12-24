@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Signer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomFormDataSignerResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -78,7 +78,6 @@ public class CustomFormDataSignerResponse {
   }
 
   public CustomFormDataSignerResponse fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
-    
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -93,14 +92,12 @@ public class CustomFormDataSignerResponse {
     return fkiEzsignfoldersignerassociationID;
   }
 
-
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
   public CustomFormDataSignerResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -115,14 +112,12 @@ public class CustomFormDataSignerResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public CustomFormDataSignerResponse sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -136,14 +131,12 @@ public class CustomFormDataSignerResponse {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public CustomFormDataSignerResponse sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -157,14 +150,12 @@ public class CustomFormDataSignerResponse {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public CustomFormDataSignerResponse aObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
-    
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -185,7 +176,6 @@ public class CustomFormDataSignerResponse {
   public List<CustomFormDataEzsignformfieldgroupResponse> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
   }
-
 
   public void setaObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;

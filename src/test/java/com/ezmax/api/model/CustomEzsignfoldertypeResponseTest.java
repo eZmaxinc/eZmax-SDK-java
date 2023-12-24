@@ -54,6 +54,14 @@ public class CustomEzsignfoldertypeResponseTest {
     }
 
     /**
+     * Test the property 'bEzsignfoldertypeSendproofezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeSendproofezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeSendproofezsignsigner
+    }
+
+    /**
      * Test the property 'bEzsignfoldertypeIncludeproofsigner'
      */
     @Test
@@ -67,6 +75,22 @@ public class CustomEzsignfoldertypeResponseTest {
     @Test
     public void bEzsignfoldertypeIncludeproofuserTest() {
         // TODO: test bEzsignfoldertypeIncludeproofuser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeAllowdownloadattachmentezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeAllowdownloadattachmentezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeAllowdownloadproofezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeAllowdownloadproofezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeAllowdownloadproofezsignsigner
     }
 
     /**

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfoldersignerassociation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "a_objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -62,7 +62,6 @@ public class EzsignfoldersignerassociationCreateObjectV2Request {
   }
 
   public EzsignfoldersignerassociationCreateObjectV2Request aObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequestCompound> aObjEzsignfoldersignerassociation) {
-    
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsignfoldersignerassociationCreateObjectV2Request {
   public List<EzsignfoldersignerassociationRequestCompound> getaObjEzsignfoldersignerassociation() {
     return aObjEzsignfoldersignerassociation;
   }
-
 
   public void setaObjEzsignfoldersignerassociation(List<EzsignfoldersignerassociationRequestCompound> aObjEzsignfoldersignerassociation) {
     this.aObjEzsignfoldersignerassociation = aObjEzsignfoldersignerassociation;

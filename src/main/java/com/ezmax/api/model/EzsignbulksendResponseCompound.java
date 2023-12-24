@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -113,7 +113,6 @@ public class EzsignbulksendResponseCompound {
   }
 
   public EzsignbulksendResponseCompound pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
-    
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -128,14 +127,12 @@ public class EzsignbulksendResponseCompound {
     return pkiEzsignbulksendID;
   }
 
-
   public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
   public EzsignbulksendResponseCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -150,14 +147,12 @@ public class EzsignbulksendResponseCompound {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsignbulksendResponseCompound fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -173,14 +168,12 @@ public class EzsignbulksendResponseCompound {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsignbulksendResponseCompound sLanguageNameX(String sLanguageNameX) {
-    
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -194,14 +187,12 @@ public class EzsignbulksendResponseCompound {
     return sLanguageNameX;
   }
 
-
   public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
   public EzsignbulksendResponseCompound eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
-    
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -215,14 +206,12 @@ public class EzsignbulksendResponseCompound {
     return eEzsignfoldertypePrivacylevel;
   }
 
-
   public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
   public EzsignbulksendResponseCompound sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -236,14 +225,12 @@ public class EzsignbulksendResponseCompound {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsignbulksendResponseCompound sEzsignbulksendDescription(String sEzsignbulksendDescription) {
-    
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -257,14 +244,12 @@ public class EzsignbulksendResponseCompound {
     return sEzsignbulksendDescription;
   }
 
-
   public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
   public EzsignbulksendResponseCompound tEzsignbulksendNote(String tEzsignbulksendNote) {
-    
     this.tEzsignbulksendNote = tEzsignbulksendNote;
     return this;
   }
@@ -278,14 +263,12 @@ public class EzsignbulksendResponseCompound {
     return tEzsignbulksendNote;
   }
 
-
   public void settEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
   }
 
 
   public EzsignbulksendResponseCompound bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
-    
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -299,14 +282,12 @@ public class EzsignbulksendResponseCompound {
     return bEzsignbulksendNeedvalidation;
   }
 
-
   public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
   public EzsignbulksendResponseCompound bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
-    
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -320,14 +301,12 @@ public class EzsignbulksendResponseCompound {
     return bEzsignbulksendIsactive;
   }
 
-
   public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
   }
 
 
   public EzsignbulksendResponseCompound objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -341,14 +320,12 @@ public class EzsignbulksendResponseCompound {
     return objAudit;
   }
 
-
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
   public EzsignbulksendResponseCompound aObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
-    
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
     return this;
   }
@@ -370,14 +347,12 @@ public class EzsignbulksendResponseCompound {
     return aObjEzsignbulksenddocumentmapping;
   }
 
-
   public void setaObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
   }
 
 
   public EzsignbulksendResponseCompound aObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
-    
     this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
     return this;
   }
@@ -398,7 +373,6 @@ public class EzsignbulksendResponseCompound {
   public List<EzsignbulksendsignermappingResponse> getaObjEzsignbulksendsignermapping() {
     return aObjEzsignbulksendsignermapping;
   }
-
 
   public void setaObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
     this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
@@ -536,6 +510,8 @@ public class EzsignbulksendResponseCompound {
       if (!jsonObj.get("sLanguageNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sLanguageNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLanguageNameX").toString()));
       }
+      // validate the required field `eEzsignfoldertypePrivacylevel`
+      FieldEEzsignfoldertypePrivacylevel.validateJsonElement(jsonObj.get("eEzsignfoldertypePrivacylevel"));
       if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }

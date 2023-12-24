@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryinternalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "pkiEzmaxinvoicingsummaryinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
@@ -80,7 +80,6 @@ public class EzmaxinvoicingsummaryinternalResponse {
   }
 
   public EzmaxinvoicingsummaryinternalResponse pkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
-    
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
     return this;
   }
@@ -95,14 +94,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return pkiEzmaxinvoicingsummaryinternalID;
   }
 
-
   public void setPkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
   }
 
 
   public EzmaxinvoicingsummaryinternalResponse objEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
-    
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
     return this;
   }
@@ -116,14 +113,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return objEzmaxinvoicingsummaryinternalDescription;
   }
 
-
   public void setObjEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
   }
 
 
   public EzmaxinvoicingsummaryinternalResponse sEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
-    
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
     return this;
   }
@@ -137,14 +132,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
-
   public void setsEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
 
   public EzmaxinvoicingsummaryinternalResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
-    
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -159,14 +152,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiEzmaxinvoicingID;
   }
 
-
   public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingsummaryinternalResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -181,14 +172,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public EzmaxinvoicingsummaryinternalResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -201,7 +190,6 @@ public class EzmaxinvoicingsummaryinternalResponse {
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
   }
-
 
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;

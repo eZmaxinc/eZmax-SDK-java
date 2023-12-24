@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentRequestPatch {
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
@@ -63,7 +63,6 @@ public class EzsigndocumentRequestPatch {
   }
 
   public EzsigndocumentRequestPatch dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
-    
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -77,14 +76,12 @@ public class EzsigndocumentRequestPatch {
     return dtEzsigndocumentDuedate;
   }
 
-
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
   public EzsigndocumentRequestPatch sEzsigndocumentName(String sEzsigndocumentName) {
-    
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -97,7 +94,6 @@ public class EzsigndocumentRequestPatch {
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
   }
-
 
   public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -75,7 +75,6 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
   }
 
   public CustomEzmaxinvoicingEzsigndocumentResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -90,14 +89,12 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public CustomEzmaxinvoicingEzsigndocumentResponse sName(String sName) {
-    
     this.sName = sName;
     return this;
   }
@@ -111,14 +108,12 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return sName;
   }
 
-
   public void setsName(String sName) {
     this.sName = sName;
   }
 
 
   public CustomEzmaxinvoicingEzsigndocumentResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -132,14 +127,12 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public CustomEzmaxinvoicingEzsigndocumentResponse sEzsigndocumentName(String sEzsigndocumentName) {
-    
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -153,14 +146,12 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return sEzsigndocumentName;
   }
 
-
   public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
   public CustomEzmaxinvoicingEzsigndocumentResponse bEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
-    
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;
     return this;
   }
@@ -173,7 +164,6 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
   public Boolean getbEzsignfolderAllowed() {
     return bEzsignfolderAllowed;
   }
-
 
   public void setbEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;

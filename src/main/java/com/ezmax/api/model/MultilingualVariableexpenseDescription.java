@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualVariableexpenseDescription {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1 = "sVariableexpenseDescription1";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualVariableexpenseDescription {
   }
 
   public MultilingualVariableexpenseDescription sVariableexpenseDescription1(String sVariableexpenseDescription1) {
-    
     this.sVariableexpenseDescription1 = sVariableexpenseDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualVariableexpenseDescription {
     return sVariableexpenseDescription1;
   }
 
-
   public void setsVariableexpenseDescription1(String sVariableexpenseDescription1) {
     this.sVariableexpenseDescription1 = sVariableexpenseDescription1;
   }
 
 
   public MultilingualVariableexpenseDescription sVariableexpenseDescription2(String sVariableexpenseDescription2) {
-    
     this.sVariableexpenseDescription2 = sVariableexpenseDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualVariableexpenseDescription {
   public String getsVariableexpenseDescription2() {
     return sVariableexpenseDescription2;
   }
-
 
   public void setsVariableexpenseDescription2(String sVariableexpenseDescription2) {
     this.sVariableexpenseDescription2 = sVariableexpenseDescription2;

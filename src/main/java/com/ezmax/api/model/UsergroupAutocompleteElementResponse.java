@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
@@ -67,7 +67,6 @@ public class UsergroupAutocompleteElementResponse {
   }
 
   public UsergroupAutocompleteElementResponse sUsergroupNameX(String sUsergroupNameX) {
-    
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -81,14 +80,12 @@ public class UsergroupAutocompleteElementResponse {
     return sUsergroupNameX;
   }
 
-
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
 
   public UsergroupAutocompleteElementResponse pkiUsergroupID(Integer pkiUsergroupID) {
-    
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -104,14 +101,12 @@ public class UsergroupAutocompleteElementResponse {
     return pkiUsergroupID;
   }
 
-
   public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
   public UsergroupAutocompleteElementResponse bUsergroupIsactive(Boolean bUsergroupIsactive) {
-    
     this.bUsergroupIsactive = bUsergroupIsactive;
     return this;
   }
@@ -124,7 +119,6 @@ public class UsergroupAutocompleteElementResponse {
   public Boolean getbUsergroupIsactive() {
     return bUsergroupIsactive;
   }
-
 
   public void setbUsergroupIsactive(Boolean bUsergroupIsactive) {
     this.bUsergroupIsactive = bUsergroupIsactive;

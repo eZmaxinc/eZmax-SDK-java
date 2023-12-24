@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PaymenttermRequestCompound {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -81,7 +81,6 @@ public class PaymenttermRequestCompound {
   }
 
   public PaymenttermRequestCompound pkiPaymenttermID(Integer pkiPaymenttermID) {
-    
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -95,14 +94,12 @@ public class PaymenttermRequestCompound {
     return pkiPaymenttermID;
   }
 
-
   public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
   public PaymenttermRequestCompound sPaymenttermCode(String sPaymenttermCode) {
-    
     this.sPaymenttermCode = sPaymenttermCode;
     return this;
   }
@@ -116,14 +113,12 @@ public class PaymenttermRequestCompound {
     return sPaymenttermCode;
   }
 
-
   public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
   }
 
 
   public PaymenttermRequestCompound ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
-    
     this.ePaymenttermType = ePaymenttermType;
     return this;
   }
@@ -137,14 +132,12 @@ public class PaymenttermRequestCompound {
     return ePaymenttermType;
   }
 
-
   public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
   }
 
 
   public PaymenttermRequestCompound iPaymenttermDay(Integer iPaymenttermDay) {
-    
     this.iPaymenttermDay = iPaymenttermDay;
     return this;
   }
@@ -160,14 +153,12 @@ public class PaymenttermRequestCompound {
     return iPaymenttermDay;
   }
 
-
   public void setiPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
   public PaymenttermRequestCompound objPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
-    
     this.objPaymenttermDescription = objPaymenttermDescription;
     return this;
   }
@@ -181,14 +172,12 @@ public class PaymenttermRequestCompound {
     return objPaymenttermDescription;
   }
 
-
   public void setObjPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
   }
 
 
   public PaymenttermRequestCompound bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
-    
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -201,7 +190,6 @@ public class PaymenttermRequestCompound {
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
   }
-
 
   public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
@@ -310,6 +298,8 @@ public class PaymenttermRequestCompound {
       if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
       }
+      // validate the required field `ePaymenttermType`
+      FieldEPaymenttermType.validateJsonElement(jsonObj.get("ePaymenttermType"));
       // validate the required field `objPaymenttermDescription`
       MultilingualPaymenttermDescription.validateJsonElement(jsonObj.get("objPaymenttermDescription"));
   }

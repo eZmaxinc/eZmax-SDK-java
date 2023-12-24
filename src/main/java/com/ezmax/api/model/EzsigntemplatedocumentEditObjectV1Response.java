@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatedocumentEditObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -72,7 +72,6 @@ public class EzsigntemplatedocumentEditObjectV1Response {
   }
 
   public EzsigntemplatedocumentEditObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
-    
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsigntemplatedocumentEditObjectV1Response {
     return objDebugPayload;
   }
 
-
   public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
   public EzsigntemplatedocumentEditObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
-    
     this.objDebug = objDebug;
     return this;
   }
@@ -107,14 +104,12 @@ public class EzsigntemplatedocumentEditObjectV1Response {
     return objDebug;
   }
 
-
   public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
   public EzsigntemplatedocumentEditObjectV1Response aObjWarning(List<CommonResponseWarning> aObjWarning) {
-    
     this.aObjWarning = aObjWarning;
     return this;
   }
@@ -135,7 +130,6 @@ public class EzsigntemplatedocumentEditObjectV1Response {
   public List<CommonResponseWarning> getaObjWarning() {
     return aObjWarning;
   }
-
 
   public void setaObjWarning(List<CommonResponseWarning> aObjWarning) {
     this.aObjWarning = aObjWarning;

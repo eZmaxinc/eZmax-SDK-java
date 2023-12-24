@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Communicationattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationattachmentRequest {
   public static final String SERIALIZED_NAME_OBJ_COMMUNICATIONATTACHMENT = "objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_OBJ_COMMUNICATIONATTACHMENT)
@@ -65,7 +65,6 @@ public class CustomCommunicationattachmentRequest {
   }
 
   public CustomCommunicationattachmentRequest objCommunicationattachment(CommunicationattachmentRequestCompound objCommunicationattachment) {
-    
     this.objCommunicationattachment = objCommunicationattachment;
     return this;
   }
@@ -79,14 +78,12 @@ public class CustomCommunicationattachmentRequest {
     return objCommunicationattachment;
   }
 
-
   public void setObjCommunicationattachment(CommunicationattachmentRequestCompound objCommunicationattachment) {
     this.objCommunicationattachment = objCommunicationattachment;
   }
 
 
   public CustomCommunicationattachmentRequest objCommunicationexternalattachment(CommonFile objCommunicationexternalattachment) {
-    
     this.objCommunicationexternalattachment = objCommunicationexternalattachment;
     return this;
   }
@@ -99,7 +96,6 @@ public class CustomCommunicationattachmentRequest {
   public CommonFile getObjCommunicationexternalattachment() {
     return objCommunicationexternalattachment;
   }
-
 
   public void setObjCommunicationexternalattachment(CommonFile objCommunicationexternalattachment) {
     this.objCommunicationexternalattachment = objCommunicationexternalattachment;

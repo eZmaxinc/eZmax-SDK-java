@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -66,7 +66,6 @@ public class CustomWordPositionWordResponse {
   }
 
   public CustomWordPositionWordResponse sWord(String sWord) {
-    
     this.sWord = sWord;
     return this;
   }
@@ -80,14 +79,12 @@ public class CustomWordPositionWordResponse {
     return sWord;
   }
 
-
   public void setsWord(String sWord) {
     this.sWord = sWord;
   }
 
 
   public CustomWordPositionWordResponse aObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
-    
     this.aObjWordPositionOccurence = aObjWordPositionOccurence;
     return this;
   }
@@ -108,7 +105,6 @@ public class CustomWordPositionWordResponse {
   public List<CustomWordPositionOccurenceResponse> getaObjWordPositionOccurence() {
     return aObjWordPositionOccurence;
   }
-
 
   public void setaObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
     this.aObjWordPositionOccurence = aObjWordPositionOccurence;

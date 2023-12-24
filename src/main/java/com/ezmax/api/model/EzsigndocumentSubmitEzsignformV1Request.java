@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentSubmitEzsignformV1Request {
   public static final String SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT = "bEzsignformIsdraft";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT)
@@ -66,7 +66,6 @@ public class EzsigndocumentSubmitEzsignformV1Request {
   }
 
   public EzsigndocumentSubmitEzsignformV1Request bEzsignformIsdraft(Boolean bEzsignformIsdraft) {
-    
     this.bEzsignformIsdraft = bEzsignformIsdraft;
     return this;
   }
@@ -80,14 +79,12 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     return bEzsignformIsdraft;
   }
 
-
   public void setbEzsignformIsdraft(Boolean bEzsignformIsdraft) {
     this.bEzsignformIsdraft = bEzsignformIsdraft;
   }
 
 
   public EzsigndocumentSubmitEzsignformV1Request aObjEzsignformfieldgroup(List<CustomEzsignformfieldgroupRequest> aObjEzsignformfieldgroup) {
-    
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -108,7 +105,6 @@ public class EzsigndocumentSubmitEzsignformV1Request {
   public List<CustomEzsignformfieldgroupRequest> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
   }
-
 
   public void setaObjEzsignformfieldgroup(List<CustomEzsignformfieldgroupRequest> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;

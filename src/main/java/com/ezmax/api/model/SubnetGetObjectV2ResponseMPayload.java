@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/subnet/{pkiSubnetID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SubnetGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_SUBNET = "objSubnet";
   @SerializedName(SERIALIZED_NAME_OBJ_SUBNET)
@@ -60,7 +60,6 @@ public class SubnetGetObjectV2ResponseMPayload {
   }
 
   public SubnetGetObjectV2ResponseMPayload objSubnet(SubnetResponseCompound objSubnet) {
-    
     this.objSubnet = objSubnet;
     return this;
   }
@@ -73,7 +72,6 @@ public class SubnetGetObjectV2ResponseMPayload {
   public SubnetResponseCompound getObjSubnet() {
     return objSubnet;
   }
-
 
   public void setObjSubnet(SubnetResponseCompound objSubnet) {
     this.objSubnet = objSubnet;

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfoldertransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -83,7 +83,6 @@ public class CustomEzsignfoldertransmissionResponse {
   }
 
   public CustomEzsignfoldertransmissionResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -98,14 +97,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return pkiEzsignfolderID;
   }
 
-
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
   public CustomEzsignfoldertransmissionResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -119,14 +116,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public CustomEzsignfoldertransmissionResponse eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
-    
     this.eEzsignfolderStep = eEzsignfolderStep;
     return this;
   }
@@ -140,14 +135,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return eEzsignfolderStep;
   }
 
-
   public void seteEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
   }
 
 
   public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturetotal(Integer iEzsignfolderSignaturetotal) {
-    
     this.iEzsignfolderSignaturetotal = iEzsignfolderSignaturetotal;
     return this;
   }
@@ -161,14 +154,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return iEzsignfolderSignaturetotal;
   }
 
-
   public void setiEzsignfolderSignaturetotal(Integer iEzsignfolderSignaturetotal) {
     this.iEzsignfolderSignaturetotal = iEzsignfolderSignaturetotal;
   }
 
 
   public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturesigned(Integer iEzsignfolderSignaturesigned) {
-    
     this.iEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
     return this;
   }
@@ -182,14 +173,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return iEzsignfolderSignaturesigned;
   }
 
-
   public void setiEzsignfolderSignaturesigned(Integer iEzsignfolderSignaturesigned) {
     this.iEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
   }
 
 
   public CustomEzsignfoldertransmissionResponse aObjEzsignfoldertransmissionSigner(List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
-    
     this.aObjEzsignfoldertransmissionSigner = aObjEzsignfoldertransmissionSigner;
     return this;
   }
@@ -210,7 +199,6 @@ public class CustomEzsignfoldertransmissionResponse {
   public List<CustomEzsignfoldertransmissionSignerResponse> getaObjEzsignfoldertransmissionSigner() {
     return aObjEzsignfoldertransmissionSigner;
   }
-
 
   public void setaObjEzsignfoldertransmissionSigner(List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
     this.aObjEzsignfoldertransmissionSigner = aObjEzsignfoldertransmissionSigner;
@@ -320,6 +308,8 @@ public class CustomEzsignfoldertransmissionResponse {
       if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
       }
+      // validate the required field `eEzsignfolderStep`
+      FieldEEzsignfolderStep.validateJsonElement(jsonObj.get("eEzsignfolderStep"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfoldertransmissionSigner").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignfoldertransmissionSigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfoldertransmissionSigner").toString()));

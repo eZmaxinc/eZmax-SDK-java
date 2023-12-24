@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -84,7 +84,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   }
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request fkiUserlogintypeID(Integer fkiUserlogintypeID) {
-    
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -99,14 +98,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return fkiUserlogintypeID;
   }
 
-
   public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
-    
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -122,14 +119,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return fkiEzsigntsarequirementID;
   }
 
-
   public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
-    
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
     return this;
   }
@@ -143,14 +138,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return sEzsignbulksendtransmissionDescription;
   }
 
-
   public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
-    
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -164,14 +157,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return dtEzsigndocumentDuedate;
   }
 
-
   public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
-    
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
     return this;
   }
@@ -185,14 +176,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return eEzsignfolderSendreminderfrequency;
   }
 
-
   public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request tExtraMessage(String tExtraMessage) {
-    
     this.tExtraMessage = tExtraMessage;
     return this;
   }
@@ -206,14 +195,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
     return tExtraMessage;
   }
 
-
   public void settExtraMessage(String tExtraMessage) {
     this.tExtraMessage = tExtraMessage;
   }
 
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV1Request sCsvBase64(byte[] sCsvBase64) {
-    
     this.sCsvBase64 = sCsvBase64;
     return this;
   }
@@ -226,7 +213,6 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
   public byte[] getsCsvBase64() {
     return sCsvBase64;
   }
-
 
   public void setsCsvBase64(byte[] sCsvBase64) {
     this.sCsvBase64 = sCsvBase64;
@@ -342,6 +328,8 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV1Request {
       if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
       }
+      // validate the required field `eEzsignfolderSendreminderfrequency`
+      FieldEEzsignfolderSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfolderSendreminderfrequency"));
       if (!jsonObj.get("tExtraMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tExtraMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tExtraMessage").toString()));
       }

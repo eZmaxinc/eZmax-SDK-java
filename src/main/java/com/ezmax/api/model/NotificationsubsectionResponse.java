@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class NotificationsubsectionResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
@@ -76,7 +76,6 @@ public class NotificationsubsectionResponse {
   }
 
   public NotificationsubsectionResponse pkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
-    
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
     return this;
   }
@@ -91,14 +90,12 @@ public class NotificationsubsectionResponse {
     return pkiNotificationsubsectionID;
   }
 
-
   public void setPkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
   }
 
 
   public NotificationsubsectionResponse fkiNotificationsectionID(Integer fkiNotificationsectionID) {
-    
     this.fkiNotificationsectionID = fkiNotificationsectionID;
     return this;
   }
@@ -113,14 +110,12 @@ public class NotificationsubsectionResponse {
     return fkiNotificationsectionID;
   }
 
-
   public void setFkiNotificationsectionID(Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
   }
 
 
   public NotificationsubsectionResponse objNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
-    
     this.objNotificationsubsectionName = objNotificationsubsectionName;
     return this;
   }
@@ -134,14 +129,12 @@ public class NotificationsubsectionResponse {
     return objNotificationsubsectionName;
   }
 
-
   public void setObjNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
   }
 
 
   public NotificationsubsectionResponse sNotificationsectionNameX(String sNotificationsectionNameX) {
-    
     this.sNotificationsectionNameX = sNotificationsectionNameX;
     return this;
   }
@@ -155,14 +148,12 @@ public class NotificationsubsectionResponse {
     return sNotificationsectionNameX;
   }
 
-
   public void setsNotificationsectionNameX(String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
   }
 
 
   public NotificationsubsectionResponse sNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
-    
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
     return this;
   }
@@ -175,7 +166,6 @@ public class NotificationsubsectionResponse {
   public String getsNotificationsubsectionNameX() {
     return sNotificationsubsectionNameX;
   }
-
 
   public void setsNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateformfieldRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -107,7 +107,6 @@ public class EzsigntemplateformfieldRequestCompound {
   }
 
   public EzsigntemplateformfieldRequestCompound pkiEzsigntemplateformfieldID(Integer pkiEzsigntemplateformfieldID) {
-    
     this.pkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
     return this;
   }
@@ -122,14 +121,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return pkiEzsigntemplateformfieldID;
   }
 
-
   public void setPkiEzsigntemplateformfieldID(Integer pkiEzsigntemplateformfieldID) {
     this.pkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
   }
 
 
   public EzsigntemplateformfieldRequestCompound iEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
-    
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
     return this;
   }
@@ -144,14 +141,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return iEzsigntemplatedocumentpagePagenumber;
   }
 
-
   public void setiEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
   }
 
 
   public EzsigntemplateformfieldRequestCompound sEzsigntemplateformfieldLabel(String sEzsigntemplateformfieldLabel) {
-    
     this.sEzsigntemplateformfieldLabel = sEzsigntemplateformfieldLabel;
     return this;
   }
@@ -165,14 +160,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return sEzsigntemplateformfieldLabel;
   }
 
-
   public void setsEzsigntemplateformfieldLabel(String sEzsigntemplateformfieldLabel) {
     this.sEzsigntemplateformfieldLabel = sEzsigntemplateformfieldLabel;
   }
 
 
   public EzsigntemplateformfieldRequestCompound sEzsigntemplateformfieldValue(String sEzsigntemplateformfieldValue) {
-    
     this.sEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
     return this;
   }
@@ -186,14 +179,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return sEzsigntemplateformfieldValue;
   }
 
-
   public void setsEzsigntemplateformfieldValue(String sEzsigntemplateformfieldValue) {
     this.sEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
   }
 
 
   public EzsigntemplateformfieldRequestCompound iEzsigntemplateformfieldX(Integer iEzsigntemplateformfieldX) {
-    
     this.iEzsigntemplateformfieldX = iEzsigntemplateformfieldX;
     return this;
   }
@@ -208,14 +199,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return iEzsigntemplateformfieldX;
   }
 
-
   public void setiEzsigntemplateformfieldX(Integer iEzsigntemplateformfieldX) {
     this.iEzsigntemplateformfieldX = iEzsigntemplateformfieldX;
   }
 
 
   public EzsigntemplateformfieldRequestCompound iEzsigntemplateformfieldY(Integer iEzsigntemplateformfieldY) {
-    
     this.iEzsigntemplateformfieldY = iEzsigntemplateformfieldY;
     return this;
   }
@@ -230,14 +219,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return iEzsigntemplateformfieldY;
   }
 
-
   public void setiEzsigntemplateformfieldY(Integer iEzsigntemplateformfieldY) {
     this.iEzsigntemplateformfieldY = iEzsigntemplateformfieldY;
   }
 
 
   public EzsigntemplateformfieldRequestCompound iEzsigntemplateformfieldWidth(Integer iEzsigntemplateformfieldWidth) {
-    
     this.iEzsigntemplateformfieldWidth = iEzsigntemplateformfieldWidth;
     return this;
   }
@@ -252,14 +239,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return iEzsigntemplateformfieldWidth;
   }
 
-
   public void setiEzsigntemplateformfieldWidth(Integer iEzsigntemplateformfieldWidth) {
     this.iEzsigntemplateformfieldWidth = iEzsigntemplateformfieldWidth;
   }
 
 
   public EzsigntemplateformfieldRequestCompound iEzsigntemplateformfieldHeight(Integer iEzsigntemplateformfieldHeight) {
-    
     this.iEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
     return this;
   }
@@ -274,14 +259,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return iEzsigntemplateformfieldHeight;
   }
 
-
   public void setiEzsigntemplateformfieldHeight(Integer iEzsigntemplateformfieldHeight) {
     this.iEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
   }
 
 
   public EzsigntemplateformfieldRequestCompound bEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
-    
     this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
     return this;
   }
@@ -295,14 +278,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return bEzsigntemplateformfieldAutocomplete;
   }
 
-
   public void setbEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
     this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
   }
 
 
   public EzsigntemplateformfieldRequestCompound bEzsigntemplateformfieldSelected(Boolean bEzsigntemplateformfieldSelected) {
-    
     this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
     return this;
   }
@@ -316,14 +297,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return bEzsigntemplateformfieldSelected;
   }
 
-
   public void setbEzsigntemplateformfieldSelected(Boolean bEzsigntemplateformfieldSelected) {
     this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
   }
 
 
   public EzsigntemplateformfieldRequestCompound eEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
-    
     this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
     return this;
   }
@@ -337,14 +316,12 @@ public class EzsigntemplateformfieldRequestCompound {
     return eEzsigntemplateformfieldDependencyrequirement;
   }
 
-
   public void seteEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
     this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
   }
 
 
   public EzsigntemplateformfieldRequestCompound aObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
-    
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
     return this;
   }
@@ -365,7 +342,6 @@ public class EzsigntemplateformfieldRequestCompound {
   public List<EzsigntemplateelementdependencyRequestCompound> getaObjEzsigntemplateelementdependency() {
     return aObjEzsigntemplateelementdependency;
   }
-
 
   public void setaObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
@@ -495,6 +471,10 @@ public class EzsigntemplateformfieldRequestCompound {
       }
       if ((jsonObj.get("sEzsigntemplateformfieldValue") != null && !jsonObj.get("sEzsigntemplateformfieldValue").isJsonNull()) && !jsonObj.get("sEzsigntemplateformfieldValue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldValue").toString()));
+      }
+      // validate the optional field `eEzsigntemplateformfieldDependencyrequirement`
+      if (jsonObj.get("eEzsigntemplateformfieldDependencyrequirement") != null && !jsonObj.get("eEzsigntemplateformfieldDependencyrequirement").isJsonNull()) {
+        FieldEEzsigntemplateformfieldDependencyrequirement.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldDependencyrequirement"));
       }
       if (jsonObj.get("a_objEzsigntemplateelementdependency") != null && !jsonObj.get("a_objEzsigntemplateelementdependency").isJsonNull()) {
         JsonArray jsonArrayaObjEzsigntemplateelementdependency = jsonObj.getAsJsonArray("a_objEzsigntemplateelementdependency");

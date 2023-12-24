@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
@@ -80,7 +80,6 @@ public class CommonReportsection {
   }
 
   public CommonReportsection aObjReportsubsection(List<CommonReportsubsection> aObjReportsubsection) {
-    
     this.aObjReportsubsection = aObjReportsubsection;
     return this;
   }
@@ -102,14 +101,12 @@ public class CommonReportsection {
     return aObjReportsubsection;
   }
 
-
   public void setaObjReportsubsection(List<CommonReportsubsection> aObjReportsubsection) {
     this.aObjReportsubsection = aObjReportsubsection;
   }
 
 
   public CommonReportsection aObjReportcolumn(List<CommonReportcolumn> aObjReportcolumn) {
-    
     this.aObjReportcolumn = aObjReportcolumn;
     return this;
   }
@@ -131,14 +128,12 @@ public class CommonReportsection {
     return aObjReportcolumn;
   }
 
-
   public void setaObjReportcolumn(List<CommonReportcolumn> aObjReportcolumn) {
     this.aObjReportcolumn = aObjReportcolumn;
   }
 
 
   public CommonReportsection eReportsectionHorizontalalignment(EnumHorizontalalignment eReportsectionHorizontalalignment) {
-    
     this.eReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
     return this;
   }
@@ -152,14 +147,12 @@ public class CommonReportsection {
     return eReportsectionHorizontalalignment;
   }
 
-
   public void seteReportsectionHorizontalalignment(EnumHorizontalalignment eReportsectionHorizontalalignment) {
     this.eReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
   }
 
 
   public CommonReportsection iReportsectionColumncount(Integer iReportsectionColumncount) {
-    
     this.iReportsectionColumncount = iReportsectionColumncount;
     return this;
   }
@@ -173,14 +166,12 @@ public class CommonReportsection {
     return iReportsectionColumncount;
   }
 
-
   public void setiReportsectionColumncount(Integer iReportsectionColumncount) {
     this.iReportsectionColumncount = iReportsectionColumncount;
   }
 
 
   public CommonReportsection iReportsectionWidth(Integer iReportsectionWidth) {
-    
     this.iReportsectionWidth = iReportsectionWidth;
     return this;
   }
@@ -193,7 +184,6 @@ public class CommonReportsection {
   public Integer getiReportsectionWidth() {
     return iReportsectionWidth;
   }
-
 
   public void setiReportsectionWidth(Integer iReportsectionWidth) {
     this.iReportsectionWidth = iReportsectionWidth;
@@ -316,6 +306,8 @@ public class CommonReportsection {
       for (int i = 0; i < jsonArrayaObjReportcolumn.size(); i++) {
         CommonReportcolumn.validateJsonElement(jsonArrayaObjReportcolumn.get(i));
       };
+      // validate the required field `eReportsectionHorizontalalignment`
+      EnumHorizontalalignment.validateJsonElement(jsonObj.get("eReportsectionHorizontalalignment"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

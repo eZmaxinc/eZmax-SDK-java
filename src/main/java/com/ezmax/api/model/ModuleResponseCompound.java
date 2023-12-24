@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ModuleResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -86,7 +86,6 @@ public class ModuleResponseCompound {
   }
 
   public ModuleResponseCompound pkiModuleID(Integer pkiModuleID) {
-    
     this.pkiModuleID = pkiModuleID;
     return this;
   }
@@ -101,14 +100,12 @@ public class ModuleResponseCompound {
     return pkiModuleID;
   }
 
-
   public void setPkiModuleID(Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
   }
 
 
   public ModuleResponseCompound fkiModulegroupID(Integer fkiModulegroupID) {
-    
     this.fkiModulegroupID = fkiModulegroupID;
     return this;
   }
@@ -124,14 +121,12 @@ public class ModuleResponseCompound {
     return fkiModulegroupID;
   }
 
-
   public void setFkiModulegroupID(Integer fkiModulegroupID) {
     this.fkiModulegroupID = fkiModulegroupID;
   }
 
 
   public ModuleResponseCompound eModuleInternalname(String eModuleInternalname) {
-    
     this.eModuleInternalname = eModuleInternalname;
     return this;
   }
@@ -145,14 +140,12 @@ public class ModuleResponseCompound {
     return eModuleInternalname;
   }
 
-
   public void seteModuleInternalname(String eModuleInternalname) {
     this.eModuleInternalname = eModuleInternalname;
   }
 
 
   public ModuleResponseCompound sModuleNameX(String sModuleNameX) {
-    
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -166,14 +159,12 @@ public class ModuleResponseCompound {
     return sModuleNameX;
   }
 
-
   public void setsModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
   public ModuleResponseCompound bModuleRegistered(Boolean bModuleRegistered) {
-    
     this.bModuleRegistered = bModuleRegistered;
     return this;
   }
@@ -187,14 +178,12 @@ public class ModuleResponseCompound {
     return bModuleRegistered;
   }
 
-
   public void setbModuleRegistered(Boolean bModuleRegistered) {
     this.bModuleRegistered = bModuleRegistered;
   }
 
 
   public ModuleResponseCompound bModuleRegisteredapi(Boolean bModuleRegisteredapi) {
-    
     this.bModuleRegisteredapi = bModuleRegisteredapi;
     return this;
   }
@@ -208,14 +197,12 @@ public class ModuleResponseCompound {
     return bModuleRegisteredapi;
   }
 
-
   public void setbModuleRegisteredapi(Boolean bModuleRegisteredapi) {
     this.bModuleRegisteredapi = bModuleRegisteredapi;
   }
 
 
   public ModuleResponseCompound aObjModulesection(List<ModulesectionResponseCompound> aObjModulesection) {
-    
     this.aObjModulesection = aObjModulesection;
     return this;
   }
@@ -236,7 +223,6 @@ public class ModuleResponseCompound {
   public List<ModulesectionResponseCompound> getaObjModulesection() {
     return aObjModulesection;
   }
-
 
   public void setaObjModulesection(List<ModulesectionResponseCompound> aObjModulesection) {
     this.aObjModulesection = aObjModulesection;

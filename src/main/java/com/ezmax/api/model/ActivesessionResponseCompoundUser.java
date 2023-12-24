@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;User Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -96,7 +96,6 @@ public class ActivesessionResponseCompoundUser {
   }
 
   public ActivesessionResponseCompoundUser pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -111,14 +110,12 @@ public class ActivesessionResponseCompoundUser {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public ActivesessionResponseCompoundUser fkiTimezoneID(Integer fkiTimezoneID) {
-    
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -133,14 +130,12 @@ public class ActivesessionResponseCompoundUser {
     return fkiTimezoneID;
   }
 
-
   public void setFkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
   public ActivesessionResponseCompoundUser sAvatarUrl(String sAvatarUrl) {
-    
     this.sAvatarUrl = sAvatarUrl;
     return this;
   }
@@ -154,14 +149,12 @@ public class ActivesessionResponseCompoundUser {
     return sAvatarUrl;
   }
 
-
   public void setsAvatarUrl(String sAvatarUrl) {
     this.sAvatarUrl = sAvatarUrl;
   }
 
 
   public ActivesessionResponseCompoundUser sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -175,14 +168,12 @@ public class ActivesessionResponseCompoundUser {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public ActivesessionResponseCompoundUser sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -196,14 +187,12 @@ public class ActivesessionResponseCompoundUser {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public ActivesessionResponseCompoundUser sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -217,14 +206,12 @@ public class ActivesessionResponseCompoundUser {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public ActivesessionResponseCompoundUser eUserEzsignsendreminderfrequency(FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
-    
     this.eUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
     return this;
   }
@@ -238,14 +225,12 @@ public class ActivesessionResponseCompoundUser {
     return eUserEzsignsendreminderfrequency;
   }
 
-
   public void seteUserEzsignsendreminderfrequency(FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
     this.eUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
   }
 
 
   public ActivesessionResponseCompoundUser iUserInterfacecolor(Integer iUserInterfacecolor) {
-    
     this.iUserInterfacecolor = iUserInterfacecolor;
     return this;
   }
@@ -260,14 +245,12 @@ public class ActivesessionResponseCompoundUser {
     return iUserInterfacecolor;
   }
 
-
   public void setiUserInterfacecolor(Integer iUserInterfacecolor) {
     this.iUserInterfacecolor = iUserInterfacecolor;
   }
 
 
   public ActivesessionResponseCompoundUser bUserInterfacedark(Boolean bUserInterfacedark) {
-    
     this.bUserInterfacedark = bUserInterfacedark;
     return this;
   }
@@ -281,14 +264,12 @@ public class ActivesessionResponseCompoundUser {
     return bUserInterfacedark;
   }
 
-
   public void setbUserInterfacedark(Boolean bUserInterfacedark) {
     this.bUserInterfacedark = bUserInterfacedark;
   }
 
 
   public ActivesessionResponseCompoundUser iUserListresult(Integer iUserListresult) {
-    
     this.iUserListresult = iUserListresult;
     return this;
   }
@@ -303,7 +284,6 @@ public class ActivesessionResponseCompoundUser {
   public Integer getiUserListresult() {
     return iUserListresult;
   }
-
 
   public void setiUserListresult(Integer iUserListresult) {
     this.iUserListresult = iUserListresult;
@@ -438,6 +418,8 @@ public class ActivesessionResponseCompoundUser {
       if (!jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
+      // validate the required field `eUserEzsignsendreminderfrequency`
+      FieldEUserEzsignsendreminderfrequency.validateJsonElement(jsonObj.get("eUserEzsignsendreminderfrequency"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

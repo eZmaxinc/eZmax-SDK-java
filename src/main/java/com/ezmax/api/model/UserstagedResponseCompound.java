@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Userstaged Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserstagedResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERSTAGED_I_D = "pkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_PKI_USERSTAGED_I_D)
@@ -79,7 +79,6 @@ public class UserstagedResponseCompound {
   }
 
   public UserstagedResponseCompound pkiUserstagedID(Integer pkiUserstagedID) {
-    
     this.pkiUserstagedID = pkiUserstagedID;
     return this;
   }
@@ -95,14 +94,12 @@ public class UserstagedResponseCompound {
     return pkiUserstagedID;
   }
 
-
   public void setPkiUserstagedID(Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
   }
 
 
   public UserstagedResponseCompound fkiEmailID(Integer fkiEmailID) {
-    
     this.fkiEmailID = fkiEmailID;
     return this;
   }
@@ -118,14 +115,12 @@ public class UserstagedResponseCompound {
     return fkiEmailID;
   }
 
-
   public void setFkiEmailID(Integer fkiEmailID) {
     this.fkiEmailID = fkiEmailID;
   }
 
 
   public UserstagedResponseCompound sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -139,14 +134,12 @@ public class UserstagedResponseCompound {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public UserstagedResponseCompound sUserstagedFirstname(String sUserstagedFirstname) {
-    
     this.sUserstagedFirstname = sUserstagedFirstname;
     return this;
   }
@@ -160,14 +153,12 @@ public class UserstagedResponseCompound {
     return sUserstagedFirstname;
   }
 
-
   public void setsUserstagedFirstname(String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
   }
 
 
   public UserstagedResponseCompound sUserstagedLastname(String sUserstagedLastname) {
-    
     this.sUserstagedLastname = sUserstagedLastname;
     return this;
   }
@@ -181,14 +172,12 @@ public class UserstagedResponseCompound {
     return sUserstagedLastname;
   }
 
-
   public void setsUserstagedLastname(String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
   }
 
 
   public UserstagedResponseCompound sUserstagedExternalid(String sUserstagedExternalid) {
-    
     this.sUserstagedExternalid = sUserstagedExternalid;
     return this;
   }
@@ -201,7 +190,6 @@ public class UserstagedResponseCompound {
   public String getsUserstagedExternalid() {
     return sUserstagedExternalid;
   }
-
 
   public void setsUserstagedExternalid(String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class VariableexpenseListElement {
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
@@ -76,7 +76,6 @@ public class VariableexpenseListElement {
   }
 
   public VariableexpenseListElement pkiVariableexpenseID(Integer pkiVariableexpenseID) {
-    
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -92,14 +91,12 @@ public class VariableexpenseListElement {
     return pkiVariableexpenseID;
   }
 
-
   public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
   public VariableexpenseListElement sVariableexpenseCode(String sVariableexpenseCode) {
-    
     this.sVariableexpenseCode = sVariableexpenseCode;
     return this;
   }
@@ -113,14 +110,12 @@ public class VariableexpenseListElement {
     return sVariableexpenseCode;
   }
 
-
   public void setsVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
   }
 
 
   public VariableexpenseListElement sVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
-    
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
     return this;
   }
@@ -134,14 +129,12 @@ public class VariableexpenseListElement {
     return sVariableexpenseDescriptionX;
   }
 
-
   public void setsVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
   }
 
 
   public VariableexpenseListElement eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
-    
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
     return this;
   }
@@ -155,14 +148,12 @@ public class VariableexpenseListElement {
     return eVariableexpenseTaxable;
   }
 
-
   public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
   }
 
 
   public VariableexpenseListElement bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
-    
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -175,7 +166,6 @@ public class VariableexpenseListElement {
   public Boolean getbVariableexpenseIsactive() {
     return bVariableexpenseIsactive;
   }
-
 
   public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
@@ -279,6 +269,10 @@ public class VariableexpenseListElement {
       }
       if ((jsonObj.get("sVariableexpenseDescriptionX") != null && !jsonObj.get("sVariableexpenseDescriptionX").isJsonNull()) && !jsonObj.get("sVariableexpenseDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sVariableexpenseDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sVariableexpenseDescriptionX").toString()));
+      }
+      // validate the optional field `eVariableexpenseTaxable`
+      if (jsonObj.get("eVariableexpenseTaxable") != null && !jsonObj.get("eVariableexpenseTaxable").isJsonNull()) {
+        FieldEVariableexpenseTaxable.validateJsonElement(jsonObj.get("eVariableexpenseTaxable"));
       }
   }
 

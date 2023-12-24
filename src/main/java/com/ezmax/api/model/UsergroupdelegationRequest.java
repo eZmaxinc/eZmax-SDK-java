@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupdelegationRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
@@ -67,7 +67,6 @@ public class UsergroupdelegationRequest {
   }
 
   public UsergroupdelegationRequest pkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
-    
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
     return this;
   }
@@ -83,14 +82,12 @@ public class UsergroupdelegationRequest {
     return pkiUsergroupdelegationID;
   }
 
-
   public void setPkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
   }
 
 
   public UsergroupdelegationRequest fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -106,14 +103,12 @@ public class UsergroupdelegationRequest {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public UsergroupdelegationRequest fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -127,7 +122,6 @@ public class UsergroupdelegationRequest {
   public Integer getFkiUserID() {
     return fkiUserID;
   }
-
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;

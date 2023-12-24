@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/usergroup/{pkiUsergroupID}/editPermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupEditPermissionsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
@@ -62,7 +62,6 @@ public class UsergroupEditPermissionsV1Request {
   }
 
   public UsergroupEditPermissionsV1Request aObjPermission(List<PermissionRequestCompound> aObjPermission) {
-    
     this.aObjPermission = aObjPermission;
     return this;
   }
@@ -83,7 +82,6 @@ public class UsergroupEditPermissionsV1Request {
   public List<PermissionRequestCompound> getaObjPermission() {
     return aObjPermission;
   }
-
 
   public void setaObjPermission(List<PermissionRequestCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;

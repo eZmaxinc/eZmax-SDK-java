@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatesignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D = "pkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D)
@@ -67,7 +67,6 @@ public class EzsigntemplatesignerResponseCompound {
   }
 
   public EzsigntemplatesignerResponseCompound pkiEzsigntemplatesignerID(Integer pkiEzsigntemplatesignerID) {
-    
     this.pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
     return this;
   }
@@ -82,14 +81,12 @@ public class EzsigntemplatesignerResponseCompound {
     return pkiEzsigntemplatesignerID;
   }
 
-
   public void setPkiEzsigntemplatesignerID(Integer pkiEzsigntemplatesignerID) {
     this.pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
   }
 
 
   public EzsigntemplatesignerResponseCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -104,14 +101,12 @@ public class EzsigntemplatesignerResponseCompound {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsigntemplatesignerResponseCompound sEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
-    
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
     return this;
   }
@@ -124,7 +119,6 @@ public class EzsigntemplatesignerResponseCompound {
   public String getsEzsigntemplatesignerDescription() {
     return sEzsigntemplatesignerDescription;
   }
-
 
   public void setsEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;

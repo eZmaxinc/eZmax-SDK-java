@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualBillingentityinternalDescription {
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1 = "sBillingentityinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualBillingentityinternalDescription {
   }
 
   public MultilingualBillingentityinternalDescription sBillingentityinternalDescription1(String sBillingentityinternalDescription1) {
-    
     this.sBillingentityinternalDescription1 = sBillingentityinternalDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualBillingentityinternalDescription {
     return sBillingentityinternalDescription1;
   }
 
-
   public void setsBillingentityinternalDescription1(String sBillingentityinternalDescription1) {
     this.sBillingentityinternalDescription1 = sBillingentityinternalDescription1;
   }
 
 
   public MultilingualBillingentityinternalDescription sBillingentityinternalDescription2(String sBillingentityinternalDescription2) {
-    
     this.sBillingentityinternalDescription2 = sBillingentityinternalDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualBillingentityinternalDescription {
   public String getsBillingentityinternalDescription2() {
     return sBillingentityinternalDescription2;
   }
-
 
   public void setsBillingentityinternalDescription2(String sBillingentityinternalDescription2) {
     this.sBillingentityinternalDescription2 = sBillingentityinternalDescription2;

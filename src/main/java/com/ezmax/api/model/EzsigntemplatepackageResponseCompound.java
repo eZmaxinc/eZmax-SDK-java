@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -103,7 +103,6 @@ public class EzsigntemplatepackageResponseCompound {
   }
 
   public EzsigntemplatepackageResponseCompound pkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
-    
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
     return this;
   }
@@ -118,14 +117,12 @@ public class EzsigntemplatepackageResponseCompound {
     return pkiEzsigntemplatepackageID;
   }
 
-
   public void setPkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
   }
 
 
   public EzsigntemplatepackageResponseCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -140,14 +137,12 @@ public class EzsigntemplatepackageResponseCompound {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public EzsigntemplatepackageResponseCompound fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -163,14 +158,12 @@ public class EzsigntemplatepackageResponseCompound {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public EzsigntemplatepackageResponseCompound sLanguageNameX(String sLanguageNameX) {
-    
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -184,14 +177,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sLanguageNameX;
   }
 
-
   public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
   public EzsigntemplatepackageResponseCompound sEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
-    
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
     return this;
   }
@@ -205,14 +196,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sEzsigntemplatepackageDescription;
   }
 
-
   public void setsEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
   }
 
 
   public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
-    
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
     return this;
   }
@@ -226,14 +215,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageAdminonly;
   }
 
-
   public void setbEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
   }
 
 
   public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
-    
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -247,14 +234,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-
   public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
   public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
-    
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
     return this;
   }
@@ -268,14 +253,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageIsactive;
   }
 
-
   public void setbEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
   }
 
 
   public EzsigntemplatepackageResponseCompound sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -289,14 +272,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
-    
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
     return this;
   }
@@ -318,14 +299,12 @@ public class EzsigntemplatepackageResponseCompound {
     return aObjEzsigntemplatepackagesigner;
   }
 
-
   public void setaObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
   }
 
 
   public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagemembership(List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
-    
     this.aObjEzsigntemplatepackagemembership = aObjEzsigntemplatepackagemembership;
     return this;
   }
@@ -346,7 +325,6 @@ public class EzsigntemplatepackageResponseCompound {
   public List<EzsigntemplatepackagemembershipResponseCompound> getaObjEzsigntemplatepackagemembership() {
     return aObjEzsigntemplatepackagemembership;
   }
-
 
   public void setaObjEzsigntemplatepackagemembership(List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
     this.aObjEzsigntemplatepackagemembership = aObjEzsigntemplatepackagemembership;

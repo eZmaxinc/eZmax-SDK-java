@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -96,6 +96,11 @@ public class CustomEzsignsignaturestatusResponse {
         return EEzsignsignaturestatusSteptypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsignsignaturestatusSteptypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURESTATUS_STEPTYPE = "eEzsignsignaturestatusSteptype";
@@ -118,7 +123,6 @@ public class CustomEzsignsignaturestatusResponse {
   }
 
   public CustomEzsignsignaturestatusResponse eEzsignsignaturestatusSteptype(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
-    
     this.eEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
     return this;
   }
@@ -132,14 +136,12 @@ public class CustomEzsignsignaturestatusResponse {
     return eEzsignsignaturestatusSteptype;
   }
 
-
   public void seteEzsignsignaturestatusSteptype(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
     this.eEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
   }
 
 
   public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusStep(Integer iEzsignsignaturestatusStep) {
-    
     this.iEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
     return this;
   }
@@ -153,14 +155,12 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusStep;
   }
 
-
   public void setiEzsignsignaturestatusStep(Integer iEzsignsignaturestatusStep) {
     this.iEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
   }
 
 
   public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusTotal(Integer iEzsignsignaturestatusTotal) {
-    
     this.iEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
     return this;
   }
@@ -174,14 +174,12 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusTotal;
   }
 
-
   public void setiEzsignsignaturestatusTotal(Integer iEzsignsignaturestatusTotal) {
     this.iEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
   }
 
 
   public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusSigned(Integer iEzsignsignaturestatusSigned) {
-    
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
     return this;
   }
@@ -194,7 +192,6 @@ public class CustomEzsignsignaturestatusResponse {
   public Integer getiEzsignsignaturestatusSigned() {
     return iEzsignsignaturestatusSigned;
   }
-
 
   public void setiEzsignsignaturestatusSigned(Integer iEzsignsignaturestatusSigned) {
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
@@ -296,6 +293,8 @@ public class CustomEzsignsignaturestatusResponse {
       if (!jsonObj.get("eEzsignsignaturestatusSteptype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignaturestatusSteptype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignaturestatusSteptype").toString()));
       }
+      // validate the required field `eEzsignsignaturestatusSteptype`
+      EEzsignsignaturestatusSteptypeEnum.validateJsonElement(jsonObj.get("eEzsignsignaturestatusSteptype"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

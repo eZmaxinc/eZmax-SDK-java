@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/franchiseoffice/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FRANCHISEOFFICE = "a_objFranchiseoffice";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FRANCHISEOFFICE)
@@ -62,7 +62,6 @@ public class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   }
 
   public FranchiseofficeGetAutocompleteV2ResponseMPayload aObjFranchiseoffice(List<FranchiseofficeAutocompleteElementResponse> aObjFranchiseoffice) {
-    
     this.aObjFranchiseoffice = aObjFranchiseoffice;
     return this;
   }
@@ -83,7 +82,6 @@ public class FranchiseofficeGetAutocompleteV2ResponseMPayload {
   public List<FranchiseofficeAutocompleteElementResponse> getaObjFranchiseoffice() {
     return aObjFranchiseoffice;
   }
-
 
   public void setaObjFranchiseoffice(List<FranchiseofficeAutocompleteElementResponse> aObjFranchiseoffice) {
     this.aObjFranchiseoffice = aObjFranchiseoffice;

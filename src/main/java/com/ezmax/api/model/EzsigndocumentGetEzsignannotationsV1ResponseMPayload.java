@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignannotations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentGetEzsignannotationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNANNOTATION = "a_objEzsignannotation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNANNOTATION)
@@ -62,7 +62,6 @@ public class EzsigndocumentGetEzsignannotationsV1ResponseMPayload {
   }
 
   public EzsigndocumentGetEzsignannotationsV1ResponseMPayload aObjEzsignannotation(List<EzsignannotationResponseCompound> aObjEzsignannotation) {
-    
     this.aObjEzsignannotation = aObjEzsignannotation;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigndocumentGetEzsignannotationsV1ResponseMPayload {
   public List<EzsignannotationResponseCompound> getaObjEzsignannotation() {
     return aObjEzsignannotation;
   }
-
 
   public void setaObjEzsignannotation(List<EzsignannotationResponseCompound> aObjEzsignannotation) {
     this.aObjEzsignannotation = aObjEzsignannotation;

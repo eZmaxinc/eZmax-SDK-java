@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contact Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ContactRequest {
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
@@ -79,7 +79,6 @@ public class ContactRequest {
   }
 
   public ContactRequest fkiContacttitleID(Integer fkiContacttitleID) {
-    
     this.fkiContacttitleID = fkiContacttitleID;
     return this;
   }
@@ -94,14 +93,12 @@ public class ContactRequest {
     return fkiContacttitleID;
   }
 
-
   public void setFkiContacttitleID(Integer fkiContacttitleID) {
     this.fkiContacttitleID = fkiContacttitleID;
   }
 
 
   public ContactRequest fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -117,14 +114,12 @@ public class ContactRequest {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public ContactRequest sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -138,14 +133,12 @@ public class ContactRequest {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public ContactRequest sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -159,14 +152,12 @@ public class ContactRequest {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public ContactRequest sContactCompany(String sContactCompany) {
-    
     this.sContactCompany = sContactCompany;
     return this;
   }
@@ -180,14 +171,12 @@ public class ContactRequest {
     return sContactCompany;
   }
 
-
   public void setsContactCompany(String sContactCompany) {
     this.sContactCompany = sContactCompany;
   }
 
 
   public ContactRequest dtContactBirthdate(String dtContactBirthdate) {
-    
     this.dtContactBirthdate = dtContactBirthdate;
     return this;
   }
@@ -200,7 +189,6 @@ public class ContactRequest {
   public String getDtContactBirthdate() {
     return dtContactBirthdate;
   }
-
 
   public void setDtContactBirthdate(String dtContactBirthdate) {
     this.dtContactBirthdate = dtContactBirthdate;

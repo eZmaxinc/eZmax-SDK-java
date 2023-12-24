@@ -18,6 +18,8 @@ import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
+import com.ezmax.api.model.FieldEUserEzsignaccess;
+import com.ezmax.api.model.FieldEUserEzsignprepaid;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -130,6 +132,30 @@ public class ActivesessionResponseCompoundTest {
     @Test
     public void fkiSignatureIDTest() {
         // TODO: test fkiSignatureID
+    }
+
+    /**
+     * Test the property 'eUserEzsignaccess'
+     */
+    @Test
+    public void eUserEzsignaccessTest() {
+        // TODO: test eUserEzsignaccess
+    }
+
+    /**
+     * Test the property 'eUserEzsignprepaid'
+     */
+    @Test
+    public void eUserEzsignprepaidTest() {
+        // TODO: test eUserEzsignprepaid
+    }
+
+    /**
+     * Test the property 'dtUserEzsignprepaidexpiration'
+     */
+    @Test
+    public void dtUserEzsignprepaidexpirationTest() {
+        // TODO: test dtUserEzsignprepaidexpiration
     }
 
     /**

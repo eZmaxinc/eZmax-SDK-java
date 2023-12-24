@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -115,7 +115,6 @@ public class FranchisereferalincomeRequestCompound {
   }
 
   public FranchisereferalincomeRequestCompound pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
-    
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
     return this;
   }
@@ -130,14 +129,12 @@ public class FranchisereferalincomeRequestCompound {
     return pkiFranchisereferalincomeID;
   }
 
-
   public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
   }
 
 
   public FranchisereferalincomeRequestCompound fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
-    
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
     return this;
   }
@@ -152,14 +149,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchisebrokerID;
   }
 
-
   public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
   }
 
 
   public FranchisereferalincomeRequestCompound fkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
-    
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
     return this;
   }
@@ -174,14 +169,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchisereferalincomeprogramID;
   }
 
-
   public void setFkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
   }
 
 
   public FranchisereferalincomeRequestCompound fkiPeriodID(Integer fkiPeriodID) {
-    
     this.fkiPeriodID = fkiPeriodID;
     return this;
   }
@@ -196,14 +189,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiPeriodID;
   }
 
-
   public void setFkiPeriodID(Integer fkiPeriodID) {
     this.fkiPeriodID = fkiPeriodID;
   }
 
 
   public FranchisereferalincomeRequestCompound dFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
-    
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
     return this;
   }
@@ -217,14 +208,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeLoan;
   }
 
-
   public void setdFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
   }
 
 
   public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
-    
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
     return this;
   }
@@ -238,14 +227,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeFranchiseamount;
   }
 
-
   public void setdFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
   }
 
 
   public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
-    
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
     return this;
   }
@@ -259,14 +246,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeFranchisoramount;
   }
 
-
   public void setdFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
   }
 
 
   public FranchisereferalincomeRequestCompound dFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
-    
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
     return this;
   }
@@ -280,14 +265,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeAgentamount;
   }
 
-
   public void setdFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
   }
 
 
   public FranchisereferalincomeRequestCompound dtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
-    
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
     return this;
   }
@@ -301,14 +284,12 @@ public class FranchisereferalincomeRequestCompound {
     return dtFranchisereferalincomeDisbursed;
   }
 
-
   public void setDtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
   }
 
 
   public FranchisereferalincomeRequestCompound tFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
-    
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
     return this;
   }
@@ -322,14 +303,12 @@ public class FranchisereferalincomeRequestCompound {
     return tFranchisereferalincomeComment;
   }
 
-
   public void settFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
   }
 
 
   public FranchisereferalincomeRequestCompound fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
-    
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -344,14 +323,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchiseofficeID;
   }
 
-
   public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
   public FranchisereferalincomeRequestCompound sFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
-    
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
     return this;
   }
@@ -365,14 +342,12 @@ public class FranchisereferalincomeRequestCompound {
     return sFranchisereferalincomeRemoteid;
   }
 
-
   public void setsFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
   }
 
 
   public FranchisereferalincomeRequestCompound objAddress(AddressRequest objAddress) {
-    
     this.objAddress = objAddress;
     return this;
   }
@@ -386,14 +361,12 @@ public class FranchisereferalincomeRequestCompound {
     return objAddress;
   }
 
-
   public void setObjAddress(AddressRequest objAddress) {
     this.objAddress = objAddress;
   }
 
 
   public FranchisereferalincomeRequestCompound aObjContact(List<ContactRequestCompound> aObjContact) {
-    
     this.aObjContact = aObjContact;
     return this;
   }
@@ -414,7 +387,6 @@ public class FranchisereferalincomeRequestCompound {
   public List<ContactRequestCompound> getaObjContact() {
     return aObjContact;
   }
-
 
   public void setaObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;

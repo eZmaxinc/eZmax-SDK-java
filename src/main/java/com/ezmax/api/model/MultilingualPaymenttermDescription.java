@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualPaymenttermDescription {
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1 = "sPaymenttermDescription1";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualPaymenttermDescription {
   }
 
   public MultilingualPaymenttermDescription sPaymenttermDescription1(String sPaymenttermDescription1) {
-    
     this.sPaymenttermDescription1 = sPaymenttermDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualPaymenttermDescription {
     return sPaymenttermDescription1;
   }
 
-
   public void setsPaymenttermDescription1(String sPaymenttermDescription1) {
     this.sPaymenttermDescription1 = sPaymenttermDescription1;
   }
 
 
   public MultilingualPaymenttermDescription sPaymenttermDescription2(String sPaymenttermDescription2) {
-    
     this.sPaymenttermDescription2 = sPaymenttermDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualPaymenttermDescription {
   public String getsPaymenttermDescription2() {
     return sPaymenttermDescription2;
   }
-
 
   public void setsPaymenttermDescription2(String sPaymenttermDescription2) {
     this.sPaymenttermDescription2 = sPaymenttermDescription2;

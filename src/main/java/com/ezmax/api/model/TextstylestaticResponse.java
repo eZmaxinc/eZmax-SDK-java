@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Textstylestatic Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class TextstylestaticResponse {
   public static final String SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D = "pkiTextstylestaticID";
   @SerializedName(SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D)
@@ -87,7 +87,6 @@ public class TextstylestaticResponse {
   }
 
   public TextstylestaticResponse pkiTextstylestaticID(Integer pkiTextstylestaticID) {
-    
     this.pkiTextstylestaticID = pkiTextstylestaticID;
     return this;
   }
@@ -102,14 +101,12 @@ public class TextstylestaticResponse {
     return pkiTextstylestaticID;
   }
 
-
   public void setPkiTextstylestaticID(Integer pkiTextstylestaticID) {
     this.pkiTextstylestaticID = pkiTextstylestaticID;
   }
 
 
   public TextstylestaticResponse fkiFontID(Integer fkiFontID) {
-    
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -124,14 +121,12 @@ public class TextstylestaticResponse {
     return fkiFontID;
   }
 
-
   public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
   public TextstylestaticResponse bTextstylestaticBold(Boolean bTextstylestaticBold) {
-    
     this.bTextstylestaticBold = bTextstylestaticBold;
     return this;
   }
@@ -145,14 +140,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticBold;
   }
 
-
   public void setbTextstylestaticBold(Boolean bTextstylestaticBold) {
     this.bTextstylestaticBold = bTextstylestaticBold;
   }
 
 
   public TextstylestaticResponse bTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
-    
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
     return this;
   }
@@ -166,14 +159,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticUnderline;
   }
 
-
   public void setbTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
   }
 
 
   public TextstylestaticResponse bTextstylestaticItalic(Boolean bTextstylestaticItalic) {
-    
     this.bTextstylestaticItalic = bTextstylestaticItalic;
     return this;
   }
@@ -187,14 +178,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticItalic;
   }
 
-
   public void setbTextstylestaticItalic(Boolean bTextstylestaticItalic) {
     this.bTextstylestaticItalic = bTextstylestaticItalic;
   }
 
 
   public TextstylestaticResponse bTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
-    
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
     return this;
   }
@@ -208,14 +197,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticStrikethrough;
   }
 
-
   public void setbTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
   }
 
 
   public TextstylestaticResponse iTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
-    
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
     return this;
   }
@@ -231,14 +218,12 @@ public class TextstylestaticResponse {
     return iTextstylestaticFontcolor;
   }
 
-
   public void setiTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
   }
 
 
   public TextstylestaticResponse iTextstylestaticSize(Integer iTextstylestaticSize) {
-    
     this.iTextstylestaticSize = iTextstylestaticSize;
     return this;
   }
@@ -253,7 +238,6 @@ public class TextstylestaticResponse {
   public Integer getiTextstylestaticSize() {
     return iTextstylestaticSize;
   }
-
 
   public void setiTextstylestaticSize(Integer iTextstylestaticSize) {
     this.iTextstylestaticSize = iTextstylestaticSize;

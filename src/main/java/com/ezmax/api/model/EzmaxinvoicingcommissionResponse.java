@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcommission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingcommissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D = "pkiEzmaxinvoicingcommissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D)
@@ -87,7 +87,6 @@ public class EzmaxinvoicingcommissionResponse {
   }
 
   public EzmaxinvoicingcommissionResponse pkiEzmaxinvoicingcommissionID(Integer pkiEzmaxinvoicingcommissionID) {
-    
     this.pkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
     return this;
   }
@@ -101,14 +100,12 @@ public class EzmaxinvoicingcommissionResponse {
     return pkiEzmaxinvoicingcommissionID;
   }
 
-
   public void setPkiEzmaxinvoicingcommissionID(Integer pkiEzmaxinvoicingcommissionID) {
     this.pkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
   }
 
 
   public EzmaxinvoicingcommissionResponse fkiEzmaxinvoicingsummaryglobalID(Integer fkiEzmaxinvoicingsummaryglobalID) {
-    
     this.fkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
     return this;
   }
@@ -123,14 +120,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxinvoicingsummaryglobalID;
   }
 
-
   public void setFkiEzmaxinvoicingsummaryglobalID(Integer fkiEzmaxinvoicingsummaryglobalID) {
     this.fkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
   }
 
 
   public EzmaxinvoicingcommissionResponse fkiEzmaxpartnerID(Integer fkiEzmaxpartnerID) {
-    
     this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
     return this;
   }
@@ -145,14 +140,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxpartnerID;
   }
 
-
   public void setFkiEzmaxpartnerID(Integer fkiEzmaxpartnerID) {
     this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
   }
 
 
   public EzmaxinvoicingcommissionResponse fkiEzmaxrepresentativeID(Integer fkiEzmaxrepresentativeID) {
-    
     this.fkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
     return this;
   }
@@ -167,14 +160,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxrepresentativeID;
   }
 
-
   public void setFkiEzmaxrepresentativeID(Integer fkiEzmaxrepresentativeID) {
     this.fkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
   }
 
 
   public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionStart(String dtEzmaxinvoicingcommissionStart) {
-    
     this.dtEzmaxinvoicingcommissionStart = dtEzmaxinvoicingcommissionStart;
     return this;
   }
@@ -188,14 +179,12 @@ public class EzmaxinvoicingcommissionResponse {
     return dtEzmaxinvoicingcommissionStart;
   }
 
-
   public void setDtEzmaxinvoicingcommissionStart(String dtEzmaxinvoicingcommissionStart) {
     this.dtEzmaxinvoicingcommissionStart = dtEzmaxinvoicingcommissionStart;
   }
 
 
   public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionEnd(String dtEzmaxinvoicingcommissionEnd) {
-    
     this.dtEzmaxinvoicingcommissionEnd = dtEzmaxinvoicingcommissionEnd;
     return this;
   }
@@ -209,14 +198,12 @@ public class EzmaxinvoicingcommissionResponse {
     return dtEzmaxinvoicingcommissionEnd;
   }
 
-
   public void setDtEzmaxinvoicingcommissionEnd(String dtEzmaxinvoicingcommissionEnd) {
     this.dtEzmaxinvoicingcommissionEnd = dtEzmaxinvoicingcommissionEnd;
   }
 
 
   public EzmaxinvoicingcommissionResponse iEzmaxinvoicingcommissionDays(Integer iEzmaxinvoicingcommissionDays) {
-    
     this.iEzmaxinvoicingcommissionDays = iEzmaxinvoicingcommissionDays;
     return this;
   }
@@ -231,14 +218,12 @@ public class EzmaxinvoicingcommissionResponse {
     return iEzmaxinvoicingcommissionDays;
   }
 
-
   public void setiEzmaxinvoicingcommissionDays(Integer iEzmaxinvoicingcommissionDays) {
     this.iEzmaxinvoicingcommissionDays = iEzmaxinvoicingcommissionDays;
   }
 
 
   public EzmaxinvoicingcommissionResponse dEzmaxinvoicingcommissionAmount(String dEzmaxinvoicingcommissionAmount) {
-    
     this.dEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;
     return this;
   }
@@ -251,7 +236,6 @@ public class EzmaxinvoicingcommissionResponse {
   public String getdEzmaxinvoicingcommissionAmount() {
     return dEzmaxinvoicingcommissionAmount;
   }
-
 
   public void setdEzmaxinvoicingcommissionAmount(String dEzmaxinvoicingcommissionAmount) {
     this.dEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;

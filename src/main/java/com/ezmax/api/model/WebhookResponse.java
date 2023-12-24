@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -90,9 +90,21 @@ public class WebhookResponse {
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
   private String sWebhookEmailfailed;
 
+  public static final String SERIALIZED_NAME_S_WEBHOOK_APIKEY = "sWebhookApikey";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_APIKEY)
+  private String sWebhookApikey;
+
+  public static final String SERIALIZED_NAME_S_WEBHOOK_SECRET = "sWebhookSecret";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_SECRET)
+  private String sWebhookSecret;
+
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISACTIVE = "bWebhookIsactive";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
   private Boolean bWebhookIsactive;
+
+  public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
+  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
+  private Boolean bWebhookIssigned;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION = "bWebhookSkipsslvalidation";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
@@ -102,7 +114,6 @@ public class WebhookResponse {
   }
 
   public WebhookResponse pkiWebhookID(Integer pkiWebhookID) {
-    
     this.pkiWebhookID = pkiWebhookID;
     return this;
   }
@@ -116,14 +127,12 @@ public class WebhookResponse {
     return pkiWebhookID;
   }
 
-
   public void setPkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
   }
 
 
   public WebhookResponse sWebhookDescription(String sWebhookDescription) {
-    
     this.sWebhookDescription = sWebhookDescription;
     return this;
   }
@@ -137,14 +146,12 @@ public class WebhookResponse {
     return sWebhookDescription;
   }
 
-
   public void setsWebhookDescription(String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
   }
 
 
   public WebhookResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
-    
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -159,14 +166,12 @@ public class WebhookResponse {
     return fkiEzsignfoldertypeID;
   }
 
-
   public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
   public WebhookResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
-    
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -180,14 +185,12 @@ public class WebhookResponse {
     return sEzsignfoldertypeNameX;
   }
 
-
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
   public WebhookResponse eWebhookModule(FieldEWebhookModule eWebhookModule) {
-    
     this.eWebhookModule = eWebhookModule;
     return this;
   }
@@ -201,14 +204,12 @@ public class WebhookResponse {
     return eWebhookModule;
   }
 
-
   public void seteWebhookModule(FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
   }
 
 
   public WebhookResponse eWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
-    
     this.eWebhookEzsignevent = eWebhookEzsignevent;
     return this;
   }
@@ -222,14 +223,12 @@ public class WebhookResponse {
     return eWebhookEzsignevent;
   }
 
-
   public void seteWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
   }
 
 
   public WebhookResponse eWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
-    
     this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
@@ -243,14 +242,12 @@ public class WebhookResponse {
     return eWebhookManagementevent;
   }
 
-
   public void seteWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
   public WebhookResponse sWebhookUrl(String sWebhookUrl) {
-    
     this.sWebhookUrl = sWebhookUrl;
     return this;
   }
@@ -264,14 +261,12 @@ public class WebhookResponse {
     return sWebhookUrl;
   }
 
-
   public void setsWebhookUrl(String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
   }
 
 
   public WebhookResponse sWebhookEmailfailed(String sWebhookEmailfailed) {
-    
     this.sWebhookEmailfailed = sWebhookEmailfailed;
     return this;
   }
@@ -285,14 +280,50 @@ public class WebhookResponse {
     return sWebhookEmailfailed;
   }
 
-
   public void setsWebhookEmailfailed(String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
   }
 
 
+  public WebhookResponse sWebhookApikey(String sWebhookApikey) {
+    this.sWebhookApikey = sWebhookApikey;
+    return this;
+  }
+
+   /**
+   * The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+   * @return sWebhookApikey
+  **/
+  @javax.annotation.Nullable
+  public String getsWebhookApikey() {
+    return sWebhookApikey;
+  }
+
+  public void setsWebhookApikey(String sWebhookApikey) {
+    this.sWebhookApikey = sWebhookApikey;
+  }
+
+
+  public WebhookResponse sWebhookSecret(String sWebhookSecret) {
+    this.sWebhookSecret = sWebhookSecret;
+    return this;
+  }
+
+   /**
+   * The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
+   * @return sWebhookSecret
+  **/
+  @javax.annotation.Nullable
+  public String getsWebhookSecret() {
+    return sWebhookSecret;
+  }
+
+  public void setsWebhookSecret(String sWebhookSecret) {
+    this.sWebhookSecret = sWebhookSecret;
+  }
+
+
   public WebhookResponse bWebhookIsactive(Boolean bWebhookIsactive) {
-    
     this.bWebhookIsactive = bWebhookIsactive;
     return this;
   }
@@ -306,14 +337,31 @@ public class WebhookResponse {
     return bWebhookIsactive;
   }
 
-
   public void setbWebhookIsactive(Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
   }
 
 
+  public WebhookResponse bWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
+    return this;
+  }
+
+   /**
+   * Whether the requests will be signed or not
+   * @return bWebhookIssigned
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbWebhookIssigned() {
+    return bWebhookIssigned;
+  }
+
+  public void setbWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
+  }
+
+
   public WebhookResponse bWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
-    
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
     return this;
   }
@@ -326,7 +374,6 @@ public class WebhookResponse {
   public Boolean getbWebhookSkipsslvalidation() {
     return bWebhookSkipsslvalidation;
   }
-
 
   public void setbWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
@@ -352,13 +399,16 @@ public class WebhookResponse {
         Objects.equals(this.eWebhookManagementevent, webhookResponse.eWebhookManagementevent) &&
         Objects.equals(this.sWebhookUrl, webhookResponse.sWebhookUrl) &&
         Objects.equals(this.sWebhookEmailfailed, webhookResponse.sWebhookEmailfailed) &&
+        Objects.equals(this.sWebhookApikey, webhookResponse.sWebhookApikey) &&
+        Objects.equals(this.sWebhookSecret, webhookResponse.sWebhookSecret) &&
         Objects.equals(this.bWebhookIsactive, webhookResponse.bWebhookIsactive) &&
+        Objects.equals(this.bWebhookIssigned, webhookResponse.bWebhookIssigned) &&
         Objects.equals(this.bWebhookSkipsslvalidation, webhookResponse.bWebhookSkipsslvalidation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookSkipsslvalidation);
+    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation);
   }
 
   @Override
@@ -374,7 +424,10 @@ public class WebhookResponse {
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
     sb.append("    sWebhookUrl: ").append(toIndentedString(sWebhookUrl)).append("\n");
     sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
+    sb.append("    sWebhookApikey: ").append(toIndentedString(sWebhookApikey)).append("\n");
+    sb.append("    sWebhookSecret: ").append(toIndentedString(sWebhookSecret)).append("\n");
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
+    sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -407,7 +460,10 @@ public class WebhookResponse {
     openapiFields.add("eWebhookManagementevent");
     openapiFields.add("sWebhookUrl");
     openapiFields.add("sWebhookEmailfailed");
+    openapiFields.add("sWebhookApikey");
+    openapiFields.add("sWebhookSecret");
     openapiFields.add("bWebhookIsactive");
+    openapiFields.add("bWebhookIssigned");
     openapiFields.add("bWebhookSkipsslvalidation");
 
     // a set of required properties/fields (JSON key names)
@@ -418,6 +474,7 @@ public class WebhookResponse {
     openapiRequiredFields.add("sWebhookUrl");
     openapiRequiredFields.add("sWebhookEmailfailed");
     openapiRequiredFields.add("bWebhookIsactive");
+    openapiRequiredFields.add("bWebhookIssigned");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
   }
 
@@ -455,11 +512,27 @@ public class WebhookResponse {
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
+      // validate the required field `eWebhookModule`
+      FieldEWebhookModule.validateJsonElement(jsonObj.get("eWebhookModule"));
+      // validate the optional field `eWebhookEzsignevent`
+      if (jsonObj.get("eWebhookEzsignevent") != null && !jsonObj.get("eWebhookEzsignevent").isJsonNull()) {
+        FieldEWebhookEzsignevent.validateJsonElement(jsonObj.get("eWebhookEzsignevent"));
+      }
+      // validate the optional field `eWebhookManagementevent`
+      if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {
+        FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
+      }
       if (!jsonObj.get("sWebhookUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));
       }
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
+      }
+      if ((jsonObj.get("sWebhookApikey") != null && !jsonObj.get("sWebhookApikey").isJsonNull()) && !jsonObj.get("sWebhookApikey").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookApikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookApikey").toString()));
+      }
+      if ((jsonObj.get("sWebhookSecret") != null && !jsonObj.get("sWebhookSecret").isJsonNull()) && !jsonObj.get("sWebhookSecret").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
       }
   }
 

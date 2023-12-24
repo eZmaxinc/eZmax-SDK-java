@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/department/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class DepartmentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_DEPARTMENT = "a_objDepartment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DEPARTMENT)
@@ -62,7 +62,6 @@ public class DepartmentGetAutocompleteV2ResponseMPayload {
   }
 
   public DepartmentGetAutocompleteV2ResponseMPayload aObjDepartment(List<DepartmentAutocompleteElementResponse> aObjDepartment) {
-    
     this.aObjDepartment = aObjDepartment;
     return this;
   }
@@ -83,7 +82,6 @@ public class DepartmentGetAutocompleteV2ResponseMPayload {
   public List<DepartmentAutocompleteElementResponse> getaObjDepartment() {
     return aObjDepartment;
   }
-
 
   public void setaObjDepartment(List<DepartmentAutocompleteElementResponse> aObjDepartment) {
     this.aObjDepartment = aObjDepartment;

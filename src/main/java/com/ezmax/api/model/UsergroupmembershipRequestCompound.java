@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupmembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -67,7 +67,6 @@ public class UsergroupmembershipRequestCompound {
   }
 
   public UsergroupmembershipRequestCompound pkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
-    
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
     return this;
   }
@@ -83,14 +82,12 @@ public class UsergroupmembershipRequestCompound {
     return pkiUsergroupmembershipID;
   }
 
-
   public void setPkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
   }
 
 
   public UsergroupmembershipRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -106,14 +103,12 @@ public class UsergroupmembershipRequestCompound {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public UsergroupmembershipRequestCompound fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -127,7 +122,6 @@ public class UsergroupmembershipRequestCompound {
   public Integer getFkiUserID() {
     return fkiUserID;
   }
-
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;

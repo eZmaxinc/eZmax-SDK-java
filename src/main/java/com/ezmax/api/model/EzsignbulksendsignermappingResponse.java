@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksendsignermapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksendsignermappingResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
@@ -71,7 +71,6 @@ public class EzsignbulksendsignermappingResponse {
   }
 
   public EzsignbulksendsignermappingResponse pkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
-    
     this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsignbulksendsignermappingResponse {
     return pkiEzsignbulksendsignermappingID;
   }
 
-
   public void setPkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
     this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
   }
 
 
   public EzsignbulksendsignermappingResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
-    
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsignbulksendsignermappingResponse {
     return fkiEzsignbulksendID;
   }
 
-
   public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
   public EzsignbulksendsignermappingResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -130,14 +125,12 @@ public class EzsignbulksendsignermappingResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public EzsignbulksendsignermappingResponse sEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
-    
     this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
     return this;
   }
@@ -150,7 +143,6 @@ public class EzsignbulksendsignermappingResponse {
   public String getsEzsignbulksendsignermappingDescription() {
     return sEzsignbulksendsignermappingDescription;
   }
-
 
   public void setsEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
     this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;

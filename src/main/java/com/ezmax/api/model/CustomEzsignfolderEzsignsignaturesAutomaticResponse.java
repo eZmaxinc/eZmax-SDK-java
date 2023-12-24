@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -70,7 +70,6 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   }
 
   public CustomEzsignfolderEzsignsignaturesAutomaticResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
-    
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -85,14 +84,12 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return pkiEzsignfolderID;
   }
 
-
   public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
   public CustomEzsignfolderEzsignsignaturesAutomaticResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
-    
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -106,14 +103,12 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return sEzsignfolderDescription;
   }
 
-
   public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
   public CustomEzsignfolderEzsignsignaturesAutomaticResponse aObjEzsigndocument(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
-    
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
@@ -134,7 +129,6 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> getaObjEzsigndocument() {
     return aObjEzsigndocument;
   }
-
 
   public void setaObjEzsigndocument(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;

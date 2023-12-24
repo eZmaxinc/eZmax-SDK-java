@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Permission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PermissionResponse {
   public static final String SERIALIZED_NAME_PKI_PERMISSION_I_D = "pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_PKI_PERMISSION_I_D)
@@ -83,7 +83,6 @@ public class PermissionResponse {
   }
 
   public PermissionResponse pkiPermissionID(Integer pkiPermissionID) {
-    
     this.pkiPermissionID = pkiPermissionID;
     return this;
   }
@@ -99,14 +98,12 @@ public class PermissionResponse {
     return pkiPermissionID;
   }
 
-
   public void setPkiPermissionID(Integer pkiPermissionID) {
     this.pkiPermissionID = pkiPermissionID;
   }
 
 
   public PermissionResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -121,14 +118,12 @@ public class PermissionResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public PermissionResponse fkiApikeyID(Integer fkiApikeyID) {
-    
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -143,14 +138,12 @@ public class PermissionResponse {
     return fkiApikeyID;
   }
 
-
   public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
   public PermissionResponse fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -166,14 +159,12 @@ public class PermissionResponse {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public PermissionResponse fkiCompanyID(Integer fkiCompanyID) {
-    
     this.fkiCompanyID = fkiCompanyID;
     return this;
   }
@@ -189,14 +180,12 @@ public class PermissionResponse {
     return fkiCompanyID;
   }
 
-
   public void setFkiCompanyID(Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
   }
 
 
   public PermissionResponse fkiModulesectionID(Integer fkiModulesectionID) {
-    
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -211,14 +200,12 @@ public class PermissionResponse {
     return fkiModulesectionID;
   }
 
-
   public void setFkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
   public PermissionResponse sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -231,7 +218,6 @@ public class PermissionResponse {
   public String getsCompanyNameX() {
     return sCompanyNameX;
   }
-
 
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;

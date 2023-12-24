@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderBatchDownloadV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D = "a_pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D)
@@ -104,6 +104,11 @@ public class EzsignfolderBatchDownloadV1Request {
         return AEDocumentTypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      AEDocumentTypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_A_E_DOCUMENT_TYPE = "a_eDocumentType";
@@ -114,7 +119,6 @@ public class EzsignfolderBatchDownloadV1Request {
   }
 
   public EzsignfolderBatchDownloadV1Request aPkiEzsigndocumentID(List<Integer> aPkiEzsigndocumentID) {
-    
     this.aPkiEzsigndocumentID = aPkiEzsigndocumentID;
     return this;
   }
@@ -136,14 +140,12 @@ public class EzsignfolderBatchDownloadV1Request {
     return aPkiEzsigndocumentID;
   }
 
-
   public void setaPkiEzsigndocumentID(List<Integer> aPkiEzsigndocumentID) {
     this.aPkiEzsigndocumentID = aPkiEzsigndocumentID;
   }
 
 
   public EzsignfolderBatchDownloadV1Request aEDocumentType(List<AEDocumentTypeEnum> aEDocumentType) {
-    
     this.aEDocumentType = aEDocumentType;
     return this;
   }
@@ -164,7 +166,6 @@ public class EzsignfolderBatchDownloadV1Request {
   public List<AEDocumentTypeEnum> getaEDocumentType() {
     return aEDocumentType;
   }
-
 
   public void setaEDocumentType(List<AEDocumentTypeEnum> aEDocumentType) {
     this.aEDocumentType = aEDocumentType;

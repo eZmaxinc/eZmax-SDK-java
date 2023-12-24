@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateelementdependencyResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D = "pkiEzsigntemplateelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D)
@@ -93,7 +93,6 @@ public class EzsigntemplateelementdependencyResponse {
   }
 
   public EzsigntemplateelementdependencyResponse pkiEzsigntemplateelementdependencyID(Integer pkiEzsigntemplateelementdependencyID) {
-    
     this.pkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
     return this;
   }
@@ -109,14 +108,12 @@ public class EzsigntemplateelementdependencyResponse {
     return pkiEzsigntemplateelementdependencyID;
   }
 
-
   public void setPkiEzsigntemplateelementdependencyID(Integer pkiEzsigntemplateelementdependencyID) {
     this.pkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
   }
 
 
   public EzsigntemplateelementdependencyResponse fkiEzsigntemplateformfieldID(Integer fkiEzsigntemplateformfieldID) {
-    
     this.fkiEzsigntemplateformfieldID = fkiEzsigntemplateformfieldID;
     return this;
   }
@@ -131,14 +128,12 @@ public class EzsigntemplateelementdependencyResponse {
     return fkiEzsigntemplateformfieldID;
   }
 
-
   public void setFkiEzsigntemplateformfieldID(Integer fkiEzsigntemplateformfieldID) {
     this.fkiEzsigntemplateformfieldID = fkiEzsigntemplateformfieldID;
   }
 
 
   public EzsigntemplateelementdependencyResponse fkiEzsigntemplatesignatureID(Integer fkiEzsigntemplatesignatureID) {
-    
     this.fkiEzsigntemplatesignatureID = fkiEzsigntemplatesignatureID;
     return this;
   }
@@ -153,14 +148,12 @@ public class EzsigntemplateelementdependencyResponse {
     return fkiEzsigntemplatesignatureID;
   }
 
-
   public void setFkiEzsigntemplatesignatureID(Integer fkiEzsigntemplatesignatureID) {
     this.fkiEzsigntemplatesignatureID = fkiEzsigntemplatesignatureID;
   }
 
 
   public EzsigntemplateelementdependencyResponse fkiEzsigntemplateformfieldIDValidation(Integer fkiEzsigntemplateformfieldIDValidation) {
-    
     this.fkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
     return this;
   }
@@ -175,14 +168,12 @@ public class EzsigntemplateelementdependencyResponse {
     return fkiEzsigntemplateformfieldIDValidation;
   }
 
-
   public void setFkiEzsigntemplateformfieldIDValidation(Integer fkiEzsigntemplateformfieldIDValidation) {
     this.fkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
   }
 
 
   public EzsigntemplateelementdependencyResponse fkiEzsigntemplateformfieldgroupIDValidation(Integer fkiEzsigntemplateformfieldgroupIDValidation) {
-    
     this.fkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
     return this;
   }
@@ -197,14 +188,12 @@ public class EzsigntemplateelementdependencyResponse {
     return fkiEzsigntemplateformfieldgroupIDValidation;
   }
 
-
   public void setFkiEzsigntemplateformfieldgroupIDValidation(Integer fkiEzsigntemplateformfieldgroupIDValidation) {
     this.fkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
   }
 
 
   public EzsigntemplateelementdependencyResponse eEzsigntemplateelementdependencyValidation(FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
-    
     this.eEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
     return this;
   }
@@ -218,14 +207,12 @@ public class EzsigntemplateelementdependencyResponse {
     return eEzsigntemplateelementdependencyValidation;
   }
 
-
   public void seteEzsigntemplateelementdependencyValidation(FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
     this.eEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
   }
 
 
   public EzsigntemplateelementdependencyResponse bEzsigntemplateelementdependencySelected(Boolean bEzsigntemplateelementdependencySelected) {
-    
     this.bEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
     return this;
   }
@@ -239,14 +226,12 @@ public class EzsigntemplateelementdependencyResponse {
     return bEzsigntemplateelementdependencySelected;
   }
 
-
   public void setbEzsigntemplateelementdependencySelected(Boolean bEzsigntemplateelementdependencySelected) {
     this.bEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
   }
 
 
   public EzsigntemplateelementdependencyResponse eEzsigntemplateelementdependencyOperator(FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
-    
     this.eEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
     return this;
   }
@@ -260,14 +245,12 @@ public class EzsigntemplateelementdependencyResponse {
     return eEzsigntemplateelementdependencyOperator;
   }
 
-
   public void seteEzsigntemplateelementdependencyOperator(FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
     this.eEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
   }
 
 
   public EzsigntemplateelementdependencyResponse sEzsigntemplateelementdependencyValue(String sEzsigntemplateelementdependencyValue) {
-    
     this.sEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
     return this;
   }
@@ -280,7 +263,6 @@ public class EzsigntemplateelementdependencyResponse {
   public String getsEzsigntemplateelementdependencyValue() {
     return sEzsigntemplateelementdependencyValue;
   }
-
 
   public void setsEzsigntemplateelementdependencyValue(String sEzsigntemplateelementdependencyValue) {
     this.sEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
@@ -392,6 +374,12 @@ public class EzsigntemplateelementdependencyResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsigntemplateelementdependencyValidation`
+      FieldEEzsigntemplateelementdependencyValidation.validateJsonElement(jsonObj.get("eEzsigntemplateelementdependencyValidation"));
+      // validate the optional field `eEzsigntemplateelementdependencyOperator`
+      if (jsonObj.get("eEzsigntemplateelementdependencyOperator") != null && !jsonObj.get("eEzsigntemplateelementdependencyOperator").isJsonNull()) {
+        FieldEEzsigntemplateelementdependencyOperator.validateJsonElement(jsonObj.get("eEzsigntemplateelementdependencyOperator"));
+      }
       if ((jsonObj.get("sEzsigntemplateelementdependencyValue") != null && !jsonObj.get("sEzsigntemplateelementdependencyValue").isJsonNull()) && !jsonObj.get("sEzsigntemplateelementdependencyValue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateelementdependencyValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyValue").toString()));
       }

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/module/user/createEzsignuser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -90,7 +90,6 @@ public class UserCreateEzsignuserV1Request {
   }
 
   public UserCreateEzsignuserV1Request fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -106,14 +105,12 @@ public class UserCreateEzsignuserV1Request {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public UserCreateEzsignuserV1Request sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -127,14 +124,12 @@ public class UserCreateEzsignuserV1Request {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UserCreateEzsignuserV1Request sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -148,14 +143,12 @@ public class UserCreateEzsignuserV1Request {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UserCreateEzsignuserV1Request sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -169,7 +162,6 @@ public class UserCreateEzsignuserV1Request {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
@@ -177,7 +169,6 @@ public class UserCreateEzsignuserV1Request {
 
   @Deprecated
   public UserCreateEzsignuserV1Request sPhoneRegion(String sPhoneRegion) {
-    
     this.sPhoneRegion = sPhoneRegion;
     return this;
   }
@@ -193,7 +184,6 @@ public class UserCreateEzsignuserV1Request {
     return sPhoneRegion;
   }
 
-
   @Deprecated
   public void setsPhoneRegion(String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
@@ -202,7 +192,6 @@ public class UserCreateEzsignuserV1Request {
 
   @Deprecated
   public UserCreateEzsignuserV1Request sPhoneExchange(String sPhoneExchange) {
-    
     this.sPhoneExchange = sPhoneExchange;
     return this;
   }
@@ -218,7 +207,6 @@ public class UserCreateEzsignuserV1Request {
     return sPhoneExchange;
   }
 
-
   @Deprecated
   public void setsPhoneExchange(String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
@@ -227,7 +215,6 @@ public class UserCreateEzsignuserV1Request {
 
   @Deprecated
   public UserCreateEzsignuserV1Request sPhoneNumber(String sPhoneNumber) {
-    
     this.sPhoneNumber = sPhoneNumber;
     return this;
   }
@@ -243,7 +230,6 @@ public class UserCreateEzsignuserV1Request {
     return sPhoneNumber;
   }
 
-
   @Deprecated
   public void setsPhoneNumber(String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
@@ -251,7 +237,6 @@ public class UserCreateEzsignuserV1Request {
 
 
   public UserCreateEzsignuserV1Request sPhoneExtension(String sPhoneExtension) {
-    
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -264,7 +249,6 @@ public class UserCreateEzsignuserV1Request {
   public String getsPhoneExtension() {
     return sPhoneExtension;
   }
-
 
   public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;

@@ -58,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
@@ -96,7 +96,6 @@ public class ScimServiceProviderConfig {
   }
 
   public ScimServiceProviderConfig authenticationSchemes(List<ScimAuthenticationScheme> authenticationSchemes) {
-    
     this.authenticationSchemes = authenticationSchemes;
     return this;
   }
@@ -118,14 +117,12 @@ public class ScimServiceProviderConfig {
     return authenticationSchemes;
   }
 
-
   public void setAuthenticationSchemes(List<ScimAuthenticationScheme> authenticationSchemes) {
     this.authenticationSchemes = authenticationSchemes;
   }
 
 
   public ScimServiceProviderConfig bulk(ScimServiceProviderConfigBulk bulk) {
-    
     this.bulk = bulk;
     return this;
   }
@@ -139,14 +136,12 @@ public class ScimServiceProviderConfig {
     return bulk;
   }
 
-
   public void setBulk(ScimServiceProviderConfigBulk bulk) {
     this.bulk = bulk;
   }
 
 
   public ScimServiceProviderConfig changePassword(ScimServiceProviderConfigChangePassword changePassword) {
-    
     this.changePassword = changePassword;
     return this;
   }
@@ -160,14 +155,12 @@ public class ScimServiceProviderConfig {
     return changePassword;
   }
 
-
   public void setChangePassword(ScimServiceProviderConfigChangePassword changePassword) {
     this.changePassword = changePassword;
   }
 
 
   public ScimServiceProviderConfig documentationUri(String documentationUri) {
-    
     this.documentationUri = documentationUri;
     return this;
   }
@@ -181,14 +174,12 @@ public class ScimServiceProviderConfig {
     return documentationUri;
   }
 
-
   public void setDocumentationUri(String documentationUri) {
     this.documentationUri = documentationUri;
   }
 
 
   public ScimServiceProviderConfig etag(ScimServiceProviderConfigEtag etag) {
-    
     this.etag = etag;
     return this;
   }
@@ -202,14 +193,12 @@ public class ScimServiceProviderConfig {
     return etag;
   }
 
-
   public void setEtag(ScimServiceProviderConfigEtag etag) {
     this.etag = etag;
   }
 
 
   public ScimServiceProviderConfig filter(ScimServiceProviderConfigFilter filter) {
-    
     this.filter = filter;
     return this;
   }
@@ -223,14 +212,12 @@ public class ScimServiceProviderConfig {
     return filter;
   }
 
-
   public void setFilter(ScimServiceProviderConfigFilter filter) {
     this.filter = filter;
   }
 
 
   public ScimServiceProviderConfig patch(ScimServiceProviderConfigPatch patch) {
-    
     this.patch = patch;
     return this;
   }
@@ -244,14 +231,12 @@ public class ScimServiceProviderConfig {
     return patch;
   }
 
-
   public void setPatch(ScimServiceProviderConfigPatch patch) {
     this.patch = patch;
   }
 
 
   public ScimServiceProviderConfig sort(ScimServiceProviderConfigSort sort) {
-    
     this.sort = sort;
     return this;
   }
@@ -264,7 +249,6 @@ public class ScimServiceProviderConfig {
   public ScimServiceProviderConfigSort getSort() {
     return sort;
   }
-
 
   public void setSort(ScimServiceProviderConfigSort sort) {
     this.sort = sort;

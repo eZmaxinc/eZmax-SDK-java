@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignformfieldRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -111,7 +111,6 @@ public class EzsignformfieldRequestCompound {
   }
 
   public EzsignformfieldRequestCompound pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
-    
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -126,14 +125,12 @@ public class EzsignformfieldRequestCompound {
     return pkiEzsignformfieldID;
   }
 
-
   public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
   public EzsignformfieldRequestCompound iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -148,14 +145,12 @@ public class EzsignformfieldRequestCompound {
     return iEzsignpagePagenumber;
   }
 
-
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
   public EzsignformfieldRequestCompound sEzsignformfieldLabel(String sEzsignformfieldLabel) {
-    
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -169,14 +164,12 @@ public class EzsignformfieldRequestCompound {
     return sEzsignformfieldLabel;
   }
 
-
   public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
   public EzsignformfieldRequestCompound sEzsignformfieldValue(String sEzsignformfieldValue) {
-    
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -190,14 +183,12 @@ public class EzsignformfieldRequestCompound {
     return sEzsignformfieldValue;
   }
 
-
   public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
   }
 
 
   public EzsignformfieldRequestCompound iEzsignformfieldX(Integer iEzsignformfieldX) {
-    
     this.iEzsignformfieldX = iEzsignformfieldX;
     return this;
   }
@@ -212,14 +203,12 @@ public class EzsignformfieldRequestCompound {
     return iEzsignformfieldX;
   }
 
-
   public void setiEzsignformfieldX(Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
   }
 
 
   public EzsignformfieldRequestCompound iEzsignformfieldY(Integer iEzsignformfieldY) {
-    
     this.iEzsignformfieldY = iEzsignformfieldY;
     return this;
   }
@@ -234,14 +223,12 @@ public class EzsignformfieldRequestCompound {
     return iEzsignformfieldY;
   }
 
-
   public void setiEzsignformfieldY(Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
   }
 
 
   public EzsignformfieldRequestCompound iEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
-    
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
     return this;
   }
@@ -256,14 +243,12 @@ public class EzsignformfieldRequestCompound {
     return iEzsignformfieldWidth;
   }
 
-
   public void setiEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
   }
 
 
   public EzsignformfieldRequestCompound iEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
-    
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
     return this;
   }
@@ -278,14 +263,12 @@ public class EzsignformfieldRequestCompound {
     return iEzsignformfieldHeight;
   }
 
-
   public void setiEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
   }
 
 
   public EzsignformfieldRequestCompound bEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
-    
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
     return this;
   }
@@ -299,14 +282,12 @@ public class EzsignformfieldRequestCompound {
     return bEzsignformfieldAutocomplete;
   }
 
-
   public void setbEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
   }
 
 
   public EzsignformfieldRequestCompound bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
-    
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -320,14 +301,12 @@ public class EzsignformfieldRequestCompound {
     return bEzsignformfieldSelected;
   }
 
-
   public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
   public EzsignformfieldRequestCompound sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
-    
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -341,14 +320,12 @@ public class EzsignformfieldRequestCompound {
     return sEzsignformfieldEnteredvalue;
   }
 
-
   public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
 
   public EzsignformfieldRequestCompound eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
-    
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
     return this;
   }
@@ -362,14 +339,12 @@ public class EzsignformfieldRequestCompound {
     return eEzsignformfieldDependencyrequirement;
   }
 
-
   public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
   }
 
 
   public EzsignformfieldRequestCompound aObjEzsignelementdependency(List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency) {
-    
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
     return this;
   }
@@ -390,7 +365,6 @@ public class EzsignformfieldRequestCompound {
   public List<EzsignelementdependencyRequestCompound> getaObjEzsignelementdependency() {
     return aObjEzsignelementdependency;
   }
-
 
   public void setaObjEzsignelementdependency(List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency) {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
@@ -526,6 +500,10 @@ public class EzsignformfieldRequestCompound {
       }
       if ((jsonObj.get("sEzsignformfieldEnteredvalue") != null && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldEnteredvalue").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldEnteredvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldEnteredvalue").toString()));
+      }
+      // validate the optional field `eEzsignformfieldDependencyrequirement`
+      if (jsonObj.get("eEzsignformfieldDependencyrequirement") != null && !jsonObj.get("eEzsignformfieldDependencyrequirement").isJsonNull()) {
+        FieldEEzsignformfieldDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldDependencyrequirement"));
       }
       if (jsonObj.get("a_objEzsignelementdependency") != null && !jsonObj.get("a_objEzsignelementdependency").isJsonNull()) {
         JsonArray jsonArrayaObjEzsignelementdependency = jsonObj.getAsJsonArray("a_objEzsignelementdependency");

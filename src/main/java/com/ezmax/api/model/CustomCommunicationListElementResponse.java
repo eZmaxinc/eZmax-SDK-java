@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communication List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationListElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -94,7 +94,6 @@ public class CustomCommunicationListElementResponse {
   }
 
   public CustomCommunicationListElementResponse pkiCommunicationID(Integer pkiCommunicationID) {
-    
     this.pkiCommunicationID = pkiCommunicationID;
     return this;
   }
@@ -109,14 +108,12 @@ public class CustomCommunicationListElementResponse {
     return pkiCommunicationID;
   }
 
-
   public void setPkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
   }
 
 
   public CustomCommunicationListElementResponse dtCreatedDate(String dtCreatedDate) {
-    
     this.dtCreatedDate = dtCreatedDate;
     return this;
   }
@@ -130,14 +127,12 @@ public class CustomCommunicationListElementResponse {
     return dtCreatedDate;
   }
 
-
   public void setDtCreatedDate(String dtCreatedDate) {
     this.dtCreatedDate = dtCreatedDate;
   }
 
 
   public CustomCommunicationListElementResponse eCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
-    
     this.eCommunicationDirection = eCommunicationDirection;
     return this;
   }
@@ -151,14 +146,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationDirection;
   }
 
-
   public void seteCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
     this.eCommunicationDirection = eCommunicationDirection;
   }
 
 
   public CustomCommunicationListElementResponse eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
-    
     this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
@@ -172,14 +165,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationImportance;
   }
 
-
   public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
   public CustomCommunicationListElementResponse eCommunicationType(FieldECommunicationType eCommunicationType) {
-    
     this.eCommunicationType = eCommunicationType;
     return this;
   }
@@ -193,14 +184,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationType;
   }
 
-
   public void seteCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
   }
 
 
   public CustomCommunicationListElementResponse iCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
-    
     this.iCommunicationrecipientCount = iCommunicationrecipientCount;
     return this;
   }
@@ -214,14 +203,12 @@ public class CustomCommunicationListElementResponse {
     return iCommunicationrecipientCount;
   }
 
-
   public void setiCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
     this.iCommunicationrecipientCount = iCommunicationrecipientCount;
   }
 
 
   public CustomCommunicationListElementResponse sCommunicationSubject(String sCommunicationSubject) {
-    
     this.sCommunicationSubject = sCommunicationSubject;
     return this;
   }
@@ -235,14 +222,12 @@ public class CustomCommunicationListElementResponse {
     return sCommunicationSubject;
   }
 
-
   public void setsCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
   }
 
 
   public CustomCommunicationListElementResponse sCommunicationSender(String sCommunicationSender) {
-    
     this.sCommunicationSender = sCommunicationSender;
     return this;
   }
@@ -256,14 +241,12 @@ public class CustomCommunicationListElementResponse {
     return sCommunicationSender;
   }
 
-
   public void setsCommunicationSender(String sCommunicationSender) {
     this.sCommunicationSender = sCommunicationSender;
   }
 
 
   public CustomCommunicationListElementResponse sCommunicationRecipient(String sCommunicationRecipient) {
-    
     this.sCommunicationRecipient = sCommunicationRecipient;
     return this;
   }
@@ -276,7 +259,6 @@ public class CustomCommunicationListElementResponse {
   public String getsCommunicationRecipient() {
     return sCommunicationRecipient;
   }
-
 
   public void setsCommunicationRecipient(String sCommunicationRecipient) {
     this.sCommunicationRecipient = sCommunicationRecipient;
@@ -398,6 +380,12 @@ public class CustomCommunicationListElementResponse {
       if (!jsonObj.get("dtCreatedDate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtCreatedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCreatedDate").toString()));
       }
+      // validate the required field `eCommunicationDirection`
+      ComputedECommunicationDirection.validateJsonElement(jsonObj.get("eCommunicationDirection"));
+      // validate the required field `eCommunicationImportance`
+      FieldECommunicationImportance.validateJsonElement(jsonObj.get("eCommunicationImportance"));
+      // validate the required field `eCommunicationType`
+      FieldECommunicationType.validateJsonElement(jsonObj.get("eCommunicationType"));
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }

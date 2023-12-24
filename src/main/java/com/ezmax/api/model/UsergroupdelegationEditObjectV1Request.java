@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupdelegationEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_USERGROUPDELEGATION = "objUsergroupdelegation";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUPDELEGATION)
@@ -60,7 +60,6 @@ public class UsergroupdelegationEditObjectV1Request {
   }
 
   public UsergroupdelegationEditObjectV1Request objUsergroupdelegation(UsergroupdelegationRequestCompound objUsergroupdelegation) {
-    
     this.objUsergroupdelegation = objUsergroupdelegation;
     return this;
   }
@@ -73,7 +72,6 @@ public class UsergroupdelegationEditObjectV1Request {
   public UsergroupdelegationRequestCompound getObjUsergroupdelegation() {
     return objUsergroupdelegation;
   }
-
 
   public void setObjUsergroupdelegation(UsergroupdelegationRequestCompound objUsergroupdelegation) {
     this.objUsergroupdelegation = objUsergroupdelegation;

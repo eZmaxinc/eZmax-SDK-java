@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonAuditdetail {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
@@ -83,7 +83,6 @@ public class CommonAuditdetail {
   }
 
   public CommonAuditdetail fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -98,14 +97,12 @@ public class CommonAuditdetail {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public CommonAuditdetail fkiApikeyID(Integer fkiApikeyID) {
-    
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -120,14 +117,12 @@ public class CommonAuditdetail {
     return fkiApikeyID;
   }
 
-
   public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
   public CommonAuditdetail sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -141,14 +136,12 @@ public class CommonAuditdetail {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public CommonAuditdetail sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -162,14 +155,12 @@ public class CommonAuditdetail {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public CommonAuditdetail sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -183,14 +174,12 @@ public class CommonAuditdetail {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public CommonAuditdetail sApikeyDescriptionX(String sApikeyDescriptionX) {
-    
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -204,14 +193,12 @@ public class CommonAuditdetail {
     return sApikeyDescriptionX;
   }
 
-
   public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
   }
 
 
   public CommonAuditdetail dtAuditdetailDate(String dtAuditdetailDate) {
-    
     this.dtAuditdetailDate = dtAuditdetailDate;
     return this;
   }
@@ -224,7 +211,6 @@ public class CommonAuditdetail {
   public String getDtAuditdetailDate() {
     return dtAuditdetailDate;
   }
-
 
   public void setDtAuditdetailDate(String dtAuditdetailDate) {
     this.dtAuditdetailDate = dtAuditdetailDate;

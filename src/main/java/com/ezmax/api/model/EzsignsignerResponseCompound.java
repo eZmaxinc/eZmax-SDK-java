@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
@@ -80,7 +80,6 @@ public class EzsignsignerResponseCompound {
   }
 
   public EzsignsignerResponseCompound pkiEzsignsignerID(Integer pkiEzsignsignerID) {
-    
     this.pkiEzsignsignerID = pkiEzsignsignerID;
     return this;
   }
@@ -95,14 +94,12 @@ public class EzsignsignerResponseCompound {
     return pkiEzsignsignerID;
   }
 
-
   public void setPkiEzsignsignerID(Integer pkiEzsignsignerID) {
     this.pkiEzsignsignerID = pkiEzsignsignerID;
   }
 
 
   public EzsignsignerResponseCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
-    
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -118,14 +115,12 @@ public class EzsignsignerResponseCompound {
     return fkiTaxassignmentID;
   }
 
-
   public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
   public EzsignsignerResponseCompound fkiSecretquestionID(Integer fkiSecretquestionID) {
-    
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -140,14 +135,12 @@ public class EzsignsignerResponseCompound {
     return fkiSecretquestionID;
   }
 
-
   public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
   public EzsignsignerResponseCompound fkiUserlogintypeID(Integer fkiUserlogintypeID) {
-    
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -162,14 +155,12 @@ public class EzsignsignerResponseCompound {
     return fkiUserlogintypeID;
   }
 
-
   public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
   public EzsignsignerResponseCompound sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
-    
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -183,14 +174,12 @@ public class EzsignsignerResponseCompound {
     return sUserlogintypeDescriptionX;
   }
 
-
   public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
 
   public EzsignsignerResponseCompound objContact(EzsignsignerResponseCompoundContact objContact) {
-    
     this.objContact = objContact;
     return this;
   }
@@ -203,7 +192,6 @@ public class EzsignsignerResponseCompound {
   public EzsignsignerResponseCompoundContact getObjContact() {
     return objContact;
   }
-
 
   public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
     this.objContact = objContact;

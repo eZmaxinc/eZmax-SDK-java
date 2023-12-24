@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagesignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "pkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
@@ -67,7 +67,6 @@ public class EzsigntemplatepackagesignerResponseCompound {
   }
 
   public EzsigntemplatepackagesignerResponseCompound pkiEzsigntemplatepackagesignerID(Integer pkiEzsigntemplatepackagesignerID) {
-    
     this.pkiEzsigntemplatepackagesignerID = pkiEzsigntemplatepackagesignerID;
     return this;
   }
@@ -82,14 +81,12 @@ public class EzsigntemplatepackagesignerResponseCompound {
     return pkiEzsigntemplatepackagesignerID;
   }
 
-
   public void setPkiEzsigntemplatepackagesignerID(Integer pkiEzsigntemplatepackagesignerID) {
     this.pkiEzsigntemplatepackagesignerID = pkiEzsigntemplatepackagesignerID;
   }
 
 
   public EzsigntemplatepackagesignerResponseCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -104,14 +101,12 @@ public class EzsigntemplatepackagesignerResponseCompound {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsigntemplatepackagesignerResponseCompound sEzsigntemplatepackagesignerDescription(String sEzsigntemplatepackagesignerDescription) {
-    
     this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
     return this;
   }
@@ -124,7 +119,6 @@ public class EzsigntemplatepackagesignerResponseCompound {
   public String getsEzsigntemplatepackagesignerDescription() {
     return sEzsigntemplatepackagesignerDescription;
   }
-
 
   public void setsEzsigntemplatepackagesignerDescription(String sEzsigntemplatepackagesignerDescription) {
     this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;

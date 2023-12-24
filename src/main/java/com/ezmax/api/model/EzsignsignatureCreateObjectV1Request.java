@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignatureCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)
@@ -65,7 +65,6 @@ public class EzsignsignatureCreateObjectV1Request {
   }
 
   public EzsignsignatureCreateObjectV1Request objEzsignsignature(EzsignsignatureRequest objEzsignsignature) {
-    
     this.objEzsignsignature = objEzsignsignature;
     return this;
   }
@@ -79,14 +78,12 @@ public class EzsignsignatureCreateObjectV1Request {
     return objEzsignsignature;
   }
 
-
   public void setObjEzsignsignature(EzsignsignatureRequest objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;
   }
 
 
   public EzsignsignatureCreateObjectV1Request objEzsignsignatureCompound(EzsignsignatureRequestCompound objEzsignsignatureCompound) {
-    
     this.objEzsignsignatureCompound = objEzsignsignatureCompound;
     return this;
   }
@@ -99,7 +96,6 @@ public class EzsignsignatureCreateObjectV1Request {
   public EzsignsignatureRequestCompound getObjEzsignsignatureCompound() {
     return objEzsignsignatureCompound;
   }
-
 
   public void setObjEzsignsignatureCompound(EzsignsignatureRequestCompound objEzsignsignatureCompound) {
     this.objEzsignsignatureCompound = objEzsignsignatureCompound;

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommunicationRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -127,6 +127,11 @@ public class CommunicationRequest {
         return ECommunicationAttachmenttypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ECommunicationAttachmenttypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_ATTACHMENTTYPE = "eCommunicationAttachmenttype";
@@ -145,7 +150,6 @@ public class CommunicationRequest {
   }
 
   public CommunicationRequest pkiCommunicationID(Integer pkiCommunicationID) {
-    
     this.pkiCommunicationID = pkiCommunicationID;
     return this;
   }
@@ -160,14 +164,12 @@ public class CommunicationRequest {
     return pkiCommunicationID;
   }
 
-
   public void setPkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
   }
 
 
   public CommunicationRequest eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
-    
     this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
@@ -181,14 +183,12 @@ public class CommunicationRequest {
     return eCommunicationImportance;
   }
 
-
   public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
   public CommunicationRequest eCommunicationType(FieldECommunicationType eCommunicationType) {
-    
     this.eCommunicationType = eCommunicationType;
     return this;
   }
@@ -202,14 +202,12 @@ public class CommunicationRequest {
     return eCommunicationType;
   }
 
-
   public void seteCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
   }
 
 
   public CommunicationRequest objCommunicationsender(CustomCommunicationsenderRequest objCommunicationsender) {
-    
     this.objCommunicationsender = objCommunicationsender;
     return this;
   }
@@ -223,14 +221,12 @@ public class CommunicationRequest {
     return objCommunicationsender;
   }
 
-
   public void setObjCommunicationsender(CustomCommunicationsenderRequest objCommunicationsender) {
     this.objCommunicationsender = objCommunicationsender;
   }
 
 
   public CommunicationRequest sCommunicationSubject(String sCommunicationSubject) {
-    
     this.sCommunicationSubject = sCommunicationSubject;
     return this;
   }
@@ -244,14 +240,12 @@ public class CommunicationRequest {
     return sCommunicationSubject;
   }
 
-
   public void setsCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
   }
 
 
   public CommunicationRequest tCommunicationBody(String tCommunicationBody) {
-    
     this.tCommunicationBody = tCommunicationBody;
     return this;
   }
@@ -265,14 +259,12 @@ public class CommunicationRequest {
     return tCommunicationBody;
   }
 
-
   public void settCommunicationBody(String tCommunicationBody) {
     this.tCommunicationBody = tCommunicationBody;
   }
 
 
   public CommunicationRequest bCommunicationPrivate(Boolean bCommunicationPrivate) {
-    
     this.bCommunicationPrivate = bCommunicationPrivate;
     return this;
   }
@@ -286,14 +278,12 @@ public class CommunicationRequest {
     return bCommunicationPrivate;
   }
 
-
   public void setbCommunicationPrivate(Boolean bCommunicationPrivate) {
     this.bCommunicationPrivate = bCommunicationPrivate;
   }
 
 
   public CommunicationRequest eCommunicationAttachmenttype(ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
-    
     this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
     return this;
   }
@@ -307,14 +297,12 @@ public class CommunicationRequest {
     return eCommunicationAttachmenttype;
   }
 
-
   public void seteCommunicationAttachmenttype(ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
     this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
   }
 
 
   public CommunicationRequest iCommunicationAttachmentlinkexpiration(Integer iCommunicationAttachmentlinkexpiration) {
-    
     this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
     return this;
   }
@@ -330,14 +318,12 @@ public class CommunicationRequest {
     return iCommunicationAttachmentlinkexpiration;
   }
 
-
   public void setiCommunicationAttachmentlinkexpiration(Integer iCommunicationAttachmentlinkexpiration) {
     this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
   }
 
 
   public CommunicationRequest bCommunicationReadreceipt(Boolean bCommunicationReadreceipt) {
-    
     this.bCommunicationReadreceipt = bCommunicationReadreceipt;
     return this;
   }
@@ -350,7 +336,6 @@ public class CommunicationRequest {
   public Boolean getbCommunicationReadreceipt() {
     return bCommunicationReadreceipt;
   }
-
 
   public void setbCommunicationReadreceipt(Boolean bCommunicationReadreceipt) {
     this.bCommunicationReadreceipt = bCommunicationReadreceipt;
@@ -466,6 +451,12 @@ public class CommunicationRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `eCommunicationImportance`
+      if (jsonObj.get("eCommunicationImportance") != null && !jsonObj.get("eCommunicationImportance").isJsonNull()) {
+        FieldECommunicationImportance.validateJsonElement(jsonObj.get("eCommunicationImportance"));
+      }
+      // validate the required field `eCommunicationType`
+      FieldECommunicationType.validateJsonElement(jsonObj.get("eCommunicationType"));
       // validate the optional field `objCommunicationsender`
       if (jsonObj.get("objCommunicationsender") != null && !jsonObj.get("objCommunicationsender").isJsonNull()) {
         CustomCommunicationsenderRequest.validateJsonElement(jsonObj.get("objCommunicationsender"));
@@ -478,6 +469,10 @@ public class CommunicationRequest {
       }
       if ((jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) && !jsonObj.get("eCommunicationAttachmenttype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eCommunicationAttachmenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationAttachmenttype").toString()));
+      }
+      // validate the optional field `eCommunicationAttachmenttype`
+      if (jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) {
+        ECommunicationAttachmenttypeEnum.validateJsonElement(jsonObj.get("eCommunicationAttachmenttype"));
       }
   }
 

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternalproduct Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalproductResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D = "pkiBillingentityinternalproductID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D)
@@ -83,7 +83,6 @@ public class BillingentityinternalproductResponse {
   }
 
   public BillingentityinternalproductResponse pkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
-    
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
     return this;
   }
@@ -99,14 +98,12 @@ public class BillingentityinternalproductResponse {
     return pkiBillingentityinternalproductID;
   }
 
-
   public void setPkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
   }
 
 
   public BillingentityinternalproductResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -121,14 +118,12 @@ public class BillingentityinternalproductResponse {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public BillingentityinternalproductResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
-    
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -142,14 +137,12 @@ public class BillingentityinternalproductResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-
   public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
   public BillingentityinternalproductResponse fkiEzmaxproductID(Integer fkiEzmaxproductID) {
-    
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -164,14 +157,12 @@ public class BillingentityinternalproductResponse {
     return fkiEzmaxproductID;
   }
 
-
   public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
   public BillingentityinternalproductResponse sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
-    
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -185,14 +176,12 @@ public class BillingentityinternalproductResponse {
     return sEzmaxproductDescriptionX;
   }
 
-
   public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
   public BillingentityinternalproductResponse fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
-    
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
     return this;
   }
@@ -207,14 +196,12 @@ public class BillingentityinternalproductResponse {
     return fkiBillingentityexternalID;
   }
 
-
   public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
   }
 
 
   public BillingentityinternalproductResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
-    
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -227,7 +214,6 @@ public class BillingentityinternalproductResponse {
   public String getsBillingentityexternalDescription() {
     return sBillingentityexternalDescription;
   }
-
 
   public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationsenders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderGetCommunicationsendersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONSENDERS = "a_objCommunicationsenders";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONSENDERS)
@@ -62,7 +62,6 @@ public class EzsignfolderGetCommunicationsendersV1ResponseMPayload {
   }
 
   public EzsignfolderGetCommunicationsendersV1ResponseMPayload aObjCommunicationsenders(List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
-    
     this.aObjCommunicationsenders = aObjCommunicationsenders;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsignfolderGetCommunicationsendersV1ResponseMPayload {
   public List<CustomCommunicationsenderResponse> getaObjCommunicationsenders() {
     return aObjCommunicationsenders;
   }
-
 
   public void setaObjCommunicationsenders(List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
     this.aObjCommunicationsenders = aObjCommunicationsenders;

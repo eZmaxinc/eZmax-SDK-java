@@ -40,9 +40,9 @@ public class ObjectElectronicfundstransferApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void eletronicfundstransferGetCommunicationListV1Test() throws ApiException {
+    public void electronicfundstransferGetCommunicationListV1Test() throws ApiException {
         Integer pkiElectronicfundstransferID = null;
-        ElectronicfundstransferGetCommunicationListV1Response response = api.eletronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+        ElectronicfundstransferGetCommunicationListV1Response response = api.electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
         // TODO: test validations
     }
 

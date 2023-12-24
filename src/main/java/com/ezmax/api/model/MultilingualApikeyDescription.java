@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the API Key
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualApikeyDescription {
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION1 = "sApikeyDescription1";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualApikeyDescription {
   }
 
   public MultilingualApikeyDescription sApikeyDescription1(String sApikeyDescription1) {
-    
     this.sApikeyDescription1 = sApikeyDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualApikeyDescription {
     return sApikeyDescription1;
   }
 
-
   public void setsApikeyDescription1(String sApikeyDescription1) {
     this.sApikeyDescription1 = sApikeyDescription1;
   }
 
 
   public MultilingualApikeyDescription sApikeyDescription2(String sApikeyDescription2) {
-    
     this.sApikeyDescription2 = sApikeyDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualApikeyDescription {
   public String getsApikeyDescription2() {
     return sApikeyDescription2;
   }
-
 
   public void setsApikeyDescription2(String sApikeyDescription2) {
     this.sApikeyDescription2 = sApikeyDescription2;

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -98,6 +98,11 @@ public class EzsigndocumentGetWordsPositionsV1Request {
         return EGetEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EGetEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_GET = "eGet";
@@ -116,7 +121,6 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   }
 
   public EzsigndocumentGetWordsPositionsV1Request eGet(EGetEnum eGet) {
-    
     this.eGet = eGet;
     return this;
   }
@@ -130,14 +134,12 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     return eGet;
   }
 
-
   public void seteGet(EGetEnum eGet) {
     this.eGet = eGet;
   }
 
 
   public EzsigndocumentGetWordsPositionsV1Request bWordCaseSensitive(Boolean bWordCaseSensitive) {
-    
     this.bWordCaseSensitive = bWordCaseSensitive;
     return this;
   }
@@ -151,14 +153,12 @@ public class EzsigndocumentGetWordsPositionsV1Request {
     return bWordCaseSensitive;
   }
 
-
   public void setbWordCaseSensitive(Boolean bWordCaseSensitive) {
     this.bWordCaseSensitive = bWordCaseSensitive;
   }
 
 
   public EzsigndocumentGetWordsPositionsV1Request aSWord(List<String> aSWord) {
-    
     this.aSWord = aSWord;
     return this;
   }
@@ -179,7 +179,6 @@ public class EzsigndocumentGetWordsPositionsV1Request {
   public List<String> getaSWord() {
     return aSWord;
   }
-
 
   public void setaSWord(List<String> aSWord) {
     this.aSWord = aSWord;
@@ -276,6 +275,8 @@ public class EzsigndocumentGetWordsPositionsV1Request {
       if (!jsonObj.get("eGet").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eGet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eGet").toString()));
       }
+      // validate the required field `eGet`
+      EGetEnum.validateJsonElement(jsonObj.get("eGet"));
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_sWord") != null && !jsonObj.get("a_sWord").isJsonNull() && !jsonObj.get("a_sWord").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_sWord` to be an array in the JSON string but got `%s`", jsonObj.get("a_sWord").toString()));

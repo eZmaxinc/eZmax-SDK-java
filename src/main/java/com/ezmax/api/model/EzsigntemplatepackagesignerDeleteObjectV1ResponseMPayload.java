@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for DELETE /1/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
@@ -63,7 +63,6 @@ public class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
   }
 
   public EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
-    
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -77,14 +76,12 @@ public class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-
   public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
   public EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
-    
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -97,7 +94,6 @@ public class EzsigntemplatepackagesignerDeleteObjectV1ResponseMPayload {
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
   }
-
 
   public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;

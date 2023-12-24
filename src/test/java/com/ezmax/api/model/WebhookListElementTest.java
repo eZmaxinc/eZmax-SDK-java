@@ -112,4 +112,12 @@ public class WebhookListElementTest {
         // TODO: test bWebhookIsactive
     }
 
+    /**
+     * Test the property 'bWebhookIssigned'
+     */
+    @Test
+    public void bWebhookIssignedTest() {
+        // TODO: test bWebhookIssigned
+    }
+
 }

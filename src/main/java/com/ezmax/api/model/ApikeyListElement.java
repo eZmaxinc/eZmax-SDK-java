@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ApikeyListElement {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -79,7 +79,6 @@ public class ApikeyListElement {
   }
 
   public ApikeyListElement pkiApikeyID(Integer pkiApikeyID) {
-    
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -94,14 +93,12 @@ public class ApikeyListElement {
     return pkiApikeyID;
   }
 
-
   public void setPkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
   public ApikeyListElement sApikeyDescriptionX(String sApikeyDescriptionX) {
-    
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -115,14 +112,12 @@ public class ApikeyListElement {
     return sApikeyDescriptionX;
   }
 
-
   public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
   }
 
 
   public ApikeyListElement sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -136,14 +131,12 @@ public class ApikeyListElement {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public ApikeyListElement sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -157,14 +150,12 @@ public class ApikeyListElement {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public ApikeyListElement bApikeyIsactive(Boolean bApikeyIsactive) {
-    
     this.bApikeyIsactive = bApikeyIsactive;
     return this;
   }
@@ -178,14 +169,12 @@ public class ApikeyListElement {
     return bApikeyIsactive;
   }
 
-
   public void setbApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
 
   public ApikeyListElement bApikeyIssigned(Boolean bApikeyIssigned) {
-    
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -198,7 +187,6 @@ public class ApikeyListElement {
   public Boolean getbApikeyIssigned() {
     return bApikeyIssigned;
   }
-
 
   public void setbApikeyIssigned(Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;

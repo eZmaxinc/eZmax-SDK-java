@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class VariableexpenseResponseCompound {
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
@@ -77,7 +77,6 @@ public class VariableexpenseResponseCompound {
   }
 
   public VariableexpenseResponseCompound pkiVariableexpenseID(Integer pkiVariableexpenseID) {
-    
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -93,14 +92,12 @@ public class VariableexpenseResponseCompound {
     return pkiVariableexpenseID;
   }
 
-
   public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
   public VariableexpenseResponseCompound sVariableexpenseCode(String sVariableexpenseCode) {
-    
     this.sVariableexpenseCode = sVariableexpenseCode;
     return this;
   }
@@ -114,14 +111,12 @@ public class VariableexpenseResponseCompound {
     return sVariableexpenseCode;
   }
 
-
   public void setsVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
   }
 
 
   public VariableexpenseResponseCompound objVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
-    
     this.objVariableexpenseDescription = objVariableexpenseDescription;
     return this;
   }
@@ -135,14 +130,12 @@ public class VariableexpenseResponseCompound {
     return objVariableexpenseDescription;
   }
 
-
   public void setObjVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
     this.objVariableexpenseDescription = objVariableexpenseDescription;
   }
 
 
   public VariableexpenseResponseCompound eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
-    
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
     return this;
   }
@@ -156,14 +149,12 @@ public class VariableexpenseResponseCompound {
     return eVariableexpenseTaxable;
   }
 
-
   public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
   }
 
 
   public VariableexpenseResponseCompound bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
-    
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -176,7 +167,6 @@ public class VariableexpenseResponseCompound {
   public Boolean getbVariableexpenseIsactive() {
     return bVariableexpenseIsactive;
   }
-
 
   public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
@@ -281,6 +271,10 @@ public class VariableexpenseResponseCompound {
       }
       // validate the required field `objVariableexpenseDescription`
       MultilingualVariableexpenseDescription.validateJsonElement(jsonObj.get("objVariableexpenseDescription"));
+      // validate the optional field `eVariableexpenseTaxable`
+      if (jsonObj.get("eVariableexpenseTaxable") != null && !jsonObj.get("eVariableexpenseTaxable").isJsonNull()) {
+        FieldEVariableexpenseTaxable.validateJsonElement(jsonObj.get("eVariableexpenseTaxable"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

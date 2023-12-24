@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreference Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommunicationreferenceRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D = "pkiCommunicationreferenceID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D)
@@ -91,7 +91,6 @@ public class CommunicationreferenceRequest {
   }
 
   public CommunicationreferenceRequest pkiCommunicationreferenceID(Integer pkiCommunicationreferenceID) {
-    
     this.pkiCommunicationreferenceID = pkiCommunicationreferenceID;
     return this;
   }
@@ -107,14 +106,12 @@ public class CommunicationreferenceRequest {
     return pkiCommunicationreferenceID;
   }
 
-
   public void setPkiCommunicationreferenceID(Integer pkiCommunicationreferenceID) {
     this.pkiCommunicationreferenceID = pkiCommunicationreferenceID;
   }
 
 
   public CommunicationreferenceRequest fkiBuyercontractID(Integer fkiBuyercontractID) {
-    
     this.fkiBuyercontractID = fkiBuyercontractID;
     return this;
   }
@@ -130,14 +127,12 @@ public class CommunicationreferenceRequest {
     return fkiBuyercontractID;
   }
 
-
   public void setFkiBuyercontractID(Integer fkiBuyercontractID) {
     this.fkiBuyercontractID = fkiBuyercontractID;
   }
 
 
   public CommunicationreferenceRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -152,14 +147,12 @@ public class CommunicationreferenceRequest {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public CommunicationreferenceRequest fkiInscriptionID(Integer fkiInscriptionID) {
-    
     this.fkiInscriptionID = fkiInscriptionID;
     return this;
   }
@@ -174,14 +167,12 @@ public class CommunicationreferenceRequest {
     return fkiInscriptionID;
   }
 
-
   public void setFkiInscriptionID(Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
   }
 
 
   public CommunicationreferenceRequest fkiInscriptiontempID(Integer fkiInscriptiontempID) {
-    
     this.fkiInscriptiontempID = fkiInscriptiontempID;
     return this;
   }
@@ -197,14 +188,12 @@ public class CommunicationreferenceRequest {
     return fkiInscriptiontempID;
   }
 
-
   public void setFkiInscriptiontempID(Integer fkiInscriptiontempID) {
     this.fkiInscriptiontempID = fkiInscriptiontempID;
   }
 
 
   public CommunicationreferenceRequest fkiInvoiceID(Integer fkiInvoiceID) {
-    
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -219,14 +208,12 @@ public class CommunicationreferenceRequest {
     return fkiInvoiceID;
   }
 
-
   public void setFkiInvoiceID(Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
   public CommunicationreferenceRequest fkiOtherincomeID(Integer fkiOtherincomeID) {
-    
     this.fkiOtherincomeID = fkiOtherincomeID;
     return this;
   }
@@ -242,14 +229,12 @@ public class CommunicationreferenceRequest {
     return fkiOtherincomeID;
   }
 
-
   public void setFkiOtherincomeID(Integer fkiOtherincomeID) {
     this.fkiOtherincomeID = fkiOtherincomeID;
   }
 
 
   public CommunicationreferenceRequest fkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
-    
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
     return this;
   }
@@ -265,14 +250,12 @@ public class CommunicationreferenceRequest {
     return fkiElectronicfundstransferID;
   }
 
-
   public void setFkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
   }
 
 
   public CommunicationreferenceRequest fkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
-    
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
     return this;
   }
@@ -287,7 +270,6 @@ public class CommunicationreferenceRequest {
   public Integer getFkiRejectedoffertopurchaseID() {
     return fkiRejectedoffertopurchaseID;
   }
-
 
   public void setFkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;

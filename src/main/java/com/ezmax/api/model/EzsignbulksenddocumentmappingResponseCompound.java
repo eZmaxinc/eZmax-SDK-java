@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignbulksenddocumentmappingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
@@ -85,7 +85,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
   }
 
   public EzsignbulksenddocumentmappingResponseCompound pkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
-    
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
     return this;
   }
@@ -100,14 +99,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return pkiEzsignbulksenddocumentmappingID;
   }
 
-
   public void setPkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
-    
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -122,14 +119,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return fkiEzsignbulksendID;
   }
 
-
   public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -144,14 +139,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -166,14 +159,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound iEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
-    
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
     return this;
   }
@@ -188,14 +179,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return iEzsignbulksenddocumentmappingOrder;
   }
 
-
   public void setiEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound objEzsigntemplate(EzsigntemplateResponseCompound objEzsigntemplate) {
-    
     this.objEzsigntemplate = objEzsigntemplate;
     return this;
   }
@@ -209,14 +198,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return objEzsigntemplate;
   }
 
-
   public void setObjEzsigntemplate(EzsigntemplateResponseCompound objEzsigntemplate) {
     this.objEzsigntemplate = objEzsigntemplate;
   }
 
 
   public EzsignbulksenddocumentmappingResponseCompound objEzsigntemplatepackage(EzsigntemplatepackageResponseCompound objEzsigntemplatepackage) {
-    
     this.objEzsigntemplatepackage = objEzsigntemplatepackage;
     return this;
   }
@@ -229,7 +216,6 @@ public class EzsignbulksenddocumentmappingResponseCompound {
   public EzsigntemplatepackageResponseCompound getObjEzsigntemplatepackage() {
     return objEzsigntemplatepackage;
   }
-
 
   public void setObjEzsigntemplatepackage(EzsigntemplatepackageResponseCompound objEzsigntemplatepackage) {
     this.objEzsigntemplatepackage = objEzsigntemplatepackage;

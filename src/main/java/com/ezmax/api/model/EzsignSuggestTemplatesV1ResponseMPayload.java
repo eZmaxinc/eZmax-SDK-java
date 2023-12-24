@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/module/ezsign/suggestTemplates
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignSuggestTemplatesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE = "a_objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE)
@@ -67,7 +67,6 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   }
 
   public EzsignSuggestTemplatesV1ResponseMPayload aObjEzsigntemplate(List<EzsigntemplateResponseCompound> aObjEzsigntemplate) {
-    
     this.aObjEzsigntemplate = aObjEzsigntemplate;
     return this;
   }
@@ -89,14 +88,12 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     return aObjEzsigntemplate;
   }
 
-
   public void setaObjEzsigntemplate(List<EzsigntemplateResponseCompound> aObjEzsigntemplate) {
     this.aObjEzsigntemplate = aObjEzsigntemplate;
   }
 
 
   public EzsignSuggestTemplatesV1ResponseMPayload aObjEzsigntemplatepackage(List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage) {
-    
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
     return this;
   }
@@ -117,7 +114,6 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   public List<EzsigntemplatepackageResponseCompound> getaObjEzsigntemplatepackage() {
     return aObjEzsigntemplatepackage;
   }
-
 
   public void setaObjEzsigntemplatepackage(List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;

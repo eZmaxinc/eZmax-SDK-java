@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/franchisereferalincome
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FranchisereferalincomeCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_FRANCHISEREFERALINCOME = "objFranchisereferalincome";
   @SerializedName(SERIALIZED_NAME_OBJ_FRANCHISEREFERALINCOME)
@@ -65,7 +65,6 @@ public class FranchisereferalincomeCreateObjectV1Request {
   }
 
   public FranchisereferalincomeCreateObjectV1Request objFranchisereferalincome(FranchisereferalincomeRequest objFranchisereferalincome) {
-    
     this.objFranchisereferalincome = objFranchisereferalincome;
     return this;
   }
@@ -79,14 +78,12 @@ public class FranchisereferalincomeCreateObjectV1Request {
     return objFranchisereferalincome;
   }
 
-
   public void setObjFranchisereferalincome(FranchisereferalincomeRequest objFranchisereferalincome) {
     this.objFranchisereferalincome = objFranchisereferalincome;
   }
 
 
   public FranchisereferalincomeCreateObjectV1Request objFranchisereferalincomeCompound(FranchisereferalincomeRequestCompound objFranchisereferalincomeCompound) {
-    
     this.objFranchisereferalincomeCompound = objFranchisereferalincomeCompound;
     return this;
   }
@@ -99,7 +96,6 @@ public class FranchisereferalincomeCreateObjectV1Request {
   public FranchisereferalincomeRequestCompound getObjFranchisereferalincomeCompound() {
     return objFranchisereferalincomeCompound;
   }
-
 
   public void setObjFranchisereferalincomeCompound(FranchisereferalincomeRequestCompound objFranchisereferalincomeCompound) {
     this.objFranchisereferalincomeCompound = objFranchisereferalincomeCompound;

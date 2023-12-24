@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupdelegationResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
@@ -87,7 +87,6 @@ public class UsergroupdelegationResponse {
   }
 
   public UsergroupdelegationResponse pkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
-    
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
     return this;
   }
@@ -103,14 +102,12 @@ public class UsergroupdelegationResponse {
     return pkiUsergroupdelegationID;
   }
 
-
   public void setPkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
   }
 
 
   public UsergroupdelegationResponse fkiUsergroupID(Integer fkiUsergroupID) {
-    
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -126,14 +123,12 @@ public class UsergroupdelegationResponse {
     return fkiUsergroupID;
   }
 
-
   public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
   public UsergroupdelegationResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -148,14 +143,12 @@ public class UsergroupdelegationResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public UsergroupdelegationResponse sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -169,14 +162,12 @@ public class UsergroupdelegationResponse {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UsergroupdelegationResponse sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -190,14 +181,12 @@ public class UsergroupdelegationResponse {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UsergroupdelegationResponse sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -211,14 +200,12 @@ public class UsergroupdelegationResponse {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public UsergroupdelegationResponse sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -232,14 +219,12 @@ public class UsergroupdelegationResponse {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public UsergroupdelegationResponse sUsergroupNameX(String sUsergroupNameX) {
-    
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -252,7 +237,6 @@ public class UsergroupdelegationResponse {
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
   }
-
 
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;

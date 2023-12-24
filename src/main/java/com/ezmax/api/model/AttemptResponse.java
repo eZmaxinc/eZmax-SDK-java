@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attempt object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class AttemptResponse {
   public static final String SERIALIZED_NAME_DT_ATTEMPT_START = "dtAttemptStart";
   @SerializedName(SERIALIZED_NAME_DT_ATTEMPT_START)
@@ -67,7 +67,6 @@ public class AttemptResponse {
   }
 
   public AttemptResponse dtAttemptStart(String dtAttemptStart) {
-    
     this.dtAttemptStart = dtAttemptStart;
     return this;
   }
@@ -81,14 +80,12 @@ public class AttemptResponse {
     return dtAttemptStart;
   }
 
-
   public void setDtAttemptStart(String dtAttemptStart) {
     this.dtAttemptStart = dtAttemptStart;
   }
 
 
   public AttemptResponse sAttemptResult(String sAttemptResult) {
-    
     this.sAttemptResult = sAttemptResult;
     return this;
   }
@@ -102,14 +99,12 @@ public class AttemptResponse {
     return sAttemptResult;
   }
 
-
   public void setsAttemptResult(String sAttemptResult) {
     this.sAttemptResult = sAttemptResult;
   }
 
 
   public AttemptResponse iAttemptDuration(Integer iAttemptDuration) {
-    
     this.iAttemptDuration = iAttemptDuration;
     return this;
   }
@@ -122,7 +117,6 @@ public class AttemptResponse {
   public Integer getiAttemptDuration() {
     return iAttemptDuration;
   }
-
 
   public void setiAttemptDuration(Integer iAttemptDuration) {
     this.iAttemptDuration = iAttemptDuration;

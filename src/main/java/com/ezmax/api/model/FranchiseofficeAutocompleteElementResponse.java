@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchiseoffice AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class FranchiseofficeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION = "sFranchiseofficeDescription";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION)
@@ -67,7 +67,6 @@ public class FranchiseofficeAutocompleteElementResponse {
   }
 
   public FranchiseofficeAutocompleteElementResponse sFranchiseofficeDescription(String sFranchiseofficeDescription) {
-    
     this.sFranchiseofficeDescription = sFranchiseofficeDescription;
     return this;
   }
@@ -81,14 +80,12 @@ public class FranchiseofficeAutocompleteElementResponse {
     return sFranchiseofficeDescription;
   }
 
-
   public void setsFranchiseofficeDescription(String sFranchiseofficeDescription) {
     this.sFranchiseofficeDescription = sFranchiseofficeDescription;
   }
 
 
   public FranchiseofficeAutocompleteElementResponse pkiFranchiseofficeID(Integer pkiFranchiseofficeID) {
-    
     this.pkiFranchiseofficeID = pkiFranchiseofficeID;
     return this;
   }
@@ -103,14 +100,12 @@ public class FranchiseofficeAutocompleteElementResponse {
     return pkiFranchiseofficeID;
   }
 
-
   public void setPkiFranchiseofficeID(Integer pkiFranchiseofficeID) {
     this.pkiFranchiseofficeID = pkiFranchiseofficeID;
   }
 
 
   public FranchiseofficeAutocompleteElementResponse bFranchiseofficeIsactive(Boolean bFranchiseofficeIsactive) {
-    
     this.bFranchiseofficeIsactive = bFranchiseofficeIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class FranchiseofficeAutocompleteElementResponse {
   public Boolean getbFranchiseofficeIsactive() {
     return bFranchiseofficeIsactive;
   }
-
 
   public void setbFranchiseofficeIsactive(Boolean bFranchiseofficeIsactive) {
     this.bFranchiseofficeIsactive = bFranchiseofficeIsactive;

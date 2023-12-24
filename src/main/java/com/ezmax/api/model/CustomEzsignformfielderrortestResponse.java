@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfielderrortest Object to contain the detail of the test error
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignformfielderrortestResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME = "sEzsignformfielderrortestName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME)
@@ -63,7 +63,6 @@ public class CustomEzsignformfielderrortestResponse {
   }
 
   public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestName(String sEzsignformfielderrortestName) {
-    
     this.sEzsignformfielderrortestName = sEzsignformfielderrortestName;
     return this;
   }
@@ -77,14 +76,12 @@ public class CustomEzsignformfielderrortestResponse {
     return sEzsignformfielderrortestName;
   }
 
-
   public void setsEzsignformfielderrortestName(String sEzsignformfielderrortestName) {
     this.sEzsignformfielderrortestName = sEzsignformfielderrortestName;
   }
 
 
   public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestDetail(String sEzsignformfielderrortestDetail) {
-    
     this.sEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;
     return this;
   }
@@ -97,7 +94,6 @@ public class CustomEzsignformfielderrortestResponse {
   public String getsEzsignformfielderrortestDetail() {
     return sEzsignformfielderrortestDetail;
   }
-
 
   public void setsEzsignformfielderrortestDetail(String sEzsignformfielderrortestDetail) {
     this.sEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;

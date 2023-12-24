@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderSendV2Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -70,7 +70,6 @@ public class EzsignfolderSendV2Request {
   }
 
   public EzsignfolderSendV2Request tEzsignfolderMessage(String tEzsignfolderMessage) {
-    
     this.tEzsignfolderMessage = tEzsignfolderMessage;
     return this;
   }
@@ -84,14 +83,12 @@ public class EzsignfolderSendV2Request {
     return tEzsignfolderMessage;
   }
 
-
   public void settEzsignfolderMessage(String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
   }
 
 
   public EzsignfolderSendV2Request aFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
-    
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -113,14 +110,12 @@ public class EzsignfolderSendV2Request {
     return aFkiEzsignfoldersignerassociationID;
   }
 
-
   public void setaFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsignfolderSendV2Request aObjEzsignfoldersignerassociationmessage(List<CustomEzsignfoldersignerassociationmessageRequest> aObjEzsignfoldersignerassociationmessage) {
-    
     this.aObjEzsignfoldersignerassociationmessage = aObjEzsignfoldersignerassociationmessage;
     return this;
   }
@@ -141,7 +136,6 @@ public class EzsignfolderSendV2Request {
   public List<CustomEzsignfoldersignerassociationmessageRequest> getaObjEzsignfoldersignerassociationmessage() {
     return aObjEzsignfoldersignerassociationmessage;
   }
-
 
   public void setaObjEzsignfoldersignerassociationmessage(List<CustomEzsignfoldersignerassociationmessageRequest> aObjEzsignfoldersignerassociationmessage) {
     this.aObjEzsignfoldersignerassociationmessage = aObjEzsignfoldersignerassociationmessage;

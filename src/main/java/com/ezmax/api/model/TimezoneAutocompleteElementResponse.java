@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Timezone AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class TimezoneAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_TIMEZONE_NAME = "sTimezoneName";
   @SerializedName(SERIALIZED_NAME_S_TIMEZONE_NAME)
@@ -67,7 +67,6 @@ public class TimezoneAutocompleteElementResponse {
   }
 
   public TimezoneAutocompleteElementResponse sTimezoneName(String sTimezoneName) {
-    
     this.sTimezoneName = sTimezoneName;
     return this;
   }
@@ -81,14 +80,12 @@ public class TimezoneAutocompleteElementResponse {
     return sTimezoneName;
   }
 
-
   public void setsTimezoneName(String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
   }
 
 
   public TimezoneAutocompleteElementResponse pkiTimezoneID(Integer pkiTimezoneID) {
-    
     this.pkiTimezoneID = pkiTimezoneID;
     return this;
   }
@@ -103,14 +100,12 @@ public class TimezoneAutocompleteElementResponse {
     return pkiTimezoneID;
   }
 
-
   public void setPkiTimezoneID(Integer pkiTimezoneID) {
     this.pkiTimezoneID = pkiTimezoneID;
   }
 
 
   public TimezoneAutocompleteElementResponse bTimezoneIsactive(Boolean bTimezoneIsactive) {
-    
     this.bTimezoneIsactive = bTimezoneIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class TimezoneAutocompleteElementResponse {
   public Boolean getbTimezoneIsactive() {
     return bTimezoneIsactive;
   }
-
 
   public void setbTimezoneIsactive(Boolean bTimezoneIsactive) {
     this.bTimezoneIsactive = bTimezoneIsactive;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Userstaged List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserstagedListElement {
   public static final String SERIALIZED_NAME_PKI_USERSTAGED_I_D = "pkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_PKI_USERSTAGED_I_D)
@@ -75,7 +75,6 @@ public class UserstagedListElement {
   }
 
   public UserstagedListElement pkiUserstagedID(Integer pkiUserstagedID) {
-    
     this.pkiUserstagedID = pkiUserstagedID;
     return this;
   }
@@ -91,14 +90,12 @@ public class UserstagedListElement {
     return pkiUserstagedID;
   }
 
-
   public void setPkiUserstagedID(Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
   }
 
 
   public UserstagedListElement sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -112,14 +109,12 @@ public class UserstagedListElement {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public UserstagedListElement sUserstagedFirstname(String sUserstagedFirstname) {
-    
     this.sUserstagedFirstname = sUserstagedFirstname;
     return this;
   }
@@ -133,14 +128,12 @@ public class UserstagedListElement {
     return sUserstagedFirstname;
   }
 
-
   public void setsUserstagedFirstname(String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
   }
 
 
   public UserstagedListElement sUserstagedLastname(String sUserstagedLastname) {
-    
     this.sUserstagedLastname = sUserstagedLastname;
     return this;
   }
@@ -154,14 +147,12 @@ public class UserstagedListElement {
     return sUserstagedLastname;
   }
 
-
   public void setsUserstagedLastname(String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
   }
 
 
   public UserstagedListElement sUserstagedExternalid(String sUserstagedExternalid) {
-    
     this.sUserstagedExternalid = sUserstagedExternalid;
     return this;
   }
@@ -174,7 +165,6 @@ public class UserstagedListElement {
   public String getsUserstagedExternalid() {
     return sUserstagedExternalid;
   }
-
 
   public void setsUserstagedExternalid(String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Detail of the Versionhistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualVersionhistoryDetail {
   public static final String SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL1 = "tVersionhistoryDetail1";
   @SerializedName(SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL1)
@@ -63,7 +63,6 @@ public class MultilingualVersionhistoryDetail {
   }
 
   public MultilingualVersionhistoryDetail tVersionhistoryDetail1(String tVersionhistoryDetail1) {
-    
     this.tVersionhistoryDetail1 = tVersionhistoryDetail1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualVersionhistoryDetail {
     return tVersionhistoryDetail1;
   }
 
-
   public void settVersionhistoryDetail1(String tVersionhistoryDetail1) {
     this.tVersionhistoryDetail1 = tVersionhistoryDetail1;
   }
 
 
   public MultilingualVersionhistoryDetail tVersionhistoryDetail2(String tVersionhistoryDetail2) {
-    
     this.tVersionhistoryDetail2 = tVersionhistoryDetail2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualVersionhistoryDetail {
   public String gettVersionhistoryDetail2() {
     return tVersionhistoryDetail2;
   }
-
 
   public void settVersionhistoryDetail2(String tVersionhistoryDetail2) {
     this.tVersionhistoryDetail2 = tVersionhistoryDetail2;

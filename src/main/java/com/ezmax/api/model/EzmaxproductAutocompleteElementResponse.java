@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxproduct AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxproductAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D = "pkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D)
@@ -67,7 +67,6 @@ public class EzmaxproductAutocompleteElementResponse {
   }
 
   public EzmaxproductAutocompleteElementResponse pkiEzmaxproductID(Integer pkiEzmaxproductID) {
-    
     this.pkiEzmaxproductID = pkiEzmaxproductID;
     return this;
   }
@@ -82,14 +81,12 @@ public class EzmaxproductAutocompleteElementResponse {
     return pkiEzmaxproductID;
   }
 
-
   public void setPkiEzmaxproductID(Integer pkiEzmaxproductID) {
     this.pkiEzmaxproductID = pkiEzmaxproductID;
   }
 
 
   public EzmaxproductAutocompleteElementResponse sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
-    
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -103,14 +100,12 @@ public class EzmaxproductAutocompleteElementResponse {
     return sEzmaxproductDescriptionX;
   }
 
-
   public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
   public EzmaxproductAutocompleteElementResponse bEzmaxproductIsactive(Boolean bEzmaxproductIsactive) {
-    
     this.bEzmaxproductIsactive = bEzmaxproductIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class EzmaxproductAutocompleteElementResponse {
   public Boolean getbEzmaxproductIsactive() {
     return bEzmaxproductIsactive;
   }
-
 
   public void setbEzmaxproductIsactive(Boolean bEzmaxproductIsactive) {
     this.bEzmaxproductIsactive = bEzmaxproductIsactive;

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for Websocket Error V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebsocketResponseErrorV1 {
   /**
    * The Type of message
@@ -95,11 +95,20 @@ public class WebsocketResponseErrorV1 {
         return EWebsocketMessagetypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EWebsocketMessagetypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE = "eWebsocketMessagetype";
   @SerializedName(SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE)
   private EWebsocketMessagetypeEnum eWebsocketMessagetype;
+
+  public static final String SERIALIZED_NAME_S_WEBSOCKET_CHANNEL = "sWebsocketChannel";
+  @SerializedName(SERIALIZED_NAME_S_WEBSOCKET_CHANNEL)
+  private String sWebsocketChannel;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
@@ -109,7 +118,6 @@ public class WebsocketResponseErrorV1 {
   }
 
   public WebsocketResponseErrorV1 eWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
-    
     this.eWebsocketMessagetype = eWebsocketMessagetype;
     return this;
   }
@@ -123,14 +131,31 @@ public class WebsocketResponseErrorV1 {
     return eWebsocketMessagetype;
   }
 
-
   public void seteWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
   }
 
 
+  public WebsocketResponseErrorV1 sWebsocketChannel(String sWebsocketChannel) {
+    this.sWebsocketChannel = sWebsocketChannel;
+    return this;
+  }
+
+   /**
+   * The Channel on which to route the websocket message
+   * @return sWebsocketChannel
+  **/
+  @javax.annotation.Nonnull
+  public String getsWebsocketChannel() {
+    return sWebsocketChannel;
+  }
+
+  public void setsWebsocketChannel(String sWebsocketChannel) {
+    this.sWebsocketChannel = sWebsocketChannel;
+  }
+
+
   public WebsocketResponseErrorV1 mPayload(WebsocketResponseErrorV1MPayload mPayload) {
-    
     this.mPayload = mPayload;
     return this;
   }
@@ -143,7 +168,6 @@ public class WebsocketResponseErrorV1 {
   public WebsocketResponseErrorV1MPayload getmPayload() {
     return mPayload;
   }
-
 
   public void setmPayload(WebsocketResponseErrorV1MPayload mPayload) {
     this.mPayload = mPayload;
@@ -161,12 +185,13 @@ public class WebsocketResponseErrorV1 {
     }
     WebsocketResponseErrorV1 websocketResponseErrorV1 = (WebsocketResponseErrorV1) o;
     return Objects.equals(this.eWebsocketMessagetype, websocketResponseErrorV1.eWebsocketMessagetype) &&
+        Objects.equals(this.sWebsocketChannel, websocketResponseErrorV1.sWebsocketChannel) &&
         Objects.equals(this.mPayload, websocketResponseErrorV1.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eWebsocketMessagetype, mPayload);
+    return Objects.hash(eWebsocketMessagetype, sWebsocketChannel, mPayload);
   }
 
   @Override
@@ -174,6 +199,7 @@ public class WebsocketResponseErrorV1 {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebsocketResponseErrorV1 {\n");
     sb.append("    eWebsocketMessagetype: ").append(toIndentedString(eWebsocketMessagetype)).append("\n");
+    sb.append("    sWebsocketChannel: ").append(toIndentedString(sWebsocketChannel)).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -198,11 +224,13 @@ public class WebsocketResponseErrorV1 {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("eWebsocketMessagetype");
+    openapiFields.add("sWebsocketChannel");
     openapiFields.add("mPayload");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("eWebsocketMessagetype");
+    openapiRequiredFields.add("sWebsocketChannel");
     openapiRequiredFields.add("mPayload");
   }
 
@@ -236,6 +264,11 @@ public class WebsocketResponseErrorV1 {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("eWebsocketMessagetype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eWebsocketMessagetype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eWebsocketMessagetype").toString()));
+      }
+      // validate the required field `eWebsocketMessagetype`
+      EWebsocketMessagetypeEnum.validateJsonElement(jsonObj.get("eWebsocketMessagetype"));
+      if (!jsonObj.get("sWebsocketChannel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebsocketChannel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebsocketChannel").toString()));
       }
       // validate the required field `mPayload`
       WebsocketResponseErrorV1MPayload.validateJsonElement(jsonObj.get("mPayload"));

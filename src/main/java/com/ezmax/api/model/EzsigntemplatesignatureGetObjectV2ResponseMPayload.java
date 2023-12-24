@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatesignatureGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATESIGNATURE = "objEzsigntemplatesignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATESIGNATURE)
@@ -60,7 +60,6 @@ public class EzsigntemplatesignatureGetObjectV2ResponseMPayload {
   }
 
   public EzsigntemplatesignatureGetObjectV2ResponseMPayload objEzsigntemplatesignature(EzsigntemplatesignatureResponseCompound objEzsigntemplatesignature) {
-    
     this.objEzsigntemplatesignature = objEzsigntemplatesignature;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsigntemplatesignatureGetObjectV2ResponseMPayload {
   public EzsigntemplatesignatureResponseCompound getObjEzsigntemplatesignature() {
     return objEzsigntemplatesignature;
   }
-
 
   public void setObjEzsigntemplatesignature(EzsigntemplatesignatureResponseCompound objEzsigntemplatesignature) {
     this.objEzsigntemplatesignature = objEzsigntemplatesignature;

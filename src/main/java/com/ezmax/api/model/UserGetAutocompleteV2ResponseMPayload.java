@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/user/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USER = "a_objUser";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USER)
@@ -62,7 +62,6 @@ public class UserGetAutocompleteV2ResponseMPayload {
   }
 
   public UserGetAutocompleteV2ResponseMPayload aObjUser(List<UserAutocompleteElementResponse> aObjUser) {
-    
     this.aObjUser = aObjUser;
     return this;
   }
@@ -83,7 +82,6 @@ public class UserGetAutocompleteV2ResponseMPayload {
   public List<UserAutocompleteElementResponse> getaObjUser() {
     return aObjUser;
   }
-
 
   public void setaObjUser(List<UserAutocompleteElementResponse> aObjUser) {
     this.aObjUser = aObjUser;

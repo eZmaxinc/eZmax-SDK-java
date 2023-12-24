@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatesigner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNER_I_D = "a_pkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNER_I_D)
@@ -69,7 +69,6 @@ public class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
   }
 
   public EzsigntemplatesignerCreateObjectV1ResponseMPayload aPkiEzsigntemplatesignerID(List<Integer> aPkiEzsigntemplatesignerID) {
-    
     this.aPkiEzsigntemplatesignerID = aPkiEzsigntemplatesignerID;
     return this;
   }
@@ -91,14 +90,12 @@ public class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
     return aPkiEzsigntemplatesignerID;
   }
 
-
   public void setaPkiEzsigntemplatesignerID(List<Integer> aPkiEzsigntemplatesignerID) {
     this.aPkiEzsigntemplatesignerID = aPkiEzsigntemplatesignerID;
   }
 
 
   public EzsigntemplatesignerCreateObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
-    
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -112,14 +109,12 @@ public class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-
   public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
   public EzsigntemplatesignerCreateObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
-    
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -132,7 +127,6 @@ public class EzsigntemplatesignerCreateObjectV1ResponseMPayload {
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
   }
-
 
   public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;

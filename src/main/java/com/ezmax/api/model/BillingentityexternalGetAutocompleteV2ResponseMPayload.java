@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/billingentityexternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL = "a_objBillingentityexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL)
@@ -62,7 +62,6 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   }
 
   public BillingentityexternalGetAutocompleteV2ResponseMPayload aObjBillingentityexternal(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
-    
     this.aObjBillingentityexternal = aObjBillingentityexternal;
     return this;
   }
@@ -83,7 +82,6 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   public List<BillingentityexternalAutocompleteElementResponse> getaObjBillingentityexternal() {
     return aObjBillingentityexternal;
   }
-
 
   public void setaObjBillingentityexternal(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
     this.aObjBillingentityexternal = aObjBillingentityexternal;

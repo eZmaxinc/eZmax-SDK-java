@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ModulesectionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
@@ -78,7 +78,6 @@ public class ModulesectionResponseCompound {
   }
 
   public ModulesectionResponseCompound pkiModulesectionID(Integer pkiModulesectionID) {
-    
     this.pkiModulesectionID = pkiModulesectionID;
     return this;
   }
@@ -93,14 +92,12 @@ public class ModulesectionResponseCompound {
     return pkiModulesectionID;
   }
 
-
   public void setPkiModulesectionID(Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
   }
 
 
   public ModulesectionResponseCompound fkiModuleID(Integer fkiModuleID) {
-    
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -115,14 +112,12 @@ public class ModulesectionResponseCompound {
     return fkiModuleID;
   }
 
-
   public void setFkiModuleID(Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
   public ModulesectionResponseCompound sModulesectionInternalname(String sModulesectionInternalname) {
-    
     this.sModulesectionInternalname = sModulesectionInternalname;
     return this;
   }
@@ -136,14 +131,12 @@ public class ModulesectionResponseCompound {
     return sModulesectionInternalname;
   }
 
-
   public void setsModulesectionInternalname(String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
   }
 
 
   public ModulesectionResponseCompound sModulesectionNameX(String sModulesectionNameX) {
-    
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -157,14 +150,12 @@ public class ModulesectionResponseCompound {
     return sModulesectionNameX;
   }
 
-
   public void setsModulesectionNameX(String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 
 
   public ModulesectionResponseCompound aObjPermission(List<PermissionResponseCompound> aObjPermission) {
-    
     this.aObjPermission = aObjPermission;
     return this;
   }
@@ -185,7 +176,6 @@ public class ModulesectionResponseCompound {
   public List<PermissionResponseCompound> getaObjPermission() {
     return aObjPermission;
   }
-
 
   public void setaObjPermission(List<PermissionResponseCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;

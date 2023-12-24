@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserRequest {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -168,7 +168,6 @@ public class UserRequest {
   }
 
   public UserRequest pkiUserID(Integer pkiUserID) {
-    
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -183,14 +182,12 @@ public class UserRequest {
     return pkiUserID;
   }
 
-
   public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
   public UserRequest fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -205,14 +202,12 @@ public class UserRequest {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public UserRequest fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -227,14 +222,12 @@ public class UserRequest {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public UserRequest fkiAssistantID(Integer fkiAssistantID) {
-    
     this.fkiAssistantID = fkiAssistantID;
     return this;
   }
@@ -249,14 +242,12 @@ public class UserRequest {
     return fkiAssistantID;
   }
 
-
   public void setFkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
   }
 
 
   public UserRequest fkiEmployeeID(Integer fkiEmployeeID) {
-    
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -271,14 +262,12 @@ public class UserRequest {
     return fkiEmployeeID;
   }
 
-
   public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
   public UserRequest fkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
-    
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
     return this;
   }
@@ -294,14 +283,12 @@ public class UserRequest {
     return fkiCompanyIDDefault;
   }
 
-
   public void setFkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
   }
 
 
   public UserRequest fkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
-    
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
     return this;
   }
@@ -316,14 +303,12 @@ public class UserRequest {
     return fkiDepartmentIDDefault;
   }
 
-
   public void setFkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
   }
 
 
   public UserRequest fkiTimezoneID(Integer fkiTimezoneID) {
-    
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -338,14 +323,12 @@ public class UserRequest {
     return fkiTimezoneID;
   }
 
-
   public void setFkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
   public UserRequest fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -361,14 +344,12 @@ public class UserRequest {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public UserRequest objEmail(EmailRequestCompound objEmail) {
-    
     this.objEmail = objEmail;
     return this;
   }
@@ -382,14 +363,12 @@ public class UserRequest {
     return objEmail;
   }
 
-
   public void setObjEmail(EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
   }
 
 
   public UserRequest fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
-    
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -404,14 +383,12 @@ public class UserRequest {
     return fkiBillingentityinternalID;
   }
 
-
   public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
   public UserRequest objPhoneHome(PhoneRequestCompound objPhoneHome) {
-    
     this.objPhoneHome = objPhoneHome;
     return this;
   }
@@ -425,14 +402,12 @@ public class UserRequest {
     return objPhoneHome;
   }
 
-
   public void setObjPhoneHome(PhoneRequestCompound objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
 
   public UserRequest objPhoneSMS(PhoneRequestCompound objPhoneSMS) {
-    
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
@@ -446,14 +421,12 @@ public class UserRequest {
     return objPhoneSMS;
   }
 
-
   public void setObjPhoneSMS(PhoneRequestCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
 
   public UserRequest fkiSecretquestionID(Integer fkiSecretquestionID) {
-    
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -468,14 +441,12 @@ public class UserRequest {
     return fkiSecretquestionID;
   }
 
-
   public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
   public UserRequest sUserSecretresponse(String sUserSecretresponse) {
-    
     this.sUserSecretresponse = sUserSecretresponse;
     return this;
   }
@@ -489,14 +460,12 @@ public class UserRequest {
     return sUserSecretresponse;
   }
 
-
   public void setsUserSecretresponse(String sUserSecretresponse) {
     this.sUserSecretresponse = sUserSecretresponse;
   }
 
 
   public UserRequest fkiModuleIDForm(Integer fkiModuleIDForm) {
-    
     this.fkiModuleIDForm = fkiModuleIDForm;
     return this;
   }
@@ -511,14 +480,12 @@ public class UserRequest {
     return fkiModuleIDForm;
   }
 
-
   public void setFkiModuleIDForm(Integer fkiModuleIDForm) {
     this.fkiModuleIDForm = fkiModuleIDForm;
   }
 
 
   public UserRequest eUserType(FieldEUserType eUserType) {
-    
     this.eUserType = eUserType;
     return this;
   }
@@ -532,14 +499,12 @@ public class UserRequest {
     return eUserType;
   }
 
-
   public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
   public UserRequest eUserLogintype(FieldEUserLogintype eUserLogintype) {
-    
     this.eUserLogintype = eUserLogintype;
     return this;
   }
@@ -553,14 +518,12 @@ public class UserRequest {
     return eUserLogintype;
   }
 
-
   public void seteUserLogintype(FieldEUserLogintype eUserLogintype) {
     this.eUserLogintype = eUserLogintype;
   }
 
 
   public UserRequest sUserFirstname(String sUserFirstname) {
-    
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -574,14 +537,12 @@ public class UserRequest {
     return sUserFirstname;
   }
 
-
   public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
   public UserRequest sUserLastname(String sUserLastname) {
-    
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -595,14 +556,12 @@ public class UserRequest {
     return sUserLastname;
   }
 
-
   public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
   public UserRequest sUserLoginname(String sUserLoginname) {
-    
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -616,14 +575,12 @@ public class UserRequest {
     return sUserLoginname;
   }
 
-
   public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
   public UserRequest eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
-    
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -637,14 +594,12 @@ public class UserRequest {
     return eUserEzsignaccess;
   }
 
-
   public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
   public UserRequest bUserIsactive(Boolean bUserIsactive) {
-    
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -658,14 +613,12 @@ public class UserRequest {
     return bUserIsactive;
   }
 
-
   public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 
 
   public UserRequest bUserValidatebyadministration(Boolean bUserValidatebyadministration) {
-    
     this.bUserValidatebyadministration = bUserValidatebyadministration;
     return this;
   }
@@ -679,14 +632,12 @@ public class UserRequest {
     return bUserValidatebyadministration;
   }
 
-
   public void setbUserValidatebyadministration(Boolean bUserValidatebyadministration) {
     this.bUserValidatebyadministration = bUserValidatebyadministration;
   }
 
 
   public UserRequest bUserValidatebydirector(Boolean bUserValidatebydirector) {
-    
     this.bUserValidatebydirector = bUserValidatebydirector;
     return this;
   }
@@ -700,14 +651,12 @@ public class UserRequest {
     return bUserValidatebydirector;
   }
 
-
   public void setbUserValidatebydirector(Boolean bUserValidatebydirector) {
     this.bUserValidatebydirector = bUserValidatebydirector;
   }
 
 
   public UserRequest bUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
-    
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
     return this;
   }
@@ -721,14 +670,12 @@ public class UserRequest {
     return bUserAttachmentautoverified;
   }
 
-
   public void setbUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
   }
 
 
   public UserRequest bUserChangepassword(Boolean bUserChangepassword) {
-    
     this.bUserChangepassword = bUserChangepassword;
     return this;
   }
@@ -741,7 +688,6 @@ public class UserRequest {
   public Boolean getbUserChangepassword() {
     return bUserChangepassword;
   }
-
 
   public void setbUserChangepassword(Boolean bUserChangepassword) {
     this.bUserChangepassword = bUserChangepassword;
@@ -931,6 +877,10 @@ public class UserRequest {
       if ((jsonObj.get("sUserSecretresponse") != null && !jsonObj.get("sUserSecretresponse").isJsonNull()) && !jsonObj.get("sUserSecretresponse").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserSecretresponse` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserSecretresponse").toString()));
       }
+      // validate the required field `eUserType`
+      FieldEUserType.validateJsonElement(jsonObj.get("eUserType"));
+      // validate the required field `eUserLogintype`
+      FieldEUserLogintype.validateJsonElement(jsonObj.get("eUserLogintype"));
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
       }
@@ -940,6 +890,8 @@ public class UserRequest {
       if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
+      // validate the required field `eUserEzsignaccess`
+      FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

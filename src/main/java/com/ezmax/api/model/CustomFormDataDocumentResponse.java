@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Document Object 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -78,7 +78,6 @@ public class CustomFormDataDocumentResponse {
   }
 
   public CustomFormDataDocumentResponse pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
-    
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -93,14 +92,12 @@ public class CustomFormDataDocumentResponse {
     return pkiEzsigndocumentID;
   }
 
-
   public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
   public CustomFormDataDocumentResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -115,14 +112,12 @@ public class CustomFormDataDocumentResponse {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public CustomFormDataDocumentResponse sEzsigndocumentName(String sEzsigndocumentName) {
-    
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -136,14 +131,12 @@ public class CustomFormDataDocumentResponse {
     return sEzsigndocumentName;
   }
 
-
   public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
   public CustomFormDataDocumentResponse dtModifiedDate(String dtModifiedDate) {
-    
     this.dtModifiedDate = dtModifiedDate;
     return this;
   }
@@ -157,14 +150,12 @@ public class CustomFormDataDocumentResponse {
     return dtModifiedDate;
   }
 
-
   public void setDtModifiedDate(String dtModifiedDate) {
     this.dtModifiedDate = dtModifiedDate;
   }
 
 
   public CustomFormDataDocumentResponse aObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
-    
     this.aObjFormDataSigner = aObjFormDataSigner;
     return this;
   }
@@ -185,7 +176,6 @@ public class CustomFormDataDocumentResponse {
   public List<CustomFormDataSignerResponse> getaObjFormDataSigner() {
     return aObjFormDataSigner;
   }
-
 
   public void setaObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
     this.aObjFormDataSigner = aObjFormDataSigner;

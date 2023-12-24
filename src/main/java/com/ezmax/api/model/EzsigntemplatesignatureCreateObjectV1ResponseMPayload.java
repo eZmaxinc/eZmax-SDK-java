@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatesignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatesignatureCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "a_pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -61,7 +61,6 @@ public class EzsigntemplatesignatureCreateObjectV1ResponseMPayload {
   }
 
   public EzsigntemplatesignatureCreateObjectV1ResponseMPayload aPkiEzsigntemplatesignatureID(List<Integer> aPkiEzsigntemplatesignatureID) {
-    
     this.aPkiEzsigntemplatesignatureID = aPkiEzsigntemplatesignatureID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsigntemplatesignatureCreateObjectV1ResponseMPayload {
   public List<Integer> getaPkiEzsigntemplatesignatureID() {
     return aPkiEzsigntemplatesignatureID;
   }
-
 
   public void setaPkiEzsigntemplatesignatureID(List<Integer> aPkiEzsigntemplatesignatureID) {
     this.aPkiEzsigntemplatesignatureID = aPkiEzsigntemplatesignatureID;

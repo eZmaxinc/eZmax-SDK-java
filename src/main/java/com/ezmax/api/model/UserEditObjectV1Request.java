@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/user/{pkiUserID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UserEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
@@ -60,7 +60,6 @@ public class UserEditObjectV1Request {
   }
 
   public UserEditObjectV1Request objUser(UserRequestCompound objUser) {
-    
     this.objUser = objUser;
     return this;
   }
@@ -73,7 +72,6 @@ public class UserEditObjectV1Request {
   public UserRequestCompound getObjUser() {
     return objUser;
   }
-
 
   public void setObjUser(UserRequestCompound objUser) {
     this.objUser = objUser;

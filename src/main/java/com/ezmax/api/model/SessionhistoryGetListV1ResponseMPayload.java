@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/sessionhistory/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SessionhistoryGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
@@ -70,7 +70,6 @@ public class SessionhistoryGetListV1ResponseMPayload {
   }
 
   public SessionhistoryGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
-    
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -84,14 +83,12 @@ public class SessionhistoryGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-
   public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
   public SessionhistoryGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
-    
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -105,14 +102,12 @@ public class SessionhistoryGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-
   public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
   public SessionhistoryGetListV1ResponseMPayload aObjSessionhistory(List<SessionhistoryListElement> aObjSessionhistory) {
-    
     this.aObjSessionhistory = aObjSessionhistory;
     return this;
   }
@@ -133,7 +128,6 @@ public class SessionhistoryGetListV1ResponseMPayload {
   public List<SessionhistoryListElement> getaObjSessionhistory() {
     return aObjSessionhistory;
   }
-
 
   public void setaObjSessionhistory(List<SessionhistoryListElement> aObjSessionhistory) {
     this.aObjSessionhistory = aObjSessionhistory;

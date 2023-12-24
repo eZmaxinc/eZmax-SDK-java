@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimGroupMember
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimGroupMember {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -71,7 +71,6 @@ public class ScimGroupMember {
   }
 
   public ScimGroupMember value(String value) {
-    
     this.value = value;
     return this;
   }
@@ -85,14 +84,12 @@ public class ScimGroupMember {
     return value;
   }
 
-
   public void setValue(String value) {
     this.value = value;
   }
 
 
   public ScimGroupMember display(String display) {
-    
     this.display = display;
     return this;
   }
@@ -106,14 +103,12 @@ public class ScimGroupMember {
     return display;
   }
 
-
   public void setDisplay(String display) {
     this.display = display;
   }
 
 
   public ScimGroupMember type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -127,14 +122,12 @@ public class ScimGroupMember {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public ScimGroupMember $ref(String $ref) {
-    
     this.$ref = $ref;
     return this;
   }
@@ -147,7 +140,6 @@ public class ScimGroupMember {
   public String get$Ref() {
     return $ref;
   }
-
 
   public void set$Ref(String $ref) {
     this.$ref = $ref;

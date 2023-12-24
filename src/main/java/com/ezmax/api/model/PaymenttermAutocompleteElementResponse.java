@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PaymenttermAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -67,7 +67,6 @@ public class PaymenttermAutocompleteElementResponse {
   }
 
   public PaymenttermAutocompleteElementResponse pkiPaymenttermID(Integer pkiPaymenttermID) {
-    
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -81,14 +80,12 @@ public class PaymenttermAutocompleteElementResponse {
     return pkiPaymenttermID;
   }
 
-
   public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
   public PaymenttermAutocompleteElementResponse sPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
-    
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
     return this;
   }
@@ -102,14 +99,12 @@ public class PaymenttermAutocompleteElementResponse {
     return sPaymenttermDescriptionX;
   }
 
-
   public void setsPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
   }
 
 
   public PaymenttermAutocompleteElementResponse bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
-    
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -122,7 +117,6 @@ public class PaymenttermAutocompleteElementResponse {
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
   }
-
 
   public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;

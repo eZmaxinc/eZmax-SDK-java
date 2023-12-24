@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhooklog object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomWebhooklogResponse {
   public static final String SERIALIZED_NAME_DT_WEBHOOKLOG_DATE = "dtWebhooklogDate";
   @SerializedName(SERIALIZED_NAME_DT_WEBHOOKLOG_DATE)
@@ -63,7 +63,6 @@ public class CustomWebhooklogResponse {
   }
 
   public CustomWebhooklogResponse dtWebhooklogDate(String dtWebhooklogDate) {
-    
     this.dtWebhooklogDate = dtWebhooklogDate;
     return this;
   }
@@ -77,14 +76,12 @@ public class CustomWebhooklogResponse {
     return dtWebhooklogDate;
   }
 
-
   public void setDtWebhooklogDate(String dtWebhooklogDate) {
     this.dtWebhooklogDate = dtWebhooklogDate;
   }
 
 
   public CustomWebhooklogResponse tWebhooklogJson(String tWebhooklogJson) {
-    
     this.tWebhooklogJson = tWebhooklogJson;
     return this;
   }
@@ -97,7 +94,6 @@ public class CustomWebhooklogResponse {
   public String gettWebhooklogJson() {
     return tWebhooklogJson;
   }
-
 
   public void settWebhooklogJson(String tWebhooklogJson) {
     this.tWebhooklogJson = tWebhooklogJson;

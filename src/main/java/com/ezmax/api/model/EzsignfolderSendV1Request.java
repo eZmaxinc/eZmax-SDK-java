@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfolderSendV1Request {
   public static final String SERIALIZED_NAME_T_EXTRA_MESSAGE = "tExtraMessage";
   @SerializedName(SERIALIZED_NAME_T_EXTRA_MESSAGE)
@@ -59,7 +59,6 @@ public class EzsignfolderSendV1Request {
   }
 
   public EzsignfolderSendV1Request tExtraMessage(String tExtraMessage) {
-    
     this.tExtraMessage = tExtraMessage;
     return this;
   }
@@ -72,7 +71,6 @@ public class EzsignfolderSendV1Request {
   public String gettExtraMessage() {
     return tExtraMessage;
   }
-
 
   public void settExtraMessage(String tExtraMessage) {
     this.tExtraMessage = tExtraMessage;

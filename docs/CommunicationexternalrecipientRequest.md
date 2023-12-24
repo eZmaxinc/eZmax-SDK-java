@@ -12,7 +12,7 @@ A Communicationexternalrecipient Object
 |**sEmailAddress** | **String** | The email address. |  [optional] |
 |**sPhoneE164** | **String** | A phone number in E.164 Format |  [optional] |
 |**eCommunicationexternalrecipientType** | **FieldECommunicationexternalrecipientType** |  |  [optional] |
-|**sCommunicationexternalrecipientName** | **String** | The name of the Communicationexternalrecipient |  |
+|**sCommunicationexternalrecipientName** | **String** | The name of the Communicationexternalrecipient |  [optional] |
 
 
 

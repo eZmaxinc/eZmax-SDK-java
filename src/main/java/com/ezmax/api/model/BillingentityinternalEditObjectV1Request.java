@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/billingentityinternal/{pkiBillingentityinternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BillingentityinternalEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL = "objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL)
@@ -60,7 +60,6 @@ public class BillingentityinternalEditObjectV1Request {
   }
 
   public BillingentityinternalEditObjectV1Request objBillingentityinternal(BillingentityinternalRequestCompound objBillingentityinternal) {
-    
     this.objBillingentityinternal = objBillingentityinternal;
     return this;
   }
@@ -73,7 +72,6 @@ public class BillingentityinternalEditObjectV1Request {
   public BillingentityinternalRequestCompound getObjBillingentityinternal() {
     return objBillingentityinternal;
   }
-
 
   public void setObjBillingentityinternal(BillingentityinternalRequestCompound objBillingentityinternal) {
     this.objBillingentityinternal = objBillingentityinternal;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagemembershipResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
@@ -71,7 +71,6 @@ public class EzsigntemplatepackagemembershipResponse {
   }
 
   public EzsigntemplatepackagemembershipResponse pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
-    
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsigntemplatepackagemembershipResponse {
     return pkiEzsigntemplatepackagemembershipID;
   }
 
-
   public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
   }
 
 
   public EzsigntemplatepackagemembershipResponse fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsigntemplatepackagemembershipResponse {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsigntemplatepackagemembershipResponse fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -130,14 +125,12 @@ public class EzsigntemplatepackagemembershipResponse {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsigntemplatepackagemembershipResponse iEzsigntemplatepackagemembershipOrder(Integer iEzsigntemplatepackagemembershipOrder) {
-    
     this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
     return this;
   }
@@ -151,7 +144,6 @@ public class EzsigntemplatepackagemembershipResponse {
   public Integer getiEzsigntemplatepackagemembershipOrder() {
     return iEzsigntemplatepackagemembershipOrder;
   }
-
 
   public void setiEzsigntemplatepackagemembershipOrder(Integer iEzsigntemplatepackagemembershipOrder) {
     this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;

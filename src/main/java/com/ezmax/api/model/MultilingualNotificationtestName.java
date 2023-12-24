@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationtest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualNotificationtestName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1 = "sNotificationtestName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1)
@@ -63,7 +63,6 @@ public class MultilingualNotificationtestName {
   }
 
   public MultilingualNotificationtestName sNotificationtestName1(String sNotificationtestName1) {
-    
     this.sNotificationtestName1 = sNotificationtestName1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualNotificationtestName {
     return sNotificationtestName1;
   }
 
-
   public void setsNotificationtestName1(String sNotificationtestName1) {
     this.sNotificationtestName1 = sNotificationtestName1;
   }
 
 
   public MultilingualNotificationtestName sNotificationtestName2(String sNotificationtestName2) {
-    
     this.sNotificationtestName2 = sNotificationtestName2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualNotificationtestName {
   public String getsNotificationtestName2() {
     return sNotificationtestName2;
   }
-
 
   public void setsNotificationtestName2(String sNotificationtestName2) {
     this.sNotificationtestName2 = sNotificationtestName2;

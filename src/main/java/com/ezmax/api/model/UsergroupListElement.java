@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class UsergroupListElement {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -67,7 +67,6 @@ public class UsergroupListElement {
   }
 
   public UsergroupListElement pkiUsergroupID(Integer pkiUsergroupID) {
-    
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -83,14 +82,12 @@ public class UsergroupListElement {
     return pkiUsergroupID;
   }
 
-
   public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
   public UsergroupListElement sUsergroupNameX(String sUsergroupNameX) {
-    
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -104,14 +101,12 @@ public class UsergroupListElement {
     return sUsergroupNameX;
   }
 
-
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
 
   public UsergroupListElement iCountUser(Integer iCountUser) {
-    
     this.iCountUser = iCountUser;
     return this;
   }
@@ -126,7 +121,6 @@ public class UsergroupListElement {
   public Integer getiCountUser() {
     return iCountUser;
   }
-
 
   public void setiCountUser(Integer iCountUser) {
     this.iCountUser = iCountUser;

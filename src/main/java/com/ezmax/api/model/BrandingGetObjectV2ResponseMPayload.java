@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/branding/{pkiBrandingID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
@@ -60,7 +60,6 @@ public class BrandingGetObjectV2ResponseMPayload {
   }
 
   public BrandingGetObjectV2ResponseMPayload objBranding(BrandingResponseCompound objBranding) {
-    
     this.objBranding = objBranding;
     return this;
   }
@@ -73,7 +72,6 @@ public class BrandingGetObjectV2ResponseMPayload {
   public BrandingResponseCompound getObjBranding() {
     return objBranding;
   }
-
 
   public void setObjBranding(BrandingResponseCompound objBranding) {
     this.objBranding = objBranding;

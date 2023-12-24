@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic List Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
@@ -63,7 +63,6 @@ public class CommonGetListV1ResponseMPayload {
   }
 
   public CommonGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
-    
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -77,14 +76,12 @@ public class CommonGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-
   public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
   public CommonGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
-    
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -97,7 +94,6 @@ public class CommonGetListV1ResponseMPayload {
   public Integer getiRowFiltered() {
     return iRowFiltered;
   }
-
 
   public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;

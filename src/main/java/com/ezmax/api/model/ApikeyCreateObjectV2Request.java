@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/apikey
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ApikeyCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
@@ -62,7 +62,6 @@ public class ApikeyCreateObjectV2Request {
   }
 
   public ApikeyCreateObjectV2Request aObjApikey(List<ApikeyRequestCompound> aObjApikey) {
-    
     this.aObjApikey = aObjApikey;
     return this;
   }
@@ -83,7 +82,6 @@ public class ApikeyCreateObjectV2Request {
   public List<ApikeyRequestCompound> getaObjApikey() {
     return aObjApikey;
   }
-
 
   public void setaObjApikey(List<ApikeyRequestCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;

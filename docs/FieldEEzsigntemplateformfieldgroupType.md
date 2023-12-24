@@ -15,5 +15,9 @@
 
 * `CHECKBOX` (value: `"Checkbox"`)
 
+* `NUMBER` (value: `"Number"`)
+
+* `DATE` (value: `"Date"`)
+
 
 

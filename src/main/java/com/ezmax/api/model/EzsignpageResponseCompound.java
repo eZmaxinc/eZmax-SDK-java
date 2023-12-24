@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignpage Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignpageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D = "pkiEzsignpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D)
@@ -83,7 +83,6 @@ public class EzsignpageResponseCompound {
   }
 
   public EzsignpageResponseCompound pkiEzsignpageID(Integer pkiEzsignpageID) {
-    
     this.pkiEzsignpageID = pkiEzsignpageID;
     return this;
   }
@@ -98,14 +97,12 @@ public class EzsignpageResponseCompound {
     return pkiEzsignpageID;
   }
 
-
   public void setPkiEzsignpageID(Integer pkiEzsignpageID) {
     this.pkiEzsignpageID = pkiEzsignpageID;
   }
 
 
   public EzsignpageResponseCompound iEzsignpageWidthimage(Integer iEzsignpageWidthimage) {
-    
     this.iEzsignpageWidthimage = iEzsignpageWidthimage;
     return this;
   }
@@ -120,14 +117,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageWidthimage;
   }
 
-
   public void setiEzsignpageWidthimage(Integer iEzsignpageWidthimage) {
     this.iEzsignpageWidthimage = iEzsignpageWidthimage;
   }
 
 
   public EzsignpageResponseCompound iEzsignpageHeightimage(Integer iEzsignpageHeightimage) {
-    
     this.iEzsignpageHeightimage = iEzsignpageHeightimage;
     return this;
   }
@@ -142,14 +137,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageHeightimage;
   }
 
-
   public void setiEzsignpageHeightimage(Integer iEzsignpageHeightimage) {
     this.iEzsignpageHeightimage = iEzsignpageHeightimage;
   }
 
 
   public EzsignpageResponseCompound iEzsignpageWidthpdf(Integer iEzsignpageWidthpdf) {
-    
     this.iEzsignpageWidthpdf = iEzsignpageWidthpdf;
     return this;
   }
@@ -164,14 +157,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageWidthpdf;
   }
 
-
   public void setiEzsignpageWidthpdf(Integer iEzsignpageWidthpdf) {
     this.iEzsignpageWidthpdf = iEzsignpageWidthpdf;
   }
 
 
   public EzsignpageResponseCompound iEzsignpageHeightpdf(Integer iEzsignpageHeightpdf) {
-    
     this.iEzsignpageHeightpdf = iEzsignpageHeightpdf;
     return this;
   }
@@ -186,14 +177,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageHeightpdf;
   }
 
-
   public void setiEzsignpageHeightpdf(Integer iEzsignpageHeightpdf) {
     this.iEzsignpageHeightpdf = iEzsignpageHeightpdf;
   }
 
 
   public EzsignpageResponseCompound iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -208,14 +197,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpagePagenumber;
   }
 
-
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
   public EzsignpageResponseCompound sComputedImageurl(String sComputedImageurl) {
-    
     this.sComputedImageurl = sComputedImageurl;
     return this;
   }
@@ -228,7 +215,6 @@ public class EzsignpageResponseCompound {
   public String getsComputedImageurl() {
     return sComputedImageurl;
   }
-
 
   public void setsComputedImageurl(String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;

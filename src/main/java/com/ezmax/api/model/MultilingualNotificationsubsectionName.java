@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationsubsection
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualNotificationsubsectionName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1 = "sNotificationsubsectionName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1)
@@ -63,7 +63,6 @@ public class MultilingualNotificationsubsectionName {
   }
 
   public MultilingualNotificationsubsectionName sNotificationsubsectionName1(String sNotificationsubsectionName1) {
-    
     this.sNotificationsubsectionName1 = sNotificationsubsectionName1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualNotificationsubsectionName {
     return sNotificationsubsectionName1;
   }
 
-
   public void setsNotificationsubsectionName1(String sNotificationsubsectionName1) {
     this.sNotificationsubsectionName1 = sNotificationsubsectionName1;
   }
 
 
   public MultilingualNotificationsubsectionName sNotificationsubsectionName2(String sNotificationsubsectionName2) {
-    
     this.sNotificationsubsectionName2 = sNotificationsubsectionName2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualNotificationsubsectionName {
   public String getsNotificationsubsectionName2() {
     return sNotificationsubsectionName2;
   }
-
 
   public void setsNotificationsubsectionName2(String sNotificationsubsectionName2) {
     this.sNotificationsubsectionName2 = sNotificationsubsectionName2;

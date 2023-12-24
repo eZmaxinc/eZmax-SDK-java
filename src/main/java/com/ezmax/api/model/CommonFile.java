@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Object representing a file used in a request or response context 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonFile {
   public static final String SERIALIZED_NAME_S_FILE_NAME = "sFileName";
   @SerializedName(SERIALIZED_NAME_S_FILE_NAME)
@@ -108,6 +108,11 @@ public class CommonFile {
         return EFileSourceEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EFileSourceEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_FILE_SOURCE = "eFileSource";
@@ -118,7 +123,6 @@ public class CommonFile {
   }
 
   public CommonFile sFileName(String sFileName) {
-    
     this.sFileName = sFileName;
     return this;
   }
@@ -132,14 +136,12 @@ public class CommonFile {
     return sFileName;
   }
 
-
   public void setsFileName(String sFileName) {
     this.sFileName = sFileName;
   }
 
 
   public CommonFile sFileUrl(String sFileUrl) {
-    
     this.sFileUrl = sFileUrl;
     return this;
   }
@@ -153,14 +155,12 @@ public class CommonFile {
     return sFileUrl;
   }
 
-
   public void setsFileUrl(String sFileUrl) {
     this.sFileUrl = sFileUrl;
   }
 
 
   public CommonFile sFileBase64(byte[] sFileBase64) {
-    
     this.sFileBase64 = sFileBase64;
     return this;
   }
@@ -174,14 +174,12 @@ public class CommonFile {
     return sFileBase64;
   }
 
-
   public void setsFileBase64(byte[] sFileBase64) {
     this.sFileBase64 = sFileBase64;
   }
 
 
   public CommonFile eFileSource(EFileSourceEnum eFileSource) {
-    
     this.eFileSource = eFileSource;
     return this;
   }
@@ -194,7 +192,6 @@ public class CommonFile {
   public EFileSourceEnum geteFileSource() {
     return eFileSource;
   }
-
 
   public void seteFileSource(EFileSourceEnum eFileSource) {
     this.eFileSource = eFileSource;
@@ -300,6 +297,8 @@ public class CommonFile {
       if (!jsonObj.get("eFileSource").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eFileSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eFileSource").toString()));
       }
+      // validate the required field `eFileSource`
+      EFileSourceEnum.validateJsonElement(jsonObj.get("eFileSource"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

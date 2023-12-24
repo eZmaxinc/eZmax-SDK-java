@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplatepackagemembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
@@ -67,7 +67,6 @@ public class EzsigntemplatepackagemembershipRequestCompound {
   }
 
   public EzsigntemplatepackagemembershipRequestCompound pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
-    
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -82,14 +81,12 @@ public class EzsigntemplatepackagemembershipRequestCompound {
     return pkiEzsigntemplatepackagemembershipID;
   }
 
-
   public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
   }
 
 
   public EzsigntemplatepackagemembershipRequestCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
-    
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -104,14 +101,12 @@ public class EzsigntemplatepackagemembershipRequestCompound {
     return fkiEzsigntemplatepackageID;
   }
 
-
   public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
   public EzsigntemplatepackagemembershipRequestCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -125,7 +120,6 @@ public class EzsigntemplatepackagemembershipRequestCompound {
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
   }
-
 
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;

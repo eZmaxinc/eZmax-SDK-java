@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a generic debug object that is returned by all API requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -78,7 +78,6 @@ public class CommonResponseObjDebug {
   }
 
   public CommonResponseObjDebug sMemoryUsage(String sMemoryUsage) {
-    
     this.sMemoryUsage = sMemoryUsage;
     return this;
   }
@@ -92,14 +91,12 @@ public class CommonResponseObjDebug {
     return sMemoryUsage;
   }
 
-
   public void setsMemoryUsage(String sMemoryUsage) {
     this.sMemoryUsage = sMemoryUsage;
   }
 
 
   public CommonResponseObjDebug sRunTime(String sRunTime) {
-    
     this.sRunTime = sRunTime;
     return this;
   }
@@ -113,14 +110,12 @@ public class CommonResponseObjDebug {
     return sRunTime;
   }
 
-
   public void setsRunTime(String sRunTime) {
     this.sRunTime = sRunTime;
   }
 
 
   public CommonResponseObjDebug iSQLSelects(Integer iSQLSelects) {
-    
     this.iSQLSelects = iSQLSelects;
     return this;
   }
@@ -134,14 +129,12 @@ public class CommonResponseObjDebug {
     return iSQLSelects;
   }
 
-
   public void setiSQLSelects(Integer iSQLSelects) {
     this.iSQLSelects = iSQLSelects;
   }
 
 
   public CommonResponseObjDebug iSQLQueries(Integer iSQLQueries) {
-    
     this.iSQLQueries = iSQLQueries;
     return this;
   }
@@ -155,14 +148,12 @@ public class CommonResponseObjDebug {
     return iSQLQueries;
   }
 
-
   public void setiSQLQueries(Integer iSQLQueries) {
     this.iSQLQueries = iSQLQueries;
   }
 
 
   public CommonResponseObjDebug aObjSQLQuery(List<CommonResponseObjSQLQuery> aObjSQLQuery) {
-    
     this.aObjSQLQuery = aObjSQLQuery;
     return this;
   }
@@ -183,7 +174,6 @@ public class CommonResponseObjDebug {
   public List<CommonResponseObjSQLQuery> getaObjSQLQuery() {
     return aObjSQLQuery;
   }
-
 
   public void setaObjSQLQuery(List<CommonResponseObjSQLQuery> aObjSQLQuery) {
     this.aObjSQLQuery = aObjSQLQuery;

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Department AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class DepartmentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
@@ -71,7 +71,6 @@ public class DepartmentAutocompleteElementResponse {
   }
 
   public DepartmentAutocompleteElementResponse sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -85,14 +84,12 @@ public class DepartmentAutocompleteElementResponse {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public DepartmentAutocompleteElementResponse sDepartmentNameX(String sDepartmentNameX) {
-    
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -106,14 +103,12 @@ public class DepartmentAutocompleteElementResponse {
     return sDepartmentNameX;
   }
 
-
   public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
   public DepartmentAutocompleteElementResponse pkiDepartmentID(Integer pkiDepartmentID) {
-    
     this.pkiDepartmentID = pkiDepartmentID;
     return this;
   }
@@ -128,14 +123,12 @@ public class DepartmentAutocompleteElementResponse {
     return pkiDepartmentID;
   }
 
-
   public void setPkiDepartmentID(Integer pkiDepartmentID) {
     this.pkiDepartmentID = pkiDepartmentID;
   }
 
 
   public DepartmentAutocompleteElementResponse bDepartmentIsactive(Boolean bDepartmentIsactive) {
-    
     this.bDepartmentIsactive = bDepartmentIsactive;
     return this;
   }
@@ -148,7 +141,6 @@ public class DepartmentAutocompleteElementResponse {
   public Boolean getbDepartmentIsactive() {
     return bDepartmentIsactive;
   }
-
 
   public void setbDepartmentIsactive(Boolean bDepartmentIsactive) {
     this.bDepartmentIsactive = bDepartmentIsactive;

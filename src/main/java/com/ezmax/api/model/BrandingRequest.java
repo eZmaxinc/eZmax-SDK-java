@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingRequest {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -109,7 +109,6 @@ public class BrandingRequest {
   }
 
   public BrandingRequest pkiBrandingID(Integer pkiBrandingID) {
-    
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -124,14 +123,12 @@ public class BrandingRequest {
     return pkiBrandingID;
   }
 
-
   public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
   public BrandingRequest objBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
-    
     this.objBrandingDescription = objBrandingDescription;
     return this;
   }
@@ -145,14 +142,12 @@ public class BrandingRequest {
     return objBrandingDescription;
   }
 
-
   public void setObjBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
     this.objBrandingDescription = objBrandingDescription;
   }
 
 
   public BrandingRequest eBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
-    
     this.eBrandingLogo = eBrandingLogo;
     return this;
   }
@@ -166,14 +161,12 @@ public class BrandingRequest {
     return eBrandingLogo;
   }
 
-
   public void seteBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
   }
 
 
   public BrandingRequest sBrandingBase64(byte[] sBrandingBase64) {
-    
     this.sBrandingBase64 = sBrandingBase64;
     return this;
   }
@@ -187,14 +180,12 @@ public class BrandingRequest {
     return sBrandingBase64;
   }
 
-
   public void setsBrandingBase64(byte[] sBrandingBase64) {
     this.sBrandingBase64 = sBrandingBase64;
   }
 
 
   public BrandingRequest iBrandingColortext(Integer iBrandingColortext) {
-    
     this.iBrandingColortext = iBrandingColortext;
     return this;
   }
@@ -210,14 +201,12 @@ public class BrandingRequest {
     return iBrandingColortext;
   }
 
-
   public void setiBrandingColortext(Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
   }
 
 
   public BrandingRequest iBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
-    
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
     return this;
   }
@@ -233,14 +222,12 @@ public class BrandingRequest {
     return iBrandingColortextlinkbox;
   }
 
-
   public void setiBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
   }
 
 
   public BrandingRequest iBrandingColortextbutton(Integer iBrandingColortextbutton) {
-    
     this.iBrandingColortextbutton = iBrandingColortextbutton;
     return this;
   }
@@ -256,14 +243,12 @@ public class BrandingRequest {
     return iBrandingColortextbutton;
   }
 
-
   public void setiBrandingColortextbutton(Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
   }
 
 
   public BrandingRequest iBrandingColorbackground(Integer iBrandingColorbackground) {
-    
     this.iBrandingColorbackground = iBrandingColorbackground;
     return this;
   }
@@ -279,14 +264,12 @@ public class BrandingRequest {
     return iBrandingColorbackground;
   }
 
-
   public void setiBrandingColorbackground(Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
   }
 
 
   public BrandingRequest iBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
-    
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
     return this;
   }
@@ -302,14 +285,12 @@ public class BrandingRequest {
     return iBrandingColorbackgroundbutton;
   }
 
-
   public void setiBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
   }
 
 
   public BrandingRequest iBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
-    
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
     return this;
   }
@@ -325,14 +306,12 @@ public class BrandingRequest {
     return iBrandingColorbackgroundsmallbox;
   }
 
-
   public void setiBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
   }
 
 
   public BrandingRequest sBrandingName(String sBrandingName) {
-    
     this.sBrandingName = sBrandingName;
     return this;
   }
@@ -346,14 +325,12 @@ public class BrandingRequest {
     return sBrandingName;
   }
 
-
   public void setsBrandingName(String sBrandingName) {
     this.sBrandingName = sBrandingName;
   }
 
 
   public BrandingRequest sEmailAddress(String sEmailAddress) {
-    
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -367,14 +344,12 @@ public class BrandingRequest {
     return sEmailAddress;
   }
 
-
   public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   public BrandingRequest bBrandingIsactive(Boolean bBrandingIsactive) {
-    
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -387,7 +362,6 @@ public class BrandingRequest {
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
   }
-
 
   public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
@@ -520,6 +494,8 @@ public class BrandingRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objBrandingDescription`
       MultilingualBrandingDescription.validateJsonElement(jsonObj.get("objBrandingDescription"));
+      // validate the required field `eBrandingLogo`
+      FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
       if ((jsonObj.get("sBrandingName") != null && !jsonObj.get("sBrandingName").isJsonNull()) && !jsonObj.get("sBrandingName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBrandingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingName").toString()));
       }

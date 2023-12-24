@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Clonehistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ClonehistoryListElement {
   public static final String SERIALIZED_NAME_PKI_CLONEHISTORY_I_D = "pkiClonehistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_CLONEHISTORY_I_D)
@@ -99,7 +99,6 @@ public class ClonehistoryListElement {
   }
 
   public ClonehistoryListElement pkiClonehistoryID(Integer pkiClonehistoryID) {
-    
     this.pkiClonehistoryID = pkiClonehistoryID;
     return this;
   }
@@ -115,14 +114,12 @@ public class ClonehistoryListElement {
     return pkiClonehistoryID;
   }
 
-
   public void setPkiClonehistoryID(Integer pkiClonehistoryID) {
     this.pkiClonehistoryID = pkiClonehistoryID;
   }
 
 
   public ClonehistoryListElement fkiUserIDCloning(Integer fkiUserIDCloning) {
-    
     this.fkiUserIDCloning = fkiUserIDCloning;
     return this;
   }
@@ -137,14 +134,12 @@ public class ClonehistoryListElement {
     return fkiUserIDCloning;
   }
 
-
   public void setFkiUserIDCloning(Integer fkiUserIDCloning) {
     this.fkiUserIDCloning = fkiUserIDCloning;
   }
 
 
   public ClonehistoryListElement fkiUserIDCloned(Integer fkiUserIDCloned) {
-    
     this.fkiUserIDCloned = fkiUserIDCloned;
     return this;
   }
@@ -159,14 +154,12 @@ public class ClonehistoryListElement {
     return fkiUserIDCloned;
   }
 
-
   public void setFkiUserIDCloned(Integer fkiUserIDCloned) {
     this.fkiUserIDCloned = fkiUserIDCloned;
   }
 
 
   public ClonehistoryListElement dtClonehistoryFirsthit(String dtClonehistoryFirsthit) {
-    
     this.dtClonehistoryFirsthit = dtClonehistoryFirsthit;
     return this;
   }
@@ -180,14 +173,12 @@ public class ClonehistoryListElement {
     return dtClonehistoryFirsthit;
   }
 
-
   public void setDtClonehistoryFirsthit(String dtClonehistoryFirsthit) {
     this.dtClonehistoryFirsthit = dtClonehistoryFirsthit;
   }
 
 
   public ClonehistoryListElement dtClonehistoryLasthit(String dtClonehistoryLasthit) {
-    
     this.dtClonehistoryLasthit = dtClonehistoryLasthit;
     return this;
   }
@@ -201,14 +192,12 @@ public class ClonehistoryListElement {
     return dtClonehistoryLasthit;
   }
 
-
   public void setDtClonehistoryLasthit(String dtClonehistoryLasthit) {
     this.dtClonehistoryLasthit = dtClonehistoryLasthit;
   }
 
 
   public ClonehistoryListElement sUserLoginnameCloning(String sUserLoginnameCloning) {
-    
     this.sUserLoginnameCloning = sUserLoginnameCloning;
     return this;
   }
@@ -222,14 +211,12 @@ public class ClonehistoryListElement {
     return sUserLoginnameCloning;
   }
 
-
   public void setsUserLoginnameCloning(String sUserLoginnameCloning) {
     this.sUserLoginnameCloning = sUserLoginnameCloning;
   }
 
 
   public ClonehistoryListElement sUserFirstnameCloning(String sUserFirstnameCloning) {
-    
     this.sUserFirstnameCloning = sUserFirstnameCloning;
     return this;
   }
@@ -243,14 +230,12 @@ public class ClonehistoryListElement {
     return sUserFirstnameCloning;
   }
 
-
   public void setsUserFirstnameCloning(String sUserFirstnameCloning) {
     this.sUserFirstnameCloning = sUserFirstnameCloning;
   }
 
 
   public ClonehistoryListElement sUserLastnameCloning(String sUserLastnameCloning) {
-    
     this.sUserLastnameCloning = sUserLastnameCloning;
     return this;
   }
@@ -264,14 +249,12 @@ public class ClonehistoryListElement {
     return sUserLastnameCloning;
   }
 
-
   public void setsUserLastnameCloning(String sUserLastnameCloning) {
     this.sUserLastnameCloning = sUserLastnameCloning;
   }
 
 
   public ClonehistoryListElement sUserLoginnameCloned(String sUserLoginnameCloned) {
-    
     this.sUserLoginnameCloned = sUserLoginnameCloned;
     return this;
   }
@@ -285,14 +268,12 @@ public class ClonehistoryListElement {
     return sUserLoginnameCloned;
   }
 
-
   public void setsUserLoginnameCloned(String sUserLoginnameCloned) {
     this.sUserLoginnameCloned = sUserLoginnameCloned;
   }
 
 
   public ClonehistoryListElement sUserFirstnameCloned(String sUserFirstnameCloned) {
-    
     this.sUserFirstnameCloned = sUserFirstnameCloned;
     return this;
   }
@@ -306,14 +287,12 @@ public class ClonehistoryListElement {
     return sUserFirstnameCloned;
   }
 
-
   public void setsUserFirstnameCloned(String sUserFirstnameCloned) {
     this.sUserFirstnameCloned = sUserFirstnameCloned;
   }
 
 
   public ClonehistoryListElement sUserLastnameCloned(String sUserLastnameCloned) {
-    
     this.sUserLastnameCloned = sUserLastnameCloned;
     return this;
   }
@@ -326,7 +305,6 @@ public class ClonehistoryListElement {
   public String getsUserLastnameCloned() {
     return sUserLastnameCloned;
   }
-
 
   public void setsUserLastnameCloned(String sUserLastnameCloned) {
     this.sUserLastnameCloned = sUserLastnameCloned;

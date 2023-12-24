@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -84,7 +84,6 @@ public class EzsignfoldersignerassociationRequestCompound {
   }
 
   public EzsignfoldersignerassociationRequestCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
-    
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -99,14 +98,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return pkiEzsignfoldersignerassociationID;
   }
 
-
   public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -121,14 +118,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound fkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
-    
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
     return this;
   }
@@ -144,14 +139,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiEzsignsignergroupID;
   }
 
-
   public void setFkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -166,14 +159,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
-    
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
     return this;
   }
@@ -187,14 +178,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return bEzsignfoldersignerassociationReceivecopy;
   }
 
-
   public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -208,14 +197,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return tEzsignfoldersignerassociationMessage;
   }
 
-
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 
 
   public EzsignfoldersignerassociationRequestCompound objEzsignsigner(EzsignsignerRequestCompound objEzsignsigner) {
-    
     this.objEzsignsigner = objEzsignsigner;
     return this;
   }
@@ -228,7 +215,6 @@ public class EzsignfoldersignerassociationRequestCompound {
   public EzsignsignerRequestCompound getObjEzsignsigner() {
     return objEzsignsigner;
   }
-
 
   public void setObjEzsignsigner(EzsignsignerRequestCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;

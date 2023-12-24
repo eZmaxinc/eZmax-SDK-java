@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CATEGORY = "sCategory";
   @SerializedName(SERIALIZED_NAME_S_CATEGORY)
@@ -76,7 +76,6 @@ public class CustomAutocompleteElementResponse {
   }
 
   public CustomAutocompleteElementResponse sCategory(String sCategory) {
-    
     this.sCategory = sCategory;
     return this;
   }
@@ -90,14 +89,12 @@ public class CustomAutocompleteElementResponse {
     return sCategory;
   }
 
-
   public void setsCategory(String sCategory) {
     this.sCategory = sCategory;
   }
 
 
   public CustomAutocompleteElementResponse sLabel(String sLabel) {
-    
     this.sLabel = sLabel;
     return this;
   }
@@ -111,14 +108,12 @@ public class CustomAutocompleteElementResponse {
     return sLabel;
   }
 
-
   public void setsLabel(String sLabel) {
     this.sLabel = sLabel;
   }
 
 
   public CustomAutocompleteElementResponse sValue(String sValue) {
-    
     this.sValue = sValue;
     return this;
   }
@@ -132,7 +127,6 @@ public class CustomAutocompleteElementResponse {
     return sValue;
   }
 
-
   public void setsValue(String sValue) {
     this.sValue = sValue;
   }
@@ -140,7 +134,6 @@ public class CustomAutocompleteElementResponse {
 
   @Deprecated
   public CustomAutocompleteElementResponse mValue(String mValue) {
-    
     this.mValue = mValue;
     return this;
   }
@@ -156,7 +149,6 @@ public class CustomAutocompleteElementResponse {
     return mValue;
   }
 
-
   @Deprecated
   public void setmValue(String mValue) {
     this.mValue = mValue;
@@ -164,7 +156,6 @@ public class CustomAutocompleteElementResponse {
 
 
   public CustomAutocompleteElementResponse bActive(Boolean bActive) {
-    
     this.bActive = bActive;
     return this;
   }
@@ -177,7 +168,6 @@ public class CustomAutocompleteElementResponse {
   public Boolean getbActive() {
     return bActive;
   }
-
 
   public void setbActive(Boolean bActive) {
     this.bActive = bActive;

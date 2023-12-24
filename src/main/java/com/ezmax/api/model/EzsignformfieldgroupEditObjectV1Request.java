@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignformfieldgroup/{pkiEzsignfoldersignerassociationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignformfieldgroupEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFORMFIELDGROUP = "objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFORMFIELDGROUP)
@@ -60,7 +60,6 @@ public class EzsignformfieldgroupEditObjectV1Request {
   }
 
   public EzsignformfieldgroupEditObjectV1Request objEzsignformfieldgroup(EzsignformfieldgroupRequestCompound objEzsignformfieldgroup) {
-    
     this.objEzsignformfieldgroup = objEzsignformfieldgroup;
     return this;
   }
@@ -73,7 +72,6 @@ public class EzsignformfieldgroupEditObjectV1Request {
   public EzsignformfieldgroupRequestCompound getObjEzsignformfieldgroup() {
     return objEzsignformfieldgroup;
   }
-
 
   public void setObjEzsignformfieldgroup(EzsignformfieldgroupRequestCompound objEzsignformfieldgroup) {
     this.objEzsignformfieldgroup = objEzsignformfieldgroup;

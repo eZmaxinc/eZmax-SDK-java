@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonWebhook {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -67,7 +67,6 @@ public class CommonWebhook {
   }
 
   public CommonWebhook objWebhook(CustomWebhookResponse objWebhook) {
-    
     this.objWebhook = objWebhook;
     return this;
   }
@@ -81,14 +80,12 @@ public class CommonWebhook {
     return objWebhook;
   }
 
-
   public void setObjWebhook(CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
   }
 
 
   public CommonWebhook aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
-    
     this.aObjAttempt = aObjAttempt;
     return this;
   }
@@ -109,7 +106,6 @@ public class CommonWebhook {
   public List<AttemptResponseCompound> getaObjAttempt() {
     return aObjAttempt;
   }
-
 
   public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;

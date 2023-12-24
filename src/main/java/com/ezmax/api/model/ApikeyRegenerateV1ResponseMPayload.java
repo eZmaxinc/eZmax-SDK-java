@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/regenerate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ApikeyRegenerateV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
@@ -60,7 +60,6 @@ public class ApikeyRegenerateV1ResponseMPayload {
   }
 
   public ApikeyRegenerateV1ResponseMPayload objApikey(ApikeyResponseCompound objApikey) {
-    
     this.objApikey = objApikey;
     return this;
   }
@@ -73,7 +72,6 @@ public class ApikeyRegenerateV1ResponseMPayload {
   public ApikeyResponseCompound getObjApikey() {
     return objApikey;
   }
-
 
   public void setObjApikey(ApikeyResponseCompound objApikey) {
     this.objApikey = objApikey;

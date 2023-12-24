@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * All API response will inherit this based Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseGetList {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -65,7 +65,6 @@ public class CommonResponseGetList {
   }
 
   public CommonResponseGetList objDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
-    
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -79,14 +78,12 @@ public class CommonResponseGetList {
     return objDebugPayload;
   }
 
-
   public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
   public CommonResponseGetList objDebug(CommonResponseObjDebug objDebug) {
-    
     this.objDebug = objDebug;
     return this;
   }
@@ -99,7 +96,6 @@ public class CommonResponseGetList {
   public CommonResponseObjDebug getObjDebug() {
     return objDebug;
   }
-
 
   public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;

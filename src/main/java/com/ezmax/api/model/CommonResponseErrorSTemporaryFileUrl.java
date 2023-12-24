@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -68,7 +68,6 @@ public class CommonResponseErrorSTemporaryFileUrl {
   }
 
   public CommonResponseErrorSTemporaryFileUrl sErrorMessage(String sErrorMessage) {
-    
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -82,14 +81,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return sErrorMessage;
   }
 
-
   public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
   public CommonResponseErrorSTemporaryFileUrl eErrorCode(FieldEErrorCode eErrorCode) {
-    
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -103,14 +100,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return eErrorCode;
   }
 
-
   public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
   public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(String sTemporaryFileUrl) {
-    
     this.sTemporaryFileUrl = sTemporaryFileUrl;
     return this;
   }
@@ -123,7 +118,6 @@ public class CommonResponseErrorSTemporaryFileUrl {
   public String getsTemporaryFileUrl() {
     return sTemporaryFileUrl;
   }
-
 
   public void setsTemporaryFileUrl(String sTemporaryFileUrl) {
     this.sTemporaryFileUrl = sTemporaryFileUrl;
@@ -220,6 +214,8 @@ public class CommonResponseErrorSTemporaryFileUrl {
       if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
       }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
       if ((jsonObj.get("sTemporaryFileUrl") != null && !jsonObj.get("sTemporaryFileUrl").isJsonNull()) && !jsonObj.get("sTemporaryFileUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sTemporaryFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sTemporaryFileUrl").toString()));
       }

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -79,7 +79,6 @@ public class EzsignfoldersignerassociationRequest {
   }
 
   public EzsignfoldersignerassociationRequest pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
-    
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -94,14 +93,12 @@ public class EzsignfoldersignerassociationRequest {
     return pkiEzsignfoldersignerassociationID;
   }
 
-
   public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
 
   public EzsignfoldersignerassociationRequest fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -116,14 +113,12 @@ public class EzsignfoldersignerassociationRequest {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public EzsignfoldersignerassociationRequest fkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
-    
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
     return this;
   }
@@ -139,14 +134,12 @@ public class EzsignfoldersignerassociationRequest {
     return fkiEzsignsignergroupID;
   }
 
-
   public void setFkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
   }
 
 
   public EzsignfoldersignerassociationRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -161,14 +154,12 @@ public class EzsignfoldersignerassociationRequest {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public EzsignfoldersignerassociationRequest bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
-    
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
     return this;
   }
@@ -182,14 +173,12 @@ public class EzsignfoldersignerassociationRequest {
     return bEzsignfoldersignerassociationReceivecopy;
   }
 
-
   public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
   }
 
 
   public EzsignfoldersignerassociationRequest tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -202,7 +191,6 @@ public class EzsignfoldersignerassociationRequest {
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
   }
-
 
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;

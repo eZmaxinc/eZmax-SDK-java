@@ -41,6 +41,14 @@ public class EzsignsignatureSignV1RequestTest {
     }
 
     /**
+     * Test the property 'fkiEzsignsigningreasonID'
+     */
+    @Test
+    public void fkiEzsignsigningreasonIDTest() {
+        // TODO: test fkiEzsignsigningreasonID
+    }
+
+    /**
      * Test the property 'sValue'
      */
     @Test

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomNotificationsubsectiongetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
@@ -83,7 +83,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
   }
 
   public CustomNotificationsubsectiongetnotificationtestsResponse pkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
-    
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
     return this;
   }
@@ -98,14 +97,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return pkiNotificationsubsectionID;
   }
 
-
   public void setPkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
   }
 
 
   public CustomNotificationsubsectiongetnotificationtestsResponse fkiNotificationsectionID(Integer fkiNotificationsectionID) {
-    
     this.fkiNotificationsectionID = fkiNotificationsectionID;
     return this;
   }
@@ -120,14 +117,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return fkiNotificationsectionID;
   }
 
-
   public void setFkiNotificationsectionID(Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
   }
 
 
   public CustomNotificationsubsectiongetnotificationtestsResponse objNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
-    
     this.objNotificationsubsectionName = objNotificationsubsectionName;
     return this;
   }
@@ -141,14 +136,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return objNotificationsubsectionName;
   }
 
-
   public void setObjNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
   }
 
 
   public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsectionNameX(String sNotificationsectionNameX) {
-    
     this.sNotificationsectionNameX = sNotificationsectionNameX;
     return this;
   }
@@ -162,14 +155,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return sNotificationsectionNameX;
   }
 
-
   public void setsNotificationsectionNameX(String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
   }
 
 
   public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
-    
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
     return this;
   }
@@ -183,14 +174,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return sNotificationsubsectionNameX;
   }
 
-
   public void setsNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
   }
 
 
   public CustomNotificationsubsectiongetnotificationtestsResponse aObjNotificationtest(List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
-    
     this.aObjNotificationtest = aObjNotificationtest;
     return this;
   }
@@ -211,7 +200,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
   public List<CustomNotificationtestgetnotificationtestsResponse> getaObjNotificationtest() {
     return aObjNotificationtest;
   }
-
 
   public void setaObjNotificationtest(List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
     this.aObjNotificationtest = aObjNotificationtest;

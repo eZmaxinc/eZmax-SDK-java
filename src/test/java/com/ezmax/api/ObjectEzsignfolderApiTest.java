@@ -28,6 +28,8 @@ import com.ezmax.api.model.EzsignfolderDisposeV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
+import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
+import com.ezmax.api.model.EzsignfolderGetAttachmentsV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationListV1Response;
 import com.ezmax.api.model.EzsignfolderGetCommunicationrecipientsV1Response;
@@ -193,6 +195,34 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetActionableElementsV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderGetActionableElementsV1Response response = api.ezsignfolderGetActionableElementsV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Attachment count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetAttachmentCountV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetAttachmentCountV1Response response = api.ezsignfolderGetAttachmentCountV1(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Ezsignfolder&#39;s Attachments
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetAttachmentsV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetAttachmentsV1Response response = api.ezsignfolderGetAttachmentsV1(pkiEzsignfolderID);
         // TODO: test validations
     }
 

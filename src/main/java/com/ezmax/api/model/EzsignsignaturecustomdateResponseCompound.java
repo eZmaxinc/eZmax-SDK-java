@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignaturecustomdate Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignaturecustomdateResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D = "pkiEzsignsignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D)
@@ -71,7 +71,6 @@ public class EzsignsignaturecustomdateResponseCompound {
   }
 
   public EzsignsignaturecustomdateResponseCompound pkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
-    
     this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
     return this;
   }
@@ -86,14 +85,12 @@ public class EzsignsignaturecustomdateResponseCompound {
     return pkiEzsignsignaturecustomdateID;
   }
 
-
   public void setPkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
     this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
   }
 
 
   public EzsignsignaturecustomdateResponseCompound iEzsignsignaturecustomdateX(Integer iEzsignsignaturecustomdateX) {
-    
     this.iEzsignsignaturecustomdateX = iEzsignsignaturecustomdateX;
     return this;
   }
@@ -108,14 +105,12 @@ public class EzsignsignaturecustomdateResponseCompound {
     return iEzsignsignaturecustomdateX;
   }
 
-
   public void setiEzsignsignaturecustomdateX(Integer iEzsignsignaturecustomdateX) {
     this.iEzsignsignaturecustomdateX = iEzsignsignaturecustomdateX;
   }
 
 
   public EzsignsignaturecustomdateResponseCompound iEzsignsignaturecustomdateY(Integer iEzsignsignaturecustomdateY) {
-    
     this.iEzsignsignaturecustomdateY = iEzsignsignaturecustomdateY;
     return this;
   }
@@ -130,14 +125,12 @@ public class EzsignsignaturecustomdateResponseCompound {
     return iEzsignsignaturecustomdateY;
   }
 
-
   public void setiEzsignsignaturecustomdateY(Integer iEzsignsignaturecustomdateY) {
     this.iEzsignsignaturecustomdateY = iEzsignsignaturecustomdateY;
   }
 
 
   public EzsignsignaturecustomdateResponseCompound sEzsignsignaturecustomdateFormat(String sEzsignsignaturecustomdateFormat) {
-    
     this.sEzsignsignaturecustomdateFormat = sEzsignsignaturecustomdateFormat;
     return this;
   }
@@ -150,7 +143,6 @@ public class EzsignsignaturecustomdateResponseCompound {
   public String getsEzsignsignaturecustomdateFormat() {
     return sEzsignsignaturecustomdateFormat;
   }
-
 
   public void setsEzsignsignaturecustomdateFormat(String sEzsignsignaturecustomdateFormat) {
     this.sEzsignsignaturecustomdateFormat = sEzsignsignaturecustomdateFormat;

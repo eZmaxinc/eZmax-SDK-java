@@ -207,4 +207,12 @@ public class EzsigndocumentResponseTest {
         // TODO: test sEzsigndocumentExternalid
     }
 
+    /**
+     * Test the property 'iEzsigndocumentEzsignsignatureattachmenttotal'
+     */
+    @Test
+    public void iEzsigndocumentEzsignsignatureattachmenttotalTest() {
+        // TODO: test iEzsigndocumentEzsignsignatureattachmenttotal
+    }
+
 }

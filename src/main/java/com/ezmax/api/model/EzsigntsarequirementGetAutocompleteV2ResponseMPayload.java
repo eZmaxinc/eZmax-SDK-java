@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsigntsarequirement/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntsarequirementGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTSAREQUIREMENT = "a_objEzsigntsarequirement";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTSAREQUIREMENT)
@@ -62,7 +62,6 @@ public class EzsigntsarequirementGetAutocompleteV2ResponseMPayload {
   }
 
   public EzsigntsarequirementGetAutocompleteV2ResponseMPayload aObjEzsigntsarequirement(List<EzsigntsarequirementAutocompleteElementResponse> aObjEzsigntsarequirement) {
-    
     this.aObjEzsigntsarequirement = aObjEzsigntsarequirement;
     return this;
   }
@@ -83,7 +82,6 @@ public class EzsigntsarequirementGetAutocompleteV2ResponseMPayload {
   public List<EzsigntsarequirementAutocompleteElementResponse> getaObjEzsigntsarequirement() {
     return aObjEzsigntsarequirement;
   }
-
 
   public void setaObjEzsigntsarequirement(List<EzsigntsarequirementAutocompleteElementResponse> aObjEzsigntsarequirement) {
     this.aObjEzsigntsarequirement = aObjEzsigntsarequirement;

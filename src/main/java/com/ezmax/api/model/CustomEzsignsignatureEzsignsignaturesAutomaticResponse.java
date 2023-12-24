@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -68,7 +68,6 @@ public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
   }
 
   public CustomEzsignsignatureEzsignsignaturesAutomaticResponse pkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
-    
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
     return this;
   }
@@ -83,14 +82,12 @@ public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
     return pkiEzsignsignatureID;
   }
 
-
   public void setPkiEzsignsignatureID(Integer pkiEzsignsignatureID) {
     this.pkiEzsignsignatureID = pkiEzsignsignatureID;
   }
 
 
   public CustomEzsignsignatureEzsignsignaturesAutomaticResponse eEzsignsignatureType(FieldEEzsignsignatureType eEzsignsignatureType) {
-    
     this.eEzsignsignatureType = eEzsignsignatureType;
     return this;
   }
@@ -104,14 +101,12 @@ public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
     return eEzsignsignatureType;
   }
 
-
   public void seteEzsignsignatureType(FieldEEzsignsignatureType eEzsignsignatureType) {
     this.eEzsignsignatureType = eEzsignsignatureType;
   }
 
 
   public CustomEzsignsignatureEzsignsignaturesAutomaticResponse iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
-    
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -125,7 +120,6 @@ public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
   }
-
 
   public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
@@ -220,6 +214,8 @@ public class CustomEzsignsignatureEzsignsignaturesAutomaticResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsignsignatureType`
+      FieldEEzsignsignatureType.validateJsonElement(jsonObj.get("eEzsignsignatureType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

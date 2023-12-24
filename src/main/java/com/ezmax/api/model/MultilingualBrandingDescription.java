@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualBrandingDescription {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION1 = "sBrandingDescription1";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualBrandingDescription {
   }
 
   public MultilingualBrandingDescription sBrandingDescription1(String sBrandingDescription1) {
-    
     this.sBrandingDescription1 = sBrandingDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualBrandingDescription {
     return sBrandingDescription1;
   }
 
-
   public void setsBrandingDescription1(String sBrandingDescription1) {
     this.sBrandingDescription1 = sBrandingDescription1;
   }
 
 
   public MultilingualBrandingDescription sBrandingDescription2(String sBrandingDescription2) {
-    
     this.sBrandingDescription2 = sBrandingDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualBrandingDescription {
   public String getsBrandingDescription2() {
     return sBrandingDescription2;
   }
-
 
   public void setsBrandingDescription2(String sBrandingDescription2) {
     this.sBrandingDescription2 = sBrandingDescription2;

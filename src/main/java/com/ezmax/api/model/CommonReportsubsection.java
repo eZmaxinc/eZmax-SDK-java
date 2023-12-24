@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CommonReportsubsection {
   public static final String SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER = "objReportsubsectionpartHeader";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER)
@@ -68,7 +68,6 @@ public class CommonReportsubsection {
   }
 
   public CommonReportsubsection objReportsubsectionpartHeader(CommonReportsubsectionpart objReportsubsectionpartHeader) {
-    
     this.objReportsubsectionpartHeader = objReportsubsectionpartHeader;
     return this;
   }
@@ -82,14 +81,12 @@ public class CommonReportsubsection {
     return objReportsubsectionpartHeader;
   }
 
-
   public void setObjReportsubsectionpartHeader(CommonReportsubsectionpart objReportsubsectionpartHeader) {
     this.objReportsubsectionpartHeader = objReportsubsectionpartHeader;
   }
 
 
   public CommonReportsubsection objReportsubsectionpartBody(CommonReportsubsectionpart objReportsubsectionpartBody) {
-    
     this.objReportsubsectionpartBody = objReportsubsectionpartBody;
     return this;
   }
@@ -103,14 +100,12 @@ public class CommonReportsubsection {
     return objReportsubsectionpartBody;
   }
 
-
   public void setObjReportsubsectionpartBody(CommonReportsubsectionpart objReportsubsectionpartBody) {
     this.objReportsubsectionpartBody = objReportsubsectionpartBody;
   }
 
 
   public CommonReportsubsection objReportsubsectionpartFooter(CommonReportsubsectionpart objReportsubsectionpartFooter) {
-    
     this.objReportsubsectionpartFooter = objReportsubsectionpartFooter;
     return this;
   }
@@ -123,7 +118,6 @@ public class CommonReportsubsection {
   public CommonReportsubsectionpart getObjReportsubsectionpartFooter() {
     return objReportsubsectionpartFooter;
   }
-
 
   public void setObjReportsubsectionpartFooter(CommonReportsubsectionpart objReportsubsectionpartFooter) {
     this.objReportsubsectionpartFooter = objReportsubsectionpartFooter;

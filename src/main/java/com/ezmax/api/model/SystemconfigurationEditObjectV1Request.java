@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/systemconfiguration/{pkiSystemconfigurationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class SystemconfigurationEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION = "objSystemconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION)
@@ -60,7 +60,6 @@ public class SystemconfigurationEditObjectV1Request {
   }
 
   public SystemconfigurationEditObjectV1Request objSystemconfiguration(SystemconfigurationRequestCompound objSystemconfiguration) {
-    
     this.objSystemconfiguration = objSystemconfiguration;
     return this;
   }
@@ -73,7 +72,6 @@ public class SystemconfigurationEditObjectV1Request {
   public SystemconfigurationRequestCompound getObjSystemconfiguration() {
     return objSystemconfiguration;
   }
-
 
   public void setObjSystemconfiguration(SystemconfigurationRequestCompound objSystemconfiguration) {
     this.objSystemconfiguration = objSystemconfiguration;

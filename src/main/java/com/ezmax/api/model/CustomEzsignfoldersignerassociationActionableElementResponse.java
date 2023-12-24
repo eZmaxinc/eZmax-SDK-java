@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociation Object with actionable elements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationActionableElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -98,7 +98,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   }
 
   public CustomEzsignfoldersignerassociationActionableElementResponse pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
-    
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -113,14 +112,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return pkiEzsignfoldersignerassociationID;
   }
 
-
   public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
-    
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -135,14 +132,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return fkiEzsignfolderID;
   }
 
-
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse bEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
-    
     this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
     return this;
   }
@@ -156,14 +151,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return bEzsignfoldersignerassociationDelayedsend;
   }
 
-
   public void setbEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
     this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
-    
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
     return this;
   }
@@ -177,14 +170,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return bEzsignfoldersignerassociationReceivecopy;
   }
 
-
   public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
-    
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -198,14 +189,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return tEzsignfoldersignerassociationMessage;
   }
 
-
   public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse objEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
-    
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
@@ -219,14 +208,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return objEzsignsignergroup;
   }
 
-
   public void setObjEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
-    
     this.objUser = objUser;
     return this;
   }
@@ -240,14 +227,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return objUser;
   }
 
-
   public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
     this.objUser = objUser;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
-    
     this.objEzsignsigner = objEzsignsigner;
     return this;
   }
@@ -261,14 +246,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return objEzsignsigner;
   }
 
-
   public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse bEzsignfoldersignerassociationHasactionableelementsCurrent(Boolean bEzsignfoldersignerassociationHasactionableelementsCurrent) {
-    
     this.bEzsignfoldersignerassociationHasactionableelementsCurrent = bEzsignfoldersignerassociationHasactionableelementsCurrent;
     return this;
   }
@@ -282,14 +265,12 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
     return bEzsignfoldersignerassociationHasactionableelementsCurrent;
   }
 
-
   public void setbEzsignfoldersignerassociationHasactionableelementsCurrent(Boolean bEzsignfoldersignerassociationHasactionableelementsCurrent) {
     this.bEzsignfoldersignerassociationHasactionableelementsCurrent = bEzsignfoldersignerassociationHasactionableelementsCurrent;
   }
 
 
   public CustomEzsignfoldersignerassociationActionableElementResponse bEzsignfoldersignerassociationHasactionableelementsFuture(Boolean bEzsignfoldersignerassociationHasactionableelementsFuture) {
-    
     this.bEzsignfoldersignerassociationHasactionableelementsFuture = bEzsignfoldersignerassociationHasactionableelementsFuture;
     return this;
   }
@@ -302,7 +283,6 @@ public class CustomEzsignfoldersignerassociationActionableElementResponse {
   public Boolean getbEzsignfoldersignerassociationHasactionableelementsFuture() {
     return bEzsignfoldersignerassociationHasactionableelementsFuture;
   }
-
 
   public void setbEzsignfoldersignerassociationHasactionableelementsFuture(Boolean bEzsignfoldersignerassociationHasactionableelementsFuture) {
     this.bEzsignfoldersignerassociationHasactionableelementsFuture = bEzsignfoldersignerassociationHasactionableelementsFuture;

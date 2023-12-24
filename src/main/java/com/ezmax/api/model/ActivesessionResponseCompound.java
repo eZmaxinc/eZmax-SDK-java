@@ -19,6 +19,8 @@ import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
+import com.ezmax.api.model.FieldEUserEzsignaccess;
+import com.ezmax.api.model.FieldEUserEzsignprepaid;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -56,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ActivesessionResponseCompound {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -102,6 +104,18 @@ public class ActivesessionResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_SIGNATURE_I_D)
   private Integer fkiSignatureID;
 
+  public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
+  @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
+  private FieldEUserEzsignaccess eUserEzsignaccess;
+
+  public static final String SERIALIZED_NAME_E_USER_EZSIGNPREPAID = "eUserEzsignprepaid";
+  @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNPREPAID)
+  private FieldEUserEzsignprepaid eUserEzsignprepaid;
+
+  public static final String SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION = "dtUserEzsignprepaidexpiration";
+  @SerializedName(SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION)
+  private String dtUserEzsignprepaidexpiration;
+
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
   private List<Integer> aPkiPermissionID = new ArrayList<>();
@@ -126,7 +140,6 @@ public class ActivesessionResponseCompound {
   }
 
   public ActivesessionResponseCompound eActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
-    
     this.eActivesessionUsertype = eActivesessionUsertype;
     return this;
   }
@@ -140,14 +153,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionUsertype;
   }
 
-
   public void seteActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
 
   public ActivesessionResponseCompound eActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
-    
     this.eActivesessionOrigin = eActivesessionOrigin;
     return this;
   }
@@ -161,14 +172,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionOrigin;
   }
 
-
   public void seteActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
     this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
 
   public ActivesessionResponseCompound eActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
-    
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
     return this;
   }
@@ -182,14 +191,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionWeekdaystart;
   }
 
-
   public void seteActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
   }
 
 
   public ActivesessionResponseCompound fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -205,14 +212,12 @@ public class ActivesessionResponseCompound {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public ActivesessionResponseCompound sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -226,14 +231,12 @@ public class ActivesessionResponseCompound {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public ActivesessionResponseCompound sDepartmentNameX(String sDepartmentNameX) {
-    
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -247,14 +250,12 @@ public class ActivesessionResponseCompound {
     return sDepartmentNameX;
   }
 
-
   public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
   public ActivesessionResponseCompound bActivesessionDebug(Boolean bActivesessionDebug) {
-    
     this.bActivesessionDebug = bActivesessionDebug;
     return this;
   }
@@ -268,14 +269,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionDebug;
   }
 
-
   public void setbActivesessionDebug(Boolean bActivesessionDebug) {
     this.bActivesessionDebug = bActivesessionDebug;
   }
 
 
   public ActivesessionResponseCompound bActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
-    
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
     return this;
   }
@@ -289,14 +288,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionIssuperadmin;
   }
 
-
   public void setbActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
   }
 
 
   public ActivesessionResponseCompound pksCustomerCode(String pksCustomerCode) {
-    
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
@@ -310,14 +307,12 @@ public class ActivesessionResponseCompound {
     return pksCustomerCode;
   }
 
-
   public void setPksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
   }
 
 
   public ActivesessionResponseCompound fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
-    
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -332,14 +327,12 @@ public class ActivesessionResponseCompound {
     return fkiSystemconfigurationtypeID;
   }
 
-
   public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
   public ActivesessionResponseCompound fkiSignatureID(Integer fkiSignatureID) {
-    
     this.fkiSignatureID = fkiSignatureID;
     return this;
   }
@@ -355,14 +348,69 @@ public class ActivesessionResponseCompound {
     return fkiSignatureID;
   }
 
-
   public void setFkiSignatureID(Integer fkiSignatureID) {
     this.fkiSignatureID = fkiSignatureID;
   }
 
 
+  public ActivesessionResponseCompound eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
+    this.eUserEzsignaccess = eUserEzsignaccess;
+    return this;
+  }
+
+   /**
+   * Get eUserEzsignaccess
+   * @return eUserEzsignaccess
+  **/
+  @javax.annotation.Nonnull
+  public FieldEUserEzsignaccess geteUserEzsignaccess() {
+    return eUserEzsignaccess;
+  }
+
+  public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
+    this.eUserEzsignaccess = eUserEzsignaccess;
+  }
+
+
+  public ActivesessionResponseCompound eUserEzsignprepaid(FieldEUserEzsignprepaid eUserEzsignprepaid) {
+    this.eUserEzsignprepaid = eUserEzsignprepaid;
+    return this;
+  }
+
+   /**
+   * Get eUserEzsignprepaid
+   * @return eUserEzsignprepaid
+  **/
+  @javax.annotation.Nullable
+  public FieldEUserEzsignprepaid geteUserEzsignprepaid() {
+    return eUserEzsignprepaid;
+  }
+
+  public void seteUserEzsignprepaid(FieldEUserEzsignprepaid eUserEzsignprepaid) {
+    this.eUserEzsignprepaid = eUserEzsignprepaid;
+  }
+
+
+  public ActivesessionResponseCompound dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
+    this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+    return this;
+  }
+
+   /**
+   * The eZsign prepaid expiration date
+   * @return dtUserEzsignprepaidexpiration
+  **/
+  @javax.annotation.Nullable
+  public String getDtUserEzsignprepaidexpiration() {
+    return dtUserEzsignprepaidexpiration;
+  }
+
+  public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
+    this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
+  }
+
+
   public ActivesessionResponseCompound aPkiPermissionID(List<Integer> aPkiPermissionID) {
-    
     this.aPkiPermissionID = aPkiPermissionID;
     return this;
   }
@@ -384,14 +432,12 @@ public class ActivesessionResponseCompound {
     return aPkiPermissionID;
   }
 
-
   public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;
   }
 
 
   public ActivesessionResponseCompound objUserReal(ActivesessionResponseCompoundUser objUserReal) {
-    
     this.objUserReal = objUserReal;
     return this;
   }
@@ -405,14 +451,12 @@ public class ActivesessionResponseCompound {
     return objUserReal;
   }
 
-
   public void setObjUserReal(ActivesessionResponseCompoundUser objUserReal) {
     this.objUserReal = objUserReal;
   }
 
 
   public ActivesessionResponseCompound objUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
-    
     this.objUserCloned = objUserCloned;
     return this;
   }
@@ -426,14 +470,12 @@ public class ActivesessionResponseCompound {
     return objUserCloned;
   }
 
-
   public void setObjUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
     this.objUserCloned = objUserCloned;
   }
 
 
   public ActivesessionResponseCompound objApikey(ActivesessionResponseCompoundApikey objApikey) {
-    
     this.objApikey = objApikey;
     return this;
   }
@@ -447,14 +489,12 @@ public class ActivesessionResponseCompound {
     return objApikey;
   }
 
-
   public void setObjApikey(ActivesessionResponseCompoundApikey objApikey) {
     this.objApikey = objApikey;
   }
 
 
   public ActivesessionResponseCompound aEModuleInternalname(List<String> aEModuleInternalname) {
-    
     this.aEModuleInternalname = aEModuleInternalname;
     return this;
   }
@@ -475,7 +515,6 @@ public class ActivesessionResponseCompound {
   public List<String> getaEModuleInternalname() {
     return aEModuleInternalname;
   }
-
 
   public void setaEModuleInternalname(List<String> aEModuleInternalname) {
     this.aEModuleInternalname = aEModuleInternalname;
@@ -503,6 +542,9 @@ public class ActivesessionResponseCompound {
         Objects.equals(this.pksCustomerCode, activesessionResponseCompound.pksCustomerCode) &&
         Objects.equals(this.fkiSystemconfigurationtypeID, activesessionResponseCompound.fkiSystemconfigurationtypeID) &&
         Objects.equals(this.fkiSignatureID, activesessionResponseCompound.fkiSignatureID) &&
+        Objects.equals(this.eUserEzsignaccess, activesessionResponseCompound.eUserEzsignaccess) &&
+        Objects.equals(this.eUserEzsignprepaid, activesessionResponseCompound.eUserEzsignprepaid) &&
+        Objects.equals(this.dtUserEzsignprepaidexpiration, activesessionResponseCompound.dtUserEzsignprepaidexpiration) &&
         Objects.equals(this.aPkiPermissionID, activesessionResponseCompound.aPkiPermissionID) &&
         Objects.equals(this.objUserReal, activesessionResponseCompound.objUserReal) &&
         Objects.equals(this.objUserCloned, activesessionResponseCompound.objUserCloned) &&
@@ -512,7 +554,7 @@ public class ActivesessionResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, eUserEzsignaccess, eUserEzsignprepaid, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
@@ -530,6 +572,9 @@ public class ActivesessionResponseCompound {
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
     sb.append("    fkiSignatureID: ").append(toIndentedString(fkiSignatureID)).append("\n");
+    sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
+    sb.append("    eUserEzsignprepaid: ").append(toIndentedString(eUserEzsignprepaid)).append("\n");
+    sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
     sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
     sb.append("    objUserReal: ").append(toIndentedString(objUserReal)).append("\n");
     sb.append("    objUserCloned: ").append(toIndentedString(objUserCloned)).append("\n");
@@ -568,6 +613,9 @@ public class ActivesessionResponseCompound {
     openapiFields.add("pksCustomerCode");
     openapiFields.add("fkiSystemconfigurationtypeID");
     openapiFields.add("fkiSignatureID");
+    openapiFields.add("eUserEzsignaccess");
+    openapiFields.add("eUserEzsignprepaid");
+    openapiFields.add("dtUserEzsignprepaidexpiration");
     openapiFields.add("a_pkiPermissionID");
     openapiFields.add("objUserReal");
     openapiFields.add("objUserCloned");
@@ -586,6 +634,7 @@ public class ActivesessionResponseCompound {
     openapiRequiredFields.add("bActivesessionIssuperadmin");
     openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("fkiSystemconfigurationtypeID");
+    openapiRequiredFields.add("eUserEzsignaccess");
     openapiRequiredFields.add("a_pkiPermissionID");
     openapiRequiredFields.add("objUserReal");
     openapiRequiredFields.add("a_eModuleInternalname");
@@ -619,6 +668,12 @@ public class ActivesessionResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eActivesessionUsertype`
+      FieldEActivesessionUsertype.validateJsonElement(jsonObj.get("eActivesessionUsertype"));
+      // validate the required field `eActivesessionOrigin`
+      FieldEActivesessionOrigin.validateJsonElement(jsonObj.get("eActivesessionOrigin"));
+      // validate the required field `eActivesessionWeekdaystart`
+      FieldEActivesessionWeekdaystart.validateJsonElement(jsonObj.get("eActivesessionWeekdaystart"));
       if (!jsonObj.get("sCompanyNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
       }
@@ -627,6 +682,15 @@ public class ActivesessionResponseCompound {
       }
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
+      }
+      // validate the required field `eUserEzsignaccess`
+      FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
+      // validate the optional field `eUserEzsignprepaid`
+      if (jsonObj.get("eUserEzsignprepaid") != null && !jsonObj.get("eUserEzsignprepaid").isJsonNull()) {
+        FieldEUserEzsignprepaid.validateJsonElement(jsonObj.get("eUserEzsignprepaid"));
+      }
+      if ((jsonObj.get("dtUserEzsignprepaidexpiration") != null && !jsonObj.get("dtUserEzsignprepaidexpiration").isJsonNull()) && !jsonObj.get("dtUserEzsignprepaidexpiration").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtUserEzsignprepaidexpiration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtUserEzsignprepaidexpiration").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_pkiPermissionID") == null) {

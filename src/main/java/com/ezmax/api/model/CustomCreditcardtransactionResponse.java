@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Creditcardtransaction Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCreditcardtransactionResponse {
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
@@ -72,7 +72,6 @@ public class CustomCreditcardtransactionResponse {
   }
 
   public CustomCreditcardtransactionResponse eCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
-    
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
     return this;
   }
@@ -86,14 +85,12 @@ public class CustomCreditcardtransactionResponse {
     return eCreditcardtypeCodename;
   }
 
-
   public void seteCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
   }
 
 
   public CustomCreditcardtransactionResponse dCreditcardtransactionAmount(String dCreditcardtransactionAmount) {
-    
     this.dCreditcardtransactionAmount = dCreditcardtransactionAmount;
     return this;
   }
@@ -107,14 +104,12 @@ public class CustomCreditcardtransactionResponse {
     return dCreditcardtransactionAmount;
   }
 
-
   public void setdCreditcardtransactionAmount(String dCreditcardtransactionAmount) {
     this.dCreditcardtransactionAmount = dCreditcardtransactionAmount;
   }
 
 
   public CustomCreditcardtransactionResponse sCreditcardtransactionPartiallydecryptednumber(String sCreditcardtransactionPartiallydecryptednumber) {
-    
     this.sCreditcardtransactionPartiallydecryptednumber = sCreditcardtransactionPartiallydecryptednumber;
     return this;
   }
@@ -128,14 +123,12 @@ public class CustomCreditcardtransactionResponse {
     return sCreditcardtransactionPartiallydecryptednumber;
   }
 
-
   public void setsCreditcardtransactionPartiallydecryptednumber(String sCreditcardtransactionPartiallydecryptednumber) {
     this.sCreditcardtransactionPartiallydecryptednumber = sCreditcardtransactionPartiallydecryptednumber;
   }
 
 
   public CustomCreditcardtransactionResponse sCreditcardtransactionReferencenumber(String sCreditcardtransactionReferencenumber) {
-    
     this.sCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
     return this;
   }
@@ -148,7 +141,6 @@ public class CustomCreditcardtransactionResponse {
   public String getsCreditcardtransactionReferencenumber() {
     return sCreditcardtransactionReferencenumber;
   }
-
 
   public void setsCreditcardtransactionReferencenumber(String sCreditcardtransactionReferencenumber) {
     this.sCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
@@ -247,6 +239,8 @@ public class CustomCreditcardtransactionResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eCreditcardtypeCodename`
+      FieldECreditcardtypeCodename.validateJsonElement(jsonObj.get("eCreditcardtypeCodename"));
       if (!jsonObj.get("dCreditcardtransactionAmount").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dCreditcardtransactionAmount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCreditcardtransactionAmount").toString()));
       }

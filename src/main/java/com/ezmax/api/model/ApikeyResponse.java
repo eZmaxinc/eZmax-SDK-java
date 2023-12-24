@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ApikeyResponse {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -94,7 +94,6 @@ public class ApikeyResponse {
   }
 
   public ApikeyResponse pkiApikeyID(Integer pkiApikeyID) {
-    
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -109,14 +108,12 @@ public class ApikeyResponse {
     return pkiApikeyID;
   }
 
-
   public void setPkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
   public ApikeyResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -131,14 +128,12 @@ public class ApikeyResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public ApikeyResponse objApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
-    
     this.objApikeyDescription = objApikeyDescription;
     return this;
   }
@@ -152,14 +147,12 @@ public class ApikeyResponse {
     return objApikeyDescription;
   }
 
-
   public void setObjApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
     this.objApikeyDescription = objApikeyDescription;
   }
 
 
   public ApikeyResponse objContactName(CustomContactNameResponse objContactName) {
-    
     this.objContactName = objContactName;
     return this;
   }
@@ -173,14 +166,12 @@ public class ApikeyResponse {
     return objContactName;
   }
 
-
   public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
   }
 
 
   public ApikeyResponse sApikeyApikey(String sApikeyApikey) {
-    
     this.sApikeyApikey = sApikeyApikey;
     return this;
   }
@@ -194,14 +185,12 @@ public class ApikeyResponse {
     return sApikeyApikey;
   }
 
-
   public void setsApikeyApikey(String sApikeyApikey) {
     this.sApikeyApikey = sApikeyApikey;
   }
 
 
   public ApikeyResponse sApikeySecret(String sApikeySecret) {
-    
     this.sApikeySecret = sApikeySecret;
     return this;
   }
@@ -215,14 +204,12 @@ public class ApikeyResponse {
     return sApikeySecret;
   }
 
-
   public void setsApikeySecret(String sApikeySecret) {
     this.sApikeySecret = sApikeySecret;
   }
 
 
   public ApikeyResponse bApikeyIsactive(Boolean bApikeyIsactive) {
-    
     this.bApikeyIsactive = bApikeyIsactive;
     return this;
   }
@@ -236,14 +223,12 @@ public class ApikeyResponse {
     return bApikeyIsactive;
   }
 
-
   public void setbApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
 
   public ApikeyResponse bApikeyIssigned(Boolean bApikeyIssigned) {
-    
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -257,14 +242,12 @@ public class ApikeyResponse {
     return bApikeyIssigned;
   }
 
-
   public void setbApikeyIssigned(Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
   }
 
 
   public ApikeyResponse objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -277,7 +260,6 @@ public class ApikeyResponse {
   public CommonAudit getObjAudit() {
     return objAudit;
   }
-
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;

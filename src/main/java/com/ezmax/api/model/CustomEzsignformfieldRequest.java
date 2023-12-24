@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfield Object to fill an Ezsignform using submitForm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -71,7 +71,6 @@ public class CustomEzsignformfieldRequest {
   }
 
   public CustomEzsignformfieldRequest pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
-    
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -86,14 +85,12 @@ public class CustomEzsignformfieldRequest {
     return pkiEzsignformfieldID;
   }
 
-
   public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
   public CustomEzsignformfieldRequest sEzsignformfieldLabel(String sEzsignformfieldLabel) {
-    
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -107,14 +104,12 @@ public class CustomEzsignformfieldRequest {
     return sEzsignformfieldLabel;
   }
 
-
   public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
   public CustomEzsignformfieldRequest bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
-    
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -128,14 +123,12 @@ public class CustomEzsignformfieldRequest {
     return bEzsignformfieldSelected;
   }
 
-
   public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
   public CustomEzsignformfieldRequest sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
-    
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -148,7 +141,6 @@ public class CustomEzsignformfieldRequest {
   public String getsEzsignformfieldEnteredvalue() {
     return sEzsignformfieldEnteredvalue;
   }
-
 
   public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;

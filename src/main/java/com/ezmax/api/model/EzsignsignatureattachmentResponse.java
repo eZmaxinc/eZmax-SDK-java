@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignatureattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignatureattachmentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D = "pkiEzsignsignatureattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D)
@@ -75,7 +75,6 @@ public class EzsignsignatureattachmentResponse {
   }
 
   public EzsignsignatureattachmentResponse pkiEzsignsignatureattachmentID(Integer pkiEzsignsignatureattachmentID) {
-    
     this.pkiEzsignsignatureattachmentID = pkiEzsignsignatureattachmentID;
     return this;
   }
@@ -91,14 +90,12 @@ public class EzsignsignatureattachmentResponse {
     return pkiEzsignsignatureattachmentID;
   }
 
-
   public void setPkiEzsignsignatureattachmentID(Integer pkiEzsignsignatureattachmentID) {
     this.pkiEzsignsignatureattachmentID = pkiEzsignsignatureattachmentID;
   }
 
 
   public EzsignsignatureattachmentResponse fkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
-    
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
     return this;
   }
@@ -113,14 +110,12 @@ public class EzsignsignatureattachmentResponse {
     return fkiEzsignsignatureID;
   }
 
-
   public void setFkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
   }
 
 
   public EzsignsignatureattachmentResponse binEzsignsignatureattachmentMD5(String binEzsignsignatureattachmentMD5) {
-    
     this.binEzsignsignatureattachmentMD5 = binEzsignsignatureattachmentMD5;
     return this;
   }
@@ -134,14 +129,12 @@ public class EzsignsignatureattachmentResponse {
     return binEzsignsignatureattachmentMD5;
   }
 
-
   public void setBinEzsignsignatureattachmentMD5(String binEzsignsignatureattachmentMD5) {
     this.binEzsignsignatureattachmentMD5 = binEzsignsignatureattachmentMD5;
   }
 
 
   public EzsignsignatureattachmentResponse sEzsignsignatureattachmentName(String sEzsignsignatureattachmentName) {
-    
     this.sEzsignsignatureattachmentName = sEzsignsignatureattachmentName;
     return this;
   }
@@ -155,14 +148,12 @@ public class EzsignsignatureattachmentResponse {
     return sEzsignsignatureattachmentName;
   }
 
-
   public void setsEzsignsignatureattachmentName(String sEzsignsignatureattachmentName) {
     this.sEzsignsignatureattachmentName = sEzsignsignatureattachmentName;
   }
 
 
   public EzsignsignatureattachmentResponse sDownloadUrl(String sDownloadUrl) {
-    
     this.sDownloadUrl = sDownloadUrl;
     return this;
   }
@@ -175,7 +166,6 @@ public class EzsignsignatureattachmentResponse {
   public String getsDownloadUrl() {
     return sDownloadUrl;
   }
-
 
   public void setsDownloadUrl(String sDownloadUrl) {
     this.sDownloadUrl = sDownloadUrl;

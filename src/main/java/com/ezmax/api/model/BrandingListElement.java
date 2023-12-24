@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class BrandingListElement {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -91,7 +91,6 @@ public class BrandingListElement {
   }
 
   public BrandingListElement pkiBrandingID(Integer pkiBrandingID) {
-    
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -106,14 +105,12 @@ public class BrandingListElement {
     return pkiBrandingID;
   }
 
-
   public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
   public BrandingListElement sBrandingDescriptionX(String sBrandingDescriptionX) {
-    
     this.sBrandingDescriptionX = sBrandingDescriptionX;
     return this;
   }
@@ -127,14 +124,12 @@ public class BrandingListElement {
     return sBrandingDescriptionX;
   }
 
-
   public void setsBrandingDescriptionX(String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
   }
 
 
   public BrandingListElement iBrandingColortext(Integer iBrandingColortext) {
-    
     this.iBrandingColortext = iBrandingColortext;
     return this;
   }
@@ -150,14 +145,12 @@ public class BrandingListElement {
     return iBrandingColortext;
   }
 
-
   public void setiBrandingColortext(Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
   }
 
 
   public BrandingListElement iBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
-    
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
     return this;
   }
@@ -173,14 +166,12 @@ public class BrandingListElement {
     return iBrandingColortextlinkbox;
   }
 
-
   public void setiBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
   }
 
 
   public BrandingListElement iBrandingColortextbutton(Integer iBrandingColortextbutton) {
-    
     this.iBrandingColortextbutton = iBrandingColortextbutton;
     return this;
   }
@@ -196,14 +187,12 @@ public class BrandingListElement {
     return iBrandingColortextbutton;
   }
 
-
   public void setiBrandingColortextbutton(Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
   }
 
 
   public BrandingListElement iBrandingColorbackground(Integer iBrandingColorbackground) {
-    
     this.iBrandingColorbackground = iBrandingColorbackground;
     return this;
   }
@@ -219,14 +208,12 @@ public class BrandingListElement {
     return iBrandingColorbackground;
   }
 
-
   public void setiBrandingColorbackground(Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
   }
 
 
   public BrandingListElement iBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
-    
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
     return this;
   }
@@ -242,14 +229,12 @@ public class BrandingListElement {
     return iBrandingColorbackgroundbutton;
   }
 
-
   public void setiBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
   }
 
 
   public BrandingListElement iBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
-    
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
     return this;
   }
@@ -265,14 +250,12 @@ public class BrandingListElement {
     return iBrandingColorbackgroundsmallbox;
   }
 
-
   public void setiBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
   }
 
 
   public BrandingListElement bBrandingIsactive(Boolean bBrandingIsactive) {
-    
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -285,7 +268,6 @@ public class BrandingListElement {
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
   }
-
 
   public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;

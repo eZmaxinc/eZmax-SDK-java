@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignsignergroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
@@ -68,7 +68,6 @@ public class EzsignsignergroupResponse {
   }
 
   public EzsignsignergroupResponse pkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
-    
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
     return this;
   }
@@ -84,14 +83,12 @@ public class EzsignsignergroupResponse {
     return pkiEzsignsignergroupID;
   }
 
-
   public void setPkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
 
   public EzsignsignergroupResponse objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
-    
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
     return this;
   }
@@ -105,14 +102,12 @@ public class EzsignsignergroupResponse {
     return objEzsignsignergroupDescription;
   }
 
-
   public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
   }
 
 
   public EzsignsignergroupResponse sEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
-    
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
     return this;
   }
@@ -125,7 +120,6 @@ public class EzsignsignergroupResponse {
   public String getsEzsignsignergroupDescriptionX() {
     return sEzsignsignergroupDescriptionX;
   }
-
 
   public void setsEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;

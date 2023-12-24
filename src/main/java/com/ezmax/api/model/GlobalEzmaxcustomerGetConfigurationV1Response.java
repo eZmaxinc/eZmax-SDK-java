@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE = "sInfrastructureregionCode";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE)
@@ -75,7 +75,6 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
   }
 
   public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCode(String sInfrastructureregionCode) {
-    
     this.sInfrastructureregionCode = sInfrastructureregionCode;
     return this;
   }
@@ -89,14 +88,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureregionCode;
   }
 
-
   public void setsInfrastructureregionCode(String sInfrastructureregionCode) {
     this.sInfrastructureregionCode = sInfrastructureregionCode;
   }
 
 
   public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCodeWeb(String sInfrastructureregionCodeWeb) {
-    
     this.sInfrastructureregionCodeWeb = sInfrastructureregionCodeWeb;
     return this;
   }
@@ -110,14 +107,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureregionCodeWeb;
   }
 
-
   public void setsInfrastructureregionCodeWeb(String sInfrastructureregionCodeWeb) {
     this.sInfrastructureregionCodeWeb = sInfrastructureregionCodeWeb;
   }
 
 
   public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureenvironmenttypeDescription(String sInfrastructureenvironmenttypeDescription) {
-    
     this.sInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
     return this;
   }
@@ -131,14 +126,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureenvironmenttypeDescription;
   }
 
-
   public void setsInfrastructureenvironmenttypeDescription(String sInfrastructureenvironmenttypeDescription) {
     this.sInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
   }
 
 
   public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDExternal(String sCognitoClientIDExternal) {
-    
     this.sCognitoClientIDExternal = sCognitoClientIDExternal;
     return this;
   }
@@ -152,14 +145,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sCognitoClientIDExternal;
   }
 
-
   public void setsCognitoClientIDExternal(String sCognitoClientIDExternal) {
     this.sCognitoClientIDExternal = sCognitoClientIDExternal;
   }
 
 
   public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDEzmaxpublic(String sCognitoClientIDEzmaxpublic) {
-    
     this.sCognitoClientIDEzmaxpublic = sCognitoClientIDEzmaxpublic;
     return this;
   }
@@ -172,7 +163,6 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public String getsCognitoClientIDEzmaxpublic() {
     return sCognitoClientIDEzmaxpublic;
   }
-
 
   public void setsCognitoClientIDEzmaxpublic(String sCognitoClientIDEzmaxpublic) {
     this.sCognitoClientIDEzmaxpublic = sCognitoClientIDEzmaxpublic;

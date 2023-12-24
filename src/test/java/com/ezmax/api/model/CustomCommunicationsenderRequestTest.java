@@ -62,6 +62,14 @@ public class CustomCommunicationsenderRequestTest {
     }
 
     /**
+     * Test the property 'fkiPhonelinesharedID'
+     */
+    @Test
+    public void fkiPhonelinesharedIDTest() {
+        // TODO: test fkiPhonelinesharedID
+    }
+
+    /**
      * Test the property 'fkiUserID'
      */
     @Test

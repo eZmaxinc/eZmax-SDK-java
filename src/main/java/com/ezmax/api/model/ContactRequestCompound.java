@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ContactRequestCompound {
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
@@ -84,7 +84,6 @@ public class ContactRequestCompound {
   }
 
   public ContactRequestCompound fkiContacttitleID(Integer fkiContacttitleID) {
-    
     this.fkiContacttitleID = fkiContacttitleID;
     return this;
   }
@@ -99,14 +98,12 @@ public class ContactRequestCompound {
     return fkiContacttitleID;
   }
 
-
   public void setFkiContacttitleID(Integer fkiContacttitleID) {
     this.fkiContacttitleID = fkiContacttitleID;
   }
 
 
   public ContactRequestCompound fkiLanguageID(Integer fkiLanguageID) {
-    
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -122,14 +119,12 @@ public class ContactRequestCompound {
     return fkiLanguageID;
   }
 
-
   public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
   public ContactRequestCompound sContactFirstname(String sContactFirstname) {
-    
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -143,14 +138,12 @@ public class ContactRequestCompound {
     return sContactFirstname;
   }
 
-
   public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
   public ContactRequestCompound sContactLastname(String sContactLastname) {
-    
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -164,14 +157,12 @@ public class ContactRequestCompound {
     return sContactLastname;
   }
 
-
   public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
   public ContactRequestCompound sContactCompany(String sContactCompany) {
-    
     this.sContactCompany = sContactCompany;
     return this;
   }
@@ -185,14 +176,12 @@ public class ContactRequestCompound {
     return sContactCompany;
   }
 
-
   public void setsContactCompany(String sContactCompany) {
     this.sContactCompany = sContactCompany;
   }
 
 
   public ContactRequestCompound dtContactBirthdate(String dtContactBirthdate) {
-    
     this.dtContactBirthdate = dtContactBirthdate;
     return this;
   }
@@ -206,14 +195,12 @@ public class ContactRequestCompound {
     return dtContactBirthdate;
   }
 
-
   public void setDtContactBirthdate(String dtContactBirthdate) {
     this.dtContactBirthdate = dtContactBirthdate;
   }
 
 
   public ContactRequestCompound objContactinformations(ContactinformationsRequestCompound objContactinformations) {
-    
     this.objContactinformations = objContactinformations;
     return this;
   }
@@ -226,7 +213,6 @@ public class ContactRequestCompound {
   public ContactinformationsRequestCompound getObjContactinformations() {
     return objContactinformations;
   }
-
 
   public void setObjContactinformations(ContactinformationsRequestCompound objContactinformations) {
     this.objContactinformations = objContactinformations;

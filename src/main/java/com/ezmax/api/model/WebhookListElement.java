@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -90,11 +90,14 @@ public class WebhookListElement {
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
   private Boolean bWebhookIsactive;
 
+  public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
+  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
+  private Boolean bWebhookIssigned;
+
   public WebhookListElement() {
   }
 
   public WebhookListElement pkiWebhookID(Integer pkiWebhookID) {
-    
     this.pkiWebhookID = pkiWebhookID;
     return this;
   }
@@ -108,14 +111,12 @@ public class WebhookListElement {
     return pkiWebhookID;
   }
 
-
   public void setPkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
   }
 
 
   public WebhookListElement sWebhookDescription(String sWebhookDescription) {
-    
     this.sWebhookDescription = sWebhookDescription;
     return this;
   }
@@ -129,14 +130,12 @@ public class WebhookListElement {
     return sWebhookDescription;
   }
 
-
   public void setsWebhookDescription(String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
   }
 
 
   public WebhookListElement sWebhookUrl(String sWebhookUrl) {
-    
     this.sWebhookUrl = sWebhookUrl;
     return this;
   }
@@ -150,14 +149,12 @@ public class WebhookListElement {
     return sWebhookUrl;
   }
 
-
   public void setsWebhookUrl(String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
   }
 
 
   public WebhookListElement sWebhookEvent(String sWebhookEvent) {
-    
     this.sWebhookEvent = sWebhookEvent;
     return this;
   }
@@ -171,14 +168,12 @@ public class WebhookListElement {
     return sWebhookEvent;
   }
 
-
   public void setsWebhookEvent(String sWebhookEvent) {
     this.sWebhookEvent = sWebhookEvent;
   }
 
 
   public WebhookListElement sWebhookEmailfailed(String sWebhookEmailfailed) {
-    
     this.sWebhookEmailfailed = sWebhookEmailfailed;
     return this;
   }
@@ -192,14 +187,12 @@ public class WebhookListElement {
     return sWebhookEmailfailed;
   }
 
-
   public void setsWebhookEmailfailed(String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
   }
 
 
   public WebhookListElement eWebhookModule(FieldEWebhookModule eWebhookModule) {
-    
     this.eWebhookModule = eWebhookModule;
     return this;
   }
@@ -213,14 +206,12 @@ public class WebhookListElement {
     return eWebhookModule;
   }
 
-
   public void seteWebhookModule(FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
   }
 
 
   public WebhookListElement eWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
-    
     this.eWebhookEzsignevent = eWebhookEzsignevent;
     return this;
   }
@@ -234,14 +225,12 @@ public class WebhookListElement {
     return eWebhookEzsignevent;
   }
 
-
   public void seteWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
   }
 
 
   public WebhookListElement eWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
-    
     this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
@@ -255,14 +244,12 @@ public class WebhookListElement {
     return eWebhookManagementevent;
   }
 
-
   public void seteWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
   public WebhookListElement bWebhookIsactive(Boolean bWebhookIsactive) {
-    
     this.bWebhookIsactive = bWebhookIsactive;
     return this;
   }
@@ -276,9 +263,27 @@ public class WebhookListElement {
     return bWebhookIsactive;
   }
 
-
   public void setbWebhookIsactive(Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
+  }
+
+
+  public WebhookListElement bWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
+    return this;
+  }
+
+   /**
+   * Whether the requests will be signed or not
+   * @return bWebhookIssigned
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbWebhookIssigned() {
+    return bWebhookIssigned;
+  }
+
+  public void setbWebhookIssigned(Boolean bWebhookIssigned) {
+    this.bWebhookIssigned = bWebhookIssigned;
   }
 
 
@@ -300,12 +305,13 @@ public class WebhookListElement {
         Objects.equals(this.eWebhookModule, webhookListElement.eWebhookModule) &&
         Objects.equals(this.eWebhookEzsignevent, webhookListElement.eWebhookEzsignevent) &&
         Objects.equals(this.eWebhookManagementevent, webhookListElement.eWebhookManagementevent) &&
-        Objects.equals(this.bWebhookIsactive, webhookListElement.bWebhookIsactive);
+        Objects.equals(this.bWebhookIsactive, webhookListElement.bWebhookIsactive) &&
+        Objects.equals(this.bWebhookIssigned, webhookListElement.bWebhookIssigned);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, sWebhookDescription, sWebhookUrl, sWebhookEvent, sWebhookEmailfailed, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, bWebhookIsactive);
+    return Objects.hash(pkiWebhookID, sWebhookDescription, sWebhookUrl, sWebhookEvent, sWebhookEmailfailed, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, bWebhookIsactive, bWebhookIssigned);
   }
 
   @Override
@@ -321,6 +327,7 @@ public class WebhookListElement {
     sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
+    sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -352,6 +359,7 @@ public class WebhookListElement {
     openapiFields.add("eWebhookEzsignevent");
     openapiFields.add("eWebhookManagementevent");
     openapiFields.add("bWebhookIsactive");
+    openapiFields.add("bWebhookIssigned");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -362,6 +370,7 @@ public class WebhookListElement {
     openapiRequiredFields.add("sWebhookEmailfailed");
     openapiRequiredFields.add("eWebhookModule");
     openapiRequiredFields.add("bWebhookIsactive");
+    openapiRequiredFields.add("bWebhookIssigned");
   }
 
  /**
@@ -403,6 +412,16 @@ public class WebhookListElement {
       }
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
+      }
+      // validate the required field `eWebhookModule`
+      FieldEWebhookModule.validateJsonElement(jsonObj.get("eWebhookModule"));
+      // validate the optional field `eWebhookEzsignevent`
+      if (jsonObj.get("eWebhookEzsignevent") != null && !jsonObj.get("eWebhookEzsignevent").isJsonNull()) {
+        FieldEWebhookEzsignevent.validateJsonElement(jsonObj.get("eWebhookEzsignevent"));
+      }
+      // validate the optional field `eWebhookManagementevent`
+      if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {
+        FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
       }
   }
 

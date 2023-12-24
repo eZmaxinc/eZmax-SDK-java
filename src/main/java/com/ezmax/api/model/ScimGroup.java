@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -70,7 +70,6 @@ public class ScimGroup {
   }
 
   public ScimGroup id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -84,14 +83,12 @@ public class ScimGroup {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ScimGroup displayName(String displayName) {
-    
     this.displayName = displayName;
     return this;
   }
@@ -105,14 +102,12 @@ public class ScimGroup {
     return displayName;
   }
 
-
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
   public ScimGroup members(List<ScimGroupMember> members) {
-    
     this.members = members;
     return this;
   }
@@ -133,7 +128,6 @@ public class ScimGroup {
   public List<ScimGroupMember> getMembers() {
     return members;
   }
-
 
   public void setMembers(List<ScimGroupMember> members) {
     this.members = members;

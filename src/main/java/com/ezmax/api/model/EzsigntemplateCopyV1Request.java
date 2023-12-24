@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigntemplateCopyV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D = "a_fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -61,7 +61,6 @@ public class EzsigntemplateCopyV1Request {
   }
 
   public EzsigntemplateCopyV1Request aFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
-    
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
     return this;
   }
@@ -82,7 +81,6 @@ public class EzsigntemplateCopyV1Request {
   public List<Integer> getaFkiEzsignfoldertypeID() {
     return aFkiEzsignfoldertypeID;
   }
-
 
   public void setaFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;

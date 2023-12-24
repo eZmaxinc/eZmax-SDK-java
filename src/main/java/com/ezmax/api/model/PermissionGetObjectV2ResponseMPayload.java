@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/permission/{pkiPermissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class PermissionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_PERMISSION = "objPermission";
   @SerializedName(SERIALIZED_NAME_OBJ_PERMISSION)
@@ -60,7 +60,6 @@ public class PermissionGetObjectV2ResponseMPayload {
   }
 
   public PermissionGetObjectV2ResponseMPayload objPermission(PermissionResponseCompound objPermission) {
-    
     this.objPermission = objPermission;
     return this;
   }
@@ -73,7 +72,6 @@ public class PermissionGetObjectV2ResponseMPayload {
   public PermissionResponseCompound getObjPermission() {
     return objPermission;
   }
-
 
   public void setObjPermission(PermissionResponseCompound objPermission) {
     this.objPermission = objPermission;

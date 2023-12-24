@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -80,7 +80,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
   public CustomEzsignfoldersignerassociationstatusResponse fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
-    
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -95,7 +94,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return fkiEzsignfoldersignerassociationID;
   }
 
-
   public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
@@ -103,7 +101,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
 
   @Deprecated
   public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
-    
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
     return this;
   }
@@ -119,7 +116,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return sEzsignfoldersignerassociationstatusLastname;
   }
 
-
   @Deprecated
   public void setsEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
@@ -128,7 +124,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
 
   @Deprecated
   public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
-    
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
     return this;
   }
@@ -144,7 +139,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return sEzsignfoldersignerassociationstatusFirstname;
   }
 
-
   @Deprecated
   public void setsEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
@@ -152,7 +146,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
 
 
   public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
-    
     this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
     return this;
   }
@@ -166,14 +159,12 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return sEzsignfoldersignerassociationstatusDescriptionX;
   }
 
-
   public void setsEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
     this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
   }
 
 
   public CustomEzsignfoldersignerassociationstatusResponse aObjEzsignsignaturestatus(List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
-    
     this.aObjEzsignsignaturestatus = aObjEzsignsignaturestatus;
     return this;
   }
@@ -194,7 +185,6 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   public List<CustomEzsignsignaturestatusResponse> getaObjEzsignsignaturestatus() {
     return aObjEzsignsignaturestatus;
   }
-
 
   public void setaObjEzsignsignaturestatus(List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
     this.aObjEzsignsignaturestatus = aObjEzsignsignaturestatus;

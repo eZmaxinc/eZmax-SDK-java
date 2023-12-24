@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ContactinformationsRequest {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -71,7 +71,6 @@ public class ContactinformationsRequest {
   }
 
   public ContactinformationsRequest iAddressDefault(Integer iAddressDefault) {
-    
     this.iAddressDefault = iAddressDefault;
     return this;
   }
@@ -85,14 +84,12 @@ public class ContactinformationsRequest {
     return iAddressDefault;
   }
 
-
   public void setiAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
   }
 
 
   public ContactinformationsRequest iPhoneDefault(Integer iPhoneDefault) {
-    
     this.iPhoneDefault = iPhoneDefault;
     return this;
   }
@@ -106,14 +103,12 @@ public class ContactinformationsRequest {
     return iPhoneDefault;
   }
 
-
   public void setiPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
   }
 
 
   public ContactinformationsRequest iEmailDefault(Integer iEmailDefault) {
-    
     this.iEmailDefault = iEmailDefault;
     return this;
   }
@@ -127,14 +122,12 @@ public class ContactinformationsRequest {
     return iEmailDefault;
   }
 
-
   public void setiEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
   }
 
 
   public ContactinformationsRequest iWebsiteDefault(Integer iWebsiteDefault) {
-    
     this.iWebsiteDefault = iWebsiteDefault;
     return this;
   }
@@ -147,7 +140,6 @@ public class ContactinformationsRequest {
   public Integer getiWebsiteDefault() {
     return iWebsiteDefault;
   }
-
 
   public void setiWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;

@@ -62,7 +62,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezmaxinvoicing/getProvisional
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -156,7 +156,6 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
   }
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload pkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
-    
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
     return this;
   }
@@ -171,14 +170,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return pkiEzmaxinvoicingID;
   }
 
-
   public void setPkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
-    
     this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
     return this;
   }
@@ -193,14 +190,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return fkiEzmaxinvoicingcontractID;
   }
 
-
   public void setFkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
     this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
-    
     this.fkiEzmaxpricingID = fkiEzmaxpricingID;
     return this;
   }
@@ -215,14 +210,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return fkiEzmaxpricingID;
   }
 
-
   public void setFkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
     this.fkiEzmaxpricingID = fkiEzmaxpricingID;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
-    
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -237,14 +230,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return fkiSystemconfigurationtypeID;
   }
 
-
   public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload sSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
-    
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
     return this;
   }
@@ -258,14 +249,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return sSystemconfigurationtypeDescriptionX;
   }
 
-
   public void setsSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload yyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
-    
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
     return this;
   }
@@ -279,14 +268,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return yyyymmEzmaxinvoicing;
   }
 
-
   public void setYyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload iEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
-    
     this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
     return this;
   }
@@ -301,14 +288,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return iEzmaxinvoicingDays;
   }
 
-
   public void setiEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
     this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload eEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
-    
     this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
     return this;
   }
@@ -322,14 +307,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return eEzmaxinvoicingPaymenttype;
   }
 
-
   public void seteEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
     this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload dEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
-    
     this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
     return this;
   }
@@ -343,14 +326,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return dEzmaxinvoicingRebatepaymenttype;
   }
 
-
   public void setdEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
     this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload iEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
-    
     this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
     return this;
   }
@@ -365,14 +346,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return iEzmaxinvoicingContractlength;
   }
 
-
   public void setiEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
     this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload dEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
-    
     this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
     return this;
   }
@@ -386,14 +365,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return dEzmaxinvoicingRebatecontractlength;
   }
 
-
   public void setdEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
     this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload bEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
-    
     this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
     return this;
   }
@@ -407,14 +384,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return bEzmaxinvoicingRebateEzsignallagents;
   }
 
-
   public void setbEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
     this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload objAudit(CommonAudit objAudit) {
-    
     this.objAudit = objAudit;
     return this;
   }
@@ -428,14 +403,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return objAudit;
   }
 
-
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload objEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
-    
     this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
     return this;
   }
@@ -449,14 +422,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return objEzmaxinvoicingcontract;
   }
 
-
   public void setObjEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
     this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload objEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
-    
     this.objEzmaxpricing = objEzmaxpricing;
     return this;
   }
@@ -470,14 +441,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return objEzmaxpricing;
   }
 
-
   public void setObjEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
     this.objEzmaxpricing = objEzmaxpricing;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
-    
     this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
     return this;
   }
@@ -499,14 +468,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicingsummaryglobal;
   }
 
-
   public void setaObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
     this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
-    
     this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
     return this;
   }
@@ -528,14 +495,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicingsummaryexternal;
   }
 
-
   public void setaObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
     this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
-    
     this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
     return this;
   }
@@ -557,14 +522,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicingsummaryinternal;
   }
 
-
   public void setaObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
     this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
-    
     this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
     return this;
   }
@@ -586,14 +549,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicingagent;
   }
 
-
   public void setaObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
     this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
-    
     this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
     return this;
   }
@@ -615,14 +576,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicinguser;
   }
 
-
   public void setaObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
     this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
-    
     this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
     return this;
   }
@@ -644,14 +603,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return aObjEzmaxinvoicingezsignfolder;
   }
 
-
   public void setaObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
     this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
   }
 
 
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
-    
     this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
     return this;
   }
@@ -672,7 +629,6 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
   public List<CustomEzmaxinvoicingEzsigndocumentResponse> getaObjEzmaxinvoicingezsigndocument() {
     return aObjEzmaxinvoicingezsigndocument;
   }
-
 
   public void setaObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
     this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
@@ -847,6 +803,8 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
       if (!jsonObj.get("yyyymmEzmaxinvoicing").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `yyyymmEzmaxinvoicing` to be a primitive type in the JSON string but got `%s`", jsonObj.get("yyyymmEzmaxinvoicing").toString()));
       }
+      // validate the required field `eEzmaxinvoicingPaymenttype`
+      FieldEEzmaxinvoicingPaymenttype.validateJsonElement(jsonObj.get("eEzmaxinvoicingPaymenttype"));
       if (!jsonObj.get("dEzmaxinvoicingRebatepaymenttype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingRebatepaymenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingRebatepaymenttype").toString()));
       }

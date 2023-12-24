@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ScimUser {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -74,7 +74,6 @@ public class ScimUser {
   }
 
   public ScimUser id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -88,14 +87,12 @@ public class ScimUser {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ScimUser userName(String userName) {
-    
     this.userName = userName;
     return this;
   }
@@ -109,14 +106,12 @@ public class ScimUser {
     return userName;
   }
 
-
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
   public ScimUser displayName(String displayName) {
-    
     this.displayName = displayName;
     return this;
   }
@@ -130,14 +125,12 @@ public class ScimUser {
     return displayName;
   }
 
-
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
   public ScimUser emails(List<ScimEmail> emails) {
-    
     this.emails = emails;
     return this;
   }
@@ -158,7 +151,6 @@ public class ScimUser {
   public List<ScimEmail> getEmails() {
     return emails;
   }
-
 
   public void setEmails(List<ScimEmail> emails) {
     this.emails = emails;

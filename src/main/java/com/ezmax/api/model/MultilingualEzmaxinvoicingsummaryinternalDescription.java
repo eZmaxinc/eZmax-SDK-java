@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Ezmaxinvoicingsummaryinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1 = "sEzmaxinvoicingsummaryinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1)
@@ -63,7 +63,6 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   }
 
   public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription1(String sEzmaxinvoicingsummaryinternalDescription1) {
-    
     this.sEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
     return this;
   }
@@ -77,14 +76,12 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
     return sEzmaxinvoicingsummaryinternalDescription1;
   }
 
-
   public void setsEzmaxinvoicingsummaryinternalDescription1(String sEzmaxinvoicingsummaryinternalDescription1) {
     this.sEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
   }
 
 
   public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription2(String sEzmaxinvoicingsummaryinternalDescription2) {
-    
     this.sEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;
     return this;
   }
@@ -97,7 +94,6 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   public String getsEzmaxinvoicingsummaryinternalDescription2() {
     return sEzmaxinvoicingsummaryinternalDescription2;
   }
-
 
   public void setsEzmaxinvoicingsummaryinternalDescription2(String sEzmaxinvoicingsummaryinternalDescription2) {
     this.sEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;

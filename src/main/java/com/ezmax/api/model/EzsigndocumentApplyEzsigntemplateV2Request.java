@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsigndocument/{pkiEzsigndocumentID}/applyezsigntemplate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV2Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
@@ -69,7 +69,6 @@ public class EzsigndocumentApplyEzsigntemplateV2Request {
   }
 
   public EzsigndocumentApplyEzsigntemplateV2Request fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
-    
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -84,14 +83,12 @@ public class EzsigndocumentApplyEzsigntemplateV2Request {
     return fkiEzsigntemplateID;
   }
 
-
   public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
   public EzsigndocumentApplyEzsigntemplateV2Request aSEzsigntemplatesigner(List<String> aSEzsigntemplatesigner) {
-    
     this.aSEzsigntemplatesigner = aSEzsigntemplatesigner;
     return this;
   }
@@ -113,14 +110,12 @@ public class EzsigndocumentApplyEzsigntemplateV2Request {
     return aSEzsigntemplatesigner;
   }
 
-
   public void setaSEzsigntemplatesigner(List<String> aSEzsigntemplatesigner) {
     this.aSEzsigntemplatesigner = aSEzsigntemplatesigner;
   }
 
 
   public EzsigndocumentApplyEzsigntemplateV2Request aPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
-    
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -141,7 +136,6 @@ public class EzsigndocumentApplyEzsigntemplateV2Request {
   public List<Integer> getaPkiEzsignfoldersignerassociationID() {
     return aPkiEzsignfoldersignerassociationID;
   }
-
 
   public void setaPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;

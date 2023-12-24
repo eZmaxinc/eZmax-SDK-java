@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_YYYYMM_EZMAXINVOICING = "yyyymmEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_YYYYMM_EZMAXINVOICING)
@@ -67,7 +67,6 @@ public class EzmaxinvoicingAutocompleteElementResponse {
   }
 
   public EzmaxinvoicingAutocompleteElementResponse yyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
-    
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
     return this;
   }
@@ -81,14 +80,12 @@ public class EzmaxinvoicingAutocompleteElementResponse {
     return yyyymmEzmaxinvoicing;
   }
 
-
   public void setYyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
   }
 
 
   public EzmaxinvoicingAutocompleteElementResponse pkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
-    
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
     return this;
   }
@@ -103,14 +100,12 @@ public class EzmaxinvoicingAutocompleteElementResponse {
     return pkiEzmaxinvoicingID;
   }
 
-
   public void setPkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
   }
 
 
   public EzmaxinvoicingAutocompleteElementResponse bEzmaxinvoicingIsactive(Boolean bEzmaxinvoicingIsactive) {
-    
     this.bEzmaxinvoicingIsactive = bEzmaxinvoicingIsactive;
     return this;
   }
@@ -123,7 +118,6 @@ public class EzmaxinvoicingAutocompleteElementResponse {
   public Boolean getbEzmaxinvoicingIsactive() {
     return bEzmaxinvoicingIsactive;
   }
-
 
   public void setbEzmaxinvoicingIsactive(Boolean bEzmaxinvoicingIsactive) {
     this.bEzmaxinvoicingIsactive = bEzmaxinvoicingIsactive;

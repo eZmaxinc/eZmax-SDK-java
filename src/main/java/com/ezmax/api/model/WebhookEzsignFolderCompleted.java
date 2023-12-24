@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class WebhookEzsignFolderCompleted {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -72,7 +72,6 @@ public class WebhookEzsignFolderCompleted {
   }
 
   public WebhookEzsignFolderCompleted objWebhook(CustomWebhookResponse objWebhook) {
-    
     this.objWebhook = objWebhook;
     return this;
   }
@@ -86,14 +85,12 @@ public class WebhookEzsignFolderCompleted {
     return objWebhook;
   }
 
-
   public void setObjWebhook(CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
   }
 
 
   public WebhookEzsignFolderCompleted aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
-    
     this.aObjAttempt = aObjAttempt;
     return this;
   }
@@ -115,14 +112,12 @@ public class WebhookEzsignFolderCompleted {
     return aObjAttempt;
   }
 
-
   public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
 
   public WebhookEzsignFolderCompleted objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
-    
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -135,7 +130,6 @@ public class WebhookEzsignFolderCompleted {
   public EzsignfolderResponse getObjEzsignfolder() {
     return objEzsignfolder;
   }
-
 
   public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;

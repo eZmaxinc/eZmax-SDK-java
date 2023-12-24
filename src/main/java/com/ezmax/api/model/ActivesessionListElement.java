@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Activesession List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class ActivesessionListElement {
   public static final String SERIALIZED_NAME_PKI_ACTIVESESSION_I_D = "pkiActivesessionID";
   @SerializedName(SERIALIZED_NAME_PKI_ACTIVESESSION_I_D)
@@ -103,7 +103,6 @@ public class ActivesessionListElement {
   }
 
   public ActivesessionListElement pkiActivesessionID(Integer pkiActivesessionID) {
-    
     this.pkiActivesessionID = pkiActivesessionID;
     return this;
   }
@@ -117,14 +116,12 @@ public class ActivesessionListElement {
     return pkiActivesessionID;
   }
 
-
   public void setPkiActivesessionID(Integer pkiActivesessionID) {
     this.pkiActivesessionID = pkiActivesessionID;
   }
 
 
   public ActivesessionListElement fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -139,14 +136,12 @@ public class ActivesessionListElement {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public ActivesessionListElement fkiComputerID(Integer fkiComputerID) {
-    
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -162,14 +157,12 @@ public class ActivesessionListElement {
     return fkiComputerID;
   }
 
-
   public void setFkiComputerID(Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
 
   public ActivesessionListElement fkiCompanyID(Integer fkiCompanyID) {
-    
     this.fkiCompanyID = fkiCompanyID;
     return this;
   }
@@ -185,14 +178,12 @@ public class ActivesessionListElement {
     return fkiCompanyID;
   }
 
-
   public void setFkiCompanyID(Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
   }
 
 
   public ActivesessionListElement fkiDepartmentID(Integer fkiDepartmentID) {
-    
     this.fkiDepartmentID = fkiDepartmentID;
     return this;
   }
@@ -207,14 +198,12 @@ public class ActivesessionListElement {
     return fkiDepartmentID;
   }
 
-
   public void setFkiDepartmentID(Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
   public ActivesessionListElement sCompanyNameX(String sCompanyNameX) {
-    
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -228,14 +217,12 @@ public class ActivesessionListElement {
     return sCompanyNameX;
   }
 
-
   public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
   public ActivesessionListElement sDepartmentNameX(String sDepartmentNameX) {
-    
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -249,14 +236,12 @@ public class ActivesessionListElement {
     return sDepartmentNameX;
   }
 
-
   public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
   public ActivesessionListElement sActivesessionLoginname(String sActivesessionLoginname) {
-    
     this.sActivesessionLoginname = sActivesessionLoginname;
     return this;
   }
@@ -270,14 +255,12 @@ public class ActivesessionListElement {
     return sActivesessionLoginname;
   }
 
-
   public void setsActivesessionLoginname(String sActivesessionLoginname) {
     this.sActivesessionLoginname = sActivesessionLoginname;
   }
 
 
   public ActivesessionListElement sComputerDescription(String sComputerDescription) {
-    
     this.sComputerDescription = sComputerDescription;
     return this;
   }
@@ -291,14 +274,12 @@ public class ActivesessionListElement {
     return sComputerDescription;
   }
 
-
   public void setsComputerDescription(String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
   }
 
 
   public ActivesessionListElement dtActivesessionFirsthit(String dtActivesessionFirsthit) {
-    
     this.dtActivesessionFirsthit = dtActivesessionFirsthit;
     return this;
   }
@@ -312,14 +293,12 @@ public class ActivesessionListElement {
     return dtActivesessionFirsthit;
   }
 
-
   public void setDtActivesessionFirsthit(String dtActivesessionFirsthit) {
     this.dtActivesessionFirsthit = dtActivesessionFirsthit;
   }
 
 
   public ActivesessionListElement dtActivesessionLasthit(String dtActivesessionLasthit) {
-    
     this.dtActivesessionLasthit = dtActivesessionLasthit;
     return this;
   }
@@ -333,14 +312,12 @@ public class ActivesessionListElement {
     return dtActivesessionLasthit;
   }
 
-
   public void setDtActivesessionLasthit(String dtActivesessionLasthit) {
     this.dtActivesessionLasthit = dtActivesessionLasthit;
   }
 
 
   public ActivesessionListElement sActivesessionIP(String sActivesessionIP) {
-    
     this.sActivesessionIP = sActivesessionIP;
     return this;
   }
@@ -353,7 +330,6 @@ public class ActivesessionListElement {
   public String getsActivesessionIP() {
     return sActivesessionIP;
   }
-
 
   public void setsActivesessionIP(String sActivesessionIP) {
     this.sActivesessionIP = sActivesessionIP;

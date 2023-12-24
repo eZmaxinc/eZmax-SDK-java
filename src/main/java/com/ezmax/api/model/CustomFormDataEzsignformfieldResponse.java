@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomFormDataEzsignformfieldResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
@@ -63,7 +63,6 @@ public class CustomFormDataEzsignformfieldResponse {
   }
 
   public CustomFormDataEzsignformfieldResponse sEzsignformfieldLabel(String sEzsignformfieldLabel) {
-    
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -77,14 +76,12 @@ public class CustomFormDataEzsignformfieldResponse {
     return sEzsignformfieldLabel;
   }
 
-
   public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
   public CustomFormDataEzsignformfieldResponse sEzsignformfieldValue(String sEzsignformfieldValue) {
-    
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -97,7 +94,6 @@ public class CustomFormDataEzsignformfieldResponse {
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;
   }
-
 
   public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;

@@ -15,6 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.EmailResponseCompound;
+import com.ezmax.api.model.PhoneResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Communicationsender Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationsenderResponse {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -68,6 +70,10 @@ public class CustomCommunicationsenderResponse {
   @SerializedName(SERIALIZED_NAME_FKI_MAILBOXSHARED_I_D)
   private Integer fkiMailboxsharedID;
 
+  public static final String SERIALIZED_NAME_FKI_PHONELINESHARED_I_D = "fkiPhonelinesharedID";
+  @SerializedName(SERIALIZED_NAME_FKI_PHONELINESHARED_I_D)
+  private Integer fkiPhonelinesharedID;
+
   /**
    * Gets or Sets eCommunicationsenderObjecttype
    */
@@ -79,7 +85,9 @@ public class CustomCommunicationsenderResponse {
     
     USER("User"),
     
-    MAILBOXSHARED("Mailboxshared");
+    MAILBOXSHARED("Mailboxshared"),
+    
+    PHONELINESHARED("Phonelineshared");
 
     private String value;
 
@@ -117,6 +125,11 @@ public class CustomCommunicationsenderResponse {
         return ECommunicationsenderObjecttypeEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ECommunicationsenderObjecttypeEnum.fromValue(value);
+    }
   }
 
   public static final String SERIALIZED_NAME_E_COMMUNICATIONSENDER_OBJECTTYPE = "eCommunicationsenderObjecttype";
@@ -127,19 +140,22 @@ public class CustomCommunicationsenderResponse {
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_NAME)
   private CustomContactNameResponse objContactName;
 
-  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
-  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  private String sEmailAddress;
+  public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  private EmailResponseCompound objEmail;
 
-  public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
-  @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  private String sPhoneE164;
+  public static final String SERIALIZED_NAME_OBJ_PHONE_FAX = "objPhoneFax";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_FAX)
+  private PhoneResponseCompound objPhoneFax;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONE_S_M_S = "objPhoneSMS";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_S_M_S)
+  private PhoneResponseCompound objPhoneSMS;
 
   public CustomCommunicationsenderResponse() {
   }
 
   public CustomCommunicationsenderResponse fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -154,14 +170,12 @@ public class CustomCommunicationsenderResponse {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public CustomCommunicationsenderResponse fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -176,14 +190,12 @@ public class CustomCommunicationsenderResponse {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public CustomCommunicationsenderResponse fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -198,14 +210,12 @@ public class CustomCommunicationsenderResponse {
     return fkiUserID;
   }
 
-
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
   public CustomCommunicationsenderResponse fkiMailboxsharedID(Integer fkiMailboxsharedID) {
-    
     this.fkiMailboxsharedID = fkiMailboxsharedID;
     return this;
   }
@@ -221,14 +231,33 @@ public class CustomCommunicationsenderResponse {
     return fkiMailboxsharedID;
   }
 
-
   public void setFkiMailboxsharedID(Integer fkiMailboxsharedID) {
     this.fkiMailboxsharedID = fkiMailboxsharedID;
   }
 
 
+  public CustomCommunicationsenderResponse fkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Phonelineshared
+   * minimum: 0
+   * maximum: 255
+   * @return fkiPhonelinesharedID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiPhonelinesharedID() {
+    return fkiPhonelinesharedID;
+  }
+
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+  }
+
+
   public CustomCommunicationsenderResponse eCommunicationsenderObjecttype(ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype) {
-    
     this.eCommunicationsenderObjecttype = eCommunicationsenderObjecttype;
     return this;
   }
@@ -242,14 +271,12 @@ public class CustomCommunicationsenderResponse {
     return eCommunicationsenderObjecttype;
   }
 
-
   public void seteCommunicationsenderObjecttype(ECommunicationsenderObjecttypeEnum eCommunicationsenderObjecttype) {
     this.eCommunicationsenderObjecttype = eCommunicationsenderObjecttype;
   }
 
 
   public CustomCommunicationsenderResponse objContactName(CustomContactNameResponse objContactName) {
-    
     this.objContactName = objContactName;
     return this;
   }
@@ -263,51 +290,65 @@ public class CustomCommunicationsenderResponse {
     return objContactName;
   }
 
-
   public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
   }
 
 
-  public CustomCommunicationsenderResponse sEmailAddress(String sEmailAddress) {
-    
-    this.sEmailAddress = sEmailAddress;
+  public CustomCommunicationsenderResponse objEmail(EmailResponseCompound objEmail) {
+    this.objEmail = objEmail;
     return this;
   }
 
    /**
-   * The email address.
-   * @return sEmailAddress
+   * Get objEmail
+   * @return objEmail
   **/
   @javax.annotation.Nullable
-  public String getsEmailAddress() {
-    return sEmailAddress;
+  public EmailResponseCompound getObjEmail() {
+    return objEmail;
+  }
+
+  public void setObjEmail(EmailResponseCompound objEmail) {
+    this.objEmail = objEmail;
   }
 
 
-  public void setsEmailAddress(String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-
-  public CustomCommunicationsenderResponse sPhoneE164(String sPhoneE164) {
-    
-    this.sPhoneE164 = sPhoneE164;
+  public CustomCommunicationsenderResponse objPhoneFax(PhoneResponseCompound objPhoneFax) {
+    this.objPhoneFax = objPhoneFax;
     return this;
   }
 
    /**
-   * A phone number in E.164 Format
-   * @return sPhoneE164
+   * Get objPhoneFax
+   * @return objPhoneFax
   **/
   @javax.annotation.Nullable
-  public String getsPhoneE164() {
-    return sPhoneE164;
+  public PhoneResponseCompound getObjPhoneFax() {
+    return objPhoneFax;
+  }
+
+  public void setObjPhoneFax(PhoneResponseCompound objPhoneFax) {
+    this.objPhoneFax = objPhoneFax;
   }
 
 
-  public void setsPhoneE164(String sPhoneE164) {
-    this.sPhoneE164 = sPhoneE164;
+  public CustomCommunicationsenderResponse objPhoneSMS(PhoneResponseCompound objPhoneSMS) {
+    this.objPhoneSMS = objPhoneSMS;
+    return this;
+  }
+
+   /**
+   * Get objPhoneSMS
+   * @return objPhoneSMS
+  **/
+  @javax.annotation.Nullable
+  public PhoneResponseCompound getObjPhoneSMS() {
+    return objPhoneSMS;
+  }
+
+  public void setObjPhoneSMS(PhoneResponseCompound objPhoneSMS) {
+    this.objPhoneSMS = objPhoneSMS;
   }
 
 
@@ -325,15 +366,17 @@ public class CustomCommunicationsenderResponse {
         Objects.equals(this.fkiBrokerID, customCommunicationsenderResponse.fkiBrokerID) &&
         Objects.equals(this.fkiUserID, customCommunicationsenderResponse.fkiUserID) &&
         Objects.equals(this.fkiMailboxsharedID, customCommunicationsenderResponse.fkiMailboxsharedID) &&
+        Objects.equals(this.fkiPhonelinesharedID, customCommunicationsenderResponse.fkiPhonelinesharedID) &&
         Objects.equals(this.eCommunicationsenderObjecttype, customCommunicationsenderResponse.eCommunicationsenderObjecttype) &&
         Objects.equals(this.objContactName, customCommunicationsenderResponse.objContactName) &&
-        Objects.equals(this.sEmailAddress, customCommunicationsenderResponse.sEmailAddress) &&
-        Objects.equals(this.sPhoneE164, customCommunicationsenderResponse.sPhoneE164);
+        Objects.equals(this.objEmail, customCommunicationsenderResponse.objEmail) &&
+        Objects.equals(this.objPhoneFax, customCommunicationsenderResponse.objPhoneFax) &&
+        Objects.equals(this.objPhoneSMS, customCommunicationsenderResponse.objPhoneSMS);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAgentID, fkiBrokerID, fkiUserID, fkiMailboxsharedID, eCommunicationsenderObjecttype, objContactName, sEmailAddress, sPhoneE164);
+    return Objects.hash(fkiAgentID, fkiBrokerID, fkiUserID, fkiMailboxsharedID, fkiPhonelinesharedID, eCommunicationsenderObjecttype, objContactName, objEmail, objPhoneFax, objPhoneSMS);
   }
 
   @Override
@@ -344,10 +387,12 @@ public class CustomCommunicationsenderResponse {
     sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    fkiMailboxsharedID: ").append(toIndentedString(fkiMailboxsharedID)).append("\n");
+    sb.append("    fkiPhonelinesharedID: ").append(toIndentedString(fkiPhonelinesharedID)).append("\n");
     sb.append("    eCommunicationsenderObjecttype: ").append(toIndentedString(eCommunicationsenderObjecttype)).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
-    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
-    sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
+    sb.append("    objEmail: ").append(toIndentedString(objEmail)).append("\n");
+    sb.append("    objPhoneFax: ").append(toIndentedString(objPhoneFax)).append("\n");
+    sb.append("    objPhoneSMS: ").append(toIndentedString(objPhoneSMS)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -374,10 +419,12 @@ public class CustomCommunicationsenderResponse {
     openapiFields.add("fkiBrokerID");
     openapiFields.add("fkiUserID");
     openapiFields.add("fkiMailboxsharedID");
+    openapiFields.add("fkiPhonelinesharedID");
     openapiFields.add("eCommunicationsenderObjecttype");
     openapiFields.add("objContactName");
-    openapiFields.add("sEmailAddress");
-    openapiFields.add("sPhoneE164");
+    openapiFields.add("objEmail");
+    openapiFields.add("objPhoneFax");
+    openapiFields.add("objPhoneSMS");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -416,13 +463,21 @@ public class CustomCommunicationsenderResponse {
       if (!jsonObj.get("eCommunicationsenderObjecttype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eCommunicationsenderObjecttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationsenderObjecttype").toString()));
       }
+      // validate the required field `eCommunicationsenderObjecttype`
+      ECommunicationsenderObjecttypeEnum.validateJsonElement(jsonObj.get("eCommunicationsenderObjecttype"));
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
-      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      // validate the optional field `objEmail`
+      if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
+        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmail"));
       }
-      if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
+      // validate the optional field `objPhoneFax`
+      if (jsonObj.get("objPhoneFax") != null && !jsonObj.get("objPhoneFax").isJsonNull()) {
+        PhoneResponseCompound.validateJsonElement(jsonObj.get("objPhoneFax"));
+      }
+      // validate the optional field `objPhoneSMS`
+      if (jsonObj.get("objPhoneSMS") != null && !jsonObj.get("objPhoneSMS").isJsonNull()) {
+        PhoneResponseCompound.validateJsonElement(jsonObj.get("objPhoneSMS"));
       }
   }
 

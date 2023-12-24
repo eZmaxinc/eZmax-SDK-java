@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryexternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzmaxinvoicingsummaryexternaldetailResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryexternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D)
@@ -95,7 +95,6 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
   }
 
   public EzmaxinvoicingsummaryexternaldetailResponse pkiEzmaxinvoicingsummaryexternaldetailID(Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
-    
     this.pkiEzmaxinvoicingsummaryexternaldetailID = pkiEzmaxinvoicingsummaryexternaldetailID;
     return this;
   }
@@ -110,14 +109,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return pkiEzmaxinvoicingsummaryexternaldetailID;
   }
 
-
   public void setPkiEzmaxinvoicingsummaryexternaldetailID(Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
     this.pkiEzmaxinvoicingsummaryexternaldetailID = pkiEzmaxinvoicingsummaryexternaldetailID;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse fkiEzmaxinvoicingsummaryexternalID(Integer fkiEzmaxinvoicingsummaryexternalID) {
-    
     this.fkiEzmaxinvoicingsummaryexternalID = fkiEzmaxinvoicingsummaryexternalID;
     return this;
   }
@@ -132,14 +129,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return fkiEzmaxinvoicingsummaryexternalID;
   }
 
-
   public void setFkiEzmaxinvoicingsummaryexternalID(Integer fkiEzmaxinvoicingsummaryexternalID) {
     this.fkiEzmaxinvoicingsummaryexternalID = fkiEzmaxinvoicingsummaryexternalID;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse fkiEzmaxproductID(Integer fkiEzmaxproductID) {
-    
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -154,14 +149,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return fkiEzmaxproductID;
   }
 
-
   public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
-    
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -175,14 +168,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return sEzmaxproductDescriptionX;
   }
 
-
   public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse dEzmaxinvoicingsummaryexternaldetailCountreal(String dEzmaxinvoicingsummaryexternaldetailCountreal) {
-    
     this.dEzmaxinvoicingsummaryexternaldetailCountreal = dEzmaxinvoicingsummaryexternaldetailCountreal;
     return this;
   }
@@ -196,14 +187,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return dEzmaxinvoicingsummaryexternaldetailCountreal;
   }
 
-
   public void setdEzmaxinvoicingsummaryexternaldetailCountreal(String dEzmaxinvoicingsummaryexternaldetailCountreal) {
     this.dEzmaxinvoicingsummaryexternaldetailCountreal = dEzmaxinvoicingsummaryexternaldetailCountreal;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse dEzmaxinvoicingsummaryexternaldetailSubtotal(String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
-    
     this.dEzmaxinvoicingsummaryexternaldetailSubtotal = dEzmaxinvoicingsummaryexternaldetailSubtotal;
     return this;
   }
@@ -217,14 +206,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return dEzmaxinvoicingsummaryexternaldetailSubtotal;
   }
 
-
   public void setdEzmaxinvoicingsummaryexternaldetailSubtotal(String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
     this.dEzmaxinvoicingsummaryexternaldetailSubtotal = dEzmaxinvoicingsummaryexternaldetailSubtotal;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse dEzmaxinvoicingsummaryexternaldetailRebate(String dEzmaxinvoicingsummaryexternaldetailRebate) {
-    
     this.dEzmaxinvoicingsummaryexternaldetailRebate = dEzmaxinvoicingsummaryexternaldetailRebate;
     return this;
   }
@@ -238,14 +225,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return dEzmaxinvoicingsummaryexternaldetailRebate;
   }
 
-
   public void setdEzmaxinvoicingsummaryexternaldetailRebate(String dEzmaxinvoicingsummaryexternaldetailRebate) {
     this.dEzmaxinvoicingsummaryexternaldetailRebate = dEzmaxinvoicingsummaryexternaldetailRebate;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse dEzmaxinvoicingsummaryexternaldetailTotal(String dEzmaxinvoicingsummaryexternaldetailTotal) {
-    
     this.dEzmaxinvoicingsummaryexternaldetailTotal = dEzmaxinvoicingsummaryexternaldetailTotal;
     return this;
   }
@@ -259,14 +244,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return dEzmaxinvoicingsummaryexternaldetailTotal;
   }
 
-
   public void setdEzmaxinvoicingsummaryexternaldetailTotal(String dEzmaxinvoicingsummaryexternaldetailTotal) {
     this.dEzmaxinvoicingsummaryexternaldetailTotal = dEzmaxinvoicingsummaryexternaldetailTotal;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse bEzmaxinvoicingsummaryexternaldetailAdjustment(Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
-    
     this.bEzmaxinvoicingsummaryexternaldetailAdjustment = bEzmaxinvoicingsummaryexternaldetailAdjustment;
     return this;
   }
@@ -280,14 +263,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
     return bEzmaxinvoicingsummaryexternaldetailAdjustment;
   }
 
-
   public void setbEzmaxinvoicingsummaryexternaldetailAdjustment(Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
     this.bEzmaxinvoicingsummaryexternaldetailAdjustment = bEzmaxinvoicingsummaryexternaldetailAdjustment;
   }
 
 
   public EzmaxinvoicingsummaryexternaldetailResponse tEzmaxproductHelpX(String tEzmaxproductHelpX) {
-    
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;
     return this;
   }
@@ -300,7 +281,6 @@ public class EzmaxinvoicingsummaryexternaldetailResponse {
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;
   }
-
 
   public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;

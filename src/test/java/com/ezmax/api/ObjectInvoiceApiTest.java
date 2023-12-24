@@ -15,6 +15,7 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.InvoiceGetAttachmentsV1Response;
 import com.ezmax.api.model.InvoiceGetCommunicationListV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -31,6 +32,20 @@ import java.util.Map;
 public class ObjectInvoiceApiTest {
 
     private final ObjectInvoiceApi api = new ObjectInvoiceApi();
+
+    /**
+     * Retrieve Invoice&#39;s Attachments
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void invoiceGetAttachmentsV1Test() throws ApiException {
+        Integer pkiInvoiceID = null;
+        InvoiceGetAttachmentsV1Response response = api.invoiceGetAttachmentsV1(pkiInvoiceID);
+        // TODO: test validations
+    }
 
     /**
      * Retrieve Communication list

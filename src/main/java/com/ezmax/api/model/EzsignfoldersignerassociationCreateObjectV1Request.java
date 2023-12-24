@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class EzsignfoldersignerassociationCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
@@ -65,7 +65,6 @@ public class EzsignfoldersignerassociationCreateObjectV1Request {
   }
 
   public EzsignfoldersignerassociationCreateObjectV1Request objEzsignfoldersignerassociation(EzsignfoldersignerassociationRequest objEzsignfoldersignerassociation) {
-    
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
     return this;
   }
@@ -79,14 +78,12 @@ public class EzsignfoldersignerassociationCreateObjectV1Request {
     return objEzsignfoldersignerassociation;
   }
 
-
   public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationRequest objEzsignfoldersignerassociation) {
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
   }
 
 
   public EzsignfoldersignerassociationCreateObjectV1Request objEzsignfoldersignerassociationCompound(EzsignfoldersignerassociationRequestCompound objEzsignfoldersignerassociationCompound) {
-    
     this.objEzsignfoldersignerassociationCompound = objEzsignfoldersignerassociationCompound;
     return this;
   }
@@ -99,7 +96,6 @@ public class EzsignfoldersignerassociationCreateObjectV1Request {
   public EzsignfoldersignerassociationRequestCompound getObjEzsignfoldersignerassociationCompound() {
     return objEzsignfoldersignerassociationCompound;
   }
-
 
   public void setObjEzsignfoldersignerassociationCompound(EzsignfoldersignerassociationRequestCompound objEzsignfoldersignerassociationCompound) {
     this.objEzsignfoldersignerassociationCompound = objEzsignfoldersignerassociationCompound;

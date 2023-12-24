@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationsender Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-08T14:50:15.840482184Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
 public class CustomCommunicationsenderRequest {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -63,6 +63,10 @@ public class CustomCommunicationsenderRequest {
   @SerializedName(SERIALIZED_NAME_FKI_MAILBOXSHARED_I_D)
   private Integer fkiMailboxsharedID;
 
+  public static final String SERIALIZED_NAME_FKI_PHONELINESHARED_I_D = "fkiPhonelinesharedID";
+  @SerializedName(SERIALIZED_NAME_FKI_PHONELINESHARED_I_D)
+  private Integer fkiPhonelinesharedID;
+
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
@@ -71,7 +75,6 @@ public class CustomCommunicationsenderRequest {
   }
 
   public CustomCommunicationsenderRequest fkiAgentID(Integer fkiAgentID) {
-    
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -86,14 +89,12 @@ public class CustomCommunicationsenderRequest {
     return fkiAgentID;
   }
 
-
   public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
   public CustomCommunicationsenderRequest fkiBrokerID(Integer fkiBrokerID) {
-    
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -108,14 +109,12 @@ public class CustomCommunicationsenderRequest {
     return fkiBrokerID;
   }
 
-
   public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
   public CustomCommunicationsenderRequest fkiMailboxsharedID(Integer fkiMailboxsharedID) {
-    
     this.fkiMailboxsharedID = fkiMailboxsharedID;
     return this;
   }
@@ -131,14 +130,33 @@ public class CustomCommunicationsenderRequest {
     return fkiMailboxsharedID;
   }
 
-
   public void setFkiMailboxsharedID(Integer fkiMailboxsharedID) {
     this.fkiMailboxsharedID = fkiMailboxsharedID;
   }
 
 
+  public CustomCommunicationsenderRequest fkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Phonelineshared
+   * minimum: 0
+   * maximum: 255
+   * @return fkiPhonelinesharedID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiPhonelinesharedID() {
+    return fkiPhonelinesharedID;
+  }
+
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
+    this.fkiPhonelinesharedID = fkiPhonelinesharedID;
+  }
+
+
   public CustomCommunicationsenderRequest fkiUserID(Integer fkiUserID) {
-    
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -152,7 +170,6 @@ public class CustomCommunicationsenderRequest {
   public Integer getFkiUserID() {
     return fkiUserID;
   }
-
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
@@ -172,12 +189,13 @@ public class CustomCommunicationsenderRequest {
     return Objects.equals(this.fkiAgentID, customCommunicationsenderRequest.fkiAgentID) &&
         Objects.equals(this.fkiBrokerID, customCommunicationsenderRequest.fkiBrokerID) &&
         Objects.equals(this.fkiMailboxsharedID, customCommunicationsenderRequest.fkiMailboxsharedID) &&
+        Objects.equals(this.fkiPhonelinesharedID, customCommunicationsenderRequest.fkiPhonelinesharedID) &&
         Objects.equals(this.fkiUserID, customCommunicationsenderRequest.fkiUserID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAgentID, fkiBrokerID, fkiMailboxsharedID, fkiUserID);
+    return Objects.hash(fkiAgentID, fkiBrokerID, fkiMailboxsharedID, fkiPhonelinesharedID, fkiUserID);
   }
 
   @Override
@@ -187,6 +205,7 @@ public class CustomCommunicationsenderRequest {
     sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
     sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
     sb.append("    fkiMailboxsharedID: ").append(toIndentedString(fkiMailboxsharedID)).append("\n");
+    sb.append("    fkiPhonelinesharedID: ").append(toIndentedString(fkiPhonelinesharedID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -213,6 +232,7 @@ public class CustomCommunicationsenderRequest {
     openapiFields.add("fkiAgentID");
     openapiFields.add("fkiBrokerID");
     openapiFields.add("fkiMailboxsharedID");
+    openapiFields.add("fkiPhonelinesharedID");
     openapiFields.add("fkiUserID");
 
     // a set of required properties/fields (JSON key names)
