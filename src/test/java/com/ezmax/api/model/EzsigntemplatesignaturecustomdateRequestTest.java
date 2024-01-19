@@ -62,6 +62,22 @@ public class EzsigntemplatesignaturecustomdateRequestTest {
     }
 
     /**
+     * Test the property 'iEzsigntemplatesignaturecustomdateOffsetx'
+     */
+    @Test
+    public void iEzsigntemplatesignaturecustomdateOffsetxTest() {
+        // TODO: test iEzsigntemplatesignaturecustomdateOffsetx
+    }
+
+    /**
+     * Test the property 'iEzsigntemplatesignaturecustomdateOffsety'
+     */
+    @Test
+    public void iEzsigntemplatesignaturecustomdateOffsetyTest() {
+        // TODO: test iEzsigntemplatesignaturecustomdateOffsety
+    }
+
+    /**
      * Test the property 'sEzsigntemplatesignaturecustomdateFormat'
      */
     @Test

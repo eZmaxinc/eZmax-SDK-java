@@ -21,6 +21,8 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
+import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request;
+import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
@@ -39,6 +41,7 @@ import com.ezmax.api.model.EzsigndocumentGetAttachmentsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignannotationsV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsigndiscussionsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignsignaturesAutomaticV1Response;
@@ -98,6 +101,21 @@ public class ObjectEzsigndocumentApiTest {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request = null;
         EzsigndocumentApplyEzsigntemplateV2Response response = api.ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     *
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentCreateEzsignelementsPositionedByWordV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request = null;
+        EzsigndocumentCreateEzsignelementsPositionedByWordV1Response response = api.ezsigndocumentCreateEzsignelementsPositionedByWordV1(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request);
         // TODO: test validations
     }
 
@@ -286,6 +304,20 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentGetEzsignannotationsV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentGetEzsignannotationsV1Response response = api.ezsigndocumentGetEzsignannotationsV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentGetEzsigndiscussionsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentGetEzsigndiscussionsV1Response response = api.ezsigndocumentGetEzsigndiscussionsV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
 

@@ -46,6 +46,14 @@ public class CustomEzmaxinvoicingEzsignfolderResponseTest {
     }
 
     /**
+     * Test the property 'fkiBillingentityinternalID'
+     */
+    @Test
+    public void fkiBillingentityinternalIDTest() {
+        // TODO: test fkiBillingentityinternalID
+    }
+
+    /**
      * Test the property 'sEzsignfolderDescription'
      */
     @Test

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsignfoldertypeCompletion;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDisposal;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.ezmax.api.model.FieldEEzsignfoldertypeSendreminderfrequency;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsignfoldertypeRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -107,6 +108,10 @@ public class EzsignfoldertypeRequest {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_DISPOSAL)
   private FieldEEzsignfoldertypeDisposal eEzsignfoldertypeDisposal;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_COMPLETION = "eEzsignfoldertypeCompletion";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_COMPLETION)
+  private FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion = FieldEEzsignfoldertypeCompletion.PEREZSIGNDOCUMENT;
+
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_DISPOSALDAYS = "iEzsignfoldertypeDisposaldays";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_DISPOSALDAYS)
   private Integer iEzsignfoldertypeDisposaldays;
@@ -122,6 +127,14 @@ public class EzsignfoldertypeRequest {
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGN = "bEzsignfoldertypeReassign";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGN)
   private Boolean bEzsignfoldertypeReassign;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNEZSIGNSIGNER = "bEzsignfoldertypeReassignezsignsigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNEZSIGNSIGNER)
+  private Boolean bEzsignfoldertypeReassignezsignsigner;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNUSER = "bEzsignfoldertypeReassignuser";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNUSER)
+  private Boolean bEzsignfoldertypeReassignuser;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTATCHMENTSIGNER = "bEzsignfoldertypeSendattatchmentsigner";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDATTATCHMENTSIGNER)
@@ -480,6 +493,25 @@ public class EzsignfoldertypeRequest {
   }
 
 
+  public EzsignfoldertypeRequest eEzsignfoldertypeCompletion(FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion) {
+    this.eEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
+    return this;
+  }
+
+   /**
+   * Get eEzsignfoldertypeCompletion
+   * @return eEzsignfoldertypeCompletion
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignfoldertypeCompletion geteEzsignfoldertypeCompletion() {
+    return eEzsignfoldertypeCompletion;
+  }
+
+  public void seteEzsignfoldertypeCompletion(FieldEEzsignfoldertypeCompletion eEzsignfoldertypeCompletion) {
+    this.eEzsignfoldertypeCompletion = eEzsignfoldertypeCompletion;
+  }
+
+
   public EzsignfoldertypeRequest iEzsignfoldertypeDisposaldays(Integer iEzsignfoldertypeDisposaldays) {
     this.iEzsignfoldertypeDisposaldays = iEzsignfoldertypeDisposaldays;
     return this;
@@ -557,6 +589,44 @@ public class EzsignfoldertypeRequest {
 
   public void setbEzsignfoldertypeReassign(Boolean bEzsignfoldertypeReassign) {
     this.bEzsignfoldertypeReassign = bEzsignfoldertypeReassign;
+  }
+
+
+  public EzsignfoldertypeRequest bEzsignfoldertypeReassignezsignsigner(Boolean bEzsignfoldertypeReassignezsignsigner) {
+    this.bEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+    return this;
+  }
+
+   /**
+   * Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
+   * @return bEzsignfoldertypeReassignezsignsigner
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeReassignezsignsigner() {
+    return bEzsignfoldertypeReassignezsignsigner;
+  }
+
+  public void setbEzsignfoldertypeReassignezsignsigner(Boolean bEzsignfoldertypeReassignezsignsigner) {
+    this.bEzsignfoldertypeReassignezsignsigner = bEzsignfoldertypeReassignezsignsigner;
+  }
+
+
+  public EzsignfoldertypeRequest bEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
+    this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+    return this;
+  }
+
+   /**
+   * Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
+   * @return bEzsignfoldertypeReassignuser
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeReassignuser() {
+    return bEzsignfoldertypeReassignuser;
+  }
+
+  public void setbEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
+    this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
   }
 
 
@@ -1039,10 +1109,13 @@ public class EzsignfoldertypeRequest {
         Objects.equals(this.eEzsignfoldertypeSendreminderfrequency, ezsignfoldertypeRequest.eEzsignfoldertypeSendreminderfrequency) &&
         Objects.equals(this.iEzsignfoldertypeArchivaldays, ezsignfoldertypeRequest.iEzsignfoldertypeArchivaldays) &&
         Objects.equals(this.eEzsignfoldertypeDisposal, ezsignfoldertypeRequest.eEzsignfoldertypeDisposal) &&
+        Objects.equals(this.eEzsignfoldertypeCompletion, ezsignfoldertypeRequest.eEzsignfoldertypeCompletion) &&
         Objects.equals(this.iEzsignfoldertypeDisposaldays, ezsignfoldertypeRequest.iEzsignfoldertypeDisposaldays) &&
         Objects.equals(this.iEzsignfoldertypeDeadlinedays, ezsignfoldertypeRequest.iEzsignfoldertypeDeadlinedays) &&
         Objects.equals(this.bEzsignfoldertypeDelegate, ezsignfoldertypeRequest.bEzsignfoldertypeDelegate) &&
         Objects.equals(this.bEzsignfoldertypeReassign, ezsignfoldertypeRequest.bEzsignfoldertypeReassign) &&
+        Objects.equals(this.bEzsignfoldertypeReassignezsignsigner, ezsignfoldertypeRequest.bEzsignfoldertypeReassignezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeReassignuser, ezsignfoldertypeRequest.bEzsignfoldertypeReassignuser) &&
         Objects.equals(this.bEzsignfoldertypeSendattatchmentsigner, ezsignfoldertypeRequest.bEzsignfoldertypeSendattatchmentsigner) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtoezsignsigner, ezsignfoldertypeRequest.bEzsignfoldertypeSendsignedtoezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtouser, ezsignfoldertypeRequest.bEzsignfoldertypeSendsignedtouser) &&
@@ -1071,7 +1144,7 @@ public class EzsignfoldertypeRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sEmailAddressSigned, sEmailAddressSummary, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign, bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive);
+    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sEmailAddressSigned, sEmailAddressSummary, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign, bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser, bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIncludeproofsigner, bEzsignfoldertypeIncludeproofuser, bEzsignfoldertypeIsactive);
   }
 
   @Override
@@ -1091,10 +1164,13 @@ public class EzsignfoldertypeRequest {
     sb.append("    eEzsignfoldertypeSendreminderfrequency: ").append(toIndentedString(eEzsignfoldertypeSendreminderfrequency)).append("\n");
     sb.append("    iEzsignfoldertypeArchivaldays: ").append(toIndentedString(iEzsignfoldertypeArchivaldays)).append("\n");
     sb.append("    eEzsignfoldertypeDisposal: ").append(toIndentedString(eEzsignfoldertypeDisposal)).append("\n");
+    sb.append("    eEzsignfoldertypeCompletion: ").append(toIndentedString(eEzsignfoldertypeCompletion)).append("\n");
     sb.append("    iEzsignfoldertypeDisposaldays: ").append(toIndentedString(iEzsignfoldertypeDisposaldays)).append("\n");
     sb.append("    iEzsignfoldertypeDeadlinedays: ").append(toIndentedString(iEzsignfoldertypeDeadlinedays)).append("\n");
     sb.append("    bEzsignfoldertypeDelegate: ").append(toIndentedString(bEzsignfoldertypeDelegate)).append("\n");
     sb.append("    bEzsignfoldertypeReassign: ").append(toIndentedString(bEzsignfoldertypeReassign)).append("\n");
+    sb.append("    bEzsignfoldertypeReassignezsignsigner: ").append(toIndentedString(bEzsignfoldertypeReassignezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeReassignuser: ").append(toIndentedString(bEzsignfoldertypeReassignuser)).append("\n");
     sb.append("    bEzsignfoldertypeSendattatchmentsigner: ").append(toIndentedString(bEzsignfoldertypeSendattatchmentsigner)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtoezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendsignedtoezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtouser: ").append(toIndentedString(bEzsignfoldertypeSendsignedtouser)).append("\n");
@@ -1154,10 +1230,13 @@ public class EzsignfoldertypeRequest {
     openapiFields.add("eEzsignfoldertypeSendreminderfrequency");
     openapiFields.add("iEzsignfoldertypeArchivaldays");
     openapiFields.add("eEzsignfoldertypeDisposal");
+    openapiFields.add("eEzsignfoldertypeCompletion");
     openapiFields.add("iEzsignfoldertypeDisposaldays");
     openapiFields.add("iEzsignfoldertypeDeadlinedays");
     openapiFields.add("bEzsignfoldertypeDelegate");
     openapiFields.add("bEzsignfoldertypeReassign");
+    openapiFields.add("bEzsignfoldertypeReassignezsignsigner");
+    openapiFields.add("bEzsignfoldertypeReassignuser");
     openapiFields.add("bEzsignfoldertypeSendattatchmentsigner");
     openapiFields.add("bEzsignfoldertypeSendsignedtoezsignsigner");
     openapiFields.add("bEzsignfoldertypeSendsignedtouser");
@@ -1245,6 +1324,10 @@ public class EzsignfoldertypeRequest {
       }
       // validate the required field `eEzsignfoldertypeDisposal`
       FieldEEzsignfoldertypeDisposal.validateJsonElement(jsonObj.get("eEzsignfoldertypeDisposal"));
+      // validate the optional field `eEzsignfoldertypeCompletion`
+      if (jsonObj.get("eEzsignfoldertypeCompletion") != null && !jsonObj.get("eEzsignfoldertypeCompletion").isJsonNull()) {
+        FieldEEzsignfoldertypeCompletion.validateJsonElement(jsonObj.get("eEzsignfoldertypeCompletion"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

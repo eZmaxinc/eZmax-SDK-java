@@ -261,6 +261,14 @@ public class UserResponseTest {
     }
 
     /**
+     * Test the property 'sUserJobtitle'
+     */
+    @Test
+    public void sUserJobtitleTest() {
+        // TODO: test sUserJobtitle
+    }
+
+    /**
      * Test the property 'eUserEzsignaccess'
      */
     @Test

@@ -18,6 +18,7 @@ A User List Element
 |**eUserEzsignaccess** | **FieldEUserEzsignaccess** |  |  |
 |**dtUserEzsignprepaidexpiration** | **String** | The eZsign prepaid expiration date |  [optional] |
 |**sEmailAddress** | **String** | The email address. |  |
+|**sUserJobtitle** | **String** | The job title of the user |  [optional] |
 
 
 

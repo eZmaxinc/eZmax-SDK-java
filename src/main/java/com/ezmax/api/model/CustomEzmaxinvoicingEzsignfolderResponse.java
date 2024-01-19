@@ -49,11 +49,15 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
   private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
@@ -95,6 +99,26 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
 
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public CustomEzmaxinvoicingEzsignfolderResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
@@ -204,6 +228,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     }
     CustomEzmaxinvoicingEzsignfolderResponse customEzmaxinvoicingEzsignfolderResponse = (CustomEzmaxinvoicingEzsignfolderResponse) o;
     return Objects.equals(this.fkiEzsignfolderID, customEzmaxinvoicingEzsignfolderResponse.fkiEzsignfolderID) &&
+        Objects.equals(this.fkiBillingentityinternalID, customEzmaxinvoicingEzsignfolderResponse.fkiBillingentityinternalID) &&
         Objects.equals(this.sEzsignfolderDescription, customEzmaxinvoicingEzsignfolderResponse.sEzsignfolderDescription) &&
         Objects.equals(this.bEzsigntsarequirementBillable, customEzmaxinvoicingEzsignfolderResponse.bEzsigntsarequirementBillable) &&
         Objects.equals(this.bEzsignfolderMfaused, customEzmaxinvoicingEzsignfolderResponse.bEzsignfolderMfaused) &&
@@ -213,7 +238,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfolderID, sEzsignfolderDescription, bEzsigntsarequirementBillable, bEzsignfolderMfaused, bEzsignfolderPaymentused, bEzsignfolderAllowed);
+    return Objects.hash(fkiEzsignfolderID, fkiBillingentityinternalID, sEzsignfolderDescription, bEzsigntsarequirementBillable, bEzsignfolderMfaused, bEzsignfolderPaymentused, bEzsignfolderAllowed);
   }
 
   @Override
@@ -221,6 +246,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomEzmaxinvoicingEzsignfolderResponse {\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    bEzsigntsarequirementBillable: ").append(toIndentedString(bEzsigntsarequirementBillable)).append("\n");
     sb.append("    bEzsignfolderMfaused: ").append(toIndentedString(bEzsignfolderMfaused)).append("\n");
@@ -249,6 +275,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("fkiBillingentityinternalID");
     openapiFields.add("sEzsignfolderDescription");
     openapiFields.add("bEzsigntsarequirementBillable");
     openapiFields.add("bEzsignfolderMfaused");

@@ -134,6 +134,14 @@ public class EzsignsignatureResponseTest {
     }
 
     /**
+     * Test the property 'iEzsignsignatureStepadjusted'
+     */
+    @Test
+    public void iEzsignsignatureStepadjustedTest() {
+        // TODO: test iEzsignsignatureStepadjusted
+    }
+
+    /**
      * Test the property 'eEzsignsignatureType'
      */
     @Test

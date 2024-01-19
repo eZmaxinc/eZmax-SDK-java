@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Ezsignsignergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class MultilingualEzsignsignergroupDescription {
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION1 = "sEzsignsignergroupDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION1)

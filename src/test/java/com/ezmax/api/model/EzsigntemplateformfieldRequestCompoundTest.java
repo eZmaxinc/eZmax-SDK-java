@@ -15,6 +15,8 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.EzsigntemplateelementdependencyRequestCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
+import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioning;
+import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioningoccurence;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -47,6 +49,14 @@ public class EzsigntemplateformfieldRequestCompoundTest {
     @Test
     public void pkiEzsigntemplateformfieldIDTest() {
         // TODO: test pkiEzsigntemplateformfieldID
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateformfieldPositioning'
+     */
+    @Test
+    public void eEzsigntemplateformfieldPositioningTest() {
+        // TODO: test eEzsigntemplateformfieldPositioning
     }
 
     /**
@@ -127,6 +137,38 @@ public class EzsigntemplateformfieldRequestCompoundTest {
     @Test
     public void eEzsigntemplateformfieldDependencyrequirementTest() {
         // TODO: test eEzsigntemplateformfieldDependencyrequirement
+    }
+
+    /**
+     * Test the property 'sEzsigntemplateformfieldPositioningpattern'
+     */
+    @Test
+    public void sEzsigntemplateformfieldPositioningpatternTest() {
+        // TODO: test sEzsigntemplateformfieldPositioningpattern
+    }
+
+    /**
+     * Test the property 'iEzsigntemplateformfieldPositioningoffsetx'
+     */
+    @Test
+    public void iEzsigntemplateformfieldPositioningoffsetxTest() {
+        // TODO: test iEzsigntemplateformfieldPositioningoffsetx
+    }
+
+    /**
+     * Test the property 'iEzsigntemplateformfieldPositioningoffsety'
+     */
+    @Test
+    public void iEzsigntemplateformfieldPositioningoffsetyTest() {
+        // TODO: test iEzsigntemplateformfieldPositioningoffsety
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateformfieldPositioningoccurence'
+     */
+    @Test
+    public void eEzsigntemplateformfieldPositioningoccurenceTest() {
+        // TODO: test eEzsigntemplateformfieldPositioningoccurence
     }
 
     /**

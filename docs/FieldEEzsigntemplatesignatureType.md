@@ -23,5 +23,7 @@
 
 * `FIELDTEXTAREA` (value: `"FieldTextarea"`)
 
+* `CONSULTATION` (value: `"Consultation"`)
+
 
 

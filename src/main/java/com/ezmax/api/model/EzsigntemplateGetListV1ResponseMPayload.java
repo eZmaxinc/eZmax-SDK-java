@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplate/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsigntemplateGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)

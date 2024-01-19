@@ -49,19 +49,29 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatesignaturecustomdate Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsigntemplatesignaturecustomdateRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D = "pkiEzsigntemplatesignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D)
   private Integer pkiEzsigntemplatesignaturecustomdateID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_X = "iEzsigntemplatesignaturecustomdateX";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_X)
   private Integer iEzsigntemplatesignaturecustomdateX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_Y = "iEzsigntemplatesignaturecustomdateY";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_Y)
   private Integer iEzsigntemplatesignaturecustomdateY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_OFFSETX = "iEzsigntemplatesignaturecustomdateOffsetx";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_OFFSETX)
+  private Integer iEzsigntemplatesignaturecustomdateOffsetx;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_OFFSETY = "iEzsigntemplatesignaturecustomdateOffsety";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURECUSTOMDATE_OFFSETY)
+  private Integer iEzsigntemplatesignaturecustomdateOffsety;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURECUSTOMDATE_FORMAT = "sEzsigntemplatesignaturecustomdateFormat";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURECUSTOMDATE_FORMAT)
@@ -90,6 +100,7 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
   }
 
 
+  @Deprecated
   public EzsigntemplatesignaturecustomdateRequestCompound iEzsigntemplatesignaturecustomdateX(Integer iEzsigntemplatesignaturecustomdateX) {
     this.iEzsigntemplatesignaturecustomdateX = iEzsigntemplatesignaturecustomdateX;
     return this;
@@ -99,17 +110,21 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsigntemplatesignaturecustomdateX
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
+  @Deprecated
+  @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateX() {
     return iEzsigntemplatesignaturecustomdateX;
   }
 
+  @Deprecated
   public void setiEzsigntemplatesignaturecustomdateX(Integer iEzsigntemplatesignaturecustomdateX) {
     this.iEzsigntemplatesignaturecustomdateX = iEzsigntemplatesignaturecustomdateX;
   }
 
 
+  @Deprecated
   public EzsigntemplatesignaturecustomdateRequestCompound iEzsigntemplatesignaturecustomdateY(Integer iEzsigntemplatesignaturecustomdateY) {
     this.iEzsigntemplatesignaturecustomdateY = iEzsigntemplatesignaturecustomdateY;
     return this;
@@ -119,14 +134,57 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
    * The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsigntemplatesignaturecustomdateY
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
+  @Deprecated
+  @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateY() {
     return iEzsigntemplatesignaturecustomdateY;
   }
 
+  @Deprecated
   public void setiEzsigntemplatesignaturecustomdateY(Integer iEzsigntemplatesignaturecustomdateY) {
     this.iEzsigntemplatesignaturecustomdateY = iEzsigntemplatesignaturecustomdateY;
+  }
+
+
+  public EzsigntemplatesignaturecustomdateRequestCompound iEzsigntemplatesignaturecustomdateOffsetx(Integer iEzsigntemplatesignaturecustomdateOffsetx) {
+    this.iEzsigntemplatesignaturecustomdateOffsetx = iEzsigntemplatesignaturecustomdateOffsetx;
+    return this;
+  }
+
+   /**
+   * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \&quot;200\&quot; for the X coordinate.
+   * minimum: 0
+   * @return iEzsigntemplatesignaturecustomdateOffsetx
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatesignaturecustomdateOffsetx() {
+    return iEzsigntemplatesignaturecustomdateOffsetx;
+  }
+
+  public void setiEzsigntemplatesignaturecustomdateOffsetx(Integer iEzsigntemplatesignaturecustomdateOffsetx) {
+    this.iEzsigntemplatesignaturecustomdateOffsetx = iEzsigntemplatesignaturecustomdateOffsetx;
+  }
+
+
+  public EzsigntemplatesignaturecustomdateRequestCompound iEzsigntemplatesignaturecustomdateOffsety(Integer iEzsigntemplatesignaturecustomdateOffsety) {
+    this.iEzsigntemplatesignaturecustomdateOffsety = iEzsigntemplatesignaturecustomdateOffsety;
+    return this;
+  }
+
+   /**
+   * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \&quot;200\&quot; for the Y coordinate.
+   * minimum: 0
+   * @return iEzsigntemplatesignaturecustomdateOffsety
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatesignaturecustomdateOffsety() {
+    return iEzsigntemplatesignaturecustomdateOffsety;
+  }
+
+  public void setiEzsigntemplatesignaturecustomdateOffsety(Integer iEzsigntemplatesignaturecustomdateOffsety) {
+    this.iEzsigntemplatesignaturecustomdateOffsety = iEzsigntemplatesignaturecustomdateOffsety;
   }
 
 
@@ -162,12 +220,14 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     return Objects.equals(this.pkiEzsigntemplatesignaturecustomdateID, ezsigntemplatesignaturecustomdateRequestCompound.pkiEzsigntemplatesignaturecustomdateID) &&
         Objects.equals(this.iEzsigntemplatesignaturecustomdateX, ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateX) &&
         Objects.equals(this.iEzsigntemplatesignaturecustomdateY, ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateY) &&
+        Objects.equals(this.iEzsigntemplatesignaturecustomdateOffsetx, ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsetx) &&
+        Objects.equals(this.iEzsigntemplatesignaturecustomdateOffsety, ezsigntemplatesignaturecustomdateRequestCompound.iEzsigntemplatesignaturecustomdateOffsety) &&
         Objects.equals(this.sEzsigntemplatesignaturecustomdateFormat, ezsigntemplatesignaturecustomdateRequestCompound.sEzsigntemplatesignaturecustomdateFormat);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatesignaturecustomdateID, iEzsigntemplatesignaturecustomdateX, iEzsigntemplatesignaturecustomdateY, sEzsigntemplatesignaturecustomdateFormat);
+    return Objects.hash(pkiEzsigntemplatesignaturecustomdateID, iEzsigntemplatesignaturecustomdateX, iEzsigntemplatesignaturecustomdateY, iEzsigntemplatesignaturecustomdateOffsetx, iEzsigntemplatesignaturecustomdateOffsety, sEzsigntemplatesignaturecustomdateFormat);
   }
 
   @Override
@@ -177,6 +237,8 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     sb.append("    pkiEzsigntemplatesignaturecustomdateID: ").append(toIndentedString(pkiEzsigntemplatesignaturecustomdateID)).append("\n");
     sb.append("    iEzsigntemplatesignaturecustomdateX: ").append(toIndentedString(iEzsigntemplatesignaturecustomdateX)).append("\n");
     sb.append("    iEzsigntemplatesignaturecustomdateY: ").append(toIndentedString(iEzsigntemplatesignaturecustomdateY)).append("\n");
+    sb.append("    iEzsigntemplatesignaturecustomdateOffsetx: ").append(toIndentedString(iEzsigntemplatesignaturecustomdateOffsetx)).append("\n");
+    sb.append("    iEzsigntemplatesignaturecustomdateOffsety: ").append(toIndentedString(iEzsigntemplatesignaturecustomdateOffsety)).append("\n");
     sb.append("    sEzsigntemplatesignaturecustomdateFormat: ").append(toIndentedString(sEzsigntemplatesignaturecustomdateFormat)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -203,12 +265,12 @@ public class EzsigntemplatesignaturecustomdateRequestCompound {
     openapiFields.add("pkiEzsigntemplatesignaturecustomdateID");
     openapiFields.add("iEzsigntemplatesignaturecustomdateX");
     openapiFields.add("iEzsigntemplatesignaturecustomdateY");
+    openapiFields.add("iEzsigntemplatesignaturecustomdateOffsetx");
+    openapiFields.add("iEzsigntemplatesignaturecustomdateOffsety");
     openapiFields.add("sEzsigntemplatesignaturecustomdateFormat");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("iEzsigntemplatesignaturecustomdateX");
-    openapiRequiredFields.add("iEzsigntemplatesignaturecustomdateY");
     openapiRequiredFields.add("sEzsigntemplatesignaturecustomdateFormat");
   }
 

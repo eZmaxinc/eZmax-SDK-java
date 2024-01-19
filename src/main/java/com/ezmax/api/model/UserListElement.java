@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -93,6 +93,10 @@ public class UserListElement {
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
   private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
+  @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
+  private String sUserJobtitle;
 
   public UserListElement() {
   }
@@ -288,6 +292,25 @@ public class UserListElement {
   }
 
 
+  public UserListElement sUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+    return this;
+  }
+
+   /**
+   * The job title of the user
+   * @return sUserJobtitle
+  **/
+  @javax.annotation.Nullable
+  public String getsUserJobtitle() {
+    return sUserJobtitle;
+  }
+
+  public void setsUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -307,12 +330,13 @@ public class UserListElement {
         Objects.equals(this.eUserOrigin, userListElement.eUserOrigin) &&
         Objects.equals(this.eUserEzsignaccess, userListElement.eUserEzsignaccess) &&
         Objects.equals(this.dtUserEzsignprepaidexpiration, userListElement.dtUserEzsignprepaidexpiration) &&
-        Objects.equals(this.sEmailAddress, userListElement.sEmailAddress);
+        Objects.equals(this.sEmailAddress, userListElement.sEmailAddress) &&
+        Objects.equals(this.sUserJobtitle, userListElement.sUserJobtitle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress);
+    return Objects.hash(pkiUserID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress, sUserJobtitle);
   }
 
   @Override
@@ -329,6 +353,7 @@ public class UserListElement {
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
     sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    sUserJobtitle: ").append(toIndentedString(sUserJobtitle)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -361,6 +386,7 @@ public class UserListElement {
     openapiFields.add("eUserEzsignaccess");
     openapiFields.add("dtUserEzsignprepaidexpiration");
     openapiFields.add("sEmailAddress");
+    openapiFields.add("sUserJobtitle");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -423,6 +449,9 @@ public class UserListElement {
       }
       if (!jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      }
+      if ((jsonObj.get("sUserJobtitle") != null && !jsonObj.get("sUserJobtitle").isJsonNull()) && !jsonObj.get("sUserJobtitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserJobtitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserJobtitle").toString()));
       }
   }
 

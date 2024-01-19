@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
+import com.ezmax.api.model.FieldEEzsignfolderCompletion;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
 import com.google.gson.TypeAdapter;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -66,6 +67,10 @@ public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
   private CustomEzsignfoldertypeResponse objEzsignfoldertype;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION = "eEzsignfolderCompletion";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION)
+  private FieldEEzsignfolderCompletion eEzsignfolderCompletion = FieldEEzsignfolderCompletion.PEREZSIGNDOCUMENT;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @Deprecated
@@ -203,6 +208,25 @@ public class EzsignfolderResponseCompound {
 
   public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
+  }
+
+
+  public EzsignfolderResponseCompound eEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
+    return this;
+  }
+
+   /**
+   * Get eEzsignfolderCompletion
+   * @return eEzsignfolderCompletion
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsignfolderCompletion geteEzsignfolderCompletion() {
+    return eEzsignfolderCompletion;
+  }
+
+  public void seteEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
   }
 
 
@@ -587,6 +611,7 @@ public class EzsignfolderResponseCompound {
     return Objects.equals(this.pkiEzsignfolderID, ezsignfolderResponseCompound.pkiEzsignfolderID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderResponseCompound.fkiEzsignfoldertypeID) &&
         Objects.equals(this.objEzsignfoldertype, ezsignfolderResponseCompound.objEzsignfoldertype) &&
+        Objects.equals(this.eEzsignfolderCompletion, ezsignfolderResponseCompound.eEzsignfolderCompletion) &&
         Objects.equals(this.sEzsignfoldertypeNameX, ezsignfolderResponseCompound.sEzsignfoldertypeNameX) &&
         Objects.equals(this.fkiBillingentityinternalID, ezsignfolderResponseCompound.fkiBillingentityinternalID) &&
         Objects.equals(this.sBillingentityinternalDescriptionX, ezsignfolderResponseCompound.sBillingentityinternalDescriptionX) &&
@@ -610,7 +635,7 @@ public class EzsignfolderResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, eEzsignfolderCompletion, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid);
   }
 
   @Override
@@ -620,6 +645,7 @@ public class EzsignfolderResponseCompound {
     sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    objEzsignfoldertype: ").append(toIndentedString(objEzsignfoldertype)).append("\n");
+    sb.append("    eEzsignfolderCompletion: ").append(toIndentedString(eEzsignfolderCompletion)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
     sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
@@ -664,6 +690,7 @@ public class EzsignfolderResponseCompound {
     openapiFields.add("pkiEzsignfolderID");
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("objEzsignfoldertype");
+    openapiFields.add("eEzsignfolderCompletion");
     openapiFields.add("sEzsignfoldertypeNameX");
     openapiFields.add("fkiBillingentityinternalID");
     openapiFields.add("sBillingentityinternalDescriptionX");
@@ -721,6 +748,10 @@ public class EzsignfolderResponseCompound {
       // validate the optional field `objEzsignfoldertype`
       if (jsonObj.get("objEzsignfoldertype") != null && !jsonObj.get("objEzsignfoldertype").isJsonNull()) {
         CustomEzsignfoldertypeResponse.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
+      }
+      // validate the optional field `eEzsignfolderCompletion`
+      if (jsonObj.get("eEzsignfolderCompletion") != null && !jsonObj.get("eEzsignfolderCompletion").isJsonNull()) {
+        FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));
       }
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));

@@ -49,11 +49,15 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class CustomEzmaxinvoicingEzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
   private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_NAME = "sName";
   @SerializedName(SERIALIZED_NAME_S_NAME)
@@ -91,6 +95,26 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
 
   public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public CustomEzmaxinvoicingEzsigndocumentResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
@@ -181,6 +205,7 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     }
     CustomEzmaxinvoicingEzsigndocumentResponse customEzmaxinvoicingEzsigndocumentResponse = (CustomEzmaxinvoicingEzsigndocumentResponse) o;
     return Objects.equals(this.fkiEzsignfolderID, customEzmaxinvoicingEzsigndocumentResponse.fkiEzsignfolderID) &&
+        Objects.equals(this.fkiBillingentityinternalID, customEzmaxinvoicingEzsigndocumentResponse.fkiBillingentityinternalID) &&
         Objects.equals(this.sName, customEzmaxinvoicingEzsigndocumentResponse.sName) &&
         Objects.equals(this.sEzsignfolderDescription, customEzmaxinvoicingEzsigndocumentResponse.sEzsignfolderDescription) &&
         Objects.equals(this.sEzsigndocumentName, customEzmaxinvoicingEzsigndocumentResponse.sEzsigndocumentName) &&
@@ -189,7 +214,7 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignfolderID, sName, sEzsignfolderDescription, sEzsigndocumentName, bEzsignfolderAllowed);
+    return Objects.hash(fkiEzsignfolderID, fkiBillingentityinternalID, sName, sEzsignfolderDescription, sEzsigndocumentName, bEzsignfolderAllowed);
   }
 
   @Override
@@ -197,6 +222,7 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomEzmaxinvoicingEzsigndocumentResponse {\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
     sb.append("    sName: ").append(toIndentedString(sName)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    sEzsigndocumentName: ").append(toIndentedString(sEzsigndocumentName)).append("\n");
@@ -224,6 +250,7 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("fkiEzsignfolderID");
+    openapiFields.add("fkiBillingentityinternalID");
     openapiFields.add("sName");
     openapiFields.add("sEzsignfolderDescription");
     openapiFields.add("sEzsigndocumentName");

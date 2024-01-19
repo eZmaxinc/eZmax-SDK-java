@@ -16,13 +16,16 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.CommonResponseWarning;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsigndocumentApplyEzsigntemplateV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -60,6 +63,10 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
   private CommonResponseObjDebug objDebug;
+
+  public static final String SERIALIZED_NAME_A_OBJ_WARNING = "a_objWarning";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_WARNING)
+  private List<CommonResponseWarning> aObjWarning;
 
   public EzsigndocumentApplyEzsigntemplateV2Response() {
   }
@@ -102,6 +109,33 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
   }
 
 
+  public EzsigndocumentApplyEzsigntemplateV2Response aObjWarning(List<CommonResponseWarning> aObjWarning) {
+    this.aObjWarning = aObjWarning;
+    return this;
+  }
+
+  public EzsigndocumentApplyEzsigntemplateV2Response addAObjWarningItem(CommonResponseWarning aObjWarningItem) {
+    if (this.aObjWarning == null) {
+      this.aObjWarning = new ArrayList<>();
+    }
+    this.aObjWarning.add(aObjWarningItem);
+    return this;
+  }
+
+   /**
+   * Get aObjWarning
+   * @return aObjWarning
+  **/
+  @javax.annotation.Nullable
+  public List<CommonResponseWarning> getaObjWarning() {
+    return aObjWarning;
+  }
+
+  public void setaObjWarning(List<CommonResponseWarning> aObjWarning) {
+    this.aObjWarning = aObjWarning;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -113,12 +147,13 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     }
     EzsigndocumentApplyEzsigntemplateV2Response ezsigndocumentApplyEzsigntemplateV2Response = (EzsigndocumentApplyEzsigntemplateV2Response) o;
     return Objects.equals(this.objDebugPayload, ezsigndocumentApplyEzsigntemplateV2Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, ezsigndocumentApplyEzsigntemplateV2Response.objDebug);
+        Objects.equals(this.objDebug, ezsigndocumentApplyEzsigntemplateV2Response.objDebug) &&
+        Objects.equals(this.aObjWarning, ezsigndocumentApplyEzsigntemplateV2Response.aObjWarning);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(objDebugPayload, objDebug, aObjWarning);
   }
 
   @Override
@@ -127,6 +162,7 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     sb.append("class EzsigndocumentApplyEzsigntemplateV2Response {\n");
     sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
     sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    aObjWarning: ").append(toIndentedString(aObjWarning)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -151,6 +187,7 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
     openapiFields = new HashSet<String>();
     openapiFields.add("objDebugPayload");
     openapiFields.add("objDebug");
+    openapiFields.add("a_objWarning");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -190,6 +227,20 @@ public class EzsigndocumentApplyEzsigntemplateV2Response {
       // validate the optional field `objDebug`
       if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
+      }
+      if (jsonObj.get("a_objWarning") != null && !jsonObj.get("a_objWarning").isJsonNull()) {
+        JsonArray jsonArrayaObjWarning = jsonObj.getAsJsonArray("a_objWarning");
+        if (jsonArrayaObjWarning != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objWarning").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objWarning` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWarning").toString()));
+          }
+
+          // validate the optional field `a_objWarning` (array)
+          for (int i = 0; i < jsonArrayaObjWarning.size(); i++) {
+            CommonResponseWarning.validateJsonElement(jsonArrayaObjWarning.get(i));
+          };
+        }
       }
   }
 

@@ -47,7 +47,9 @@ public enum FieldEEzsignsignatureType {
   
   FIELDTEXT("FieldText"),
   
-  FIELDTEXTAREA("FieldTextarea");
+  FIELDTEXTAREA("FieldTextarea"),
+  
+  CONSULTATION("Consultation");
 
   private String value;
 

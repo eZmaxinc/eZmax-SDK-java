@@ -120,4 +120,12 @@ public class UserListElementTest {
         // TODO: test sEmailAddress
     }
 
+    /**
+     * Test the property 'sUserJobtitle'
+     */
+    @Test
+    public void sUserJobtitleTest() {
+        // TODO: test sUserJobtitle
+    }
+
 }

@@ -19,6 +19,7 @@ An Ezsignsignature Object and children to create a complete structure
 |**iEzsignsignatureHeight** | **Integer** | The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight. |  [optional] |
 |**iEzsignsignatureWidth** | **Integer** | The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth. |  [optional] |
 |**iEzsignsignatureStep** | **Integer** | The step when the Ezsignsigner will be invited to sign |  |
+|**iEzsignsignatureStepadjusted** | **Integer** | The step when the Ezsignsigner will be invited to sign |  [optional] |
 |**eEzsignsignatureType** | **FieldEEzsignsignatureType** |  |  |
 |**tEzsignsignatureTooltip** | **String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional] |
 |**eEzsignsignatureTooltipposition** | **FieldEEzsignsignatureTooltipposition** |  |  [optional] |

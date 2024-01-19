@@ -34,6 +34,8 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
+import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request;
+import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
@@ -52,6 +54,7 @@ import com.ezmax.api.model.EzsigndocumentGetAttachmentsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetDownloadUrlV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignannotationsV1Response;
+import com.ezmax.api.model.EzsigndocumentGetEzsigndiscussionsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignpagesV1Response;
 import com.ezmax.api.model.EzsigndocumentGetEzsignsignaturesAutomaticV1Response;
@@ -400,6 +403,147 @@ public class ObjectEzsigndocumentApi {
 
         okhttp3.Call localVarCall = ezsigndocumentApplyEzsigntemplateV2ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigndocumentCreateEzsignelementsPositionedByWordV1
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentCreateEzsignelementsPositionedByWordV1Call(Integer pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsigndocumentCreateEzsignelementsPositionedByWordV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord"
+            .replace("{" + "pkiEzsigndocumentID" + "}", localVarApiClient.escapeString(pkiEzsigndocumentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigndocumentCreateEzsignelementsPositionedByWordV1ValidateBeforeCall(Integer pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsigndocumentID' is set
+        if (pkiEzsigndocumentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentCreateEzsignelementsPositionedByWordV1(Async)");
+        }
+
+        // verify the required parameter 'ezsigndocumentCreateEzsignelementsPositionedByWordV1Request' is set
+        if (ezsigndocumentCreateEzsignelementsPositionedByWordV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigndocumentCreateEzsignelementsPositionedByWordV1Request' when calling ezsigndocumentCreateEzsignelementsPositionedByWordV1(Async)");
+        }
+
+        return ezsigndocumentCreateEzsignelementsPositionedByWordV1Call(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, _callback);
+
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request  (required)
+     * @return EzsigndocumentCreateEzsignelementsPositionedByWordV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigndocumentCreateEzsignelementsPositionedByWordV1Response ezsigndocumentCreateEzsignelementsPositionedByWordV1(Integer pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response> localVarResp = ezsigndocumentCreateEzsignelementsPositionedByWordV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request  (required)
+     * @return ApiResponse&lt;EzsigndocumentCreateEzsignelementsPositionedByWordV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response> ezsigndocumentCreateEzsignelementsPositionedByWordV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentCreateEzsignelementsPositionedByWordV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, null);
+        Type localVarReturnType = new TypeToken<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create multiple Ezsignsignatures/Ezsignformfieldgroups (asynchronously)
+     * Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups positioned by word at the same time.
+     * @param pkiEzsigndocumentID  (required)
+     * @param ezsigndocumentCreateEzsignelementsPositionedByWordV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentCreateEzsignelementsPositionedByWordV1Async(Integer pkiEzsigndocumentID, EzsigndocumentCreateEzsignelementsPositionedByWordV1Request ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, final ApiCallback<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigndocumentCreateEzsignelementsPositionedByWordV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentCreateEzsignelementsPositionedByWordV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigndocumentCreateEzsignelementsPositionedByWordV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1894,7 +2038,7 @@ public class ObjectEzsigndocumentApi {
     /**
      * Build call for ezsigndocumentGetDownloadUrlV1
      * @param pkiEzsigndocumentID  (required)
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1972,7 +2116,7 @@ public class ObjectEzsigndocumentApi {
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
      * @return EzsigndocumentGetDownloadUrlV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1992,7 +2136,7 @@ public class ObjectEzsigndocumentApi {
      * Retrieve a URL to download documents.
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
      * @return ApiResponse&lt;EzsigndocumentGetDownloadUrlV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2013,7 +2157,7 @@ public class ObjectEzsigndocumentApi {
      * Retrieve a URL to download documents. (asynchronously)
      * This endpoint returns URLs to different files that can be downloaded during the signing process.  These links will expire after 5 minutes so the download of the file should be made soon after retrieving the link.
      * @param pkiEzsigndocumentID  (required)
-     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
+     * @param eDocumentType The type of document to retrieve.  1. **Initial** Is the initial document before any signature were applied. 2. **SignatureReady** Is the version containing the annotations/form to show the signer. 3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.&lt;br&gt;     Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder. 4. **Proofdocument** Is the evidence report. 5. **Proof** Is the complete evidence archive including all of the above and more.  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2160,6 +2304,137 @@ public class ObjectEzsigndocumentApi {
 
         okhttp3.Call localVarCall = ezsigndocumentGetEzsignannotationsV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
         Type localVarReturnType = new TypeToken<EzsigndocumentGetEzsignannotationsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigndocumentGetEzsigndiscussionsV1
+     * @param pkiEzsigndocumentID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentGetEzsigndiscussionsV1Call(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions"
+            .replace("{" + "pkiEzsigndocumentID" + "}", localVarApiClient.escapeString(pkiEzsigndocumentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigndocumentGetEzsigndiscussionsV1ValidateBeforeCall(Integer pkiEzsigndocumentID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsigndocumentID' is set
+        if (pkiEzsigndocumentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigndocumentID' when calling ezsigndocumentGetEzsigndiscussionsV1(Async)");
+        }
+
+        return ezsigndocumentGetEzsigndiscussionsV1Call(pkiEzsigndocumentID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @return EzsigndocumentGetEzsigndiscussionsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigndocumentGetEzsigndiscussionsV1Response ezsigndocumentGetEzsigndiscussionsV1(Integer pkiEzsigndocumentID) throws ApiException {
+        ApiResponse<EzsigndocumentGetEzsigndiscussionsV1Response> localVarResp = ezsigndocumentGetEzsigndiscussionsV1WithHttpInfo(pkiEzsigndocumentID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @return ApiResponse&lt;EzsigndocumentGetEzsigndiscussionsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigndocumentGetEzsigndiscussionsV1Response> ezsigndocumentGetEzsigndiscussionsV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
+        okhttp3.Call localVarCall = ezsigndocumentGetEzsigndiscussionsV1ValidateBeforeCall(pkiEzsigndocumentID, null);
+        Type localVarReturnType = new TypeToken<EzsigndocumentGetEzsigndiscussionsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Ezsigndocument&#39;s Ezsigndiscussions (asynchronously)
+     * 
+     * @param pkiEzsigndocumentID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigndocumentGetEzsigndiscussionsV1Async(Integer pkiEzsigndocumentID, final ApiCallback<EzsigndocumentGetEzsigndiscussionsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigndocumentGetEzsigndiscussionsV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
+        Type localVarReturnType = new TypeToken<EzsigndocumentGetEzsigndiscussionsV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

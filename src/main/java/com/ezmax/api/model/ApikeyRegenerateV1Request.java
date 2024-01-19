@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/apikey/{pkiApikeyID}/regenerate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class ApikeyRegenerateV1Request {
   public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)

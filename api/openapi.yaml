@@ -81,84 +81,113 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.2.X Releases\r\
-    \n\r\n### [1.2.0] - 2023-09-24\r\n\r\n#### Added\r\n- DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
+    \n\r\n### [1.2.0] - 2023-09-24\r\n\r\n#### Added\r\n- DELETE /1/object/discussion/{pkiDiscussionID}\r\
+    \n- DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}\r\n- DELETE\
+    \ /1/object/discussionmessage/{pkiDiscussionmessageID}\r\n- DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
     \n- GET /1/object/activesession/getDocumentationUrl\r\n- GET /1/object/attachment/{pkiAttachmentID}/download\r\
     \n- GET /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs\r\n- GET /1/object/buyercontract/{pkiBuyercontractID}/getCommunicationList\r\
-    \n- GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList\r\
-    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments\r\n- GET\
-    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount\r\n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments\r\
-    \n- GET /1/object/ezsignsigningreason/getAutocomplete\r\n- GET /1/object/ezsignsigningreason/getList\r\
-    \n- GET /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}\r\n- GET /1/object/inscription/{pkiInscriptionID}/getAttachments\r\
-    \n- GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList\r\n- GET\
-    \ /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders\r\n- GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList\r\
+    \n- GET /1/object/discussion/{pkiDiscussionID}\r\n- GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList\r\
+    \n- GET /1/object/ezsigndiscussion/{pkiEzsigndiscussionID}\r\n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments\r\
+    \n- GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndocumentdiscussions\r\
+    \n- GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount\r\n- GET\
+    \ /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments\r\n- GET /1/object/ezsignsigningreason/getAutocomplete\r\
+    \n- GET /1/object/ezsignsigningreason/getList\r\n- GET /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}\r\
+    \n- GET /1/object/inscription/{pkiInscriptionID}/getAttachments\r\n- GET /1/object/inscription/{pkiInscriptionID}/getCommunicationList\r\
+    \n- GET /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders\r\n-\
+    \ GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList\r\
     \n- GET /1/object/inscriptiontemp/{pkiInscriptiontempID}/getCommunicationList\r\
     \n- GET /1/object/invoice/{pkiInvoiceID}/getAttachments\r\n- GET /1/object/invoice/{pkiInvoiceID}/getCommunicationList\r\
     \n- GET /1/object/otherincome/{pkiOtherincomeID}/getCommunicationList\r\n- GET\
     \ /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList\r\
     \n- GET /1/object/user/{pkiUserID}/getApikeys\r\n- GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations\r\
-    \n- GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\n- POST /1/object/ezsignsigningreason\r\
-    \n- POST /1/object/user/{pkiUserID}/sendPasswordReset\r\n- POST /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations\r\
-    \n- POST /1/object/usergroupdelegation\r\n- POST /1/object/webhook/{pkiWebhookID}/regenerateApikey\r\
+    \n- GET /2/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\n- PATCH /1/object/discussion/{pkiDiscussionID}\r\
+    \n- PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}\r\n- POST /1/object/discussion\r\
+    \n- POST /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus\r\n\
+    - POST /1/object/discussionmembership\r\n- POST /1/object/discussionmessage\r\n\
+    - POST /1/object/ezsignsigningreason\r\n- POST /1/object/ezsigndocument{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord\r\
+    \n- POST /1/object/ezsignfolder{pkiEzsignfolderID}/reassign\r\n- POST /1/object/user/{pkiUserID}/sendPasswordReset\r\
+    \n- POST /1/object/usergroup/{pkiUsergroupID}/editUsergroupdelegations\r\n- POST\
+    \ /1/object/usergroupdelegation\r\n- POST /1/object/webhook/{pkiWebhookID}/regenerateApikey\r\
     \n- POST /2/object/webhook\r\n- PUT /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}\r\
     \n- PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\n- Added avanced\
     \ search filters sContactFirstname, sContactLastname and sEzsigndocumentName to\
-    \ Ezsignfolder list\r\n- Added property a_objEzsignelementdependency in ezsignformfield-RequestCompound,\
+    \ Ezsignfolder list\r\n- Property a_objEzsignelementdependency in ezsignformfield-RequestCompound,\
     \ ezsignformfield-ResponseCompound, ezsignsignature-RequestCompound and ezsignsignature-RequestCompound\r\
-    \n- Added property a_objEzsigntemplateelementdependency in ezsigntemplateformfield-RequestCompound,\
+    \n- Property a_objEzsigntemplateelementdependency in ezsigntemplateformfield-RequestCompound,\
     \ ezsigntemplateformfield-ResponseCompound, ezsigntemplatesignature-RequestCompound\
-    \ and ezsigntemplatesignature-RequestCompound\r\n- Added property bVersionDeprecated\
-    \ in Common-Response-objDebugPayload\r\n- Added property eEzsigndocumentSteptype\
-    \ in ezsigndocument-ResponseCompound\r\n- Added property iEzsigntemplatesignatureWidth\
+    \ and ezsigntemplatesignature-RequestCompound\r\n- Property a_objWarning in ezsigndocument-applyEzsigntemplate-v2-Response\r\
+    \n- Property bVersionDeprecated in Common-Response-objDebugPayload\r\n- Property\
+    \ eEzsigndocumentSteptype in ezsigndocument-ResponseCompound\r\n- Property iEzsigntemplatesignatureWidth\
     \ and iEzsigntemplatesignatureHeight in object ezsigntemplatesignature-Request\
-    \ and ezsigntemplatesignature-Response\r\n- Added property eEzsignformfieldDependencyrequirement\
-    \ in object ezsignformfield-Request and ezsignformfield-Response\r\n- Added property\
-    \ eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\n- Added\
-    \ property eEzsigntemplateformfieldDependencyrequirement in ezsigntemplateformfield-Request\
-    \ and ezsigntemplateformfield-Response \r\n- Added property iEzsigntemplatesignatureWidth\
+    \ and ezsigntemplatesignature-Response\r\n- Property eEzsignformfieldDependencyrequirement\
+    \ in object ezsignformfield-Request and ezsignformfield-Response\r\n- Property\
+    \ eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\n- Property\
+    \ eEzsigntemplateformfieldDependencyrequirement in ezsigntemplateformfield-Request\
+    \ and ezsigntemplateformfield-Response \r\n- Property iEzsigntemplatesignatureWidth\
     \ and iEzsigntemplatesignatureHeight in object ezsigntemplatesignature-Request\
-    \ and ezsigntemplatesignature-Response\r\n- Added property eEzsignformfieldDependencyrequirement\
-    \ in object ezsignformfield-Request and ezsignformfield-Response\r\n- Added property\
-    \ eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\n- Added\
-    \ property eEzsigntemplateformfieldDependencyrequirement in ezsigntemplateformfield-Request\
-    \ and ezsigntemplateformfield-Response \r\n- Added property eEzsigntemplatesignatureDependencyrequirement\
+    \ and ezsigntemplatesignature-Response\r\n- Property eEzsignformfieldDependencyrequirement\
+    \ in object ezsignformfield-Request and ezsignformfield-Response\r\n- Property\
+    \ eEzsignformfieldgroupTextvalidation in ezsignformfieldgroup-Response\r\n- Property\
+    \ eEzsigntemplateformfieldDependencyrequirement in ezsigntemplateformfield-Request\
+    \ and ezsigntemplateformfield-Response \r\n- Property eEzsigntemplatesignatureDependencyrequirement\
     \ in ezsigntemplatesignature-Request and ezsigntemplatesignature-Response \r\n\
-    - Added property eEzsigntemplateformfieldgroupTextvalidation in ezsigntemplateformfieldgroup-Request\
-    \ and ezsigntemplateformfieldgroup-Response\r\n- Added property fkiEzsignsigningreasonID\
-    \ in ezsignsignature-sign-v1-Request\r\n- Added properties iEzsignsignatureMaxlength,\
+    - Property eEzsigntemplateformfieldgroupTextvalidation in ezsigntemplateformfieldgroup-Request\
+    \ and ezsigntemplateformfieldgroup-Response\r\n- Property fkiEzsignsigningreasonID\
+    \ in ezsignsignature-sign-v1-Request\r\n- Properties eEzsigntemplateformfieldPositioning,\
+    \ sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx,\
+    \ iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence\
+    \ in ezsigntemplateformfield-Request and ezsigntemplateformfield-Response\r\n\
+    - Properties eEzsigntemplatesignaturePositioning, sEzsigntemplatesignaturePositioningpattern,\
+    \ iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety,\
+    \ eEzsigntemplatesignaturePositioningoccurence in ezsigntemplatesignature-Request\
+    \ and ezsigntemplatesignature-Response\r\n- Properties iEzsignsignatureMaxlength,\
     \ eEzsignsignatureDependencyrequirement in ezsignsignature-Request and ezsignsignature-Response\r\
-    \n- Added properties iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp\
+    \n- Properties iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureRegexp\
     \ and eEzsigntemplatesignatureTextvalidation in ezsigntemplatesignature-Request\
-    \ and ezsigntemplatesignature-Response\r\n- Added property objContactNameDelegation\
-    \ in ezCustom-Ezsignfoldertype-Responsesignsignature-Response\r\n- Added property\
-    \ objEzsignfoldertype in ezsignfolder-Response\r\n- Added property bEzsignformfieldAutocomplete\
-    \ in ezsignformfield-Request and ezsignformfield-Response\r\n- Added property\
-    \ bEzsigntemplateformfieldAutocomplete in ezsigntemplateformfield-Request and\
-    \ ezsigntemplateformfield-Response\r\n- Added property bPhoneInternational in\
-    \ phone-ResponseCompound\r\n- Added properties bEzsignfoldertypeDelegate, bEzsignfoldertypeReassign,\
-    \ bEzsignfoldertypeAllowdownloadattachmentezsignsigner AND bEzsignfoldertypeAllowdownloadproofezsignsigner\
-    \ in Custom-Ezsignfoldertype-Response, ezsignfoldertype-Request and ezsignfoldertype-Response\r\
-    \n- Added properties bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendattachmentezsignsigner,\
+    \ and ezsigntemplatesignature-Response\r\n- Property objContactNameDelegation\
+    \ in ezCustom-Ezsignfoldertype-Responsesignsignature-Response\r\n- Property objEzsignfoldertype\
+    \ in ezsignfolder-Response\r\n- Property bEzsignformfieldAutocomplete in ezsignformfield-Request\
+    \ and ezsignformfield-Response\r\n- Property bEzsigntemplateformfieldAutocomplete\
+    \ in ezsigntemplateformfield-Request and ezsigntemplateformfield-Response\r\n\
+    - Property bPhoneInternational in phone-ResponseCompound\r\n- Properties bEzsignfoldertypeDelegate,\
+    \ bEzsignfoldertypeReassign, bEzsignfoldertypeAllowdownloadattachmentezsignsigner\
+    \ AND bEzsignfoldertypeAllowdownloadproofezsignsigner in Custom-Ezsignfoldertype-Response,\
+    \ ezsignfoldertype-Request and ezsignfoldertype-Response\r\n- Added properties\
+    \ bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendattachmentezsignsigner,\
     \ bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentuser,\
     \ bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner,\
     \ bEzsignfoldertypeAllowdownloadproofezsignsigner and bEzsignfoldertypeSendproofreceivealldocument\
-    \ in ezsignfoldertype-Request and ezsignfoldertype-Response\r\n- Added value AgentBrokerEzsignUserNormal\
-    \ for sSelector in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Added value\
-    \ AllButEveryone for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\
-    \n- Added value fkiUserID for sFilter in GET /1/object/ezsignfolder/getList\r\n\
-    - Added value NameReason for eEzsignsignatureType\r\n- Added value NameReason\
-    \ for eEzsigntemplatesignatureType\r\n- Added value Number, Date in Field-eEzsignformfieldgroupType\
-    \ and Field-eEzsigntemplateformfieldgroupType\r\n- Added properties eUserEzsignaccess,\
-    \ eUserEzsignprepaid and dtUserEzsignprepaidexpiration in activesession-ResponseCompound\r\
-    \n- Remove properties bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeIncludeproofsigner\
+    \ in ezsignfoldertype-Request and ezsignfoldertype-Response\r\n- Property fkiBillingentityinternalID\
+    \ in Custom-EzmaxinvoicingEzsigndocument-Response and Custom-EzmaxinvoicingEzsignfolder-Response\r\
+    \n- Property eEzsignfolderCompletion in ezsignfolder-Response\r\n- Property eEzsignfoldertypeCompletion\
+    \ in ezsignfoldertype-Response and ezsignfoldertype-Response\r\n- Property sUserJobtitle\
+    \ in user-Request, user-Response and user-ListElement\r\n- Property dtEzsignfolderDelayedsenddate\
+    \ in ezsignfolder-ListElement\r\n- Property iEzsignsignatureStep in ezsignsignature-Response\r\
+    \n- Properties iEzsigntemplatesignaturecustomdateOffsetx and iEzsigntemplatesignaturecustomdateOffsety\
+    \ in ezsigntemplatesignaturecustomdate-Request and ezsigntemplatesignaturecustomdate-Response\r\
+    \n- Properties eUserEzsignaccess, eUserEzsignprepaid and dtUserEzsignprepaidexpiration\
+    \ in activesession-ResponseCompound\r\n- Properties bEzsignfoldertypeReassignezsignsigner\
+    \ and bEzsignfoldertypeReassignuser in Custom-Ezsignfoldertype-Response ezsignfoldertype-Request\
+    \ and ezsignfoldertype-Response\r\n- Value AgentBrokerEzsignUserNormal for sSelector\
+    \ in GET /2/object/user/getAutocomplete/{sSelector}\r\n- Value AllButEveryone\
+    \ for sSelector in GET /2/object/usergroup/getAutocomplete/{sSelector}\r\n- Value\
+    \ fkiUserID for sFilter in GET /1/object/ezsignfolder/getList\r\n- Value NameReason\
+    \ for eEzsignsignatureType\r\n- Value NameReason for eEzsigntemplatesignatureType\r\
+    \n- Value Number, Date in Field-eEzsignformfieldgroupType and Field-eEzsigntemplateformfieldgroupType\r\
+    \n- Value PendingCompletion for eEzsigndocumentStep\r\n- Value Consultation for\
+    \ eEzsignsignatureType and eEzsigntemplatesignatureType\r\n- New 401 error code\
+    \ UNAUTHORIZED_REQUEST_APIKEY\r\n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED\
+    \ \r\n- New 422 error code UNPROCESSABLEENTITY_EZSIGNSIGNATURE_SIGNED \r\n- New\
+    \ Authorization key starting with \"W\" for webhooks\r\n- New iso environment\
+    \ for isolated customers \r\n- Webhook User-Agent\r\n- Webhook Request signing\r\
+    \n\r\n#### Remove\r\n- Properties bEzsignfoldertypeSendattatchmentsigner, bEzsignfoldertypeIncludeproofsigner\
     \ and bEzsignfoldertypeSendsignedtolimitedgroup in ezsignfoldertype-Request and\
-    \ ezsignfoldertype-Response\r\n- New 401 error code UNAUTHORIZED_REQUEST_APIKEY\r\
-    \n- New 401 error code UNAUTHORIZED_REQUEST_PRESIGNED \r\n- New 422 error code\
-    \ UNPROCESSABLEENTITY_EZSIGNSIGNATURE_SIGNED \r\n- New Authorization key starting\
-    \ with \"W\" for webhooks\r\n- New iso environment for isolated customers \r\n\
-    - Webhook User-Agent\r\n- Webhook Request signing\r\n\r\n#### Deprecated\r\n-\
-    \ POST /1/object/webhook\r\n\r\n## Older Releases\r\nDocumentation and changelog\
-    \ for older releases can be found here\r\n- [1.1.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\r\
-    \n- [1.0.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
+    \ ezsignfoldertype-Response\r\n\r\n#### Deprecated\r\n- POST /1/object/ezsignfoldersignerassociation/reassign\r\
+    \n- POST /1/object/webhook\r\n- Properties iEzsigntemplatesignaturecustomdateX\
+    \ and iEzsigntemplatesignaturecustomdateY\r\n\r\n## Older Releases\r\nDocumentation\
+    \ and changelog for older releases can be found here\r\n- [1.1.x Releases Documentation\
+    \ (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.1.html)\r\n\
+    - [1.0.x Releases Documentation (Full)](https://ezmaxinc.github.io/eZmax-API/docs/full/ezmax.v1.0.html)"
   name: General_Changelog
   x-displayName: Changelog
 - description: "## Variables\n\nWe use a custom type base naming convention for variables.\n\
@@ -843,6 +872,15 @@ tags:
 - description: Department contains detail about a Department
   name: Object_Department
   x-displayName: Department
+- description: Discussion contains details about Discussions
+  name: Object_Discussion
+  x-displayName: Discussion
+- description: Discussionmembership contains details about Discussionmemberships
+  name: Object_Discussionmembership
+  x-displayName: Discussionmembership
+- description: Discussionmessage contains details about Discussionmessages
+  name: Object_Discussionmessage
+  x-displayName: Discussionmessage
 - description: Electronicfundstransfer contains detail about an Electronicfundstransfer
   name: Object_Electronicfundstransfer
   x-displayName: Electronicfundstransfer
@@ -869,6 +907,9 @@ tags:
 - description: Ezsignbulksendtransmission contains detail about a batch of Ezsignfolders
   name: Object_Ezsignbulksendtransmission
   x-displayName: Ezsignbulksendtransmission
+- description: Ezsigndiscussion contains details about Ezsigndiscussions
+  name: Object_Ezsigndiscussion
+  x-displayName: Ezsigndiscussion
 - description: Ezsigndocument contains detail about a document to sign
   name: Object_Ezsigndocument
   x-displayName: Ezsigndocument
@@ -3088,6 +3129,432 @@ paths:
       x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
+  /1/object/discussion:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Discussion_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussion-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussion-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Discussion
+      tags:
+      - Object_Discussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/discussion/{pkiDiscussionID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Discussion_GetObject_V2
+      parameters:
+      - description: The unique ID of the Discussion
+        explode: false
+        in: path
+        name: pkiDiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussion-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Discussion
+      tags:
+      - Object_Discussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/discussion/{pkiDiscussionID}:
+    delete:
+      description: ""
+      operationId: Discussion_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Discussion
+        explode: false
+        in: path
+        name: pkiDiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussion-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Discussion
+      tags:
+      - Object_Discussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+    patch:
+      description: ""
+      operationId: Discussion_PatchObject_V1
+      parameters:
+      - description: The unique ID of the Discussion
+        explode: false
+        in: path
+        name: pkiDiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussion-patchObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussion-patchObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Patch an existing Discussion
+      tags:
+      - Object_Discussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus:
+    description: ""
+    post:
+      operationId: Discussion_UpdateDiscussionreadstatus_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiDiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussion-updateDiscussionreadstatus-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussion-updateDiscussionreadstatus-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Update the read status of the discussion
+      tags:
+      - Object_Discussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/discussionmembership:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Discussionmembership_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussionmembership-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussionmembership-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Discussionmembership
+      tags:
+      - Object_Discussionmembership
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/discussionmembership/{pkiDiscussionmembershipID}:
+    delete:
+      description: ""
+      operationId: Discussionmembership_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Discussionmembership
+        explode: false
+        in: path
+        name: pkiDiscussionmembershipID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionmembershipID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussionmembership-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Discussionmembership
+      tags:
+      - Object_Discussionmembership
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+  /1/object/discussionmessage:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Discussionmessage_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussionmessage-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussionmessage-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Discussionmessage
+      tags:
+      - Object_Discussionmessage
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/discussionmessage/{pkiDiscussionmessageID}:
+    delete:
+      description: ""
+      operationId: Discussionmessage_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Discussionmessage
+        explode: false
+        in: path
+        name: pkiDiscussionmessageID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionmessageID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussionmessage-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Discussionmessage
+      tags:
+      - Object_Discussionmessage
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
+    patch:
+      description: ""
+      operationId: Discussionmessage_PatchObject_V1
+      parameters:
+      - description: The unique ID of the Discussionmessage
+        explode: false
+        in: path
+        name: pkiDiscussionmessageID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiDiscussionmessageID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/discussionmessage-patchObject-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/discussionmessage-patchObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Patch an existing Discussionmessage
+      tags:
+      - Object_Discussionmessage
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
   /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationList:
     get:
       description: ""
@@ -4413,6 +4880,120 @@ paths:
       x-powerautomate: false
       x-usertypeextra: []
       x-accepts: application/json
+  /1/object/ezsigndiscussion:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Ezsigndiscussion_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndiscussion-createObject-v1-Request'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndiscussion-createObject-v1-Response'
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Ezsigndiscussion
+      tags:
+      - Object_Ezsigndiscussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Ezsigndiscussion_GetObject_V2
+      parameters:
+      - description: The unique ID of the Ezsigndiscussion
+        explode: false
+        in: path
+        name: pkiEzsigndiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndiscussionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndiscussion-getObject-v2-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndiscussion
+      tags:
+      - Object_Ezsigndiscussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+  /1/object/ezsigndiscussion/{pkiEzsigndiscussionID}:
+    delete:
+      description: ""
+      operationId: Ezsigndiscussion_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Ezsigndiscussion
+        explode: false
+        in: path
+        name: pkiEzsigndiscussionID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndiscussionID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndiscussion-deleteObject-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Delete an existing Ezsigndiscussion
+      tags:
+      - Object_Ezsigndiscussion
+      x-powerautomate: false
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - EzsignSigner
+      - AgentBroker
+      x-presentations: []
+      x-accepts: application/json
+    description: ""
   /2/object/ezsigndocument:
     description: ""
     post:
@@ -4785,6 +5366,59 @@ paths:
       x-permissions:
       - All
       x-powerautomate: false
+      x-usertypeextra: []
+      x-content-type: application/json
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord:
+    post:
+      description: "Using this endpoint, you can create multiple Ezsignsignatures/Ezsignformfieldgroups\
+        \ positioned by word at the same time."
+      operationId: Ezsigndocument_CreateEzsignelementsPositionedByWord_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ezsigndocument-createEzsignelementsPositionedByWord-v1-Request'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-createEzsignelementsPositionedByWord-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Create multiple Ezsignsignatures/Ezsignformfieldgroups
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - All
+      x-powerautomate: true
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts: application/json
@@ -5205,7 +5839,8 @@ paths:
 
           1. **Initial** Is the initial document before any signature were applied.
           2. **SignatureReady** Is the version containing the annotations/form to show the signer.
-          3. **Signed** Is the final document once all signatures were applied.
+          3. **Signed** Is the final document once all signatures were applied in current document if eEzsignfolderCompletion is PerEzsigndocument.<br>
+              Is the final document once all signatures were applied in all documents if eEzsignfolderCompletion is PerEzsignfolder.
           4. **Proofdocument** Is the evidence report.
           5. **Proof** Is the complete evidence archive including all of the above and more.
         explode: false
@@ -5299,6 +5934,52 @@ paths:
       x-presentations: []
       x-permissions:
       - All
+      x-accepts: application/json
+  /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsigndiscussions:
+    get:
+      description: ""
+      operationId: Ezsigndocument_GetEzsigndiscussions_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiEzsigndocumentID
+        required: true
+        schema:
+          $ref: '#/components/schemas/Field-pkiEzsigndocumentID'
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ezsigndocument-getEzsigndiscussions-v1-Response'
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Common-Response-Error'
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Ezsigndocument's Ezsigndiscussions
+      tags:
+      - Object_Ezsigndocument
+      x-presentations:
+      - Ezsign
+      x-permissions:
+      - All
+      x-powerautomate: false
+      x-usertypeextra:
+      - EzsignSigner
       x-accepts: application/json
   /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignformfieldgroups:
     get:
@@ -17088,6 +17769,27 @@ components:
       required:
       - objReportgroup
       type: object
+    Computed-bDiscussionconfigurationCompletehistorywhenadded:
+      description: If the added Discussionmembership will have access to the entire
+        history or not
+      example: true
+      type: boolean
+    Computed-bDiscussionconfigurationCreateallowed:
+      description: If the the creation of the Discussion is allowed or not
+      example: true
+      type: boolean
+    Computed-bDiscussionconfigurationDeleteallowed:
+      description: If the the destruction of the Discussion is allowed or not
+      example: true
+      type: boolean
+    Computed-bDiscussionconfigurationDeletediscussionmessageallowed:
+      description: If the the destruction of the Discussionmessage is allowed or not
+      example: true
+      type: boolean
+    Computed-bDiscussionconfigurationEditdiscussionmessageallowed:
+      description: If the the creation of the Discussionmessage is allowed or not
+      example: true
+      type: boolean
     Computed-bEzsigndocumentEzsignform:
       description: If the Ezsigndocument contains an Ezsignform or not
       example: true
@@ -17104,6 +17806,10 @@ components:
       description: Indicate the phone number is an international phone number.
       example: true
       type: boolean
+    Computed-dtDiscussionLastread:
+      description: The date the Discussion was last read
+      example: 2020-12-31 23:59:59
+      type: string
     Computed-dtEzsignfolderDuedate:
       description: The maximum date and time at which the Ezsignfolder can be signed.
       example: 2020-12-31 23:59:59
@@ -17143,6 +17849,18 @@ components:
     Computed-iCommunicationrecipientCount:
       description: The count of Communicationrecipient
       example: 8
+      type: integer
+    Computed-iDiscussionmessageCount:
+      description: The count of Attachment.
+      example: 4
+      type: integer
+    Computed-iDiscussionmessageCountunread:
+      description: The count of Attachment.
+      example: 4
+      type: integer
+    Computed-iEzsigndiscussionPagenumber:
+      description: The page number in the Ezsigndocument for the Ezsigndiscussion
+      example: 4
       type: integer
     Computed-iEzsigndocumentEzsignsignatureattachmenttotal:
       description: The number of Ezsigndocumentattachment total
@@ -17204,6 +17922,12 @@ components:
     Computed-sCommunicationSender:
       description: The sender name of the Communication
       example: John Doe
+      type: string
+    Computed-sDiscussionmembershipDescription:
+      description: The Description containing the detail of who the Discussionmembership
+        refers to
+      example: John Doe
+      pattern: "^.{0,100}$"
       type: string
     Computed-sEzsigndocumentMD5initial:
       description: MD5 Hash of the initial PDF Document before signatures were applied
@@ -17587,6 +18311,32 @@ components:
           example: eZmax Solutions Inc.
           type: string
       type: object
+    Custom-CreateEzsignelementsPositionedByWord-Request:
+      description: A CreateEzsignelementsPositionedByWord object
+      properties:
+        sCreateezsignelementspositionedbywordPattern:
+          description: The word to search
+          pattern: "^.{1,35}$"
+          type: string
+        iCreateezsignelementspositionedbywordOffsetx:
+          description: The X offset
+          type: integer
+        iCreateezsignelementspositionedbywordOffsety:
+          description: The Y offset
+          type: integer
+        eCreateezsignelementspositionedbywordOccurance:
+          description: The occurance in the search to add the ezsign element
+          enum:
+          - All
+          - First
+          - Last
+          type: string
+      required:
+      - eCreateezsignelementspositionedbywordOccurance
+      - iCreateezsignelementspositionedbywordOffsetx
+      - iCreateezsignelementspositionedbywordOffsety
+      - sCreateezsignelementspositionedbywordPattern
+      type: object
     Custom-Creditcardtransaction-Response:
       description: A custom Creditcardtransaction Object
       properties:
@@ -17612,6 +18362,28 @@ components:
       - eCreditcardtypeCodename
       - sCreditcardtransactionPartiallydecryptednumber
       - sCreditcardtransactionReferencenumber
+      type: object
+    Custom-Discussionconfiguration-Response:
+      allOf:
+      - properties:
+          bDiscussionconfigurationCompletehistorywhenadded:
+            $ref: '#/components/schemas/Computed-bDiscussionconfigurationCompletehistorywhenadded'
+          bDiscussionconfigurationCreateallowed:
+            $ref: '#/components/schemas/Computed-bDiscussionconfigurationCreateallowed'
+          bDiscussionconfigurationDeleteallowed:
+            $ref: '#/components/schemas/Computed-bDiscussionconfigurationDeleteallowed'
+          bDiscussionconfigurationDeletediscussionmessageallowed:
+            $ref: '#/components/schemas/Computed-bDiscussionconfigurationDeletediscussionmessageallowed'
+          bDiscussionconfigurationEditdiscussionmessageallowed:
+            $ref: '#/components/schemas/Computed-bDiscussionconfigurationEditdiscussionmessageallowed'
+        required:
+        - bDiscussionconfigurationCompletehistorywhenadded
+        - bDiscussionconfigurationCreateallowed
+        - bDiscussionconfigurationDeleteallowed
+        - bDiscussionconfigurationDeletediscussionmessageallowed
+        - bDiscussionconfigurationEditdiscussionmessageallowed
+        type: object
+      description: A Custom Discussionconfiguration Object
       type: object
     Custom-DropdownElement-Request:
       description: Generic DropdownElement Request
@@ -17656,6 +18428,8 @@ components:
       - properties:
           fkiEzsignfolderID:
             $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          fkiBillingentityinternalID:
+            $ref: '#/components/schemas/Field-pkiBillingentityinternalID'
           sName:
             type: string
           sEzsignfolderDescription:
@@ -17680,6 +18454,8 @@ components:
       - properties:
           fkiEzsignfolderID:
             $ref: '#/components/schemas/Field-pkiEzsignfolderID'
+          fkiBillingentityinternalID:
+            $ref: '#/components/schemas/Field-pkiBillingentityinternalID'
           sEzsignfolderDescription:
             $ref: '#/components/schemas/Field-sEzsignfolderDescription'
           bEzsigntsarequirementBillable:
@@ -17928,6 +18704,10 @@ components:
             $ref: '#/components/schemas/Field-bEzsignfoldertypeDelegate'
           bEzsignfoldertypeReassign:
             $ref: '#/components/schemas/Field-bEzsignfoldertypeReassign'
+          bEzsignfoldertypeReassignezsignsigner:
+            $ref: '#/components/schemas/Field-bEzsignfoldertypeReassignezsignsigner'
+          bEzsignfoldertypeReassignuser:
+            $ref: '#/components/schemas/Field-bEzsignfoldertypeReassignuser'
         required:
         - pkiEzsignfoldertypeID
         type: object
@@ -17999,6 +18779,30 @@ components:
         type: object
       description: A Custom Ezsignformfieldgroup Object to fill an Ezsignform using
         submitForm
+      type: object
+    Custom-EzsignformfieldgroupCreateEzsignelementsPositionedByWord-Request:
+      allOf:
+      - $ref: '#/components/schemas/ezsignformfieldgroup-RequestCompound'
+      - properties:
+          objCreateezsignelementspositionedbyword:
+            $ref: '#/components/schemas/Custom-CreateEzsignelementsPositionedByWord-Request'
+        required:
+        - objCreateezsignelementspositionedbyword
+        type: object
+      description: An Ezsignformfieldgroup Object in the context of a createEzsignelementsPositionedByWord
+        path
+      type: object
+    Custom-EzsignsignatureCreateEzsignelementsPositionedByWord-Request:
+      allOf:
+      - $ref: '#/components/schemas/ezsignsignature-RequestCompound'
+      - properties:
+          objCreateezsignelementspositionedbyword:
+            $ref: '#/components/schemas/Custom-CreateEzsignelementsPositionedByWord-Request'
+        required:
+        - objCreateezsignelementspositionedbyword
+        type: object
+      description: An Ezsignsignature Object in the context of an CreateEzsignelementsPositionedByWord
+        path
       type: object
     Custom-EzsignsignatureEzsignsignaturesAutomatic-Response:
       description: An Ezsignsignature Object in the context of an EzsignsignaturesAutomatic
@@ -18428,6 +19232,10 @@ components:
       description: Whether the Department is active or not
       example: true
       type: boolean
+    Field-bDiscussionClosed:
+      description: Whether if it's an closed
+      example: true
+      type: boolean
     Field-bEmailtypeIsactive:
       description: Whether the Emailtype is active or not
       example: true
@@ -18543,6 +19351,16 @@ components:
     Field-bEzsignfoldertypeReassign:
       description: Wheter if Reassignment of signature is allowed to another signatory
         or not
+      example: true
+      type: boolean
+    Field-bEzsignfoldertypeReassignezsignsigner:
+      description: Wheter if Reassignment of signature is allowed by a signatory to
+        another signatory or not
+      example: true
+      type: boolean
+    Field-bEzsignfoldertypeReassignuser:
+      description: Wheter if Reassignment of signature is allowed by a user to a signatory
+        or another user or not
       example: true
       type: boolean
     Field-bEzsignfoldertypeSendattachmentezsignsigner:
@@ -19033,6 +19851,11 @@ components:
       description: The date and time at which the object was created
       example: 2020-12-31 23:59:59
       type: string
+    Field-dtDiscussionmembershipJoined:
+      description: The joined date of the Discussionmembership
+      example: 2020-12-31 23:59:59
+      pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+      type: string
     Field-dtEzmaxinvoicingcommissionEnd:
       description: The end date for the Ezmaxinvoicingcommission
       example: 2020-12-31
@@ -19361,6 +20184,14 @@ components:
       - Visa
       example: visa
       type: string
+    Field-eDiscussionmessageStatus:
+      description: The status of the Discussionmessage
+      enum:
+      - New
+      - Edited
+      - Deleted
+      example: New
+      type: string
     Field-eErrorCode:
       description: The error code. See documentation for valid values
       enum:
@@ -19477,6 +20308,7 @@ components:
       - PartiallySigned
       - DeclinedToSign
       - PrematurelyEnded
+      - PendingCompletion
       - Completed
       - Disposed
       example: Completed
@@ -19541,6 +20373,16 @@ components:
       - Filled
       example: Value
       type: string
+    Field-eEzsignfolderCompletion:
+      default: PerEzsigndocument
+      description: Indicates if the Ezsigndocument is completed when all signatures
+        of this Ezsigndocument were applied or when all signatures of all Ezsigndocument  were
+        applied
+      enum:
+      - PerEzsigndocument
+      - PerEzsignfolder
+      example: PerEzsigndocument
+      type: string
     Field-eEzsignfolderSendreminderfrequency:
       description: Frequency at which reminders will be sent to signers that haven't
         signed the documents
@@ -19562,6 +20404,16 @@ components:
       - Archived
       - Disposed
       example: Completed
+      type: string
+    Field-eEzsignfoldertypeCompletion:
+      default: PerEzsigndocument
+      description: Indicates if the Ezsigndocument is completed when all signatures
+        of this Ezsigndocument were applied or when all signatures of all Ezsigndocument  were
+        applied
+      enum:
+      - PerEzsigndocument
+      - PerEzsignfolder
+      example: PerEzsigndocument
       type: string
     Field-eEzsignfoldertypeDisposal:
       description: The type of disposal
@@ -19689,6 +20541,7 @@ components:
       - AttachmentsConfirmation
       - FieldText
       - FieldTextarea
+      - Consultation
       example: Name
       type: string
     Field-eEzsigntemplateelementdependencyOperator:
@@ -19721,6 +20574,25 @@ components:
       - AllOf
       - AnyOf
       example: AllOf
+      type: string
+    Field-eEzsigntemplateformfieldPositioning:
+      default: PerCoordinates
+      description: How the positioning of the Ezsigntemplateformfield will be done
+      enum:
+      - PerCoordinates
+      - PerPositioningPattern
+      example: PerCoordinates
+      type: string
+    Field-eEzsigntemplateformfieldPositioningoccurence:
+      description: |-
+        The occurence of the pattern to add the Ezsigntemplateformfield
+
+        This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+      enum:
+      - All
+      - First
+      - Last
+      example: All
       type: string
     Field-eEzsigntemplateformfieldgroupSignerrequirement:
       description: "The Signer requirement of the Ezsigntemplateformfieldgroup. **All**\
@@ -19780,6 +20652,24 @@ components:
       - Cursive
       example: Normal
       type: string
+    Field-eEzsigntemplatesignaturePositioning:
+      description: How the positioning of the Ezsigntemplatesignature will be done
+      enum:
+      - PerCoordinates
+      - PerPositioningPattern
+      example: PerCoordinates
+      type: string
+    Field-eEzsigntemplatesignaturePositioningoccurence:
+      description: |-
+        The occurence of the pattern to add the Ezsigntemplatesignature
+
+        This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+      enum:
+      - All
+      - First
+      - Last
+      example: All
+      type: string
     Field-eEzsigntemplatesignatureTooltipposition:
       description: The location of the tooltip relative to the Ezsigntemplatesignature's
         location.
@@ -19813,6 +20703,7 @@ components:
       - Attachments
       - FieldText
       - FieldTextarea
+      - Consultation
       example: Name
       type: string
     Field-eModuleInternalname:
@@ -20179,6 +21070,18 @@ components:
       example: 1
       minimum: 0
       type: integer
+    Field-iEzsigndiscussionX:
+      description: The x of the Ezsigndiscussion
+      example: 57208
+      maximum: 65535
+      minimum: 0
+      type: integer
+    Field-iEzsigndiscussionY:
+      description: The y of the Ezsigndiscussion
+      example: 57652
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-iEzsigndocumentOrder:
       description: The order in which the Ezsigndocument will be presented to the
         signatory in the Ezsignfolder.
@@ -20341,6 +21244,10 @@ components:
       description: The step when the Ezsignsigner will be invited to sign
       example: 1
       type: integer
+    Field-iEzsignsignatureStepadjusted:
+      description: The step when the Ezsignsigner will be invited to sign
+      example: 1
+      type: integer
     Field-iEzsignsignatureValidationstep:
       description: The step when the Ezsignsigner will be invited to validate the
         Ezsignsignature of eEzsignsignatureType Attachments
@@ -20432,6 +21339,20 @@ components:
       example: 22
       minimum: 0
       type: integer
+    Field-iEzsigntemplateformfieldPositioningoffsetx:
+      description: |-
+        The offset X
+
+        This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+      example: 200
+      type: integer
+    Field-iEzsigntemplateformfieldPositioningoffsety:
+      description: |-
+        The offset Y
+
+        This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+      example: 200
+      type: integer
     Field-iEzsigntemplateformfieldWidth:
       description: |-
         The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
@@ -20519,6 +21440,20 @@ components:
       maximum: 65535
       minimum: 0
       type: integer
+    Field-iEzsigntemplatesignaturePositioningoffsetx:
+      description: |-
+        The offset X
+
+        This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+      example: 200
+      type: integer
+    Field-iEzsigntemplatesignaturePositioningoffsety:
+      description: |-
+        The offset Y
+
+        This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+      example: 200
+      type: integer
     Field-iEzsigntemplatesignatureStep:
       description: The step when the Ezsigntemplatesigner will be invited to sign
       example: 1
@@ -20553,7 +21488,24 @@ components:
       example: 300
       minimum: 0
       type: integer
+    Field-iEzsigntemplatesignaturecustomdateOffsetx:
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use "200" for the X coordinate.
+      example: 200
+      minimum: 0
+      type: integer
+    Field-iEzsigntemplatesignaturecustomdateOffsety:
+      description: |-
+        The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+        Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use "200" for the Y coordinate.
+      example: 200
+      minimum: 0
+      type: integer
     Field-iEzsigntemplatesignaturecustomdateX:
+      deprecated: true
       description: |-
         The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
@@ -20562,6 +21514,7 @@ components:
       minimum: 0
       type: integer
     Field-iEzsigntemplatesignaturecustomdateY:
+      deprecated: true
       description: |-
         The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
@@ -20854,6 +21807,24 @@ components:
       maximum: 65535
       minimum: 0
       type: integer
+    Field-pkiDiscussionID:
+      description: The unique ID of the Discussion
+      example: 125
+      maximum: 16777215
+      minimum: 0
+      type: integer
+    Field-pkiDiscussionmembershipID:
+      description: The unique ID of the Discussionmembership
+      example: 165
+      maximum: 16777215
+      minimum: 0
+      type: integer
+    Field-pkiDiscussionmessageID:
+      description: The unique ID of the Discussionmessage
+      example: 123
+      maximum: 16777215
+      minimum: 0
+      type: integer
     Field-pkiElectronicfundstransferID:
       description: The unique ID of the Electronicfundstransfer
       example: 1262
@@ -20997,6 +21968,12 @@ components:
     Field-pkiEzsignbulksendtransmissionID:
       description: The unique ID of the Ezsignbulksendtransmission
       example: 21
+      minimum: 0
+      type: integer
+    Field-pkiEzsigndiscussionID:
+      description: The unique ID of the Ezsigndiscussion
+      example: 194
+      maximum: 16777215
       minimum: 0
       type: integer
     Field-pkiEzsigndocumentID:
@@ -21922,6 +22899,11 @@ components:
       description: The Name of the Department in the language of the requester
       example: Head Office
       type: string
+    Field-sDiscussionDescription:
+      description: The description of the Discussion
+      example: John Doe
+      pattern: "^.{0,75}$"
+      type: string
     Field-sEmailAddress:
       description: The email address.
       example: email@example.com
@@ -22011,6 +22993,19 @@ components:
         This is the value enterred for the Ezsignformfield
 
         This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
+
+        You can use the codes below and they will be replaced at signature time.
+
+
+
+        | Code | Description | Example |
+        | ------------------------- | ------------ | ------------ |
+        | {sUserFirstname} | The first name of the contact | John |
+        | {sUserLastname} | The last name of the contact | Doe |
+        | {sUserJobtitle} | The job title | Sales Representative |
+        | {sEmailAddress} | The email address | email@example.com |
+        | {sPhoneE164} | A phone number in E.164 Format | +15149901516 |
+        | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
       example: Montreal
       type: string
     Field-sEzsignformfieldLabel:
@@ -22111,6 +23106,14 @@ components:
       description: The Label for the Ezsigntemplateformfield
       example: Peanuts
       type: string
+    Field-sEzsigntemplateformfieldPositioningpattern:
+      description: |-
+        The string pattern to search for the positioning. **This is not a regexp**
+
+        This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+      example: Signature
+      pattern: "^.{0,30}$"
+      type: string
     Field-sEzsigntemplateformfieldValue:
       description: The value for the Ezsigntemplateformfield
       example: "Yes"
@@ -22145,6 +23148,14 @@ components:
       description: The description attached to the attachment name added in Ezsigntemplatesignature
         of eEzsigntemplatesignatureType Attachments
       example: Attachment
+      type: string
+    Field-sEzsigntemplatesignaturePositioningpattern:
+      description: |-
+        The string pattern to search for the positioning. **This is not a regexp**
+
+        This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+      example: Signature
+      pattern: "^.{0,30}$"
       type: string
     Field-sEzsigntemplatesignatureRegexp:
       description: |-
@@ -22348,6 +23359,11 @@ components:
       description: The first name of the user
       example: John
       type: string
+    Field-sUserJobtitle:
+      description: The job title of the user
+      example: Sales Representative
+      pattern: "^.{0,50}$"
+      type: string
     Field-sUserLastname:
       description: The last name of the user
       example: Doe
@@ -22448,6 +23464,11 @@ components:
     Field-tAttachmentRejectioncomment:
       description: The rejectioncomment of the Attachment
       example: Unreadable
+      pattern: "^.{0,65535}$"
+      type: string
+    Field-tDiscussionmessageContent:
+      description: The content of the Discussionmessage
+      example: "Hello, this is an example of content in a message"
       pattern: "^.{0,65535}$"
       type: string
     Field-tExtraMessage:
@@ -25982,6 +27003,510 @@ components:
       required:
       - a_objDepartment
       type: object
+    discussion-Request:
+      description: A Discussion Object
+      properties:
+        pkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        sDiscussionDescription:
+          description: The description of the Discussion
+          example: John Doe
+          pattern: "^.{0,75}$"
+          type: string
+        bDiscussionClosed:
+          description: Whether if it's an closed
+          example: true
+          type: boolean
+      required:
+      - sDiscussionDescription
+      type: object
+    discussion-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussion-Request'
+      - type: object
+      description: A Discussion Object and children
+      type: object
+    discussion-RequestPatch:
+      description: A Discussion Object
+      properties:
+        sDiscussionDescription:
+          description: The description of the Discussion
+          example: John Doe
+          pattern: "^.{0,75}$"
+          type: string
+        bDiscussionClosed:
+          description: Whether if it's an closed
+          example: true
+          type: boolean
+      type: object
+    discussion-Response:
+      description: A Discussion Object
+      properties:
+        pkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        sDiscussionDescription:
+          description: The description of the Discussion
+          example: John Doe
+          pattern: "^.{0,75}$"
+          type: string
+        bDiscussionClosed:
+          description: Whether if it's an closed
+          example: true
+          type: boolean
+        dtDiscussionLastread:
+          description: The date the Discussion was last read
+          example: 2020-12-31 23:59:59
+          type: string
+        iDiscussionmessageCount:
+          description: The count of Attachment.
+          example: 4
+          type: integer
+        iDiscussionmessageCountunread:
+          description: The count of Attachment.
+          example: 4
+          type: integer
+        objDiscussionconfiguration:
+          $ref: '#/components/schemas/Custom-Discussionconfiguration-Response'
+      required:
+      - bDiscussionClosed
+      - iDiscussionmessageCount
+      - iDiscussionmessageCountunread
+      - pkiDiscussionID
+      - sDiscussionDescription
+      type: object
+    discussion-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussion-Response'
+      - properties:
+          a_objDiscussionmembership:
+            items:
+              $ref: '#/components/schemas/discussionmembership-ResponseCompound'
+            type: array
+          a_objDiscussionmessage:
+            items:
+              $ref: '#/components/schemas/discussionmessage-ResponseCompound'
+            type: array
+        required:
+        - a_objDiscussionmembership
+        - a_objDiscussionmessage
+        type: object
+      description: A Discussion Object
+      type: object
+    discussion-createObject-v1-Request:
+      description: Request for POST /1/object/discussion
+      properties:
+        a_objDiscussion:
+          items:
+            $ref: '#/components/schemas/discussion-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objDiscussion
+      type: object
+    discussion-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/discussion-createObject-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/discussion
+      type: object
+    discussion-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/discussion
+      properties:
+        a_pkiDiscussionID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiDiscussionID'
+          type: array
+      required:
+      - a_pkiDiscussionID
+      type: object
+    discussion-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/discussion/{pkiDiscussionID}"
+      type: object
+    discussion-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/discussion-getObject-v2-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/discussion/{pkiDiscussionID}"
+      type: object
+    discussion-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/discussion/{pkiDiscussionID}"
+      properties:
+        objDiscussion:
+          $ref: '#/components/schemas/discussion-ResponseCompound'
+      required:
+      - objDiscussion
+      type: object
+    discussion-patchObject-v1-Request:
+      description: "Request for PATCH /1/object/discussion/{pkiDiscussionID}"
+      properties:
+        objDiscussion:
+          $ref: '#/components/schemas/discussion-RequestPatch'
+      required:
+      - objDiscussion
+      type: object
+    discussion-patchObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PATCH /1/object/discussion/{pkiDiscussionID}"
+      type: object
+    discussion-updateDiscussionreadstatus-v1-Request:
+      description: "Request for POST /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus"
+      properties:
+        dtDiscussionreadstatusDate:
+          description: The date of the last discussion message read
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+      type: object
+    discussion-updateDiscussionreadstatus-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus"
+      type: object
+    discussionmembership-Request:
+      description: A Discussionmembership Object
+      properties:
+        pkiDiscussionmembershipID:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+          x-ms-dynamic-values:
+            operationId: User_GetAutocomplete_V2
+            value-path: pkiUserID
+            value-title: sUserName
+            value-collection: mPayload/a_objUser
+            parameters:
+              sSelector: AgentBrokerEzsignuserNormal
+        fkiUsergroupID:
+          description: The unique ID of the Usergroup
+          example: 2
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiModulesectionID:
+          description: The unique ID of the Modulesection
+          example: 53
+          minimum: 0
+          type: integer
+        dtDiscussionmembershipJoined:
+          description: The joined date of the Discussionmembership
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+      required:
+      - dtDiscussionmembershipJoined
+      - fkiDiscussionID
+      type: object
+    discussionmembership-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussionmembership-Request'
+      - type: object
+      description: A Discussionmembership Object and children
+      type: object
+    discussionmembership-Response:
+      description: A Discussionmembership Object
+      properties:
+        pkiDiscussionmembershipID:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiUserID:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+          x-ms-dynamic-values:
+            operationId: User_GetAutocomplete_V2
+            value-path: pkiUserID
+            value-title: sUserName
+            value-collection: mPayload/a_objUser
+            parameters:
+              sSelector: AgentBrokerEzsignuserNormal
+        fkiUsergroupID:
+          description: The unique ID of the Usergroup
+          example: 2
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiModulesectionID:
+          description: The unique ID of the Modulesection
+          example: 53
+          minimum: 0
+          type: integer
+        sDiscussionmembershipDescription:
+          description: The Description containing the detail of who the Discussionmembership
+            refers to
+          example: John Doe
+          pattern: "^.{0,100}$"
+          type: string
+        dtDiscussionmembershipJoined:
+          description: The joined date of the Discussionmembership
+          example: 2020-12-31 23:59:59
+          pattern: "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$"
+          type: string
+      required:
+      - dtDiscussionmembershipJoined
+      - fkiDiscussionID
+      - pkiDiscussionmembershipID
+      - sDiscussionmembershipDescription
+      type: object
+    discussionmembership-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussionmembership-Response'
+      - type: object
+      description: A Discussionmembership Object and children
+      type: object
+    discussionmembership-createObject-v1-Request:
+      description: Request for POST /1/object/discussionmembership
+      properties:
+        a_objDiscussionmembership:
+          items:
+            $ref: '#/components/schemas/discussionmembership-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objDiscussionmembership
+      type: object
+    discussionmembership-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/discussionmembership-createObject-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/discussionmembership
+      type: object
+    discussionmembership-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/discussionmembership
+      properties:
+        a_pkiDiscussionmembershipID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiDiscussionmembershipID'
+          type: array
+      required:
+      - a_pkiDiscussionmembershipID
+      type: object
+    discussionmembership-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}"
+      type: object
+    discussionmessage-Request:
+      description: A Discussionmessage Object
+      properties:
+        pkiDiscussionmessageID:
+          description: The unique ID of the Discussionmessage
+          example: 123
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionmembershipIDActionrequired:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        tDiscussionmessageContent:
+          description: The content of the Discussionmessage
+          example: "Hello, this is an example of content in a message"
+          pattern: "^.{0,65535}$"
+          type: string
+      required:
+      - fkiDiscussionID
+      - tDiscussionmessageContent
+      type: object
+    discussionmessage-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussionmessage-Request'
+      - type: object
+      description: A Discussionmessage Object and children
+      type: object
+    discussionmessage-RequestPatch:
+      description: A Discussionmessage Object
+      properties:
+        fkiDiscussionmembershipIDActionrequired:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        tDiscussionmessageContent:
+          description: The content of the Discussionmessage
+          example: "Hello, this is an example of content in a message"
+          pattern: "^.{0,65535}$"
+          type: string
+      type: object
+    discussionmessage-Response:
+      description: A Discussionmessage Object
+      properties:
+        pkiDiscussionmessageID:
+          description: The unique ID of the Discussionmessage
+          example: 123
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionmembershipID:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDiscussionmembershipIDActionrequired:
+          description: The unique ID of the Discussionmembership
+          example: 165
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        eDiscussionmessageStatus:
+          $ref: '#/components/schemas/Field-eDiscussionmessageStatus'
+        tDiscussionmessageContent:
+          description: The content of the Discussionmessage
+          example: "Hello, this is an example of content in a message"
+          pattern: "^.{0,65535}$"
+          type: string
+        sDiscussionmessageCreatorname:
+          description: The name the creator of the Discussionmessage.
+          example: John Doe
+          pattern: "^.{0,75}$"
+          type: string
+        sDiscussionmessageActionrequiredname:
+          description: The name the Actionrequired of the Discussionmessage.
+          example: Jane Doe
+          pattern: "^.{0,75}$"
+          type: string
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
+      required:
+      - eDiscussionmessageStatus
+      - fkiDiscussionID
+      - objAudit
+      - pkiDiscussionmessageID
+      - sDiscussionmessageCreatorname
+      - tDiscussionmessageContent
+      type: object
+    discussionmessage-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/discussionmessage-Response'
+      - type: object
+      description: A Discussionmessage Object and children
+      type: object
+    discussionmessage-createObject-v1-Request:
+      description: Request for POST /1/object/discussionmessage
+      properties:
+        a_objDiscussionmessage:
+          items:
+            $ref: '#/components/schemas/discussionmessage-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objDiscussionmessage
+      type: object
+    discussionmessage-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/discussionmessage-createObject-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/discussionmessage
+      type: object
+    discussionmessage-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/discussionmessage
+      properties:
+        a_pkiDiscussionmessageID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiDiscussionmessageID'
+          type: array
+      required:
+      - a_pkiDiscussionmessageID
+      type: object
+    discussionmessage-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/discussionmessage/{pkiDiscussionmessageID}"
+      type: object
+    discussionmessage-patchObject-v1-Request:
+      description: "Request for PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}"
+      properties:
+        objDiscussionmessage:
+          $ref: '#/components/schemas/discussionmessage-RequestPatch'
+      required:
+      - objDiscussionmessage
+      type: object
+    discussionmessage-patchObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}"
+      type: object
     electronicfundstransfer-getCommunicationList-v1-Response:
       allOf:
       - properties:
@@ -28121,6 +29646,164 @@ components:
       required:
       - objEzsignbulksendtransmission
       type: object
+    ezsigndiscussion-Request:
+      description: An Ezsigndiscussion Object
+      properties:
+        pkiEzsigndiscussionID:
+          description: The unique ID of the Ezsigndiscussion
+          example: 194
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsigndocumentID:
+          description: The unique ID of the Ezsigndocument
+          example: 97
+          minimum: 0
+          type: integer
+        iEzsigndiscussionPagenumber:
+          description: The page number in the Ezsigndocument for the Ezsigndiscussion
+          example: 4
+          type: integer
+        iEzsigndiscussionX:
+          description: The x of the Ezsigndiscussion
+          example: 57208
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigndiscussionY:
+          description: The y of the Ezsigndiscussion
+          example: 57652
+          maximum: 65535
+          minimum: 0
+          type: integer
+        objDiscussion:
+          $ref: '#/components/schemas/discussion-Request'
+      required:
+      - fkiEzsigndocumentID
+      - iEzsigndiscussionPagenumber
+      - iEzsigndiscussionX
+      - iEzsigndiscussionY
+      - objDiscussion
+      type: object
+    ezsigndiscussion-RequestCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndiscussion-Request'
+      - type: object
+      description: A Ezsigndiscussion Object and children
+      type: object
+    ezsigndiscussion-Response:
+      description: A Ezsigndiscussion Object
+      properties:
+        pkiEzsigndiscussionID:
+          description: The unique ID of the Ezsigndiscussion
+          example: 194
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzsignpageID:
+          description: The unique ID of the Ezsignpage
+          example: 64
+          minimum: 0
+          type: integer
+        fkiDiscussionID:
+          description: The unique ID of the Discussion
+          example: 125
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        iEzsigndiscussionX:
+          description: The x of the Ezsigndiscussion
+          example: 57208
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigndiscussionY:
+          description: The y of the Ezsigndiscussion
+          example: 57652
+          maximum: 65535
+          minimum: 0
+          type: integer
+        iEzsigndiscussionPagenumber:
+          description: The page number in the Ezsigndocument for the Ezsigndiscussion
+          example: 4
+          type: integer
+        objDiscussion:
+          $ref: '#/components/schemas/discussion-ResponseCompound'
+      required:
+      - fkiDiscussionID
+      - fkiEzsignpageID
+      - iEzsigndiscussionPagenumber
+      - iEzsigndiscussionX
+      - iEzsigndiscussionY
+      - objDiscussion
+      - pkiEzsigndiscussionID
+      type: object
+    ezsigndiscussion-ResponseCompound:
+      allOf:
+      - $ref: '#/components/schemas/ezsigndiscussion-Response'
+      - type: object
+      description: A Ezsigndiscussion Object
+      type: object
+    ezsigndiscussion-createObject-v1-Request:
+      description: Request for POST /1/object/ezsigndiscussion
+      properties:
+        a_objEzsigndiscussion:
+          items:
+            $ref: '#/components/schemas/ezsigndiscussion-RequestCompound'
+          minItems: 1
+          type: array
+      required:
+      - a_objEzsigndiscussion
+      type: object
+    ezsigndiscussion-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsigndiscussion-createObject-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: Response for POST /1/object/ezsigndiscussion
+      type: object
+    ezsigndiscussion-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/ezsigndiscussion
+      properties:
+        a_pkiEzsigndiscussionID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsigndiscussionID'
+          type: array
+      required:
+      - a_pkiEzsigndiscussionID
+      type: object
+    ezsigndiscussion-deleteObject-v1-Response:
+      allOf:
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for DELETE /1/object/ezsigndiscussion/{pkiEzsigndiscussionID}"
+      type: object
+    ezsigndiscussion-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsigndiscussion-getObject-v2-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}"
+      type: object
+    ezsigndiscussion-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}"
+      properties:
+        objEzsigndiscussion:
+          $ref: '#/components/schemas/ezsigndiscussion-ResponseCompound'
+      required:
+      - objEzsigndiscussion
+      type: object
     ezsigndocument-Request:
       description: An Ezsigndocument Object
       properties:
@@ -28509,7 +30192,54 @@ components:
     ezsigndocument-applyEzsigntemplate-v2-Response:
       allOf:
       - $ref: '#/components/schemas/Common-Response'
+      - properties:
+          a_objWarning:
+            items:
+              $ref: '#/components/schemas/Common-Response-Warning'
+            type: array
+        type: object
       description: "Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate"
+      type: object
+    ezsigndocument-createEzsignelementsPositionedByWord-v1-Request:
+      description: "Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord"
+      properties:
+        a_objEzsignformfieldgroup:
+          items:
+            $ref: '#/components/schemas/Custom-EzsignformfieldgroupCreateEzsignelementsPositionedByWord-Request'
+          type: array
+        a_objEzsignsignature:
+          items:
+            $ref: '#/components/schemas/Custom-EzsignsignatureCreateEzsignelementsPositionedByWord-Request'
+          type: array
+      required:
+      - a_objEzsignformfieldgroup
+      - a_objEzsignsignature
+      type: object
+    ezsigndocument-createEzsignelementsPositionedByWord-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsigndocument-createEzsignelementsPositionedByWord-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord"
+      type: object
+    ezsigndocument-createEzsignelementsPositionedByWord-v1-Response-mPayload:
+      description: "Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord"
+      properties:
+        a_pkiEzsignsignatureID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignsignatureID'
+          type: array
+        a_pkiEzsignformfieldgroupID:
+          items:
+            $ref: '#/components/schemas/Field-pkiEzsignformfieldgroupID'
+          type: array
+      required:
+      - a_pkiEzsignformfieldgroupID
+      - a_pkiEzsignsignatureID
       type: object
     ezsigndocument-createObject-v1-Request:
       description: Request for POST /1/object/ezsigndocument
@@ -28806,6 +30536,27 @@ components:
           type: array
       required:
       - a_objEzsignannotation
+      type: object
+    ezsigndocument-getEzsigndiscussions-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: '#/components/schemas/ezsigndocument-getEzsigndiscussions-v1-Response-mPayload'
+        required:
+        - mPayload
+        type: object
+      - $ref: '#/components/schemas/Common-Response'
+      description: "Response for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsigndiscussions"
+      type: object
+    ezsigndocument-getEzsigndiscussions-v1-Response-mPayload:
+      description: "Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsigndiscussions"
+      properties:
+        a_objEzsigndiscussion:
+          items:
+            $ref: '#/components/schemas/ezsigndiscussion-Response'
+          type: array
+      required:
+      - a_objEzsigndiscussion
       type: object
     ezsigndocument-getEzsignformfieldgroups-v1-Response:
       allOf:
@@ -29254,6 +31005,11 @@ components:
           description: The date and time at which the object was created
           example: 2020-12-31 23:59:59
           type: string
+        dtEzsignfolderDelayedsenddate:
+          description: The date and time at which the Ezsignfolder will be sent in
+            the future.
+          example: 2020-12-31T23:59:59.000Z
+          type: string
         dtEzsignfolderSentdate:
           description: The date and time at which the Ezsignfolder was sent the last
             time.
@@ -29389,6 +31145,8 @@ components:
               sSelector: Active
         objEzsignfoldertype:
           $ref: '#/components/schemas/Custom-Ezsignfoldertype-Response'
+        eEzsignfolderCompletion:
+          $ref: '#/components/schemas/Field-eEzsignfolderCompletion'
         sEzsignfoldertypeNameX:
           deprecated: true
           type: string
@@ -30669,6 +32427,8 @@ components:
           type: integer
         eEzsignfoldertypeDisposal:
           $ref: '#/components/schemas/Field-eEzsignfoldertypeDisposal'
+        eEzsignfoldertypeCompletion:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypeCompletion'
         iEzsignfoldertypeDisposaldays:
           description: The number of days after the archival before the disposal of
             the Ezsignfolder
@@ -30690,6 +32450,16 @@ components:
         bEzsignfoldertypeReassign:
           description: Wheter if Reassignment of signature is allowed to another signatory
             or not
+          example: true
+          type: boolean
+        bEzsignfoldertypeReassignezsignsigner:
+          description: Wheter if Reassignment of signature is allowed by a signatory
+            to another signatory or not
+          example: true
+          type: boolean
+        bEzsignfoldertypeReassignuser:
+          description: Wheter if Reassignment of signature is allowed by a user to
+            a signatory or another user or not
           example: true
           type: boolean
         bEzsignfoldertypeSendattatchmentsigner:
@@ -30939,6 +32709,8 @@ components:
           type: integer
         eEzsignfoldertypeDisposal:
           $ref: '#/components/schemas/Field-eEzsignfoldertypeDisposal'
+        eEzsignfoldertypeCompletion:
+          $ref: '#/components/schemas/Field-eEzsignfoldertypeCompletion'
         iEzsignfoldertypeDisposaldays:
           description: The number of days after the archival before the disposal of
             the Ezsignfolder
@@ -30960,6 +32732,16 @@ components:
         bEzsignfoldertypeReassign:
           description: Wheter if Reassignment of signature is allowed to another signatory
             or not
+          example: true
+          type: boolean
+        bEzsignfoldertypeReassignezsignsigner:
+          description: Wheter if Reassignment of signature is allowed by a signatory
+            to another signatory or not
+          example: true
+          type: boolean
+        bEzsignfoldertypeReassignuser:
+          description: Wheter if Reassignment of signature is allowed by a user to
+            a signatory or another user or not
           example: true
           type: boolean
         bEzsignfoldertypeSendattatchmentsigner:
@@ -31309,6 +33091,19 @@ components:
             This is the value enterred for the Ezsignformfield
 
             This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
+
+            You can use the codes below and they will be replaced at signature time.
+
+
+
+            | Code | Description | Example |
+            | ------------------------- | ------------ | ------------ |
+            | {sUserFirstname} | The first name of the contact | John |
+            | {sUserLastname} | The last name of the contact | Doe |
+            | {sUserJobtitle} | The job title | Sales Representative |
+            | {sEmailAddress} | The email address | email@example.com |
+            | {sPhoneE164} | A phone number in E.164 Format | +15149901516 |
+            | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
           example: Montreal
           type: string
         eEzsignformfieldDependencyrequirement:
@@ -31421,6 +33216,19 @@ components:
             This is the value enterred for the Ezsignformfield
 
             This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
+
+            You can use the codes below and they will be replaced at signature time.
+
+
+
+            | Code | Description | Example |
+            | ------------------------- | ------------ | ------------ |
+            | {sUserFirstname} | The first name of the contact | John |
+            | {sUserLastname} | The last name of the contact | Doe |
+            | {sUserJobtitle} | The job title | Sales Representative |
+            | {sEmailAddress} | The email address | email@example.com |
+            | {sPhoneE164} | A phone number in E.164 Format | +15149901516 |
+            | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
           example: Montreal
           type: string
         eEzsignformfieldDependencyrequirement:
@@ -32066,6 +33874,10 @@ components:
           minimum: 0
           type: integer
         iEzsignsignatureStep:
+          description: The step when the Ezsignsigner will be invited to sign
+          example: 1
+          type: integer
+        iEzsignsignatureStepadjusted:
           description: The step when the Ezsignsigner will be invited to sign
           example: 1
           type: integer
@@ -34534,6 +36346,8 @@ components:
           example: 71
           minimum: 0
           type: integer
+        eEzsigntemplateformfieldPositioning:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldPositioning'
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
@@ -34609,12 +36423,34 @@ components:
           type: boolean
         eEzsigntemplateformfieldDependencyrequirement:
           $ref: '#/components/schemas/Field-eEzsigntemplateformfieldDependencyrequirement'
+        sEzsigntemplateformfieldPositioningpattern:
+          description: |-
+            The string pattern to search for the positioning. **This is not a regexp**
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: Signature
+          pattern: "^.{0,30}$"
+          type: string
+        iEzsigntemplateformfieldPositioningoffsetx:
+          description: |-
+            The offset X
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        iEzsigntemplateformfieldPositioningoffsety:
+          description: |-
+            The offset Y
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        eEzsigntemplateformfieldPositioningoccurence:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldPositioningoccurence'
       required:
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplateformfieldHeight
       - iEzsigntemplateformfieldWidth
-      - iEzsigntemplateformfieldX
-      - iEzsigntemplateformfieldY
       - sEzsigntemplateformfieldLabel
       type: object
     ezsigntemplateformfield-RequestCompound:
@@ -34637,6 +36473,8 @@ components:
           example: 71
           minimum: 0
           type: integer
+        eEzsigntemplateformfieldPositioning:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldPositioning'
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
@@ -34712,12 +36550,34 @@ components:
           type: boolean
         eEzsigntemplateformfieldDependencyrequirement:
           $ref: '#/components/schemas/Field-eEzsigntemplateformfieldDependencyrequirement'
+        sEzsigntemplateformfieldPositioningpattern:
+          description: |-
+            The string pattern to search for the positioning. **This is not a regexp**
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: Signature
+          pattern: "^.{0,30}$"
+          type: string
+        iEzsigntemplateformfieldPositioningoffsetx:
+          description: |-
+            The offset X
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        iEzsigntemplateformfieldPositioningoffsety:
+          description: |-
+            The offset Y
+
+            This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        eEzsigntemplateformfieldPositioningoccurence:
+          $ref: '#/components/schemas/Field-eEzsigntemplateformfieldPositioningoccurence'
       required:
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplateformfieldHeight
       - iEzsigntemplateformfieldWidth
-      - iEzsigntemplateformfieldX
-      - iEzsigntemplateformfieldY
       - pkiEzsigntemplateformfieldID
       - sEzsigntemplateformfieldLabel
       type: object
@@ -36032,6 +37892,8 @@ components:
           example: 9
           minimum: 0
           type: integer
+        eEzsigntemplatesignaturePositioning:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignaturePositioning'
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
@@ -36123,14 +37985,36 @@ components:
           $ref: '#/components/schemas/Enum-Textvalidation'
         eEzsigntemplatesignatureDependencyrequirement:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureDependencyrequirement'
+        sEzsigntemplatesignaturePositioningpattern:
+          description: |-
+            The string pattern to search for the positioning. **This is not a regexp**
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: Signature
+          pattern: "^.{0,30}$"
+          type: string
+        iEzsigntemplatesignaturePositioningoffsetx:
+          description: |-
+            The offset X
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        iEzsigntemplatesignaturePositioningoffsety:
+          description: |-
+            The offset Y
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        eEzsigntemplatesignaturePositioningoccurence:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignaturePositioningoccurence'
       required:
       - eEzsigntemplatesignatureType
       - fkiEzsigntemplatedocumentID
       - fkiEzsigntemplatesignerID
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplatesignatureStep
-      - iEzsigntemplatesignatureX
-      - iEzsigntemplatesignatureY
       type: object
     ezsigntemplatesignature-RequestCompound:
       allOf:
@@ -36178,6 +38062,8 @@ components:
           example: 9
           minimum: 0
           type: integer
+        eEzsigntemplatesignaturePositioning:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignaturePositioning'
         iEzsigntemplatedocumentpagePagenumber:
           description: The page number in the Ezsigntemplatedocument
           example: 1
@@ -36269,14 +38155,36 @@ components:
           $ref: '#/components/schemas/Enum-Textvalidation'
         eEzsigntemplatesignatureDependencyrequirement:
           $ref: '#/components/schemas/Field-eEzsigntemplatesignatureDependencyrequirement'
+        sEzsigntemplatesignaturePositioningpattern:
+          description: |-
+            The string pattern to search for the positioning. **This is not a regexp**
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: Signature
+          pattern: "^.{0,30}$"
+          type: string
+        iEzsigntemplatesignaturePositioningoffsetx:
+          description: |-
+            The offset X
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        iEzsigntemplatesignaturePositioningoffsety:
+          description: |-
+            The offset Y
+
+            This will be required if **eEzsigntemplatesignaturePositioning** is set to **PerCoordinates**
+          example: 200
+          type: integer
+        eEzsigntemplatesignaturePositioningoccurence:
+          $ref: '#/components/schemas/Field-eEzsigntemplatesignaturePositioningoccurence'
       required:
       - eEzsigntemplatesignatureType
       - fkiEzsigntemplatedocumentID
       - fkiEzsigntemplatesignerID
       - iEzsigntemplatedocumentpagePagenumber
       - iEzsigntemplatesignatureStep
-      - iEzsigntemplatesignatureX
-      - iEzsigntemplatesignatureY
       - pkiEzsigntemplatesignatureID
       type: object
     ezsigntemplatesignature-ResponseCompound:
@@ -36385,6 +38293,7 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
+          deprecated: true
           description: |-
             The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
@@ -36393,11 +38302,28 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
+          deprecated: true
           description: |-
             The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignaturecustomdateOffsetx:
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use "200" for the X coordinate.
+          example: 200
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignaturecustomdateOffsety:
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use "200" for the Y coordinate.
+          example: 200
           minimum: 0
           type: integer
         sEzsigntemplatesignaturecustomdateFormat:
@@ -36424,8 +38350,6 @@ components:
           example: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}"
           type: string
       required:
-      - iEzsigntemplatesignaturecustomdateX
-      - iEzsigntemplatesignaturecustomdateY
       - sEzsigntemplatesignaturecustomdateFormat
       type: object
     ezsigntemplatesignaturecustomdate-RequestCompound:
@@ -36443,6 +38367,7 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateX:
+          deprecated: true
           description: |-
             The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
@@ -36451,11 +38376,28 @@ components:
           minimum: 0
           type: integer
         iEzsigntemplatesignaturecustomdateY:
+          deprecated: true
           description: |-
             The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.
 
             Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use "300" for the Y coordinate.
           example: 300
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignaturecustomdateOffsetx:
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use "200" for the X coordinate.
+          example: 200
+          minimum: 0
+          type: integer
+        iEzsigntemplatesignaturecustomdateOffsety:
+          description: |-
+            The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.
+
+            Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use "200" for the Y coordinate.
+          example: 200
           minimum: 0
           type: integer
         sEzsigntemplatesignaturecustomdateFormat:
@@ -36482,8 +38424,6 @@ components:
           example: "Signature date: {YYYY}/{MM}/{DD} {hh}:{mm}{ss} {Z}"
           type: string
       required:
-      - iEzsigntemplatesignaturecustomdateX
-      - iEzsigntemplatesignaturecustomdateY
       - pkiEzsigntemplatesignaturecustomdateID
       - sEzsigntemplatesignaturecustomdateFormat
       type: object
@@ -39111,6 +41051,11 @@ components:
           description: The email address.
           example: email@example.com
           type: string
+        sUserJobtitle:
+          description: The job title of the user
+          example: Sales Representative
+          pattern: "^.{0,50}$"
+          type: string
       required:
       - bUserIsactive
       - eUserEzsignaccess
@@ -39272,6 +41217,11 @@ components:
           description: The login name of the User.
           example: JohnDoe
           pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
+          type: string
+        sUserJobtitle:
+          description: The job title of the user
+          example: Sales Representative
+          pattern: "^.{0,50}$"
           type: string
         eUserEzsignaccess:
           $ref: '#/components/schemas/Field-eUserEzsignaccess'
@@ -39492,6 +41442,11 @@ components:
           description: The login name of the User.
           example: JohnDoe
           pattern: "^(?:([\\w\\.-]+@[\\w\\.-]+\\.\\w{2,20})|([a-zA-Z0-9]){1,32})$"
+          type: string
+        sUserJobtitle:
+          description: The job title of the user
+          example: Sales Representative
+          pattern: "^.{0,50}$"
           type: string
         eUserEzsignaccess:
           $ref: '#/components/schemas/Field-eUserEzsignaccess'
@@ -41360,11 +43315,14 @@ components:
             not. Not recommended to skip for production use
           example: false
           type: boolean
+        objAudit:
+          $ref: '#/components/schemas/Common-Audit'
       required:
       - bWebhookIsactive
       - bWebhookIssigned
       - bWebhookSkipsslvalidation
       - eWebhookModule
+      - objAudit
       - pkiWebhookID
       - sWebhookDescription
       - sWebhookEmailfailed
@@ -41970,6 +43928,9 @@ x-tagGroups:
   - Object_Company
   - Object_Cors
   - Object_Department
+  - Object_Discussion
+  - Object_Discussionmembership
+  - Object_Discussionmessage
   - Object_Electronicfundstransfer
   - Object_Emailtype
   - Object_Ezmaxinvoicing
@@ -41978,6 +43939,7 @@ x-tagGroups:
   - Object_Ezsignbulksenddocumentmapping
   - Object_Ezsignbulksendsignermapping
   - Object_Ezsignbulksendtransmission
+  - Object_Ezsigndiscussion
   - Object_Ezsigndocument
   - Object_Ezsignfolder
   - Object_Ezsignfoldersignerassociation

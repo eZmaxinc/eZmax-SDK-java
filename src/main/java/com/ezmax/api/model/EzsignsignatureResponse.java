@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsignsignatureResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -102,6 +102,10 @@ public class EzsignsignatureResponse {
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_STEP = "iEzsignsignatureStep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_STEP)
   private Integer iEzsignsignatureStep;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_STEPADJUSTED = "iEzsignsignatureStepadjusted";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_STEPADJUSTED)
+  private Integer iEzsignsignatureStepadjusted;
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_TYPE = "eEzsignsignatureType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TYPE)
@@ -398,6 +402,25 @@ public class EzsignsignatureResponse {
 
   public void setiEzsignsignatureStep(Integer iEzsignsignatureStep) {
     this.iEzsignsignatureStep = iEzsignsignatureStep;
+  }
+
+
+  public EzsignsignatureResponse iEzsignsignatureStepadjusted(Integer iEzsignsignatureStepadjusted) {
+    this.iEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
+    return this;
+  }
+
+   /**
+   * The step when the Ezsignsigner will be invited to sign
+   * @return iEzsignsignatureStepadjusted
+  **/
+  @javax.annotation.Nullable
+  public Integer getiEzsignsignatureStepadjusted() {
+    return iEzsignsignatureStepadjusted;
+  }
+
+  public void setiEzsignsignatureStepadjusted(Integer iEzsignsignatureStepadjusted) {
+    this.iEzsignsignatureStepadjusted = iEzsignsignatureStepadjusted;
   }
 
 
@@ -786,6 +809,7 @@ public class EzsignsignatureResponse {
         Objects.equals(this.iEzsignsignatureHeight, ezsignsignatureResponse.iEzsignsignatureHeight) &&
         Objects.equals(this.iEzsignsignatureWidth, ezsignsignatureResponse.iEzsignsignatureWidth) &&
         Objects.equals(this.iEzsignsignatureStep, ezsignsignatureResponse.iEzsignsignatureStep) &&
+        Objects.equals(this.iEzsignsignatureStepadjusted, ezsignsignatureResponse.iEzsignsignatureStepadjusted) &&
         Objects.equals(this.eEzsignsignatureType, ezsignsignatureResponse.eEzsignsignatureType) &&
         Objects.equals(this.tEzsignsignatureTooltip, ezsignsignatureResponse.tEzsignsignatureTooltip) &&
         Objects.equals(this.eEzsignsignatureTooltipposition, ezsignsignatureResponse.eEzsignsignatureTooltipposition) &&
@@ -809,7 +833,7 @@ public class EzsignsignatureResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
   }
 
   @Override
@@ -827,6 +851,7 @@ public class EzsignsignatureResponse {
     sb.append("    iEzsignsignatureHeight: ").append(toIndentedString(iEzsignsignatureHeight)).append("\n");
     sb.append("    iEzsignsignatureWidth: ").append(toIndentedString(iEzsignsignatureWidth)).append("\n");
     sb.append("    iEzsignsignatureStep: ").append(toIndentedString(iEzsignsignatureStep)).append("\n");
+    sb.append("    iEzsignsignatureStepadjusted: ").append(toIndentedString(iEzsignsignatureStepadjusted)).append("\n");
     sb.append("    eEzsignsignatureType: ").append(toIndentedString(eEzsignsignatureType)).append("\n");
     sb.append("    tEzsignsignatureTooltip: ").append(toIndentedString(tEzsignsignatureTooltip)).append("\n");
     sb.append("    eEzsignsignatureTooltipposition: ").append(toIndentedString(eEzsignsignatureTooltipposition)).append("\n");
@@ -879,6 +904,7 @@ public class EzsignsignatureResponse {
     openapiFields.add("iEzsignsignatureHeight");
     openapiFields.add("iEzsignsignatureWidth");
     openapiFields.add("iEzsignsignatureStep");
+    openapiFields.add("iEzsignsignatureStepadjusted");
     openapiFields.add("eEzsignsignatureType");
     openapiFields.add("tEzsignsignatureTooltip");
     openapiFields.add("eEzsignsignatureTooltipposition");

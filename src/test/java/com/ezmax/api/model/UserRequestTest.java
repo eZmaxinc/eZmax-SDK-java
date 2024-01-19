@@ -211,6 +211,14 @@ public class UserRequestTest {
     }
 
     /**
+     * Test the property 'sUserJobtitle'
+     */
+    @Test
+    public void sUserJobtitleTest() {
+        // TODO: test sUserJobtitle
+    }
+
+    /**
      * Test the property 'eUserEzsignaccess'
      */
     @Test

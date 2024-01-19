@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -165,6 +165,10 @@ public class UserResponse {
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
   private String sUserLoginname;
+
+  public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
+  @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
+  private String sUserJobtitle;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
@@ -736,6 +740,25 @@ public class UserResponse {
   }
 
 
+  public UserResponse sUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+    return this;
+  }
+
+   /**
+   * The job title of the user
+   * @return sUserJobtitle
+  **/
+  @javax.annotation.Nullable
+  public String getsUserJobtitle() {
+    return sUserJobtitle;
+  }
+
+  public void setsUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
+
   public UserResponse eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
@@ -963,6 +986,7 @@ public class UserResponse {
         Objects.equals(this.sUserFirstname, userResponse.sUserFirstname) &&
         Objects.equals(this.sUserLastname, userResponse.sUserLastname) &&
         Objects.equals(this.sUserLoginname, userResponse.sUserLoginname) &&
+        Objects.equals(this.sUserJobtitle, userResponse.sUserJobtitle) &&
         Objects.equals(this.eUserEzsignaccess, userResponse.eUserEzsignaccess) &&
         Objects.equals(this.dtUserLastlogondate, userResponse.dtUserLastlogondate) &&
         Objects.equals(this.dtUserPasswordchanged, userResponse.dtUserPasswordchanged) &&
@@ -977,7 +1001,7 @@ public class UserResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, sCompanyNameX, fkiDepartmentIDDefault, sDepartmentNameX, fkiTimezoneID, sTimezoneName, fkiLanguageID, sLanguageNameX, objEmail, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, objPhoneHome, objPhoneSMS, fkiSecretquestionID, fkiModuleIDForm, sModuleNameX, eUserOrigin, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, eUserEzsignaccess, dtUserLastlogondate, dtUserPasswordchanged, dtUserEzsignprepaidexpiration, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword, objAudit);
+    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, sCompanyNameX, fkiDepartmentIDDefault, sDepartmentNameX, fkiTimezoneID, sTimezoneName, fkiLanguageID, sLanguageNameX, objEmail, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, objPhoneHome, objPhoneSMS, fkiSecretquestionID, fkiModuleIDForm, sModuleNameX, eUserOrigin, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, dtUserLastlogondate, dtUserPasswordchanged, dtUserEzsignprepaidexpiration, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword, objAudit);
   }
 
   @Override
@@ -1011,6 +1035,7 @@ public class UserResponse {
     sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
+    sb.append("    sUserJobtitle: ").append(toIndentedString(sUserJobtitle)).append("\n");
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
     sb.append("    dtUserLastlogondate: ").append(toIndentedString(dtUserLastlogondate)).append("\n");
     sb.append("    dtUserPasswordchanged: ").append(toIndentedString(dtUserPasswordchanged)).append("\n");
@@ -1070,6 +1095,7 @@ public class UserResponse {
     openapiFields.add("sUserFirstname");
     openapiFields.add("sUserLastname");
     openapiFields.add("sUserLoginname");
+    openapiFields.add("sUserJobtitle");
     openapiFields.add("eUserEzsignaccess");
     openapiFields.add("dtUserLastlogondate");
     openapiFields.add("dtUserPasswordchanged");
@@ -1177,6 +1203,9 @@ public class UserResponse {
       }
       if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
+      }
+      if ((jsonObj.get("sUserJobtitle") != null && !jsonObj.get("sUserJobtitle").isJsonNull()) && !jsonObj.get("sUserJobtitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserJobtitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserJobtitle").toString()));
       }
       // validate the required field `eUserEzsignaccess`
       FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));

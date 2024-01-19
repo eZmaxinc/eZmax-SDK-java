@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PATCH /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsignfoldersignerassociationPatchObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
@@ -52,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class CustomWebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -109,6 +110,10 @@ public class CustomWebhookResponse {
   public static final String SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION = "bWebhookSkipsslvalidation";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
   private Boolean bWebhookSkipsslvalidation;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
@@ -388,6 +393,25 @@ public class CustomWebhookResponse {
   }
 
 
+  public CustomWebhookResponse objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+   /**
+   * Get objAudit
+   * @return objAudit
+  **/
+  @javax.annotation.Nonnull
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
   public CustomWebhookResponse pksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
@@ -450,13 +474,14 @@ public class CustomWebhookResponse {
         Objects.equals(this.bWebhookIsactive, customWebhookResponse.bWebhookIsactive) &&
         Objects.equals(this.bWebhookIssigned, customWebhookResponse.bWebhookIssigned) &&
         Objects.equals(this.bWebhookSkipsslvalidation, customWebhookResponse.bWebhookSkipsslvalidation) &&
+        Objects.equals(this.objAudit, customWebhookResponse.objAudit) &&
         Objects.equals(this.pksCustomerCode, customWebhookResponse.pksCustomerCode) &&
         Objects.equals(this.bWebhookTest, customWebhookResponse.bWebhookTest);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, pksCustomerCode, bWebhookTest);
+    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, objAudit, pksCustomerCode, bWebhookTest);
   }
 
   @Override
@@ -477,6 +502,7 @@ public class CustomWebhookResponse {
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
     sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    bWebhookTest: ").append(toIndentedString(bWebhookTest)).append("\n");
     sb.append("}");
@@ -515,6 +541,7 @@ public class CustomWebhookResponse {
     openapiFields.add("bWebhookIsactive");
     openapiFields.add("bWebhookIssigned");
     openapiFields.add("bWebhookSkipsslvalidation");
+    openapiFields.add("objAudit");
     openapiFields.add("pksCustomerCode");
     openapiFields.add("bWebhookTest");
 
@@ -528,6 +555,7 @@ public class CustomWebhookResponse {
     openapiRequiredFields.add("bWebhookIsactive");
     openapiRequiredFields.add("bWebhookIssigned");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
+    openapiRequiredFields.add("objAudit");
     openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("bWebhookTest");
   }
@@ -588,6 +616,8 @@ public class CustomWebhookResponse {
       if ((jsonObj.get("sWebhookSecret") != null && !jsonObj.get("sWebhookSecret").isJsonNull()) && !jsonObj.get("sWebhookSecret").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
       }
+      // validate the required field `objAudit`
+      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
       }

@@ -19,6 +19,8 @@ import com.ezmax.api.model.EzsigntemplatesignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureFont;
+import com.ezmax.api.model.FieldEEzsigntemplatesignaturePositioning;
+import com.ezmax.api.model.FieldEEzsigntemplatesignaturePositioningoccurence;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureType;
 import com.google.gson.TypeAdapter;
@@ -77,6 +79,14 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     @Test
     public void fkiEzsigntemplatesignerIDValidationTest() {
         // TODO: test fkiEzsigntemplatesignerIDValidation
+    }
+
+    /**
+     * Test the property 'eEzsigntemplatesignaturePositioning'
+     */
+    @Test
+    public void eEzsigntemplatesignaturePositioningTest() {
+        // TODO: test eEzsigntemplatesignaturePositioning
     }
 
     /**
@@ -221,6 +231,38 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     @Test
     public void eEzsigntemplatesignatureDependencyrequirementTest() {
         // TODO: test eEzsigntemplatesignatureDependencyrequirement
+    }
+
+    /**
+     * Test the property 'sEzsigntemplatesignaturePositioningpattern'
+     */
+    @Test
+    public void sEzsigntemplatesignaturePositioningpatternTest() {
+        // TODO: test sEzsigntemplatesignaturePositioningpattern
+    }
+
+    /**
+     * Test the property 'iEzsigntemplatesignaturePositioningoffsetx'
+     */
+    @Test
+    public void iEzsigntemplatesignaturePositioningoffsetxTest() {
+        // TODO: test iEzsigntemplatesignaturePositioningoffsetx
+    }
+
+    /**
+     * Test the property 'iEzsigntemplatesignaturePositioningoffsety'
+     */
+    @Test
+    public void iEzsigntemplatesignaturePositioningoffsetyTest() {
+        // TODO: test iEzsigntemplatesignaturePositioningoffsety
+    }
+
+    /**
+     * Test the property 'eEzsigntemplatesignaturePositioningoccurence'
+     */
+    @Test
+    public void eEzsigntemplatesignaturePositioningoccurenceTest() {
+        // TODO: test eEzsigntemplatesignaturePositioningoccurence
     }
 
     /**

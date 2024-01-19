@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE = "sInfrastructureregionCode";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE)

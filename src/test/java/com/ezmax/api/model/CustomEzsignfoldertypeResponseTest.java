@@ -109,4 +109,20 @@ public class CustomEzsignfoldertypeResponseTest {
         // TODO: test bEzsignfoldertypeReassign
     }
 
+    /**
+     * Test the property 'bEzsignfoldertypeReassignezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeReassignezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeReassignezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeReassignuser'
+     */
+    @Test
+    public void bEzsignfoldertypeReassignuserTest() {
+        // TODO: test bEzsignfoldertypeReassignuser
+    }
+
 }

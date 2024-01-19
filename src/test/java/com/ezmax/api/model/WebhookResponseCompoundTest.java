@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
@@ -150,6 +151,14 @@ public class WebhookResponseCompoundTest {
     @Test
     public void bWebhookSkipsslvalidationTest() {
         // TODO: test bWebhookSkipsslvalidation
+    }
+
+    /**
+     * Test the property 'objAudit'
+     */
+    @Test
+    public void objAuditTest() {
+        // TODO: test objAudit
     }
 
     /**

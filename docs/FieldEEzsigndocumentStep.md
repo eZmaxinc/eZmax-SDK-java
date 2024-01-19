@@ -15,6 +15,8 @@
 
 * `PREMATURELYENDED` (value: `"PrematurelyEnded"`)
 
+* `PENDINGCOMPLETION` (value: `"PendingCompletion"`)
+
 * `COMPLETED` (value: `"Completed"`)
 
 * `DISPOSED` (value: `"Disposed"`)

@@ -15,13 +15,16 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.CommonResponseWarning;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -53,6 +56,14 @@ public class EzsigndocumentApplyEzsigntemplateV2ResponseTest {
     @Test
     public void objDebugTest() {
         // TODO: test objDebug
+    }
+
+    /**
+     * Test the property 'aObjWarning'
+     */
+    @Test
+    public void aObjWarningTest() {
+        // TODO: test aObjWarning
     }
 
 }

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)

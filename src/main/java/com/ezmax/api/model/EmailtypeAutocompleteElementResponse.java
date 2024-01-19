@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Emailtype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EmailtypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EMAILTYPE_I_D = "pkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAILTYPE_I_D)

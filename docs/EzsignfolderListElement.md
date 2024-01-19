@@ -15,6 +15,7 @@ An Ezsignfolder List Element
 |**sEzsignfolderDescription** | **String** | The description of the Ezsignfolder |  |
 |**eEzsignfolderStep** | **FieldEEzsignfolderStep** |  |  |
 |**dtCreatedDate** | **String** | The date and time at which the object was created |  |
+|**dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 |**dtEzsignfolderSentdate** | **String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional] |
 |**dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |
 |**iEzsigndocument** | **Integer** | The total number of Ezsigndocument in the folder |  |

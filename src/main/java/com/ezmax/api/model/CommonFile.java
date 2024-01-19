@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Object representing a file used in a request or response context 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class CommonFile {
   public static final String SERIALIZED_NAME_S_FILE_NAME = "sFileName";
   @SerializedName(SERIALIZED_NAME_S_FILE_NAME)

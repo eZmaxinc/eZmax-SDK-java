@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getCors
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class ApikeyGetCorsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CORS = "a_objCors";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CORS)

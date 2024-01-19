@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)

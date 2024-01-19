@@ -96,6 +96,14 @@ public class EzsignfolderListElementTest {
     }
 
     /**
+     * Test the property 'dtEzsignfolderDelayedsenddate'
+     */
+    @Test
+    public void dtEzsignfolderDelayedsenddateTest() {
+        // TODO: test dtEzsignfolderDelayedsenddate
+    }
+
+    /**
      * Test the property 'dtEzsignfolderSentdate'
      */
     @Test

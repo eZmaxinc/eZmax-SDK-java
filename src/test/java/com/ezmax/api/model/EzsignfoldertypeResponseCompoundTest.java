@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsignfoldertypeCompletion;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDisposal;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.ezmax.api.model.FieldEEzsignfoldertypeSendreminderfrequency;
@@ -188,6 +189,14 @@ public class EzsignfoldertypeResponseCompoundTest {
     }
 
     /**
+     * Test the property 'eEzsignfoldertypeCompletion'
+     */
+    @Test
+    public void eEzsignfoldertypeCompletionTest() {
+        // TODO: test eEzsignfoldertypeCompletion
+    }
+
+    /**
      * Test the property 'iEzsignfoldertypeDisposaldays'
      */
     @Test
@@ -217,6 +226,22 @@ public class EzsignfoldertypeResponseCompoundTest {
     @Test
     public void bEzsignfoldertypeReassignTest() {
         // TODO: test bEzsignfoldertypeReassign
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeReassignezsignsigner'
+     */
+    @Test
+    public void bEzsignfoldertypeReassignezsignsignerTest() {
+        // TODO: test bEzsignfoldertypeReassignezsignsigner
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeReassignuser'
+     */
+    @Test
+    public void bEzsignfoldertypeReassignuserTest() {
+        // TODO: test bEzsignfoldertypeReassignuser
     }
 
     /**

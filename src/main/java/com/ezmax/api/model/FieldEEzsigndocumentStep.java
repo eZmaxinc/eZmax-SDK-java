@@ -39,6 +39,8 @@ public enum FieldEEzsigndocumentStep {
   
   PREMATURELYENDED("PrematurelyEnded"),
   
+  PENDINGCOMPLETION("PendingCompletion"),
+  
   COMPLETED("Completed"),
   
   DISPOSED("Disposed");

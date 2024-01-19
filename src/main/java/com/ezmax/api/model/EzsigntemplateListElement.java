@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-24T17:56:16.490445194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
 public class EzsigntemplateListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
