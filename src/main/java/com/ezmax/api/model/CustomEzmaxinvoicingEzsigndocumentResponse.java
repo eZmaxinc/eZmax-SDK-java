@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T04:04:06.974848816Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class CustomEzmaxinvoicingEzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T04:04:06.974848816Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class CustomImportEzsigntemplatepackageRelationRequest {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "fkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)

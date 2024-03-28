@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T04:04:06.974848816Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)

@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T04:04:06.974848816Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class UserRequestV2 {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
