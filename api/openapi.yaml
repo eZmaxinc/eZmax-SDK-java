@@ -60543,7 +60543,7 @@ components:
           example: '*.example.com'
           pattern: "^.{0,2048}$"
           type: string
-        bIsiframe:
+        bIsIframe:
           description: Whether the url would be in an iFrame or not
           type: boolean
       type: object

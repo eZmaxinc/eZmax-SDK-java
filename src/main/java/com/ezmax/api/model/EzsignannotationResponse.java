@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignannotationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class DiscussionmessageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)

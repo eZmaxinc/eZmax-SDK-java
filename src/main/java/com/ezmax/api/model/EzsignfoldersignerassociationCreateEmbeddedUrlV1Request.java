@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   public static final String SERIALIZED_NAME_S_RETURN_URL = "sReturnUrl";
   @SerializedName(SERIALIZED_NAME_S_RETURN_URL)
@@ -59,9 +59,9 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   @SerializedName(SERIALIZED_NAME_S_IFRAMEDOMAIN)
   private String sIframedomain;
 
-  public static final String SERIALIZED_NAME_B_ISIFRAME = "bIsiframe";
-  @SerializedName(SERIALIZED_NAME_B_ISIFRAME)
-  private Boolean bIsiframe;
+  public static final String SERIALIZED_NAME_B_IS_IFRAME = "bIsIframe";
+  @SerializedName(SERIALIZED_NAME_B_IS_IFRAME)
+  private Boolean bIsIframe;
 
   public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request() {
   }
@@ -104,22 +104,22 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   }
 
 
-  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request bIsiframe(Boolean bIsiframe) {
-    this.bIsiframe = bIsiframe;
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request bIsIframe(Boolean bIsIframe) {
+    this.bIsIframe = bIsIframe;
     return this;
   }
 
    /**
    * Whether the url would be in an iFrame or not
-   * @return bIsiframe
+   * @return bIsIframe
   **/
   @javax.annotation.Nullable
-  public Boolean getbIsiframe() {
-    return bIsiframe;
+  public Boolean getbIsIframe() {
+    return bIsIframe;
   }
 
-  public void setbIsiframe(Boolean bIsiframe) {
-    this.bIsiframe = bIsiframe;
+  public void setbIsIframe(Boolean bIsIframe) {
+    this.bIsIframe = bIsIframe;
   }
 
 
@@ -135,12 +135,12 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = (EzsignfoldersignerassociationCreateEmbeddedUrlV1Request) o;
     return Objects.equals(this.sReturnUrl, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sReturnUrl) &&
         Objects.equals(this.sIframedomain, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.sIframedomain) &&
-        Objects.equals(this.bIsiframe, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsiframe);
+        Objects.equals(this.bIsIframe, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request.bIsIframe);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sReturnUrl, sIframedomain, bIsiframe);
+    return Objects.hash(sReturnUrl, sIframedomain, bIsIframe);
   }
 
   @Override
@@ -149,7 +149,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     sb.append("class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {\n");
     sb.append("    sReturnUrl: ").append(toIndentedString(sReturnUrl)).append("\n");
     sb.append("    sIframedomain: ").append(toIndentedString(sIframedomain)).append("\n");
-    sb.append("    bIsiframe: ").append(toIndentedString(bIsiframe)).append("\n");
+    sb.append("    bIsIframe: ").append(toIndentedString(bIsIframe)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -174,7 +174,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     openapiFields = new HashSet<String>();
     openapiFields.add("sReturnUrl");
     openapiFields.add("sIframedomain");
-    openapiFields.add("bIsiframe");
+    openapiFields.add("bIsIframe");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

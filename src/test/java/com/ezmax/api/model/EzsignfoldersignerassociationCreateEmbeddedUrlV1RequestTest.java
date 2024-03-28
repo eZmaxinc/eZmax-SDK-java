@@ -54,11 +54,11 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1RequestTest {
     }
 
     /**
-     * Test the property 'bIsiframe'
+     * Test the property 'bIsIframe'
      */
     @Test
-    public void bIsiframeTest() {
-        // TODO: test bIsiframe
+    public void bIsIframeTest() {
+        // TODO: test bIsIframe
     }
 
 }

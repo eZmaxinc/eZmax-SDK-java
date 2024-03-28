@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignfolderGetAttachmentCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ATTACHMENT_COUNT = "iAttachmentCount";
   @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_COUNT)

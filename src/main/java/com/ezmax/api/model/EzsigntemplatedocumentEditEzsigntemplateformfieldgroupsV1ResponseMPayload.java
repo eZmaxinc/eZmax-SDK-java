@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "a_pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)

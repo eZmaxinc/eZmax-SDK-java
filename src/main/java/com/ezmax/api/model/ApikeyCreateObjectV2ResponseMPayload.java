@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/apikey
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T05:38:24.783072930Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class ApikeyCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
