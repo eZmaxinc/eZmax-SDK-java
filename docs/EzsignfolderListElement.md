@@ -22,6 +22,10 @@ An Ezsignfolder List Element
 |**iEzsigndocumentEdm** | **Integer** | The total number of Ezsigndocument in the folder that were saved in the edm system |  |
 |**iEzsignsignature** | **Integer** | The total number of signature blocks in all Ezsigndocuments in the folder |  |
 |**iEzsignsignatureSigned** | **Integer** | The total number of already signed signature blocks in all Ezsigndocuments in the folder |  |
+|**iEzsignformfieldgroup** | **Integer** | The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder |  |
+|**iEzsignformfieldgroupCompleted** | **Integer** | The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder |  |
+|**bEzsignformHasdependencies** | **Boolean** | Whether the Ezsignform/Ezsignsignatures has dependencies or not |  [optional] |
+|**dEzsignfolderCompletedpercentage** | **String** | Whether the Ezsignform/Ezsignsignatures has dependencies or not |  |
 
 
 

@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzmaxinvoicingGetAutocompleteV2Response;
 import com.ezmax.api.model.EzmaxinvoicingGetObjectV2Response;
@@ -35,23 +34,6 @@ import java.util.Map;
 public class ObjectEzmaxinvoicingApiTest {
 
     private final ObjectEzmaxinvoicingApi api = new ObjectEzmaxinvoicingApi();
-
-    /**
-     * Retrieve Ezmaxinvoicings and IDs
-     *
-     * Get the list of Ezmaxinvoicing to be used in a dropdown or autocomplete control.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezmaxinvoicingGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.ezmaxinvoicingGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
-        // TODO: test validations
-    }
 
     /**
      * Retrieve Ezmaxinvoicings and IDs

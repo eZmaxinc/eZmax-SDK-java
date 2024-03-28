@@ -59,7 +59,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object in the context of a createEzsignelementsPositionedByWord path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -74,6 +74,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
   private FieldEEzsignformfieldgroupType eEzsignformfieldgroupType;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT = "eEzsignformfieldgroupSignerrequirement";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT)
   private FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement;
 
@@ -203,6 +204,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
   }
 
 
+  @Deprecated
   public CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest eEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
     return this;
@@ -211,12 +213,15 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
    /**
    * Get eEzsignformfieldgroupSignerrequirement
    * @return eEzsignformfieldgroupSignerrequirement
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
+  @Deprecated
+  @javax.annotation.Nullable
   public FieldEEzsignformfieldgroupSignerrequirement geteEzsignformfieldgroupSignerrequirement() {
     return eEzsignformfieldgroupSignerrequirement;
   }
 
+  @Deprecated
   public void seteEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
   }
@@ -267,7 +272,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
   }
 
    /**
-   * The default value for the Ezsignformfieldgroup
+   * The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
    * @return sEzsignformfieldgroupDefaultvalue
   **/
   @javax.annotation.Nullable
@@ -663,7 +668,6 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("fkiEzsigndocumentID");
     openapiRequiredFields.add("eEzsignformfieldgroupType");
-    openapiRequiredFields.add("eEzsignformfieldgroupSignerrequirement");
     openapiRequiredFields.add("sEzsignformfieldgroupLabel");
     openapiRequiredFields.add("iEzsignformfieldgroupStep");
     openapiRequiredFields.add("iEzsignformfieldgroupFilledmin");
@@ -704,8 +708,10 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eEzsignformfieldgroupType`
       FieldEEzsignformfieldgroupType.validateJsonElement(jsonObj.get("eEzsignformfieldgroupType"));
-      // validate the required field `eEzsignformfieldgroupSignerrequirement`
-      FieldEEzsignformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldgroupSignerrequirement"));
+      // validate the optional field `eEzsignformfieldgroupSignerrequirement`
+      if (jsonObj.get("eEzsignformfieldgroupSignerrequirement") != null && !jsonObj.get("eEzsignformfieldgroupSignerrequirement").isJsonNull()) {
+        FieldEEzsignformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldgroupSignerrequirement"));
+      }
       if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
       }

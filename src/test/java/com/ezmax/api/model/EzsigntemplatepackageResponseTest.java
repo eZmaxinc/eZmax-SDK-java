@@ -109,4 +109,12 @@ public class EzsigntemplatepackageResponseTest {
         // TODO: test sEzsignfoldertypeNameX
     }
 
+    /**
+     * Test the property 'bEzsigntemplatepackageEditallowed'
+     */
+    @Test
+    public void bEzsigntemplatepackageEditallowedTest() {
+        // TODO: test bEzsigntemplatepackageEditallowed
+    }
+
 }

@@ -18,6 +18,7 @@ import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
+import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserEzsignprepaid;
 import com.google.gson.TypeAdapter;
@@ -132,6 +133,22 @@ public class ActivesessionResponseCompoundTest {
     @Test
     public void fkiSignatureIDTest() {
         // TODO: test fkiSignatureID
+    }
+
+    /**
+     * Test the property 'bSystemconfigurationEzsignpaidbyoffice'
+     */
+    @Test
+    public void bSystemconfigurationEzsignpaidbyofficeTest() {
+        // TODO: test bSystemconfigurationEzsignpaidbyoffice
+    }
+
+    /**
+     * Test the property 'eSystemconfigurationEzsignofficeplan'
+     */
+    @Test
+    public void eSystemconfigurationEzsignofficeplanTest() {
+        // TODO: test eSystemconfigurationEzsignofficeplan
     }
 
     /**

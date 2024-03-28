@@ -54,4 +54,12 @@ public class UsergroupResponseCompoundTest {
         // TODO: test objUsergroupName
     }
 
+    /**
+     * Test the property 'sUsergroupNameX'
+     */
+    @Test
+    public void sUsergroupNameXTest() {
+        // TODO: test sUsergroupNameX
+    }
+
 }

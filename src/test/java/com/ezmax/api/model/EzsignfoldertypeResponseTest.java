@@ -18,13 +18,16 @@ import com.ezmax.api.model.FieldEEzsignfoldertypeDisposal;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.ezmax.api.model.FieldEEzsignfoldertypeSendreminderfrequency;
 import com.ezmax.api.model.MultilingualEzsignfoldertypeName;
+import com.ezmax.api.model.UserlogintypeResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -219,11 +222,11 @@ public class EzsignfoldertypeResponseTest {
     }
 
     /**
-     * Test the property 'bEzsignfoldertypeReassign'
+     * Test the property 'bEzsignfoldertypeDiscussion'
      */
     @Test
-    public void bEzsignfoldertypeReassignTest() {
-        // TODO: test bEzsignfoldertypeReassign
+    public void bEzsignfoldertypeDiscussionTest() {
+        // TODO: test bEzsignfoldertypeDiscussion
     }
 
     /**
@@ -240,14 +243,6 @@ public class EzsignfoldertypeResponseTest {
     @Test
     public void bEzsignfoldertypeReassignuserTest() {
         // TODO: test bEzsignfoldertypeReassignuser
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeSendattatchmentsigner'
-     */
-    @Test
-    public void bEzsignfoldertypeSendattatchmentsignerTest() {
-        // TODO: test bEzsignfoldertypeSendattatchmentsigner
     }
 
     /**
@@ -411,27 +406,19 @@ public class EzsignfoldertypeResponseTest {
     }
 
     /**
-     * Test the property 'bEzsignfoldertypeIncludeproofsigner'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofsignerTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofsigner
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeIncludeproofuser'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofuserTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofuser
-    }
-
-    /**
      * Test the property 'bEzsignfoldertypeIsactive'
      */
     @Test
     public void bEzsignfoldertypeIsactiveTest() {
         // TODO: test bEzsignfoldertypeIsactive
+    }
+
+    /**
+     * Test the property 'aObjUserlogintype'
+     */
+    @Test
+    public void aObjUserlogintypeTest() {
+        // TODO: test aObjUserlogintype
     }
 
 }

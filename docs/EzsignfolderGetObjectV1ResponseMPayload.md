@@ -11,7 +11,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
 |**objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional] |
-|**eEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  |  [optional] |
+|**eEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  |  |
 |**sEzsignfoldertypeNameX** | **String** |  |  [optional] |
 |**fkiBillingentityinternalID** | **Integer** | The unique ID of the Billingentityinternal. |  [optional] |
 |**sBillingentityinternalDescriptionX** | **String** | The description of the Billingentityinternal in the language of the requester |  [optional] |

@@ -76,6 +76,7 @@ public class ObjectUserlogintypeApi {
     /**
      * Build call for userlogintypeGetAutocompleteV2
      * @param sSelector The type of Userlogintypes to return (required)
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -88,7 +89,7 @@ public class ObjectUserlogintypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userlogintypeGetAutocompleteV2Call(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call userlogintypeGetAutocompleteV2Call(String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -113,6 +114,10 @@ public class ObjectUserlogintypeApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (fkiEzsignfoldertypeID != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
+        }
 
         if (eFilterActive != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("eFilterActive", eFilterActive));
@@ -146,13 +151,13 @@ public class ObjectUserlogintypeApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call userlogintypeGetAutocompleteV2ValidateBeforeCall(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call userlogintypeGetAutocompleteV2ValidateBeforeCall(String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'sSelector' is set
         if (sSelector == null) {
             throw new ApiException("Missing the required parameter 'sSelector' when calling userlogintypeGetAutocompleteV2(Async)");
         }
 
-        return userlogintypeGetAutocompleteV2Call(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        return userlogintypeGetAutocompleteV2Call(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, _callback);
 
     }
 
@@ -160,6 +165,7 @@ public class ObjectUserlogintypeApi {
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return (required)
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -171,8 +177,8 @@ public class ObjectUserlogintypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResp = userlogintypeGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        ApiResponse<UserlogintypeGetAutocompleteV2Response> localVarResp = userlogintypeGetAutocompleteV2WithHttpInfo(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
         return localVarResp.getData();
     }
 
@@ -180,6 +186,7 @@ public class ObjectUserlogintypeApi {
      * Retrieve Userlogintypes and IDs
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return (required)
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -191,8 +198,8 @@ public class ObjectUserlogintypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UserlogintypeGetAutocompleteV2Response> userlogintypeGetAutocompleteV2WithHttpInfo(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        okhttp3.Call localVarCall = userlogintypeGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, null);
+    public ApiResponse<UserlogintypeGetAutocompleteV2Response> userlogintypeGetAutocompleteV2WithHttpInfo(String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        okhttp3.Call localVarCall = userlogintypeGetAutocompleteV2ValidateBeforeCall(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, null);
         Type localVarReturnType = new TypeToken<UserlogintypeGetAutocompleteV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -201,6 +208,7 @@ public class ObjectUserlogintypeApi {
      * Retrieve Userlogintypes and IDs (asynchronously)
      * Get the list of Userlogintype to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Userlogintypes to return (required)
+     * @param fkiEzsignfoldertypeID  (optional)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
@@ -213,9 +221,9 @@ public class ObjectUserlogintypeApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userlogintypeGetAutocompleteV2Async(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<UserlogintypeGetAutocompleteV2Response> _callback) throws ApiException {
+    public okhttp3.Call userlogintypeGetAutocompleteV2Async(String sSelector, Integer fkiEzsignfoldertypeID, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<UserlogintypeGetAutocompleteV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = userlogintypeGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        okhttp3.Call localVarCall = userlogintypeGetAutocompleteV2ValidateBeforeCall(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<UserlogintypeGetAutocompleteV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

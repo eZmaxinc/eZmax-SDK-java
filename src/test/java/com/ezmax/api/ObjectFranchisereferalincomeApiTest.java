@@ -14,8 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Request;
-import com.ezmax.api.model.FranchisereferalincomeCreateObjectV1Response;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
 import org.junit.jupiter.api.Disabled;
@@ -33,20 +31,6 @@ import java.util.Map;
 public class ObjectFranchisereferalincomeApiTest {
 
     private final ObjectFranchisereferalincomeApi api = new ObjectFranchisereferalincomeApi();
-
-    /**
-     * Create a new Franchisereferalincome
-     *
-     * The endpoint allows to create one or many elements at once.  The array can contain simple (Just the object) or compound (The object and its child) objects.  Creating compound elements allows to reduce the multiple requests to create all child objects.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void franchisereferalincomeCreateObjectV1Test() throws ApiException {
-        List<FranchisereferalincomeCreateObjectV1Request> franchisereferalincomeCreateObjectV1Request = null;
-        FranchisereferalincomeCreateObjectV1Response response = api.franchisereferalincomeCreateObjectV1(franchisereferalincomeCreateObjectV1Request);
-        // TODO: test validations
-    }
 
     /**
      * Create a new Franchisereferalincome

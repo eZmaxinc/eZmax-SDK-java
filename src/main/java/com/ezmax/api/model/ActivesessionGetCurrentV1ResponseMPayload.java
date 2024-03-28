@@ -19,6 +19,7 @@ import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
+import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserEzsignprepaid;
 import com.google.gson.TypeAdapter;
@@ -58,7 +59,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -103,6 +104,14 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_FKI_SIGNATURE_I_D = "fkiSignatureID";
   @SerializedName(SERIALIZED_NAME_FKI_SIGNATURE_I_D)
   private Integer fkiSignatureID;
+
+  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
+  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
+  private Boolean bSystemconfigurationEzsignpaidbyoffice;
+
+  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
+  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
+  private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
@@ -353,6 +362,44 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
+  public ActivesessionGetCurrentV1ResponseMPayload bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+    return this;
+  }
+
+   /**
+   * Whether if Ezsign is paid by the company or not
+   * @return bSystemconfigurationEzsignpaidbyoffice
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbSystemconfigurationEzsignpaidbyoffice() {
+    return bSystemconfigurationEzsignpaidbyoffice;
+  }
+
+  public void setbSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+    return this;
+  }
+
+   /**
+   * Get eSystemconfigurationEzsignofficeplan
+   * @return eSystemconfigurationEzsignofficeplan
+  **/
+  @javax.annotation.Nullable
+  public FieldESystemconfigurationEzsignofficeplan geteSystemconfigurationEzsignofficeplan() {
+    return eSystemconfigurationEzsignofficeplan;
+  }
+
+  public void seteSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+  }
+
+
   public ActivesessionGetCurrentV1ResponseMPayload eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
@@ -542,6 +589,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
         Objects.equals(this.pksCustomerCode, activesessionGetCurrentV1ResponseMPayload.pksCustomerCode) &&
         Objects.equals(this.fkiSystemconfigurationtypeID, activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID) &&
         Objects.equals(this.fkiSignatureID, activesessionGetCurrentV1ResponseMPayload.fkiSignatureID) &&
+        Objects.equals(this.bSystemconfigurationEzsignpaidbyoffice, activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice) &&
+        Objects.equals(this.eSystemconfigurationEzsignofficeplan, activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan) &&
         Objects.equals(this.eUserEzsignaccess, activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess) &&
         Objects.equals(this.eUserEzsignprepaid, activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid) &&
         Objects.equals(this.dtUserEzsignprepaidexpiration, activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration) &&
@@ -554,7 +603,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, eUserEzsignaccess, eUserEzsignprepaid, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
@@ -572,6 +621,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
     sb.append("    fkiSignatureID: ").append(toIndentedString(fkiSignatureID)).append("\n");
+    sb.append("    bSystemconfigurationEzsignpaidbyoffice: ").append(toIndentedString(bSystemconfigurationEzsignpaidbyoffice)).append("\n");
+    sb.append("    eSystemconfigurationEzsignofficeplan: ").append(toIndentedString(eSystemconfigurationEzsignofficeplan)).append("\n");
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
     sb.append("    eUserEzsignprepaid: ").append(toIndentedString(eUserEzsignprepaid)).append("\n");
     sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
@@ -613,6 +664,8 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     openapiFields.add("pksCustomerCode");
     openapiFields.add("fkiSystemconfigurationtypeID");
     openapiFields.add("fkiSignatureID");
+    openapiFields.add("bSystemconfigurationEzsignpaidbyoffice");
+    openapiFields.add("eSystemconfigurationEzsignofficeplan");
     openapiFields.add("eUserEzsignaccess");
     openapiFields.add("eUserEzsignprepaid");
     openapiFields.add("dtUserEzsignprepaidexpiration");
@@ -682,6 +735,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       }
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
+      }
+      // validate the optional field `eSystemconfigurationEzsignofficeplan`
+      if (jsonObj.get("eSystemconfigurationEzsignofficeplan") != null && !jsonObj.get("eSystemconfigurationEzsignofficeplan").isJsonNull()) {
+        FieldESystemconfigurationEzsignofficeplan.validateJsonElement(jsonObj.get("eSystemconfigurationEzsignofficeplan"));
       }
       // validate the required field `eUserEzsignaccess`
       FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));

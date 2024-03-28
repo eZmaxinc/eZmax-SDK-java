@@ -29,9 +29,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEUserEzsignprepaid.Adapter.class)
 public enum FieldEUserEzsignprepaid {
   
+  NO("No"),
+  
   BASIC("Basic"),
   
-  UNLIMITED("Unlimited"),
+  STANDARD("Standard"),
   
   PRO("Pro");
 

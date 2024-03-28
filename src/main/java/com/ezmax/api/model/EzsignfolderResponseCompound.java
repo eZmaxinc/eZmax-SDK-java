@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -70,7 +70,7 @@ public class EzsignfolderResponseCompound {
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION = "eEzsignfolderCompletion";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION)
-  private FieldEEzsignfolderCompletion eEzsignfolderCompletion = FieldEEzsignfolderCompletion.PEREZSIGNDOCUMENT;
+  private FieldEEzsignfolderCompletion eEzsignfolderCompletion;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @Deprecated
@@ -180,6 +180,7 @@ public class EzsignfolderResponseCompound {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
@@ -220,7 +221,7 @@ public class EzsignfolderResponseCompound {
    * Get eEzsignfolderCompletion
    * @return eEzsignfolderCompletion
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public FieldEEzsignfolderCompletion geteEzsignfolderCompletion() {
     return eEzsignfolderCompletion;
   }
@@ -714,6 +715,7 @@ public class EzsignfolderResponseCompound {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignfolderID");
+    openapiRequiredFields.add("eEzsignfolderCompletion");
     openapiRequiredFields.add("sEzsignfolderDescription");
   }
 
@@ -749,10 +751,8 @@ public class EzsignfolderResponseCompound {
       if (jsonObj.get("objEzsignfoldertype") != null && !jsonObj.get("objEzsignfoldertype").isJsonNull()) {
         CustomEzsignfoldertypeResponse.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
       }
-      // validate the optional field `eEzsignfolderCompletion`
-      if (jsonObj.get("eEzsignfolderCompletion") != null && !jsonObj.get("eEzsignfolderCompletion").isJsonNull()) {
-        FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));
-      }
+      // validate the required field `eEzsignfolderCompletion`
+      FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }

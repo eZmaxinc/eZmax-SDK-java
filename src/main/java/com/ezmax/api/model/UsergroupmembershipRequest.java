@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class UsergroupmembershipRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -62,6 +62,10 @@ public class UsergroupmembershipRequest {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
+  private Integer fkiUsergroupexternalID;
 
   public UsergroupmembershipRequest() {
   }
@@ -118,13 +122,34 @@ public class UsergroupmembershipRequest {
    * minimum: 0
    * @return fkiUserID
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
   }
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+
+  public UsergroupmembershipRequest fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Usergroupexternal
+   * minimum: 0
+   * maximum: 255
+   * @return fkiUsergroupexternalID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiUsergroupexternalID() {
+    return fkiUsergroupexternalID;
+  }
+
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
@@ -140,12 +165,13 @@ public class UsergroupmembershipRequest {
     UsergroupmembershipRequest usergroupmembershipRequest = (UsergroupmembershipRequest) o;
     return Objects.equals(this.pkiUsergroupmembershipID, usergroupmembershipRequest.pkiUsergroupmembershipID) &&
         Objects.equals(this.fkiUsergroupID, usergroupmembershipRequest.fkiUsergroupID) &&
-        Objects.equals(this.fkiUserID, usergroupmembershipRequest.fkiUserID);
+        Objects.equals(this.fkiUserID, usergroupmembershipRequest.fkiUserID) &&
+        Objects.equals(this.fkiUsergroupexternalID, usergroupmembershipRequest.fkiUsergroupexternalID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupmembershipID, fkiUsergroupID, fkiUserID);
+    return Objects.hash(pkiUsergroupmembershipID, fkiUsergroupID, fkiUserID, fkiUsergroupexternalID);
   }
 
   @Override
@@ -155,6 +181,7 @@ public class UsergroupmembershipRequest {
     sb.append("    pkiUsergroupmembershipID: ").append(toIndentedString(pkiUsergroupmembershipID)).append("\n");
     sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiUsergroupexternalID: ").append(toIndentedString(fkiUsergroupexternalID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -180,11 +207,11 @@ public class UsergroupmembershipRequest {
     openapiFields.add("pkiUsergroupmembershipID");
     openapiFields.add("fkiUsergroupID");
     openapiFields.add("fkiUserID");
+    openapiFields.add("fkiUsergroupexternalID");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("fkiUsergroupID");
-    openapiRequiredFields.add("fkiUserID");
   }
 
  /**

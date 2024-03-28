@@ -28,6 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
@@ -85,6 +87,147 @@ public class ObjectEzsignfoldersignerassociationApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for ezsignfoldersignerassociationCreateEmbeddedUrlV1
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationCreateEmbeddedUrlV1Call(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/createEmbeddedUrl"
+            .replace("{" + "pkiEzsignfoldersignerassociationID" + "}", localVarApiClient.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfoldersignerassociationCreateEmbeddedUrlV1ValidateBeforeCall(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+        if (pkiEzsignfoldersignerassociationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1(Async)");
+        }
+
+        // verify the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' is set
+        if (ezsignfoldersignerassociationCreateEmbeddedUrlV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfoldersignerassociationCreateEmbeddedUrlV1Request' when calling ezsignfoldersignerassociationCreateEmbeddedUrlV1(Async)");
+        }
+
+        return ezsignfoldersignerassociationCreateEmbeddedUrlV1Call(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, _callback);
+
+    }
+
+    /**
+     * Creates an Url to allow embedded signing
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
+     * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfoldersignerassociationCreateEmbeddedUrlV1Response ezsignfoldersignerassociationCreateEmbeddedUrlV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request) throws ApiException {
+        ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> localVarResp = ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Creates an Url to allow embedded signing
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
+     * @return ApiResponse&lt;EzsignfoldersignerassociationCreateEmbeddedUrlV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> ezsignfoldersignerassociationCreateEmbeddedUrlV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateEmbeddedUrlV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, null);
+        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Creates an Url to allow embedded signing (asynchronously)
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationCreateEmbeddedUrlV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, final ApiCallback<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationCreateEmbeddedUrlV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationCreateEmbeddedUrlV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for ezsignfoldersignerassociationCreateObjectV1
      * @param ezsignfoldersignerassociationCreateObjectV1Request  (required)

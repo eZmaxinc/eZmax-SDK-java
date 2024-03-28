@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EzsigntemplateResponseCompound;
+import com.ezmax.api.model.EzsigntemplateglobalResponseCompound;
 import com.ezmax.api.model.EzsigntemplatepackageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/module/ezsign/suggestTemplates
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignSuggestTemplatesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE = "a_objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE)
@@ -62,6 +63,10 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
   private List<EzsigntemplatepackageResponseCompound> aObjEzsigntemplatepackage = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBAL = "a_objEzsigntemplateglobal";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBAL)
+  private List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal = new ArrayList<>();
 
   public EzsignSuggestTemplatesV1ResponseMPayload() {
   }
@@ -120,6 +125,33 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
   }
 
 
+  public EzsignSuggestTemplatesV1ResponseMPayload aObjEzsigntemplateglobal(List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal) {
+    this.aObjEzsigntemplateglobal = aObjEzsigntemplateglobal;
+    return this;
+  }
+
+  public EzsignSuggestTemplatesV1ResponseMPayload addAObjEzsigntemplateglobalItem(EzsigntemplateglobalResponseCompound aObjEzsigntemplateglobalItem) {
+    if (this.aObjEzsigntemplateglobal == null) {
+      this.aObjEzsigntemplateglobal = new ArrayList<>();
+    }
+    this.aObjEzsigntemplateglobal.add(aObjEzsigntemplateglobalItem);
+    return this;
+  }
+
+   /**
+   * Get aObjEzsigntemplateglobal
+   * @return aObjEzsigntemplateglobal
+  **/
+  @javax.annotation.Nonnull
+  public List<EzsigntemplateglobalResponseCompound> getaObjEzsigntemplateglobal() {
+    return aObjEzsigntemplateglobal;
+  }
+
+  public void setaObjEzsigntemplateglobal(List<EzsigntemplateglobalResponseCompound> aObjEzsigntemplateglobal) {
+    this.aObjEzsigntemplateglobal = aObjEzsigntemplateglobal;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -131,12 +163,13 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     }
     EzsignSuggestTemplatesV1ResponseMPayload ezsignSuggestTemplatesV1ResponseMPayload = (EzsignSuggestTemplatesV1ResponseMPayload) o;
     return Objects.equals(this.aObjEzsigntemplate, ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplate) &&
-        Objects.equals(this.aObjEzsigntemplatepackage, ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage);
+        Objects.equals(this.aObjEzsigntemplatepackage, ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplatepackage) &&
+        Objects.equals(this.aObjEzsigntemplateglobal, ezsignSuggestTemplatesV1ResponseMPayload.aObjEzsigntemplateglobal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsigntemplate, aObjEzsigntemplatepackage);
+    return Objects.hash(aObjEzsigntemplate, aObjEzsigntemplatepackage, aObjEzsigntemplateglobal);
   }
 
   @Override
@@ -145,6 +178,7 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     sb.append("class EzsignSuggestTemplatesV1ResponseMPayload {\n");
     sb.append("    aObjEzsigntemplate: ").append(toIndentedString(aObjEzsigntemplate)).append("\n");
     sb.append("    aObjEzsigntemplatepackage: ").append(toIndentedString(aObjEzsigntemplatepackage)).append("\n");
+    sb.append("    aObjEzsigntemplateglobal: ").append(toIndentedString(aObjEzsigntemplateglobal)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -169,11 +203,13 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objEzsigntemplate");
     openapiFields.add("a_objEzsigntemplatepackage");
+    openapiFields.add("a_objEzsigntemplateglobal");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objEzsigntemplate");
     openapiRequiredFields.add("a_objEzsigntemplatepackage");
+    openapiRequiredFields.add("a_objEzsigntemplateglobal");
   }
 
  /**
@@ -223,6 +259,16 @@ public class EzsignSuggestTemplatesV1ResponseMPayload {
       // validate the required field `a_objEzsigntemplatepackage` (array)
       for (int i = 0; i < jsonArrayaObjEzsigntemplatepackage.size(); i++) {
         EzsigntemplatepackageResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplatepackage.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzsigntemplateglobal").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzsigntemplateglobal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplateglobal").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzsigntemplateglobal = jsonObj.getAsJsonArray("a_objEzsigntemplateglobal");
+      // validate the required field `a_objEzsigntemplateglobal` (array)
+      for (int i = 0; i < jsonArrayaObjEzsigntemplateglobal.size(); i++) {
+        EzsigntemplateglobalResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateglobal.get(i));
       };
   }
 

@@ -27,6 +27,7 @@ import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
 import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
+import com.ezmax.api.model.EzsignfolderEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentsV1Response;
@@ -49,8 +50,6 @@ import com.ezmax.api.model.EzsignfolderReorderV1Request;
 import com.ezmax.api.model.EzsignfolderReorderV1Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
-import com.ezmax.api.model.EzsignfolderSendV2Request;
-import com.ezmax.api.model.EzsignfolderSendV2Response;
 import com.ezmax.api.model.EzsignfolderSendV3Request;
 import com.ezmax.api.model.EzsignfolderSendV3Response;
 import com.ezmax.api.model.EzsignfolderUnsendV1Response;
@@ -181,6 +180,21 @@ public class ObjectEzsignfolderApiTest {
         Integer pkiEzsignfolderID = null;
         EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
         EzsignfolderEditObjectV1Response response = api.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * End prematurely
+     *
+     * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderEndPrematurelyV1Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        Object body = null;
+        EzsignfolderEndPrematurelyV1Response response = api.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
 
@@ -437,21 +451,6 @@ public class ObjectEzsignfolderApiTest {
         Integer pkiEzsignfolderID = null;
         EzsignfolderSendV1Request ezsignfolderSendV1Request = null;
         EzsignfolderSendV1Response response = api.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Send the Ezsignfolder to the signatories for signature
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsignfolderSendV2Test() throws ApiException {
-        Integer pkiEzsignfolderID = null;
-        EzsignfolderSendV2Request ezsignfolderSendV2Request = null;
-        EzsignfolderSendV2Response response = api.ezsignfolderSendV2(pkiEzsignfolderID, ezsignfolderSendV2Request);
         // TODO: test validations
     }
 

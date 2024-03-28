@@ -24,6 +24,7 @@ A Webhook Object
 |**bWebhookSkipsslvalidation** | **Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use |  |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
 |**sWebhookEvent** | **String** | The concatenated string to describe the Webhook event |  [optional] |
+|**aObjWebhookheader** | [**List&lt;WebhookheaderResponseCompound&gt;**](WebhookheaderResponseCompound.md) |  |  [optional] |
 
 
 

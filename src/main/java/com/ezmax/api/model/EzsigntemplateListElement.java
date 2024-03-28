@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsigntemplateType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplateListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -87,6 +88,10 @@ public class EzsigntemplateListElement {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
   private String sEzsignfoldertypeNameX;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE = "eEzsigntemplateType";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE)
+  private FieldEEzsigntemplateType eEzsigntemplateType;
+
   public EzsigntemplateListElement() {
   }
 
@@ -118,9 +123,10 @@ public class EzsigntemplateListElement {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -256,13 +262,32 @@ public class EzsigntemplateListElement {
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
 
   public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+
+  public EzsigntemplateListElement eEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
+    return this;
+  }
+
+   /**
+   * Get eEzsigntemplateType
+   * @return eEzsigntemplateType
+  **/
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplateType geteEzsigntemplateType() {
+    return eEzsigntemplateType;
+  }
+
+  public void seteEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
   }
 
 
@@ -284,12 +309,13 @@ public class EzsigntemplateListElement {
         Objects.equals(this.iEzsigntemplateSignaturetotal, ezsigntemplateListElement.iEzsigntemplateSignaturetotal) &&
         Objects.equals(this.iEzsigntemplateFormfieldtotal, ezsigntemplateListElement.iEzsigntemplateFormfieldtotal) &&
         Objects.equals(this.bEzsigntemplateIncomplete, ezsigntemplateListElement.bEzsigntemplateIncomplete) &&
-        Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplateListElement.sEzsignfoldertypeNameX);
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplateListElement.sEzsignfoldertypeNameX) &&
+        Objects.equals(this.eEzsigntemplateType, ezsigntemplateListElement.eEzsigntemplateType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplateDescription, iEzsigntemplatedocumentPagetotal, iEzsigntemplateSignaturetotal, iEzsigntemplateFormfieldtotal, bEzsigntemplateIncomplete, sEzsignfoldertypeNameX);
+    return Objects.hash(pkiEzsigntemplateID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplateDescription, iEzsigntemplatedocumentPagetotal, iEzsigntemplateSignaturetotal, iEzsigntemplateFormfieldtotal, bEzsigntemplateIncomplete, sEzsignfoldertypeNameX, eEzsigntemplateType);
   }
 
   @Override
@@ -305,6 +331,7 @@ public class EzsigntemplateListElement {
     sb.append("    iEzsigntemplateFormfieldtotal: ").append(toIndentedString(iEzsigntemplateFormfieldtotal)).append("\n");
     sb.append("    bEzsigntemplateIncomplete: ").append(toIndentedString(bEzsigntemplateIncomplete)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
+    sb.append("    eEzsigntemplateType: ").append(toIndentedString(eEzsigntemplateType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -336,15 +363,15 @@ public class EzsigntemplateListElement {
     openapiFields.add("iEzsigntemplateFormfieldtotal");
     openapiFields.add("bEzsigntemplateIncomplete");
     openapiFields.add("sEzsignfoldertypeNameX");
+    openapiFields.add("eEzsigntemplateType");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsigntemplateID");
-    openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sEzsigntemplateDescription");
     openapiRequiredFields.add("bEzsigntemplateIncomplete");
-    openapiRequiredFields.add("sEzsignfoldertypeNameX");
+    openapiRequiredFields.add("eEzsigntemplateType");
   }
 
  /**
@@ -378,9 +405,11 @@ public class EzsigntemplateListElement {
       if (!jsonObj.get("sEzsigntemplateDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateDescription").toString()));
       }
-      if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+      if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
+      // validate the required field `eEzsigntemplateType`
+      FieldEEzsigntemplateType.validateJsonElement(jsonObj.get("eEzsigntemplateType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

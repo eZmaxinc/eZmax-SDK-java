@@ -10,10 +10,10 @@ An Activesession->User Object and children to create a complete structure
 |------------ | ------------- | ------------- | -------------|
 |**pkiUserID** | **Integer** | The unique ID of the User |  |
 |**fkiTimezoneID** | **Integer** | The unique ID of the Timezone |  |
-|**sAvatarUrl** | **String** | The url of the picture used as avatar |  |
+|**sAvatarUrl** | **String** | The url of the picture used as avatar |  [optional] |
 |**sUserFirstname** | **String** | The first name of the user |  |
 |**sUserLastname** | **String** | The last name of the user |  |
-|**sEmailAddress** | **String** | The email address. |  |
+|**sEmailAddress** | **String** | The email address. |  [optional] |
 |**eUserEzsignsendreminderfrequency** | **FieldEUserEzsignsendreminderfrequency** |  |  |
 |**iUserInterfacecolor** | **Integer** | The int32 representation of the interface color. For example, RGB color #39435B would be 3752795 |  |
 |**bUserInterfacedark** | **Boolean** | Whether to use a dark mode interface |  |

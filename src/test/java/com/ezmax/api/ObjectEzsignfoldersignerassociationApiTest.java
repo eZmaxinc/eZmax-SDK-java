@@ -15,6 +15,8 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
@@ -43,6 +45,21 @@ import java.util.Map;
 public class ObjectEzsignfoldersignerassociationApiTest {
 
     private final ObjectEzsignfoldersignerassociationApi api = new ObjectEzsignfoldersignerassociationApi();
+
+    /**
+     * Creates an Url to allow embedded signing
+     *
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfoldersignerassociationCreateEmbeddedUrlV1Test() throws ApiException {
+        Integer pkiEzsignfoldersignerassociationID = null;
+        EzsignfoldersignerassociationCreateEmbeddedUrlV1Request ezsignfoldersignerassociationCreateEmbeddedUrlV1Request = null;
+        EzsignfoldersignerassociationCreateEmbeddedUrlV1Response response = api.ezsignfoldersignerassociationCreateEmbeddedUrlV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationCreateEmbeddedUrlV1Request);
+        // TODO: test validations
+    }
 
     /**
      * Create a new Ezsignfoldersignerassociation

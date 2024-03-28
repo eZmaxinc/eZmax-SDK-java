@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.FieldEEzsigntemplateType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -87,6 +88,14 @@ public class EzsigntemplateResponseTest {
     }
 
     /**
+     * Test the property 'sEzsigntemplateFilenamepattern'
+     */
+    @Test
+    public void sEzsigntemplateFilenamepatternTest() {
+        // TODO: test sEzsigntemplateFilenamepattern
+    }
+
+    /**
      * Test the property 'bEzsigntemplateAdminonly'
      */
     @Test
@@ -108,6 +117,22 @@ public class EzsigntemplateResponseTest {
     @Test
     public void objAuditTest() {
         // TODO: test objAudit
+    }
+
+    /**
+     * Test the property 'bEzsigntemplateEditallowed'
+     */
+    @Test
+    public void bEzsigntemplateEditallowedTest() {
+        // TODO: test bEzsigntemplateEditallowed
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateType'
+     */
+    @Test
+    public void eEzsigntemplateTypeTest() {
+        // TODO: test eEzsigntemplateType
     }
 
 }

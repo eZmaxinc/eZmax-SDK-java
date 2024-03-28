@@ -17,13 +17,16 @@ import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.WebhookheaderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -159,6 +162,22 @@ public class CustomWebhookResponseTest {
     @Test
     public void objAuditTest() {
         // TODO: test objAudit
+    }
+
+    /**
+     * Test the property 'sWebhookEvent'
+     */
+    @Test
+    public void sWebhookEventTest() {
+        // TODO: test sWebhookEvent
+    }
+
+    /**
+     * Test the property 'aObjWebhookheader'
+     */
+    @Test
+    public void aObjWebhookheaderTest() {
+        // TODO: test aObjWebhookheader
     }
 
     /**

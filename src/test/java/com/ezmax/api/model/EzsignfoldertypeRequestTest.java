@@ -179,11 +179,11 @@ public class EzsignfoldertypeRequestTest {
     }
 
     /**
-     * Test the property 'bEzsignfoldertypeReassign'
+     * Test the property 'bEzsignfoldertypeDiscussion'
      */
     @Test
-    public void bEzsignfoldertypeReassignTest() {
-        // TODO: test bEzsignfoldertypeReassign
+    public void bEzsignfoldertypeDiscussionTest() {
+        // TODO: test bEzsignfoldertypeDiscussion
     }
 
     /**
@@ -200,14 +200,6 @@ public class EzsignfoldertypeRequestTest {
     @Test
     public void bEzsignfoldertypeReassignuserTest() {
         // TODO: test bEzsignfoldertypeReassignuser
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeSendattatchmentsigner'
-     */
-    @Test
-    public void bEzsignfoldertypeSendattatchmentsignerTest() {
-        // TODO: test bEzsignfoldertypeSendattatchmentsigner
     }
 
     /**
@@ -368,22 +360,6 @@ public class EzsignfoldertypeRequestTest {
     @Test
     public void bEzsignfoldertypeSendsummarytocolleagueTest() {
         // TODO: test bEzsignfoldertypeSendsummarytocolleague
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeIncludeproofsigner'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofsignerTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofsigner
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeIncludeproofuser'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofuserTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofuser
     }
 
     /**

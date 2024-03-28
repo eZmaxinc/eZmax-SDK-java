@@ -220,6 +220,14 @@ public class EzsigndocumentGetObjectV1ResponseMPayloadTest {
     }
 
     /**
+     * Test the property 'iEzsigndocumentEzsigndiscussiontotal'
+     */
+    @Test
+    public void iEzsigndocumentEzsigndiscussiontotalTest() {
+        // TODO: test iEzsigndocumentEzsigndiscussiontotal
+    }
+
+    /**
      * Test the property 'eEzsigndocumentSteptype'
      */
     @Test

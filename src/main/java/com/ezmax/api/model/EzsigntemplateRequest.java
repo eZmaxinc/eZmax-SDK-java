@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplateRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -66,6 +66,10 @@ public class EzsigntemplateRequest {
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION = "sEzsigntemplateDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION)
   private String sEzsigntemplateDescription;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATE_FILENAMEPATTERN = "sEzsigntemplateFilenamepattern";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_FILENAMEPATTERN)
+  private String sEzsigntemplateFilenamepattern;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATE_ADMINONLY = "bEzsigntemplateAdminonly";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATE_ADMINONLY)
@@ -102,6 +106,7 @@ public class EzsigntemplateRequest {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
@@ -154,6 +159,25 @@ public class EzsigntemplateRequest {
   }
 
 
+  public EzsigntemplateRequest sEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+    return this;
+  }
+
+   /**
+   * The filename pattern of the Ezsigntemplate
+   * @return sEzsigntemplateFilenamepattern
+  **/
+  @javax.annotation.Nullable
+  public String getsEzsigntemplateFilenamepattern() {
+    return sEzsigntemplateFilenamepattern;
+  }
+
+  public void setsEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+  }
+
+
   public EzsigntemplateRequest bEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
     return this;
@@ -187,12 +211,13 @@ public class EzsigntemplateRequest {
         Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplateRequest.fkiEzsignfoldertypeID) &&
         Objects.equals(this.fkiLanguageID, ezsigntemplateRequest.fkiLanguageID) &&
         Objects.equals(this.sEzsigntemplateDescription, ezsigntemplateRequest.sEzsigntemplateDescription) &&
+        Objects.equals(this.sEzsigntemplateFilenamepattern, ezsigntemplateRequest.sEzsigntemplateFilenamepattern) &&
         Objects.equals(this.bEzsigntemplateAdminonly, ezsigntemplateRequest.bEzsigntemplateAdminonly);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplateDescription, bEzsigntemplateAdminonly);
+    return Objects.hash(pkiEzsigntemplateID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplateDescription, sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly);
   }
 
   @Override
@@ -203,6 +228,7 @@ public class EzsigntemplateRequest {
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sEzsigntemplateDescription: ").append(toIndentedString(sEzsigntemplateDescription)).append("\n");
+    sb.append("    sEzsigntemplateFilenamepattern: ").append(toIndentedString(sEzsigntemplateFilenamepattern)).append("\n");
     sb.append("    bEzsigntemplateAdminonly: ").append(toIndentedString(bEzsigntemplateAdminonly)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -230,6 +256,7 @@ public class EzsigntemplateRequest {
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sEzsigntemplateDescription");
+    openapiFields.add("sEzsigntemplateFilenamepattern");
     openapiFields.add("bEzsigntemplateAdminonly");
 
     // a set of required properties/fields (JSON key names)
@@ -270,6 +297,9 @@ public class EzsigntemplateRequest {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsigntemplateDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateDescription").toString()));
+      }
+      if ((jsonObj.get("sEzsigntemplateFilenamepattern") != null && !jsonObj.get("sEzsigntemplateFilenamepattern").isJsonNull()) && !jsonObj.get("sEzsigntemplateFilenamepattern").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateFilenamepattern` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateFilenamepattern").toString()));
       }
   }
 

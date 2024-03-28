@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplatepackageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -87,6 +87,10 @@ public class EzsigntemplatepackageResponse {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
   private String sEzsignfoldertypeNameX;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED = "bEzsigntemplatepackageEditallowed";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED)
+  private Boolean bEzsigntemplatepackageEditallowed;
+
   public EzsigntemplatepackageResponse() {
   }
 
@@ -118,6 +122,7 @@ public class EzsigntemplatepackageResponse {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nonnull
@@ -265,6 +270,25 @@ public class EzsigntemplatepackageResponse {
   }
 
 
+  public EzsigntemplatepackageResponse bEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+    this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsigntemplatepackage if allowed to edit or not
+   * @return bEzsigntemplatepackageEditallowed
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbEzsigntemplatepackageEditallowed() {
+    return bEzsigntemplatepackageEditallowed;
+  }
+
+  public void setbEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+    this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -283,12 +307,13 @@ public class EzsigntemplatepackageResponse {
         Objects.equals(this.bEzsigntemplatepackageAdminonly, ezsigntemplatepackageResponse.bEzsigntemplatepackageAdminonly) &&
         Objects.equals(this.bEzsigntemplatepackageNeedvalidation, ezsigntemplatepackageResponse.bEzsigntemplatepackageNeedvalidation) &&
         Objects.equals(this.bEzsigntemplatepackageIsactive, ezsigntemplatepackageResponse.bEzsigntemplatepackageIsactive) &&
-        Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplatepackageResponse.sEzsignfoldertypeNameX);
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplatepackageResponse.sEzsignfoldertypeNameX) &&
+        Objects.equals(this.bEzsigntemplatepackageEditallowed, ezsigntemplatepackageResponse.bEzsigntemplatepackageEditallowed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX);
+    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX, bEzsigntemplatepackageEditallowed);
   }
 
   @Override
@@ -304,6 +329,7 @@ public class EzsigntemplatepackageResponse {
     sb.append("    bEzsigntemplatepackageNeedvalidation: ").append(toIndentedString(bEzsigntemplatepackageNeedvalidation)).append("\n");
     sb.append("    bEzsigntemplatepackageIsactive: ").append(toIndentedString(bEzsigntemplatepackageIsactive)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
+    sb.append("    bEzsigntemplatepackageEditallowed: ").append(toIndentedString(bEzsigntemplatepackageEditallowed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -335,6 +361,7 @@ public class EzsigntemplatepackageResponse {
     openapiFields.add("bEzsigntemplatepackageNeedvalidation");
     openapiFields.add("bEzsigntemplatepackageIsactive");
     openapiFields.add("sEzsignfoldertypeNameX");
+    openapiFields.add("bEzsigntemplatepackageEditallowed");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -347,6 +374,7 @@ public class EzsigntemplatepackageResponse {
     openapiRequiredFields.add("bEzsigntemplatepackageNeedvalidation");
     openapiRequiredFields.add("bEzsigntemplatepackageIsactive");
     openapiRequiredFields.add("sEzsignfoldertypeNameX");
+    openapiRequiredFields.add("bEzsigntemplatepackageEditallowed");
   }
 
  /**

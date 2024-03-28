@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
+import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage2;
 import com.ezmax.api.model.FieldESystemconfigurationNewexternaluseraction;
@@ -79,6 +80,22 @@ public class SystemconfigurationRequestCompoundTest {
     @Test
     public void eSystemconfigurationEzsignTest() {
         // TODO: test eSystemconfigurationEzsign
+    }
+
+    /**
+     * Test the property 'eSystemconfigurationEzsignofficeplan'
+     */
+    @Test
+    public void eSystemconfigurationEzsignofficeplanTest() {
+        // TODO: test eSystemconfigurationEzsignofficeplan
+    }
+
+    /**
+     * Test the property 'bSystemconfigurationEzsignpaidbyoffice'
+     */
+    @Test
+    public void bSystemconfigurationEzsignpaidbyofficeTest() {
+        // TODO: test bSystemconfigurationEzsignpaidbyoffice
     }
 
     /**

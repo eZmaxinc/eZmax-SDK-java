@@ -101,4 +101,20 @@ public class AddressRequestCompoundTest {
         // TODO: test sAddressZip
     }
 
+    /**
+     * Test the property 'fAddressLongitude'
+     */
+    @Test
+    public void fAddressLongitudeTest() {
+        // TODO: test fAddressLongitude
+    }
+
+    /**
+     * Test the property 'fAddressLatitude'
+     */
+    @Test
+    public void fAddressLatitudeTest() {
+        // TODO: test fAddressLatitude
+    }
+
 }

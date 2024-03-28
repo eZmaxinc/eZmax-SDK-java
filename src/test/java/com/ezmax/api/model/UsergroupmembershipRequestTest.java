@@ -61,4 +61,12 @@ public class UsergroupmembershipRequestTest {
         // TODO: test fkiUserID
     }
 
+    /**
+     * Test the property 'fkiUsergroupexternalID'
+     */
+    @Test
+    public void fkiUsergroupexternalIDTest() {
+        // TODO: test fkiUsergroupexternalID
+    }
+
 }

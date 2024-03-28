@@ -21,6 +21,8 @@ import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
+import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateglobalV1Request;
+import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateglobalV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateEzsignelementsPositionedByWordV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
@@ -101,6 +103,21 @@ public class ObjectEzsigndocumentApiTest {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentApplyEzsigntemplateV2Request ezsigndocumentApplyEzsigntemplateV2Request = null;
         EzsigndocumentApplyEzsigntemplateV2Response response = api.ezsigndocumentApplyEzsigntemplateV2(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV2Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Apply an Ezsigntemplateglobal to the Ezsigndocument.
+     *
+     * This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentApplyEzsigntemplateglobalV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentApplyEzsigntemplateglobalV1Request ezsigndocumentApplyEzsigntemplateglobalV1Request = null;
+        EzsigndocumentApplyEzsigntemplateglobalV1Response response = api.ezsigndocumentApplyEzsigntemplateglobalV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateglobalV1Request);
         // TODO: test validations
     }
 

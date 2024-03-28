@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Address Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class AddressRequest {
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)
@@ -82,6 +82,14 @@ public class AddressRequest {
   public static final String SERIALIZED_NAME_S_ADDRESS_ZIP = "sAddressZip";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_ZIP)
   private String sAddressZip;
+
+  public static final String SERIALIZED_NAME_F_ADDRESS_LONGITUDE = "fAddressLongitude";
+  @SerializedName(SERIALIZED_NAME_F_ADDRESS_LONGITUDE)
+  private String fAddressLongitude;
+
+  public static final String SERIALIZED_NAME_F_ADDRESS_LATITUDE = "fAddressLatitude";
+  @SerializedName(SERIALIZED_NAME_F_ADDRESS_LATITUDE)
+  private String fAddressLatitude;
 
   public AddressRequest() {
   }
@@ -241,6 +249,44 @@ public class AddressRequest {
   }
 
 
+  public AddressRequest fAddressLongitude(String fAddressLongitude) {
+    this.fAddressLongitude = fAddressLongitude;
+    return this;
+  }
+
+   /**
+   * The Longitude of the Address
+   * @return fAddressLongitude
+  **/
+  @javax.annotation.Nullable
+  public String getfAddressLongitude() {
+    return fAddressLongitude;
+  }
+
+  public void setfAddressLongitude(String fAddressLongitude) {
+    this.fAddressLongitude = fAddressLongitude;
+  }
+
+
+  public AddressRequest fAddressLatitude(String fAddressLatitude) {
+    this.fAddressLatitude = fAddressLatitude;
+    return this;
+  }
+
+   /**
+   * The Latitude of the Address
+   * @return fAddressLatitude
+  **/
+  @javax.annotation.Nullable
+  public String getfAddressLatitude() {
+    return fAddressLatitude;
+  }
+
+  public void setfAddressLatitude(String fAddressLatitude) {
+    this.fAddressLatitude = fAddressLatitude;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -258,12 +304,14 @@ public class AddressRequest {
         Objects.equals(this.sAddressCity, addressRequest.sAddressCity) &&
         Objects.equals(this.fkiProvinceID, addressRequest.fkiProvinceID) &&
         Objects.equals(this.fkiCountryID, addressRequest.fkiCountryID) &&
-        Objects.equals(this.sAddressZip, addressRequest.sAddressZip);
+        Objects.equals(this.sAddressZip, addressRequest.sAddressZip) &&
+        Objects.equals(this.fAddressLongitude, addressRequest.fAddressLongitude) &&
+        Objects.equals(this.fAddressLatitude, addressRequest.fAddressLatitude);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAddresstypeID, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, fkiProvinceID, fkiCountryID, sAddressZip);
+    return Objects.hash(fkiAddresstypeID, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, fkiProvinceID, fkiCountryID, sAddressZip, fAddressLongitude, fAddressLatitude);
   }
 
   @Override
@@ -278,6 +326,8 @@ public class AddressRequest {
     sb.append("    fkiProvinceID: ").append(toIndentedString(fkiProvinceID)).append("\n");
     sb.append("    fkiCountryID: ").append(toIndentedString(fkiCountryID)).append("\n");
     sb.append("    sAddressZip: ").append(toIndentedString(sAddressZip)).append("\n");
+    sb.append("    fAddressLongitude: ").append(toIndentedString(fAddressLongitude)).append("\n");
+    sb.append("    fAddressLatitude: ").append(toIndentedString(fAddressLatitude)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -308,6 +358,8 @@ public class AddressRequest {
     openapiFields.add("fkiProvinceID");
     openapiFields.add("fkiCountryID");
     openapiFields.add("sAddressZip");
+    openapiFields.add("fAddressLongitude");
+    openapiFields.add("fAddressLatitude");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -363,6 +415,12 @@ public class AddressRequest {
       }
       if (!jsonObj.get("sAddressZip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sAddressZip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAddressZip").toString()));
+      }
+      if ((jsonObj.get("fAddressLongitude") != null && !jsonObj.get("fAddressLongitude").isJsonNull()) && !jsonObj.get("fAddressLongitude").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `fAddressLongitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fAddressLongitude").toString()));
+      }
+      if ((jsonObj.get("fAddressLatitude") != null && !jsonObj.get("fAddressLatitude").isJsonNull()) && !jsonObj.get("fAddressLatitude").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `fAddressLatitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fAddressLatitude").toString()));
       }
   }
 

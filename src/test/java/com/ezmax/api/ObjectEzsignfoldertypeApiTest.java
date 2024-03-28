@@ -14,15 +14,17 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonGetAutocompleteV1Response;
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsignfoldertypeCreateObjectV1Request;
-import com.ezmax.api.model.EzsignfoldertypeCreateObjectV1Response;
+import com.ezmax.api.model.EzsignfoldertypeCreateObjectV2Request;
+import com.ezmax.api.model.EzsignfoldertypeCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfoldertypeEditObjectV1Request;
 import com.ezmax.api.model.EzsignfoldertypeEditObjectV1Response;
+import com.ezmax.api.model.EzsignfoldertypeEditObjectV2Request;
+import com.ezmax.api.model.EzsignfoldertypeEditObjectV2Response;
 import com.ezmax.api.model.EzsignfoldertypeGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
 import com.ezmax.api.model.EzsignfoldertypeGetObjectV2Response;
+import com.ezmax.api.model.EzsignfoldertypeGetObjectV3Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -49,9 +51,9 @@ public class ObjectEzsignfoldertypeApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsignfoldertypeCreateObjectV1Test() throws ApiException {
-        EzsignfoldertypeCreateObjectV1Request ezsignfoldertypeCreateObjectV1Request = null;
-        EzsignfoldertypeCreateObjectV1Response response = api.ezsignfoldertypeCreateObjectV1(ezsignfoldertypeCreateObjectV1Request);
+    public void ezsignfoldertypeCreateObjectV2Test() throws ApiException {
+        EzsignfoldertypeCreateObjectV2Request ezsignfoldertypeCreateObjectV2Request = null;
+        EzsignfoldertypeCreateObjectV2Response response = api.ezsignfoldertypeCreateObjectV2(ezsignfoldertypeCreateObjectV2Request);
         // TODO: test validations
     }
 
@@ -71,19 +73,17 @@ public class ObjectEzsignfoldertypeApiTest {
     }
 
     /**
-     * Retrieve Ezsignfoldertypes and IDs
+     * Edit an existing Ezsignfoldertype
      *
-     * Get the list of Ezsignfoldertypes to be used in a dropdown or autocomplete control.
+     * 
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsignfoldertypeGetAutocompleteV1Test() throws ApiException {
-        String sSelector = null;
-        String eFilterActive = null;
-        String sQuery = null;
-        HeaderAcceptLanguage acceptLanguage = null;
-        CommonGetAutocompleteV1Response response = api.ezsignfoldertypeGetAutocompleteV1(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public void ezsignfoldertypeEditObjectV2Test() throws ApiException {
+        Integer pkiEzsignfoldertypeID = null;
+        EzsignfoldertypeEditObjectV2Request ezsignfoldertypeEditObjectV2Request = null;
+        EzsignfoldertypeEditObjectV2Response response = api.ezsignfoldertypeEditObjectV2(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV2Request);
         // TODO: test validations
     }
 
@@ -133,6 +133,20 @@ public class ObjectEzsignfoldertypeApiTest {
     public void ezsignfoldertypeGetObjectV2Test() throws ApiException {
         Integer pkiEzsignfoldertypeID = null;
         EzsignfoldertypeGetObjectV2Response response = api.ezsignfoldertypeGetObjectV2(pkiEzsignfoldertypeID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsignfoldertype
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfoldertypeGetObjectV3Test() throws ApiException {
+        Integer pkiEzsignfoldertypeID = null;
+        EzsignfoldertypeGetObjectV3Response response = api.ezsignfoldertypeGetObjectV3(pkiEzsignfoldertypeID);
         // TODO: test validations
     }
 

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;User Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -144,7 +144,7 @@ public class ActivesessionResponseCompoundUser {
    * The url of the picture used as avatar
    * @return sAvatarUrl
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsAvatarUrl() {
     return sAvatarUrl;
   }
@@ -201,7 +201,7 @@ public class ActivesessionResponseCompoundUser {
    * The email address.
    * @return sEmailAddress
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEmailAddress() {
     return sEmailAddress;
   }
@@ -368,10 +368,8 @@ public class ActivesessionResponseCompoundUser {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiUserID");
     openapiRequiredFields.add("fkiTimezoneID");
-    openapiRequiredFields.add("sAvatarUrl");
     openapiRequiredFields.add("sUserFirstname");
     openapiRequiredFields.add("sUserLastname");
-    openapiRequiredFields.add("sEmailAddress");
     openapiRequiredFields.add("eUserEzsignsendreminderfrequency");
     openapiRequiredFields.add("iUserInterfacecolor");
     openapiRequiredFields.add("bUserInterfacedark");
@@ -406,7 +404,7 @@ public class ActivesessionResponseCompoundUser {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sAvatarUrl").isJsonPrimitive()) {
+      if ((jsonObj.get("sAvatarUrl") != null && !jsonObj.get("sAvatarUrl").isJsonNull()) && !jsonObj.get("sAvatarUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sAvatarUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAvatarUrl").toString()));
       }
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
@@ -415,7 +413,7 @@ public class ActivesessionResponseCompoundUser {
       if (!jsonObj.get("sUserLastname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
       }
-      if (!jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
       // validate the required field `eUserEzsignsendreminderfrequency`

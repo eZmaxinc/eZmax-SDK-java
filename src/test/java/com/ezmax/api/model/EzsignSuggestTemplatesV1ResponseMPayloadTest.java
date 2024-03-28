@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EzsigntemplateResponseCompound;
+import com.ezmax.api.model.EzsigntemplateglobalResponseCompound;
 import com.ezmax.api.model.EzsigntemplatepackageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -55,6 +56,14 @@ public class EzsignSuggestTemplatesV1ResponseMPayloadTest {
     @Test
     public void aObjEzsigntemplatepackageTest() {
         // TODO: test aObjEzsigntemplatepackage
+    }
+
+    /**
+     * Test the property 'aObjEzsigntemplateglobal'
+     */
+    @Test
+    public void aObjEzsigntemplateglobalTest() {
+        // TODO: test aObjEzsigntemplateglobal
     }
 
 }

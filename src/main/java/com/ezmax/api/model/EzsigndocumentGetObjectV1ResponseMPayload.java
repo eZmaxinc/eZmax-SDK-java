@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -144,6 +144,10 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL = "iEzsigndocumentEzsignsignatureattachmenttotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL)
   private Integer iEzsigndocumentEzsignsignatureattachmenttotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL = "iEzsigndocumentEzsigndiscussiontotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL)
+  private Integer iEzsigndocumentEzsigndiscussiontotal;
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE = "eEzsigndocumentSteptype";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE)
@@ -600,6 +604,25 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentEzsigndiscussiontotal(Integer iEzsigndocumentEzsigndiscussiontotal) {
+    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
+    return this;
+  }
+
+   /**
+   * The total number of Ezsigndiscussions
+   * @return iEzsigndocumentEzsigndiscussiontotal
+  **/
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentEzsigndiscussiontotal() {
+    return iEzsigndocumentEzsigndiscussiontotal;
+  }
+
+  public void setiEzsigndocumentEzsigndiscussiontotal(Integer iEzsigndocumentEzsigndiscussiontotal) {
+    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
+  }
+
+
   public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
     this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
     return this;
@@ -754,6 +777,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
         Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit) &&
         Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid) &&
         Objects.equals(this.iEzsigndocumentEzsignsignatureattachmenttotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsignsignatureattachmenttotal) &&
+        Objects.equals(this.iEzsigndocumentEzsigndiscussiontotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsigndiscussiontotal) &&
         Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype) &&
         Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
         Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
@@ -764,7 +788,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus);
   }
 
   @Override
@@ -793,6 +817,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
     sb.append("    iEzsigndocumentEzsignsignatureattachmenttotal: ").append(toIndentedString(iEzsigndocumentEzsignsignatureattachmenttotal)).append("\n");
+    sb.append("    iEzsigndocumentEzsigndiscussiontotal: ").append(toIndentedString(iEzsigndocumentEzsigndiscussiontotal)).append("\n");
     sb.append("    eEzsigndocumentSteptype: ").append(toIndentedString(eEzsigndocumentSteptype)).append("\n");
     sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
     sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
@@ -843,6 +868,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiFields.add("objAudit");
     openapiFields.add("sEzsigndocumentExternalid");
     openapiFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
+    openapiFields.add("iEzsigndocumentEzsigndiscussiontotal");
     openapiFields.add("eEzsigndocumentSteptype");
     openapiFields.add("iEzsigndocumentStepformtotal");
     openapiFields.add("iEzsigndocumentStepformcurrent");
@@ -862,6 +888,7 @@ public class EzsigndocumentGetObjectV1ResponseMPayload {
     openapiRequiredFields.add("iEzsigndocumentSignaturesigned");
     openapiRequiredFields.add("iEzsigndocumentSignaturetotal");
     openapiRequiredFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
+    openapiRequiredFields.add("iEzsigndocumentEzsigndiscussiontotal");
     openapiRequiredFields.add("eEzsigndocumentSteptype");
     openapiRequiredFields.add("iEzsigndocumentStepformtotal");
     openapiRequiredFields.add("iEzsigndocumentStepformcurrent");

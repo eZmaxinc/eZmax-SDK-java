@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="userlogintypeGetAutocompleteV2"></a>
 # **userlogintypeGetAutocompleteV2**
-> UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserlogintypeGetAutocompleteV2Response userlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage)
 
 Retrieve Userlogintypes and IDs
 
@@ -38,11 +38,12 @@ public class Example {
 
     ObjectUserlogintypeApi apiInstance = new ObjectUserlogintypeApi(defaultClient);
     String sSelector = "All"; // String | The type of Userlogintypes to return
+    Integer fkiEzsignfoldertypeID = 56; // Integer | 
     String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      UserlogintypeGetAutocompleteV2Response result = apiInstance.userlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+      UserlogintypeGetAutocompleteV2Response result = apiInstance.userlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserlogintypeApi#userlogintypeGetAutocompleteV2");
@@ -59,7 +60,8 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Userlogintypes to return | [enum: All] |
+| **sSelector** | **String**| The type of Userlogintypes to return | [enum: All, Ezsignfoldertype] |
+| **fkiEzsignfoldertypeID** | **Integer**|  | [optional] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |

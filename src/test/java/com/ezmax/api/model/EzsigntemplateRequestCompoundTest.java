@@ -70,6 +70,14 @@ public class EzsigntemplateRequestCompoundTest {
     }
 
     /**
+     * Test the property 'sEzsigntemplateFilenamepattern'
+     */
+    @Test
+    public void sEzsigntemplateFilenamepatternTest() {
+        // TODO: test sEzsigntemplateFilenamepattern
+    }
+
+    /**
      * Test the property 'bEzsigntemplateAdminonly'
      */
     @Test

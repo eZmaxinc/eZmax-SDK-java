@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
+import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage2;
 import com.ezmax.api.model.FieldESystemconfigurationNewexternaluseraction;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class SystemconfigurationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
@@ -80,12 +81,25 @@ public class SystemconfigurationResponseCompound {
   private FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN = "eSystemconfigurationEzsign";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN)
   private FieldESystemconfigurationEzsign eSystemconfigurationEzsign;
+
+  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
+  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
+  private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
+
+  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
+  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
+  private Boolean bSystemconfigurationEzsignpaidbyoffice;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL = "bSystemconfigurationEzsignpersonnal";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL)
   private Boolean bSystemconfigurationEzsignpersonnal;
+
+  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_ISDISPOSALACTIVE = "bSystemconfigurationIsdisposalactive";
+  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_ISDISPOSALACTIVE)
+  private Boolean bSystemconfigurationIsdisposalactive;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR = "bSystemconfigurationSspr";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR)
@@ -219,6 +233,7 @@ public class SystemconfigurationResponseCompound {
   }
 
 
+  @Deprecated
   public SystemconfigurationResponseCompound eSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
     return this;
@@ -227,14 +242,55 @@ public class SystemconfigurationResponseCompound {
    /**
    * Get eSystemconfigurationEzsign
    * @return eSystemconfigurationEzsign
+   * @deprecated
   **/
-  @javax.annotation.Nonnull
+  @Deprecated
+  @javax.annotation.Nullable
   public FieldESystemconfigurationEzsign geteSystemconfigurationEzsign() {
     return eSystemconfigurationEzsign;
   }
 
+  @Deprecated
   public void seteSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
+  }
+
+
+  public SystemconfigurationResponseCompound eSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+    return this;
+  }
+
+   /**
+   * Get eSystemconfigurationEzsignofficeplan
+   * @return eSystemconfigurationEzsignofficeplan
+  **/
+  @javax.annotation.Nullable
+  public FieldESystemconfigurationEzsignofficeplan geteSystemconfigurationEzsignofficeplan() {
+    return eSystemconfigurationEzsignofficeplan;
+  }
+
+  public void seteSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
+  }
+
+
+  public SystemconfigurationResponseCompound bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
+    return this;
+  }
+
+   /**
+   * Whether if Ezsign is paid by the company or not
+   * @return bSystemconfigurationEzsignpaidbyoffice
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbSystemconfigurationEzsignpaidbyoffice() {
+    return bSystemconfigurationEzsignpaidbyoffice;
+  }
+
+  public void setbSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
   }
 
 
@@ -254,6 +310,25 @@ public class SystemconfigurationResponseCompound {
 
   public void setbSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
+  }
+
+
+  public SystemconfigurationResponseCompound bSystemconfigurationIsdisposalactive(Boolean bSystemconfigurationIsdisposalactive) {
+    this.bSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
+    return this;
+  }
+
+   /**
+   * Whether is Disposal processus is active or not
+   * @return bSystemconfigurationIsdisposalactive
+  **/
+  @javax.annotation.Nullable
+  public Boolean getbSystemconfigurationIsdisposalactive() {
+    return bSystemconfigurationIsdisposalactive;
+  }
+
+  public void setbSystemconfigurationIsdisposalactive(Boolean bSystemconfigurationIsdisposalactive) {
+    this.bSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
   }
 
 
@@ -331,7 +406,10 @@ public class SystemconfigurationResponseCompound {
         Objects.equals(this.eSystemconfigurationLanguage1, systemconfigurationResponseCompound.eSystemconfigurationLanguage1) &&
         Objects.equals(this.eSystemconfigurationLanguage2, systemconfigurationResponseCompound.eSystemconfigurationLanguage2) &&
         Objects.equals(this.eSystemconfigurationEzsign, systemconfigurationResponseCompound.eSystemconfigurationEzsign) &&
+        Objects.equals(this.eSystemconfigurationEzsignofficeplan, systemconfigurationResponseCompound.eSystemconfigurationEzsignofficeplan) &&
+        Objects.equals(this.bSystemconfigurationEzsignpaidbyoffice, systemconfigurationResponseCompound.bSystemconfigurationEzsignpaidbyoffice) &&
         Objects.equals(this.bSystemconfigurationEzsignpersonnal, systemconfigurationResponseCompound.bSystemconfigurationEzsignpersonnal) &&
+        Objects.equals(this.bSystemconfigurationIsdisposalactive, systemconfigurationResponseCompound.bSystemconfigurationIsdisposalactive) &&
         Objects.equals(this.bSystemconfigurationSspr, systemconfigurationResponseCompound.bSystemconfigurationSspr) &&
         Objects.equals(this.dtSystemconfigurationReadonlyexpirationstart, systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart) &&
         Objects.equals(this.dtSystemconfigurationReadonlyexpirationend, systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend);
@@ -339,7 +417,7 @@ public class SystemconfigurationResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSystemconfigurationID, fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend);
+    return Objects.hash(pkiSystemconfigurationID, fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend);
   }
 
   @Override
@@ -353,7 +431,10 @@ public class SystemconfigurationResponseCompound {
     sb.append("    eSystemconfigurationLanguage1: ").append(toIndentedString(eSystemconfigurationLanguage1)).append("\n");
     sb.append("    eSystemconfigurationLanguage2: ").append(toIndentedString(eSystemconfigurationLanguage2)).append("\n");
     sb.append("    eSystemconfigurationEzsign: ").append(toIndentedString(eSystemconfigurationEzsign)).append("\n");
+    sb.append("    eSystemconfigurationEzsignofficeplan: ").append(toIndentedString(eSystemconfigurationEzsignofficeplan)).append("\n");
+    sb.append("    bSystemconfigurationEzsignpaidbyoffice: ").append(toIndentedString(bSystemconfigurationEzsignpaidbyoffice)).append("\n");
     sb.append("    bSystemconfigurationEzsignpersonnal: ").append(toIndentedString(bSystemconfigurationEzsignpersonnal)).append("\n");
+    sb.append("    bSystemconfigurationIsdisposalactive: ").append(toIndentedString(bSystemconfigurationIsdisposalactive)).append("\n");
     sb.append("    bSystemconfigurationSspr: ").append(toIndentedString(bSystemconfigurationSspr)).append("\n");
     sb.append("    dtSystemconfigurationReadonlyexpirationstart: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationstart)).append("\n");
     sb.append("    dtSystemconfigurationReadonlyexpirationend: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationend)).append("\n");
@@ -386,7 +467,10 @@ public class SystemconfigurationResponseCompound {
     openapiFields.add("eSystemconfigurationLanguage1");
     openapiFields.add("eSystemconfigurationLanguage2");
     openapiFields.add("eSystemconfigurationEzsign");
+    openapiFields.add("eSystemconfigurationEzsignofficeplan");
+    openapiFields.add("bSystemconfigurationEzsignpaidbyoffice");
     openapiFields.add("bSystemconfigurationEzsignpersonnal");
+    openapiFields.add("bSystemconfigurationIsdisposalactive");
     openapiFields.add("bSystemconfigurationSspr");
     openapiFields.add("dtSystemconfigurationReadonlyexpirationstart");
     openapiFields.add("dtSystemconfigurationReadonlyexpirationend");
@@ -399,7 +483,6 @@ public class SystemconfigurationResponseCompound {
     openapiRequiredFields.add("eSystemconfigurationNewexternaluseraction");
     openapiRequiredFields.add("eSystemconfigurationLanguage1");
     openapiRequiredFields.add("eSystemconfigurationLanguage2");
-    openapiRequiredFields.add("eSystemconfigurationEzsign");
     openapiRequiredFields.add("bSystemconfigurationEzsignpersonnal");
     openapiRequiredFields.add("bSystemconfigurationSspr");
   }
@@ -441,8 +524,14 @@ public class SystemconfigurationResponseCompound {
       FieldESystemconfigurationLanguage1.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage1"));
       // validate the required field `eSystemconfigurationLanguage2`
       FieldESystemconfigurationLanguage2.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage2"));
-      // validate the required field `eSystemconfigurationEzsign`
-      FieldESystemconfigurationEzsign.validateJsonElement(jsonObj.get("eSystemconfigurationEzsign"));
+      // validate the optional field `eSystemconfigurationEzsign`
+      if (jsonObj.get("eSystemconfigurationEzsign") != null && !jsonObj.get("eSystemconfigurationEzsign").isJsonNull()) {
+        FieldESystemconfigurationEzsign.validateJsonElement(jsonObj.get("eSystemconfigurationEzsign"));
+      }
+      // validate the optional field `eSystemconfigurationEzsignofficeplan`
+      if (jsonObj.get("eSystemconfigurationEzsignofficeplan") != null && !jsonObj.get("eSystemconfigurationEzsignofficeplan").isJsonNull()) {
+        FieldESystemconfigurationEzsignofficeplan.validateJsonElement(jsonObj.get("eSystemconfigurationEzsignofficeplan"));
+      }
       if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationstart") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtSystemconfigurationReadonlyexpirationstart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").toString()));
       }

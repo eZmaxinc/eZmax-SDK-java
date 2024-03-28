@@ -62,6 +62,14 @@ public class UsergroupmembershipResponseTest {
     }
 
     /**
+     * Test the property 'fkiUsergroupexternalID'
+     */
+    @Test
+    public void fkiUsergroupexternalIDTest() {
+        // TODO: test fkiUsergroupexternalID
+    }
+
+    /**
      * Test the property 'sUserFirstname'
      */
     @Test
@@ -99,6 +107,14 @@ public class UsergroupmembershipResponseTest {
     @Test
     public void sUsergroupNameXTest() {
         // TODO: test sUsergroupNameX
+    }
+
+    /**
+     * Test the property 'sUsergroupexternalName'
+     */
+    @Test
+    public void sUsergroupexternalNameTest() {
+        // TODO: test sUsergroupexternalName
     }
 
 }

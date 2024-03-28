@@ -19,6 +19,8 @@ import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UserCreateObjectV1Request;
 import com.ezmax.api.model.UserCreateObjectV1Response;
+import com.ezmax.api.model.UserCreateObjectV2Request;
+import com.ezmax.api.model.UserCreateObjectV2Response;
 import com.ezmax.api.model.UserEditObjectV1Request;
 import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
@@ -30,6 +32,8 @@ import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
 import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
+import com.ezmax.api.model.UserGetUsergroupexternalsV1Response;
+import com.ezmax.api.model.UserGetUsergroupsV1Response;
 import com.ezmax.api.model.UserSendPasswordResetV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -58,6 +62,20 @@ public class ObjectUserApiTest {
     public void userCreateObjectV1Test() throws ApiException {
         UserCreateObjectV1Request userCreateObjectV1Request = null;
         UserCreateObjectV1Response response = api.userCreateObjectV1(userCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Create a new User
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userCreateObjectV2Test() throws ApiException {
+        UserCreateObjectV2Request userCreateObjectV2Request = null;
+        UserCreateObjectV2Response response = api.userCreateObjectV2(userCreateObjectV2Request);
         // TODO: test validations
     }
 
@@ -187,6 +205,30 @@ public class ObjectUserApiTest {
     public void userGetSubnetsV1Test() throws ApiException {
         Integer pkiUserID = null;
         UserGetSubnetsV1Response response = api.userGetSubnetsV1(pkiUserID);
+        // TODO: test validations
+    }
+
+    /**
+     * Get User&#39;s Usergroupexternals
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userGetUsergroupexternalsV1Test() throws ApiException {
+        Integer pkiUserID = null;
+        UserGetUsergroupexternalsV1Response response = api.userGetUsergroupexternalsV1(pkiUserID);
+        // TODO: test validations
+    }
+
+    /**
+     * Get User&#39;s Usergroups
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userGetUsergroupsV1Test() throws ApiException {
+        Integer pkiUserID = null;
+        UserGetUsergroupsV1Response response = api.userGetUsergroupsV1(pkiUserID);
         // TODO: test validations
     }
 

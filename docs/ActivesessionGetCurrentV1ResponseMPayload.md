@@ -19,6 +19,8 @@ Payload for GET /1/object/activesession/getCurrent
 |**pksCustomerCode** | **String** | The customer code assigned to your account |  |
 |**fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  |
 |**fkiSignatureID** | **Integer** | The unique ID of the Signature |  [optional] |
+|**bSystemconfigurationEzsignpaidbyoffice** | **Boolean** | Whether if Ezsign is paid by the company or not |  [optional] |
+|**eSystemconfigurationEzsignofficeplan** | **FieldESystemconfigurationEzsignofficeplan** |  |  [optional] |
 |**eUserEzsignaccess** | **FieldEUserEzsignaccess** |  |  |
 |**eUserEzsignprepaid** | **FieldEUserEzsignprepaid** |  |  [optional] |
 |**dtUserEzsignprepaidexpiration** | **String** | The eZsign prepaid expiration date |  [optional] |

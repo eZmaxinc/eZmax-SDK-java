@@ -215,4 +215,12 @@ public class EzsigndocumentResponseTest {
         // TODO: test iEzsigndocumentEzsignsignatureattachmenttotal
     }
 
+    /**
+     * Test the property 'iEzsigndocumentEzsigndiscussiontotal'
+     */
+    @Test
+    public void iEzsigndocumentEzsigndiscussiontotalTest() {
+        // TODO: test iEzsigndocumentEzsigndiscussiontotal
+    }
+
 }

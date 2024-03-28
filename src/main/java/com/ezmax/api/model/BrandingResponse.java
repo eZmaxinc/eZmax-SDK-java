@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldEBrandingLogo;
+import com.ezmax.api.model.FieldEBrandingLogointerface;
 import com.ezmax.api.model.MultilingualBrandingDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class BrandingResponse {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -81,6 +82,10 @@ public class BrandingResponse {
   @SerializedName(SERIALIZED_NAME_E_BRANDING_LOGO)
   private FieldEBrandingLogo eBrandingLogo;
 
+  public static final String SERIALIZED_NAME_E_BRANDING_LOGOINTERFACE = "eBrandingLogointerface";
+  @SerializedName(SERIALIZED_NAME_E_BRANDING_LOGOINTERFACE)
+  private FieldEBrandingLogointerface eBrandingLogointerface = FieldEBrandingLogointerface.DEFAULT;
+
   public static final String SERIALIZED_NAME_I_BRANDING_COLORTEXT = "iBrandingColortext";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORTEXT)
   private Integer iBrandingColortext;
@@ -104,6 +109,10 @@ public class BrandingResponse {
   public static final String SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDSMALLBOX = "iBrandingColorbackgroundsmallbox";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDSMALLBOX)
   private Integer iBrandingColorbackgroundsmallbox;
+
+  public static final String SERIALIZED_NAME_I_BRANDING_INTERFACECOLOR = "iBrandingInterfacecolor";
+  @SerializedName(SERIALIZED_NAME_I_BRANDING_INTERFACECOLOR)
+  private Integer iBrandingInterfacecolor;
 
   public static final String SERIALIZED_NAME_B_BRANDING_ISACTIVE = "bBrandingIsactive";
   @SerializedName(SERIALIZED_NAME_B_BRANDING_ISACTIVE)
@@ -248,6 +257,25 @@ public class BrandingResponse {
   }
 
 
+  public BrandingResponse eBrandingLogointerface(FieldEBrandingLogointerface eBrandingLogointerface) {
+    this.eBrandingLogointerface = eBrandingLogointerface;
+    return this;
+  }
+
+   /**
+   * Get eBrandingLogointerface
+   * @return eBrandingLogointerface
+  **/
+  @javax.annotation.Nullable
+  public FieldEBrandingLogointerface geteBrandingLogointerface() {
+    return eBrandingLogointerface;
+  }
+
+  public void seteBrandingLogointerface(FieldEBrandingLogointerface eBrandingLogointerface) {
+    this.eBrandingLogointerface = eBrandingLogointerface;
+  }
+
+
   public BrandingResponse iBrandingColortext(Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
     return this;
@@ -374,6 +402,27 @@ public class BrandingResponse {
   }
 
 
+  public BrandingResponse iBrandingInterfacecolor(Integer iBrandingInterfacecolor) {
+    this.iBrandingInterfacecolor = iBrandingInterfacecolor;
+    return this;
+  }
+
+   /**
+   * The color of the interface. This is a RGB color converted into integer
+   * minimum: 0
+   * maximum: 16777215
+   * @return iBrandingInterfacecolor
+  **/
+  @javax.annotation.Nullable
+  public Integer getiBrandingInterfacecolor() {
+    return iBrandingInterfacecolor;
+  }
+
+  public void setiBrandingInterfacecolor(Integer iBrandingInterfacecolor) {
+    this.iBrandingInterfacecolor = iBrandingInterfacecolor;
+  }
+
+
   public BrandingResponse bBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
@@ -410,18 +459,20 @@ public class BrandingResponse {
         Objects.equals(this.sBrandingName, brandingResponse.sBrandingName) &&
         Objects.equals(this.sEmailAddress, brandingResponse.sEmailAddress) &&
         Objects.equals(this.eBrandingLogo, brandingResponse.eBrandingLogo) &&
+        Objects.equals(this.eBrandingLogointerface, brandingResponse.eBrandingLogointerface) &&
         Objects.equals(this.iBrandingColortext, brandingResponse.iBrandingColortext) &&
         Objects.equals(this.iBrandingColortextlinkbox, brandingResponse.iBrandingColortextlinkbox) &&
         Objects.equals(this.iBrandingColortextbutton, brandingResponse.iBrandingColortextbutton) &&
         Objects.equals(this.iBrandingColorbackground, brandingResponse.iBrandingColorbackground) &&
         Objects.equals(this.iBrandingColorbackgroundbutton, brandingResponse.iBrandingColorbackgroundbutton) &&
         Objects.equals(this.iBrandingColorbackgroundsmallbox, brandingResponse.iBrandingColorbackgroundsmallbox) &&
+        Objects.equals(this.iBrandingInterfacecolor, brandingResponse.iBrandingInterfacecolor) &&
         Objects.equals(this.bBrandingIsactive, brandingResponse.bBrandingIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiBrandingID, fkiEmailID, objBrandingDescription, sBrandingDescriptionX, sBrandingName, sEmailAddress, eBrandingLogo, iBrandingColortext, iBrandingColortextlinkbox, iBrandingColortextbutton, iBrandingColorbackground, iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox, bBrandingIsactive);
+    return Objects.hash(pkiBrandingID, fkiEmailID, objBrandingDescription, sBrandingDescriptionX, sBrandingName, sEmailAddress, eBrandingLogo, eBrandingLogointerface, iBrandingColortext, iBrandingColortextlinkbox, iBrandingColortextbutton, iBrandingColorbackground, iBrandingColorbackgroundbutton, iBrandingColorbackgroundsmallbox, iBrandingInterfacecolor, bBrandingIsactive);
   }
 
   @Override
@@ -435,12 +486,14 @@ public class BrandingResponse {
     sb.append("    sBrandingName: ").append(toIndentedString(sBrandingName)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
     sb.append("    eBrandingLogo: ").append(toIndentedString(eBrandingLogo)).append("\n");
+    sb.append("    eBrandingLogointerface: ").append(toIndentedString(eBrandingLogointerface)).append("\n");
     sb.append("    iBrandingColortext: ").append(toIndentedString(iBrandingColortext)).append("\n");
     sb.append("    iBrandingColortextlinkbox: ").append(toIndentedString(iBrandingColortextlinkbox)).append("\n");
     sb.append("    iBrandingColortextbutton: ").append(toIndentedString(iBrandingColortextbutton)).append("\n");
     sb.append("    iBrandingColorbackground: ").append(toIndentedString(iBrandingColorbackground)).append("\n");
     sb.append("    iBrandingColorbackgroundbutton: ").append(toIndentedString(iBrandingColorbackgroundbutton)).append("\n");
     sb.append("    iBrandingColorbackgroundsmallbox: ").append(toIndentedString(iBrandingColorbackgroundsmallbox)).append("\n");
+    sb.append("    iBrandingInterfacecolor: ").append(toIndentedString(iBrandingInterfacecolor)).append("\n");
     sb.append("    bBrandingIsactive: ").append(toIndentedString(bBrandingIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -471,12 +524,14 @@ public class BrandingResponse {
     openapiFields.add("sBrandingName");
     openapiFields.add("sEmailAddress");
     openapiFields.add("eBrandingLogo");
+    openapiFields.add("eBrandingLogointerface");
     openapiFields.add("iBrandingColortext");
     openapiFields.add("iBrandingColortextlinkbox");
     openapiFields.add("iBrandingColortextbutton");
     openapiFields.add("iBrandingColorbackground");
     openapiFields.add("iBrandingColorbackgroundbutton");
     openapiFields.add("iBrandingColorbackgroundsmallbox");
+    openapiFields.add("iBrandingInterfacecolor");
     openapiFields.add("bBrandingIsactive");
 
     // a set of required properties/fields (JSON key names)
@@ -535,6 +590,10 @@ public class BrandingResponse {
       }
       // validate the required field `eBrandingLogo`
       FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
+      // validate the optional field `eBrandingLogointerface`
+      if (jsonObj.get("eBrandingLogointerface") != null && !jsonObj.get("eBrandingLogointerface").isJsonNull()) {
+        FieldEBrandingLogointerface.validateJsonElement(jsonObj.get("eBrandingLogointerface"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

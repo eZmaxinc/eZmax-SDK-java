@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsigntemplateType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -107,6 +108,14 @@ public class EzsigntemplateListElementTest {
     @Test
     public void sEzsignfoldertypeNameXTest() {
         // TODO: test sEzsignfoldertypeNameX
+    }
+
+    /**
+     * Test the property 'eEzsigntemplateType'
+     */
+    @Test
+    public void eEzsigntemplateTypeTest() {
+        // TODO: test eEzsigntemplateType
     }
 
 }

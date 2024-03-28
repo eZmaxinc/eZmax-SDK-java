@@ -42,10 +42,11 @@ public class ObjectUserlogintypeApiTest {
     @Test
     public void userlogintypeGetAutocompleteV2Test() throws ApiException {
         String sSelector = null;
+        Integer fkiEzsignfoldertypeID = null;
         String eFilterActive = null;
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
-        UserlogintypeGetAutocompleteV2Response response = api.userlogintypeGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        UserlogintypeGetAutocompleteV2Response response = api.userlogintypeGetAutocompleteV2(sSelector, fkiEzsignfoldertypeID, eFilterActive, sQuery, acceptLanguage);
         // TODO: test validations
     }
 

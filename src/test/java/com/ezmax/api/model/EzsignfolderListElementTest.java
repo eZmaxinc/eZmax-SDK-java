@@ -151,4 +151,36 @@ public class EzsignfolderListElementTest {
         // TODO: test iEzsignsignatureSigned
     }
 
+    /**
+     * Test the property 'iEzsignformfieldgroup'
+     */
+    @Test
+    public void iEzsignformfieldgroupTest() {
+        // TODO: test iEzsignformfieldgroup
+    }
+
+    /**
+     * Test the property 'iEzsignformfieldgroupCompleted'
+     */
+    @Test
+    public void iEzsignformfieldgroupCompletedTest() {
+        // TODO: test iEzsignformfieldgroupCompleted
+    }
+
+    /**
+     * Test the property 'bEzsignformHasdependencies'
+     */
+    @Test
+    public void bEzsignformHasdependenciesTest() {
+        // TODO: test bEzsignformHasdependencies
+    }
+
+    /**
+     * Test the property 'dEzsignfolderCompletedpercentage'
+     */
+    @Test
+    public void dEzsignfolderCompletedpercentageTest() {
+        // TODO: test dEzsignfolderCompletedpercentage
+    }
+
 }

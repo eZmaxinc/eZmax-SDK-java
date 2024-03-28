@@ -18,8 +18,6 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorTooManyRequests;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
-import com.ezmax.api.model.WebhookCreateObjectV1Request;
-import com.ezmax.api.model.WebhookCreateObjectV1Response;
 import com.ezmax.api.model.WebhookCreateObjectV2Request;
 import com.ezmax.api.model.WebhookCreateObjectV2Response;
 import com.ezmax.api.model.WebhookDeleteObjectV1Response;
@@ -46,20 +44,6 @@ import java.util.Map;
 public class ObjectWebhookApiTest {
 
     private final ObjectWebhookApi api = new ObjectWebhookApi();
-
-    /**
-     * Create a new Webhook
-     *
-     * The endpoint allows to create one or many elements at once.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void webhookCreateObjectV1Test() throws ApiException {
-        WebhookCreateObjectV1Request webhookCreateObjectV1Request = null;
-        WebhookCreateObjectV1Response response = api.webhookCreateObjectV1(webhookCreateObjectV1Request);
-        // TODO: test validations
-    }
 
     /**
      * Create a new Webhook

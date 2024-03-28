@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class UsergroupResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -59,6 +59,10 @@ public class UsergroupResponse {
   public static final String SERIALIZED_NAME_OBJ_USERGROUP_NAME = "objUsergroupName";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP_NAME)
   private MultilingualUsergroupName objUsergroupName;
+
+  public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
+  @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
+  private String sUsergroupNameX;
 
   public UsergroupResponse() {
   }
@@ -103,6 +107,25 @@ public class UsergroupResponse {
   }
 
 
+  public UsergroupResponse sUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
+    return this;
+  }
+
+   /**
+   * The Name of the Usergroup in the language of the requester
+   * @return sUsergroupNameX
+  **/
+  @javax.annotation.Nullable
+  public String getsUsergroupNameX() {
+    return sUsergroupNameX;
+  }
+
+  public void setsUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -114,12 +137,13 @@ public class UsergroupResponse {
     }
     UsergroupResponse usergroupResponse = (UsergroupResponse) o;
     return Objects.equals(this.pkiUsergroupID, usergroupResponse.pkiUsergroupID) &&
-        Objects.equals(this.objUsergroupName, usergroupResponse.objUsergroupName);
+        Objects.equals(this.objUsergroupName, usergroupResponse.objUsergroupName) &&
+        Objects.equals(this.sUsergroupNameX, usergroupResponse.sUsergroupNameX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupID, objUsergroupName);
+    return Objects.hash(pkiUsergroupID, objUsergroupName, sUsergroupNameX);
   }
 
   @Override
@@ -128,6 +152,7 @@ public class UsergroupResponse {
     sb.append("class UsergroupResponse {\n");
     sb.append("    pkiUsergroupID: ").append(toIndentedString(pkiUsergroupID)).append("\n");
     sb.append("    objUsergroupName: ").append(toIndentedString(objUsergroupName)).append("\n");
+    sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -152,6 +177,7 @@ public class UsergroupResponse {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiUsergroupID");
     openapiFields.add("objUsergroupName");
+    openapiFields.add("sUsergroupNameX");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -189,6 +215,9 @@ public class UsergroupResponse {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objUsergroupName`
       MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
+      if ((jsonObj.get("sUsergroupNameX") != null && !jsonObj.get("sUsergroupNameX").isJsonNull()) && !jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

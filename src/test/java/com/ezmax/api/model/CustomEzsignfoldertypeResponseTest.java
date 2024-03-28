@@ -62,22 +62,6 @@ public class CustomEzsignfoldertypeResponseTest {
     }
 
     /**
-     * Test the property 'bEzsignfoldertypeIncludeproofsigner'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofsignerTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofsigner
-    }
-
-    /**
-     * Test the property 'bEzsignfoldertypeIncludeproofuser'
-     */
-    @Test
-    public void bEzsignfoldertypeIncludeproofuserTest() {
-        // TODO: test bEzsignfoldertypeIncludeproofuser
-    }
-
-    /**
      * Test the property 'bEzsignfoldertypeAllowdownloadattachmentezsignsigner'
      */
     @Test
@@ -102,11 +86,11 @@ public class CustomEzsignfoldertypeResponseTest {
     }
 
     /**
-     * Test the property 'bEzsignfoldertypeReassign'
+     * Test the property 'bEzsignfoldertypeDiscussion'
      */
     @Test
-    public void bEzsignfoldertypeReassignTest() {
-        // TODO: test bEzsignfoldertypeReassign
+    public void bEzsignfoldertypeDiscussionTest() {
+        // TODO: test bEzsignfoldertypeDiscussion
     }
 
     /**

@@ -32,9 +32,13 @@ import com.ezmax.api.model.EzsigntemplateCopyV1Request;
 import com.ezmax.api.model.EzsigntemplateCopyV1Response;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV2Request;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV2Response;
 import com.ezmax.api.model.EzsigntemplateDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateEditObjectV1Response;
+import com.ezmax.api.model.EzsigntemplateEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplateEditObjectV2Response;
 import com.ezmax.api.model.EzsigntemplateGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplateGetListV1Response;
 import com.ezmax.api.model.EzsigntemplateGetObjectV1Response;
@@ -233,7 +237,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigntemplateCreateObjectV1Call(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -279,6 +285,7 @@ public class ObjectEzsigntemplateApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsigntemplateCreateObjectV1ValidateBeforeCall(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'ezsigntemplateCreateObjectV1Request' is set
@@ -301,7 +308,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request) throws ApiException {
         ApiResponse<EzsigntemplateCreateObjectV1Response> localVarResp = ezsigntemplateCreateObjectV1WithHttpInfo(ezsigntemplateCreateObjectV1Request);
         return localVarResp.getData();
@@ -318,7 +327,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsigntemplateCreateObjectV1Response> ezsigntemplateCreateObjectV1WithHttpInfo(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplateCreateObjectV1ValidateBeforeCall(ezsigntemplateCreateObjectV1Request, null);
         Type localVarReturnType = new TypeToken<EzsigntemplateCreateObjectV1Response>(){}.getType();
@@ -337,11 +348,136 @@ public class ObjectEzsigntemplateApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigntemplateCreateObjectV1Async(EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request, final ApiCallback<EzsigntemplateCreateObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplateCreateObjectV1ValidateBeforeCall(ezsigntemplateCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigntemplateCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigntemplateCreateObjectV2
+     * @param ezsigntemplateCreateObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplateCreateObjectV2Call(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsigntemplateCreateObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/ezsigntemplate";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigntemplateCreateObjectV2ValidateBeforeCall(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'ezsigntemplateCreateObjectV2Request' is set
+        if (ezsigntemplateCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigntemplateCreateObjectV2Request' when calling ezsigntemplateCreateObjectV2(Async)");
+        }
+
+        return ezsigntemplateCreateObjectV2Call(ezsigntemplateCreateObjectV2Request, _callback);
+
+    }
+
+    /**
+     * Create a new Ezsigntemplate
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigntemplateCreateObjectV2Request  (required)
+     * @return EzsigntemplateCreateObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request) throws ApiException {
+        ApiResponse<EzsigntemplateCreateObjectV2Response> localVarResp = ezsigntemplateCreateObjectV2WithHttpInfo(ezsigntemplateCreateObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Ezsigntemplate
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigntemplateCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsigntemplateCreateObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigntemplateCreateObjectV2Response> ezsigntemplateCreateObjectV2WithHttpInfo(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplateCreateObjectV2ValidateBeforeCall(ezsigntemplateCreateObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplateCreateObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a new Ezsigntemplate (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsigntemplateCreateObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplateCreateObjectV2Async(EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request, final ApiCallback<EzsigntemplateCreateObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigntemplateCreateObjectV2ValidateBeforeCall(ezsigntemplateCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplateCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -486,7 +622,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigntemplateEditObjectV1Call(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -533,6 +671,7 @@ public class ObjectEzsigntemplateApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsigntemplateEditObjectV1ValidateBeforeCall(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsigntemplateID' is set
@@ -563,7 +702,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request) throws ApiException {
         ApiResponse<EzsigntemplateEditObjectV1Response> localVarResp = ezsigntemplateEditObjectV1WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
         return localVarResp.getData();
@@ -583,7 +724,9 @@ public class ObjectEzsigntemplateApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsigntemplateEditObjectV1Response> ezsigntemplateEditObjectV1WithHttpInfo(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplateEditObjectV1ValidateBeforeCall(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request, null);
         Type localVarReturnType = new TypeToken<EzsigntemplateEditObjectV1Response>(){}.getType();
@@ -605,11 +748,154 @@ public class ObjectEzsigntemplateApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsigntemplateEditObjectV1Async(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request, final ApiCallback<EzsigntemplateEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplateEditObjectV1ValidateBeforeCall(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigntemplateEditObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigntemplateEditObjectV2
+     * @param pkiEzsigntemplateID  (required)
+     * @param ezsigntemplateEditObjectV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplateEditObjectV2Call(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsigntemplateEditObjectV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/ezsigntemplate/{pkiEzsigntemplateID}"
+            .replace("{" + "pkiEzsigntemplateID" + "}", localVarApiClient.escapeString(pkiEzsigntemplateID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigntemplateEditObjectV2ValidateBeforeCall(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsigntemplateID' is set
+        if (pkiEzsigntemplateID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigntemplateID' when calling ezsigntemplateEditObjectV2(Async)");
+        }
+
+        // verify the required parameter 'ezsigntemplateEditObjectV2Request' is set
+        if (ezsigntemplateEditObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigntemplateEditObjectV2Request' when calling ezsigntemplateEditObjectV2(Async)");
+        }
+
+        return ezsigntemplateEditObjectV2Call(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request, _callback);
+
+    }
+
+    /**
+     * Edit an existing Ezsigntemplate
+     * 
+     * @param pkiEzsigntemplateID  (required)
+     * @param ezsigntemplateEditObjectV2Request  (required)
+     * @return EzsigntemplateEditObjectV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request) throws ApiException {
+        ApiResponse<EzsigntemplateEditObjectV2Response> localVarResp = ezsigntemplateEditObjectV2WithHttpInfo(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit an existing Ezsigntemplate
+     * 
+     * @param pkiEzsigntemplateID  (required)
+     * @param ezsigntemplateEditObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsigntemplateEditObjectV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigntemplateEditObjectV2Response> ezsigntemplateEditObjectV2WithHttpInfo(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplateEditObjectV2ValidateBeforeCall(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplateEditObjectV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Edit an existing Ezsigntemplate (asynchronously)
+     * 
+     * @param pkiEzsigntemplateID  (required)
+     * @param ezsigntemplateEditObjectV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplateEditObjectV2Async(Integer pkiEzsigntemplateID, EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request, final ApiCallback<EzsigntemplateEditObjectV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigntemplateEditObjectV2ValidateBeforeCall(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplateEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -17,13 +17,16 @@ import java.util.Objects;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.WebhookheaderRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class WebhookRequestCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -98,6 +101,10 @@ public class WebhookRequestCompound {
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
   private Boolean bWebhookSkipsslvalidation;
 
+  public static final String SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER = "a_objWebhookheader";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER)
+  private List<WebhookheaderRequestCompound> aObjWebhookheader;
+
   public WebhookRequestCompound() {
   }
 
@@ -128,6 +135,7 @@ public class WebhookRequestCompound {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
   @javax.annotation.Nullable
@@ -311,6 +319,33 @@ public class WebhookRequestCompound {
   }
 
 
+  public WebhookRequestCompound aObjWebhookheader(List<WebhookheaderRequestCompound> aObjWebhookheader) {
+    this.aObjWebhookheader = aObjWebhookheader;
+    return this;
+  }
+
+  public WebhookRequestCompound addAObjWebhookheaderItem(WebhookheaderRequestCompound aObjWebhookheaderItem) {
+    if (this.aObjWebhookheader == null) {
+      this.aObjWebhookheader = new ArrayList<>();
+    }
+    this.aObjWebhookheader.add(aObjWebhookheaderItem);
+    return this;
+  }
+
+   /**
+   * Get aObjWebhookheader
+   * @return aObjWebhookheader
+  **/
+  @javax.annotation.Nullable
+  public List<WebhookheaderRequestCompound> getaObjWebhookheader() {
+    return aObjWebhookheader;
+  }
+
+  public void setaObjWebhookheader(List<WebhookheaderRequestCompound> aObjWebhookheader) {
+    this.aObjWebhookheader = aObjWebhookheader;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -331,12 +366,13 @@ public class WebhookRequestCompound {
         Objects.equals(this.sWebhookEmailfailed, webhookRequestCompound.sWebhookEmailfailed) &&
         Objects.equals(this.bWebhookIsactive, webhookRequestCompound.bWebhookIsactive) &&
         Objects.equals(this.bWebhookIssigned, webhookRequestCompound.bWebhookIssigned) &&
-        Objects.equals(this.bWebhookSkipsslvalidation, webhookRequestCompound.bWebhookSkipsslvalidation);
+        Objects.equals(this.bWebhookSkipsslvalidation, webhookRequestCompound.bWebhookSkipsslvalidation) &&
+        Objects.equals(this.aObjWebhookheader, webhookRequestCompound.aObjWebhookheader);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, fkiEzsignfoldertypeID, sWebhookDescription, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation);
+    return Objects.hash(pkiWebhookID, fkiEzsignfoldertypeID, sWebhookDescription, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, aObjWebhookheader);
   }
 
   @Override
@@ -354,6 +390,7 @@ public class WebhookRequestCompound {
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
     sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
+    sb.append("    aObjWebhookheader: ").append(toIndentedString(aObjWebhookheader)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -387,6 +424,7 @@ public class WebhookRequestCompound {
     openapiFields.add("bWebhookIsactive");
     openapiFields.add("bWebhookIssigned");
     openapiFields.add("bWebhookSkipsslvalidation");
+    openapiFields.add("a_objWebhookheader");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -444,6 +482,20 @@ public class WebhookRequestCompound {
       }
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
+      }
+      if (jsonObj.get("a_objWebhookheader") != null && !jsonObj.get("a_objWebhookheader").isJsonNull()) {
+        JsonArray jsonArrayaObjWebhookheader = jsonObj.getAsJsonArray("a_objWebhookheader");
+        if (jsonArrayaObjWebhookheader != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objWebhookheader").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objWebhookheader` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebhookheader").toString()));
+          }
+
+          // validate the optional field `a_objWebhookheader` (array)
+          for (int i = 0; i < jsonArrayaObjWebhookheader.size(); i++) {
+            WebhookheaderRequestCompound.validateJsonElement(jsonArrayaObjWebhookheader.get(i));
+          };
+        }
       }
   }
 

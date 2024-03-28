@@ -114,6 +114,14 @@ public class EzsigntemplatepackageResponseCompoundTest {
     }
 
     /**
+     * Test the property 'bEzsigntemplatepackageEditallowed'
+     */
+    @Test
+    public void bEzsigntemplatepackageEditallowedTest() {
+        // TODO: test bEzsigntemplatepackageEditallowed
+    }
+
+    /**
      * Test the property 'aObjEzsigntemplatepackagesigner'
      */
     @Test

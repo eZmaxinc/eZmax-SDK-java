@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class UsergroupmembershipResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -62,6 +62,10 @@ public class UsergroupmembershipResponseCompound {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
+  private Integer fkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
@@ -82,6 +86,10 @@ public class UsergroupmembershipResponseCompound {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
   private String sUsergroupNameX;
+
+  public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
+  @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
+  private String sUsergroupexternalName;
 
   public UsergroupmembershipResponseCompound() {
   }
@@ -138,13 +146,34 @@ public class UsergroupmembershipResponseCompound {
    * minimum: 0
    * @return fkiUserID
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
   }
 
   public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+
+  public UsergroupmembershipResponseCompound fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
+    return this;
+  }
+
+   /**
+   * The unique ID of the Usergroupexternal
+   * minimum: 0
+   * maximum: 255
+   * @return fkiUsergroupexternalID
+  **/
+  @javax.annotation.Nullable
+  public Integer getFkiUsergroupexternalID() {
+    return fkiUsergroupexternalID;
+  }
+
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+    this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
@@ -157,7 +186,7 @@ public class UsergroupmembershipResponseCompound {
    * The first name of the user
    * @return sUserFirstname
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsUserFirstname() {
     return sUserFirstname;
   }
@@ -176,7 +205,7 @@ public class UsergroupmembershipResponseCompound {
    * The last name of the user
    * @return sUserLastname
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsUserLastname() {
     return sUserLastname;
   }
@@ -195,7 +224,7 @@ public class UsergroupmembershipResponseCompound {
    * The login name of the User.
    * @return sUserLoginname
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsUserLoginname() {
     return sUserLoginname;
   }
@@ -243,6 +272,25 @@ public class UsergroupmembershipResponseCompound {
   }
 
 
+  public UsergroupmembershipResponseCompound sUsergroupexternalName(String sUsergroupexternalName) {
+    this.sUsergroupexternalName = sUsergroupexternalName;
+    return this;
+  }
+
+   /**
+   * The name of the Usergroupexternal
+   * @return sUsergroupexternalName
+  **/
+  @javax.annotation.Nullable
+  public String getsUsergroupexternalName() {
+    return sUsergroupexternalName;
+  }
+
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
+    this.sUsergroupexternalName = sUsergroupexternalName;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -256,16 +304,18 @@ public class UsergroupmembershipResponseCompound {
     return Objects.equals(this.pkiUsergroupmembershipID, usergroupmembershipResponseCompound.pkiUsergroupmembershipID) &&
         Objects.equals(this.fkiUsergroupID, usergroupmembershipResponseCompound.fkiUsergroupID) &&
         Objects.equals(this.fkiUserID, usergroupmembershipResponseCompound.fkiUserID) &&
+        Objects.equals(this.fkiUsergroupexternalID, usergroupmembershipResponseCompound.fkiUsergroupexternalID) &&
         Objects.equals(this.sUserFirstname, usergroupmembershipResponseCompound.sUserFirstname) &&
         Objects.equals(this.sUserLastname, usergroupmembershipResponseCompound.sUserLastname) &&
         Objects.equals(this.sUserLoginname, usergroupmembershipResponseCompound.sUserLoginname) &&
         Objects.equals(this.sEmailAddress, usergroupmembershipResponseCompound.sEmailAddress) &&
-        Objects.equals(this.sUsergroupNameX, usergroupmembershipResponseCompound.sUsergroupNameX);
+        Objects.equals(this.sUsergroupNameX, usergroupmembershipResponseCompound.sUsergroupNameX) &&
+        Objects.equals(this.sUsergroupexternalName, usergroupmembershipResponseCompound.sUsergroupexternalName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupmembershipID, fkiUsergroupID, fkiUserID, sUserFirstname, sUserLastname, sUserLoginname, sEmailAddress, sUsergroupNameX);
+    return Objects.hash(pkiUsergroupmembershipID, fkiUsergroupID, fkiUserID, fkiUsergroupexternalID, sUserFirstname, sUserLastname, sUserLoginname, sEmailAddress, sUsergroupNameX, sUsergroupexternalName);
   }
 
   @Override
@@ -275,11 +325,13 @@ public class UsergroupmembershipResponseCompound {
     sb.append("    pkiUsergroupmembershipID: ").append(toIndentedString(pkiUsergroupmembershipID)).append("\n");
     sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiUsergroupexternalID: ").append(toIndentedString(fkiUsergroupexternalID)).append("\n");
     sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
     sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
+    sb.append("    sUsergroupexternalName: ").append(toIndentedString(sUsergroupexternalName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -305,20 +357,18 @@ public class UsergroupmembershipResponseCompound {
     openapiFields.add("pkiUsergroupmembershipID");
     openapiFields.add("fkiUsergroupID");
     openapiFields.add("fkiUserID");
+    openapiFields.add("fkiUsergroupexternalID");
     openapiFields.add("sUserFirstname");
     openapiFields.add("sUserLastname");
     openapiFields.add("sUserLoginname");
     openapiFields.add("sEmailAddress");
     openapiFields.add("sUsergroupNameX");
+    openapiFields.add("sUsergroupexternalName");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiUsergroupmembershipID");
     openapiRequiredFields.add("fkiUsergroupID");
-    openapiRequiredFields.add("fkiUserID");
-    openapiRequiredFields.add("sUserFirstname");
-    openapiRequiredFields.add("sUserLastname");
-    openapiRequiredFields.add("sUserLoginname");
     openapiRequiredFields.add("sUsergroupNameX");
   }
 
@@ -350,13 +400,13 @@ public class UsergroupmembershipResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
+      if ((jsonObj.get("sUserFirstname") != null && !jsonObj.get("sUserFirstname").isJsonNull()) && !jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
       }
-      if (!jsonObj.get("sUserLastname").isJsonPrimitive()) {
+      if ((jsonObj.get("sUserLastname") != null && !jsonObj.get("sUserLastname").isJsonNull()) && !jsonObj.get("sUserLastname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
       }
-      if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
+      if ((jsonObj.get("sUserLoginname") != null && !jsonObj.get("sUserLoginname").isJsonNull()) && !jsonObj.get("sUserLoginname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
@@ -364,6 +414,9 @@ public class UsergroupmembershipResponseCompound {
       }
       if (!jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
+      }
+      if ((jsonObj.get("sUsergroupexternalName") != null && !jsonObj.get("sUsergroupexternalName").isJsonNull()) && !jsonObj.get("sUsergroupexternalName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupexternalName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupexternalName").toString()));
       }
   }
 

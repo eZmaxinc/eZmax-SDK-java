@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.EzsigntemplatedocumentResponse;
 import com.ezmax.api.model.EzsigntemplatesignerResponseCompound;
+import com.ezmax.api.model.FieldEEzsigntemplateType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplate/{pkiEzsigntemplateID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-19T17:55:55.222327902Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplateGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -80,6 +81,10 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION)
   private String sEzsigntemplateDescription;
 
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATE_FILENAMEPATTERN = "sEzsigntemplateFilenamepattern";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_FILENAMEPATTERN)
+  private String sEzsigntemplateFilenamepattern;
+
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATE_ADMINONLY = "bEzsigntemplateAdminonly";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATE_ADMINONLY)
   private Boolean bEzsigntemplateAdminonly;
@@ -91,6 +96,14 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATE_EDITALLOWED = "bEzsigntemplateEditallowed";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATE_EDITALLOWED)
+  private Boolean bEzsigntemplateEditallowed;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE = "eEzsigntemplateType";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE)
+  private FieldEEzsigntemplateType eEzsigntemplateType;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT = "objEzsigntemplatedocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT)
@@ -151,9 +164,10 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
    /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
+   * maximum: 65535
    * @return fkiEzsignfoldertypeID
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
   }
@@ -222,6 +236,25 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsigntemplateGetObjectV1ResponseMPayload sEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+    return this;
+  }
+
+   /**
+   * The filename pattern of the Ezsigntemplate
+   * @return sEzsigntemplateFilenamepattern
+  **/
+  @javax.annotation.Nullable
+  public String getsEzsigntemplateFilenamepattern() {
+    return sEzsigntemplateFilenamepattern;
+  }
+
+  public void setsEzsigntemplateFilenamepattern(String sEzsigntemplateFilenamepattern) {
+    this.sEzsigntemplateFilenamepattern = sEzsigntemplateFilenamepattern;
+  }
+
+
   public EzsigntemplateGetObjectV1ResponseMPayload bEzsigntemplateAdminonly(Boolean bEzsigntemplateAdminonly) {
     this.bEzsigntemplateAdminonly = bEzsigntemplateAdminonly;
     return this;
@@ -250,7 +283,7 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
   }
@@ -276,6 +309,44 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
 
   public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
+  }
+
+
+  public EzsigntemplateGetObjectV1ResponseMPayload bEzsigntemplateEditallowed(Boolean bEzsigntemplateEditallowed) {
+    this.bEzsigntemplateEditallowed = bEzsigntemplateEditallowed;
+    return this;
+  }
+
+   /**
+   * Whether the Ezsigntemplate if allowed to edit or not
+   * @return bEzsigntemplateEditallowed
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbEzsigntemplateEditallowed() {
+    return bEzsigntemplateEditallowed;
+  }
+
+  public void setbEzsigntemplateEditallowed(Boolean bEzsigntemplateEditallowed) {
+    this.bEzsigntemplateEditallowed = bEzsigntemplateEditallowed;
+  }
+
+
+  public EzsigntemplateGetObjectV1ResponseMPayload eEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
+    return this;
+  }
+
+   /**
+   * Get eEzsigntemplateType
+   * @return eEzsigntemplateType
+  **/
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplateType geteEzsigntemplateType() {
+    return eEzsigntemplateType;
+  }
+
+  public void seteEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
+    this.eEzsigntemplateType = eEzsigntemplateType;
   }
 
 
@@ -341,16 +412,19 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
         Objects.equals(this.fkiLanguageID, ezsigntemplateGetObjectV1ResponseMPayload.fkiLanguageID) &&
         Objects.equals(this.sLanguageNameX, ezsigntemplateGetObjectV1ResponseMPayload.sLanguageNameX) &&
         Objects.equals(this.sEzsigntemplateDescription, ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateDescription) &&
+        Objects.equals(this.sEzsigntemplateFilenamepattern, ezsigntemplateGetObjectV1ResponseMPayload.sEzsigntemplateFilenamepattern) &&
         Objects.equals(this.bEzsigntemplateAdminonly, ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateAdminonly) &&
         Objects.equals(this.sEzsignfoldertypeNameX, ezsigntemplateGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX) &&
         Objects.equals(this.objAudit, ezsigntemplateGetObjectV1ResponseMPayload.objAudit) &&
+        Objects.equals(this.bEzsigntemplateEditallowed, ezsigntemplateGetObjectV1ResponseMPayload.bEzsigntemplateEditallowed) &&
+        Objects.equals(this.eEzsigntemplateType, ezsigntemplateGetObjectV1ResponseMPayload.eEzsigntemplateType) &&
         Objects.equals(this.objEzsigntemplatedocument, ezsigntemplateGetObjectV1ResponseMPayload.objEzsigntemplatedocument) &&
         Objects.equals(this.aObjEzsigntemplatesigner, ezsigntemplateGetObjectV1ResponseMPayload.aObjEzsigntemplatesigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsigntemplateDescription, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, objEzsigntemplatedocument, aObjEzsigntemplatesigner);
+    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsigntemplateDescription, sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, bEzsigntemplateEditallowed, eEzsigntemplateType, objEzsigntemplatedocument, aObjEzsigntemplatesigner);
   }
 
   @Override
@@ -363,9 +437,12 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sLanguageNameX: ").append(toIndentedString(sLanguageNameX)).append("\n");
     sb.append("    sEzsigntemplateDescription: ").append(toIndentedString(sEzsigntemplateDescription)).append("\n");
+    sb.append("    sEzsigntemplateFilenamepattern: ").append(toIndentedString(sEzsigntemplateFilenamepattern)).append("\n");
     sb.append("    bEzsigntemplateAdminonly: ").append(toIndentedString(bEzsigntemplateAdminonly)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    bEzsigntemplateEditallowed: ").append(toIndentedString(bEzsigntemplateEditallowed)).append("\n");
+    sb.append("    eEzsigntemplateType: ").append(toIndentedString(eEzsigntemplateType)).append("\n");
     sb.append("    objEzsigntemplatedocument: ").append(toIndentedString(objEzsigntemplatedocument)).append("\n");
     sb.append("    aObjEzsigntemplatesigner: ").append(toIndentedString(aObjEzsigntemplatesigner)).append("\n");
     sb.append("}");
@@ -396,22 +473,24 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sLanguageNameX");
     openapiFields.add("sEzsigntemplateDescription");
+    openapiFields.add("sEzsigntemplateFilenamepattern");
     openapiFields.add("bEzsigntemplateAdminonly");
     openapiFields.add("sEzsignfoldertypeNameX");
     openapiFields.add("objAudit");
+    openapiFields.add("bEzsigntemplateEditallowed");
+    openapiFields.add("eEzsigntemplateType");
     openapiFields.add("objEzsigntemplatedocument");
     openapiFields.add("a_objEzsigntemplatesigner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsigntemplateID");
-    openapiRequiredFields.add("fkiEzsignfoldertypeID");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sLanguageNameX");
     openapiRequiredFields.add("sEzsigntemplateDescription");
     openapiRequiredFields.add("bEzsigntemplateAdminonly");
-    openapiRequiredFields.add("sEzsignfoldertypeNameX");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("bEzsigntemplateEditallowed");
     openapiRequiredFields.add("a_objEzsigntemplatesigner");
   }
 
@@ -449,11 +528,18 @@ public class EzsigntemplateGetObjectV1ResponseMPayload {
       if (!jsonObj.get("sEzsigntemplateDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateDescription").toString()));
       }
-      if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+      if ((jsonObj.get("sEzsigntemplateFilenamepattern") != null && !jsonObj.get("sEzsigntemplateFilenamepattern").isJsonNull()) && !jsonObj.get("sEzsigntemplateFilenamepattern").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateFilenamepattern` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateFilenamepattern").toString()));
+      }
+      if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      // validate the optional field `eEzsigntemplateType`
+      if (jsonObj.get("eEzsigntemplateType") != null && !jsonObj.get("eEzsigntemplateType").isJsonNull()) {
+        FieldEEzsigntemplateType.validateJsonElement(jsonObj.get("eEzsigntemplateType"));
+      }
       // validate the optional field `objEzsigntemplatedocument`
       if (jsonObj.get("objEzsigntemplatedocument") != null && !jsonObj.get("objEzsigntemplatedocument").isJsonNull()) {
         EzsigntemplatedocumentResponse.validateJsonElement(jsonObj.get("objEzsigntemplatedocument"));

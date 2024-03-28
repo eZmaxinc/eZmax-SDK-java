@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.FieldEBrandingLogo;
+import com.ezmax.api.model.FieldEBrandingLogointerface;
 import com.ezmax.api.model.MultilingualBrandingDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -96,6 +97,14 @@ public class BrandingResponseCompoundTest {
     }
 
     /**
+     * Test the property 'eBrandingLogointerface'
+     */
+    @Test
+    public void eBrandingLogointerfaceTest() {
+        // TODO: test eBrandingLogointerface
+    }
+
+    /**
      * Test the property 'iBrandingColortext'
      */
     @Test
@@ -144,6 +153,14 @@ public class BrandingResponseCompoundTest {
     }
 
     /**
+     * Test the property 'iBrandingInterfacecolor'
+     */
+    @Test
+    public void iBrandingInterfacecolorTest() {
+        // TODO: test iBrandingInterfacecolor
+    }
+
+    /**
      * Test the property 'bBrandingIsactive'
      */
     @Test
@@ -157,6 +174,14 @@ public class BrandingResponseCompoundTest {
     @Test
     public void sBrandingLogourlTest() {
         // TODO: test sBrandingLogourl
+    }
+
+    /**
+     * Test the property 'sBrandingLogointerfaceurl'
+     */
+    @Test
+    public void sBrandingLogointerfaceurlTest() {
+        // TODO: test sBrandingLogointerfaceurl
     }
 
 }

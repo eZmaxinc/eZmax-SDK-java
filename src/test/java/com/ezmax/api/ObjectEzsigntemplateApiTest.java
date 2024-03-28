@@ -19,9 +19,13 @@ import com.ezmax.api.model.EzsigntemplateCopyV1Request;
 import com.ezmax.api.model.EzsigntemplateCopyV1Response;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV2Request;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV2Response;
 import com.ezmax.api.model.EzsigntemplateDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateEditObjectV1Response;
+import com.ezmax.api.model.EzsigntemplateEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplateEditObjectV2Response;
 import com.ezmax.api.model.EzsigntemplateGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplateGetListV1Response;
 import com.ezmax.api.model.EzsigntemplateGetObjectV1Response;
@@ -74,6 +78,20 @@ public class ObjectEzsigntemplateApiTest {
     }
 
     /**
+     * Create a new Ezsigntemplate
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplateCreateObjectV2Test() throws ApiException {
+        EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = null;
+        EzsigntemplateCreateObjectV2Response response = api.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
+        // TODO: test validations
+    }
+
+    /**
      * Delete an existing Ezsigntemplate
      *
      * 
@@ -99,6 +117,21 @@ public class ObjectEzsigntemplateApiTest {
         Integer pkiEzsigntemplateID = null;
         EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = null;
         EzsigntemplateEditObjectV1Response response = api.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit an existing Ezsigntemplate
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplateEditObjectV2Test() throws ApiException {
+        Integer pkiEzsigntemplateID = null;
+        EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = null;
+        EzsigntemplateEditObjectV2Response response = api.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
         // TODO: test validations
     }
 
