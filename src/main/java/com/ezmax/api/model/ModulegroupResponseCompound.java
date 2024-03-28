@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulegroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T03:34:43.801077477Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class ModulegroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULEGROUP_I_D = "pkiModulegroupID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULEGROUP_I_D)

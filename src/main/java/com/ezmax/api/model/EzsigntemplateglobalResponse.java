@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T01:27:41.601414258Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T03:34:43.801077477Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsigntemplateglobalResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
