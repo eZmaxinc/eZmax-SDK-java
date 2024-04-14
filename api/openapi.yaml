@@ -10,7 +10,7 @@ info:
     url: https://opensource.org/licenses/MIT
   termsOfService: https://www.ezmax.ca/TODO
   title: eZmax API Definition (Full)
-  version: 1.2.0
+  version: 1.2.1
   x-logo:
     url: https://github.com/eZmaxinc/eZmax-API/raw/master/docs/resources/images/logo.png
     backgroundColor: '#fafafa'
@@ -81,7 +81,8 @@ tags:
     \ ask users to update to the newer version of the function and give them ample\
     \ time to do so.\r\nOnly after that delay expires (or no more users are still\
     \ using it), we will have the function **Removed**.\r\n\r\n## 1.2.X Releases\r\
-    \n\r\n### [1.2.0] - 2024-04-14\r\n\r\n#### Added\r\n- DELETE /1/object/creditcardclient/{pkiCreditcardclientID}\r\
+    \n\r\n### [1.2.1] - 2024-\r\n\r\n#### Added\r\n\r\n### [1.2.0] - 2024-04-14\r\n\
+    \r\n#### Added\r\n- DELETE /1/object/creditcardclient/{pkiCreditcardclientID}\r\
     \n- DELETE /1/object/discussion/{pkiDiscussionID}\r\n- DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}\r\
     \n- DELETE /1/object/discussionmessage/{pkiDiscussionmessageID}\r\n- DELETE /1/object/usergroupdelegation/{pkiUsergroupdelegationID}\r\
     \n- DELETE /1/object/usergroupexternal/{pkiUsergroupexternalID}\r\n- GET /1/module/location/search\r\
