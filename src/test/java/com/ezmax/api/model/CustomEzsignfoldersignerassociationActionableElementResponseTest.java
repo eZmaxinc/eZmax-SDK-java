@@ -81,6 +81,14 @@ public class CustomEzsignfoldersignerassociationActionableElementResponseTest {
     }
 
     /**
+     * Test the property 'bEzsignfoldersignerassociationAllowsigninginperson'
+     */
+    @Test
+    public void bEzsignfoldersignerassociationAllowsigninginpersonTest() {
+        // TODO: test bEzsignfoldersignerassociationAllowsigninginperson
+    }
+
+    /**
      * Test the property 'objEzsignsignergroup'
      */
     @Test

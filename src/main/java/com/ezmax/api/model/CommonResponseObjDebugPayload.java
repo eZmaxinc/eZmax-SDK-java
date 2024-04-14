@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T20:13:03.553513468Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -68,6 +68,10 @@ public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
   @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
   private Boolean bVersionDeprecated;
+
+  public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
+  @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
+  private String dtResponseDate;
 
   public CommonResponseObjDebugPayload() {
   }
@@ -156,6 +160,25 @@ public class CommonResponseObjDebugPayload {
   }
 
 
+  public CommonResponseObjDebugPayload dtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+    return this;
+  }
+
+   /**
+   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+   * @return dtResponseDate
+  **/
+  @javax.annotation.Nonnull
+  public String getDtResponseDate() {
+    return dtResponseDate;
+  }
+
+  public void setDtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,12 +192,13 @@ public class CommonResponseObjDebugPayload {
     return Objects.equals(this.iVersionMin, commonResponseObjDebugPayload.iVersionMin) &&
         Objects.equals(this.iVersionMax, commonResponseObjDebugPayload.iVersionMax) &&
         Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayload.aRequiredPermission) &&
-        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayload.bVersionDeprecated);
+        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayload.bVersionDeprecated) &&
+        Objects.equals(this.dtResponseDate, commonResponseObjDebugPayload.dtResponseDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated);
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, dtResponseDate);
   }
 
   @Override
@@ -185,6 +209,7 @@ public class CommonResponseObjDebugPayload {
     sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
     sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
     sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
+    sb.append("    dtResponseDate: ").append(toIndentedString(dtResponseDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -211,6 +236,7 @@ public class CommonResponseObjDebugPayload {
     openapiFields.add("iVersionMax");
     openapiFields.add("a_RequiredPermission");
     openapiFields.add("bVersionDeprecated");
+    openapiFields.add("dtResponseDate");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -218,6 +244,7 @@ public class CommonResponseObjDebugPayload {
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
     openapiRequiredFields.add("bVersionDeprecated");
+    openapiRequiredFields.add("dtResponseDate");
   }
 
  /**
@@ -253,6 +280,9 @@ public class CommonResponseObjDebugPayload {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("a_RequiredPermission").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
+      }
+      if (!jsonObj.get("dtResponseDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtResponseDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtResponseDate").toString()));
       }
   }
 

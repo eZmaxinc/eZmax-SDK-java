@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T20:13:03.553513468Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -70,6 +70,10 @@ public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
   private String tEzsignfoldersignerassociationMessage;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON = "bEzsignfoldersignerassociationAllowsigninginperson";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON)
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson;
 
   public EzsignfoldersignerassociationResponse() {
   }
@@ -171,6 +175,25 @@ public class EzsignfoldersignerassociationResponse {
   }
 
 
+  public EzsignfoldersignerassociationResponse bEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+    return this;
+  }
+
+   /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   * @return bEzsignfoldersignerassociationAllowsigninginperson
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+  public void setbEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -185,12 +208,13 @@ public class EzsignfoldersignerassociationResponse {
         Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationResponse.fkiEzsignfolderID) &&
         Objects.equals(this.bEzsignfoldersignerassociationDelayedsend, ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationDelayedsend) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationReceivecopy) &&
-        Objects.equals(this.tEzsignfoldersignerassociationMessage, ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage);
+        Objects.equals(this.tEzsignfoldersignerassociationMessage, ezsignfoldersignerassociationResponse.tEzsignfoldersignerassociationMessage) &&
+        Objects.equals(this.bEzsignfoldersignerassociationAllowsigninginperson, ezsignfoldersignerassociationResponse.bEzsignfoldersignerassociationAllowsigninginperson);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson);
   }
 
   @Override
@@ -202,6 +226,7 @@ public class EzsignfoldersignerassociationResponse {
     sb.append("    bEzsignfoldersignerassociationDelayedsend: ").append(toIndentedString(bEzsignfoldersignerassociationDelayedsend)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
     sb.append("    tEzsignfoldersignerassociationMessage: ").append(toIndentedString(tEzsignfoldersignerassociationMessage)).append("\n");
+    sb.append("    bEzsignfoldersignerassociationAllowsigninginperson: ").append(toIndentedString(bEzsignfoldersignerassociationAllowsigninginperson)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -229,6 +254,7 @@ public class EzsignfoldersignerassociationResponse {
     openapiFields.add("bEzsignfoldersignerassociationDelayedsend");
     openapiFields.add("bEzsignfoldersignerassociationReceivecopy");
     openapiFields.add("tEzsignfoldersignerassociationMessage");
+    openapiFields.add("bEzsignfoldersignerassociationAllowsigninginperson");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -237,6 +263,7 @@ public class EzsignfoldersignerassociationResponse {
     openapiRequiredFields.add("bEzsignfoldersignerassociationDelayedsend");
     openapiRequiredFields.add("bEzsignfoldersignerassociationReceivecopy");
     openapiRequiredFields.add("tEzsignfoldersignerassociationMessage");
+    openapiRequiredFields.add("bEzsignfoldersignerassociationAllowsigninginperson");
   }
 
  /**

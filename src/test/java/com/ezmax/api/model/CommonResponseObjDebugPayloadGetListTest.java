@@ -75,6 +75,14 @@ public class CommonResponseObjDebugPayloadGetListTest {
     }
 
     /**
+     * Test the property 'dtResponseDate'
+     */
+    @Test
+    public void dtResponseDateTest() {
+        // TODO: test dtResponseDate
+    }
+
+    /**
      * Test the property 'aFilter'
      */
     @Test

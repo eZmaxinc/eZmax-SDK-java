@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T20:13:03.553513468Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -71,6 +71,10 @@ public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
   @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
   private Boolean bVersionDeprecated;
+
+  public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
+  @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
+  private String dtResponseDate;
 
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
@@ -175,6 +179,25 @@ public class CommonResponseObjDebugPayloadGetList {
   }
 
 
+  public CommonResponseObjDebugPayloadGetList dtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+    return this;
+  }
+
+   /**
+   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+   * @return dtResponseDate
+  **/
+  @javax.annotation.Nonnull
+  public String getDtResponseDate() {
+    return dtResponseDate;
+  }
+
+  public void setDtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+  }
+
+
   public CommonResponseObjDebugPayloadGetList aFilter(CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
     return this;
@@ -276,6 +299,7 @@ public class CommonResponseObjDebugPayloadGetList {
         Objects.equals(this.iVersionMax, commonResponseObjDebugPayloadGetList.iVersionMax) &&
         Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayloadGetList.aRequiredPermission) &&
         Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayloadGetList.bVersionDeprecated) &&
+        Objects.equals(this.dtResponseDate, commonResponseObjDebugPayloadGetList.dtResponseDate) &&
         Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
         Objects.equals(this.aOrderBy, commonResponseObjDebugPayloadGetList.aOrderBy) &&
         Objects.equals(this.iRowMax, commonResponseObjDebugPayloadGetList.iRowMax) &&
@@ -284,7 +308,7 @@ public class CommonResponseObjDebugPayloadGetList {
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, aFilter, aOrderBy, iRowMax, iRowOffset);
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, dtResponseDate, aFilter, aOrderBy, iRowMax, iRowOffset);
   }
 
   @Override
@@ -295,6 +319,7 @@ public class CommonResponseObjDebugPayloadGetList {
     sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
     sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
     sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
+    sb.append("    dtResponseDate: ").append(toIndentedString(dtResponseDate)).append("\n");
     sb.append("    aFilter: ").append(toIndentedString(aFilter)).append("\n");
     sb.append("    aOrderBy: ").append(toIndentedString(aOrderBy)).append("\n");
     sb.append("    iRowMax: ").append(toIndentedString(iRowMax)).append("\n");
@@ -325,6 +350,7 @@ public class CommonResponseObjDebugPayloadGetList {
     openapiFields.add("iVersionMax");
     openapiFields.add("a_RequiredPermission");
     openapiFields.add("bVersionDeprecated");
+    openapiFields.add("dtResponseDate");
     openapiFields.add("a_Filter");
     openapiFields.add("a_OrderBy");
     openapiFields.add("iRowMax");
@@ -336,6 +362,7 @@ public class CommonResponseObjDebugPayloadGetList {
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
     openapiRequiredFields.add("bVersionDeprecated");
+    openapiRequiredFields.add("dtResponseDate");
     openapiRequiredFields.add("a_Filter");
     openapiRequiredFields.add("a_OrderBy");
     openapiRequiredFields.add("iRowMax");
@@ -375,6 +402,9 @@ public class CommonResponseObjDebugPayloadGetList {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("a_RequiredPermission").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
+      }
+      if (!jsonObj.get("dtResponseDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtResponseDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtResponseDate").toString()));
       }
       // validate the required field `a_Filter`
       CommonResponseFilter.validateJsonElement(jsonObj.get("a_Filter"));

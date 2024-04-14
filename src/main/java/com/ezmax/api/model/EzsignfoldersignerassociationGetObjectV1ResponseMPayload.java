@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-28T20:00:03.371436717Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T20:13:03.553513468Z[Etc/UTC]", comments = "Generator version: 7.4.0")
 public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -73,6 +73,10 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
   private String tEzsignfoldersignerassociationMessage;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON = "bEzsignfoldersignerassociationAllowsigninginperson";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON)
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
@@ -186,6 +190,25 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
   }
 
 
+  public EzsignfoldersignerassociationGetObjectV1ResponseMPayload bEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+    return this;
+  }
+
+   /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   * @return bEzsignfoldersignerassociationAllowsigninginperson
+  **/
+  @javax.annotation.Nonnull
+  public Boolean getbEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+  public void setbEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+
   public EzsignfoldersignerassociationGetObjectV1ResponseMPayload objEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
@@ -258,6 +281,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
         Objects.equals(this.bEzsignfoldersignerassociationDelayedsend, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationDelayedsend) &&
         Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationReceivecopy) &&
         Objects.equals(this.tEzsignfoldersignerassociationMessage, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.tEzsignfoldersignerassociationMessage) &&
+        Objects.equals(this.bEzsignfoldersignerassociationAllowsigninginperson, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.bEzsignfoldersignerassociationAllowsigninginperson) &&
         Objects.equals(this.objEzsignsignergroup, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsignergroup) &&
         Objects.equals(this.objUser, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objUser) &&
         Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationGetObjectV1ResponseMPayload.objEzsignsigner);
@@ -265,7 +289,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, objEzsignsignergroup, objUser, objEzsignsigner);
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson, objEzsignsignergroup, objUser, objEzsignsigner);
   }
 
   @Override
@@ -277,6 +301,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     sb.append("    bEzsignfoldersignerassociationDelayedsend: ").append(toIndentedString(bEzsignfoldersignerassociationDelayedsend)).append("\n");
     sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
     sb.append("    tEzsignfoldersignerassociationMessage: ").append(toIndentedString(tEzsignfoldersignerassociationMessage)).append("\n");
+    sb.append("    bEzsignfoldersignerassociationAllowsigninginperson: ").append(toIndentedString(bEzsignfoldersignerassociationAllowsigninginperson)).append("\n");
     sb.append("    objEzsignsignergroup: ").append(toIndentedString(objEzsignsignergroup)).append("\n");
     sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
     sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
@@ -307,6 +332,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     openapiFields.add("bEzsignfoldersignerassociationDelayedsend");
     openapiFields.add("bEzsignfoldersignerassociationReceivecopy");
     openapiFields.add("tEzsignfoldersignerassociationMessage");
+    openapiFields.add("bEzsignfoldersignerassociationAllowsigninginperson");
     openapiFields.add("objEzsignsignergroup");
     openapiFields.add("objUser");
     openapiFields.add("objEzsignsigner");
@@ -318,6 +344,7 @@ public class EzsignfoldersignerassociationGetObjectV1ResponseMPayload {
     openapiRequiredFields.add("bEzsignfoldersignerassociationDelayedsend");
     openapiRequiredFields.add("bEzsignfoldersignerassociationReceivecopy");
     openapiRequiredFields.add("tEzsignfoldersignerassociationMessage");
+    openapiRequiredFields.add("bEzsignfoldersignerassociationAllowsigninginperson");
   }
 
  /**

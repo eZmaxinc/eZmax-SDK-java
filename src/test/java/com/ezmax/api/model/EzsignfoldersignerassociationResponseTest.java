@@ -77,4 +77,12 @@ public class EzsignfoldersignerassociationResponseTest {
         // TODO: test tEzsignfoldersignerassociationMessage
     }
 
+    /**
+     * Test the property 'bEzsignfoldersignerassociationAllowsigninginperson'
+     */
+    @Test
+    public void bEzsignfoldersignerassociationAllowsigninginpersonTest() {
+        // TODO: test bEzsignfoldersignerassociationAllowsigninginperson
+    }
+
 }

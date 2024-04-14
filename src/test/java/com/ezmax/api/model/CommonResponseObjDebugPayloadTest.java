@@ -71,4 +71,12 @@ public class CommonResponseObjDebugPayloadTest {
         // TODO: test bVersionDeprecated
     }
 
+    /**
+     * Test the property 'dtResponseDate'
+     */
+    @Test
+    public void dtResponseDateTest() {
+        // TODO: test dtResponseDate
+    }
+
 }
