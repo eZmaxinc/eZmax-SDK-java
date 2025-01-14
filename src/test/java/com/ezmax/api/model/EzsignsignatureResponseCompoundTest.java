@@ -15,10 +15,12 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.CustomCreditcardtransactionResponse;
+import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
@@ -80,6 +82,14 @@ public class EzsignsignatureResponseCompoundTest {
     @Test
     public void fkiEzsignsigningreasonIDTest() {
         // TODO: test fkiEzsignsigningreasonID
+    }
+
+    /**
+     * Test the property 'fkiFontID'
+     */
+    @Test
+    public void fkiFontIDTest() {
+        // TODO: test fkiFontID
     }
 
     /**
@@ -203,6 +213,30 @@ public class EzsignsignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'eEzsignsignatureConsultationtrigger'
+     */
+    @Test
+    public void eEzsignsignatureConsultationtriggerTest() {
+        // TODO: test eEzsignsignatureConsultationtrigger
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureHandwritten'
+     */
+    @Test
+    public void bEzsignsignatureHandwrittenTest() {
+        // TODO: test bEzsignsignatureHandwritten
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureReason'
+     */
+    @Test
+    public void bEzsignsignatureReasonTest() {
+        // TODO: test bEzsignsignatureReason
+    }
+
+    /**
      * Test the property 'bEzsignsignatureRequired'
      */
     @Test
@@ -259,11 +293,27 @@ public class EzsignsignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'sEzsignsignatureTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsignsignatureTextvalidationcustommessageTest() {
+        // TODO: test sEzsignsignatureTextvalidationcustommessage
+    }
+
+    /**
      * Test the property 'eEzsignsignatureDependencyrequirement'
      */
     @Test
     public void eEzsignsignatureDependencyrequirementTest() {
         // TODO: test eEzsignsignatureDependencyrequirement
+    }
+
+    /**
+     * Test the property 'sEzsignsignatureDefaultvalue'
+     */
+    @Test
+    public void sEzsignsignatureDefaultvalueTest() {
+        // TODO: test sEzsignsignatureDefaultvalue
     }
 
     /**
@@ -299,6 +349,14 @@ public class EzsignsignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'dtEzsignsignatureDateInFolderTimezone'
+     */
+    @Test
+    public void dtEzsignsignatureDateInFolderTimezoneTest() {
+        // TODO: test dtEzsignsignatureDateInFolderTimezone
+    }
+
+    /**
      * Test the property 'bEzsignsignatureCustomdate'
      */
     @Test
@@ -328,6 +386,14 @@ public class EzsignsignatureResponseCompoundTest {
     @Test
     public void aObjEzsignelementdependencyTest() {
         // TODO: test aObjEzsignelementdependency
+    }
+
+    /**
+     * Test the property 'objTimezone'
+     */
+    @Test
+    public void objTimezoneTest() {
+        // TODO: test objTimezone
     }
 
 }

@@ -50,7 +50,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -62,7 +61,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezmaxinvoicing/getProvisional
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -160,11 +159,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicing
    * minimum: 0
    * @return pkiEzmaxinvoicingID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzmaxinvoicingID() {
     return pkiEzmaxinvoicingID;
@@ -180,11 +179,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingcontract
    * minimum: 1
    * @return fkiEzmaxinvoicingcontractID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzmaxinvoicingcontractID() {
     return fkiEzmaxinvoicingcontractID;
@@ -200,11 +199,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxpricing
    * minimum: 1
    * @return fkiEzmaxpricingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzmaxpricingID() {
     return fkiEzmaxpricingID;
@@ -220,11 +219,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Systemconfigurationtype
    * minimum: 1
    * @return fkiSystemconfigurationtypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
@@ -240,10 +239,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The description of the Systemconfigurationtype in the language of the requester
    * @return sSystemconfigurationtypeDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsSystemconfigurationtypeDescriptionX() {
     return sSystemconfigurationtypeDescriptionX;
@@ -259,10 +258,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The YYYYMM period of the Ezmaxinvoicing
    * @return yyyymmEzmaxinvoicing
-  **/
+   */
   @javax.annotation.Nonnull
   public String getYyyymmEzmaxinvoicing() {
     return yyyymmEzmaxinvoicing;
@@ -278,11 +277,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The number of days invoiced
    * minimum: 1
    * @return iEzmaxinvoicingDays
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingDays() {
     return iEzmaxinvoicingDays;
@@ -298,10 +297,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eEzmaxinvoicingPaymenttype
    * @return eEzmaxinvoicingPaymenttype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzmaxinvoicingPaymenttype geteEzmaxinvoicingPaymenttype() {
     return eEzmaxinvoicingPaymenttype;
@@ -317,10 +316,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The percentage of rebate depending of the payment type
    * @return dEzmaxinvoicingRebatepaymenttype
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingRebatepaymenttype() {
     return dEzmaxinvoicingRebatepaymenttype;
@@ -336,11 +335,11 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The length of the contract in years
    * minimum: 1
    * @return iEzmaxinvoicingContractlength
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingContractlength() {
     return iEzmaxinvoicingContractlength;
@@ -356,10 +355,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The percentage of rebate depending of the contract length
    * @return dEzmaxinvoicingRebatecontractlength
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingRebatecontractlength() {
     return dEzmaxinvoicingRebatecontractlength;
@@ -375,10 +374,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Whether the rebate for eZsign is for all agents
    * @return bEzmaxinvoicingRebateEzsignallagents
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingRebateEzsignallagents() {
     return bEzmaxinvoicingRebateEzsignallagents;
@@ -394,10 +393,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nullable
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -413,10 +412,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objEzmaxinvoicingcontract
    * @return objEzmaxinvoicingcontract
-  **/
+   */
   @javax.annotation.Nonnull
   public EzmaxinvoicingcontractResponseCompound getObjEzmaxinvoicingcontract() {
     return objEzmaxinvoicingcontract;
@@ -432,10 +431,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objEzmaxpricing
    * @return objEzmaxpricing
-  **/
+   */
   @javax.annotation.Nonnull
   public CustomEzmaxpricingResponse getObjEzmaxpricing() {
     return objEzmaxpricing;
@@ -459,10 +458,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingsummaryglobal
    * @return aObjEzmaxinvoicingsummaryglobal
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzmaxinvoicingsummaryglobalResponseCompound> getaObjEzmaxinvoicingsummaryglobal() {
     return aObjEzmaxinvoicingsummaryglobal;
@@ -486,10 +485,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingsummaryexternal
    * @return aObjEzmaxinvoicingsummaryexternal
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzmaxinvoicingsummaryexternalResponseCompound> getaObjEzmaxinvoicingsummaryexternal() {
     return aObjEzmaxinvoicingsummaryexternal;
@@ -513,10 +512,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingsummaryinternal
    * @return aObjEzmaxinvoicingsummaryinternal
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzmaxinvoicingsummaryinternalResponseCompound> getaObjEzmaxinvoicingsummaryinternal() {
     return aObjEzmaxinvoicingsummaryinternal;
@@ -540,10 +539,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingagent
    * @return aObjEzmaxinvoicingagent
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzmaxinvoicingagentResponseCompound> getaObjEzmaxinvoicingagent() {
     return aObjEzmaxinvoicingagent;
@@ -567,10 +566,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicinguser
    * @return aObjEzmaxinvoicinguser
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzmaxinvoicinguserResponseCompound> getaObjEzmaxinvoicinguser() {
     return aObjEzmaxinvoicinguser;
@@ -594,10 +593,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingezsignfolder
    * @return aObjEzmaxinvoicingezsignfolder
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzmaxinvoicingEzsignfolderResponse> getaObjEzmaxinvoicingezsignfolder() {
     return aObjEzmaxinvoicingezsignfolder;
@@ -621,10 +620,10 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingezsigndocument
    * @return aObjEzmaxinvoicingezsigndocument
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzmaxinvoicingEzsigndocumentResponse> getaObjEzmaxinvoicingezsigndocument() {
     return aObjEzmaxinvoicingezsigndocument;
@@ -769,12 +768,12 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     openapiRequiredFields.add("a_objEzmaxinvoicingezsigndocument");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingGetProvisionalV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingGetProvisionalV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingGetProvisionalV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -920,22 +919,22 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingGetProvisionalV1ResponseMPayload
-  */
+  /**
+   * Create an instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingGetProvisionalV1ResponseMPayload
+   */
   public static EzmaxinvoicingGetProvisionalV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicingGetProvisionalV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicingGetProvisionalV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

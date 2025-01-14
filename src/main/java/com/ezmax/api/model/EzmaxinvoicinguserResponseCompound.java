@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicinguser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicinguserResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D = "pkiEzmaxinvoicinguserID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D)
@@ -101,11 +100,11 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicinguser
    * minimum: 0
    * @return pkiEzmaxinvoicinguserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzmaxinvoicinguserID() {
     return pkiEzmaxinvoicinguserID;
@@ -121,11 +120,11 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicing
    * minimum: 0
    * @return fkiEzmaxinvoicingID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -141,11 +140,11 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityinternal.
    * minimum: 0
    * @return fkiBillingentityinternalID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -161,10 +160,10 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Billingentityinternal in the language of the requester
    * @return sBillingentityinternalDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -180,11 +179,11 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -200,11 +199,11 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of ezsign documents
    * minimum: 0
    * @return iEzmaxinvoicinguserEzsigndocument
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicinguserEzsigndocument() {
     return iEzmaxinvoicinguserEzsigndocument;
@@ -220,10 +219,10 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether there is an eZsign account
    * @return bEzmaxinvoicinguserEzsignaccount
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicinguserEzsignaccount() {
     return bEzmaxinvoicinguserEzsignaccount;
@@ -239,10 +238,10 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether it is billable for eZsign
    * @return bEzmaxinvoicinguserBillableezsign
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicinguserBillableezsign() {
     return bEzmaxinvoicinguserBillableezsign;
@@ -258,10 +257,10 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzmaxinvoicinguserVariationezsign
    * @return eEzmaxinvoicinguserVariationezsign
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzmaxinvoicinguserVariationezsign geteEzmaxinvoicinguserVariationezsign() {
     return eEzmaxinvoicinguserVariationezsign;
@@ -277,10 +276,10 @@ public class EzmaxinvoicinguserResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objContactName
    * @return objContactName
-  **/
+   */
   @javax.annotation.Nonnull
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
@@ -377,12 +376,12 @@ public class EzmaxinvoicinguserResponseCompound {
     openapiRequiredFields.add("objContactName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicinguserResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicinguserResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicinguserResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -443,22 +442,22 @@ public class EzmaxinvoicinguserResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicinguserResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicinguserResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicinguserResponseCompound
-  */
+  /**
+   * Create an instance of EzmaxinvoicinguserResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicinguserResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicinguserResponseCompound
+   */
   public static EzmaxinvoicinguserResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicinguserResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicinguserResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicinguserResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

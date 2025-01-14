@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attempt object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttemptResponse {
   public static final String SERIALIZED_NAME_DT_ATTEMPT_START = "dtAttemptStart";
   @SerializedName(SERIALIZED_NAME_DT_ATTEMPT_START)
@@ -71,10 +70,10 @@ public class AttemptResponse {
     return this;
   }
 
-   /**
+  /**
    * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
    * @return dtAttemptStart
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtAttemptStart() {
     return dtAttemptStart;
@@ -90,10 +89,10 @@ public class AttemptResponse {
     return this;
   }
 
-   /**
+  /**
    * The Success or Failure message of the attempt when we tried to call the URL to deliver the webhook event.
    * @return sAttemptResult
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAttemptResult() {
     return sAttemptResult;
@@ -109,10 +108,10 @@ public class AttemptResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of second it took to process the webhook or get an error
    * @return iAttemptDuration
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiAttemptDuration() {
     return iAttemptDuration;
@@ -183,12 +182,12 @@ public class AttemptResponse {
     openapiRequiredFields.add("iAttemptDuration");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AttemptResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AttemptResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AttemptResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -248,22 +247,22 @@ public class AttemptResponse {
     }
   }
 
- /**
-  * Create an instance of AttemptResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AttemptResponse
-  * @throws IOException if the JSON string is invalid with respect to AttemptResponse
-  */
+  /**
+   * Create an instance of AttemptResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AttemptResponse
+   * @throws IOException if the JSON string is invalid with respect to AttemptResponse
+   */
   public static AttemptResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AttemptResponse.class);
   }
 
- /**
-  * Convert an instance of AttemptResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AttemptResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -46,6 +46,30 @@ public class CustomEzsignfoldertypeResponseTest {
     }
 
     /**
+     * Test the property 'fkiFontIDAnnotation'
+     */
+    @Test
+    public void fkiFontIDAnnotationTest() {
+        // TODO: test fkiFontIDAnnotation
+    }
+
+    /**
+     * Test the property 'fkiFontIDFormfield'
+     */
+    @Test
+    public void fkiFontIDFormfieldTest() {
+        // TODO: test fkiFontIDFormfield
+    }
+
+    /**
+     * Test the property 'fkiFontIDSignature'
+     */
+    @Test
+    public void fkiFontIDSignatureTest() {
+        // TODO: test fkiFontIDSignature
+    }
+
+    /**
      * Test the property 'sEzsignfoldertypeNameX'
      */
     @Test
@@ -78,6 +102,14 @@ public class CustomEzsignfoldertypeResponseTest {
     }
 
     /**
+     * Test the property 'bEzsignfoldertypeAutomaticsignature'
+     */
+    @Test
+    public void bEzsignfoldertypeAutomaticsignatureTest() {
+        // TODO: test bEzsignfoldertypeAutomaticsignature
+    }
+
+    /**
      * Test the property 'bEzsignfoldertypeDelegate'
      */
     @Test
@@ -107,6 +139,38 @@ public class CustomEzsignfoldertypeResponseTest {
     @Test
     public void bEzsignfoldertypeReassignuserTest() {
         // TODO: test bEzsignfoldertypeReassignuser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeReassigngroup'
+     */
+    @Test
+    public void bEzsignfoldertypeReassigngroupTest() {
+        // TODO: test bEzsignfoldertypeReassigngroup
+    }
+
+    /**
+     * Test the property 'iEzsignfoldertypeDeadlinedays'
+     */
+    @Test
+    public void iEzsignfoldertypeDeadlinedaysTest() {
+        // TODO: test iEzsignfoldertypeDeadlinedays
+    }
+
+    /**
+     * Test the property 'iEzsignfoldertypeFontsizeannotation'
+     */
+    @Test
+    public void iEzsignfoldertypeFontsizeannotationTest() {
+        // TODO: test iEzsignfoldertypeFontsizeannotation
+    }
+
+    /**
+     * Test the property 'iEzsignfoldertypeFontsizeformfield'
+     */
+    @Test
+    public void iEzsignfoldertypeFontsizeformfieldTest() {
+        // TODO: test iEzsignfoldertypeFontsizeformfield
     }
 
 }

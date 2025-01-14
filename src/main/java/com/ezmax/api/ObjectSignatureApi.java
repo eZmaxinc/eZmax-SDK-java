@@ -34,6 +34,7 @@ import com.ezmax.api.model.SignatureDeleteObjectV1Response;
 import com.ezmax.api.model.SignatureEditObjectV1Request;
 import com.ezmax.api.model.SignatureEditObjectV1Response;
 import com.ezmax.api.model.SignatureGetObjectV2Response;
+import com.ezmax.api.model.SignatureGetObjectV3Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -481,7 +482,9 @@ public class ObjectSignatureApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call signatureGetObjectV2Call(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -527,6 +530,7 @@ public class ObjectSignatureApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call signatureGetObjectV2ValidateBeforeCall(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiSignatureID' is set
@@ -550,7 +554,9 @@ public class ObjectSignatureApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public SignatureGetObjectV2Response signatureGetObjectV2(Integer pkiSignatureID) throws ApiException {
         ApiResponse<SignatureGetObjectV2Response> localVarResp = signatureGetObjectV2WithHttpInfo(pkiSignatureID);
         return localVarResp.getData();
@@ -568,7 +574,9 @@ public class ObjectSignatureApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<SignatureGetObjectV2Response> signatureGetObjectV2WithHttpInfo(Integer pkiSignatureID) throws ApiException {
         okhttp3.Call localVarCall = signatureGetObjectV2ValidateBeforeCall(pkiSignatureID, null);
         Type localVarReturnType = new TypeToken<SignatureGetObjectV2Response>(){}.getType();
@@ -588,12 +596,387 @@ public class ObjectSignatureApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call signatureGetObjectV2Async(Integer pkiSignatureID, final ApiCallback<SignatureGetObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = signatureGetObjectV2ValidateBeforeCall(pkiSignatureID, _callback);
         Type localVarReturnType = new TypeToken<SignatureGetObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for signatureGetObjectV3
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetObjectV3Call(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/3/object/signature/{pkiSignatureID}"
+            .replace("{" + "pkiSignatureID" + "}", localVarApiClient.escapeString(pkiSignatureID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call signatureGetObjectV3ValidateBeforeCall(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiSignatureID' is set
+        if (pkiSignatureID == null) {
+            throw new ApiException("Missing the required parameter 'pkiSignatureID' when calling signatureGetObjectV3(Async)");
+        }
+
+        return signatureGetObjectV3Call(pkiSignatureID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Signature
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @return SignatureGetObjectV3Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public SignatureGetObjectV3Response signatureGetObjectV3(Integer pkiSignatureID) throws ApiException {
+        ApiResponse<SignatureGetObjectV3Response> localVarResp = signatureGetObjectV3WithHttpInfo(pkiSignatureID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Signature
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @return ApiResponse&lt;SignatureGetObjectV3Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<SignatureGetObjectV3Response> signatureGetObjectV3WithHttpInfo(Integer pkiSignatureID) throws ApiException {
+        okhttp3.Call localVarCall = signatureGetObjectV3ValidateBeforeCall(pkiSignatureID, null);
+        Type localVarReturnType = new TypeToken<SignatureGetObjectV3Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Signature (asynchronously)
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetObjectV3Async(Integer pkiSignatureID, final ApiCallback<SignatureGetObjectV3Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = signatureGetObjectV3ValidateBeforeCall(pkiSignatureID, _callback);
+        Type localVarReturnType = new TypeToken<SignatureGetObjectV3Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for signatureGetSVGInitialsV1
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetSVGInitialsV1Call(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/signature/{pkiSignatureID}/getSVGInitials"
+            .replace("{" + "pkiSignatureID" + "}", localVarApiClient.escapeString(pkiSignatureID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call signatureGetSVGInitialsV1ValidateBeforeCall(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiSignatureID' is set
+        if (pkiSignatureID == null) {
+            throw new ApiException("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGInitialsV1(Async)");
+        }
+
+        return signatureGetSVGInitialsV1Call(pkiSignatureID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public void signatureGetSVGInitialsV1(Integer pkiSignatureID) throws ApiException {
+        signatureGetSVGInitialsV1WithHttpInfo(pkiSignatureID);
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> signatureGetSVGInitialsV1WithHttpInfo(Integer pkiSignatureID) throws ApiException {
+        okhttp3.Call localVarCall = signatureGetSVGInitialsV1ValidateBeforeCall(pkiSignatureID, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG (asynchronously)
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetSVGInitialsV1Async(Integer pkiSignatureID, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = signatureGetSVGInitialsV1ValidateBeforeCall(pkiSignatureID, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for signatureGetSVGSignatureV1
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetSVGSignatureV1Call(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/signature/{pkiSignatureID}/getSVGSignature"
+            .replace("{" + "pkiSignatureID" + "}", localVarApiClient.escapeString(pkiSignatureID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call signatureGetSVGSignatureV1ValidateBeforeCall(Integer pkiSignatureID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiSignatureID' is set
+        if (pkiSignatureID == null) {
+            throw new ApiException("Missing the required parameter 'pkiSignatureID' when calling signatureGetSVGSignatureV1(Async)");
+        }
+
+        return signatureGetSVGSignatureV1Call(pkiSignatureID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Signature SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public void signatureGetSVGSignatureV1(Integer pkiSignatureID) throws ApiException {
+        signatureGetSVGSignatureV1WithHttpInfo(pkiSignatureID);
+    }
+
+    /**
+     * Retrieve an existing Signature SVG
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> signatureGetSVGSignatureV1WithHttpInfo(Integer pkiSignatureID) throws ApiException {
+        okhttp3.Call localVarCall = signatureGetSVGSignatureV1ValidateBeforeCall(pkiSignatureID, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Retrieve an existing Signature SVG (asynchronously)
+     * 
+     * @param pkiSignatureID The unique ID of the Signature (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call signatureGetSVGSignatureV1Async(Integer pkiSignatureID, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = signatureGetSVGSignatureV1ValidateBeforeCall(pkiSignatureID, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
 }

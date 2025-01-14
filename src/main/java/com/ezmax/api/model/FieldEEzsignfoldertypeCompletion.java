@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEEzsignfoldertypeCompletion.Adapter.class)
 public enum FieldEEzsignfoldertypeCompletion {
   
-  PEREZSIGNDOCUMENT("PerEzsigndocument"),
+  PER_EZSIGNDOCUMENT("PerEzsigndocument"),
   
-  PEREZSIGNFOLDER("PerEzsignfolder");
+  PER_EZSIGNFOLDER("PerEzsignfolder");
 
   private String value;
 

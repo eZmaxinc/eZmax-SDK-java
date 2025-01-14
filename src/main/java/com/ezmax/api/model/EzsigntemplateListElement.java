@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -100,11 +99,11 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return pkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplateID() {
     return pkiEzsigntemplateID;
@@ -120,12 +119,12 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -141,12 +140,12 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -162,10 +161,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplate
    * @return sEzsigntemplateDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplateDescription() {
     return sEzsigntemplateDescription;
@@ -181,11 +180,11 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the Ezsigntemplatedocument.
    * minimum: 1
    * @return iEzsigntemplatedocumentPagetotal
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatedocumentPagetotal() {
     return iEzsigntemplatedocumentPagetotal;
@@ -201,10 +200,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The number of total signatures in the Ezsigntemplate.
    * @return iEzsigntemplateSignaturetotal
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateSignaturetotal() {
     return iEzsigntemplateSignaturetotal;
@@ -220,10 +219,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The number of total form fields in the Ezsigntemplate.
    * @return iEzsigntemplateFormfieldtotal
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateFormfieldtotal() {
     return iEzsigntemplateFormfieldtotal;
@@ -239,10 +238,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * Indicate the Ezsigntemplate is incomplete and cannot be used
    * @return bEzsigntemplateIncomplete
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplateIncomplete() {
     return bEzsigntemplateIncomplete;
@@ -258,10 +257,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -277,10 +276,10 @@ public class EzsigntemplateListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateType
    * @return eEzsigntemplateType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsigntemplateType geteEzsigntemplateType() {
     return eEzsigntemplateType;
@@ -374,12 +373,12 @@ public class EzsigntemplateListElement {
     openapiRequiredFields.add("eEzsigntemplateType");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -441,22 +440,22 @@ public class EzsigntemplateListElement {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateListElement
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateListElement
-  */
+  /**
+   * Create an instance of EzsigntemplateListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateListElement
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateListElement
+   */
   public static EzsigntemplateListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateListElement.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

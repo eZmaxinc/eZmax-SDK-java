@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsigntemplatepackagesignerMapping;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,11 +55,75 @@ public class EzsigntemplatepackagesignerResponseCompoundTest {
     }
 
     /**
+     * Test the property 'fkiEzdoctemplatedocumentID'
+     */
+    @Test
+    public void fkiEzdoctemplatedocumentIDTest() {
+        // TODO: test fkiEzdoctemplatedocumentID
+    }
+
+    /**
+     * Test the property 'fkiUserID'
+     */
+    @Test
+    public void fkiUserIDTest() {
+        // TODO: test fkiUserID
+    }
+
+    /**
+     * Test the property 'fkiUsergroupID'
+     */
+    @Test
+    public void fkiUsergroupIDTest() {
+        // TODO: test fkiUsergroupID
+    }
+
+    /**
+     * Test the property 'sEzdoctemplatedocumentNameX'
+     */
+    @Test
+    public void sEzdoctemplatedocumentNameXTest() {
+        // TODO: test sEzdoctemplatedocumentNameX
+    }
+
+    /**
+     * Test the property 'bEzsigntemplatepackagesignerReceivecopy'
+     */
+    @Test
+    public void bEzsigntemplatepackagesignerReceivecopyTest() {
+        // TODO: test bEzsigntemplatepackagesignerReceivecopy
+    }
+
+    /**
+     * Test the property 'eEzsigntemplatepackagesignerMapping'
+     */
+    @Test
+    public void eEzsigntemplatepackagesignerMappingTest() {
+        // TODO: test eEzsigntemplatepackagesignerMapping
+    }
+
+    /**
      * Test the property 'sEzsigntemplatepackagesignerDescription'
      */
     @Test
     public void sEzsigntemplatepackagesignerDescriptionTest() {
         // TODO: test sEzsigntemplatepackagesignerDescription
+    }
+
+    /**
+     * Test the property 'sUserName'
+     */
+    @Test
+    public void sUserNameTest() {
+        // TODO: test sUserName
+    }
+
+    /**
+     * Test the property 'sUsergroupNameX'
+     */
+    @Test
+    public void sUsergroupNameXTest() {
+        // TODO: test sUsergroupNameX
     }
 
 }

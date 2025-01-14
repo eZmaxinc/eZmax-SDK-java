@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,11 +48,23 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
   private Integer pkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D_ANNOTATION = "fkiFontIDAnnotation";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D_ANNOTATION)
+  private Integer fkiFontIDAnnotation;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D_FORMFIELD = "fkiFontIDFormfield";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D_FORMFIELD)
+  private Integer fkiFontIDFormfield;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D_SIGNATURE = "fkiFontIDSignature";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D_SIGNATURE)
+  private Integer fkiFontIDSignature;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
@@ -71,6 +82,10 @@ public class CustomEzsignfoldertypeResponse {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ALLOWDOWNLOADPROOFEZSIGNSIGNER)
   private Boolean bEzsignfoldertypeAllowdownloadproofezsignsigner;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_AUTOMATICSIGNATURE = "bEzsignfoldertypeAutomaticsignature";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_AUTOMATICSIGNATURE)
+  private Boolean bEzsignfoldertypeAutomaticsignature;
+
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE = "bEzsignfoldertypeDelegate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE)
   private Boolean bEzsignfoldertypeDelegate;
@@ -87,6 +102,22 @@ public class CustomEzsignfoldertypeResponse {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNUSER)
   private Boolean bEzsignfoldertypeReassignuser;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNGROUP = "bEzsignfoldertypeReassigngroup";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNGROUP)
+  private Boolean bEzsignfoldertypeReassigngroup;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_DEADLINEDAYS = "iEzsignfoldertypeDeadlinedays";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_DEADLINEDAYS)
+  private Integer iEzsignfoldertypeDeadlinedays;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_FONTSIZEANNOTATION = "iEzsignfoldertypeFontsizeannotation";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_FONTSIZEANNOTATION)
+  private Integer iEzsignfoldertypeFontsizeannotation;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_FONTSIZEFORMFIELD = "iEzsignfoldertypeFontsizeformfield";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_FONTSIZEFORMFIELD)
+  private Integer iEzsignfoldertypeFontsizeformfield;
+
   public CustomEzsignfoldertypeResponse() {
   }
 
@@ -95,12 +126,12 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return pkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfoldertypeID() {
     return pkiEzsignfoldertypeID;
@@ -111,15 +142,75 @@ public class CustomEzsignfoldertypeResponse {
   }
 
 
+  public CustomEzsignfoldertypeResponse fkiFontIDAnnotation(Integer fkiFontIDAnnotation) {
+    this.fkiFontIDAnnotation = fkiFontIDAnnotation;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontIDAnnotation
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontIDAnnotation() {
+    return fkiFontIDAnnotation;
+  }
+
+  public void setFkiFontIDAnnotation(Integer fkiFontIDAnnotation) {
+    this.fkiFontIDAnnotation = fkiFontIDAnnotation;
+  }
+
+
+  public CustomEzsignfoldertypeResponse fkiFontIDFormfield(Integer fkiFontIDFormfield) {
+    this.fkiFontIDFormfield = fkiFontIDFormfield;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontIDFormfield
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontIDFormfield() {
+    return fkiFontIDFormfield;
+  }
+
+  public void setFkiFontIDFormfield(Integer fkiFontIDFormfield) {
+    this.fkiFontIDFormfield = fkiFontIDFormfield;
+  }
+
+
+  public CustomEzsignfoldertypeResponse fkiFontIDSignature(Integer fkiFontIDSignature) {
+    this.fkiFontIDSignature = fkiFontIDSignature;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontIDSignature
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontIDSignature() {
+    return fkiFontIDSignature;
+  }
+
+  public void setFkiFontIDSignature(Integer fkiFontIDSignature) {
+    this.fkiFontIDSignature = fkiFontIDSignature;
+  }
+
+
   public CustomEzsignfoldertypeResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -135,10 +226,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the proof in the email to Ezsignsigner
    * @return bEzsignfoldertypeSendproofezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendproofezsignsigner() {
     return bEzsignfoldertypeSendproofezsignsigner;
@@ -154,10 +245,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
    * @return bEzsignfoldertypeAllowdownloadattachmentezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeAllowdownloadattachmentezsignsigner() {
     return bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
@@ -173,10 +264,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we allow the proof to be downloaded by an Ezsignsigner
    * @return bEzsignfoldertypeAllowdownloadproofezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeAllowdownloadproofezsignsigner() {
     return bEzsignfoldertypeAllowdownloadproofezsignsigner;
@@ -187,15 +278,34 @@ public class CustomEzsignfoldertypeResponse {
   }
 
 
+  public CustomEzsignfoldertypeResponse bEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+    return this;
+  }
+
+  /**
+   * Whether we allow the automatic signature by an User
+   * @return bEzsignfoldertypeAutomaticsignature
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAutomaticsignature() {
+    return bEzsignfoldertypeAutomaticsignature;
+  }
+
+  public void setbEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+  }
+
+
   public CustomEzsignfoldertypeResponse bEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
     return this;
   }
 
-   /**
+  /**
    * Wheter if delegation of signature is allowed to another user or not
    * @return bEzsignfoldertypeDelegate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeDelegate() {
     return bEzsignfoldertypeDelegate;
@@ -211,10 +321,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if creating a new Discussion is allowed or not
    * @return bEzsignfoldertypeDiscussion
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeDiscussion() {
     return bEzsignfoldertypeDiscussion;
@@ -230,10 +340,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
    * @return bEzsignfoldertypeReassignezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeReassignezsignsigner() {
     return bEzsignfoldertypeReassignezsignsigner;
@@ -249,10 +359,10 @@ public class CustomEzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
    * @return bEzsignfoldertypeReassignuser
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeReassignuser() {
     return bEzsignfoldertypeReassignuser;
@@ -260,6 +370,88 @@ public class CustomEzsignfoldertypeResponse {
 
   public void setbEzsignfoldertypeReassignuser(Boolean bEzsignfoldertypeReassignuser) {
     this.bEzsignfoldertypeReassignuser = bEzsignfoldertypeReassignuser;
+  }
+
+
+  public CustomEzsignfoldertypeResponse bEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+    return this;
+  }
+
+  /**
+   * Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+   * @return bEzsignfoldertypeReassigngroup
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeReassigngroup() {
+    return bEzsignfoldertypeReassigngroup;
+  }
+
+  public void setbEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+  }
+
+
+  public CustomEzsignfoldertypeResponse iEzsignfoldertypeDeadlinedays(Integer iEzsignfoldertypeDeadlinedays) {
+    this.iEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
+    return this;
+  }
+
+  /**
+   * The number of days to get all Ezsignsignatures
+   * minimum: 1
+   * maximum: 60
+   * @return iEzsignfoldertypeDeadlinedays
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfoldertypeDeadlinedays() {
+    return iEzsignfoldertypeDeadlinedays;
+  }
+
+  public void setiEzsignfoldertypeDeadlinedays(Integer iEzsignfoldertypeDeadlinedays) {
+    this.iEzsignfoldertypeDeadlinedays = iEzsignfoldertypeDeadlinedays;
+  }
+
+
+  public CustomEzsignfoldertypeResponse iEzsignfoldertypeFontsizeannotation(Integer iEzsignfoldertypeFontsizeannotation) {
+    this.iEzsignfoldertypeFontsizeannotation = iEzsignfoldertypeFontsizeannotation;
+    return this;
+  }
+
+  /**
+   * Font size for annotations
+   * minimum: 1
+   * maximum: 255
+   * @return iEzsignfoldertypeFontsizeannotation
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfoldertypeFontsizeannotation() {
+    return iEzsignfoldertypeFontsizeannotation;
+  }
+
+  public void setiEzsignfoldertypeFontsizeannotation(Integer iEzsignfoldertypeFontsizeannotation) {
+    this.iEzsignfoldertypeFontsizeannotation = iEzsignfoldertypeFontsizeannotation;
+  }
+
+
+  public CustomEzsignfoldertypeResponse iEzsignfoldertypeFontsizeformfield(Integer iEzsignfoldertypeFontsizeformfield) {
+    this.iEzsignfoldertypeFontsizeformfield = iEzsignfoldertypeFontsizeformfield;
+    return this;
+  }
+
+  /**
+   * Font size for form fields
+   * minimum: 1
+   * maximum: 255
+   * @return iEzsignfoldertypeFontsizeformfield
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfoldertypeFontsizeformfield() {
+    return iEzsignfoldertypeFontsizeformfield;
+  }
+
+  public void setiEzsignfoldertypeFontsizeformfield(Integer iEzsignfoldertypeFontsizeformfield) {
+    this.iEzsignfoldertypeFontsizeformfield = iEzsignfoldertypeFontsizeformfield;
   }
 
 
@@ -274,19 +466,27 @@ public class CustomEzsignfoldertypeResponse {
     }
     CustomEzsignfoldertypeResponse customEzsignfoldertypeResponse = (CustomEzsignfoldertypeResponse) o;
     return Objects.equals(this.pkiEzsignfoldertypeID, customEzsignfoldertypeResponse.pkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiFontIDAnnotation, customEzsignfoldertypeResponse.fkiFontIDAnnotation) &&
+        Objects.equals(this.fkiFontIDFormfield, customEzsignfoldertypeResponse.fkiFontIDFormfield) &&
+        Objects.equals(this.fkiFontIDSignature, customEzsignfoldertypeResponse.fkiFontIDSignature) &&
         Objects.equals(this.sEzsignfoldertypeNameX, customEzsignfoldertypeResponse.sEzsignfoldertypeNameX) &&
         Objects.equals(this.bEzsignfoldertypeSendproofezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeSendproofezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeAllowdownloadattachmentezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadattachmentezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeAllowdownloadproofezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeAllowdownloadproofezsignsigner) &&
+        Objects.equals(this.bEzsignfoldertypeAutomaticsignature, customEzsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature) &&
         Objects.equals(this.bEzsignfoldertypeDelegate, customEzsignfoldertypeResponse.bEzsignfoldertypeDelegate) &&
         Objects.equals(this.bEzsignfoldertypeDiscussion, customEzsignfoldertypeResponse.bEzsignfoldertypeDiscussion) &&
         Objects.equals(this.bEzsignfoldertypeReassignezsignsigner, customEzsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner) &&
-        Objects.equals(this.bEzsignfoldertypeReassignuser, customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser);
+        Objects.equals(this.bEzsignfoldertypeReassignuser, customEzsignfoldertypeResponse.bEzsignfoldertypeReassignuser) &&
+        Objects.equals(this.bEzsignfoldertypeReassigngroup, customEzsignfoldertypeResponse.bEzsignfoldertypeReassigngroup) &&
+        Objects.equals(this.iEzsignfoldertypeDeadlinedays, customEzsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays) &&
+        Objects.equals(this.iEzsignfoldertypeFontsizeannotation, customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeannotation) &&
+        Objects.equals(this.iEzsignfoldertypeFontsizeformfield, customEzsignfoldertypeResponse.iEzsignfoldertypeFontsizeformfield);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser);
+    return Objects.hash(pkiEzsignfoldertypeID, fkiFontIDAnnotation, fkiFontIDFormfield, fkiFontIDSignature, sEzsignfoldertypeNameX, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup, iEzsignfoldertypeDeadlinedays, iEzsignfoldertypeFontsizeannotation, iEzsignfoldertypeFontsizeformfield);
   }
 
   @Override
@@ -294,14 +494,22 @@ public class CustomEzsignfoldertypeResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomEzsignfoldertypeResponse {\n");
     sb.append("    pkiEzsignfoldertypeID: ").append(toIndentedString(pkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiFontIDAnnotation: ").append(toIndentedString(fkiFontIDAnnotation)).append("\n");
+    sb.append("    fkiFontIDFormfield: ").append(toIndentedString(fkiFontIDFormfield)).append("\n");
+    sb.append("    fkiFontIDSignature: ").append(toIndentedString(fkiFontIDSignature)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("    bEzsignfoldertypeSendproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendproofezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeAllowdownloadattachmentezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadattachmentezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeAllowdownloadproofezsignsigner: ").append(toIndentedString(bEzsignfoldertypeAllowdownloadproofezsignsigner)).append("\n");
+    sb.append("    bEzsignfoldertypeAutomaticsignature: ").append(toIndentedString(bEzsignfoldertypeAutomaticsignature)).append("\n");
     sb.append("    bEzsignfoldertypeDelegate: ").append(toIndentedString(bEzsignfoldertypeDelegate)).append("\n");
     sb.append("    bEzsignfoldertypeDiscussion: ").append(toIndentedString(bEzsignfoldertypeDiscussion)).append("\n");
     sb.append("    bEzsignfoldertypeReassignezsignsigner: ").append(toIndentedString(bEzsignfoldertypeReassignezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeReassignuser: ").append(toIndentedString(bEzsignfoldertypeReassignuser)).append("\n");
+    sb.append("    bEzsignfoldertypeReassigngroup: ").append(toIndentedString(bEzsignfoldertypeReassigngroup)).append("\n");
+    sb.append("    iEzsignfoldertypeDeadlinedays: ").append(toIndentedString(iEzsignfoldertypeDeadlinedays)).append("\n");
+    sb.append("    iEzsignfoldertypeFontsizeannotation: ").append(toIndentedString(iEzsignfoldertypeFontsizeannotation)).append("\n");
+    sb.append("    iEzsignfoldertypeFontsizeformfield: ").append(toIndentedString(iEzsignfoldertypeFontsizeformfield)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -325,26 +533,34 @@ public class CustomEzsignfoldertypeResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignfoldertypeID");
+    openapiFields.add("fkiFontIDAnnotation");
+    openapiFields.add("fkiFontIDFormfield");
+    openapiFields.add("fkiFontIDSignature");
     openapiFields.add("sEzsignfoldertypeNameX");
     openapiFields.add("bEzsignfoldertypeSendproofezsignsigner");
     openapiFields.add("bEzsignfoldertypeAllowdownloadattachmentezsignsigner");
     openapiFields.add("bEzsignfoldertypeAllowdownloadproofezsignsigner");
+    openapiFields.add("bEzsignfoldertypeAutomaticsignature");
     openapiFields.add("bEzsignfoldertypeDelegate");
     openapiFields.add("bEzsignfoldertypeDiscussion");
     openapiFields.add("bEzsignfoldertypeReassignezsignsigner");
     openapiFields.add("bEzsignfoldertypeReassignuser");
+    openapiFields.add("bEzsignfoldertypeReassigngroup");
+    openapiFields.add("iEzsignfoldertypeDeadlinedays");
+    openapiFields.add("iEzsignfoldertypeFontsizeannotation");
+    openapiFields.add("iEzsignfoldertypeFontsizeformfield");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiEzsignfoldertypeID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldertypeResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldertypeResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignfoldertypeResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -401,22 +617,22 @@ public class CustomEzsignfoldertypeResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignfoldertypeResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignfoldertypeResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldertypeResponse
-  */
+  /**
+   * Create an instance of CustomEzsignfoldertypeResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignfoldertypeResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldertypeResponse
+   */
   public static CustomEzsignfoldertypeResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignfoldertypeResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignfoldertypeResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignfoldertypeResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

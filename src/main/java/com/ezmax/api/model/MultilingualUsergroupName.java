@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * The name of the Usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualUsergroupName {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME1 = "sUsergroupName1";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME1)
@@ -67,10 +66,10 @@ public class MultilingualUsergroupName {
     return this;
   }
 
-   /**
+  /**
    * The name of the Usergroup in French
    * @return sUsergroupName1
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupName1() {
     return sUsergroupName1;
@@ -86,10 +85,10 @@ public class MultilingualUsergroupName {
     return this;
   }
 
-   /**
+  /**
    * The name of the Usergroup in English
    * @return sUsergroupName2
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupName2() {
     return sUsergroupName2;
@@ -154,12 +153,12 @@ public class MultilingualUsergroupName {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MultilingualUsergroupName
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MultilingualUsergroupName
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MultilingualUsergroupName.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -212,22 +211,22 @@ public class MultilingualUsergroupName {
     }
   }
 
- /**
-  * Create an instance of MultilingualUsergroupName given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MultilingualUsergroupName
-  * @throws IOException if the JSON string is invalid with respect to MultilingualUsergroupName
-  */
+  /**
+   * Create an instance of MultilingualUsergroupName given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MultilingualUsergroupName
+   * @throws IOException if the JSON string is invalid with respect to MultilingualUsergroupName
+   */
   public static MultilingualUsergroupName fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MultilingualUsergroupName.class);
   }
 
- /**
-  * Convert an instance of MultilingualUsergroupName to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MultilingualUsergroupName to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

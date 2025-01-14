@@ -300,7 +300,7 @@ public class Example {
 
 <a id="ezsigntemplatepackageGetAutocompleteV2"></a>
 # **ezsigntemplatepackageGetAutocompleteV2**
-> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplatepackages and IDs
 
@@ -332,8 +332,9 @@ public class Example {
     String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    Integer fkiEzsignfoldertypeID = 56; // Integer | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
     try {
-      EzsigntemplatepackageGetAutocompleteV2Response result = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+      EzsigntemplatepackageGetAutocompleteV2Response result = apiInstance.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetAutocompleteV2");
@@ -350,10 +351,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Ezsigntemplatepackages to return | [enum: All, AllMultipleCopiesDisabled] |
+| **sSelector** | **String**| The type of Ezsigntemplatepackages to return | [enum: All, AllMultipleCopiesDisabled, Ezsigntemplatepublic] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **fkiEzsignfoldertypeID** | **Integer**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] |
 
 ### Return type
 

@@ -7,7 +7,7 @@
 
 * `STAGE` (value: `"Stage"`)
 
-* `AUTOCREATE` (value: `"AutoCreate"`)
+* `AUTO_CREATE` (value: `"AutoCreate"`)
 
 
 

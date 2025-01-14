@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
@@ -64,10 +63,10 @@ public class EzsignfoldertypeGetObjectV2ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsignfoldertype
    * @return objEzsignfoldertype
-  **/
+   */
   @javax.annotation.Nonnull
   public EzsignfoldertypeResponseCompound getObjEzsignfoldertype() {
     return objEzsignfoldertype;
@@ -130,12 +129,12 @@ public class EzsignfoldertypeGetObjectV2ResponseMPayload {
     openapiRequiredFields.add("objEzsignfoldertype");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeGetObjectV2ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeGetObjectV2ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldertypeGetObjectV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -191,22 +190,22 @@ public class EzsignfoldertypeGetObjectV2ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldertypeGetObjectV2ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldertypeGetObjectV2ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeGetObjectV2ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsignfoldertypeGetObjectV2ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldertypeGetObjectV2ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeGetObjectV2ResponseMPayload
+   */
   public static EzsignfoldertypeGetObjectV2ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldertypeGetObjectV2ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldertypeGetObjectV2ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldertypeGetObjectV2ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

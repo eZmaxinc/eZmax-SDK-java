@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SubnetRequestCompound {
   public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
@@ -84,12 +83,12 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Subnet
    * minimum: 0
    * maximum: 65535
    * @return pkiSubnetID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiSubnetID() {
     return pkiSubnetID;
@@ -105,11 +104,11 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -125,11 +124,11 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Apikey
    * minimum: 0
    * @return fkiApikeyID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiApikeyID() {
     return fkiApikeyID;
@@ -145,10 +144,10 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objSubnetDescription
    * @return objSubnetDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualSubnetDescription getObjSubnetDescription() {
     return objSubnetDescription;
@@ -164,12 +163,12 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064
    * minimum: 0
    * maximum: 4294967295
    * @return iSubnetNetwork
-  **/
+   */
   @javax.annotation.Nonnull
   public Long getiSubnetNetwork() {
     return iSubnetNetwork;
@@ -185,12 +184,12 @@ public class SubnetRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
    * minimum: 0
    * maximum: 4294967295
    * @return iSubnetMask
-  **/
+   */
   @javax.annotation.Nonnull
   public Long getiSubnetMask() {
     return iSubnetMask;
@@ -270,12 +269,12 @@ public class SubnetRequestCompound {
     openapiRequiredFields.add("iSubnetMask");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SubnetRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SubnetRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SubnetRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -331,22 +330,22 @@ public class SubnetRequestCompound {
     }
   }
 
- /**
-  * Create an instance of SubnetRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SubnetRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to SubnetRequestCompound
-  */
+  /**
+   * Create an instance of SubnetRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SubnetRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to SubnetRequestCompound
+   */
   public static SubnetRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SubnetRequestCompound.class);
   }
 
- /**
-  * Convert an instance of SubnetRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SubnetRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,13 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.BrandingCreateObjectV1Request;
-import com.ezmax.api.model.BrandingCreateObjectV1Response;
-import com.ezmax.api.model.BrandingEditObjectV1Request;
-import com.ezmax.api.model.BrandingEditObjectV1Response;
+import com.ezmax.api.model.BrandingCreateObjectV2Request;
+import com.ezmax.api.model.BrandingCreateObjectV2Response;
+import com.ezmax.api.model.BrandingEditObjectV2Request;
+import com.ezmax.api.model.BrandingEditObjectV2Response;
 import com.ezmax.api.model.BrandingGetAutocompleteV2Response;
 import com.ezmax.api.model.BrandingGetListV1Response;
-import com.ezmax.api.model.BrandingGetObjectV2Response;
+import com.ezmax.api.model.BrandingGetObjectV3Response;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -48,9 +48,9 @@ public class ObjectBrandingApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void brandingCreateObjectV1Test() throws ApiException {
-        BrandingCreateObjectV1Request brandingCreateObjectV1Request = null;
-        BrandingCreateObjectV1Response response = api.brandingCreateObjectV1(brandingCreateObjectV1Request);
+    public void brandingCreateObjectV2Test() throws ApiException {
+        BrandingCreateObjectV2Request brandingCreateObjectV2Request = null;
+        BrandingCreateObjectV2Response response = api.brandingCreateObjectV2(brandingCreateObjectV2Request);
         // TODO: test validations
     }
 
@@ -62,10 +62,10 @@ public class ObjectBrandingApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void brandingEditObjectV1Test() throws ApiException {
+    public void brandingEditObjectV2Test() throws ApiException {
         Integer pkiBrandingID = null;
-        BrandingEditObjectV1Request brandingEditObjectV1Request = null;
-        BrandingEditObjectV1Response response = api.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request);
+        BrandingEditObjectV2Request brandingEditObjectV2Request = null;
+        BrandingEditObjectV2Response response = api.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
         // TODO: test validations
     }
 
@@ -112,9 +112,9 @@ public class ObjectBrandingApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void brandingGetObjectV2Test() throws ApiException {
+    public void brandingGetObjectV3Test() throws ApiException {
         Integer pkiBrandingID = null;
-        BrandingGetObjectV2Response response = api.brandingGetObjectV2(pkiBrandingID);
+        BrandingGetObjectV3Response response = api.brandingGetObjectV3(pkiBrandingID);
         // TODO: test validations
     }
 

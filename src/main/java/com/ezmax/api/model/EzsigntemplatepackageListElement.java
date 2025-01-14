@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatepackage List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -91,11 +90,11 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackage
    * minimum: 0
    * @return pkiEzsigntemplatepackageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
@@ -111,12 +110,12 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -132,12 +131,12 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -153,10 +152,10 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatepackage
    * @return sEzsigntemplatepackageDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
@@ -172,10 +171,10 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignbulksend was automatically modified and needs a manual validation
    * @return bEzsigntemplatepackageNeedvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
@@ -191,10 +190,10 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of Ezsigntemplatepackagemembership in the Ezsigntemplatepackage
    * @return iEzsigntemplatepackagemembership
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatepackagemembership() {
     return iEzsigntemplatepackagemembership;
@@ -210,10 +209,10 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -229,10 +228,10 @@ public class EzsigntemplatepackageListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage is active or not
    * @return bEzsigntemplatepackageIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;
@@ -323,12 +322,12 @@ public class EzsigntemplatepackageListElement {
     openapiRequiredFields.add("bEzsigntemplatepackageIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackageListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -388,22 +387,22 @@ public class EzsigntemplatepackageListElement {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackageListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackageListElement
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageListElement
-  */
+  /**
+   * Create an instance of EzsigntemplatepackageListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackageListElement
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageListElement
+   */
   public static EzsigntemplatepackageListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackageListElement.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackageListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackageListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

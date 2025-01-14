@@ -15,12 +15,12 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatesignatureDeleteObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV3Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -45,9 +45,9 @@ public class ObjectEzsigntemplatesignatureApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplatesignatureCreateObjectV1Test() throws ApiException {
-        EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request = null;
-        EzsigntemplatesignatureCreateObjectV1Response response = api.ezsigntemplatesignatureCreateObjectV1(ezsigntemplatesignatureCreateObjectV1Request);
+    public void ezsigntemplatesignatureCreateObjectV2Test() throws ApiException {
+        EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request = null;
+        EzsigntemplatesignatureCreateObjectV2Response response = api.ezsigntemplatesignatureCreateObjectV2(ezsigntemplatesignatureCreateObjectV2Request);
         // TODO: test validations
     }
 
@@ -73,10 +73,10 @@ public class ObjectEzsigntemplatesignatureApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplatesignatureEditObjectV1Test() throws ApiException {
+    public void ezsigntemplatesignatureEditObjectV2Test() throws ApiException {
         Integer pkiEzsigntemplatesignatureID = null;
-        EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request = null;
-        EzsigntemplatesignatureEditObjectV1Response response = api.ezsigntemplatesignatureEditObjectV1(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request);
+        EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request = null;
+        EzsigntemplatesignatureEditObjectV2Response response = api.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
         // TODO: test validations
     }
 
@@ -88,9 +88,9 @@ public class ObjectEzsigntemplatesignatureApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplatesignatureGetObjectV2Test() throws ApiException {
+    public void ezsigntemplatesignatureGetObjectV3Test() throws ApiException {
         Integer pkiEzsigntemplatesignatureID = null;
-        EzsigntemplatesignatureGetObjectV2Response response = api.ezsigntemplatesignatureGetObjectV2(pkiEzsigntemplatesignatureID);
+        EzsigntemplatesignatureGetObjectV3Response response = api.ezsigntemplatesignatureGetObjectV3(pkiEzsigntemplatesignatureID);
         // TODO: test validations
     }
 

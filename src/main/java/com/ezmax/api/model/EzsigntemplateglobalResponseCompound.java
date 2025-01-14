@@ -43,7 +43,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -55,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateglobalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
@@ -113,11 +112,11 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateglobal
    * minimum: 0
    * @return pkiEzsigntemplateglobalID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplateglobalID() {
     return pkiEzsigntemplateglobalID;
@@ -133,11 +132,11 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateglobaldocument
    * minimum: 0
    * @return fkiEzsigntemplateglobaldocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplateglobaldocumentID() {
     return fkiEzsigntemplateglobaldocumentID;
@@ -153,11 +152,11 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return fkiModuleID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiModuleID() {
     return fkiModuleID;
@@ -173,10 +172,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Module in the language of the requester
    * @return sModuleNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -192,12 +191,12 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -213,10 +212,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Language in the language of the requester
    * @return sLanguageNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsLanguageNameX() {
     return sLanguageNameX;
@@ -232,10 +231,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateglobalModule
    * @return eEzsigntemplateglobalModule
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsigntemplateglobalModule geteEzsigntemplateglobalModule() {
     return eEzsigntemplateglobalModule;
@@ -251,10 +250,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateglobalSupplier
    * @return eEzsigntemplateglobalSupplier
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsigntemplateglobalSupplier geteEzsigntemplateglobalSupplier() {
     return eEzsigntemplateglobalSupplier;
@@ -270,10 +269,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Code of the Ezsigntemplateglobal
    * @return sEzsigntemplateglobalCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplateglobalCode() {
     return sEzsigntemplateglobalCode;
@@ -289,10 +288,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplate
    * @return sEzsigntemplateglobalDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplateglobalDescription() {
     return sEzsigntemplateglobalDescription;
@@ -308,10 +307,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsigntemplateglobaldocument
    * @return objEzsigntemplateglobaldocument
-  **/
+   */
   @javax.annotation.Nullable
   public EzsigntemplateglobaldocumentResponse getObjEzsigntemplateglobaldocument() {
     return objEzsigntemplateglobaldocument;
@@ -335,10 +334,10 @@ public class EzsigntemplateglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsigntemplateglobalsigner
    * @return aObjEzsigntemplateglobalsigner
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzsigntemplateglobalsignerResponseCompound> getaObjEzsigntemplateglobalsigner() {
     return aObjEzsigntemplateglobalsigner;
@@ -443,12 +442,12 @@ public class EzsigntemplateglobalResponseCompound {
     openapiRequiredFields.add("a_objEzsigntemplateglobalsigner");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateglobalResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateglobalResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateglobalResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -532,22 +531,22 @@ public class EzsigntemplateglobalResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateglobalResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateglobalResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateglobalResponseCompound
-  */
+  /**
+   * Create an instance of EzsigntemplateglobalResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateglobalResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateglobalResponseCompound
+   */
   public static EzsigntemplateglobalResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateglobalResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateglobalResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateglobalResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

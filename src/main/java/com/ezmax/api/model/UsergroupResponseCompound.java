@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.MultilingualUsergroupName;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -38,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -64,6 +64,10 @@ public class UsergroupResponseCompound {
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
   private String sUsergroupNameX;
 
+  public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  private EmailRequest objEmail;
+
   public UsergroupResponseCompound() {
   }
 
@@ -72,12 +76,12 @@ public class UsergroupResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return pkiUsergroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUsergroupID() {
     return pkiUsergroupID;
@@ -93,10 +97,10 @@ public class UsergroupResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objUsergroupName
    * @return objUsergroupName
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualUsergroupName getObjUsergroupName() {
     return objUsergroupName;
@@ -112,10 +116,10 @@ public class UsergroupResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Usergroup in the language of the requester
    * @return sUsergroupNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -123,6 +127,25 @@ public class UsergroupResponseCompound {
 
   public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
+  }
+
+
+  public UsergroupResponseCompound objEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+    return this;
+  }
+
+  /**
+   * Get objEmail
+   * @return objEmail
+   */
+  @javax.annotation.Nullable
+  public EmailRequest getObjEmail() {
+    return objEmail;
+  }
+
+  public void setObjEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
   }
 
 
@@ -138,12 +161,13 @@ public class UsergroupResponseCompound {
     UsergroupResponseCompound usergroupResponseCompound = (UsergroupResponseCompound) o;
     return Objects.equals(this.pkiUsergroupID, usergroupResponseCompound.pkiUsergroupID) &&
         Objects.equals(this.objUsergroupName, usergroupResponseCompound.objUsergroupName) &&
-        Objects.equals(this.sUsergroupNameX, usergroupResponseCompound.sUsergroupNameX);
+        Objects.equals(this.sUsergroupNameX, usergroupResponseCompound.sUsergroupNameX) &&
+        Objects.equals(this.objEmail, usergroupResponseCompound.objEmail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupID, objUsergroupName, sUsergroupNameX);
+    return Objects.hash(pkiUsergroupID, objUsergroupName, sUsergroupNameX, objEmail);
   }
 
   @Override
@@ -153,6 +177,7 @@ public class UsergroupResponseCompound {
     sb.append("    pkiUsergroupID: ").append(toIndentedString(pkiUsergroupID)).append("\n");
     sb.append("    objUsergroupName: ").append(toIndentedString(objUsergroupName)).append("\n");
     sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
+    sb.append("    objEmail: ").append(toIndentedString(objEmail)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -178,6 +203,7 @@ public class UsergroupResponseCompound {
     openapiFields.add("pkiUsergroupID");
     openapiFields.add("objUsergroupName");
     openapiFields.add("sUsergroupNameX");
+    openapiFields.add("objEmail");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -185,12 +211,12 @@ public class UsergroupResponseCompound {
     openapiRequiredFields.add("objUsergroupName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UsergroupResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UsergroupResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -217,6 +243,10 @@ public class UsergroupResponseCompound {
       MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
       if ((jsonObj.get("sUsergroupNameX") != null && !jsonObj.get("sUsergroupNameX").isJsonNull()) && !jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
+      }
+      // validate the optional field `objEmail`
+      if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
+        EmailRequest.validateJsonElement(jsonObj.get("objEmail"));
       }
   }
 
@@ -249,22 +279,22 @@ public class UsergroupResponseCompound {
     }
   }
 
- /**
-  * Create an instance of UsergroupResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UsergroupResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to UsergroupResponseCompound
-  */
+  /**
+   * Create an instance of UsergroupResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UsergroupResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to UsergroupResponseCompound
+   */
   public static UsergroupResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UsergroupResponseCompound.class);
   }
 
- /**
-  * Convert an instance of UsergroupResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UsergroupResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

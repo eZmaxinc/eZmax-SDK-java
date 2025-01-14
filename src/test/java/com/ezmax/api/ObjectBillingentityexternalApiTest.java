@@ -14,7 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.BillingentityexternalGenerateFederationTokenV1Request;
+import com.ezmax.api.model.BillingentityexternalGenerateFederationTokenV1Response;
 import com.ezmax.api.model.BillingentityexternalGetAutocompleteV2Response;
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -31,6 +34,21 @@ import java.util.Map;
 public class ObjectBillingentityexternalApiTest {
 
     private final ObjectBillingentityexternalApi api = new ObjectBillingentityexternalApi();
+
+    /**
+     * Generate a federation token
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void billingentityexternalGenerateFederationTokenV1Test() throws ApiException {
+        Integer pkiBillingentityexternalID = null;
+        BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request = null;
+        BillingentityexternalGenerateFederationTokenV1Response response = api.billingentityexternalGenerateFederationTokenV1(pkiBillingentityexternalID, billingentityexternalGenerateFederationTokenV1Request);
+        // TODO: test validations
+    }
 
     /**
      * Retrieve Billingentityexternals and IDs

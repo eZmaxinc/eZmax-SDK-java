@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyRequest {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -80,11 +79,11 @@ public class ApikeyRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Apikey
    * minimum: 0
    * @return pkiApikeyID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiApikeyID() {
     return pkiApikeyID;
@@ -100,11 +99,11 @@ public class ApikeyRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -120,10 +119,10 @@ public class ApikeyRequest {
     return this;
   }
 
-   /**
+  /**
    * Get objApikeyDescription
    * @return objApikeyDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualApikeyDescription getObjApikeyDescription() {
     return objApikeyDescription;
@@ -139,10 +138,10 @@ public class ApikeyRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether the apikey is active or not
    * @return bApikeyIsactive
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbApikeyIsactive() {
     return bApikeyIsactive;
@@ -158,10 +157,10 @@ public class ApikeyRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether the apikey is signed or not
    * @return bApikeyIssigned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbApikeyIssigned() {
     return bApikeyIssigned;
@@ -237,12 +236,12 @@ public class ApikeyRequest {
     openapiRequiredFields.add("objApikeyDescription");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ApikeyRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ApikeyRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ApikeyRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -298,22 +297,22 @@ public class ApikeyRequest {
     }
   }
 
- /**
-  * Create an instance of ApikeyRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ApikeyRequest
-  * @throws IOException if the JSON string is invalid with respect to ApikeyRequest
-  */
+  /**
+   * Create an instance of ApikeyRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ApikeyRequest
+   * @throws IOException if the JSON string is invalid with respect to ApikeyRequest
+   */
   public static ApikeyRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ApikeyRequest.class);
   }
 
- /**
-  * Convert an instance of ApikeyRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ApikeyRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -29,7 +29,9 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.InscriptionGetAttachmentsV1Response;
+import com.ezmax.api.model.InscriptionGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptionGetCommunicationListV1Response;
+import com.ezmax.api.model.InscriptionGetCommunicationrecipientsV1Response;
 import com.ezmax.api.model.InscriptionGetCommunicationsendersV1Response;
 
 import java.lang.reflect.Type;
@@ -203,6 +205,133 @@ public class ObjectInscriptionApi {
         return localVarCall;
     }
     /**
+     * Build call for inscriptionGetCommunicationCountV1
+     * @param pkiInscriptionID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionGetCommunicationCountV1Call(Integer pkiInscriptionID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscription/{pkiInscriptionID}/getCommunicationCount"
+            .replace("{" + "pkiInscriptionID" + "}", localVarApiClient.escapeString(pkiInscriptionID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptionGetCommunicationCountV1ValidateBeforeCall(Integer pkiInscriptionID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptionID' is set
+        if (pkiInscriptionID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptionID' when calling inscriptionGetCommunicationCountV1(Async)");
+        }
+
+        return inscriptionGetCommunicationCountV1Call(pkiInscriptionID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionID  (required)
+     * @return InscriptionGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptionGetCommunicationCountV1Response inscriptionGetCommunicationCountV1(Integer pkiInscriptionID) throws ApiException {
+        ApiResponse<InscriptionGetCommunicationCountV1Response> localVarResp = inscriptionGetCommunicationCountV1WithHttpInfo(pkiInscriptionID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionID  (required)
+     * @return ApiResponse&lt;InscriptionGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptionGetCommunicationCountV1Response> inscriptionGetCommunicationCountV1WithHttpInfo(Integer pkiInscriptionID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptionGetCommunicationCountV1ValidateBeforeCall(pkiInscriptionID, null);
+        Type localVarReturnType = new TypeToken<InscriptionGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiInscriptionID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionGetCommunicationCountV1Async(Integer pkiInscriptionID, final ApiCallback<InscriptionGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptionGetCommunicationCountV1ValidateBeforeCall(pkiInscriptionID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptionGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for inscriptionGetCommunicationListV1
      * @param pkiInscriptionID  (required)
      * @param _callback Callback for upload/download progress
@@ -326,6 +455,133 @@ public class ObjectInscriptionApi {
 
         okhttp3.Call localVarCall = inscriptionGetCommunicationListV1ValidateBeforeCall(pkiInscriptionID, _callback);
         Type localVarReturnType = new TypeToken<InscriptionGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for inscriptionGetCommunicationrecipientsV1
+     * @param pkiInscriptionID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionGetCommunicationrecipientsV1Call(Integer pkiInscriptionID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscription/{pkiInscriptionID}/getCommunicationrecipients"
+            .replace("{" + "pkiInscriptionID" + "}", localVarApiClient.escapeString(pkiInscriptionID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptionGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiInscriptionID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptionID' is set
+        if (pkiInscriptionID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptionID' when calling inscriptionGetCommunicationrecipientsV1(Async)");
+        }
+
+        return inscriptionGetCommunicationrecipientsV1Call(pkiInscriptionID, _callback);
+
+    }
+
+    /**
+     * Retrieve Inscription&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionID  (required)
+     * @return InscriptionGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptionGetCommunicationrecipientsV1Response inscriptionGetCommunicationrecipientsV1(Integer pkiInscriptionID) throws ApiException {
+        ApiResponse<InscriptionGetCommunicationrecipientsV1Response> localVarResp = inscriptionGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Inscription&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionID  (required)
+     * @return ApiResponse&lt;InscriptionGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptionGetCommunicationrecipientsV1Response> inscriptionGetCommunicationrecipientsV1WithHttpInfo(Integer pkiInscriptionID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptionGetCommunicationrecipientsV1ValidateBeforeCall(pkiInscriptionID, null);
+        Type localVarReturnType = new TypeToken<InscriptionGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Inscription&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiInscriptionID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionGetCommunicationrecipientsV1Async(Integer pkiInscriptionID, final ApiCallback<InscriptionGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptionGetCommunicationrecipientsV1ValidateBeforeCall(pkiInscriptionID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptionGetCommunicationrecipientsV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

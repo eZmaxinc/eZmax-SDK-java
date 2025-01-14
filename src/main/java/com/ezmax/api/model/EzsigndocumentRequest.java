@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -212,7 +211,7 @@ public class EzsigndocumentRequest {
   private String sEzsigndocumentPassword;
 
   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
    */
   @JsonAdapter(EEzsigndocumentFormEnum.Adapter.class)
   public enum EEzsigndocumentFormEnum {
@@ -220,7 +219,9 @@ public class EzsigndocumentRequest {
     
     CONVERT("Convert"),
     
-    DISCARD("Discard");
+    DISCARD("Discard"),
+    
+    FLATTEN("Flatten");
 
     private String value;
 
@@ -289,11 +290,11 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return pkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
@@ -309,11 +310,11 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return fkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -329,11 +330,11 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return fkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -349,11 +350,11 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -369,12 +370,12 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -390,10 +391,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Indicates where to look for the document binary content.
    * @return eEzsigndocumentSource
-  **/
+   */
   @javax.annotation.Nonnull
   public EEzsigndocumentSourceEnum geteEzsigndocumentSource() {
     return eEzsigndocumentSource;
@@ -409,10 +410,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Indicates the format of the document.
    * @return eEzsigndocumentFormat
-  **/
+   */
   @javax.annotation.Nullable
   public EEzsigndocumentFormatEnum geteEzsigndocumentFormat() {
     return eEzsigndocumentFormat;
@@ -428,10 +429,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The Base64 encoded binary content of the document.  This field is Required when eEzsigndocumentSource &#x3D; Base64.
    * @return sEzsigndocumentBase64
-  **/
+   */
   @javax.annotation.Nullable
   public byte[] getsEzsigndocumentBase64() {
     return sEzsigndocumentBase64;
@@ -447,10 +448,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The url where the document content resides.  This field is Required when eEzsigndocumentSource &#x3D; Url.
    * @return sEzsigndocumentUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentUrl() {
     return sEzsigndocumentUrl;
@@ -466,10 +467,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Try to repair the document or flatten it if it cannot be used for electronic signature. 
    * @return bEzsigndocumentForcerepair
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigndocumentForcerepair() {
     return bEzsigndocumentForcerepair;
@@ -485,10 +486,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * If the source document is password protected, the password to open/modify it.
    * @return sEzsigndocumentPassword
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentPassword() {
     return sEzsigndocumentPassword;
@@ -504,10 +505,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.
+  /**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsignformfieldgroups and assign them to the specified **fkiEzsignfoldersignerassociationID**  **Discard** removes the form from the document.  **Flatten** prints the form values in the document.
    * @return eEzsigndocumentForm
-  **/
+   */
   @javax.annotation.Nullable
   public EEzsigndocumentFormEnum geteEzsigndocumentForm() {
     return eEzsigndocumentForm;
@@ -523,10 +524,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The maximum date and time at which the Ezsigndocument can be signed.
    * @return dtEzsigndocumentDuedate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -542,10 +543,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The name of the document that will be presented to Ezsignfoldersignerassociations
    * @return sEzsigndocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
@@ -561,10 +562,10 @@ public class EzsigndocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
    * @return sEzsigndocumentExternalid
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentExternalid() {
     return sEzsigndocumentExternalid;
@@ -673,12 +674,12 @@ public class EzsigndocumentRequest {
     openapiRequiredFields.add("sEzsigndocumentName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigndocumentRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -766,22 +767,22 @@ public class EzsigndocumentRequest {
     }
   }
 
- /**
-  * Create an instance of EzsigndocumentRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigndocumentRequest
-  * @throws IOException if the JSON string is invalid with respect to EzsigndocumentRequest
-  */
+  /**
+   * Create an instance of EzsigndocumentRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigndocumentRequest
+   * @throws IOException if the JSON string is invalid with respect to EzsigndocumentRequest
+   */
   public static EzsigndocumentRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigndocumentRequest.class);
   }
 
- /**
-  * Convert an instance of EzsigndocumentRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigndocumentRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

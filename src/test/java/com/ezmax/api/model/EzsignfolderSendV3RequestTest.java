@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsignfolderMessageorder;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -45,6 +46,14 @@ public class EzsignfolderSendV3RequestTest {
     @Test
     public void tEzsignfolderMessageTest() {
         // TODO: test tEzsignfolderMessage
+    }
+
+    /**
+     * Test the property 'eEzsignfolderMessageorder'
+     */
+    @Test
+    public void eEzsignfolderMessageorderTest() {
+        // TODO: test eEzsignfolderMessageorder
     }
 
     /**

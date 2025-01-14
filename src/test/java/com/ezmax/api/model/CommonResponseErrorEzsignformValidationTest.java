@@ -58,6 +58,14 @@ public class CommonResponseErrorEzsignformValidationTest {
     }
 
     /**
+     * Test the property 'aSErrorMessagedetail'
+     */
+    @Test
+    public void aSErrorMessagedetailTest() {
+        // TODO: test aSErrorMessagedetail
+    }
+
+    /**
      * Test the property 'aObjEzsignformfielderror'
      */
     @Test

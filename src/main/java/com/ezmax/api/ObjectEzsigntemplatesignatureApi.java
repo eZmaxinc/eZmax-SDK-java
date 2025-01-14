@@ -28,12 +28,12 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatesignatureDeleteObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV3Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -79,8 +79,8 @@ public class ObjectEzsigntemplatesignatureApi {
     }
 
     /**
-     * Build call for ezsigntemplatesignatureCreateObjectV1
-     * @param ezsigntemplatesignatureCreateObjectV1Request  (required)
+     * Build call for ezsigntemplatesignatureCreateObjectV2
+     * @param ezsigntemplatesignatureCreateObjectV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -90,7 +90,7 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureCreateObjectV1Call(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureCreateObjectV2Call(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -104,10 +104,10 @@ public class ObjectEzsigntemplatesignatureApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ezsigntemplatesignatureCreateObjectV1Request;
+        Object localVarPostBody = ezsigntemplatesignatureCreateObjectV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/ezsigntemplatesignature";
+        String localVarPath = "/2/object/ezsigntemplatesignature";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -136,21 +136,21 @@ public class ObjectEzsigntemplatesignatureApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsigntemplatesignatureCreateObjectV1ValidateBeforeCall(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'ezsigntemplatesignatureCreateObjectV1Request' is set
-        if (ezsigntemplatesignatureCreateObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'ezsigntemplatesignatureCreateObjectV1Request' when calling ezsigntemplatesignatureCreateObjectV1(Async)");
+    private okhttp3.Call ezsigntemplatesignatureCreateObjectV2ValidateBeforeCall(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'ezsigntemplatesignatureCreateObjectV2Request' is set
+        if (ezsigntemplatesignatureCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigntemplatesignatureCreateObjectV2Request' when calling ezsigntemplatesignatureCreateObjectV2(Async)");
         }
 
-        return ezsigntemplatesignatureCreateObjectV1Call(ezsigntemplatesignatureCreateObjectV1Request, _callback);
+        return ezsigntemplatesignatureCreateObjectV2Call(ezsigntemplatesignatureCreateObjectV2Request, _callback);
 
     }
 
     /**
      * Create a new Ezsigntemplatesignature
      * The endpoint allows to create one or many elements at once.
-     * @param ezsigntemplatesignatureCreateObjectV1Request  (required)
-     * @return EzsigntemplatesignatureCreateObjectV1Response
+     * @param ezsigntemplatesignatureCreateObjectV2Request  (required)
+     * @return EzsigntemplatesignatureCreateObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -158,16 +158,16 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatesignatureCreateObjectV1Response ezsigntemplatesignatureCreateObjectV1(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request) throws ApiException {
-        ApiResponse<EzsigntemplatesignatureCreateObjectV1Response> localVarResp = ezsigntemplatesignatureCreateObjectV1WithHttpInfo(ezsigntemplatesignatureCreateObjectV1Request);
+    public EzsigntemplatesignatureCreateObjectV2Response ezsigntemplatesignatureCreateObjectV2(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request) throws ApiException {
+        ApiResponse<EzsigntemplatesignatureCreateObjectV2Response> localVarResp = ezsigntemplatesignatureCreateObjectV2WithHttpInfo(ezsigntemplatesignatureCreateObjectV2Request);
         return localVarResp.getData();
     }
 
     /**
      * Create a new Ezsigntemplatesignature
      * The endpoint allows to create one or many elements at once.
-     * @param ezsigntemplatesignatureCreateObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsigntemplatesignatureCreateObjectV1Response&gt;
+     * @param ezsigntemplatesignatureCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsigntemplatesignatureCreateObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -175,16 +175,16 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatesignatureCreateObjectV1Response> ezsigntemplatesignatureCreateObjectV1WithHttpInfo(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = ezsigntemplatesignatureCreateObjectV1ValidateBeforeCall(ezsigntemplatesignatureCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureCreateObjectV1Response>(){}.getType();
+    public ApiResponse<EzsigntemplatesignatureCreateObjectV2Response> ezsigntemplatesignatureCreateObjectV2WithHttpInfo(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplatesignatureCreateObjectV2ValidateBeforeCall(ezsigntemplatesignatureCreateObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureCreateObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create a new Ezsigntemplatesignature (asynchronously)
      * The endpoint allows to create one or many elements at once.
-     * @param ezsigntemplatesignatureCreateObjectV1Request  (required)
+     * @param ezsigntemplatesignatureCreateObjectV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -194,10 +194,10 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureCreateObjectV1Async(EzsigntemplatesignatureCreateObjectV1Request ezsigntemplatesignatureCreateObjectV1Request, final ApiCallback<EzsigntemplatesignatureCreateObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureCreateObjectV2Async(EzsigntemplatesignatureCreateObjectV2Request ezsigntemplatesignatureCreateObjectV2Request, final ApiCallback<EzsigntemplatesignatureCreateObjectV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsigntemplatesignatureCreateObjectV1ValidateBeforeCall(ezsigntemplatesignatureCreateObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureCreateObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = ezsigntemplatesignatureCreateObjectV2ValidateBeforeCall(ezsigntemplatesignatureCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -329,9 +329,9 @@ public class ObjectEzsigntemplatesignatureApi {
         return localVarCall;
     }
     /**
-     * Build call for ezsigntemplatesignatureEditObjectV1
+     * Build call for ezsigntemplatesignatureEditObjectV2
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @param ezsigntemplatesignatureEditObjectV1Request  (required)
+     * @param ezsigntemplatesignatureEditObjectV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -343,7 +343,7 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureEditObjectV1Call(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureEditObjectV2Call(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -357,10 +357,10 @@ public class ObjectEzsigntemplatesignatureApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ezsigntemplatesignatureEditObjectV1Request;
+        Object localVarPostBody = ezsigntemplatesignatureEditObjectV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
+        String localVarPath = "/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
             .replace("{" + "pkiEzsigntemplatesignatureID" + "}", localVarApiClient.escapeString(pkiEzsigntemplatesignatureID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -390,18 +390,18 @@ public class ObjectEzsigntemplatesignatureApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsigntemplatesignatureEditObjectV1ValidateBeforeCall(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsigntemplatesignatureEditObjectV2ValidateBeforeCall(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
         if (pkiEzsigntemplatesignatureID == null) {
-            throw new ApiException("Missing the required parameter 'pkiEzsigntemplatesignatureID' when calling ezsigntemplatesignatureEditObjectV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiEzsigntemplatesignatureID' when calling ezsigntemplatesignatureEditObjectV2(Async)");
         }
 
-        // verify the required parameter 'ezsigntemplatesignatureEditObjectV1Request' is set
-        if (ezsigntemplatesignatureEditObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'ezsigntemplatesignatureEditObjectV1Request' when calling ezsigntemplatesignatureEditObjectV1(Async)");
+        // verify the required parameter 'ezsigntemplatesignatureEditObjectV2Request' is set
+        if (ezsigntemplatesignatureEditObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsigntemplatesignatureEditObjectV2Request' when calling ezsigntemplatesignatureEditObjectV2(Async)");
         }
 
-        return ezsigntemplatesignatureEditObjectV1Call(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request, _callback);
+        return ezsigntemplatesignatureEditObjectV2Call(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request, _callback);
 
     }
 
@@ -409,8 +409,8 @@ public class ObjectEzsigntemplatesignatureApi {
      * Edit an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @param ezsigntemplatesignatureEditObjectV1Request  (required)
-     * @return EzsigntemplatesignatureEditObjectV1Response
+     * @param ezsigntemplatesignatureEditObjectV2Request  (required)
+     * @return EzsigntemplatesignatureEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -420,8 +420,8 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatesignatureEditObjectV1Response ezsigntemplatesignatureEditObjectV1(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsigntemplatesignatureEditObjectV1Response> localVarResp = ezsigntemplatesignatureEditObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request);
+    public EzsigntemplatesignatureEditObjectV2Response ezsigntemplatesignatureEditObjectV2(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
+        ApiResponse<EzsigntemplatesignatureEditObjectV2Response> localVarResp = ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -429,8 +429,8 @@ public class ObjectEzsigntemplatesignatureApi {
      * Edit an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @param ezsigntemplatesignatureEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsigntemplatesignatureEditObjectV1Response&gt;
+     * @param ezsigntemplatesignatureEditObjectV2Request  (required)
+     * @return ApiResponse&lt;EzsigntemplatesignatureEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -440,9 +440,9 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatesignatureEditObjectV1Response> ezsigntemplatesignatureEditObjectV1WithHttpInfo(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV1ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV1Response>(){}.getType();
+    public ApiResponse<EzsigntemplatesignatureEditObjectV2Response> ezsigntemplatesignatureEditObjectV2WithHttpInfo(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -450,7 +450,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * Edit an existing Ezsigntemplatesignature (asynchronously)
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @param ezsigntemplatesignatureEditObjectV1Request  (required)
+     * @param ezsigntemplatesignatureEditObjectV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -462,15 +462,15 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureEditObjectV1Async(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV1Request ezsigntemplatesignatureEditObjectV1Request, final ApiCallback<EzsigntemplatesignatureEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureEditObjectV2Async(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request, final ApiCallback<EzsigntemplatesignatureEditObjectV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV1ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for ezsigntemplatesignatureGetObjectV2
+     * Build call for ezsigntemplatesignatureGetObjectV3
      * @param pkiEzsigntemplatesignatureID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -482,7 +482,7 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureGetObjectV2Call(Integer pkiEzsigntemplatesignatureID, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureGetObjectV3Call(Integer pkiEzsigntemplatesignatureID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -499,7 +499,7 @@ public class ObjectEzsigntemplatesignatureApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/2/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
+        String localVarPath = "/3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}"
             .replace("{" + "pkiEzsigntemplatesignatureID" + "}", localVarApiClient.escapeString(pkiEzsigntemplatesignatureID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -528,13 +528,13 @@ public class ObjectEzsigntemplatesignatureApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsigntemplatesignatureGetObjectV2ValidateBeforeCall(Integer pkiEzsigntemplatesignatureID, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsigntemplatesignatureGetObjectV3ValidateBeforeCall(Integer pkiEzsigntemplatesignatureID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsigntemplatesignatureID' is set
         if (pkiEzsigntemplatesignatureID == null) {
-            throw new ApiException("Missing the required parameter 'pkiEzsigntemplatesignatureID' when calling ezsigntemplatesignatureGetObjectV2(Async)");
+            throw new ApiException("Missing the required parameter 'pkiEzsigntemplatesignatureID' when calling ezsigntemplatesignatureGetObjectV3(Async)");
         }
 
-        return ezsigntemplatesignatureGetObjectV2Call(pkiEzsigntemplatesignatureID, _callback);
+        return ezsigntemplatesignatureGetObjectV3Call(pkiEzsigntemplatesignatureID, _callback);
 
     }
 
@@ -542,7 +542,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * Retrieve an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @return EzsigntemplatesignatureGetObjectV2Response
+     * @return EzsigntemplatesignatureGetObjectV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -551,8 +551,8 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatesignatureGetObjectV2Response ezsigntemplatesignatureGetObjectV2(Integer pkiEzsigntemplatesignatureID) throws ApiException {
-        ApiResponse<EzsigntemplatesignatureGetObjectV2Response> localVarResp = ezsigntemplatesignatureGetObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID);
+    public EzsigntemplatesignatureGetObjectV3Response ezsigntemplatesignatureGetObjectV3(Integer pkiEzsigntemplatesignatureID) throws ApiException {
+        ApiResponse<EzsigntemplatesignatureGetObjectV3Response> localVarResp = ezsigntemplatesignatureGetObjectV3WithHttpInfo(pkiEzsigntemplatesignatureID);
         return localVarResp.getData();
     }
 
@@ -560,7 +560,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * Retrieve an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @return ApiResponse&lt;EzsigntemplatesignatureGetObjectV2Response&gt;
+     * @return ApiResponse&lt;EzsigntemplatesignatureGetObjectV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -569,9 +569,9 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatesignatureGetObjectV2Response> ezsigntemplatesignatureGetObjectV2WithHttpInfo(Integer pkiEzsigntemplatesignatureID) throws ApiException {
-        okhttp3.Call localVarCall = ezsigntemplatesignatureGetObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureGetObjectV2Response>(){}.getType();
+    public ApiResponse<EzsigntemplatesignatureGetObjectV3Response> ezsigntemplatesignatureGetObjectV3WithHttpInfo(Integer pkiEzsigntemplatesignatureID) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplatesignatureGetObjectV3ValidateBeforeCall(pkiEzsigntemplatesignatureID, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureGetObjectV3Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -589,10 +589,10 @@ public class ObjectEzsigntemplatesignatureApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureGetObjectV2Async(Integer pkiEzsigntemplatesignatureID, final ApiCallback<EzsigntemplatesignatureGetObjectV2Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureGetObjectV3Async(Integer pkiEzsigntemplatesignatureID, final ApiCallback<EzsigntemplatesignatureGetObjectV3Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsigntemplatesignatureGetObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureGetObjectV2Response>(){}.getType();
+        okhttp3.Call localVarCall = ezsigntemplatesignatureGetObjectV3ValidateBeforeCall(pkiEzsigntemplatesignatureID, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureGetObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

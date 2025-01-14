@@ -54,6 +54,14 @@ public class EzsigntemplatepackageRequestTest {
     }
 
     /**
+     * Test the property 'fkiEzdoctemplatedocumentID'
+     */
+    @Test
+    public void fkiEzdoctemplatedocumentIDTest() {
+        // TODO: test fkiEzdoctemplatedocumentID
+    }
+
+    /**
      * Test the property 'fkiLanguageID'
      */
     @Test

@@ -43,7 +43,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -55,11 +54,15 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookRequestCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
   private Integer pkiWebhookID;
+
+  public static final String SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D = "fkiAuthenticationexternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D)
+  private Integer fkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
@@ -103,7 +106,7 @@ public class WebhookRequestCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER = "a_objWebhookheader";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER)
-  private List<WebhookheaderRequestCompound> aObjWebhookheader;
+  private List<WebhookheaderRequestCompound> aObjWebhookheader = new ArrayList<>();
 
   public WebhookRequestCompound() {
   }
@@ -113,10 +116,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Webhook
    * @return pkiWebhookID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
@@ -127,17 +130,38 @@ public class WebhookRequestCompound {
   }
 
 
+  public WebhookRequestCompound fkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Authenticationexternal
+   * minimum: 0
+   * maximum: 255
+   * @return fkiAuthenticationexternalID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAuthenticationexternalID() {
+    return fkiAuthenticationexternalID;
+  }
+
+  public void setFkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
+  }
+
+
   public WebhookRequestCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -153,10 +177,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Webhook
    * @return sWebhookDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookDescription() {
     return sWebhookDescription;
@@ -172,10 +196,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookModule
    * @return eWebhookModule
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
@@ -191,10 +215,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookEzsignevent
    * @return eWebhookEzsignevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
@@ -210,10 +234,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookManagementevent
    * @return eWebhookManagementevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
@@ -229,10 +253,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The URL of the Webhook callback
    * @return sWebhookUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookUrl() {
     return sWebhookUrl;
@@ -248,10 +272,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The email that will receive the Webhook in case all attempts fail
    * @return sWebhookEmailfailed
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
@@ -267,10 +291,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Webhook is active or not
    * @return bWebhookIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
@@ -286,10 +310,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the requests will be signed or not
    * @return bWebhookIssigned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbWebhookIssigned() {
     return bWebhookIssigned;
@@ -305,10 +329,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
    * @return bWebhookSkipsslvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookSkipsslvalidation() {
     return bWebhookSkipsslvalidation;
@@ -332,10 +356,10 @@ public class WebhookRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjWebhookheader
    * @return aObjWebhookheader
-  **/
+   */
   @javax.annotation.Nullable
   public List<WebhookheaderRequestCompound> getaObjWebhookheader() {
     return aObjWebhookheader;
@@ -357,6 +381,7 @@ public class WebhookRequestCompound {
     }
     WebhookRequestCompound webhookRequestCompound = (WebhookRequestCompound) o;
     return Objects.equals(this.pkiWebhookID, webhookRequestCompound.pkiWebhookID) &&
+        Objects.equals(this.fkiAuthenticationexternalID, webhookRequestCompound.fkiAuthenticationexternalID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, webhookRequestCompound.fkiEzsignfoldertypeID) &&
         Objects.equals(this.sWebhookDescription, webhookRequestCompound.sWebhookDescription) &&
         Objects.equals(this.eWebhookModule, webhookRequestCompound.eWebhookModule) &&
@@ -372,7 +397,7 @@ public class WebhookRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, fkiEzsignfoldertypeID, sWebhookDescription, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, aObjWebhookheader);
+    return Objects.hash(pkiWebhookID, fkiAuthenticationexternalID, fkiEzsignfoldertypeID, sWebhookDescription, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, aObjWebhookheader);
   }
 
   @Override
@@ -380,6 +405,7 @@ public class WebhookRequestCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookRequestCompound {\n");
     sb.append("    pkiWebhookID: ").append(toIndentedString(pkiWebhookID)).append("\n");
+    sb.append("    fkiAuthenticationexternalID: ").append(toIndentedString(fkiAuthenticationexternalID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    sWebhookDescription: ").append(toIndentedString(sWebhookDescription)).append("\n");
     sb.append("    eWebhookModule: ").append(toIndentedString(eWebhookModule)).append("\n");
@@ -414,6 +440,7 @@ public class WebhookRequestCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiWebhookID");
+    openapiFields.add("fkiAuthenticationexternalID");
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("sWebhookDescription");
     openapiFields.add("eWebhookModule");
@@ -436,12 +463,12 @@ public class WebhookRequestCompound {
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WebhookRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to WebhookRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebhookRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -528,22 +555,22 @@ public class WebhookRequestCompound {
     }
   }
 
- /**
-  * Create an instance of WebhookRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WebhookRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to WebhookRequestCompound
-  */
+  /**
+   * Create an instance of WebhookRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of WebhookRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to WebhookRequestCompound
+   */
   public static WebhookRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, WebhookRequestCompound.class);
   }
 
- /**
-  * Convert an instance of WebhookRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of WebhookRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

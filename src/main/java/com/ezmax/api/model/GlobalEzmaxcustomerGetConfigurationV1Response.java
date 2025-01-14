@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE = "sInfrastructureregionCode";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE)
@@ -79,10 +78,10 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return this;
   }
 
-   /**
+  /**
    * The region code
    * @return sInfrastructureregionCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsInfrastructureregionCode() {
     return sInfrastructureregionCode;
@@ -98,10 +97,10 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return this;
   }
 
-   /**
+  /**
    * The region code
    * @return sInfrastructureregionCodeWeb
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsInfrastructureregionCodeWeb() {
     return sInfrastructureregionCodeWeb;
@@ -117,10 +116,10 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return this;
   }
 
-   /**
+  /**
    * The environment type Description
    * @return sInfrastructureenvironmenttypeDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsInfrastructureenvironmenttypeDescription() {
     return sInfrastructureenvironmenttypeDescription;
@@ -136,10 +135,10 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return this;
   }
 
-   /**
+  /**
    * The ID of the client in Cognito
    * @return sCognitoClientIDExternal
-  **/
+   */
   @javax.annotation.Nullable
   public String getsCognitoClientIDExternal() {
     return sCognitoClientIDExternal;
@@ -155,10 +154,10 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return this;
   }
 
-   /**
+  /**
    * The ID of the client in Cognito
    * @return sCognitoClientIDEzmaxpublic
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCognitoClientIDEzmaxpublic() {
     return sCognitoClientIDEzmaxpublic;
@@ -236,12 +235,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     openapiRequiredFields.add("sCognitoClientIDEzmaxpublic");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GlobalEzmaxcustomerGetConfigurationV1Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GlobalEzmaxcustomerGetConfigurationV1Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GlobalEzmaxcustomerGetConfigurationV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -310,22 +309,22 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     }
   }
 
- /**
-  * Create an instance of GlobalEzmaxcustomerGetConfigurationV1Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GlobalEzmaxcustomerGetConfigurationV1Response
-  * @throws IOException if the JSON string is invalid with respect to GlobalEzmaxcustomerGetConfigurationV1Response
-  */
+  /**
+   * Create an instance of GlobalEzmaxcustomerGetConfigurationV1Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GlobalEzmaxcustomerGetConfigurationV1Response
+   * @throws IOException if the JSON string is invalid with respect to GlobalEzmaxcustomerGetConfigurationV1Response
+   */
   public static GlobalEzmaxcustomerGetConfigurationV1Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GlobalEzmaxcustomerGetConfigurationV1Response.class);
   }
 
- /**
-  * Convert an instance of GlobalEzmaxcustomerGetConfigurationV1Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GlobalEzmaxcustomerGetConfigurationV1Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

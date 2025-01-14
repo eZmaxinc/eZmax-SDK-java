@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP = "a_objEzsignsignergroupmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP)
@@ -74,10 +73,10 @@ public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload 
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignsignergroupmembership
    * @return aObjEzsignsignergroupmembership
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzsignsignergroupmembershipResponseCompound> getaObjEzsignsignergroupmembership() {
     return aObjEzsignsignergroupmembership;
@@ -140,12 +139,12 @@ public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload 
     openapiRequiredFields.add("a_objEzsignsignergroupmembership");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -209,22 +208,22 @@ public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload 
     }
   }
 
- /**
-  * Create an instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload
+   */
   public static EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

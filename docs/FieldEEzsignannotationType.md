@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `STRIKETHROUGHBLOCK` (value: `"StrikethroughBlock"`)
+* `STRIKETHROUGH_BLOCK` (value: `"StrikethroughBlock"`)
 
-* `STRIKETHROUGHLINE` (value: `"StrikethroughLine"`)
+* `STRIKETHROUGH_LINE` (value: `"StrikethroughLine"`)
 
 * `TEXT` (value: `"Text"`)
 

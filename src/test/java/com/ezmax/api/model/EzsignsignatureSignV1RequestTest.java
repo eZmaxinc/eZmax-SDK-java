@@ -49,6 +49,14 @@ public class EzsignsignatureSignV1RequestTest {
     }
 
     /**
+     * Test the property 'fkiFontID'
+     */
+    @Test
+    public void fkiFontIDTest() {
+        // TODO: test fkiFontID
+    }
+
+    /**
      * Test the property 'sValue'
      */
     @Test

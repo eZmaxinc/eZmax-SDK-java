@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcarddetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcarddetailRequest {
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH = "iCreditcarddetailExpirationmonth";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH)
@@ -79,12 +78,12 @@ public class CreditcarddetailRequest {
     return this;
   }
 
-   /**
+  /**
    * The expirationmonth of the Creditcarddetail
    * minimum: 0
    * maximum: 12
    * @return iCreditcarddetailExpirationmonth
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiCreditcarddetailExpirationmonth() {
     return iCreditcarddetailExpirationmonth;
@@ -100,12 +99,12 @@ public class CreditcarddetailRequest {
     return this;
   }
 
-   /**
+  /**
    * The expirationyear of the Creditcarddetail
    * minimum: 0
    * maximum: 2200
    * @return iCreditcarddetailExpirationyear
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiCreditcarddetailExpirationyear() {
     return iCreditcarddetailExpirationyear;
@@ -121,11 +120,11 @@ public class CreditcarddetailRequest {
     return this;
   }
 
-   /**
+  /**
    * The civic of the Creditcarddetail
    * @return sCreditcarddetailCivic
-  **/
-  @javax.annotation.Nullable
+   */
+  @javax.annotation.Nonnull
   public String getsCreditcarddetailCivic() {
     return sCreditcarddetailCivic;
   }
@@ -140,11 +139,11 @@ public class CreditcarddetailRequest {
     return this;
   }
 
-   /**
+  /**
    * The street of the Creditcarddetail
    * @return sCreditcarddetailStreet
-  **/
-  @javax.annotation.Nullable
+   */
+  @javax.annotation.Nonnull
   public String getsCreditcarddetailStreet() {
     return sCreditcarddetailStreet;
   }
@@ -159,11 +158,11 @@ public class CreditcarddetailRequest {
     return this;
   }
 
-   /**
+  /**
    * The zip of the Creditcarddetail
    * @return sCreditcarddetailZip
-  **/
-  @javax.annotation.Nullable
+   */
+  @javax.annotation.Nonnull
   public String getsCreditcarddetailZip() {
     return sCreditcarddetailZip;
   }
@@ -236,14 +235,17 @@ public class CreditcarddetailRequest {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("iCreditcarddetailExpirationmonth");
     openapiRequiredFields.add("iCreditcarddetailExpirationyear");
+    openapiRequiredFields.add("sCreditcarddetailCivic");
+    openapiRequiredFields.add("sCreditcarddetailStreet");
+    openapiRequiredFields.add("sCreditcarddetailZip");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CreditcarddetailRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CreditcarddetailRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CreditcarddetailRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,13 +268,13 @@ public class CreditcarddetailRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("sCreditcarddetailCivic") != null && !jsonObj.get("sCreditcarddetailCivic").isJsonNull()) && !jsonObj.get("sCreditcarddetailCivic").isJsonPrimitive()) {
+      if (!jsonObj.get("sCreditcarddetailCivic").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailCivic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailCivic").toString()));
       }
-      if ((jsonObj.get("sCreditcarddetailStreet") != null && !jsonObj.get("sCreditcarddetailStreet").isJsonNull()) && !jsonObj.get("sCreditcarddetailStreet").isJsonPrimitive()) {
+      if (!jsonObj.get("sCreditcarddetailStreet").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailStreet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailStreet").toString()));
       }
-      if ((jsonObj.get("sCreditcarddetailZip") != null && !jsonObj.get("sCreditcarddetailZip").isJsonNull()) && !jsonObj.get("sCreditcarddetailZip").isJsonPrimitive()) {
+      if (!jsonObj.get("sCreditcarddetailZip").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailZip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailZip").toString()));
       }
   }
@@ -306,22 +308,22 @@ public class CreditcarddetailRequest {
     }
   }
 
- /**
-  * Create an instance of CreditcarddetailRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreditcarddetailRequest
-  * @throws IOException if the JSON string is invalid with respect to CreditcarddetailRequest
-  */
+  /**
+   * Create an instance of CreditcarddetailRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CreditcarddetailRequest
+   * @throws IOException if the JSON string is invalid with respect to CreditcarddetailRequest
+   */
   public static CreditcarddetailRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CreditcarddetailRequest.class);
   }
 
- /**
-  * Convert an instance of CreditcarddetailRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CreditcarddetailRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -38,6 +38,14 @@ public class AddressRequestCompoundTest {
     }
 
     /**
+     * Test the property 'pkiAddressID'
+     */
+    @Test
+    public void pkiAddressIDTest() {
+        // TODO: test pkiAddressID
+    }
+
+    /**
      * Test the property 'fkiAddresstypeID'
      */
     @Test

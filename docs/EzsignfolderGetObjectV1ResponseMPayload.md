@@ -11,6 +11,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
 |**objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional] |
+|**fkiTimezoneID** | **Integer** | The unique ID of the Timezone |  [optional] |
 |**eEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  |  |
 |**sEzsignfoldertypeNameX** | **String** |  |  [optional] |
 |**fkiBillingentityinternalID** | **Integer** | The unique ID of the Billingentityinternal. |  [optional] |
@@ -21,6 +22,8 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**tEzsignfolderNote** | **String** | Note about the Ezsignfolder |  [optional] |
 |**bEzsignfolderIsdisposable** | **Boolean** | If the Ezsigndocument can be disposed |  [optional] |
 |**eEzsignfolderSendreminderfrequency** | **FieldEEzsignfolderSendreminderfrequency** |  |  [optional] |
+|**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the the first reminder sending |  [optional] |
+|**iEzsignfolderSendreminderotherdays** | **Integer** | The number of days after the first reminder sending |  [optional] |
 |**dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 |**dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |
 |**dtEzsignfolderSentdate** | **String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional] |
@@ -31,6 +34,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**tEzsignfolderMessage** | **String** | A custom text message that will be added to the email sent. |  [optional] |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional] |
 |**sEzsignfolderExternalid** | **String** | This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format.  |  [optional] |
+|**objTimezone** | [**CustomTimezoneWithCodeResponse**](CustomTimezoneWithCodeResponse.md) |  |  [optional] |
 
 
 

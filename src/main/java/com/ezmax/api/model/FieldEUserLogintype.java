@@ -31,9 +31,9 @@ public enum FieldEUserLogintype {
   
   PASSWORD("Password"),
   
-  PASSWORDPHONE("PasswordPhone"),
+  PASSWORD_PHONE("PasswordPhone"),
   
-  PASSWORDQUESTION("PasswordQuestion");
+  PASSWORD_QUESTION("PasswordQuestion");
 
   private String value;
 

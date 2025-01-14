@@ -114,7 +114,8 @@ public class ObjectEzsigntemplatepackageApiTest {
         String eFilterActive = null;
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
-        EzsigntemplatepackageGetAutocompleteV2Response response = api.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        Integer fkiEzsignfoldertypeID = null;
+        EzsigntemplatepackageGetAutocompleteV2Response response = api.ezsigntemplatepackageGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
         // TODO: test validations
     }
 

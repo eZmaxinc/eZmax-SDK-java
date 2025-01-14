@@ -9,6 +9,7 @@ A Systemconfiguration Object
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiSystemconfigurationID** | **Integer** | The unique ID of the Systemconfiguration |  [optional] |
+|**fkiBrandingID** | **Integer** | The unique ID of the Branding |  [optional] |
 |**eSystemconfigurationNewexternaluseraction** | **FieldESystemconfigurationNewexternaluseraction** |  |  |
 |**eSystemconfigurationLanguage1** | **FieldESystemconfigurationLanguage1** |  |  |
 |**eSystemconfigurationLanguage2** | **FieldESystemconfigurationLanguage2** |  |  |

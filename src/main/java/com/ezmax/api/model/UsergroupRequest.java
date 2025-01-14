@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.MultilingualUsergroupName;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -38,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,11 +50,15 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
   private Integer pkiUsergroupID;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  private EmailRequest objEmail;
 
   public static final String SERIALIZED_NAME_OBJ_USERGROUP_NAME = "objUsergroupName";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP_NAME)
@@ -68,12 +72,12 @@ public class UsergroupRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return pkiUsergroupID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiUsergroupID() {
     return pkiUsergroupID;
@@ -84,15 +88,34 @@ public class UsergroupRequest {
   }
 
 
+  public UsergroupRequest objEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+    return this;
+  }
+
+  /**
+   * Get objEmail
+   * @return objEmail
+   */
+  @javax.annotation.Nullable
+  public EmailRequest getObjEmail() {
+    return objEmail;
+  }
+
+  public void setObjEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+  }
+
+
   public UsergroupRequest objUsergroupName(MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;
     return this;
   }
 
-   /**
+  /**
    * Get objUsergroupName
    * @return objUsergroupName
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualUsergroupName getObjUsergroupName() {
     return objUsergroupName;
@@ -114,12 +137,13 @@ public class UsergroupRequest {
     }
     UsergroupRequest usergroupRequest = (UsergroupRequest) o;
     return Objects.equals(this.pkiUsergroupID, usergroupRequest.pkiUsergroupID) &&
+        Objects.equals(this.objEmail, usergroupRequest.objEmail) &&
         Objects.equals(this.objUsergroupName, usergroupRequest.objUsergroupName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupID, objUsergroupName);
+    return Objects.hash(pkiUsergroupID, objEmail, objUsergroupName);
   }
 
   @Override
@@ -127,6 +151,7 @@ public class UsergroupRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupRequest {\n");
     sb.append("    pkiUsergroupID: ").append(toIndentedString(pkiUsergroupID)).append("\n");
+    sb.append("    objEmail: ").append(toIndentedString(objEmail)).append("\n");
     sb.append("    objUsergroupName: ").append(toIndentedString(objUsergroupName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -151,6 +176,7 @@ public class UsergroupRequest {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiUsergroupID");
+    openapiFields.add("objEmail");
     openapiFields.add("objUsergroupName");
 
     // a set of required properties/fields (JSON key names)
@@ -158,12 +184,12 @@ public class UsergroupRequest {
     openapiRequiredFields.add("objUsergroupName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UsergroupRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UsergroupRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -186,6 +212,10 @@ public class UsergroupRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `objEmail`
+      if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
+        EmailRequest.validateJsonElement(jsonObj.get("objEmail"));
+      }
       // validate the required field `objUsergroupName`
       MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
   }
@@ -219,22 +249,22 @@ public class UsergroupRequest {
     }
   }
 
- /**
-  * Create an instance of UsergroupRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UsergroupRequest
-  * @throws IOException if the JSON string is invalid with respect to UsergroupRequest
-  */
+  /**
+   * Create an instance of UsergroupRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UsergroupRequest
+   * @throws IOException if the JSON string is invalid with respect to UsergroupRequest
+   */
   public static UsergroupRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UsergroupRequest.class);
   }
 
- /**
-  * Convert an instance of UsergroupRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UsergroupRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

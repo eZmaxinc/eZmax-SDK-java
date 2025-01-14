@@ -14,6 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponseErrorWrongFranchiseoffice;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
 import org.junit.jupiter.api.Disabled;

@@ -13,7 +13,11 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEActivesessionEzsign;
+import com.ezmax.api.model.FieldEActivesessionEzsignaccess;
+import com.ezmax.api.model.FieldEActivesessionEzsignprepaid;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
+import com.ezmax.api.model.FieldEActivesessionRealestateinprogress;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
@@ -102,6 +106,70 @@ public class ActivesessionResponseTest {
     @Test
     public void bActivesessionIssuperadminTest() {
         // TODO: test bActivesessionIssuperadmin
+    }
+
+    /**
+     * Test the property 'bActivesessionAttachment'
+     */
+    @Test
+    public void bActivesessionAttachmentTest() {
+        // TODO: test bActivesessionAttachment
+    }
+
+    /**
+     * Test the property 'bActivesessionCanafe'
+     */
+    @Test
+    public void bActivesessionCanafeTest() {
+        // TODO: test bActivesessionCanafe
+    }
+
+    /**
+     * Test the property 'bActivesessionFinancial'
+     */
+    @Test
+    public void bActivesessionFinancialTest() {
+        // TODO: test bActivesessionFinancial
+    }
+
+    /**
+     * Test the property 'bActivesessionRealestatecompleted'
+     */
+    @Test
+    public void bActivesessionRealestatecompletedTest() {
+        // TODO: test bActivesessionRealestatecompleted
+    }
+
+    /**
+     * Test the property 'eActivesessionEzsign'
+     */
+    @Test
+    public void eActivesessionEzsignTest() {
+        // TODO: test eActivesessionEzsign
+    }
+
+    /**
+     * Test the property 'eActivesessionEzsignaccess'
+     */
+    @Test
+    public void eActivesessionEzsignaccessTest() {
+        // TODO: test eActivesessionEzsignaccess
+    }
+
+    /**
+     * Test the property 'eActivesessionEzsignprepaid'
+     */
+    @Test
+    public void eActivesessionEzsignprepaidTest() {
+        // TODO: test eActivesessionEzsignprepaid
+    }
+
+    /**
+     * Test the property 'eActivesessionRealestateinprogress'
+     */
+    @Test
+    public void eActivesessionRealestateinprogressTest() {
+        // TODO: test eActivesessionRealestateinprogress
     }
 
     /**

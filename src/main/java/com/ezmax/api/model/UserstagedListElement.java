@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Userstaged List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserstagedListElement {
   public static final String SERIALIZED_NAME_PKI_USERSTAGED_I_D = "pkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_PKI_USERSTAGED_I_D)
@@ -79,12 +78,12 @@ public class UserstagedListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Userstaged
    * minimum: 1
    * maximum: 65535
    * @return pkiUserstagedID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUserstagedID() {
     return pkiUserstagedID;
@@ -100,10 +99,10 @@ public class UserstagedListElement {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -119,10 +118,10 @@ public class UserstagedListElement {
     return this;
   }
 
-   /**
+  /**
    * The firstname of the Userstaged
    * @return sUserstagedFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserstagedFirstname() {
     return sUserstagedFirstname;
@@ -138,10 +137,10 @@ public class UserstagedListElement {
     return this;
   }
 
-   /**
+  /**
    * The lastname of the Userstaged
    * @return sUserstagedLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserstagedLastname() {
     return sUserstagedLastname;
@@ -157,10 +156,10 @@ public class UserstagedListElement {
     return this;
   }
 
-   /**
+  /**
    * The externalid of the Userstaged
    * @return sUserstagedExternalid
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserstagedExternalid() {
     return sUserstagedExternalid;
@@ -239,12 +238,12 @@ public class UserstagedListElement {
     openapiRequiredFields.add("sUserstagedExternalid");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserstagedListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserstagedListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserstagedListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -310,22 +309,22 @@ public class UserstagedListElement {
     }
   }
 
- /**
-  * Create an instance of UserstagedListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserstagedListElement
-  * @throws IOException if the JSON string is invalid with respect to UserstagedListElement
-  */
+  /**
+   * Create an instance of UserstagedListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserstagedListElement
+   * @throws IOException if the JSON string is invalid with respect to UserstagedListElement
+   */
   public static UserstagedListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserstagedListElement.class);
   }
 
- /**
-  * Convert an instance of UserstagedListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserstagedListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

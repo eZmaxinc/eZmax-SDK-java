@@ -76,6 +76,14 @@ public class EzsigntemplateResponseCompoundTest {
     }
 
     /**
+     * Test the property 'fkiEzdoctemplatedocumentID'
+     */
+    @Test
+    public void fkiEzdoctemplatedocumentIDTest() {
+        // TODO: test fkiEzdoctemplatedocumentID
+    }
+
+    /**
      * Test the property 'sLanguageNameX'
      */
     @Test
@@ -89,6 +97,22 @@ public class EzsigntemplateResponseCompoundTest {
     @Test
     public void sEzsigntemplateDescriptionTest() {
         // TODO: test sEzsigntemplateDescription
+    }
+
+    /**
+     * Test the property 'sEzsigntemplateExternaldescription'
+     */
+    @Test
+    public void sEzsigntemplateExternaldescriptionTest() {
+        // TODO: test sEzsigntemplateExternaldescription
+    }
+
+    /**
+     * Test the property 'tEzsigntemplateComment'
+     */
+    @Test
+    public void tEzsigntemplateCommentTest() {
+        // TODO: test tEzsigntemplateComment
     }
 
     /**

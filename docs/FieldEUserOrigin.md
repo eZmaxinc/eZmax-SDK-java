@@ -5,7 +5,7 @@
 ## Enum
 
 
-* `BUILTIN` (value: `"BuiltIn"`)
+* `BUILT_IN` (value: `"BuiltIn"`)
 
 * `EXTERNAL` (value: `"External"`)
 

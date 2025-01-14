@@ -46,7 +46,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -58,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
@@ -108,10 +107,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * A multi-valued complex type that specifies supported authentication scheme properties.
    * @return authenticationSchemes
-  **/
+   */
   @javax.annotation.Nonnull
   public List<ScimAuthenticationScheme> getAuthenticationSchemes() {
     return authenticationSchemes;
@@ -127,10 +126,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get bulk
    * @return bulk
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigBulk getBulk() {
     return bulk;
@@ -146,10 +145,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get changePassword
    * @return changePassword
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigChangePassword getChangePassword() {
     return changePassword;
@@ -165,10 +164,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * An HTTP-addressable URL pointing to the service provider&#39;s human-consumable help documentation
    * @return documentationUri
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDocumentationUri() {
     return documentationUri;
@@ -184,10 +183,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get etag
    * @return etag
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigEtag getEtag() {
     return etag;
@@ -203,10 +202,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get filter
    * @return filter
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigFilter getFilter() {
     return filter;
@@ -222,10 +221,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get patch
    * @return patch
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigPatch getPatch() {
     return patch;
@@ -241,10 +240,10 @@ public class ScimServiceProviderConfig {
     return this;
   }
 
-   /**
+  /**
    * Get sort
    * @return sort
-  **/
+   */
   @javax.annotation.Nonnull
   public ScimServiceProviderConfigSort getSort() {
     return sort;
@@ -335,12 +334,12 @@ public class ScimServiceProviderConfig {
     openapiRequiredFields.add("sort");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ScimServiceProviderConfig
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ScimServiceProviderConfig
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ScimServiceProviderConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -419,22 +418,22 @@ public class ScimServiceProviderConfig {
     }
   }
 
- /**
-  * Create an instance of ScimServiceProviderConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ScimServiceProviderConfig
-  * @throws IOException if the JSON string is invalid with respect to ScimServiceProviderConfig
-  */
+  /**
+   * Create an instance of ScimServiceProviderConfig given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ScimServiceProviderConfig
+   * @throws IOException if the JSON string is invalid with respect to ScimServiceProviderConfig
+   */
   public static ScimServiceProviderConfig fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ScimServiceProviderConfig.class);
   }
 
- /**
-  * Convert an instance of ScimServiceProviderConfig to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ScimServiceProviderConfig to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

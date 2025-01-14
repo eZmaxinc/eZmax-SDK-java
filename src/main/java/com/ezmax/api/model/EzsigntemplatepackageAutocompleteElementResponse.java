@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
@@ -80,10 +79,10 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypePrivacylevel
    * @return eEzsignfoldertypePrivacylevel
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -99,10 +98,10 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatepackage
    * @return sEzsigntemplatepackageDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
@@ -118,11 +117,11 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackage
    * minimum: 0
    * @return pkiEzsigntemplatepackageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
@@ -138,10 +137,10 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage is active or not
    * @return bEzsigntemplatepackageIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;
@@ -157,10 +156,10 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Indicates if the element is disabled in the context
    * @return bDisabled
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDisabled() {
     return bDisabled;
@@ -239,12 +238,12 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     openapiRequiredFields.add("bDisabled");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackageAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -303,22 +302,22 @@ public class EzsigntemplatepackageAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackageAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackageAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of EzsigntemplatepackageAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackageAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageAutocompleteElementResponse
+   */
   public static EzsigntemplatepackageAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackageAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackageAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackageAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

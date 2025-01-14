@@ -30,6 +30,8 @@ import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Response;
+import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -49,7 +51,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     /**
      * Creates an Url to allow embedded signing
      *
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      *
      * @throws ApiException if the Api call fails
      */
@@ -185,6 +187,21 @@ public class ObjectEzsignfoldersignerassociationApiTest {
         Integer pkiEzsignfoldersignerassociationID = null;
         EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request = null;
         EzsignfoldersignerassociationPatchObjectV1Response response = api.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms
+     *
+     * Reassign remaining unsigned signatures and forms
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfoldersignerassociationReassignV1Test() throws ApiException {
+        Integer pkiEzsignfoldersignerassociationID = null;
+        EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request = null;
+        EzsignfoldersignerassociationReassignV1Response response = api.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
         // TODO: test validations
     }
 

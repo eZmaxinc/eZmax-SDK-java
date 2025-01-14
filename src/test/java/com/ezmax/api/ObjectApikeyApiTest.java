@@ -20,6 +20,8 @@ import com.ezmax.api.model.ApikeyEditObjectV1Request;
 import com.ezmax.api.model.ApikeyEditObjectV1Response;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Request;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Response;
+import com.ezmax.api.model.ApikeyGenerateDelegatedCredentialsV1Request;
+import com.ezmax.api.model.ApikeyGenerateDelegatedCredentialsV1Response;
 import com.ezmax.api.model.ApikeyGetCorsV1Response;
 import com.ezmax.api.model.ApikeyGetListV1Response;
 import com.ezmax.api.model.ApikeyGetObjectV2Response;
@@ -87,6 +89,20 @@ public class ObjectApikeyApiTest {
         Integer pkiApikeyID = null;
         ApikeyEditPermissionsV1Request apikeyEditPermissionsV1Request = null;
         ApikeyEditPermissionsV1Response response = api.apikeyEditPermissionsV1(pkiApikeyID, apikeyEditPermissionsV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Generate a delegated credentials
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void apikeyGenerateDelegatedCredentialsV1Test() throws ApiException {
+        ApikeyGenerateDelegatedCredentialsV1Request apikeyGenerateDelegatedCredentialsV1Request = null;
+        ApikeyGenerateDelegatedCredentialsV1Response response = api.apikeyGenerateDelegatedCredentialsV1(apikeyGenerateDelegatedCredentialsV1Request);
         // TODO: test validations
     }
 

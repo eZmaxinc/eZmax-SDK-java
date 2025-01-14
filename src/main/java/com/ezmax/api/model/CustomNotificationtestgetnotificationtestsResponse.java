@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomNotificationtestgetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
@@ -89,11 +88,11 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Notificationtest
    * minimum: 0
    * @return pkiNotificationtestID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiNotificationtestID() {
     return pkiNotificationtestID;
@@ -109,10 +108,10 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objNotificationtestName
    * @return objNotificationtestName
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualNotificationtestName getObjNotificationtestName() {
     return objNotificationtestName;
@@ -128,11 +127,11 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Notificationsubsection
    * minimum: 0
    * @return fkiNotificationsubsectionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiNotificationsubsectionID() {
     return fkiNotificationsubsectionID;
@@ -148,10 +147,10 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * The function name of the Notificationtest
    * @return sNotificationtestFunction
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsNotificationtestFunction() {
     return sNotificationtestFunction;
@@ -167,10 +166,10 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Notificationtest in the language of the requester
    * @return sNotificationtestNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsNotificationtestNameX() {
     return sNotificationtestNameX;
@@ -186,10 +185,10 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eNotificationpreferenceStatus
    * @return eNotificationpreferenceStatus
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldENotificationpreferenceStatus geteNotificationpreferenceStatus() {
     return eNotificationpreferenceStatus;
@@ -205,10 +204,10 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of elements returned by the Notificationtest
    * @return iNotificationtest
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiNotificationtest() {
     return iNotificationtest;
@@ -295,12 +294,12 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     openapiRequiredFields.add("iNotificationtest");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomNotificationtestgetnotificationtestsResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomNotificationtestgetnotificationtestsResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomNotificationtestgetnotificationtestsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -364,22 +363,22 @@ public class CustomNotificationtestgetnotificationtestsResponse {
     }
   }
 
- /**
-  * Create an instance of CustomNotificationtestgetnotificationtestsResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomNotificationtestgetnotificationtestsResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomNotificationtestgetnotificationtestsResponse
-  */
+  /**
+   * Create an instance of CustomNotificationtestgetnotificationtestsResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomNotificationtestgetnotificationtestsResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomNotificationtestgetnotificationtestsResponse
+   */
   public static CustomNotificationtestgetnotificationtestsResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomNotificationtestgetnotificationtestsResponse.class);
   }
 
- /**
-  * Convert an instance of CustomNotificationtestgetnotificationtestsResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomNotificationtestgetnotificationtestsResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

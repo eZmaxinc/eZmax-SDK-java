@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Activesession List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionListElement {
   public static final String SERIALIZED_NAME_PKI_ACTIVESESSION_I_D = "pkiActivesessionID";
   @SerializedName(SERIALIZED_NAME_PKI_ACTIVESESSION_I_D)
@@ -107,10 +106,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Activesession
    * @return pkiActivesessionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiActivesessionID() {
     return pkiActivesessionID;
@@ -126,11 +125,11 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -146,12 +145,12 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Computer
    * minimum: 1
    * maximum: 65535
    * @return fkiComputerID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiComputerID() {
     return fkiComputerID;
@@ -167,12 +166,12 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Company
    * minimum: 1
    * maximum: 255
    * @return fkiCompanyID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiCompanyID() {
     return fkiCompanyID;
@@ -188,11 +187,11 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Department
    * minimum: 0
    * @return fkiDepartmentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiDepartmentID() {
     return fkiDepartmentID;
@@ -208,10 +207,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Company in the language of the requester
    * @return sCompanyNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -227,10 +226,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Department in the language of the requester
    * @return sDepartmentNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -246,10 +245,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The loginname of the Activesession
    * @return sActivesessionLoginname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsActivesessionLoginname() {
     return sActivesessionLoginname;
@@ -265,10 +264,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Computer
    * @return sComputerDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsComputerDescription() {
     return sComputerDescription;
@@ -284,10 +283,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The first hit of the Activesession
    * @return dtActivesessionFirsthit
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtActivesessionFirsthit() {
     return dtActivesessionFirsthit;
@@ -303,10 +302,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * The last hit of the Activesession
    * @return dtActivesessionLasthit
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtActivesessionLasthit() {
     return dtActivesessionLasthit;
@@ -322,10 +321,10 @@ public class ActivesessionListElement {
     return this;
   }
 
-   /**
+  /**
    * Represent an IP address.
    * @return sActivesessionIP
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsActivesessionIP() {
     return sActivesessionIP;
@@ -432,12 +431,12 @@ public class ActivesessionListElement {
     openapiRequiredFields.add("sActivesessionIP");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActivesessionListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActivesessionListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -512,22 +511,22 @@ public class ActivesessionListElement {
     }
   }
 
- /**
-  * Create an instance of ActivesessionListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActivesessionListElement
-  * @throws IOException if the JSON string is invalid with respect to ActivesessionListElement
-  */
+  /**
+   * Create an instance of ActivesessionListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActivesessionListElement
+   * @throws IOException if the JSON string is invalid with respect to ActivesessionListElement
+   */
   public static ActivesessionListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActivesessionListElement.class);
   }
 
- /**
-  * Convert an instance of ActivesessionListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActivesessionListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

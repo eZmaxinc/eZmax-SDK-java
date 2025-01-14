@@ -5,21 +5,21 @@
 ## Enum
 
 
-* `TOPLEFT` (value: `"TopLeft"`)
+* `TOP_LEFT` (value: `"TopLeft"`)
 
-* `TOPCENTER` (value: `"TopCenter"`)
+* `TOP_CENTER` (value: `"TopCenter"`)
 
-* `TOPRIGHT` (value: `"TopRight"`)
+* `TOP_RIGHT` (value: `"TopRight"`)
 
-* `MIDDLELEFT` (value: `"MiddleLeft"`)
+* `MIDDLE_LEFT` (value: `"MiddleLeft"`)
 
-* `MIDDLERIGHT` (value: `"MiddleRight"`)
+* `MIDDLE_RIGHT` (value: `"MiddleRight"`)
 
-* `BOTTOMLEFT` (value: `"BottomLeft"`)
+* `BOTTOM_LEFT` (value: `"BottomLeft"`)
 
-* `BOTTOMCENTER` (value: `"BottomCenter"`)
+* `BOTTOM_CENTER` (value: `"BottomCenter"`)
 
-* `BOTTOMRIGHT` (value: `"BottomRight"`)
+* `BOTTOM_RIGHT` (value: `"BottomRight"`)
 
 
 

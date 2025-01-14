@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/module/user/createEzsignuser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -94,12 +93,12 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -115,10 +114,10 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -134,10 +133,10 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastname() {
     return sUserLastname;
@@ -153,10 +152,10 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -173,11 +172,11 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The region of the phone number. (For a North America Number only)  The region is the \&quot;514\&quot; section in this sample phone number: (514) 990-1516 x123
    * @return sPhoneRegion
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nonnull
   public String getsPhoneRegion() {
@@ -196,11 +195,11 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The exchange of the phone number. (For a North America Number only)  The exchange is the \&quot;990\&quot; section in this sample phone number: (514) 990-1516 x123
    * @return sPhoneExchange
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nonnull
   public String getsPhoneExchange() {
@@ -219,11 +218,11 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The number of the phone number. (For a North America Number only)  The number is the \&quot;1516\&quot; section in this sample phone number: (514) 990-1516 x123
    * @return sPhoneNumber
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nonnull
   public String getsPhoneNumber() {
@@ -241,10 +240,10 @@ public class UserCreateEzsignuserV1Request {
     return this;
   }
 
-   /**
+  /**
    * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
    * @return sPhoneExtension
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneExtension() {
     return sPhoneExtension;
@@ -334,12 +333,12 @@ public class UserCreateEzsignuserV1Request {
     openapiRequiredFields.add("sPhoneNumber");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserCreateEzsignuserV1Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserCreateEzsignuserV1Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserCreateEzsignuserV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -414,22 +413,22 @@ public class UserCreateEzsignuserV1Request {
     }
   }
 
- /**
-  * Create an instance of UserCreateEzsignuserV1Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserCreateEzsignuserV1Request
-  * @throws IOException if the JSON string is invalid with respect to UserCreateEzsignuserV1Request
-  */
+  /**
+   * Create an instance of UserCreateEzsignuserV1Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserCreateEzsignuserV1Request
+   * @throws IOException if the JSON string is invalid with respect to UserCreateEzsignuserV1Request
+   */
   public static UserCreateEzsignuserV1Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserCreateEzsignuserV1Request.class);
   }
 
- /**
-  * Convert an instance of UserCreateEzsignuserV1Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserCreateEzsignuserV1Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

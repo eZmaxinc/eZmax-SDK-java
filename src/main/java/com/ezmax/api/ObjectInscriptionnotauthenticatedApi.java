@@ -28,7 +28,10 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationListV1Response;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationsendersV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -73,6 +76,133 @@ public class ObjectInscriptionnotauthenticatedApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for inscriptionnotauthenticatedGetCommunicationCountV1
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationCountV1Call(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationCount"
+            .replace("{" + "pkiInscriptionnotauthenticatedID" + "}", localVarApiClient.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptionnotauthenticatedGetCommunicationCountV1ValidateBeforeCall(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+        if (pkiInscriptionnotauthenticatedID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetCommunicationCountV1(Async)");
+        }
+
+        return inscriptionnotauthenticatedGetCommunicationCountV1Call(pkiInscriptionnotauthenticatedID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return InscriptionnotauthenticatedGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptionnotauthenticatedGetCommunicationCountV1Response inscriptionnotauthenticatedGetCommunicationCountV1(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response> localVarResp = inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(pkiInscriptionnotauthenticatedID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return ApiResponse&lt;InscriptionnotauthenticatedGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptionnotauthenticatedGetCommunicationCountV1Response> inscriptionnotauthenticatedGetCommunicationCountV1WithHttpInfo(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationCountV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, null);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationCountV1Async(Integer pkiInscriptionnotauthenticatedID, final ApiCallback<InscriptionnotauthenticatedGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationCountV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for inscriptionnotauthenticatedGetCommunicationListV1
      * @param pkiInscriptionnotauthenticatedID  (required)
@@ -197,6 +327,260 @@ public class ObjectInscriptionnotauthenticatedApi {
 
         okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationListV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, _callback);
         Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for inscriptionnotauthenticatedGetCommunicationrecipientsV1
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationrecipientsV1Call(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationrecipients"
+            .replace("{" + "pkiInscriptionnotauthenticatedID" + "}", localVarApiClient.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptionnotauthenticatedGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+        if (pkiInscriptionnotauthenticatedID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetCommunicationrecipientsV1(Async)");
+        }
+
+        return inscriptionnotauthenticatedGetCommunicationrecipientsV1Call(pkiInscriptionnotauthenticatedID, _callback);
+
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return InscriptionnotauthenticatedGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptionnotauthenticatedGetCommunicationrecipientsV1Response inscriptionnotauthenticatedGetCommunicationrecipientsV1(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> localVarResp = inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(pkiInscriptionnotauthenticatedID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return ApiResponse&lt;InscriptionnotauthenticatedGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> inscriptionnotauthenticatedGetCommunicationrecipientsV1WithHttpInfo(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationrecipientsV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, null);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationrecipientsV1Async(Integer pkiInscriptionnotauthenticatedID, final ApiCallback<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationrecipientsV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for inscriptionnotauthenticatedGetCommunicationsendersV1
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationsendersV1Call(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationsenders"
+            .replace("{" + "pkiInscriptionnotauthenticatedID" + "}", localVarApiClient.escapeString(pkiInscriptionnotauthenticatedID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptionnotauthenticatedGetCommunicationsendersV1ValidateBeforeCall(Integer pkiInscriptionnotauthenticatedID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptionnotauthenticatedID' is set
+        if (pkiInscriptionnotauthenticatedID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptionnotauthenticatedID' when calling inscriptionnotauthenticatedGetCommunicationsendersV1(Async)");
+        }
+
+        return inscriptionnotauthenticatedGetCommunicationsendersV1Call(pkiInscriptionnotauthenticatedID, _callback);
+
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return InscriptionnotauthenticatedGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptionnotauthenticatedGetCommunicationsendersV1Response inscriptionnotauthenticatedGetCommunicationsendersV1(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response> localVarResp = inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(pkiInscriptionnotauthenticatedID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @return ApiResponse&lt;InscriptionnotauthenticatedGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptionnotauthenticatedGetCommunicationsendersV1Response> inscriptionnotauthenticatedGetCommunicationsendersV1WithHttpInfo(Integer pkiInscriptionnotauthenticatedID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationsendersV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, null);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender (asynchronously)
+     * 
+     * @param pkiInscriptionnotauthenticatedID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptionnotauthenticatedGetCommunicationsendersV1Async(Integer pkiInscriptionnotauthenticatedID, final ApiCallback<InscriptionnotauthenticatedGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptionnotauthenticatedGetCommunicationsendersV1ValidateBeforeCall(pkiInscriptionnotauthenticatedID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptionnotauthenticatedGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

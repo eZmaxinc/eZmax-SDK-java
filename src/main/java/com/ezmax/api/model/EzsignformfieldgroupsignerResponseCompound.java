@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroupsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignformfieldgroupsignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUPSIGNER_I_D = "pkiEzsignformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUPSIGNER_I_D)
@@ -67,11 +66,11 @@ public class EzsignformfieldgroupsignerResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignformfieldgroupsigner
    * minimum: 0
    * @return pkiEzsignformfieldgroupsignerID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignformfieldgroupsignerID() {
     return pkiEzsignformfieldgroupsignerID;
@@ -87,11 +86,11 @@ public class EzsignformfieldgroupsignerResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -158,12 +157,12 @@ public class EzsignformfieldgroupsignerResponseCompound {
     openapiRequiredFields.add("fkiEzsignfoldersignerassociationID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldgroupsignerResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldgroupsignerResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignformfieldgroupsignerResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -217,22 +216,22 @@ public class EzsignformfieldgroupsignerResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignformfieldgroupsignerResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignformfieldgroupsignerResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignformfieldgroupsignerResponseCompound
-  */
+  /**
+   * Create an instance of EzsignformfieldgroupsignerResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignformfieldgroupsignerResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignformfieldgroupsignerResponseCompound
+   */
   public static EzsignformfieldgroupsignerResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignformfieldgroupsignerResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignformfieldgroupsignerResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignformfieldgroupsignerResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

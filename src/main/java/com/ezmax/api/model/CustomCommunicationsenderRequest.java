@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationsender Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationsenderRequest {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -79,11 +78,11 @@ public class CustomCommunicationsenderRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Agent.
    * minimum: 0
    * @return fkiAgentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -99,11 +98,11 @@ public class CustomCommunicationsenderRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Broker.
    * minimum: 0
    * @return fkiBrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -119,12 +118,12 @@ public class CustomCommunicationsenderRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Mailboxshared
    * minimum: 0
    * maximum: 255
    * @return fkiMailboxsharedID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiMailboxsharedID() {
     return fkiMailboxsharedID;
@@ -140,12 +139,12 @@ public class CustomCommunicationsenderRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phonelineshared
    * minimum: 0
    * maximum: 255
    * @return fkiPhonelinesharedID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiPhonelinesharedID() {
     return fkiPhonelinesharedID;
@@ -161,11 +160,11 @@ public class CustomCommunicationsenderRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -239,12 +238,12 @@ public class CustomCommunicationsenderRequest {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomCommunicationsenderRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomCommunicationsenderRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomCommunicationsenderRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -291,22 +290,22 @@ public class CustomCommunicationsenderRequest {
     }
   }
 
- /**
-  * Create an instance of CustomCommunicationsenderRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomCommunicationsenderRequest
-  * @throws IOException if the JSON string is invalid with respect to CustomCommunicationsenderRequest
-  */
+  /**
+   * Create an instance of CustomCommunicationsenderRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomCommunicationsenderRequest
+   * @throws IOException if the JSON string is invalid with respect to CustomCommunicationsenderRequest
+   */
   public static CustomCommunicationsenderRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomCommunicationsenderRequest.class);
   }
 
- /**
-  * Convert an instance of CustomCommunicationsenderRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomCommunicationsenderRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

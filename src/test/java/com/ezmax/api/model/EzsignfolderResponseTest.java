@@ -67,6 +67,14 @@ public class EzsignfolderResponseTest {
     }
 
     /**
+     * Test the property 'fkiTimezoneID'
+     */
+    @Test
+    public void fkiTimezoneIDTest() {
+        // TODO: test fkiTimezoneID
+    }
+
+    /**
      * Test the property 'eEzsignfolderCompletion'
      */
     @Test
@@ -144,6 +152,22 @@ public class EzsignfolderResponseTest {
     @Test
     public void eEzsignfolderSendreminderfrequencyTest() {
         // TODO: test eEzsignfolderSendreminderfrequency
+    }
+
+    /**
+     * Test the property 'iEzsignfolderSendreminderfirstdays'
+     */
+    @Test
+    public void iEzsignfolderSendreminderfirstdaysTest() {
+        // TODO: test iEzsignfolderSendreminderfirstdays
+    }
+
+    /**
+     * Test the property 'iEzsignfolderSendreminderotherdays'
+     */
+    @Test
+    public void iEzsignfolderSendreminderotherdaysTest() {
+        // TODO: test iEzsignfolderSendreminderotherdays
     }
 
     /**

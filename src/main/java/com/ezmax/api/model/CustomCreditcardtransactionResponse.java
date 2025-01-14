@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Creditcardtransaction Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCreditcardtransactionResponse {
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
@@ -76,10 +75,10 @@ public class CustomCreditcardtransactionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eCreditcardtypeCodename
    * @return eCreditcardtypeCodename
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldECreditcardtypeCodename geteCreditcardtypeCodename() {
     return eCreditcardtypeCodename;
@@ -95,10 +94,10 @@ public class CustomCreditcardtransactionResponse {
     return this;
   }
 
-   /**
+  /**
    * The amount of the Creditcardtransaction
    * @return dCreditcardtransactionAmount
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdCreditcardtransactionAmount() {
     return dCreditcardtransactionAmount;
@@ -114,10 +113,10 @@ public class CustomCreditcardtransactionResponse {
     return this;
   }
 
-   /**
+  /**
    * The partially decrypted credit card number used in the Creditcardtransaction
    * @return sCreditcardtransactionPartiallydecryptednumber
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCreditcardtransactionPartiallydecryptednumber() {
     return sCreditcardtransactionPartiallydecryptednumber;
@@ -133,10 +132,10 @@ public class CustomCreditcardtransactionResponse {
     return this;
   }
 
-   /**
+  /**
    * The reference number on the creditcard service for the Creditcardtransaction
    * @return sCreditcardtransactionReferencenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCreditcardtransactionReferencenumber() {
     return sCreditcardtransactionReferencenumber;
@@ -211,12 +210,12 @@ public class CustomCreditcardtransactionResponse {
     openapiRequiredFields.add("sCreditcardtransactionReferencenumber");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomCreditcardtransactionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomCreditcardtransactionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomCreditcardtransactionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -281,22 +280,22 @@ public class CustomCreditcardtransactionResponse {
     }
   }
 
- /**
-  * Create an instance of CustomCreditcardtransactionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomCreditcardtransactionResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomCreditcardtransactionResponse
-  */
+  /**
+   * Create an instance of CustomCreditcardtransactionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomCreditcardtransactionResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomCreditcardtransactionResponse
+   */
   public static CustomCreditcardtransactionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomCreditcardtransactionResponse.class);
   }
 
- /**
-  * Convert an instance of CustomCreditcardtransactionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomCreditcardtransactionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

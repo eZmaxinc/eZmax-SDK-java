@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -106,11 +105,11 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return pkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -126,10 +125,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -145,10 +144,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastname() {
     return sUserLastname;
@@ -164,10 +163,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLoginname() {
     return sUserLoginname;
@@ -183,10 +182,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the User is active or not
    * @return bUserIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbUserIsactive() {
     return bUserIsactive;
@@ -202,10 +201,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eUserType
    * @return eUserType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserType geteUserType() {
     return eUserType;
@@ -221,10 +220,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eUserOrigin
    * @return eUserOrigin
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserOrigin geteUserOrigin() {
     return eUserOrigin;
@@ -240,10 +239,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eUserEzsignaccess
    * @return eUserEzsignaccess
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserEzsignaccess geteUserEzsignaccess() {
     return eUserEzsignaccess;
@@ -259,10 +258,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The eZsign prepaid expiration date
    * @return dtUserEzsignprepaidexpiration
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtUserEzsignprepaidexpiration() {
     return dtUserEzsignprepaidexpiration;
@@ -278,10 +277,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -297,10 +296,10 @@ public class UserListElement {
     return this;
   }
 
-   /**
+  /**
    * The job title of the user
    * @return sUserJobtitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserJobtitle() {
     return sUserJobtitle;
@@ -401,12 +400,12 @@ public class UserListElement {
     openapiRequiredFields.add("sEmailAddress");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -484,22 +483,22 @@ public class UserListElement {
     }
   }
 
- /**
-  * Create an instance of UserListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserListElement
-  * @throws IOException if the JSON string is invalid with respect to UserListElement
-  */
+  /**
+   * Create an instance of UserListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserListElement
+   * @throws IOException if the JSON string is invalid with respect to UserListElement
+   */
   public static UserListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserListElement.class);
   }
 
- /**
-  * Convert an instance of UserListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

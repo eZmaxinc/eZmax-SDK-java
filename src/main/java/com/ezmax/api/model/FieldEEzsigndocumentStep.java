@@ -33,13 +33,13 @@ public enum FieldEEzsigndocumentStep {
   
   UNSIGNED("Unsigned"),
   
-  PARTIALLYSIGNED("PartiallySigned"),
+  PARTIALLY_SIGNED("PartiallySigned"),
   
-  DECLINEDTOSIGN("DeclinedToSign"),
+  DECLINED_TO_SIGN("DeclinedToSign"),
   
-  PREMATURELYENDED("PrematurelyEnded"),
+  PREMATURELY_ENDED("PrematurelyEnded"),
   
-  PENDINGCOMPLETION("PendingCompletion"),
+  PENDING_COMPLETION("PendingCompletion"),
   
   COMPLETED("Completed"),
   

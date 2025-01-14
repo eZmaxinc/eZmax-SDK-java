@@ -54,11 +54,11 @@ public class CreditcarddetailResponseCompoundTest {
     }
 
     /**
-     * Test the property 'sCreditcarddetailNumbermasked'
+     * Test the property 'iCreditcarddetailLastdigits'
      */
     @Test
-    public void sCreditcarddetailNumbermaskedTest() {
-        // TODO: test sCreditcarddetailNumbermasked
+    public void iCreditcarddetailLastdigitsTest() {
+        // TODO: test iCreditcarddetailLastdigits
     }
 
     /**

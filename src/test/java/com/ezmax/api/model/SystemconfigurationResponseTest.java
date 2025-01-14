@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CustomBrandingResponse;
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
 import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
@@ -56,6 +57,14 @@ public class SystemconfigurationResponseTest {
     @Test
     public void fkiSystemconfigurationtypeIDTest() {
         // TODO: test fkiSystemconfigurationtypeID
+    }
+
+    /**
+     * Test the property 'fkiBrandingID'
+     */
+    @Test
+    public void fkiBrandingIDTest() {
+        // TODO: test fkiBrandingID
     }
 
     /**
@@ -123,6 +132,14 @@ public class SystemconfigurationResponseTest {
     }
 
     /**
+     * Test the property 'bSystemconfigurationHascreditcardmerchant'
+     */
+    @Test
+    public void bSystemconfigurationHascreditcardmerchantTest() {
+        // TODO: test bSystemconfigurationHascreditcardmerchant
+    }
+
+    /**
      * Test the property 'bSystemconfigurationIsdisposalactive'
      */
     @Test
@@ -152,6 +169,14 @@ public class SystemconfigurationResponseTest {
     @Test
     public void dtSystemconfigurationReadonlyexpirationendTest() {
         // TODO: test dtSystemconfigurationReadonlyexpirationend
+    }
+
+    /**
+     * Test the property 'objBranding'
+     */
+    @Test
+    public void objBrandingTest() {
+        // TODO: test objBranding
     }
 
 }

@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneResponseCompound {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
@@ -85,11 +84,11 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phone.
    * minimum: 0
    * @return pkiPhoneID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiPhoneID() {
     return pkiPhoneID;
@@ -105,11 +104,11 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
    * minimum: 0
    * @return fkiPhonetypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiPhonetypeID() {
     return fkiPhonetypeID;
@@ -126,11 +125,11 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get ePhoneType
    * @return ePhoneType
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public FieldEPhoneType getePhoneType() {
@@ -148,10 +147,10 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * A phone number in E.164 Format
    * @return sPhoneE164
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneE164() {
     return sPhoneE164;
@@ -167,10 +166,10 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
    * @return sPhoneExtension
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneExtension() {
     return sPhoneExtension;
@@ -186,10 +185,10 @@ public class PhoneResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Indicate the phone number is an international phone number.
    * @return bPhoneInternational
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbPhoneInternational() {
     return bPhoneInternational;
@@ -268,12 +267,12 @@ public class PhoneResponseCompound {
     openapiRequiredFields.add("fkiPhonetypeID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PhoneResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PhoneResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PhoneResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -337,22 +336,22 @@ public class PhoneResponseCompound {
     }
   }
 
- /**
-  * Create an instance of PhoneResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PhoneResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to PhoneResponseCompound
-  */
+  /**
+   * Create an instance of PhoneResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PhoneResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to PhoneResponseCompound
+   */
   public static PhoneResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PhoneResponseCompound.class);
   }
 
- /**
-  * Convert an instance of PhoneResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PhoneResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

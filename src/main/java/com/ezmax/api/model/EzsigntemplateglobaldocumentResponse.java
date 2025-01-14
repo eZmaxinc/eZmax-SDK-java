@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobaldocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateglobaldocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D = "pkiEzsigntemplateglobaldocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D)
@@ -75,11 +74,11 @@ public class EzsigntemplateglobaldocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateglobaldocument
    * minimum: 0
    * @return pkiEzsigntemplateglobaldocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplateglobaldocumentID() {
     return pkiEzsigntemplateglobaldocumentID;
@@ -95,10 +94,10 @@ public class EzsigntemplateglobaldocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsigntemplateglobaldocument.
    * @return sEzsigntemplateglobaldocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplateglobaldocumentName() {
     return sEzsigntemplateglobaldocumentName;
@@ -114,11 +113,11 @@ public class EzsigntemplateglobaldocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the Ezsigntemplateglobaldocument.
    * minimum: 1
    * @return iEzsigntemplateglobaldocumentPagetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplateglobaldocumentPagetotal() {
     return iEzsigntemplateglobaldocumentPagetotal;
@@ -134,10 +133,10 @@ public class EzsigntemplateglobaldocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of total signatures in the Ezsigntemplateglobal.
    * @return iEzsigntemplateglobaldocumentSignaturetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplateglobaldocumentSignaturetotal() {
     return iEzsigntemplateglobaldocumentSignaturetotal;
@@ -212,12 +211,12 @@ public class EzsigntemplateglobaldocumentResponse {
     openapiRequiredFields.add("iEzsigntemplateglobaldocumentSignaturetotal");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateglobaldocumentResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateglobaldocumentResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateglobaldocumentResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -274,22 +273,22 @@ public class EzsigntemplateglobaldocumentResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateglobaldocumentResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateglobaldocumentResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateglobaldocumentResponse
-  */
+  /**
+   * Create an instance of EzsigntemplateglobaldocumentResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateglobaldocumentResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateglobaldocumentResponse
+   */
   public static EzsigntemplateglobaldocumentResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateglobaldocumentResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateglobaldocumentResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateglobaldocumentResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

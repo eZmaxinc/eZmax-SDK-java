@@ -34,12 +34,14 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
+import com.ezmax.api.model.EzsignfolderCreateObjectV3Request;
+import com.ezmax.api.model.EzsignfolderCreateObjectV3Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Request;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeV1Response;
-import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
-import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
+import com.ezmax.api.model.EzsignfolderEditObjectV3Request;
+import com.ezmax.api.model.EzsignfolderEditObjectV3Response;
 import com.ezmax.api.model.EzsignfolderEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
@@ -55,12 +57,15 @@ import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV2Response;
+import com.ezmax.api.model.EzsignfolderGetObjectV3Response;
 import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV1Request;
 import com.ezmax.api.model.EzsignfolderReorderV1Response;
+import com.ezmax.api.model.EzsignfolderReorderV2Request;
+import com.ezmax.api.model.EzsignfolderReorderV2Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderSendV3Request;
@@ -542,7 +547,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderCreateObjectV2Call(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -588,6 +595,7 @@ public class ObjectEzsignfolderApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsignfolderCreateObjectV2ValidateBeforeCall(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'ezsignfolderCreateObjectV2Request' is set
@@ -610,7 +618,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsignfolderCreateObjectV2Response ezsignfolderCreateObjectV2(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request) throws ApiException {
         ApiResponse<EzsignfolderCreateObjectV2Response> localVarResp = ezsignfolderCreateObjectV2WithHttpInfo(ezsignfolderCreateObjectV2Request);
         return localVarResp.getData();
@@ -627,7 +637,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsignfolderCreateObjectV2Response> ezsignfolderCreateObjectV2WithHttpInfo(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderCreateObjectV2ValidateBeforeCall(ezsignfolderCreateObjectV2Request, null);
         Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV2Response>(){}.getType();
@@ -646,11 +658,136 @@ public class ObjectEzsignfolderApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderCreateObjectV2Async(EzsignfolderCreateObjectV2Request ezsignfolderCreateObjectV2Request, final ApiCallback<EzsignfolderCreateObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderCreateObjectV2ValidateBeforeCall(ezsignfolderCreateObjectV2Request, _callback);
         Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfolderCreateObjectV3
+     * @param ezsignfolderCreateObjectV3Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderCreateObjectV3Call(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfolderCreateObjectV3Request;
+
+        // create path and map variables
+        String localVarPath = "/3/object/ezsignfolder";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderCreateObjectV3ValidateBeforeCall(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'ezsignfolderCreateObjectV3Request' is set
+        if (ezsignfolderCreateObjectV3Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfolderCreateObjectV3Request' when calling ezsignfolderCreateObjectV3(Async)");
+        }
+
+        return ezsignfolderCreateObjectV3Call(ezsignfolderCreateObjectV3Request, _callback);
+
+    }
+
+    /**
+     * Create a new Ezsignfolder
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfolderCreateObjectV3Request  (required)
+     * @return EzsignfolderCreateObjectV3Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfolderCreateObjectV3Response ezsignfolderCreateObjectV3(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request) throws ApiException {
+        ApiResponse<EzsignfolderCreateObjectV3Response> localVarResp = ezsignfolderCreateObjectV3WithHttpInfo(ezsignfolderCreateObjectV3Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Create a new Ezsignfolder
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfolderCreateObjectV3Request  (required)
+     * @return ApiResponse&lt;EzsignfolderCreateObjectV3Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfolderCreateObjectV3Response> ezsignfolderCreateObjectV3WithHttpInfo(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderCreateObjectV3ValidateBeforeCall(ezsignfolderCreateObjectV3Request, null);
+        Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV3Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Create a new Ezsignfolder (asynchronously)
+     * The endpoint allows to create one or many elements at once.
+     * @param ezsignfolderCreateObjectV3Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderCreateObjectV3Async(EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request, final ApiCallback<EzsignfolderCreateObjectV3Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderCreateObjectV3ValidateBeforeCall(ezsignfolderCreateObjectV3Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderCreateObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1058,9 +1195,9 @@ public class ObjectEzsignfolderApi {
         return localVarCall;
     }
     /**
-     * Build call for ezsignfolderEditObjectV1
+     * Build call for ezsignfolderEditObjectV3
      * @param pkiEzsignfolderID  (required)
-     * @param ezsignfolderEditObjectV1Request  (required)
+     * @param ezsignfolderEditObjectV3Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1072,7 +1209,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderEditObjectV1Call(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderEditObjectV3Call(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1086,10 +1223,10 @@ public class ObjectEzsignfolderApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ezsignfolderEditObjectV1Request;
+        Object localVarPostBody = ezsignfolderEditObjectV3Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/ezsignfolder/{pkiEzsignfolderID}"
+        String localVarPath = "/3/object/ezsignfolder/{pkiEzsignfolderID}"
             .replace("{" + "pkiEzsignfolderID" + "}", localVarApiClient.escapeString(pkiEzsignfolderID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1119,18 +1256,18 @@ public class ObjectEzsignfolderApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignfolderEditObjectV1ValidateBeforeCall(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignfolderEditObjectV3ValidateBeforeCall(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsignfolderID' is set
         if (pkiEzsignfolderID == null) {
-            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderEditObjectV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderEditObjectV3(Async)");
         }
 
-        // verify the required parameter 'ezsignfolderEditObjectV1Request' is set
-        if (ezsignfolderEditObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'ezsignfolderEditObjectV1Request' when calling ezsignfolderEditObjectV1(Async)");
+        // verify the required parameter 'ezsignfolderEditObjectV3Request' is set
+        if (ezsignfolderEditObjectV3Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfolderEditObjectV3Request' when calling ezsignfolderEditObjectV3(Async)");
         }
 
-        return ezsignfolderEditObjectV1Call(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, _callback);
+        return ezsignfolderEditObjectV3Call(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, _callback);
 
     }
 
@@ -1138,8 +1275,8 @@ public class ObjectEzsignfolderApi {
      * Edit an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
-     * @param ezsignfolderEditObjectV1Request  (required)
-     * @return EzsignfolderEditObjectV1Response
+     * @param ezsignfolderEditObjectV3Request  (required)
+     * @return EzsignfolderEditObjectV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1149,8 +1286,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfolderEditObjectV1Response ezsignfolderEditObjectV1(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsignfolderEditObjectV1Response> localVarResp = ezsignfolderEditObjectV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+    public EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
+        ApiResponse<EzsignfolderEditObjectV3Response> localVarResp = ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
         return localVarResp.getData();
     }
 
@@ -1158,8 +1295,8 @@ public class ObjectEzsignfolderApi {
      * Edit an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
-     * @param ezsignfolderEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsignfolderEditObjectV1Response&gt;
+     * @param ezsignfolderEditObjectV3Request  (required)
+     * @return ApiResponse&lt;EzsignfolderEditObjectV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1169,9 +1306,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfolderEditObjectV1Response> ezsignfolderEditObjectV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = ezsignfolderEditObjectV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV1Response>(){}.getType();
+    public ApiResponse<EzsignfolderEditObjectV3Response> ezsignfolderEditObjectV3WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderEditObjectV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, null);
+        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV3Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1179,7 +1316,7 @@ public class ObjectEzsignfolderApi {
      * Edit an existing Ezsignfolder (asynchronously)
      * 
      * @param pkiEzsignfolderID  (required)
-     * @param ezsignfolderEditObjectV1Request  (required)
+     * @param ezsignfolderEditObjectV3Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1191,10 +1328,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderEditObjectV1Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request, final ApiCallback<EzsignfolderEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderEditObjectV3Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final ApiCallback<EzsignfolderEditObjectV3Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsignfolderEditObjectV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = ezsignfolderEditObjectV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2839,7 +2976,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve Ezsignfolder list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
@@ -2861,7 +2998,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve Ezsignfolder list
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
@@ -2884,7 +3021,7 @@ public class ObjectEzsignfolderApi {
 
     /**
      * Retrieve Ezsignfolder list (asynchronously)
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
      * @param iRowOffset  (optional, default to 0)
@@ -3055,7 +3192,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderGetObjectV2Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -3101,6 +3240,7 @@ public class ObjectEzsignfolderApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsignfolderGetObjectV2ValidateBeforeCall(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsignfolderID' is set
@@ -3124,7 +3264,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsignfolderGetObjectV2Response ezsignfolderGetObjectV2(Integer pkiEzsignfolderID) throws ApiException {
         ApiResponse<EzsignfolderGetObjectV2Response> localVarResp = ezsignfolderGetObjectV2WithHttpInfo(pkiEzsignfolderID);
         return localVarResp.getData();
@@ -3142,7 +3284,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsignfolderGetObjectV2Response> ezsignfolderGetObjectV2WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderGetObjectV2ValidateBeforeCall(pkiEzsignfolderID, null);
         Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV2Response>(){}.getType();
@@ -3162,11 +3306,140 @@ public class ObjectEzsignfolderApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderGetObjectV2Async(Integer pkiEzsignfolderID, final ApiCallback<EzsignfolderGetObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderGetObjectV2ValidateBeforeCall(pkiEzsignfolderID, _callback);
         Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfolderGetObjectV3
+     * @param pkiEzsignfolderID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetObjectV3Call(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/3/object/ezsignfolder/{pkiEzsignfolderID}"
+            .replace("{" + "pkiEzsignfolderID" + "}", localVarApiClient.escapeString(pkiEzsignfolderID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderGetObjectV3ValidateBeforeCall(Integer pkiEzsignfolderID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsignfolderID' is set
+        if (pkiEzsignfolderID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderGetObjectV3(Async)");
+        }
+
+        return ezsignfolderGetObjectV3Call(pkiEzsignfolderID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return EzsignfolderGetObjectV3Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfolderGetObjectV3Response ezsignfolderGetObjectV3(Integer pkiEzsignfolderID) throws ApiException {
+        ApiResponse<EzsignfolderGetObjectV3Response> localVarResp = ezsignfolderGetObjectV3WithHttpInfo(pkiEzsignfolderID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @return ApiResponse&lt;EzsignfolderGetObjectV3Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfolderGetObjectV3Response> ezsignfolderGetObjectV3WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderGetObjectV3ValidateBeforeCall(pkiEzsignfolderID, null);
+        Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV3Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder (asynchronously)
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderGetObjectV3Async(Integer pkiEzsignfolderID, final ApiCallback<EzsignfolderGetObjectV3Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderGetObjectV3ValidateBeforeCall(pkiEzsignfolderID, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderGetObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3470,7 +3743,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderReorderV1Call(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -3517,6 +3792,7 @@ public class ObjectEzsignfolderApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call ezsignfolderReorderV1ValidateBeforeCall(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsignfolderID' is set
@@ -3547,7 +3823,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public EzsignfolderReorderV1Response ezsignfolderReorderV1(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
         ApiResponse<EzsignfolderReorderV1Response> localVarResp = ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
         return localVarResp.getData();
@@ -3567,7 +3845,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<EzsignfolderReorderV1Response> ezsignfolderReorderV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderReorderV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV1Request, null);
         Type localVarReturnType = new TypeToken<EzsignfolderReorderV1Response>(){}.getType();
@@ -3589,11 +3869,154 @@ public class ObjectEzsignfolderApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call ezsignfolderReorderV1Async(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final ApiCallback<EzsignfolderReorderV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderReorderV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsignfolderReorderV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfolderReorderV2
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderReorderV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderReorderV2Call(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfolderReorderV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/ezsignfolder/{pkiEzsignfolderID}/reorder"
+            .replace("{" + "pkiEzsignfolderID" + "}", localVarApiClient.escapeString(pkiEzsignfolderID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfolderReorderV2ValidateBeforeCall(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsignfolderID' is set
+        if (pkiEzsignfolderID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderReorderV2(Async)");
+        }
+
+        // verify the required parameter 'ezsignfolderReorderV2Request' is set
+        if (ezsignfolderReorderV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfolderReorderV2Request' when calling ezsignfolderReorderV2(Async)");
+        }
+
+        return ezsignfolderReorderV2Call(pkiEzsignfolderID, ezsignfolderReorderV2Request, _callback);
+
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderReorderV2Request  (required)
+     * @return EzsignfolderReorderV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfolderReorderV2Response ezsignfolderReorderV2(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
+        ApiResponse<EzsignfolderReorderV2Response> localVarResp = ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderReorderV2Request  (required)
+     * @return ApiResponse&lt;EzsignfolderReorderV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfolderReorderV2Response> ezsignfolderReorderV2WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderReorderV2ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder (asynchronously)
+     * 
+     * @param pkiEzsignfolderID  (required)
+     * @param ezsignfolderReorderV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfolderReorderV2Async(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final ApiCallback<EzsignfolderReorderV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfolderReorderV2ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

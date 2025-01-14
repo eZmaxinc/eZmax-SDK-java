@@ -31,9 +31,9 @@ public enum FieldEVersionhistoryUsertype {
   
   EMPTY(""),
   
-  AGENTBROKER("AgentBroker"),
+  AGENT_BROKER("AgentBroker"),
   
-  EZSIGNUSER("EzsignUser"),
+  EZSIGN_USER("EzsignUser"),
   
   NORMAL("Normal");
 

@@ -15,7 +15,10 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.OtherincomeGetCommunicationCountV1Response;
 import com.ezmax.api.model.OtherincomeGetCommunicationListV1Response;
+import com.ezmax.api.model.OtherincomeGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.OtherincomeGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +36,20 @@ public class ObjectOtherincomeApiTest {
     private final ObjectOtherincomeApi api = new ObjectOtherincomeApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void otherincomeGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiOtherincomeID = null;
+        OtherincomeGetCommunicationCountV1Response response = api.otherincomeGetCommunicationCountV1(pkiOtherincomeID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectOtherincomeApiTest {
     public void otherincomeGetCommunicationListV1Test() throws ApiException {
         Integer pkiOtherincomeID = null;
         OtherincomeGetCommunicationListV1Response response = api.otherincomeGetCommunicationListV1(pkiOtherincomeID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Otherincome&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void otherincomeGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiOtherincomeID = null;
+        OtherincomeGetCommunicationrecipientsV1Response response = api.otherincomeGetCommunicationrecipientsV1(pkiOtherincomeID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Otherincome&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void otherincomeGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiOtherincomeID = null;
+        OtherincomeGetCommunicationsendersV1Response response = api.otherincomeGetCommunicationsendersV1(pkiOtherincomeID);
         // TODO: test validations
     }
 

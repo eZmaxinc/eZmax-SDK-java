@@ -15,6 +15,7 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.CommonResponseErrorCreditcardValidation;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Request;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Response;
 import com.ezmax.api.model.CreditcardclientDeleteObjectV1Response;
@@ -23,6 +24,8 @@ import com.ezmax.api.model.CreditcardclientEditObjectV1Response;
 import com.ezmax.api.model.CreditcardclientGetAutocompleteV2Response;
 import com.ezmax.api.model.CreditcardclientGetListV1Response;
 import com.ezmax.api.model.CreditcardclientGetObjectV2Response;
+import com.ezmax.api.model.CreditcardclientPatchObjectV1Request;
+import com.ezmax.api.model.CreditcardclientPatchObjectV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -130,6 +133,21 @@ public class ObjectCreditcardclientApiTest {
     public void creditcardclientGetObjectV2Test() throws ApiException {
         Integer pkiCreditcardclientID = null;
         CreditcardclientGetObjectV2Response response = api.creditcardclientGetObjectV2(pkiCreditcardclientID);
+        // TODO: test validations
+    }
+
+    /**
+     * Patch an existing Creditcardclient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void creditcardclientPatchObjectV1Test() throws ApiException {
+        Integer pkiCreditcardclientID = null;
+        CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = null;
+        CreditcardclientPatchObjectV1Response response = api.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
         // TODO: test validations
     }
 

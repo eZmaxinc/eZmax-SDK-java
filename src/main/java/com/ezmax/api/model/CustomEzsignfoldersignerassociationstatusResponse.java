@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -84,11 +83,11 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -105,11 +104,11 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The last name of the Ezsignsigner
    * @return sEzsignfoldersignerassociationstatusLastname
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public String getsEzsignfoldersignerassociationstatusLastname() {
@@ -128,11 +127,11 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The first name of the Ezsignsigner
    * @return sEzsignfoldersignerassociationstatusFirstname
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public String getsEzsignfoldersignerassociationstatusFirstname() {
@@ -150,10 +149,10 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignsigner
    * @return sEzsignfoldersignerassociationstatusDescriptionX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignfoldersignerassociationstatusDescriptionX() {
     return sEzsignfoldersignerassociationstatusDescriptionX;
@@ -177,10 +176,10 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignsignaturestatus
    * @return aObjEzsignsignaturestatus
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzsignsignaturestatusResponse> getaObjEzsignsignaturestatus() {
     return aObjEzsignsignaturestatus;
@@ -256,12 +255,12 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     openapiRequiredFields.add("a_objEzsignsignaturestatus");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldersignerassociationstatusResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldersignerassociationstatusResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignfoldersignerassociationstatusResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -334,22 +333,22 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignfoldersignerassociationstatusResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignfoldersignerassociationstatusResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldersignerassociationstatusResponse
-  */
+  /**
+   * Create an instance of CustomEzsignfoldersignerassociationstatusResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignfoldersignerassociationstatusResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldersignerassociationstatusResponse
+   */
   public static CustomEzsignfoldersignerassociationstatusResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignfoldersignerassociationstatusResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignfoldersignerassociationstatusResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignfoldersignerassociationstatusResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

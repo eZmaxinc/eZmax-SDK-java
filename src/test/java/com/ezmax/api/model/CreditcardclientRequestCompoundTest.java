@@ -71,27 +71,19 @@ public class CreditcardclientRequestCompoundTest {
     }
 
     /**
-     * Test the property 'bCreditcardclientIsactive'
+     * Test the property 'bCreditcardclientAllowedcompanypayment'
      */
     @Test
-    public void bCreditcardclientIsactiveTest() {
-        // TODO: test bCreditcardclientIsactive
+    public void bCreditcardclientAllowedcompanypaymentTest() {
+        // TODO: test bCreditcardclientAllowedcompanypayment
     }
 
     /**
-     * Test the property 'bCreditcardclientAllowedagencypayment'
+     * Test the property 'bCreditcardclientAllowedezsign'
      */
     @Test
-    public void bCreditcardclientAllowedagencypaymentTest() {
-        // TODO: test bCreditcardclientAllowedagencypayment
-    }
-
-    /**
-     * Test the property 'bCreditcardclientAllowedroyallepageprotection'
-     */
-    @Test
-    public void bCreditcardclientAllowedroyallepageprotectionTest() {
-        // TODO: test bCreditcardclientAllowedroyallepageprotection
+    public void bCreditcardclientAllowedezsignTest() {
+        // TODO: test bCreditcardclientAllowedezsign
     }
 
     /**

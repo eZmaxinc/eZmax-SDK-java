@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneResponse {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
@@ -81,11 +80,11 @@ public class PhoneResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phone.
    * minimum: 0
    * @return pkiPhoneID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiPhoneID() {
     return pkiPhoneID;
@@ -101,11 +100,11 @@ public class PhoneResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
    * minimum: 0
    * @return fkiPhonetypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiPhonetypeID() {
     return fkiPhonetypeID;
@@ -122,11 +121,11 @@ public class PhoneResponse {
     return this;
   }
 
-   /**
+  /**
    * Get ePhoneType
    * @return ePhoneType
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public FieldEPhoneType getePhoneType() {
@@ -144,10 +143,10 @@ public class PhoneResponse {
     return this;
   }
 
-   /**
+  /**
    * A phone number in E.164 Format
    * @return sPhoneE164
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneE164() {
     return sPhoneE164;
@@ -163,10 +162,10 @@ public class PhoneResponse {
     return this;
   }
 
-   /**
+  /**
    * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
    * @return sPhoneExtension
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneExtension() {
     return sPhoneExtension;
@@ -242,12 +241,12 @@ public class PhoneResponse {
     openapiRequiredFields.add("fkiPhonetypeID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PhoneResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PhoneResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PhoneResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -311,22 +310,22 @@ public class PhoneResponse {
     }
   }
 
- /**
-  * Create an instance of PhoneResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PhoneResponse
-  * @throws IOException if the JSON string is invalid with respect to PhoneResponse
-  */
+  /**
+   * Create an instance of PhoneResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PhoneResponse
+   * @throws IOException if the JSON string is invalid with respect to PhoneResponse
+   */
   public static PhoneResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PhoneResponse.class);
   }
 
- /**
-  * Convert an instance of PhoneResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PhoneResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

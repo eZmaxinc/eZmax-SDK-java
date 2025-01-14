@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)
@@ -78,10 +77,10 @@ public class CommonReportrow {
     return this;
   }
 
-   /**
+  /**
    * Get aObjReportcell
    * @return aObjReportcell
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CommonReportcell> getaObjReportcell() {
     return aObjReportcell;
@@ -97,10 +96,10 @@ public class CommonReportrow {
     return this;
   }
 
-   /**
+  /**
    * The reportrow height in pixels
    * @return iReportrowHeight
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiReportrowHeight() {
     return iReportrowHeight;
@@ -167,12 +166,12 @@ public class CommonReportrow {
     openapiRequiredFields.add("iReportrowHeight");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonReportrow
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonReportrow
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportrow.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -236,22 +235,22 @@ public class CommonReportrow {
     }
   }
 
- /**
-  * Create an instance of CommonReportrow given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonReportrow
-  * @throws IOException if the JSON string is invalid with respect to CommonReportrow
-  */
+  /**
+   * Create an instance of CommonReportrow given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonReportrow
+   * @throws IOException if the JSON string is invalid with respect to CommonReportrow
+   */
   public static CommonReportrow fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonReportrow.class);
   }
 
- /**
-  * Convert an instance of CommonReportrow to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonReportrow to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

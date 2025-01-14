@@ -17,7 +17,7 @@ Response for Websocket GetWebsocketID V1
 
 | Name | Value |
 |---- | -----|
-| RESPONSE_GETWEBSOCKETID_V1 | &quot;Response-GetWebsocketID-V1&quot; |
+| RESPONSE_GET_WEBSOCKET_ID_V1 | &quot;Response-GetWebsocketID-V1&quot; |
 
 
 

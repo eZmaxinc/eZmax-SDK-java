@@ -5,13 +5,13 @@
 ## Enum
 
 
-* `AGENTBROKER` (value: `"AgentBroker"`)
+* `AGENT_BROKER` (value: `"AgentBroker"`)
 
 * `ASSISTANT` (value: `"Assistant"`)
 
-* `EZSIGNSIGNER` (value: `"EzsignSigner"`)
+* `EZSIGN_SIGNER` (value: `"EzsignSigner"`)
 
-* `EZSIGNUSER` (value: `"EzsignUser"`)
+* `EZSIGN_USER` (value: `"EzsignUser"`)
 
 * `NORMAL` (value: `"Normal"`)
 

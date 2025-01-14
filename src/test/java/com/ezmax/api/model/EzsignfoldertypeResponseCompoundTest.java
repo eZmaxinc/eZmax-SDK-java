@@ -214,6 +214,14 @@ public class EzsignfoldertypeResponseCompoundTest {
     }
 
     /**
+     * Test the property 'bEzsignfoldertypeAutomaticsignature'
+     */
+    @Test
+    public void bEzsignfoldertypeAutomaticsignatureTest() {
+        // TODO: test bEzsignfoldertypeAutomaticsignature
+    }
+
+    /**
      * Test the property 'bEzsignfoldertypeDelegate'
      */
     @Test
@@ -243,6 +251,14 @@ public class EzsignfoldertypeResponseCompoundTest {
     @Test
     public void bEzsignfoldertypeReassignuserTest() {
         // TODO: test bEzsignfoldertypeReassignuser
+    }
+
+    /**
+     * Test the property 'bEzsignfoldertypeReassigngroup'
+     */
+    @Test
+    public void bEzsignfoldertypeReassigngroupTest() {
+        // TODO: test bEzsignfoldertypeReassigngroup
     }
 
     /**

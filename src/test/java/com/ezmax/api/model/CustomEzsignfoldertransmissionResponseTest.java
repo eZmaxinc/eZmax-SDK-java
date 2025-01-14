@@ -74,6 +74,14 @@ public class CustomEzsignfoldertransmissionResponseTest {
     }
 
     /**
+     * Test the property 'iEzsignfolderFormfieldtotal'
+     */
+    @Test
+    public void iEzsignfolderFormfieldtotalTest() {
+        // TODO: test iEzsignfolderFormfieldtotal
+    }
+
+    /**
      * Test the property 'iEzsignfolderSignaturesigned'
      */
     @Test

@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldertype List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -76,12 +75,12 @@ public class EzsignfoldertypeListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return pkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfoldertypeID() {
     return pkiEzsignfoldertypeID;
@@ -97,10 +96,10 @@ public class EzsignfoldertypeListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypePrivacylevel
    * @return eEzsignfoldertypePrivacylevel
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -116,10 +115,10 @@ public class EzsignfoldertypeListElement {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -135,10 +134,10 @@ public class EzsignfoldertypeListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignfoldertype is active or not
    * @return bEzsignfoldertypeIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeIsactive() {
     return bEzsignfoldertypeIsactive;
@@ -213,12 +212,12 @@ public class EzsignfoldertypeListElement {
     openapiRequiredFields.add("bEzsignfoldertypeIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldertypeListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -277,22 +276,22 @@ public class EzsignfoldertypeListElement {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldertypeListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldertypeListElement
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeListElement
-  */
+  /**
+   * Create an instance of EzsignfoldertypeListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldertypeListElement
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeListElement
+   */
   public static EzsignfoldertypeListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldertypeListElement.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldertypeListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldertypeListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

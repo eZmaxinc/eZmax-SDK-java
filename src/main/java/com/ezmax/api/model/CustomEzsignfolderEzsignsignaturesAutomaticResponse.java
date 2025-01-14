@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -74,11 +73,11 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return pkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -94,10 +93,10 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -121,10 +120,10 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsigndocument
    * @return aObjEzsigndocument
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> getaObjEzsigndocument() {
     return aObjEzsigndocument;
@@ -195,12 +194,12 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     openapiRequiredFields.add("a_objEzsigndocument");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfolderEzsignsignaturesAutomaticResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfolderEzsignsignaturesAutomaticResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignfolderEzsignsignaturesAutomaticResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -267,22 +266,22 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignfolderEzsignsignaturesAutomaticResponse
-  */
+  /**
+   * Create an instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignfolderEzsignsignaturesAutomaticResponse
+   */
   public static CustomEzsignfolderEzsignsignaturesAutomaticResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignfolderEzsignsignaturesAutomaticResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignfolderEzsignsignaturesAutomaticResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -83,11 +82,11 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return pkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfoldersignerassociationID() {
     return pkiEzsignfoldersignerassociationID;
@@ -103,11 +102,11 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return fkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -123,10 +122,10 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * If this flag is true the signatory is part of a delayed send.
    * @return bEzsignfoldersignerassociationDelayedsend
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldersignerassociationDelayedsend() {
     return bEzsignfoldersignerassociationDelayedsend;
@@ -142,10 +141,10 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
    * @return bEzsignfoldersignerassociationReceivecopy
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldersignerassociationReceivecopy() {
     return bEzsignfoldersignerassociationReceivecopy;
@@ -161,10 +160,10 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * A custom text message that will be added to the email sent.
    * @return tEzsignfoldersignerassociationMessage
-  **/
+   */
   @javax.annotation.Nonnull
   public String gettEzsignfoldersignerassociationMessage() {
     return tEzsignfoldersignerassociationMessage;
@@ -180,10 +179,10 @@ public class EzsignfoldersignerassociationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the Ezsignfoldersignerassociation is allowed to sign in person or not
    * @return bEzsignfoldersignerassociationAllowsigninginperson
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldersignerassociationAllowsigninginperson() {
     return bEzsignfoldersignerassociationAllowsigninginperson;
@@ -266,12 +265,12 @@ public class EzsignfoldersignerassociationResponse {
     openapiRequiredFields.add("bEzsignfoldersignerassociationAllowsigninginperson");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldersignerassociationResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -328,22 +327,22 @@ public class EzsignfoldersignerassociationResponse {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldersignerassociationResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldersignerassociationResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationResponse
-  */
+  /**
+   * Create an instance of EzsignfoldersignerassociationResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldersignerassociationResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationResponse
+   */
   public static EzsignfoldersignerassociationResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldersignerassociationResponse.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldersignerassociationResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldersignerassociationResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -27,7 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.BuyercontractGetCommunicationCountV1Response;
 import com.ezmax.api.model.BuyercontractGetCommunicationListV1Response;
+import com.ezmax.api.model.BuyercontractGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.BuyercontractGetCommunicationsendersV1Response;
 import com.ezmax.api.model.CommonResponseError;
 
 import java.lang.reflect.Type;
@@ -73,6 +76,133 @@ public class ObjectBuyercontractApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for buyercontractGetCommunicationCountV1
+     * @param pkiBuyercontractID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationCountV1Call(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationCount"
+            .replace("{" + "pkiBuyercontractID" + "}", localVarApiClient.escapeString(pkiBuyercontractID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call buyercontractGetCommunicationCountV1ValidateBeforeCall(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBuyercontractID' is set
+        if (pkiBuyercontractID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBuyercontractID' when calling buyercontractGetCommunicationCountV1(Async)");
+        }
+
+        return buyercontractGetCommunicationCountV1Call(pkiBuyercontractID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return BuyercontractGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public BuyercontractGetCommunicationCountV1Response buyercontractGetCommunicationCountV1(Integer pkiBuyercontractID) throws ApiException {
+        ApiResponse<BuyercontractGetCommunicationCountV1Response> localVarResp = buyercontractGetCommunicationCountV1WithHttpInfo(pkiBuyercontractID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return ApiResponse&lt;BuyercontractGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BuyercontractGetCommunicationCountV1Response> buyercontractGetCommunicationCountV1WithHttpInfo(Integer pkiBuyercontractID) throws ApiException {
+        okhttp3.Call localVarCall = buyercontractGetCommunicationCountV1ValidateBeforeCall(pkiBuyercontractID, null);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationCountV1Async(Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = buyercontractGetCommunicationCountV1ValidateBeforeCall(pkiBuyercontractID, _callback);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for buyercontractGetCommunicationListV1
      * @param pkiBuyercontractID  (required)
@@ -197,6 +327,260 @@ public class ObjectBuyercontractApi {
 
         okhttp3.Call localVarCall = buyercontractGetCommunicationListV1ValidateBeforeCall(pkiBuyercontractID, _callback);
         Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for buyercontractGetCommunicationrecipientsV1
+     * @param pkiBuyercontractID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationrecipientsV1Call(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationrecipients"
+            .replace("{" + "pkiBuyercontractID" + "}", localVarApiClient.escapeString(pkiBuyercontractID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call buyercontractGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBuyercontractID' is set
+        if (pkiBuyercontractID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBuyercontractID' when calling buyercontractGetCommunicationrecipientsV1(Async)");
+        }
+
+        return buyercontractGetCommunicationrecipientsV1Call(pkiBuyercontractID, _callback);
+
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return BuyercontractGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public BuyercontractGetCommunicationrecipientsV1Response buyercontractGetCommunicationrecipientsV1(Integer pkiBuyercontractID) throws ApiException {
+        ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> localVarResp = buyercontractGetCommunicationrecipientsV1WithHttpInfo(pkiBuyercontractID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return ApiResponse&lt;BuyercontractGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> buyercontractGetCommunicationrecipientsV1WithHttpInfo(Integer pkiBuyercontractID) throws ApiException {
+        okhttp3.Call localVarCall = buyercontractGetCommunicationrecipientsV1ValidateBeforeCall(pkiBuyercontractID, null);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationrecipientsV1Async(Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = buyercontractGetCommunicationrecipientsV1ValidateBeforeCall(pkiBuyercontractID, _callback);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for buyercontractGetCommunicationsendersV1
+     * @param pkiBuyercontractID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationsendersV1Call(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/buyercontract/{pkiBuyercontractID}/getCommunicationsenders"
+            .replace("{" + "pkiBuyercontractID" + "}", localVarApiClient.escapeString(pkiBuyercontractID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call buyercontractGetCommunicationsendersV1ValidateBeforeCall(Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBuyercontractID' is set
+        if (pkiBuyercontractID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBuyercontractID' when calling buyercontractGetCommunicationsendersV1(Async)");
+        }
+
+        return buyercontractGetCommunicationsendersV1Call(pkiBuyercontractID, _callback);
+
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return BuyercontractGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public BuyercontractGetCommunicationsendersV1Response buyercontractGetCommunicationsendersV1(Integer pkiBuyercontractID) throws ApiException {
+        ApiResponse<BuyercontractGetCommunicationsendersV1Response> localVarResp = buyercontractGetCommunicationsendersV1WithHttpInfo(pkiBuyercontractID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return ApiResponse&lt;BuyercontractGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BuyercontractGetCommunicationsendersV1Response> buyercontractGetCommunicationsendersV1WithHttpInfo(Integer pkiBuyercontractID) throws ApiException {
+        okhttp3.Call localVarCall = buyercontractGetCommunicationsendersV1ValidateBeforeCall(pkiBuyercontractID, null);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender (asynchronously)
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetCommunicationsendersV1Async(Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = buyercontractGetCommunicationsendersV1ValidateBeforeCall(pkiBuyercontractID, _callback);
+        Type localVarReturnType = new TypeToken<BuyercontractGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -18,13 +18,18 @@ import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl;
 import com.ezmax.api.model.EzsigntemplatedocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request;
+import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentExtractTextV1Request;
+import com.ezmax.api.model.EzsigntemplatedocumentExtractTextV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentFlattenV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatesignaturesV1Response;
@@ -60,6 +65,21 @@ public class ObjectEzsigntemplatedocumentApiTest {
     public void ezsigntemplatedocumentCreateObjectV1Test() throws ApiException {
         EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request = null;
         EzsigntemplatedocumentCreateObjectV1Response response = api.ezsigntemplatedocumentCreateObjectV1(ezsigntemplatedocumentCreateObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     *
+     * Edit multiple Ezsigntemplatedocumentpagerecognitions
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Test() throws ApiException {
+        Integer pkiEzsigntemplatedocumentID = null;
+        EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request = null;
+        EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response response = api.ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request);
         // TODO: test validations
     }
 
@@ -109,6 +129,21 @@ public class ObjectEzsigntemplatedocumentApiTest {
     }
 
     /**
+     * Extract text from Ezsigntemplatedocument area
+     *
+     * Extract text from Ezsigntemplatedocument area
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatedocumentExtractTextV1Test() throws ApiException {
+        Integer pkiEzsigntemplatedocumentID = null;
+        EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request = null;
+        EzsigntemplatedocumentExtractTextV1Response response = api.ezsigntemplatedocumentExtractTextV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentExtractTextV1Request);
+        // TODO: test validations
+    }
+
+    /**
      * Flatten
      *
      * Flatten an Ezsigntemplatedocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
@@ -120,6 +155,20 @@ public class ObjectEzsigntemplatedocumentApiTest {
         Integer pkiEzsigntemplatedocumentID = null;
         Object body = null;
         EzsigntemplatedocumentFlattenV1Response response = api.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsigntemplatedocument&#39;s Ezsigntemplatedocumentpagerecognitions
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Test() throws ApiException {
+        Integer pkiEzsigntemplatedocumentID = null;
+        EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response response = api.ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(pkiEzsigntemplatedocumentID);
         // TODO: test validations
     }
 

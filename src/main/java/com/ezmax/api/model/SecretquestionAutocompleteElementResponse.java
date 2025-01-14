@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Secretquestion AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SecretquestionAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)
@@ -71,10 +70,10 @@ public class SecretquestionAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The text of the Secretquestion in the language of the requester
    * @return sSecretquestionTextX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsSecretquestionTextX() {
     return sSecretquestionTextX;
@@ -90,11 +89,11 @@ public class SecretquestionAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
    * minimum: 0
    * @return pkiSecretquestionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiSecretquestionID() {
     return pkiSecretquestionID;
@@ -110,10 +109,10 @@ public class SecretquestionAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Secretquestion is active or not
    * @return bSecretquestionIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbSecretquestionIsactive() {
     return bSecretquestionIsactive;
@@ -184,12 +183,12 @@ public class SecretquestionAutocompleteElementResponse {
     openapiRequiredFields.add("bSecretquestionIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SecretquestionAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SecretquestionAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SecretquestionAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -246,22 +245,22 @@ public class SecretquestionAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of SecretquestionAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SecretquestionAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to SecretquestionAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of SecretquestionAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SecretquestionAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to SecretquestionAutocompleteElementResponse
+   */
   public static SecretquestionAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SecretquestionAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of SecretquestionAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SecretquestionAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

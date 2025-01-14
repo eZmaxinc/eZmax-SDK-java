@@ -13,8 +13,10 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EnumHorizontalalignment;
 import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
+import com.ezmax.api.model.TextstylestaticResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -135,6 +137,22 @@ public class EzsignformfieldResponseCompoundTest {
     @Test
     public void eEzsignformfieldDependencyrequirementTest() {
         // TODO: test eEzsignformfieldDependencyrequirement
+    }
+
+    /**
+     * Test the property 'eEzsignformfieldHorizontalalignment'
+     */
+    @Test
+    public void eEzsignformfieldHorizontalalignmentTest() {
+        // TODO: test eEzsignformfieldHorizontalalignment
+    }
+
+    /**
+     * Test the property 'objTextstylestatic'
+     */
+    @Test
+    public void objTextstylestaticTest() {
+        // TODO: test objTextstylestatic
     }
 
     /**

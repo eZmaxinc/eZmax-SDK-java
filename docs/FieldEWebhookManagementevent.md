@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `USERCREATED` (value: `"UserCreated"`)
+* `USER_CREATED` (value: `"UserCreated"`)
 
-* `USERSTAGEDCREATED` (value: `"UserstagedCreated"`)
+* `USERSTAGED_CREATED` (value: `"UserstagedCreated"`)
 
 
 

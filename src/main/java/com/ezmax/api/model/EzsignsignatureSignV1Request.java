@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,11 +51,15 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
   private Integer fkiEzsignsigningreasonID;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
@@ -128,7 +131,7 @@ public class EzsignsignatureSignV1Request {
 
   public static final String SERIALIZED_NAME_A_OBJ_FILE = "a_objFile";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FILE)
-  private List<CommonFile> aObjFile;
+  private List<CommonFile> aObjFile = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_IS_AUTOMATIC = "bIsAutomatic";
   @SerializedName(SERIALIZED_NAME_B_IS_AUTOMATIC)
@@ -142,12 +145,12 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsigningreason
    * minimum: 0
    * maximum: 255
    * @return fkiEzsignsigningreasonID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignsigningreasonID() {
     return fkiEzsignsigningreasonID;
@@ -158,15 +161,35 @@ public class EzsignsignatureSignV1Request {
   }
 
 
+  public EzsignsignatureSignV1Request fkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+
   public EzsignsignatureSignV1Request sValue(String sValue) {
     this.sValue = sValue;
     return this;
   }
 
-   /**
+  /**
    * The value required for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **City**, **FieldText** or **FieldTextarea**
    * @return sValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsValue() {
     return sValue;
@@ -182,10 +205,10 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
+  /**
    * Whether the attachment are accepted or refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
    * @return eAttachmentsConfirmationDecision
-  **/
+   */
   @javax.annotation.Nullable
   public EAttachmentsConfirmationDecisionEnum geteAttachmentsConfirmationDecision() {
     return eAttachmentsConfirmationDecision;
@@ -201,10 +224,10 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
+  /**
    * The reason of refused.  This can only be set if eEzsignsignatureType is **AttachmentsConfirmation**
    * @return sAttachmentsRefusalReason
-  **/
+   */
   @javax.annotation.Nullable
   public String getsAttachmentsRefusalReason() {
     return sAttachmentsRefusalReason;
@@ -220,10 +243,10 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
-   * The SVG of the handwritten signature.  This can only be set if eEzsignsignatureType is **Handwritten** and **bIsAutomatic** is false
+  /**
+   * The SVG of the signature.  This can only be set if eEzsignsignatureType is **Signature**_/_**Initials** and **bIsAutomatic** is false
    * @return sSvg
-  **/
+   */
   @javax.annotation.Nullable
   public String getsSvg() {
     return sSvg;
@@ -247,10 +270,10 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
+  /**
    * Get aObjFile
    * @return aObjFile
-  **/
+   */
   @javax.annotation.Nullable
   public List<CommonFile> getaObjFile() {
     return aObjFile;
@@ -266,10 +289,10 @@ public class EzsignsignatureSignV1Request {
     return this;
   }
 
-   /**
-   * Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Handwritten**, **Initials**, **Name** or **Stamp**. 
+  /**
+   * Indicates if the Ezsignsignature was part of an automatic process or not.  This can only be true if eEzsignsignatureType is **Acknowledgement**, **City**, **Signature**, **Initials** or **Stamp**. 
    * @return bIsAutomatic
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbIsAutomatic() {
     return bIsAutomatic;
@@ -291,6 +314,7 @@ public class EzsignsignatureSignV1Request {
     }
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
     return Objects.equals(this.fkiEzsignsigningreasonID, ezsignsignatureSignV1Request.fkiEzsignsigningreasonID) &&
+        Objects.equals(this.fkiFontID, ezsignsignatureSignV1Request.fkiFontID) &&
         Objects.equals(this.sValue, ezsignsignatureSignV1Request.sValue) &&
         Objects.equals(this.eAttachmentsConfirmationDecision, ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision) &&
         Objects.equals(this.sAttachmentsRefusalReason, ezsignsignatureSignV1Request.sAttachmentsRefusalReason) &&
@@ -301,7 +325,7 @@ public class EzsignsignatureSignV1Request {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignsigningreasonID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, bIsAutomatic);
+    return Objects.hash(fkiEzsignsigningreasonID, fkiFontID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, bIsAutomatic);
   }
 
   @Override
@@ -309,6 +333,7 @@ public class EzsignsignatureSignV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignatureSignV1Request {\n");
     sb.append("    fkiEzsignsigningreasonID: ").append(toIndentedString(fkiEzsignsigningreasonID)).append("\n");
+    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
     sb.append("    sValue: ").append(toIndentedString(sValue)).append("\n");
     sb.append("    eAttachmentsConfirmationDecision: ").append(toIndentedString(eAttachmentsConfirmationDecision)).append("\n");
     sb.append("    sAttachmentsRefusalReason: ").append(toIndentedString(sAttachmentsRefusalReason)).append("\n");
@@ -338,6 +363,7 @@ public class EzsignsignatureSignV1Request {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("fkiEzsignsigningreasonID");
+    openapiFields.add("fkiFontID");
     openapiFields.add("sValue");
     openapiFields.add("eAttachmentsConfirmationDecision");
     openapiFields.add("sAttachmentsRefusalReason");
@@ -350,12 +376,12 @@ public class EzsignsignatureSignV1Request {
     openapiRequiredFields.add("bIsAutomatic");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureSignV1Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureSignV1Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignatureSignV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -439,22 +465,22 @@ public class EzsignsignatureSignV1Request {
     }
   }
 
- /**
-  * Create an instance of EzsignsignatureSignV1Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignatureSignV1Request
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignatureSignV1Request
-  */
+  /**
+   * Create an instance of EzsignsignatureSignV1Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignatureSignV1Request
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignatureSignV1Request
+   */
   public static EzsignsignatureSignV1Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignatureSignV1Request.class);
   }
 
- /**
-  * Convert an instance of EzsignsignatureSignV1Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignatureSignV1Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

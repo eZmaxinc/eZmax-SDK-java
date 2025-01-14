@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryglobalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
@@ -132,7 +131,7 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGCOMMISSION = "a_objEzmaxinvoicingcommission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGCOMMISSION)
-  private List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission;
+  private List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = new ArrayList<>();
 
   public EzmaxinvoicingsummaryglobalResponseCompound() {
   }
@@ -142,11 +141,11 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingsummaryglobal
    * minimum: 0
    * @return pkiEzmaxinvoicingsummaryglobalID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzmaxinvoicingsummaryglobalID() {
     return pkiEzmaxinvoicingsummaryglobalID;
@@ -162,11 +161,11 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicing
    * minimum: 0
    * @return fkiEzmaxinvoicingID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -182,11 +181,11 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxproduct
    * minimum: 1
    * @return fkiEzmaxproductID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
@@ -202,10 +201,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezmaxproduct in the language of the requester
    * @return sEzmaxproductDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
@@ -221,10 +220,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The start date for the Ezmaxinvoicingsummaryglobal
    * @return dtEzmaxinvoicingsummaryglobalStart
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzmaxinvoicingsummaryglobalStart() {
     return dtEzmaxinvoicingsummaryglobalStart;
@@ -240,10 +239,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The end date for the Ezmaxinvoicingsummaryglobal
    * @return dtEzmaxinvoicingsummaryglobalEnd
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzmaxinvoicingsummaryglobalEnd() {
     return dtEzmaxinvoicingsummaryglobalEnd;
@@ -259,11 +258,11 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of days for the Ezmaxinvoicingsummaryglobal
    * minimum: 1
    * @return iEzmaxinvoicingsummaryglobalDays
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingsummaryglobalDays() {
     return iEzmaxinvoicingsummaryglobalDays;
@@ -279,10 +278,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The count item calculated
    * @return dEzmaxinvoicingsummaryglobalCountreal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalCountreal() {
     return dEzmaxinvoicingsummaryglobalCountreal;
@@ -298,10 +297,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The count item billed
    * @return dEzmaxinvoicingsummaryglobalCountbilled
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalCountbilled() {
     return dEzmaxinvoicingsummaryglobalCountbilled;
@@ -317,10 +316,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Ezmaxinvoicingsummaryglobal subtotal
    * @return dEzmaxinvoicingsummaryglobalSubtotal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalSubtotal() {
     return dEzmaxinvoicingsummaryglobalSubtotal;
@@ -336,10 +335,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The rebate amount for the Ezmaxinvoicingsummaryglobal
    * @return dEzmaxinvoicingsummaryglobalRebateamount
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalRebateamount() {
     return dEzmaxinvoicingsummaryglobalRebateamount;
@@ -355,10 +354,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The rebate percentage of the Ezmaxinvoicingsummaryglobal
    * @return dEzmaxinvoicingsummaryglobalRebatepercent
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalRebatepercent() {
     return dEzmaxinvoicingsummaryglobalRebatepercent;
@@ -374,10 +373,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The rebate amount total for the Ezmaxinvoicingsummaryglobal
    * @return dEzmaxinvoicingsummaryglobalRebatetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalRebatetotal() {
     return dEzmaxinvoicingsummaryglobalRebatetotal;
@@ -393,10 +392,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Ezmaxinvoicingsummaryglobal total
    * @return dEzmaxinvoicingsummaryglobalTotal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryglobalTotal() {
     return dEzmaxinvoicingsummaryglobalTotal;
@@ -412,10 +411,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The amount of commission for the representative
    * @return dEzmaxinvoicingsummaryglobalRepresentative
-  **/
+   */
   @javax.annotation.Nullable
   public String getdEzmaxinvoicingsummaryglobalRepresentative() {
     return dEzmaxinvoicingsummaryglobalRepresentative;
@@ -431,10 +430,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The amount of commission for the partner
    * @return dEzmaxinvoicingsummaryglobalPartner
-  **/
+   */
   @javax.annotation.Nullable
   public String getdEzmaxinvoicingsummaryglobalPartner() {
     return dEzmaxinvoicingsummaryglobalPartner;
@@ -450,10 +449,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The net amount of the Ezmaxinvoicingsummaryglobal
    * @return dEzmaxinvoicingsummaryglobalNet
-  **/
+   */
   @javax.annotation.Nullable
   public String getdEzmaxinvoicingsummaryglobalNet() {
     return dEzmaxinvoicingsummaryglobalNet;
@@ -469,10 +468,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
    * @return bEzmaxinvoicingsummaryglobalAdjustment
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingsummaryglobalAdjustment() {
     return bEzmaxinvoicingsummaryglobalAdjustment;
@@ -488,10 +487,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The help message of the Ezmaxproduct in the language of the requester
    * @return tEzmaxproductHelpX
-  **/
+   */
   @javax.annotation.Nonnull
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;
@@ -515,10 +514,10 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzmaxinvoicingcommission
    * @return aObjEzmaxinvoicingcommission
-  **/
+   */
   @javax.annotation.Nullable
   public List<EzmaxinvoicingcommissionResponseCompound> getaObjEzmaxinvoicingcommission() {
     return aObjEzmaxinvoicingcommission;
@@ -651,12 +650,12 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     openapiRequiredFields.add("tEzmaxproductHelpX");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingsummaryglobalResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingsummaryglobalResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingsummaryglobalResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -766,22 +765,22 @@ public class EzmaxinvoicingsummaryglobalResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicingsummaryglobalResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicingsummaryglobalResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingsummaryglobalResponseCompound
-  */
+  /**
+   * Create an instance of EzmaxinvoicingsummaryglobalResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicingsummaryglobalResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingsummaryglobalResponseCompound
+   */
   public static EzmaxinvoicingsummaryglobalResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicingsummaryglobalResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicingsummaryglobalResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicingsummaryglobalResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModuleResponse {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -83,11 +82,11 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return pkiModuleID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiModuleID() {
     return pkiModuleID;
@@ -103,12 +102,12 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Modulegroup
    * minimum: 1
    * maximum: 255
    * @return fkiModulegroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiModulegroupID() {
     return fkiModulegroupID;
@@ -124,10 +123,10 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.
    * @return eModuleInternalname
-  **/
+   */
   @javax.annotation.Nonnull
   public String geteModuleInternalname() {
     return eModuleInternalname;
@@ -143,10 +142,10 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Module in the language of the requester
    * @return sModuleNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -162,10 +161,10 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Module is registered or not
    * @return bModuleRegistered
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbModuleRegistered() {
     return bModuleRegistered;
@@ -181,10 +180,10 @@ public class ModuleResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Module is registered or not for api use
    * @return bModuleRegisteredapi
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbModuleRegisteredapi() {
     return bModuleRegisteredapi;
@@ -267,12 +266,12 @@ public class ModuleResponse {
     openapiRequiredFields.add("bModuleRegisteredapi");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ModuleResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ModuleResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ModuleResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -332,22 +331,22 @@ public class ModuleResponse {
     }
   }
 
- /**
-  * Create an instance of ModuleResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ModuleResponse
-  * @throws IOException if the JSON string is invalid with respect to ModuleResponse
-  */
+  /**
+   * Create an instance of ModuleResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ModuleResponse
+   * @throws IOException if the JSON string is invalid with respect to ModuleResponse
+   */
   public static ModuleResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ModuleResponse.class);
   }
 
- /**
-  * Convert an instance of ModuleResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ModuleResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

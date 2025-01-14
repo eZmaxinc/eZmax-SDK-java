@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VersionhistoryResponse {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
@@ -106,11 +105,11 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Versionhistory
    * minimum: 0
    * @return pkiVersionhistoryID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiVersionhistoryID() {
     return pkiVersionhistoryID;
@@ -126,11 +125,11 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return fkiModuleID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiModuleID() {
     return fkiModuleID;
@@ -146,11 +145,11 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Modulesection
    * minimum: 0
    * @return fkiModulesectionID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiModulesectionID() {
     return fkiModulesectionID;
@@ -166,10 +165,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Module in the language of the requester
    * @return sModuleNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -185,10 +184,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Modulesection in the language of the requester
    * @return sModulesectionNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsModulesectionNameX() {
     return sModulesectionNameX;
@@ -204,10 +203,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eVersionhistoryUsertype
    * @return eVersionhistoryUsertype
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEVersionhistoryUsertype geteVersionhistoryUsertype() {
     return eVersionhistoryUsertype;
@@ -223,10 +222,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objVersionhistoryDetail
    * @return objVersionhistoryDetail
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualVersionhistoryDetail getObjVersionhistoryDetail() {
     return objVersionhistoryDetail;
@@ -242,10 +241,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The date  at which the Versionhistory was published or should be published
    * @return dtVersionhistoryDate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtVersionhistoryDate() {
     return dtVersionhistoryDate;
@@ -261,10 +260,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * The date  at which the Versionhistory will no longer be visible
    * @return dtVersionhistoryDateend
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtVersionhistoryDateend() {
     return dtVersionhistoryDateend;
@@ -280,10 +279,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eVersionhistoryType
    * @return eVersionhistoryType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEVersionhistoryType geteVersionhistoryType() {
     return eVersionhistoryType;
@@ -299,10 +298,10 @@ public class VersionhistoryResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Versionhistory is published or still a draft
    * @return bVersionhistoryDraft
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbVersionhistoryDraft() {
     return bVersionhistoryDraft;
@@ -399,12 +398,12 @@ public class VersionhistoryResponse {
     openapiRequiredFields.add("bVersionhistoryDraft");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VersionhistoryResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VersionhistoryResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VersionhistoryResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -478,22 +477,22 @@ public class VersionhistoryResponse {
     }
   }
 
- /**
-  * Create an instance of VersionhistoryResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VersionhistoryResponse
-  * @throws IOException if the JSON string is invalid with respect to VersionhistoryResponse
-  */
+  /**
+   * Create an instance of VersionhistoryResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VersionhistoryResponse
+   * @throws IOException if the JSON string is invalid with respect to VersionhistoryResponse
+   */
   public static VersionhistoryResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VersionhistoryResponse.class);
   }
 
- /**
-  * Convert an instance of VersionhistoryResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VersionhistoryResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

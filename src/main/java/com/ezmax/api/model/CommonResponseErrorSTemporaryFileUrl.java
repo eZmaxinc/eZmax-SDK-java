@@ -21,7 +21,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -38,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -59,6 +60,10 @@ public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
   private FieldEErrorCode eErrorCode;
+
+  public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
+  @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
@@ -72,10 +77,10 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return this;
   }
 
-   /**
+  /**
    * The message giving details about the error
    * @return sErrorMessage
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsErrorMessage() {
     return sErrorMessage;
@@ -91,10 +96,10 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return this;
   }
 
-   /**
+  /**
    * Get eErrorCode
    * @return eErrorCode
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEErrorCode geteErrorCode() {
     return eErrorCode;
@@ -105,15 +110,42 @@ public class CommonResponseErrorSTemporaryFileUrl {
   }
 
 
+  public CommonResponseErrorSTemporaryFileUrl aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+    return this;
+  }
+
+  public CommonResponseErrorSTemporaryFileUrl addASErrorMessagedetailItem(String aSErrorMessagedetailItem) {
+    if (this.aSErrorMessagedetail == null) {
+      this.aSErrorMessagedetail = new ArrayList<>();
+    }
+    this.aSErrorMessagedetail.add(aSErrorMessagedetailItem);
+    return this;
+  }
+
+  /**
+   * More error message detail
+   * @return aSErrorMessagedetail
+   */
+  @javax.annotation.Nullable
+  public List<String> getaSErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
+
   public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(String sTemporaryFileUrl) {
     this.sTemporaryFileUrl = sTemporaryFileUrl;
     return this;
   }
 
-   /**
+  /**
    * The Temporary File Url of the document that was uploaded. That url can be reused instead of uploading the file again.
    * @return sTemporaryFileUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getsTemporaryFileUrl() {
     return sTemporaryFileUrl;
@@ -136,12 +168,13 @@ public class CommonResponseErrorSTemporaryFileUrl {
     CommonResponseErrorSTemporaryFileUrl commonResponseErrorSTemporaryFileUrl = (CommonResponseErrorSTemporaryFileUrl) o;
     return Objects.equals(this.sErrorMessage, commonResponseErrorSTemporaryFileUrl.sErrorMessage) &&
         Objects.equals(this.eErrorCode, commonResponseErrorSTemporaryFileUrl.eErrorCode) &&
+        Objects.equals(this.aSErrorMessagedetail, commonResponseErrorSTemporaryFileUrl.aSErrorMessagedetail) &&
         Objects.equals(this.sTemporaryFileUrl, commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sErrorMessage, eErrorCode, sTemporaryFileUrl);
+    return Objects.hash(sErrorMessage, eErrorCode, aSErrorMessagedetail, sTemporaryFileUrl);
   }
 
   @Override
@@ -150,6 +183,7 @@ public class CommonResponseErrorSTemporaryFileUrl {
     sb.append("class CommonResponseErrorSTemporaryFileUrl {\n");
     sb.append("    sErrorMessage: ").append(toIndentedString(sErrorMessage)).append("\n");
     sb.append("    eErrorCode: ").append(toIndentedString(eErrorCode)).append("\n");
+    sb.append("    aSErrorMessagedetail: ").append(toIndentedString(aSErrorMessagedetail)).append("\n");
     sb.append("    sTemporaryFileUrl: ").append(toIndentedString(sTemporaryFileUrl)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -175,6 +209,7 @@ public class CommonResponseErrorSTemporaryFileUrl {
     openapiFields = new HashSet<String>();
     openapiFields.add("sErrorMessage");
     openapiFields.add("eErrorCode");
+    openapiFields.add("a_sErrorMessagedetail");
     openapiFields.add("sTemporaryFileUrl");
 
     // a set of required properties/fields (JSON key names)
@@ -183,12 +218,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     openapiRequiredFields.add("eErrorCode");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonResponseErrorSTemporaryFileUrl
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonResponseErrorSTemporaryFileUrl
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonResponseErrorSTemporaryFileUrl.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -216,6 +251,10 @@ public class CommonResponseErrorSTemporaryFileUrl {
       }
       // validate the required field `eErrorCode`
       FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
+      }
       if ((jsonObj.get("sTemporaryFileUrl") != null && !jsonObj.get("sTemporaryFileUrl").isJsonNull()) && !jsonObj.get("sTemporaryFileUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sTemporaryFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sTemporaryFileUrl").toString()));
       }
@@ -250,22 +289,22 @@ public class CommonResponseErrorSTemporaryFileUrl {
     }
   }
 
- /**
-  * Create an instance of CommonResponseErrorSTemporaryFileUrl given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonResponseErrorSTemporaryFileUrl
-  * @throws IOException if the JSON string is invalid with respect to CommonResponseErrorSTemporaryFileUrl
-  */
+  /**
+   * Create an instance of CommonResponseErrorSTemporaryFileUrl given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonResponseErrorSTemporaryFileUrl
+   * @throws IOException if the JSON string is invalid with respect to CommonResponseErrorSTemporaryFileUrl
+   */
   public static CommonResponseErrorSTemporaryFileUrl fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonResponseErrorSTemporaryFileUrl.class);
   }
 
- /**
-  * Convert an instance of CommonResponseErrorSTemporaryFileUrl to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonResponseErrorSTemporaryFileUrl to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -154,11 +153,11 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Communication.
    * minimum: 0
    * @return pkiCommunicationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiCommunicationID() {
     return pkiCommunicationID;
@@ -174,10 +173,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eCommunicationImportance
    * @return eCommunicationImportance
-  **/
+   */
   @javax.annotation.Nullable
   public FieldECommunicationImportance geteCommunicationImportance() {
     return eCommunicationImportance;
@@ -193,10 +192,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eCommunicationType
    * @return eCommunicationType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldECommunicationType geteCommunicationType() {
     return eCommunicationType;
@@ -212,10 +211,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get objCommunicationsender
    * @return objCommunicationsender
-  **/
+   */
   @javax.annotation.Nullable
   public CustomCommunicationsenderRequest getObjCommunicationsender() {
     return objCommunicationsender;
@@ -231,10 +230,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * The subject of the Communication
    * @return sCommunicationSubject
-  **/
+   */
   @javax.annotation.Nullable
   public String getsCommunicationSubject() {
     return sCommunicationSubject;
@@ -250,10 +249,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * The Body of the Communication
    * @return tCommunicationBody
-  **/
+   */
   @javax.annotation.Nonnull
   public String gettCommunicationBody() {
     return tCommunicationBody;
@@ -269,10 +268,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether the Communication is private or not
    * @return bCommunicationPrivate
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbCommunicationPrivate() {
     return bCommunicationPrivate;
@@ -288,10 +287,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
    * @return eCommunicationAttachmenttype
-  **/
+   */
   @javax.annotation.Nullable
   public ECommunicationAttachmenttypeEnum geteCommunicationAttachmenttype() {
     return eCommunicationAttachmenttype;
@@ -307,12 +306,12 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**
    * minimum: 1
    * maximum: 30
    * @return iCommunicationAttachmentlinkexpiration
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiCommunicationAttachmentlinkexpiration() {
     return iCommunicationAttachmentlinkexpiration;
@@ -328,10 +327,10 @@ public class CommunicationRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether we ask for a read receipt or not.
    * @return bCommunicationReadreceipt
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbCommunicationReadreceipt() {
     return bCommunicationReadreceipt;
@@ -423,12 +422,12 @@ public class CommunicationRequest {
     openapiRequiredFields.add("bCommunicationPrivate");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommunicationRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommunicationRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommunicationRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -505,22 +504,22 @@ public class CommunicationRequest {
     }
   }
 
- /**
-  * Create an instance of CommunicationRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommunicationRequest
-  * @throws IOException if the JSON string is invalid with respect to CommunicationRequest
-  */
+  /**
+   * Create an instance of CommunicationRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommunicationRequest
+   * @throws IOException if the JSON string is invalid with respect to CommunicationRequest
+   */
   public static CommunicationRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommunicationRequest.class);
   }
 
- /**
-  * Convert an instance of CommunicationRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommunicationRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

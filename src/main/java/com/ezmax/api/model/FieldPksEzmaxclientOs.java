@@ -29,11 +29,13 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldPksEzmaxclientOs.Adapter.class)
 public enum FieldPksEzmaxclientOs {
   
-  IOS("iOS"),
+  ANDROID("Android"),
   
-  IPADOS("iPadOS"),
+  I_OS("iOS"),
   
-  MACOS("macOS"),
+  I_PAD_OS("iPadOS"),
+  
+  MAC_OS("macOS"),
   
   WINDOWS("Windows");
 

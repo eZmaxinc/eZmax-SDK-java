@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModuleResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -80,7 +79,7 @@ public class ModuleResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_MODULESECTION = "a_objModulesection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULESECTION)
-  private List<ModulesectionResponseCompound> aObjModulesection;
+  private List<ModulesectionResponseCompound> aObjModulesection = new ArrayList<>();
 
   public ModuleResponseCompound() {
   }
@@ -90,11 +89,11 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return pkiModuleID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiModuleID() {
     return pkiModuleID;
@@ -110,12 +109,12 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Modulegroup
    * minimum: 1
    * maximum: 255
    * @return fkiModulegroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiModulegroupID() {
     return fkiModulegroupID;
@@ -131,10 +130,10 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.
    * @return eModuleInternalname
-  **/
+   */
   @javax.annotation.Nonnull
   public String geteModuleInternalname() {
     return eModuleInternalname;
@@ -150,10 +149,10 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Module in the language of the requester
    * @return sModuleNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -169,10 +168,10 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Module is registered or not
    * @return bModuleRegistered
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbModuleRegistered() {
     return bModuleRegistered;
@@ -188,10 +187,10 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Module is registered or not for api use
    * @return bModuleRegisteredapi
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbModuleRegisteredapi() {
     return bModuleRegisteredapi;
@@ -215,10 +214,10 @@ public class ModuleResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjModulesection
    * @return aObjModulesection
-  **/
+   */
   @javax.annotation.Nullable
   public List<ModulesectionResponseCompound> getaObjModulesection() {
     return aObjModulesection;
@@ -304,12 +303,12 @@ public class ModuleResponseCompound {
     openapiRequiredFields.add("bModuleRegisteredapi");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ModuleResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ModuleResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ModuleResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -383,22 +382,22 @@ public class ModuleResponseCompound {
     }
   }
 
- /**
-  * Create an instance of ModuleResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ModuleResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to ModuleResponseCompound
-  */
+  /**
+   * Create an instance of ModuleResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ModuleResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to ModuleResponseCompound
+   */
   public static ModuleResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ModuleResponseCompound.class);
   }
 
- /**
-  * Convert an instance of ModuleResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ModuleResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

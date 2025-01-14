@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X = "sVariableexpenseDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X)
@@ -71,10 +70,10 @@ public class VariableexpenseAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Variableexpense in the language of the requester
    * @return sVariableexpenseDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsVariableexpenseDescriptionX() {
     return sVariableexpenseDescriptionX;
@@ -90,12 +89,12 @@ public class VariableexpenseAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Variableexpense
    * minimum: 1
    * maximum: 255
    * @return pkiVariableexpenseID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiVariableexpenseID() {
     return pkiVariableexpenseID;
@@ -111,10 +110,10 @@ public class VariableexpenseAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the variableexpense is active or not
    * @return bVariableexpenseIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbVariableexpenseIsactive() {
     return bVariableexpenseIsactive;
@@ -185,12 +184,12 @@ public class VariableexpenseAutocompleteElementResponse {
     openapiRequiredFields.add("bVariableexpenseIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to VariableexpenseAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to VariableexpenseAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VariableexpenseAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -247,22 +246,22 @@ public class VariableexpenseAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of VariableexpenseAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of VariableexpenseAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to VariableexpenseAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of VariableexpenseAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of VariableexpenseAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to VariableexpenseAutocompleteElementResponse
+   */
   public static VariableexpenseAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, VariableexpenseAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of VariableexpenseAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of VariableexpenseAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

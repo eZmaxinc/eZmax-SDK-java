@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
+import com.ezmax.api.model.EzsigndocumentdependencyResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -156,6 +157,14 @@ public class EzsigndocumentGetObjectV1ResponseMPayloadTest {
     }
 
     /**
+     * Test the property 'iEzsigndocumentFormfieldtotal'
+     */
+    @Test
+    public void iEzsigndocumentFormfieldtotalTest() {
+        // TODO: test iEzsigndocumentFormfieldtotal
+    }
+
+    /**
      * Test the property 'sEzsigndocumentMD5initial'
      */
     @Test
@@ -273,6 +282,14 @@ public class EzsigndocumentGetObjectV1ResponseMPayloadTest {
     @Test
     public void aObjEzsignfoldersignerassociationstatusTest() {
         // TODO: test aObjEzsignfoldersignerassociationstatus
+    }
+
+    /**
+     * Test the property 'aObjEzsigndocumentdependency'
+     */
+    @Test
+    public void aObjEzsigndocumentdependencyTest() {
+        // TODO: test aObjEzsigndocumentdependency
     }
 
 }

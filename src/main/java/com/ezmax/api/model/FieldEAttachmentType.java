@@ -33,9 +33,9 @@ public enum FieldEAttachmentType {
   
   PDF("Pdf"),
   
-  PDFGENERATED("PdfGenerated"),
+  PDF_GENERATED("PdfGenerated"),
   
-  PDFSCANNED("PdfScanned"),
+  PDF_SCANNED("PdfScanned"),
   
   EZSIGN("Ezsign");
 

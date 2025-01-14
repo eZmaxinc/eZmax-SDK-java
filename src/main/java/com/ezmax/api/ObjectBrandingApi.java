@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.BrandingCreateObjectV1Request;
-import com.ezmax.api.model.BrandingCreateObjectV1Response;
-import com.ezmax.api.model.BrandingEditObjectV1Request;
-import com.ezmax.api.model.BrandingEditObjectV1Response;
+import com.ezmax.api.model.BrandingCreateObjectV2Request;
+import com.ezmax.api.model.BrandingCreateObjectV2Response;
+import com.ezmax.api.model.BrandingEditObjectV2Request;
+import com.ezmax.api.model.BrandingEditObjectV2Response;
 import com.ezmax.api.model.BrandingGetAutocompleteV2Response;
 import com.ezmax.api.model.BrandingGetListV1Response;
-import com.ezmax.api.model.BrandingGetObjectV2Response;
+import com.ezmax.api.model.BrandingGetObjectV3Response;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -82,8 +82,8 @@ public class ObjectBrandingApi {
     }
 
     /**
-     * Build call for brandingCreateObjectV1
-     * @param brandingCreateObjectV1Request  (required)
+     * Build call for brandingCreateObjectV2
+     * @param brandingCreateObjectV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -93,7 +93,7 @@ public class ObjectBrandingApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingCreateObjectV1Call(BrandingCreateObjectV1Request brandingCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call brandingCreateObjectV2Call(BrandingCreateObjectV2Request brandingCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -107,10 +107,10 @@ public class ObjectBrandingApi {
             basePath = null;
         }
 
-        Object localVarPostBody = brandingCreateObjectV1Request;
+        Object localVarPostBody = brandingCreateObjectV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/branding";
+        String localVarPath = "/2/object/branding";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -139,21 +139,21 @@ public class ObjectBrandingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call brandingCreateObjectV1ValidateBeforeCall(BrandingCreateObjectV1Request brandingCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'brandingCreateObjectV1Request' is set
-        if (brandingCreateObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'brandingCreateObjectV1Request' when calling brandingCreateObjectV1(Async)");
+    private okhttp3.Call brandingCreateObjectV2ValidateBeforeCall(BrandingCreateObjectV2Request brandingCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'brandingCreateObjectV2Request' is set
+        if (brandingCreateObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'brandingCreateObjectV2Request' when calling brandingCreateObjectV2(Async)");
         }
 
-        return brandingCreateObjectV1Call(brandingCreateObjectV1Request, _callback);
+        return brandingCreateObjectV2Call(brandingCreateObjectV2Request, _callback);
 
     }
 
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingCreateObjectV1Request  (required)
-     * @return BrandingCreateObjectV1Response
+     * @param brandingCreateObjectV2Request  (required)
+     * @return BrandingCreateObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -161,16 +161,16 @@ public class ObjectBrandingApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public BrandingCreateObjectV1Response brandingCreateObjectV1(BrandingCreateObjectV1Request brandingCreateObjectV1Request) throws ApiException {
-        ApiResponse<BrandingCreateObjectV1Response> localVarResp = brandingCreateObjectV1WithHttpInfo(brandingCreateObjectV1Request);
+    public BrandingCreateObjectV2Response brandingCreateObjectV2(BrandingCreateObjectV2Request brandingCreateObjectV2Request) throws ApiException {
+        ApiResponse<BrandingCreateObjectV2Response> localVarResp = brandingCreateObjectV2WithHttpInfo(brandingCreateObjectV2Request);
         return localVarResp.getData();
     }
 
     /**
      * Create a new Branding
      * The endpoint allows to create one or many elements at once.
-     * @param brandingCreateObjectV1Request  (required)
-     * @return ApiResponse&lt;BrandingCreateObjectV1Response&gt;
+     * @param brandingCreateObjectV2Request  (required)
+     * @return ApiResponse&lt;BrandingCreateObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -178,16 +178,16 @@ public class ObjectBrandingApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BrandingCreateObjectV1Response> brandingCreateObjectV1WithHttpInfo(BrandingCreateObjectV1Request brandingCreateObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = brandingCreateObjectV1ValidateBeforeCall(brandingCreateObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<BrandingCreateObjectV1Response>(){}.getType();
+    public ApiResponse<BrandingCreateObjectV2Response> brandingCreateObjectV2WithHttpInfo(BrandingCreateObjectV2Request brandingCreateObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = brandingCreateObjectV2ValidateBeforeCall(brandingCreateObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<BrandingCreateObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create a new Branding (asynchronously)
      * The endpoint allows to create one or many elements at once.
-     * @param brandingCreateObjectV1Request  (required)
+     * @param brandingCreateObjectV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,17 +197,17 @@ public class ObjectBrandingApi {
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingCreateObjectV1Async(BrandingCreateObjectV1Request brandingCreateObjectV1Request, final ApiCallback<BrandingCreateObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call brandingCreateObjectV2Async(BrandingCreateObjectV2Request brandingCreateObjectV2Request, final ApiCallback<BrandingCreateObjectV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = brandingCreateObjectV1ValidateBeforeCall(brandingCreateObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<BrandingCreateObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = brandingCreateObjectV2ValidateBeforeCall(brandingCreateObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<BrandingCreateObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for brandingEditObjectV1
+     * Build call for brandingEditObjectV2
      * @param pkiBrandingID  (required)
-     * @param brandingEditObjectV1Request  (required)
+     * @param brandingEditObjectV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -218,7 +218,7 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingEditObjectV1Call(Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call brandingEditObjectV2Call(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -232,10 +232,10 @@ public class ObjectBrandingApi {
             basePath = null;
         }
 
-        Object localVarPostBody = brandingEditObjectV1Request;
+        Object localVarPostBody = brandingEditObjectV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/branding/{pkiBrandingID}"
+        String localVarPath = "/2/object/branding/{pkiBrandingID}"
             .replace("{" + "pkiBrandingID" + "}", localVarApiClient.escapeString(pkiBrandingID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -265,18 +265,18 @@ public class ObjectBrandingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call brandingEditObjectV1ValidateBeforeCall(Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call brandingEditObjectV2ValidateBeforeCall(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiBrandingID' is set
         if (pkiBrandingID == null) {
-            throw new ApiException("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiBrandingID' when calling brandingEditObjectV2(Async)");
         }
 
-        // verify the required parameter 'brandingEditObjectV1Request' is set
-        if (brandingEditObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'brandingEditObjectV1Request' when calling brandingEditObjectV1(Async)");
+        // verify the required parameter 'brandingEditObjectV2Request' is set
+        if (brandingEditObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'brandingEditObjectV2Request' when calling brandingEditObjectV2(Async)");
         }
 
-        return brandingEditObjectV1Call(pkiBrandingID, brandingEditObjectV1Request, _callback);
+        return brandingEditObjectV2Call(pkiBrandingID, brandingEditObjectV2Request, _callback);
 
     }
 
@@ -284,8 +284,8 @@ public class ObjectBrandingApi {
      * Edit an existing Branding
      * 
      * @param pkiBrandingID  (required)
-     * @param brandingEditObjectV1Request  (required)
-     * @return BrandingEditObjectV1Response
+     * @param brandingEditObjectV2Request  (required)
+     * @return BrandingEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -294,8 +294,8 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public BrandingEditObjectV1Response brandingEditObjectV1(Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request) throws ApiException {
-        ApiResponse<BrandingEditObjectV1Response> localVarResp = brandingEditObjectV1WithHttpInfo(pkiBrandingID, brandingEditObjectV1Request);
+    public BrandingEditObjectV2Response brandingEditObjectV2(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
+        ApiResponse<BrandingEditObjectV2Response> localVarResp = brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -303,8 +303,8 @@ public class ObjectBrandingApi {
      * Edit an existing Branding
      * 
      * @param pkiBrandingID  (required)
-     * @param brandingEditObjectV1Request  (required)
-     * @return ApiResponse&lt;BrandingEditObjectV1Response&gt;
+     * @param brandingEditObjectV2Request  (required)
+     * @return ApiResponse&lt;BrandingEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -313,9 +313,9 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BrandingEditObjectV1Response> brandingEditObjectV1WithHttpInfo(Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = brandingEditObjectV1ValidateBeforeCall(pkiBrandingID, brandingEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<BrandingEditObjectV1Response>(){}.getType();
+    public ApiResponse<BrandingEditObjectV2Response> brandingEditObjectV2WithHttpInfo(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = brandingEditObjectV2ValidateBeforeCall(pkiBrandingID, brandingEditObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<BrandingEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -323,7 +323,7 @@ public class ObjectBrandingApi {
      * Edit an existing Branding (asynchronously)
      * 
      * @param pkiBrandingID  (required)
-     * @param brandingEditObjectV1Request  (required)
+     * @param brandingEditObjectV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -334,10 +334,10 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingEditObjectV1Async(Integer pkiBrandingID, BrandingEditObjectV1Request brandingEditObjectV1Request, final ApiCallback<BrandingEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call brandingEditObjectV2Async(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback<BrandingEditObjectV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = brandingEditObjectV1ValidateBeforeCall(pkiBrandingID, brandingEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<BrandingEditObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = brandingEditObjectV2ValidateBeforeCall(pkiBrandingID, brandingEditObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<BrandingEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -647,7 +647,7 @@ public class ObjectBrandingApi {
         return localVarCall;
     }
     /**
-     * Build call for brandingGetObjectV2
+     * Build call for brandingGetObjectV3
      * @param pkiBrandingID  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -659,7 +659,7 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingGetObjectV2Call(Integer pkiBrandingID, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call brandingGetObjectV3Call(Integer pkiBrandingID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -676,7 +676,7 @@ public class ObjectBrandingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/2/object/branding/{pkiBrandingID}"
+        String localVarPath = "/3/object/branding/{pkiBrandingID}"
             .replace("{" + "pkiBrandingID" + "}", localVarApiClient.escapeString(pkiBrandingID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -705,13 +705,13 @@ public class ObjectBrandingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call brandingGetObjectV2ValidateBeforeCall(Integer pkiBrandingID, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call brandingGetObjectV3ValidateBeforeCall(Integer pkiBrandingID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiBrandingID' is set
         if (pkiBrandingID == null) {
-            throw new ApiException("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV2(Async)");
+            throw new ApiException("Missing the required parameter 'pkiBrandingID' when calling brandingGetObjectV3(Async)");
         }
 
-        return brandingGetObjectV2Call(pkiBrandingID, _callback);
+        return brandingGetObjectV3Call(pkiBrandingID, _callback);
 
     }
 
@@ -719,7 +719,7 @@ public class ObjectBrandingApi {
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID  (required)
-     * @return BrandingGetObjectV2Response
+     * @return BrandingGetObjectV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -728,8 +728,8 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public BrandingGetObjectV2Response brandingGetObjectV2(Integer pkiBrandingID) throws ApiException {
-        ApiResponse<BrandingGetObjectV2Response> localVarResp = brandingGetObjectV2WithHttpInfo(pkiBrandingID);
+    public BrandingGetObjectV3Response brandingGetObjectV3(Integer pkiBrandingID) throws ApiException {
+        ApiResponse<BrandingGetObjectV3Response> localVarResp = brandingGetObjectV3WithHttpInfo(pkiBrandingID);
         return localVarResp.getData();
     }
 
@@ -737,7 +737,7 @@ public class ObjectBrandingApi {
      * Retrieve an existing Branding
      * 
      * @param pkiBrandingID  (required)
-     * @return ApiResponse&lt;BrandingGetObjectV2Response&gt;
+     * @return ApiResponse&lt;BrandingGetObjectV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -746,9 +746,9 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<BrandingGetObjectV2Response> brandingGetObjectV2WithHttpInfo(Integer pkiBrandingID) throws ApiException {
-        okhttp3.Call localVarCall = brandingGetObjectV2ValidateBeforeCall(pkiBrandingID, null);
-        Type localVarReturnType = new TypeToken<BrandingGetObjectV2Response>(){}.getType();
+    public ApiResponse<BrandingGetObjectV3Response> brandingGetObjectV3WithHttpInfo(Integer pkiBrandingID) throws ApiException {
+        okhttp3.Call localVarCall = brandingGetObjectV3ValidateBeforeCall(pkiBrandingID, null);
+        Type localVarReturnType = new TypeToken<BrandingGetObjectV3Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -766,10 +766,10 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingGetObjectV2Async(Integer pkiBrandingID, final ApiCallback<BrandingGetObjectV2Response> _callback) throws ApiException {
+    public okhttp3.Call brandingGetObjectV3Async(Integer pkiBrandingID, final ApiCallback<BrandingGetObjectV3Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = brandingGetObjectV2ValidateBeforeCall(pkiBrandingID, _callback);
-        Type localVarReturnType = new TypeToken<BrandingGetObjectV2Response>(){}.getType();
+        okhttp3.Call localVarCall = brandingGetObjectV3ValidateBeforeCall(pkiBrandingID, _callback);
+        Type localVarReturnType = new TypeToken<BrandingGetObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

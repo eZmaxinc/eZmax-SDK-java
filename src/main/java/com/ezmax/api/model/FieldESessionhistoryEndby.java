@@ -37,25 +37,25 @@ public enum FieldESessionhistoryEndby {
   
   HIJACK("Hijack"),
   
-  DOUBLELOGON("DoubleLogon"),
+  DOUBLE_LOGON("DoubleLogon"),
   
   GARBAGE("Garbage"),
   
   LOGOFF("Logoff"),
   
-  BADAUTH("BadAuth"),
+  BAD_AUTH("BadAuth"),
   
   LOCKED("Locked"),
   
   INACTIVE("Inactive"),
   
-  INVALIDUSER("InvalidUser"),
+  INVALID_USER("InvalidUser"),
   
-  BADUSERTYPE("BadUserType"),
+  BAD_USER_TYPE("BadUserType"),
   
-  BADIP("BadIP"),
+  BAD_IP("BadIP"),
   
-  FORCEDLOGOFF("ForcedLogoff");
+  FORCED_LOGOFF("ForcedLogoff");
 
   private String value;
 

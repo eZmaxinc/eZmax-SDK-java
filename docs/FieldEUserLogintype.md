@@ -7,9 +7,9 @@
 
 * `PASSWORD` (value: `"Password"`)
 
-* `PASSWORDPHONE` (value: `"PasswordPhone"`)
+* `PASSWORD_PHONE` (value: `"PasswordPhone"`)
 
-* `PASSWORDQUESTION` (value: `"PasswordQuestion"`)
+* `PASSWORD_QUESTION` (value: `"PasswordQuestion"`)
 
 
 

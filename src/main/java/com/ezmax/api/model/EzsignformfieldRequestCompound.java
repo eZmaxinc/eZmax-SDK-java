@@ -14,8 +14,10 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EnumHorizontalalignment;
 import com.ezmax.api.model.EzsignelementdependencyRequestCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
+import com.ezmax.api.model.TextstylestaticRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,7 +43,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignformfieldRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -103,9 +104,17 @@ public class EzsignformfieldRequestCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT)
   private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT = "eEzsignformfieldHorizontalalignment";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT)
+  private EnumHorizontalalignment eEzsignformfieldHorizontalalignment;
+
+  public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
+  private TextstylestaticRequestCompound objTextstylestatic;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY = "a_objEzsignelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY)
-  private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency;
+  private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = new ArrayList<>();
 
   public EzsignformfieldRequestCompound() {
   }
@@ -115,11 +124,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignformfield
    * minimum: 0
    * @return pkiEzsignformfieldID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsignformfieldID() {
     return pkiEzsignformfieldID;
@@ -135,11 +144,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigndocument
    * minimum: 1
    * @return iEzsignpagePagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -155,10 +164,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The Label for the Ezsignformfield
    * @return sEzsignformfieldLabel
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignformfieldLabel() {
     return sEzsignformfieldLabel;
@@ -174,10 +183,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The value for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is Checkbox or Radio
    * @return sEzsignformfieldValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignformfieldValue() {
     return sEzsignformfieldValue;
@@ -193,11 +202,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsignformfieldX
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldX() {
     return iEzsignformfieldX;
@@ -213,11 +222,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where to put the Ezsignformfield on the Ezsignpage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsignformfieldY
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldY() {
     return iEzsignformfieldY;
@@ -233,11 +242,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
-   * The Width of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  /**
+   * The Width of the Ezsignformfield in pixels calculated at 100 DPI
    * minimum: 0
    * @return iEzsignformfieldWidth
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldWidth() {
     return iEzsignformfieldWidth;
@@ -253,11 +262,11 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
-   * The Height of the Ezsignformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsignformfieldgroupType.  | eEzsignformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  /**
+   * The Height of the Ezsignformfield in pixels calculated at 100 DPI 
    * minimum: 0
    * @return iEzsignformfieldHeight
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldHeight() {
     return iEzsignformfieldHeight;
@@ -273,10 +282,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsignformfieldgroupType is **Text**
    * @return bEzsignformfieldAutocomplete
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignformfieldAutocomplete() {
     return bEzsignformfieldAutocomplete;
@@ -292,10 +301,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignformfield is selected or not by default.  This can only be set if eEzsignformfieldgroupType is **Checkbox** or **Radio**
    * @return bEzsignformfieldSelected
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignformfieldSelected() {
     return bEzsignformfieldSelected;
@@ -311,10 +320,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * This is the value enterred for the Ezsignformfield  This can only be set if eEzsignformfieldgroupType is **Dropdown**, **Text** or **Textarea**
    * @return sEzsignformfieldEnteredvalue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignformfieldEnteredvalue() {
     return sEzsignformfieldEnteredvalue;
@@ -330,10 +339,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignformfieldDependencyrequirement
    * @return eEzsignformfieldDependencyrequirement
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignformfieldDependencyrequirement geteEzsignformfieldDependencyrequirement() {
     return eEzsignformfieldDependencyrequirement;
@@ -341,6 +350,44 @@ public class EzsignformfieldRequestCompound {
 
   public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
+  }
+
+
+  public EzsignformfieldRequestCompound eEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+    this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
+    return this;
+  }
+
+  /**
+   * Get eEzsignformfieldHorizontalalignment
+   * @return eEzsignformfieldHorizontalalignment
+   */
+  @javax.annotation.Nullable
+  public EnumHorizontalalignment geteEzsignformfieldHorizontalalignment() {
+    return eEzsignformfieldHorizontalalignment;
+  }
+
+  public void seteEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+    this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
+  }
+
+
+  public EzsignformfieldRequestCompound objTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+    return this;
+  }
+
+  /**
+   * Get objTextstylestatic
+   * @return objTextstylestatic
+   */
+  @javax.annotation.Nullable
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
   }
 
 
@@ -357,10 +404,10 @@ public class EzsignformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignelementdependency
    * @return aObjEzsignelementdependency
-  **/
+   */
   @javax.annotation.Nullable
   public List<EzsignelementdependencyRequestCompound> getaObjEzsignelementdependency() {
     return aObjEzsignelementdependency;
@@ -393,12 +440,14 @@ public class EzsignformfieldRequestCompound {
         Objects.equals(this.bEzsignformfieldSelected, ezsignformfieldRequestCompound.bEzsignformfieldSelected) &&
         Objects.equals(this.sEzsignformfieldEnteredvalue, ezsignformfieldRequestCompound.sEzsignformfieldEnteredvalue) &&
         Objects.equals(this.eEzsignformfieldDependencyrequirement, ezsignformfieldRequestCompound.eEzsignformfieldDependencyrequirement) &&
+        Objects.equals(this.eEzsignformfieldHorizontalalignment, ezsignformfieldRequestCompound.eEzsignformfieldHorizontalalignment) &&
+        Objects.equals(this.objTextstylestatic, ezsignformfieldRequestCompound.objTextstylestatic) &&
         Objects.equals(this.aObjEzsignelementdependency, ezsignformfieldRequestCompound.aObjEzsignelementdependency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement, aObjEzsignelementdependency);
+    return Objects.hash(pkiEzsignformfieldID, iEzsignpagePagenumber, sEzsignformfieldLabel, sEzsignformfieldValue, iEzsignformfieldX, iEzsignformfieldY, iEzsignformfieldWidth, iEzsignformfieldHeight, bEzsignformfieldAutocomplete, bEzsignformfieldSelected, sEzsignformfieldEnteredvalue, eEzsignformfieldDependencyrequirement, eEzsignformfieldHorizontalalignment, objTextstylestatic, aObjEzsignelementdependency);
   }
 
   @Override
@@ -417,6 +466,8 @@ public class EzsignformfieldRequestCompound {
     sb.append("    bEzsignformfieldSelected: ").append(toIndentedString(bEzsignformfieldSelected)).append("\n");
     sb.append("    sEzsignformfieldEnteredvalue: ").append(toIndentedString(sEzsignformfieldEnteredvalue)).append("\n");
     sb.append("    eEzsignformfieldDependencyrequirement: ").append(toIndentedString(eEzsignformfieldDependencyrequirement)).append("\n");
+    sb.append("    eEzsignformfieldHorizontalalignment: ").append(toIndentedString(eEzsignformfieldHorizontalalignment)).append("\n");
+    sb.append("    objTextstylestatic: ").append(toIndentedString(objTextstylestatic)).append("\n");
     sb.append("    aObjEzsignelementdependency: ").append(toIndentedString(aObjEzsignelementdependency)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -452,6 +503,8 @@ public class EzsignformfieldRequestCompound {
     openapiFields.add("bEzsignformfieldSelected");
     openapiFields.add("sEzsignformfieldEnteredvalue");
     openapiFields.add("eEzsignformfieldDependencyrequirement");
+    openapiFields.add("eEzsignformfieldHorizontalalignment");
+    openapiFields.add("objTextstylestatic");
     openapiFields.add("a_objEzsignelementdependency");
 
     // a set of required properties/fields (JSON key names)
@@ -464,12 +517,12 @@ public class EzsignformfieldRequestCompound {
     openapiRequiredFields.add("iEzsignformfieldHeight");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignformfieldRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignformfieldRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -504,6 +557,14 @@ public class EzsignformfieldRequestCompound {
       // validate the optional field `eEzsignformfieldDependencyrequirement`
       if (jsonObj.get("eEzsignformfieldDependencyrequirement") != null && !jsonObj.get("eEzsignformfieldDependencyrequirement").isJsonNull()) {
         FieldEEzsignformfieldDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldDependencyrequirement"));
+      }
+      // validate the optional field `eEzsignformfieldHorizontalalignment`
+      if (jsonObj.get("eEzsignformfieldHorizontalalignment") != null && !jsonObj.get("eEzsignformfieldHorizontalalignment").isJsonNull()) {
+        EnumHorizontalalignment.validateJsonElement(jsonObj.get("eEzsignformfieldHorizontalalignment"));
+      }
+      // validate the optional field `objTextstylestatic`
+      if (jsonObj.get("objTextstylestatic") != null && !jsonObj.get("objTextstylestatic").isJsonNull()) {
+        TextstylestaticRequestCompound.validateJsonElement(jsonObj.get("objTextstylestatic"));
       }
       if (jsonObj.get("a_objEzsignelementdependency") != null && !jsonObj.get("a_objEzsignelementdependency").isJsonNull()) {
         JsonArray jsonArrayaObjEzsignelementdependency = jsonObj.getAsJsonArray("a_objEzsignelementdependency");
@@ -550,22 +611,22 @@ public class EzsignformfieldRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignformfieldRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignformfieldRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignformfieldRequestCompound
-  */
+  /**
+   * Create an instance of EzsignformfieldRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignformfieldRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignformfieldRequestCompound
+   */
   public static EzsignformfieldRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignformfieldRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignformfieldRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignformfieldRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

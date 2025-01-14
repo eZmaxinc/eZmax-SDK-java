@@ -43,6 +43,8 @@ import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Response;
+import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Request;
+import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -166,7 +168,7 @@ public class ObjectEzsignfoldersignerassociationApi {
 
     /**
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
      * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
@@ -186,7 +188,7 @@ public class ObjectEzsignfoldersignerassociationApi {
 
     /**
      * Creates an Url to allow embedded signing
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
      * @return ApiResponse&lt;EzsignfoldersignerassociationCreateEmbeddedUrlV1Response&gt;
@@ -207,7 +209,7 @@ public class ObjectEzsignfoldersignerassociationApi {
 
     /**
      * Creates an Url to allow embedded signing (asynchronously)
-     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.  There will be a list to retrieve informations after the signing happens in the embedded version. To do so, there is a list of parameter to add to your sReturnUrl.  In example: https://www.example.com/sReturl?sParameter1&amp;sParameter2. The sParameter1 et sParameter2 will be replace when we will redirect on the url.
+     * This endpoint creates an Url that can be used in a browser or embedded in an I-Frame to allow signing.  The signer Login type must be configured as Embedded.
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationCreateEmbeddedUrlV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -1428,6 +1430,147 @@ public class ObjectEzsignfoldersignerassociationApi {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationPatchObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationPatchObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsignfoldersignerassociationReassignV1
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationReassignV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationReassignV1Call(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = ezsignfoldersignerassociationReassignV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign"
+            .replace("{" + "pkiEzsignfoldersignerassociationID" + "}", localVarApiClient.escapeString(pkiEzsignfoldersignerassociationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsignfoldersignerassociationReassignV1ValidateBeforeCall(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsignfoldersignerassociationID' is set
+        if (pkiEzsignfoldersignerassociationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsignfoldersignerassociationID' when calling ezsignfoldersignerassociationReassignV1(Async)");
+        }
+
+        // verify the required parameter 'ezsignfoldersignerassociationReassignV1Request' is set
+        if (ezsignfoldersignerassociationReassignV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignfoldersignerassociationReassignV1Request' when calling ezsignfoldersignerassociationReassignV1(Async)");
+        }
+
+        return ezsignfoldersignerassociationReassignV1Call(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, _callback);
+
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms
+     * Reassign remaining unsigned signatures and forms
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationReassignV1Request  (required)
+     * @return EzsignfoldersignerassociationReassignV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
+        ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResp = ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms
+     * Reassign remaining unsigned signatures and forms
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationReassignV1Request  (required)
+     * @return ApiResponse&lt;EzsignfoldersignerassociationReassignV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsignfoldersignerassociationReassignV1Response> ezsignfoldersignerassociationReassignV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationReassignV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, null);
+        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationReassignV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Reassign remaining unsigned signatures and forms (asynchronously)
+     * Reassign remaining unsigned signatures and forms
+     * @param pkiEzsignfoldersignerassociationID  (required)
+     * @param ezsignfoldersignerassociationReassignV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsignfoldersignerassociationReassignV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final ApiCallback<EzsignfoldersignerassociationReassignV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsignfoldersignerassociationReassignV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationReassignV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

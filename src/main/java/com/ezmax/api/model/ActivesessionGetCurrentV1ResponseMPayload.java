@@ -16,7 +16,11 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
 import com.ezmax.api.model.ActivesessionResponseCompoundUser;
+import com.ezmax.api.model.FieldEActivesessionEzsign;
+import com.ezmax.api.model.FieldEActivesessionEzsignaccess;
+import com.ezmax.api.model.FieldEActivesessionEzsignprepaid;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
+import com.ezmax.api.model.FieldEActivesessionRealestateinprogress;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
@@ -47,7 +51,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -59,7 +62,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -93,6 +96,38 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN)
   private Boolean bActivesessionIssuperadmin;
 
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT = "bActivesessionAttachment";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT)
+  private Boolean bActivesessionAttachment;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_CANAFE = "bActivesessionCanafe";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_CANAFE)
+  private Boolean bActivesessionCanafe;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL = "bActivesessionFinancial";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL)
+  private Boolean bActivesessionFinancial;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED = "bActivesessionRealestatecompleted";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED)
+  private Boolean bActivesessionRealestatecompleted;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN = "eActivesessionEzsign";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN)
+  private FieldEActivesessionEzsign eActivesessionEzsign;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS = "eActivesessionEzsignaccess";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS)
+  private FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID = "eActivesessionEzsignprepaid";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID)
+  private FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS = "eActivesessionRealestateinprogress";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS)
+  private FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress;
+
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
   private String pksCustomerCode;
@@ -104,6 +139,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_FKI_SIGNATURE_I_D = "fkiSignatureID";
   @SerializedName(SERIALIZED_NAME_FKI_SIGNATURE_I_D)
   private Integer fkiSignatureID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNUSER_I_D = "fkiEzsignuserID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNUSER_I_D)
+  private Integer fkiEzsignuserID;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
@@ -120,6 +159,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_E_USER_EZSIGNPREPAID = "eUserEzsignprepaid";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNPREPAID)
   private FieldEUserEzsignprepaid eUserEzsignprepaid;
+
+  public static final String SERIALIZED_NAME_B_USER_EZSIGNTRIAL = "bUserEzsigntrial";
+  @SerializedName(SERIALIZED_NAME_B_USER_EZSIGNTRIAL)
+  private Boolean bUserEzsigntrial;
 
   public static final String SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION = "dtUserEzsignprepaidexpiration";
   @SerializedName(SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION)
@@ -153,10 +196,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionUsertype
    * @return eActivesessionUsertype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionUsertype geteActivesessionUsertype() {
     return eActivesessionUsertype;
@@ -172,10 +215,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionOrigin
    * @return eActivesessionOrigin
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionOrigin geteActivesessionOrigin() {
     return eActivesessionOrigin;
@@ -191,10 +234,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionWeekdaystart
    * @return eActivesessionWeekdaystart
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
     return eActivesessionWeekdaystart;
@@ -210,12 +253,12 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -231,10 +274,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Company in the language of the requester
    * @return sCompanyNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -250,10 +293,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Department in the language of the requester
    * @return sDepartmentNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -269,10 +312,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Whether the active session is in debug or not
    * @return bActivesessionDebug
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbActivesessionDebug() {
     return bActivesessionDebug;
@@ -288,10 +331,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Whether the active session is superadmin or not
    * @return bActivesessionIssuperadmin
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbActivesessionIssuperadmin() {
     return bActivesessionIssuperadmin;
@@ -302,15 +345,167 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
+  public ActivesessionGetCurrentV1ResponseMPayload bActivesessionAttachment(Boolean bActivesessionAttachment) {
+    this.bActivesessionAttachment = bActivesessionAttachment;
+    return this;
+  }
+
+  /**
+   * Can access attachment when we clone a user
+   * @return bActivesessionAttachment
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionAttachment() {
+    return bActivesessionAttachment;
+  }
+
+  public void setbActivesessionAttachment(Boolean bActivesessionAttachment) {
+    this.bActivesessionAttachment = bActivesessionAttachment;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload bActivesessionCanafe(Boolean bActivesessionCanafe) {
+    this.bActivesessionCanafe = bActivesessionCanafe;
+    return this;
+  }
+
+  /**
+   * Can access canafe when we clone a user
+   * @return bActivesessionCanafe
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionCanafe() {
+    return bActivesessionCanafe;
+  }
+
+  public void setbActivesessionCanafe(Boolean bActivesessionCanafe) {
+    this.bActivesessionCanafe = bActivesessionCanafe;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload bActivesessionFinancial(Boolean bActivesessionFinancial) {
+    this.bActivesessionFinancial = bActivesessionFinancial;
+    return this;
+  }
+
+  /**
+   * Can access financial element when we clone a user
+   * @return bActivesessionFinancial
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionFinancial() {
+    return bActivesessionFinancial;
+  }
+
+  public void setbActivesessionFinancial(Boolean bActivesessionFinancial) {
+    this.bActivesessionFinancial = bActivesessionFinancial;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload bActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
+    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+    return this;
+  }
+
+  /**
+   * Can access closed realestate folders when we clone a user
+   * @return bActivesessionRealestatecompleted
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionRealestatecompleted() {
+    return bActivesessionRealestatecompleted;
+  }
+
+  public void setbActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
+    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
+    this.eActivesessionEzsign = eActivesessionEzsign;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsign
+   * @return eActivesessionEzsign
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionEzsign geteActivesessionEzsign() {
+    return eActivesessionEzsign;
+  }
+
+  public void seteActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
+    this.eActivesessionEzsign = eActivesessionEzsign;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsignaccess
+   * @return eActivesessionEzsignaccess
+   */
+  @javax.annotation.Nonnull
+  public FieldEActivesessionEzsignaccess geteActivesessionEzsignaccess() {
+    return eActivesessionEzsignaccess;
+  }
+
+  public void seteActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsignprepaid
+   * @return eActivesessionEzsignprepaid
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionEzsignprepaid geteActivesessionEzsignprepaid() {
+    return eActivesessionEzsignprepaid;
+  }
+
+  public void seteActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+  }
+
+
+  public ActivesessionGetCurrentV1ResponseMPayload eActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionRealestateinprogress
+   * @return eActivesessionRealestateinprogress
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionRealestateinprogress geteActivesessionRealestateinprogress() {
+    return eActivesessionRealestateinprogress;
+  }
+
+  public void seteActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+  }
+
+
   public ActivesessionGetCurrentV1ResponseMPayload pksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
 
-   /**
+  /**
    * The customer code assigned to your account
    * @return pksCustomerCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPksCustomerCode() {
     return pksCustomerCode;
@@ -326,11 +521,11 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Systemconfigurationtype
    * minimum: 1
    * @return fkiSystemconfigurationtypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
@@ -346,12 +541,12 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Signature
    * minimum: 0
    * maximum: 16777215
    * @return fkiSignatureID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSignatureID() {
     return fkiSignatureID;
@@ -362,15 +557,36 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
+  public ActivesessionGetCurrentV1ResponseMPayload fkiEzsignuserID(Integer fkiEzsignuserID) {
+    this.fkiEzsignuserID = fkiEzsignuserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignuser
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzsignuserID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignuserID() {
+    return fkiEzsignuserID;
+  }
+
+  public void setFkiEzsignuserID(Integer fkiEzsignuserID) {
+    this.fkiEzsignuserID = fkiEzsignuserID;
+  }
+
+
   public ActivesessionGetCurrentV1ResponseMPayload bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
     return this;
   }
 
-   /**
+  /**
    * Whether if Ezsign is paid by the company or not
    * @return bSystemconfigurationEzsignpaidbyoffice
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbSystemconfigurationEzsignpaidbyoffice() {
     return bSystemconfigurationEzsignpaidbyoffice;
@@ -386,10 +602,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationEzsignofficeplan
    * @return eSystemconfigurationEzsignofficeplan
-  **/
+   */
   @javax.annotation.Nullable
   public FieldESystemconfigurationEzsignofficeplan geteSystemconfigurationEzsignofficeplan() {
     return eSystemconfigurationEzsignofficeplan;
@@ -405,10 +621,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eUserEzsignaccess
    * @return eUserEzsignaccess
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserEzsignaccess geteUserEzsignaccess() {
     return eUserEzsignaccess;
@@ -424,10 +640,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get eUserEzsignprepaid
    * @return eUserEzsignprepaid
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEUserEzsignprepaid geteUserEzsignprepaid() {
     return eUserEzsignprepaid;
@@ -438,15 +654,34 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
   }
 
 
+  public ActivesessionGetCurrentV1ResponseMPayload bUserEzsigntrial(Boolean bUserEzsigntrial) {
+    this.bUserEzsigntrial = bUserEzsigntrial;
+    return this;
+  }
+
+  /**
+   * Whether the User&#39;s eZsign subscription is a trial
+   * @return bUserEzsigntrial
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserEzsigntrial() {
+    return bUserEzsigntrial;
+  }
+
+  public void setbUserEzsigntrial(Boolean bUserEzsigntrial) {
+    this.bUserEzsigntrial = bUserEzsigntrial;
+  }
+
+
   public ActivesessionGetCurrentV1ResponseMPayload dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
   }
 
-   /**
+  /**
    * The eZsign prepaid expiration date
    * @return dtUserEzsignprepaidexpiration
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtUserEzsignprepaidexpiration() {
     return dtUserEzsignprepaidexpiration;
@@ -470,10 +705,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of permissions granted to the user or api key
    * @return aPkiPermissionID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaPkiPermissionID() {
     return aPkiPermissionID;
@@ -489,10 +724,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objUserReal
    * @return objUserReal
-  **/
+   */
   @javax.annotation.Nonnull
   public ActivesessionResponseCompoundUser getObjUserReal() {
     return objUserReal;
@@ -508,10 +743,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objUserCloned
    * @return objUserCloned
-  **/
+   */
   @javax.annotation.Nullable
   public ActivesessionResponseCompoundUser getObjUserCloned() {
     return objUserCloned;
@@ -527,10 +762,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objApikey
    * @return objApikey
-  **/
+   */
   @javax.annotation.Nullable
   public ActivesessionResponseCompoundApikey getObjApikey() {
     return objApikey;
@@ -554,10 +789,10 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An Array of Registered modules.  These are the modules that are Licensed to be used by the User or the API Key.
    * @return aEModuleInternalname
-  **/
+   */
   @javax.annotation.Nonnull
   public List<String> getaEModuleInternalname() {
     return aEModuleInternalname;
@@ -586,13 +821,23 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
         Objects.equals(this.sDepartmentNameX, activesessionGetCurrentV1ResponseMPayload.sDepartmentNameX) &&
         Objects.equals(this.bActivesessionDebug, activesessionGetCurrentV1ResponseMPayload.bActivesessionDebug) &&
         Objects.equals(this.bActivesessionIssuperadmin, activesessionGetCurrentV1ResponseMPayload.bActivesessionIssuperadmin) &&
+        Objects.equals(this.bActivesessionAttachment, activesessionGetCurrentV1ResponseMPayload.bActivesessionAttachment) &&
+        Objects.equals(this.bActivesessionCanafe, activesessionGetCurrentV1ResponseMPayload.bActivesessionCanafe) &&
+        Objects.equals(this.bActivesessionFinancial, activesessionGetCurrentV1ResponseMPayload.bActivesessionFinancial) &&
+        Objects.equals(this.bActivesessionRealestatecompleted, activesessionGetCurrentV1ResponseMPayload.bActivesessionRealestatecompleted) &&
+        Objects.equals(this.eActivesessionEzsign, activesessionGetCurrentV1ResponseMPayload.eActivesessionEzsign) &&
+        Objects.equals(this.eActivesessionEzsignaccess, activesessionGetCurrentV1ResponseMPayload.eActivesessionEzsignaccess) &&
+        Objects.equals(this.eActivesessionEzsignprepaid, activesessionGetCurrentV1ResponseMPayload.eActivesessionEzsignprepaid) &&
+        Objects.equals(this.eActivesessionRealestateinprogress, activesessionGetCurrentV1ResponseMPayload.eActivesessionRealestateinprogress) &&
         Objects.equals(this.pksCustomerCode, activesessionGetCurrentV1ResponseMPayload.pksCustomerCode) &&
         Objects.equals(this.fkiSystemconfigurationtypeID, activesessionGetCurrentV1ResponseMPayload.fkiSystemconfigurationtypeID) &&
         Objects.equals(this.fkiSignatureID, activesessionGetCurrentV1ResponseMPayload.fkiSignatureID) &&
+        Objects.equals(this.fkiEzsignuserID, activesessionGetCurrentV1ResponseMPayload.fkiEzsignuserID) &&
         Objects.equals(this.bSystemconfigurationEzsignpaidbyoffice, activesessionGetCurrentV1ResponseMPayload.bSystemconfigurationEzsignpaidbyoffice) &&
         Objects.equals(this.eSystemconfigurationEzsignofficeplan, activesessionGetCurrentV1ResponseMPayload.eSystemconfigurationEzsignofficeplan) &&
         Objects.equals(this.eUserEzsignaccess, activesessionGetCurrentV1ResponseMPayload.eUserEzsignaccess) &&
         Objects.equals(this.eUserEzsignprepaid, activesessionGetCurrentV1ResponseMPayload.eUserEzsignprepaid) &&
+        Objects.equals(this.bUserEzsigntrial, activesessionGetCurrentV1ResponseMPayload.bUserEzsigntrial) &&
         Objects.equals(this.dtUserEzsignprepaidexpiration, activesessionGetCurrentV1ResponseMPayload.dtUserEzsignprepaidexpiration) &&
         Objects.equals(this.aPkiPermissionID, activesessionGetCurrentV1ResponseMPayload.aPkiPermissionID) &&
         Objects.equals(this.objUserReal, activesessionGetCurrentV1ResponseMPayload.objUserReal) &&
@@ -603,7 +848,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
   }
 
   @Override
@@ -618,13 +863,23 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
     sb.append("    bActivesessionIssuperadmin: ").append(toIndentedString(bActivesessionIssuperadmin)).append("\n");
+    sb.append("    bActivesessionAttachment: ").append(toIndentedString(bActivesessionAttachment)).append("\n");
+    sb.append("    bActivesessionCanafe: ").append(toIndentedString(bActivesessionCanafe)).append("\n");
+    sb.append("    bActivesessionFinancial: ").append(toIndentedString(bActivesessionFinancial)).append("\n");
+    sb.append("    bActivesessionRealestatecompleted: ").append(toIndentedString(bActivesessionRealestatecompleted)).append("\n");
+    sb.append("    eActivesessionEzsign: ").append(toIndentedString(eActivesessionEzsign)).append("\n");
+    sb.append("    eActivesessionEzsignaccess: ").append(toIndentedString(eActivesessionEzsignaccess)).append("\n");
+    sb.append("    eActivesessionEzsignprepaid: ").append(toIndentedString(eActivesessionEzsignprepaid)).append("\n");
+    sb.append("    eActivesessionRealestateinprogress: ").append(toIndentedString(eActivesessionRealestateinprogress)).append("\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
     sb.append("    fkiSignatureID: ").append(toIndentedString(fkiSignatureID)).append("\n");
+    sb.append("    fkiEzsignuserID: ").append(toIndentedString(fkiEzsignuserID)).append("\n");
     sb.append("    bSystemconfigurationEzsignpaidbyoffice: ").append(toIndentedString(bSystemconfigurationEzsignpaidbyoffice)).append("\n");
     sb.append("    eSystemconfigurationEzsignofficeplan: ").append(toIndentedString(eSystemconfigurationEzsignofficeplan)).append("\n");
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
     sb.append("    eUserEzsignprepaid: ").append(toIndentedString(eUserEzsignprepaid)).append("\n");
+    sb.append("    bUserEzsigntrial: ").append(toIndentedString(bUserEzsigntrial)).append("\n");
     sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
     sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
     sb.append("    objUserReal: ").append(toIndentedString(objUserReal)).append("\n");
@@ -661,13 +916,23 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     openapiFields.add("sDepartmentNameX");
     openapiFields.add("bActivesessionDebug");
     openapiFields.add("bActivesessionIssuperadmin");
+    openapiFields.add("bActivesessionAttachment");
+    openapiFields.add("bActivesessionCanafe");
+    openapiFields.add("bActivesessionFinancial");
+    openapiFields.add("bActivesessionRealestatecompleted");
+    openapiFields.add("eActivesessionEzsign");
+    openapiFields.add("eActivesessionEzsignaccess");
+    openapiFields.add("eActivesessionEzsignprepaid");
+    openapiFields.add("eActivesessionRealestateinprogress");
     openapiFields.add("pksCustomerCode");
     openapiFields.add("fkiSystemconfigurationtypeID");
     openapiFields.add("fkiSignatureID");
+    openapiFields.add("fkiEzsignuserID");
     openapiFields.add("bSystemconfigurationEzsignpaidbyoffice");
     openapiFields.add("eSystemconfigurationEzsignofficeplan");
     openapiFields.add("eUserEzsignaccess");
     openapiFields.add("eUserEzsignprepaid");
+    openapiFields.add("bUserEzsigntrial");
     openapiFields.add("dtUserEzsignprepaidexpiration");
     openapiFields.add("a_pkiPermissionID");
     openapiFields.add("objUserReal");
@@ -685,6 +950,7 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     openapiRequiredFields.add("sDepartmentNameX");
     openapiRequiredFields.add("bActivesessionDebug");
     openapiRequiredFields.add("bActivesessionIssuperadmin");
+    openapiRequiredFields.add("eActivesessionEzsignaccess");
     openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("fkiSystemconfigurationtypeID");
     openapiRequiredFields.add("eUserEzsignaccess");
@@ -693,12 +959,12 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     openapiRequiredFields.add("a_eModuleInternalname");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActivesessionGetCurrentV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActivesessionGetCurrentV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionGetCurrentV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -732,6 +998,20 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
       }
       if (!jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
+      }
+      // validate the optional field `eActivesessionEzsign`
+      if (jsonObj.get("eActivesessionEzsign") != null && !jsonObj.get("eActivesessionEzsign").isJsonNull()) {
+        FieldEActivesessionEzsign.validateJsonElement(jsonObj.get("eActivesessionEzsign"));
+      }
+      // validate the required field `eActivesessionEzsignaccess`
+      FieldEActivesessionEzsignaccess.validateJsonElement(jsonObj.get("eActivesessionEzsignaccess"));
+      // validate the optional field `eActivesessionEzsignprepaid`
+      if (jsonObj.get("eActivesessionEzsignprepaid") != null && !jsonObj.get("eActivesessionEzsignprepaid").isJsonNull()) {
+        FieldEActivesessionEzsignprepaid.validateJsonElement(jsonObj.get("eActivesessionEzsignprepaid"));
+      }
+      // validate the optional field `eActivesessionRealestateinprogress`
+      if (jsonObj.get("eActivesessionRealestateinprogress") != null && !jsonObj.get("eActivesessionRealestateinprogress").isJsonNull()) {
+        FieldEActivesessionRealestateinprogress.validateJsonElement(jsonObj.get("eActivesessionRealestateinprogress"));
       }
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
@@ -802,22 +1082,22 @@ public class ActivesessionGetCurrentV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of ActivesessionGetCurrentV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActivesessionGetCurrentV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to ActivesessionGetCurrentV1ResponseMPayload
-  */
+  /**
+   * Create an instance of ActivesessionGetCurrentV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActivesessionGetCurrentV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to ActivesessionGetCurrentV1ResponseMPayload
+   */
   public static ActivesessionGetCurrentV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActivesessionGetCurrentV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of ActivesessionGetCurrentV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActivesessionGetCurrentV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

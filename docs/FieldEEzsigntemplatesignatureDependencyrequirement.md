@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `ALLOF` (value: `"AllOf"`)
+* `ALL_OF` (value: `"AllOf"`)
 
-* `ANYOF` (value: `"AnyOf"`)
+* `ANY_OF` (value: `"AnyOf"`)
 
 
 

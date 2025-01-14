@@ -15,7 +15,10 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationCountV1Response;
 import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationListV1Response;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +36,20 @@ public class ObjectRejectedoffertopurchaseApiTest {
     private final ObjectRejectedoffertopurchaseApi api = new ObjectRejectedoffertopurchaseApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void rejectedoffertopurchaseGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiRejectedoffertopurchaseID = null;
+        RejectedoffertopurchaseGetCommunicationCountV1Response response = api.rejectedoffertopurchaseGetCommunicationCountV1(pkiRejectedoffertopurchaseID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectRejectedoffertopurchaseApiTest {
     public void rejectedoffertopurchaseGetCommunicationListV1Test() throws ApiException {
         Integer pkiRejectedoffertopurchaseID = null;
         RejectedoffertopurchaseGetCommunicationListV1Response response = api.rejectedoffertopurchaseGetCommunicationListV1(pkiRejectedoffertopurchaseID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void rejectedoffertopurchaseGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiRejectedoffertopurchaseID = null;
+        RejectedoffertopurchaseGetCommunicationrecipientsV1Response response = api.rejectedoffertopurchaseGetCommunicationrecipientsV1(pkiRejectedoffertopurchaseID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void rejectedoffertopurchaseGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiRejectedoffertopurchaseID = null;
+        RejectedoffertopurchaseGetCommunicationsendersV1Response response = api.rejectedoffertopurchaseGetCommunicationsendersV1(pkiRejectedoffertopurchaseID);
         // TODO: test validations
     }
 

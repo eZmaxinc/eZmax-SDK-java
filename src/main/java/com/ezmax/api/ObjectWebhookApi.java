@@ -41,6 +41,8 @@ import com.ezmax.api.model.WebhookGetListV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Request;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Response;
+import com.ezmax.api.model.WebhookSendWebhookV1Request;
+import com.ezmax.api.model.WebhookSendWebhookV1Response;
 import com.ezmax.api.model.WebhookTestV1Response;
 
 import java.lang.reflect.Type;
@@ -1036,6 +1038,133 @@ public class ObjectWebhookApi {
 
         okhttp3.Call localVarCall = webhookRegenerateApikeyV1ValidateBeforeCall(pkiWebhookID, webhookRegenerateApikeyV1Request, _callback);
         Type localVarReturnType = new TypeToken<WebhookRegenerateApikeyV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for webhookSendWebhookV1
+     * @param webhookSendWebhookV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookSendWebhookV1Call(WebhookSendWebhookV1Request webhookSendWebhookV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = webhookSendWebhookV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/webhook/sendWebhook";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call webhookSendWebhookV1ValidateBeforeCall(WebhookSendWebhookV1Request webhookSendWebhookV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'webhookSendWebhookV1Request' is set
+        if (webhookSendWebhookV1Request == null) {
+            throw new ApiException("Missing the required parameter 'webhookSendWebhookV1Request' when calling webhookSendWebhookV1(Async)");
+        }
+
+        return webhookSendWebhookV1Call(webhookSendWebhookV1Request, _callback);
+
+    }
+
+    /**
+     * Emit a Webhook event
+     * 
+     * @param webhookSendWebhookV1Request  (required)
+     * @return WebhookSendWebhookV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public WebhookSendWebhookV1Response webhookSendWebhookV1(WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws ApiException {
+        ApiResponse<WebhookSendWebhookV1Response> localVarResp = webhookSendWebhookV1WithHttpInfo(webhookSendWebhookV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Emit a Webhook event
+     * 
+     * @param webhookSendWebhookV1Request  (required)
+     * @return ApiResponse&lt;WebhookSendWebhookV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<WebhookSendWebhookV1Response> webhookSendWebhookV1WithHttpInfo(WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws ApiException {
+        okhttp3.Call localVarCall = webhookSendWebhookV1ValidateBeforeCall(webhookSendWebhookV1Request, null);
+        Type localVarReturnType = new TypeToken<WebhookSendWebhookV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Emit a Webhook event (asynchronously)
+     * 
+     * @param webhookSendWebhookV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call webhookSendWebhookV1Async(WebhookSendWebhookV1Request webhookSendWebhookV1Request, final ApiCallback<WebhookSendWebhookV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = webhookSendWebhookV1ValidateBeforeCall(webhookSendWebhookV1Request, _callback);
+        Type localVarReturnType = new TypeToken<WebhookSendWebhookV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

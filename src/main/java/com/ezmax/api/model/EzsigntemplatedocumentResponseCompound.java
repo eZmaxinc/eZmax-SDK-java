@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -71,6 +70,10 @@ public class EzsigntemplatedocumentResponseCompound {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_SIGNATURETOTAL)
   private Integer iEzsigntemplatedocumentSignaturetotal;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_FORMFIELDTOTAL = "iEzsigntemplatedocumentFormfieldtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_FORMFIELDTOTAL)
+  private Integer iEzsigntemplatedocumentFormfieldtotal;
+
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigntemplatedocumentHassignedsignatures";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES)
   private Boolean bEzsigntemplatedocumentHassignedsignatures;
@@ -83,11 +86,11 @@ public class EzsigntemplatedocumentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatedocument
    * minimum: 0
    * @return pkiEzsigntemplatedocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
@@ -103,11 +106,11 @@ public class EzsigntemplatedocumentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return fkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -123,10 +126,10 @@ public class EzsigntemplatedocumentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsigntemplatedocument.
    * @return sEzsigntemplatedocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
@@ -142,11 +145,11 @@ public class EzsigntemplatedocumentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the Ezsigntemplatedocument.
    * minimum: 1
    * @return iEzsigntemplatedocumentPagetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentPagetotal() {
     return iEzsigntemplatedocumentPagetotal;
@@ -162,10 +165,10 @@ public class EzsigntemplatedocumentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of total signatures in the Ezsigntemplate.
    * @return iEzsigntemplatedocumentSignaturetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentSignaturetotal() {
     return iEzsigntemplatedocumentSignaturetotal;
@@ -176,15 +179,34 @@ public class EzsigntemplatedocumentResponseCompound {
   }
 
 
+  public EzsigntemplatedocumentResponseCompound iEzsigntemplatedocumentFormfieldtotal(Integer iEzsigntemplatedocumentFormfieldtotal) {
+    this.iEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
+    return this;
+  }
+
+  /**
+   * The number of total form fields in the Ezsigntemplate.
+   * @return iEzsigntemplatedocumentFormfieldtotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigntemplatedocumentFormfieldtotal() {
+    return iEzsigntemplatedocumentFormfieldtotal;
+  }
+
+  public void setiEzsigntemplatedocumentFormfieldtotal(Integer iEzsigntemplatedocumentFormfieldtotal) {
+    this.iEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
+  }
+
+
   public EzsigntemplatedocumentResponseCompound bEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
     this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
     return this;
   }
 
-   /**
+  /**
    * If the Ezsigntemplatedocument contains signed signatures (From internal or external sources)
    * @return bEzsigntemplatedocumentHassignedsignatures
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatedocumentHassignedsignatures() {
     return bEzsigntemplatedocumentHassignedsignatures;
@@ -210,12 +232,13 @@ public class EzsigntemplatedocumentResponseCompound {
         Objects.equals(this.sEzsigntemplatedocumentName, ezsigntemplatedocumentResponseCompound.sEzsigntemplatedocumentName) &&
         Objects.equals(this.iEzsigntemplatedocumentPagetotal, ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentPagetotal) &&
         Objects.equals(this.iEzsigntemplatedocumentSignaturetotal, ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentSignaturetotal) &&
+        Objects.equals(this.iEzsigntemplatedocumentFormfieldtotal, ezsigntemplatedocumentResponseCompound.iEzsigntemplatedocumentFormfieldtotal) &&
         Objects.equals(this.bEzsigntemplatedocumentHassignedsignatures, ezsigntemplatedocumentResponseCompound.bEzsigntemplatedocumentHassignedsignatures);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatedocumentID, fkiEzsigntemplateID, sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal, bEzsigntemplatedocumentHassignedsignatures);
+    return Objects.hash(pkiEzsigntemplatedocumentID, fkiEzsigntemplateID, sEzsigntemplatedocumentName, iEzsigntemplatedocumentPagetotal, iEzsigntemplatedocumentSignaturetotal, iEzsigntemplatedocumentFormfieldtotal, bEzsigntemplatedocumentHassignedsignatures);
   }
 
   @Override
@@ -227,6 +250,7 @@ public class EzsigntemplatedocumentResponseCompound {
     sb.append("    sEzsigntemplatedocumentName: ").append(toIndentedString(sEzsigntemplatedocumentName)).append("\n");
     sb.append("    iEzsigntemplatedocumentPagetotal: ").append(toIndentedString(iEzsigntemplatedocumentPagetotal)).append("\n");
     sb.append("    iEzsigntemplatedocumentSignaturetotal: ").append(toIndentedString(iEzsigntemplatedocumentSignaturetotal)).append("\n");
+    sb.append("    iEzsigntemplatedocumentFormfieldtotal: ").append(toIndentedString(iEzsigntemplatedocumentFormfieldtotal)).append("\n");
     sb.append("    bEzsigntemplatedocumentHassignedsignatures: ").append(toIndentedString(bEzsigntemplatedocumentHassignedsignatures)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -255,6 +279,7 @@ public class EzsigntemplatedocumentResponseCompound {
     openapiFields.add("sEzsigntemplatedocumentName");
     openapiFields.add("iEzsigntemplatedocumentPagetotal");
     openapiFields.add("iEzsigntemplatedocumentSignaturetotal");
+    openapiFields.add("iEzsigntemplatedocumentFormfieldtotal");
     openapiFields.add("bEzsigntemplatedocumentHassignedsignatures");
 
     // a set of required properties/fields (JSON key names)
@@ -264,15 +289,16 @@ public class EzsigntemplatedocumentResponseCompound {
     openapiRequiredFields.add("sEzsigntemplatedocumentName");
     openapiRequiredFields.add("iEzsigntemplatedocumentPagetotal");
     openapiRequiredFields.add("iEzsigntemplatedocumentSignaturetotal");
+    openapiRequiredFields.add("iEzsigntemplatedocumentFormfieldtotal");
     openapiRequiredFields.add("bEzsigntemplatedocumentHassignedsignatures");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatedocumentResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -329,22 +355,22 @@ public class EzsigntemplatedocumentResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatedocumentResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatedocumentResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentResponseCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatedocumentResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatedocumentResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentResponseCompound
+   */
   public static EzsigntemplatedocumentResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatedocumentResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatedocumentResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatedocumentResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

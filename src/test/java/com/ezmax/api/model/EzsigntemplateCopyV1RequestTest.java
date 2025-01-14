@@ -47,4 +47,20 @@ public class EzsigntemplateCopyV1RequestTest {
         // TODO: test aFkiEzsignfoldertypeID
     }
 
+    /**
+     * Test the property 'bCopyCompany'
+     */
+    @Test
+    public void bCopyCompanyTest() {
+        // TODO: test bCopyCompany
+    }
+
+    /**
+     * Test the property 'bCopyUser'
+     */
+    @Test
+    public void bCopyUserTest() {
+        // TODO: test bCopyUser
+    }
+
 }

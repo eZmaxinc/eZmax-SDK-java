@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
@@ -59,10 +58,6 @@ public class CreditcardclientAutocompleteElementResponse {
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
   private String sCreditcardclientDescription;
 
-  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ISACTIVE = "bCreditcardclientIsactive";
-  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ISACTIVE)
-  private Boolean bCreditcardclientIsactive;
-
   public CreditcardclientAutocompleteElementResponse() {
   }
 
@@ -71,12 +66,12 @@ public class CreditcardclientAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Creditcardclient
    * minimum: 0
    * maximum: 65535
    * @return pkiCreditcardclientID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiCreditcardclientID() {
     return pkiCreditcardclientID;
@@ -92,10 +87,10 @@ public class CreditcardclientAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Creditcardclient
    * @return sCreditcardclientDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCreditcardclientDescription() {
     return sCreditcardclientDescription;
@@ -103,25 +98,6 @@ public class CreditcardclientAutocompleteElementResponse {
 
   public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
-  }
-
-
-  public CreditcardclientAutocompleteElementResponse bCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
-    return this;
-  }
-
-   /**
-   * Whether the creditcardclient is active or not
-   * @return bCreditcardclientIsactive
-  **/
-  @javax.annotation.Nonnull
-  public Boolean getbCreditcardclientIsactive() {
-    return bCreditcardclientIsactive;
-  }
-
-  public void setbCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
   }
 
 
@@ -136,13 +112,12 @@ public class CreditcardclientAutocompleteElementResponse {
     }
     CreditcardclientAutocompleteElementResponse creditcardclientAutocompleteElementResponse = (CreditcardclientAutocompleteElementResponse) o;
     return Objects.equals(this.pkiCreditcardclientID, creditcardclientAutocompleteElementResponse.pkiCreditcardclientID) &&
-        Objects.equals(this.sCreditcardclientDescription, creditcardclientAutocompleteElementResponse.sCreditcardclientDescription) &&
-        Objects.equals(this.bCreditcardclientIsactive, creditcardclientAutocompleteElementResponse.bCreditcardclientIsactive);
+        Objects.equals(this.sCreditcardclientDescription, creditcardclientAutocompleteElementResponse.sCreditcardclientDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCreditcardclientID, sCreditcardclientDescription, bCreditcardclientIsactive);
+    return Objects.hash(pkiCreditcardclientID, sCreditcardclientDescription);
   }
 
   @Override
@@ -151,7 +126,6 @@ public class CreditcardclientAutocompleteElementResponse {
     sb.append("class CreditcardclientAutocompleteElementResponse {\n");
     sb.append("    pkiCreditcardclientID: ").append(toIndentedString(pkiCreditcardclientID)).append("\n");
     sb.append("    sCreditcardclientDescription: ").append(toIndentedString(sCreditcardclientDescription)).append("\n");
-    sb.append("    bCreditcardclientIsactive: ").append(toIndentedString(bCreditcardclientIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -176,21 +150,19 @@ public class CreditcardclientAutocompleteElementResponse {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiCreditcardclientID");
     openapiFields.add("sCreditcardclientDescription");
-    openapiFields.add("bCreditcardclientIsactive");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiCreditcardclientID");
     openapiRequiredFields.add("sCreditcardclientDescription");
-    openapiRequiredFields.add("bCreditcardclientIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CreditcardclientAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CreditcardclientAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CreditcardclientAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -247,22 +219,22 @@ public class CreditcardclientAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of CreditcardclientAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreditcardclientAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to CreditcardclientAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of CreditcardclientAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CreditcardclientAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to CreditcardclientAutocompleteElementResponse
+   */
   public static CreditcardclientAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CreditcardclientAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of CreditcardclientAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CreditcardclientAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

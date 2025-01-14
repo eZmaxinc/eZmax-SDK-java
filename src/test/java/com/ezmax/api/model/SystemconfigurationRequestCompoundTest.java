@@ -51,6 +51,14 @@ public class SystemconfigurationRequestCompoundTest {
     }
 
     /**
+     * Test the property 'fkiBrandingID'
+     */
+    @Test
+    public void fkiBrandingIDTest() {
+        // TODO: test fkiBrandingID
+    }
+
+    /**
      * Test the property 'eSystemconfigurationNewexternaluseraction'
      */
     @Test

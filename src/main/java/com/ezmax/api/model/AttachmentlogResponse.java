@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attachmentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttachmentlogResponse {
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
@@ -80,11 +79,11 @@ public class AttachmentlogResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Attachment.
    * minimum: 0
    * @return fkiAttachmentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiAttachmentID() {
     return fkiAttachmentID;
@@ -100,11 +99,11 @@ public class AttachmentlogResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -120,10 +119,10 @@ public class AttachmentlogResponse {
     return this;
   }
 
-   /**
+  /**
    * The created date
    * @return dtAttachmentlogDatetime
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtAttachmentlogDatetime() {
     return dtAttachmentlogDatetime;
@@ -139,10 +138,10 @@ public class AttachmentlogResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eAttachmentlogType
    * @return eAttachmentlogType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEAttachmentlogType geteAttachmentlogType() {
     return eAttachmentlogType;
@@ -158,10 +157,10 @@ public class AttachmentlogResponse {
     return this;
   }
 
-   /**
+  /**
    * The additionnal detail
    * @return sAttachmentlogDetail
-  **/
+   */
   @javax.annotation.Nullable
   public String getsAttachmentlogDetail() {
     return sAttachmentlogDetail;
@@ -239,12 +238,12 @@ public class AttachmentlogResponse {
     openapiRequiredFields.add("eAttachmentlogType");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AttachmentlogResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AttachmentlogResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AttachmentlogResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -306,22 +305,22 @@ public class AttachmentlogResponse {
     }
   }
 
- /**
-  * Create an instance of AttachmentlogResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AttachmentlogResponse
-  * @throws IOException if the JSON string is invalid with respect to AttachmentlogResponse
-  */
+  /**
+   * Create an instance of AttachmentlogResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AttachmentlogResponse
+   * @throws IOException if the JSON string is invalid with respect to AttachmentlogResponse
+   */
   public static AttachmentlogResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AttachmentlogResponse.class);
   }
 
- /**
-  * Convert an instance of AttachmentlogResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AttachmentlogResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

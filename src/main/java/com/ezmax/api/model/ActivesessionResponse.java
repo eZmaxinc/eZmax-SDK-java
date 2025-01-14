@@ -14,7 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEActivesessionEzsign;
+import com.ezmax.api.model.FieldEActivesessionEzsignaccess;
+import com.ezmax.api.model.FieldEActivesessionEzsignprepaid;
 import com.ezmax.api.model.FieldEActivesessionOrigin;
+import com.ezmax.api.model.FieldEActivesessionRealestateinprogress;
 import com.ezmax.api.model.FieldEActivesessionUsertype;
 import com.ezmax.api.model.FieldEActivesessionWeekdaystart;
 import com.google.gson.TypeAdapter;
@@ -40,7 +44,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -86,6 +89,38 @@ public class ActivesessionResponse {
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN)
   private Boolean bActivesessionIssuperadmin;
 
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT = "bActivesessionAttachment";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT)
+  private Boolean bActivesessionAttachment;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_CANAFE = "bActivesessionCanafe";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_CANAFE)
+  private Boolean bActivesessionCanafe;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL = "bActivesessionFinancial";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL)
+  private Boolean bActivesessionFinancial;
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED = "bActivesessionRealestatecompleted";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED)
+  private Boolean bActivesessionRealestatecompleted;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN = "eActivesessionEzsign";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN)
+  private FieldEActivesessionEzsign eActivesessionEzsign;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS = "eActivesessionEzsignaccess";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS)
+  private FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID = "eActivesessionEzsignprepaid";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID)
+  private FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid;
+
+  public static final String SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS = "eActivesessionRealestateinprogress";
+  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS)
+  private FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress;
+
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
   private String pksCustomerCode;
@@ -106,10 +141,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionUsertype
    * @return eActivesessionUsertype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionUsertype geteActivesessionUsertype() {
     return eActivesessionUsertype;
@@ -125,10 +160,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionOrigin
    * @return eActivesessionOrigin
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionOrigin geteActivesessionOrigin() {
     return eActivesessionOrigin;
@@ -144,10 +179,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eActivesessionWeekdaystart
    * @return eActivesessionWeekdaystart
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
     return eActivesessionWeekdaystart;
@@ -163,12 +198,12 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -184,10 +219,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Company in the language of the requester
    * @return sCompanyNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -203,10 +238,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Department in the language of the requester
    * @return sDepartmentNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -222,10 +257,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the active session is in debug or not
    * @return bActivesessionDebug
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbActivesessionDebug() {
     return bActivesessionDebug;
@@ -241,10 +276,10 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the active session is superadmin or not
    * @return bActivesessionIssuperadmin
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbActivesessionIssuperadmin() {
     return bActivesessionIssuperadmin;
@@ -255,15 +290,167 @@ public class ActivesessionResponse {
   }
 
 
+  public ActivesessionResponse bActivesessionAttachment(Boolean bActivesessionAttachment) {
+    this.bActivesessionAttachment = bActivesessionAttachment;
+    return this;
+  }
+
+  /**
+   * Can access attachment when we clone a user
+   * @return bActivesessionAttachment
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionAttachment() {
+    return bActivesessionAttachment;
+  }
+
+  public void setbActivesessionAttachment(Boolean bActivesessionAttachment) {
+    this.bActivesessionAttachment = bActivesessionAttachment;
+  }
+
+
+  public ActivesessionResponse bActivesessionCanafe(Boolean bActivesessionCanafe) {
+    this.bActivesessionCanafe = bActivesessionCanafe;
+    return this;
+  }
+
+  /**
+   * Can access canafe when we clone a user
+   * @return bActivesessionCanafe
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionCanafe() {
+    return bActivesessionCanafe;
+  }
+
+  public void setbActivesessionCanafe(Boolean bActivesessionCanafe) {
+    this.bActivesessionCanafe = bActivesessionCanafe;
+  }
+
+
+  public ActivesessionResponse bActivesessionFinancial(Boolean bActivesessionFinancial) {
+    this.bActivesessionFinancial = bActivesessionFinancial;
+    return this;
+  }
+
+  /**
+   * Can access financial element when we clone a user
+   * @return bActivesessionFinancial
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionFinancial() {
+    return bActivesessionFinancial;
+  }
+
+  public void setbActivesessionFinancial(Boolean bActivesessionFinancial) {
+    this.bActivesessionFinancial = bActivesessionFinancial;
+  }
+
+
+  public ActivesessionResponse bActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
+    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+    return this;
+  }
+
+  /**
+   * Can access closed realestate folders when we clone a user
+   * @return bActivesessionRealestatecompleted
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionRealestatecompleted() {
+    return bActivesessionRealestatecompleted;
+  }
+
+  public void setbActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
+    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
+  }
+
+
+  public ActivesessionResponse eActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
+    this.eActivesessionEzsign = eActivesessionEzsign;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsign
+   * @return eActivesessionEzsign
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionEzsign geteActivesessionEzsign() {
+    return eActivesessionEzsign;
+  }
+
+  public void seteActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
+    this.eActivesessionEzsign = eActivesessionEzsign;
+  }
+
+
+  public ActivesessionResponse eActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsignaccess
+   * @return eActivesessionEzsignaccess
+   */
+  @javax.annotation.Nonnull
+  public FieldEActivesessionEzsignaccess geteActivesessionEzsignaccess() {
+    return eActivesessionEzsignaccess;
+  }
+
+  public void seteActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
+  }
+
+
+  public ActivesessionResponse eActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionEzsignprepaid
+   * @return eActivesessionEzsignprepaid
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionEzsignprepaid geteActivesessionEzsignprepaid() {
+    return eActivesessionEzsignprepaid;
+  }
+
+  public void seteActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
+  }
+
+
+  public ActivesessionResponse eActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+    return this;
+  }
+
+  /**
+   * Get eActivesessionRealestateinprogress
+   * @return eActivesessionRealestateinprogress
+   */
+  @javax.annotation.Nullable
+  public FieldEActivesessionRealestateinprogress geteActivesessionRealestateinprogress() {
+    return eActivesessionRealestateinprogress;
+  }
+
+  public void seteActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
+  }
+
+
   public ActivesessionResponse pksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
 
-   /**
+  /**
    * The customer code assigned to your account
    * @return pksCustomerCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getPksCustomerCode() {
     return pksCustomerCode;
@@ -279,11 +466,11 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Systemconfigurationtype
    * minimum: 1
    * @return fkiSystemconfigurationtypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiSystemconfigurationtypeID() {
     return fkiSystemconfigurationtypeID;
@@ -299,12 +486,12 @@ public class ActivesessionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Signature
    * minimum: 0
    * maximum: 16777215
    * @return fkiSignatureID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSignatureID() {
     return fkiSignatureID;
@@ -333,6 +520,14 @@ public class ActivesessionResponse {
         Objects.equals(this.sDepartmentNameX, activesessionResponse.sDepartmentNameX) &&
         Objects.equals(this.bActivesessionDebug, activesessionResponse.bActivesessionDebug) &&
         Objects.equals(this.bActivesessionIssuperadmin, activesessionResponse.bActivesessionIssuperadmin) &&
+        Objects.equals(this.bActivesessionAttachment, activesessionResponse.bActivesessionAttachment) &&
+        Objects.equals(this.bActivesessionCanafe, activesessionResponse.bActivesessionCanafe) &&
+        Objects.equals(this.bActivesessionFinancial, activesessionResponse.bActivesessionFinancial) &&
+        Objects.equals(this.bActivesessionRealestatecompleted, activesessionResponse.bActivesessionRealestatecompleted) &&
+        Objects.equals(this.eActivesessionEzsign, activesessionResponse.eActivesessionEzsign) &&
+        Objects.equals(this.eActivesessionEzsignaccess, activesessionResponse.eActivesessionEzsignaccess) &&
+        Objects.equals(this.eActivesessionEzsignprepaid, activesessionResponse.eActivesessionEzsignprepaid) &&
+        Objects.equals(this.eActivesessionRealestateinprogress, activesessionResponse.eActivesessionRealestateinprogress) &&
         Objects.equals(this.pksCustomerCode, activesessionResponse.pksCustomerCode) &&
         Objects.equals(this.fkiSystemconfigurationtypeID, activesessionResponse.fkiSystemconfigurationtypeID) &&
         Objects.equals(this.fkiSignatureID, activesessionResponse.fkiSignatureID);
@@ -340,7 +535,7 @@ public class ActivesessionResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID);
   }
 
   @Override
@@ -355,6 +550,14 @@ public class ActivesessionResponse {
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
     sb.append("    bActivesessionIssuperadmin: ").append(toIndentedString(bActivesessionIssuperadmin)).append("\n");
+    sb.append("    bActivesessionAttachment: ").append(toIndentedString(bActivesessionAttachment)).append("\n");
+    sb.append("    bActivesessionCanafe: ").append(toIndentedString(bActivesessionCanafe)).append("\n");
+    sb.append("    bActivesessionFinancial: ").append(toIndentedString(bActivesessionFinancial)).append("\n");
+    sb.append("    bActivesessionRealestatecompleted: ").append(toIndentedString(bActivesessionRealestatecompleted)).append("\n");
+    sb.append("    eActivesessionEzsign: ").append(toIndentedString(eActivesessionEzsign)).append("\n");
+    sb.append("    eActivesessionEzsignaccess: ").append(toIndentedString(eActivesessionEzsignaccess)).append("\n");
+    sb.append("    eActivesessionEzsignprepaid: ").append(toIndentedString(eActivesessionEzsignprepaid)).append("\n");
+    sb.append("    eActivesessionRealestateinprogress: ").append(toIndentedString(eActivesessionRealestateinprogress)).append("\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
     sb.append("    fkiSignatureID: ").append(toIndentedString(fkiSignatureID)).append("\n");
@@ -388,6 +591,14 @@ public class ActivesessionResponse {
     openapiFields.add("sDepartmentNameX");
     openapiFields.add("bActivesessionDebug");
     openapiFields.add("bActivesessionIssuperadmin");
+    openapiFields.add("bActivesessionAttachment");
+    openapiFields.add("bActivesessionCanafe");
+    openapiFields.add("bActivesessionFinancial");
+    openapiFields.add("bActivesessionRealestatecompleted");
+    openapiFields.add("eActivesessionEzsign");
+    openapiFields.add("eActivesessionEzsignaccess");
+    openapiFields.add("eActivesessionEzsignprepaid");
+    openapiFields.add("eActivesessionRealestateinprogress");
     openapiFields.add("pksCustomerCode");
     openapiFields.add("fkiSystemconfigurationtypeID");
     openapiFields.add("fkiSignatureID");
@@ -402,16 +613,17 @@ public class ActivesessionResponse {
     openapiRequiredFields.add("sDepartmentNameX");
     openapiRequiredFields.add("bActivesessionDebug");
     openapiRequiredFields.add("bActivesessionIssuperadmin");
+    openapiRequiredFields.add("eActivesessionEzsignaccess");
     openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("fkiSystemconfigurationtypeID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -445,6 +657,20 @@ public class ActivesessionResponse {
       }
       if (!jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
+      }
+      // validate the optional field `eActivesessionEzsign`
+      if (jsonObj.get("eActivesessionEzsign") != null && !jsonObj.get("eActivesessionEzsign").isJsonNull()) {
+        FieldEActivesessionEzsign.validateJsonElement(jsonObj.get("eActivesessionEzsign"));
+      }
+      // validate the required field `eActivesessionEzsignaccess`
+      FieldEActivesessionEzsignaccess.validateJsonElement(jsonObj.get("eActivesessionEzsignaccess"));
+      // validate the optional field `eActivesessionEzsignprepaid`
+      if (jsonObj.get("eActivesessionEzsignprepaid") != null && !jsonObj.get("eActivesessionEzsignprepaid").isJsonNull()) {
+        FieldEActivesessionEzsignprepaid.validateJsonElement(jsonObj.get("eActivesessionEzsignprepaid"));
+      }
+      // validate the optional field `eActivesessionRealestateinprogress`
+      if (jsonObj.get("eActivesessionRealestateinprogress") != null && !jsonObj.get("eActivesessionRealestateinprogress").isJsonNull()) {
+        FieldEActivesessionRealestateinprogress.validateJsonElement(jsonObj.get("eActivesessionRealestateinprogress"));
       }
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
@@ -480,22 +706,22 @@ public class ActivesessionResponse {
     }
   }
 
- /**
-  * Create an instance of ActivesessionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActivesessionResponse
-  * @throws IOException if the JSON string is invalid with respect to ActivesessionResponse
-  */
+  /**
+   * Create an instance of ActivesessionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActivesessionResponse
+   * @throws IOException if the JSON string is invalid with respect to ActivesessionResponse
+   */
   public static ActivesessionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActivesessionResponse.class);
   }
 
- /**
-  * Convert an instance of ActivesessionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActivesessionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Branding AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BrandingAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X = "sBrandingDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X)
@@ -71,10 +70,10 @@ public class BrandingAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The Description of the Branding in the language of the requester
    * @return sBrandingDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBrandingDescriptionX() {
     return sBrandingDescriptionX;
@@ -90,11 +89,11 @@ public class BrandingAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Branding
    * minimum: 0
    * @return pkiBrandingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiBrandingID() {
     return pkiBrandingID;
@@ -110,10 +109,10 @@ public class BrandingAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Branding is active or not
    * @return bBrandingIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
@@ -184,12 +183,12 @@ public class BrandingAutocompleteElementResponse {
     openapiRequiredFields.add("bBrandingIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to BrandingAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to BrandingAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!BrandingAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -246,22 +245,22 @@ public class BrandingAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of BrandingAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of BrandingAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to BrandingAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of BrandingAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of BrandingAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to BrandingAutocompleteElementResponse
+   */
   public static BrandingAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, BrandingAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of BrandingAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of BrandingAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

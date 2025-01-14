@@ -21,12 +21,15 @@ import com.ezmax.api.model.UserCreateObjectV1Request;
 import com.ezmax.api.model.UserCreateObjectV1Response;
 import com.ezmax.api.model.UserCreateObjectV2Request;
 import com.ezmax.api.model.UserCreateObjectV2Response;
+import com.ezmax.api.model.UserEditColleaguesV2Request;
+import com.ezmax.api.model.UserEditColleaguesV2Response;
 import com.ezmax.api.model.UserEditObjectV1Request;
 import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
 import com.ezmax.api.model.UserGetApikeysV1Response;
 import com.ezmax.api.model.UserGetAutocompleteV2Response;
+import com.ezmax.api.model.UserGetColleaguesV2Response;
 import com.ezmax.api.model.UserGetEffectivePermissionsV1Response;
 import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
@@ -76,6 +79,21 @@ public class ObjectUserApiTest {
     public void userCreateObjectV2Test() throws ApiException {
         UserCreateObjectV2Request userCreateObjectV2Request = null;
         UserCreateObjectV2Response response = api.userCreateObjectV2(userCreateObjectV2Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit multiple Colleagues
+     *
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userEditColleaguesV2Test() throws ApiException {
+        Integer pkiUserID = null;
+        UserEditColleaguesV2Request userEditColleaguesV2Request = null;
+        UserEditColleaguesV2Response response = api.userEditColleaguesV2(pkiUserID, userEditColleaguesV2Request);
         // TODO: test validations
     }
 
@@ -135,6 +153,18 @@ public class ObjectUserApiTest {
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
         UserGetAutocompleteV2Response response = api.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void userGetColleaguesV2Test() throws ApiException {
+        Integer pkiUserID = null;
+        UserGetColleaguesV2Response response = api.userGetColleaguesV2(pkiUserID);
         // TODO: test validations
     }
 

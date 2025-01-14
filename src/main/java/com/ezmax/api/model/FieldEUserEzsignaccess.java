@@ -31,9 +31,9 @@ public enum FieldEUserEzsignaccess {
   
   NO("No"),
   
-  PAIDBYOFFICE("PaidByOffice"),
+  PAID_BY_OFFICE("PaidByOffice"),
   
-  PERDOCUMENT("PerDocument"),
+  PER_DOCUMENT("PerDocument"),
   
   PREPAID("Prepaid");
 

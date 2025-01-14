@@ -183,4 +183,28 @@ public class EzsignfolderListElementTest {
         // TODO: test dEzsignfolderCompletedpercentage
     }
 
+    /**
+     * Test the property 'dEzsignfolderFormcompletedpercentage'
+     */
+    @Test
+    public void dEzsignfolderFormcompletedpercentageTest() {
+        // TODO: test dEzsignfolderFormcompletedpercentage
+    }
+
+    /**
+     * Test the property 'dEzsignfolderSignaturecompletedpercentage'
+     */
+    @Test
+    public void dEzsignfolderSignaturecompletedpercentageTest() {
+        // TODO: test dEzsignfolderSignaturecompletedpercentage
+    }
+
+    /**
+     * Test the property 'bEzsignfolderSigner'
+     */
+    @Test
+    public void bEzsignfolderSignerTest() {
+        // TODO: test bEzsignfolderSigner
+    }
+
 }

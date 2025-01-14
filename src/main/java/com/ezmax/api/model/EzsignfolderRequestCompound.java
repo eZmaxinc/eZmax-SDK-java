@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -59,6 +58,10 @@ public class EzsignfolderRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
+  @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
+  private Integer fkiTimezoneID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D = "fkiEzsigntsarequirementID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D)
@@ -73,6 +76,7 @@ public class EzsignfolderRequestCompound {
   private String tEzsignfolderNote;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY = "eEzsignfolderSendreminderfrequency";
+  @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY)
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
@@ -88,11 +92,11 @@ public class EzsignfolderRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return pkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -108,12 +112,12 @@ public class EzsignfolderRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -124,17 +128,37 @@ public class EzsignfolderRequestCompound {
   }
 
 
+  public EzsignfolderRequestCompound fkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   * @return fkiTimezoneID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiTimezoneID() {
+    return fkiTimezoneID;
+  }
+
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+  }
+
+
   public EzsignfolderRequestCompound fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
    * minimum: 1
    * maximum: 3
    * @return fkiEzsigntsarequirementID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -150,10 +174,10 @@ public class EzsignfolderRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -169,10 +193,10 @@ public class EzsignfolderRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Note about the Ezsignfolder
    * @return tEzsignfolderNote
-  **/
+   */
   @javax.annotation.Nullable
   public String gettEzsignfolderNote() {
     return tEzsignfolderNote;
@@ -183,20 +207,24 @@ public class EzsignfolderRequestCompound {
   }
 
 
+  @Deprecated
   public EzsignfolderRequestCompound eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfolderSendreminderfrequency
    * @return eEzsignfolderSendreminderfrequency
-  **/
+   * @deprecated
+   */
+  @Deprecated
   @javax.annotation.Nonnull
   public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
     return eEzsignfolderSendreminderfrequency;
   }
 
+  @Deprecated
   public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
@@ -207,10 +235,10 @@ public class EzsignfolderRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
    * @return sEzsignfolderExternalid
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignfolderExternalid() {
     return sEzsignfolderExternalid;
@@ -233,6 +261,7 @@ public class EzsignfolderRequestCompound {
     EzsignfolderRequestCompound ezsignfolderRequestCompound = (EzsignfolderRequestCompound) o;
     return Objects.equals(this.pkiEzsignfolderID, ezsignfolderRequestCompound.pkiEzsignfolderID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderRequestCompound.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiTimezoneID, ezsignfolderRequestCompound.fkiTimezoneID) &&
         Objects.equals(this.fkiEzsigntsarequirementID, ezsignfolderRequestCompound.fkiEzsigntsarequirementID) &&
         Objects.equals(this.sEzsignfolderDescription, ezsignfolderRequestCompound.sEzsignfolderDescription) &&
         Objects.equals(this.tEzsignfolderNote, ezsignfolderRequestCompound.tEzsignfolderNote) &&
@@ -242,7 +271,7 @@ public class EzsignfolderRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency, sEzsignfolderExternalid);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, fkiTimezoneID, fkiEzsigntsarequirementID, sEzsignfolderDescription, tEzsignfolderNote, eEzsignfolderSendreminderfrequency, sEzsignfolderExternalid);
   }
 
   @Override
@@ -251,6 +280,7 @@ public class EzsignfolderRequestCompound {
     sb.append("class EzsignfolderRequestCompound {\n");
     sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiTimezoneID: ").append(toIndentedString(fkiTimezoneID)).append("\n");
     sb.append("    fkiEzsigntsarequirementID: ").append(toIndentedString(fkiEzsigntsarequirementID)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    tEzsignfolderNote: ").append(toIndentedString(tEzsignfolderNote)).append("\n");
@@ -280,6 +310,7 @@ public class EzsignfolderRequestCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignfolderID");
     openapiFields.add("fkiEzsignfoldertypeID");
+    openapiFields.add("fkiTimezoneID");
     openapiFields.add("fkiEzsigntsarequirementID");
     openapiFields.add("sEzsignfolderDescription");
     openapiFields.add("tEzsignfolderNote");
@@ -293,12 +324,12 @@ public class EzsignfolderRequestCompound {
     openapiRequiredFields.add("eEzsignfolderSendreminderfrequency");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfolderRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -363,22 +394,22 @@ public class EzsignfolderRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignfolderRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfolderRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignfolderRequestCompound
-  */
+  /**
+   * Create an instance of EzsignfolderRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfolderRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignfolderRequestCompound
+   */
   public static EzsignfolderRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfolderRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignfolderRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfolderRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -17,6 +17,7 @@ import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsigntemplateelementdependencyResponseCompound;
 import com.ezmax.api.model.EzsigntemplatesignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsigntemplatesignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureFont;
 import com.ezmax.api.model.FieldEEzsigntemplatesignaturePositioning;
@@ -79,6 +80,22 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     @Test
     public void fkiEzsigntemplatesignerIDValidationTest() {
         // TODO: test fkiEzsigntemplatesignerIDValidation
+    }
+
+    /**
+     * Test the property 'bEzsigntemplatesignatureHandwritten'
+     */
+    @Test
+    public void bEzsigntemplatesignatureHandwrittenTest() {
+        // TODO: test bEzsigntemplatesignatureHandwritten
+    }
+
+    /**
+     * Test the property 'bEzsigntemplatesignatureReason'
+     */
+    @Test
+    public void bEzsigntemplatesignatureReasonTest() {
+        // TODO: test bEzsigntemplatesignatureReason
     }
 
     /**
@@ -146,6 +163,14 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'eEzsigntemplatesignatureConsultationtrigger'
+     */
+    @Test
+    public void eEzsigntemplatesignatureConsultationtriggerTest() {
+        // TODO: test eEzsigntemplatesignatureConsultationtrigger
+    }
+
+    /**
      * Test the property 'tEzsigntemplatesignatureTooltip'
      */
     @Test
@@ -210,6 +235,14 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'sEzsigntemplatesignatureDefaultvalue'
+     */
+    @Test
+    public void sEzsigntemplatesignatureDefaultvalueTest() {
+        // TODO: test sEzsigntemplatesignatureDefaultvalue
+    }
+
+    /**
      * Test the property 'sEzsigntemplatesignatureRegexp'
      */
     @Test
@@ -223,6 +256,14 @@ public class EzsigntemplatesignatureResponseCompoundTest {
     @Test
     public void eEzsigntemplatesignatureTextvalidationTest() {
         // TODO: test eEzsigntemplatesignatureTextvalidation
+    }
+
+    /**
+     * Test the property 'sEzsigntemplatesignatureTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsigntemplatesignatureTextvalidationcustommessageTest() {
+        // TODO: test sEzsigntemplatesignatureTextvalidationcustommessage
     }
 
     /**

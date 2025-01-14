@@ -30,7 +30,7 @@ public class Example {
     defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
 
     GlobalEzmaxclientApi apiInstance = new GlobalEzmaxclientApi(defaultClient);
-    FieldPksEzmaxclientOs pksEzmaxclientOs = FieldPksEzmaxclientOs.fromValue("iOS"); // FieldPksEzmaxclientOs | 
+    FieldPksEzmaxclientOs pksEzmaxclientOs = FieldPksEzmaxclientOs.fromValue("Android"); // FieldPksEzmaxclientOs | 
     try {
       GlobalEzmaxclientVersionV1Response result = apiInstance.globalEzmaxclientVersionV1(pksEzmaxclientOs);
       System.out.println(result);
@@ -49,7 +49,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [enum: iOS, iPadOS, macOS, Windows] |
+| **pksEzmaxclientOs** | [**FieldPksEzmaxclientOs**](.md)|  | [enum: Android, iOS, iPadOS, macOS, Windows] |
 
 ### Return type
 

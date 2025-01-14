@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,11 +50,19 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateCopyV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D = "a_fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D)
   private List<Integer> aFkiEzsignfoldertypeID = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_COPY_COMPANY = "bCopyCompany";
+  @SerializedName(SERIALIZED_NAME_B_COPY_COMPANY)
+  private Boolean bCopyCompany;
+
+  public static final String SERIALIZED_NAME_B_COPY_USER = "bCopyUser";
+  @SerializedName(SERIALIZED_NAME_B_COPY_USER)
+  private Boolean bCopyUser;
 
   public EzsigntemplateCopyV1Request() {
   }
@@ -73,17 +80,55 @@ public class EzsigntemplateCopyV1Request {
     return this;
   }
 
-   /**
+  /**
    * Get aFkiEzsignfoldertypeID
    * @return aFkiEzsignfoldertypeID
-  **/
-  @javax.annotation.Nonnull
+   */
+  @javax.annotation.Nullable
   public List<Integer> getaFkiEzsignfoldertypeID() {
     return aFkiEzsignfoldertypeID;
   }
 
   public void setaFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
+  }
+
+
+  public EzsigntemplateCopyV1Request bCopyCompany(Boolean bCopyCompany) {
+    this.bCopyCompany = bCopyCompany;
+    return this;
+  }
+
+  /**
+   * Whether we shall copy the Ezsigntemplate as a company Ezsigntemplate
+   * @return bCopyCompany
+   */
+  @javax.annotation.Nullable
+  public Boolean getbCopyCompany() {
+    return bCopyCompany;
+  }
+
+  public void setbCopyCompany(Boolean bCopyCompany) {
+    this.bCopyCompany = bCopyCompany;
+  }
+
+
+  public EzsigntemplateCopyV1Request bCopyUser(Boolean bCopyUser) {
+    this.bCopyUser = bCopyUser;
+    return this;
+  }
+
+  /**
+   * Whether we shall copy the Ezsigntemplate as a user Ezsigntemplate
+   * @return bCopyUser
+   */
+  @javax.annotation.Nullable
+  public Boolean getbCopyUser() {
+    return bCopyUser;
+  }
+
+  public void setbCopyUser(Boolean bCopyUser) {
+    this.bCopyUser = bCopyUser;
   }
 
 
@@ -97,12 +142,14 @@ public class EzsigntemplateCopyV1Request {
       return false;
     }
     EzsigntemplateCopyV1Request ezsigntemplateCopyV1Request = (EzsigntemplateCopyV1Request) o;
-    return Objects.equals(this.aFkiEzsignfoldertypeID, ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID);
+    return Objects.equals(this.aFkiEzsignfoldertypeID, ezsigntemplateCopyV1Request.aFkiEzsignfoldertypeID) &&
+        Objects.equals(this.bCopyCompany, ezsigntemplateCopyV1Request.bCopyCompany) &&
+        Objects.equals(this.bCopyUser, ezsigntemplateCopyV1Request.bCopyUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aFkiEzsignfoldertypeID);
+    return Objects.hash(aFkiEzsignfoldertypeID, bCopyCompany, bCopyUser);
   }
 
   @Override
@@ -110,6 +157,8 @@ public class EzsigntemplateCopyV1Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateCopyV1Request {\n");
     sb.append("    aFkiEzsignfoldertypeID: ").append(toIndentedString(aFkiEzsignfoldertypeID)).append("\n");
+    sb.append("    bCopyCompany: ").append(toIndentedString(bCopyCompany)).append("\n");
+    sb.append("    bCopyUser: ").append(toIndentedString(bCopyUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -133,18 +182,19 @@ public class EzsigntemplateCopyV1Request {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("a_fkiEzsignfoldertypeID");
+    openapiFields.add("bCopyCompany");
+    openapiFields.add("bCopyUser");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_fkiEzsignfoldertypeID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateCopyV1Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateCopyV1Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateCopyV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -159,18 +209,9 @@ public class EzsigntemplateCopyV1Request {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplateCopyV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsigntemplateCopyV1Request.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the required json array is present
-      if (jsonObj.get("a_fkiEzsignfoldertypeID") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("a_fkiEzsignfoldertypeID").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_fkiEzsignfoldertypeID") != null && !jsonObj.get("a_fkiEzsignfoldertypeID").isJsonNull() && !jsonObj.get("a_fkiEzsignfoldertypeID").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_fkiEzsignfoldertypeID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiEzsignfoldertypeID").toString()));
       }
   }
@@ -204,22 +245,22 @@ public class EzsigntemplateCopyV1Request {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateCopyV1Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateCopyV1Request
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateCopyV1Request
-  */
+  /**
+   * Create an instance of EzsigntemplateCopyV1Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateCopyV1Request
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateCopyV1Request
+   */
   public static EzsigntemplateCopyV1Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateCopyV1Request.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateCopyV1Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateCopyV1Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -46,11 +46,27 @@ public class SignatureResponseCompoundTest {
     }
 
     /**
+     * Test the property 'fkiFontID'
+     */
+    @Test
+    public void fkiFontIDTest() {
+        // TODO: test fkiFontID
+    }
+
+    /**
      * Test the property 'sSignatureUrl'
      */
     @Test
     public void sSignatureUrlTest() {
         // TODO: test sSignatureUrl
+    }
+
+    /**
+     * Test the property 'sSignatureUrlinitials'
+     */
+    @Test
+    public void sSignatureUrlinitialsTest() {
+        // TODO: test sSignatureUrlinitials
     }
 
 }

@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEEzsignannotationType.Adapter.class)
 public enum FieldEEzsignannotationType {
   
-  STRIKETHROUGHBLOCK("StrikethroughBlock"),
+  STRIKETHROUGH_BLOCK("StrikethroughBlock"),
   
-  STRIKETHROUGHLINE("StrikethroughLine"),
+  STRIKETHROUGH_LINE("StrikethroughLine"),
   
   TEXT("Text");
 

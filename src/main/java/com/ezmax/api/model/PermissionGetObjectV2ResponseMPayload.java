@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/permission/{pkiPermissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PermissionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_PERMISSION = "objPermission";
   @SerializedName(SERIALIZED_NAME_OBJ_PERMISSION)
@@ -64,10 +63,10 @@ public class PermissionGetObjectV2ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get objPermission
    * @return objPermission
-  **/
+   */
   @javax.annotation.Nonnull
   public PermissionResponseCompound getObjPermission() {
     return objPermission;
@@ -130,12 +129,12 @@ public class PermissionGetObjectV2ResponseMPayload {
     openapiRequiredFields.add("objPermission");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PermissionGetObjectV2ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PermissionGetObjectV2ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PermissionGetObjectV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -191,22 +190,22 @@ public class PermissionGetObjectV2ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of PermissionGetObjectV2ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PermissionGetObjectV2ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to PermissionGetObjectV2ResponseMPayload
-  */
+  /**
+   * Create an instance of PermissionGetObjectV2ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PermissionGetObjectV2ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to PermissionGetObjectV2ResponseMPayload
+   */
   public static PermissionGetObjectV2ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PermissionGetObjectV2ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of PermissionGetObjectV2ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PermissionGetObjectV2ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

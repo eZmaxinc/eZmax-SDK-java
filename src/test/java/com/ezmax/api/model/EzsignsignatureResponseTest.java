@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
@@ -75,6 +76,14 @@ public class EzsignsignatureResponseTest {
     @Test
     public void fkiEzsignsigningreasonIDTest() {
         // TODO: test fkiEzsignsigningreasonID
+    }
+
+    /**
+     * Test the property 'fkiFontID'
+     */
+    @Test
+    public void fkiFontIDTest() {
+        // TODO: test fkiFontID
     }
 
     /**
@@ -198,6 +207,30 @@ public class EzsignsignatureResponseTest {
     }
 
     /**
+     * Test the property 'eEzsignsignatureConsultationtrigger'
+     */
+    @Test
+    public void eEzsignsignatureConsultationtriggerTest() {
+        // TODO: test eEzsignsignatureConsultationtrigger
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureHandwritten'
+     */
+    @Test
+    public void bEzsignsignatureHandwrittenTest() {
+        // TODO: test bEzsignsignatureHandwritten
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureReason'
+     */
+    @Test
+    public void bEzsignsignatureReasonTest() {
+        // TODO: test bEzsignsignatureReason
+    }
+
+    /**
      * Test the property 'bEzsignsignatureRequired'
      */
     @Test
@@ -254,11 +287,27 @@ public class EzsignsignatureResponseTest {
     }
 
     /**
+     * Test the property 'sEzsignsignatureTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsignsignatureTextvalidationcustommessageTest() {
+        // TODO: test sEzsignsignatureTextvalidationcustommessage
+    }
+
+    /**
      * Test the property 'eEzsignsignatureDependencyrequirement'
      */
     @Test
     public void eEzsignsignatureDependencyrequirementTest() {
         // TODO: test eEzsignsignatureDependencyrequirement
+    }
+
+    /**
+     * Test the property 'sEzsignsignatureDefaultvalue'
+     */
+    @Test
+    public void sEzsignsignatureDefaultvalueTest() {
+        // TODO: test sEzsignsignatureDefaultvalue
     }
 
     /**

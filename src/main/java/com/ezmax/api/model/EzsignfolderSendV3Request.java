@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsignfolderMessageorder;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,11 +51,15 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
   private String tEzsignfolderMessage;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_MESSAGEORDER = "eEzsignfolderMessageorder";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_MESSAGEORDER)
+  private FieldEEzsignfolderMessageorder eEzsignfolderMessageorder = FieldEEzsignfolderMessageorder.GLOBAL_FIRST;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE = "dtEzsignfolderDelayedsenddate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE)
@@ -73,10 +77,10 @@ public class EzsignfolderSendV3Request {
     return this;
   }
 
-   /**
+  /**
    * A custom text message that will be added to the email sent.
    * @return tEzsignfolderMessage
-  **/
+   */
   @javax.annotation.Nullable
   public String gettEzsignfolderMessage() {
     return tEzsignfolderMessage;
@@ -87,15 +91,34 @@ public class EzsignfolderSendV3Request {
   }
 
 
+  public EzsignfolderSendV3Request eEzsignfolderMessageorder(FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
+    this.eEzsignfolderMessageorder = eEzsignfolderMessageorder;
+    return this;
+  }
+
+  /**
+   * Get eEzsignfolderMessageorder
+   * @return eEzsignfolderMessageorder
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsignfolderMessageorder geteEzsignfolderMessageorder() {
+    return eEzsignfolderMessageorder;
+  }
+
+  public void seteEzsignfolderMessageorder(FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
+    this.eEzsignfolderMessageorder = eEzsignfolderMessageorder;
+  }
+
+
   public EzsignfolderSendV3Request dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
     return this;
   }
 
-   /**
+  /**
    * The date and time at which the Ezsignfolder will be sent in the future.
    * @return dtEzsignfolderDelayedsenddate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignfolderDelayedsenddate() {
     return dtEzsignfolderDelayedsenddate;
@@ -119,10 +142,10 @@ public class EzsignfolderSendV3Request {
     return this;
   }
 
-   /**
+  /**
    * Get aFkiEzsignfoldersignerassociationID
    * @return aFkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaFkiEzsignfoldersignerassociationID() {
     return aFkiEzsignfoldersignerassociationID;
@@ -144,13 +167,14 @@ public class EzsignfolderSendV3Request {
     }
     EzsignfolderSendV3Request ezsignfolderSendV3Request = (EzsignfolderSendV3Request) o;
     return Objects.equals(this.tEzsignfolderMessage, ezsignfolderSendV3Request.tEzsignfolderMessage) &&
+        Objects.equals(this.eEzsignfolderMessageorder, ezsignfolderSendV3Request.eEzsignfolderMessageorder) &&
         Objects.equals(this.dtEzsignfolderDelayedsenddate, ezsignfolderSendV3Request.dtEzsignfolderDelayedsenddate) &&
         Objects.equals(this.aFkiEzsignfoldersignerassociationID, ezsignfolderSendV3Request.aFkiEzsignfoldersignerassociationID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tEzsignfolderMessage, dtEzsignfolderDelayedsenddate, aFkiEzsignfoldersignerassociationID);
+    return Objects.hash(tEzsignfolderMessage, eEzsignfolderMessageorder, dtEzsignfolderDelayedsenddate, aFkiEzsignfoldersignerassociationID);
   }
 
   @Override
@@ -158,6 +182,7 @@ public class EzsignfolderSendV3Request {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderSendV3Request {\n");
     sb.append("    tEzsignfolderMessage: ").append(toIndentedString(tEzsignfolderMessage)).append("\n");
+    sb.append("    eEzsignfolderMessageorder: ").append(toIndentedString(eEzsignfolderMessageorder)).append("\n");
     sb.append("    dtEzsignfolderDelayedsenddate: ").append(toIndentedString(dtEzsignfolderDelayedsenddate)).append("\n");
     sb.append("    aFkiEzsignfoldersignerassociationID: ").append(toIndentedString(aFkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("}");
@@ -183,6 +208,7 @@ public class EzsignfolderSendV3Request {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("tEzsignfolderMessage");
+    openapiFields.add("eEzsignfolderMessageorder");
     openapiFields.add("dtEzsignfolderDelayedsenddate");
     openapiFields.add("a_fkiEzsignfoldersignerassociationID");
 
@@ -191,12 +217,12 @@ public class EzsignfolderSendV3Request {
     openapiRequiredFields.add("a_fkiEzsignfoldersignerassociationID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderSendV3Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfolderSendV3Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderSendV3Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -221,6 +247,10 @@ public class EzsignfolderSendV3Request {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
+      }
+      // validate the optional field `eEzsignfolderMessageorder`
+      if (jsonObj.get("eEzsignfolderMessageorder") != null && !jsonObj.get("eEzsignfolderMessageorder").isJsonNull()) {
+        FieldEEzsignfolderMessageorder.validateJsonElement(jsonObj.get("eEzsignfolderMessageorder"));
       }
       if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
@@ -262,22 +292,22 @@ public class EzsignfolderSendV3Request {
     }
   }
 
- /**
-  * Create an instance of EzsignfolderSendV3Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfolderSendV3Request
-  * @throws IOException if the JSON string is invalid with respect to EzsignfolderSendV3Request
-  */
+  /**
+   * Create an instance of EzsignfolderSendV3Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfolderSendV3Request
+   * @throws IOException if the JSON string is invalid with respect to EzsignfolderSendV3Request
+   */
   public static EzsignfolderSendV3Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfolderSendV3Request.class);
   }
 
- /**
-  * Convert an instance of EzsignfolderSendV3Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfolderSendV3Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

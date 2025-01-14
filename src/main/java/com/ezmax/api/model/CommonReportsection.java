@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
@@ -92,10 +91,10 @@ public class CommonReportsection {
     return this;
   }
 
-   /**
+  /**
    * Get aObjReportsubsection
    * @return aObjReportsubsection
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CommonReportsubsection> getaObjReportsubsection() {
     return aObjReportsubsection;
@@ -119,10 +118,10 @@ public class CommonReportsection {
     return this;
   }
 
-   /**
+  /**
    * Get aObjReportcolumn
    * @return aObjReportcolumn
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CommonReportcolumn> getaObjReportcolumn() {
     return aObjReportcolumn;
@@ -138,10 +137,10 @@ public class CommonReportsection {
     return this;
   }
 
-   /**
+  /**
    * Get eReportsectionHorizontalalignment
    * @return eReportsectionHorizontalalignment
-  **/
+   */
   @javax.annotation.Nonnull
   public EnumHorizontalalignment geteReportsectionHorizontalalignment() {
     return eReportsectionHorizontalalignment;
@@ -157,10 +156,10 @@ public class CommonReportsection {
     return this;
   }
 
-   /**
+  /**
    * The number of Reportcolumns in the Reportsection
    * @return iReportsectionColumncount
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiReportsectionColumncount() {
     return iReportsectionColumncount;
@@ -176,10 +175,10 @@ public class CommonReportsection {
     return this;
   }
 
-   /**
+  /**
    * The combined width of all the Reportcolumns in the Reportsection
    * @return iReportsectionWidth
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiReportsectionWidth() {
     return iReportsectionWidth;
@@ -258,12 +257,12 @@ public class CommonReportsection {
     openapiRequiredFields.add("iReportsectionWidth");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonReportsection
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonReportsection
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportsection.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -339,22 +338,22 @@ public class CommonReportsection {
     }
   }
 
- /**
-  * Create an instance of CommonReportsection given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonReportsection
-  * @throws IOException if the JSON string is invalid with respect to CommonReportsection
-  */
+  /**
+   * Create an instance of CommonReportsection given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonReportsection
+   * @throws IOException if the JSON string is invalid with respect to CommonReportsection
+   */
   public static CommonReportsection fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonReportsection.class);
   }
 
- /**
-  * Convert an instance of CommonReportsection to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonReportsection to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

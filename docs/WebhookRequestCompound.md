@@ -9,6 +9,7 @@ A Webhook Object and children
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiWebhookID** | **Integer** | The unique ID of the Webhook |  [optional] |
+|**fkiAuthenticationexternalID** | **Integer** | The unique ID of the Authenticationexternal |  [optional] |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
 |**sWebhookDescription** | **String** | The description of the Webhook |  |
 |**eWebhookModule** | **FieldEWebhookModule** |  |  |

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -71,10 +70,10 @@ public class PaymenttermAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Paymentterm
    * @return pkiPaymenttermID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiPaymenttermID() {
     return pkiPaymenttermID;
@@ -90,10 +89,10 @@ public class PaymenttermAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Paymentterm in the language of the requester
    * @return sPaymenttermDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsPaymenttermDescriptionX() {
     return sPaymenttermDescriptionX;
@@ -109,10 +108,10 @@ public class PaymenttermAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Paymentterm is active or not
    * @return bPaymenttermIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
@@ -183,12 +182,12 @@ public class PaymenttermAutocompleteElementResponse {
     openapiRequiredFields.add("bPaymenttermIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PaymenttermAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PaymenttermAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PaymenttermAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -245,22 +244,22 @@ public class PaymenttermAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of PaymenttermAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PaymenttermAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to PaymenttermAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of PaymenttermAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PaymenttermAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to PaymenttermAutocompleteElementResponse
+   */
   public static PaymenttermAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PaymenttermAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of PaymenttermAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PaymenttermAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

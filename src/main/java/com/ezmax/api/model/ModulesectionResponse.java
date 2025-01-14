@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModulesectionResponse {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
@@ -75,11 +74,11 @@ public class ModulesectionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Modulesection
    * minimum: 0
    * @return pkiModulesectionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiModulesectionID() {
     return pkiModulesectionID;
@@ -95,11 +94,11 @@ public class ModulesectionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return fkiModuleID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiModuleID() {
     return fkiModuleID;
@@ -115,10 +114,10 @@ public class ModulesectionResponse {
     return this;
   }
 
-   /**
+  /**
    * The Internal name of the Module section.
    * @return sModulesectionInternalname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsModulesectionInternalname() {
     return sModulesectionInternalname;
@@ -134,10 +133,10 @@ public class ModulesectionResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Modulesection in the language of the requester
    * @return sModulesectionNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsModulesectionNameX() {
     return sModulesectionNameX;
@@ -212,12 +211,12 @@ public class ModulesectionResponse {
     openapiRequiredFields.add("sModulesectionNameX");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ModulesectionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ModulesectionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ModulesectionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -277,22 +276,22 @@ public class ModulesectionResponse {
     }
   }
 
- /**
-  * Create an instance of ModulesectionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ModulesectionResponse
-  * @throws IOException if the JSON string is invalid with respect to ModulesectionResponse
-  */
+  /**
+   * Create an instance of ModulesectionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ModulesectionResponse
+   * @throws IOException if the JSON string is invalid with respect to ModulesectionResponse
+   */
   public static ModulesectionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ModulesectionResponse.class);
   }
 
- /**
-  * Convert an instance of ModulesectionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ModulesectionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

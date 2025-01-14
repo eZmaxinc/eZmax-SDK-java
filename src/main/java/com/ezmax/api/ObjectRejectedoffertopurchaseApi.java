@@ -28,7 +28,10 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationCountV1Response;
 import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationListV1Response;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationsendersV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -73,6 +76,133 @@ public class ObjectRejectedoffertopurchaseApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for rejectedoffertopurchaseGetCommunicationCountV1
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationCountV1Call(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount"
+            .replace("{" + "pkiRejectedoffertopurchaseID" + "}", localVarApiClient.escapeString(pkiRejectedoffertopurchaseID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rejectedoffertopurchaseGetCommunicationCountV1ValidateBeforeCall(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiRejectedoffertopurchaseID' is set
+        if (pkiRejectedoffertopurchaseID == null) {
+            throw new ApiException("Missing the required parameter 'pkiRejectedoffertopurchaseID' when calling rejectedoffertopurchaseGetCommunicationCountV1(Async)");
+        }
+
+        return rejectedoffertopurchaseGetCommunicationCountV1Call(pkiRejectedoffertopurchaseID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return RejectedoffertopurchaseGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public RejectedoffertopurchaseGetCommunicationCountV1Response rejectedoffertopurchaseGetCommunicationCountV1(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> localVarResp = rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return ApiResponse&lt;RejectedoffertopurchaseGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationCountV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, null);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationCountV1Async(Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationCountV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, _callback);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for rejectedoffertopurchaseGetCommunicationListV1
      * @param pkiRejectedoffertopurchaseID  (required)
@@ -197,6 +327,260 @@ public class ObjectRejectedoffertopurchaseApi {
 
         okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationListV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, _callback);
         Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for rejectedoffertopurchaseGetCommunicationrecipientsV1
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationrecipientsV1Call(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients"
+            .replace("{" + "pkiRejectedoffertopurchaseID" + "}", localVarApiClient.escapeString(pkiRejectedoffertopurchaseID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rejectedoffertopurchaseGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiRejectedoffertopurchaseID' is set
+        if (pkiRejectedoffertopurchaseID == null) {
+            throw new ApiException("Missing the required parameter 'pkiRejectedoffertopurchaseID' when calling rejectedoffertopurchaseGetCommunicationrecipientsV1(Async)");
+        }
+
+        return rejectedoffertopurchaseGetCommunicationrecipientsV1Call(pkiRejectedoffertopurchaseID, _callback);
+
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return RejectedoffertopurchaseGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public RejectedoffertopurchaseGetCommunicationrecipientsV1Response rejectedoffertopurchaseGetCommunicationrecipientsV1(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> localVarResp = rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return ApiResponse&lt;RejectedoffertopurchaseGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationrecipientsV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, null);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationrecipientsV1Async(Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationrecipientsV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, _callback);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for rejectedoffertopurchaseGetCommunicationsendersV1
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationsendersV1Call(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationsenders"
+            .replace("{" + "pkiRejectedoffertopurchaseID" + "}", localVarApiClient.escapeString(pkiRejectedoffertopurchaseID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rejectedoffertopurchaseGetCommunicationsendersV1ValidateBeforeCall(Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiRejectedoffertopurchaseID' is set
+        if (pkiRejectedoffertopurchaseID == null) {
+            throw new ApiException("Missing the required parameter 'pkiRejectedoffertopurchaseID' when calling rejectedoffertopurchaseGetCommunicationsendersV1(Async)");
+        }
+
+        return rejectedoffertopurchaseGetCommunicationsendersV1Call(pkiRejectedoffertopurchaseID, _callback);
+
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return RejectedoffertopurchaseGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public RejectedoffertopurchaseGetCommunicationsendersV1Response rejectedoffertopurchaseGetCommunicationsendersV1(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> localVarResp = rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return ApiResponse&lt;RejectedoffertopurchaseGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationsendersV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, null);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s Communicationsender (asynchronously)
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetCommunicationsendersV1Async(Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetCommunicationsendersV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, _callback);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

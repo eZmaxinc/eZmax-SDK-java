@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcontract Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingcontractResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D = "pkiEzmaxinvoicingcontractID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D)
@@ -97,11 +96,11 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingcontract
    * minimum: 1
    * @return pkiEzmaxinvoicingcontractID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzmaxinvoicingcontractID() {
     return pkiEzmaxinvoicingcontractID;
@@ -117,10 +116,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzmaxinvoicingcontractPaymenttype
    * @return eEzmaxinvoicingcontractPaymenttype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzmaxinvoicingcontractPaymenttype geteEzmaxinvoicingcontractPaymenttype() {
     return eEzmaxinvoicingcontractPaymenttype;
@@ -136,11 +135,11 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The length in years of the Ezmaxinvoicingcontract
    * minimum: 1
    * @return iEzmaxinvoicingcontractLength
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingcontractLength() {
     return iEzmaxinvoicingcontractLength;
@@ -156,10 +155,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The start date of the Ezmaxinvoicingcontract
    * @return dtEzmaxinvoicingcontractStart
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzmaxinvoicingcontractStart() {
     return dtEzmaxinvoicingcontractStart;
@@ -175,10 +174,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The end date of the Ezmaxinvoicingcontract
    * @return dtEzmaxinvoicingcontractEnd
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzmaxinvoicingcontractEnd() {
     return dtEzmaxinvoicingcontractEnd;
@@ -194,10 +193,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The price of the license
    * @return dEzmaxinvoicingcontractLicense
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingcontractLicense() {
     return dEzmaxinvoicingcontractLicense;
@@ -213,10 +212,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * The price for 121QA
    * @return dEzmaxinvoicingcontract121qa
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingcontract121qa() {
     return dEzmaxinvoicingcontract121qa;
@@ -232,10 +231,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether eZsign is for all agents
    * @return bEzmaxinvoicingcontractEzsignallagents
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingcontractEzsignallagents() {
     return bEzmaxinvoicingcontractEzsignallagents;
@@ -251,10 +250,10 @@ public class EzmaxinvoicingcontractResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nonnull
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -349,12 +348,12 @@ public class EzmaxinvoicingcontractResponse {
     openapiRequiredFields.add("objAudit");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingcontractResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingcontractResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingcontractResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -424,22 +423,22 @@ public class EzmaxinvoicingcontractResponse {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicingcontractResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicingcontractResponse
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingcontractResponse
-  */
+  /**
+   * Create an instance of EzmaxinvoicingcontractResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicingcontractResponse
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingcontractResponse
+   */
   public static EzmaxinvoicingcontractResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicingcontractResponse.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicingcontractResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicingcontractResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The Type of Ezsigntemplate
+ * The Type of Ezsigntemplate  **Usergroup** is now deprecated and replace with **Ezsignfoldertype**
  */
 @JsonAdapter(FieldEEzsigntemplateType.Adapter.class)
 public enum FieldEEzsigntemplateType {
@@ -33,7 +33,9 @@ public enum FieldEEzsigntemplateType {
   
   USERGROUP("Usergroup"),
   
-  COMPANY("Company");
+  COMPANY("Company"),
+  
+  EZSIGNFOLDERTYPE("Ezsignfoldertype");
 
   private String value;
 

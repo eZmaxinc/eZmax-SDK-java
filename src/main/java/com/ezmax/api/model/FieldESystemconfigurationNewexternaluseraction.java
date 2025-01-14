@@ -31,7 +31,7 @@ public enum FieldESystemconfigurationNewexternaluseraction {
   
   STAGE("Stage"),
   
-  AUTOCREATE("AutoCreate");
+  AUTO_CREATE("AutoCreate");
 
   private String value;
 

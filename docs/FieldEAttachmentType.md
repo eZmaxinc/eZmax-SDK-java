@@ -9,9 +9,9 @@
 
 * `PDF` (value: `"Pdf"`)
 
-* `PDFGENERATED` (value: `"PdfGenerated"`)
+* `PDF_GENERATED` (value: `"PdfGenerated"`)
 
-* `PDFSCANNED` (value: `"PdfScanned"`)
+* `PDF_SCANNED` (value: `"PdfScanned"`)
 
 * `EZSIGN` (value: `"Ezsign"`)
 

@@ -11,5 +11,7 @@
 
 * `COMPANY` (value: `"Company"`)
 
+* `EZSIGNFOLDERTYPE` (value: `"Ezsignfoldertype"`)
+
 
 

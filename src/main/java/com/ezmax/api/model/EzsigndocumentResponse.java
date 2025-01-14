@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -109,6 +108,10 @@ public class EzsigndocumentResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURETOTAL)
   private Integer iEzsigndocumentSignaturetotal;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL = "iEzsigndocumentFormfieldtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL)
+  private Integer iEzsigndocumentFormfieldtotal;
+
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL = "sEzsigndocumentMD5initial";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL)
   private String sEzsigndocumentMD5initial;
@@ -153,11 +156,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return pkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigndocumentID() {
     return pkiEzsigndocumentID;
@@ -173,11 +176,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return fkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -193,11 +196,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationIDDeclinedtosign
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldersignerassociationIDDeclinedtosign() {
     return fkiEzsignfoldersignerassociationIDDeclinedtosign;
@@ -213,10 +216,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The maximum date and time at which the Ezsigndocument can be signed.
    * @return dtEzsigndocumentDuedate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzsigndocumentDuedate() {
     return dtEzsigndocumentDuedate;
@@ -232,10 +235,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The date and time at which the Ezsignform has been completed.
    * @return dtEzsignformCompleted
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignformCompleted() {
     return dtEzsignformCompleted;
@@ -251,12 +254,12 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -272,10 +275,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the document that will be presented to Ezsignfoldersignerassociations
    * @return sEzsigndocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
@@ -291,10 +294,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigndocumentStep
    * @return eEzsigndocumentStep
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsigndocumentStep geteEzsigndocumentStep() {
     return eEzsigndocumentStep;
@@ -310,10 +313,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The date and time when the Ezsigndocument was first sent.
    * @return dtEzsigndocumentFirstsend
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsigndocumentFirstsend() {
     return dtEzsigndocumentFirstsend;
@@ -329,10 +332,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The date and time when the Ezsigndocument was sent the last time.
    * @return dtEzsigndocumentLastsend
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsigndocumentLastsend() {
     return dtEzsigndocumentLastsend;
@@ -348,11 +351,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
    * minimum: 1
    * @return iEzsigndocumentOrder
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentOrder() {
     return iEzsigndocumentOrder;
@@ -368,11 +371,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the Ezsigndocument.
    * minimum: 1
    * @return iEzsigndocumentPagetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentPagetotal() {
     return iEzsigndocumentPagetotal;
@@ -388,11 +391,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of signatures that were signed in the document.
    * minimum: 0
    * @return iEzsigndocumentSignaturesigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentSignaturesigned() {
     return iEzsigndocumentSignaturesigned;
@@ -408,11 +411,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of total signatures that were requested in the Ezsigndocument.
    * minimum: 0
    * @return iEzsigndocumentSignaturetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentSignaturetotal() {
     return iEzsigndocumentSignaturetotal;
@@ -423,15 +426,35 @@ public class EzsigndocumentResponse {
   }
 
 
+  public EzsigndocumentResponse iEzsigndocumentFormfieldtotal(Integer iEzsigndocumentFormfieldtotal) {
+    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
+    return this;
+  }
+
+  /**
+   * The number of total Ezsignformfield that were requested in the Ezsigndocument.
+   * minimum: 0
+   * @return iEzsigndocumentFormfieldtotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentFormfieldtotal() {
+    return iEzsigndocumentFormfieldtotal;
+  }
+
+  public void setiEzsigndocumentFormfieldtotal(Integer iEzsigndocumentFormfieldtotal) {
+    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
+  }
+
+
   public EzsigndocumentResponse sEzsigndocumentMD5initial(String sEzsigndocumentMD5initial) {
     this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
     return this;
   }
 
-   /**
+  /**
    * MD5 Hash of the initial PDF Document before signatures were applied to it.
    * @return sEzsigndocumentMD5initial
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentMD5initial() {
     return sEzsigndocumentMD5initial;
@@ -447,10 +470,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
    * @return tEzsigndocumentDeclinedtosignreason
-  **/
+   */
   @javax.annotation.Nullable
   public String gettEzsigndocumentDeclinedtosignreason() {
     return tEzsigndocumentDeclinedtosignreason;
@@ -466,10 +489,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * MD5 Hash of the final PDF Document after all signatures were applied to it.
    * @return sEzsigndocumentMD5signed
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentMD5signed() {
     return sEzsigndocumentMD5signed;
@@ -485,10 +508,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * If the Ezsigndocument contains an Ezsignform or not
    * @return bEzsigndocumentEzsignform
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigndocumentEzsignform() {
     return bEzsigndocumentEzsignform;
@@ -504,10 +527,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * If the Ezsigndocument contains signed signatures (From internal or external sources)
    * @return bEzsigndocumentHassignedsignatures
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigndocumentHassignedsignatures() {
     return bEzsigndocumentHassignedsignatures;
@@ -523,10 +546,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nullable
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -542,10 +565,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
    * @return sEzsigndocumentExternalid
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigndocumentExternalid() {
     return sEzsigndocumentExternalid;
@@ -561,11 +584,11 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of Ezsigndocumentattachment total
    * minimum: 0
    * @return iEzsigndocumentEzsignsignatureattachmenttotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentEzsignsignatureattachmenttotal() {
     return iEzsigndocumentEzsignsignatureattachmenttotal;
@@ -581,10 +604,10 @@ public class EzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The total number of Ezsigndiscussions
    * @return iEzsigndocumentEzsigndiscussiontotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentEzsigndiscussiontotal() {
     return iEzsigndocumentEzsigndiscussiontotal;
@@ -619,6 +642,7 @@ public class EzsigndocumentResponse {
         Objects.equals(this.iEzsigndocumentPagetotal, ezsigndocumentResponse.iEzsigndocumentPagetotal) &&
         Objects.equals(this.iEzsigndocumentSignaturesigned, ezsigndocumentResponse.iEzsigndocumentSignaturesigned) &&
         Objects.equals(this.iEzsigndocumentSignaturetotal, ezsigndocumentResponse.iEzsigndocumentSignaturetotal) &&
+        Objects.equals(this.iEzsigndocumentFormfieldtotal, ezsigndocumentResponse.iEzsigndocumentFormfieldtotal) &&
         Objects.equals(this.sEzsigndocumentMD5initial, ezsigndocumentResponse.sEzsigndocumentMD5initial) &&
         Objects.equals(this.tEzsigndocumentDeclinedtosignreason, ezsigndocumentResponse.tEzsigndocumentDeclinedtosignreason) &&
         Objects.equals(this.sEzsigndocumentMD5signed, ezsigndocumentResponse.sEzsigndocumentMD5signed) &&
@@ -632,7 +656,7 @@ public class EzsigndocumentResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal);
   }
 
   @Override
@@ -653,6 +677,7 @@ public class EzsigndocumentResponse {
     sb.append("    iEzsigndocumentPagetotal: ").append(toIndentedString(iEzsigndocumentPagetotal)).append("\n");
     sb.append("    iEzsigndocumentSignaturesigned: ").append(toIndentedString(iEzsigndocumentSignaturesigned)).append("\n");
     sb.append("    iEzsigndocumentSignaturetotal: ").append(toIndentedString(iEzsigndocumentSignaturetotal)).append("\n");
+    sb.append("    iEzsigndocumentFormfieldtotal: ").append(toIndentedString(iEzsigndocumentFormfieldtotal)).append("\n");
     sb.append("    sEzsigndocumentMD5initial: ").append(toIndentedString(sEzsigndocumentMD5initial)).append("\n");
     sb.append("    tEzsigndocumentDeclinedtosignreason: ").append(toIndentedString(tEzsigndocumentDeclinedtosignreason)).append("\n");
     sb.append("    sEzsigndocumentMD5signed: ").append(toIndentedString(sEzsigndocumentMD5signed)).append("\n");
@@ -698,6 +723,7 @@ public class EzsigndocumentResponse {
     openapiFields.add("iEzsigndocumentPagetotal");
     openapiFields.add("iEzsigndocumentSignaturesigned");
     openapiFields.add("iEzsigndocumentSignaturetotal");
+    openapiFields.add("iEzsigndocumentFormfieldtotal");
     openapiFields.add("sEzsigndocumentMD5initial");
     openapiFields.add("tEzsigndocumentDeclinedtosignreason");
     openapiFields.add("sEzsigndocumentMD5signed");
@@ -719,16 +745,17 @@ public class EzsigndocumentResponse {
     openapiRequiredFields.add("iEzsigndocumentPagetotal");
     openapiRequiredFields.add("iEzsigndocumentSignaturesigned");
     openapiRequiredFields.add("iEzsigndocumentSignaturetotal");
+    openapiRequiredFields.add("iEzsigndocumentFormfieldtotal");
     openapiRequiredFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
     openapiRequiredFields.add("iEzsigndocumentEzsigndiscussiontotal");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigndocumentResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -815,22 +842,22 @@ public class EzsigndocumentResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigndocumentResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigndocumentResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigndocumentResponse
-  */
+  /**
+   * Create an instance of EzsigndocumentResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigndocumentResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigndocumentResponse
+   */
   public static EzsigndocumentResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigndocumentResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigndocumentResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigndocumentResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

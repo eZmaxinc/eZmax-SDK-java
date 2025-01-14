@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.CommonResponseErrorCreditcardValidation;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Request;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Response;
 import com.ezmax.api.model.CreditcardclientDeleteObjectV1Response;
@@ -36,6 +37,8 @@ import com.ezmax.api.model.CreditcardclientEditObjectV1Response;
 import com.ezmax.api.model.CreditcardclientGetAutocompleteV2Response;
 import com.ezmax.api.model.CreditcardclientGetListV1Response;
 import com.ezmax.api.model.CreditcardclientGetObjectV2Response;
+import com.ezmax.api.model.CreditcardclientPatchObjectV1Request;
+import com.ezmax.api.model.CreditcardclientPatchObjectV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
@@ -92,6 +95,7 @@ public class ObjectCreditcardclientApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call creditcardclientCreateObjectV1Call(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -160,6 +164,7 @@ public class ObjectCreditcardclientApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public CreditcardclientCreateObjectV1Response creditcardclientCreateObjectV1(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request) throws ApiException {
@@ -177,6 +182,7 @@ public class ObjectCreditcardclientApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<CreditcardclientCreateObjectV1Response> creditcardclientCreateObjectV1WithHttpInfo(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request) throws ApiException {
@@ -196,6 +202,7 @@ public class ObjectCreditcardclientApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call creditcardclientCreateObjectV1Async(CreditcardclientCreateObjectV1Request creditcardclientCreateObjectV1Request, final ApiCallback<CreditcardclientCreateObjectV1Response> _callback) throws ApiException {
@@ -344,7 +351,7 @@ public class ObjectCreditcardclientApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call creditcardclientEditObjectV1Call(Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -421,7 +428,7 @@ public class ObjectCreditcardclientApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public CreditcardclientEditObjectV1Response creditcardclientEditObjectV1(Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) throws ApiException {
@@ -441,7 +448,7 @@ public class ObjectCreditcardclientApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<CreditcardclientEditObjectV1Response> creditcardclientEditObjectV1WithHttpInfo(Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request) throws ApiException {
@@ -463,7 +470,7 @@ public class ObjectCreditcardclientApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call creditcardclientEditObjectV1Async(Integer pkiCreditcardclientID, CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request, final ApiCallback<CreditcardclientEditObjectV1Response> _callback) throws ApiException {
@@ -902,6 +909,147 @@ public class ObjectCreditcardclientApi {
 
         okhttp3.Call localVarCall = creditcardclientGetObjectV2ValidateBeforeCall(pkiCreditcardclientID, _callback);
         Type localVarReturnType = new TypeToken<CreditcardclientGetObjectV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for creditcardclientPatchObjectV1
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient (required)
+     * @param creditcardclientPatchObjectV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call creditcardclientPatchObjectV1Call(Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = creditcardclientPatchObjectV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/creditcardclient/{pkiCreditcardclientID}"
+            .replace("{" + "pkiCreditcardclientID" + "}", localVarApiClient.escapeString(pkiCreditcardclientID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call creditcardclientPatchObjectV1ValidateBeforeCall(Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCreditcardclientID' is set
+        if (pkiCreditcardclientID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCreditcardclientID' when calling creditcardclientPatchObjectV1(Async)");
+        }
+
+        // verify the required parameter 'creditcardclientPatchObjectV1Request' is set
+        if (creditcardclientPatchObjectV1Request == null) {
+            throw new ApiException("Missing the required parameter 'creditcardclientPatchObjectV1Request' when calling creditcardclientPatchObjectV1(Async)");
+        }
+
+        return creditcardclientPatchObjectV1Call(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, _callback);
+
+    }
+
+    /**
+     * Patch an existing Creditcardclient
+     * 
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient (required)
+     * @param creditcardclientPatchObjectV1Request  (required)
+     * @return CreditcardclientPatchObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public CreditcardclientPatchObjectV1Response creditcardclientPatchObjectV1(Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) throws ApiException {
+        ApiResponse<CreditcardclientPatchObjectV1Response> localVarResp = creditcardclientPatchObjectV1WithHttpInfo(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Patch an existing Creditcardclient
+     * 
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient (required)
+     * @param creditcardclientPatchObjectV1Request  (required)
+     * @return ApiResponse&lt;CreditcardclientPatchObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CreditcardclientPatchObjectV1Response> creditcardclientPatchObjectV1WithHttpInfo(Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request) throws ApiException {
+        okhttp3.Call localVarCall = creditcardclientPatchObjectV1ValidateBeforeCall(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, null);
+        Type localVarReturnType = new TypeToken<CreditcardclientPatchObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Patch an existing Creditcardclient (asynchronously)
+     * 
+     * @param pkiCreditcardclientID The unique ID of the Creditcardclient (required)
+     * @param creditcardclientPatchObjectV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call creditcardclientPatchObjectV1Async(Integer pkiCreditcardclientID, CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request, final ApiCallback<CreditcardclientPatchObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = creditcardclientPatchObjectV1ValidateBeforeCall(pkiCreditcardclientID, creditcardclientPatchObjectV1Request, _callback);
+        Type localVarReturnType = new TypeToken<CreditcardclientPatchObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

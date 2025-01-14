@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -119,6 +118,10 @@ public class CustomEzsignsignaturestatusResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_SIGNED)
   private Integer iEzsignsignaturestatusSigned;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_CONDITIONAL = "iEzsignsignaturestatusConditional";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_CONDITIONAL)
+  private Integer iEzsignsignaturestatusConditional;
+
   public CustomEzsignsignaturestatusResponse() {
   }
 
@@ -127,10 +130,10 @@ public class CustomEzsignsignaturestatusResponse {
     return this;
   }
 
-   /**
+  /**
    * Type of step
    * @return eEzsignsignaturestatusSteptype
-  **/
+   */
   @javax.annotation.Nonnull
   public EEzsignsignaturestatusSteptypeEnum geteEzsignsignaturestatusSteptype() {
     return eEzsignsignaturestatusSteptype;
@@ -146,10 +149,10 @@ public class CustomEzsignsignaturestatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The step at which the Ezsignsigner will be invited to sign or fill the form fields
    * @return iEzsignsignaturestatusStep
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignaturestatusStep() {
     return iEzsignsignaturestatusStep;
@@ -165,10 +168,10 @@ public class CustomEzsignsignaturestatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The total number of signature or form fields the Ezsignsigner must process at the current step
    * @return iEzsignsignaturestatusTotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignaturestatusTotal() {
     return iEzsignsignaturestatusTotal;
@@ -184,10 +187,10 @@ public class CustomEzsignsignaturestatusResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of signature or form fields the Ezsignsigner has already processed at the current step
    * @return iEzsignsignaturestatusSigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignaturestatusSigned() {
     return iEzsignsignaturestatusSigned;
@@ -195,6 +198,25 @@ public class CustomEzsignsignaturestatusResponse {
 
   public void setiEzsignsignaturestatusSigned(Integer iEzsignsignaturestatusSigned) {
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
+  }
+
+
+  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusConditional(Integer iEzsignsignaturestatusConditional) {
+    this.iEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
+    return this;
+  }
+
+  /**
+   * The number of signature or form fields the Ezsignsigner need to sign or fill under current conditions.
+   * @return iEzsignsignaturestatusConditional
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsignsignaturestatusConditional() {
+    return iEzsignsignaturestatusConditional;
+  }
+
+  public void setiEzsignsignaturestatusConditional(Integer iEzsignsignaturestatusConditional) {
+    this.iEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
   }
 
 
@@ -211,12 +233,13 @@ public class CustomEzsignsignaturestatusResponse {
     return Objects.equals(this.eEzsignsignaturestatusSteptype, customEzsignsignaturestatusResponse.eEzsignsignaturestatusSteptype) &&
         Objects.equals(this.iEzsignsignaturestatusStep, customEzsignsignaturestatusResponse.iEzsignsignaturestatusStep) &&
         Objects.equals(this.iEzsignsignaturestatusTotal, customEzsignsignaturestatusResponse.iEzsignsignaturestatusTotal) &&
-        Objects.equals(this.iEzsignsignaturestatusSigned, customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned);
+        Objects.equals(this.iEzsignsignaturestatusSigned, customEzsignsignaturestatusResponse.iEzsignsignaturestatusSigned) &&
+        Objects.equals(this.iEzsignsignaturestatusConditional, customEzsignsignaturestatusResponse.iEzsignsignaturestatusConditional);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned);
+    return Objects.hash(eEzsignsignaturestatusSteptype, iEzsignsignaturestatusStep, iEzsignsignaturestatusTotal, iEzsignsignaturestatusSigned, iEzsignsignaturestatusConditional);
   }
 
   @Override
@@ -227,6 +250,7 @@ public class CustomEzsignsignaturestatusResponse {
     sb.append("    iEzsignsignaturestatusStep: ").append(toIndentedString(iEzsignsignaturestatusStep)).append("\n");
     sb.append("    iEzsignsignaturestatusTotal: ").append(toIndentedString(iEzsignsignaturestatusTotal)).append("\n");
     sb.append("    iEzsignsignaturestatusSigned: ").append(toIndentedString(iEzsignsignaturestatusSigned)).append("\n");
+    sb.append("    iEzsignsignaturestatusConditional: ").append(toIndentedString(iEzsignsignaturestatusConditional)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -253,6 +277,7 @@ public class CustomEzsignsignaturestatusResponse {
     openapiFields.add("iEzsignsignaturestatusStep");
     openapiFields.add("iEzsignsignaturestatusTotal");
     openapiFields.add("iEzsignsignaturestatusSigned");
+    openapiFields.add("iEzsignsignaturestatusConditional");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -260,14 +285,15 @@ public class CustomEzsignsignaturestatusResponse {
     openapiRequiredFields.add("iEzsignsignaturestatusStep");
     openapiRequiredFields.add("iEzsignsignaturestatusTotal");
     openapiRequiredFields.add("iEzsignsignaturestatusSigned");
+    openapiRequiredFields.add("iEzsignsignaturestatusConditional");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignsignaturestatusResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignsignaturestatusResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignsignaturestatusResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -326,22 +352,22 @@ public class CustomEzsignsignaturestatusResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignsignaturestatusResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignsignaturestatusResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignsignaturestatusResponse
-  */
+  /**
+   * Create an instance of CustomEzsignsignaturestatusResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignsignaturestatusResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignsignaturestatusResponse
+   */
   public static CustomEzsignsignaturestatusResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignsignaturestatusResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignsignaturestatusResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignsignaturestatusResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

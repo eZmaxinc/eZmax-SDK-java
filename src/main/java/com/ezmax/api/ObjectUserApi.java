@@ -34,12 +34,15 @@ import com.ezmax.api.model.UserCreateObjectV1Request;
 import com.ezmax.api.model.UserCreateObjectV1Response;
 import com.ezmax.api.model.UserCreateObjectV2Request;
 import com.ezmax.api.model.UserCreateObjectV2Response;
+import com.ezmax.api.model.UserEditColleaguesV2Request;
+import com.ezmax.api.model.UserEditColleaguesV2Response;
 import com.ezmax.api.model.UserEditObjectV1Request;
 import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
 import com.ezmax.api.model.UserGetApikeysV1Response;
 import com.ezmax.api.model.UserGetAutocompleteV2Response;
+import com.ezmax.api.model.UserGetColleaguesV2Response;
 import com.ezmax.api.model.UserGetEffectivePermissionsV1Response;
 import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
@@ -335,6 +338,147 @@ public class ObjectUserApi {
 
         okhttp3.Call localVarCall = userCreateObjectV2ValidateBeforeCall(userCreateObjectV2Request, _callback);
         Type localVarReturnType = new TypeToken<UserCreateObjectV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for userEditColleaguesV2
+     * @param pkiUserID  (required)
+     * @param userEditColleaguesV2Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userEditColleaguesV2Call(Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = userEditColleaguesV2Request;
+
+        // create path and map variables
+        String localVarPath = "/2/object/user/{pkiUserID}/editColleagues"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userEditColleaguesV2ValidateBeforeCall(Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userEditColleaguesV2(Async)");
+        }
+
+        // verify the required parameter 'userEditColleaguesV2Request' is set
+        if (userEditColleaguesV2Request == null) {
+            throw new ApiException("Missing the required parameter 'userEditColleaguesV2Request' when calling userEditColleaguesV2(Async)");
+        }
+
+        return userEditColleaguesV2Call(pkiUserID, userEditColleaguesV2Request, _callback);
+
+    }
+
+    /**
+     * Edit multiple Colleagues
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     * @param pkiUserID  (required)
+     * @param userEditColleaguesV2Request  (required)
+     * @return UserEditColleaguesV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserEditColleaguesV2Response userEditColleaguesV2(Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request) throws ApiException {
+        ApiResponse<UserEditColleaguesV2Response> localVarResp = userEditColleaguesV2WithHttpInfo(pkiUserID, userEditColleaguesV2Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Edit multiple Colleagues
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     * @param pkiUserID  (required)
+     * @param userEditColleaguesV2Request  (required)
+     * @return ApiResponse&lt;UserEditColleaguesV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserEditColleaguesV2Response> userEditColleaguesV2WithHttpInfo(Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request) throws ApiException {
+        okhttp3.Call localVarCall = userEditColleaguesV2ValidateBeforeCall(pkiUserID, userEditColleaguesV2Request, null);
+        Type localVarReturnType = new TypeToken<UserEditColleaguesV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Edit multiple Colleagues (asynchronously)
+     * Using this endpoint, you can edit multiple Colleagues at the same time.
+     * @param pkiUserID  (required)
+     * @param userEditColleaguesV2Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userEditColleaguesV2Async(Integer pkiUserID, UserEditColleaguesV2Request userEditColleaguesV2Request, final ApiCallback<UserEditColleaguesV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userEditColleaguesV2ValidateBeforeCall(pkiUserID, userEditColleaguesV2Request, _callback);
+        Type localVarReturnType = new TypeToken<UserEditColleaguesV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -891,6 +1035,133 @@ public class ObjectUserApi {
 
         okhttp3.Call localVarCall = userGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<UserGetAutocompleteV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for userGetColleaguesV2
+     * @param pkiUserID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetColleaguesV2Call(Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/2/object/user/{pkiUserID}/getColleagues"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userGetColleaguesV2ValidateBeforeCall(Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userGetColleaguesV2(Async)");
+        }
+
+        return userGetColleaguesV2Call(pkiUserID, _callback);
+
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues
+     * 
+     * @param pkiUserID  (required)
+     * @return UserGetColleaguesV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserGetColleaguesV2Response userGetColleaguesV2(Integer pkiUserID) throws ApiException {
+        ApiResponse<UserGetColleaguesV2Response> localVarResp = userGetColleaguesV2WithHttpInfo(pkiUserID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues
+     * 
+     * @param pkiUserID  (required)
+     * @return ApiResponse&lt;UserGetColleaguesV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserGetColleaguesV2Response> userGetColleaguesV2WithHttpInfo(Integer pkiUserID) throws ApiException {
+        okhttp3.Call localVarCall = userGetColleaguesV2ValidateBeforeCall(pkiUserID, null);
+        Type localVarReturnType = new TypeToken<UserGetColleaguesV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve an existing User&#39;s Colleagues (asynchronously)
+     * 
+     * @param pkiUserID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetColleaguesV2Async(Integer pkiUserID, final ApiCallback<UserGetColleaguesV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userGetColleaguesV2ValidateBeforeCall(pkiUserID, _callback);
+        Type localVarReturnType = new TypeToken<UserGetColleaguesV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

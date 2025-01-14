@@ -14,10 +14,12 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EnumHorizontalalignment;
 import com.ezmax.api.model.EzsigntemplateelementdependencyRequestCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioning;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioningoccurence;
+import com.ezmax.api.model.TextstylestaticRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,7 +45,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -55,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateformfieldRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -63,7 +64,7 @@ public class EzsigntemplateformfieldRequestCompound {
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONING = "eEzsigntemplateformfieldPositioning";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONING)
-  private FieldEEzsigntemplateformfieldPositioning eEzsigntemplateformfieldPositioning = FieldEEzsigntemplateformfieldPositioning.PERCOORDINATES;
+  private FieldEEzsigntemplateformfieldPositioning eEzsigntemplateformfieldPositioning = FieldEEzsigntemplateformfieldPositioning.PER_COORDINATES;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplatedocumentpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER)
@@ -121,9 +122,17 @@ public class EzsigntemplateformfieldRequestCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOCCURENCE)
   private FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_HORIZONTALALIGNMENT = "eEzsigntemplateformfieldHorizontalalignment";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_HORIZONTALALIGNMENT)
+  private EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment;
+
+  public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
+  private TextstylestaticRequestCompound objTextstylestatic;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY = "a_objEzsigntemplateelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY)
-  private List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency;
+  private List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency = new ArrayList<>();
 
   public EzsigntemplateformfieldRequestCompound() {
   }
@@ -133,11 +142,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateformfield
    * minimum: 0
    * @return pkiEzsigntemplateformfieldID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigntemplateformfieldID() {
     return pkiEzsigntemplateformfieldID;
@@ -153,10 +162,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateformfieldPositioning
    * @return eEzsigntemplateformfieldPositioning
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsigntemplateformfieldPositioning geteEzsigntemplateformfieldPositioning() {
     return eEzsigntemplateformfieldPositioning;
@@ -172,11 +181,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigntemplatedocument
    * minimum: 1
    * @return iEzsigntemplatedocumentpagePagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
@@ -192,10 +201,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The Label for the Ezsigntemplateformfield
    * @return sEzsigntemplateformfieldLabel
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplateformfieldLabel() {
     return sEzsigntemplateformfieldLabel;
@@ -211,10 +220,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The value for the Ezsigntemplateformfield
    * @return sEzsigntemplateformfieldValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplateformfieldValue() {
     return sEzsigntemplateformfieldValue;
@@ -230,11 +239,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsigntemplateformfieldX
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateformfieldX() {
     return iEzsigntemplateformfieldX;
@@ -250,11 +259,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsigntemplateformfieldY
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateformfieldY() {
     return iEzsigntemplateformfieldY;
@@ -270,11 +279,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
-   * The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22-65535     | | Radio                     | 22           | | Text                      | 22-65535     | | Textarea                  | 22-65535     |
+  /**
+   * The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
    * minimum: 0
    * @return iEzsigntemplateformfieldWidth
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplateformfieldWidth() {
     return iEzsigntemplateformfieldWidth;
@@ -290,11 +299,11 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
-   * The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI  The allowed values are varying based on the eEzsigntemplateformfieldgroupType.  | eEzsigntemplateformfieldgroupType | Valid values | | ------------------------- | ------------ | | Checkbox                  | 22           | | Dropdown                  | 22           | | Radio                     | 22           | | Text                      | 22           | | Textarea                  | 22-65535     | 
+  /**
+   * The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
    * minimum: 0
    * @return iEzsigntemplateformfieldHeight
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplateformfieldHeight() {
     return iEzsigntemplateformfieldHeight;
@@ -310,10 +319,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
    * @return bEzsigntemplateformfieldAutocomplete
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigntemplateformfieldAutocomplete() {
     return bEzsigntemplateformfieldAutocomplete;
@@ -329,10 +338,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
    * @return bEzsigntemplateformfieldSelected
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigntemplateformfieldSelected() {
     return bEzsigntemplateformfieldSelected;
@@ -348,10 +357,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateformfieldDependencyrequirement
    * @return eEzsigntemplateformfieldDependencyrequirement
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsigntemplateformfieldDependencyrequirement geteEzsigntemplateformfieldDependencyrequirement() {
     return eEzsigntemplateformfieldDependencyrequirement;
@@ -367,10 +376,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
    * @return sEzsigntemplateformfieldPositioningpattern
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplateformfieldPositioningpattern() {
     return sEzsigntemplateformfieldPositioningpattern;
@@ -386,10 +395,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
    * @return iEzsigntemplateformfieldPositioningoffsetx
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateformfieldPositioningoffsetx() {
     return iEzsigntemplateformfieldPositioningoffsetx;
@@ -405,10 +414,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
    * @return iEzsigntemplateformfieldPositioningoffsety
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplateformfieldPositioningoffsety() {
     return iEzsigntemplateformfieldPositioningoffsety;
@@ -424,10 +433,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateformfieldPositioningoccurence
    * @return eEzsigntemplateformfieldPositioningoccurence
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsigntemplateformfieldPositioningoccurence geteEzsigntemplateformfieldPositioningoccurence() {
     return eEzsigntemplateformfieldPositioningoccurence;
@@ -435,6 +444,44 @@ public class EzsigntemplateformfieldRequestCompound {
 
   public void seteEzsigntemplateformfieldPositioningoccurence(FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence) {
     this.eEzsigntemplateformfieldPositioningoccurence = eEzsigntemplateformfieldPositioningoccurence;
+  }
+
+
+  public EzsigntemplateformfieldRequestCompound eEzsigntemplateformfieldHorizontalalignment(EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment) {
+    this.eEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateformfieldHorizontalalignment
+   * @return eEzsigntemplateformfieldHorizontalalignment
+   */
+  @javax.annotation.Nullable
+  public EnumHorizontalalignment geteEzsigntemplateformfieldHorizontalalignment() {
+    return eEzsigntemplateformfieldHorizontalalignment;
+  }
+
+  public void seteEzsigntemplateformfieldHorizontalalignment(EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment) {
+    this.eEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+  }
+
+
+  public EzsigntemplateformfieldRequestCompound objTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+    return this;
+  }
+
+  /**
+   * Get objTextstylestatic
+   * @return objTextstylestatic
+   */
+  @javax.annotation.Nullable
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
   }
 
 
@@ -451,10 +498,10 @@ public class EzsigntemplateformfieldRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsigntemplateelementdependency
    * @return aObjEzsigntemplateelementdependency
-  **/
+   */
   @javax.annotation.Nullable
   public List<EzsigntemplateelementdependencyRequestCompound> getaObjEzsigntemplateelementdependency() {
     return aObjEzsigntemplateelementdependency;
@@ -491,12 +538,14 @@ public class EzsigntemplateformfieldRequestCompound {
         Objects.equals(this.iEzsigntemplateformfieldPositioningoffsetx, ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldPositioningoffsetx) &&
         Objects.equals(this.iEzsigntemplateformfieldPositioningoffsety, ezsigntemplateformfieldRequestCompound.iEzsigntemplateformfieldPositioningoffsety) &&
         Objects.equals(this.eEzsigntemplateformfieldPositioningoccurence, ezsigntemplateformfieldRequestCompound.eEzsigntemplateformfieldPositioningoccurence) &&
+        Objects.equals(this.eEzsigntemplateformfieldHorizontalalignment, ezsigntemplateformfieldRequestCompound.eEzsigntemplateformfieldHorizontalalignment) &&
+        Objects.equals(this.objTextstylestatic, ezsigntemplateformfieldRequestCompound.objTextstylestatic) &&
         Objects.equals(this.aObjEzsigntemplateelementdependency, ezsigntemplateformfieldRequestCompound.aObjEzsigntemplateelementdependency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence, aObjEzsigntemplateelementdependency);
+    return Objects.hash(pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence, eEzsigntemplateformfieldHorizontalalignment, objTextstylestatic, aObjEzsigntemplateelementdependency);
   }
 
   @Override
@@ -519,6 +568,8 @@ public class EzsigntemplateformfieldRequestCompound {
     sb.append("    iEzsigntemplateformfieldPositioningoffsetx: ").append(toIndentedString(iEzsigntemplateformfieldPositioningoffsetx)).append("\n");
     sb.append("    iEzsigntemplateformfieldPositioningoffsety: ").append(toIndentedString(iEzsigntemplateformfieldPositioningoffsety)).append("\n");
     sb.append("    eEzsigntemplateformfieldPositioningoccurence: ").append(toIndentedString(eEzsigntemplateformfieldPositioningoccurence)).append("\n");
+    sb.append("    eEzsigntemplateformfieldHorizontalalignment: ").append(toIndentedString(eEzsigntemplateformfieldHorizontalalignment)).append("\n");
+    sb.append("    objTextstylestatic: ").append(toIndentedString(objTextstylestatic)).append("\n");
     sb.append("    aObjEzsigntemplateelementdependency: ").append(toIndentedString(aObjEzsigntemplateelementdependency)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -558,6 +609,8 @@ public class EzsigntemplateformfieldRequestCompound {
     openapiFields.add("iEzsigntemplateformfieldPositioningoffsetx");
     openapiFields.add("iEzsigntemplateformfieldPositioningoffsety");
     openapiFields.add("eEzsigntemplateformfieldPositioningoccurence");
+    openapiFields.add("eEzsigntemplateformfieldHorizontalalignment");
+    openapiFields.add("objTextstylestatic");
     openapiFields.add("a_objEzsigntemplateelementdependency");
 
     // a set of required properties/fields (JSON key names)
@@ -568,12 +621,12 @@ public class EzsigntemplateformfieldRequestCompound {
     openapiRequiredFields.add("iEzsigntemplateformfieldHeight");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateformfieldRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateformfieldRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateformfieldRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -616,6 +669,14 @@ public class EzsigntemplateformfieldRequestCompound {
       // validate the optional field `eEzsigntemplateformfieldPositioningoccurence`
       if (jsonObj.get("eEzsigntemplateformfieldPositioningoccurence") != null && !jsonObj.get("eEzsigntemplateformfieldPositioningoccurence").isJsonNull()) {
         FieldEEzsigntemplateformfieldPositioningoccurence.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldPositioningoccurence"));
+      }
+      // validate the optional field `eEzsigntemplateformfieldHorizontalalignment`
+      if (jsonObj.get("eEzsigntemplateformfieldHorizontalalignment") != null && !jsonObj.get("eEzsigntemplateformfieldHorizontalalignment").isJsonNull()) {
+        EnumHorizontalalignment.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldHorizontalalignment"));
+      }
+      // validate the optional field `objTextstylestatic`
+      if (jsonObj.get("objTextstylestatic") != null && !jsonObj.get("objTextstylestatic").isJsonNull()) {
+        TextstylestaticRequestCompound.validateJsonElement(jsonObj.get("objTextstylestatic"));
       }
       if (jsonObj.get("a_objEzsigntemplateelementdependency") != null && !jsonObj.get("a_objEzsigntemplateelementdependency").isJsonNull()) {
         JsonArray jsonArrayaObjEzsigntemplateelementdependency = jsonObj.getAsJsonArray("a_objEzsigntemplateelementdependency");
@@ -662,22 +723,22 @@ public class EzsigntemplateformfieldRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateformfieldRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateformfieldRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateformfieldRequestCompound
-  */
+  /**
+   * Create an instance of EzsigntemplateformfieldRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateformfieldRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateformfieldRequestCompound
+   */
   public static EzsigntemplateformfieldRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateformfieldRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateformfieldRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateformfieldRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

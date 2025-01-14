@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupListElement {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -71,12 +70,12 @@ public class UsergroupListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return pkiUsergroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUsergroupID() {
     return pkiUsergroupID;
@@ -92,10 +91,10 @@ public class UsergroupListElement {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Usergroup in the language of the requester
    * @return sUsergroupNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -111,12 +110,12 @@ public class UsergroupListElement {
     return this;
   }
 
-   /**
+  /**
    * Number of users in group
    * minimum: 0
    * maximum: 16777215
    * @return iCountUser
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiCountUser() {
     return iCountUser;
@@ -187,12 +186,12 @@ public class UsergroupListElement {
     openapiRequiredFields.add("iCountUser");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UsergroupListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UsergroupListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -249,22 +248,22 @@ public class UsergroupListElement {
     }
   }
 
- /**
-  * Create an instance of UsergroupListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UsergroupListElement
-  * @throws IOException if the JSON string is invalid with respect to UsergroupListElement
-  */
+  /**
+   * Create an instance of UsergroupListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UsergroupListElement
+   * @throws IOException if the JSON string is invalid with respect to UsergroupListElement
+   */
   public static UsergroupListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UsergroupListElement.class);
   }
 
- /**
-  * Convert an instance of UsergroupListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UsergroupListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

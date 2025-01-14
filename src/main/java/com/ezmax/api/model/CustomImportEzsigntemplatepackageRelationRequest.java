@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomImportEzsigntemplatepackageRelationRequest {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "fkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
@@ -71,11 +70,11 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackagesigner
    * minimum: 0
    * @return fkiEzsigntemplatepackagesignerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplatepackagesignerID() {
     return fkiEzsigntemplatepackagesignerID;
@@ -91,11 +90,11 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -111,10 +110,10 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatepackagesigner
    * @return sEzsigntemplatepackagesignerDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplatepackagesignerDescription() {
     return sEzsigntemplatepackagesignerDescription;
@@ -183,12 +182,12 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     openapiRequiredFields.add("fkiEzsignfoldersignerassociationID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomImportEzsigntemplatepackageRelationRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomImportEzsigntemplatepackageRelationRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomImportEzsigntemplatepackageRelationRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -245,22 +244,22 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     }
   }
 
- /**
-  * Create an instance of CustomImportEzsigntemplatepackageRelationRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomImportEzsigntemplatepackageRelationRequest
-  * @throws IOException if the JSON string is invalid with respect to CustomImportEzsigntemplatepackageRelationRequest
-  */
+  /**
+   * Create an instance of CustomImportEzsigntemplatepackageRelationRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomImportEzsigntemplatepackageRelationRequest
+   * @throws IOException if the JSON string is invalid with respect to CustomImportEzsigntemplatepackageRelationRequest
+   */
   public static CustomImportEzsigntemplatepackageRelationRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomImportEzsigntemplatepackageRelationRequest.class);
   }
 
- /**
-  * Convert an instance of CustomImportEzsigntemplatepackageRelationRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomImportEzsigntemplatepackageRelationRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

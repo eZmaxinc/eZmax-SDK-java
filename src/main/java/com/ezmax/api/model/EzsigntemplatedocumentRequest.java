@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
@@ -208,7 +207,7 @@ public class EzsigntemplatedocumentRequest {
   private Boolean bEzsigntemplatedocumentForcerepair;
 
   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
    */
   @JsonAdapter(EEzsigntemplatedocumentFormEnum.Adapter.class)
   public enum EEzsigntemplatedocumentFormEnum {
@@ -216,7 +215,9 @@ public class EzsigntemplatedocumentRequest {
     
     CONVERT("Convert"),
     
-    DISCARD("Discard");
+    DISCARD("Discard"),
+    
+    FLATTEN("Flatten");
 
     private String value;
 
@@ -277,11 +278,11 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatedocument
    * minimum: 0
    * @return pkiEzsigntemplatedocumentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigntemplatedocumentID() {
     return pkiEzsigntemplatedocumentID;
@@ -297,11 +298,11 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return fkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -317,11 +318,11 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return fkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -337,11 +338,11 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatesigner
    * minimum: 0
    * @return fkiEzsigntemplatesignerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
@@ -357,10 +358,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsigntemplatedocument.
    * @return sEzsigntemplatedocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatedocumentName() {
     return sEzsigntemplatedocumentName;
@@ -376,10 +377,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Indicates where to look for the document binary content.
    * @return eEzsigntemplatedocumentSource
-  **/
+   */
   @javax.annotation.Nonnull
   public EEzsigntemplatedocumentSourceEnum geteEzsigntemplatedocumentSource() {
     return eEzsigntemplatedocumentSource;
@@ -395,10 +396,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Indicates the format of the template.
    * @return eEzsigntemplatedocumentFormat
-  **/
+   */
   @javax.annotation.Nullable
   public EEzsigntemplatedocumentFormatEnum geteEzsigntemplatedocumentFormat() {
     return eEzsigntemplatedocumentFormat;
@@ -414,10 +415,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
    * @return sEzsigntemplatedocumentBase64
-  **/
+   */
   @javax.annotation.Nullable
   public byte[] getsEzsigntemplatedocumentBase64() {
     return sEzsigntemplatedocumentBase64;
@@ -433,10 +434,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.
    * @return sEzsigntemplatedocumentUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplatedocumentUrl() {
     return sEzsigntemplatedocumentUrl;
@@ -452,10 +453,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * Try to repair the document or flatten it if it cannot be used for electronic signature.
    * @return bEzsigntemplatedocumentForcerepair
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigntemplatedocumentForcerepair() {
     return bEzsigntemplatedocumentForcerepair;
@@ -471,10 +472,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
-   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document
+  /**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
    * @return eEzsigntemplatedocumentForm
-  **/
+   */
   @javax.annotation.Nullable
   public EEzsigntemplatedocumentFormEnum geteEzsigntemplatedocumentForm() {
     return eEzsigntemplatedocumentForm;
@@ -490,10 +491,10 @@ public class EzsigntemplatedocumentRequest {
     return this;
   }
 
-   /**
+  /**
    * If the source template is password protected, the password to open/modify it.
    * @return sEzsigntemplatedocumentPassword
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplatedocumentPassword() {
     return sEzsigntemplatedocumentPassword;
@@ -591,12 +592,12 @@ public class EzsigntemplatedocumentRequest {
     openapiRequiredFields.add("eEzsigntemplatedocumentSource");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatedocumentRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -678,22 +679,22 @@ public class EzsigntemplatedocumentRequest {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatedocumentRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatedocumentRequest
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentRequest
-  */
+  /**
+   * Create an instance of EzsigntemplatedocumentRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatedocumentRequest
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentRequest
+   */
   public static EzsigntemplatedocumentRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatedocumentRequest.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatedocumentRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatedocumentRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -29,15 +29,15 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEVersionhistoryType.Adapter.class)
 public enum FieldEVersionhistoryType {
   
-  AGENTBROKER("AgentBroker"),
+  AGENT_BROKER("AgentBroker"),
   
-  NEWFEATURE("NewFeature"),
+  NEW_FEATURE("NewFeature"),
   
   CORRECTION("Correction"),
   
   MODIFICATION("Modification"),
   
-  IMPORTANTMESSAGE("ImportantMessage");
+  IMPORTANT_MESSAGE("ImportantMessage");
 
   private String value;
 

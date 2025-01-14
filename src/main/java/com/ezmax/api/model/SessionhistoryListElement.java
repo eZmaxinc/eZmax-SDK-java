@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Sessionhistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SessionhistoryListElement {
   public static final String SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D = "pkiSessionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D)
@@ -100,12 +99,12 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Sessionhistory
    * minimum: 1
    * maximum: 2147483647
    * @return pkiSessionhistoryID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiSessionhistoryID() {
     return pkiSessionhistoryID;
@@ -121,12 +120,12 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Computer
    * minimum: 1
    * maximum: 65535
    * @return fkiComputerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiComputerID() {
     return fkiComputerID;
@@ -142,11 +141,11 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -162,10 +161,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The first hit of the Sessionhistory
    * @return dtSessionhistoryFirsthit
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtSessionhistoryFirsthit() {
     return dtSessionhistoryFirsthit;
@@ -181,10 +180,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The last hit of the Sessionhistory
    * @return dtSessionhistoryLasthit
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtSessionhistoryLasthit() {
     return dtSessionhistoryLasthit;
@@ -200,10 +199,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eSessionhistoryEndby
    * @return eSessionhistoryEndby
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldESessionhistoryEndby geteSessionhistoryEndby() {
     return eSessionhistoryEndby;
@@ -219,10 +218,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Computer
    * @return sComputerDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getsComputerDescription() {
     return sComputerDescription;
@@ -238,10 +237,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The duration of the session
    * @return sSessionhistoryDuration
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsSessionhistoryDuration() {
     return sSessionhistoryDuration;
@@ -257,10 +256,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * Represent an IP address.
    * @return sSessionhistoryIP
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsSessionhistoryIP() {
     return sSessionhistoryIP;
@@ -276,10 +275,10 @@ public class SessionhistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginname
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserLoginname() {
     return sUserLoginname;
@@ -374,12 +373,12 @@ public class SessionhistoryListElement {
     openapiRequiredFields.add("sSessionhistoryIP");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SessionhistoryListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SessionhistoryListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SessionhistoryListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -453,22 +452,22 @@ public class SessionhistoryListElement {
     }
   }
 
- /**
-  * Create an instance of SessionhistoryListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SessionhistoryListElement
-  * @throws IOException if the JSON string is invalid with respect to SessionhistoryListElement
-  */
+  /**
+   * Create an instance of SessionhistoryListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SessionhistoryListElement
+   * @throws IOException if the JSON string is invalid with respect to SessionhistoryListElement
+   */
   public static SessionhistoryListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SessionhistoryListElement.class);
   }
 
- /**
-  * Convert an instance of SessionhistoryListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SessionhistoryListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

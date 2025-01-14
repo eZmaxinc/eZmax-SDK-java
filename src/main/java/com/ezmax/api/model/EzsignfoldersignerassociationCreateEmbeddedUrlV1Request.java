@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   public static final String SERIALIZED_NAME_S_RETURN_URL = "sReturnUrl";
   @SerializedName(SERIALIZED_NAME_S_RETURN_URL)
@@ -71,10 +70,10 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return this;
   }
 
-   /**
-   * The return Url to redirect after the signing is completed
+  /**
+   * The return Url to redirect after the signing is completed  **Warning** Due to the potential for Ezsignsigners to cancel redirection, close their browser post-signing, or spoof the landing URL, it&#39;s advisable not to solely depend on the sReturnUrl for accurate status within your integration.  Once the Ezsignsigner finishes, they are directed back to your application. Your application can retain transaction state details by either storing data in a cookie or incorporating query parameters in the sReturnUrl. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123  The actual url that will be called will have an extra url parameter appended to give details about the process. The possible values are listed in the table below. For example: https://www.example.com/sReturnUrl?sSessionID&#x3D;ABC123&amp;eEzsignEvent&#x3D;CompletedEzsignfolder   |**Query parameters appended**| |---| |eEzsignEvent|   |**eEzsignEvent**|**Description**| |---|---| |SessionTimeout|The session timed out| |SessionLogout|The Ezsignsigner signed out| |DeclinedTermOfUse|The Ezsignsigner refused the terms| |DeclinedSign|The Ezsignsigner refused to sign| |Reassigned|The Ezsignsigner reassigned his signatures to someone else| |CompletedStep|The Ezsignsigner completed his step. There is other signatures to complete the Ezsigndocument| |CompletedEzsignfolder|The Ezsignfolder is completed. Everyone signed their signatures|
    * @return sReturnUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getsReturnUrl() {
     return sReturnUrl;
@@ -90,10 +89,10 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return this;
   }
 
-   /**
+  /**
    * Domain protection for the iFrame
    * @return sIframedomain
-  **/
+   */
   @javax.annotation.Nullable
   public String getsIframedomain() {
     return sIframedomain;
@@ -109,10 +108,10 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return this;
   }
 
-   /**
+  /**
    * Whether the url would be in an iFrame or not
    * @return bIsIframe
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbIsIframe() {
     return bIsIframe;
@@ -180,12 +179,12 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -238,22 +237,22 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
-  */
+  /**
+   * Create an instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationCreateEmbeddedUrlV1Request
+   */
   public static EzsignfoldersignerassociationCreateEmbeddedUrlV1Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldersignerassociationCreateEmbeddedUrlV1Request.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldersignerassociationCreateEmbeddedUrlV1Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

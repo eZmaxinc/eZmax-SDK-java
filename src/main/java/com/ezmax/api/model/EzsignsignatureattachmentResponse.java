@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignatureattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureattachmentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D = "pkiEzsignsignatureattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D)
@@ -79,12 +78,12 @@ public class EzsignsignatureattachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsignatureattachment
    * minimum: 1
    * maximum: 16777215
    * @return pkiEzsignsignatureattachmentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignsignatureattachmentID() {
     return pkiEzsignsignatureattachmentID;
@@ -100,11 +99,11 @@ public class EzsignsignatureattachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsignature
    * minimum: 0
    * @return fkiEzsignsignatureID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignsignatureID() {
     return fkiEzsignsignatureID;
@@ -120,10 +119,10 @@ public class EzsignsignatureattachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The md5 of the Ezsignsignatureattachment
    * @return binEzsignsignatureattachmentMD5
-  **/
+   */
   @javax.annotation.Nonnull
   public String getBinEzsignsignatureattachmentMD5() {
     return binEzsignsignatureattachmentMD5;
@@ -139,10 +138,10 @@ public class EzsignsignatureattachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignsignatureattachment
    * @return sEzsignsignatureattachmentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignsignatureattachmentName() {
     return sEzsignsignatureattachmentName;
@@ -158,10 +157,10 @@ public class EzsignsignatureattachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The Url to the requested document.  Url will expire after 3 hours.
    * @return sDownloadUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsDownloadUrl() {
     return sDownloadUrl;
@@ -240,12 +239,12 @@ public class EzsignsignatureattachmentResponse {
     openapiRequiredFields.add("sDownloadUrl");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureattachmentResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureattachmentResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignatureattachmentResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -308,22 +307,22 @@ public class EzsignsignatureattachmentResponse {
     }
   }
 
- /**
-  * Create an instance of EzsignsignatureattachmentResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignatureattachmentResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignatureattachmentResponse
-  */
+  /**
+   * Create an instance of EzsignsignatureattachmentResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignatureattachmentResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignatureattachmentResponse
+   */
   public static EzsignsignatureattachmentResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignatureattachmentResponse.class);
   }
 
- /**
-  * Convert an instance of EzsignsignatureattachmentResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignatureattachmentResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

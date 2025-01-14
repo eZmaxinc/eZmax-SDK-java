@@ -29,25 +29,25 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEWebhookEzsignevent.Adapter.class)
 public enum FieldEWebhookEzsignevent {
   
-  DOCUMENTCOMPLETED("DocumentCompleted"),
+  DOCUMENT_COMPLETED("DocumentCompleted"),
   
-  DOCUMENTFORMCOMPLETED("DocumentFormCompleted"),
+  DOCUMENT_FORM_COMPLETED("DocumentFormCompleted"),
   
-  DOCUMENTUNSENT("DocumentUnsent"),
+  DOCUMENT_UNSENT("DocumentUnsent"),
   
-  EZSIGNSIGNERACCEPTCLAUSE("EzsignsignerAcceptclause"),
+  EZSIGNSIGNER_ACCEPTCLAUSE("EzsignsignerAcceptclause"),
   
-  EZSIGNSIGNERCONNECT("EzsignsignerConnect"),
+  EZSIGNSIGNER_CONNECT("EzsignsignerConnect"),
   
-  FOLDERCOMPLETED("FolderCompleted"),
+  FOLDER_COMPLETED("FolderCompleted"),
   
-  FOLDERDISPOSED("FolderDisposed"),
+  FOLDER_DISPOSED("FolderDisposed"),
   
-  FOLDERSENT("FolderSent"),
+  FOLDER_SENT("FolderSent"),
   
-  FOLDERUNSENT("FolderUnsent"),
+  FOLDER_UNSENT("FolderUnsent"),
   
-  SIGNATURESIGNED("SignatureSigned");
+  SIGNATURE_SIGNED("SignatureSigned");
 
   private String value;
 

@@ -21,12 +21,14 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
+import com.ezmax.api.model.EzsignfolderCreateObjectV3Request;
+import com.ezmax.api.model.EzsignfolderCreateObjectV3Response;
 import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Request;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeV1Response;
-import com.ezmax.api.model.EzsignfolderEditObjectV1Request;
-import com.ezmax.api.model.EzsignfolderEditObjectV1Response;
+import com.ezmax.api.model.EzsignfolderEditObjectV3Request;
+import com.ezmax.api.model.EzsignfolderEditObjectV3Response;
 import com.ezmax.api.model.EzsignfolderEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
@@ -42,12 +44,15 @@ import com.ezmax.api.model.EzsignfolderGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignfolderGetListV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV1Response;
 import com.ezmax.api.model.EzsignfolderGetObjectV2Response;
+import com.ezmax.api.model.EzsignfolderGetObjectV3Response;
 import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Response;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV1Request;
 import com.ezmax.api.model.EzsignfolderReorderV1Response;
+import com.ezmax.api.model.EzsignfolderReorderV2Request;
+import com.ezmax.api.model.EzsignfolderReorderV2Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
 import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderSendV3Request;
@@ -128,6 +133,20 @@ public class ObjectEzsignfolderApiTest {
     }
 
     /**
+     * Create a new Ezsignfolder
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderCreateObjectV3Test() throws ApiException {
+        EzsignfolderCreateObjectV3Request ezsignfolderCreateObjectV3Request = null;
+        EzsignfolderCreateObjectV3Response response = api.ezsignfolderCreateObjectV3(ezsignfolderCreateObjectV3Request);
+        // TODO: test validations
+    }
+
+    /**
      * Delete an existing Ezsignfolder
      *
      * @throws ApiException if the Api call fails
@@ -176,10 +195,10 @@ public class ObjectEzsignfolderApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsignfolderEditObjectV1Test() throws ApiException {
+    public void ezsignfolderEditObjectV3Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-        EzsignfolderEditObjectV1Request ezsignfolderEditObjectV1Request = null;
-        EzsignfolderEditObjectV1Response response = api.ezsignfolderEditObjectV1(pkiEzsignfolderID, ezsignfolderEditObjectV1Request);
+        EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request = null;
+        EzsignfolderEditObjectV3Response response = api.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
         // TODO: test validations
     }
 
@@ -355,7 +374,7 @@ public class ObjectEzsignfolderApiTest {
     /**
      * Retrieve Ezsignfolder list
      *
-     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sEzsigndocumentName |
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eEzsignfolderStep | Unsent&lt;br&gt;Sent&lt;br&gt;PartiallySigned&lt;br&gt;Expired&lt;br&gt;Completed&lt;br&gt;Archived&lt;br&gt;Disposed| | eEzsignfoldertypePrivacylevel | User&lt;br&gt;Usergroup |  Advanced filters that can be used in query parameter *sFilter*:  | Variable | |---| | fkiUserID | | sContactFirstname | | sContactLastname | | sUserFirstname | | sUserLastname | | sEzsigndocumentName |
      *
      * @throws ApiException if the Api call fails
      */
@@ -393,6 +412,20 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderGetObjectV2Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderGetObjectV2Response response = api.ezsignfolderGetObjectV2(pkiEzsignfolderID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Ezsignfolder
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderGetObjectV3Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderGetObjectV3Response response = api.ezsignfolderGetObjectV3(pkiEzsignfolderID);
         // TODO: test validations
     }
 
@@ -436,6 +469,19 @@ public class ObjectEzsignfolderApiTest {
         Integer pkiEzsignfolderID = null;
         EzsignfolderReorderV1Request ezsignfolderReorderV1Request = null;
         EzsignfolderReorderV1Response response = api.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Reorder Ezsigndocuments in the Ezsignfolder
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsignfolderReorderV2Test() throws ApiException {
+        Integer pkiEzsignfolderID = null;
+        EzsignfolderReorderV2Request ezsignfolderReorderV2Request = null;
+        EzsignfolderReorderV2Response response = api.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
         // TODO: test validations
     }
 

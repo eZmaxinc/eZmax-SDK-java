@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Styles applied to a Reportcell 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportcellstyle {
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP = "bReportcellstyleBordertop";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP)
@@ -95,10 +94,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Whether there is a border at the top of the Reportcell
    * @return bReportcellstyleBordertop
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbReportcellstyleBordertop() {
     return bReportcellstyleBordertop;
@@ -114,10 +113,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Whether there is a border at the bottom of the Reportcell
    * @return bReportcellstyleBorderbottom
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbReportcellstyleBorderbottom() {
     return bReportcellstyleBorderbottom;
@@ -133,10 +132,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Whether there is a border at the left of the Reportcell
    * @return bReportcellstyleBorderleft
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbReportcellstyleBorderleft() {
     return bReportcellstyleBorderleft;
@@ -152,10 +151,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Whether there is a border at the right of the Reportcell
    * @return bReportcellstyleBorderright
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbReportcellstyleBorderright() {
     return bReportcellstyleBorderright;
@@ -171,10 +170,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Get eReportcellHorizontalalignment
    * @return eReportcellHorizontalalignment
-  **/
+   */
   @javax.annotation.Nonnull
   public EnumHorizontalalignment geteReportcellHorizontalalignment() {
     return eReportcellHorizontalalignment;
@@ -190,10 +189,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Get eReportcellVerticalalignment
    * @return eReportcellVerticalalignment
-  **/
+   */
   @javax.annotation.Nonnull
   public EnumVerticalalignment geteReportcellVerticalalignment() {
     return eReportcellVerticalalignment;
@@ -209,10 +208,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Get eReportcellFontweight
    * @return eReportcellFontweight
-  **/
+   */
   @javax.annotation.Nonnull
   public EnumFontweight geteReportcellFontweight() {
     return eReportcellFontweight;
@@ -228,10 +227,10 @@ public class CommonReportcellstyle {
     return this;
   }
 
-   /**
+  /**
    * Get eReportcellFontunderline
    * @return eReportcellFontunderline
-  **/
+   */
   @javax.annotation.Nonnull
   public EnumFontunderline geteReportcellFontunderline() {
     return eReportcellFontunderline;
@@ -322,12 +321,12 @@ public class CommonReportcellstyle {
     openapiRequiredFields.add("eReportcellFontunderline");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonReportcellstyle
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonReportcellstyle
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportcellstyle.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -389,22 +388,22 @@ public class CommonReportcellstyle {
     }
   }
 
- /**
-  * Create an instance of CommonReportcellstyle given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonReportcellstyle
-  * @throws IOException if the JSON string is invalid with respect to CommonReportcellstyle
-  */
+  /**
+   * Create an instance of CommonReportcellstyle given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonReportcellstyle
+   * @throws IOException if the JSON string is invalid with respect to CommonReportcellstyle
+   */
   public static CommonReportcellstyle fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonReportcellstyle.class);
   }
 
- /**
-  * Convert an instance of CommonReportcellstyle to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonReportcellstyle to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

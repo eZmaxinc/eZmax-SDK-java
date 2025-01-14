@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
@@ -74,10 +73,10 @@ public class EzsignfolderCreateObjectV2Request {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignfolder
    * @return aObjEzsignfolder
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzsignfolderRequestCompound> getaObjEzsignfolder() {
     return aObjEzsignfolder;
@@ -140,12 +139,12 @@ public class EzsignfolderCreateObjectV2Request {
     openapiRequiredFields.add("a_objEzsignfolder");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderCreateObjectV2Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfolderCreateObjectV2Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderCreateObjectV2Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -209,22 +208,22 @@ public class EzsignfolderCreateObjectV2Request {
     }
   }
 
- /**
-  * Create an instance of EzsignfolderCreateObjectV2Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfolderCreateObjectV2Request
-  * @throws IOException if the JSON string is invalid with respect to EzsignfolderCreateObjectV2Request
-  */
+  /**
+   * Create an instance of EzsignfolderCreateObjectV2Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfolderCreateObjectV2Request
+   * @throws IOException if the JSON string is invalid with respect to EzsignfolderCreateObjectV2Request
+   */
   public static EzsignfolderCreateObjectV2Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfolderCreateObjectV2Request.class);
   }
 
- /**
-  * Convert an instance of EzsignfolderCreateObjectV2Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfolderCreateObjectV2Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

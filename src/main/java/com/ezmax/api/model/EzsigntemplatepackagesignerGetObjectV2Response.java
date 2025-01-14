@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagesignerGetObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -74,10 +73,10 @@ public class EzsigntemplatepackagesignerGetObjectV2Response {
     return this;
   }
 
-   /**
+  /**
    * Get objDebugPayload
    * @return objDebugPayload
-  **/
+   */
   @javax.annotation.Nonnull
   public CommonResponseObjDebugPayload getObjDebugPayload() {
     return objDebugPayload;
@@ -93,10 +92,10 @@ public class EzsigntemplatepackagesignerGetObjectV2Response {
     return this;
   }
 
-   /**
+  /**
    * Get objDebug
    * @return objDebug
-  **/
+   */
   @javax.annotation.Nullable
   public CommonResponseObjDebug getObjDebug() {
     return objDebug;
@@ -112,10 +111,10 @@ public class EzsigntemplatepackagesignerGetObjectV2Response {
     return this;
   }
 
-   /**
+  /**
    * Get mPayload
    * @return mPayload
-  **/
+   */
   @javax.annotation.Nonnull
   public EzsigntemplatepackagesignerGetObjectV2ResponseMPayload getmPayload() {
     return mPayload;
@@ -185,12 +184,12 @@ public class EzsigntemplatepackagesignerGetObjectV2Response {
     openapiRequiredFields.add("mPayload");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagesignerGetObjectV2Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagesignerGetObjectV2Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackagesignerGetObjectV2Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -252,22 +251,22 @@ public class EzsigntemplatepackagesignerGetObjectV2Response {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackagesignerGetObjectV2Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackagesignerGetObjectV2Response
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagesignerGetObjectV2Response
-  */
+  /**
+   * Create an instance of EzsigntemplatepackagesignerGetObjectV2Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackagesignerGetObjectV2Response
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagesignerGetObjectV2Response
+   */
   public static EzsigntemplatepackagesignerGetObjectV2Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackagesignerGetObjectV2Response.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackagesignerGetObjectV2Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackagesignerGetObjectV2Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

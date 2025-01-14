@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
@@ -81,10 +80,10 @@ public class CommonResponseObjDebugPayload {
     return this;
   }
 
-   /**
+  /**
    * The minimum version of the function that can be called
    * @return iVersionMin
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiVersionMin() {
     return iVersionMin;
@@ -100,10 +99,10 @@ public class CommonResponseObjDebugPayload {
     return this;
   }
 
-   /**
+  /**
    * The maximum version of the function that can be called
    * @return iVersionMax
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiVersionMax() {
     return iVersionMax;
@@ -127,10 +126,10 @@ public class CommonResponseObjDebugPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.
    * @return aRequiredPermission
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaRequiredPermission() {
     return aRequiredPermission;
@@ -146,10 +145,10 @@ public class CommonResponseObjDebugPayload {
     return this;
   }
 
-   /**
+  /**
    * Wheter the current route is deprecated or not
    * @return bVersionDeprecated
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbVersionDeprecated() {
     return bVersionDeprecated;
@@ -165,10 +164,10 @@ public class CommonResponseObjDebugPayload {
     return this;
   }
 
-   /**
+  /**
    * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
    * @return dtResponseDate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtResponseDate() {
     return dtResponseDate;
@@ -247,12 +246,12 @@ public class CommonResponseObjDebugPayload {
     openapiRequiredFields.add("dtResponseDate");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonResponseObjDebugPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonResponseObjDebugPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonResponseObjDebugPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -315,22 +314,22 @@ public class CommonResponseObjDebugPayload {
     }
   }
 
- /**
-  * Create an instance of CommonResponseObjDebugPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonResponseObjDebugPayload
-  * @throws IOException if the JSON string is invalid with respect to CommonResponseObjDebugPayload
-  */
+  /**
+   * Create an instance of CommonResponseObjDebugPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonResponseObjDebugPayload
+   * @throws IOException if the JSON string is invalid with respect to CommonResponseObjDebugPayload
+   */
   public static CommonResponseObjDebugPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonResponseObjDebugPayload.class);
   }
 
- /**
-  * Convert an instance of CommonResponseObjDebugPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonResponseObjDebugPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

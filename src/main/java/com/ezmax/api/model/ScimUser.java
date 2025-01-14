@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimUser {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,7 +67,7 @@ public class ScimUser {
 
   public static final String SERIALIZED_NAME_EMAILS = "emails";
   @SerializedName(SERIALIZED_NAME_EMAILS)
-  private List<ScimEmail> emails;
+  private List<ScimEmail> emails = new ArrayList<>();
 
   public ScimUser() {
   }
@@ -78,10 +77,10 @@ public class ScimUser {
     return this;
   }
 
-   /**
+  /**
    * Get id
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public String getId() {
     return id;
@@ -97,10 +96,10 @@ public class ScimUser {
     return this;
   }
 
-   /**
+  /**
    * A service provider&#39;s unique identifier for the user, typically used by the user to directly authenticate to the service provider.  Often displayed to the user as their unique identifier within the system (as opposed to \&quot;id\&quot; or \&quot;externalId\&quot;, which are generally opaque and not user-friendly identifiers).  Each User MUST include a non-empty userName value.  This identifier MUST be unique across the service provider&#39;s entire set of Users.  This attribute is REQUIRED and is case insensitive.
    * @return userName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getUserName() {
     return userName;
@@ -116,10 +115,10 @@ public class ScimUser {
     return this;
   }
 
-   /**
+  /**
    * Get displayName
    * @return displayName
-  **/
+   */
   @javax.annotation.Nullable
   public String getDisplayName() {
     return displayName;
@@ -143,10 +142,10 @@ public class ScimUser {
     return this;
   }
 
-   /**
+  /**
    * Get emails
    * @return emails
-  **/
+   */
   @javax.annotation.Nullable
   public List<ScimEmail> getEmails() {
     return emails;
@@ -218,12 +217,12 @@ public class ScimUser {
     openapiRequiredFields.add("userName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ScimUser
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ScimUser
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ScimUser.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -300,22 +299,22 @@ public class ScimUser {
     }
   }
 
- /**
-  * Create an instance of ScimUser given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ScimUser
-  * @throws IOException if the JSON string is invalid with respect to ScimUser
-  */
+  /**
+   * Create an instance of ScimUser given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ScimUser
+   * @throws IOException if the JSON string is invalid with respect to ScimUser
+   */
   public static ScimUser fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ScimUser.class);
   }
 
- /**
-  * Convert an instance of ScimUser to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ScimUser to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

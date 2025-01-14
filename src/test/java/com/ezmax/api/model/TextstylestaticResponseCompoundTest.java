@@ -54,6 +54,14 @@ public class TextstylestaticResponseCompoundTest {
     }
 
     /**
+     * Test the property 'sFontName'
+     */
+    @Test
+    public void sFontNameTest() {
+        // TODO: test sFontName
+    }
+
+    /**
      * Test the property 'bTextstylestaticBold'
      */
     @Test

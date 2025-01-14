@@ -5,15 +5,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**ezsigntemplateCopyV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCopyV1) | **POST** /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy | Copy the Ezsigntemplate |
-| [**ezsigntemplateCreateObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV1) | **POST** /1/object/ezsigntemplate | Create a new Ezsigntemplate |
-| [**ezsigntemplateCreateObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV2) | **POST** /2/object/ezsigntemplate | Create a new Ezsigntemplate |
+| [**ezsigntemplateCreateObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateCreateObjectV3) | **POST** /3/object/ezsigntemplate | Create a new Ezsigntemplate |
 | [**ezsigntemplateDeleteObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateDeleteObjectV1) | **DELETE** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Delete an existing Ezsigntemplate |
-| [**ezsigntemplateEditObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV1) | **PUT** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
-| [**ezsigntemplateEditObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV2) | **PUT** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
+| [**ezsigntemplateEditObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateEditObjectV3) | **PUT** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Edit an existing Ezsigntemplate |
 | [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs |
 | [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list |
-| [**ezsigntemplateGetObjectV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV1) | **GET** /1/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
-| [**ezsigntemplateGetObjectV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV2) | **GET** /2/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
+| [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
 
 
 <a id="ezsigntemplateCopyV1"></a>
@@ -88,9 +85,9 @@ public class Example {
 | **201** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a id="ezsigntemplateCreateObjectV1"></a>
-# **ezsigntemplateCreateObjectV1**
-> EzsigntemplateCreateObjectV1Response ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request)
+<a id="ezsigntemplateCreateObjectV3"></a>
+# **ezsigntemplateCreateObjectV3**
+> EzsigntemplateCreateObjectV3Response ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request)
 
 Create a new Ezsigntemplate
 
@@ -118,12 +115,12 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
-    EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request = new EzsigntemplateCreateObjectV1Request(); // EzsigntemplateCreateObjectV1Request | 
+    EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request = new EzsigntemplateCreateObjectV3Request(); // EzsigntemplateCreateObjectV3Request | 
     try {
-      EzsigntemplateCreateObjectV1Response result = apiInstance.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
+      EzsigntemplateCreateObjectV3Response result = apiInstance.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV1");
+      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -137,80 +134,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ezsigntemplateCreateObjectV1Request** | [**EzsigntemplateCreateObjectV1Request**](EzsigntemplateCreateObjectV1Request.md)|  | |
+| **ezsigntemplateCreateObjectV3Request** | [**EzsigntemplateCreateObjectV3Request**](EzsigntemplateCreateObjectV3Request.md)|  | |
 
 ### Return type
 
-[**EzsigntemplateCreateObjectV1Response**](EzsigntemplateCreateObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **201** | Successful response |  -  |
-
-<a id="ezsigntemplateCreateObjectV2"></a>
-# **ezsigntemplateCreateObjectV2**
-> EzsigntemplateCreateObjectV2Response ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request)
-
-Create a new Ezsigntemplate
-
-The endpoint allows to create one or many elements at once.
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsigntemplateApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
-    EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = new EzsigntemplateCreateObjectV2Request(); // EzsigntemplateCreateObjectV2Request | 
-    try {
-      EzsigntemplateCreateObjectV2Response result = apiInstance.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateCreateObjectV2");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ezsigntemplateCreateObjectV2Request** | [**EzsigntemplateCreateObjectV2Request**](EzsigntemplateCreateObjectV2Request.md)|  | |
-
-### Return type
-
-[**EzsigntemplateCreateObjectV2Response**](EzsigntemplateCreateObjectV2Response.md)
+[**EzsigntemplateCreateObjectV3Response**](EzsigntemplateCreateObjectV3Response.md)
 
 ### Authorization
 
@@ -296,9 +224,9 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
-<a id="ezsigntemplateEditObjectV1"></a>
-# **ezsigntemplateEditObjectV1**
-> EzsigntemplateEditObjectV1Response ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request)
+<a id="ezsigntemplateEditObjectV3"></a>
+# **ezsigntemplateEditObjectV3**
+> EzsigntemplateEditObjectV3Response ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request)
 
 Edit an existing Ezsigntemplate
 
@@ -327,12 +255,12 @@ public class Example {
 
     ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
     Integer pkiEzsigntemplateID = 56; // Integer | 
-    EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = new EzsigntemplateEditObjectV1Request(); // EzsigntemplateEditObjectV1Request | 
+    EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = new EzsigntemplateEditObjectV3Request(); // EzsigntemplateEditObjectV3Request | 
     try {
-      EzsigntemplateEditObjectV1Response result = apiInstance.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
+      EzsigntemplateEditObjectV3Response result = apiInstance.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV1");
+      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -347,84 +275,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pkiEzsigntemplateID** | **Integer**|  | |
-| **ezsigntemplateEditObjectV1Request** | [**EzsigntemplateEditObjectV1Request**](EzsigntemplateEditObjectV1Request.md)|  | |
+| **ezsigntemplateEditObjectV3Request** | [**EzsigntemplateEditObjectV3Request**](EzsigntemplateEditObjectV3Request.md)|  | |
 
 ### Return type
 
-[**EzsigntemplateEditObjectV1Response**](EzsigntemplateEditObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
-
-<a id="ezsigntemplateEditObjectV2"></a>
-# **ezsigntemplateEditObjectV2**
-> EzsigntemplateEditObjectV2Response ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request)
-
-Edit an existing Ezsigntemplate
-
-
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsigntemplateApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
-    Integer pkiEzsigntemplateID = 56; // Integer | 
-    EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = new EzsigntemplateEditObjectV2Request(); // EzsigntemplateEditObjectV2Request | 
-    try {
-      EzsigntemplateEditObjectV2Response result = apiInstance.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateEditObjectV2");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pkiEzsigntemplateID** | **Integer**|  | |
-| **ezsigntemplateEditObjectV2Request** | [**EzsigntemplateEditObjectV2Request**](EzsigntemplateEditObjectV2Request.md)|  | |
-
-### Return type
-
-[**EzsigntemplateEditObjectV2Response**](EzsigntemplateEditObjectV2Response.md)
+[**EzsigntemplateEditObjectV3Response**](EzsigntemplateEditObjectV3Response.md)
 
 ### Authorization
 
@@ -444,7 +299,7 @@ public class Example {
 
 <a id="ezsigntemplateGetAutocompleteV2"></a>
 # **ezsigntemplateGetAutocompleteV2**
-> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> EzsigntemplateGetAutocompleteV2Response ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID)
 
 Retrieve Ezsigntemplates and IDs
 
@@ -476,8 +331,9 @@ public class Example {
     String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    Integer fkiEzsignfoldertypeID = 56; // Integer | The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic
     try {
-      EzsigntemplateGetAutocompleteV2Response result = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+      EzsigntemplateGetAutocompleteV2Response result = apiInstance.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetAutocompleteV2");
@@ -494,10 +350,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Ezsigntemplates to return | [enum: All] |
+| **sSelector** | **String**| The type of Ezsigntemplates to return | [enum: All, Ezsigntemplatepublic] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **fkiEzsignfoldertypeID** | **Integer**| The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic | [optional] |
 
 ### Return type
 
@@ -595,9 +452,9 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a id="ezsigntemplateGetObjectV1"></a>
-# **ezsigntemplateGetObjectV1**
-> EzsigntemplateGetObjectV1Response ezsigntemplateGetObjectV1(pkiEzsigntemplateID)
+<a id="ezsigntemplateGetObjectV3"></a>
+# **ezsigntemplateGetObjectV3**
+> EzsigntemplateGetObjectV3Response ezsigntemplateGetObjectV3(pkiEzsigntemplateID)
 
 Retrieve an existing Ezsigntemplate
 
@@ -627,10 +484,10 @@ public class Example {
     ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
     Integer pkiEzsigntemplateID = 56; // Integer | 
     try {
-      EzsigntemplateGetObjectV1Response result = apiInstance.ezsigntemplateGetObjectV1(pkiEzsigntemplateID);
+      EzsigntemplateGetObjectV3Response result = apiInstance.ezsigntemplateGetObjectV3(pkiEzsigntemplateID);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV1");
+      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -648,77 +505,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigntemplateGetObjectV1Response**](EzsigntemplateGetObjectV1Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-
-<a id="ezsigntemplateGetObjectV2"></a>
-# **ezsigntemplateGetObjectV2**
-> EzsigntemplateGetObjectV2Response ezsigntemplateGetObjectV2(pkiEzsigntemplateID)
-
-Retrieve an existing Ezsigntemplate
-
-
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsigntemplateApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
-    Integer pkiEzsigntemplateID = 56; // Integer | 
-    try {
-      EzsigntemplateGetObjectV2Response result = apiInstance.ezsigntemplateGetObjectV2(pkiEzsigntemplateID);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV2");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pkiEzsigntemplateID** | **Integer**|  | |
-
-### Return type
-
-[**EzsigntemplateGetObjectV2Response**](EzsigntemplateGetObjectV2Response.md)
+[**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
 
 ### Authorization
 

@@ -5,15 +5,15 @@
 ## Enum
 
 
-* `AGENTBROKER` (value: `"AgentBroker"`)
+* `AGENT_BROKER` (value: `"AgentBroker"`)
 
-* `NEWFEATURE` (value: `"NewFeature"`)
+* `NEW_FEATURE` (value: `"NewFeature"`)
 
 * `CORRECTION` (value: `"Correction"`)
 
 * `MODIFICATION` (value: `"Modification"`)
 
-* `IMPORTANTMESSAGE` (value: `"ImportantMessage"`)
+* `IMPORTANT_MESSAGE` (value: `"ImportantMessage"`)
 
 
 

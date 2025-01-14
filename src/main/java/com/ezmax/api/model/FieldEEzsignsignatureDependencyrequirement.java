@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEEzsignsignatureDependencyrequirement.Adapter.class)
 public enum FieldEEzsignsignatureDependencyrequirement {
   
-  ALLOF("AllOf"),
+  ALL_OF("AllOf"),
   
-  ANYOF("AnyOf");
+  ANY_OF("AnyOf");
 
   private String value;
 

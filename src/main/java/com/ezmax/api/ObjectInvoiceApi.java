@@ -29,7 +29,10 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.InvoiceGetAttachmentsV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationCountV1Response;
 import com.ezmax.api.model.InvoiceGetCommunicationListV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationsendersV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -202,6 +205,133 @@ public class ObjectInvoiceApi {
         return localVarCall;
     }
     /**
+     * Build call for invoiceGetCommunicationCountV1
+     * @param pkiInvoiceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationCountV1Call(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/invoice/{pkiInvoiceID}/getCommunicationCount"
+            .replace("{" + "pkiInvoiceID" + "}", localVarApiClient.escapeString(pkiInvoiceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call invoiceGetCommunicationCountV1ValidateBeforeCall(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInvoiceID' is set
+        if (pkiInvoiceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationCountV1(Async)");
+        }
+
+        return invoiceGetCommunicationCountV1Call(pkiInvoiceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return InvoiceGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InvoiceGetCommunicationCountV1Response invoiceGetCommunicationCountV1(Integer pkiInvoiceID) throws ApiException {
+        ApiResponse<InvoiceGetCommunicationCountV1Response> localVarResp = invoiceGetCommunicationCountV1WithHttpInfo(pkiInvoiceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return ApiResponse&lt;InvoiceGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InvoiceGetCommunicationCountV1Response> invoiceGetCommunicationCountV1WithHttpInfo(Integer pkiInvoiceID) throws ApiException {
+        okhttp3.Call localVarCall = invoiceGetCommunicationCountV1ValidateBeforeCall(pkiInvoiceID, null);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationCountV1Async(Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = invoiceGetCommunicationCountV1ValidateBeforeCall(pkiInvoiceID, _callback);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for invoiceGetCommunicationListV1
      * @param pkiInvoiceID  (required)
      * @param _callback Callback for upload/download progress
@@ -325,6 +455,260 @@ public class ObjectInvoiceApi {
 
         okhttp3.Call localVarCall = invoiceGetCommunicationListV1ValidateBeforeCall(pkiInvoiceID, _callback);
         Type localVarReturnType = new TypeToken<InvoiceGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for invoiceGetCommunicationrecipientsV1
+     * @param pkiInvoiceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationrecipientsV1Call(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/invoice/{pkiInvoiceID}/getCommunicationrecipients"
+            .replace("{" + "pkiInvoiceID" + "}", localVarApiClient.escapeString(pkiInvoiceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call invoiceGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInvoiceID' is set
+        if (pkiInvoiceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationrecipientsV1(Async)");
+        }
+
+        return invoiceGetCommunicationrecipientsV1Call(pkiInvoiceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return InvoiceGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InvoiceGetCommunicationrecipientsV1Response invoiceGetCommunicationrecipientsV1(Integer pkiInvoiceID) throws ApiException {
+        ApiResponse<InvoiceGetCommunicationrecipientsV1Response> localVarResp = invoiceGetCommunicationrecipientsV1WithHttpInfo(pkiInvoiceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return ApiResponse&lt;InvoiceGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InvoiceGetCommunicationrecipientsV1Response> invoiceGetCommunicationrecipientsV1WithHttpInfo(Integer pkiInvoiceID) throws ApiException {
+        okhttp3.Call localVarCall = invoiceGetCommunicationrecipientsV1ValidateBeforeCall(pkiInvoiceID, null);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationrecipientsV1Async(Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = invoiceGetCommunicationrecipientsV1ValidateBeforeCall(pkiInvoiceID, _callback);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for invoiceGetCommunicationsendersV1
+     * @param pkiInvoiceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationsendersV1Call(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/invoice/{pkiInvoiceID}/getCommunicationsenders"
+            .replace("{" + "pkiInvoiceID" + "}", localVarApiClient.escapeString(pkiInvoiceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call invoiceGetCommunicationsendersV1ValidateBeforeCall(Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInvoiceID' is set
+        if (pkiInvoiceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInvoiceID' when calling invoiceGetCommunicationsendersV1(Async)");
+        }
+
+        return invoiceGetCommunicationsendersV1Call(pkiInvoiceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return InvoiceGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public InvoiceGetCommunicationsendersV1Response invoiceGetCommunicationsendersV1(Integer pkiInvoiceID) throws ApiException {
+        ApiResponse<InvoiceGetCommunicationsendersV1Response> localVarResp = invoiceGetCommunicationsendersV1WithHttpInfo(pkiInvoiceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender
+     * 
+     * @param pkiInvoiceID  (required)
+     * @return ApiResponse&lt;InvoiceGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InvoiceGetCommunicationsendersV1Response> invoiceGetCommunicationsendersV1WithHttpInfo(Integer pkiInvoiceID) throws ApiException {
+        okhttp3.Call localVarCall = invoiceGetCommunicationsendersV1ValidateBeforeCall(pkiInvoiceID, null);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender (asynchronously)
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceGetCommunicationsendersV1Async(Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = invoiceGetCommunicationsendersV1ValidateBeforeCall(pkiInvoiceID, _callback);
+        Type localVarReturnType = new TypeToken<InvoiceGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

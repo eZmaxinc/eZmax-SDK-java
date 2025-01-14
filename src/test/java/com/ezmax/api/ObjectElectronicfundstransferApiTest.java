@@ -15,7 +15,10 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationCountV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationListV1Response;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +36,20 @@ public class ObjectElectronicfundstransferApiTest {
     private final ObjectElectronicfundstransferApi api = new ObjectElectronicfundstransferApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void electronicfundstransferGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiElectronicfundstransferID = null;
+        ElectronicfundstransferGetCommunicationCountV1Response response = api.electronicfundstransferGetCommunicationCountV1(pkiElectronicfundstransferID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectElectronicfundstransferApiTest {
     public void electronicfundstransferGetCommunicationListV1Test() throws ApiException {
         Integer pkiElectronicfundstransferID = null;
         ElectronicfundstransferGetCommunicationListV1Response response = api.electronicfundstransferGetCommunicationListV1(pkiElectronicfundstransferID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void electronicfundstransferGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiElectronicfundstransferID = null;
+        ElectronicfundstransferGetCommunicationrecipientsV1Response response = api.electronicfundstransferGetCommunicationrecipientsV1(pkiElectronicfundstransferID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void electronicfundstransferGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiElectronicfundstransferID = null;
+        ElectronicfundstransferGetCommunicationsendersV1Response response = api.electronicfundstransferGetCommunicationsendersV1(pkiElectronicfundstransferID);
         // TODO: test validations
     }
 

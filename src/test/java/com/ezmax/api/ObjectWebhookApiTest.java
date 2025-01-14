@@ -28,6 +28,8 @@ import com.ezmax.api.model.WebhookGetListV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Request;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Response;
+import com.ezmax.api.model.WebhookSendWebhookV1Request;
+import com.ezmax.api.model.WebhookSendWebhookV1Response;
 import com.ezmax.api.model.WebhookTestV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -147,6 +149,18 @@ public class ObjectWebhookApiTest {
         Integer pkiWebhookID = null;
         WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request = null;
         WebhookRegenerateApikeyV1Response response = api.webhookRegenerateApikeyV1(pkiWebhookID, webhookRegenerateApikeyV1Request);
+        // TODO: test validations
+    }
+
+    /**
+     * Emit a Webhook event
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void webhookSendWebhookV1Test() throws ApiException {
+        WebhookSendWebhookV1Request webhookSendWebhookV1Request = null;
+        WebhookSendWebhookV1Response response = api.webhookSendWebhookV1(webhookSendWebhookV1Request);
         // TODO: test validations
     }
 

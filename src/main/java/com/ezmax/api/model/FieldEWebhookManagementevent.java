@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEWebhookManagementevent.Adapter.class)
 public enum FieldEWebhookManagementevent {
   
-  USERCREATED("UserCreated"),
+  USER_CREATED("UserCreated"),
   
-  USERSTAGEDCREATED("UserstagedCreated");
+  USERSTAGED_CREATED("UserstagedCreated");
 
   private String value;
 

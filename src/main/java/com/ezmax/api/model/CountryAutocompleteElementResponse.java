@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Country AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CountryAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COUNTRY_I_D = "pkiCountryID";
   @SerializedName(SERIALIZED_NAME_PKI_COUNTRY_I_D)
@@ -75,11 +74,11 @@ public class CountryAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
    * minimum: 0
    * @return pkiCountryID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiCountryID() {
     return pkiCountryID;
@@ -95,10 +94,10 @@ public class CountryAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Country in the language of the requester
    * @return sCountryNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCountryNameX() {
     return sCountryNameX;
@@ -114,10 +113,10 @@ public class CountryAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The shortname of the Country
    * @return sCountryShortname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCountryShortname() {
     return sCountryShortname;
@@ -133,10 +132,10 @@ public class CountryAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Country is active or not
    * @return bCountryIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbCountryIsactive() {
     return bCountryIsactive;
@@ -211,12 +210,12 @@ public class CountryAutocompleteElementResponse {
     openapiRequiredFields.add("bCountryIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CountryAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CountryAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CountryAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -276,22 +275,22 @@ public class CountryAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of CountryAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CountryAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to CountryAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of CountryAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CountryAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to CountryAutocompleteElementResponse
+   */
   public static CountryAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CountryAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of CountryAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CountryAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

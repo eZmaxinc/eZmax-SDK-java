@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepackagemembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "a_pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
@@ -81,10 +80,10 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
    * @return aPkiEzsigntemplatepackagemembershipID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaPkiEzsigntemplatepackagemembershipID() {
     return aPkiEzsigntemplatepackagemembershipID;
@@ -100,10 +99,10 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignbulksend was automatically modified and needs a manual validation
    * @return bEzsigntemplatepackageNeedvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
@@ -119,10 +118,10 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage was automatically modified and needs a manual validation
    * @return bEzsignbulksendNeedvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignbulksendNeedvalidation() {
     return bEzsignbulksendNeedvalidation;
@@ -193,12 +192,12 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     openapiRequiredFields.add("bEzsignbulksendNeedvalidation");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -258,22 +257,22 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload
+   */
   public static EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

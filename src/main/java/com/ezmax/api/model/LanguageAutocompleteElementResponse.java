@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Language AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LanguageAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_LANGUAGE_I_D = "pkiLanguageID";
   @SerializedName(SERIALIZED_NAME_PKI_LANGUAGE_I_D)
@@ -71,12 +70,12 @@ public class LanguageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return pkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiLanguageID() {
     return pkiLanguageID;
@@ -92,10 +91,10 @@ public class LanguageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Language in the language of the requester
    * @return sLanguageNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsLanguageNameX() {
     return sLanguageNameX;
@@ -111,10 +110,10 @@ public class LanguageAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Language is active or not
    * @return bLanguageIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbLanguageIsactive() {
     return bLanguageIsactive;
@@ -185,12 +184,12 @@ public class LanguageAutocompleteElementResponse {
     openapiRequiredFields.add("bLanguageIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to LanguageAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to LanguageAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!LanguageAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -247,22 +246,22 @@ public class LanguageAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of LanguageAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of LanguageAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to LanguageAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of LanguageAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of LanguageAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to LanguageAutocompleteElementResponse
+   */
   public static LanguageAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, LanguageAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of LanguageAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of LanguageAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

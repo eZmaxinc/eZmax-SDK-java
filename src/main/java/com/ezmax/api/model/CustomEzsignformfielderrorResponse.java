@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfield Object to contain an error list
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignformfielderrorResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
@@ -70,10 +69,10 @@ public class CustomEzsignformfielderrorResponse {
     return this;
   }
 
-   /**
+  /**
    * The Label for the Ezsignformfield
    * @return sEzsignformfieldLabel
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignformfieldLabel() {
     return sEzsignformfieldLabel;
@@ -97,10 +96,10 @@ public class CustomEzsignformfielderrorResponse {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return aObjEzsignformfielderrortest
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzsignformfielderrortestResponse> getaObjEzsignformfielderrortest() {
     return aObjEzsignformfielderrortest;
@@ -167,12 +166,12 @@ public class CustomEzsignformfielderrorResponse {
     openapiRequiredFields.add("a_objEzsignformfielderrortest");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignformfielderrorResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignformfielderrorResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignformfielderrorResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -239,22 +238,22 @@ public class CustomEzsignformfielderrorResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignformfielderrorResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignformfielderrorResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignformfielderrorResponse
-  */
+  /**
+   * Create an instance of CustomEzsignformfielderrorResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignformfielderrorResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignformfielderrorResponse
+   */
   public static CustomEzsignformfielderrorResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignformfielderrorResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignformfielderrorResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignformfielderrorResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

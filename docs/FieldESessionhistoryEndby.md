@@ -13,25 +13,25 @@
 
 * `HIJACK` (value: `"Hijack"`)
 
-* `DOUBLELOGON` (value: `"DoubleLogon"`)
+* `DOUBLE_LOGON` (value: `"DoubleLogon"`)
 
 * `GARBAGE` (value: `"Garbage"`)
 
 * `LOGOFF` (value: `"Logoff"`)
 
-* `BADAUTH` (value: `"BadAuth"`)
+* `BAD_AUTH` (value: `"BadAuth"`)
 
 * `LOCKED` (value: `"Locked"`)
 
 * `INACTIVE` (value: `"Inactive"`)
 
-* `INVALIDUSER` (value: `"InvalidUser"`)
+* `INVALID_USER` (value: `"InvalidUser"`)
 
-* `BADUSERTYPE` (value: `"BadUserType"`)
+* `BAD_USER_TYPE` (value: `"BadUserType"`)
 
-* `BADIP` (value: `"BadIP"`)
+* `BAD_IP` (value: `"BadIP"`)
 
-* `FORCEDLOGOFF` (value: `"ForcedLogoff"`)
+* `FORCED_LOGOFF` (value: `"ForcedLogoff"`)
 
 
 

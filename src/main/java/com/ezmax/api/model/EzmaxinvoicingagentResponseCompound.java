@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingagentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
@@ -146,11 +145,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingagent
    * minimum: 0
    * @return pkiEzmaxinvoicingagentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzmaxinvoicingagentID() {
     return pkiEzmaxinvoicingagentID;
@@ -166,11 +165,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicing
    * minimum: 0
    * @return fkiEzmaxinvoicingID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzmaxinvoicingID() {
     return fkiEzmaxinvoicingID;
@@ -186,11 +185,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityinternal.
    * minimum: 0
    * @return fkiBillingentityinternalID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -206,10 +205,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Billingentityinternal in the language of the requester
    * @return sBillingentityinternalDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -225,11 +224,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Agent.
    * minimum: 0
    * @return fkiAgentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -245,11 +244,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Broker.
    * minimum: 0
    * @return fkiBrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -265,11 +264,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of sessions
    * minimum: 0
    * @return iEzmaxinvoicingagentSession
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentSession() {
     return iEzmaxinvoicingagentSession;
@@ -285,11 +284,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of times this user was cloned
    * minimum: 0
    * @return iEzmaxinvoicingagentCloned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentCloned() {
     return iEzmaxinvoicingagentCloned;
@@ -305,11 +304,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of invoices
    * minimum: 0
    * @return iEzmaxinvoicingagentInvoice
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentInvoice() {
     return iEzmaxinvoicingagentInvoice;
@@ -325,11 +324,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of inscriptions
    * minimum: 0
    * @return iEzmaxinvoicingagentInscription
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentInscription() {
     return iEzmaxinvoicingagentInscription;
@@ -345,11 +344,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of active inscriptions
    * minimum: 0
    * @return iEzmaxinvoicingagentInscriptionactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentInscriptionactive() {
     return iEzmaxinvoicingagentInscriptionactive;
@@ -365,11 +364,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of sales
    * minimum: 0
    * @return iEzmaxinvoicingagentSale
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentSale() {
     return iEzmaxinvoicingagentSale;
@@ -385,11 +384,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of otherincomes
    * minimum: 0
    * @return iEzmaxinvoicingagentOtherincome
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentOtherincome() {
     return iEzmaxinvoicingagentOtherincome;
@@ -405,11 +404,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of commission calculations
    * minimum: 0
    * @return iEzmaxinvoicingagentCommissioncalculation
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentCommissioncalculation() {
     return iEzmaxinvoicingagentCommissioncalculation;
@@ -425,11 +424,11 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The number of ezsign documents
    * minimum: 0
    * @return iEzmaxinvoicingagentEzsigndocument
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzmaxinvoicingagentEzsigndocument() {
     return iEzmaxinvoicingagentEzsigndocument;
@@ -445,10 +444,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the agent has an eZsign account
    * @return bEzmaxinvoicingagentEzsignaccount
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingagentEzsignaccount() {
     return bEzmaxinvoicingagentEzsignaccount;
@@ -464,10 +463,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether it is billable for eZmax
    * @return bEzmaxinvoicingagentBillableezmax
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingagentBillableezmax() {
     return bEzmaxinvoicingagentBillableezmax;
@@ -483,10 +482,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzmaxinvoicingagentVariationezmax
    * @return eEzmaxinvoicingagentVariationezmax
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzmaxinvoicingagentVariationezmax geteEzmaxinvoicingagentVariationezmax() {
     return eEzmaxinvoicingagentVariationezmax;
@@ -502,10 +501,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether it is billable for eZsign
    * @return bEzmaxinvoicingagentBillableezsign
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingagentBillableezsign() {
     return bEzmaxinvoicingagentBillableezsign;
@@ -521,10 +520,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzmaxinvoicingagentVariationezsign
    * @return eEzmaxinvoicingagentVariationezsign
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzmaxinvoicingagentVariationezsign geteEzmaxinvoicingagentVariationezsign() {
     return eEzmaxinvoicingagentVariationezsign;
@@ -540,10 +539,10 @@ public class EzmaxinvoicingagentResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objContactName
    * @return objContactName
-  **/
+   */
   @javax.annotation.Nonnull
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
@@ -682,12 +681,12 @@ public class EzmaxinvoicingagentResponseCompound {
     openapiRequiredFields.add("objContactName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingagentResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingagentResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingagentResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -750,22 +749,22 @@ public class EzmaxinvoicingagentResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicingagentResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicingagentResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingagentResponseCompound
-  */
+  /**
+   * Create an instance of EzmaxinvoicingagentResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicingagentResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingagentResponseCompound
+   */
   public static EzmaxinvoicingagentResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicingagentResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicingagentResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicingagentResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

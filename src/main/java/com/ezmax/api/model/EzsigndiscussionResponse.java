@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndiscussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndiscussionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
@@ -88,12 +87,12 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndiscussion
    * minimum: 0
    * maximum: 16777215
    * @return pkiEzsigndiscussionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigndiscussionID() {
     return pkiEzsigndiscussionID;
@@ -109,11 +108,11 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignpage
    * minimum: 0
    * @return fkiEzsignpageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignpageID() {
     return fkiEzsignpageID;
@@ -129,12 +128,12 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Discussion
    * minimum: 0
    * maximum: 16777215
    * @return fkiDiscussionID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiDiscussionID() {
     return fkiDiscussionID;
@@ -150,12 +149,12 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The x of the Ezsigndiscussion
    * minimum: 0
    * maximum: 65535
    * @return iEzsigndiscussionX
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndiscussionX() {
     return iEzsigndiscussionX;
@@ -171,12 +170,12 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The y of the Ezsigndiscussion
    * minimum: 0
    * maximum: 65535
    * @return iEzsigndiscussionY
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndiscussionY() {
     return iEzsigndiscussionY;
@@ -192,10 +191,10 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigndocument for the Ezsigndiscussion
    * @return iEzsigndiscussionPagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndiscussionPagenumber() {
     return iEzsigndiscussionPagenumber;
@@ -211,10 +210,10 @@ public class EzsigndiscussionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objDiscussion
    * @return objDiscussion
-  **/
+   */
   @javax.annotation.Nonnull
   public DiscussionResponseCompound getObjDiscussion() {
     return objDiscussion;
@@ -301,12 +300,12 @@ public class EzsigndiscussionResponse {
     openapiRequiredFields.add("objDiscussion");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigndiscussionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigndiscussionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigndiscussionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -362,22 +361,22 @@ public class EzsigndiscussionResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigndiscussionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigndiscussionResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigndiscussionResponse
-  */
+  /**
+   * Create an instance of EzsigndiscussionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigndiscussionResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigndiscussionResponse
+   */
   public static EzsigndiscussionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigndiscussionResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigndiscussionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigndiscussionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

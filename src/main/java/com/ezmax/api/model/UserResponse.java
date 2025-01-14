@@ -44,7 +44,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -56,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -218,11 +217,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return pkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -238,11 +237,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Agent.
    * minimum: 0
    * @return fkiAgentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -258,11 +257,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Broker.
    * minimum: 0
    * @return fkiBrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -278,11 +277,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Assistant.
    * minimum: 0
    * @return fkiAssistantID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAssistantID() {
     return fkiAssistantID;
@@ -298,11 +297,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Employee.
    * minimum: 0
    * @return fkiEmployeeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEmployeeID() {
     return fkiEmployeeID;
@@ -318,12 +317,12 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Company
    * minimum: 1
    * maximum: 255
    * @return fkiCompanyIDDefault
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiCompanyIDDefault() {
     return fkiCompanyIDDefault;
@@ -339,10 +338,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Company in the language of the requester
    * @return sCompanyNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -358,11 +357,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Department
    * minimum: 0
    * @return fkiDepartmentIDDefault
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiDepartmentIDDefault() {
     return fkiDepartmentIDDefault;
@@ -378,10 +377,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Department in the language of the requester
    * @return sDepartmentNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsDepartmentNameX() {
     return sDepartmentNameX;
@@ -397,11 +396,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Timezone
    * minimum: 0
    * @return fkiTimezoneID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiTimezoneID() {
     return fkiTimezoneID;
@@ -417,10 +416,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Timezone
    * @return sTimezoneName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsTimezoneName() {
     return sTimezoneName;
@@ -436,12 +435,12 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -457,10 +456,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Language in the language of the requester
    * @return sLanguageNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsLanguageNameX() {
     return sLanguageNameX;
@@ -476,10 +475,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objEmail
    * @return objEmail
-  **/
+   */
   @javax.annotation.Nonnull
   public EmailResponseCompound getObjEmail() {
     return objEmail;
@@ -495,11 +494,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityinternal.
    * minimum: 0
    * @return fkiBillingentityinternalID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -515,10 +514,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Billingentityinternal in the language of the requester
    * @return sBillingentityinternalDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -534,10 +533,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objPhoneHome
    * @return objPhoneHome
-  **/
+   */
   @javax.annotation.Nullable
   public PhoneResponseCompound getObjPhoneHome() {
     return objPhoneHome;
@@ -553,10 +552,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objPhoneSMS
    * @return objPhoneSMS
-  **/
+   */
   @javax.annotation.Nullable
   public PhoneResponseCompound getObjPhoneSMS() {
     return objPhoneSMS;
@@ -572,11 +571,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
    * minimum: 0
    * @return fkiSecretquestionID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSecretquestionID() {
     return fkiSecretquestionID;
@@ -592,11 +591,11 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Module
    * minimum: 0
    * @return fkiModuleIDForm
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiModuleIDForm() {
     return fkiModuleIDForm;
@@ -612,10 +611,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Module in the language of the requester
    * @return sModuleNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsModuleNameX() {
     return sModuleNameX;
@@ -631,10 +630,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eUserOrigin
    * @return eUserOrigin
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserOrigin geteUserOrigin() {
     return eUserOrigin;
@@ -650,10 +649,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eUserType
    * @return eUserType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserType geteUserType() {
     return eUserType;
@@ -669,10 +668,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eUserLogintype
    * @return eUserLogintype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserLogintype geteUserLogintype() {
     return eUserLogintype;
@@ -688,10 +687,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -707,10 +706,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastname() {
     return sUserLastname;
@@ -726,10 +725,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLoginname() {
     return sUserLoginname;
@@ -745,10 +744,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The job title of the user
    * @return sUserJobtitle
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserJobtitle() {
     return sUserJobtitle;
@@ -764,10 +763,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eUserEzsignaccess
    * @return eUserEzsignaccess
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserEzsignaccess geteUserEzsignaccess() {
     return eUserEzsignaccess;
@@ -783,10 +782,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The last logon date of the User
    * @return dtUserLastlogondate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtUserLastlogondate() {
     return dtUserLastlogondate;
@@ -802,10 +801,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The date at which the User&#39;s password was last changed
    * @return dtUserPasswordchanged
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtUserPasswordchanged() {
     return dtUserPasswordchanged;
@@ -821,10 +820,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * The eZsign prepaid expiration date
    * @return dtUserEzsignprepaidexpiration
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtUserEzsignprepaidexpiration() {
     return dtUserEzsignprepaidexpiration;
@@ -840,10 +839,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the User is active or not
    * @return bUserIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbUserIsactive() {
     return bUserIsactive;
@@ -859,10 +858,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
    * @return bUserValidatebyadministration
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbUserValidatebyadministration() {
     return bUserValidatebyadministration;
@@ -878,10 +877,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if the transactions in which the User is implicated must be validated by a director or not
    * @return bUserValidatebydirector
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbUserValidatebydirector() {
     return bUserValidatebydirector;
@@ -897,10 +896,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if Attachments uploaded by the User must be validated or not
    * @return bUserAttachmentautoverified
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbUserAttachmentautoverified() {
     return bUserAttachmentautoverified;
@@ -916,10 +915,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if the User is forced to change its password
    * @return bUserChangepassword
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbUserChangepassword() {
     return bUserChangepassword;
@@ -935,10 +934,10 @@ public class UserResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nonnull
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -1133,12 +1132,12 @@ public class UserResponse {
     openapiRequiredFields.add("objAudit");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -1251,22 +1250,22 @@ public class UserResponse {
     }
   }
 
- /**
-  * Create an instance of UserResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserResponse
-  * @throws IOException if the JSON string is invalid with respect to UserResponse
-  */
+  /**
+   * Create an instance of UserResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserResponse
+   * @throws IOException if the JSON string is invalid with respect to UserResponse
+   */
   public static UserResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserResponse.class);
   }
 
- /**
-  * Convert an instance of UserResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

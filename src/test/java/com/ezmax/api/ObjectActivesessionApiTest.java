@@ -14,6 +14,8 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Request;
+import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Response;
 import com.ezmax.api.model.ActivesessionGetCurrentV1Response;
 import com.ezmax.api.model.ActivesessionGetListV1Response;
 import com.ezmax.api.model.CommonResponseError;
@@ -35,6 +37,20 @@ import java.util.Map;
 public class ObjectActivesessionApiTest {
 
     private final ObjectActivesessionApi api = new ObjectActivesessionApi();
+
+    /**
+     * Generate a federation token
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void activesessionGenerateFederationTokenV1Test() throws ApiException {
+        ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request = null;
+        ActivesessionGenerateFederationTokenV1Response response = api.activesessionGenerateFederationTokenV1(activesessionGenerateFederationTokenV1Request);
+        // TODO: test validations
+    }
 
     /**
      * Get Current Activesession

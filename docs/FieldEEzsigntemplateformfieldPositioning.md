@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `PERCOORDINATES` (value: `"PerCoordinates"`)
+* `PER_COORDINATES` (value: `"PerCoordinates"`)
 
-* `PERPOSITIONINGPATTERN` (value: `"PerPositioningPattern"`)
+* `PER_POSITIONING_PATTERN` (value: `"PerPositioningPattern"`)
 
 
 

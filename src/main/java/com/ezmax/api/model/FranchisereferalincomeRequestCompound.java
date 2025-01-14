@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -119,11 +118,11 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisereferalincome
    * minimum: 0
    * @return pkiFranchisereferalincomeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiFranchisereferalincomeID() {
     return pkiFranchisereferalincomeID;
@@ -139,11 +138,11 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisebroker
    * minimum: 0
    * @return fkiFranchisebrokerID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiFranchisebrokerID() {
     return fkiFranchisebrokerID;
@@ -159,11 +158,11 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisereferalincomeprogram
    * minimum: 0
    * @return fkiFranchisereferalincomeprogramID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiFranchisereferalincomeprogramID() {
     return fkiFranchisereferalincomeprogramID;
@@ -179,11 +178,11 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Period
    * minimum: 0
    * @return fkiPeriodID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiPeriodID() {
     return fkiPeriodID;
@@ -199,10 +198,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The loan amount
    * @return dFranchisereferalincomeLoan
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdFranchisereferalincomeLoan() {
     return dFranchisereferalincomeLoan;
@@ -218,10 +217,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The amount that will be given to the franchise
    * @return dFranchisereferalincomeFranchiseamount
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdFranchisereferalincomeFranchiseamount() {
     return dFranchisereferalincomeFranchiseamount;
@@ -237,10 +236,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The amount that will be kept by the franchisor
    * @return dFranchisereferalincomeFranchisoramount
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdFranchisereferalincomeFranchisoramount() {
     return dFranchisereferalincomeFranchisoramount;
@@ -256,10 +255,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The amount that will be given to the agent
    * @return dFranchisereferalincomeAgentamount
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdFranchisereferalincomeAgentamount() {
     return dFranchisereferalincomeAgentamount;
@@ -275,10 +274,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The date the amounts were disbursed
    * @return dtFranchisereferalincomeDisbursed
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtFranchisereferalincomeDisbursed() {
     return dtFranchisereferalincomeDisbursed;
@@ -294,10 +293,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Comment about the transaction
    * @return tFranchisereferalincomeComment
-  **/
+   */
   @javax.annotation.Nonnull
   public String gettFranchisereferalincomeComment() {
     return tFranchisereferalincomeComment;
@@ -313,11 +312,11 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisereoffice
    * minimum: 0
    * @return fkiFranchiseofficeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiFranchiseofficeID() {
     return fkiFranchiseofficeID;
@@ -333,10 +332,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return sFranchisereferalincomeRemoteid
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsFranchisereferalincomeRemoteid() {
     return sFranchisereferalincomeRemoteid;
@@ -352,10 +351,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objAddress
    * @return objAddress
-  **/
+   */
   @javax.annotation.Nullable
   public AddressRequest getObjAddress() {
     return objAddress;
@@ -379,10 +378,10 @@ public class FranchisereferalincomeRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjContact
    * @return aObjContact
-  **/
+   */
   @javax.annotation.Nonnull
   public List<ContactRequestCompound> getaObjContact() {
     return aObjContact;
@@ -495,12 +494,12 @@ public class FranchisereferalincomeRequestCompound {
     openapiRequiredFields.add("a_objContact");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FranchisereferalincomeRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to FranchisereferalincomeRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!FranchisereferalincomeRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -589,22 +588,22 @@ public class FranchisereferalincomeRequestCompound {
     }
   }
 
- /**
-  * Create an instance of FranchisereferalincomeRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of FranchisereferalincomeRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to FranchisereferalincomeRequestCompound
-  */
+  /**
+   * Create an instance of FranchisereferalincomeRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of FranchisereferalincomeRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to FranchisereferalincomeRequestCompound
+   */
   public static FranchisereferalincomeRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, FranchisereferalincomeRequestCompound.class);
   }
 
- /**
-  * Convert an instance of FranchisereferalincomeRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of FranchisereferalincomeRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -31,11 +31,11 @@ public enum FieldEEzsignfolderStep {
   
   UNSENT("Unsent"),
   
-  PENDINGSEND("PendingSend"),
+  PENDING_SEND("PendingSend"),
   
   SENT("Sent"),
   
-  PARTIALLYSIGNED("PartiallySigned"),
+  PARTIALLY_SIGNED("PartiallySigned"),
   
   EXPIRED("Expired"),
   

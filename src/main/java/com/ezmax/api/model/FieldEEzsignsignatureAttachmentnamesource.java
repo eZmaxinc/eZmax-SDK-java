@@ -33,7 +33,7 @@ public enum FieldEEzsignsignatureAttachmentnamesource {
   
   CUSTOMER("Customer"),
   
-  DESCRIPTIONCUSTOMER("DescriptionCustomer");
+  DESCRIPTION_CUSTOMER("DescriptionCustomer");
 
   private String value;
 

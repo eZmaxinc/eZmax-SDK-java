@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,11 +53,15 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SystemconfigurationRequest {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
   private Integer pkiSystemconfigurationID;
+
+  public static final String SERIALIZED_NAME_FKI_BRANDING_I_D = "fkiBrandingID";
+  @SerializedName(SERIALIZED_NAME_FKI_BRANDING_I_D)
+  private Integer fkiBrandingID;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION = "eSystemconfigurationNewexternaluseraction";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION)
@@ -109,12 +112,12 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Systemconfiguration
    * minimum: 1
    * maximum: 1
    * @return pkiSystemconfigurationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiSystemconfigurationID() {
     return pkiSystemconfigurationID;
@@ -125,15 +128,35 @@ public class SystemconfigurationRequest {
   }
 
 
+  public SystemconfigurationRequest fkiBrandingID(Integer fkiBrandingID) {
+    this.fkiBrandingID = fkiBrandingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Branding
+   * minimum: 0
+   * @return fkiBrandingID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBrandingID() {
+    return fkiBrandingID;
+  }
+
+  public void setFkiBrandingID(Integer fkiBrandingID) {
+    this.fkiBrandingID = fkiBrandingID;
+  }
+
+
   public SystemconfigurationRequest eSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationNewexternaluseraction
    * @return eSystemconfigurationNewexternaluseraction
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldESystemconfigurationNewexternaluseraction geteSystemconfigurationNewexternaluseraction() {
     return eSystemconfigurationNewexternaluseraction;
@@ -149,10 +172,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationLanguage1
    * @return eSystemconfigurationLanguage1
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldESystemconfigurationLanguage1 geteSystemconfigurationLanguage1() {
     return eSystemconfigurationLanguage1;
@@ -168,10 +191,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationLanguage2
    * @return eSystemconfigurationLanguage2
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldESystemconfigurationLanguage2 geteSystemconfigurationLanguage2() {
     return eSystemconfigurationLanguage2;
@@ -188,11 +211,11 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationEzsign
    * @return eSystemconfigurationEzsign
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public FieldESystemconfigurationEzsign geteSystemconfigurationEzsign() {
@@ -210,10 +233,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eSystemconfigurationEzsignofficeplan
    * @return eSystemconfigurationEzsignofficeplan
-  **/
+   */
   @javax.annotation.Nullable
   public FieldESystemconfigurationEzsignofficeplan geteSystemconfigurationEzsignofficeplan() {
     return eSystemconfigurationEzsignofficeplan;
@@ -229,10 +252,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether if Ezsign is paid by the company or not
    * @return bSystemconfigurationEzsignpaidbyoffice
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbSystemconfigurationEzsignpaidbyoffice() {
     return bSystemconfigurationEzsignpaidbyoffice;
@@ -248,10 +271,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether if we allow the creation of personal files in eZsign
    * @return bSystemconfigurationEzsignpersonnal
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbSystemconfigurationEzsignpersonnal() {
     return bSystemconfigurationEzsignpersonnal;
@@ -267,10 +290,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether if we allow SSPR
    * @return bSystemconfigurationSspr
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbSystemconfigurationSspr() {
     return bSystemconfigurationSspr;
@@ -286,10 +309,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * The start date where the system will be in read only
    * @return dtSystemconfigurationReadonlyexpirationstart
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtSystemconfigurationReadonlyexpirationstart() {
     return dtSystemconfigurationReadonlyexpirationstart;
@@ -305,10 +328,10 @@ public class SystemconfigurationRequest {
     return this;
   }
 
-   /**
+  /**
    * The end date where the system will be in read only
    * @return dtSystemconfigurationReadonlyexpirationend
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtSystemconfigurationReadonlyexpirationend() {
     return dtSystemconfigurationReadonlyexpirationend;
@@ -330,6 +353,7 @@ public class SystemconfigurationRequest {
     }
     SystemconfigurationRequest systemconfigurationRequest = (SystemconfigurationRequest) o;
     return Objects.equals(this.pkiSystemconfigurationID, systemconfigurationRequest.pkiSystemconfigurationID) &&
+        Objects.equals(this.fkiBrandingID, systemconfigurationRequest.fkiBrandingID) &&
         Objects.equals(this.eSystemconfigurationNewexternaluseraction, systemconfigurationRequest.eSystemconfigurationNewexternaluseraction) &&
         Objects.equals(this.eSystemconfigurationLanguage1, systemconfigurationRequest.eSystemconfigurationLanguage1) &&
         Objects.equals(this.eSystemconfigurationLanguage2, systemconfigurationRequest.eSystemconfigurationLanguage2) &&
@@ -344,7 +368,7 @@ public class SystemconfigurationRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSystemconfigurationID, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend);
+    return Objects.hash(pkiSystemconfigurationID, fkiBrandingID, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend);
   }
 
   @Override
@@ -352,6 +376,7 @@ public class SystemconfigurationRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class SystemconfigurationRequest {\n");
     sb.append("    pkiSystemconfigurationID: ").append(toIndentedString(pkiSystemconfigurationID)).append("\n");
+    sb.append("    fkiBrandingID: ").append(toIndentedString(fkiBrandingID)).append("\n");
     sb.append("    eSystemconfigurationNewexternaluseraction: ").append(toIndentedString(eSystemconfigurationNewexternaluseraction)).append("\n");
     sb.append("    eSystemconfigurationLanguage1: ").append(toIndentedString(eSystemconfigurationLanguage1)).append("\n");
     sb.append("    eSystemconfigurationLanguage2: ").append(toIndentedString(eSystemconfigurationLanguage2)).append("\n");
@@ -385,6 +410,7 @@ public class SystemconfigurationRequest {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiSystemconfigurationID");
+    openapiFields.add("fkiBrandingID");
     openapiFields.add("eSystemconfigurationNewexternaluseraction");
     openapiFields.add("eSystemconfigurationLanguage1");
     openapiFields.add("eSystemconfigurationLanguage2");
@@ -405,12 +431,12 @@ public class SystemconfigurationRequest {
     openapiRequiredFields.add("bSystemconfigurationSspr");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SystemconfigurationRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SystemconfigurationRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SystemconfigurationRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -484,22 +510,22 @@ public class SystemconfigurationRequest {
     }
   }
 
- /**
-  * Create an instance of SystemconfigurationRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SystemconfigurationRequest
-  * @throws IOException if the JSON string is invalid with respect to SystemconfigurationRequest
-  */
+  /**
+   * Create an instance of SystemconfigurationRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SystemconfigurationRequest
+   * @throws IOException if the JSON string is invalid with respect to SystemconfigurationRequest
+   */
   public static SystemconfigurationRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SystemconfigurationRequest.class);
   }
 
- /**
-  * Convert an instance of SystemconfigurationRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SystemconfigurationRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

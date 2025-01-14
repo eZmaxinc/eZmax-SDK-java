@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A forms Data Folder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomFormsDataFolderResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -74,11 +73,11 @@ public class CustomFormsDataFolderResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return pkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -94,10 +93,10 @@ public class CustomFormsDataFolderResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -121,10 +120,10 @@ public class CustomFormsDataFolderResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjFormDataDocument
    * @return aObjFormDataDocument
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomFormDataDocumentResponse> getaObjFormDataDocument() {
     return aObjFormDataDocument;
@@ -195,12 +194,12 @@ public class CustomFormsDataFolderResponse {
     openapiRequiredFields.add("a_objFormDataDocument");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomFormsDataFolderResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomFormsDataFolderResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomFormsDataFolderResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -267,22 +266,22 @@ public class CustomFormsDataFolderResponse {
     }
   }
 
- /**
-  * Create an instance of CustomFormsDataFolderResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomFormsDataFolderResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomFormsDataFolderResponse
-  */
+  /**
+   * Create an instance of CustomFormsDataFolderResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomFormsDataFolderResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomFormsDataFolderResponse
+   */
   public static CustomFormsDataFolderResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomFormsDataFolderResponse.class);
   }
 
- /**
-  * Convert an instance of CustomFormsDataFolderResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomFormsDataFolderResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

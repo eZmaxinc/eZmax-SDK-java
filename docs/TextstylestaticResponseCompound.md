@@ -10,6 +10,7 @@ A Textstylestatic Object
 |------------ | ------------- | ------------- | -------------|
 |**pkiTextstylestaticID** | **Integer** | The unique ID of the Textstylestatic |  [optional] |
 |**fkiFontID** | **Integer** | The unique ID of the Font |  |
+|**sFontName** | **String** | The name of the Font |  |
 |**bTextstylestaticBold** | **Boolean** | Whether the Textstylestatic is Bold or not |  |
 |**bTextstylestaticUnderline** | **Boolean** | Whether the Textstylestatic is Underline or not |  |
 |**bTextstylestaticItalic** | **Boolean** | Whether the Textstylestatic is Italic or not |  |

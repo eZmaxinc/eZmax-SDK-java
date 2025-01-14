@@ -15,7 +15,10 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationListV1Response;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +36,20 @@ public class ObjectInscriptionnotauthenticatedApiTest {
     private final ObjectInscriptionnotauthenticatedApi api = new ObjectInscriptionnotauthenticatedApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptionnotauthenticatedGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiInscriptionnotauthenticatedID = null;
+        InscriptionnotauthenticatedGetCommunicationCountV1Response response = api.inscriptionnotauthenticatedGetCommunicationCountV1(pkiInscriptionnotauthenticatedID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectInscriptionnotauthenticatedApiTest {
     public void inscriptionnotauthenticatedGetCommunicationListV1Test() throws ApiException {
         Integer pkiInscriptionnotauthenticatedID = null;
         InscriptionnotauthenticatedGetCommunicationListV1Response response = api.inscriptionnotauthenticatedGetCommunicationListV1(pkiInscriptionnotauthenticatedID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptionnotauthenticatedGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiInscriptionnotauthenticatedID = null;
+        InscriptionnotauthenticatedGetCommunicationrecipientsV1Response response = api.inscriptionnotauthenticatedGetCommunicationrecipientsV1(pkiInscriptionnotauthenticatedID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Inscriptionnotauthenticated&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptionnotauthenticatedGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiInscriptionnotauthenticatedID = null;
+        InscriptionnotauthenticatedGetCommunicationsendersV1Response response = api.inscriptionnotauthenticatedGetCommunicationsendersV1(pkiInscriptionnotauthenticatedID);
         // TODO: test validations
     }
 

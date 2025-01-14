@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateCopyV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATE_I_D = "a_pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATE_I_D)
@@ -73,10 +72,10 @@ public class EzsigntemplateCopyV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of unique IDs representing the object that were requested to be copied.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
    * @return aPkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaPkiEzsigntemplateID() {
     return aPkiEzsigntemplateID;
@@ -139,12 +138,12 @@ public class EzsigntemplateCopyV1ResponseMPayload {
     openapiRequiredFields.add("a_pkiEzsigntemplateID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateCopyV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateCopyV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateCopyV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -204,22 +203,22 @@ public class EzsigntemplateCopyV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateCopyV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateCopyV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateCopyV1ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsigntemplateCopyV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateCopyV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateCopyV1ResponseMPayload
+   */
   public static EzsigntemplateCopyV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateCopyV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateCopyV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateCopyV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

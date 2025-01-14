@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignannotationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
@@ -111,10 +110,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignannotation
    * @return pkiEzsignannotationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignannotationID() {
     return pkiEzsignannotationID;
@@ -130,11 +129,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return fkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -150,10 +149,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignannotationHorizontalalignment
    * @return eEzsignannotationHorizontalalignment
-  **/
+   */
   @javax.annotation.Nullable
   public EnumHorizontalalignment geteEzsignannotationHorizontalalignment() {
     return eEzsignannotationHorizontalalignment;
@@ -169,10 +168,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignannotationVerticalalignment
    * @return eEzsignannotationVerticalalignment
-  **/
+   */
   @javax.annotation.Nullable
   public EnumVerticalalignment geteEzsignannotationVerticalalignment() {
     return eEzsignannotationVerticalalignment;
@@ -188,10 +187,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignannotationType
    * @return eEzsignannotationType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignannotationType geteEzsignannotationType() {
     return eEzsignannotationType;
@@ -207,11 +206,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsignannotationX
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignannotationX() {
     return iEzsignannotationX;
@@ -227,11 +226,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsignannotationY
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignannotationY() {
     return iEzsignannotationY;
@@ -247,11 +246,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.
    * minimum: 0
    * @return iEzsignannotationWidth
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignannotationWidth() {
     return iEzsignannotationWidth;
@@ -267,11 +266,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**
    * minimum: 0
    * @return iEzsignannotationHeight
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignannotationHeight() {
     return iEzsignannotationHeight;
@@ -287,10 +286,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Text of the Ezsignannotation
    * @return sEzsignannotationText
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignannotationText() {
     return sEzsignannotationText;
@@ -306,11 +305,11 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigndocument
    * minimum: 1
    * @return iEzsignpagePagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -326,10 +325,10 @@ public class EzsignannotationResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objTextstylestatic
    * @return objTextstylestatic
-  **/
+   */
   @javax.annotation.Nullable
   public TextstylestaticResponseCompound getObjTextstylestatic() {
     return objTextstylestatic;
@@ -430,12 +429,12 @@ public class EzsignannotationResponseCompound {
     openapiRequiredFields.add("iEzsignpagePagenumber");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignannotationResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignannotationResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignannotationResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -506,22 +505,22 @@ public class EzsignannotationResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignannotationResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignannotationResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignannotationResponseCompound
-  */
+  /**
+   * Create an instance of EzsignannotationResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignannotationResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignannotationResponseCompound
+   */
   public static EzsignannotationResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignannotationResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignannotationResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignannotationResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -6,10 +6,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**userCreateObjectV1**](ObjectUserApi.md#userCreateObjectV1) | **POST** /1/object/user | Create a new User |
 | [**userCreateObjectV2**](ObjectUserApi.md#userCreateObjectV2) | **POST** /2/object/user | Create a new User |
+| [**userEditColleaguesV2**](ObjectUserApi.md#userEditColleaguesV2) | **PUT** /2/object/user/{pkiUserID}/editColleagues | Edit multiple Colleagues |
 | [**userEditObjectV1**](ObjectUserApi.md#userEditObjectV1) | **PUT** /1/object/user/{pkiUserID} | Edit an existing User |
 | [**userEditPermissionsV1**](ObjectUserApi.md#userEditPermissionsV1) | **PUT** /1/object/user/{pkiUserID}/editPermissions | Edit multiple Permissions |
 | [**userGetApikeysV1**](ObjectUserApi.md#userGetApikeysV1) | **GET** /1/object/user/{pkiUserID}/getApikeys | Retrieve an existing User&#39;s Apikeys |
 | [**userGetAutocompleteV2**](ObjectUserApi.md#userGetAutocompleteV2) | **GET** /2/object/user/getAutocomplete/{sSelector} | Retrieve Users and IDs |
+| [**userGetColleaguesV2**](ObjectUserApi.md#userGetColleaguesV2) | **GET** /2/object/user/{pkiUserID}/getColleagues | Retrieve an existing User&#39;s Colleagues |
 | [**userGetEffectivePermissionsV1**](ObjectUserApi.md#userGetEffectivePermissionsV1) | **GET** /1/object/user/{pkiUserID}/getEffectivePermissions | Retrieve an existing User&#39;s Effective Permissions |
 | [**userGetListV1**](ObjectUserApi.md#userGetListV1) | **GET** /1/object/user/getList | Retrieve User list |
 | [**userGetObjectV2**](ObjectUserApi.md#userGetObjectV2) | **GET** /2/object/user/{pkiUserID} | Retrieve an existing User |
@@ -157,6 +159,79 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
+
+<a id="userEditColleaguesV2"></a>
+# **userEditColleaguesV2**
+> UserEditColleaguesV2Response userEditColleaguesV2(pkiUserID, userEditColleaguesV2Request)
+
+Edit multiple Colleagues
+
+Using this endpoint, you can edit multiple Colleagues at the same time.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUserApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUserApi apiInstance = new ObjectUserApi(defaultClient);
+    Integer pkiUserID = 56; // Integer | 
+    UserEditColleaguesV2Request userEditColleaguesV2Request = new UserEditColleaguesV2Request(); // UserEditColleaguesV2Request | 
+    try {
+      UserEditColleaguesV2Response result = apiInstance.userEditColleaguesV2(pkiUserID, userEditColleaguesV2Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUserApi#userEditColleaguesV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUserID** | **Integer**|  | |
+| **userEditColleaguesV2Request** | [**UserEditColleaguesV2Request**](UserEditColleaguesV2Request.md)|  | |
+
+### Return type
+
+[**UserEditColleaguesV2Response**](UserEditColleaguesV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 <a id="userEditObjectV1"></a>
 # **userEditObjectV1**
@@ -402,7 +477,7 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectUserApi apiInstance = new ObjectUserApi(defaultClient);
-    String sSelector = "AgentBrokerEmployeeEzsignUserNormal"; // String | The type of Users to return
+    String sSelector = "AgentBrokerAssistant"; // String | The type of Users to return
     String eFilterActive = "All"; // String | Specify which results we want to display.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
@@ -424,7 +499,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Users to return | [enum: AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Normal, UsergroupDelegated] |
+| **sSelector** | **String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
@@ -446,6 +521,74 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
+
+<a id="userGetColleaguesV2"></a>
+# **userGetColleaguesV2**
+> UserGetColleaguesV2Response userGetColleaguesV2(pkiUserID)
+
+Retrieve an existing User&#39;s Colleagues
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectUserApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectUserApi apiInstance = new ObjectUserApi(defaultClient);
+    Integer pkiUserID = 56; // Integer | 
+    try {
+      UserGetColleaguesV2Response result = apiInstance.userGetColleaguesV2(pkiUserID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectUserApi#userGetColleaguesV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiUserID** | **Integer**|  | |
+
+### Return type
+
+[**UserGetColleaguesV2Response**](UserGetColleaguesV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 <a id="userGetEffectivePermissionsV1"></a>
 # **userGetEffectivePermissionsV1**

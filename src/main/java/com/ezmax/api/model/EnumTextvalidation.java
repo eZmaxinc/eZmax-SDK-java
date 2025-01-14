@@ -51,7 +51,7 @@ public enum EnumTextvalidation {
   
   ZIP_4("Zip+4"),
   
-  POSTALCODE("PostalCode"),
+  POSTAL_CODE("PostalCode"),
   
   CUSTOM("Custom");
 

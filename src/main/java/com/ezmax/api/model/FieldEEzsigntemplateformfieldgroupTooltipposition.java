@@ -29,21 +29,21 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEEzsigntemplateformfieldgroupTooltipposition.Adapter.class)
 public enum FieldEEzsigntemplateformfieldgroupTooltipposition {
   
-  TOPLEFT("TopLeft"),
+  TOP_LEFT("TopLeft"),
   
-  TOPCENTER("TopCenter"),
+  TOP_CENTER("TopCenter"),
   
-  TOPRIGHT("TopRight"),
+  TOP_RIGHT("TopRight"),
   
-  MIDDLELEFT("MiddleLeft"),
+  MIDDLE_LEFT("MiddleLeft"),
   
-  MIDDLERIGHT("MiddleRight"),
+  MIDDLE_RIGHT("MiddleRight"),
   
-  BOTTOMLEFT("BottomLeft"),
+  BOTTOM_LEFT("BottomLeft"),
   
-  BOTTOMCENTER("BottomCenter"),
+  BOTTOM_CENTER("BottomCenter"),
   
-  BOTTOMRIGHT("BottomRight");
+  BOTTOM_RIGHT("BottomRight");
 
   private String value;
 

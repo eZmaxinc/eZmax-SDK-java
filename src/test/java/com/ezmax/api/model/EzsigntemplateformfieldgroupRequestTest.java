@@ -146,6 +146,14 @@ public class EzsigntemplateformfieldgroupRequestTest {
     }
 
     /**
+     * Test the property 'sEzsigntemplateformfieldgroupTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsigntemplateformfieldgroupTextvalidationcustommessageTest() {
+        // TODO: test sEzsigntemplateformfieldgroupTextvalidationcustommessage
+    }
+
+    /**
      * Test the property 'eEzsigntemplateformfieldgroupTextvalidation'
      */
     @Test

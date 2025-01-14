@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponseErrorWrongFranchiseoffice;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Request;
 import com.ezmax.api.model.FranchisereferalincomeCreateObjectV2Response;
 
@@ -83,6 +84,7 @@ public class ObjectFranchisereferalincomeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of this Franchisebroker is not in this Franchiseoffice. fkiFranchiseofficeID contains the id of Franchiseoffice where the Franchisebroker is located on the dtFranchisereferalincomeDisbursed.  </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call franchisereferalincomeCreateObjectV2Call(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, final ApiCallback _callback) throws ApiException {
@@ -151,6 +153,7 @@ public class ObjectFranchisereferalincomeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of this Franchisebroker is not in this Franchiseoffice. fkiFranchiseofficeID contains the id of Franchiseoffice where the Franchisebroker is located on the dtFranchisereferalincomeDisbursed.  </td><td>  -  </td></tr>
      </table>
      */
     public FranchisereferalincomeCreateObjectV2Response franchisereferalincomeCreateObjectV2(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) throws ApiException {
@@ -168,6 +171,7 @@ public class ObjectFranchisereferalincomeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of this Franchisebroker is not in this Franchiseoffice. fkiFranchiseofficeID contains the id of Franchiseoffice where the Franchisebroker is located on the dtFranchisereferalincomeDisbursed.  </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FranchisereferalincomeCreateObjectV2Response> franchisereferalincomeCreateObjectV2WithHttpInfo(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request) throws ApiException {
@@ -187,6 +191,7 @@ public class ObjectFranchisereferalincomeApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of this Franchisebroker is not in this Franchiseoffice. fkiFranchiseofficeID contains the id of Franchiseoffice where the Franchisebroker is located on the dtFranchisereferalincomeDisbursed.  </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call franchisereferalincomeCreateObjectV2Async(FranchisereferalincomeCreateObjectV2Request franchisereferalincomeCreateObjectV2Request, final ApiCallback<FranchisereferalincomeCreateObjectV2Response> _callback) throws ApiException {

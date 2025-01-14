@@ -78,6 +78,14 @@ public class EzsigntemplatedocumentResponseTest {
     }
 
     /**
+     * Test the property 'iEzsigntemplatedocumentFormfieldtotal'
+     */
+    @Test
+    public void iEzsigntemplatedocumentFormfieldtotalTest() {
+        // TODO: test iEzsigntemplatedocumentFormfieldtotal
+    }
+
+    /**
      * Test the property 'bEzsigntemplatedocumentHassignedsignatures'
      */
     @Test

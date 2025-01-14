@@ -21,6 +21,7 @@ import com.ezmax.api.model.SignatureDeleteObjectV1Response;
 import com.ezmax.api.model.SignatureEditObjectV1Request;
 import com.ezmax.api.model.SignatureEditObjectV1Response;
 import com.ezmax.api.model.SignatureGetObjectV2Response;
+import com.ezmax.api.model.SignatureGetObjectV3Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -91,6 +92,48 @@ public class ObjectSignatureApiTest {
     public void signatureGetObjectV2Test() throws ApiException {
         Integer pkiSignatureID = null;
         SignatureGetObjectV2Response response = api.signatureGetObjectV2(pkiSignatureID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Signature
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void signatureGetObjectV3Test() throws ApiException {
+        Integer pkiSignatureID = null;
+        SignatureGetObjectV3Response response = api.signatureGetObjectV3(pkiSignatureID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Signature initial SVG
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void signatureGetSVGInitialsV1Test() throws ApiException {
+        Integer pkiSignatureID = null;
+        api.signatureGetSVGInitialsV1(pkiSignatureID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve an existing Signature SVG
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void signatureGetSVGSignatureV1Test() throws ApiException {
+        Integer pkiSignatureID = null;
+        api.signatureGetSVGSignatureV1(pkiSignatureID);
         // TODO: test validations
     }
 

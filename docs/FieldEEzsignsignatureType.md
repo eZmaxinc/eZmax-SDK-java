@@ -15,17 +15,19 @@
 
 * `NAME` (value: `"Name"`)
 
-* `NAMEREASON` (value: `"NameReason"`)
+* `NAME_REASON` (value: `"NameReason"`)
 
 * `ATTACHMENTS` (value: `"Attachments"`)
 
-* `ATTACHMENTSCONFIRMATION` (value: `"AttachmentsConfirmation"`)
+* `ATTACHMENTS_CONFIRMATION` (value: `"AttachmentsConfirmation"`)
 
-* `FIELDTEXT` (value: `"FieldText"`)
+* `FIELD_TEXT` (value: `"FieldText"`)
 
-* `FIELDTEXTAREA` (value: `"FieldTextarea"`)
+* `FIELD_TEXTAREA` (value: `"FieldTextarea"`)
 
 * `CONSULTATION` (value: `"Consultation"`)
+
+* `SIGNATURE` (value: `"Signature"`)
 
 
 

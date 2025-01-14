@@ -14,7 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.BuyercontractGetCommunicationCountV1Response;
 import com.ezmax.api.model.BuyercontractGetCommunicationListV1Response;
+import com.ezmax.api.model.BuyercontractGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.BuyercontractGetCommunicationsendersV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -33,6 +36,20 @@ public class ObjectBuyercontractApiTest {
     private final ObjectBuyercontractApi api = new ObjectBuyercontractApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void buyercontractGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiBuyercontractID = null;
+        BuyercontractGetCommunicationCountV1Response response = api.buyercontractGetCommunicationCountV1(pkiBuyercontractID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectBuyercontractApiTest {
     public void buyercontractGetCommunicationListV1Test() throws ApiException {
         Integer pkiBuyercontractID = null;
         BuyercontractGetCommunicationListV1Response response = api.buyercontractGetCommunicationListV1(pkiBuyercontractID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void buyercontractGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiBuyercontractID = null;
+        BuyercontractGetCommunicationrecipientsV1Response response = api.buyercontractGetCommunicationrecipientsV1(pkiBuyercontractID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void buyercontractGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiBuyercontractID = null;
+        BuyercontractGetCommunicationsendersV1Response response = api.buyercontractGetCommunicationsendersV1(pkiBuyercontractID);
         // TODO: test validations
     }
 

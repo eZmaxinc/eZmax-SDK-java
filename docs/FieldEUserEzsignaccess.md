@@ -7,9 +7,9 @@
 
 * `NO` (value: `"No"`)
 
-* `PAIDBYOFFICE` (value: `"PaidByOffice"`)
+* `PAID_BY_OFFICE` (value: `"PaidByOffice"`)
 
-* `PERDOCUMENT` (value: `"PerDocument"`)
+* `PER_DOCUMENT` (value: `"PerDocument"`)
 
 * `PREPAID` (value: `"Prepaid"`)
 

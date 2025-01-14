@@ -49,6 +49,14 @@ public class WebhookRequestTest {
     }
 
     /**
+     * Test the property 'fkiAuthenticationexternalID'
+     */
+    @Test
+    public void fkiAuthenticationexternalIDTest() {
+        // TODO: test fkiAuthenticationexternalID
+    }
+
+    /**
      * Test the property 'fkiEzsignfoldertypeID'
      */
     @Test

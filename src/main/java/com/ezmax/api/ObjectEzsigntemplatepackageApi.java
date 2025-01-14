@@ -622,6 +622,7 @@ public class ObjectEzsigntemplatepackageApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -631,7 +632,7 @@ public class ObjectEzsigntemplatepackageApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatepackageGetAutocompleteV2Call(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatepackageGetAutocompleteV2Call(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -665,6 +666,10 @@ public class ObjectEzsigntemplatepackageApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("sQuery", sQuery));
         }
 
+        if (fkiEzsignfoldertypeID != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("fkiEzsignfoldertypeID", fkiEzsignfoldertypeID));
+        }
+
         if (acceptLanguage != null) {
             localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
         }
@@ -689,13 +694,13 @@ public class ObjectEzsigntemplatepackageApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'sSelector' is set
         if (sSelector == null) {
             throw new ApiException("Missing the required parameter 'sSelector' when calling ezsigntemplatepackageGetAutocompleteV2(Async)");
         }
 
-        return ezsigntemplatepackageGetAutocompleteV2Call(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        return ezsigntemplatepackageGetAutocompleteV2Call(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID, _callback);
 
     }
 
@@ -706,6 +711,7 @@ public class ObjectEzsigntemplatepackageApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @return EzsigntemplatepackageGetAutocompleteV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -714,8 +720,8 @@ public class ObjectEzsigntemplatepackageApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResp = ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public EzsigntemplatepackageGetAutocompleteV2Response ezsigntemplatepackageGetAutocompleteV2(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID) throws ApiException {
+        ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> localVarResp = ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
         return localVarResp.getData();
     }
 
@@ -726,6 +732,7 @@ public class ObjectEzsigntemplatepackageApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @return ApiResponse&lt;EzsigntemplatepackageGetAutocompleteV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -734,8 +741,8 @@ public class ObjectEzsigntemplatepackageApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        okhttp3.Call localVarCall = ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, null);
+    public ApiResponse<EzsigntemplatepackageGetAutocompleteV2Response> ezsigntemplatepackageGetAutocompleteV2WithHttpInfo(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID, null);
         Type localVarReturnType = new TypeToken<EzsigntemplatepackageGetAutocompleteV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -747,6 +754,7 @@ public class ObjectEzsigntemplatepackageApi {
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
+     * @param fkiEzsignfoldertypeID The fkiEzsignfoldertypeID to use with the selector Ezsigntemplatepublic (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -756,9 +764,9 @@ public class ObjectEzsigntemplatepackageApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatepackageGetAutocompleteV2Async(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, final ApiCallback<EzsigntemplatepackageGetAutocompleteV2Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatepackageGetAutocompleteV2Async(String sSelector, String eFilterActive, String sQuery, HeaderAcceptLanguage acceptLanguage, Integer fkiEzsignfoldertypeID, final ApiCallback<EzsigntemplatepackageGetAutocompleteV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        okhttp3.Call localVarCall = ezsigntemplatepackageGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID, _callback);
         Type localVarReturnType = new TypeToken<EzsigntemplatepackageGetAutocompleteV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

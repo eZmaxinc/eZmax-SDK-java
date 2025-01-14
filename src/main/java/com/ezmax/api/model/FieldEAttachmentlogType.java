@@ -29,15 +29,15 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEAttachmentlogType.Adapter.class)
 public enum FieldEAttachmentlogType {
   
-  AUTOVALIDATION("AutoValidation"),
+  AUTO_VALIDATION("AutoValidation"),
   
-  COPYFROM("CopyFrom"),
+  COPY_FROM("CopyFrom"),
   
-  COPYTO("CopyTo"),
+  COPY_TO("CopyTo"),
   
-  COPYTOEZSIGN("CopyToEzsign"),
+  COPY_TO_EZSIGN("CopyToEzsign"),
   
-  CREATEBYEZSIGN("CreateByEzsign"),
+  CREATE_BY_EZSIGN("CreateByEzsign"),
   
   DOWNLOAD("Download"),
   
@@ -47,25 +47,25 @@ public enum FieldEAttachmentlogType {
   
   EMAIL("Email"),
   
-  EMAILCC("EmailCC"),
+  EMAIL_CC("EmailCC"),
   
-  EMAILCCI("EmailCCI"),
+  EMAIL_CCI("EmailCCI"),
   
   FAX("Fax"),
   
-  IMPORTEDFROMEXTERNALSYSTEM("ImportedFromExternalSystem"),
+  IMPORTED_FROM_EXTERNAL_SYSTEM("ImportedFromExternalSystem"),
   
-  IMPORTEDFROMEZA("ImportedFromEZA"),
+  IMPORTED_FROM_EZA("ImportedFromEZA"),
   
-  IMPORTEDFROMFALTOUR("ImportedFromFaltour"),
+  IMPORTED_FROM_FALTOUR("ImportedFromFaltour"),
   
-  IMPORTEDFROMLONEWOLF("ImportedFromLonewolf"),
+  IMPORTED_FROM_LONEWOLF("ImportedFromLonewolf"),
   
-  IMPORTEDFROMPROSPECTS("ImportedFromProspects"),
+  IMPORTED_FROM_PROSPECTS("ImportedFromProspects"),
   
   MOVE("Move"),
   
-  OPENFROMEMAIL("OpenFromEmail"),
+  OPEN_FROM_EMAIL("OpenFromEmail"),
   
   PURGED("Purged"),
   
@@ -77,15 +77,15 @@ public enum FieldEAttachmentlogType {
   
   SCANNED("Scanned"),
   
-  SENDTOGED("SendToGED"),
+  SEND_TO_GED("SendToGED"),
   
-  UNVALIDATEDBY("UnvalidatedBy"),
+  UNVALIDATED_BY("UnvalidatedBy"),
   
   UPLOAD("Upload"),
   
-  VALIDATEDBY("ValidatedBy"),
+  VALIDATED_BY("ValidatedBy"),
   
-  VETINFOUPLOAD("VetinfoUpload");
+  VETINFO_UPLOAD("VetinfoUpload");
 
   private String value;
 

@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignelementdependencyRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D = "pkiEzsignelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D)
@@ -97,12 +96,12 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignelementdependency
    * minimum: 0
-   * maximum: 65535
+   * maximum: 16777215
    * @return pkiEzsignelementdependencyID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsignelementdependencyID() {
     return pkiEzsignelementdependencyID;
@@ -118,11 +117,11 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignformfield
    * minimum: 0
    * @return fkiEzsignformfieldIDValidation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignformfieldIDValidation() {
     return fkiEzsignformfieldIDValidation;
@@ -138,11 +137,11 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignformfieldgroup
    * minimum: 0
    * @return fkiEzsignformfieldgroupIDValidation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignformfieldgroupIDValidation() {
     return fkiEzsignformfieldgroupIDValidation;
@@ -158,10 +157,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The Label for the Ezsignformfieldgroup
    * @return sEzsignelementdependencyEzsignformfieldgrouplabel
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignelementdependencyEzsignformfieldgrouplabel() {
     return sEzsignelementdependencyEzsignformfieldgrouplabel;
@@ -177,10 +176,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The Label for the Ezsignformfield
    * @return sEzsignelementdependencyEzsignformfieldlabel
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignelementdependencyEzsignformfieldlabel() {
     return sEzsignelementdependencyEzsignformfieldlabel;
@@ -196,10 +195,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignelementdependencyValidation
    * @return eEzsignelementdependencyValidation
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignelementdependencyValidation geteEzsignelementdependencyValidation() {
     return eEzsignelementdependencyValidation;
@@ -215,10 +214,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s selected or not when using eEzsignelementdependencyValidation &#x3D; Selected
    * @return bEzsignelementdependencySelected
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignelementdependencySelected() {
     return bEzsignelementdependencySelected;
@@ -234,10 +233,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignelementdependencyOperator
    * @return eEzsignelementdependencyOperator
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignelementdependencyOperator geteEzsignelementdependencyOperator() {
     return eEzsignelementdependencyOperator;
@@ -253,10 +252,10 @@ public class EzsignelementdependencyRequest {
     return this;
   }
 
-   /**
+  /**
    * The value of the Ezsignelementdependency
    * @return sEzsignelementdependencyValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignelementdependencyValue() {
     return sEzsignelementdependencyValue;
@@ -343,12 +342,12 @@ public class EzsignelementdependencyRequest {
     openapiRequiredFields.add("eEzsignelementdependencyValidation");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignelementdependencyRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignelementdependencyRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignelementdependencyRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -417,22 +416,22 @@ public class EzsignelementdependencyRequest {
     }
   }
 
- /**
-  * Create an instance of EzsignelementdependencyRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignelementdependencyRequest
-  * @throws IOException if the JSON string is invalid with respect to EzsignelementdependencyRequest
-  */
+  /**
+   * Create an instance of EzsignelementdependencyRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignelementdependencyRequest
+   * @throws IOException if the JSON string is invalid with respect to EzsignelementdependencyRequest
+   */
   public static EzsignelementdependencyRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignelementdependencyRequest.class);
   }
 
- /**
-  * Convert an instance of EzsignelementdependencyRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignelementdependencyRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

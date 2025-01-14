@@ -16,7 +16,9 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.InscriptionGetAttachmentsV1Response;
+import com.ezmax.api.model.InscriptionGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptionGetCommunicationListV1Response;
+import com.ezmax.api.model.InscriptionGetCommunicationrecipientsV1Response;
 import com.ezmax.api.model.InscriptionGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -49,6 +51,20 @@ public class ObjectInscriptionApiTest {
     }
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptionGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiInscriptionID = null;
+        InscriptionGetCommunicationCountV1Response response = api.inscriptionGetCommunicationCountV1(pkiInscriptionID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -59,6 +75,20 @@ public class ObjectInscriptionApiTest {
     public void inscriptionGetCommunicationListV1Test() throws ApiException {
         Integer pkiInscriptionID = null;
         InscriptionGetCommunicationListV1Response response = api.inscriptionGetCommunicationListV1(pkiInscriptionID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Inscription&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptionGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiInscriptionID = null;
+        InscriptionGetCommunicationrecipientsV1Response response = api.inscriptionGetCommunicationrecipientsV1(pkiInscriptionID);
         // TODO: test validations
     }
 

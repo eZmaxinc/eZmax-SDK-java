@@ -45,7 +45,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -57,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -143,6 +142,10 @@ public class EzsignfoldertypeResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDERTYPE_DEADLINEDAYS)
   private Integer iEzsignfoldertypeDeadlinedays;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_AUTOMATICSIGNATURE = "bEzsignfoldertypeAutomaticsignature";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_AUTOMATICSIGNATURE)
+  private Boolean bEzsignfoldertypeAutomaticsignature;
+
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE = "bEzsignfoldertypeDelegate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_DELEGATE)
   private Boolean bEzsignfoldertypeDelegate;
@@ -158,6 +161,10 @@ public class EzsignfoldertypeResponse {
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNUSER = "bEzsignfoldertypeReassignuser";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNUSER)
   private Boolean bEzsignfoldertypeReassignuser;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNGROUP = "bEzsignfoldertypeReassigngroup";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_REASSIGNGROUP)
+  private Boolean bEzsignfoldertypeReassigngroup;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOEZSIGNSIGNER = "bEzsignfoldertypeSendsignedtoezsignsigner";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_SENDSIGNEDTOEZSIGNSIGNER)
@@ -255,12 +262,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return pkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfoldertypeID() {
     return pkiEzsignfoldertypeID;
@@ -276,10 +283,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsignfoldertypeName
    * @return objEzsignfoldertypeName
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualEzsignfoldertypeName getObjEzsignfoldertypeName() {
     return objEzsignfoldertypeName;
@@ -295,11 +302,11 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Branding
    * minimum: 0
    * @return fkiBrandingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiBrandingID() {
     return fkiBrandingID;
@@ -315,11 +322,11 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityinternal.
    * minimum: 0
    * @return fkiBillingentityinternalID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -335,12 +342,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return fkiUsergroupID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUsergroupID() {
     return fkiUsergroupID;
@@ -356,12 +363,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return fkiUsergroupIDRestricted
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUsergroupIDRestricted() {
     return fkiUsergroupIDRestricted;
@@ -377,12 +384,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
    * minimum: 1
    * maximum: 3
    * @return fkiEzsigntsarequirementID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntsarequirementID() {
     return fkiEzsigntsarequirementID;
@@ -398,10 +405,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The Description of the Branding in the language of the requester
    * @return sBrandingDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBrandingDescriptionX() {
     return sBrandingDescriptionX;
@@ -417,10 +424,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Billingentityinternal in the language of the requester
    * @return sBillingentityinternalDescriptionX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsBillingentityinternalDescriptionX() {
     return sBillingentityinternalDescriptionX;
@@ -436,10 +443,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntsarequirement in the language of the requester
    * @return sEzsigntsarequirementDescriptionX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
@@ -455,10 +462,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddressSigned
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEmailAddressSigned() {
     return sEmailAddressSigned;
@@ -474,10 +481,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddressSummary
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEmailAddressSummary() {
     return sEmailAddressSummary;
@@ -493,10 +500,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Usergroup in the language of the requester
    * @return sUsergroupNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -512,10 +519,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Usergroup in the language of the requester
    * @return sUsergroupNameXRestricted
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupNameXRestricted() {
     return sUsergroupNameXRestricted;
@@ -531,10 +538,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypePrivacylevel
    * @return eEzsignfoldertypePrivacylevel
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -550,10 +557,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypeSendreminderfrequency
    * @return eEzsignfoldertypeSendreminderfrequency
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignfoldertypeSendreminderfrequency geteEzsignfoldertypeSendreminderfrequency() {
     return eEzsignfoldertypeSendreminderfrequency;
@@ -569,12 +576,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of days before the archival of Ezsignfolders created using this Ezsignfoldertype
    * minimum: 0
    * maximum: 180
    * @return iEzsignfoldertypeArchivaldays
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignfoldertypeArchivaldays() {
     return iEzsignfoldertypeArchivaldays;
@@ -590,10 +597,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypeDisposal
    * @return eEzsignfoldertypeDisposal
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypeDisposal geteEzsignfoldertypeDisposal() {
     return eEzsignfoldertypeDisposal;
@@ -609,10 +616,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypeCompletion
    * @return eEzsignfoldertypeCompletion
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypeCompletion geteEzsignfoldertypeCompletion() {
     return eEzsignfoldertypeCompletion;
@@ -628,12 +635,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of days after the archival before the disposal of the Ezsignfolder
    * minimum: 0
    * maximum: 9999
    * @return iEzsignfoldertypeDisposaldays
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignfoldertypeDisposaldays() {
     return iEzsignfoldertypeDisposaldays;
@@ -649,12 +656,12 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of days to get all Ezsignsignatures
    * minimum: 1
    * maximum: 60
    * @return iEzsignfoldertypeDeadlinedays
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignfoldertypeDeadlinedays() {
     return iEzsignfoldertypeDeadlinedays;
@@ -665,15 +672,34 @@ public class EzsignfoldertypeResponse {
   }
 
 
+  public EzsignfoldertypeResponse bEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+    return this;
+  }
+
+  /**
+   * Whether we allow the automatic signature by an User
+   * @return bEzsignfoldertypeAutomaticsignature
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeAutomaticsignature() {
+    return bEzsignfoldertypeAutomaticsignature;
+  }
+
+  public void setbEzsignfoldertypeAutomaticsignature(Boolean bEzsignfoldertypeAutomaticsignature) {
+    this.bEzsignfoldertypeAutomaticsignature = bEzsignfoldertypeAutomaticsignature;
+  }
+
+
   public EzsignfoldertypeResponse bEzsignfoldertypeDelegate(Boolean bEzsignfoldertypeDelegate) {
     this.bEzsignfoldertypeDelegate = bEzsignfoldertypeDelegate;
     return this;
   }
 
-   /**
+  /**
    * Wheter if delegation of signature is allowed to another user or not
    * @return bEzsignfoldertypeDelegate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeDelegate() {
     return bEzsignfoldertypeDelegate;
@@ -689,10 +715,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if creating a new Discussion is allowed or not
    * @return bEzsignfoldertypeDiscussion
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeDiscussion() {
     return bEzsignfoldertypeDiscussion;
@@ -708,10 +734,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if Reassignment of signature is allowed by a signatory to another signatory or not
    * @return bEzsignfoldertypeReassignezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeReassignezsignsigner() {
     return bEzsignfoldertypeReassignezsignsigner;
@@ -727,10 +753,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter if Reassignment of signature is allowed by a user to a signatory or another user or not
    * @return bEzsignfoldertypeReassignuser
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeReassignuser() {
     return bEzsignfoldertypeReassignuser;
@@ -741,15 +767,34 @@ public class EzsignfoldertypeResponse {
   }
 
 
+  public EzsignfoldertypeResponse bEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+    return this;
+  }
+
+  /**
+   * Wheter if Reassignment of signatures of the groups to which the user belongs is authorized by a user to himself
+   * @return bEzsignfoldertypeReassigngroup
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfoldertypeReassigngroup() {
+    return bEzsignfoldertypeReassigngroup;
+  }
+
+  public void setbEzsignfoldertypeReassigngroup(Boolean bEzsignfoldertypeReassigngroup) {
+    this.bEzsignfoldertypeReassigngroup = bEzsignfoldertypeReassigngroup;
+  }
+
+
   public EzsignfoldertypeResponse bEzsignfoldertypeSendsignedtoezsignsigner(Boolean bEzsignfoldertypeSendsignedtoezsignsigner) {
     this.bEzsignfoldertypeSendsignedtoezsignsigner = bEzsignfoldertypeSendsignedtoezsignsigner;
     return this;
   }
 
-   /**
+  /**
    * Whether we send an email to Ezsignsigner  when document is completed
    * @return bEzsignfoldertypeSendsignedtoezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsignedtoezsignsigner() {
     return bEzsignfoldertypeSendsignedtoezsignsigner;
@@ -765,10 +810,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send an email to User who signed when document is completed
    * @return bEzsignfoldertypeSendsignedtouser
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsignedtouser() {
     return bEzsignfoldertypeSendsignedtouser;
@@ -784,10 +829,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the Ezsigndocument in the email to Ezsignsigner
    * @return bEzsignfoldertypeSendattachmentezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendattachmentezsignsigner() {
     return bEzsignfoldertypeSendattachmentezsignsigner;
@@ -803,10 +848,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the proof in the email to Ezsignsigner
    * @return bEzsignfoldertypeSendproofezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendproofezsignsigner() {
     return bEzsignfoldertypeSendproofezsignsigner;
@@ -822,10 +867,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the Ezsigndocument in the email to User
    * @return bEzsignfoldertypeSendattachmentuser
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendattachmentuser() {
     return bEzsignfoldertypeSendattachmentuser;
@@ -841,10 +886,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the proof in the email to User
    * @return bEzsignfoldertypeSendproofuser
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendproofuser() {
     return bEzsignfoldertypeSendproofuser;
@@ -860,10 +905,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the proof in the email to external recipient
    * @return bEzsignfoldertypeSendproofemail
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendproofemail() {
     return bEzsignfoldertypeSendproofemail;
@@ -879,10 +924,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we allow the Ezsigndocument to be downloaded by an Ezsignsigner
    * @return bEzsignfoldertypeAllowdownloadattachmentezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeAllowdownloadattachmentezsignsigner() {
     return bEzsignfoldertypeAllowdownloadattachmentezsignsigner;
@@ -898,10 +943,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we allow the proof to be downloaded by an Ezsignsigner
    * @return bEzsignfoldertypeAllowdownloadproofezsignsigner
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeAllowdownloadproofezsignsigner() {
     return bEzsignfoldertypeAllowdownloadproofezsignsigner;
@@ -917,10 +962,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the proof to user and Ezsignsigner who receive all documents.
    * @return bEzsignfoldertypeSendproofreceivealldocument
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendproofreceivealldocument() {
     return bEzsignfoldertypeSendproofreceivealldocument;
@@ -936,10 +981,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the signed Ezsigndocument to the Ezsigndocument&#39;s owner
    * @return bEzsignfoldertypeSendsignedtodocumentowner
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsignedtodocumentowner() {
     return bEzsignfoldertypeSendsignedtodocumentowner;
@@ -955,10 +1000,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the signed Ezsigndocument to the Ezsignfolder&#39;s owner
    * @return bEzsignfoldertypeSendsignedtofolderowner
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsignedtofolderowner() {
     return bEzsignfoldertypeSendsignedtofolderowner;
@@ -974,10 +1019,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the signed Ezsigndocument to the Usergroup that has acces to all Ezsignfolders
    * @return bEzsignfoldertypeSendsignedtofullgroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsignedtofullgroup() {
     return bEzsignfoldertypeSendsignedtofullgroup;
@@ -993,10 +1038,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * THIS FIELD WILL BE DELETED. Whether we send the signed Ezsigndocument to the Usergroup that has acces to only their own Ezsignfolders
    * @return bEzsignfoldertypeSendsignedtolimitedgroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsignedtolimitedgroup() {
     return bEzsignfoldertypeSendsignedtolimitedgroup;
@@ -1012,10 +1057,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the signed Ezsigndocument to the colleagues
    * @return bEzsignfoldertypeSendsignedtocolleague
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsignedtocolleague() {
     return bEzsignfoldertypeSendsignedtocolleague;
@@ -1031,10 +1076,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the summary to the Ezsigndocument&#39;s owner
    * @return bEzsignfoldertypeSendsummarytodocumentowner
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsummarytodocumentowner() {
     return bEzsignfoldertypeSendsummarytodocumentowner;
@@ -1050,10 +1095,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the summary to the Ezsignfolder&#39;s owner
    * @return bEzsignfoldertypeSendsummarytofolderowner
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsummarytofolderowner() {
     return bEzsignfoldertypeSendsummarytofolderowner;
@@ -1069,10 +1114,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the summary to the Usergroup that has acces to all Ezsignfolders
    * @return bEzsignfoldertypeSendsummarytofullgroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsummarytofullgroup() {
     return bEzsignfoldertypeSendsummarytofullgroup;
@@ -1088,10 +1133,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the summary to the Usergroup that has acces to only their own Ezsignfolders
    * @return bEzsignfoldertypeSendsummarytolimitedgroup
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignfoldertypeSendsummarytolimitedgroup() {
     return bEzsignfoldertypeSendsummarytolimitedgroup;
@@ -1107,10 +1152,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether we send the summary to the colleagues
    * @return bEzsignfoldertypeSendsummarytocolleague
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeSendsummarytocolleague() {
     return bEzsignfoldertypeSendsummarytocolleague;
@@ -1126,10 +1171,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignfoldertype is active or not
    * @return bEzsignfoldertypeIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfoldertypeIsactive() {
     return bEzsignfoldertypeIsactive;
@@ -1153,10 +1198,10 @@ public class EzsignfoldertypeResponse {
     return this;
   }
 
-   /**
+  /**
    * 
    * @return aObjUserlogintype
-  **/
+   */
   @javax.annotation.Nonnull
   public List<UserlogintypeResponse> getaObjUserlogintype() {
     return aObjUserlogintype;
@@ -1198,10 +1243,12 @@ public class EzsignfoldertypeResponse {
         Objects.equals(this.eEzsignfoldertypeCompletion, ezsignfoldertypeResponse.eEzsignfoldertypeCompletion) &&
         Objects.equals(this.iEzsignfoldertypeDisposaldays, ezsignfoldertypeResponse.iEzsignfoldertypeDisposaldays) &&
         Objects.equals(this.iEzsignfoldertypeDeadlinedays, ezsignfoldertypeResponse.iEzsignfoldertypeDeadlinedays) &&
+        Objects.equals(this.bEzsignfoldertypeAutomaticsignature, ezsignfoldertypeResponse.bEzsignfoldertypeAutomaticsignature) &&
         Objects.equals(this.bEzsignfoldertypeDelegate, ezsignfoldertypeResponse.bEzsignfoldertypeDelegate) &&
         Objects.equals(this.bEzsignfoldertypeDiscussion, ezsignfoldertypeResponse.bEzsignfoldertypeDiscussion) &&
         Objects.equals(this.bEzsignfoldertypeReassignezsignsigner, ezsignfoldertypeResponse.bEzsignfoldertypeReassignezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeReassignuser, ezsignfoldertypeResponse.bEzsignfoldertypeReassignuser) &&
+        Objects.equals(this.bEzsignfoldertypeReassigngroup, ezsignfoldertypeResponse.bEzsignfoldertypeReassigngroup) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtoezsignsigner, ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtoezsignsigner) &&
         Objects.equals(this.bEzsignfoldertypeSendsignedtouser, ezsignfoldertypeResponse.bEzsignfoldertypeSendsignedtouser) &&
         Objects.equals(this.bEzsignfoldertypeSendattachmentezsignsigner, ezsignfoldertypeResponse.bEzsignfoldertypeSendattachmentezsignsigner) &&
@@ -1228,7 +1275,7 @@ public class EzsignfoldertypeResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sBrandingDescriptionX, sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX, sEmailAddressSigned, sEmailAddressSummary, sUsergroupNameX, sUsergroupNameXRestricted, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser, bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIsactive, aObjUserlogintype);
+    return Objects.hash(pkiEzsignfoldertypeID, objEzsignfoldertypeName, fkiBrandingID, fkiBillingentityinternalID, fkiUsergroupID, fkiUsergroupIDRestricted, fkiEzsigntsarequirementID, sBrandingDescriptionX, sBillingentityinternalDescriptionX, sEzsigntsarequirementDescriptionX, sEmailAddressSigned, sEmailAddressSummary, sUsergroupNameX, sUsergroupNameXRestricted, eEzsignfoldertypePrivacylevel, eEzsignfoldertypeSendreminderfrequency, iEzsignfoldertypeArchivaldays, eEzsignfoldertypeDisposal, eEzsignfoldertypeCompletion, iEzsignfoldertypeDisposaldays, iEzsignfoldertypeDeadlinedays, bEzsignfoldertypeAutomaticsignature, bEzsignfoldertypeDelegate, bEzsignfoldertypeDiscussion, bEzsignfoldertypeReassignezsignsigner, bEzsignfoldertypeReassignuser, bEzsignfoldertypeReassigngroup, bEzsignfoldertypeSendsignedtoezsignsigner, bEzsignfoldertypeSendsignedtouser, bEzsignfoldertypeSendattachmentezsignsigner, bEzsignfoldertypeSendproofezsignsigner, bEzsignfoldertypeSendattachmentuser, bEzsignfoldertypeSendproofuser, bEzsignfoldertypeSendproofemail, bEzsignfoldertypeAllowdownloadattachmentezsignsigner, bEzsignfoldertypeAllowdownloadproofezsignsigner, bEzsignfoldertypeSendproofreceivealldocument, bEzsignfoldertypeSendsignedtodocumentowner, bEzsignfoldertypeSendsignedtofolderowner, bEzsignfoldertypeSendsignedtofullgroup, bEzsignfoldertypeSendsignedtolimitedgroup, bEzsignfoldertypeSendsignedtocolleague, bEzsignfoldertypeSendsummarytodocumentowner, bEzsignfoldertypeSendsummarytofolderowner, bEzsignfoldertypeSendsummarytofullgroup, bEzsignfoldertypeSendsummarytolimitedgroup, bEzsignfoldertypeSendsummarytocolleague, bEzsignfoldertypeIsactive, aObjUserlogintype);
   }
 
   @Override
@@ -1256,10 +1303,12 @@ public class EzsignfoldertypeResponse {
     sb.append("    eEzsignfoldertypeCompletion: ").append(toIndentedString(eEzsignfoldertypeCompletion)).append("\n");
     sb.append("    iEzsignfoldertypeDisposaldays: ").append(toIndentedString(iEzsignfoldertypeDisposaldays)).append("\n");
     sb.append("    iEzsignfoldertypeDeadlinedays: ").append(toIndentedString(iEzsignfoldertypeDeadlinedays)).append("\n");
+    sb.append("    bEzsignfoldertypeAutomaticsignature: ").append(toIndentedString(bEzsignfoldertypeAutomaticsignature)).append("\n");
     sb.append("    bEzsignfoldertypeDelegate: ").append(toIndentedString(bEzsignfoldertypeDelegate)).append("\n");
     sb.append("    bEzsignfoldertypeDiscussion: ").append(toIndentedString(bEzsignfoldertypeDiscussion)).append("\n");
     sb.append("    bEzsignfoldertypeReassignezsignsigner: ").append(toIndentedString(bEzsignfoldertypeReassignezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeReassignuser: ").append(toIndentedString(bEzsignfoldertypeReassignuser)).append("\n");
+    sb.append("    bEzsignfoldertypeReassigngroup: ").append(toIndentedString(bEzsignfoldertypeReassigngroup)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtoezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendsignedtoezsignsigner)).append("\n");
     sb.append("    bEzsignfoldertypeSendsignedtouser: ").append(toIndentedString(bEzsignfoldertypeSendsignedtouser)).append("\n");
     sb.append("    bEzsignfoldertypeSendattachmentezsignsigner: ").append(toIndentedString(bEzsignfoldertypeSendattachmentezsignsigner)).append("\n");
@@ -1325,10 +1374,12 @@ public class EzsignfoldertypeResponse {
     openapiFields.add("eEzsignfoldertypeCompletion");
     openapiFields.add("iEzsignfoldertypeDisposaldays");
     openapiFields.add("iEzsignfoldertypeDeadlinedays");
+    openapiFields.add("bEzsignfoldertypeAutomaticsignature");
     openapiFields.add("bEzsignfoldertypeDelegate");
     openapiFields.add("bEzsignfoldertypeDiscussion");
     openapiFields.add("bEzsignfoldertypeReassignezsignsigner");
     openapiFields.add("bEzsignfoldertypeReassignuser");
+    openapiFields.add("bEzsignfoldertypeReassigngroup");
     openapiFields.add("bEzsignfoldertypeSendsignedtoezsignsigner");
     openapiFields.add("bEzsignfoldertypeSendsignedtouser");
     openapiFields.add("bEzsignfoldertypeSendattachmentezsignsigner");
@@ -1373,12 +1424,12 @@ public class EzsignfoldertypeResponse {
     openapiRequiredFields.add("a_objUserlogintype");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldertypeResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldertypeResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -1475,22 +1526,22 @@ public class EzsignfoldertypeResponse {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldertypeResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldertypeResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeResponse
-  */
+  /**
+   * Create an instance of EzsignfoldertypeResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldertypeResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldertypeResponse
+   */
   public static EzsignfoldertypeResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldertypeResponse.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldertypeResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldertypeResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -29,13 +29,13 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEActivesessionUsertype.Adapter.class)
 public enum FieldEActivesessionUsertype {
   
-  AGENTBROKER("AgentBroker"),
+  AGENT_BROKER("AgentBroker"),
   
   ASSISTANT("Assistant"),
   
-  EZSIGNSIGNER("EzsignSigner"),
+  EZSIGN_SIGNER("EzsignSigner"),
   
-  EZSIGNUSER("EzsignUser"),
+  EZSIGN_USER("EzsignUser"),
   
   NORMAL("Normal");
 

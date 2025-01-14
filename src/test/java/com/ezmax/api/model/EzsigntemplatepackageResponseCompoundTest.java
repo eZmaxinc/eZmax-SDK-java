@@ -58,11 +58,27 @@ public class EzsigntemplatepackageResponseCompoundTest {
     }
 
     /**
+     * Test the property 'fkiEzdoctemplatedocumentID'
+     */
+    @Test
+    public void fkiEzdoctemplatedocumentIDTest() {
+        // TODO: test fkiEzdoctemplatedocumentID
+    }
+
+    /**
      * Test the property 'fkiLanguageID'
      */
     @Test
     public void fkiLanguageIDTest() {
         // TODO: test fkiLanguageID
+    }
+
+    /**
+     * Test the property 'sEzdoctemplatedocumentNameX'
+     */
+    @Test
+    public void sEzdoctemplatedocumentNameXTest() {
+        // TODO: test sEzdoctemplatedocumentNameX
     }
 
     /**

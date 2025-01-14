@@ -154,6 +154,14 @@ public class EzsignformfieldgroupResponseTest {
     }
 
     /**
+     * Test the property 'sEzsignformfieldgroupTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsignformfieldgroupTextvalidationcustommessageTest() {
+        // TODO: test sEzsignformfieldgroupTextvalidationcustommessage
+    }
+
+    /**
      * Test the property 'tEzsignformfieldgroupTooltip'
      */
     @Test

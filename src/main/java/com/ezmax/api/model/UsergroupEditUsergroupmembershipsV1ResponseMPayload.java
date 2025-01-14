@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_USERGROUPMEMBERSHIP_I_D = "a_pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -73,10 +72,10 @@ public class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * Get aPkiUsergroupmembershipID
    * @return aPkiUsergroupmembershipID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaPkiUsergroupmembershipID() {
     return aPkiUsergroupmembershipID;
@@ -139,12 +138,12 @@ public class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
     openapiRequiredFields.add("a_pkiUsergroupmembershipID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UsergroupEditUsergroupmembershipsV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UsergroupEditUsergroupmembershipsV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupEditUsergroupmembershipsV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -204,22 +203,22 @@ public class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to UsergroupEditUsergroupmembershipsV1ResponseMPayload
-  */
+  /**
+   * Create an instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to UsergroupEditUsergroupmembershipsV1ResponseMPayload
+   */
   public static UsergroupEditUsergroupmembershipsV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UsergroupEditUsergroupmembershipsV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UsergroupEditUsergroupmembershipsV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

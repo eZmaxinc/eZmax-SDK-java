@@ -53,12 +53,4 @@ public class CreditcardclientAutocompleteElementResponseTest {
         // TODO: test sCreditcardclientDescription
     }
 
-    /**
-     * Test the property 'bCreditcardclientIsactive'
-     */
-    @Test
-    public void bCreditcardclientIsactiveTest() {
-        // TODO: test bCreditcardclientIsactive
-    }
-
 }

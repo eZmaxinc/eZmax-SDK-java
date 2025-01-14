@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;Apikey object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionResponseCompoundApikey {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -67,11 +66,11 @@ public class ActivesessionResponseCompoundApikey {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Apikey
    * minimum: 0
    * @return pkiApikeyID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiApikeyID() {
     return pkiApikeyID;
@@ -87,10 +86,10 @@ public class ActivesessionResponseCompoundApikey {
     return this;
   }
 
-   /**
+  /**
    * The description of the Apikey in the language of the requester
    * @return sApikeyDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsApikeyDescriptionX() {
     return sApikeyDescriptionX;
@@ -157,12 +156,12 @@ public class ActivesessionResponseCompoundApikey {
     openapiRequiredFields.add("sApikeyDescriptionX");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponseCompoundApikey
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponseCompoundApikey
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionResponseCompoundApikey.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -219,22 +218,22 @@ public class ActivesessionResponseCompoundApikey {
     }
   }
 
- /**
-  * Create an instance of ActivesessionResponseCompoundApikey given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActivesessionResponseCompoundApikey
-  * @throws IOException if the JSON string is invalid with respect to ActivesessionResponseCompoundApikey
-  */
+  /**
+   * Create an instance of ActivesessionResponseCompoundApikey given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActivesessionResponseCompoundApikey
+   * @throws IOException if the JSON string is invalid with respect to ActivesessionResponseCompoundApikey
+   */
   public static ActivesessionResponseCompoundApikey fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActivesessionResponseCompoundApikey.class);
   }
 
- /**
-  * Convert an instance of ActivesessionResponseCompoundApikey to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActivesessionResponseCompoundApikey to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

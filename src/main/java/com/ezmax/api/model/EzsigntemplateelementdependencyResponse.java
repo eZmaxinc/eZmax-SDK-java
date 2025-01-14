@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateelementdependencyResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D = "pkiEzsigntemplateelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D)
@@ -97,12 +96,12 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateelementdependency
    * minimum: 0
    * maximum: 65535
    * @return pkiEzsigntemplateelementdependencyID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplateelementdependencyID() {
     return pkiEzsigntemplateelementdependencyID;
@@ -118,11 +117,11 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateformfield
    * minimum: 0
    * @return fkiEzsigntemplateformfieldID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplateformfieldID() {
     return fkiEzsigntemplateformfieldID;
@@ -138,11 +137,11 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatesignature
    * minimum: 0
    * @return fkiEzsigntemplatesignatureID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplatesignatureID() {
     return fkiEzsigntemplatesignatureID;
@@ -158,11 +157,11 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateformfield
    * minimum: 0
    * @return fkiEzsigntemplateformfieldIDValidation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplateformfieldIDValidation() {
     return fkiEzsigntemplateformfieldIDValidation;
@@ -178,11 +177,11 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplateformfieldgroup
    * minimum: 0
    * @return fkiEzsigntemplateformfieldgroupIDValidation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplateformfieldgroupIDValidation() {
     return fkiEzsigntemplateformfieldgroupIDValidation;
@@ -198,10 +197,10 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateelementdependencyValidation
    * @return eEzsigntemplateelementdependencyValidation
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsigntemplateelementdependencyValidation geteEzsigntemplateelementdependencyValidation() {
     return eEzsigntemplateelementdependencyValidation;
@@ -217,10 +216,10 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s selected or not when using eEzsigntemplateelementdependencyValidation &#x3D; Selected
    * @return bEzsigntemplateelementdependencySelected
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsigntemplateelementdependencySelected() {
     return bEzsigntemplateelementdependencySelected;
@@ -236,10 +235,10 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsigntemplateelementdependencyOperator
    * @return eEzsigntemplateelementdependencyOperator
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsigntemplateelementdependencyOperator geteEzsigntemplateelementdependencyOperator() {
     return eEzsigntemplateelementdependencyOperator;
@@ -255,10 +254,10 @@ public class EzsigntemplateelementdependencyResponse {
     return this;
   }
 
-   /**
+  /**
    * The value of the Ezsignelementdependency
    * @return sEzsigntemplateelementdependencyValue
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsigntemplateelementdependencyValue() {
     return sEzsigntemplateelementdependencyValue;
@@ -346,12 +345,12 @@ public class EzsigntemplateelementdependencyResponse {
     openapiRequiredFields.add("eEzsigntemplateelementdependencyValidation");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateelementdependencyResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplateelementdependencyResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateelementdependencyResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -414,22 +413,22 @@ public class EzsigntemplateelementdependencyResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplateelementdependencyResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplateelementdependencyResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplateelementdependencyResponse
-  */
+  /**
+   * Create an instance of EzsigntemplateelementdependencyResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplateelementdependencyResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplateelementdependencyResponse
+   */
   public static EzsigntemplateelementdependencyResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplateelementdependencyResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplateelementdependencyResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplateelementdependencyResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

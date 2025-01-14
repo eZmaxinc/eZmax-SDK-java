@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_COMMUNICATION_COUNT = "iCommunicationCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_COUNT)
@@ -63,10 +62,10 @@ public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * The count of Communication.
    * @return iCommunicationCount
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiCommunicationCount() {
     return iCommunicationCount;
@@ -129,12 +128,12 @@ public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
     openapiRequiredFields.add("iCommunicationCount");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderGetCommunicationCountV1ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfolderGetCommunicationCountV1ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderGetCommunicationCountV1ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -188,22 +187,22 @@ public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzsignfolderGetCommunicationCountV1ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfolderGetCommunicationCountV1ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsignfolderGetCommunicationCountV1ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsignfolderGetCommunicationCountV1ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfolderGetCommunicationCountV1ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsignfolderGetCommunicationCountV1ResponseMPayload
+   */
   public static EzsignfolderGetCommunicationCountV1ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfolderGetCommunicationCountV1ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsignfolderGetCommunicationCountV1ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfolderGetCommunicationCountV1ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

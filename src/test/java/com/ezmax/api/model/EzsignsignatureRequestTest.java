@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
@@ -156,6 +157,22 @@ public class EzsignsignatureRequestTest {
     }
 
     /**
+     * Test the property 'bEzsignsignatureHandwritten'
+     */
+    @Test
+    public void bEzsignsignatureHandwrittenTest() {
+        // TODO: test bEzsignsignatureHandwritten
+    }
+
+    /**
+     * Test the property 'bEzsignsignatureReason'
+     */
+    @Test
+    public void bEzsignsignatureReasonTest() {
+        // TODO: test bEzsignsignatureReason
+    }
+
+    /**
      * Test the property 'bEzsignsignatureRequired'
      */
     @Test
@@ -180,6 +197,14 @@ public class EzsignsignatureRequestTest {
     }
 
     /**
+     * Test the property 'eEzsignsignatureConsultationtrigger'
+     */
+    @Test
+    public void eEzsignsignatureConsultationtriggerTest() {
+        // TODO: test eEzsignsignatureConsultationtrigger
+    }
+
+    /**
      * Test the property 'iEzsignsignatureValidationstep'
      */
     @Test
@@ -196,11 +221,27 @@ public class EzsignsignatureRequestTest {
     }
 
     /**
+     * Test the property 'sEzsignsignatureDefaultvalue'
+     */
+    @Test
+    public void sEzsignsignatureDefaultvalueTest() {
+        // TODO: test sEzsignsignatureDefaultvalue
+    }
+
+    /**
      * Test the property 'eEzsignsignatureTextvalidation'
      */
     @Test
     public void eEzsignsignatureTextvalidationTest() {
         // TODO: test eEzsignsignatureTextvalidation
+    }
+
+    /**
+     * Test the property 'sEzsignsignatureTextvalidationcustommessage'
+     */
+    @Test
+    public void sEzsignsignatureTextvalidationcustommessageTest() {
+        // TODO: test sEzsignsignatureTextvalidationcustommessage
     }
 
     /**

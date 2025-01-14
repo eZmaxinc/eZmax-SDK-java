@@ -16,7 +16,7 @@ Request for Websocket GetWebsocketID V1
 
 | Name | Value |
 |---- | -----|
-| REQUESTSERVER_GETWEBSOCKETID_V1 | &quot;RequestServer-GetWebsocketID-V1&quot; |
+| REQUEST_SERVER_GET_WEBSOCKET_ID_V1 | &quot;RequestServer-GetWebsocketID-V1&quot; |
 
 
 

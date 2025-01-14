@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A User AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
@@ -76,10 +75,10 @@ public class UserAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eUserType
    * @return eUserType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserType geteUserType() {
     return eUserType;
@@ -95,10 +94,10 @@ public class UserAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the User in the language of the requester
    * @return sUserName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserName() {
     return sUserName;
@@ -114,11 +113,11 @@ public class UserAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return pkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -134,10 +133,10 @@ public class UserAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the User is active or not
    * @return bUserIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbUserIsactive() {
     return bUserIsactive;
@@ -212,12 +211,12 @@ public class UserAutocompleteElementResponse {
     openapiRequiredFields.add("bUserIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UserAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UserAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UserAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -276,22 +275,22 @@ public class UserAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of UserAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UserAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to UserAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of UserAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UserAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to UserAutocompleteElementResponse
+   */
   public static UserAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UserAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of UserAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UserAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

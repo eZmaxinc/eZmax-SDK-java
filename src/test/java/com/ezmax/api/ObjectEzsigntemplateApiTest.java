@@ -17,19 +17,14 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplateCopyV1Request;
 import com.ezmax.api.model.EzsigntemplateCopyV1Response;
-import com.ezmax.api.model.EzsigntemplateCreateObjectV1Request;
-import com.ezmax.api.model.EzsigntemplateCreateObjectV1Response;
-import com.ezmax.api.model.EzsigntemplateCreateObjectV2Request;
-import com.ezmax.api.model.EzsigntemplateCreateObjectV2Response;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV3Request;
+import com.ezmax.api.model.EzsigntemplateCreateObjectV3Response;
 import com.ezmax.api.model.EzsigntemplateDeleteObjectV1Response;
-import com.ezmax.api.model.EzsigntemplateEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplateEditObjectV1Response;
-import com.ezmax.api.model.EzsigntemplateEditObjectV2Request;
-import com.ezmax.api.model.EzsigntemplateEditObjectV2Response;
+import com.ezmax.api.model.EzsigntemplateEditObjectV3Request;
+import com.ezmax.api.model.EzsigntemplateEditObjectV3Response;
 import com.ezmax.api.model.EzsigntemplateGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplateGetListV1Response;
-import com.ezmax.api.model.EzsigntemplateGetObjectV1Response;
-import com.ezmax.api.model.EzsigntemplateGetObjectV2Response;
+import com.ezmax.api.model.EzsigntemplateGetObjectV3Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -71,23 +66,9 @@ public class ObjectEzsigntemplateApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplateCreateObjectV1Test() throws ApiException {
-        EzsigntemplateCreateObjectV1Request ezsigntemplateCreateObjectV1Request = null;
-        EzsigntemplateCreateObjectV1Response response = api.ezsigntemplateCreateObjectV1(ezsigntemplateCreateObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Create a new Ezsigntemplate
-     *
-     * The endpoint allows to create one or many elements at once.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplateCreateObjectV2Test() throws ApiException {
-        EzsigntemplateCreateObjectV2Request ezsigntemplateCreateObjectV2Request = null;
-        EzsigntemplateCreateObjectV2Response response = api.ezsigntemplateCreateObjectV2(ezsigntemplateCreateObjectV2Request);
+    public void ezsigntemplateCreateObjectV3Test() throws ApiException {
+        EzsigntemplateCreateObjectV3Request ezsigntemplateCreateObjectV3Request = null;
+        EzsigntemplateCreateObjectV3Response response = api.ezsigntemplateCreateObjectV3(ezsigntemplateCreateObjectV3Request);
         // TODO: test validations
     }
 
@@ -113,25 +94,10 @@ public class ObjectEzsigntemplateApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplateEditObjectV1Test() throws ApiException {
+    public void ezsigntemplateEditObjectV3Test() throws ApiException {
         Integer pkiEzsigntemplateID = null;
-        EzsigntemplateEditObjectV1Request ezsigntemplateEditObjectV1Request = null;
-        EzsigntemplateEditObjectV1Response response = api.ezsigntemplateEditObjectV1(pkiEzsigntemplateID, ezsigntemplateEditObjectV1Request);
-        // TODO: test validations
-    }
-
-    /**
-     * Edit an existing Ezsigntemplate
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplateEditObjectV2Test() throws ApiException {
-        Integer pkiEzsigntemplateID = null;
-        EzsigntemplateEditObjectV2Request ezsigntemplateEditObjectV2Request = null;
-        EzsigntemplateEditObjectV2Response response = api.ezsigntemplateEditObjectV2(pkiEzsigntemplateID, ezsigntemplateEditObjectV2Request);
+        EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = null;
+        EzsigntemplateEditObjectV3Response response = api.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
         // TODO: test validations
     }
 
@@ -148,7 +114,8 @@ public class ObjectEzsigntemplateApiTest {
         String eFilterActive = null;
         String sQuery = null;
         HeaderAcceptLanguage acceptLanguage = null;
-        EzsigntemplateGetAutocompleteV2Response response = api.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+        Integer fkiEzsignfoldertypeID = null;
+        EzsigntemplateGetAutocompleteV2Response response = api.ezsigntemplateGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage, fkiEzsignfoldertypeID);
         // TODO: test validations
     }
 
@@ -178,23 +145,9 @@ public class ObjectEzsigntemplateApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsigntemplateGetObjectV1Test() throws ApiException {
+    public void ezsigntemplateGetObjectV3Test() throws ApiException {
         Integer pkiEzsigntemplateID = null;
-        EzsigntemplateGetObjectV1Response response = api.ezsigntemplateGetObjectV1(pkiEzsigntemplateID);
-        // TODO: test validations
-    }
-
-    /**
-     * Retrieve an existing Ezsigntemplate
-     *
-     * 
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void ezsigntemplateGetObjectV2Test() throws ApiException {
-        Integer pkiEzsigntemplateID = null;
-        EzsigntemplateGetObjectV2Response response = api.ezsigntemplateGetObjectV2(pkiEzsigntemplateID);
+        EzsigntemplateGetObjectV3Response response = api.ezsigntemplateGetObjectV3(pkiEzsigntemplateID);
         // TODO: test validations
     }
 

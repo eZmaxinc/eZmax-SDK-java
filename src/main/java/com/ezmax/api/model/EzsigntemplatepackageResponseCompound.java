@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -63,9 +62,17 @@ public class EzsigntemplatepackageResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   private Integer fkiEzsignfoldertypeID;
 
+  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  private Integer fkiEzdoctemplatedocumentID;
+
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
   private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
+  @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
+  private String sEzdoctemplatedocumentNameX;
 
   public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
   @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
@@ -111,11 +118,11 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackage
    * minimum: 0
    * @return pkiEzsigntemplatepackageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
@@ -131,12 +138,12 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -147,17 +154,38 @@ public class EzsigntemplatepackageResponseCompound {
   }
 
 
+  public EzsigntemplatepackageResponseCompound fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzdoctemplatedocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+
   public EzsigntemplatepackageResponseCompound fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -168,15 +196,34 @@ public class EzsigntemplatepackageResponseCompound {
   }
 
 
+  public EzsigntemplatepackageResponseCompound sEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+    this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
+    return this;
+  }
+
+  /**
+   * The name of the Ezdoctemplatedocument in the language of the requester
+   * @return sEzdoctemplatedocumentNameX
+   */
+  @javax.annotation.Nullable
+  public String getsEzdoctemplatedocumentNameX() {
+    return sEzdoctemplatedocumentNameX;
+  }
+
+  public void setsEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+    this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
+  }
+
+
   public EzsigntemplatepackageResponseCompound sLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
 
-   /**
+  /**
    * The Name of the Language in the language of the requester
    * @return sLanguageNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsLanguageNameX() {
     return sLanguageNameX;
@@ -192,10 +239,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatepackage
    * @return sEzsigntemplatepackageDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
@@ -211,10 +258,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal)
    * @return bEzsigntemplatepackageAdminonly
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageAdminonly() {
     return bEzsigntemplatepackageAdminonly;
@@ -230,10 +277,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignbulksend was automatically modified and needs a manual validation
    * @return bEzsigntemplatepackageNeedvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageNeedvalidation() {
     return bEzsigntemplatepackageNeedvalidation;
@@ -249,10 +296,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage is active or not
    * @return bEzsigntemplatepackageIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;
@@ -268,10 +315,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -287,10 +334,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage if allowed to edit or not
    * @return bEzsigntemplatepackageEditallowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageEditallowed() {
     return bEzsigntemplatepackageEditallowed;
@@ -314,10 +361,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsigntemplatepackagesigner
    * @return aObjEzsigntemplatepackagesigner
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzsigntemplatepackagesignerResponseCompound> getaObjEzsigntemplatepackagesigner() {
     return aObjEzsigntemplatepackagesigner;
@@ -341,10 +388,10 @@ public class EzsigntemplatepackageResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsigntemplatepackagemembership
    * @return aObjEzsigntemplatepackagemembership
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EzsigntemplatepackagemembershipResponseCompound> getaObjEzsigntemplatepackagemembership() {
     return aObjEzsigntemplatepackagemembership;
@@ -367,7 +414,9 @@ public class EzsigntemplatepackageResponseCompound {
     EzsigntemplatepackageResponseCompound ezsigntemplatepackageResponseCompound = (EzsigntemplatepackageResponseCompound) o;
     return Objects.equals(this.pkiEzsigntemplatepackageID, ezsigntemplatepackageResponseCompound.pkiEzsigntemplatepackageID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplatepackageResponseCompound.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiEzdoctemplatedocumentID, ezsigntemplatepackageResponseCompound.fkiEzdoctemplatedocumentID) &&
         Objects.equals(this.fkiLanguageID, ezsigntemplatepackageResponseCompound.fkiLanguageID) &&
+        Objects.equals(this.sEzdoctemplatedocumentNameX, ezsigntemplatepackageResponseCompound.sEzdoctemplatedocumentNameX) &&
         Objects.equals(this.sLanguageNameX, ezsigntemplatepackageResponseCompound.sLanguageNameX) &&
         Objects.equals(this.sEzsigntemplatepackageDescription, ezsigntemplatepackageResponseCompound.sEzsigntemplatepackageDescription) &&
         Objects.equals(this.bEzsigntemplatepackageAdminonly, ezsigntemplatepackageResponseCompound.bEzsigntemplatepackageAdminonly) &&
@@ -381,7 +430,7 @@ public class EzsigntemplatepackageResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiLanguageID, sLanguageNameX, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX, bEzsigntemplatepackageEditallowed, aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagemembership);
+    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiEzdoctemplatedocumentID, fkiLanguageID, sEzdoctemplatedocumentNameX, sLanguageNameX, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageNeedvalidation, bEzsigntemplatepackageIsactive, sEzsignfoldertypeNameX, bEzsigntemplatepackageEditallowed, aObjEzsigntemplatepackagesigner, aObjEzsigntemplatepackagemembership);
   }
 
   @Override
@@ -390,7 +439,9 @@ public class EzsigntemplatepackageResponseCompound {
     sb.append("class EzsigntemplatepackageResponseCompound {\n");
     sb.append("    pkiEzsigntemplatepackageID: ").append(toIndentedString(pkiEzsigntemplatepackageID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiEzdoctemplatedocumentID: ").append(toIndentedString(fkiEzdoctemplatedocumentID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    sEzdoctemplatedocumentNameX: ").append(toIndentedString(sEzdoctemplatedocumentNameX)).append("\n");
     sb.append("    sLanguageNameX: ").append(toIndentedString(sLanguageNameX)).append("\n");
     sb.append("    sEzsigntemplatepackageDescription: ").append(toIndentedString(sEzsigntemplatepackageDescription)).append("\n");
     sb.append("    bEzsigntemplatepackageAdminonly: ").append(toIndentedString(bEzsigntemplatepackageAdminonly)).append("\n");
@@ -424,7 +475,9 @@ public class EzsigntemplatepackageResponseCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsigntemplatepackageID");
     openapiFields.add("fkiEzsignfoldertypeID");
+    openapiFields.add("fkiEzdoctemplatedocumentID");
     openapiFields.add("fkiLanguageID");
+    openapiFields.add("sEzdoctemplatedocumentNameX");
     openapiFields.add("sLanguageNameX");
     openapiFields.add("sEzsigntemplatepackageDescription");
     openapiFields.add("bEzsigntemplatepackageAdminonly");
@@ -451,12 +504,12 @@ public class EzsigntemplatepackageResponseCompound {
     openapiRequiredFields.add("a_objEzsigntemplatepackagemembership");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackageResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -479,6 +532,9 @@ public class EzsigntemplatepackageResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sEzdoctemplatedocumentNameX") != null && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonNull()) && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzdoctemplatedocumentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentNameX").toString()));
+      }
       if (!jsonObj.get("sLanguageNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sLanguageNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLanguageNameX").toString()));
       }
@@ -539,22 +595,22 @@ public class EzsigntemplatepackageResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackageResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackageResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageResponseCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatepackageResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackageResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageResponseCompound
+   */
   public static EzsigntemplatepackageResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackageResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackageResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackageResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

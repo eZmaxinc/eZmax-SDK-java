@@ -9,7 +9,7 @@
 
 * `CUSTOMER` (value: `"Customer"`)
 
-* `DESCRIPTIONCUSTOMER` (value: `"DescriptionCustomer"`)
+* `DESCRIPTION_CUSTOMER` (value: `"DescriptionCustomer"`)
 
 
 

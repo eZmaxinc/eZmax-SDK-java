@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Branding List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BrandingListElement {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -95,11 +94,11 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Branding
    * minimum: 0
    * @return pkiBrandingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiBrandingID() {
     return pkiBrandingID;
@@ -115,10 +114,10 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The Description of the Branding in the language of the requester
    * @return sBrandingDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBrandingDescriptionX() {
     return sBrandingDescriptionX;
@@ -134,12 +133,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the text. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColortext
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColortext() {
     return iBrandingColortext;
@@ -155,12 +154,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the text in the link box. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColortextlinkbox
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColortextlinkbox() {
     return iBrandingColortextlinkbox;
@@ -176,12 +175,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the text in the button. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColortextbutton
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColortextbutton() {
     return iBrandingColortextbutton;
@@ -197,12 +196,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the background. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColorbackground
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColorbackground() {
     return iBrandingColorbackground;
@@ -218,12 +217,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the background of the button. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColorbackgroundbutton
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColorbackgroundbutton() {
     return iBrandingColorbackgroundbutton;
@@ -239,12 +238,12 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * The color of the background of the small box. This is a RGB color converted into integer
    * minimum: 0
    * maximum: 16777215
    * @return iBrandingColorbackgroundsmallbox
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiBrandingColorbackgroundsmallbox() {
     return iBrandingColorbackgroundsmallbox;
@@ -260,10 +259,10 @@ public class BrandingListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Branding is active or not
    * @return bBrandingIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbBrandingIsactive() {
     return bBrandingIsactive;
@@ -358,12 +357,12 @@ public class BrandingListElement {
     openapiRequiredFields.add("bBrandingIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to BrandingListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to BrandingListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!BrandingListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -420,22 +419,22 @@ public class BrandingListElement {
     }
   }
 
- /**
-  * Create an instance of BrandingListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of BrandingListElement
-  * @throws IOException if the JSON string is invalid with respect to BrandingListElement
-  */
+  /**
+   * Create an instance of BrandingListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of BrandingListElement
+   * @throws IOException if the JSON string is invalid with respect to BrandingListElement
+   */
   public static BrandingListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, BrandingListElement.class);
   }
 
- /**
-  * Convert an instance of BrandingListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of BrandingListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

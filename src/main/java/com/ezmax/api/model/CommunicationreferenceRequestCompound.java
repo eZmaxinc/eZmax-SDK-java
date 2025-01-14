@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreference Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationreferenceRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D = "pkiCommunicationreferenceID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D)
@@ -95,12 +94,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Communicationreference
    * minimum: 0
    * maximum: 4294967295
    * @return pkiCommunicationreferenceID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiCommunicationreferenceID() {
     return pkiCommunicationreferenceID;
@@ -116,12 +115,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Buyercontract
    * minimum: 1
    * maximum: 65535
    * @return fkiBuyercontractID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBuyercontractID() {
     return fkiBuyercontractID;
@@ -137,11 +136,11 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return fkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -157,11 +156,11 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscription.
    * minimum: 0
    * @return fkiInscriptionID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptionID() {
     return fkiInscriptionID;
@@ -177,12 +176,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscriptiontemp
    * minimum: 1
    * maximum: 16777215
    * @return fkiInscriptiontempID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptiontempID() {
     return fkiInscriptiontempID;
@@ -198,11 +197,11 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Invoice.
    * minimum: 0
    * @return fkiInvoiceID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInvoiceID() {
     return fkiInvoiceID;
@@ -218,12 +217,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Otherincome
    * minimum: 1
    * maximum: 65535
    * @return fkiOtherincomeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiOtherincomeID() {
     return fkiOtherincomeID;
@@ -239,12 +238,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Electronicfundstransfer
    * minimum: 1
    * maximum: 65535
    * @return fkiElectronicfundstransferID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiElectronicfundstransferID() {
     return fkiElectronicfundstransferID;
@@ -260,12 +259,12 @@ public class CommunicationreferenceRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Rejectedoffertopurchase
    * minimum: 1
    * maximum: 65535
    * @return fkiRejectedoffertopurchaseID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiRejectedoffertopurchaseID() {
     return fkiRejectedoffertopurchaseID;
@@ -351,12 +350,12 @@ public class CommunicationreferenceRequestCompound {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommunicationreferenceRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommunicationreferenceRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommunicationreferenceRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -403,22 +402,22 @@ public class CommunicationreferenceRequestCompound {
     }
   }
 
- /**
-  * Create an instance of CommunicationreferenceRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommunicationreferenceRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to CommunicationreferenceRequestCompound
-  */
+  /**
+   * Create an instance of CommunicationreferenceRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommunicationreferenceRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to CommunicationreferenceRequestCompound
+   */
   public static CommunicationreferenceRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommunicationreferenceRequestCompound.class);
   }
 
- /**
-  * Convert an instance of CommunicationreferenceRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommunicationreferenceRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

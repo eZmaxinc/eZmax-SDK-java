@@ -5,9 +5,9 @@
 ## Enum
 
 
-* `PEREZSIGNDOCUMENT` (value: `"PerEzsigndocument"`)
+* `PER_EZSIGNDOCUMENT` (value: `"PerEzsigndocument"`)
 
-* `PEREZSIGNFOLDER` (value: `"PerEzsignfolder"`)
+* `PER_EZSIGNFOLDER` (value: `"PerEzsignfolder"`)
 
 
 

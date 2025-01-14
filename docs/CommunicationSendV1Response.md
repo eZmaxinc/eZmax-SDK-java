@@ -10,7 +10,7 @@ Response for POST /1/object/communication
 |------------ | ------------- | ------------- | -------------|
 |**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
-|**mPayload** | [**CommunicationCreateObjectV1ResponseMPayload**](CommunicationCreateObjectV1ResponseMPayload.md) |  |  |
+|**mPayload** | [**CommunicationSendV1ResponseMPayload**](CommunicationSendV1ResponseMPayload.md) |  |  |
 
 
 

@@ -4,16 +4,16 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**brandingCreateObjectV1**](ObjectBrandingApi.md#brandingCreateObjectV1) | **POST** /1/object/branding | Create a new Branding |
-| [**brandingEditObjectV1**](ObjectBrandingApi.md#brandingEditObjectV1) | **PUT** /1/object/branding/{pkiBrandingID} | Edit an existing Branding |
+| [**brandingCreateObjectV2**](ObjectBrandingApi.md#brandingCreateObjectV2) | **POST** /2/object/branding | Create a new Branding |
+| [**brandingEditObjectV2**](ObjectBrandingApi.md#brandingEditObjectV2) | **PUT** /2/object/branding/{pkiBrandingID} | Edit an existing Branding |
 | [**brandingGetAutocompleteV2**](ObjectBrandingApi.md#brandingGetAutocompleteV2) | **GET** /2/object/branding/getAutocomplete/{sSelector} | Retrieve Brandings and IDs |
 | [**brandingGetListV1**](ObjectBrandingApi.md#brandingGetListV1) | **GET** /1/object/branding/getList | Retrieve Branding list |
-| [**brandingGetObjectV2**](ObjectBrandingApi.md#brandingGetObjectV2) | **GET** /2/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
+| [**brandingGetObjectV3**](ObjectBrandingApi.md#brandingGetObjectV3) | **GET** /3/object/branding/{pkiBrandingID} | Retrieve an existing Branding |
 
 
-<a id="brandingCreateObjectV1"></a>
-# **brandingCreateObjectV1**
-> BrandingCreateObjectV1Response brandingCreateObjectV1(brandingCreateObjectV1Request)
+<a id="brandingCreateObjectV2"></a>
+# **brandingCreateObjectV2**
+> BrandingCreateObjectV2Response brandingCreateObjectV2(brandingCreateObjectV2Request)
 
 Create a new Branding
 
@@ -41,12 +41,12 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ObjectBrandingApi apiInstance = new ObjectBrandingApi(defaultClient);
-    BrandingCreateObjectV1Request brandingCreateObjectV1Request = new BrandingCreateObjectV1Request(); // BrandingCreateObjectV1Request | 
+    BrandingCreateObjectV2Request brandingCreateObjectV2Request = new BrandingCreateObjectV2Request(); // BrandingCreateObjectV2Request | 
     try {
-      BrandingCreateObjectV1Response result = apiInstance.brandingCreateObjectV1(brandingCreateObjectV1Request);
+      BrandingCreateObjectV2Response result = apiInstance.brandingCreateObjectV2(brandingCreateObjectV2Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectBrandingApi#brandingCreateObjectV1");
+      System.err.println("Exception when calling ObjectBrandingApi#brandingCreateObjectV2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -60,11 +60,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **brandingCreateObjectV1Request** | [**BrandingCreateObjectV1Request**](BrandingCreateObjectV1Request.md)|  | |
+| **brandingCreateObjectV2Request** | [**BrandingCreateObjectV2Request**](BrandingCreateObjectV2Request.md)|  | |
 
 ### Return type
 
-[**BrandingCreateObjectV1Response**](BrandingCreateObjectV1Response.md)
+[**BrandingCreateObjectV2Response**](BrandingCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -80,9 +80,9 @@ public class Example {
 |-------------|-------------|------------------|
 | **201** | Successful response |  -  |
 
-<a id="brandingEditObjectV1"></a>
-# **brandingEditObjectV1**
-> BrandingEditObjectV1Response brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request)
+<a id="brandingEditObjectV2"></a>
+# **brandingEditObjectV2**
+> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -111,12 +111,12 @@ public class Example {
 
     ObjectBrandingApi apiInstance = new ObjectBrandingApi(defaultClient);
     Integer pkiBrandingID = 56; // Integer | 
-    BrandingEditObjectV1Request brandingEditObjectV1Request = new BrandingEditObjectV1Request(); // BrandingEditObjectV1Request | 
+    BrandingEditObjectV2Request brandingEditObjectV2Request = new BrandingEditObjectV2Request(); // BrandingEditObjectV2Request | 
     try {
-      BrandingEditObjectV1Response result = apiInstance.brandingEditObjectV1(pkiBrandingID, brandingEditObjectV1Request);
+      BrandingEditObjectV2Response result = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectBrandingApi#brandingEditObjectV1");
+      System.err.println("Exception when calling ObjectBrandingApi#brandingEditObjectV2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -131,11 +131,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pkiBrandingID** | **Integer**|  | |
-| **brandingEditObjectV1Request** | [**BrandingEditObjectV1Request**](BrandingEditObjectV1Request.md)|  | |
+| **brandingEditObjectV2Request** | [**BrandingEditObjectV2Request**](BrandingEditObjectV2Request.md)|  | |
 
 ### Return type
 
-[**BrandingEditObjectV1Response**](BrandingEditObjectV1Response.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 
@@ -305,9 +305,9 @@ public class Example {
 | **200** | Successful response |  -  |
 | **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
-<a id="brandingGetObjectV2"></a>
-# **brandingGetObjectV2**
-> BrandingGetObjectV2Response brandingGetObjectV2(pkiBrandingID)
+<a id="brandingGetObjectV3"></a>
+# **brandingGetObjectV3**
+> BrandingGetObjectV3Response brandingGetObjectV3(pkiBrandingID)
 
 Retrieve an existing Branding
 
@@ -337,10 +337,10 @@ public class Example {
     ObjectBrandingApi apiInstance = new ObjectBrandingApi(defaultClient);
     Integer pkiBrandingID = 56; // Integer | 
     try {
-      BrandingGetObjectV2Response result = apiInstance.brandingGetObjectV2(pkiBrandingID);
+      BrandingGetObjectV3Response result = apiInstance.brandingGetObjectV3(pkiBrandingID);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectBrandingApi#brandingGetObjectV2");
+      System.err.println("Exception when calling ObjectBrandingApi#brandingGetObjectV3");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -358,7 +358,7 @@ public class Example {
 
 ### Return type
 
-[**BrandingGetObjectV2Response**](BrandingGetObjectV2Response.md)
+[**BrandingGetObjectV3Response**](BrandingGetObjectV3Response.md)
 
 ### Authorization
 

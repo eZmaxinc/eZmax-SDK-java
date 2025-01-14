@@ -27,7 +27,7 @@
 
 * `ZIP_4` (value: `"Zip+4"`)
 
-* `POSTALCODE` (value: `"PostalCode"`)
+* `POSTAL_CODE` (value: `"PostalCode"`)
 
 * `CUSTOM` (value: `"Custom"`)
 

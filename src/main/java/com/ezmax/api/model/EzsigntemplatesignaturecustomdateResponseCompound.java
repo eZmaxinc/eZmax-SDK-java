@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatesignaturecustomdate Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatesignaturecustomdateResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D = "pkiEzsigntemplatesignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURECUSTOMDATE_I_D)
@@ -85,11 +84,11 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatesignaturecustomdate
    * minimum: 0
    * @return pkiEzsigntemplatesignaturecustomdateID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatesignaturecustomdateID() {
     return pkiEzsigntemplatesignaturecustomdateID;
@@ -106,12 +105,12 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsigntemplatesignaturecustomdateX
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateX() {
@@ -130,12 +129,12 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsigntemplatesignaturecustomdateY
    * @deprecated
-  **/
+   */
   @Deprecated
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateY() {
@@ -153,10 +152,10 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the left of the signature, you would use \&quot;200\&quot; for the X coordinate.
    * @return iEzsigntemplatesignaturecustomdateOffsetx
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateOffsetx() {
     return iEzsigntemplatesignaturecustomdateOffsetx;
@@ -172,10 +171,10 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsigntemplatesignaturecustomdate on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplatesignaturecustomdate 2 inches from the top of the signature, you would use \&quot;200\&quot; for the Y coordinate.
    * @return iEzsigntemplatesignaturecustomdateOffsety
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatesignaturecustomdateOffsety() {
     return iEzsigntemplatesignaturecustomdateOffsety;
@@ -191,10 +190,10 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The custom date format to use  You can use the codes below and they will be replaced at signature time. Text values like month and day names will be rendered in the proper language. Other text will be left as-is.  The codes examples below are based on the following datetime: Thursday, January 6, 2022 at 08:07:09 EST  For example, the format \&quot;Signature date: {MM}/{DD}/{YYYY} {hh}:{mm}\&quot; would become \&quot;Signature date: 01/06/2022 08:07\&quot;  **Year**  | Code | Example | | - | - | | {YYYY} | 2022 | | {YY} | 22 |  **Month**  | Code | Example | | - | - | | {MonthCapitalize} | Janvier | | {Month} | janvier | | {MM} | 01 | | {M} | 1 |  **Day**  | Code | Example | | - | - | | {DayCapitalize} | Jeudi | | {Day} | jeudi | | {DD} | 06 | | {D} | 6 |  **Hour**  | Code | Example | | - | - | | {hh} | 08 |  **Minute**  | Code | Example | | - | - | | {mm} | 07 |  **Second**  | Code | Example | | - | - | | {ss} | 09 |        **Timezone**  | Code | Example | | - | - | | {Z} | EST |       **Time**  | Code | Example | | - | - | | {Time} | 08:07:09 |   | {TimeZ} | 08:07:09 EST |     **Date**  | Code | Example | | - | - | | {Date} | 2022-01-06 |   | {DateText} | 1er Janvier 2022 |  **Full**  | Code | Example | | - | - | | {DateTime} | 2022-01-06 08:07:09 |   | {DateTimeZ} | 2022-01-06 08:07:09 EST | 
    * @return sEzsigntemplatesignaturecustomdateFormat
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatesignaturecustomdateFormat() {
     return sEzsigntemplatesignaturecustomdateFormat;
@@ -273,12 +272,12 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     openapiRequiredFields.add("sEzsigntemplatesignaturecustomdateFormat");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatesignaturecustomdateResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatesignaturecustomdateResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatesignaturecustomdateResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -335,22 +334,22 @@ public class EzsigntemplatesignaturecustomdateResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatesignaturecustomdateResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatesignaturecustomdateResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatesignaturecustomdateResponseCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatesignaturecustomdateResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatesignaturecustomdateResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatesignaturecustomdateResponseCompound
+   */
   public static EzsigntemplatesignaturecustomdateResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatesignaturecustomdateResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatesignaturecustomdateResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatesignaturecustomdateResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyResponseCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -98,11 +97,11 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Apikey
    * minimum: 0
    * @return pkiApikeyID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiApikeyID() {
     return pkiApikeyID;
@@ -118,11 +117,11 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -138,10 +137,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objApikeyDescription
    * @return objApikeyDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualApikeyDescription getObjApikeyDescription() {
     return objApikeyDescription;
@@ -157,10 +156,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objContactName
    * @return objContactName
-  **/
+   */
   @javax.annotation.Nonnull
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
@@ -176,10 +175,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
    * @return sApikeyApikey
-  **/
+   */
   @javax.annotation.Nullable
   public String getsApikeyApikey() {
     return sApikeyApikey;
@@ -195,10 +194,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Secret for the API key.  This will be hidden if we are not creating or regenerating the Apikey.
    * @return sApikeySecret
-  **/
+   */
   @javax.annotation.Nullable
   public String getsApikeySecret() {
     return sApikeySecret;
@@ -214,10 +213,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the apikey is active or not
    * @return bApikeyIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbApikeyIsactive() {
     return bApikeyIsactive;
@@ -233,10 +232,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the apikey is signed or not
    * @return bApikeyIssigned
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbApikeyIssigned() {
     return bApikeyIssigned;
@@ -252,10 +251,10 @@ public class ApikeyResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nonnull
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -347,12 +346,12 @@ public class ApikeyResponseCompound {
     openapiRequiredFields.add("objAudit");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ApikeyResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ApikeyResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ApikeyResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -418,22 +417,22 @@ public class ApikeyResponseCompound {
     }
   }
 
- /**
-  * Create an instance of ApikeyResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ApikeyResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to ApikeyResponseCompound
-  */
+  /**
+   * Create an instance of ApikeyResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ApikeyResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to ApikeyResponseCompound
+   */
   public static ApikeyResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ApikeyResponseCompound.class);
   }
 
- /**
-  * Convert an instance of ApikeyResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ApikeyResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

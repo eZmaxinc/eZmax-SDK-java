@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,11 +52,15 @@ import eZmaxAPI.JSON;
 /**
  * A webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
   private Integer pkiWebhookID;
+
+  public static final String SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D = "fkiAuthenticationexternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D)
+  private Integer fkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION = "sWebhookDescription";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION)
@@ -111,6 +114,10 @@ public class WebhookResponse {
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
   private Boolean bWebhookSkipsslvalidation;
 
+  public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
+  @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
+  private String sAuthenticationexternalDescription;
+
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
   private CommonAudit objAudit;
@@ -123,10 +130,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Webhook
    * @return pkiWebhookID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
@@ -137,15 +144,36 @@ public class WebhookResponse {
   }
 
 
+  public WebhookResponse fkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Authenticationexternal
+   * minimum: 0
+   * maximum: 255
+   * @return fkiAuthenticationexternalID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAuthenticationexternalID() {
+    return fkiAuthenticationexternalID;
+  }
+
+  public void setFkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
+  }
+
+
   public WebhookResponse sWebhookDescription(String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
     return this;
   }
 
-   /**
+  /**
    * The description of the Webhook
    * @return sWebhookDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookDescription() {
     return sWebhookDescription;
@@ -161,12 +189,12 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -182,10 +210,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -201,10 +229,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookModule
    * @return eWebhookModule
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
@@ -220,10 +248,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookEzsignevent
    * @return eWebhookEzsignevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
@@ -239,10 +267,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookManagementevent
    * @return eWebhookManagementevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
@@ -258,10 +286,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The URL of the Webhook callback
    * @return sWebhookUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookUrl() {
     return sWebhookUrl;
@@ -277,10 +305,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The email that will receive the Webhook in case all attempts fail
    * @return sWebhookEmailfailed
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
@@ -296,10 +324,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
    * @return sWebhookApikey
-  **/
+   */
   @javax.annotation.Nullable
   public String getsWebhookApikey() {
     return sWebhookApikey;
@@ -315,10 +343,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
    * @return sWebhookSecret
-  **/
+   */
   @javax.annotation.Nullable
   public String getsWebhookSecret() {
     return sWebhookSecret;
@@ -334,10 +362,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Webhook is active or not
    * @return bWebhookIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
@@ -353,10 +381,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the requests will be signed or not
    * @return bWebhookIssigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookIssigned() {
     return bWebhookIssigned;
@@ -372,10 +400,10 @@ public class WebhookResponse {
     return this;
   }
 
-   /**
+  /**
    * Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
    * @return bWebhookSkipsslvalidation
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookSkipsslvalidation() {
     return bWebhookSkipsslvalidation;
@@ -386,15 +414,34 @@ public class WebhookResponse {
   }
 
 
+  public WebhookResponse sAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Authenticationexternal
+   * @return sAuthenticationexternalDescription
+   */
+  @javax.annotation.Nullable
+  public String getsAuthenticationexternalDescription() {
+    return sAuthenticationexternalDescription;
+  }
+
+  public void setsAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
+  }
+
+
   public WebhookResponse objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nonnull
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -416,6 +463,7 @@ public class WebhookResponse {
     }
     WebhookResponse webhookResponse = (WebhookResponse) o;
     return Objects.equals(this.pkiWebhookID, webhookResponse.pkiWebhookID) &&
+        Objects.equals(this.fkiAuthenticationexternalID, webhookResponse.fkiAuthenticationexternalID) &&
         Objects.equals(this.sWebhookDescription, webhookResponse.sWebhookDescription) &&
         Objects.equals(this.fkiEzsignfoldertypeID, webhookResponse.fkiEzsignfoldertypeID) &&
         Objects.equals(this.sEzsignfoldertypeNameX, webhookResponse.sEzsignfoldertypeNameX) &&
@@ -429,12 +477,13 @@ public class WebhookResponse {
         Objects.equals(this.bWebhookIsactive, webhookResponse.bWebhookIsactive) &&
         Objects.equals(this.bWebhookIssigned, webhookResponse.bWebhookIssigned) &&
         Objects.equals(this.bWebhookSkipsslvalidation, webhookResponse.bWebhookSkipsslvalidation) &&
+        Objects.equals(this.sAuthenticationexternalDescription, webhookResponse.sAuthenticationexternalDescription) &&
         Objects.equals(this.objAudit, webhookResponse.objAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, objAudit);
+    return Objects.hash(pkiWebhookID, fkiAuthenticationexternalID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, sAuthenticationexternalDescription, objAudit);
   }
 
   @Override
@@ -442,6 +491,7 @@ public class WebhookResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookResponse {\n");
     sb.append("    pkiWebhookID: ").append(toIndentedString(pkiWebhookID)).append("\n");
+    sb.append("    fkiAuthenticationexternalID: ").append(toIndentedString(fkiAuthenticationexternalID)).append("\n");
     sb.append("    sWebhookDescription: ").append(toIndentedString(sWebhookDescription)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
@@ -455,6 +505,7 @@ public class WebhookResponse {
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
     sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
+    sb.append("    sAuthenticationexternalDescription: ").append(toIndentedString(sAuthenticationexternalDescription)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -479,6 +530,7 @@ public class WebhookResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiWebhookID");
+    openapiFields.add("fkiAuthenticationexternalID");
     openapiFields.add("sWebhookDescription");
     openapiFields.add("fkiEzsignfoldertypeID");
     openapiFields.add("sEzsignfoldertypeNameX");
@@ -492,6 +544,7 @@ public class WebhookResponse {
     openapiFields.add("bWebhookIsactive");
     openapiFields.add("bWebhookIssigned");
     openapiFields.add("bWebhookSkipsslvalidation");
+    openapiFields.add("sAuthenticationexternalDescription");
     openapiFields.add("objAudit");
 
     // a set of required properties/fields (JSON key names)
@@ -507,12 +560,12 @@ public class WebhookResponse {
     openapiRequiredFields.add("objAudit");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WebhookResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to WebhookResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebhookResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -563,6 +616,9 @@ public class WebhookResponse {
       if ((jsonObj.get("sWebhookSecret") != null && !jsonObj.get("sWebhookSecret").isJsonNull()) && !jsonObj.get("sWebhookSecret").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
       }
+      if ((jsonObj.get("sAuthenticationexternalDescription") != null && !jsonObj.get("sAuthenticationexternalDescription").isJsonNull()) && !jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
+      }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
@@ -596,22 +652,22 @@ public class WebhookResponse {
     }
   }
 
- /**
-  * Create an instance of WebhookResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WebhookResponse
-  * @throws IOException if the JSON string is invalid with respect to WebhookResponse
-  */
+  /**
+   * Create an instance of WebhookResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of WebhookResponse
+   * @throws IOException if the JSON string is invalid with respect to WebhookResponse
+   */
   public static WebhookResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, WebhookResponse.class);
   }
 
- /**
-  * Convert an instance of WebhookResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of WebhookResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

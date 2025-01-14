@@ -60,7 +60,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Userlogintypes to return | [enum: All, Ezsignfoldertype] |
+| **sSelector** | **String**| The type of Userlogintypes to return | [enum: All, Ezsignfoldertype, Ezsigntemplatepublic] |
 | **fkiEzsignfoldertypeID** | **Integer**|  | [optional] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |

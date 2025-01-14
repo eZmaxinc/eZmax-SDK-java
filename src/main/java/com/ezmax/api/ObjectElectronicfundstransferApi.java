@@ -28,7 +28,10 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationCountV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationListV1Response;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.ElectronicfundstransferGetCommunicationsendersV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -73,6 +76,133 @@ public class ObjectElectronicfundstransferApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for electronicfundstransferGetCommunicationCountV1
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationCountV1Call(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationCount"
+            .replace("{" + "pkiElectronicfundstransferID" + "}", localVarApiClient.escapeString(pkiElectronicfundstransferID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call electronicfundstransferGetCommunicationCountV1ValidateBeforeCall(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiElectronicfundstransferID' is set
+        if (pkiElectronicfundstransferID == null) {
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationCountV1(Async)");
+        }
+
+        return electronicfundstransferGetCommunicationCountV1Call(pkiElectronicfundstransferID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ElectronicfundstransferGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ElectronicfundstransferGetCommunicationCountV1Response electronicfundstransferGetCommunicationCountV1(Integer pkiElectronicfundstransferID) throws ApiException {
+        ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response> localVarResp = electronicfundstransferGetCommunicationCountV1WithHttpInfo(pkiElectronicfundstransferID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ApiResponse&lt;ElectronicfundstransferGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response> electronicfundstransferGetCommunicationCountV1WithHttpInfo(Integer pkiElectronicfundstransferID) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationCountV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationCountV1Async(Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationCountV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for electronicfundstransferGetCommunicationListV1
      * @param pkiElectronicfundstransferID  (required)
@@ -197,6 +327,260 @@ public class ObjectElectronicfundstransferApi {
 
         okhttp3.Call localVarCall = electronicfundstransferGetCommunicationListV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
         Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for electronicfundstransferGetCommunicationrecipientsV1
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationrecipientsV1Call(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients"
+            .replace("{" + "pkiElectronicfundstransferID" + "}", localVarApiClient.escapeString(pkiElectronicfundstransferID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call electronicfundstransferGetCommunicationrecipientsV1ValidateBeforeCall(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiElectronicfundstransferID' is set
+        if (pkiElectronicfundstransferID == null) {
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationrecipientsV1(Async)");
+        }
+
+        return electronicfundstransferGetCommunicationrecipientsV1Call(pkiElectronicfundstransferID, _callback);
+
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ElectronicfundstransferGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ElectronicfundstransferGetCommunicationrecipientsV1Response electronicfundstransferGetCommunicationrecipientsV1(Integer pkiElectronicfundstransferID) throws ApiException {
+        ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response> localVarResp = electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(pkiElectronicfundstransferID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ApiResponse&lt;ElectronicfundstransferGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response> electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(Integer pkiElectronicfundstransferID) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationrecipientsV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationrecipient (asynchronously)
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationrecipientsV1Async(Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationrecipientsV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for electronicfundstransferGetCommunicationsendersV1
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationsendersV1Call(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationsenders"
+            .replace("{" + "pkiElectronicfundstransferID" + "}", localVarApiClient.escapeString(pkiElectronicfundstransferID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call electronicfundstransferGetCommunicationsendersV1ValidateBeforeCall(Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiElectronicfundstransferID' is set
+        if (pkiElectronicfundstransferID == null) {
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetCommunicationsendersV1(Async)");
+        }
+
+        return electronicfundstransferGetCommunicationsendersV1Call(pkiElectronicfundstransferID, _callback);
+
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ElectronicfundstransferGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ElectronicfundstransferGetCommunicationsendersV1Response electronicfundstransferGetCommunicationsendersV1(Integer pkiElectronicfundstransferID) throws ApiException {
+        ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response> localVarResp = electronicfundstransferGetCommunicationsendersV1WithHttpInfo(pkiElectronicfundstransferID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ApiResponse&lt;ElectronicfundstransferGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response> electronicfundstransferGetCommunicationsendersV1WithHttpInfo(Integer pkiElectronicfundstransferID) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationsendersV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s Communicationsender (asynchronously)
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetCommunicationsendersV1Async(Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = electronicfundstransferGetCommunicationsendersV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

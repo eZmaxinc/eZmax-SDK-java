@@ -14,6 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommunicationSendV1Request;
 import com.ezmax.api.model.CommunicationSendV1Response;
 import org.junit.jupiter.api.Disabled;
@@ -31,6 +32,20 @@ import java.util.Map;
 public class ObjectCommunicationApiTest {
 
     private final ObjectCommunicationApi api = new ObjectCommunicationApi();
+
+    /**
+     * Retrieve the communication body.
+     *
+     * This endpoint returns the communication body.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void communicationGetCommunicationBodyV1Test() throws ApiException {
+        Integer pkiCommunicationID = null;
+        api.communicationGetCommunicationBodyV1(pkiCommunicationID);
+        // TODO: test validations
+    }
 
     /**
      * Send a new Communication

@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;User Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -100,11 +99,11 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return pkiUserID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUserID() {
     return pkiUserID;
@@ -120,11 +119,11 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Timezone
    * minimum: 0
    * @return fkiTimezoneID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiTimezoneID() {
     return fkiTimezoneID;
@@ -140,10 +139,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The url of the picture used as avatar
    * @return sAvatarUrl
-  **/
+   */
   @javax.annotation.Nullable
   public String getsAvatarUrl() {
     return sAvatarUrl;
@@ -159,10 +158,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -178,10 +177,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastname() {
     return sUserLastname;
@@ -197,10 +196,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -216,10 +215,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * Get eUserEzsignsendreminderfrequency
    * @return eUserEzsignsendreminderfrequency
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEUserEzsignsendreminderfrequency geteUserEzsignsendreminderfrequency() {
     return eUserEzsignsendreminderfrequency;
@@ -235,11 +234,11 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The int32 representation of the interface color. For example, RGB color #39435B would be 3752795
    * minimum: 0
    * @return iUserInterfacecolor
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiUserInterfacecolor() {
     return iUserInterfacecolor;
@@ -255,10 +254,10 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * Whether to use a dark mode interface
    * @return bUserInterfacedark
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbUserInterfacedark() {
     return bUserInterfacedark;
@@ -274,12 +273,12 @@ public class ActivesessionResponseCompoundUser {
     return this;
   }
 
-   /**
+  /**
    * The number of rows to return by default in lists
    * minimum: 5
    * maximum: 500
    * @return iUserListresult
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiUserListresult() {
     return iUserListresult;
@@ -376,12 +375,12 @@ public class ActivesessionResponseCompoundUser {
     openapiRequiredFields.add("iUserListresult");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponseCompoundUser
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ActivesessionResponseCompoundUser
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionResponseCompoundUser.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -449,22 +448,22 @@ public class ActivesessionResponseCompoundUser {
     }
   }
 
- /**
-  * Create an instance of ActivesessionResponseCompoundUser given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ActivesessionResponseCompoundUser
-  * @throws IOException if the JSON string is invalid with respect to ActivesessionResponseCompoundUser
-  */
+  /**
+   * Create an instance of ActivesessionResponseCompoundUser given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ActivesessionResponseCompoundUser
+   * @throws IOException if the JSON string is invalid with respect to ActivesessionResponseCompoundUser
+   */
   public static ActivesessionResponseCompoundUser fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ActivesessionResponseCompoundUser.class);
   }
 
- /**
-  * Convert an instance of ActivesessionResponseCompoundUser to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ActivesessionResponseCompoundUser to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

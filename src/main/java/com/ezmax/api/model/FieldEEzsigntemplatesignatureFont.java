@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The font of the signature. This can only be set if eEzsigntemplatesignatureType is **Name** or **Initials**
+ * The font of the signature. This can only be set if eEzsigntemplatesignatureType is **Name** or **Initials** **Deprecated**
  */
 @JsonAdapter(FieldEEzsigntemplatesignatureFont.Adapter.class)
 public enum FieldEEzsigntemplatesignatureFont {

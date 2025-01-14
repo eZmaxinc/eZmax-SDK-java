@@ -29,14 +29,22 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV3Request;
+import com.ezmax.api.model.EzsigndocumentCreateObjectV3Response;
 import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Request;
 import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Response;
 import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Request;
+import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
+import com.ezmax.api.model.EzsigndocumentEditObjectV1Request;
+import com.ezmax.api.model.EzsigndocumentEditObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
+import com.ezmax.api.model.EzsigndocumentExtractTextV1Request;
+import com.ezmax.api.model.EzsigndocumentExtractTextV1Response;
 import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetAttachmentsV1Response;
@@ -165,6 +173,20 @@ public class ObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Create a new Ezsigndocument
+     *
+     * The endpoint allows to create one or many elements at once.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentCreateObjectV3Test() throws ApiException {
+        EzsigndocumentCreateObjectV3Request ezsigndocumentCreateObjectV3Request = null;
+        EzsigndocumentCreateObjectV3Response response = api.ezsigndocumentCreateObjectV3(ezsigndocumentCreateObjectV3Request);
+        // TODO: test validations
+    }
+
+    /**
      * Decline to sign
      *
      * Decline to sign
@@ -190,6 +212,21 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentDeleteObjectV1Response response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+        // TODO: test validations
+    }
+
+    /**
+     * Edit multiple Ezsignannotations
+     *
+     * Using this endpoint, you can edit multiple Ezsignannotations at the same time.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentEditEzsignannotationsV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentEditEzsignannotationsV1Request ezsigndocumentEditEzsignannotationsV1Request = null;
+        EzsigndocumentEditEzsignannotationsV1Response response = api.ezsigndocumentEditEzsignannotationsV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignannotationsV1Request);
         // TODO: test validations
     }
 
@@ -224,6 +261,21 @@ public class ObjectEzsigndocumentApiTest {
     }
 
     /**
+     * Edit an existing Ezsigndocument
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentEditObjectV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentEditObjectV1Request ezsigndocumentEditObjectV1Request = null;
+        EzsigndocumentEditObjectV1Response response = api.ezsigndocumentEditObjectV1(pkiEzsigndocumentID, ezsigndocumentEditObjectV1Request);
+        // TODO: test validations
+    }
+
+    /**
      * End prematurely
      *
      * End prematurely an Ezsigndocument when some signatures are still required
@@ -235,6 +287,21 @@ public class ObjectEzsigndocumentApiTest {
         Integer pkiEzsigndocumentID = null;
         Object body = null;
         EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
+        // TODO: test validations
+    }
+
+    /**
+     * Extract text from Ezsigndocument area
+     *
+     * Extract text from Ezsigndocument area
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void ezsigndocumentExtractTextV1Test() throws ApiException {
+        Integer pkiEzsigndocumentID = null;
+        EzsigndocumentExtractTextV1Request ezsigndocumentExtractTextV1Request = null;
+        EzsigndocumentExtractTextV1Response response = api.ezsigndocumentExtractTextV1(pkiEzsigndocumentID, ezsigndocumentExtractTextV1Request);
         // TODO: test validations
     }
 

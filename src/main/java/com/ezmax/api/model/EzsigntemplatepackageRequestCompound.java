@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -58,6 +57,10 @@ public class EzsigntemplatepackageRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  private Integer fkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -83,11 +86,11 @@ public class EzsigntemplatepackageRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackage
    * minimum: 0
    * @return pkiEzsigntemplatepackageID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigntemplatepackageID() {
     return pkiEzsigntemplatepackageID;
@@ -103,12 +106,12 @@ public class EzsigntemplatepackageRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -119,17 +122,38 @@ public class EzsigntemplatepackageRequestCompound {
   }
 
 
+  public EzsigntemplatepackageRequestCompound fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzdoctemplatedocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+
   public EzsigntemplatepackageRequestCompound fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -145,10 +169,10 @@ public class EzsigntemplatepackageRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatepackage
    * @return sEzsigntemplatepackageDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatepackageDescription() {
     return sEzsigntemplatepackageDescription;
@@ -164,10 +188,10 @@ public class EzsigntemplatepackageRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage can be accessed by admin users only (eUserType&#x3D;Normal)
    * @return bEzsigntemplatepackageAdminonly
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageAdminonly() {
     return bEzsigntemplatepackageAdminonly;
@@ -183,10 +207,10 @@ public class EzsigntemplatepackageRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntemplatepackage is active or not
    * @return bEzsigntemplatepackageIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntemplatepackageIsactive() {
     return bEzsigntemplatepackageIsactive;
@@ -209,6 +233,7 @@ public class EzsigntemplatepackageRequestCompound {
     EzsigntemplatepackageRequestCompound ezsigntemplatepackageRequestCompound = (EzsigntemplatepackageRequestCompound) o;
     return Objects.equals(this.pkiEzsigntemplatepackageID, ezsigntemplatepackageRequestCompound.pkiEzsigntemplatepackageID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplatepackageRequestCompound.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiEzdoctemplatedocumentID, ezsigntemplatepackageRequestCompound.fkiEzdoctemplatedocumentID) &&
         Objects.equals(this.fkiLanguageID, ezsigntemplatepackageRequestCompound.fkiLanguageID) &&
         Objects.equals(this.sEzsigntemplatepackageDescription, ezsigntemplatepackageRequestCompound.sEzsigntemplatepackageDescription) &&
         Objects.equals(this.bEzsigntemplatepackageAdminonly, ezsigntemplatepackageRequestCompound.bEzsigntemplatepackageAdminonly) &&
@@ -217,7 +242,7 @@ public class EzsigntemplatepackageRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiLanguageID, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageIsactive);
+    return Objects.hash(pkiEzsigntemplatepackageID, fkiEzsignfoldertypeID, fkiEzdoctemplatedocumentID, fkiLanguageID, sEzsigntemplatepackageDescription, bEzsigntemplatepackageAdminonly, bEzsigntemplatepackageIsactive);
   }
 
   @Override
@@ -226,6 +251,7 @@ public class EzsigntemplatepackageRequestCompound {
     sb.append("class EzsigntemplatepackageRequestCompound {\n");
     sb.append("    pkiEzsigntemplatepackageID: ").append(toIndentedString(pkiEzsigntemplatepackageID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiEzdoctemplatedocumentID: ").append(toIndentedString(fkiEzdoctemplatedocumentID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    sEzsigntemplatepackageDescription: ").append(toIndentedString(sEzsigntemplatepackageDescription)).append("\n");
     sb.append("    bEzsigntemplatepackageAdminonly: ").append(toIndentedString(bEzsigntemplatepackageAdminonly)).append("\n");
@@ -254,6 +280,7 @@ public class EzsigntemplatepackageRequestCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsigntemplatepackageID");
     openapiFields.add("fkiEzsignfoldertypeID");
+    openapiFields.add("fkiEzdoctemplatedocumentID");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("sEzsigntemplatepackageDescription");
     openapiFields.add("bEzsigntemplatepackageAdminonly");
@@ -268,12 +295,12 @@ public class EzsigntemplatepackageRequestCompound {
     openapiRequiredFields.add("bEzsigntemplatepackageIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackageRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackageRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -330,22 +357,22 @@ public class EzsigntemplatepackageRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackageRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackageRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageRequestCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatepackageRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackageRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackageRequestCompound
+   */
   public static EzsigntemplatepackageRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackageRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackageRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackageRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

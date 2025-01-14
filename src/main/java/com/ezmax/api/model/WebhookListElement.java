@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -102,10 +101,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Webhook
    * @return pkiWebhookID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
@@ -121,10 +120,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Webhook
    * @return sWebhookDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookDescription() {
     return sWebhookDescription;
@@ -140,10 +139,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * The URL of the Webhook callback
    * @return sWebhookUrl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookUrl() {
     return sWebhookUrl;
@@ -159,10 +158,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * The concatenated string to describe the Webhook event
    * @return sWebhookEvent
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookEvent() {
     return sWebhookEvent;
@@ -178,10 +177,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * The email that will receive the Webhook in case all attempts fail
    * @return sWebhookEmailfailed
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebhookEmailfailed() {
     return sWebhookEmailfailed;
@@ -197,10 +196,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookModule
    * @return eWebhookModule
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEWebhookModule geteWebhookModule() {
     return eWebhookModule;
@@ -216,10 +215,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookEzsignevent
    * @return eWebhookEzsignevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
     return eWebhookEzsignevent;
@@ -235,10 +234,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eWebhookManagementevent
    * @return eWebhookManagementevent
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEWebhookManagementevent geteWebhookManagementevent() {
     return eWebhookManagementevent;
@@ -254,10 +253,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Webhook is active or not
    * @return bWebhookIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookIsactive() {
     return bWebhookIsactive;
@@ -273,10 +272,10 @@ public class WebhookListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the requests will be signed or not
    * @return bWebhookIssigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbWebhookIssigned() {
     return bWebhookIssigned;
@@ -373,12 +372,12 @@ public class WebhookListElement {
     openapiRequiredFields.add("bWebhookIssigned");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WebhookListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to WebhookListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebhookListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -454,22 +453,22 @@ public class WebhookListElement {
     }
   }
 
- /**
-  * Create an instance of WebhookListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WebhookListElement
-  * @throws IOException if the JSON string is invalid with respect to WebhookListElement
-  */
+  /**
+   * Create an instance of WebhookListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of WebhookListElement
+   * @throws IOException if the JSON string is invalid with respect to WebhookListElement
+   */
   public static WebhookListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, WebhookListElement.class);
   }
 
- /**
-  * Convert an instance of WebhookListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of WebhookListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

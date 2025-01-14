@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,8 +48,12 @@ import eZmaxAPI.JSON;
 /**
  * A Website Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsiteRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_WEBSITE_I_D = "pkiWebsiteID";
+  @SerializedName(SERIALIZED_NAME_PKI_WEBSITE_I_D)
+  private Integer pkiWebsiteID;
+
   public static final String SERIALIZED_NAME_FKI_WEBSITETYPE_I_D = "fkiWebsitetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITETYPE_I_D)
   private Integer fkiWebsitetypeID;
@@ -62,16 +65,37 @@ public class WebsiteRequestCompound {
   public WebsiteRequestCompound() {
   }
 
+  public WebsiteRequestCompound pkiWebsiteID(Integer pkiWebsiteID) {
+    this.pkiWebsiteID = pkiWebsiteID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Website Default
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiWebsiteID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiWebsiteID() {
+    return pkiWebsiteID;
+  }
+
+  public void setPkiWebsiteID(Integer pkiWebsiteID) {
+    this.pkiWebsiteID = pkiWebsiteID;
+  }
+
+
   public WebsiteRequestCompound fkiWebsitetypeID(Integer fkiWebsitetypeID) {
     this.fkiWebsitetypeID = fkiWebsitetypeID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Websitetype.  Valid values:  |Value|Description| |-|-| |1|Website| |2|Twitter| |3|Facebook| |4|Survey|
    * minimum: 0
    * @return fkiWebsitetypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiWebsitetypeID() {
     return fkiWebsitetypeID;
@@ -87,10 +111,10 @@ public class WebsiteRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The URL of the website.
    * @return sWebsiteAddress
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWebsiteAddress() {
     return sWebsiteAddress;
@@ -111,19 +135,21 @@ public class WebsiteRequestCompound {
       return false;
     }
     WebsiteRequestCompound websiteRequestCompound = (WebsiteRequestCompound) o;
-    return Objects.equals(this.fkiWebsitetypeID, websiteRequestCompound.fkiWebsitetypeID) &&
+    return Objects.equals(this.pkiWebsiteID, websiteRequestCompound.pkiWebsiteID) &&
+        Objects.equals(this.fkiWebsitetypeID, websiteRequestCompound.fkiWebsitetypeID) &&
         Objects.equals(this.sWebsiteAddress, websiteRequestCompound.sWebsiteAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiWebsitetypeID, sWebsiteAddress);
+    return Objects.hash(pkiWebsiteID, fkiWebsitetypeID, sWebsiteAddress);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebsiteRequestCompound {\n");
+    sb.append("    pkiWebsiteID: ").append(toIndentedString(pkiWebsiteID)).append("\n");
     sb.append("    fkiWebsitetypeID: ").append(toIndentedString(fkiWebsitetypeID)).append("\n");
     sb.append("    sWebsiteAddress: ").append(toIndentedString(sWebsiteAddress)).append("\n");
     sb.append("}");
@@ -148,6 +174,7 @@ public class WebsiteRequestCompound {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("pkiWebsiteID");
     openapiFields.add("fkiWebsitetypeID");
     openapiFields.add("sWebsiteAddress");
 
@@ -157,12 +184,12 @@ public class WebsiteRequestCompound {
     openapiRequiredFields.add("sWebsiteAddress");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WebsiteRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to WebsiteRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebsiteRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -219,22 +246,22 @@ public class WebsiteRequestCompound {
     }
   }
 
- /**
-  * Create an instance of WebsiteRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WebsiteRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to WebsiteRequestCompound
-  */
+  /**
+   * Create an instance of WebsiteRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of WebsiteRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to WebsiteRequestCompound
+   */
   public static WebsiteRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, WebsiteRequestCompound.class);
   }
 
- /**
-  * Convert an instance of WebsiteRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of WebsiteRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

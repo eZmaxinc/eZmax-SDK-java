@@ -55,6 +55,14 @@ public class EzsignfolderRequestTest {
     }
 
     /**
+     * Test the property 'fkiTimezoneID'
+     */
+    @Test
+    public void fkiTimezoneIDTest() {
+        // TODO: test fkiTimezoneID
+    }
+
+    /**
      * Test the property 'fkiEzsigntsarequirementID'
      */
     @Test

@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldEEzsigntemplatesignerMapping;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,6 +52,46 @@ public class EzsigntemplatesignerRequestCompoundTest {
     @Test
     public void fkiEzsigntemplateIDTest() {
         // TODO: test fkiEzsigntemplateID
+    }
+
+    /**
+     * Test the property 'fkiUserID'
+     */
+    @Test
+    public void fkiUserIDTest() {
+        // TODO: test fkiUserID
+    }
+
+    /**
+     * Test the property 'fkiUsergroupID'
+     */
+    @Test
+    public void fkiUsergroupIDTest() {
+        // TODO: test fkiUsergroupID
+    }
+
+    /**
+     * Test the property 'fkiEzdoctemplatedocumentID'
+     */
+    @Test
+    public void fkiEzdoctemplatedocumentIDTest() {
+        // TODO: test fkiEzdoctemplatedocumentID
+    }
+
+    /**
+     * Test the property 'bEzsigntemplatesignerReceivecopy'
+     */
+    @Test
+    public void bEzsigntemplatesignerReceivecopyTest() {
+        // TODO: test bEzsigntemplatesignerReceivecopy
+    }
+
+    /**
+     * Test the property 'eEzsigntemplatesignerMapping'
+     */
+    @Test
+    public void eEzsigntemplatesignerMappingTest() {
+        // TODO: test eEzsigntemplatesignerMapping
     }
 
     /**

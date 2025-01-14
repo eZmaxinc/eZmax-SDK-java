@@ -16,10 +16,12 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.CustomCreditcardtransactionResponse;
+import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
+import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
@@ -50,7 +52,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -62,7 +63,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -79,6 +80,10 @@ public class EzsignsignatureResponseCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
   private Integer fkiEzsignsigningreasonID;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X = "sEzsignsigningreasonDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X)
@@ -140,6 +145,18 @@ public class EzsignsignatureResponseCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_ATTACHMENTNAMESOURCE)
   private FieldEEzsignsignatureAttachmentnamesource eEzsignsignatureAttachmentnamesource;
 
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_CONSULTATIONTRIGGER = "eEzsignsignatureConsultationtrigger";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_CONSULTATIONTRIGGER)
+  private FieldEEzsignsignatureConsultationtrigger eEzsignsignatureConsultationtrigger;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_HANDWRITTEN = "bEzsignsignatureHandwritten";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_HANDWRITTEN)
+  private Boolean bEzsignsignatureHandwritten;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_REASON = "bEzsignsignatureReason";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_REASON)
+  private Boolean bEzsignsignatureReason;
+
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_REQUIRED = "bEzsignsignatureRequired";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_REQUIRED)
   private Boolean bEzsignsignatureRequired;
@@ -168,9 +185,17 @@ public class EzsignsignatureResponseCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TEXTVALIDATION)
   private EnumTextvalidation eEzsignsignatureTextvalidation;
 
+  public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURE_TEXTVALIDATIONCUSTOMMESSAGE = "sEzsignsignatureTextvalidationcustommessage";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURE_TEXTVALIDATIONCUSTOMMESSAGE)
+  private String sEzsignsignatureTextvalidationcustommessage;
+
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT = "eEzsignsignatureDependencyrequirement";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_DEPENDENCYREQUIREMENT)
   private FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURE_DEFAULTVALUE = "sEzsignsignatureDefaultvalue";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURE_DEFAULTVALUE)
+  private String sEzsignsignatureDefaultvalue;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP = "sEzsignsignatureRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURE_REGEXP)
@@ -188,13 +213,17 @@ public class EzsignsignatureResponseCompound {
   @SerializedName(SERIALIZED_NAME_OBJ_SIGNATURE)
   private SignatureResponseCompound objSignature;
 
+  public static final String SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE = "dtEzsignsignatureDateInFolderTimezone";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE)
+  private String dtEzsignsignatureDateInFolderTimezone;
+
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE = "bEzsignsignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CUSTOMDATE)
   private Boolean bEzsignsignatureCustomdate;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE = "a_objEzsignsignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURECUSTOMDATE)
-  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate;
+  private List<EzsignsignaturecustomdateResponseCompound> aObjEzsignsignaturecustomdate = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTION = "objCreditcardtransaction";
   @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTION)
@@ -202,7 +231,11 @@ public class EzsignsignatureResponseCompound {
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY = "a_objEzsignelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY)
-  private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency;
+  private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_OBJ_TIMEZONE = "objTimezone";
+  @SerializedName(SERIALIZED_NAME_OBJ_TIMEZONE)
+  private CustomTimezoneWithCodeResponse objTimezone;
 
   public EzsignsignatureResponseCompound() {
   }
@@ -212,11 +245,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsignature
    * minimum: 0
    * @return pkiEzsignsignatureID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignsignatureID() {
     return pkiEzsignsignatureID;
@@ -232,11 +265,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return fkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -252,11 +285,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldersignerassociationID() {
     return fkiEzsignfoldersignerassociationID;
@@ -272,12 +305,12 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsigningreason
    * minimum: 0
    * maximum: 255
    * @return fkiEzsignsigningreasonID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignsigningreasonID() {
     return fkiEzsignsigningreasonID;
@@ -288,15 +321,35 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound fkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+
   public EzsignsignatureResponseCompound sEzsignsigningreasonDescriptionX(String sEzsignsigningreasonDescriptionX) {
     this.sEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignsigningreason in the language of the requester
    * @return sEzsignsigningreasonDescriptionX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignsigningreasonDescriptionX() {
     return sEzsignsigningreasonDescriptionX;
@@ -312,11 +365,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigndocument
    * minimum: 1
    * @return iEzsignpagePagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignpagePagenumber() {
     return iEzsignpagePagenumber;
@@ -332,11 +385,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
    * minimum: 0
    * @return iEzsignsignatureX
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignatureX() {
     return iEzsignsignatureX;
@@ -352,11 +405,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
    * minimum: 0
    * @return iEzsignsignatureY
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignatureY() {
     return iEzsignsignatureY;
@@ -372,11 +425,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The height of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have an height of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureHeight.
    * minimum: 0
    * @return iEzsignsignatureHeight
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureHeight() {
     return iEzsignsignatureHeight;
@@ -392,11 +445,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The width of the Ezsignsignature.  Size is calculated at 100dpi (dot per inch). So for example, if you want the Ezsignsignature to have a width of 2 inches, you would use \&quot;200\&quot; for the iEzsignsignatureWidth.
    * minimum: 0
    * @return iEzsignsignatureWidth
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureWidth() {
     return iEzsignsignatureWidth;
@@ -412,10 +465,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The step when the Ezsignsigner will be invited to sign
    * @return iEzsignsignatureStep
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignatureStep() {
     return iEzsignsignatureStep;
@@ -431,10 +484,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The step when the Ezsignsigner will be invited to sign
    * @return iEzsignsignatureStepadjusted
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureStepadjusted() {
     return iEzsignsignatureStepadjusted;
@@ -450,10 +503,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureType
    * @return eEzsignsignatureType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignsignatureType geteEzsignsignatureType() {
     return eEzsignsignatureType;
@@ -469,10 +522,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * A tooltip that will be presented to Ezsignsigner about the Ezsignsignature
    * @return tEzsignsignatureTooltip
-  **/
+   */
   @javax.annotation.Nullable
   public String gettEzsignsignatureTooltip() {
     return tEzsignsignatureTooltip;
@@ -488,10 +541,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureTooltipposition
    * @return eEzsignsignatureTooltipposition
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignsignatureTooltipposition geteEzsignsignatureTooltipposition() {
     return eEzsignsignatureTooltipposition;
@@ -507,10 +560,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureFont
    * @return eEzsignsignatureFont
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignsignatureFont geteEzsignsignatureFont() {
     return eEzsignsignatureFont;
@@ -526,10 +579,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The step when the Ezsignsigner will be invited to validate the Ezsignsignature of eEzsignsignatureType Attachments
    * @return iEzsignsignatureValidationstep
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureValidationstep() {
     return iEzsignsignatureValidationstep;
@@ -545,10 +598,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The description attached to the attachment name added in Ezsignsignature of eEzsignsignatureType Attachments
    * @return sEzsignsignatureAttachmentdescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignsignatureAttachmentdescription() {
     return sEzsignsignatureAttachmentdescription;
@@ -564,10 +617,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureAttachmentnamesource
    * @return eEzsignsignatureAttachmentnamesource
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignsignatureAttachmentnamesource geteEzsignsignatureAttachmentnamesource() {
     return eEzsignsignatureAttachmentnamesource;
@@ -578,15 +631,72 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound eEzsignsignatureConsultationtrigger(FieldEEzsignsignatureConsultationtrigger eEzsignsignatureConsultationtrigger) {
+    this.eEzsignsignatureConsultationtrigger = eEzsignsignatureConsultationtrigger;
+    return this;
+  }
+
+  /**
+   * Get eEzsignsignatureConsultationtrigger
+   * @return eEzsignsignatureConsultationtrigger
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsignsignatureConsultationtrigger geteEzsignsignatureConsultationtrigger() {
+    return eEzsignsignatureConsultationtrigger;
+  }
+
+  public void seteEzsignsignatureConsultationtrigger(FieldEEzsignsignatureConsultationtrigger eEzsignsignatureConsultationtrigger) {
+    this.eEzsignsignatureConsultationtrigger = eEzsignsignatureConsultationtrigger;
+  }
+
+
+  public EzsignsignatureResponseCompound bEzsignsignatureHandwritten(Boolean bEzsignsignatureHandwritten) {
+    this.bEzsignsignatureHandwritten = bEzsignsignatureHandwritten;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsignsignature must be handwritten or not when eEzsignsignatureType &#x3D; Signature.
+   * @return bEzsignsignatureHandwritten
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignsignatureHandwritten() {
+    return bEzsignsignatureHandwritten;
+  }
+
+  public void setbEzsignsignatureHandwritten(Boolean bEzsignsignatureHandwritten) {
+    this.bEzsignsignatureHandwritten = bEzsignsignatureHandwritten;
+  }
+
+
+  public EzsignsignatureResponseCompound bEzsignsignatureReason(Boolean bEzsignsignatureReason) {
+    this.bEzsignsignatureReason = bEzsignsignatureReason;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsignsignature must include a reason or not when eEzsignsignatureType &#x3D; Signature.
+   * @return bEzsignsignatureReason
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignsignatureReason() {
+    return bEzsignsignatureReason;
+  }
+
+  public void setbEzsignsignatureReason(Boolean bEzsignsignatureReason) {
+    this.bEzsignsignatureReason = bEzsignsignatureReason;
+  }
+
+
   public EzsignsignatureResponseCompound bEzsignsignatureRequired(Boolean bEzsignsignatureRequired) {
     this.bEzsignsignatureRequired = bEzsignsignatureRequired;
     return this;
   }
 
-   /**
-   * Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments.
+  /**
+   * Whether the Ezsignsignature is required or not. This field is relevant only with Ezsignsignature with eEzsignsignatureType &#x3D; Attachments, Text or Textarea.
    * @return bEzsignsignatureRequired
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignsignatureRequired() {
     return bEzsignsignatureRequired;
@@ -602,11 +712,11 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldersignerassociation
    * minimum: 0
    * @return fkiEzsignfoldersignerassociationIDValidation
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignfoldersignerassociationIDValidation() {
     return fkiEzsignfoldersignerassociationIDValidation;
@@ -622,10 +732,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The date the Ezsignsignature was signed
    * @return dtEzsignsignatureDate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignsignatureDate() {
     return dtEzsignsignatureDate;
@@ -641,10 +751,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The count of Ezsignsignatureattachment
    * @return iEzsignsignatureattachmentCount
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureattachmentCount() {
     return iEzsignsignatureattachmentCount;
@@ -660,10 +770,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The value entered while signing Ezsignsignature of eEzsignsignatureType **City**, **FieldText** and **FieldTextarea**
    * @return sEzsignsignatureDescription
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignsignatureDescription() {
     return sEzsignsignatureDescription;
@@ -679,12 +789,12 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The maximum length for the value in the Ezsignsignature  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea**
    * minimum: 0
    * maximum: 65535
    * @return iEzsignsignatureMaxlength
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsignsignatureMaxlength() {
     return iEzsignsignatureMaxlength;
@@ -700,10 +810,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureTextvalidation
    * @return eEzsignsignatureTextvalidation
-  **/
+   */
   @javax.annotation.Nullable
   public EnumTextvalidation geteEzsignsignatureTextvalidation() {
     return eEzsignsignatureTextvalidation;
@@ -714,15 +824,34 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound sEzsignsignatureTextvalidationcustommessage(String sEzsignsignatureTextvalidationcustommessage) {
+    this.sEzsignsignatureTextvalidationcustommessage = sEzsignsignatureTextvalidationcustommessage;
+    return this;
+  }
+
+  /**
+   * Description of validation rule. Show by signatory.
+   * @return sEzsignsignatureTextvalidationcustommessage
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignsignatureTextvalidationcustommessage() {
+    return sEzsignsignatureTextvalidationcustommessage;
+  }
+
+  public void setsEzsignsignatureTextvalidationcustommessage(String sEzsignsignatureTextvalidationcustommessage) {
+    this.sEzsignsignatureTextvalidationcustommessage = sEzsignsignatureTextvalidationcustommessage;
+  }
+
+
   public EzsignsignatureResponseCompound eEzsignsignatureDependencyrequirement(FieldEEzsignsignatureDependencyrequirement eEzsignsignatureDependencyrequirement) {
     this.eEzsignsignatureDependencyrequirement = eEzsignsignatureDependencyrequirement;
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignsignatureDependencyrequirement
    * @return eEzsignsignatureDependencyrequirement
-  **/
+   */
   @javax.annotation.Nullable
   public FieldEEzsignsignatureDependencyrequirement geteEzsignsignatureDependencyrequirement() {
     return eEzsignsignatureDependencyrequirement;
@@ -733,15 +862,34 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound sEzsignsignatureDefaultvalue(String sEzsignsignatureDefaultvalue) {
+    this.sEzsignsignatureDefaultvalue = sEzsignsignatureDefaultvalue;
+    return this;
+  }
+
+  /**
+   * The default value for the Ezsignsignature  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
+   * @return sEzsignsignatureDefaultvalue
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignsignatureDefaultvalue() {
+    return sEzsignsignatureDefaultvalue;
+  }
+
+  public void setsEzsignsignatureDefaultvalue(String sEzsignsignatureDefaultvalue) {
+    this.sEzsignsignatureDefaultvalue = sEzsignsignatureDefaultvalue;
+  }
+
+
   public EzsignsignatureResponseCompound sEzsignsignatureRegexp(String sEzsignsignatureRegexp) {
     this.sEzsignsignatureRegexp = sEzsignsignatureRegexp;
     return this;
   }
 
-   /**
+  /**
    * A regular expression to indicate what values are acceptable for the Ezsignsignature.  This can only be set if eEzsignsignatureType is **FieldText** or **FieldTextarea** and eEzsignsignatureTextvalidation is **Custom**
    * @return sEzsignsignatureRegexp
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignsignatureRegexp() {
     return sEzsignsignatureRegexp;
@@ -757,10 +905,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objContactName
    * @return objContactName
-  **/
+   */
   @javax.annotation.Nonnull
   public CustomContactNameResponse getObjContactName() {
     return objContactName;
@@ -776,10 +924,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objContactNameDelegation
    * @return objContactNameDelegation
-  **/
+   */
   @javax.annotation.Nullable
   public CustomContactNameResponse getObjContactNameDelegation() {
     return objContactNameDelegation;
@@ -795,10 +943,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objSignature
    * @return objSignature
-  **/
+   */
   @javax.annotation.Nullable
   public SignatureResponseCompound getObjSignature() {
     return objSignature;
@@ -809,15 +957,34 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound dtEzsignsignatureDateInFolderTimezone(String dtEzsignsignatureDateInFolderTimezone) {
+    this.dtEzsignsignatureDateInFolderTimezone = dtEzsignsignatureDateInFolderTimezone;
+    return this;
+  }
+
+  /**
+   * The date the Ezsignsignature was signed in folder&#39;s timezone
+   * @return dtEzsignsignatureDateInFolderTimezone
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignsignatureDateInFolderTimezone() {
+    return dtEzsignsignatureDateInFolderTimezone;
+  }
+
+  public void setDtEzsignsignatureDateInFolderTimezone(String dtEzsignsignatureDateInFolderTimezone) {
+    this.dtEzsignsignatureDateInFolderTimezone = dtEzsignsignatureDateInFolderTimezone;
+  }
+
+
   public EzsignsignatureResponseCompound bEzsignsignatureCustomdate(Boolean bEzsignsignatureCustomdate) {
     this.bEzsignsignatureCustomdate = bEzsignsignatureCustomdate;
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignsignature has a custom date format or not. (Only possible when eEzsignsignatureType is **Name** or **Handwritten**)
    * @return bEzsignsignatureCustomdate
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignsignatureCustomdate() {
     return bEzsignsignatureCustomdate;
@@ -841,10 +1008,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * An array of custom date blocks that will be filled at the time of signature.  Can only be used if bEzsignsignatureCustomdate is true.  Use an empty array if you don&#39;t want to have a date at all.
    * @return aObjEzsignsignaturecustomdate
-  **/
+   */
   @javax.annotation.Nullable
   public List<EzsignsignaturecustomdateResponseCompound> getaObjEzsignsignaturecustomdate() {
     return aObjEzsignsignaturecustomdate;
@@ -860,10 +1027,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objCreditcardtransaction
    * @return objCreditcardtransaction
-  **/
+   */
   @javax.annotation.Nullable
   public CustomCreditcardtransactionResponse getObjCreditcardtransaction() {
     return objCreditcardtransaction;
@@ -887,10 +1054,10 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignelementdependency
    * @return aObjEzsignelementdependency
-  **/
+   */
   @javax.annotation.Nullable
   public List<EzsignelementdependencyResponseCompound> getaObjEzsignelementdependency() {
     return aObjEzsignelementdependency;
@@ -898,6 +1065,25 @@ public class EzsignsignatureResponseCompound {
 
   public void setaObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
+  }
+
+
+  public EzsignsignatureResponseCompound objTimezone(CustomTimezoneWithCodeResponse objTimezone) {
+    this.objTimezone = objTimezone;
+    return this;
+  }
+
+  /**
+   * Get objTimezone
+   * @return objTimezone
+   */
+  @javax.annotation.Nullable
+  public CustomTimezoneWithCodeResponse getObjTimezone() {
+    return objTimezone;
+  }
+
+  public void setObjTimezone(CustomTimezoneWithCodeResponse objTimezone) {
+    this.objTimezone = objTimezone;
   }
 
 
@@ -915,6 +1101,7 @@ public class EzsignsignatureResponseCompound {
         Objects.equals(this.fkiEzsigndocumentID, ezsignsignatureResponseCompound.fkiEzsigndocumentID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignsigningreasonID, ezsignsignatureResponseCompound.fkiEzsignsigningreasonID) &&
+        Objects.equals(this.fkiFontID, ezsignsignatureResponseCompound.fkiFontID) &&
         Objects.equals(this.sEzsignsigningreasonDescriptionX, ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureResponseCompound.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureResponseCompound.iEzsignsignatureX) &&
@@ -930,6 +1117,9 @@ public class EzsignsignatureResponseCompound {
         Objects.equals(this.iEzsignsignatureValidationstep, ezsignsignatureResponseCompound.iEzsignsignatureValidationstep) &&
         Objects.equals(this.sEzsignsignatureAttachmentdescription, ezsignsignatureResponseCompound.sEzsignsignatureAttachmentdescription) &&
         Objects.equals(this.eEzsignsignatureAttachmentnamesource, ezsignsignatureResponseCompound.eEzsignsignatureAttachmentnamesource) &&
+        Objects.equals(this.eEzsignsignatureConsultationtrigger, ezsignsignatureResponseCompound.eEzsignsignatureConsultationtrigger) &&
+        Objects.equals(this.bEzsignsignatureHandwritten, ezsignsignatureResponseCompound.bEzsignsignatureHandwritten) &&
+        Objects.equals(this.bEzsignsignatureReason, ezsignsignatureResponseCompound.bEzsignsignatureReason) &&
         Objects.equals(this.bEzsignsignatureRequired, ezsignsignatureResponseCompound.bEzsignsignatureRequired) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationIDValidation, ezsignsignatureResponseCompound.fkiEzsignfoldersignerassociationIDValidation) &&
         Objects.equals(this.dtEzsignsignatureDate, ezsignsignatureResponseCompound.dtEzsignsignatureDate) &&
@@ -937,20 +1127,24 @@ public class EzsignsignatureResponseCompound {
         Objects.equals(this.sEzsignsignatureDescription, ezsignsignatureResponseCompound.sEzsignsignatureDescription) &&
         Objects.equals(this.iEzsignsignatureMaxlength, ezsignsignatureResponseCompound.iEzsignsignatureMaxlength) &&
         Objects.equals(this.eEzsignsignatureTextvalidation, ezsignsignatureResponseCompound.eEzsignsignatureTextvalidation) &&
+        Objects.equals(this.sEzsignsignatureTextvalidationcustommessage, ezsignsignatureResponseCompound.sEzsignsignatureTextvalidationcustommessage) &&
         Objects.equals(this.eEzsignsignatureDependencyrequirement, ezsignsignatureResponseCompound.eEzsignsignatureDependencyrequirement) &&
+        Objects.equals(this.sEzsignsignatureDefaultvalue, ezsignsignatureResponseCompound.sEzsignsignatureDefaultvalue) &&
         Objects.equals(this.sEzsignsignatureRegexp, ezsignsignatureResponseCompound.sEzsignsignatureRegexp) &&
         Objects.equals(this.objContactName, ezsignsignatureResponseCompound.objContactName) &&
         Objects.equals(this.objContactNameDelegation, ezsignsignatureResponseCompound.objContactNameDelegation) &&
         Objects.equals(this.objSignature, ezsignsignatureResponseCompound.objSignature) &&
+        Objects.equals(this.dtEzsignsignatureDateInFolderTimezone, ezsignsignatureResponseCompound.dtEzsignsignatureDateInFolderTimezone) &&
         Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureResponseCompound.bEzsignsignatureCustomdate) &&
         Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureResponseCompound.aObjEzsignsignaturecustomdate) &&
         Objects.equals(this.objCreditcardtransaction, ezsignsignatureResponseCompound.objCreditcardtransaction) &&
-        Objects.equals(this.aObjEzsignelementdependency, ezsignsignatureResponseCompound.aObjEzsignelementdependency);
+        Objects.equals(this.aObjEzsignelementdependency, ezsignsignatureResponseCompound.aObjEzsignelementdependency) &&
+        Objects.equals(this.objTimezone, ezsignsignatureResponseCompound.objTimezone);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, eEzsignsignatureDependencyrequirement, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, objCreditcardtransaction, aObjEzsignelementdependency);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, fkiFontID, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature, dtEzsignsignatureDateInFolderTimezone, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, objCreditcardtransaction, aObjEzsignelementdependency, objTimezone);
   }
 
   @Override
@@ -961,6 +1155,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignsigningreasonID: ").append(toIndentedString(fkiEzsignsigningreasonID)).append("\n");
+    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
     sb.append("    sEzsignsigningreasonDescriptionX: ").append(toIndentedString(sEzsignsigningreasonDescriptionX)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
@@ -976,6 +1171,9 @@ public class EzsignsignatureResponseCompound {
     sb.append("    iEzsignsignatureValidationstep: ").append(toIndentedString(iEzsignsignatureValidationstep)).append("\n");
     sb.append("    sEzsignsignatureAttachmentdescription: ").append(toIndentedString(sEzsignsignatureAttachmentdescription)).append("\n");
     sb.append("    eEzsignsignatureAttachmentnamesource: ").append(toIndentedString(eEzsignsignatureAttachmentnamesource)).append("\n");
+    sb.append("    eEzsignsignatureConsultationtrigger: ").append(toIndentedString(eEzsignsignatureConsultationtrigger)).append("\n");
+    sb.append("    bEzsignsignatureHandwritten: ").append(toIndentedString(bEzsignsignatureHandwritten)).append("\n");
+    sb.append("    bEzsignsignatureReason: ").append(toIndentedString(bEzsignsignatureReason)).append("\n");
     sb.append("    bEzsignsignatureRequired: ").append(toIndentedString(bEzsignsignatureRequired)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationIDValidation: ").append(toIndentedString(fkiEzsignfoldersignerassociationIDValidation)).append("\n");
     sb.append("    dtEzsignsignatureDate: ").append(toIndentedString(dtEzsignsignatureDate)).append("\n");
@@ -983,15 +1181,19 @@ public class EzsignsignatureResponseCompound {
     sb.append("    sEzsignsignatureDescription: ").append(toIndentedString(sEzsignsignatureDescription)).append("\n");
     sb.append("    iEzsignsignatureMaxlength: ").append(toIndentedString(iEzsignsignatureMaxlength)).append("\n");
     sb.append("    eEzsignsignatureTextvalidation: ").append(toIndentedString(eEzsignsignatureTextvalidation)).append("\n");
+    sb.append("    sEzsignsignatureTextvalidationcustommessage: ").append(toIndentedString(sEzsignsignatureTextvalidationcustommessage)).append("\n");
     sb.append("    eEzsignsignatureDependencyrequirement: ").append(toIndentedString(eEzsignsignatureDependencyrequirement)).append("\n");
+    sb.append("    sEzsignsignatureDefaultvalue: ").append(toIndentedString(sEzsignsignatureDefaultvalue)).append("\n");
     sb.append("    sEzsignsignatureRegexp: ").append(toIndentedString(sEzsignsignatureRegexp)).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
     sb.append("    objContactNameDelegation: ").append(toIndentedString(objContactNameDelegation)).append("\n");
     sb.append("    objSignature: ").append(toIndentedString(objSignature)).append("\n");
+    sb.append("    dtEzsignsignatureDateInFolderTimezone: ").append(toIndentedString(dtEzsignsignatureDateInFolderTimezone)).append("\n");
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
     sb.append("    objCreditcardtransaction: ").append(toIndentedString(objCreditcardtransaction)).append("\n");
     sb.append("    aObjEzsignelementdependency: ").append(toIndentedString(aObjEzsignelementdependency)).append("\n");
+    sb.append("    objTimezone: ").append(toIndentedString(objTimezone)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -1018,6 +1220,7 @@ public class EzsignsignatureResponseCompound {
     openapiFields.add("fkiEzsigndocumentID");
     openapiFields.add("fkiEzsignfoldersignerassociationID");
     openapiFields.add("fkiEzsignsigningreasonID");
+    openapiFields.add("fkiFontID");
     openapiFields.add("sEzsignsigningreasonDescriptionX");
     openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("iEzsignsignatureX");
@@ -1033,6 +1236,9 @@ public class EzsignsignatureResponseCompound {
     openapiFields.add("iEzsignsignatureValidationstep");
     openapiFields.add("sEzsignsignatureAttachmentdescription");
     openapiFields.add("eEzsignsignatureAttachmentnamesource");
+    openapiFields.add("eEzsignsignatureConsultationtrigger");
+    openapiFields.add("bEzsignsignatureHandwritten");
+    openapiFields.add("bEzsignsignatureReason");
     openapiFields.add("bEzsignsignatureRequired");
     openapiFields.add("fkiEzsignfoldersignerassociationIDValidation");
     openapiFields.add("dtEzsignsignatureDate");
@@ -1040,15 +1246,19 @@ public class EzsignsignatureResponseCompound {
     openapiFields.add("sEzsignsignatureDescription");
     openapiFields.add("iEzsignsignatureMaxlength");
     openapiFields.add("eEzsignsignatureTextvalidation");
+    openapiFields.add("sEzsignsignatureTextvalidationcustommessage");
     openapiFields.add("eEzsignsignatureDependencyrequirement");
+    openapiFields.add("sEzsignsignatureDefaultvalue");
     openapiFields.add("sEzsignsignatureRegexp");
     openapiFields.add("objContactName");
     openapiFields.add("objContactNameDelegation");
     openapiFields.add("objSignature");
+    openapiFields.add("dtEzsignsignatureDateInFolderTimezone");
     openapiFields.add("bEzsignsignatureCustomdate");
     openapiFields.add("a_objEzsignsignaturecustomdate");
     openapiFields.add("objCreditcardtransaction");
     openapiFields.add("a_objEzsignelementdependency");
+    openapiFields.add("objTimezone");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -1063,12 +1273,12 @@ public class EzsignsignatureResponseCompound {
     openapiRequiredFields.add("objContactName");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignatureResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignatureResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -1114,6 +1324,10 @@ public class EzsignsignatureResponseCompound {
       if (jsonObj.get("eEzsignsignatureAttachmentnamesource") != null && !jsonObj.get("eEzsignsignatureAttachmentnamesource").isJsonNull()) {
         FieldEEzsignsignatureAttachmentnamesource.validateJsonElement(jsonObj.get("eEzsignsignatureAttachmentnamesource"));
       }
+      // validate the optional field `eEzsignsignatureConsultationtrigger`
+      if (jsonObj.get("eEzsignsignatureConsultationtrigger") != null && !jsonObj.get("eEzsignsignatureConsultationtrigger").isJsonNull()) {
+        FieldEEzsignsignatureConsultationtrigger.validateJsonElement(jsonObj.get("eEzsignsignatureConsultationtrigger"));
+      }
       if ((jsonObj.get("dtEzsignsignatureDate") != null && !jsonObj.get("dtEzsignsignatureDate").isJsonNull()) && !jsonObj.get("dtEzsignsignatureDate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignsignatureDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDate").toString()));
       }
@@ -1124,9 +1338,15 @@ public class EzsignsignatureResponseCompound {
       if (jsonObj.get("eEzsignsignatureTextvalidation") != null && !jsonObj.get("eEzsignsignatureTextvalidation").isJsonNull()) {
         EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignsignatureTextvalidation"));
       }
+      if ((jsonObj.get("sEzsignsignatureTextvalidationcustommessage") != null && !jsonObj.get("sEzsignsignatureTextvalidationcustommessage").isJsonNull()) && !jsonObj.get("sEzsignsignatureTextvalidationcustommessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignatureTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureTextvalidationcustommessage").toString()));
+      }
       // validate the optional field `eEzsignsignatureDependencyrequirement`
       if (jsonObj.get("eEzsignsignatureDependencyrequirement") != null && !jsonObj.get("eEzsignsignatureDependencyrequirement").isJsonNull()) {
         FieldEEzsignsignatureDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignsignatureDependencyrequirement"));
+      }
+      if ((jsonObj.get("sEzsignsignatureDefaultvalue") != null && !jsonObj.get("sEzsignsignatureDefaultvalue").isJsonNull()) && !jsonObj.get("sEzsignsignatureDefaultvalue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignatureDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureDefaultvalue").toString()));
       }
       if ((jsonObj.get("sEzsignsignatureRegexp") != null && !jsonObj.get("sEzsignsignatureRegexp").isJsonNull()) && !jsonObj.get("sEzsignsignatureRegexp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignatureRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureRegexp").toString()));
@@ -1140,6 +1360,9 @@ public class EzsignsignatureResponseCompound {
       // validate the optional field `objSignature`
       if (jsonObj.get("objSignature") != null && !jsonObj.get("objSignature").isJsonNull()) {
         SignatureResponseCompound.validateJsonElement(jsonObj.get("objSignature"));
+      }
+      if ((jsonObj.get("dtEzsignsignatureDateInFolderTimezone") != null && !jsonObj.get("dtEzsignsignatureDateInFolderTimezone").isJsonNull()) && !jsonObj.get("dtEzsignsignatureDateInFolderTimezone").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignsignatureDateInFolderTimezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDateInFolderTimezone").toString()));
       }
       if (jsonObj.get("a_objEzsignsignaturecustomdate") != null && !jsonObj.get("a_objEzsignsignaturecustomdate").isJsonNull()) {
         JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
@@ -1173,6 +1396,10 @@ public class EzsignsignatureResponseCompound {
           };
         }
       }
+      // validate the optional field `objTimezone`
+      if (jsonObj.get("objTimezone") != null && !jsonObj.get("objTimezone").isJsonNull()) {
+        CustomTimezoneWithCodeResponse.validateJsonElement(jsonObj.get("objTimezone"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -1204,22 +1431,22 @@ public class EzsignsignatureResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignsignatureResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignatureResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignatureResponseCompound
-  */
+  /**
+   * Create an instance of EzsignsignatureResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignatureResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignatureResponseCompound
+   */
   public static EzsignsignatureResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignatureResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignsignatureResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignatureResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

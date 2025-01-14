@@ -16,7 +16,10 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.InvoiceGetAttachmentsV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationCountV1Response;
 import com.ezmax.api.model.InvoiceGetCommunicationListV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.InvoiceGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -48,6 +51,20 @@ public class ObjectInvoiceApiTest {
     }
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void invoiceGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiInvoiceID = null;
+        InvoiceGetCommunicationCountV1Response response = api.invoiceGetCommunicationCountV1(pkiInvoiceID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -58,6 +75,34 @@ public class ObjectInvoiceApiTest {
     public void invoiceGetCommunicationListV1Test() throws ApiException {
         Integer pkiInvoiceID = null;
         InvoiceGetCommunicationListV1Response response = api.invoiceGetCommunicationListV1(pkiInvoiceID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void invoiceGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiInvoiceID = null;
+        InvoiceGetCommunicationrecipientsV1Response response = api.invoiceGetCommunicationrecipientsV1(pkiInvoiceID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Invoice&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void invoiceGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiInvoiceID = null;
+        InvoiceGetCommunicationsendersV1Response response = api.invoiceGetCommunicationsendersV1(pkiInvoiceID);
         // TODO: test validations
     }
 

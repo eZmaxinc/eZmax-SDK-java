@@ -45,7 +45,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -57,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Attachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomAttachmentResponse {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENT_I_D = "pkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENT_I_D)
@@ -313,11 +312,11 @@ public class CustomAttachmentResponse {
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT_ATTACHMENT = "a_objAttachmentAttachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT_ATTACHMENT)
-  private List<AttachmentResponseCompound> aObjAttachmentAttachment;
+  private List<AttachmentResponseCompound> aObjAttachmentAttachment = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT_VERSION = "a_objAttachmentVersion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT_VERSION)
-  private List<AttachmentResponseCompound> aObjAttachmentVersion;
+  private List<AttachmentResponseCompound> aObjAttachmentVersion = new ArrayList<>();
 
   public CustomAttachmentResponse() {
   }
@@ -327,11 +326,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Attachment.
    * minimum: 0
    * @return pkiAttachmentID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiAttachmentID() {
     return pkiAttachmentID;
@@ -347,12 +346,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Computer
    * minimum: 1
    * maximum: 65535
    * @return fkiComputerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiComputerID() {
     return fkiComputerID;
@@ -368,12 +367,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Adjustment
    * minimum: 0
    * maximum: 65535
    * @return fkiAdjustmentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAdjustmentID() {
     return fkiAdjustmentID;
@@ -389,11 +388,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Agent.
    * minimum: 0
    * @return fkiAgentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -409,12 +408,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Bankaccount
    * minimum: 0
    * maximum: 255
    * @return fkiBankaccountID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBankaccountID() {
     return fkiBankaccountID;
@@ -430,11 +429,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Broker.
    * minimum: 0
    * @return fkiBrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -450,12 +449,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Commissionadvance
    * minimum: 0
    * maximum: 65535
    * @return fkiCommissionadvanceID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiCommissionadvanceID() {
     return fkiCommissionadvanceID;
@@ -471,11 +470,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Communication.
    * minimum: 0
    * @return fkiCommunicationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiCommunicationID() {
     return fkiCommunicationID;
@@ -491,11 +490,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Customer.
    * minimum: 0
    * @return fkiCustomerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiCustomerID() {
     return fkiCustomerID;
@@ -511,12 +510,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Customertemplate
    * minimum: 0
    * maximum: 65535
    * @return fkiCustomertemplateID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiCustomertemplateID() {
     return fkiCustomertemplateID;
@@ -532,12 +531,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Deposit
    * minimum: 0
    * maximum: 16777215
    * @return fkiDepositID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiDepositID() {
     return fkiDepositID;
@@ -553,12 +552,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Deposittransitcheque
    * minimum: 0
    * maximum: 65535
    * @return fkiDeposittransitchequeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiDeposittransitchequeID() {
     return fkiDeposittransitchequeID;
@@ -574,12 +573,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Electronicfundstransfer
    * minimum: 1
    * maximum: 65535
    * @return fkiElectronicfundstransferID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiElectronicfundstransferID() {
     return fkiElectronicfundstransferID;
@@ -595,11 +594,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Employee.
    * minimum: 0
    * @return fkiEmployeeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEmployeeID() {
     return fkiEmployeeID;
@@ -615,11 +614,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Externalbroker.
    * minimum: 0
    * @return fkiExternalbrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiExternalbrokerID() {
     return fkiExternalbrokerID;
@@ -635,12 +634,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezcomadvanceserver
    * minimum: 0
    * maximum: 16777215
    * @return fkiEzcomadvanceserverID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzcomadvanceserverID() {
     return fkiEzcomadvanceserverID;
@@ -656,12 +655,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezcomcompany
    * minimum: 0
    * maximum: 65535
    * @return fkiEzcomcompanyID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzcomcompanyID() {
     return fkiEzcomcompanyID;
@@ -677,11 +676,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return fkiEzsigndocumentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigndocumentID() {
     return fkiEzsigndocumentID;
@@ -697,12 +696,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ghacqcontract
    * minimum: 0
    * maximum: 16777215
    * @return fkiGhacqcontractID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiGhacqcontractID() {
     return fkiGhacqcontractID;
@@ -718,11 +717,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscription.
    * minimum: 0
    * @return fkiInscriptionID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptionID() {
     return fkiInscriptionID;
@@ -738,12 +737,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscriptiontemp
    * minimum: 1
    * maximum: 16777215
    * @return fkiInscriptiontempID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptiontempID() {
     return fkiInscriptiontempID;
@@ -759,11 +758,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscriptionnotauthenticated.
    * minimum: 0
    * @return fkiInscriptionnotauthenticatedID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptionnotauthenticatedID() {
     return fkiInscriptionnotauthenticatedID;
@@ -779,11 +778,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Invoice.
    * minimum: 0
    * @return fkiInvoiceID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInvoiceID() {
     return fkiInvoiceID;
@@ -799,12 +798,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Buyercontract
    * minimum: 1
    * maximum: 65535
    * @return fkiBuyercontractID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBuyercontractID() {
     return fkiBuyercontractID;
@@ -820,11 +819,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisebroker
    * minimum: 0
    * @return fkiFranchisebrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFranchisebrokerID() {
     return fkiFranchisebrokerID;
@@ -840,12 +839,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchiseagence
    * minimum: 0
    * maximum: 65535
    * @return fkiFranchiseagenceID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFranchiseagenceID() {
     return fkiFranchiseagenceID;
@@ -861,11 +860,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisereoffice
    * minimum: 0
    * @return fkiFranchiseofficeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFranchiseofficeID() {
     return fkiFranchiseofficeID;
@@ -881,12 +880,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisefranchise
    * minimum: 0
    * maximum: 65535
    * @return fkiFranchisefranchiseID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFranchisefranchiseID() {
     return fkiFranchisefranchiseID;
@@ -902,12 +901,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisecomplaint
    * minimum: 0
    * maximum: 65535
    * @return fkiFranchisecomplaintID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFranchisecomplaintID() {
     return fkiFranchisecomplaintID;
@@ -923,12 +922,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Lead
    * minimum: 0
    * maximum: 65535
    * @return fkiLeadID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiLeadID() {
     return fkiLeadID;
@@ -944,12 +943,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Marketingprogram
    * minimum: 0
    * maximum: 255
    * @return fkiMarketingprogramID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiMarketingprogramID() {
     return fkiMarketingprogramID;
@@ -965,12 +964,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Marketingfollow
    * minimum: 0
    * maximum: 65535
    * @return fkiMarketingfollowID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiMarketingfollowID() {
     return fkiMarketingfollowID;
@@ -986,11 +985,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Notary.
    * minimum: 0
    * @return fkiNotaryID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiNotaryID() {
     return fkiNotaryID;
@@ -1006,12 +1005,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Officetaxreport
    * minimum: 0
    * maximum: 65535
    * @return fkiOfficetaxreportID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiOfficetaxreportID() {
     return fkiOfficetaxreportID;
@@ -1027,12 +1026,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Otherincome
    * minimum: 1
    * maximum: 65535
    * @return fkiOtherincomeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiOtherincomeID() {
     return fkiOtherincomeID;
@@ -1048,12 +1047,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Paymentpreparation
    * minimum: 0
    * maximum: 16777215
    * @return fkiPaymentpreparationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiPaymentpreparationID() {
     return fkiPaymentpreparationID;
@@ -1069,10 +1068,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Purchase
    * @return fkiPurchaseID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiPurchaseID() {
     return fkiPurchaseID;
@@ -1088,12 +1087,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Salary
    * minimum: 0
    * maximum: 16777215
    * @return fkiSalaryID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSalaryID() {
     return fkiSalaryID;
@@ -1109,11 +1108,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Supplier.
    * minimum: 0
    * @return fkiSupplierID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSupplierID() {
     return fkiSupplierID;
@@ -1129,12 +1128,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Tranqcontract
    * minimum: 0
    * maximum: 16777215
    * @return fkiTranqcontractID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiTranqcontractID() {
     return fkiTranqcontractID;
@@ -1150,12 +1149,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Template
    * minimum: 0
    * maximum: 65535
    * @return fkiTemplateID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiTemplateID() {
     return fkiTemplateID;
@@ -1171,12 +1170,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Inscriptionchecklist
    * minimum: 0
    * maximum: 16777215
    * @return fkiInscriptionchecklistID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiInscriptionchecklistID() {
     return fkiInscriptionchecklistID;
@@ -1192,12 +1191,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Folder
    * minimum: 0
    * maximum: 65535
    * @return fkiFolderID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiFolderID() {
     return fkiFolderID;
@@ -1213,12 +1212,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Rejectedoffertopurchase
    * minimum: 1
    * maximum: 65535
    * @return fkiRejectedoffertopurchaseID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiRejectedoffertopurchaseID() {
     return fkiRejectedoffertopurchaseID;
@@ -1234,12 +1233,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Disclosure
    * minimum: 0
    * maximum: 65535
    * @return fkiDisclosureID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiDisclosureID() {
     return fkiDisclosureID;
@@ -1255,12 +1254,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Reconciliation
    * minimum: 0
    * maximum: 65535
    * @return fkiReconciliationID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiReconciliationID() {
     return fkiReconciliationID;
@@ -1276,11 +1275,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigndocument
    * minimum: 0
    * @return fkiEzsigndocumentIDReference
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigndocumentIDReference() {
     return fkiEzsigndocumentIDReference;
@@ -1296,10 +1295,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eAttachmentDocumenttype
    * @return eAttachmentDocumenttype
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEAttachmentDocumenttype geteAttachmentDocumenttype() {
     return eAttachmentDocumenttype;
@@ -1315,10 +1314,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Attachment
    * @return sAttachmentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAttachmentName() {
     return sAttachmentName;
@@ -1334,10 +1333,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eAttachmentPrivacy
    * @return eAttachmentPrivacy
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEAttachmentPrivacy geteAttachmentPrivacy() {
     return eAttachmentPrivacy;
@@ -1353,11 +1352,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserIDSpecific
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserIDSpecific() {
     return fkiUserIDSpecific;
@@ -1373,10 +1372,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eAttachmentType
    * @return eAttachmentType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEAttachmentType geteAttachmentType() {
     return eAttachmentType;
@@ -1392,12 +1391,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The size of the Attachment
    * minimum: 0
    * maximum: 4294967295
    * @return iAttachmentSize
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiAttachmentSize() {
     return iAttachmentSize;
@@ -1413,12 +1412,12 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The edmmoduleflag of the Attachment
    * minimum: 0
    * maximum: 255
    * @return iAttachmentEDMmoduleflag
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiAttachmentEDMmoduleflag() {
     return iAttachmentEDMmoduleflag;
@@ -1434,10 +1433,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The md5 of the Attachment
    * @return sAttachmentMD5
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAttachmentMD5() {
     return sAttachmentMD5;
@@ -1453,10 +1452,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s deleted
    * @return bAttachmentDeleted
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbAttachmentDeleted() {
     return bAttachmentDeleted;
@@ -1472,10 +1471,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s valid
    * @return bAttachmentValid
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbAttachmentValid() {
     return bAttachmentValid;
@@ -1491,10 +1490,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eAttachmentVerified
    * @return eAttachmentVerified
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEAttachmentVerified geteAttachmentVerified() {
     return eAttachmentVerified;
@@ -1510,10 +1509,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The rejectioncomment of the Attachment
    * @return tAttachmentRejectioncomment
-  **/
+   */
   @javax.annotation.Nullable
   public String gettAttachmentRejectioncomment() {
     return tAttachmentRejectioncomment;
@@ -1529,11 +1528,11 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserIDOwner
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserIDOwner() {
     return fkiUserIDOwner;
@@ -1549,10 +1548,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAudit
    * @return objAudit
-  **/
+   */
   @javax.annotation.Nullable
   public CommonAudit getObjAudit() {
     return objAudit;
@@ -1568,10 +1567,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAttachmentProof
    * @return objAttachmentProof
-  **/
+   */
   @javax.annotation.Nullable
   public AttachmentResponseCompound getObjAttachmentProof() {
     return objAttachmentProof;
@@ -1587,10 +1586,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objAttachmentProofdocument
    * @return objAttachmentProofdocument
-  **/
+   */
   @javax.annotation.Nullable
   public AttachmentResponseCompound getObjAttachmentProofdocument() {
     return objAttachmentProofdocument;
@@ -1614,10 +1613,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjAttachmentAttachment
    * @return aObjAttachmentAttachment
-  **/
+   */
   @javax.annotation.Nullable
   public List<AttachmentResponseCompound> getaObjAttachmentAttachment() {
     return aObjAttachmentAttachment;
@@ -1641,10 +1640,10 @@ public class CustomAttachmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjAttachmentVersion
    * @return aObjAttachmentVersion
-  **/
+   */
   @javax.annotation.Nullable
   public List<AttachmentResponseCompound> getaObjAttachmentVersion() {
     return aObjAttachmentVersion;
@@ -1908,12 +1907,12 @@ public class CustomAttachmentResponse {
     openapiRequiredFields.add("eAttachmentVerified");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomAttachmentResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomAttachmentResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomAttachmentResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -2024,22 +2023,22 @@ public class CustomAttachmentResponse {
     }
   }
 
- /**
-  * Create an instance of CustomAttachmentResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomAttachmentResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomAttachmentResponse
-  */
+  /**
+   * Create an instance of CustomAttachmentResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomAttachmentResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomAttachmentResponse
+   */
   public static CustomAttachmentResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomAttachmentResponse.class);
   }
 
- /**
-  * Convert an instance of CustomAttachmentResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomAttachmentResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

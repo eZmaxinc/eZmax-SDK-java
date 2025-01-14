@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientResponse {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
@@ -68,17 +67,9 @@ public class CreditcardclientResponse {
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
   private String sCreditcardclientDescription;
 
-  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ISACTIVE = "bCreditcardclientIsactive";
-  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ISACTIVE)
-  private Boolean bCreditcardclientIsactive;
-
-  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDAGENCYPAYMENT = "bCreditcardclientAllowedagencypayment";
-  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDAGENCYPAYMENT)
-  private Boolean bCreditcardclientAllowedagencypayment;
-
-  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDROYALLEPAGEPROTECTION = "bCreditcardclientAllowedroyallepageprotection";
-  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDROYALLEPAGEPROTECTION)
-  private Boolean bCreditcardclientAllowedroyallepageprotection;
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT = "bCreditcardclientAllowedcompanypayment";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT)
+  private Boolean bCreditcardclientAllowedcompanypayment;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT = "bCreditcardclientAllowedtranquillit";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT)
@@ -96,12 +87,12 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Creditcardclient
    * minimum: 0
    * maximum: 65535
    * @return pkiCreditcardclientID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiCreditcardclientID() {
     return pkiCreditcardclientID;
@@ -117,12 +108,12 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Creditcarddetail
    * minimum: 0
    * maximum: 65535
    * @return fkiCreditcarddetailID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiCreditcarddetailID() {
     return fkiCreditcarddetailID;
@@ -138,10 +129,10 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
-   * Whether if it&#39;s an relationisdefault
+  /**
+   * Whether if it&#39;s the creditcardclient is the default one
    * @return bCreditcardclientrelationIsdefault
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbCreditcardclientrelationIsdefault() {
     return bCreditcardclientrelationIsdefault;
@@ -157,10 +148,10 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Creditcardclient
    * @return sCreditcardclientDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCreditcardclientDescription() {
     return sCreditcardclientDescription;
@@ -171,60 +162,22 @@ public class CreditcardclientResponse {
   }
 
 
-  public CreditcardclientResponse bCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
+  public CreditcardclientResponse bCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
     return this;
   }
 
-   /**
-   * Whether the creditcardclient is active or not
-   * @return bCreditcardclientIsactive
-  **/
-  @javax.annotation.Nonnull
-  public Boolean getbCreditcardclientIsactive() {
-    return bCreditcardclientIsactive;
-  }
-
-  public void setbCreditcardclientIsactive(Boolean bCreditcardclientIsactive) {
-    this.bCreditcardclientIsactive = bCreditcardclientIsactive;
-  }
-
-
-  public CreditcardclientResponse bCreditcardclientAllowedagencypayment(Boolean bCreditcardclientAllowedagencypayment) {
-    this.bCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-    return this;
-  }
-
-   /**
+  /**
    * Whether if it&#39;s an allowedagencypayment
-   * @return bCreditcardclientAllowedagencypayment
-  **/
+   * @return bCreditcardclientAllowedcompanypayment
+   */
   @javax.annotation.Nonnull
-  public Boolean getbCreditcardclientAllowedagencypayment() {
-    return bCreditcardclientAllowedagencypayment;
+  public Boolean getbCreditcardclientAllowedcompanypayment() {
+    return bCreditcardclientAllowedcompanypayment;
   }
 
-  public void setbCreditcardclientAllowedagencypayment(Boolean bCreditcardclientAllowedagencypayment) {
-    this.bCreditcardclientAllowedagencypayment = bCreditcardclientAllowedagencypayment;
-  }
-
-
-  public CreditcardclientResponse bCreditcardclientAllowedroyallepageprotection(Boolean bCreditcardclientAllowedroyallepageprotection) {
-    this.bCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
-    return this;
-  }
-
-   /**
-   * Whether if it&#39;s an allowedroyallepageprotection
-   * @return bCreditcardclientAllowedroyallepageprotection
-  **/
-  @javax.annotation.Nonnull
-  public Boolean getbCreditcardclientAllowedroyallepageprotection() {
-    return bCreditcardclientAllowedroyallepageprotection;
-  }
-
-  public void setbCreditcardclientAllowedroyallepageprotection(Boolean bCreditcardclientAllowedroyallepageprotection) {
-    this.bCreditcardclientAllowedroyallepageprotection = bCreditcardclientAllowedroyallepageprotection;
+  public void setbCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
 
@@ -233,10 +186,10 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s an allowedtranquillit
    * @return bCreditcardclientAllowedtranquillit
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbCreditcardclientAllowedtranquillit() {
     return bCreditcardclientAllowedtranquillit;
@@ -252,10 +205,10 @@ public class CreditcardclientResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objCreditcarddetail
    * @return objCreditcarddetail
-  **/
+   */
   @javax.annotation.Nonnull
   public CreditcarddetailResponseCompound getObjCreditcarddetail() {
     return objCreditcarddetail;
@@ -280,16 +233,14 @@ public class CreditcardclientResponse {
         Objects.equals(this.fkiCreditcarddetailID, creditcardclientResponse.fkiCreditcarddetailID) &&
         Objects.equals(this.bCreditcardclientrelationIsdefault, creditcardclientResponse.bCreditcardclientrelationIsdefault) &&
         Objects.equals(this.sCreditcardclientDescription, creditcardclientResponse.sCreditcardclientDescription) &&
-        Objects.equals(this.bCreditcardclientIsactive, creditcardclientResponse.bCreditcardclientIsactive) &&
-        Objects.equals(this.bCreditcardclientAllowedagencypayment, creditcardclientResponse.bCreditcardclientAllowedagencypayment) &&
-        Objects.equals(this.bCreditcardclientAllowedroyallepageprotection, creditcardclientResponse.bCreditcardclientAllowedroyallepageprotection) &&
+        Objects.equals(this.bCreditcardclientAllowedcompanypayment, creditcardclientResponse.bCreditcardclientAllowedcompanypayment) &&
         Objects.equals(this.bCreditcardclientAllowedtranquillit, creditcardclientResponse.bCreditcardclientAllowedtranquillit) &&
         Objects.equals(this.objCreditcarddetail, creditcardclientResponse.objCreditcarddetail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCreditcardclientID, fkiCreditcarddetailID, bCreditcardclientrelationIsdefault, sCreditcardclientDescription, bCreditcardclientIsactive, bCreditcardclientAllowedagencypayment, bCreditcardclientAllowedroyallepageprotection, bCreditcardclientAllowedtranquillit, objCreditcarddetail);
+    return Objects.hash(pkiCreditcardclientID, fkiCreditcarddetailID, bCreditcardclientrelationIsdefault, sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit, objCreditcarddetail);
   }
 
   @Override
@@ -300,9 +251,7 @@ public class CreditcardclientResponse {
     sb.append("    fkiCreditcarddetailID: ").append(toIndentedString(fkiCreditcarddetailID)).append("\n");
     sb.append("    bCreditcardclientrelationIsdefault: ").append(toIndentedString(bCreditcardclientrelationIsdefault)).append("\n");
     sb.append("    sCreditcardclientDescription: ").append(toIndentedString(sCreditcardclientDescription)).append("\n");
-    sb.append("    bCreditcardclientIsactive: ").append(toIndentedString(bCreditcardclientIsactive)).append("\n");
-    sb.append("    bCreditcardclientAllowedagencypayment: ").append(toIndentedString(bCreditcardclientAllowedagencypayment)).append("\n");
-    sb.append("    bCreditcardclientAllowedroyallepageprotection: ").append(toIndentedString(bCreditcardclientAllowedroyallepageprotection)).append("\n");
+    sb.append("    bCreditcardclientAllowedcompanypayment: ").append(toIndentedString(bCreditcardclientAllowedcompanypayment)).append("\n");
     sb.append("    bCreditcardclientAllowedtranquillit: ").append(toIndentedString(bCreditcardclientAllowedtranquillit)).append("\n");
     sb.append("    objCreditcarddetail: ").append(toIndentedString(objCreditcarddetail)).append("\n");
     sb.append("}");
@@ -331,9 +280,7 @@ public class CreditcardclientResponse {
     openapiFields.add("fkiCreditcarddetailID");
     openapiFields.add("bCreditcardclientrelationIsdefault");
     openapiFields.add("sCreditcardclientDescription");
-    openapiFields.add("bCreditcardclientIsactive");
-    openapiFields.add("bCreditcardclientAllowedagencypayment");
-    openapiFields.add("bCreditcardclientAllowedroyallepageprotection");
+    openapiFields.add("bCreditcardclientAllowedcompanypayment");
     openapiFields.add("bCreditcardclientAllowedtranquillit");
     openapiFields.add("objCreditcarddetail");
 
@@ -343,19 +290,17 @@ public class CreditcardclientResponse {
     openapiRequiredFields.add("fkiCreditcarddetailID");
     openapiRequiredFields.add("bCreditcardclientrelationIsdefault");
     openapiRequiredFields.add("sCreditcardclientDescription");
-    openapiRequiredFields.add("bCreditcardclientIsactive");
-    openapiRequiredFields.add("bCreditcardclientAllowedagencypayment");
-    openapiRequiredFields.add("bCreditcardclientAllowedroyallepageprotection");
+    openapiRequiredFields.add("bCreditcardclientAllowedcompanypayment");
     openapiRequiredFields.add("bCreditcardclientAllowedtranquillit");
     openapiRequiredFields.add("objCreditcarddetail");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CreditcardclientResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CreditcardclientResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CreditcardclientResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -414,22 +359,22 @@ public class CreditcardclientResponse {
     }
   }
 
- /**
-  * Create an instance of CreditcardclientResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreditcardclientResponse
-  * @throws IOException if the JSON string is invalid with respect to CreditcardclientResponse
-  */
+  /**
+   * Create an instance of CreditcardclientResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CreditcardclientResponse
+   * @throws IOException if the JSON string is invalid with respect to CreditcardclientResponse
+   */
   public static CreditcardclientResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CreditcardclientResponse.class);
   }
 
- /**
-  * Convert an instance of CreditcardclientResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CreditcardclientResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

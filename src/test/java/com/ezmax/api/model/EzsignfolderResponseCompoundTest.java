@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
+import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.FieldEEzsignfolderCompletion;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
@@ -64,6 +65,14 @@ public class EzsignfolderResponseCompoundTest {
     @Test
     public void objEzsignfoldertypeTest() {
         // TODO: test objEzsignfoldertype
+    }
+
+    /**
+     * Test the property 'fkiTimezoneID'
+     */
+    @Test
+    public void fkiTimezoneIDTest() {
+        // TODO: test fkiTimezoneID
     }
 
     /**
@@ -147,6 +156,22 @@ public class EzsignfolderResponseCompoundTest {
     }
 
     /**
+     * Test the property 'iEzsignfolderSendreminderfirstdays'
+     */
+    @Test
+    public void iEzsignfolderSendreminderfirstdaysTest() {
+        // TODO: test iEzsignfolderSendreminderfirstdays
+    }
+
+    /**
+     * Test the property 'iEzsignfolderSendreminderotherdays'
+     */
+    @Test
+    public void iEzsignfolderSendreminderotherdaysTest() {
+        // TODO: test iEzsignfolderSendreminderotherdays
+    }
+
+    /**
      * Test the property 'dtEzsignfolderDelayedsenddate'
      */
     @Test
@@ -224,6 +249,14 @@ public class EzsignfolderResponseCompoundTest {
     @Test
     public void sEzsignfolderExternalidTest() {
         // TODO: test sEzsignfolderExternalid
+    }
+
+    /**
+     * Test the property 'objTimezone'
+     */
+    @Test
+    public void objTimezoneTest() {
+        // TODO: test objTimezone
     }
 
 }

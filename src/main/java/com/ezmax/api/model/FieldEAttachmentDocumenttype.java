@@ -65,17 +65,17 @@ public enum FieldEAttachmentDocumenttype {
   
   EZSIGNDOCUMENT("Ezsigndocument"),
   
-  EZSIGNDOCUMENTPROOF("EzsigndocumentProof"),
+  EZSIGNDOCUMENT_PROOF("EzsigndocumentProof"),
   
-  EZSIGNDOCUMENTPROOFDOCUMENT("EzsigndocumentProofdocument"),
+  EZSIGNDOCUMENT_PROOFDOCUMENT("EzsigndocumentProofdocument"),
   
   EZSIGNDOCUMENTGROUP("Ezsigndocumentgroup"),
   
-  EZSIGNDOCUMENTGROUPPROOF("EzsigndocumentgroupProof"),
+  EZSIGNDOCUMENTGROUP_PROOF("EzsigndocumentgroupProof"),
   
-  EZSIGNDOCUMENTGROUPPROOFDOCUMENT("EzsigndocumentgroupProofdocument"),
+  EZSIGNDOCUMENTGROUP_PROOFDOCUMENT("EzsigndocumentgroupProofdocument"),
   
-  EZSIGNDOCUMENTATTACHMENT("EzsigndocumentAttachment"),
+  EZSIGNDOCUMENT_ATTACHMENT("EzsigndocumentAttachment"),
   
   FOLDER("Folder"),
   

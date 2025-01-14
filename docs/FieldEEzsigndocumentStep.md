@@ -9,13 +9,13 @@
 
 * `UNSIGNED` (value: `"Unsigned"`)
 
-* `PARTIALLYSIGNED` (value: `"PartiallySigned"`)
+* `PARTIALLY_SIGNED` (value: `"PartiallySigned"`)
 
-* `DECLINEDTOSIGN` (value: `"DeclinedToSign"`)
+* `DECLINED_TO_SIGN` (value: `"DeclinedToSign"`)
 
-* `PREMATURELYENDED` (value: `"PrematurelyEnded"`)
+* `PREMATURELY_ENDED` (value: `"PrematurelyEnded"`)
 
-* `PENDINGCOMPLETION` (value: `"PendingCompletion"`)
+* `PENDING_COMPLETION` (value: `"PendingCompletion"`)
 
 * `COMPLETED` (value: `"Completed"`)
 

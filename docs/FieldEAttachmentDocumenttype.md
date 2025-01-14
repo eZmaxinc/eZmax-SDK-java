@@ -41,17 +41,17 @@
 
 * `EZSIGNDOCUMENT` (value: `"Ezsigndocument"`)
 
-* `EZSIGNDOCUMENTPROOF` (value: `"EzsigndocumentProof"`)
+* `EZSIGNDOCUMENT_PROOF` (value: `"EzsigndocumentProof"`)
 
-* `EZSIGNDOCUMENTPROOFDOCUMENT` (value: `"EzsigndocumentProofdocument"`)
+* `EZSIGNDOCUMENT_PROOFDOCUMENT` (value: `"EzsigndocumentProofdocument"`)
 
 * `EZSIGNDOCUMENTGROUP` (value: `"Ezsigndocumentgroup"`)
 
-* `EZSIGNDOCUMENTGROUPPROOF` (value: `"EzsigndocumentgroupProof"`)
+* `EZSIGNDOCUMENTGROUP_PROOF` (value: `"EzsigndocumentgroupProof"`)
 
-* `EZSIGNDOCUMENTGROUPPROOFDOCUMENT` (value: `"EzsigndocumentgroupProofdocument"`)
+* `EZSIGNDOCUMENTGROUP_PROOFDOCUMENT` (value: `"EzsigndocumentgroupProofdocument"`)
 
-* `EZSIGNDOCUMENTATTACHMENT` (value: `"EzsigndocumentAttachment"`)
+* `EZSIGNDOCUMENT_ATTACHMENT` (value: `"EzsigndocumentAttachment"`)
 
 * `FOLDER` (value: `"Folder"`)
 

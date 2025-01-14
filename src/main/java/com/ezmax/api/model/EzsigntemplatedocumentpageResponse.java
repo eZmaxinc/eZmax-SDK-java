@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocumentpage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentpageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "pkiEzsigntemplatedocumentpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
@@ -87,11 +86,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatedocumentpage
    * minimum: 0
    * @return pkiEzsigntemplatedocumentpageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntemplatedocumentpageID() {
     return pkiEzsigntemplatedocumentpageID;
@@ -107,11 +106,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The Width of the page&#39;s image in pixels calculated at 100 DPI
    * minimum: 0
    * @return iEzsigntemplatedocumentpageWidthimage
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpageWidthimage() {
     return iEzsigntemplatedocumentpageWidthimage;
@@ -127,11 +126,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The Height of the page&#39;s image in pixels calculated at 100 DPI
    * minimum: 0
    * @return iEzsigntemplatedocumentpageHeightimage
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpageHeightimage() {
     return iEzsigntemplatedocumentpageHeightimage;
@@ -147,11 +146,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The Width of the page in points calculated at 72 DPI
    * minimum: 0
    * @return iEzsigntemplatedocumentpageWidthpdf
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpageWidthpdf() {
     return iEzsigntemplatedocumentpageWidthpdf;
@@ -167,11 +166,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The Height of the page in points calculated at 72 DPI
    * minimum: 0
    * @return iEzsigntemplatedocumentpageHeightpdf
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpageHeightpdf() {
     return iEzsigntemplatedocumentpageHeightpdf;
@@ -187,11 +186,11 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The page number in the Ezsigntemplatedocument
    * minimum: 1
    * @return iEzsigntemplatedocumentpagePagenumber
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigntemplatedocumentpagePagenumber() {
     return iEzsigntemplatedocumentpagePagenumber;
@@ -207,10 +206,10 @@ public class EzsigntemplatedocumentpageResponse {
     return this;
   }
 
-   /**
+  /**
    * The Url to the Ezsigntemplatedocumentpage&#39;s rasterized image.  Url will expire after 5 minutes.
    * @return sComputedImageurl
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsComputedImageurl() {
     return sComputedImageurl;
@@ -297,12 +296,12 @@ public class EzsigntemplatedocumentpageResponse {
     openapiRequiredFields.add("sComputedImageurl");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentpageResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatedocumentpageResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatedocumentpageResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -359,22 +358,22 @@ public class EzsigntemplatedocumentpageResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatedocumentpageResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatedocumentpageResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentpageResponse
-  */
+  /**
+   * Create an instance of EzsigntemplatedocumentpageResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatedocumentpageResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatedocumentpageResponse
+   */
   public static EzsigntemplatedocumentpageResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatedocumentpageResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatedocumentpageResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatedocumentpageResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

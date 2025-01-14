@@ -31,9 +31,9 @@ public enum FieldEEzmaxinvoicingcontractPaymenttype {
   
   CHEQUE("Cheque"),
   
-  CREDITCARD("CreditCard"),
+  CREDIT_CARD("CreditCard"),
   
-  DIRECTDEBIT("DirectDebit");
+  DIRECT_DEBIT("DirectDebit");
 
   private String value;
 

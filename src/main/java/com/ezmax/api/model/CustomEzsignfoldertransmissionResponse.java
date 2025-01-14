@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfoldertransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -71,6 +70,10 @@ public class CustomEzsignfoldertransmissionResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURETOTAL)
   private Integer iEzsignfolderSignaturetotal;
 
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_FORMFIELDTOTAL = "iEzsignfolderFormfieldtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_FORMFIELDTOTAL)
+  private Integer iEzsignfolderFormfieldtotal;
+
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURESIGNED = "iEzsignfolderSignaturesigned";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURESIGNED)
   private Integer iEzsignfolderSignaturesigned;
@@ -87,11 +90,11 @@ public class CustomEzsignfoldertransmissionResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return pkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -107,10 +110,10 @@ public class CustomEzsignfoldertransmissionResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -126,10 +129,10 @@ public class CustomEzsignfoldertransmissionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfolderStep
    * @return eEzsignfolderStep
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
@@ -145,10 +148,10 @@ public class CustomEzsignfoldertransmissionResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of total signatures that were requested in the Ezsignfolder
    * @return iEzsignfolderSignaturetotal
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignfolderSignaturetotal() {
     return iEzsignfolderSignaturetotal;
@@ -159,15 +162,34 @@ public class CustomEzsignfoldertransmissionResponse {
   }
 
 
+  public CustomEzsignfoldertransmissionResponse iEzsignfolderFormfieldtotal(Integer iEzsignfolderFormfieldtotal) {
+    this.iEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
+    return this;
+  }
+
+  /**
+   * The number of total form fields that were requested in the Ezsignfolder
+   * @return iEzsignfolderFormfieldtotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsignfolderFormfieldtotal() {
+    return iEzsignfolderFormfieldtotal;
+  }
+
+  public void setiEzsignfolderFormfieldtotal(Integer iEzsignfolderFormfieldtotal) {
+    this.iEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
+  }
+
+
   public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturesigned(Integer iEzsignfolderSignaturesigned) {
     this.iEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
     return this;
   }
 
-   /**
+  /**
    * The number of signatures that were signed in the Ezsignfolder.
    * @return iEzsignfolderSignaturesigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignfolderSignaturesigned() {
     return iEzsignfolderSignaturesigned;
@@ -191,10 +213,10 @@ public class CustomEzsignfoldertransmissionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignfoldertransmissionSigner
    * @return aObjEzsignfoldertransmissionSigner
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzsignfoldertransmissionSignerResponse> getaObjEzsignfoldertransmissionSigner() {
     return aObjEzsignfoldertransmissionSigner;
@@ -219,13 +241,14 @@ public class CustomEzsignfoldertransmissionResponse {
         Objects.equals(this.sEzsignfolderDescription, customEzsignfoldertransmissionResponse.sEzsignfolderDescription) &&
         Objects.equals(this.eEzsignfolderStep, customEzsignfoldertransmissionResponse.eEzsignfolderStep) &&
         Objects.equals(this.iEzsignfolderSignaturetotal, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturetotal) &&
+        Objects.equals(this.iEzsignfolderFormfieldtotal, customEzsignfoldertransmissionResponse.iEzsignfolderFormfieldtotal) &&
         Objects.equals(this.iEzsignfolderSignaturesigned, customEzsignfoldertransmissionResponse.iEzsignfolderSignaturesigned) &&
         Objects.equals(this.aObjEzsignfoldertransmissionSigner, customEzsignfoldertransmissionResponse.aObjEzsignfoldertransmissionSigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, sEzsignfolderDescription, eEzsignfolderStep, iEzsignfolderSignaturetotal, iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner);
+    return Objects.hash(pkiEzsignfolderID, sEzsignfolderDescription, eEzsignfolderStep, iEzsignfolderSignaturetotal, iEzsignfolderFormfieldtotal, iEzsignfolderSignaturesigned, aObjEzsignfoldertransmissionSigner);
   }
 
   @Override
@@ -236,6 +259,7 @@ public class CustomEzsignfoldertransmissionResponse {
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
     sb.append("    iEzsignfolderSignaturetotal: ").append(toIndentedString(iEzsignfolderSignaturetotal)).append("\n");
+    sb.append("    iEzsignfolderFormfieldtotal: ").append(toIndentedString(iEzsignfolderFormfieldtotal)).append("\n");
     sb.append("    iEzsignfolderSignaturesigned: ").append(toIndentedString(iEzsignfolderSignaturesigned)).append("\n");
     sb.append("    aObjEzsignfoldertransmissionSigner: ").append(toIndentedString(aObjEzsignfoldertransmissionSigner)).append("\n");
     sb.append("}");
@@ -264,6 +288,7 @@ public class CustomEzsignfoldertransmissionResponse {
     openapiFields.add("sEzsignfolderDescription");
     openapiFields.add("eEzsignfolderStep");
     openapiFields.add("iEzsignfolderSignaturetotal");
+    openapiFields.add("iEzsignfolderFormfieldtotal");
     openapiFields.add("iEzsignfolderSignaturesigned");
     openapiFields.add("a_objEzsignfoldertransmissionSigner");
 
@@ -273,16 +298,17 @@ public class CustomEzsignfoldertransmissionResponse {
     openapiRequiredFields.add("sEzsignfolderDescription");
     openapiRequiredFields.add("eEzsignfolderStep");
     openapiRequiredFields.add("iEzsignfolderSignaturetotal");
+    openapiRequiredFields.add("iEzsignfolderFormfieldtotal");
     openapiRequiredFields.add("iEzsignfolderSignaturesigned");
     openapiRequiredFields.add("a_objEzsignfoldertransmissionSigner");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldertransmissionResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzsignfoldertransmissionResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzsignfoldertransmissionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -351,22 +377,22 @@ public class CustomEzsignfoldertransmissionResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzsignfoldertransmissionResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzsignfoldertransmissionResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldertransmissionResponse
-  */
+  /**
+   * Create an instance of CustomEzsignfoldertransmissionResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzsignfoldertransmissionResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzsignfoldertransmissionResponse
+   */
   public static CustomEzsignfoldertransmissionResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzsignfoldertransmissionResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzsignfoldertransmissionResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzsignfoldertransmissionResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.MultilingualUsergroupName;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -60,6 +61,14 @@ public class UsergroupResponseTest {
     @Test
     public void sUsergroupNameXTest() {
         // TODO: test sUsergroupNameX
+    }
+
+    /**
+     * Test the property 'objEmail'
+     */
+    @Test
+    public void objEmailTest() {
+        // TODO: test objEmail
     }
 
 }

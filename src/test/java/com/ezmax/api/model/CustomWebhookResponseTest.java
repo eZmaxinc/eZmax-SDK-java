@@ -53,6 +53,14 @@ public class CustomWebhookResponseTest {
     }
 
     /**
+     * Test the property 'fkiAuthenticationexternalID'
+     */
+    @Test
+    public void fkiAuthenticationexternalIDTest() {
+        // TODO: test fkiAuthenticationexternalID
+    }
+
+    /**
      * Test the property 'sWebhookDescription'
      */
     @Test
@@ -157,6 +165,14 @@ public class CustomWebhookResponseTest {
     }
 
     /**
+     * Test the property 'sAuthenticationexternalDescription'
+     */
+    @Test
+    public void sAuthenticationexternalDescriptionTest() {
+        // TODO: test sAuthenticationexternalDescription
+    }
+
+    /**
      * Test the property 'objAudit'
      */
     @Test
@@ -194,6 +210,14 @@ public class CustomWebhookResponseTest {
     @Test
     public void bWebhookTestTest() {
         // TODO: test bWebhookTest
+    }
+
+    /**
+     * Test the property 'eWebhookEmittype'
+     */
+    @Test
+    public void eWebhookEmittypeTest() {
+        // TODO: test eWebhookEmittype
     }
 
 }

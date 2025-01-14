@@ -152,6 +152,14 @@ public class EzsigndocumentResponseTest {
     }
 
     /**
+     * Test the property 'iEzsigndocumentFormfieldtotal'
+     */
+    @Test
+    public void iEzsigndocumentFormfieldtotalTest() {
+        // TODO: test iEzsigndocumentFormfieldtotal
+    }
+
+    /**
      * Test the property 'sEzsigndocumentMD5initial'
      */
     @Test

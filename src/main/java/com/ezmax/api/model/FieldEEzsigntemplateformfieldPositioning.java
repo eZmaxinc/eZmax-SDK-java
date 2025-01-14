@@ -29,9 +29,9 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEEzsigntemplateformfieldPositioning.Adapter.class)
 public enum FieldEEzsigntemplateformfieldPositioning {
   
-  PERCOORDINATES("PerCoordinates"),
+  PER_COORDINATES("PerCoordinates"),
   
-  PERPOSITIONINGPATTERN("PerPositioningPattern");
+  PER_POSITIONING_PATTERN("PerPositioningPattern");
 
   private String value;
 

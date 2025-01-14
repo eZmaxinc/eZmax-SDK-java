@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchiseoffice AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchiseofficeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION = "sFranchiseofficeDescription";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION)
@@ -71,10 +70,10 @@ public class FranchiseofficeAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Franchiseoffice in the language of the requester
    * @return sFranchiseofficeDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsFranchiseofficeDescription() {
     return sFranchiseofficeDescription;
@@ -90,11 +89,11 @@ public class FranchiseofficeAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Franchisereoffice
    * minimum: 0
    * @return pkiFranchiseofficeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiFranchiseofficeID() {
     return pkiFranchiseofficeID;
@@ -110,10 +109,10 @@ public class FranchiseofficeAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Franchiseoffice is active or not
    * @return bFranchiseofficeIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbFranchiseofficeIsactive() {
     return bFranchiseofficeIsactive;
@@ -184,12 +183,12 @@ public class FranchiseofficeAutocompleteElementResponse {
     openapiRequiredFields.add("bFranchiseofficeIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FranchiseofficeAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to FranchiseofficeAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!FranchiseofficeAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -246,22 +245,22 @@ public class FranchiseofficeAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of FranchiseofficeAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of FranchiseofficeAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to FranchiseofficeAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of FranchiseofficeAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of FranchiseofficeAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to FranchiseofficeAutocompleteElementResponse
+   */
   public static FranchiseofficeAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, FranchiseofficeAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of FranchiseofficeAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of FranchiseofficeAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

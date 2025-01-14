@@ -7,11 +7,11 @@
 
 * `UNSENT` (value: `"Unsent"`)
 
-* `PENDINGSEND` (value: `"PendingSend"`)
+* `PENDING_SEND` (value: `"PendingSend"`)
 
 * `SENT` (value: `"Sent"`)
 
-* `PARTIALLYSIGNED` (value: `"PartiallySigned"`)
+* `PARTIALLY_SIGNED` (value: `"PartiallySigned"`)
 
 * `EXPIRED` (value: `"Expired"`)
 

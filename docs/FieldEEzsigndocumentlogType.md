@@ -39,33 +39,39 @@
 
 * `UNSIGN` (value: `"Unsign"`)
 
-* `IMPORTFROMINSTANET` (value: `"ImportFromInstanet"`)
+* `IMPORT_FROM_INSTANET` (value: `"ImportFromInstanet"`)
 
-* `SENDEMAIL` (value: `"SendEmail"`)
+* `CREATED_FROM_EZSIGNTEMPLATEPUBLIC` (value: `"CreatedFromEzsigntemplatepublic"`)
 
-* `FORMCOMPLETION` (value: `"FormCompletion"`)
+* `SEND_EMAIL` (value: `"SendEmail"`)
 
-* `SIGNATUREATTACHMENTADD` (value: `"SignatureAttachmentAdd"`)
+* `FORM_COMPLETION` (value: `"FormCompletion"`)
 
-* `SIGNATUREATTACHMENTVALIDATION` (value: `"SignatureAttachmentValidation"`)
+* `FORM_SAVE_AS_DRAFT` (value: `"FormSaveAsDraft"`)
 
-* `SIGNATUREATTACHMENTREFUSED` (value: `"SignatureAttachmentRefused"`)
+* `SIGNATURE_ATTACHMENT_ADD` (value: `"SignatureAttachmentAdd"`)
 
-* `SIGNATUREATTACHMENTDELETED` (value: `"SignatureAttachmentDeleted"`)
+* `SIGNATURE_ATTACHMENT_VALIDATION` (value: `"SignatureAttachmentValidation"`)
 
-* `DECLINEDTOSIGN` (value: `"DeclinedToSign"`)
+* `SIGNATURE_ATTACHMENT_REFUSED` (value: `"SignatureAttachmentRefused"`)
 
-* `DELAYEDSENDEMAIL` (value: `"DelayedSendEmail"`)
+* `SIGNATURE_ATTACHMENT_DELETED` (value: `"SignatureAttachmentDeleted"`)
 
-* `ANNOTATIONADDED` (value: `"AnnotationAdded"`)
+* `DECLINED_TO_SIGN` (value: `"DeclinedToSign"`)
+
+* `DELAYED_SEND_EMAIL` (value: `"DelayedSendEmail"`)
+
+* `ANNOTATION_ADDED` (value: `"AnnotationAdded"`)
 
 * `FLATTEN` (value: `"Flatten"`)
 
-* `REGENERATEPAGE` (value: `"RegeneratePage"`)
+* `REGENERATE_PAGE` (value: `"RegeneratePage"`)
 
-* `REGENERATEPAGEFORM` (value: `"RegeneratePageForm"`)
+* `REGENERATE_PAGE_FORM` (value: `"RegeneratePageForm"`)
 
 * `REASSIGN` (value: `"Reassign"`)
+
+* `DOCUMENT_COMPLETION` (value: `"DocumentCompletion"`)
 
 
 

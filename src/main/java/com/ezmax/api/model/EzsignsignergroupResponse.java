@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
@@ -72,12 +71,12 @@ public class EzsignsignergroupResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsignergroup
    * minimum: 0
    * maximum: 65535
    * @return pkiEzsignsignergroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignsignergroupID() {
     return pkiEzsignsignergroupID;
@@ -93,10 +92,10 @@ public class EzsignsignergroupResponse {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsignsignergroupDescription
    * @return objEzsignsignergroupDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualEzsignsignergroupDescription getObjEzsignsignergroupDescription() {
     return objEzsignsignergroupDescription;
@@ -112,10 +111,10 @@ public class EzsignsignergroupResponse {
     return this;
   }
 
-   /**
+  /**
    * The Description of the Ezsignsignergroup in the language of the requester
    * @return sEzsignsignergroupDescriptionX
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEzsignsignergroupDescriptionX() {
     return sEzsignsignergroupDescriptionX;
@@ -185,12 +184,12 @@ public class EzsignsignergroupResponse {
     openapiRequiredFields.add("objEzsignsignergroupDescription");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignergroupResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignergroupResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignergroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -249,22 +248,22 @@ public class EzsignsignergroupResponse {
     }
   }
 
- /**
-  * Create an instance of EzsignsignergroupResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignergroupResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignergroupResponse
-  */
+  /**
+   * Create an instance of EzsignsignergroupResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignergroupResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignergroupResponse
+   */
   public static EzsignsignergroupResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignergroupResponse.class);
   }
 
- /**
-  * Convert an instance of EzsignsignergroupResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignergroupResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,8 +48,12 @@ import eZmaxAPI.JSON;
 /**
  * An Address Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AddressRequest {
+  public static final String SERIALIZED_NAME_PKI_ADDRESS_I_D = "pkiAddressID";
+  @SerializedName(SERIALIZED_NAME_PKI_ADDRESS_I_D)
+  private Integer pkiAddressID;
+
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)
   private Integer fkiAddresstypeID;
@@ -94,16 +97,36 @@ public class AddressRequest {
   public AddressRequest() {
   }
 
+  public AddressRequest pkiAddressID(Integer pkiAddressID) {
+    this.pkiAddressID = pkiAddressID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Address
+   * minimum: 0
+   * @return pkiAddressID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiAddressID() {
+    return pkiAddressID;
+  }
+
+  public void setPkiAddressID(Integer pkiAddressID) {
+    this.pkiAddressID = pkiAddressID;
+  }
+
+
   public AddressRequest fkiAddresstypeID(Integer fkiAddresstypeID) {
     this.fkiAddresstypeID = fkiAddresstypeID;
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Addresstype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Real Estate Invoice| |4|Invoicing| |5|Shipping|
    * minimum: 0
    * @return fkiAddresstypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiAddresstypeID() {
     return fkiAddresstypeID;
@@ -119,10 +142,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Civic number.
    * @return sAddressCivic
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAddressCivic() {
     return sAddressCivic;
@@ -138,10 +161,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Street Name
    * @return sAddressStreet
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAddressStreet() {
     return sAddressStreet;
@@ -157,11 +180,11 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Suite or appartment number
    * @return sAddressSuite
-  **/
-  @javax.annotation.Nonnull
+   */
+  @javax.annotation.Nullable
   public String getsAddressSuite() {
     return sAddressSuite;
   }
@@ -176,10 +199,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The City name
    * @return sAddressCity
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAddressCity() {
     return sAddressCity;
@@ -195,11 +218,11 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
    * minimum: 0
    * @return fkiProvinceID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiProvinceID() {
     return fkiProvinceID;
@@ -215,11 +238,11 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
    * minimum: 0
    * @return fkiCountryID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiCountryID() {
     return fkiCountryID;
@@ -235,10 +258,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Postal/Zip Code  The value must be entered without spaces
    * @return sAddressZip
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsAddressZip() {
     return sAddressZip;
@@ -254,10 +277,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Longitude of the Address
    * @return fAddressLongitude
-  **/
+   */
   @javax.annotation.Nullable
   public String getfAddressLongitude() {
     return fAddressLongitude;
@@ -273,10 +296,10 @@ public class AddressRequest {
     return this;
   }
 
-   /**
+  /**
    * The Latitude of the Address
    * @return fAddressLatitude
-  **/
+   */
   @javax.annotation.Nullable
   public String getfAddressLatitude() {
     return fAddressLatitude;
@@ -297,7 +320,8 @@ public class AddressRequest {
       return false;
     }
     AddressRequest addressRequest = (AddressRequest) o;
-    return Objects.equals(this.fkiAddresstypeID, addressRequest.fkiAddresstypeID) &&
+    return Objects.equals(this.pkiAddressID, addressRequest.pkiAddressID) &&
+        Objects.equals(this.fkiAddresstypeID, addressRequest.fkiAddresstypeID) &&
         Objects.equals(this.sAddressCivic, addressRequest.sAddressCivic) &&
         Objects.equals(this.sAddressStreet, addressRequest.sAddressStreet) &&
         Objects.equals(this.sAddressSuite, addressRequest.sAddressSuite) &&
@@ -311,13 +335,14 @@ public class AddressRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAddresstypeID, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, fkiProvinceID, fkiCountryID, sAddressZip, fAddressLongitude, fAddressLatitude);
+    return Objects.hash(pkiAddressID, fkiAddresstypeID, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, fkiProvinceID, fkiCountryID, sAddressZip, fAddressLongitude, fAddressLatitude);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressRequest {\n");
+    sb.append("    pkiAddressID: ").append(toIndentedString(pkiAddressID)).append("\n");
     sb.append("    fkiAddresstypeID: ").append(toIndentedString(fkiAddresstypeID)).append("\n");
     sb.append("    sAddressCivic: ").append(toIndentedString(sAddressCivic)).append("\n");
     sb.append("    sAddressStreet: ").append(toIndentedString(sAddressStreet)).append("\n");
@@ -350,6 +375,7 @@ public class AddressRequest {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("pkiAddressID");
     openapiFields.add("fkiAddresstypeID");
     openapiFields.add("sAddressCivic");
     openapiFields.add("sAddressStreet");
@@ -366,19 +392,18 @@ public class AddressRequest {
     openapiRequiredFields.add("fkiAddresstypeID");
     openapiRequiredFields.add("sAddressCivic");
     openapiRequiredFields.add("sAddressStreet");
-    openapiRequiredFields.add("sAddressSuite");
     openapiRequiredFields.add("sAddressCity");
     openapiRequiredFields.add("fkiProvinceID");
     openapiRequiredFields.add("fkiCountryID");
     openapiRequiredFields.add("sAddressZip");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddressRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddressRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddressRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -407,7 +432,7 @@ public class AddressRequest {
       if (!jsonObj.get("sAddressStreet").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sAddressStreet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAddressStreet").toString()));
       }
-      if (!jsonObj.get("sAddressSuite").isJsonPrimitive()) {
+      if ((jsonObj.get("sAddressSuite") != null && !jsonObj.get("sAddressSuite").isJsonNull()) && !jsonObj.get("sAddressSuite").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sAddressSuite` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAddressSuite").toString()));
       }
       if (!jsonObj.get("sAddressCity").isJsonPrimitive()) {
@@ -453,22 +478,22 @@ public class AddressRequest {
     }
   }
 
- /**
-  * Create an instance of AddressRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddressRequest
-  * @throws IOException if the JSON string is invalid with respect to AddressRequest
-  */
+  /**
+   * Create an instance of AddressRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddressRequest
+   * @throws IOException if the JSON string is invalid with respect to AddressRequest
+   */
   public static AddressRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddressRequest.class);
   }
 
- /**
-  * Convert an instance of AddressRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddressRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

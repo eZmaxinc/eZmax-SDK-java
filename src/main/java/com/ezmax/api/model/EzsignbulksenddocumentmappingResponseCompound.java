@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksenddocumentmappingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
@@ -89,11 +88,11 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignbulksenddocumentmapping.
    * minimum: 0
    * @return pkiEzsignbulksenddocumentmappingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignbulksenddocumentmappingID() {
     return pkiEzsignbulksenddocumentmappingID;
@@ -109,11 +108,11 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignbulksend
    * minimum: 0
    * @return fkiEzsignbulksendID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignbulksendID() {
     return fkiEzsignbulksendID;
@@ -129,11 +128,11 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackage
    * minimum: 0
    * @return fkiEzsigntemplatepackageID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplatepackageID() {
     return fkiEzsigntemplatepackageID;
@@ -149,11 +148,11 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return fkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -169,11 +168,11 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The order in which the Ezsigntemplate or Ezsigntemplatepackage will be presented to the signatory in the Ezsignfolder.
    * minimum: 0
    * @return iEzsignbulksenddocumentmappingOrder
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignbulksenddocumentmappingOrder() {
     return iEzsignbulksenddocumentmappingOrder;
@@ -189,10 +188,10 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsigntemplate
    * @return objEzsigntemplate
-  **/
+   */
   @javax.annotation.Nullable
   public EzsigntemplateResponseCompound getObjEzsigntemplate() {
     return objEzsigntemplate;
@@ -208,10 +207,10 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * Get objEzsigntemplatepackage
    * @return objEzsigntemplatepackage
-  **/
+   */
   @javax.annotation.Nullable
   public EzsigntemplatepackageResponseCompound getObjEzsigntemplatepackage() {
     return objEzsigntemplatepackage;
@@ -294,12 +293,12 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     openapiRequiredFields.add("iEzsignbulksenddocumentmappingOrder");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignbulksenddocumentmappingResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignbulksenddocumentmappingResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignbulksenddocumentmappingResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -361,22 +360,22 @@ public class EzsignbulksenddocumentmappingResponseCompound {
     }
   }
 
- /**
-  * Create an instance of EzsignbulksenddocumentmappingResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignbulksenddocumentmappingResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsignbulksenddocumentmappingResponseCompound
-  */
+  /**
+   * Create an instance of EzsignbulksenddocumentmappingResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignbulksenddocumentmappingResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsignbulksenddocumentmappingResponseCompound
+   */
   public static EzsignbulksenddocumentmappingResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignbulksenddocumentmappingResponseCompound.class);
   }
 
- /**
-  * Convert an instance of EzsignbulksenddocumentmappingResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignbulksenddocumentmappingResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

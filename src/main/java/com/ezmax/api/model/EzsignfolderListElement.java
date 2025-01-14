@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -125,6 +124,18 @@ public class EzsignfolderListElement {
   @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_COMPLETEDPERCENTAGE)
   private String dEzsignfolderCompletedpercentage;
 
+  public static final String SERIALIZED_NAME_D_EZSIGNFOLDER_FORMCOMPLETEDPERCENTAGE = "dEzsignfolderFormcompletedpercentage";
+  @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_FORMCOMPLETEDPERCENTAGE)
+  private String dEzsignfolderFormcompletedpercentage;
+
+  public static final String SERIALIZED_NAME_D_EZSIGNFOLDER_SIGNATURECOMPLETEDPERCENTAGE = "dEzsignfolderSignaturecompletedpercentage";
+  @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_SIGNATURECOMPLETEDPERCENTAGE)
+  private String dEzsignfolderSignaturecompletedpercentage;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_SIGNER = "bEzsignfolderSigner";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_SIGNER)
+  private Boolean bEzsignfolderSigner;
+
   public EzsignfolderListElement() {
   }
 
@@ -133,11 +144,11 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return pkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsignfolderID() {
     return pkiEzsignfolderID;
@@ -153,12 +164,12 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfoldertype.
    * minimum: 0
    * maximum: 65535
    * @return fkiEzsignfoldertypeID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfoldertypeID() {
     return fkiEzsignfoldertypeID;
@@ -174,10 +185,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfoldertypePrivacylevel
    * @return eEzsignfoldertypePrivacylevel
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfoldertypePrivacylevel geteEzsignfoldertypePrivacylevel() {
     return eEzsignfoldertypePrivacylevel;
@@ -193,10 +204,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The name of the Ezsignfoldertype in the language of the requester
    * @return sEzsignfoldertypeNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfoldertypeNameX() {
     return sEzsignfoldertypeNameX;
@@ -212,10 +223,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -231,10 +242,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * Get eEzsignfolderStep
    * @return eEzsignfolderStep
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEEzsignfolderStep geteEzsignfolderStep() {
     return eEzsignfolderStep;
@@ -250,10 +261,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The date and time at which the object was created
    * @return dtCreatedDate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtCreatedDate() {
     return dtCreatedDate;
@@ -269,10 +280,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The date and time at which the Ezsignfolder will be sent in the future.
    * @return dtEzsignfolderDelayedsenddate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignfolderDelayedsenddate() {
     return dtEzsignfolderDelayedsenddate;
@@ -288,10 +299,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The date and time at which the Ezsignfolder was sent the last time.
    * @return dtEzsignfolderSentdate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignfolderSentdate() {
     return dtEzsignfolderSentdate;
@@ -307,10 +318,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The maximum date and time at which the Ezsignfolder can be signed.
    * @return dtEzsignfolderDuedate
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzsignfolderDuedate() {
     return dtEzsignfolderDuedate;
@@ -326,10 +337,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of Ezsigndocument in the folder
    * @return iEzsigndocument
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocument() {
     return iEzsigndocument;
@@ -345,10 +356,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of Ezsigndocument in the folder that were saved in the edm system
    * @return iEzsigndocumentEdm
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsigndocumentEdm() {
     return iEzsigndocumentEdm;
@@ -364,10 +375,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of signature blocks in all Ezsigndocuments in the folder
    * @return iEzsignsignature
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignature() {
     return iEzsignsignature;
@@ -383,10 +394,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of already signed signature blocks in all Ezsigndocuments in the folder
    * @return iEzsignsignatureSigned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignsignatureSigned() {
     return iEzsignsignatureSigned;
@@ -402,10 +413,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of Ezsignformfieldgroup in all Ezsigndocuments in the folder
    * @return iEzsignformfieldgroup
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldgroup() {
     return iEzsignformfieldgroup;
@@ -421,10 +432,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * The total number of completed Ezsignformfieldgroup in all Ezsigndocuments in the folder
    * @return iEzsignformfieldgroupCompleted
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiEzsignformfieldgroupCompleted() {
     return iEzsignformfieldgroupCompleted;
@@ -440,10 +451,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignform/Ezsignsignatures has dependencies or not
    * @return bEzsignformHasdependencies
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getbEzsignformHasdependencies() {
     return bEzsignformHasdependencies;
@@ -459,10 +470,10 @@ public class EzsignfolderListElement {
     return this;
   }
 
-   /**
-   * Whether the Ezsignform/Ezsignsignatures has dependencies or not
+  /**
+   * Percentage of Ezsignform/Ezsignsignatures has completed
    * @return dEzsignfolderCompletedpercentage
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzsignfolderCompletedpercentage() {
     return dEzsignfolderCompletedpercentage;
@@ -470,6 +481,63 @@ public class EzsignfolderListElement {
 
   public void setdEzsignfolderCompletedpercentage(String dEzsignfolderCompletedpercentage) {
     this.dEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
+  }
+
+
+  public EzsignfolderListElement dEzsignfolderFormcompletedpercentage(String dEzsignfolderFormcompletedpercentage) {
+    this.dEzsignfolderFormcompletedpercentage = dEzsignfolderFormcompletedpercentage;
+    return this;
+  }
+
+  /**
+   * Percentage of Ezsignform has completed
+   * @return dEzsignfolderFormcompletedpercentage
+   */
+  @javax.annotation.Nonnull
+  public String getdEzsignfolderFormcompletedpercentage() {
+    return dEzsignfolderFormcompletedpercentage;
+  }
+
+  public void setdEzsignfolderFormcompletedpercentage(String dEzsignfolderFormcompletedpercentage) {
+    this.dEzsignfolderFormcompletedpercentage = dEzsignfolderFormcompletedpercentage;
+  }
+
+
+  public EzsignfolderListElement dEzsignfolderSignaturecompletedpercentage(String dEzsignfolderSignaturecompletedpercentage) {
+    this.dEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
+    return this;
+  }
+
+  /**
+   * Percentage of Ezsignsignatures has signed
+   * @return dEzsignfolderSignaturecompletedpercentage
+   */
+  @javax.annotation.Nonnull
+  public String getdEzsignfolderSignaturecompletedpercentage() {
+    return dEzsignfolderSignaturecompletedpercentage;
+  }
+
+  public void setdEzsignfolderSignaturecompletedpercentage(String dEzsignfolderSignaturecompletedpercentage) {
+    this.dEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
+  }
+
+
+  public EzsignfolderListElement bEzsignfolderSigner(Boolean bEzsignfolderSigner) {
+    this.bEzsignfolderSigner = bEzsignfolderSigner;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsignfolder has an Ezsignsignatures that need to be signed or an Ezsignformfieldgroups that need to be filled by the current user
+   * @return bEzsignfolderSigner
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfolderSigner() {
+    return bEzsignfolderSigner;
+  }
+
+  public void setbEzsignfolderSigner(Boolean bEzsignfolderSigner) {
+    this.bEzsignfolderSigner = bEzsignfolderSigner;
   }
 
 
@@ -500,12 +568,15 @@ public class EzsignfolderListElement {
         Objects.equals(this.iEzsignformfieldgroup, ezsignfolderListElement.iEzsignformfieldgroup) &&
         Objects.equals(this.iEzsignformfieldgroupCompleted, ezsignfolderListElement.iEzsignformfieldgroupCompleted) &&
         Objects.equals(this.bEzsignformHasdependencies, ezsignfolderListElement.bEzsignformHasdependencies) &&
-        Objects.equals(this.dEzsignfolderCompletedpercentage, ezsignfolderListElement.dEzsignfolderCompletedpercentage);
+        Objects.equals(this.dEzsignfolderCompletedpercentage, ezsignfolderListElement.dEzsignfolderCompletedpercentage) &&
+        Objects.equals(this.dEzsignfolderFormcompletedpercentage, ezsignfolderListElement.dEzsignfolderFormcompletedpercentage) &&
+        Objects.equals(this.dEzsignfolderSignaturecompletedpercentage, ezsignfolderListElement.dEzsignfolderSignaturecompletedpercentage) &&
+        Objects.equals(this.bEzsignfolderSigner, ezsignfolderListElement.bEzsignfolderSigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, dtCreatedDate, dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate, dtEzsignfolderDuedate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned, iEzsignformfieldgroup, iEzsignformfieldgroupCompleted, bEzsignformHasdependencies, dEzsignfolderCompletedpercentage);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, dtCreatedDate, dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate, dtEzsignfolderDuedate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned, iEzsignformfieldgroup, iEzsignformfieldgroupCompleted, bEzsignformHasdependencies, dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage, bEzsignfolderSigner);
   }
 
   @Override
@@ -530,6 +601,9 @@ public class EzsignfolderListElement {
     sb.append("    iEzsignformfieldgroupCompleted: ").append(toIndentedString(iEzsignformfieldgroupCompleted)).append("\n");
     sb.append("    bEzsignformHasdependencies: ").append(toIndentedString(bEzsignformHasdependencies)).append("\n");
     sb.append("    dEzsignfolderCompletedpercentage: ").append(toIndentedString(dEzsignfolderCompletedpercentage)).append("\n");
+    sb.append("    dEzsignfolderFormcompletedpercentage: ").append(toIndentedString(dEzsignfolderFormcompletedpercentage)).append("\n");
+    sb.append("    dEzsignfolderSignaturecompletedpercentage: ").append(toIndentedString(dEzsignfolderSignaturecompletedpercentage)).append("\n");
+    sb.append("    bEzsignfolderSigner: ").append(toIndentedString(bEzsignfolderSigner)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -570,6 +644,9 @@ public class EzsignfolderListElement {
     openapiFields.add("iEzsignformfieldgroupCompleted");
     openapiFields.add("bEzsignformHasdependencies");
     openapiFields.add("dEzsignfolderCompletedpercentage");
+    openapiFields.add("dEzsignfolderFormcompletedpercentage");
+    openapiFields.add("dEzsignfolderSignaturecompletedpercentage");
+    openapiFields.add("bEzsignfolderSigner");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -587,14 +664,16 @@ public class EzsignfolderListElement {
     openapiRequiredFields.add("iEzsignformfieldgroup");
     openapiRequiredFields.add("iEzsignformfieldgroupCompleted");
     openapiRequiredFields.add("dEzsignfolderCompletedpercentage");
+    openapiRequiredFields.add("dEzsignfolderFormcompletedpercentage");
+    openapiRequiredFields.add("dEzsignfolderSignaturecompletedpercentage");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfolderListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfolderListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -642,6 +721,12 @@ public class EzsignfolderListElement {
       if (!jsonObj.get("dEzsignfolderCompletedpercentage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dEzsignfolderCompletedpercentage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignfolderCompletedpercentage").toString()));
       }
+      if (!jsonObj.get("dEzsignfolderFormcompletedpercentage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzsignfolderFormcompletedpercentage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignfolderFormcompletedpercentage").toString()));
+      }
+      if (!jsonObj.get("dEzsignfolderSignaturecompletedpercentage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzsignfolderSignaturecompletedpercentage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignfolderSignaturecompletedpercentage").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -673,22 +758,22 @@ public class EzsignfolderListElement {
     }
   }
 
- /**
-  * Create an instance of EzsignfolderListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfolderListElement
-  * @throws IOException if the JSON string is invalid with respect to EzsignfolderListElement
-  */
+  /**
+   * Create an instance of EzsignfolderListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfolderListElement
+   * @throws IOException if the JSON string is invalid with respect to EzsignfolderListElement
+   */
   public static EzsignfolderListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfolderListElement.class);
   }
 
- /**
-  * Convert an instance of EzsignfolderListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfolderListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

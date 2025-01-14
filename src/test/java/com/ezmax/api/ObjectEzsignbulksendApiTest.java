@@ -15,8 +15,8 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Request;
-import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Response;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
@@ -53,10 +53,10 @@ public class ObjectEzsignbulksendApiTest {
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void ezsignbulksendCreateEzsignbulksendtransmissionV1Test() throws ApiException {
+    public void ezsignbulksendCreateEzsignbulksendtransmissionV2Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
-        EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request = null;
-        EzsignbulksendCreateEzsignbulksendtransmissionV1Response response = api.ezsignbulksendCreateEzsignbulksendtransmissionV1(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+        EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request = null;
+        EzsignbulksendCreateEzsignbulksendtransmissionV2Response response = api.ezsignbulksendCreateEzsignbulksendtransmissionV2(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
         // TODO: test validations
     }
 

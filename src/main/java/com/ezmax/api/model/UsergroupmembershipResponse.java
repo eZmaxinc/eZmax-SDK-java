@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
@@ -99,12 +98,12 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroupmembership
    * minimum: 0
    * maximum: 65535
    * @return pkiUsergroupmembershipID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiUsergroupmembershipID() {
     return pkiUsergroupmembershipID;
@@ -120,12 +119,12 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroup
    * minimum: 0
    * maximum: 255
    * @return fkiUsergroupID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUsergroupID() {
     return fkiUsergroupID;
@@ -141,11 +140,11 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -161,12 +160,12 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Usergroupexternal
    * minimum: 0
    * maximum: 255
    * @return fkiUsergroupexternalID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUsergroupexternalID() {
     return fkiUsergroupexternalID;
@@ -182,10 +181,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstname
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserFirstname() {
     return sUserFirstname;
@@ -201,10 +200,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastname
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserLastname() {
     return sUserLastname;
@@ -220,10 +219,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginname
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUserLoginname() {
     return sUserLoginname;
@@ -239,10 +238,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -258,10 +257,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Usergroup in the language of the requester
    * @return sUsergroupNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUsergroupNameX() {
     return sUsergroupNameX;
@@ -277,10 +276,10 @@ public class UsergroupmembershipResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the Usergroupexternal
    * @return sUsergroupexternalName
-  **/
+   */
   @javax.annotation.Nullable
   public String getsUsergroupexternalName() {
     return sUsergroupexternalName;
@@ -372,12 +371,12 @@ public class UsergroupmembershipResponse {
     openapiRequiredFields.add("sUsergroupNameX");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UsergroupmembershipResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UsergroupmembershipResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupmembershipResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -449,22 +448,22 @@ public class UsergroupmembershipResponse {
     }
   }
 
- /**
-  * Create an instance of UsergroupmembershipResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UsergroupmembershipResponse
-  * @throws IOException if the JSON string is invalid with respect to UsergroupmembershipResponse
-  */
+  /**
+   * Create an instance of UsergroupmembershipResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UsergroupmembershipResponse
+   * @throws IOException if the JSON string is invalid with respect to UsergroupmembershipResponse
+   */
   public static UsergroupmembershipResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UsergroupmembershipResponse.class);
   }
 
- /**
-  * Convert an instance of UsergroupmembershipResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UsergroupmembershipResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

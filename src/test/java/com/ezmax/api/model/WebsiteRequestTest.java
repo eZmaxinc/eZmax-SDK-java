@@ -38,6 +38,14 @@ public class WebsiteRequestTest {
     }
 
     /**
+     * Test the property 'pkiWebsiteID'
+     */
+    @Test
+    public void pkiWebsiteIDTest() {
+        // TODO: test pkiWebsiteID
+    }
+
+    /**
      * Test the property 'fkiWebsitetypeID'
      */
     @Test

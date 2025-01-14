@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Warning Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseWarning {
   public static final String SERIALIZED_NAME_S_WARNING_MESSAGE = "sWarningMessage";
   @SerializedName(SERIALIZED_NAME_S_WARNING_MESSAGE)
@@ -67,10 +66,10 @@ public class CommonResponseWarning {
     return this;
   }
 
-   /**
+  /**
    * More detail about the warning
    * @return sWarningMessage
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsWarningMessage() {
     return sWarningMessage;
@@ -86,10 +85,10 @@ public class CommonResponseWarning {
     return this;
   }
 
-   /**
+  /**
    * The warning code. See documentation for valid values
    * @return eWarningCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String geteWarningCode() {
     return eWarningCode;
@@ -156,12 +155,12 @@ public class CommonResponseWarning {
     openapiRequiredFields.add("eWarningCode");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonResponseWarning
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonResponseWarning
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonResponseWarning.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -221,22 +220,22 @@ public class CommonResponseWarning {
     }
   }
 
- /**
-  * Create an instance of CommonResponseWarning given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonResponseWarning
-  * @throws IOException if the JSON string is invalid with respect to CommonResponseWarning
-  */
+  /**
+   * Create an instance of CommonResponseWarning given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonResponseWarning
+   * @throws IOException if the JSON string is invalid with respect to CommonResponseWarning
+   */
   public static CommonResponseWarning fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonResponseWarning.class);
   }
 
- /**
-  * Convert an instance of CommonResponseWarning to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonResponseWarning to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

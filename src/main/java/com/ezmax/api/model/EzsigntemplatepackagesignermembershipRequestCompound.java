@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesignermembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagesignermembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D = "pkiEzsigntemplatepackagesignermembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D)
@@ -79,11 +78,11 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackagesignermembership
    * minimum: 0
    * @return pkiEzsigntemplatepackagesignermembershipID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigntemplatepackagesignermembershipID() {
     return pkiEzsigntemplatepackagesignermembershipID;
@@ -99,11 +98,11 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackagemembership
    * minimum: 0
    * @return fkiEzsigntemplatepackagemembershipID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplatepackagemembershipID() {
     return fkiEzsigntemplatepackagemembershipID;
@@ -119,11 +118,11 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatepackagesigner
    * minimum: 0
    * @return fkiEzsigntemplatepackagesignerID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplatepackagesignerID() {
     return fkiEzsigntemplatepackagesignerID;
@@ -139,11 +138,11 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatesigner
    * minimum: 0
    * @return fkiEzsigntemplatesignerID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplatesignerID() {
     return fkiEzsigntemplatesignerID;
@@ -159,11 +158,11 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The Copy number in case of multiple copies.
    * minimum: 1
    * @return iEzsigntemplatepackagesignermembershipCopy
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiEzsigntemplatepackagesignermembershipCopy() {
     return iEzsigntemplatepackagesignermembershipCopy;
@@ -240,12 +239,12 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     openapiRequiredFields.add("fkiEzsigntemplatesignerID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagesignermembershipRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatepackagesignermembershipRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepackagesignermembershipRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -299,22 +298,22 @@ public class EzsigntemplatepackagesignermembershipRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatepackagesignermembershipRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatepackagesignermembershipRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagesignermembershipRequestCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatepackagesignermembershipRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatepackagesignermembershipRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatepackagesignermembershipRequestCompound
+   */
   public static EzsigntemplatepackagesignermembershipRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatepackagesignermembershipRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatepackagesignermembershipRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatepackagesignermembershipRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

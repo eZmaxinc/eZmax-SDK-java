@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
@@ -75,10 +74,10 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntsarequirement in the language of the requester
    * @return sEzsigntsarequirementDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntsarequirementDescriptionX() {
     return sEzsigntsarequirementDescriptionX;
@@ -94,12 +93,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
    * minimum: 1
    * maximum: 3
    * @return pkiEzsigntsarequirementID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzsigntsarequirementID() {
     return pkiEzsigntsarequirementID;
@@ -115,10 +114,10 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsigntsarequirement is active or not
    * @return bEzsigntsarequirementIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsigntsarequirementIsactive() {
     return bEzsigntsarequirementIsactive;
@@ -134,10 +133,10 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Indicates if the element is disabled in the context
    * @return bDisabled
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDisabled() {
     return bDisabled;
@@ -212,12 +211,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     openapiRequiredFields.add("bDisabled");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntsarequirementAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntsarequirementAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntsarequirementAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -274,22 +273,22 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of EzsigntsarequirementAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntsarequirementAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to EzsigntsarequirementAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of EzsigntsarequirementAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntsarequirementAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to EzsigntsarequirementAutocompleteElementResponse
+   */
   public static EzsigntsarequirementAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntsarequirementAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of EzsigntsarequirementAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntsarequirementAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

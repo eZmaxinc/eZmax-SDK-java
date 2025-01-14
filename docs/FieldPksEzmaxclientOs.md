@@ -5,11 +5,13 @@
 ## Enum
 
 
-* `IOS` (value: `"iOS"`)
+* `ANDROID` (value: `"Android"`)
 
-* `IPADOS` (value: `"iPadOS"`)
+* `I_OS` (value: `"iOS"`)
 
-* `MACOS` (value: `"macOS"`)
+* `I_PAD_OS` (value: `"iPadOS"`)
+
+* `MAC_OS` (value: `"macOS"`)
 
 * `WINDOWS` (value: `"Windows"`)
 

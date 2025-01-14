@@ -28,8 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Request;
-import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV1Response;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
+import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
@@ -89,9 +89,9 @@ public class ObjectEzsignbulksendApi {
     }
 
     /**
-     * Build call for ezsignbulksendCreateEzsignbulksendtransmissionV1
+     * Build call for ezsignbulksendCreateEzsignbulksendtransmissionV2
      * @param pkiEzsignbulksendID  (required)
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request  (required)
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -103,7 +103,7 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV1Call(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV2Call(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -117,10 +117,10 @@ public class ObjectEzsignbulksendApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ezsignbulksendCreateEzsignbulksendtransmissionV1Request;
+        Object localVarPostBody = ezsignbulksendCreateEzsignbulksendtransmissionV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission"
+        String localVarPath = "/2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission"
             .replace("{" + "pkiEzsignbulksendID" + "}", localVarApiClient.escapeString(pkiEzsignbulksendID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -150,18 +150,18 @@ public class ObjectEzsignbulksendApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV1ValidateBeforeCall(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV2ValidateBeforeCall(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsignbulksendID' is set
         if (pkiEzsignbulksendID == null) {
-            throw new ApiException("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiEzsignbulksendID' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2(Async)");
         }
 
-        // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' is set
-        if (ezsignbulksendCreateEzsignbulksendtransmissionV1Request == null) {
-            throw new ApiException("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV1Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV1(Async)");
+        // verify the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' is set
+        if (ezsignbulksendCreateEzsignbulksendtransmissionV2Request == null) {
+            throw new ApiException("Missing the required parameter 'ezsignbulksendCreateEzsignbulksendtransmissionV2Request' when calling ezsignbulksendCreateEzsignbulksendtransmissionV2(Async)");
         }
 
-        return ezsignbulksendCreateEzsignbulksendtransmissionV1Call(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request, _callback);
+        return ezsignbulksendCreateEzsignbulksendtransmissionV2Call(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request, _callback);
 
     }
 
@@ -169,8 +169,8 @@ public class ObjectEzsignbulksendApi {
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID  (required)
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request  (required)
-     * @return EzsignbulksendCreateEzsignbulksendtransmissionV1Response
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request  (required)
+     * @return EzsignbulksendCreateEzsignbulksendtransmissionV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -180,8 +180,8 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignbulksendCreateEzsignbulksendtransmissionV1Response ezsignbulksendCreateEzsignbulksendtransmissionV1(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request) throws ApiException {
-        ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> localVarResp = ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request);
+    public EzsignbulksendCreateEzsignbulksendtransmissionV2Response ezsignbulksendCreateEzsignbulksendtransmissionV2(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request) throws ApiException {
+        ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> localVarResp = ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request);
         return localVarResp.getData();
     }
 
@@ -189,8 +189,8 @@ public class ObjectEzsignbulksendApi {
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID  (required)
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request  (required)
-     * @return ApiResponse&lt;EzsignbulksendCreateEzsignbulksendtransmissionV1Response&gt;
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request  (required)
+     * @return ApiResponse&lt;EzsignbulksendCreateEzsignbulksendtransmissionV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -200,9 +200,9 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> ezsignbulksendCreateEzsignbulksendtransmissionV1WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request) throws ApiException {
-        okhttp3.Call localVarCall = ezsignbulksendCreateEzsignbulksendtransmissionV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(){}.getType();
+    public ApiResponse<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> ezsignbulksendCreateEzsignbulksendtransmissionV2WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignbulksendCreateEzsignbulksendtransmissionV2ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request, null);
+        Type localVarReturnType = new TypeToken<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -210,7 +210,7 @@ public class ObjectEzsignbulksendApi {
      * Create a new Ezsignbulksendtransmission in the Ezsignbulksend (asynchronously)
      * 
      * @param pkiEzsignbulksendID  (required)
-     * @param ezsignbulksendCreateEzsignbulksendtransmissionV1Request  (required)
+     * @param ezsignbulksendCreateEzsignbulksendtransmissionV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -222,10 +222,10 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV1Async(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV1Request ezsignbulksendCreateEzsignbulksendtransmissionV1Request, final ApiCallback<EzsignbulksendCreateEzsignbulksendtransmissionV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendCreateEzsignbulksendtransmissionV2Async(Integer pkiEzsignbulksendID, EzsignbulksendCreateEzsignbulksendtransmissionV2Request ezsignbulksendCreateEzsignbulksendtransmissionV2Request, final ApiCallback<EzsignbulksendCreateEzsignbulksendtransmissionV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsignbulksendCreateEzsignbulksendtransmissionV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignbulksendCreateEzsignbulksendtransmissionV1Response>(){}.getType();
+        okhttp3.Call localVarCall = ezsignbulksendCreateEzsignbulksendtransmissionV2ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendCreateEzsignbulksendtransmissionV2Request, _callback);
+        Type localVarReturnType = new TypeToken<EzsignbulksendCreateEzsignbulksendtransmissionV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

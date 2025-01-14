@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignfoldersignerassociation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -73,10 +72,10 @@ public class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of unique IDs representing the object that were requested to be created.  They are returned in the same order as the array containing the objects to be created that was sent in the request.
    * @return aPkiEzsignfoldersignerassociationID
-  **/
+   */
   @javax.annotation.Nonnull
   public List<Integer> getaPkiEzsignfoldersignerassociationID() {
     return aPkiEzsignfoldersignerassociationID;
@@ -139,12 +138,12 @@ public class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
     openapiRequiredFields.add("a_pkiEzsignfoldersignerassociationID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -204,22 +203,22 @@ public class EzsignfoldersignerassociationCreateObjectV2ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
-  */
+  /**
+   * Create an instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EzsignfoldersignerassociationCreateObjectV2ResponseMPayload
+   */
   public static EzsignfoldersignerassociationCreateObjectV2ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignfoldersignerassociationCreateObjectV2ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignfoldersignerassociationCreateObjectV2ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

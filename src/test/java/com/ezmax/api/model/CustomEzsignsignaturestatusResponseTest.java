@@ -69,4 +69,12 @@ public class CustomEzsignsignaturestatusResponseTest {
         // TODO: test iEzsignsignaturestatusSigned
     }
 
+    /**
+     * Test the property 'iEzsignsignaturestatusConditional'
+     */
+    @Test
+    public void iEzsignsignaturestatusConditionalTest() {
+        // TODO: test iEzsignsignaturestatusConditional
+    }
+
 }

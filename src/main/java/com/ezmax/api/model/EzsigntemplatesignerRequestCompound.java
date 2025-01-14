@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsigntemplatesignerMapping;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -37,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesigner Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatesignerRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D = "pkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D)
@@ -58,6 +58,26 @@ public class EzsigntemplatesignerRequestCompound {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
   private Integer fkiEzsigntemplateID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  private Integer fkiUsergroupID;
+
+  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  private Integer fkiEzdoctemplatedocumentID;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNER_RECEIVECOPY = "bEzsigntemplatesignerReceivecopy";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNER_RECEIVECOPY)
+  private Boolean bEzsigntemplatesignerReceivecopy;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNER_MAPPING = "eEzsigntemplatesignerMapping";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNER_MAPPING)
+  private FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNER_DESCRIPTION = "sEzsigntemplatesignerDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNER_DESCRIPTION)
@@ -71,11 +91,11 @@ public class EzsigntemplatesignerRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplatesigner
    * minimum: 0
    * @return pkiEzsigntemplatesignerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzsigntemplatesignerID() {
     return pkiEzsigntemplatesignerID;
@@ -91,11 +111,11 @@ public class EzsigntemplatesignerRequestCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsigntemplate
    * minimum: 0
    * @return fkiEzsigntemplateID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsigntemplateID() {
     return fkiEzsigntemplateID;
@@ -106,15 +126,115 @@ public class EzsigntemplatesignerRequestCompound {
   }
 
 
+  public EzsigntemplatesignerRequestCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public EzsigntemplatesignerRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Usergroup
+   * minimum: 0
+   * maximum: 255
+   * @return fkiUsergroupID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUsergroupID() {
+    return fkiUsergroupID;
+  }
+
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+  }
+
+
+  public EzsigntemplatesignerRequestCompound fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzdoctemplatedocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzdoctemplatedocumentID() {
+    return fkiEzdoctemplatedocumentID;
+  }
+
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
+  }
+
+
+  public EzsigntemplatesignerRequestCompound bEzsigntemplatesignerReceivecopy(Boolean bEzsigntemplatesignerReceivecopy) {
+    this.bEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
+    return this;
+  }
+
+  /**
+   * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
+   * @return bEzsigntemplatesignerReceivecopy
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplatesignerReceivecopy() {
+    return bEzsigntemplatesignerReceivecopy;
+  }
+
+  public void setbEzsigntemplatesignerReceivecopy(Boolean bEzsigntemplatesignerReceivecopy) {
+    this.bEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
+  }
+
+
+  public EzsigntemplatesignerRequestCompound eEzsigntemplatesignerMapping(FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
+    this.eEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplatesignerMapping
+   * @return eEzsigntemplatesignerMapping
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplatesignerMapping geteEzsigntemplatesignerMapping() {
+    return eEzsigntemplatesignerMapping;
+  }
+
+  public void seteEzsigntemplatesignerMapping(FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
+    this.eEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
+  }
+
+
   public EzsigntemplatesignerRequestCompound sEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsigntemplatesigner
    * @return sEzsigntemplatesignerDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigntemplatesignerDescription() {
     return sEzsigntemplatesignerDescription;
@@ -137,12 +257,17 @@ public class EzsigntemplatesignerRequestCompound {
     EzsigntemplatesignerRequestCompound ezsigntemplatesignerRequestCompound = (EzsigntemplatesignerRequestCompound) o;
     return Objects.equals(this.pkiEzsigntemplatesignerID, ezsigntemplatesignerRequestCompound.pkiEzsigntemplatesignerID) &&
         Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatesignerRequestCompound.fkiEzsigntemplateID) &&
+        Objects.equals(this.fkiUserID, ezsigntemplatesignerRequestCompound.fkiUserID) &&
+        Objects.equals(this.fkiUsergroupID, ezsigntemplatesignerRequestCompound.fkiUsergroupID) &&
+        Objects.equals(this.fkiEzdoctemplatedocumentID, ezsigntemplatesignerRequestCompound.fkiEzdoctemplatedocumentID) &&
+        Objects.equals(this.bEzsigntemplatesignerReceivecopy, ezsigntemplatesignerRequestCompound.bEzsigntemplatesignerReceivecopy) &&
+        Objects.equals(this.eEzsigntemplatesignerMapping, ezsigntemplatesignerRequestCompound.eEzsigntemplatesignerMapping) &&
         Objects.equals(this.sEzsigntemplatesignerDescription, ezsigntemplatesignerRequestCompound.sEzsigntemplatesignerDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatesignerID, fkiEzsigntemplateID, sEzsigntemplatesignerDescription);
+    return Objects.hash(pkiEzsigntemplatesignerID, fkiEzsigntemplateID, fkiUserID, fkiUsergroupID, fkiEzdoctemplatedocumentID, bEzsigntemplatesignerReceivecopy, eEzsigntemplatesignerMapping, sEzsigntemplatesignerDescription);
   }
 
   @Override
@@ -151,6 +276,11 @@ public class EzsigntemplatesignerRequestCompound {
     sb.append("class EzsigntemplatesignerRequestCompound {\n");
     sb.append("    pkiEzsigntemplatesignerID: ").append(toIndentedString(pkiEzsigntemplatesignerID)).append("\n");
     sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
+    sb.append("    fkiEzdoctemplatedocumentID: ").append(toIndentedString(fkiEzdoctemplatedocumentID)).append("\n");
+    sb.append("    bEzsigntemplatesignerReceivecopy: ").append(toIndentedString(bEzsigntemplatesignerReceivecopy)).append("\n");
+    sb.append("    eEzsigntemplatesignerMapping: ").append(toIndentedString(eEzsigntemplatesignerMapping)).append("\n");
     sb.append("    sEzsigntemplatesignerDescription: ").append(toIndentedString(sEzsigntemplatesignerDescription)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -176,6 +306,11 @@ public class EzsigntemplatesignerRequestCompound {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsigntemplatesignerID");
     openapiFields.add("fkiEzsigntemplateID");
+    openapiFields.add("fkiUserID");
+    openapiFields.add("fkiUsergroupID");
+    openapiFields.add("fkiEzdoctemplatedocumentID");
+    openapiFields.add("bEzsigntemplatesignerReceivecopy");
+    openapiFields.add("eEzsigntemplatesignerMapping");
     openapiFields.add("sEzsigntemplatesignerDescription");
 
     // a set of required properties/fields (JSON key names)
@@ -184,12 +319,12 @@ public class EzsigntemplatesignerRequestCompound {
     openapiRequiredFields.add("sEzsigntemplatesignerDescription");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatesignerRequestCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigntemplatesignerRequestCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatesignerRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -212,6 +347,10 @@ public class EzsigntemplatesignerRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `eEzsigntemplatesignerMapping`
+      if (jsonObj.get("eEzsigntemplatesignerMapping") != null && !jsonObj.get("eEzsigntemplatesignerMapping").isJsonNull()) {
+        FieldEEzsigntemplatesignerMapping.validateJsonElement(jsonObj.get("eEzsigntemplatesignerMapping"));
+      }
       if (!jsonObj.get("sEzsigntemplatesignerDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatesignerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatesignerDescription").toString()));
       }
@@ -246,22 +385,22 @@ public class EzsigntemplatesignerRequestCompound {
     }
   }
 
- /**
-  * Create an instance of EzsigntemplatesignerRequestCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigntemplatesignerRequestCompound
-  * @throws IOException if the JSON string is invalid with respect to EzsigntemplatesignerRequestCompound
-  */
+  /**
+   * Create an instance of EzsigntemplatesignerRequestCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigntemplatesignerRequestCompound
+   * @throws IOException if the JSON string is invalid with respect to EzsigntemplatesignerRequestCompound
+   */
   public static EzsigntemplatesignerRequestCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigntemplatesignerRequestCompound.class);
   }
 
- /**
-  * Convert an instance of EzsigntemplatesignerRequestCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigntemplatesignerRequestCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

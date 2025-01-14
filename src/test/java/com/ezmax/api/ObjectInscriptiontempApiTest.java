@@ -15,7 +15,10 @@ package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.InscriptiontempGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptiontempGetCommunicationListV1Response;
+import com.ezmax.api.model.InscriptiontempGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.InscriptiontempGetCommunicationsendersV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +36,20 @@ public class ObjectInscriptiontempApiTest {
     private final ObjectInscriptiontempApi api = new ObjectInscriptiontempApi();
 
     /**
+     * Retrieve Communication count
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptiontempGetCommunicationCountV1Test() throws ApiException {
+        Integer pkiInscriptiontempID = null;
+        InscriptiontempGetCommunicationCountV1Response response = api.inscriptiontempGetCommunicationCountV1(pkiInscriptiontempID);
+        // TODO: test validations
+    }
+
+    /**
      * Retrieve Communication list
      *
      * 
@@ -43,6 +60,34 @@ public class ObjectInscriptiontempApiTest {
     public void inscriptiontempGetCommunicationListV1Test() throws ApiException {
         Integer pkiInscriptiontempID = null;
         InscriptiontempGetCommunicationListV1Response response = api.inscriptiontempGetCommunicationListV1(pkiInscriptiontempID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationrecipient
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptiontempGetCommunicationrecipientsV1Test() throws ApiException {
+        Integer pkiInscriptiontempID = null;
+        InscriptiontempGetCommunicationrecipientsV1Response response = api.inscriptiontempGetCommunicationrecipientsV1(pkiInscriptiontempID);
+        // TODO: test validations
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s Communicationsender
+     *
+     * 
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void inscriptiontempGetCommunicationsendersV1Test() throws ApiException {
+        Integer pkiInscriptiontempID = null;
+        InscriptiontempGetCommunicationsendersV1Response response = api.inscriptiontempGetCommunicationsendersV1(pkiInscriptiontempID);
         // TODO: test validations
     }
 

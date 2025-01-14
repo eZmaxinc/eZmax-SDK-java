@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/emailtype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EmailtypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EMAILTYPE = "a_objEmailtype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAILTYPE)
@@ -74,10 +73,10 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
     return this;
   }
 
-   /**
+  /**
    * An array of Emailtype autocomplete element response.
    * @return aObjEmailtype
-  **/
+   */
   @javax.annotation.Nonnull
   public List<EmailtypeAutocompleteElementResponse> getaObjEmailtype() {
     return aObjEmailtype;
@@ -140,12 +139,12 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
     openapiRequiredFields.add("a_objEmailtype");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EmailtypeGetAutocompleteV2ResponseMPayload
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EmailtypeGetAutocompleteV2ResponseMPayload
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EmailtypeGetAutocompleteV2ResponseMPayload.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -209,22 +208,22 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
     }
   }
 
- /**
-  * Create an instance of EmailtypeGetAutocompleteV2ResponseMPayload given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EmailtypeGetAutocompleteV2ResponseMPayload
-  * @throws IOException if the JSON string is invalid with respect to EmailtypeGetAutocompleteV2ResponseMPayload
-  */
+  /**
+   * Create an instance of EmailtypeGetAutocompleteV2ResponseMPayload given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EmailtypeGetAutocompleteV2ResponseMPayload
+   * @throws IOException if the JSON string is invalid with respect to EmailtypeGetAutocompleteV2ResponseMPayload
+   */
   public static EmailtypeGetAutocompleteV2ResponseMPayload fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EmailtypeGetAutocompleteV2ResponseMPayload.class);
   }
 
- /**
-  * Convert an instance of EmailtypeGetAutocompleteV2ResponseMPayload to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EmailtypeGetAutocompleteV2ResponseMPayload to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermRequest {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
@@ -85,10 +84,10 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Paymentterm
    * @return pkiPaymenttermID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiPaymenttermID() {
     return pkiPaymenttermID;
@@ -104,10 +103,10 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * The code of the Paymentterm
    * @return sPaymenttermCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsPaymenttermCode() {
     return sPaymenttermCode;
@@ -123,10 +122,10 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * Get ePaymenttermType
    * @return ePaymenttermType
-  **/
+   */
   @javax.annotation.Nonnull
   public FieldEPaymenttermType getePaymenttermType() {
     return ePaymenttermType;
@@ -142,12 +141,12 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * The day of the Paymentterm
    * minimum: 0
    * maximum: 255
    * @return iPaymenttermDay
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getiPaymenttermDay() {
     return iPaymenttermDay;
@@ -163,10 +162,10 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * Get objPaymenttermDescription
    * @return objPaymenttermDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public MultilingualPaymenttermDescription getObjPaymenttermDescription() {
     return objPaymenttermDescription;
@@ -182,10 +181,10 @@ public class PaymenttermRequest {
     return this;
   }
 
-   /**
+  /**
    * Whether the Paymentterm is active or not
    * @return bPaymenttermIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbPaymenttermIsactive() {
     return bPaymenttermIsactive;
@@ -267,12 +266,12 @@ public class PaymenttermRequest {
     openapiRequiredFields.add("bPaymenttermIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PaymenttermRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PaymenttermRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PaymenttermRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -333,22 +332,22 @@ public class PaymenttermRequest {
     }
   }
 
- /**
-  * Create an instance of PaymenttermRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PaymenttermRequest
-  * @throws IOException if the JSON string is invalid with respect to PaymenttermRequest
-  */
+  /**
+   * Create an instance of PaymenttermRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PaymenttermRequest
+   * @throws IOException if the JSON string is invalid with respect to PaymenttermRequest
+   */
   public static PaymenttermRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PaymenttermRequest.class);
   }
 
- /**
-  * Convert an instance of PaymenttermRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PaymenttermRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

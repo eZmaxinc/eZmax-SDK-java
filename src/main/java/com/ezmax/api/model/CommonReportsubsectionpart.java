@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart
@@ -124,10 +123,10 @@ public class CommonReportsubsectionpart {
     return this;
   }
 
-   /**
+  /**
    * The type of the Reportsubsectionpart
    * @return eReportsubsectionpartType
-  **/
+   */
   @javax.annotation.Nonnull
   public EReportsubsectionpartTypeEnum geteReportsubsectionpartType() {
     return eReportsubsectionpartType;
@@ -151,10 +150,10 @@ public class CommonReportsubsectionpart {
     return this;
   }
 
-   /**
+  /**
    * Get aObjReportrow
    * @return aObjReportrow
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CommonReportrow> getaObjReportrow() {
     return aObjReportrow;
@@ -221,12 +220,12 @@ public class CommonReportsubsectionpart {
     openapiRequiredFields.add("a_objReportrow");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommonReportsubsectionpart
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommonReportsubsectionpart
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportsubsectionpart.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -295,22 +294,22 @@ public class CommonReportsubsectionpart {
     }
   }
 
- /**
-  * Create an instance of CommonReportsubsectionpart given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommonReportsubsectionpart
-  * @throws IOException if the JSON string is invalid with respect to CommonReportsubsectionpart
-  */
+  /**
+   * Create an instance of CommonReportsubsectionpart given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommonReportsubsectionpart
+   * @throws IOException if the JSON string is invalid with respect to CommonReportsubsectionpart
+   */
   public static CommonReportsubsectionpart fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommonReportsubsectionpart.class);
   }
 
- /**
-  * Convert an instance of CommonReportsubsectionpart to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommonReportsubsectionpart to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

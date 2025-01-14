@@ -53,6 +53,14 @@ public class WebhookResponseCompoundTest {
     }
 
     /**
+     * Test the property 'fkiAuthenticationexternalID'
+     */
+    @Test
+    public void fkiAuthenticationexternalIDTest() {
+        // TODO: test fkiAuthenticationexternalID
+    }
+
+    /**
      * Test the property 'sWebhookDescription'
      */
     @Test
@@ -154,6 +162,14 @@ public class WebhookResponseCompoundTest {
     @Test
     public void bWebhookSkipsslvalidationTest() {
         // TODO: test bWebhookSkipsslvalidation
+    }
+
+    /**
+     * Test the property 'sAuthenticationexternalDescription'
+     */
+    @Test
+    public void sAuthenticationexternalDescriptionTest() {
+        // TODO: test sAuthenticationexternalDescription
     }
 
     /**

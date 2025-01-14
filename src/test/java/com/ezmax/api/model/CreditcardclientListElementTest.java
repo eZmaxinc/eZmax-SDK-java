@@ -54,6 +54,14 @@ public class CreditcardclientListElementTest {
     }
 
     /**
+     * Test the property 'fkiCreditcardtypeID'
+     */
+    @Test
+    public void fkiCreditcardtypeIDTest() {
+        // TODO: test fkiCreditcardtypeID
+    }
+
+    /**
      * Test the property 'bCreditcardclientrelationIsdefault'
      */
     @Test
@@ -70,27 +78,11 @@ public class CreditcardclientListElementTest {
     }
 
     /**
-     * Test the property 'bCreditcardclientIsactive'
+     * Test the property 'bCreditcardclientAllowedcompanypayment'
      */
     @Test
-    public void bCreditcardclientIsactiveTest() {
-        // TODO: test bCreditcardclientIsactive
-    }
-
-    /**
-     * Test the property 'bCreditcardclientAllowedagencypayment'
-     */
-    @Test
-    public void bCreditcardclientAllowedagencypaymentTest() {
-        // TODO: test bCreditcardclientAllowedagencypayment
-    }
-
-    /**
-     * Test the property 'bCreditcardclientAllowedroyallepageprotection'
-     */
-    @Test
-    public void bCreditcardclientAllowedroyallepageprotectionTest() {
-        // TODO: test bCreditcardclientAllowedroyallepageprotection
+    public void bCreditcardclientAllowedcompanypaymentTest() {
+        // TODO: test bCreditcardclientAllowedcompanypayment
     }
 
     /**
@@ -118,11 +110,11 @@ public class CreditcardclientListElementTest {
     }
 
     /**
-     * Test the property 'sCreditcarddetailNumbermasked'
+     * Test the property 'iCreditcarddetailLastdigits'
      */
     @Test
-    public void sCreditcarddetailNumbermaskedTest() {
-        // TODO: test sCreditcarddetailNumbermasked
+    public void iCreditcarddetailLastdigitsTest() {
+        // TODO: test iCreditcarddetailLastdigits
     }
 
 }

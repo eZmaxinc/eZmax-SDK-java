@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezmaxpricing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzmaxpricingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRICING_I_D = "pkiEzmaxpricingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRICING_I_D)
@@ -75,11 +74,11 @@ public class CustomEzmaxpricingResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxpricing
    * minimum: 1
    * @return pkiEzmaxpricingID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiEzmaxpricingID() {
     return pkiEzmaxpricingID;
@@ -95,10 +94,10 @@ public class CustomEzmaxpricingResponse {
     return this;
   }
 
-   /**
+  /**
    * The rebate offered when eZsign is taken for all agents
    * @return dEzmaxpricingRebateezsignallagents
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxpricingRebateezsignallagents() {
     return dEzmaxpricingRebateezsignallagents;
@@ -114,10 +113,10 @@ public class CustomEzmaxpricingResponse {
     return this;
   }
 
-   /**
+  /**
    * The start date of the Ezmaxpricing
    * @return dtEzmaxpricingStart
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtEzmaxpricingStart() {
     return dtEzmaxpricingStart;
@@ -133,10 +132,10 @@ public class CustomEzmaxpricingResponse {
     return this;
   }
 
-   /**
+  /**
    * The end date of the Ezmaxpricing
    * @return dtEzmaxpricingEnd
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtEzmaxpricingEnd() {
     return dtEzmaxpricingEnd;
@@ -210,12 +209,12 @@ public class CustomEzmaxpricingResponse {
     openapiRequiredFields.add("dtEzmaxpricingStart");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzmaxpricingResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzmaxpricingResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzmaxpricingResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -278,22 +277,22 @@ public class CustomEzmaxpricingResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzmaxpricingResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzmaxpricingResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzmaxpricingResponse
-  */
+  /**
+   * Create an instance of CustomEzmaxpricingResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzmaxpricingResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzmaxpricingResponse
+   */
   public static CustomEzmaxpricingResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzmaxpricingResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzmaxpricingResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzmaxpricingResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

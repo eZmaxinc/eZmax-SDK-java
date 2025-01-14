@@ -29,7 +29,7 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEUserOrigin.Adapter.class)
 public enum FieldEUserOrigin {
   
-  BUILTIN("BuiltIn"),
+  BUILT_IN("BuiltIn"),
   
   EXTERNAL("External");
 

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualPaymenttermDescription {
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1 = "sPaymenttermDescription1";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1)
@@ -67,10 +66,10 @@ public class MultilingualPaymenttermDescription {
     return this;
   }
 
-   /**
+  /**
    * The description of the Paymentterm in French
    * @return sPaymenttermDescription1
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPaymenttermDescription1() {
     return sPaymenttermDescription1;
@@ -86,10 +85,10 @@ public class MultilingualPaymenttermDescription {
     return this;
   }
 
-   /**
+  /**
    * The description of the Paymentterm in English
    * @return sPaymenttermDescription2
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPaymenttermDescription2() {
     return sPaymenttermDescription2;
@@ -154,12 +153,12 @@ public class MultilingualPaymenttermDescription {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MultilingualPaymenttermDescription
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MultilingualPaymenttermDescription
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MultilingualPaymenttermDescription.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -212,22 +211,22 @@ public class MultilingualPaymenttermDescription {
     }
   }
 
- /**
-  * Create an instance of MultilingualPaymenttermDescription given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MultilingualPaymenttermDescription
-  * @throws IOException if the JSON string is invalid with respect to MultilingualPaymenttermDescription
-  */
+  /**
+   * Create an instance of MultilingualPaymenttermDescription given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MultilingualPaymenttermDescription
+   * @throws IOException if the JSON string is invalid with respect to MultilingualPaymenttermDescription
+   */
   public static MultilingualPaymenttermDescription fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MultilingualPaymenttermDescription.class);
   }
 
- /**
-  * Convert an instance of MultilingualPaymenttermDescription to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MultilingualPaymenttermDescription to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,15 +48,23 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
   private Integer pkiSignatureID;
 
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  private Integer fkiFontID;
+
   public static final String SERIALIZED_NAME_S_SIGNATURE_URL = "sSignatureUrl";
   @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URL)
   private String sSignatureUrl;
+
+  public static final String SERIALIZED_NAME_S_SIGNATURE_URLINITIALS = "sSignatureUrlinitials";
+  @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URLINITIALS)
+  private String sSignatureUrlinitials;
 
   public SignatureResponseCompound() {
   }
@@ -67,12 +74,12 @@ public class SignatureResponseCompound {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Signature
    * minimum: 0
    * maximum: 16777215
    * @return pkiSignatureID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiSignatureID() {
     return pkiSignatureID;
@@ -83,22 +90,61 @@ public class SignatureResponseCompound {
   }
 
 
+  public SignatureResponseCompound fkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+
   public SignatureResponseCompound sSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
     return this;
   }
 
-   /**
+  /**
    * The URL of the SVG file for the Signature
    * @return sSignatureUrl
-  **/
-  @javax.annotation.Nonnull
+   */
+  @javax.annotation.Nullable
   public String getsSignatureUrl() {
     return sSignatureUrl;
   }
 
   public void setsSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
+  }
+
+
+  public SignatureResponseCompound sSignatureUrlinitials(String sSignatureUrlinitials) {
+    this.sSignatureUrlinitials = sSignatureUrlinitials;
+    return this;
+  }
+
+  /**
+   * The URL of the SVG file for the Initials
+   * @return sSignatureUrlinitials
+   */
+  @javax.annotation.Nullable
+  public String getsSignatureUrlinitials() {
+    return sSignatureUrlinitials;
+  }
+
+  public void setsSignatureUrlinitials(String sSignatureUrlinitials) {
+    this.sSignatureUrlinitials = sSignatureUrlinitials;
   }
 
 
@@ -113,12 +159,14 @@ public class SignatureResponseCompound {
     }
     SignatureResponseCompound signatureResponseCompound = (SignatureResponseCompound) o;
     return Objects.equals(this.pkiSignatureID, signatureResponseCompound.pkiSignatureID) &&
-        Objects.equals(this.sSignatureUrl, signatureResponseCompound.sSignatureUrl);
+        Objects.equals(this.fkiFontID, signatureResponseCompound.fkiFontID) &&
+        Objects.equals(this.sSignatureUrl, signatureResponseCompound.sSignatureUrl) &&
+        Objects.equals(this.sSignatureUrlinitials, signatureResponseCompound.sSignatureUrlinitials);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSignatureID, sSignatureUrl);
+    return Objects.hash(pkiSignatureID, fkiFontID, sSignatureUrl, sSignatureUrlinitials);
   }
 
   @Override
@@ -126,7 +174,9 @@ public class SignatureResponseCompound {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureResponseCompound {\n");
     sb.append("    pkiSignatureID: ").append(toIndentedString(pkiSignatureID)).append("\n");
+    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
     sb.append("    sSignatureUrl: ").append(toIndentedString(sSignatureUrl)).append("\n");
+    sb.append("    sSignatureUrlinitials: ").append(toIndentedString(sSignatureUrlinitials)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -150,20 +200,21 @@ public class SignatureResponseCompound {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiSignatureID");
+    openapiFields.add("fkiFontID");
     openapiFields.add("sSignatureUrl");
+    openapiFields.add("sSignatureUrlinitials");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("pkiSignatureID");
-    openapiRequiredFields.add("sSignatureUrl");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SignatureResponseCompound
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to SignatureResponseCompound
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SignatureResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -186,8 +237,11 @@ public class SignatureResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sSignatureUrl").isJsonPrimitive()) {
+      if ((jsonObj.get("sSignatureUrl") != null && !jsonObj.get("sSignatureUrl").isJsonNull()) && !jsonObj.get("sSignatureUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sSignatureUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSignatureUrl").toString()));
+      }
+      if ((jsonObj.get("sSignatureUrlinitials") != null && !jsonObj.get("sSignatureUrlinitials").isJsonNull()) && !jsonObj.get("sSignatureUrlinitials").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sSignatureUrlinitials` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSignatureUrlinitials").toString()));
       }
   }
 
@@ -220,22 +274,22 @@ public class SignatureResponseCompound {
     }
   }
 
- /**
-  * Create an instance of SignatureResponseCompound given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SignatureResponseCompound
-  * @throws IOException if the JSON string is invalid with respect to SignatureResponseCompound
-  */
+  /**
+   * Create an instance of SignatureResponseCompound given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of SignatureResponseCompound
+   * @throws IOException if the JSON string is invalid with respect to SignatureResponseCompound
+   */
   public static SignatureResponseCompound fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, SignatureResponseCompound.class);
   }
 
- /**
-  * Convert an instance of SignatureResponseCompound to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of SignatureResponseCompound to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

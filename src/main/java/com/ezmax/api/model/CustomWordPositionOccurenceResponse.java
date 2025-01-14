@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
@@ -71,11 +70,11 @@ public class CustomWordPositionOccurenceResponse {
     return this;
   }
 
-   /**
+  /**
    * The page where the word occurence was found
    * minimum: 1
    * @return iPage
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiPage() {
     return iPage;
@@ -91,11 +90,11 @@ public class CustomWordPositionOccurenceResponse {
     return this;
   }
 
-   /**
+  /**
    * The X coordinate (Horizontal) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).
    * minimum: 0
    * @return iX
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiX() {
     return iX;
@@ -111,11 +110,11 @@ public class CustomWordPositionOccurenceResponse {
     return this;
   }
 
-   /**
+  /**
    * The Y coordinate (Vertical) where the Word occurence was found.  Coordinate is calculated at 100dpi (dot per inch).
    * minimum: 0
    * @return iY
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getiY() {
     return iY;
@@ -183,12 +182,12 @@ public class CustomWordPositionOccurenceResponse {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomWordPositionOccurenceResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomWordPositionOccurenceResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomWordPositionOccurenceResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -235,22 +234,22 @@ public class CustomWordPositionOccurenceResponse {
     }
   }
 
- /**
-  * Create an instance of CustomWordPositionOccurenceResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomWordPositionOccurenceResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomWordPositionOccurenceResponse
-  */
+  /**
+   * Create an instance of CustomWordPositionOccurenceResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomWordPositionOccurenceResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomWordPositionOccurenceResponse
+   */
   public static CustomWordPositionOccurenceResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomWordPositionOccurenceResponse.class);
   }
 
- /**
-  * Convert an instance of CustomWordPositionOccurenceResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomWordPositionOccurenceResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

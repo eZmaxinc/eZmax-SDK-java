@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentSubmitEzsignformV1Request {
   public static final String SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT = "bEzsignformIsdraft";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT)
@@ -70,10 +69,10 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     return this;
   }
 
-   /**
+  /**
    * Whether the Ezsignform submitted is a draft or not.
    * @return bEzsignformIsdraft
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignformIsdraft() {
     return bEzsignformIsdraft;
@@ -97,10 +96,10 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     return this;
   }
 
-   /**
+  /**
    * Get aObjEzsignformfieldgroup
    * @return aObjEzsignformfieldgroup
-  **/
+   */
   @javax.annotation.Nonnull
   public List<CustomEzsignformfieldgroupRequest> getaObjEzsignformfieldgroup() {
     return aObjEzsignformfieldgroup;
@@ -167,12 +166,12 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     openapiRequiredFields.add("a_objEzsignformfieldgroup");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentSubmitEzsignformV1Request
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsigndocumentSubmitEzsignformV1Request
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigndocumentSubmitEzsignformV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -236,22 +235,22 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     }
   }
 
- /**
-  * Create an instance of EzsigndocumentSubmitEzsignformV1Request given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsigndocumentSubmitEzsignformV1Request
-  * @throws IOException if the JSON string is invalid with respect to EzsigndocumentSubmitEzsignformV1Request
-  */
+  /**
+   * Create an instance of EzsigndocumentSubmitEzsignformV1Request given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsigndocumentSubmitEzsignformV1Request
+   * @throws IOException if the JSON string is invalid with respect to EzsigndocumentSubmitEzsignformV1Request
+   */
   public static EzsigndocumentSubmitEzsignformV1Request fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsigndocumentSubmitEzsignformV1Request.class);
   }
 
- /**
-  * Convert an instance of EzsigndocumentSubmitEzsignformV1Request to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsigndocumentSubmitEzsignformV1Request to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

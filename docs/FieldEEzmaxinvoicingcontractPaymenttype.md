@@ -7,9 +7,9 @@
 
 * `CHEQUE` (value: `"Cheque"`)
 
-* `CREDITCARD` (value: `"CreditCard"`)
+* `CREDIT_CARD` (value: `"CreditCard"`)
 
-* `DIRECTDEBIT` (value: `"DirectDebit"`)
+* `DIRECT_DEBIT` (value: `"DirectDebit"`)
 
 
 

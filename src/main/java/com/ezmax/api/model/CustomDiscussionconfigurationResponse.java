@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Discussionconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomDiscussionconfigurationResponse {
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_COMPLETEHISTORYWHENADDED = "bDiscussionconfigurationCompletehistorywhenadded";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_COMPLETEHISTORYWHENADDED)
@@ -79,10 +78,10 @@ public class CustomDiscussionconfigurationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the added Discussionmembership will have access to the entire history or not
    * @return bDiscussionconfigurationCompletehistorywhenadded
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDiscussionconfigurationCompletehistorywhenadded() {
     return bDiscussionconfigurationCompletehistorywhenadded;
@@ -98,10 +97,10 @@ public class CustomDiscussionconfigurationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the the creation of the Discussion is allowed or not
    * @return bDiscussionconfigurationCreateallowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDiscussionconfigurationCreateallowed() {
     return bDiscussionconfigurationCreateallowed;
@@ -117,10 +116,10 @@ public class CustomDiscussionconfigurationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the the destruction of the Discussion is allowed or not
    * @return bDiscussionconfigurationDeleteallowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDiscussionconfigurationDeleteallowed() {
     return bDiscussionconfigurationDeleteallowed;
@@ -136,10 +135,10 @@ public class CustomDiscussionconfigurationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the the destruction of the Discussionmessage is allowed or not
    * @return bDiscussionconfigurationDeletediscussionmessageallowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDiscussionconfigurationDeletediscussionmessageallowed() {
     return bDiscussionconfigurationDeletediscussionmessageallowed;
@@ -155,10 +154,10 @@ public class CustomDiscussionconfigurationResponse {
     return this;
   }
 
-   /**
+  /**
    * If the the creation of the Discussionmessage is allowed or not
    * @return bDiscussionconfigurationEditdiscussionmessageallowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbDiscussionconfigurationEditdiscussionmessageallowed() {
     return bDiscussionconfigurationEditdiscussionmessageallowed;
@@ -237,12 +236,12 @@ public class CustomDiscussionconfigurationResponse {
     openapiRequiredFields.add("bDiscussionconfigurationEditdiscussionmessageallowed");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomDiscussionconfigurationResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomDiscussionconfigurationResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomDiscussionconfigurationResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -296,22 +295,22 @@ public class CustomDiscussionconfigurationResponse {
     }
   }
 
- /**
-  * Create an instance of CustomDiscussionconfigurationResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomDiscussionconfigurationResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomDiscussionconfigurationResponse
-  */
+  /**
+   * Create an instance of CustomDiscussionconfigurationResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomDiscussionconfigurationResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomDiscussionconfigurationResponse
+   */
   public static CustomDiscussionconfigurationResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomDiscussionconfigurationResponse.class);
   }
 
- /**
-  * Convert an instance of CustomDiscussionconfigurationResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomDiscussionconfigurationResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

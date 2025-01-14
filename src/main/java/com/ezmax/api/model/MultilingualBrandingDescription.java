@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualBrandingDescription {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION1 = "sBrandingDescription1";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION1)
@@ -67,10 +66,10 @@ public class MultilingualBrandingDescription {
     return this;
   }
 
-   /**
+  /**
    * The description of the Branding in French
    * @return sBrandingDescription1
-  **/
+   */
   @javax.annotation.Nullable
   public String getsBrandingDescription1() {
     return sBrandingDescription1;
@@ -86,10 +85,10 @@ public class MultilingualBrandingDescription {
     return this;
   }
 
-   /**
+  /**
    * The description of the Branding in English
    * @return sBrandingDescription2
-  **/
+   */
   @javax.annotation.Nullable
   public String getsBrandingDescription2() {
     return sBrandingDescription2;
@@ -154,12 +153,12 @@ public class MultilingualBrandingDescription {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MultilingualBrandingDescription
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MultilingualBrandingDescription
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MultilingualBrandingDescription.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -212,22 +211,22 @@ public class MultilingualBrandingDescription {
     }
   }
 
- /**
-  * Create an instance of MultilingualBrandingDescription given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MultilingualBrandingDescription
-  * @throws IOException if the JSON string is invalid with respect to MultilingualBrandingDescription
-  */
+  /**
+   * Create an instance of MultilingualBrandingDescription given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MultilingualBrandingDescription
+   * @throws IOException if the JSON string is invalid with respect to MultilingualBrandingDescription
+   */
   public static MultilingualBrandingDescription fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MultilingualBrandingDescription.class);
   }
 
- /**
-  * Convert an instance of MultilingualBrandingDescription to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MultilingualBrandingDescription to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

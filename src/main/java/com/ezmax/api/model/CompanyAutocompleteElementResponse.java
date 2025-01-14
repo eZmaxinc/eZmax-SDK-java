@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Company AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CompanyAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMPANY_I_D = "pkiCompanyID";
   @SerializedName(SERIALIZED_NAME_PKI_COMPANY_I_D)
@@ -71,12 +70,12 @@ public class CompanyAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Company
    * minimum: 1
    * maximum: 255
    * @return pkiCompanyID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiCompanyID() {
     return pkiCompanyID;
@@ -92,10 +91,10 @@ public class CompanyAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * The Name of the Company in the language of the requester
    * @return sCompanyNameX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsCompanyNameX() {
     return sCompanyNameX;
@@ -111,10 +110,10 @@ public class CompanyAutocompleteElementResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether the Company is active or not
    * @return bCompanyIsactive
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbCompanyIsactive() {
     return bCompanyIsactive;
@@ -185,12 +184,12 @@ public class CompanyAutocompleteElementResponse {
     openapiRequiredFields.add("bCompanyIsactive");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CompanyAutocompleteElementResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CompanyAutocompleteElementResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CompanyAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -247,22 +246,22 @@ public class CompanyAutocompleteElementResponse {
     }
   }
 
- /**
-  * Create an instance of CompanyAutocompleteElementResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CompanyAutocompleteElementResponse
-  * @throws IOException if the JSON string is invalid with respect to CompanyAutocompleteElementResponse
-  */
+  /**
+   * Create an instance of CompanyAutocompleteElementResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CompanyAutocompleteElementResponse
+   * @throws IOException if the JSON string is invalid with respect to CompanyAutocompleteElementResponse
+   */
   public static CompanyAutocompleteElementResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CompanyAutocompleteElementResponse.class);
   }
 
- /**
-  * Convert an instance of CompanyAutocompleteElementResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CompanyAutocompleteElementResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

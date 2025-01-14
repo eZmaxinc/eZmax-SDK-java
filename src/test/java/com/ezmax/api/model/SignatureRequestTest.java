@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.FieldESignaturePreference;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,11 +47,35 @@ public class SignatureRequestTest {
     }
 
     /**
+     * Test the property 'fkiFontID'
+     */
+    @Test
+    public void fkiFontIDTest() {
+        // TODO: test fkiFontID
+    }
+
+    /**
+     * Test the property 'eSignaturePreference'
+     */
+    @Test
+    public void eSignaturePreferenceTest() {
+        // TODO: test eSignaturePreference
+    }
+
+    /**
      * Test the property 'tSignatureSvg'
      */
     @Test
     public void tSignatureSvgTest() {
         // TODO: test tSignatureSvg
+    }
+
+    /**
+     * Test the property 'tSignatureSvginitials'
+     */
+    @Test
+    public void tSignatureSvginitialsTest() {
+        // TODO: test tSignatureSvginitials
     }
 
 }

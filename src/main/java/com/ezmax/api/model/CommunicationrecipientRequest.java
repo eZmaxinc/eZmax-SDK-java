@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationrecipient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationrecipientRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D = "pkiCommunicationrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONRECIPIENT_I_D)
@@ -120,11 +119,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Communicationrecipient.
    * minimum: 0
    * @return pkiCommunicationrecipientID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiCommunicationrecipientID() {
     return pkiCommunicationrecipientID;
@@ -140,11 +139,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Agent.
    * minimum: 0
    * @return fkiAgentID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAgentID() {
     return fkiAgentID;
@@ -160,11 +159,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Broker.
    * minimum: 0
    * @return fkiBrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBrokerID() {
     return fkiBrokerID;
@@ -180,11 +179,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Contact
    * minimum: 0
    * @return fkiContactID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiContactID() {
     return fkiContactID;
@@ -200,11 +199,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Customer.
    * minimum: 0
    * @return fkiCustomerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiCustomerID() {
     return fkiCustomerID;
@@ -220,11 +219,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Employee.
    * minimum: 0
    * @return fkiEmployeeID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEmployeeID() {
     return fkiEmployeeID;
@@ -240,11 +239,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Assistant.
    * minimum: 0
    * @return fkiAssistantID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiAssistantID() {
     return fkiAssistantID;
@@ -260,11 +259,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Externalbroker.
    * minimum: 0
    * @return fkiExternalbrokerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiExternalbrokerID() {
     return fkiExternalbrokerID;
@@ -280,11 +279,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignsigner
    * minimum: 0
    * @return fkiEzsignsignerID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzsignsignerID() {
     return fkiEzsignsignerID;
@@ -300,11 +299,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Notary.
    * minimum: 0
    * @return fkiNotaryID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiNotaryID() {
     return fkiNotaryID;
@@ -320,11 +319,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Supplier.
    * minimum: 0
    * @return fkiSupplierID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiSupplierID() {
     return fkiSupplierID;
@@ -340,11 +339,11 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiUserID() {
     return fkiUserID;
@@ -360,12 +359,12 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Mailboxshared
    * minimum: 0
    * maximum: 255
    * @return fkiMailboxsharedID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiMailboxsharedID() {
     return fkiMailboxsharedID;
@@ -381,12 +380,12 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Phonelineshared
    * minimum: 0
    * maximum: 255
    * @return fkiPhonelinesharedID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiPhonelinesharedID() {
     return fkiPhonelinesharedID;
@@ -402,10 +401,10 @@ public class CommunicationrecipientRequest {
     return this;
   }
 
-   /**
+  /**
    * Get eCommunicationrecipientType
    * @return eCommunicationrecipientType
-  **/
+   */
   @javax.annotation.Nullable
   public FieldECommunicationrecipientType geteCommunicationrecipientType() {
     return eCommunicationrecipientType;
@@ -509,12 +508,12 @@ public class CommunicationrecipientRequest {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CommunicationrecipientRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CommunicationrecipientRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommunicationrecipientRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -565,22 +564,22 @@ public class CommunicationrecipientRequest {
     }
   }
 
- /**
-  * Create an instance of CommunicationrecipientRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CommunicationrecipientRequest
-  * @throws IOException if the JSON string is invalid with respect to CommunicationrecipientRequest
-  */
+  /**
+   * Create an instance of CommunicationrecipientRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CommunicationrecipientRequest
+   * @throws IOException if the JSON string is invalid with respect to CommunicationrecipientRequest
+   */
   public static CommunicationrecipientRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CommunicationrecipientRequest.class);
   }
 
- /**
-  * Convert an instance of CommunicationrecipientRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CommunicationrecipientRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

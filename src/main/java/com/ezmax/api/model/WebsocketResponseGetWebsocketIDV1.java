@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,14 +49,14 @@ import eZmaxAPI.JSON;
 /**
  * Response for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsocketResponseGetWebsocketIDV1 {
   /**
    * The Type of message
    */
   @JsonAdapter(EWebsocketMessagetypeEnum.Adapter.class)
   public enum EWebsocketMessagetypeEnum {
-    RESPONSE_GETWEBSOCKETID_V1("Response-GetWebsocketID-V1");
+    RESPONSE_GET_WEBSOCKET_ID_V1("Response-GetWebsocketID-V1");
 
     private String value;
 
@@ -118,10 +117,10 @@ public class WebsocketResponseGetWebsocketIDV1 {
     return this;
   }
 
-   /**
+  /**
    * The Type of message
    * @return eWebsocketMessagetype
-  **/
+   */
   @javax.annotation.Nonnull
   public EWebsocketMessagetypeEnum geteWebsocketMessagetype() {
     return eWebsocketMessagetype;
@@ -137,10 +136,10 @@ public class WebsocketResponseGetWebsocketIDV1 {
     return this;
   }
 
-   /**
+  /**
    * Get mPayload
    * @return mPayload
-  **/
+   */
   @javax.annotation.Nonnull
   public WebsocketResponseGetWebsocketIDV1MPayload getmPayload() {
     return mPayload;
@@ -207,12 +206,12 @@ public class WebsocketResponseGetWebsocketIDV1 {
     openapiRequiredFields.add("mPayload");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WebsocketResponseGetWebsocketIDV1
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to WebsocketResponseGetWebsocketIDV1
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebsocketResponseGetWebsocketIDV1.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -273,22 +272,22 @@ public class WebsocketResponseGetWebsocketIDV1 {
     }
   }
 
- /**
-  * Create an instance of WebsocketResponseGetWebsocketIDV1 given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WebsocketResponseGetWebsocketIDV1
-  * @throws IOException if the JSON string is invalid with respect to WebsocketResponseGetWebsocketIDV1
-  */
+  /**
+   * Create an instance of WebsocketResponseGetWebsocketIDV1 given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of WebsocketResponseGetWebsocketIDV1
+   * @throws IOException if the JSON string is invalid with respect to WebsocketResponseGetWebsocketIDV1
+   */
   public static WebsocketResponseGetWebsocketIDV1 fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, WebsocketResponseGetWebsocketIDV1.class);
   }
 
- /**
-  * Convert an instance of WebsocketResponseGetWebsocketIDV1 to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of WebsocketResponseGetWebsocketIDV1 to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

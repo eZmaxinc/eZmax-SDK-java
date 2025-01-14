@@ -5,15 +5,15 @@
 ## Enum
 
 
-* `AUTOVALIDATION` (value: `"AutoValidation"`)
+* `AUTO_VALIDATION` (value: `"AutoValidation"`)
 
-* `COPYFROM` (value: `"CopyFrom"`)
+* `COPY_FROM` (value: `"CopyFrom"`)
 
-* `COPYTO` (value: `"CopyTo"`)
+* `COPY_TO` (value: `"CopyTo"`)
 
-* `COPYTOEZSIGN` (value: `"CopyToEzsign"`)
+* `COPY_TO_EZSIGN` (value: `"CopyToEzsign"`)
 
-* `CREATEBYEZSIGN` (value: `"CreateByEzsign"`)
+* `CREATE_BY_EZSIGN` (value: `"CreateByEzsign"`)
 
 * `DOWNLOAD` (value: `"Download"`)
 
@@ -23,25 +23,25 @@
 
 * `EMAIL` (value: `"Email"`)
 
-* `EMAILCC` (value: `"EmailCC"`)
+* `EMAIL_CC` (value: `"EmailCC"`)
 
-* `EMAILCCI` (value: `"EmailCCI"`)
+* `EMAIL_CCI` (value: `"EmailCCI"`)
 
 * `FAX` (value: `"Fax"`)
 
-* `IMPORTEDFROMEXTERNALSYSTEM` (value: `"ImportedFromExternalSystem"`)
+* `IMPORTED_FROM_EXTERNAL_SYSTEM` (value: `"ImportedFromExternalSystem"`)
 
-* `IMPORTEDFROMEZA` (value: `"ImportedFromEZA"`)
+* `IMPORTED_FROM_EZA` (value: `"ImportedFromEZA"`)
 
-* `IMPORTEDFROMFALTOUR` (value: `"ImportedFromFaltour"`)
+* `IMPORTED_FROM_FALTOUR` (value: `"ImportedFromFaltour"`)
 
-* `IMPORTEDFROMLONEWOLF` (value: `"ImportedFromLonewolf"`)
+* `IMPORTED_FROM_LONEWOLF` (value: `"ImportedFromLonewolf"`)
 
-* `IMPORTEDFROMPROSPECTS` (value: `"ImportedFromProspects"`)
+* `IMPORTED_FROM_PROSPECTS` (value: `"ImportedFromProspects"`)
 
 * `MOVE` (value: `"Move"`)
 
-* `OPENFROMEMAIL` (value: `"OpenFromEmail"`)
+* `OPEN_FROM_EMAIL` (value: `"OpenFromEmail"`)
 
 * `PURGED` (value: `"Purged"`)
 
@@ -53,15 +53,15 @@
 
 * `SCANNED` (value: `"Scanned"`)
 
-* `SENDTOGED` (value: `"SendToGED"`)
+* `SEND_TO_GED` (value: `"SendToGED"`)
 
-* `UNVALIDATEDBY` (value: `"UnvalidatedBy"`)
+* `UNVALIDATED_BY` (value: `"UnvalidatedBy"`)
 
 * `UPLOAD` (value: `"Upload"`)
 
-* `VALIDATEDBY` (value: `"ValidatedBy"`)
+* `VALIDATED_BY` (value: `"ValidatedBy"`)
 
-* `VETINFOUPLOAD` (value: `"VetinfoUpload"`)
+* `VETINFO_UPLOAD` (value: `"VetinfoUpload"`)
 
 
 

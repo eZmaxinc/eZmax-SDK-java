@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Clonehistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ClonehistoryListElement {
   public static final String SERIALIZED_NAME_PKI_CLONEHISTORY_I_D = "pkiClonehistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_CLONEHISTORY_I_D)
@@ -103,12 +102,12 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Clonehistory
    * minimum: 1
    * maximum: 16777215
    * @return pkiClonehistoryID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiClonehistoryID() {
     return pkiClonehistoryID;
@@ -124,11 +123,11 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserIDCloning
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserIDCloning() {
     return fkiUserIDCloning;
@@ -144,11 +143,11 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the User
    * minimum: 0
    * @return fkiUserIDCloned
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiUserIDCloned() {
     return fkiUserIDCloned;
@@ -164,10 +163,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The firsthit of the Clonehistory
    * @return dtClonehistoryFirsthit
-  **/
+   */
   @javax.annotation.Nonnull
   public String getDtClonehistoryFirsthit() {
     return dtClonehistoryFirsthit;
@@ -183,10 +182,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The lasthit of the Clonehistory
    * @return dtClonehistoryLasthit
-  **/
+   */
   @javax.annotation.Nullable
   public String getDtClonehistoryLasthit() {
     return dtClonehistoryLasthit;
@@ -202,10 +201,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginnameCloning
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLoginnameCloning() {
     return sUserLoginnameCloning;
@@ -221,10 +220,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstnameCloning
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstnameCloning() {
     return sUserFirstnameCloning;
@@ -240,10 +239,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastnameCloning
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastnameCloning() {
     return sUserLastnameCloning;
@@ -259,10 +258,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The login name of the User.
    * @return sUserLoginnameCloned
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLoginnameCloned() {
     return sUserLoginnameCloned;
@@ -278,10 +277,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The first name of the user
    * @return sUserFirstnameCloned
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserFirstnameCloned() {
     return sUserFirstnameCloned;
@@ -297,10 +296,10 @@ public class ClonehistoryListElement {
     return this;
   }
 
-   /**
+  /**
    * The last name of the user
    * @return sUserLastnameCloned
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsUserLastnameCloned() {
     return sUserLastnameCloned;
@@ -402,12 +401,12 @@ public class ClonehistoryListElement {
     openapiRequiredFields.add("sUserLastnameCloned");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ClonehistoryListElement
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ClonehistoryListElement
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ClonehistoryListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -485,22 +484,22 @@ public class ClonehistoryListElement {
     }
   }
 
- /**
-  * Create an instance of ClonehistoryListElement given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ClonehistoryListElement
-  * @throws IOException if the JSON string is invalid with respect to ClonehistoryListElement
-  */
+  /**
+   * Create an instance of ClonehistoryListElement given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ClonehistoryListElement
+   * @throws IOException if the JSON string is invalid with respect to ClonehistoryListElement
+   */
   public static ClonehistoryListElement fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ClonehistoryListElement.class);
   }
 
- /**
-  * Convert an instance of ClonehistoryListElement to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ClonehistoryListElement to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

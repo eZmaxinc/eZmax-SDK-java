@@ -5,25 +5,25 @@
 ## Enum
 
 
-* `DOCUMENTCOMPLETED` (value: `"DocumentCompleted"`)
+* `DOCUMENT_COMPLETED` (value: `"DocumentCompleted"`)
 
-* `DOCUMENTFORMCOMPLETED` (value: `"DocumentFormCompleted"`)
+* `DOCUMENT_FORM_COMPLETED` (value: `"DocumentFormCompleted"`)
 
-* `DOCUMENTUNSENT` (value: `"DocumentUnsent"`)
+* `DOCUMENT_UNSENT` (value: `"DocumentUnsent"`)
 
-* `EZSIGNSIGNERACCEPTCLAUSE` (value: `"EzsignsignerAcceptclause"`)
+* `EZSIGNSIGNER_ACCEPTCLAUSE` (value: `"EzsignsignerAcceptclause"`)
 
-* `EZSIGNSIGNERCONNECT` (value: `"EzsignsignerConnect"`)
+* `EZSIGNSIGNER_CONNECT` (value: `"EzsignsignerConnect"`)
 
-* `FOLDERCOMPLETED` (value: `"FolderCompleted"`)
+* `FOLDER_COMPLETED` (value: `"FolderCompleted"`)
 
-* `FOLDERDISPOSED` (value: `"FolderDisposed"`)
+* `FOLDER_DISPOSED` (value: `"FolderDisposed"`)
 
-* `FOLDERSENT` (value: `"FolderSent"`)
+* `FOLDER_SENT` (value: `"FolderSent"`)
 
-* `FOLDERUNSENT` (value: `"FolderUnsent"`)
+* `FOLDER_UNSENT` (value: `"FolderUnsent"`)
 
-* `SIGNATURESIGNED` (value: `"SignatureSigned"`)
+* `SIGNATURE_SIGNED` (value: `"SignatureSigned"`)
 
 
 

@@ -7,9 +7,9 @@
 
 * `EMPTY` (value: `""`)
 
-* `AGENTBROKER` (value: `"AgentBroker"`)
+* `AGENT_BROKER` (value: `"AgentBroker"`)
 
-* `EZSIGNUSER` (value: `"EzsignUser"`)
+* `EZSIGN_USER` (value: `"EzsignUser"`)
 
 * `NORMAL` (value: `"Normal"`)
 

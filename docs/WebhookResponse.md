@@ -9,6 +9,7 @@ A webhook object
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiWebhookID** | **Integer** | The unique ID of the Webhook |  |
+|**fkiAuthenticationexternalID** | **Integer** | The unique ID of the Authenticationexternal |  [optional] |
 |**sWebhookDescription** | **String** | The description of the Webhook |  |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
 |**sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester |  [optional] |
@@ -22,6 +23,7 @@ A webhook object
 |**bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not |  |
 |**bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not |  |
 |**bWebhookSkipsslvalidation** | **Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use |  |
+|**sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal |  [optional] |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
 
 

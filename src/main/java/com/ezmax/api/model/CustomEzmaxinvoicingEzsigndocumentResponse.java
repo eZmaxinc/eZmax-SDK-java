@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsigndocument object containing information about the Ezmaxinvoicing for an Ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzmaxinvoicingEzsigndocumentResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
@@ -83,11 +82,11 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezsignfolder
    * minimum: 0
    * @return fkiEzsignfolderID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzsignfolderID() {
     return fkiEzsignfolderID;
@@ -103,11 +102,11 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityinternal.
    * minimum: 0
    * @return fkiBillingentityinternalID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiBillingentityinternalID() {
     return fkiBillingentityinternalID;
@@ -123,10 +122,10 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * Get sName
    * @return sName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsName() {
     return sName;
@@ -142,10 +141,10 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezsignfolder
    * @return sEzsignfolderDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsignfolderDescription() {
     return sEzsignfolderDescription;
@@ -161,10 +160,10 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the document that will be presented to Ezsignfoldersignerassociations
    * @return sEzsigndocumentName
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzsigndocumentName() {
     return sEzsigndocumentName;
@@ -180,10 +179,10 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether you have access to the Ezsignfolder or not
    * @return bEzsignfolderAllowed
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzsignfolderAllowed() {
     return bEzsignfolderAllowed;
@@ -265,12 +264,12 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     openapiRequiredFields.add("bEzsignfolderAllowed");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to CustomEzmaxinvoicingEzsigndocumentResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CustomEzmaxinvoicingEzsigndocumentResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomEzmaxinvoicingEzsigndocumentResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -333,22 +332,22 @@ public class CustomEzmaxinvoicingEzsigndocumentResponse {
     }
   }
 
- /**
-  * Create an instance of CustomEzmaxinvoicingEzsigndocumentResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CustomEzmaxinvoicingEzsigndocumentResponse
-  * @throws IOException if the JSON string is invalid with respect to CustomEzmaxinvoicingEzsigndocumentResponse
-  */
+  /**
+   * Create an instance of CustomEzmaxinvoicingEzsigndocumentResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CustomEzmaxinvoicingEzsigndocumentResponse
+   * @throws IOException if the JSON string is invalid with respect to CustomEzmaxinvoicingEzsigndocumentResponse
+   */
   public static CustomEzmaxinvoicingEzsigndocumentResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, CustomEzmaxinvoicingEzsigndocumentResponse.class);
   }
 
- /**
-  * Convert an instance of CustomEzmaxinvoicingEzsigndocumentResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of CustomEzmaxinvoicingEzsigndocumentResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -63,33 +63,39 @@ public enum FieldEEzsigndocumentlogType {
   
   UNSIGN("Unsign"),
   
-  IMPORTFROMINSTANET("ImportFromInstanet"),
+  IMPORT_FROM_INSTANET("ImportFromInstanet"),
   
-  SENDEMAIL("SendEmail"),
+  CREATED_FROM_EZSIGNTEMPLATEPUBLIC("CreatedFromEzsigntemplatepublic"),
   
-  FORMCOMPLETION("FormCompletion"),
+  SEND_EMAIL("SendEmail"),
   
-  SIGNATUREATTACHMENTADD("SignatureAttachmentAdd"),
+  FORM_COMPLETION("FormCompletion"),
   
-  SIGNATUREATTACHMENTVALIDATION("SignatureAttachmentValidation"),
+  FORM_SAVE_AS_DRAFT("FormSaveAsDraft"),
   
-  SIGNATUREATTACHMENTREFUSED("SignatureAttachmentRefused"),
+  SIGNATURE_ATTACHMENT_ADD("SignatureAttachmentAdd"),
   
-  SIGNATUREATTACHMENTDELETED("SignatureAttachmentDeleted"),
+  SIGNATURE_ATTACHMENT_VALIDATION("SignatureAttachmentValidation"),
   
-  DECLINEDTOSIGN("DeclinedToSign"),
+  SIGNATURE_ATTACHMENT_REFUSED("SignatureAttachmentRefused"),
   
-  DELAYEDSENDEMAIL("DelayedSendEmail"),
+  SIGNATURE_ATTACHMENT_DELETED("SignatureAttachmentDeleted"),
   
-  ANNOTATIONADDED("AnnotationAdded"),
+  DECLINED_TO_SIGN("DeclinedToSign"),
+  
+  DELAYED_SEND_EMAIL("DelayedSendEmail"),
+  
+  ANNOTATION_ADDED("AnnotationAdded"),
   
   FLATTEN("Flatten"),
   
-  REGENERATEPAGE("RegeneratePage"),
+  REGENERATE_PAGE("RegeneratePage"),
   
-  REGENERATEPAGEFORM("RegeneratePageForm"),
+  REGENERATE_PAGE_FORM("RegeneratePageForm"),
   
-  REASSIGN("Reassign");
+  REASSIGN("Reassign"),
+  
+  DOCUMENT_COMPLETION("DocumentCompletion");
 
   private String value;
 

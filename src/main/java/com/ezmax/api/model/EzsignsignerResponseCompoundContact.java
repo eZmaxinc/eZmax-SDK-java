@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignerResponseCompoundContact {
   public static final String SERIALIZED_NAME_PKI_CONTACT_I_D = "pkiContactID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACT_I_D)
@@ -91,11 +90,11 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Contact
    * minimum: 0
    * @return pkiContactID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getPkiContactID() {
     return pkiContactID;
@@ -111,10 +110,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The First name of the contact
    * @return sContactFirstname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsContactFirstname() {
     return sContactFirstname;
@@ -130,10 +129,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The Last name of the contact
    * @return sContactLastname
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsContactLastname() {
     return sContactLastname;
@@ -149,12 +148,12 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
    * minimum: 1
    * maximum: 2
    * @return fkiLanguageID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiLanguageID() {
     return fkiLanguageID;
@@ -170,10 +169,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The email address.
    * @return sEmailAddress
-  **/
+   */
   @javax.annotation.Nullable
   public String getsEmailAddress() {
     return sEmailAddress;
@@ -189,10 +188,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * A phone number in E.164 Format
    * @return sPhoneE164
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneE164() {
     return sPhoneE164;
@@ -208,10 +207,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
    * @return sPhoneExtension
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneExtension() {
     return sPhoneExtension;
@@ -227,10 +226,10 @@ public class EzsignsignerResponseCompoundContact {
     return this;
   }
 
-   /**
+  /**
    * A phone number in E.164 Format
    * @return sPhoneE164Cell
-  **/
+   */
   @javax.annotation.Nullable
   public String getsPhoneE164Cell() {
     return sPhoneE164Cell;
@@ -317,12 +316,12 @@ public class EzsignsignerResponseCompoundContact {
     openapiRequiredFields.add("fkiLanguageID");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzsignsignerResponseCompoundContact
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzsignsignerResponseCompoundContact
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignerResponseCompoundContact.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -394,22 +393,22 @@ public class EzsignsignerResponseCompoundContact {
     }
   }
 
- /**
-  * Create an instance of EzsignsignerResponseCompoundContact given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzsignsignerResponseCompoundContact
-  * @throws IOException if the JSON string is invalid with respect to EzsignsignerResponseCompoundContact
-  */
+  /**
+   * Create an instance of EzsignsignerResponseCompoundContact given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzsignsignerResponseCompoundContact
+   * @throws IOException if the JSON string is invalid with respect to EzsignsignerResponseCompoundContact
+   */
   public static EzsignsignerResponseCompoundContact fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzsignsignerResponseCompoundContact.class);
   }
 
- /**
-  * Convert an instance of EzsignsignerResponseCompoundContact to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzsignsignerResponseCompoundContact to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-14T23:45:44.203418720Z[Etc/UTC]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryinternaldetailResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryinternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D)
@@ -107,11 +106,11 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingsummaryinternaldetail
    * minimum: 0
    * @return pkiEzmaxinvoicingsummaryinternaldetailID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPkiEzmaxinvoicingsummaryinternaldetailID() {
     return pkiEzmaxinvoicingsummaryinternaldetailID;
@@ -127,11 +126,11 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxinvoicingsummaryinternal
    * minimum: 0
    * @return fkiEzmaxinvoicingsummaryinternalID
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFkiEzmaxinvoicingsummaryinternalID() {
     return fkiEzmaxinvoicingsummaryinternalID;
@@ -147,11 +146,11 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Ezmaxproduct
    * minimum: 1
    * @return fkiEzmaxproductID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiEzmaxproductID() {
     return fkiEzmaxproductID;
@@ -167,10 +166,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Ezmaxproduct in the language of the requester
    * @return sEzmaxproductDescriptionX
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsEzmaxproductDescriptionX() {
     return sEzmaxproductDescriptionX;
@@ -186,11 +185,11 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The unique ID of the Billingentityexternal
    * minimum: 1
    * @return fkiBillingentityexternalID
-  **/
+   */
   @javax.annotation.Nonnull
   public Integer getFkiBillingentityexternalID() {
     return fkiBillingentityexternalID;
@@ -206,10 +205,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The description of the Billingentityexternal
    * @return sBillingentityexternalDescription
-  **/
+   */
   @javax.annotation.Nonnull
   public String getsBillingentityexternalDescription() {
     return sBillingentityexternalDescription;
@@ -225,10 +224,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The count item invoiced for the product
    * @return dEzmaxinvoicingsummaryinternaldetailCountreal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryinternaldetailCountreal() {
     return dEzmaxinvoicingsummaryinternaldetailCountreal;
@@ -244,10 +243,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The subtotal invoiced for the product
    * @return dEzmaxinvoicingsummaryinternaldetailSubtotal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryinternaldetailSubtotal() {
     return dEzmaxinvoicingsummaryinternaldetailSubtotal;
@@ -263,10 +262,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The rebate for the product
    * @return dEzmaxinvoicingsummaryinternaldetailRebate
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryinternaldetailRebate() {
     return dEzmaxinvoicingsummaryinternaldetailRebate;
@@ -282,10 +281,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The total invoiced for the product
    * @return dEzmaxinvoicingsummaryinternaldetailTotal
-  **/
+   */
   @javax.annotation.Nonnull
   public String getdEzmaxinvoicingsummaryinternaldetailTotal() {
     return dEzmaxinvoicingsummaryinternaldetailTotal;
@@ -301,10 +300,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * Whether if it&#39;s an adjustment
    * @return bEzmaxinvoicingsummaryinternaldetailAdjustment
-  **/
+   */
   @javax.annotation.Nonnull
   public Boolean getbEzmaxinvoicingsummaryinternaldetailAdjustment() {
     return bEzmaxinvoicingsummaryinternaldetailAdjustment;
@@ -320,10 +319,10 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     return this;
   }
 
-   /**
+  /**
    * The help message of the Ezmaxproduct in the language of the requester
    * @return tEzmaxproductHelpX
-  **/
+   */
   @javax.annotation.Nonnull
   public String gettEzmaxproductHelpX() {
     return tEzmaxproductHelpX;
@@ -428,12 +427,12 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     openapiRequiredFields.add("tEzmaxproductHelpX");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingsummaryinternaldetailResponse
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxinvoicingsummaryinternaldetailResponse
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingsummaryinternaldetailResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -508,22 +507,22 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
     }
   }
 
- /**
-  * Create an instance of EzmaxinvoicingsummaryinternaldetailResponse given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of EzmaxinvoicingsummaryinternaldetailResponse
-  * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingsummaryinternaldetailResponse
-  */
+  /**
+   * Create an instance of EzmaxinvoicingsummaryinternaldetailResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of EzmaxinvoicingsummaryinternaldetailResponse
+   * @throws IOException if the JSON string is invalid with respect to EzmaxinvoicingsummaryinternaldetailResponse
+   */
   public static EzmaxinvoicingsummaryinternaldetailResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, EzmaxinvoicingsummaryinternaldetailResponse.class);
   }
 
- /**
-  * Convert an instance of EzmaxinvoicingsummaryinternaldetailResponse to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of EzmaxinvoicingsummaryinternaldetailResponse to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }
