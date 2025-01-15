@@ -81,7 +81,7 @@ public class Example {
 
 <a id="ezsignannotationDeleteObjectV1"></a>
 # **ezsignannotationDeleteObjectV1**
-> EzsignannotationDeleteObjectV1Response ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
+> CommonResponse ezsignannotationDeleteObjectV1(pkiEzsignannotationID)
 
 Delete an existing Ezsignannotation
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectEzsignannotationApi apiInstance = new ObjectEzsignannotationApi(defaultClient);
     Integer pkiEzsignannotationID = 56; // Integer | 
     try {
-      EzsignannotationDeleteObjectV1Response result = apiInstance.ezsignannotationDeleteObjectV1(pkiEzsignannotationID);
+      CommonResponse result = apiInstance.ezsignannotationDeleteObjectV1(pkiEzsignannotationID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignannotationApi#ezsignannotationDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignannotationDeleteObjectV1Response**](EzsignannotationDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ public class Example {
 
 <a id="ezsignannotationEditObjectV1"></a>
 # **ezsignannotationEditObjectV1**
-> EzsignannotationEditObjectV1Response ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
+> CommonResponse ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request)
 
 Edit an existing Ezsignannotation
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiEzsignannotationID = 56; // Integer | 
     EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request = new EzsignannotationEditObjectV1Request(); // EzsignannotationEditObjectV1Request | 
     try {
-      EzsignannotationEditObjectV1Response result = apiInstance.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+      CommonResponse result = apiInstance.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignannotationApi#ezsignannotationEditObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignannotationEditObjectV1Response**](EzsignannotationEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

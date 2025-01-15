@@ -17,10 +17,10 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
-import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
 import com.ezmax.api.model.BillingentityinternalGetListV1Response;
 import com.ezmax.api.model.BillingentityinternalGetObjectV2Response;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -65,7 +65,7 @@ public class ObjectBillingentityinternalApiTest {
     public void billingentityinternalEditObjectV1Test() throws ApiException {
         Integer pkiBillingentityinternalID = null;
         BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = null;
-        BillingentityinternalEditObjectV1Response response = api.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+        CommonResponse response = api.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
         // TODO: test validations
     }
 

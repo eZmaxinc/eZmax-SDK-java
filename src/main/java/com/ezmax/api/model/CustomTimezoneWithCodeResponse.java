@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * Generic AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomTimezoneWithCodeResponse {
   public static final String SERIALIZED_NAME_S_TIMEZONE_NAME = "sTimezoneName";
   @SerializedName(SERIALIZED_NAME_S_TIMEZONE_NAME)
+  @javax.annotation.Nonnull
   private String sTimezoneName;
 
   public static final String SERIALIZED_NAME_S_CODE = "sCode";
   @SerializedName(SERIALIZED_NAME_S_CODE)
+  @javax.annotation.Nonnull
   private String sCode;
 
   public CustomTimezoneWithCodeResponse() {
   }
 
-  public CustomTimezoneWithCodeResponse sTimezoneName(String sTimezoneName) {
+  public CustomTimezoneWithCodeResponse sTimezoneName(@javax.annotation.Nonnull String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
     return this;
   }
@@ -75,12 +77,12 @@ public class CustomTimezoneWithCodeResponse {
     return sTimezoneName;
   }
 
-  public void setsTimezoneName(String sTimezoneName) {
+  public void setsTimezoneName(@javax.annotation.Nonnull String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
   }
 
 
-  public CustomTimezoneWithCodeResponse sCode(String sCode) {
+  public CustomTimezoneWithCodeResponse sCode(@javax.annotation.Nonnull String sCode) {
     this.sCode = sCode;
     return this;
   }
@@ -94,7 +96,7 @@ public class CustomTimezoneWithCodeResponse {
     return sCode;
   }
 
-  public void setsCode(String sCode) {
+  public void setsCode(@javax.annotation.Nonnull String sCode) {
     this.sCode = sCode;
   }
 

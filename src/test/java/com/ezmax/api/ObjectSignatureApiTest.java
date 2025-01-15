@@ -14,12 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.SignatureCreateObjectV1Request;
 import com.ezmax.api.model.SignatureCreateObjectV1Response;
-import com.ezmax.api.model.SignatureDeleteObjectV1Response;
 import com.ezmax.api.model.SignatureEditObjectV1Request;
-import com.ezmax.api.model.SignatureEditObjectV1Response;
 import com.ezmax.api.model.SignatureGetObjectV2Response;
 import com.ezmax.api.model.SignatureGetObjectV3Response;
 import org.junit.jupiter.api.Disabled;
@@ -62,7 +61,7 @@ public class ObjectSignatureApiTest {
     @Test
     public void signatureDeleteObjectV1Test() throws ApiException {
         Integer pkiSignatureID = null;
-        SignatureDeleteObjectV1Response response = api.signatureDeleteObjectV1(pkiSignatureID);
+        CommonResponse response = api.signatureDeleteObjectV1(pkiSignatureID);
         // TODO: test validations
     }
 
@@ -77,7 +76,7 @@ public class ObjectSignatureApiTest {
     public void signatureEditObjectV1Test() throws ApiException {
         Integer pkiSignatureID = null;
         SignatureEditObjectV1Request signatureEditObjectV1Request = null;
-        SignatureEditObjectV1Response response = api.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
+        CommonResponse response = api.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
         // TODO: test validations
     }
 

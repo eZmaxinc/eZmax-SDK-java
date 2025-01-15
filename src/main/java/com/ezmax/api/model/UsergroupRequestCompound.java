@@ -50,24 +50,27 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupRequestCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiUsergroupID;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  @javax.annotation.Nullable
   private EmailRequest objEmail;
 
   public static final String SERIALIZED_NAME_OBJ_USERGROUP_NAME = "objUsergroupName";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP_NAME)
+  @javax.annotation.Nonnull
   private MultilingualUsergroupName objUsergroupName;
 
   public UsergroupRequestCompound() {
   }
 
-  public UsergroupRequestCompound pkiUsergroupID(Integer pkiUsergroupID) {
+  public UsergroupRequestCompound pkiUsergroupID(@javax.annotation.Nullable Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -83,12 +86,12 @@ public class UsergroupRequestCompound {
     return pkiUsergroupID;
   }
 
-  public void setPkiUsergroupID(Integer pkiUsergroupID) {
+  public void setPkiUsergroupID(@javax.annotation.Nullable Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
-  public UsergroupRequestCompound objEmail(EmailRequest objEmail) {
+  public UsergroupRequestCompound objEmail(@javax.annotation.Nullable EmailRequest objEmail) {
     this.objEmail = objEmail;
     return this;
   }
@@ -102,12 +105,12 @@ public class UsergroupRequestCompound {
     return objEmail;
   }
 
-  public void setObjEmail(EmailRequest objEmail) {
+  public void setObjEmail(@javax.annotation.Nullable EmailRequest objEmail) {
     this.objEmail = objEmail;
   }
 
 
-  public UsergroupRequestCompound objUsergroupName(MultilingualUsergroupName objUsergroupName) {
+  public UsergroupRequestCompound objUsergroupName(@javax.annotation.Nonnull MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;
     return this;
   }
@@ -121,7 +124,7 @@ public class UsergroupRequestCompound {
     return objUsergroupName;
   }
 
-  public void setObjUsergroupName(MultilingualUsergroupName objUsergroupName) {
+  public void setObjUsergroupName(@javax.annotation.Nonnull MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;
   }
 

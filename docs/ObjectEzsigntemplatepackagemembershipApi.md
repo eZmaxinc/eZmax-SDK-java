@@ -81,7 +81,7 @@ public class Example {
 
 <a id="ezsigntemplatepackagemembershipDeleteObjectV1"></a>
 # **ezsigntemplatepackagemembershipDeleteObjectV1**
-> EzsigntemplatepackagemembershipDeleteObjectV1Response ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
+> CommonResponse ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID)
 
 Delete an existing Ezsigntemplatepackagemembership
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectEzsigntemplatepackagemembershipApi apiInstance = new ObjectEzsigntemplatepackagemembershipApi(defaultClient);
     Integer pkiEzsigntemplatepackagemembershipID = 56; // Integer | 
     try {
-      EzsigntemplatepackagemembershipDeleteObjectV1Response result = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
+      CommonResponse result = apiInstance.ezsigntemplatepackagemembershipDeleteObjectV1(pkiEzsigntemplatepackagemembershipID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatepackagemembershipApi#ezsigntemplatepackagemembershipDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigntemplatepackagemembershipDeleteObjectV1Response**](EzsigntemplatepackagemembershipDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

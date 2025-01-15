@@ -53,24 +53,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentGetWordsPositionsV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private List<CustomWordPositionWordResponse> mPayload = new ArrayList<>();
 
   public EzsigntemplatedocumentGetWordsPositionsV1Response() {
   }
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -84,12 +87,12 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -103,12 +106,12 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Response mPayload(List<CustomWordPositionWordResponse> mPayload) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Response mPayload(@javax.annotation.Nonnull List<CustomWordPositionWordResponse> mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -130,7 +133,7 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Response {
     return mPayload;
   }
 
-  public void setmPayload(List<CustomWordPositionWordResponse> mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull List<CustomWordPositionWordResponse> mPayload) {
     this.mPayload = mPayload;
   }
 

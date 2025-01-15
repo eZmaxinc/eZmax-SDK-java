@@ -24,7 +24,7 @@ A Systemconfiguration Object
 |**bSystemconfigurationSspr** | **Boolean** | Whether if we allow SSPR |  |
 |**dtSystemconfigurationReadonlyexpirationstart** | **String** | The start date where the system will be in read only |  [optional] |
 |**dtSystemconfigurationReadonlyexpirationend** | **String** | The end date where the system will be in read only |  [optional] |
-|**objBranding** | [**CustomBrandingResponse**](CustomBrandingResponse.md) |  |  [optional] |
+|**objBranding** | [**Object**](Object.md) | A Custom Branding Object |  [optional] |
 
 
 

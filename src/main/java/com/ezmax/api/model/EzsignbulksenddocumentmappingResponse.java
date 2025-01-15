@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksenddocumentmappingResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksenddocumentmappingID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDDOCUMENTMAPPING_ORDER = "iEzsignbulksenddocumentmappingOrder";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDDOCUMENTMAPPING_ORDER)
+  @javax.annotation.Nonnull
   private Integer iEzsignbulksenddocumentmappingOrder;
 
   public EzsignbulksenddocumentmappingResponse() {
   }
 
-  public EzsignbulksenddocumentmappingResponse pkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
+  public EzsignbulksenddocumentmappingResponse pkiEzsignbulksenddocumentmappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
     return this;
   }
@@ -88,12 +93,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return pkiEzsignbulksenddocumentmappingID;
   }
 
-  public void setPkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
+  public void setPkiEzsignbulksenddocumentmappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -108,12 +113,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsignbulksendID;
   }
 
-  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -128,12 +133,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -148,12 +153,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse iEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
+  public EzsignbulksenddocumentmappingResponse iEzsignbulksenddocumentmappingOrder(@javax.annotation.Nonnull Integer iEzsignbulksenddocumentmappingOrder) {
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
     return this;
   }
@@ -168,7 +173,7 @@ public class EzsignbulksenddocumentmappingResponse {
     return iEzsignbulksenddocumentmappingOrder;
   }
 
-  public void setiEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
+  public void setiEzsignbulksenddocumentmappingOrder(@javax.annotation.Nonnull Integer iEzsignbulksenddocumentmappingOrder) {
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
   }
 

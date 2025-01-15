@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/userstaged/{pkiUserstagedID}/createUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserstagedCreateUserV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUserID;
 
   public UserstagedCreateUserV1ResponseMPayload() {
   }
 
-  public UserstagedCreateUserV1ResponseMPayload pkiUserID(Integer pkiUserID) {
+  public UserstagedCreateUserV1ResponseMPayload pkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -72,7 +73,7 @@ public class UserstagedCreateUserV1ResponseMPayload {
     return pkiUserID;
   }
 
-  public void setPkiUserID(Integer pkiUserID) {
+  public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 

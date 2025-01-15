@@ -13,10 +13,10 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CustomDropdownElementResponseCompound;
+import com.ezmax.api.model.CustomDropdownElementResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsigntemplateformfieldResponseCompound;
-import com.ezmax.api.model.EzsigntemplateformfieldgroupsignerResponseCompound;
+import com.ezmax.api.model.EzsigntemplateformfieldgroupsignerResponse;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupType;

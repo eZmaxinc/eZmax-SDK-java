@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionRequestPatch {
   public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
+  @javax.annotation.Nullable
   private String sDiscussionDescription;
 
   public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
+  @javax.annotation.Nullable
   private Boolean bDiscussionClosed;
 
   public DiscussionRequestPatch() {
   }
 
-  public DiscussionRequestPatch sDiscussionDescription(String sDiscussionDescription) {
+  public DiscussionRequestPatch sDiscussionDescription(@javax.annotation.Nullable String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
     return this;
   }
@@ -75,12 +77,12 @@ public class DiscussionRequestPatch {
     return sDiscussionDescription;
   }
 
-  public void setsDiscussionDescription(String sDiscussionDescription) {
+  public void setsDiscussionDescription(@javax.annotation.Nullable String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
   }
 
 
-  public DiscussionRequestPatch bDiscussionClosed(Boolean bDiscussionClosed) {
+  public DiscussionRequestPatch bDiscussionClosed(@javax.annotation.Nullable Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
     return this;
   }
@@ -94,7 +96,7 @@ public class DiscussionRequestPatch {
     return bDiscussionClosed;
   }
 
-  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
+  public void setbDiscussionClosed(@javax.annotation.Nullable Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
   }
 

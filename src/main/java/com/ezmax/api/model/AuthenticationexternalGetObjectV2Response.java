@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/authenticationexternal/{pkiAuthenticationexternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AuthenticationexternalGetObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private AuthenticationexternalGetObjectV2ResponseMPayload mPayload;
 
   public AuthenticationexternalGetObjectV2Response() {
   }
 
-  public AuthenticationexternalGetObjectV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public AuthenticationexternalGetObjectV2Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -82,12 +85,12 @@ public class AuthenticationexternalGetObjectV2Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public AuthenticationexternalGetObjectV2Response objDebug(CommonResponseObjDebug objDebug) {
+  public AuthenticationexternalGetObjectV2Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -101,12 +104,12 @@ public class AuthenticationexternalGetObjectV2Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public AuthenticationexternalGetObjectV2Response mPayload(AuthenticationexternalGetObjectV2ResponseMPayload mPayload) {
+  public AuthenticationexternalGetObjectV2Response mPayload(@javax.annotation.Nonnull AuthenticationexternalGetObjectV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -120,7 +123,7 @@ public class AuthenticationexternalGetObjectV2Response {
     return mPayload;
   }
 
-  public void setmPayload(AuthenticationexternalGetObjectV2ResponseMPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull AuthenticationexternalGetObjectV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

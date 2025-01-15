@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomBrandingResponse;
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
 import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
@@ -54,81 +53,98 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SystemconfigurationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSystemconfigurationID;
 
   public static final String SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D = "fkiSystemconfigurationtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiSystemconfigurationtypeID;
 
   public static final String SERIALIZED_NAME_FKI_BRANDING_I_D = "fkiBrandingID";
   @SerializedName(SERIALIZED_NAME_FKI_BRANDING_I_D)
+  @javax.annotation.Nullable
   private Integer fkiBrandingID;
 
   public static final String SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X = "sSystemconfigurationtypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sSystemconfigurationtypeDescriptionX;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION = "eSystemconfigurationNewexternaluseraction";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION)
+  @javax.annotation.Nonnull
   private FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1 = "eSystemconfigurationLanguage1";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1)
+  @javax.annotation.Nonnull
   private FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2 = "eSystemconfigurationLanguage2";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2)
+  @javax.annotation.Nonnull
   private FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN = "eSystemconfigurationEzsign";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN)
+  @javax.annotation.Nullable
   private FieldESystemconfigurationEzsign eSystemconfigurationEzsign;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
+  @javax.annotation.Nullable
   private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
+  @javax.annotation.Nullable
   private Boolean bSystemconfigurationEzsignpaidbyoffice;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL = "bSystemconfigurationEzsignpersonnal";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL)
+  @javax.annotation.Nonnull
   private Boolean bSystemconfigurationEzsignpersonnal;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_HASCREDITCARDMERCHANT = "bSystemconfigurationHascreditcardmerchant";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_HASCREDITCARDMERCHANT)
+  @javax.annotation.Nullable
   private Boolean bSystemconfigurationHascreditcardmerchant;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_ISDISPOSALACTIVE = "bSystemconfigurationIsdisposalactive";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_ISDISPOSALACTIVE)
+  @javax.annotation.Nullable
   private Boolean bSystemconfigurationIsdisposalactive;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR = "bSystemconfigurationSspr";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR)
+  @javax.annotation.Nonnull
   private Boolean bSystemconfigurationSspr;
 
   public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART = "dtSystemconfigurationReadonlyexpirationstart";
   @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART)
+  @javax.annotation.Nullable
   private String dtSystemconfigurationReadonlyexpirationstart;
 
   public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND = "dtSystemconfigurationReadonlyexpirationend";
   @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND)
+  @javax.annotation.Nullable
   private String dtSystemconfigurationReadonlyexpirationend;
 
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
-  private CustomBrandingResponse objBranding;
+  @javax.annotation.Nullable
+  private Object objBranding;
 
   public SystemconfigurationResponseCompound() {
   }
 
-  public SystemconfigurationResponseCompound pkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
+  public SystemconfigurationResponseCompound pkiSystemconfigurationID(@javax.annotation.Nonnull Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
     return this;
   }
@@ -144,12 +160,12 @@ public class SystemconfigurationResponseCompound {
     return pkiSystemconfigurationID;
   }
 
-  public void setPkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
+  public void setPkiSystemconfigurationID(@javax.annotation.Nonnull Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
   }
 
 
-  public SystemconfigurationResponseCompound fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
+  public SystemconfigurationResponseCompound fkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -164,12 +180,12 @@ public class SystemconfigurationResponseCompound {
     return fkiSystemconfigurationtypeID;
   }
 
-  public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
+  public void setFkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
-  public SystemconfigurationResponseCompound fkiBrandingID(Integer fkiBrandingID) {
+  public SystemconfigurationResponseCompound fkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
     return this;
   }
@@ -184,12 +200,12 @@ public class SystemconfigurationResponseCompound {
     return fkiBrandingID;
   }
 
-  public void setFkiBrandingID(Integer fkiBrandingID) {
+  public void setFkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
   }
 
 
-  public SystemconfigurationResponseCompound sSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
+  public SystemconfigurationResponseCompound sSystemconfigurationtypeDescriptionX(@javax.annotation.Nonnull String sSystemconfigurationtypeDescriptionX) {
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
     return this;
   }
@@ -203,12 +219,12 @@ public class SystemconfigurationResponseCompound {
     return sSystemconfigurationtypeDescriptionX;
   }
 
-  public void setsSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
+  public void setsSystemconfigurationtypeDescriptionX(@javax.annotation.Nonnull String sSystemconfigurationtypeDescriptionX) {
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
   }
 
 
-  public SystemconfigurationResponseCompound eSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
+  public SystemconfigurationResponseCompound eSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
     return this;
   }
@@ -222,12 +238,12 @@ public class SystemconfigurationResponseCompound {
     return eSystemconfigurationNewexternaluseraction;
   }
 
-  public void seteSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
+  public void seteSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
   }
 
 
-  public SystemconfigurationResponseCompound eSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
+  public SystemconfigurationResponseCompound eSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
     return this;
   }
@@ -241,12 +257,12 @@ public class SystemconfigurationResponseCompound {
     return eSystemconfigurationLanguage1;
   }
 
-  public void seteSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
+  public void seteSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
   }
 
 
-  public SystemconfigurationResponseCompound eSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
+  public SystemconfigurationResponseCompound eSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
     return this;
   }
@@ -260,13 +276,13 @@ public class SystemconfigurationResponseCompound {
     return eSystemconfigurationLanguage2;
   }
 
-  public void seteSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
+  public void seteSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
   }
 
 
   @Deprecated
-  public SystemconfigurationResponseCompound eSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
+  public SystemconfigurationResponseCompound eSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
     return this;
   }
@@ -283,12 +299,12 @@ public class SystemconfigurationResponseCompound {
   }
 
   @Deprecated
-  public void seteSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
+  public void seteSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
   }
 
 
-  public SystemconfigurationResponseCompound eSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public SystemconfigurationResponseCompound eSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
     return this;
   }
@@ -302,12 +318,12 @@ public class SystemconfigurationResponseCompound {
     return eSystemconfigurationEzsignofficeplan;
   }
 
-  public void seteSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public void seteSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
   }
 
 
-  public SystemconfigurationResponseCompound bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public SystemconfigurationResponseCompound bSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
     return this;
   }
@@ -321,12 +337,12 @@ public class SystemconfigurationResponseCompound {
     return bSystemconfigurationEzsignpaidbyoffice;
   }
 
-  public void setbSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public void setbSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
   }
 
 
-  public SystemconfigurationResponseCompound bSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
+  public SystemconfigurationResponseCompound bSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
     return this;
   }
@@ -340,12 +356,12 @@ public class SystemconfigurationResponseCompound {
     return bSystemconfigurationEzsignpersonnal;
   }
 
-  public void setbSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
+  public void setbSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
   }
 
 
-  public SystemconfigurationResponseCompound bSystemconfigurationHascreditcardmerchant(Boolean bSystemconfigurationHascreditcardmerchant) {
+  public SystemconfigurationResponseCompound bSystemconfigurationHascreditcardmerchant(@javax.annotation.Nullable Boolean bSystemconfigurationHascreditcardmerchant) {
     this.bSystemconfigurationHascreditcardmerchant = bSystemconfigurationHascreditcardmerchant;
     return this;
   }
@@ -359,12 +375,12 @@ public class SystemconfigurationResponseCompound {
     return bSystemconfigurationHascreditcardmerchant;
   }
 
-  public void setbSystemconfigurationHascreditcardmerchant(Boolean bSystemconfigurationHascreditcardmerchant) {
+  public void setbSystemconfigurationHascreditcardmerchant(@javax.annotation.Nullable Boolean bSystemconfigurationHascreditcardmerchant) {
     this.bSystemconfigurationHascreditcardmerchant = bSystemconfigurationHascreditcardmerchant;
   }
 
 
-  public SystemconfigurationResponseCompound bSystemconfigurationIsdisposalactive(Boolean bSystemconfigurationIsdisposalactive) {
+  public SystemconfigurationResponseCompound bSystemconfigurationIsdisposalactive(@javax.annotation.Nullable Boolean bSystemconfigurationIsdisposalactive) {
     this.bSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
     return this;
   }
@@ -378,12 +394,12 @@ public class SystemconfigurationResponseCompound {
     return bSystemconfigurationIsdisposalactive;
   }
 
-  public void setbSystemconfigurationIsdisposalactive(Boolean bSystemconfigurationIsdisposalactive) {
+  public void setbSystemconfigurationIsdisposalactive(@javax.annotation.Nullable Boolean bSystemconfigurationIsdisposalactive) {
     this.bSystemconfigurationIsdisposalactive = bSystemconfigurationIsdisposalactive;
   }
 
 
-  public SystemconfigurationResponseCompound bSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
+  public SystemconfigurationResponseCompound bSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
     return this;
   }
@@ -397,12 +413,12 @@ public class SystemconfigurationResponseCompound {
     return bSystemconfigurationSspr;
   }
 
-  public void setbSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
+  public void setbSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
   }
 
 
-  public SystemconfigurationResponseCompound dtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
+  public SystemconfigurationResponseCompound dtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
     return this;
   }
@@ -416,12 +432,12 @@ public class SystemconfigurationResponseCompound {
     return dtSystemconfigurationReadonlyexpirationstart;
   }
 
-  public void setDtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
+  public void setDtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
   }
 
 
-  public SystemconfigurationResponseCompound dtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
+  public SystemconfigurationResponseCompound dtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
     return this;
   }
@@ -435,26 +451,26 @@ public class SystemconfigurationResponseCompound {
     return dtSystemconfigurationReadonlyexpirationend;
   }
 
-  public void setDtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
+  public void setDtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
   }
 
 
-  public SystemconfigurationResponseCompound objBranding(CustomBrandingResponse objBranding) {
+  public SystemconfigurationResponseCompound objBranding(@javax.annotation.Nullable Object objBranding) {
     this.objBranding = objBranding;
     return this;
   }
 
   /**
-   * Get objBranding
+   * A Custom Branding Object
    * @return objBranding
    */
   @javax.annotation.Nullable
-  public CustomBrandingResponse getObjBranding() {
+  public Object getObjBranding() {
     return objBranding;
   }
 
-  public void setObjBranding(CustomBrandingResponse objBranding) {
+  public void setObjBranding(@javax.annotation.Nullable Object objBranding) {
     this.objBranding = objBranding;
   }
 
@@ -619,7 +635,7 @@ public class SystemconfigurationResponseCompound {
       }
       // validate the optional field `objBranding`
       if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {
-        CustomBrandingResponse.validateJsonElement(jsonObj.get("objBranding"));
+        Object.validateJsonElement(jsonObj.get("objBranding"));
       }
   }
 

@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/department/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DepartmentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_DEPARTMENT = "a_objDepartment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DEPARTMENT)
+  @javax.annotation.Nonnull
   private List<DepartmentAutocompleteElementResponse> aObjDepartment = new ArrayList<>();
 
   public DepartmentGetAutocompleteV2ResponseMPayload() {
   }
 
-  public DepartmentGetAutocompleteV2ResponseMPayload aObjDepartment(List<DepartmentAutocompleteElementResponse> aObjDepartment) {
+  public DepartmentGetAutocompleteV2ResponseMPayload aObjDepartment(@javax.annotation.Nonnull List<DepartmentAutocompleteElementResponse> aObjDepartment) {
     this.aObjDepartment = aObjDepartment;
     return this;
   }
@@ -82,7 +83,7 @@ public class DepartmentGetAutocompleteV2ResponseMPayload {
     return aObjDepartment;
   }
 
-  public void setaObjDepartment(List<DepartmentAutocompleteElementResponse> aObjDepartment) {
+  public void setaObjDepartment(@javax.annotation.Nonnull List<DepartmentAutocompleteElementResponse> aObjDepartment) {
     this.aObjDepartment = aObjDepartment;
   }
 

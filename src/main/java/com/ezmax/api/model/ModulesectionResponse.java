@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModulesectionResponse {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiModulesectionID;
 
   public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiModuleID;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME = "sModulesectionInternalname";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME)
+  @javax.annotation.Nonnull
   private String sModulesectionInternalname;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
+  @javax.annotation.Nonnull
   private String sModulesectionNameX;
 
   public ModulesectionResponse() {
   }
 
-  public ModulesectionResponse pkiModulesectionID(Integer pkiModulesectionID) {
+  public ModulesectionResponse pkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
     return this;
   }
@@ -84,12 +88,12 @@ public class ModulesectionResponse {
     return pkiModulesectionID;
   }
 
-  public void setPkiModulesectionID(Integer pkiModulesectionID) {
+  public void setPkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
   }
 
 
-  public ModulesectionResponse fkiModuleID(Integer fkiModuleID) {
+  public ModulesectionResponse fkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -104,12 +108,12 @@ public class ModulesectionResponse {
     return fkiModuleID;
   }
 
-  public void setFkiModuleID(Integer fkiModuleID) {
+  public void setFkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
-  public ModulesectionResponse sModulesectionInternalname(String sModulesectionInternalname) {
+  public ModulesectionResponse sModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
     return this;
   }
@@ -123,12 +127,12 @@ public class ModulesectionResponse {
     return sModulesectionInternalname;
   }
 
-  public void setsModulesectionInternalname(String sModulesectionInternalname) {
+  public void setsModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
   }
 
 
-  public ModulesectionResponse sModulesectionNameX(String sModulesectionNameX) {
+  public ModulesectionResponse sModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -142,7 +146,7 @@ public class ModulesectionResponse {
     return sModulesectionNameX;
   }
 
-  public void setsModulesectionNameX(String sModulesectionNameX) {
+  public void setsModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 

@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponseCompound;
+import com.ezmax.api.model.AttemptResponse;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignfolderResponse;
 import com.google.gson.TypeAdapter;
@@ -53,24 +53,27 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookEzsignFolderDisposed {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  @javax.annotation.Nonnull
   private CustomWebhookResponse objWebhook;
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
+  @javax.annotation.Nonnull
   private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private EzsignfolderResponse objEzsignfolder;
 
   public WebhookEzsignFolderDisposed() {
   }
 
-  public WebhookEzsignFolderDisposed objWebhook(CustomWebhookResponse objWebhook) {
+  public WebhookEzsignFolderDisposed objWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
     return this;
   }
@@ -84,17 +87,17 @@ public class WebhookEzsignFolderDisposed {
     return objWebhook;
   }
 
-  public void setObjWebhook(CustomWebhookResponse objWebhook) {
+  public void setObjWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
   }
 
 
-  public WebhookEzsignFolderDisposed aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+  public WebhookEzsignFolderDisposed aObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
     return this;
   }
 
-  public WebhookEzsignFolderDisposed addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+  public WebhookEzsignFolderDisposed addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
     if (this.aObjAttempt == null) {
       this.aObjAttempt = new ArrayList<>();
     }
@@ -111,12 +114,12 @@ public class WebhookEzsignFolderDisposed {
     return aObjAttempt;
   }
 
-  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+  public void setaObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
 
-  public WebhookEzsignFolderDisposed objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+  public WebhookEzsignFolderDisposed objEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -130,7 +133,7 @@ public class WebhookEzsignFolderDisposed {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+  public void setObjEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
@@ -233,7 +236,7 @@ public class WebhookEzsignFolderDisposed {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
       // validate the required field `objEzsignfolder`
       EzsignfolderResponse.validateJsonElement(jsonObj.get("objEzsignfolder"));

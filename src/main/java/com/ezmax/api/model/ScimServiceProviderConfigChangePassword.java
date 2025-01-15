@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies configuration options related to changing a password.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ScimServiceProviderConfigChangePassword {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
+  @javax.annotation.Nonnull
   private Boolean supported;
 
   public ScimServiceProviderConfigChangePassword() {
   }
 
-  public ScimServiceProviderConfigChangePassword supported(Boolean supported) {
+  public ScimServiceProviderConfigChangePassword supported(@javax.annotation.Nonnull Boolean supported) {
     this.supported = supported;
     return this;
   }
@@ -71,7 +72,7 @@ public class ScimServiceProviderConfigChangePassword {
     return supported;
   }
 
-  public void setSupported(Boolean supported) {
+  public void setSupported(@javax.annotation.Nonnull Boolean supported) {
     this.supported = supported;
   }
 

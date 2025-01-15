@@ -81,7 +81,7 @@ public class Example {
 
 <a id="corsDeleteObjectV1"></a>
 # **corsDeleteObjectV1**
-> CorsDeleteObjectV1Response corsDeleteObjectV1(pkiCorsID)
+> CommonResponse corsDeleteObjectV1(pkiCorsID)
 
 Delete an existing Cors
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectCorsApi apiInstance = new ObjectCorsApi(defaultClient);
     Integer pkiCorsID = 56; // Integer | The unique ID of the Cors
     try {
-      CorsDeleteObjectV1Response result = apiInstance.corsDeleteObjectV1(pkiCorsID);
+      CommonResponse result = apiInstance.corsDeleteObjectV1(pkiCorsID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectCorsApi#corsDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**CorsDeleteObjectV1Response**](CorsDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ public class Example {
 
 <a id="corsEditObjectV1"></a>
 # **corsEditObjectV1**
-> CorsEditObjectV1Response corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
+> CommonResponse corsEditObjectV1(pkiCorsID, corsEditObjectV1Request)
 
 Edit an existing Cors
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiCorsID = 56; // Integer | The unique ID of the Cors
     CorsEditObjectV1Request corsEditObjectV1Request = new CorsEditObjectV1Request(); // CorsEditObjectV1Request | 
     try {
-      CorsEditObjectV1Response result = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
+      CommonResponse result = apiInstance.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectCorsApi#corsEditObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**CorsEditObjectV1Response**](CorsEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

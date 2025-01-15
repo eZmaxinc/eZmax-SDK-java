@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/usergroupexternal/{pkiUsergroupexternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupexternalGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USERGROUPEXTERNAL = "objUsergroupexternal";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUPEXTERNAL)
+  @javax.annotation.Nonnull
   private UsergroupexternalResponseCompound objUsergroupexternal;
 
   public UsergroupexternalGetObjectV2ResponseMPayload() {
   }
 
-  public UsergroupexternalGetObjectV2ResponseMPayload objUsergroupexternal(UsergroupexternalResponseCompound objUsergroupexternal) {
+  public UsergroupexternalGetObjectV2ResponseMPayload objUsergroupexternal(@javax.annotation.Nonnull UsergroupexternalResponseCompound objUsergroupexternal) {
     this.objUsergroupexternal = objUsergroupexternal;
     return this;
   }
@@ -72,7 +73,7 @@ public class UsergroupexternalGetObjectV2ResponseMPayload {
     return objUsergroupexternal;
   }
 
-  public void setObjUsergroupexternal(UsergroupexternalResponseCompound objUsergroupexternal) {
+  public void setObjUsergroupexternal(@javax.annotation.Nonnull UsergroupexternalResponseCompound objUsergroupexternal) {
     this.objUsergroupexternal = objUsergroupexternal;
   }
 

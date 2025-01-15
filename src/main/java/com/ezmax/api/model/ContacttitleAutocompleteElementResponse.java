@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A Contacttitle AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ContacttitleAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_CONTACTTITLE_I_D = "pkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACTTITLE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiContacttitleID;
 
   public static final String SERIALIZED_NAME_S_CONTACTTITLE_NAME_X = "sContacttitleNameX";
   @SerializedName(SERIALIZED_NAME_S_CONTACTTITLE_NAME_X)
+  @javax.annotation.Nonnull
   private String sContacttitleNameX;
 
   public ContacttitleAutocompleteElementResponse() {
   }
 
-  public ContacttitleAutocompleteElementResponse pkiContacttitleID(Integer pkiContacttitleID) {
+  public ContacttitleAutocompleteElementResponse pkiContacttitleID(@javax.annotation.Nonnull Integer pkiContacttitleID) {
     this.pkiContacttitleID = pkiContacttitleID;
     return this;
   }
@@ -76,12 +78,12 @@ public class ContacttitleAutocompleteElementResponse {
     return pkiContacttitleID;
   }
 
-  public void setPkiContacttitleID(Integer pkiContacttitleID) {
+  public void setPkiContacttitleID(@javax.annotation.Nonnull Integer pkiContacttitleID) {
     this.pkiContacttitleID = pkiContacttitleID;
   }
 
 
-  public ContacttitleAutocompleteElementResponse sContacttitleNameX(String sContacttitleNameX) {
+  public ContacttitleAutocompleteElementResponse sContacttitleNameX(@javax.annotation.Nonnull String sContacttitleNameX) {
     this.sContacttitleNameX = sContacttitleNameX;
     return this;
   }
@@ -95,7 +97,7 @@ public class ContacttitleAutocompleteElementResponse {
     return sContacttitleNameX;
   }
 
-  public void setsContacttitleNameX(String sContacttitleNameX) {
+  public void setsContacttitleNameX(@javax.annotation.Nonnull String sContacttitleNameX) {
     this.sContacttitleNameX = sContacttitleNameX;
   }
 

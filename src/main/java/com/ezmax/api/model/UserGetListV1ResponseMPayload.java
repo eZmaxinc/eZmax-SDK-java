@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/user/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_USER = "a_objUser";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USER)
+  @javax.annotation.Nonnull
   private List<UserListElement> aObjUser = new ArrayList<>();
 
   public UserGetListV1ResponseMPayload() {
   }
 
-  public UserGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public UserGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class UserGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public UserGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public UserGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class UserGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public UserGetListV1ResponseMPayload aObjUser(List<UserListElement> aObjUser) {
+  public UserGetListV1ResponseMPayload aObjUser(@javax.annotation.Nonnull List<UserListElement> aObjUser) {
     this.aObjUser = aObjUser;
     return this;
   }
@@ -128,7 +131,7 @@ public class UserGetListV1ResponseMPayload {
     return aObjUser;
   }
 
-  public void setaObjUser(List<UserListElement> aObjUser) {
+  public void setaObjUser(@javax.annotation.Nonnull List<UserListElement> aObjUser) {
     this.aObjUser = aObjUser;
   }
 

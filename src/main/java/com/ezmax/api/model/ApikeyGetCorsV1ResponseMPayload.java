@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getCors
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ApikeyGetCorsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CORS = "a_objCors";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CORS)
+  @javax.annotation.Nonnull
   private List<CorsResponseCompound> aObjCors = new ArrayList<>();
 
   public ApikeyGetCorsV1ResponseMPayload() {
   }
 
-  public ApikeyGetCorsV1ResponseMPayload aObjCors(List<CorsResponseCompound> aObjCors) {
+  public ApikeyGetCorsV1ResponseMPayload aObjCors(@javax.annotation.Nonnull List<CorsResponseCompound> aObjCors) {
     this.aObjCors = aObjCors;
     return this;
   }
@@ -82,7 +83,7 @@ public class ApikeyGetCorsV1ResponseMPayload {
     return aObjCors;
   }
 
-  public void setaObjCors(List<CorsResponseCompound> aObjCors) {
+  public void setaObjCors(@javax.annotation.Nonnull List<CorsResponseCompound> aObjCors) {
     this.aObjCors = aObjCors;
   }
 

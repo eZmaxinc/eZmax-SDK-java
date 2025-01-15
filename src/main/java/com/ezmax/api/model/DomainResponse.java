@@ -49,36 +49,42 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DomainResponse {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiDomainID;
 
   public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
   @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
+  @javax.annotation.Nonnull
   private String sDomainName;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDDKIM = "bDomainValiddkim";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDDKIM)
+  @javax.annotation.Nonnull
   private Boolean bDomainValiddkim;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM = "bDomainValidmailfrom";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM)
+  @javax.annotation.Nonnull
   private Boolean bDomainValidmailfrom;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER = "bDomainValidcustomer";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER)
+  @javax.annotation.Nonnull
   private Boolean bDomainValidcustomer;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public DomainResponse() {
   }
 
-  public DomainResponse pkiDomainID(Integer pkiDomainID) {
+  public DomainResponse pkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
     return this;
   }
@@ -94,12 +100,12 @@ public class DomainResponse {
     return pkiDomainID;
   }
 
-  public void setPkiDomainID(Integer pkiDomainID) {
+  public void setPkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
   }
 
 
-  public DomainResponse sDomainName(String sDomainName) {
+  public DomainResponse sDomainName(@javax.annotation.Nonnull String sDomainName) {
     this.sDomainName = sDomainName;
     return this;
   }
@@ -113,12 +119,12 @@ public class DomainResponse {
     return sDomainName;
   }
 
-  public void setsDomainName(String sDomainName) {
+  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
     this.sDomainName = sDomainName;
   }
 
 
-  public DomainResponse bDomainValiddkim(Boolean bDomainValiddkim) {
+  public DomainResponse bDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
     return this;
   }
@@ -132,12 +138,12 @@ public class DomainResponse {
     return bDomainValiddkim;
   }
 
-  public void setbDomainValiddkim(Boolean bDomainValiddkim) {
+  public void setbDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
   }
 
 
-  public DomainResponse bDomainValidmailfrom(Boolean bDomainValidmailfrom) {
+  public DomainResponse bDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
     return this;
   }
@@ -151,12 +157,12 @@ public class DomainResponse {
     return bDomainValidmailfrom;
   }
 
-  public void setbDomainValidmailfrom(Boolean bDomainValidmailfrom) {
+  public void setbDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
   }
 
 
-  public DomainResponse bDomainValidcustomer(Boolean bDomainValidcustomer) {
+  public DomainResponse bDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
     return this;
   }
@@ -170,12 +176,12 @@ public class DomainResponse {
     return bDomainValidcustomer;
   }
 
-  public void setbDomainValidcustomer(Boolean bDomainValidcustomer) {
+  public void setbDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
   }
 
 
-  public DomainResponse objAudit(CommonAudit objAudit) {
+  public DomainResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -189,7 +195,7 @@ public class DomainResponse {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

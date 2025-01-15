@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_USERGROUP_I_D = "a_pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_USERGROUP_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiUsergroupID = new ArrayList<>();
 
   public UsergroupCreateObjectV1ResponseMPayload() {
   }
 
-  public UsergroupCreateObjectV1ResponseMPayload aPkiUsergroupID(List<Integer> aPkiUsergroupID) {
+  public UsergroupCreateObjectV1ResponseMPayload aPkiUsergroupID(@javax.annotation.Nonnull List<Integer> aPkiUsergroupID) {
     this.aPkiUsergroupID = aPkiUsergroupID;
     return this;
   }
@@ -81,7 +82,7 @@ public class UsergroupCreateObjectV1ResponseMPayload {
     return aPkiUsergroupID;
   }
 
-  public void setaPkiUsergroupID(List<Integer> aPkiUsergroupID) {
+  public void setaPkiUsergroupID(@javax.annotation.Nonnull List<Integer> aPkiUsergroupID) {
     this.aPkiUsergroupID = aPkiUsergroupID;
   }
 

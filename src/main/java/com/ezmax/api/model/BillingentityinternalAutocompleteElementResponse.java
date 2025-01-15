@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BillingentityinternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sBillingentityinternalDescriptionX;
 
   public static final String SERIALIZED_NAME_B_BILLINGENTITYINTERNAL_ISACTIVE = "bBillingentityinternalIsactive";
   @SerializedName(SERIALIZED_NAME_B_BILLINGENTITYINTERNAL_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bBillingentityinternalIsactive;
 
   public BillingentityinternalAutocompleteElementResponse() {
   }
 
-  public BillingentityinternalAutocompleteElementResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
+  public BillingentityinternalAutocompleteElementResponse pkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -80,12 +83,12 @@ public class BillingentityinternalAutocompleteElementResponse {
     return pkiBillingentityinternalID;
   }
 
-  public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
+  public void setPkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
-  public BillingentityinternalAutocompleteElementResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+  public BillingentityinternalAutocompleteElementResponse sBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -99,12 +102,12 @@ public class BillingentityinternalAutocompleteElementResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+  public void setsBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
-  public BillingentityinternalAutocompleteElementResponse bBillingentityinternalIsactive(Boolean bBillingentityinternalIsactive) {
+  public BillingentityinternalAutocompleteElementResponse bBillingentityinternalIsactive(@javax.annotation.Nonnull Boolean bBillingentityinternalIsactive) {
     this.bBillingentityinternalIsactive = bBillingentityinternalIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class BillingentityinternalAutocompleteElementResponse {
     return bBillingentityinternalIsactive;
   }
 
-  public void setbBillingentityinternalIsactive(Boolean bBillingentityinternalIsactive) {
+  public void setbBillingentityinternalIsactive(@javax.annotation.Nonnull Boolean bBillingentityinternalIsactive) {
     this.bBillingentityinternalIsactive = bBillingentityinternalIsactive;
   }
 

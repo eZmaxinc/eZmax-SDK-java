@@ -50,36 +50,42 @@ import eZmaxAPI.JSON;
 /**
  * A Authenticationexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AuthenticationexternalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D = "pkiAuthenticationexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sAuthenticationexternalDescription;
 
   public static final String SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE = "eAuthenticationexternalType";
   @SerializedName(SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE)
+  @javax.annotation.Nonnull
   private FieldEAuthenticationexternalType eAuthenticationexternalType;
 
   public static final String SERIALIZED_NAME_B_AUTHENTICATIONEXTERNAL_CONNECTED = "bAuthenticationexternalConnected";
   @SerializedName(SERIALIZED_NAME_B_AUTHENTICATIONEXTERNAL_CONNECTED)
+  @javax.annotation.Nullable
   private Boolean bAuthenticationexternalConnected;
 
   public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_AUTHORIZATIONURL = "sAuthenticationexternalAuthorizationurl";
   @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_AUTHORIZATIONURL)
+  @javax.annotation.Nullable
   private String sAuthenticationexternalAuthorizationurl;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public AuthenticationexternalResponseCompound() {
   }
 
-  public AuthenticationexternalResponseCompound pkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
+  public AuthenticationexternalResponseCompound pkiAuthenticationexternalID(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
     return this;
   }
@@ -95,12 +101,12 @@ public class AuthenticationexternalResponseCompound {
     return pkiAuthenticationexternalID;
   }
 
-  public void setPkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
+  public void setPkiAuthenticationexternalID(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
   }
 
 
-  public AuthenticationexternalResponseCompound sAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public AuthenticationexternalResponseCompound sAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
     return this;
   }
@@ -114,12 +120,12 @@ public class AuthenticationexternalResponseCompound {
     return sAuthenticationexternalDescription;
   }
 
-  public void setsAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public void setsAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
   }
 
 
-  public AuthenticationexternalResponseCompound eAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public AuthenticationexternalResponseCompound eAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
     return this;
   }
@@ -133,12 +139,12 @@ public class AuthenticationexternalResponseCompound {
     return eAuthenticationexternalType;
   }
 
-  public void seteAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public void seteAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
   }
 
 
-  public AuthenticationexternalResponseCompound bAuthenticationexternalConnected(Boolean bAuthenticationexternalConnected) {
+  public AuthenticationexternalResponseCompound bAuthenticationexternalConnected(@javax.annotation.Nullable Boolean bAuthenticationexternalConnected) {
     this.bAuthenticationexternalConnected = bAuthenticationexternalConnected;
     return this;
   }
@@ -152,12 +158,12 @@ public class AuthenticationexternalResponseCompound {
     return bAuthenticationexternalConnected;
   }
 
-  public void setbAuthenticationexternalConnected(Boolean bAuthenticationexternalConnected) {
+  public void setbAuthenticationexternalConnected(@javax.annotation.Nullable Boolean bAuthenticationexternalConnected) {
     this.bAuthenticationexternalConnected = bAuthenticationexternalConnected;
   }
 
 
-  public AuthenticationexternalResponseCompound sAuthenticationexternalAuthorizationurl(String sAuthenticationexternalAuthorizationurl) {
+  public AuthenticationexternalResponseCompound sAuthenticationexternalAuthorizationurl(@javax.annotation.Nullable String sAuthenticationexternalAuthorizationurl) {
     this.sAuthenticationexternalAuthorizationurl = sAuthenticationexternalAuthorizationurl;
     return this;
   }
@@ -171,12 +177,12 @@ public class AuthenticationexternalResponseCompound {
     return sAuthenticationexternalAuthorizationurl;
   }
 
-  public void setsAuthenticationexternalAuthorizationurl(String sAuthenticationexternalAuthorizationurl) {
+  public void setsAuthenticationexternalAuthorizationurl(@javax.annotation.Nullable String sAuthenticationexternalAuthorizationurl) {
     this.sAuthenticationexternalAuthorizationurl = sAuthenticationexternalAuthorizationurl;
   }
 
 
-  public AuthenticationexternalResponseCompound objAudit(CommonAudit objAudit) {
+  public AuthenticationexternalResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -190,7 +196,7 @@ public class AuthenticationexternalResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

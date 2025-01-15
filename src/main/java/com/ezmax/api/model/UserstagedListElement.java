@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A Userstaged List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserstagedListElement {
   public static final String SERIALIZED_NAME_PKI_USERSTAGED_I_D = "pkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_PKI_USERSTAGED_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUserstagedID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_FIRSTNAME = "sUserstagedFirstname";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserstagedFirstname;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_LASTNAME = "sUserstagedLastname";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserstagedLastname;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_EXTERNALID = "sUserstagedExternalid";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_EXTERNALID)
+  @javax.annotation.Nonnull
   private String sUserstagedExternalid;
 
   public UserstagedListElement() {
   }
 
-  public UserstagedListElement pkiUserstagedID(Integer pkiUserstagedID) {
+  public UserstagedListElement pkiUserstagedID(@javax.annotation.Nonnull Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
     return this;
   }
@@ -89,12 +94,12 @@ public class UserstagedListElement {
     return pkiUserstagedID;
   }
 
-  public void setPkiUserstagedID(Integer pkiUserstagedID) {
+  public void setPkiUserstagedID(@javax.annotation.Nonnull Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
   }
 
 
-  public UserstagedListElement sEmailAddress(String sEmailAddress) {
+  public UserstagedListElement sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -108,12 +113,12 @@ public class UserstagedListElement {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UserstagedListElement sUserstagedFirstname(String sUserstagedFirstname) {
+  public UserstagedListElement sUserstagedFirstname(@javax.annotation.Nonnull String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
     return this;
   }
@@ -127,12 +132,12 @@ public class UserstagedListElement {
     return sUserstagedFirstname;
   }
 
-  public void setsUserstagedFirstname(String sUserstagedFirstname) {
+  public void setsUserstagedFirstname(@javax.annotation.Nonnull String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
   }
 
 
-  public UserstagedListElement sUserstagedLastname(String sUserstagedLastname) {
+  public UserstagedListElement sUserstagedLastname(@javax.annotation.Nonnull String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
     return this;
   }
@@ -146,12 +151,12 @@ public class UserstagedListElement {
     return sUserstagedLastname;
   }
 
-  public void setsUserstagedLastname(String sUserstagedLastname) {
+  public void setsUserstagedLastname(@javax.annotation.Nonnull String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
   }
 
 
-  public UserstagedListElement sUserstagedExternalid(String sUserstagedExternalid) {
+  public UserstagedListElement sUserstagedExternalid(@javax.annotation.Nonnull String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;
     return this;
   }
@@ -165,7 +170,7 @@ public class UserstagedListElement {
     return sUserstagedExternalid;
   }
 
-  public void setsUserstagedExternalid(String sUserstagedExternalid) {
+  public void setsUserstagedExternalid(@javax.annotation.Nonnull String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;
   }
 

@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private EzsignfolderResponseCompound objEzsignfolder;
 
   public EzsignfolderGetObjectV2ResponseMPayload() {
   }
 
-  public EzsignfolderGetObjectV2ResponseMPayload objEzsignfolder(EzsignfolderResponseCompound objEzsignfolder) {
+  public EzsignfolderGetObjectV2ResponseMPayload objEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponseCompound objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignfolderGetObjectV2ResponseMPayload {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(EzsignfolderResponseCompound objEzsignfolder) {
+  public void setObjEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponseCompound objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 

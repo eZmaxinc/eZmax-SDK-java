@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomFormDataEzsignformfieldResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
+  @javax.annotation.Nonnull
   private String sEzsignformfieldLabel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE = "sEzsignformfieldValue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE)
+  @javax.annotation.Nonnull
   private String sEzsignformfieldValue;
 
   public CustomFormDataEzsignformfieldResponse() {
   }
 
-  public CustomFormDataEzsignformfieldResponse sEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public CustomFormDataEzsignformfieldResponse sEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -75,12 +77,12 @@ public class CustomFormDataEzsignformfieldResponse {
     return sEzsignformfieldLabel;
   }
 
-  public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public void setsEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
-  public CustomFormDataEzsignformfieldResponse sEzsignformfieldValue(String sEzsignformfieldValue) {
+  public CustomFormDataEzsignformfieldResponse sEzsignformfieldValue(@javax.annotation.Nonnull String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -94,7 +96,7 @@ public class CustomFormDataEzsignformfieldResponse {
     return sEzsignformfieldValue;
   }
 
-  public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
+  public void setsEzsignformfieldValue(@javax.annotation.Nonnull String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
   }
 

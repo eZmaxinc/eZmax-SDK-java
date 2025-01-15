@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/webhook/{pkiWebhookID}/regenerateApikey
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookRegenerateApikeyV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  @javax.annotation.Nonnull
   private WebhookResponseCompound objWebhook;
 
   public WebhookRegenerateApikeyV1ResponseMPayload() {
   }
 
-  public WebhookRegenerateApikeyV1ResponseMPayload objWebhook(WebhookResponseCompound objWebhook) {
+  public WebhookRegenerateApikeyV1ResponseMPayload objWebhook(@javax.annotation.Nonnull WebhookResponseCompound objWebhook) {
     this.objWebhook = objWebhook;
     return this;
   }
@@ -72,7 +73,7 @@ public class WebhookRegenerateApikeyV1ResponseMPayload {
     return objWebhook;
   }
 
-  public void setObjWebhook(WebhookResponseCompound objWebhook) {
+  public void setObjWebhook(@javax.annotation.Nonnull WebhookResponseCompound objWebhook) {
     this.objWebhook = objWebhook;
   }
 

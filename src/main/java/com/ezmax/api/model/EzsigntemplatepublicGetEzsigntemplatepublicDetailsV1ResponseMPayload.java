@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomBrandingResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,43 +50,46 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
-  private CustomBrandingResponse objBranding;
+  @javax.annotation.Nullable
+  private Object objBranding;
 
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER_DESCRIPTION = "a_sEzsigntemplatesignerDescription";
   @SerializedName(SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER_DESCRIPTION)
+  @javax.annotation.Nonnull
   private List<String> aSEzsigntemplatesignerDescription = new ArrayList<>();
 
   public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload objBranding(CustomBrandingResponse objBranding) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload objBranding(@javax.annotation.Nullable Object objBranding) {
     this.objBranding = objBranding;
     return this;
   }
 
   /**
-   * Get objBranding
+   * A Custom Branding Object
    * @return objBranding
    */
   @javax.annotation.Nullable
-  public CustomBrandingResponse getObjBranding() {
+  public Object getObjBranding() {
     return objBranding;
   }
 
-  public void setObjBranding(CustomBrandingResponse objBranding) {
+  public void setObjBranding(@javax.annotation.Nullable Object objBranding) {
     this.objBranding = objBranding;
   }
 
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload fkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -102,12 +104,12 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloa
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload aSEzsigntemplatesignerDescription(List<String> aSEzsigntemplatesignerDescription) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload aSEzsigntemplatesignerDescription(@javax.annotation.Nonnull List<String> aSEzsigntemplatesignerDescription) {
     this.aSEzsigntemplatesignerDescription = aSEzsigntemplatesignerDescription;
     return this;
   }
@@ -129,7 +131,7 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloa
     return aSEzsigntemplatesignerDescription;
   }
 
-  public void setaSEzsigntemplatesignerDescription(List<String> aSEzsigntemplatesignerDescription) {
+  public void setaSEzsigntemplatesignerDescription(@javax.annotation.Nonnull List<String> aSEzsigntemplatesignerDescription) {
     this.aSEzsigntemplatesignerDescription = aSEzsigntemplatesignerDescription;
   }
 
@@ -223,7 +225,7 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloa
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `objBranding`
       if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {
-        CustomBrandingResponse.validateJsonElement(jsonObj.get("objBranding"));
+        Object.validateJsonElement(jsonObj.get("objBranding"));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_sEzsigntemplatesignerDescription") == null) {

@@ -85,7 +85,7 @@ public class Example {
 
 <a id="userstagedDeleteObjectV1"></a>
 # **userstagedDeleteObjectV1**
-> UserstagedDeleteObjectV1Response userstagedDeleteObjectV1(pkiUserstagedID)
+> CommonResponse userstagedDeleteObjectV1(pkiUserstagedID)
 
 Delete an existing Userstaged
 
@@ -115,7 +115,7 @@ public class Example {
     ObjectUserstagedApi apiInstance = new ObjectUserstagedApi(defaultClient);
     Integer pkiUserstagedID = 56; // Integer | 
     try {
-      UserstagedDeleteObjectV1Response result = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID);
+      CommonResponse result = apiInstance.userstagedDeleteObjectV1(pkiUserstagedID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserstagedApi#userstagedDeleteObjectV1");
@@ -136,7 +136,7 @@ public class Example {
 
 ### Return type
 
-[**UserstagedDeleteObjectV1Response**](UserstagedDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ public class Example {
 
 <a id="userstagedMapV1"></a>
 # **userstagedMapV1**
-> UserstagedMapV1Response userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
+> CommonResponse userstagedMapV1(pkiUserstagedID, userstagedMapV1Request)
 
 Map the Userstaged to an existing user
 
@@ -334,7 +334,7 @@ public class Example {
     Integer pkiUserstagedID = 56; // Integer | 
     UserstagedMapV1Request userstagedMapV1Request = new UserstagedMapV1Request(); // UserstagedMapV1Request | 
     try {
-      UserstagedMapV1Response result = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
+      CommonResponse result = apiInstance.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserstagedApi#userstagedMapV1");
@@ -356,7 +356,7 @@ public class Example {
 
 ### Return type
 
-[**UserstagedMapV1Response**](UserstagedMapV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -49,24 +49,27 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignergroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION = "objEzsignsignergroupDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X = "sEzsignsignergroupDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sEzsignsignergroupDescriptionX;
 
   public EzsignsignergroupResponseCompound() {
   }
 
-  public EzsignsignergroupResponseCompound pkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
+  public EzsignsignergroupResponseCompound pkiEzsignsignergroupID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
     return this;
   }
@@ -82,12 +85,12 @@ public class EzsignsignergroupResponseCompound {
     return pkiEzsignsignergroupID;
   }
 
-  public void setPkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
+  public void setPkiEzsignsignergroupID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
 
-  public EzsignsignergroupResponseCompound objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public EzsignsignergroupResponseCompound objEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
     return this;
   }
@@ -101,12 +104,12 @@ public class EzsignsignergroupResponseCompound {
     return objEzsignsignergroupDescription;
   }
 
-  public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public void setObjEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
   }
 
 
-  public EzsignsignergroupResponseCompound sEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+  public EzsignsignergroupResponseCompound sEzsignsignergroupDescriptionX(@javax.annotation.Nullable String sEzsignsignergroupDescriptionX) {
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
     return this;
   }
@@ -120,7 +123,7 @@ public class EzsignsignergroupResponseCompound {
     return sEzsignsignergroupDescriptionX;
   }
 
-  public void setsEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+  public void setsEzsignsignergroupDescriptionX(@javax.annotation.Nullable String sEzsignsignergroupDescriptionX) {
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
   }
 

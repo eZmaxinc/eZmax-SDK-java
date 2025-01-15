@@ -49,20 +49,22 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/activesession/generateFederationToken
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionGenerateFederationTokenV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_APIKEYFEDERATION = "objApikeyfederation";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEYFEDERATION)
+  @javax.annotation.Nonnull
   private CustomApikeyfederation objApikeyfederation;
 
   public static final String SERIALIZED_NAME_S_EZMAXCUSTOMERCODE_URL = "sEzmaxcustomercodeUrl";
   @SerializedName(SERIALIZED_NAME_S_EZMAXCUSTOMERCODE_URL)
+  @javax.annotation.Nonnull
   private String sEzmaxcustomercodeUrl;
 
   public ActivesessionGenerateFederationTokenV1ResponseMPayload() {
   }
 
-  public ActivesessionGenerateFederationTokenV1ResponseMPayload objApikeyfederation(CustomApikeyfederation objApikeyfederation) {
+  public ActivesessionGenerateFederationTokenV1ResponseMPayload objApikeyfederation(@javax.annotation.Nonnull CustomApikeyfederation objApikeyfederation) {
     this.objApikeyfederation = objApikeyfederation;
     return this;
   }
@@ -76,12 +78,12 @@ public class ActivesessionGenerateFederationTokenV1ResponseMPayload {
     return objApikeyfederation;
   }
 
-  public void setObjApikeyfederation(CustomApikeyfederation objApikeyfederation) {
+  public void setObjApikeyfederation(@javax.annotation.Nonnull CustomApikeyfederation objApikeyfederation) {
     this.objApikeyfederation = objApikeyfederation;
   }
 
 
-  public ActivesessionGenerateFederationTokenV1ResponseMPayload sEzmaxcustomercodeUrl(String sEzmaxcustomercodeUrl) {
+  public ActivesessionGenerateFederationTokenV1ResponseMPayload sEzmaxcustomercodeUrl(@javax.annotation.Nonnull String sEzmaxcustomercodeUrl) {
     this.sEzmaxcustomercodeUrl = sEzmaxcustomercodeUrl;
     return this;
   }
@@ -95,7 +97,7 @@ public class ActivesessionGenerateFederationTokenV1ResponseMPayload {
     return sEzmaxcustomercodeUrl;
   }
 
-  public void setsEzmaxcustomercodeUrl(String sEzmaxcustomercodeUrl) {
+  public void setsEzmaxcustomercodeUrl(@javax.annotation.Nonnull String sEzmaxcustomercodeUrl) {
     this.sEzmaxcustomercodeUrl = sEzmaxcustomercodeUrl;
   }
 

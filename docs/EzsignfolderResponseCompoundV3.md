@@ -10,7 +10,7 @@ An Ezsignfolder Object and children to create a complete structure
 |------------ | ------------- | ------------- | -------------|
 |**pkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
-|**objEzsignfoldertype** | [**CustomEzsignfoldertypeResponse**](CustomEzsignfoldertypeResponse.md) |  |  [optional] |
+|**objEzsignfoldertype** | [**Object**](Object.md) | A Custom Ezsignfoldertype Object |  [optional] |
 |**fkiTimezoneID** | **Integer** | The unique ID of the Timezone |  [optional] |
 |**eEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  |  |
 |**eEzsignfolderDocumentdependency** | **FieldEEzsignfolderDocumentdependency** |  |  [optional] |

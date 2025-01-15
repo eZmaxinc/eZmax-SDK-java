@@ -48,47 +48,55 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/module/user/createEzsignuser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserCreateEzsignuserV1Request {
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_PHONE_REGION = "sPhoneRegion";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_REGION)
+  @javax.annotation.Nonnull
   private String sPhoneRegion;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXCHANGE = "sPhoneExchange";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXCHANGE)
+  @javax.annotation.Nonnull
   private String sPhoneExchange;
 
   public static final String SERIALIZED_NAME_S_PHONE_NUMBER = "sPhoneNumber";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_NUMBER)
+  @javax.annotation.Nonnull
   private String sPhoneNumber;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
+  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public UserCreateEzsignuserV1Request() {
   }
 
-  public UserCreateEzsignuserV1Request fkiLanguageID(Integer fkiLanguageID) {
+  public UserCreateEzsignuserV1Request fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -104,12 +112,12 @@ public class UserCreateEzsignuserV1Request {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public UserCreateEzsignuserV1Request sUserFirstname(String sUserFirstname) {
+  public UserCreateEzsignuserV1Request sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -123,12 +131,12 @@ public class UserCreateEzsignuserV1Request {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(String sUserFirstname) {
+  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UserCreateEzsignuserV1Request sUserLastname(String sUserLastname) {
+  public UserCreateEzsignuserV1Request sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -142,12 +150,12 @@ public class UserCreateEzsignuserV1Request {
     return sUserLastname;
   }
 
-  public void setsUserLastname(String sUserLastname) {
+  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UserCreateEzsignuserV1Request sEmailAddress(String sEmailAddress) {
+  public UserCreateEzsignuserV1Request sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -161,13 +169,13 @@ public class UserCreateEzsignuserV1Request {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
   @Deprecated
-  public UserCreateEzsignuserV1Request sPhoneRegion(String sPhoneRegion) {
+  public UserCreateEzsignuserV1Request sPhoneRegion(@javax.annotation.Nonnull String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
     return this;
   }
@@ -184,13 +192,13 @@ public class UserCreateEzsignuserV1Request {
   }
 
   @Deprecated
-  public void setsPhoneRegion(String sPhoneRegion) {
+  public void setsPhoneRegion(@javax.annotation.Nonnull String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
   }
 
 
   @Deprecated
-  public UserCreateEzsignuserV1Request sPhoneExchange(String sPhoneExchange) {
+  public UserCreateEzsignuserV1Request sPhoneExchange(@javax.annotation.Nonnull String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
     return this;
   }
@@ -207,13 +215,13 @@ public class UserCreateEzsignuserV1Request {
   }
 
   @Deprecated
-  public void setsPhoneExchange(String sPhoneExchange) {
+  public void setsPhoneExchange(@javax.annotation.Nonnull String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
   }
 
 
   @Deprecated
-  public UserCreateEzsignuserV1Request sPhoneNumber(String sPhoneNumber) {
+  public UserCreateEzsignuserV1Request sPhoneNumber(@javax.annotation.Nonnull String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
     return this;
   }
@@ -230,12 +238,12 @@ public class UserCreateEzsignuserV1Request {
   }
 
   @Deprecated
-  public void setsPhoneNumber(String sPhoneNumber) {
+  public void setsPhoneNumber(@javax.annotation.Nonnull String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
   }
 
 
-  public UserCreateEzsignuserV1Request sPhoneExtension(String sPhoneExtension) {
+  public UserCreateEzsignuserV1Request sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -249,7 +257,7 @@ public class UserCreateEzsignuserV1Request {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(String sPhoneExtension) {
+  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 

@@ -14,14 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackageCreateObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatepackageDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request;
 import com.ezmax.api.model.EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatepackageEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetListV1Response;
 import com.ezmax.api.model.EzsigntemplatepackageGetObjectV2Response;
@@ -67,7 +66,7 @@ public class ObjectEzsigntemplatepackageApiTest {
     @Test
     public void ezsigntemplatepackageDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatepackageID = null;
-        EzsigntemplatepackageDeleteObjectV1Response response = api.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
+        CommonResponse response = api.ezsigntemplatepackageDeleteObjectV1(pkiEzsigntemplatepackageID);
         // TODO: test validations
     }
 
@@ -97,7 +96,7 @@ public class ObjectEzsigntemplatepackageApiTest {
     public void ezsigntemplatepackageEditObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatepackageID = null;
         EzsigntemplatepackageEditObjectV1Request ezsigntemplatepackageEditObjectV1Request = null;
-        EzsigntemplatepackageEditObjectV1Response response = api.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
+        CommonResponse response = api.ezsigntemplatepackageEditObjectV1(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditObjectV1Request);
         // TODO: test validations
     }
 

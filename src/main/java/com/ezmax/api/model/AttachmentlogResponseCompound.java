@@ -49,32 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * A Attachmentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AttachmentlogResponseCompound {
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiAttachmentID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME = "dtAttachmentlogDatetime";
   @SerializedName(SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME)
+  @javax.annotation.Nonnull
   private String dtAttachmentlogDatetime;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE = "eAttachmentlogType";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE)
+  @javax.annotation.Nonnull
   private FieldEAttachmentlogType eAttachmentlogType;
 
   public static final String SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL = "sAttachmentlogDetail";
   @SerializedName(SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL)
+  @javax.annotation.Nullable
   private String sAttachmentlogDetail;
 
   public AttachmentlogResponseCompound() {
   }
 
-  public AttachmentlogResponseCompound fkiAttachmentID(Integer fkiAttachmentID) {
+  public AttachmentlogResponseCompound fkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
     return this;
   }
@@ -89,12 +94,12 @@ public class AttachmentlogResponseCompound {
     return fkiAttachmentID;
   }
 
-  public void setFkiAttachmentID(Integer fkiAttachmentID) {
+  public void setFkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
   }
 
 
-  public AttachmentlogResponseCompound fkiUserID(Integer fkiUserID) {
+  public AttachmentlogResponseCompound fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -109,12 +114,12 @@ public class AttachmentlogResponseCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public AttachmentlogResponseCompound dtAttachmentlogDatetime(String dtAttachmentlogDatetime) {
+  public AttachmentlogResponseCompound dtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
     this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
     return this;
   }
@@ -128,12 +133,12 @@ public class AttachmentlogResponseCompound {
     return dtAttachmentlogDatetime;
   }
 
-  public void setDtAttachmentlogDatetime(String dtAttachmentlogDatetime) {
+  public void setDtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
     this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
   }
 
 
-  public AttachmentlogResponseCompound eAttachmentlogType(FieldEAttachmentlogType eAttachmentlogType) {
+  public AttachmentlogResponseCompound eAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
     this.eAttachmentlogType = eAttachmentlogType;
     return this;
   }
@@ -147,12 +152,12 @@ public class AttachmentlogResponseCompound {
     return eAttachmentlogType;
   }
 
-  public void seteAttachmentlogType(FieldEAttachmentlogType eAttachmentlogType) {
+  public void seteAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
     this.eAttachmentlogType = eAttachmentlogType;
   }
 
 
-  public AttachmentlogResponseCompound sAttachmentlogDetail(String sAttachmentlogDetail) {
+  public AttachmentlogResponseCompound sAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
     this.sAttachmentlogDetail = sAttachmentlogDetail;
     return this;
   }
@@ -166,7 +171,7 @@ public class AttachmentlogResponseCompound {
     return sAttachmentlogDetail;
   }
 
-  public void setsAttachmentlogDetail(String sAttachmentlogDetail) {
+  public void setsAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
     this.sAttachmentlogDetail = sAttachmentlogDetail;
   }
 

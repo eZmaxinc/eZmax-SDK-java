@@ -49,24 +49,27 @@ import eZmaxAPI.JSON;
 /**
  * A Authenticationexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AuthenticationexternalRequest {
   public static final String SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D = "pkiAuthenticationexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D)
+  @javax.annotation.Nullable
   private Integer pkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sAuthenticationexternalDescription;
 
   public static final String SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE = "eAuthenticationexternalType";
   @SerializedName(SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE)
+  @javax.annotation.Nonnull
   private FieldEAuthenticationexternalType eAuthenticationexternalType;
 
   public AuthenticationexternalRequest() {
   }
 
-  public AuthenticationexternalRequest pkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
+  public AuthenticationexternalRequest pkiAuthenticationexternalID(@javax.annotation.Nullable Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
     return this;
   }
@@ -82,12 +85,12 @@ public class AuthenticationexternalRequest {
     return pkiAuthenticationexternalID;
   }
 
-  public void setPkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
+  public void setPkiAuthenticationexternalID(@javax.annotation.Nullable Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
   }
 
 
-  public AuthenticationexternalRequest sAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public AuthenticationexternalRequest sAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
     return this;
   }
@@ -101,12 +104,12 @@ public class AuthenticationexternalRequest {
     return sAuthenticationexternalDescription;
   }
 
-  public void setsAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public void setsAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
   }
 
 
-  public AuthenticationexternalRequest eAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public AuthenticationexternalRequest eAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
     return this;
   }
@@ -120,7 +123,7 @@ public class AuthenticationexternalRequest {
     return eAuthenticationexternalType;
   }
 
-  public void seteAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public void seteAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
   }
 

@@ -14,15 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DiscussionCreateObjectV1Request;
 import com.ezmax.api.model.DiscussionCreateObjectV1Response;
-import com.ezmax.api.model.DiscussionDeleteObjectV1Response;
 import com.ezmax.api.model.DiscussionGetObjectV2Response;
 import com.ezmax.api.model.DiscussionPatchObjectV1Request;
-import com.ezmax.api.model.DiscussionPatchObjectV1Response;
 import com.ezmax.api.model.DiscussionUpdateDiscussionreadstatusV1Request;
-import com.ezmax.api.model.DiscussionUpdateDiscussionreadstatusV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -63,7 +61,7 @@ public class ObjectDiscussionApiTest {
     @Test
     public void discussionDeleteObjectV1Test() throws ApiException {
         Integer pkiDiscussionID = null;
-        DiscussionDeleteObjectV1Response response = api.discussionDeleteObjectV1(pkiDiscussionID);
+        CommonResponse response = api.discussionDeleteObjectV1(pkiDiscussionID);
         // TODO: test validations
     }
 
@@ -92,7 +90,7 @@ public class ObjectDiscussionApiTest {
     public void discussionPatchObjectV1Test() throws ApiException {
         Integer pkiDiscussionID = null;
         DiscussionPatchObjectV1Request discussionPatchObjectV1Request = null;
-        DiscussionPatchObjectV1Response response = api.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request);
+        CommonResponse response = api.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request);
         // TODO: test validations
     }
 
@@ -105,7 +103,7 @@ public class ObjectDiscussionApiTest {
     public void discussionUpdateDiscussionreadstatusV1Test() throws ApiException {
         Integer pkiDiscussionID = null;
         DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request = null;
-        DiscussionUpdateDiscussionreadstatusV1Response response = api.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
+        CommonResponse response = api.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
         // TODO: test validations
     }
 

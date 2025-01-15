@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezdoctemplatetype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzdoctemplatetypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATETYPE = "a_objEzdoctemplatetype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATETYPE)
+  @javax.annotation.Nonnull
   private List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype = new ArrayList<>();
 
   public EzdoctemplatetypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzdoctemplatetypeGetAutocompleteV2ResponseMPayload aObjEzdoctemplatetype(List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype) {
+  public EzdoctemplatetypeGetAutocompleteV2ResponseMPayload aObjEzdoctemplatetype(@javax.annotation.Nonnull List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype) {
     this.aObjEzdoctemplatetype = aObjEzdoctemplatetype;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzdoctemplatetypeGetAutocompleteV2ResponseMPayload {
     return aObjEzdoctemplatetype;
   }
 
-  public void setaObjEzdoctemplatetype(List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype) {
+  public void setaObjEzdoctemplatetype(@javax.annotation.Nonnull List<EzdoctemplatetypeAutocompleteElementResponse> aObjEzdoctemplatetype) {
     this.aObjEzdoctemplatetype = aObjEzdoctemplatetype;
   }
 

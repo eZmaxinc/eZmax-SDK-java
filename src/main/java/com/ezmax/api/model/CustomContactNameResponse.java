@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Custom ContactName Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomContactNameResponse {
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
+  @javax.annotation.Nullable
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
+  @javax.annotation.Nullable
   private String sContactLastname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_COMPANY = "sContactCompany";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_COMPANY)
+  @javax.annotation.Nullable
   private String sContactCompany;
 
   public CustomContactNameResponse() {
   }
 
-  public CustomContactNameResponse sContactFirstname(String sContactFirstname) {
+  public CustomContactNameResponse sContactFirstname(@javax.annotation.Nullable String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -79,12 +82,12 @@ public class CustomContactNameResponse {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(String sContactFirstname) {
+  public void setsContactFirstname(@javax.annotation.Nullable String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public CustomContactNameResponse sContactLastname(String sContactLastname) {
+  public CustomContactNameResponse sContactLastname(@javax.annotation.Nullable String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -98,12 +101,12 @@ public class CustomContactNameResponse {
     return sContactLastname;
   }
 
-  public void setsContactLastname(String sContactLastname) {
+  public void setsContactLastname(@javax.annotation.Nullable String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
-  public CustomContactNameResponse sContactCompany(String sContactCompany) {
+  public CustomContactNameResponse sContactCompany(@javax.annotation.Nullable String sContactCompany) {
     this.sContactCompany = sContactCompany;
     return this;
   }
@@ -117,7 +120,7 @@ public class CustomContactNameResponse {
     return sContactCompany;
   }
 
-  public void setsContactCompany(String sContactCompany) {
+  public void setsContactCompany(@javax.annotation.Nullable String sContactCompany) {
     this.sContactCompany = sContactCompany;
   }
 

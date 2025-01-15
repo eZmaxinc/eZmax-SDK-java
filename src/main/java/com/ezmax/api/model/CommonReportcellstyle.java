@@ -52,44 +52,52 @@ import eZmaxAPI.JSON;
 /**
  * Styles applied to a Reportcell 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportcellstyle {
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP = "bReportcellstyleBordertop";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERTOP)
+  @javax.annotation.Nonnull
   private Boolean bReportcellstyleBordertop;
 
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERBOTTOM = "bReportcellstyleBorderbottom";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERBOTTOM)
+  @javax.annotation.Nonnull
   private Boolean bReportcellstyleBorderbottom;
 
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERLEFT = "bReportcellstyleBorderleft";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERLEFT)
+  @javax.annotation.Nonnull
   private Boolean bReportcellstyleBorderleft;
 
   public static final String SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERRIGHT = "bReportcellstyleBorderright";
   @SerializedName(SERIALIZED_NAME_B_REPORTCELLSTYLE_BORDERRIGHT)
+  @javax.annotation.Nonnull
   private Boolean bReportcellstyleBorderright;
 
   public static final String SERIALIZED_NAME_E_REPORTCELL_HORIZONTALALIGNMENT = "eReportcellHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_REPORTCELL_HORIZONTALALIGNMENT)
+  @javax.annotation.Nonnull
   private EnumHorizontalalignment eReportcellHorizontalalignment;
 
   public static final String SERIALIZED_NAME_E_REPORTCELL_VERTICALALIGNMENT = "eReportcellVerticalalignment";
   @SerializedName(SERIALIZED_NAME_E_REPORTCELL_VERTICALALIGNMENT)
+  @javax.annotation.Nonnull
   private EnumVerticalalignment eReportcellVerticalalignment;
 
   public static final String SERIALIZED_NAME_E_REPORTCELL_FONTWEIGHT = "eReportcellFontweight";
   @SerializedName(SERIALIZED_NAME_E_REPORTCELL_FONTWEIGHT)
+  @javax.annotation.Nonnull
   private EnumFontweight eReportcellFontweight;
 
   public static final String SERIALIZED_NAME_E_REPORTCELL_FONTUNDERLINE = "eReportcellFontunderline";
   @SerializedName(SERIALIZED_NAME_E_REPORTCELL_FONTUNDERLINE)
+  @javax.annotation.Nonnull
   private EnumFontunderline eReportcellFontunderline;
 
   public CommonReportcellstyle() {
   }
 
-  public CommonReportcellstyle bReportcellstyleBordertop(Boolean bReportcellstyleBordertop) {
+  public CommonReportcellstyle bReportcellstyleBordertop(@javax.annotation.Nonnull Boolean bReportcellstyleBordertop) {
     this.bReportcellstyleBordertop = bReportcellstyleBordertop;
     return this;
   }
@@ -103,12 +111,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBordertop;
   }
 
-  public void setbReportcellstyleBordertop(Boolean bReportcellstyleBordertop) {
+  public void setbReportcellstyleBordertop(@javax.annotation.Nonnull Boolean bReportcellstyleBordertop) {
     this.bReportcellstyleBordertop = bReportcellstyleBordertop;
   }
 
 
-  public CommonReportcellstyle bReportcellstyleBorderbottom(Boolean bReportcellstyleBorderbottom) {
+  public CommonReportcellstyle bReportcellstyleBorderbottom(@javax.annotation.Nonnull Boolean bReportcellstyleBorderbottom) {
     this.bReportcellstyleBorderbottom = bReportcellstyleBorderbottom;
     return this;
   }
@@ -122,12 +130,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderbottom;
   }
 
-  public void setbReportcellstyleBorderbottom(Boolean bReportcellstyleBorderbottom) {
+  public void setbReportcellstyleBorderbottom(@javax.annotation.Nonnull Boolean bReportcellstyleBorderbottom) {
     this.bReportcellstyleBorderbottom = bReportcellstyleBorderbottom;
   }
 
 
-  public CommonReportcellstyle bReportcellstyleBorderleft(Boolean bReportcellstyleBorderleft) {
+  public CommonReportcellstyle bReportcellstyleBorderleft(@javax.annotation.Nonnull Boolean bReportcellstyleBorderleft) {
     this.bReportcellstyleBorderleft = bReportcellstyleBorderleft;
     return this;
   }
@@ -141,12 +149,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderleft;
   }
 
-  public void setbReportcellstyleBorderleft(Boolean bReportcellstyleBorderleft) {
+  public void setbReportcellstyleBorderleft(@javax.annotation.Nonnull Boolean bReportcellstyleBorderleft) {
     this.bReportcellstyleBorderleft = bReportcellstyleBorderleft;
   }
 
 
-  public CommonReportcellstyle bReportcellstyleBorderright(Boolean bReportcellstyleBorderright) {
+  public CommonReportcellstyle bReportcellstyleBorderright(@javax.annotation.Nonnull Boolean bReportcellstyleBorderright) {
     this.bReportcellstyleBorderright = bReportcellstyleBorderright;
     return this;
   }
@@ -160,12 +168,12 @@ public class CommonReportcellstyle {
     return bReportcellstyleBorderright;
   }
 
-  public void setbReportcellstyleBorderright(Boolean bReportcellstyleBorderright) {
+  public void setbReportcellstyleBorderright(@javax.annotation.Nonnull Boolean bReportcellstyleBorderright) {
     this.bReportcellstyleBorderright = bReportcellstyleBorderright;
   }
 
 
-  public CommonReportcellstyle eReportcellHorizontalalignment(EnumHorizontalalignment eReportcellHorizontalalignment) {
+  public CommonReportcellstyle eReportcellHorizontalalignment(@javax.annotation.Nonnull EnumHorizontalalignment eReportcellHorizontalalignment) {
     this.eReportcellHorizontalalignment = eReportcellHorizontalalignment;
     return this;
   }
@@ -179,12 +187,12 @@ public class CommonReportcellstyle {
     return eReportcellHorizontalalignment;
   }
 
-  public void seteReportcellHorizontalalignment(EnumHorizontalalignment eReportcellHorizontalalignment) {
+  public void seteReportcellHorizontalalignment(@javax.annotation.Nonnull EnumHorizontalalignment eReportcellHorizontalalignment) {
     this.eReportcellHorizontalalignment = eReportcellHorizontalalignment;
   }
 
 
-  public CommonReportcellstyle eReportcellVerticalalignment(EnumVerticalalignment eReportcellVerticalalignment) {
+  public CommonReportcellstyle eReportcellVerticalalignment(@javax.annotation.Nonnull EnumVerticalalignment eReportcellVerticalalignment) {
     this.eReportcellVerticalalignment = eReportcellVerticalalignment;
     return this;
   }
@@ -198,12 +206,12 @@ public class CommonReportcellstyle {
     return eReportcellVerticalalignment;
   }
 
-  public void seteReportcellVerticalalignment(EnumVerticalalignment eReportcellVerticalalignment) {
+  public void seteReportcellVerticalalignment(@javax.annotation.Nonnull EnumVerticalalignment eReportcellVerticalalignment) {
     this.eReportcellVerticalalignment = eReportcellVerticalalignment;
   }
 
 
-  public CommonReportcellstyle eReportcellFontweight(EnumFontweight eReportcellFontweight) {
+  public CommonReportcellstyle eReportcellFontweight(@javax.annotation.Nonnull EnumFontweight eReportcellFontweight) {
     this.eReportcellFontweight = eReportcellFontweight;
     return this;
   }
@@ -217,12 +225,12 @@ public class CommonReportcellstyle {
     return eReportcellFontweight;
   }
 
-  public void seteReportcellFontweight(EnumFontweight eReportcellFontweight) {
+  public void seteReportcellFontweight(@javax.annotation.Nonnull EnumFontweight eReportcellFontweight) {
     this.eReportcellFontweight = eReportcellFontweight;
   }
 
 
-  public CommonReportcellstyle eReportcellFontunderline(EnumFontunderline eReportcellFontunderline) {
+  public CommonReportcellstyle eReportcellFontunderline(@javax.annotation.Nonnull EnumFontunderline eReportcellFontunderline) {
     this.eReportcellFontunderline = eReportcellFontunderline;
     return this;
   }
@@ -236,7 +244,7 @@ public class CommonReportcellstyle {
     return eReportcellFontunderline;
   }
 
-  public void seteReportcellFontunderline(EnumFontunderline eReportcellFontunderline) {
+  public void seteReportcellFontunderline(@javax.annotation.Nonnull EnumFontunderline eReportcellFontunderline) {
     this.eReportcellFontunderline = eReportcellFontunderline;
   }
 

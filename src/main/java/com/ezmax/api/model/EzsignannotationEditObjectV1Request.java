@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignannotation/{pkiEzsignannotationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignannotationEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNANNOTATION = "objEzsignannotation";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNANNOTATION)
+  @javax.annotation.Nonnull
   private EzsignannotationRequestCompound objEzsignannotation;
 
   public EzsignannotationEditObjectV1Request() {
   }
 
-  public EzsignannotationEditObjectV1Request objEzsignannotation(EzsignannotationRequestCompound objEzsignannotation) {
+  public EzsignannotationEditObjectV1Request objEzsignannotation(@javax.annotation.Nonnull EzsignannotationRequestCompound objEzsignannotation) {
     this.objEzsignannotation = objEzsignannotation;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignannotationEditObjectV1Request {
     return objEzsignannotation;
   }
 
-  public void setObjEzsignannotation(EzsignannotationRequestCompound objEzsignannotation) {
+  public void setObjEzsignannotation(@javax.annotation.Nonnull EzsignannotationRequestCompound objEzsignannotation) {
     this.objEzsignannotation = objEzsignannotation;
   }
 

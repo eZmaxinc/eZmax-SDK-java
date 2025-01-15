@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntsarequirement AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntsarequirementAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sEzsigntsarequirementDescriptionX;
 
   public static final String SERIALIZED_NAME_PKI_EZSIGNTSAREQUIREMENT_I_D = "pkiEzsigntsarequirementID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTSAREQUIREMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntsarequirementID;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTSAREQUIREMENT_ISACTIVE = "bEzsigntsarequirementIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTSAREQUIREMENT_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntsarequirementIsactive;
 
   public static final String SERIALIZED_NAME_B_DISABLED = "bDisabled";
   @SerializedName(SERIALIZED_NAME_B_DISABLED)
+  @javax.annotation.Nonnull
   private Boolean bDisabled;
 
   public EzsigntsarequirementAutocompleteElementResponse() {
   }
 
-  public EzsigntsarequirementAutocompleteElementResponse sEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
+  public EzsigntsarequirementAutocompleteElementResponse sEzsigntsarequirementDescriptionX(@javax.annotation.Nonnull String sEzsigntsarequirementDescriptionX) {
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
     return this;
   }
@@ -83,12 +87,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return sEzsigntsarequirementDescriptionX;
   }
 
-  public void setsEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
+  public void setsEzsigntsarequirementDescriptionX(@javax.annotation.Nonnull String sEzsigntsarequirementDescriptionX) {
     this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
   }
 
 
-  public EzsigntsarequirementAutocompleteElementResponse pkiEzsigntsarequirementID(Integer pkiEzsigntsarequirementID) {
+  public EzsigntsarequirementAutocompleteElementResponse pkiEzsigntsarequirementID(@javax.annotation.Nonnull Integer pkiEzsigntsarequirementID) {
     this.pkiEzsigntsarequirementID = pkiEzsigntsarequirementID;
     return this;
   }
@@ -104,12 +108,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return pkiEzsigntsarequirementID;
   }
 
-  public void setPkiEzsigntsarequirementID(Integer pkiEzsigntsarequirementID) {
+  public void setPkiEzsigntsarequirementID(@javax.annotation.Nonnull Integer pkiEzsigntsarequirementID) {
     this.pkiEzsigntsarequirementID = pkiEzsigntsarequirementID;
   }
 
 
-  public EzsigntsarequirementAutocompleteElementResponse bEzsigntsarequirementIsactive(Boolean bEzsigntsarequirementIsactive) {
+  public EzsigntsarequirementAutocompleteElementResponse bEzsigntsarequirementIsactive(@javax.annotation.Nonnull Boolean bEzsigntsarequirementIsactive) {
     this.bEzsigntsarequirementIsactive = bEzsigntsarequirementIsactive;
     return this;
   }
@@ -123,12 +127,12 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return bEzsigntsarequirementIsactive;
   }
 
-  public void setbEzsigntsarequirementIsactive(Boolean bEzsigntsarequirementIsactive) {
+  public void setbEzsigntsarequirementIsactive(@javax.annotation.Nonnull Boolean bEzsigntsarequirementIsactive) {
     this.bEzsigntsarequirementIsactive = bEzsigntsarequirementIsactive;
   }
 
 
-  public EzsigntsarequirementAutocompleteElementResponse bDisabled(Boolean bDisabled) {
+  public EzsigntsarequirementAutocompleteElementResponse bDisabled(@javax.annotation.Nonnull Boolean bDisabled) {
     this.bDisabled = bDisabled;
     return this;
   }
@@ -142,7 +146,7 @@ public class EzsigntsarequirementAutocompleteElementResponse {
     return bDisabled;
   }
 
-  public void setbDisabled(Boolean bDisabled) {
+  public void setbDisabled(@javax.annotation.Nonnull Boolean bDisabled) {
     this.bDisabled = bDisabled;
   }
 

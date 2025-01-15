@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Userlogintype
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualUserlogintypeDescription {
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION1 = "sUserlogintypeDescription1";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sUserlogintypeDescription1;
 
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION2 = "sUserlogintypeDescription2";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sUserlogintypeDescription2;
 
   public MultilingualUserlogintypeDescription() {
   }
 
-  public MultilingualUserlogintypeDescription sUserlogintypeDescription1(String sUserlogintypeDescription1) {
+  public MultilingualUserlogintypeDescription sUserlogintypeDescription1(@javax.annotation.Nullable String sUserlogintypeDescription1) {
     this.sUserlogintypeDescription1 = sUserlogintypeDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualUserlogintypeDescription {
     return sUserlogintypeDescription1;
   }
 
-  public void setsUserlogintypeDescription1(String sUserlogintypeDescription1) {
+  public void setsUserlogintypeDescription1(@javax.annotation.Nullable String sUserlogintypeDescription1) {
     this.sUserlogintypeDescription1 = sUserlogintypeDescription1;
   }
 
 
-  public MultilingualUserlogintypeDescription sUserlogintypeDescription2(String sUserlogintypeDescription2) {
+  public MultilingualUserlogintypeDescription sUserlogintypeDescription2(@javax.annotation.Nullable String sUserlogintypeDescription2) {
     this.sUserlogintypeDescription2 = sUserlogintypeDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualUserlogintypeDescription {
     return sUserlogintypeDescription2;
   }
 
-  public void setsUserlogintypeDescription2(String sUserlogintypeDescription2) {
+  public void setsUserlogintypeDescription2(@javax.annotation.Nullable String sUserlogintypeDescription2) {
     this.sUserlogintypeDescription2 = sUserlogintypeDescription2;
   }
 

@@ -10,7 +10,7 @@ Response for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignera
 |------------ | ------------- | ------------- | -------------|
 |**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
-|**mPayload** | [**EzsignfoldersignerassociationGetObjectV1ResponseMPayload**](EzsignfoldersignerassociationGetObjectV1ResponseMPayload.md) |  |  |
+|**mPayload** | [**EzsignfoldersignerassociationResponseCompound**](EzsignfoldersignerassociationResponseCompound.md) | Payload for GET /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID} |  |
 
 
 

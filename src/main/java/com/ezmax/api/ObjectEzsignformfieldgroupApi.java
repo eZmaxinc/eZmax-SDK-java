@@ -27,12 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignformfieldgroupCreateObjectV1Request;
 import com.ezmax.api.model.EzsignformfieldgroupCreateObjectV1Response;
-import com.ezmax.api.model.EzsignformfieldgroupDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignformfieldgroupEditObjectV1Request;
-import com.ezmax.api.model.EzsignformfieldgroupEditObjectV1Response;
 import com.ezmax.api.model.EzsignformfieldgroupGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -85,7 +84,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,7 +153,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return EzsignformfieldgroupCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -170,7 +171,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return ApiResponse&lt;EzsignformfieldgroupCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -189,7 +191,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -208,7 +211,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -275,18 +279,19 @@ public class ObjectEzsignformfieldgroupApi {
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID  (required)
-     * @return EzsignformfieldgroupDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignformfieldgroupDeleteObjectV1Response ezsignformfieldgroupDeleteObjectV1(Integer pkiEzsignformfieldgroupID) throws ApiException {
-        ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> localVarResp = ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
+    public CommonResponse ezsignformfieldgroupDeleteObjectV1(Integer pkiEzsignformfieldgroupID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignformfieldgroupDeleteObjectV1WithHttpInfo(pkiEzsignformfieldgroupID);
         return localVarResp.getData();
     }
 
@@ -294,19 +299,20 @@ public class ObjectEzsignformfieldgroupApi {
      * Delete an existing Ezsignformfieldgroup
      * 
      * @param pkiEzsignformfieldgroupID  (required)
-     * @return ApiResponse&lt;EzsignformfieldgroupDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignformfieldgroupDeleteObjectV1Response> ezsignformfieldgroupDeleteObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignformfieldgroupDeleteObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupDeleteObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, null);
-        Type localVarReturnType = new TypeToken<EzsignformfieldgroupDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -318,17 +324,18 @@ public class ObjectEzsignformfieldgroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignformfieldgroupDeleteObjectV1Async(Integer pkiEzsignformfieldgroupID, final ApiCallback<EzsignformfieldgroupDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignformfieldgroupDeleteObjectV1Async(Integer pkiEzsignformfieldgroupID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignformfieldgroupDeleteObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, _callback);
-        Type localVarReturnType = new TypeToken<EzsignformfieldgroupDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -340,7 +347,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -414,18 +422,19 @@ public class ObjectEzsignformfieldgroupApi {
      * 
      * @param pkiEzsignformfieldgroupID  (required)
      * @param ezsignformfieldgroupEditObjectV1Request  (required)
-     * @return EzsignformfieldgroupEditObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignformfieldgroupEditObjectV1Response ezsignformfieldgroupEditObjectV1(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsignformfieldgroupEditObjectV1Response> localVarResp = ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
+    public CommonResponse ezsignformfieldgroupEditObjectV1(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignformfieldgroupEditObjectV1WithHttpInfo(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -434,19 +443,20 @@ public class ObjectEzsignformfieldgroupApi {
      * 
      * @param pkiEzsignformfieldgroupID  (required)
      * @param ezsignformfieldgroupEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsignformfieldgroupEditObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignformfieldgroupEditObjectV1Response> ezsignformfieldgroupEditObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignformfieldgroupEditObjectV1WithHttpInfo(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignformfieldgroupEditObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignformfieldgroupEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -459,17 +469,18 @@ public class ObjectEzsignformfieldgroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignformfieldgroupEditObjectV1Async(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, final ApiCallback<EzsignformfieldgroupEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignformfieldgroupEditObjectV1Async(Integer pkiEzsignformfieldgroupID, EzsignformfieldgroupEditObjectV1Request ezsignformfieldgroupEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignformfieldgroupEditObjectV1ValidateBeforeCall(pkiEzsignformfieldgroupID, ezsignformfieldgroupEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignformfieldgroupEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -480,7 +491,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -549,7 +561,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return EzsignformfieldgroupGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -567,7 +580,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return ApiResponse&lt;EzsignformfieldgroupGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -587,7 +601,8 @@ public class ObjectEzsignformfieldgroupApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

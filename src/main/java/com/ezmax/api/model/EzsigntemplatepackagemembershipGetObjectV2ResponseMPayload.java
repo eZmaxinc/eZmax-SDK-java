@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP = "objEzsigntemplatepackagemembership";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP)
+  @javax.annotation.Nonnull
   private EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership;
 
   public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload() {
   }
 
-  public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload objEzsigntemplatepackagemembership(EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
+  public EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload objEzsigntemplatepackagemembership(@javax.annotation.Nonnull EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
     this.objEzsigntemplatepackagemembership = objEzsigntemplatepackagemembership;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigntemplatepackagemembershipGetObjectV2ResponseMPayload {
     return objEzsigntemplatepackagemembership;
   }
 
-  public void setObjEzsigntemplatepackagemembership(EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
+  public void setObjEzsigntemplatepackagemembership(@javax.annotation.Nonnull EzsigntemplatepackagemembershipResponseCompound objEzsigntemplatepackagemembership) {
     this.objEzsigntemplatepackagemembership = objEzsigntemplatepackagemembership;
   }
 

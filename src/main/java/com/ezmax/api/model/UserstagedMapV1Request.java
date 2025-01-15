@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/userstaged/{pkiUserstagedID}/map
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserstagedMapV1Request {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public UserstagedMapV1Request() {
   }
 
-  public UserstagedMapV1Request fkiUserID(Integer fkiUserID) {
+  public UserstagedMapV1Request fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -72,7 +73,7 @@ public class UserstagedMapV1Request {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 

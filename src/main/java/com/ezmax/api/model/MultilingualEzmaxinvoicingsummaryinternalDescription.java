@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Ezmaxinvoicingsummaryinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualEzmaxinvoicingsummaryinternalDescription {
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1 = "sEzmaxinvoicingsummaryinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sEzmaxinvoicingsummaryinternalDescription1;
 
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION2 = "sEzmaxinvoicingsummaryinternalDescription2";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sEzmaxinvoicingsummaryinternalDescription2;
 
   public MultilingualEzmaxinvoicingsummaryinternalDescription() {
   }
 
-  public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription1(String sEzmaxinvoicingsummaryinternalDescription1) {
+  public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription1(@javax.annotation.Nullable String sEzmaxinvoicingsummaryinternalDescription1) {
     this.sEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
     return sEzmaxinvoicingsummaryinternalDescription1;
   }
 
-  public void setsEzmaxinvoicingsummaryinternalDescription1(String sEzmaxinvoicingsummaryinternalDescription1) {
+  public void setsEzmaxinvoicingsummaryinternalDescription1(@javax.annotation.Nullable String sEzmaxinvoicingsummaryinternalDescription1) {
     this.sEzmaxinvoicingsummaryinternalDescription1 = sEzmaxinvoicingsummaryinternalDescription1;
   }
 
 
-  public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription2(String sEzmaxinvoicingsummaryinternalDescription2) {
+  public MultilingualEzmaxinvoicingsummaryinternalDescription sEzmaxinvoicingsummaryinternalDescription2(@javax.annotation.Nullable String sEzmaxinvoicingsummaryinternalDescription2) {
     this.sEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualEzmaxinvoicingsummaryinternalDescription {
     return sEzmaxinvoicingsummaryinternalDescription2;
   }
 
-  public void setsEzmaxinvoicingsummaryinternalDescription2(String sEzmaxinvoicingsummaryinternalDescription2) {
+  public void setsEzmaxinvoicingsummaryinternalDescription2(@javax.annotation.Nullable String sEzmaxinvoicingsummaryinternalDescription2) {
     this.sEzmaxinvoicingsummaryinternalDescription2 = sEzmaxinvoicingsummaryinternalDescription2;
   }
 

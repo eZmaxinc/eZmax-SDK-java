@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/font/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class FontGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FONT = "a_objFont";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FONT)
+  @javax.annotation.Nonnull
   private List<FontAutocompleteElementResponse> aObjFont = new ArrayList<>();
 
   public FontGetAutocompleteV2ResponseMPayload() {
   }
 
-  public FontGetAutocompleteV2ResponseMPayload aObjFont(List<FontAutocompleteElementResponse> aObjFont) {
+  public FontGetAutocompleteV2ResponseMPayload aObjFont(@javax.annotation.Nonnull List<FontAutocompleteElementResponse> aObjFont) {
     this.aObjFont = aObjFont;
     return this;
   }
@@ -82,7 +83,7 @@ public class FontGetAutocompleteV2ResponseMPayload {
     return aObjFont;
   }
 
-  public void setaObjFont(List<FontAutocompleteElementResponse> aObjFont) {
+  public void setaObjFont(@javax.annotation.Nonnull List<FontAutocompleteElementResponse> aObjFont) {
     this.aObjFont = aObjFont;
   }
 

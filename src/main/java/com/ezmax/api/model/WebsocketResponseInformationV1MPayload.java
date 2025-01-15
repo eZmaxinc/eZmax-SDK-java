@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for Websocket Information V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebsocketResponseInformationV1MPayload {
   public static final String SERIALIZED_NAME_S_INFORMATION_MESSAGE = "sInformationMessage";
   @SerializedName(SERIALIZED_NAME_S_INFORMATION_MESSAGE)
+  @javax.annotation.Nonnull
   private String sInformationMessage;
 
   public WebsocketResponseInformationV1MPayload() {
   }
 
-  public WebsocketResponseInformationV1MPayload sInformationMessage(String sInformationMessage) {
+  public WebsocketResponseInformationV1MPayload sInformationMessage(@javax.annotation.Nonnull String sInformationMessage) {
     this.sInformationMessage = sInformationMessage;
     return this;
   }
@@ -71,7 +72,7 @@ public class WebsocketResponseInformationV1MPayload {
     return sInformationMessage;
   }
 
-  public void setsInformationMessage(String sInformationMessage) {
+  public void setsInformationMessage(@javax.annotation.Nonnull String sInformationMessage) {
     this.sInformationMessage = sInformationMessage;
   }
 

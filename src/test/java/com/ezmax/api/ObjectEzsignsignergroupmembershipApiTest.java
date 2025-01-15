@@ -14,10 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignergroupmembershipCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignergroupmembershipCreateObjectV1Response;
-import com.ezmax.api.model.EzsignsignergroupmembershipDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignergroupmembershipGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -59,7 +59,7 @@ public class ObjectEzsignsignergroupmembershipApiTest {
     @Test
     public void ezsignsignergroupmembershipDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignsignergroupmembershipID = null;
-        EzsignsignergroupmembershipDeleteObjectV1Response response = api.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
+        CommonResponse response = api.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
         // TODO: test validations
     }
 

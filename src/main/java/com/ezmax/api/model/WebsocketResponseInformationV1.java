@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for Websocket Information V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebsocketResponseInformationV1 {
   /**
    * The Type of message
@@ -103,20 +103,23 @@ public class WebsocketResponseInformationV1 {
 
   public static final String SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE = "eWebsocketMessagetype";
   @SerializedName(SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE)
+  @javax.annotation.Nonnull
   private EWebsocketMessagetypeEnum eWebsocketMessagetype;
 
   public static final String SERIALIZED_NAME_S_WEBSOCKET_CHANNEL = "sWebsocketChannel";
   @SerializedName(SERIALIZED_NAME_S_WEBSOCKET_CHANNEL)
+  @javax.annotation.Nonnull
   private String sWebsocketChannel;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private WebsocketResponseInformationV1MPayload mPayload;
 
   public WebsocketResponseInformationV1() {
   }
 
-  public WebsocketResponseInformationV1 eWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public WebsocketResponseInformationV1 eWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
     return this;
   }
@@ -130,12 +133,12 @@ public class WebsocketResponseInformationV1 {
     return eWebsocketMessagetype;
   }
 
-  public void seteWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public void seteWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
   }
 
 
-  public WebsocketResponseInformationV1 sWebsocketChannel(String sWebsocketChannel) {
+  public WebsocketResponseInformationV1 sWebsocketChannel(@javax.annotation.Nonnull String sWebsocketChannel) {
     this.sWebsocketChannel = sWebsocketChannel;
     return this;
   }
@@ -149,12 +152,12 @@ public class WebsocketResponseInformationV1 {
     return sWebsocketChannel;
   }
 
-  public void setsWebsocketChannel(String sWebsocketChannel) {
+  public void setsWebsocketChannel(@javax.annotation.Nonnull String sWebsocketChannel) {
     this.sWebsocketChannel = sWebsocketChannel;
   }
 
 
-  public WebsocketResponseInformationV1 mPayload(WebsocketResponseInformationV1MPayload mPayload) {
+  public WebsocketResponseInformationV1 mPayload(@javax.annotation.Nonnull WebsocketResponseInformationV1MPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -168,7 +171,7 @@ public class WebsocketResponseInformationV1 {
     return mPayload;
   }
 
-  public void setmPayload(WebsocketResponseInformationV1MPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull WebsocketResponseInformationV1MPayload mPayload) {
     this.mPayload = mPayload;
   }
 

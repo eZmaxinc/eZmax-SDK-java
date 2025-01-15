@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Secretquestion AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SecretquestionAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)
+  @javax.annotation.Nonnull
   private String sSecretquestionTextX;
 
   public static final String SERIALIZED_NAME_PKI_SECRETQUESTION_I_D = "pkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_PKI_SECRETQUESTION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSecretquestionID;
 
   public static final String SERIALIZED_NAME_B_SECRETQUESTION_ISACTIVE = "bSecretquestionIsactive";
   @SerializedName(SERIALIZED_NAME_B_SECRETQUESTION_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bSecretquestionIsactive;
 
   public SecretquestionAutocompleteElementResponse() {
   }
 
-  public SecretquestionAutocompleteElementResponse sSecretquestionTextX(String sSecretquestionTextX) {
+  public SecretquestionAutocompleteElementResponse sSecretquestionTextX(@javax.annotation.Nonnull String sSecretquestionTextX) {
     this.sSecretquestionTextX = sSecretquestionTextX;
     return this;
   }
@@ -79,12 +82,12 @@ public class SecretquestionAutocompleteElementResponse {
     return sSecretquestionTextX;
   }
 
-  public void setsSecretquestionTextX(String sSecretquestionTextX) {
+  public void setsSecretquestionTextX(@javax.annotation.Nonnull String sSecretquestionTextX) {
     this.sSecretquestionTextX = sSecretquestionTextX;
   }
 
 
-  public SecretquestionAutocompleteElementResponse pkiSecretquestionID(Integer pkiSecretquestionID) {
+  public SecretquestionAutocompleteElementResponse pkiSecretquestionID(@javax.annotation.Nonnull Integer pkiSecretquestionID) {
     this.pkiSecretquestionID = pkiSecretquestionID;
     return this;
   }
@@ -99,12 +102,12 @@ public class SecretquestionAutocompleteElementResponse {
     return pkiSecretquestionID;
   }
 
-  public void setPkiSecretquestionID(Integer pkiSecretquestionID) {
+  public void setPkiSecretquestionID(@javax.annotation.Nonnull Integer pkiSecretquestionID) {
     this.pkiSecretquestionID = pkiSecretquestionID;
   }
 
 
-  public SecretquestionAutocompleteElementResponse bSecretquestionIsactive(Boolean bSecretquestionIsactive) {
+  public SecretquestionAutocompleteElementResponse bSecretquestionIsactive(@javax.annotation.Nonnull Boolean bSecretquestionIsactive) {
     this.bSecretquestionIsactive = bSecretquestionIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class SecretquestionAutocompleteElementResponse {
     return bSecretquestionIsactive;
   }
 
-  public void setbSecretquestionIsactive(Boolean bSecretquestionIsactive) {
+  public void setbSecretquestionIsactive(@javax.annotation.Nonnull Boolean bSecretquestionIsactive) {
     this.bSecretquestionIsactive = bSecretquestionIsactive;
   }
 

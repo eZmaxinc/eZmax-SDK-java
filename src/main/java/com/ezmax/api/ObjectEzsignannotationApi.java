@@ -27,12 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Response;
-import com.ezmax.api.model.EzsignannotationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignannotationEditObjectV1Request;
-import com.ezmax.api.model.EzsignannotationEditObjectV1Response;
 import com.ezmax.api.model.EzsignannotationGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -85,7 +84,8 @@ public class ObjectEzsignannotationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,7 +153,8 @@ public class ObjectEzsignannotationApi {
      * @return EzsignannotationCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -170,7 +171,8 @@ public class ObjectEzsignannotationApi {
      * @return ApiResponse&lt;EzsignannotationCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -189,7 +191,8 @@ public class ObjectEzsignannotationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -208,7 +211,8 @@ public class ObjectEzsignannotationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -274,17 +278,18 @@ public class ObjectEzsignannotationApi {
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID  (required)
-     * @return EzsignannotationDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignannotationDeleteObjectV1Response ezsignannotationDeleteObjectV1(Integer pkiEzsignannotationID) throws ApiException {
-        ApiResponse<EzsignannotationDeleteObjectV1Response> localVarResp = ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
+    public CommonResponse ezsignannotationDeleteObjectV1(Integer pkiEzsignannotationID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
         return localVarResp.getData();
     }
 
@@ -292,18 +297,19 @@ public class ObjectEzsignannotationApi {
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID  (required)
-     * @return ApiResponse&lt;EzsignannotationDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignannotationDeleteObjectV1Response> ezsignannotationDeleteObjectV1WithHttpInfo(Integer pkiEzsignannotationID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignannotationDeleteObjectV1WithHttpInfo(Integer pkiEzsignannotationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignannotationDeleteObjectV1ValidateBeforeCall(pkiEzsignannotationID, null);
-        Type localVarReturnType = new TypeToken<EzsignannotationDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -315,16 +321,17 @@ public class ObjectEzsignannotationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignannotationDeleteObjectV1Async(Integer pkiEzsignannotationID, final ApiCallback<EzsignannotationDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignannotationDeleteObjectV1Async(Integer pkiEzsignannotationID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignannotationDeleteObjectV1ValidateBeforeCall(pkiEzsignannotationID, _callback);
-        Type localVarReturnType = new TypeToken<EzsignannotationDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -336,7 +343,8 @@ public class ObjectEzsignannotationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -410,18 +418,19 @@ public class ObjectEzsignannotationApi {
      * 
      * @param pkiEzsignannotationID  (required)
      * @param ezsignannotationEditObjectV1Request  (required)
-     * @return EzsignannotationEditObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignannotationEditObjectV1Response ezsignannotationEditObjectV1(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsignannotationEditObjectV1Response> localVarResp = ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+    public CommonResponse ezsignannotationEditObjectV1(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -430,19 +439,20 @@ public class ObjectEzsignannotationApi {
      * 
      * @param pkiEzsignannotationID  (required)
      * @param ezsignannotationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsignannotationEditObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignannotationEditObjectV1Response> ezsignannotationEditObjectV1WithHttpInfo(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignannotationEditObjectV1WithHttpInfo(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignannotationEditObjectV1ValidateBeforeCall(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignannotationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -455,17 +465,18 @@ public class ObjectEzsignannotationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignannotationEditObjectV1Async(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final ApiCallback<EzsignannotationEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignannotationEditObjectV1Async(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignannotationEditObjectV1ValidateBeforeCall(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignannotationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -476,7 +487,8 @@ public class ObjectEzsignannotationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -545,7 +557,8 @@ public class ObjectEzsignannotationApi {
      * @return EzsignannotationGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -563,7 +576,8 @@ public class ObjectEzsignannotationApi {
      * @return ApiResponse&lt;EzsignannotationGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -583,7 +597,8 @@ public class ObjectEzsignannotationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

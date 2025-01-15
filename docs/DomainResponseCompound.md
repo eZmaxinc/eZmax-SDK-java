@@ -14,7 +14,7 @@ A Domain Object
 |**bDomainValidmailfrom** | **Boolean** | Whether the mail from is valid or not |  |
 |**bDomainValidcustomer** | **Boolean** | Whether the customer has access to it or not |  |
 |**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
-|**aObjDnsrecord** | [**List&lt;CustomDnsrecordResponse&gt;**](CustomDnsrecordResponse.md) |  |  |
+|**aObjDnsrecord** | [**List&lt;Object&gt;**](Object.md) |  |  |
 
 
 

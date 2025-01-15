@@ -51,56 +51,67 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class VersionhistoryResponse {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiVersionhistoryID;
 
   public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiModuleID;
 
   public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiModulesectionID;
 
   public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
+  @javax.annotation.Nullable
   private String sModuleNameX;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
+  @javax.annotation.Nullable
   private String sModulesectionNameX;
 
   public static final String SERIALIZED_NAME_E_VERSIONHISTORY_USERTYPE = "eVersionhistoryUsertype";
   @SerializedName(SERIALIZED_NAME_E_VERSIONHISTORY_USERTYPE)
+  @javax.annotation.Nullable
   private FieldEVersionhistoryUsertype eVersionhistoryUsertype;
 
   public static final String SERIALIZED_NAME_OBJ_VERSIONHISTORY_DETAIL = "objVersionhistoryDetail";
   @SerializedName(SERIALIZED_NAME_OBJ_VERSIONHISTORY_DETAIL)
+  @javax.annotation.Nonnull
   private MultilingualVersionhistoryDetail objVersionhistoryDetail;
 
   public static final String SERIALIZED_NAME_DT_VERSIONHISTORY_DATE = "dtVersionhistoryDate";
   @SerializedName(SERIALIZED_NAME_DT_VERSIONHISTORY_DATE)
+  @javax.annotation.Nonnull
   private String dtVersionhistoryDate;
 
   public static final String SERIALIZED_NAME_DT_VERSIONHISTORY_DATEEND = "dtVersionhistoryDateend";
   @SerializedName(SERIALIZED_NAME_DT_VERSIONHISTORY_DATEEND)
+  @javax.annotation.Nullable
   private String dtVersionhistoryDateend;
 
   public static final String SERIALIZED_NAME_E_VERSIONHISTORY_TYPE = "eVersionhistoryType";
   @SerializedName(SERIALIZED_NAME_E_VERSIONHISTORY_TYPE)
+  @javax.annotation.Nonnull
   private FieldEVersionhistoryType eVersionhistoryType;
 
   public static final String SERIALIZED_NAME_B_VERSIONHISTORY_DRAFT = "bVersionhistoryDraft";
   @SerializedName(SERIALIZED_NAME_B_VERSIONHISTORY_DRAFT)
+  @javax.annotation.Nonnull
   private Boolean bVersionhistoryDraft;
 
   public VersionhistoryResponse() {
   }
 
-  public VersionhistoryResponse pkiVersionhistoryID(Integer pkiVersionhistoryID) {
+  public VersionhistoryResponse pkiVersionhistoryID(@javax.annotation.Nonnull Integer pkiVersionhistoryID) {
     this.pkiVersionhistoryID = pkiVersionhistoryID;
     return this;
   }
@@ -115,12 +126,12 @@ public class VersionhistoryResponse {
     return pkiVersionhistoryID;
   }
 
-  public void setPkiVersionhistoryID(Integer pkiVersionhistoryID) {
+  public void setPkiVersionhistoryID(@javax.annotation.Nonnull Integer pkiVersionhistoryID) {
     this.pkiVersionhistoryID = pkiVersionhistoryID;
   }
 
 
-  public VersionhistoryResponse fkiModuleID(Integer fkiModuleID) {
+  public VersionhistoryResponse fkiModuleID(@javax.annotation.Nullable Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -135,12 +146,12 @@ public class VersionhistoryResponse {
     return fkiModuleID;
   }
 
-  public void setFkiModuleID(Integer fkiModuleID) {
+  public void setFkiModuleID(@javax.annotation.Nullable Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
-  public VersionhistoryResponse fkiModulesectionID(Integer fkiModulesectionID) {
+  public VersionhistoryResponse fkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -155,12 +166,12 @@ public class VersionhistoryResponse {
     return fkiModulesectionID;
   }
 
-  public void setFkiModulesectionID(Integer fkiModulesectionID) {
+  public void setFkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
-  public VersionhistoryResponse sModuleNameX(String sModuleNameX) {
+  public VersionhistoryResponse sModuleNameX(@javax.annotation.Nullable String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -174,12 +185,12 @@ public class VersionhistoryResponse {
     return sModuleNameX;
   }
 
-  public void setsModuleNameX(String sModuleNameX) {
+  public void setsModuleNameX(@javax.annotation.Nullable String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
-  public VersionhistoryResponse sModulesectionNameX(String sModulesectionNameX) {
+  public VersionhistoryResponse sModulesectionNameX(@javax.annotation.Nullable String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -193,12 +204,12 @@ public class VersionhistoryResponse {
     return sModulesectionNameX;
   }
 
-  public void setsModulesectionNameX(String sModulesectionNameX) {
+  public void setsModulesectionNameX(@javax.annotation.Nullable String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 
 
-  public VersionhistoryResponse eVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
+  public VersionhistoryResponse eVersionhistoryUsertype(@javax.annotation.Nullable FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
     this.eVersionhistoryUsertype = eVersionhistoryUsertype;
     return this;
   }
@@ -212,12 +223,12 @@ public class VersionhistoryResponse {
     return eVersionhistoryUsertype;
   }
 
-  public void seteVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
+  public void seteVersionhistoryUsertype(@javax.annotation.Nullable FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
     this.eVersionhistoryUsertype = eVersionhistoryUsertype;
   }
 
 
-  public VersionhistoryResponse objVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
+  public VersionhistoryResponse objVersionhistoryDetail(@javax.annotation.Nonnull MultilingualVersionhistoryDetail objVersionhistoryDetail) {
     this.objVersionhistoryDetail = objVersionhistoryDetail;
     return this;
   }
@@ -231,12 +242,12 @@ public class VersionhistoryResponse {
     return objVersionhistoryDetail;
   }
 
-  public void setObjVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
+  public void setObjVersionhistoryDetail(@javax.annotation.Nonnull MultilingualVersionhistoryDetail objVersionhistoryDetail) {
     this.objVersionhistoryDetail = objVersionhistoryDetail;
   }
 
 
-  public VersionhistoryResponse dtVersionhistoryDate(String dtVersionhistoryDate) {
+  public VersionhistoryResponse dtVersionhistoryDate(@javax.annotation.Nonnull String dtVersionhistoryDate) {
     this.dtVersionhistoryDate = dtVersionhistoryDate;
     return this;
   }
@@ -250,12 +261,12 @@ public class VersionhistoryResponse {
     return dtVersionhistoryDate;
   }
 
-  public void setDtVersionhistoryDate(String dtVersionhistoryDate) {
+  public void setDtVersionhistoryDate(@javax.annotation.Nonnull String dtVersionhistoryDate) {
     this.dtVersionhistoryDate = dtVersionhistoryDate;
   }
 
 
-  public VersionhistoryResponse dtVersionhistoryDateend(String dtVersionhistoryDateend) {
+  public VersionhistoryResponse dtVersionhistoryDateend(@javax.annotation.Nullable String dtVersionhistoryDateend) {
     this.dtVersionhistoryDateend = dtVersionhistoryDateend;
     return this;
   }
@@ -269,12 +280,12 @@ public class VersionhistoryResponse {
     return dtVersionhistoryDateend;
   }
 
-  public void setDtVersionhistoryDateend(String dtVersionhistoryDateend) {
+  public void setDtVersionhistoryDateend(@javax.annotation.Nullable String dtVersionhistoryDateend) {
     this.dtVersionhistoryDateend = dtVersionhistoryDateend;
   }
 
 
-  public VersionhistoryResponse eVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
+  public VersionhistoryResponse eVersionhistoryType(@javax.annotation.Nonnull FieldEVersionhistoryType eVersionhistoryType) {
     this.eVersionhistoryType = eVersionhistoryType;
     return this;
   }
@@ -288,12 +299,12 @@ public class VersionhistoryResponse {
     return eVersionhistoryType;
   }
 
-  public void seteVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
+  public void seteVersionhistoryType(@javax.annotation.Nonnull FieldEVersionhistoryType eVersionhistoryType) {
     this.eVersionhistoryType = eVersionhistoryType;
   }
 
 
-  public VersionhistoryResponse bVersionhistoryDraft(Boolean bVersionhistoryDraft) {
+  public VersionhistoryResponse bVersionhistoryDraft(@javax.annotation.Nonnull Boolean bVersionhistoryDraft) {
     this.bVersionhistoryDraft = bVersionhistoryDraft;
     return this;
   }
@@ -307,7 +318,7 @@ public class VersionhistoryResponse {
     return bVersionhistoryDraft;
   }
 
-  public void setbVersionhistoryDraft(Boolean bVersionhistoryDraft) {
+  public void setbVersionhistoryDraft(@javax.annotation.Nonnull Boolean bVersionhistoryDraft) {
     this.bVersionhistoryDraft = bVersionhistoryDraft;
   }
 

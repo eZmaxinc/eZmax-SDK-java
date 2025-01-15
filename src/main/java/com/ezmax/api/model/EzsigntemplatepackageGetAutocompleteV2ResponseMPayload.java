@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsigntemplatepackage/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage = new ArrayList<>();
 
   public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload aObjEzsigntemplatepackage(List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
+  public EzsigntemplatepackageGetAutocompleteV2ResponseMPayload aObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplatepackageGetAutocompleteV2ResponseMPayload {
     return aObjEzsigntemplatepackage;
   }
 
-  public void setaObjEzsigntemplatepackage(List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
+  public void setaObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageAutocompleteElementResponse> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
   }
 

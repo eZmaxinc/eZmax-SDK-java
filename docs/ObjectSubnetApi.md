@@ -82,7 +82,7 @@ public class Example {
 
 <a id="subnetDeleteObjectV1"></a>
 # **subnetDeleteObjectV1**
-> SubnetDeleteObjectV1Response subnetDeleteObjectV1(pkiSubnetID)
+> CommonResponse subnetDeleteObjectV1(pkiSubnetID)
 
 Delete an existing Subnet
 
@@ -112,7 +112,7 @@ public class Example {
     ObjectSubnetApi apiInstance = new ObjectSubnetApi(defaultClient);
     Integer pkiSubnetID = 56; // Integer | The unique ID of the Subnet
     try {
-      SubnetDeleteObjectV1Response result = apiInstance.subnetDeleteObjectV1(pkiSubnetID);
+      CommonResponse result = apiInstance.subnetDeleteObjectV1(pkiSubnetID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSubnetApi#subnetDeleteObjectV1");
@@ -133,7 +133,7 @@ public class Example {
 
 ### Return type
 
-[**SubnetDeleteObjectV1Response**](SubnetDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ public class Example {
 
 <a id="subnetEditObjectV1"></a>
 # **subnetEditObjectV1**
-> SubnetEditObjectV1Response subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
+> CommonResponse subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request)
 
 Edit an existing Subnet
 
@@ -184,7 +184,7 @@ public class Example {
     Integer pkiSubnetID = 56; // Integer | The unique ID of the Subnet
     SubnetEditObjectV1Request subnetEditObjectV1Request = new SubnetEditObjectV1Request(); // SubnetEditObjectV1Request | 
     try {
-      SubnetEditObjectV1Response result = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
+      CommonResponse result = apiInstance.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSubnetApi#subnetEditObjectV1");
@@ -206,7 +206,7 @@ public class Example {
 
 ### Return type
 
-[**SubnetEditObjectV1Response**](SubnetEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

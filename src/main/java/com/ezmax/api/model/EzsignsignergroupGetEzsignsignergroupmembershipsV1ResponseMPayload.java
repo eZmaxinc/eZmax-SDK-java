@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}/getEzsignsignergroupmemberships
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP = "a_objEzsignsignergroupmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP)
+  @javax.annotation.Nonnull
   private List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership = new ArrayList<>();
 
   public EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload() {
   }
 
-  public EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload aObjEzsignsignergroupmembership(List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership) {
+  public EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload aObjEzsignsignergroupmembership(@javax.annotation.Nonnull List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership) {
     this.aObjEzsignsignergroupmembership = aObjEzsignsignergroupmembership;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsignsignergroupGetEzsignsignergroupmembershipsV1ResponseMPayload 
     return aObjEzsignsignergroupmembership;
   }
 
-  public void setaObjEzsignsignergroupmembership(List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership) {
+  public void setaObjEzsignsignergroupmembership(@javax.annotation.Nonnull List<EzsignsignergroupmembershipResponseCompound> aObjEzsignsignergroupmembership) {
     this.aObjEzsignsignergroupmembership = aObjEzsignsignergroupmembership;
   }
 

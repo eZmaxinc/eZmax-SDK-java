@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/usergroup/{pkiUsergroupID}/getPermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupGetPermissionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_MODULEGROUP = "a_objModulegroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULEGROUP)
+  @javax.annotation.Nonnull
   private List<ModulegroupResponseCompound> aObjModulegroup = new ArrayList<>();
 
   public UsergroupGetPermissionsV1ResponseMPayload() {
   }
 
-  public UsergroupGetPermissionsV1ResponseMPayload aObjModulegroup(List<ModulegroupResponseCompound> aObjModulegroup) {
+  public UsergroupGetPermissionsV1ResponseMPayload aObjModulegroup(@javax.annotation.Nonnull List<ModulegroupResponseCompound> aObjModulegroup) {
     this.aObjModulegroup = aObjModulegroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class UsergroupGetPermissionsV1ResponseMPayload {
     return aObjModulegroup;
   }
 
-  public void setaObjModulegroup(List<ModulegroupResponseCompound> aObjModulegroup) {
+  public void setaObjModulegroup(@javax.annotation.Nonnull List<ModulegroupResponseCompound> aObjModulegroup) {
     this.aObjModulegroup = aObjModulegroup;
   }
 

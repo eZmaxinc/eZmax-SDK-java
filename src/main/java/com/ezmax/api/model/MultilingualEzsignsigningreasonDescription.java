@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Ezsignsigningreason
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualEzsignsigningreasonDescription {
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION1 = "sEzsignsigningreasonDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sEzsignsigningreasonDescription1;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION2 = "sEzsignsigningreasonDescription2";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sEzsignsigningreasonDescription2;
 
   public MultilingualEzsignsigningreasonDescription() {
   }
 
-  public MultilingualEzsignsigningreasonDescription sEzsignsigningreasonDescription1(String sEzsignsigningreasonDescription1) {
+  public MultilingualEzsignsigningreasonDescription sEzsignsigningreasonDescription1(@javax.annotation.Nullable String sEzsignsigningreasonDescription1) {
     this.sEzsignsigningreasonDescription1 = sEzsignsigningreasonDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualEzsignsigningreasonDescription {
     return sEzsignsigningreasonDescription1;
   }
 
-  public void setsEzsignsigningreasonDescription1(String sEzsignsigningreasonDescription1) {
+  public void setsEzsignsigningreasonDescription1(@javax.annotation.Nullable String sEzsignsigningreasonDescription1) {
     this.sEzsignsigningreasonDescription1 = sEzsignsigningreasonDescription1;
   }
 
 
-  public MultilingualEzsignsigningreasonDescription sEzsignsigningreasonDescription2(String sEzsignsigningreasonDescription2) {
+  public MultilingualEzsignsigningreasonDescription sEzsignsigningreasonDescription2(@javax.annotation.Nullable String sEzsignsigningreasonDescription2) {
     this.sEzsignsigningreasonDescription2 = sEzsignsigningreasonDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualEzsignsigningreasonDescription {
     return sEzsignsigningreasonDescription2;
   }
 
-  public void setsEzsignsigningreasonDescription2(String sEzsignsigningreasonDescription2) {
+  public void setsEzsignsigningreasonDescription2(@javax.annotation.Nullable String sEzsignsigningreasonDescription2) {
     this.sEzsignsigningreasonDescription2 = sEzsignsigningreasonDescription2;
   }
 

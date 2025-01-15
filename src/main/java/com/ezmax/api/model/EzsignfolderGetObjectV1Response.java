@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsignfolderGetObjectV1ResponseMPayload;
+import com.ezmax.api.model.EzsignfolderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderGetObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  private EzsignfolderGetObjectV1ResponseMPayload mPayload;
+  @javax.annotation.Nonnull
+  private EzsignfolderResponseCompound mPayload;
 
   public EzsignfolderGetObjectV1Response() {
   }
 
-  public EzsignfolderGetObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsignfolderGetObjectV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -82,12 +85,12 @@ public class EzsignfolderGetObjectV1Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public EzsignfolderGetObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public EzsignfolderGetObjectV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -101,26 +104,26 @@ public class EzsignfolderGetObjectV1Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public EzsignfolderGetObjectV1Response mPayload(EzsignfolderGetObjectV1ResponseMPayload mPayload) {
+  public EzsignfolderGetObjectV1Response mPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Get mPayload
+   * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public EzsignfolderGetObjectV1ResponseMPayload getmPayload() {
+  public EzsignfolderResponseCompound getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(EzsignfolderGetObjectV1ResponseMPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -219,7 +222,7 @@ public class EzsignfolderGetObjectV1Response {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // validate the required field `mPayload`
-      EzsignfolderGetObjectV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
+      EzsignfolderResponseCompound.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

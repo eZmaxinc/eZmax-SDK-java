@@ -57,44 +57,52 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
+  @javax.annotation.Nonnull
   private List<ScimAuthenticationScheme> authenticationSchemes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_BULK = "bulk";
   @SerializedName(SERIALIZED_NAME_BULK)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigBulk bulk;
 
   public static final String SERIALIZED_NAME_CHANGE_PASSWORD = "changePassword";
   @SerializedName(SERIALIZED_NAME_CHANGE_PASSWORD)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigChangePassword changePassword;
 
   public static final String SERIALIZED_NAME_DOCUMENTATION_URI = "documentationUri";
   @SerializedName(SERIALIZED_NAME_DOCUMENTATION_URI)
+  @javax.annotation.Nonnull
   private String documentationUri;
 
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigEtag etag;
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigFilter filter;
 
   public static final String SERIALIZED_NAME_PATCH = "patch";
   @SerializedName(SERIALIZED_NAME_PATCH)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigPatch patch;
 
   public static final String SERIALIZED_NAME_SORT = "sort";
   @SerializedName(SERIALIZED_NAME_SORT)
+  @javax.annotation.Nonnull
   private ScimServiceProviderConfigSort sort;
 
   public ScimServiceProviderConfig() {
   }
 
-  public ScimServiceProviderConfig authenticationSchemes(List<ScimAuthenticationScheme> authenticationSchemes) {
+  public ScimServiceProviderConfig authenticationSchemes(@javax.annotation.Nonnull List<ScimAuthenticationScheme> authenticationSchemes) {
     this.authenticationSchemes = authenticationSchemes;
     return this;
   }
@@ -116,12 +124,12 @@ public class ScimServiceProviderConfig {
     return authenticationSchemes;
   }
 
-  public void setAuthenticationSchemes(List<ScimAuthenticationScheme> authenticationSchemes) {
+  public void setAuthenticationSchemes(@javax.annotation.Nonnull List<ScimAuthenticationScheme> authenticationSchemes) {
     this.authenticationSchemes = authenticationSchemes;
   }
 
 
-  public ScimServiceProviderConfig bulk(ScimServiceProviderConfigBulk bulk) {
+  public ScimServiceProviderConfig bulk(@javax.annotation.Nonnull ScimServiceProviderConfigBulk bulk) {
     this.bulk = bulk;
     return this;
   }
@@ -135,12 +143,12 @@ public class ScimServiceProviderConfig {
     return bulk;
   }
 
-  public void setBulk(ScimServiceProviderConfigBulk bulk) {
+  public void setBulk(@javax.annotation.Nonnull ScimServiceProviderConfigBulk bulk) {
     this.bulk = bulk;
   }
 
 
-  public ScimServiceProviderConfig changePassword(ScimServiceProviderConfigChangePassword changePassword) {
+  public ScimServiceProviderConfig changePassword(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword changePassword) {
     this.changePassword = changePassword;
     return this;
   }
@@ -154,12 +162,12 @@ public class ScimServiceProviderConfig {
     return changePassword;
   }
 
-  public void setChangePassword(ScimServiceProviderConfigChangePassword changePassword) {
+  public void setChangePassword(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword changePassword) {
     this.changePassword = changePassword;
   }
 
 
-  public ScimServiceProviderConfig documentationUri(String documentationUri) {
+  public ScimServiceProviderConfig documentationUri(@javax.annotation.Nonnull String documentationUri) {
     this.documentationUri = documentationUri;
     return this;
   }
@@ -173,12 +181,12 @@ public class ScimServiceProviderConfig {
     return documentationUri;
   }
 
-  public void setDocumentationUri(String documentationUri) {
+  public void setDocumentationUri(@javax.annotation.Nonnull String documentationUri) {
     this.documentationUri = documentationUri;
   }
 
 
-  public ScimServiceProviderConfig etag(ScimServiceProviderConfigEtag etag) {
+  public ScimServiceProviderConfig etag(@javax.annotation.Nonnull ScimServiceProviderConfigEtag etag) {
     this.etag = etag;
     return this;
   }
@@ -192,12 +200,12 @@ public class ScimServiceProviderConfig {
     return etag;
   }
 
-  public void setEtag(ScimServiceProviderConfigEtag etag) {
+  public void setEtag(@javax.annotation.Nonnull ScimServiceProviderConfigEtag etag) {
     this.etag = etag;
   }
 
 
-  public ScimServiceProviderConfig filter(ScimServiceProviderConfigFilter filter) {
+  public ScimServiceProviderConfig filter(@javax.annotation.Nonnull ScimServiceProviderConfigFilter filter) {
     this.filter = filter;
     return this;
   }
@@ -211,12 +219,12 @@ public class ScimServiceProviderConfig {
     return filter;
   }
 
-  public void setFilter(ScimServiceProviderConfigFilter filter) {
+  public void setFilter(@javax.annotation.Nonnull ScimServiceProviderConfigFilter filter) {
     this.filter = filter;
   }
 
 
-  public ScimServiceProviderConfig patch(ScimServiceProviderConfigPatch patch) {
+  public ScimServiceProviderConfig patch(@javax.annotation.Nonnull ScimServiceProviderConfigPatch patch) {
     this.patch = patch;
     return this;
   }
@@ -230,12 +238,12 @@ public class ScimServiceProviderConfig {
     return patch;
   }
 
-  public void setPatch(ScimServiceProviderConfigPatch patch) {
+  public void setPatch(@javax.annotation.Nonnull ScimServiceProviderConfigPatch patch) {
     this.patch = patch;
   }
 
 
-  public ScimServiceProviderConfig sort(ScimServiceProviderConfigSort sort) {
+  public ScimServiceProviderConfig sort(@javax.annotation.Nonnull ScimServiceProviderConfigSort sort) {
     this.sort = sort;
     return this;
   }
@@ -249,7 +257,7 @@ public class ScimServiceProviderConfig {
     return sort;
   }
 
-  public void setSort(ScimServiceProviderConfigSort sort) {
+  public void setSort(@javax.annotation.Nonnull ScimServiceProviderConfigSort sort) {
     this.sort = sort;
   }
 

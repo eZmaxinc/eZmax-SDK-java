@@ -49,60 +49,72 @@ import eZmaxAPI.JSON;
 /**
  * A Supply Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SupplyResponse {
   public static final String SERIALIZED_NAME_PKI_SUPPLY_I_D = "pkiSupplyID";
   @SerializedName(SERIALIZED_NAME_PKI_SUPPLY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSupplyID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNT_I_D = "fkiGlaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiGlaccountID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D = "fkiGlaccountcontainerID";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiGlaccountcontainerID;
 
   public static final String SERIALIZED_NAME_FKI_VARIABLEEXPENSE_I_D = "fkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_FKI_VARIABLEEXPENSE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_S_SUPPLY_CODE = "sSupplyCode";
   @SerializedName(SERIALIZED_NAME_S_SUPPLY_CODE)
+  @javax.annotation.Nonnull
   private String sSupplyCode;
 
   public static final String SERIALIZED_NAME_OBJ_SUPPLY_DESCRIPTION = "objSupplyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_SUPPLY_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualSupplyDescription objSupplyDescription;
 
   public static final String SERIALIZED_NAME_D_SUPPLY_UNITPRICE = "dSupplyUnitprice";
   @SerializedName(SERIALIZED_NAME_D_SUPPLY_UNITPRICE)
+  @javax.annotation.Nonnull
   private String dSupplyUnitprice;
 
   public static final String SERIALIZED_NAME_B_SUPPLY_ISACTIVE = "bSupplyIsactive";
   @SerializedName(SERIALIZED_NAME_B_SUPPLY_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bSupplyIsactive;
 
   public static final String SERIALIZED_NAME_B_SUPPLY_VARIABLEPRICE = "bSupplyVariableprice";
   @SerializedName(SERIALIZED_NAME_B_SUPPLY_VARIABLEPRICE)
+  @javax.annotation.Nonnull
   private Boolean bSupplyVariableprice;
 
   public static final String SERIALIZED_NAME_S_GLACCOUNT_DESCRIPTION_X = "sGlaccountDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_GLACCOUNT_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sGlaccountDescriptionX;
 
   public static final String SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGDESCRIPTION_X = "sGlaccountcontainerLongdescriptionX";
   @SerializedName(SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGDESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sGlaccountcontainerLongdescriptionX;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X = "sVariableexpenseDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sVariableexpenseDescriptionX;
 
   public SupplyResponse() {
   }
 
-  public SupplyResponse pkiSupplyID(Integer pkiSupplyID) {
+  public SupplyResponse pkiSupplyID(@javax.annotation.Nonnull Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
     return this;
   }
@@ -118,12 +130,12 @@ public class SupplyResponse {
     return pkiSupplyID;
   }
 
-  public void setPkiSupplyID(Integer pkiSupplyID) {
+  public void setPkiSupplyID(@javax.annotation.Nonnull Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
   }
 
 
-  public SupplyResponse fkiGlaccountID(Integer fkiGlaccountID) {
+  public SupplyResponse fkiGlaccountID(@javax.annotation.Nullable Integer fkiGlaccountID) {
     this.fkiGlaccountID = fkiGlaccountID;
     return this;
   }
@@ -138,12 +150,12 @@ public class SupplyResponse {
     return fkiGlaccountID;
   }
 
-  public void setFkiGlaccountID(Integer fkiGlaccountID) {
+  public void setFkiGlaccountID(@javax.annotation.Nullable Integer fkiGlaccountID) {
     this.fkiGlaccountID = fkiGlaccountID;
   }
 
 
-  public SupplyResponse fkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
+  public SupplyResponse fkiGlaccountcontainerID(@javax.annotation.Nullable Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
     return this;
   }
@@ -158,12 +170,12 @@ public class SupplyResponse {
     return fkiGlaccountcontainerID;
   }
 
-  public void setFkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
+  public void setFkiGlaccountcontainerID(@javax.annotation.Nullable Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
   }
 
 
-  public SupplyResponse fkiVariableexpenseID(Integer fkiVariableexpenseID) {
+  public SupplyResponse fkiVariableexpenseID(@javax.annotation.Nonnull Integer fkiVariableexpenseID) {
     this.fkiVariableexpenseID = fkiVariableexpenseID;
     return this;
   }
@@ -179,12 +191,12 @@ public class SupplyResponse {
     return fkiVariableexpenseID;
   }
 
-  public void setFkiVariableexpenseID(Integer fkiVariableexpenseID) {
+  public void setFkiVariableexpenseID(@javax.annotation.Nonnull Integer fkiVariableexpenseID) {
     this.fkiVariableexpenseID = fkiVariableexpenseID;
   }
 
 
-  public SupplyResponse sSupplyCode(String sSupplyCode) {
+  public SupplyResponse sSupplyCode(@javax.annotation.Nonnull String sSupplyCode) {
     this.sSupplyCode = sSupplyCode;
     return this;
   }
@@ -198,12 +210,12 @@ public class SupplyResponse {
     return sSupplyCode;
   }
 
-  public void setsSupplyCode(String sSupplyCode) {
+  public void setsSupplyCode(@javax.annotation.Nonnull String sSupplyCode) {
     this.sSupplyCode = sSupplyCode;
   }
 
 
-  public SupplyResponse objSupplyDescription(MultilingualSupplyDescription objSupplyDescription) {
+  public SupplyResponse objSupplyDescription(@javax.annotation.Nonnull MultilingualSupplyDescription objSupplyDescription) {
     this.objSupplyDescription = objSupplyDescription;
     return this;
   }
@@ -217,12 +229,12 @@ public class SupplyResponse {
     return objSupplyDescription;
   }
 
-  public void setObjSupplyDescription(MultilingualSupplyDescription objSupplyDescription) {
+  public void setObjSupplyDescription(@javax.annotation.Nonnull MultilingualSupplyDescription objSupplyDescription) {
     this.objSupplyDescription = objSupplyDescription;
   }
 
 
-  public SupplyResponse dSupplyUnitprice(String dSupplyUnitprice) {
+  public SupplyResponse dSupplyUnitprice(@javax.annotation.Nonnull String dSupplyUnitprice) {
     this.dSupplyUnitprice = dSupplyUnitprice;
     return this;
   }
@@ -236,12 +248,12 @@ public class SupplyResponse {
     return dSupplyUnitprice;
   }
 
-  public void setdSupplyUnitprice(String dSupplyUnitprice) {
+  public void setdSupplyUnitprice(@javax.annotation.Nonnull String dSupplyUnitprice) {
     this.dSupplyUnitprice = dSupplyUnitprice;
   }
 
 
-  public SupplyResponse bSupplyIsactive(Boolean bSupplyIsactive) {
+  public SupplyResponse bSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
     return this;
   }
@@ -255,12 +267,12 @@ public class SupplyResponse {
     return bSupplyIsactive;
   }
 
-  public void setbSupplyIsactive(Boolean bSupplyIsactive) {
+  public void setbSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
   }
 
 
-  public SupplyResponse bSupplyVariableprice(Boolean bSupplyVariableprice) {
+  public SupplyResponse bSupplyVariableprice(@javax.annotation.Nonnull Boolean bSupplyVariableprice) {
     this.bSupplyVariableprice = bSupplyVariableprice;
     return this;
   }
@@ -274,12 +286,12 @@ public class SupplyResponse {
     return bSupplyVariableprice;
   }
 
-  public void setbSupplyVariableprice(Boolean bSupplyVariableprice) {
+  public void setbSupplyVariableprice(@javax.annotation.Nonnull Boolean bSupplyVariableprice) {
     this.bSupplyVariableprice = bSupplyVariableprice;
   }
 
 
-  public SupplyResponse sGlaccountDescriptionX(String sGlaccountDescriptionX) {
+  public SupplyResponse sGlaccountDescriptionX(@javax.annotation.Nullable String sGlaccountDescriptionX) {
     this.sGlaccountDescriptionX = sGlaccountDescriptionX;
     return this;
   }
@@ -293,12 +305,12 @@ public class SupplyResponse {
     return sGlaccountDescriptionX;
   }
 
-  public void setsGlaccountDescriptionX(String sGlaccountDescriptionX) {
+  public void setsGlaccountDescriptionX(@javax.annotation.Nullable String sGlaccountDescriptionX) {
     this.sGlaccountDescriptionX = sGlaccountDescriptionX;
   }
 
 
-  public SupplyResponse sGlaccountcontainerLongdescriptionX(String sGlaccountcontainerLongdescriptionX) {
+  public SupplyResponse sGlaccountcontainerLongdescriptionX(@javax.annotation.Nullable String sGlaccountcontainerLongdescriptionX) {
     this.sGlaccountcontainerLongdescriptionX = sGlaccountcontainerLongdescriptionX;
     return this;
   }
@@ -312,12 +324,12 @@ public class SupplyResponse {
     return sGlaccountcontainerLongdescriptionX;
   }
 
-  public void setsGlaccountcontainerLongdescriptionX(String sGlaccountcontainerLongdescriptionX) {
+  public void setsGlaccountcontainerLongdescriptionX(@javax.annotation.Nullable String sGlaccountcontainerLongdescriptionX) {
     this.sGlaccountcontainerLongdescriptionX = sGlaccountcontainerLongdescriptionX;
   }
 
 
-  public SupplyResponse sVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
+  public SupplyResponse sVariableexpenseDescriptionX(@javax.annotation.Nullable String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
     return this;
   }
@@ -331,7 +343,7 @@ public class SupplyResponse {
     return sVariableexpenseDescriptionX;
   }
 
-  public void setsVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
+  public void setsVariableexpenseDescriptionX(@javax.annotation.Nullable String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
   }
 

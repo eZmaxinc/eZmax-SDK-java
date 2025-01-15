@@ -49,36 +49,42 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxinvoicingsummaryinternalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "pkiEzmaxinvoicingsummaryinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingsummaryinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION = "objEzmaxinvoicingsummaryinternalDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription;
 
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION_X = "sEzmaxinvoicingsummaryinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sEzmaxinvoicingsummaryinternalDescriptionX;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sBillingentityinternalDescriptionX;
 
   public EzmaxinvoicingsummaryinternalResponse() {
   }
 
-  public EzmaxinvoicingsummaryinternalResponse pkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
+  public EzmaxinvoicingsummaryinternalResponse pkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternalID) {
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
     return this;
   }
@@ -93,12 +99,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return pkiEzmaxinvoicingsummaryinternalID;
   }
 
-  public void setPkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
+  public void setPkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternalID) {
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse objEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
+  public EzmaxinvoicingsummaryinternalResponse objEzmaxinvoicingsummaryinternalDescription(@javax.annotation.Nonnull MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
     return this;
   }
@@ -112,12 +118,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return objEzmaxinvoicingsummaryinternalDescription;
   }
 
-  public void setObjEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
+  public void setObjEzmaxinvoicingsummaryinternalDescription(@javax.annotation.Nonnull MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse sEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
+  public EzmaxinvoicingsummaryinternalResponse sEzmaxinvoicingsummaryinternalDescriptionX(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryinternalDescriptionX) {
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
     return this;
   }
@@ -131,12 +137,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
-  public void setsEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
+  public void setsEzmaxinvoicingsummaryinternalDescriptionX(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryinternalDescriptionX) {
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+  public EzmaxinvoicingsummaryinternalResponse fkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -151,12 +157,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiEzmaxinvoicingID;
   }
 
-  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+  public void setFkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+  public EzmaxinvoicingsummaryinternalResponse fkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -171,12 +177,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiBillingentityinternalID;
   }
 
-  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+  public void setFkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+  public EzmaxinvoicingsummaryinternalResponse sBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -190,7 +196,7 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+  public void setsBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 

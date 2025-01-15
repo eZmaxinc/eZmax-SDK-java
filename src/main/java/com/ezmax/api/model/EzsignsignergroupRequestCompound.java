@@ -49,24 +49,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroup Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignergroupRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION = "objEzsignsignergroupDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
 
   public EzsignsignergroupRequestCompound() {
   }
 
-  public EzsignsignergroupRequestCompound pkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
+  public EzsignsignergroupRequestCompound pkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
     return this;
   }
@@ -82,12 +85,12 @@ public class EzsignsignergroupRequestCompound {
     return pkiEzsignsignergroupID;
   }
 
-  public void setPkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
+  public void setPkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
 
-  public EzsignsignergroupRequestCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public EzsignsignergroupRequestCompound fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -102,12 +105,12 @@ public class EzsignsignergroupRequestCompound {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public EzsignsignergroupRequestCompound objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public EzsignsignergroupRequestCompound objEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
     return this;
   }
@@ -121,7 +124,7 @@ public class EzsignsignergroupRequestCompound {
     return objEzsignsignergroupDescription;
   }
 
-  public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public void setObjEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
   }
 

@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/cors/{pkiCorsID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CorsEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_CORS = "objCors";
   @SerializedName(SERIALIZED_NAME_OBJ_CORS)
+  @javax.annotation.Nonnull
   private CorsRequestCompound objCors;
 
   public CorsEditObjectV1Request() {
   }
 
-  public CorsEditObjectV1Request objCors(CorsRequestCompound objCors) {
+  public CorsEditObjectV1Request objCors(@javax.annotation.Nonnull CorsRequestCompound objCors) {
     this.objCors = objCors;
     return this;
   }
@@ -72,7 +73,7 @@ public class CorsEditObjectV1Request {
     return objCors;
   }
 
-  public void setObjCors(CorsRequestCompound objCors) {
+  public void setObjCors(@javax.annotation.Nonnull CorsRequestCompound objCors) {
     this.objCors = objCors;
   }
 

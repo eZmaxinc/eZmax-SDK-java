@@ -48,44 +48,52 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D = "fkiEzsigntsarequirementID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntsarequirementID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION = "sEzsignbulksendtransmissionDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsignbulksendtransmissionDescription;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
+  @javax.annotation.Nonnull
   private String dtEzsigndocumentDuedate;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDERFIRSTDAYS = "iEzsignfolderSendreminderfirstdays";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDERFIRSTDAYS)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolderSendreminderfirstdays;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDEROTHERDAYS = "iEzsignfolderSendreminderotherdays";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDEROTHERDAYS)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolderSendreminderotherdays;
 
   public static final String SERIALIZED_NAME_T_EXTRA_MESSAGE = "tExtraMessage";
   @SerializedName(SERIALIZED_NAME_T_EXTRA_MESSAGE)
+  @javax.annotation.Nonnull
   private String tExtraMessage;
 
   public static final String SERIALIZED_NAME_S_CSV_BASE64 = "sCsvBase64";
   @SerializedName(SERIALIZED_NAME_S_CSV_BASE64)
+  @javax.annotation.Nonnull
   private byte[] sCsvBase64;
 
   public EzsignbulksendCreateEzsignbulksendtransmissionV2Request() {
   }
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request fkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -100,12 +108,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request fkiEzsigntsarequirementID(@javax.annotation.Nullable Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -121,12 +129,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return fkiEzsigntsarequirementID;
   }
 
-  public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
+  public void setFkiEzsigntsarequirementID(@javax.annotation.Nullable Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request sEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
     return this;
   }
@@ -140,12 +148,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return sEzsignbulksendtransmissionDescription;
   }
 
-  public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
+  public void setsEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request dtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -159,12 +167,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return dtEzsigndocumentDuedate;
   }
 
-  public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public void setDtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request iEzsignfolderSendreminderfirstdays(Integer iEzsignfolderSendreminderfirstdays) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request iEzsignfolderSendreminderfirstdays(@javax.annotation.Nonnull Integer iEzsignfolderSendreminderfirstdays) {
     this.iEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
     return this;
   }
@@ -180,12 +188,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return iEzsignfolderSendreminderfirstdays;
   }
 
-  public void setiEzsignfolderSendreminderfirstdays(Integer iEzsignfolderSendreminderfirstdays) {
+  public void setiEzsignfolderSendreminderfirstdays(@javax.annotation.Nonnull Integer iEzsignfolderSendreminderfirstdays) {
     this.iEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request iEzsignfolderSendreminderotherdays(Integer iEzsignfolderSendreminderotherdays) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request iEzsignfolderSendreminderotherdays(@javax.annotation.Nonnull Integer iEzsignfolderSendreminderotherdays) {
     this.iEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
     return this;
   }
@@ -201,12 +209,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return iEzsignfolderSendreminderotherdays;
   }
 
-  public void setiEzsignfolderSendreminderotherdays(Integer iEzsignfolderSendreminderotherdays) {
+  public void setiEzsignfolderSendreminderotherdays(@javax.annotation.Nonnull Integer iEzsignfolderSendreminderotherdays) {
     this.iEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request tExtraMessage(String tExtraMessage) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request tExtraMessage(@javax.annotation.Nonnull String tExtraMessage) {
     this.tExtraMessage = tExtraMessage;
     return this;
   }
@@ -220,12 +228,12 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return tExtraMessage;
   }
 
-  public void settExtraMessage(String tExtraMessage) {
+  public void settExtraMessage(@javax.annotation.Nonnull String tExtraMessage) {
     this.tExtraMessage = tExtraMessage;
   }
 
 
-  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request sCsvBase64(byte[] sCsvBase64) {
+  public EzsignbulksendCreateEzsignbulksendtransmissionV2Request sCsvBase64(@javax.annotation.Nonnull byte[] sCsvBase64) {
     this.sCsvBase64 = sCsvBase64;
     return this;
   }
@@ -239,7 +247,7 @@ public class EzsignbulksendCreateEzsignbulksendtransmissionV2Request {
     return sCsvBase64;
   }
 
-  public void setsCsvBase64(byte[] sCsvBase64) {
+  public void setsCsvBase64(@javax.annotation.Nonnull byte[] sCsvBase64) {
     this.sCsvBase64 = sCsvBase64;
   }
 

@@ -42,7 +42,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsigndocumentApplyEzsigntemplateV1"></a>
 # **ezsigndocumentApplyEzsigntemplateV1**
-> EzsigndocumentApplyEzsigntemplateV1Response ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
+> CommonResponse ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request)
 
 Apply an Ezsigntemplate to the Ezsigndocument.
 
@@ -73,7 +73,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request = new EzsigndocumentApplyEzsigntemplateV1Request(); // EzsigndocumentApplyEzsigntemplateV1Request | 
     try {
-      EzsigndocumentApplyEzsigntemplateV1Response result = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+      CommonResponse result = apiInstance.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentApplyEzsigntemplateV1");
@@ -95,7 +95,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentApplyEzsigntemplateV1Response**](EzsigndocumentApplyEzsigntemplateV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -545,7 +545,7 @@ public class Example {
 
 <a id="ezsigndocumentDeclineToSignV1"></a>
 # **ezsigndocumentDeclineToSignV1**
-> EzsigndocumentDeclineToSignV1Response ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
+> CommonResponse ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request)
 
 Decline to sign
 
@@ -576,7 +576,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request = new EzsigndocumentDeclineToSignV1Request(); // EzsigndocumentDeclineToSignV1Request | 
     try {
-      EzsigndocumentDeclineToSignV1Response result = apiInstance.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+      CommonResponse result = apiInstance.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentDeclineToSignV1");
@@ -598,7 +598,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentDeclineToSignV1Response**](EzsigndocumentDeclineToSignV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ public class Example {
 
 <a id="ezsigndocumentDeleteObjectV1"></a>
 # **ezsigndocumentDeleteObjectV1**
-> EzsigndocumentDeleteObjectV1Response ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
+> CommonResponse ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID)
 
 Delete an existing Ezsigndocument
 
@@ -648,7 +648,7 @@ public class Example {
     ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
     Integer pkiEzsigndocumentID = 56; // Integer | 
     try {
-      EzsigndocumentDeleteObjectV1Response result = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+      CommonResponse result = apiInstance.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentDeleteObjectV1");
@@ -669,7 +669,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentDeleteObjectV1Response**](EzsigndocumentDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -981,7 +981,7 @@ public class Example {
 
 <a id="ezsigndocumentEndPrematurelyV1"></a>
 # **ezsigndocumentEndPrematurelyV1**
-> EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
+> CommonResponse ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body)
 
 End prematurely
 
@@ -1012,7 +1012,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      EzsigndocumentEndPrematurelyV1Response result = apiInstance.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
+      CommonResponse result = apiInstance.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentEndPrematurelyV1");
@@ -1034,7 +1034,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentEndPrematurelyV1Response**](EzsigndocumentEndPrematurelyV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -1127,7 +1127,7 @@ public class Example {
 
 <a id="ezsigndocumentFlattenV1"></a>
 # **ezsigndocumentFlattenV1**
-> EzsigndocumentFlattenV1Response ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
+> CommonResponse ezsigndocumentFlattenV1(pkiEzsigndocumentID, body)
 
 Flatten
 
@@ -1158,7 +1158,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      EzsigndocumentFlattenV1Response result = apiInstance.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body);
+      CommonResponse result = apiInstance.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentFlattenV1");
@@ -1180,7 +1180,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentFlattenV1Response**](EzsigndocumentFlattenV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2264,7 +2264,7 @@ public class Example {
 
 <a id="ezsigndocumentPatchObjectV1"></a>
 # **ezsigndocumentPatchObjectV1**
-> EzsigndocumentPatchObjectV1Response ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
+> CommonResponse ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request)
 
 Patch an existing Ezsigndocument
 
@@ -2295,7 +2295,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = new EzsigndocumentPatchObjectV1Request(); // EzsigndocumentPatchObjectV1Request | 
     try {
-      EzsigndocumentPatchObjectV1Response result = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+      CommonResponse result = apiInstance.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentPatchObjectV1");
@@ -2317,7 +2317,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentPatchObjectV1Response**](EzsigndocumentPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2337,7 +2337,7 @@ public class Example {
 
 <a id="ezsigndocumentSubmitEzsignformV1"></a>
 # **ezsigndocumentSubmitEzsignformV1**
-> EzsigndocumentSubmitEzsignformV1Response ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
+> CommonResponse ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request)
 
 Submit the Ezsignform
 
@@ -2368,7 +2368,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request = new EzsigndocumentSubmitEzsignformV1Request(); // EzsigndocumentSubmitEzsignformV1Request | 
     try {
-      EzsigndocumentSubmitEzsignformV1Response result = apiInstance.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+      CommonResponse result = apiInstance.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentSubmitEzsignformV1");
@@ -2390,7 +2390,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentSubmitEzsignformV1Response**](EzsigndocumentSubmitEzsignformV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -2410,7 +2410,7 @@ public class Example {
 
 <a id="ezsigndocumentUnsendV1"></a>
 # **ezsigndocumentUnsendV1**
-> EzsigndocumentUnsendV1Response ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
+> CommonResponse ezsigndocumentUnsendV1(pkiEzsigndocumentID, body)
 
 Unsend the Ezsigndocument
 
@@ -2441,7 +2441,7 @@ public class Example {
     Integer pkiEzsigndocumentID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      EzsigndocumentUnsendV1Response result = apiInstance.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body);
+      CommonResponse result = apiInstance.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentUnsendV1");
@@ -2463,7 +2463,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigndocumentUnsendV1Response**](EzsigndocumentUnsendV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/ezmaxproduct/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxproductGetAutocompleteV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private EzmaxproductGetAutocompleteV2ResponseMPayload mPayload;
 
   public EzmaxproductGetAutocompleteV2Response() {
   }
 
-  public EzmaxproductGetAutocompleteV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public EzmaxproductGetAutocompleteV2Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -82,12 +85,12 @@ public class EzmaxproductGetAutocompleteV2Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public EzmaxproductGetAutocompleteV2Response objDebug(CommonResponseObjDebug objDebug) {
+  public EzmaxproductGetAutocompleteV2Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -101,12 +104,12 @@ public class EzmaxproductGetAutocompleteV2Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public EzmaxproductGetAutocompleteV2Response mPayload(EzmaxproductGetAutocompleteV2ResponseMPayload mPayload) {
+  public EzmaxproductGetAutocompleteV2Response mPayload(@javax.annotation.Nonnull EzmaxproductGetAutocompleteV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -120,7 +123,7 @@ public class EzmaxproductGetAutocompleteV2Response {
     return mPayload;
   }
 
-  public void setmPayload(EzmaxproductGetAutocompleteV2ResponseMPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull EzmaxproductGetAutocompleteV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

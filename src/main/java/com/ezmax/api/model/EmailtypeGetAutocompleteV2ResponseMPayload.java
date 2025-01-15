@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/emailtype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EmailtypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EMAILTYPE = "a_objEmailtype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAILTYPE)
+  @javax.annotation.Nonnull
   private List<EmailtypeAutocompleteElementResponse> aObjEmailtype = new ArrayList<>();
 
   public EmailtypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EmailtypeGetAutocompleteV2ResponseMPayload aObjEmailtype(List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
+  public EmailtypeGetAutocompleteV2ResponseMPayload aObjEmailtype(@javax.annotation.Nonnull List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
     this.aObjEmailtype = aObjEmailtype;
     return this;
   }
@@ -82,7 +83,7 @@ public class EmailtypeGetAutocompleteV2ResponseMPayload {
     return aObjEmailtype;
   }
 
-  public void setaObjEmailtype(List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
+  public void setaObjEmailtype(@javax.annotation.Nonnull List<EmailtypeAutocompleteElementResponse> aObjEmailtype) {
     this.aObjEmailtype = aObjEmailtype;
   }
 

@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/subnet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SubnetCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_SUBNET_I_D = "a_pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_A_PKI_SUBNET_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiSubnetID = new ArrayList<>();
 
   public SubnetCreateObjectV1ResponseMPayload() {
   }
 
-  public SubnetCreateObjectV1ResponseMPayload aPkiSubnetID(List<Integer> aPkiSubnetID) {
+  public SubnetCreateObjectV1ResponseMPayload aPkiSubnetID(@javax.annotation.Nonnull List<Integer> aPkiSubnetID) {
     this.aPkiSubnetID = aPkiSubnetID;
     return this;
   }
@@ -81,7 +82,7 @@ public class SubnetCreateObjectV1ResponseMPayload {
     return aPkiSubnetID;
   }
 
-  public void setaPkiSubnetID(List<Integer> aPkiSubnetID) {
+  public void setaPkiSubnetID(@javax.annotation.Nonnull List<Integer> aPkiSubnetID) {
     this.aPkiSubnetID = aPkiSubnetID;
   }
 

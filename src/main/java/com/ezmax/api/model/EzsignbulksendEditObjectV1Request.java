@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSEND = "objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSEND)
+  @javax.annotation.Nonnull
   private EzsignbulksendRequestCompound objEzsignbulksend;
 
   public EzsignbulksendEditObjectV1Request() {
   }
 
-  public EzsignbulksendEditObjectV1Request objEzsignbulksend(EzsignbulksendRequestCompound objEzsignbulksend) {
+  public EzsignbulksendEditObjectV1Request objEzsignbulksend(@javax.annotation.Nonnull EzsignbulksendRequestCompound objEzsignbulksend) {
     this.objEzsignbulksend = objEzsignbulksend;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignbulksendEditObjectV1Request {
     return objEzsignbulksend;
   }
 
-  public void setObjEzsignbulksend(EzsignbulksendRequestCompound objEzsignbulksend) {
+  public void setObjEzsignbulksend(@javax.annotation.Nonnull EzsignbulksendRequestCompound objEzsignbulksend) {
     this.objEzsignbulksend = objEzsignbulksend;
   }
 

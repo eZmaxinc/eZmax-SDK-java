@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * Description of the API Key
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualApikeyDescription {
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION1 = "sApikeyDescription1";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sApikeyDescription1;
 
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION2 = "sApikeyDescription2";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sApikeyDescription2;
 
   public MultilingualApikeyDescription() {
   }
 
-  public MultilingualApikeyDescription sApikeyDescription1(String sApikeyDescription1) {
+  public MultilingualApikeyDescription sApikeyDescription1(@javax.annotation.Nullable String sApikeyDescription1) {
     this.sApikeyDescription1 = sApikeyDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualApikeyDescription {
     return sApikeyDescription1;
   }
 
-  public void setsApikeyDescription1(String sApikeyDescription1) {
+  public void setsApikeyDescription1(@javax.annotation.Nullable String sApikeyDescription1) {
     this.sApikeyDescription1 = sApikeyDescription1;
   }
 
 
-  public MultilingualApikeyDescription sApikeyDescription2(String sApikeyDescription2) {
+  public MultilingualApikeyDescription sApikeyDescription2(@javax.annotation.Nullable String sApikeyDescription2) {
     this.sApikeyDescription2 = sApikeyDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualApikeyDescription {
     return sApikeyDescription2;
   }
 
-  public void setsApikeyDescription2(String sApikeyDescription2) {
+  public void setsApikeyDescription2(@javax.annotation.Nullable String sApikeyDescription2) {
     this.sApikeyDescription2 = sApikeyDescription2;
   }
 

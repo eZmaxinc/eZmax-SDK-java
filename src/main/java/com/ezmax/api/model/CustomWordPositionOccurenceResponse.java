@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomWordPositionOccurenceResponse {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
+  @javax.annotation.Nullable
   private Integer iPage;
 
   public static final String SERIALIZED_NAME_I_X = "iX";
   @SerializedName(SERIALIZED_NAME_I_X)
+  @javax.annotation.Nullable
   private Integer iX;
 
   public static final String SERIALIZED_NAME_I_Y = "iY";
   @SerializedName(SERIALIZED_NAME_I_Y)
+  @javax.annotation.Nullable
   private Integer iY;
 
   public CustomWordPositionOccurenceResponse() {
   }
 
-  public CustomWordPositionOccurenceResponse iPage(Integer iPage) {
+  public CustomWordPositionOccurenceResponse iPage(@javax.annotation.Nullable Integer iPage) {
     this.iPage = iPage;
     return this;
   }
@@ -80,12 +83,12 @@ public class CustomWordPositionOccurenceResponse {
     return iPage;
   }
 
-  public void setiPage(Integer iPage) {
+  public void setiPage(@javax.annotation.Nullable Integer iPage) {
     this.iPage = iPage;
   }
 
 
-  public CustomWordPositionOccurenceResponse iX(Integer iX) {
+  public CustomWordPositionOccurenceResponse iX(@javax.annotation.Nullable Integer iX) {
     this.iX = iX;
     return this;
   }
@@ -100,12 +103,12 @@ public class CustomWordPositionOccurenceResponse {
     return iX;
   }
 
-  public void setiX(Integer iX) {
+  public void setiX(@javax.annotation.Nullable Integer iX) {
     this.iX = iX;
   }
 
 
-  public CustomWordPositionOccurenceResponse iY(Integer iY) {
+  public CustomWordPositionOccurenceResponse iY(@javax.annotation.Nullable Integer iY) {
     this.iY = iY;
     return this;
   }
@@ -120,7 +123,7 @@ public class CustomWordPositionOccurenceResponse {
     return iY;
   }
 
-  public void setiY(Integer iY) {
+  public void setiY(@javax.annotation.Nullable Integer iY) {
     this.iY = iY;
   }
 

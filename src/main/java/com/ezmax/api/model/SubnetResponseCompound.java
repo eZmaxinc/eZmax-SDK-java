@@ -49,36 +49,42 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SubnetResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSubnetID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION = "objSubnetDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualSubnetDescription objSubnetDescription;
 
   public static final String SERIALIZED_NAME_I_SUBNET_NETWORK = "iSubnetNetwork";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_NETWORK)
+  @javax.annotation.Nonnull
   private Long iSubnetNetwork;
 
   public static final String SERIALIZED_NAME_I_SUBNET_MASK = "iSubnetMask";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_MASK)
+  @javax.annotation.Nonnull
   private Long iSubnetMask;
 
   public SubnetResponseCompound() {
   }
 
-  public SubnetResponseCompound pkiSubnetID(Integer pkiSubnetID) {
+  public SubnetResponseCompound pkiSubnetID(@javax.annotation.Nonnull Integer pkiSubnetID) {
     this.pkiSubnetID = pkiSubnetID;
     return this;
   }
@@ -94,12 +100,12 @@ public class SubnetResponseCompound {
     return pkiSubnetID;
   }
 
-  public void setPkiSubnetID(Integer pkiSubnetID) {
+  public void setPkiSubnetID(@javax.annotation.Nonnull Integer pkiSubnetID) {
     this.pkiSubnetID = pkiSubnetID;
   }
 
 
-  public SubnetResponseCompound fkiUserID(Integer fkiUserID) {
+  public SubnetResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -114,12 +120,12 @@ public class SubnetResponseCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public SubnetResponseCompound fkiApikeyID(Integer fkiApikeyID) {
+  public SubnetResponseCompound fkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -134,12 +140,12 @@ public class SubnetResponseCompound {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(Integer fkiApikeyID) {
+  public void setFkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public SubnetResponseCompound objSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
+  public SubnetResponseCompound objSubnetDescription(@javax.annotation.Nonnull MultilingualSubnetDescription objSubnetDescription) {
     this.objSubnetDescription = objSubnetDescription;
     return this;
   }
@@ -153,12 +159,12 @@ public class SubnetResponseCompound {
     return objSubnetDescription;
   }
 
-  public void setObjSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
+  public void setObjSubnetDescription(@javax.annotation.Nonnull MultilingualSubnetDescription objSubnetDescription) {
     this.objSubnetDescription = objSubnetDescription;
   }
 
 
-  public SubnetResponseCompound iSubnetNetwork(Long iSubnetNetwork) {
+  public SubnetResponseCompound iSubnetNetwork(@javax.annotation.Nonnull Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
     return this;
   }
@@ -174,12 +180,12 @@ public class SubnetResponseCompound {
     return iSubnetNetwork;
   }
 
-  public void setiSubnetNetwork(Long iSubnetNetwork) {
+  public void setiSubnetNetwork(@javax.annotation.Nonnull Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
   }
 
 
-  public SubnetResponseCompound iSubnetMask(Long iSubnetMask) {
+  public SubnetResponseCompound iSubnetMask(@javax.annotation.Nonnull Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
     return this;
   }
@@ -195,7 +201,7 @@ public class SubnetResponseCompound {
     return iSubnetMask;
   }
 
-  public void setiSubnetMask(Long iSubnetMask) {
+  public void setiSubnetMask(@javax.annotation.Nonnull Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
   }
 

@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxinvoicingAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_YYYYMM_EZMAXINVOICING = "yyyymmEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_YYYYMM_EZMAXINVOICING)
+  @javax.annotation.Nonnull
   private String yyyymmEzmaxinvoicing;
 
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_B_EZMAXINVOICING_ISACTIVE = "bEzmaxinvoicingIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICING_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzmaxinvoicingIsactive;
 
   public EzmaxinvoicingAutocompleteElementResponse() {
   }
 
-  public EzmaxinvoicingAutocompleteElementResponse yyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
+  public EzmaxinvoicingAutocompleteElementResponse yyyymmEzmaxinvoicing(@javax.annotation.Nonnull String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
     return this;
   }
@@ -79,12 +82,12 @@ public class EzmaxinvoicingAutocompleteElementResponse {
     return yyyymmEzmaxinvoicing;
   }
 
-  public void setYyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
+  public void setYyyymmEzmaxinvoicing(@javax.annotation.Nonnull String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
   }
 
 
-  public EzmaxinvoicingAutocompleteElementResponse pkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
+  public EzmaxinvoicingAutocompleteElementResponse pkiEzmaxinvoicingID(@javax.annotation.Nonnull Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
     return this;
   }
@@ -99,12 +102,12 @@ public class EzmaxinvoicingAutocompleteElementResponse {
     return pkiEzmaxinvoicingID;
   }
 
-  public void setPkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
+  public void setPkiEzmaxinvoicingID(@javax.annotation.Nonnull Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingAutocompleteElementResponse bEzmaxinvoicingIsactive(Boolean bEzmaxinvoicingIsactive) {
+  public EzmaxinvoicingAutocompleteElementResponse bEzmaxinvoicingIsactive(@javax.annotation.Nonnull Boolean bEzmaxinvoicingIsactive) {
     this.bEzmaxinvoicingIsactive = bEzmaxinvoicingIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class EzmaxinvoicingAutocompleteElementResponse {
     return bEzmaxinvoicingIsactive;
   }
 
-  public void setbEzmaxinvoicingIsactive(Boolean bEzmaxinvoicingIsactive) {
+  public void setbEzmaxinvoicingIsactive(@javax.annotation.Nonnull Boolean bEzmaxinvoicingIsactive) {
     this.bEzmaxinvoicingIsactive = bEzmaxinvoicingIsactive;
   }
 

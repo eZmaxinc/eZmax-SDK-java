@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignformfieldgroupsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignformfieldgroupsignerRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUPSIGNER_I_D = "pkiEzsignformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUPSIGNER_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsignformfieldgroupsignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
 
   public EzsignformfieldgroupsignerRequest() {
   }
 
-  public EzsignformfieldgroupsignerRequest pkiEzsignformfieldgroupsignerID(Integer pkiEzsignformfieldgroupsignerID) {
+  public EzsignformfieldgroupsignerRequest pkiEzsignformfieldgroupsignerID(@javax.annotation.Nullable Integer pkiEzsignformfieldgroupsignerID) {
     this.pkiEzsignformfieldgroupsignerID = pkiEzsignformfieldgroupsignerID;
     return this;
   }
@@ -76,12 +78,12 @@ public class EzsignformfieldgroupsignerRequest {
     return pkiEzsignformfieldgroupsignerID;
   }
 
-  public void setPkiEzsignformfieldgroupsignerID(Integer pkiEzsignformfieldgroupsignerID) {
+  public void setPkiEzsignformfieldgroupsignerID(@javax.annotation.Nullable Integer pkiEzsignformfieldgroupsignerID) {
     this.pkiEzsignformfieldgroupsignerID = pkiEzsignformfieldgroupsignerID;
   }
 
 
-  public EzsignformfieldgroupsignerRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public EzsignformfieldgroupsignerRequest fkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -96,7 +98,7 @@ public class EzsignformfieldgroupsignerRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 

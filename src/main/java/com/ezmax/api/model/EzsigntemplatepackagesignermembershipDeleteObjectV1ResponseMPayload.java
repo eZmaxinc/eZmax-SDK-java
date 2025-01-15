@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * Payload for DELETE /1/object/ezsigntemplatepackagesignermembership/{pkiEzsigntemplatepackagesignermembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -75,12 +77,12 @@ public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-  public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public void setbEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
-  public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -94,7 +96,7 @@ public class EzsigntemplatepackagesignermembershipDeleteObjectV1ResponseMPayload
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 

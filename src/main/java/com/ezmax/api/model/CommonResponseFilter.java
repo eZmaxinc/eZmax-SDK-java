@@ -50,24 +50,27 @@ import eZmaxAPI.JSON;
 /**
  * Definition of Filters for getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseFilter {
   public static final String SERIALIZED_NAME_A_AUTO_TYPE = "a_AutoType";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE)
+  @javax.annotation.Nullable
   private Map<String, String> aAutoType = new HashMap<>();
 
   public static final String SERIALIZED_NAME_A_AUTO_TYPE_HAVING = "a_AutoTypeHaving";
   @SerializedName(SERIALIZED_NAME_A_AUTO_TYPE_HAVING)
+  @javax.annotation.Nullable
   private Map<String, String> aAutoTypeHaving = new HashMap<>();
 
   public static final String SERIALIZED_NAME_A_ENUM = "a_Enum";
   @SerializedName(SERIALIZED_NAME_A_ENUM)
+  @javax.annotation.Nullable
   private Map<String, Map<String, String>> aEnum = new HashMap<>();
 
   public CommonResponseFilter() {
   }
 
-  public CommonResponseFilter aAutoType(Map<String, String> aAutoType) {
+  public CommonResponseFilter aAutoType(@javax.annotation.Nullable Map<String, String> aAutoType) {
     this.aAutoType = aAutoType;
     return this;
   }
@@ -89,12 +92,12 @@ public class CommonResponseFilter {
     return aAutoType;
   }
 
-  public void setaAutoType(Map<String, String> aAutoType) {
+  public void setaAutoType(@javax.annotation.Nullable Map<String, String> aAutoType) {
     this.aAutoType = aAutoType;
   }
 
 
-  public CommonResponseFilter aAutoTypeHaving(Map<String, String> aAutoTypeHaving) {
+  public CommonResponseFilter aAutoTypeHaving(@javax.annotation.Nullable Map<String, String> aAutoTypeHaving) {
     this.aAutoTypeHaving = aAutoTypeHaving;
     return this;
   }
@@ -116,12 +119,12 @@ public class CommonResponseFilter {
     return aAutoTypeHaving;
   }
 
-  public void setaAutoTypeHaving(Map<String, String> aAutoTypeHaving) {
+  public void setaAutoTypeHaving(@javax.annotation.Nullable Map<String, String> aAutoTypeHaving) {
     this.aAutoTypeHaving = aAutoTypeHaving;
   }
 
 
-  public CommonResponseFilter aEnum(Map<String, Map<String, String>> aEnum) {
+  public CommonResponseFilter aEnum(@javax.annotation.Nullable Map<String, Map<String, String>> aEnum) {
     this.aEnum = aEnum;
     return this;
   }
@@ -143,7 +146,7 @@ public class CommonResponseFilter {
     return aEnum;
   }
 
-  public void setaEnum(Map<String, Map<String, String>> aEnum) {
+  public void setaEnum(@javax.annotation.Nullable Map<String, Map<String, String>> aEnum) {
     this.aEnum = aEnum;
   }
 

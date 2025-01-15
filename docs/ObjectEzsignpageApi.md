@@ -9,7 +9,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignpageConsultV1"></a>
 # **ezsignpageConsultV1**
-> EzsignpageConsultV1Response ezsignpageConsultV1(pkiEzsignpageID, body)
+> CommonResponse ezsignpageConsultV1(pkiEzsignpageID, body)
 
 Consult an Ezsignpage
 
@@ -38,7 +38,7 @@ public class Example {
     Integer pkiEzsignpageID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      EzsignpageConsultV1Response result = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body);
+      CommonResponse result = apiInstance.ezsignpageConsultV1(pkiEzsignpageID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignpageApi#ezsignpageConsultV1");
@@ -60,7 +60,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignpageConsultV1Response**](EzsignpageConsultV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

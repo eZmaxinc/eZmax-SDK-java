@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomEzsignformfielderrortestResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,20 +50,22 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfield Object to contain an error list
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomEzsignformfielderrorResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
+  @javax.annotation.Nonnull
   private String sEzsignformfieldLabel;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERRORTEST = "a_objEzsignformfielderrortest";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERRORTEST)
+  @javax.annotation.Nonnull
   private List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest = new ArrayList<>();
 
   public CustomEzsignformfielderrorResponse() {
   }
 
-  public CustomEzsignformfielderrorResponse sEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public CustomEzsignformfielderrorResponse sEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -78,17 +79,17 @@ public class CustomEzsignformfielderrorResponse {
     return sEzsignformfieldLabel;
   }
 
-  public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public void setsEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
-  public CustomEzsignformfielderrorResponse aObjEzsignformfielderrortest(List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
+  public CustomEzsignformfielderrorResponse aObjEzsignformfielderrortest(@javax.annotation.Nonnull List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
     this.aObjEzsignformfielderrortest = aObjEzsignformfielderrortest;
     return this;
   }
 
-  public CustomEzsignformfielderrorResponse addAObjEzsignformfielderrortestItem(CustomEzsignformfielderrortestResponse aObjEzsignformfielderrortestItem) {
+  public CustomEzsignformfielderrorResponse addAObjEzsignformfielderrortestItem(Object aObjEzsignformfielderrortestItem) {
     if (this.aObjEzsignformfielderrortest == null) {
       this.aObjEzsignformfielderrortest = new ArrayList<>();
     }
@@ -105,7 +106,7 @@ public class CustomEzsignformfielderrorResponse {
     return aObjEzsignformfielderrortest;
   }
 
-  public void setaObjEzsignformfielderrortest(List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
+  public void setaObjEzsignformfielderrortest(@javax.annotation.Nonnull List<CustomEzsignformfielderrortestResponse> aObjEzsignformfielderrortest) {
     this.aObjEzsignformfielderrortest = aObjEzsignformfielderrortest;
   }
 
@@ -205,7 +206,7 @@ public class CustomEzsignformfielderrorResponse {
       JsonArray jsonArrayaObjEzsignformfielderrortest = jsonObj.getAsJsonArray("a_objEzsignformfielderrortest");
       // validate the required field `a_objEzsignformfielderrortest` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfielderrortest.size(); i++) {
-        CustomEzsignformfielderrortestResponse.validateJsonElement(jsonArrayaObjEzsignformfielderrortest.get(i));
+        Object.validateJsonElement(jsonArrayaObjEzsignformfielderrortest.get(i));
       };
   }
 

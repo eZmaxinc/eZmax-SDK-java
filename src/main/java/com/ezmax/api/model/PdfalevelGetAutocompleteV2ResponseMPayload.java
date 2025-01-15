@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/pdfalevel/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PdfalevelGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PDFALEVEL = "a_objPdfalevel";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PDFALEVEL)
+  @javax.annotation.Nonnull
   private List<PdfalevelAutocompleteElementResponse> aObjPdfalevel = new ArrayList<>();
 
   public PdfalevelGetAutocompleteV2ResponseMPayload() {
   }
 
-  public PdfalevelGetAutocompleteV2ResponseMPayload aObjPdfalevel(List<PdfalevelAutocompleteElementResponse> aObjPdfalevel) {
+  public PdfalevelGetAutocompleteV2ResponseMPayload aObjPdfalevel(@javax.annotation.Nonnull List<PdfalevelAutocompleteElementResponse> aObjPdfalevel) {
     this.aObjPdfalevel = aObjPdfalevel;
     return this;
   }
@@ -82,7 +83,7 @@ public class PdfalevelGetAutocompleteV2ResponseMPayload {
     return aObjPdfalevel;
   }
 
-  public void setaObjPdfalevel(List<PdfalevelAutocompleteElementResponse> aObjPdfalevel) {
+  public void setaObjPdfalevel(@javax.annotation.Nonnull List<PdfalevelAutocompleteElementResponse> aObjPdfalevel) {
     this.aObjPdfalevel = aObjPdfalevel;
   }
 

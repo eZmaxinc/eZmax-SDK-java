@@ -49,32 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SignatureResponseV3 {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_E_SIGNATURE_PREFERENCE = "eSignaturePreference";
   @SerializedName(SERIALIZED_NAME_E_SIGNATURE_PREFERENCE)
+  @javax.annotation.Nonnull
   private FieldESignaturePreference eSignaturePreference;
 
   public static final String SERIALIZED_NAME_B_SIGNATURE_SVG = "bSignatureSvg";
   @SerializedName(SERIALIZED_NAME_B_SIGNATURE_SVG)
+  @javax.annotation.Nonnull
   private Boolean bSignatureSvg;
 
   public static final String SERIALIZED_NAME_B_SIGNATURE_SVGINITIALS = "bSignatureSvginitials";
   @SerializedName(SERIALIZED_NAME_B_SIGNATURE_SVGINITIALS)
+  @javax.annotation.Nonnull
   private Boolean bSignatureSvginitials;
 
   public SignatureResponseV3() {
   }
 
-  public SignatureResponseV3 pkiSignatureID(Integer pkiSignatureID) {
+  public SignatureResponseV3 pkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -90,12 +95,12 @@ public class SignatureResponseV3 {
     return pkiSignatureID;
   }
 
-  public void setPkiSignatureID(Integer pkiSignatureID) {
+  public void setPkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
-  public SignatureResponseV3 fkiFontID(Integer fkiFontID) {
+  public SignatureResponseV3 fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -110,12 +115,12 @@ public class SignatureResponseV3 {
     return fkiFontID;
   }
 
-  public void setFkiFontID(Integer fkiFontID) {
+  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public SignatureResponseV3 eSignaturePreference(FieldESignaturePreference eSignaturePreference) {
+  public SignatureResponseV3 eSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
     return this;
   }
@@ -129,12 +134,12 @@ public class SignatureResponseV3 {
     return eSignaturePreference;
   }
 
-  public void seteSignaturePreference(FieldESignaturePreference eSignaturePreference) {
+  public void seteSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
   }
 
 
-  public SignatureResponseV3 bSignatureSvg(Boolean bSignatureSvg) {
+  public SignatureResponseV3 bSignatureSvg(@javax.annotation.Nonnull Boolean bSignatureSvg) {
     this.bSignatureSvg = bSignatureSvg;
     return this;
   }
@@ -148,12 +153,12 @@ public class SignatureResponseV3 {
     return bSignatureSvg;
   }
 
-  public void setbSignatureSvg(Boolean bSignatureSvg) {
+  public void setbSignatureSvg(@javax.annotation.Nonnull Boolean bSignatureSvg) {
     this.bSignatureSvg = bSignatureSvg;
   }
 
 
-  public SignatureResponseV3 bSignatureSvginitials(Boolean bSignatureSvginitials) {
+  public SignatureResponseV3 bSignatureSvginitials(@javax.annotation.Nonnull Boolean bSignatureSvginitials) {
     this.bSignatureSvginitials = bSignatureSvginitials;
     return this;
   }
@@ -167,7 +172,7 @@ public class SignatureResponseV3 {
     return bSignatureSvginitials;
   }
 
-  public void setbSignatureSvginitials(Boolean bSignatureSvginitials) {
+  public void setbSignatureSvginitials(@javax.annotation.Nonnull Boolean bSignatureSvginitials) {
     this.bSignatureSvginitials = bSignatureSvginitials;
   }
 

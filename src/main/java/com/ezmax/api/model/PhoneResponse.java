@@ -49,33 +49,38 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PhoneResponse {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiPhoneID;
 
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiPhonetypeID;
 
   public static final String SERIALIZED_NAME_E_PHONE_TYPE = "ePhoneType";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_PHONE_TYPE)
+  @javax.annotation.Nullable
   private FieldEPhoneType ePhoneType;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
+  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public PhoneResponse() {
   }
 
-  public PhoneResponse pkiPhoneID(Integer pkiPhoneID) {
+  public PhoneResponse pkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -90,12 +95,12 @@ public class PhoneResponse {
     return pkiPhoneID;
   }
 
-  public void setPkiPhoneID(Integer pkiPhoneID) {
+  public void setPkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
-  public PhoneResponse fkiPhonetypeID(Integer fkiPhonetypeID) {
+  public PhoneResponse fkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -110,13 +115,13 @@ public class PhoneResponse {
     return fkiPhonetypeID;
   }
 
-  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
+  public void setFkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
 
 
   @Deprecated
-  public PhoneResponse ePhoneType(FieldEPhoneType ePhoneType) {
+  public PhoneResponse ePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -133,12 +138,12 @@ public class PhoneResponse {
   }
 
   @Deprecated
-  public void setePhoneType(FieldEPhoneType ePhoneType) {
+  public void setePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
   }
 
 
-  public PhoneResponse sPhoneE164(String sPhoneE164) {
+  public PhoneResponse sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -152,12 +157,12 @@ public class PhoneResponse {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(String sPhoneE164) {
+  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public PhoneResponse sPhoneExtension(String sPhoneExtension) {
+  public PhoneResponse sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -171,7 +176,7 @@ public class PhoneResponse {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(String sPhoneExtension) {
+  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 

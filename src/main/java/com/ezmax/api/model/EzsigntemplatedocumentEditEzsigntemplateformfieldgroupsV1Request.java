@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP = "a_objEzsigntemplateformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP)
+  @javax.annotation.Nonnull
   private List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup = new ArrayList<>();
 
   public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request() {
   }
 
-  public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request aObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
+  public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request aObjEzsigntemplateformfieldgroup(@javax.annotation.Nonnull List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request {
     return aObjEzsigntemplateformfieldgroup;
   }
 
-  public void setaObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
+  public void setaObjEzsigntemplateformfieldgroup(@javax.annotation.Nonnull List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
   }
 

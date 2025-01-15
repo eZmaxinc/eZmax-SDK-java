@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/creditcardclient
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CreditcardclientCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_CREDITCARDCLIENT = "a_objCreditcardclient";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CREDITCARDCLIENT)
+  @javax.annotation.Nonnull
   private List<CreditcardclientRequestCompound> aObjCreditcardclient = new ArrayList<>();
 
   public CreditcardclientCreateObjectV1Request() {
   }
 
-  public CreditcardclientCreateObjectV1Request aObjCreditcardclient(List<CreditcardclientRequestCompound> aObjCreditcardclient) {
+  public CreditcardclientCreateObjectV1Request aObjCreditcardclient(@javax.annotation.Nonnull List<CreditcardclientRequestCompound> aObjCreditcardclient) {
     this.aObjCreditcardclient = aObjCreditcardclient;
     return this;
   }
@@ -82,7 +83,7 @@ public class CreditcardclientCreateObjectV1Request {
     return aObjCreditcardclient;
   }
 
-  public void setaObjCreditcardclient(List<CreditcardclientRequestCompound> aObjCreditcardclient) {
+  public void setaObjCreditcardclient(@javax.annotation.Nonnull List<CreditcardclientRequestCompound> aObjCreditcardclient) {
     this.aObjCreditcardclient = aObjCreditcardclient;
   }
 

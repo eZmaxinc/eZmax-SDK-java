@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ApikeyResponseCompound;
+import com.ezmax.api.model.ApikeyResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,30 +49,31 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/apikey/{pkiApikeyID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ApikeyGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
-  private ApikeyResponseCompound objApikey;
+  @javax.annotation.Nonnull
+  private ApikeyResponse objApikey;
 
   public ApikeyGetObjectV2ResponseMPayload() {
   }
 
-  public ApikeyGetObjectV2ResponseMPayload objApikey(ApikeyResponseCompound objApikey) {
+  public ApikeyGetObjectV2ResponseMPayload objApikey(@javax.annotation.Nonnull ApikeyResponse objApikey) {
     this.objApikey = objApikey;
     return this;
   }
 
   /**
-   * Get objApikey
+   * An Apikey Object and children to create a complete structure
    * @return objApikey
    */
   @javax.annotation.Nonnull
-  public ApikeyResponseCompound getObjApikey() {
+  public ApikeyResponse getObjApikey() {
     return objApikey;
   }
 
-  public void setObjApikey(ApikeyResponseCompound objApikey) {
+  public void setObjApikey(@javax.annotation.Nonnull ApikeyResponse objApikey) {
     this.objApikey = objApikey;
   }
 
@@ -158,7 +159,7 @@ public class ApikeyGetObjectV2ResponseMPayload {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objApikey`
-      ApikeyResponseCompound.validateJsonElement(jsonObj.get("objApikey"));
+      ApikeyResponse.validateJsonElement(jsonObj.get("objApikey"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

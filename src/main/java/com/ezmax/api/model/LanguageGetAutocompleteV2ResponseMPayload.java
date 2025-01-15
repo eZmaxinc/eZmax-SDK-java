@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/language/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class LanguageGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_LANGUAGE = "a_objLanguage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_LANGUAGE)
+  @javax.annotation.Nonnull
   private List<LanguageAutocompleteElementResponse> aObjLanguage = new ArrayList<>();
 
   public LanguageGetAutocompleteV2ResponseMPayload() {
   }
 
-  public LanguageGetAutocompleteV2ResponseMPayload aObjLanguage(List<LanguageAutocompleteElementResponse> aObjLanguage) {
+  public LanguageGetAutocompleteV2ResponseMPayload aObjLanguage(@javax.annotation.Nonnull List<LanguageAutocompleteElementResponse> aObjLanguage) {
     this.aObjLanguage = aObjLanguage;
     return this;
   }
@@ -82,7 +83,7 @@ public class LanguageGetAutocompleteV2ResponseMPayload {
     return aObjLanguage;
   }
 
-  public void setaObjLanguage(List<LanguageAutocompleteElementResponse> aObjLanguage) {
+  public void setaObjLanguage(@javax.annotation.Nonnull List<LanguageAutocompleteElementResponse> aObjLanguage) {
     this.aObjLanguage = aObjLanguage;
   }
 

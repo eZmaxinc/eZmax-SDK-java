@@ -14,12 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.UsergroupdelegationCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupdelegationCreateObjectV1Response;
-import com.ezmax.api.model.UsergroupdelegationDeleteObjectV1Response;
 import com.ezmax.api.model.UsergroupdelegationEditObjectV1Request;
-import com.ezmax.api.model.UsergroupdelegationEditObjectV1Response;
 import com.ezmax.api.model.UsergroupdelegationGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,7 +60,7 @@ public class ObjectUsergroupdelegationApiTest {
     @Test
     public void usergroupdelegationDeleteObjectV1Test() throws ApiException {
         Integer pkiUsergroupdelegationID = null;
-        UsergroupdelegationDeleteObjectV1Response response = api.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
+        CommonResponse response = api.usergroupdelegationDeleteObjectV1(pkiUsergroupdelegationID);
         // TODO: test validations
     }
 
@@ -76,7 +75,7 @@ public class ObjectUsergroupdelegationApiTest {
     public void usergroupdelegationEditObjectV1Test() throws ApiException {
         Integer pkiUsergroupdelegationID = null;
         UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request = null;
-        UsergroupdelegationEditObjectV1Response response = api.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+        CommonResponse response = api.usergroupdelegationEditObjectV1(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
         // TODO: test validations
     }
 

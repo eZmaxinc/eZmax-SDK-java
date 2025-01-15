@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupexternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D = "pkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
+  @javax.annotation.Nonnull
   private String sUsergroupexternalName;
 
   public static final String SERIALIZED_NAME_B_USERGROUPEXTERNAL_ISACTIVE = "bUsergroupexternalIsactive";
   @SerializedName(SERIALIZED_NAME_B_USERGROUPEXTERNAL_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bUsergroupexternalIsactive;
 
   public UsergroupexternalAutocompleteElementResponse() {
   }
 
-  public UsergroupexternalAutocompleteElementResponse pkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
+  public UsergroupexternalAutocompleteElementResponse pkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
     return this;
   }
@@ -81,12 +84,12 @@ public class UsergroupexternalAutocompleteElementResponse {
     return pkiUsergroupexternalID;
   }
 
-  public void setPkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
+  public void setPkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
   }
 
 
-  public UsergroupexternalAutocompleteElementResponse sUsergroupexternalName(String sUsergroupexternalName) {
+  public UsergroupexternalAutocompleteElementResponse sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -100,12 +103,12 @@ public class UsergroupexternalAutocompleteElementResponse {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 
 
-  public UsergroupexternalAutocompleteElementResponse bUsergroupexternalIsactive(Boolean bUsergroupexternalIsactive) {
+  public UsergroupexternalAutocompleteElementResponse bUsergroupexternalIsactive(@javax.annotation.Nonnull Boolean bUsergroupexternalIsactive) {
     this.bUsergroupexternalIsactive = bUsergroupexternalIsactive;
     return this;
   }
@@ -119,7 +122,7 @@ public class UsergroupexternalAutocompleteElementResponse {
     return bUsergroupexternalIsactive;
   }
 
-  public void setbUsergroupexternalIsactive(Boolean bUsergroupexternalIsactive) {
+  public void setbUsergroupexternalIsactive(@javax.annotation.Nonnull Boolean bUsergroupexternalIsactive) {
     this.bUsergroupexternalIsactive = bUsergroupexternalIsactive;
   }
 

@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupmembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiUsergroupmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUsergroupexternalID;
 
   public UsergroupmembershipRequestCompound() {
   }
 
-  public UsergroupmembershipRequestCompound pkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
+  public UsergroupmembershipRequestCompound pkiUsergroupmembershipID(@javax.annotation.Nullable Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
     return this;
   }
@@ -85,12 +89,12 @@ public class UsergroupmembershipRequestCompound {
     return pkiUsergroupmembershipID;
   }
 
-  public void setPkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
+  public void setPkiUsergroupmembershipID(@javax.annotation.Nullable Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
   }
 
 
-  public UsergroupmembershipRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
+  public UsergroupmembershipRequestCompound fkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -106,12 +110,12 @@ public class UsergroupmembershipRequestCompound {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public UsergroupmembershipRequestCompound fkiUserID(Integer fkiUserID) {
+  public UsergroupmembershipRequestCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -126,12 +130,12 @@ public class UsergroupmembershipRequestCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public UsergroupmembershipRequestCompound fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+  public UsergroupmembershipRequestCompound fkiUsergroupexternalID(@javax.annotation.Nullable Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
     return this;
   }
@@ -147,7 +151,7 @@ public class UsergroupmembershipRequestCompound {
     return fkiUsergroupexternalID;
   }
 
-  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
+  public void setFkiUsergroupexternalID(@javax.annotation.Nullable Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 

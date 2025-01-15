@@ -49,32 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ApikeyRequestCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
+  @javax.annotation.Nullable
   private Integer pkiApikeyID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
+  @javax.annotation.Nonnull
   private MultilingualApikeyDescription objApikeyDescription;
 
   public static final String SERIALIZED_NAME_B_APIKEY_ISACTIVE = "bApikeyIsactive";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISACTIVE)
+  @javax.annotation.Nullable
   private Boolean bApikeyIsactive;
 
   public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)
+  @javax.annotation.Nullable
   private Boolean bApikeyIssigned;
 
   public ApikeyRequestCompound() {
   }
 
-  public ApikeyRequestCompound pkiApikeyID(Integer pkiApikeyID) {
+  public ApikeyRequestCompound pkiApikeyID(@javax.annotation.Nullable Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -89,12 +94,12 @@ public class ApikeyRequestCompound {
     return pkiApikeyID;
   }
 
-  public void setPkiApikeyID(Integer pkiApikeyID) {
+  public void setPkiApikeyID(@javax.annotation.Nullable Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
-  public ApikeyRequestCompound fkiUserID(Integer fkiUserID) {
+  public ApikeyRequestCompound fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -109,12 +114,12 @@ public class ApikeyRequestCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public ApikeyRequestCompound objApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
+  public ApikeyRequestCompound objApikeyDescription(@javax.annotation.Nonnull MultilingualApikeyDescription objApikeyDescription) {
     this.objApikeyDescription = objApikeyDescription;
     return this;
   }
@@ -128,12 +133,12 @@ public class ApikeyRequestCompound {
     return objApikeyDescription;
   }
 
-  public void setObjApikeyDescription(MultilingualApikeyDescription objApikeyDescription) {
+  public void setObjApikeyDescription(@javax.annotation.Nonnull MultilingualApikeyDescription objApikeyDescription) {
     this.objApikeyDescription = objApikeyDescription;
   }
 
 
-  public ApikeyRequestCompound bApikeyIsactive(Boolean bApikeyIsactive) {
+  public ApikeyRequestCompound bApikeyIsactive(@javax.annotation.Nullable Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
     return this;
   }
@@ -147,12 +152,12 @@ public class ApikeyRequestCompound {
     return bApikeyIsactive;
   }
 
-  public void setbApikeyIsactive(Boolean bApikeyIsactive) {
+  public void setbApikeyIsactive(@javax.annotation.Nullable Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
 
-  public ApikeyRequestCompound bApikeyIssigned(Boolean bApikeyIssigned) {
+  public ApikeyRequestCompound bApikeyIssigned(@javax.annotation.Nullable Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -166,7 +171,7 @@ public class ApikeyRequestCompound {
     return bApikeyIssigned;
   }
 
-  public void setbApikeyIssigned(Boolean bApikeyIssigned) {
+  public void setbApikeyIssigned(@javax.annotation.Nullable Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
   }
 

@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachmentCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-14T22:02:49.990345163Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderGetAttachmentCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ATTACHMENT_COUNT = "iAttachmentCount";
   @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_COUNT)
+  @javax.annotation.Nonnull
   private Integer iAttachmentCount;
 
   public EzsignfolderGetAttachmentCountV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetAttachmentCountV1ResponseMPayload iAttachmentCount(Integer iAttachmentCount) {
+  public EzsignfolderGetAttachmentCountV1ResponseMPayload iAttachmentCount(@javax.annotation.Nonnull Integer iAttachmentCount) {
     this.iAttachmentCount = iAttachmentCount;
     return this;
   }
@@ -71,7 +72,7 @@ public class EzsignfolderGetAttachmentCountV1ResponseMPayload {
     return iAttachmentCount;
   }
 
-  public void setiAttachmentCount(Integer iAttachmentCount) {
+  public void setiAttachmentCount(@javax.annotation.Nonnull Integer iAttachmentCount) {
     this.iAttachmentCount = iAttachmentCount;
   }
 
