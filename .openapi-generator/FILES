@@ -11,6 +11,8 @@ docs/ActivesessionGenerateFederationTokenV1Response.md
 docs/ActivesessionGenerateFederationTokenV1ResponseMPayload.md
 docs/ActivesessionGetCurrentV1Response.md
 docs/ActivesessionGetCurrentV1ResponseMPayload.md
+docs/ActivesessionGetCurrentV2Response.md
+docs/ActivesessionGetCurrentV2ResponseMPayload.md
 docs/ActivesessionGetListV1Response.md
 docs/ActivesessionGetListV1ResponseMPayload.md
 docs/ActivesessionListElement.md
@@ -1874,6 +1876,8 @@ src/main/java/com/ezmax/api/model/ActivesessionGenerateFederationTokenV1Response
 src/main/java/com/ezmax/api/model/ActivesessionGenerateFederationTokenV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1Response.java
 src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV2Response.java
+src/main/java/com/ezmax/api/model/ActivesessionGetCurrentV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/ActivesessionGetListV1Response.java
 src/main/java/com/ezmax/api/model/ActivesessionGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/ActivesessionListElement.java
@@ -3635,6 +3639,8 @@ src/test/java/com/ezmax/api/model/ActivesessionGenerateFederationTokenV1Response
 src/test/java/com/ezmax/api/model/ActivesessionGenerateFederationTokenV1ResponseTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV1ResponseTest.java
+src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV2ResponseMPayloadTest.java
+src/test/java/com/ezmax/api/model/ActivesessionGetCurrentV2ResponseTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetListV1ResponseMPayloadTest.java
 src/test/java/com/ezmax/api/model/ActivesessionGetListV1ResponseTest.java
 src/test/java/com/ezmax/api/model/ActivesessionListElementTest.java

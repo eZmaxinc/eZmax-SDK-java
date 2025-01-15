@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PaymenttermRequest {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)

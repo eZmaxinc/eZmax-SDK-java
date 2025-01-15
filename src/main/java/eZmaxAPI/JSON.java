@@ -98,6 +98,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGenerateFederationTokenV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV2Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetCurrentV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetListV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGetListV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionListElement.CustomTypeAdapterFactory());

@@ -30,6 +30,7 @@ import java.io.IOException;
 import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Request;
 import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Response;
 import com.ezmax.api.model.ActivesessionGetCurrentV1Response;
+import com.ezmax.api.model.ActivesessionGetCurrentV2Response;
 import com.ezmax.api.model.ActivesessionGetListV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseRedirectSSecretquestionTextX;
@@ -228,7 +229,9 @@ public class ObjectActivesessionApi {
         <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
         <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call activesessionGetCurrentV1Call(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -273,6 +276,7 @@ public class ObjectActivesessionApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call activesessionGetCurrentV1ValidateBeforeCall(final ApiCallback _callback) throws ApiException {
         return activesessionGetCurrentV1Call(_callback);
@@ -297,7 +301,9 @@ public class ObjectActivesessionApi {
         <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
         <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ActivesessionGetCurrentV1Response activesessionGetCurrentV1() throws ApiException {
         ApiResponse<ActivesessionGetCurrentV1Response> localVarResp = activesessionGetCurrentV1WithHttpInfo();
         return localVarResp.getData();
@@ -321,7 +327,9 @@ public class ObjectActivesessionApi {
         <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
         <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<ActivesessionGetCurrentV1Response> activesessionGetCurrentV1WithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = activesessionGetCurrentV1ValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
@@ -347,11 +355,158 @@ public class ObjectActivesessionApi {
         <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
         <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call activesessionGetCurrentV1Async(final ApiCallback<ActivesessionGetCurrentV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = activesessionGetCurrentV1ValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for activesessionGetCurrentV2
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 350 </td><td> The user must authenticate before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 351 </td><td> The user is configured with 2FA and needs to validate its phone number before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 352 </td><td> The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 353 </td><td> The user must accept clauses before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 354 </td><td> The user&#39;s computer must be validated before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call activesessionGetCurrentV2Call(final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/2/object/activesession/getCurrent";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call activesessionGetCurrentV2ValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return activesessionGetCurrentV2Call(_callback);
+
+    }
+
+    /**
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ActivesessionGetCurrentV2Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 350 </td><td> The user must authenticate before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 351 </td><td> The user is configured with 2FA and needs to validate its phone number before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 352 </td><td> The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 353 </td><td> The user must accept clauses before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 354 </td><td> The user&#39;s computer must be validated before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
+     </table>
+     */
+    public ActivesessionGetCurrentV2Response activesessionGetCurrentV2() throws ApiException {
+        ApiResponse<ActivesessionGetCurrentV2Response> localVarResp = activesessionGetCurrentV2WithHttpInfo();
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get Current Activesession
+     * Retrieve the details about the current activesession
+     * @return ApiResponse&lt;ActivesessionGetCurrentV2Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 350 </td><td> The user must authenticate before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 351 </td><td> The user is configured with 2FA and needs to validate its phone number before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 352 </td><td> The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 353 </td><td> The user must accept clauses before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 354 </td><td> The user&#39;s computer must be validated before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ActivesessionGetCurrentV2Response> activesessionGetCurrentV2WithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = activesessionGetCurrentV2ValidateBeforeCall(null);
+        Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV2Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get Current Activesession (asynchronously)
+     * Retrieve the details about the current activesession
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  -  </td></tr>
+        <tr><td> 350 </td><td> The user must authenticate before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 351 </td><td> The user is configured with 2FA and needs to validate its phone number before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 352 </td><td> The user is configured with 2FA and needs to answer a Secretquestion before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 353 </td><td> The user must accept clauses before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 354 </td><td> The user&#39;s computer must be validated before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 355 </td><td> The user must change its password before he can continue with this request </td><td>  -  </td></tr>
+        <tr><td> 356 </td><td> The user is not running the latest version of the native application. He must valide or update its version before he can continue with this request </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call activesessionGetCurrentV2Async(final ApiCallback<ActivesessionGetCurrentV2Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = activesessionGetCurrentV2ValidateBeforeCall(_callback);
+        Type localVarReturnType = new TypeToken<ActivesessionGetCurrentV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

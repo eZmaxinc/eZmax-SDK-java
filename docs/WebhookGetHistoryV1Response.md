@@ -10,7 +10,7 @@ Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
 |------------ | ------------- | ------------- | -------------|
 |**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
 |**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
-|**mPayload** | [**Object**](Object.md) | Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory |  |
+|**mPayload** | [**WebhookGetHistoryV1ResponseMPayload**](WebhookGetHistoryV1ResponseMPayload.md) |  |  |
 
 
 

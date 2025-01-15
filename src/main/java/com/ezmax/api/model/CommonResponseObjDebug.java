@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a generic debug object that is returned by all API requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)

@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
+import com.ezmax.api.model.WebhookGetHistoryV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,7 +24,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/webhook/{pkiWebhookID}/getHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookGetHistoryV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -66,7 +66,7 @@ public class WebhookGetHistoryV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
   @javax.annotation.Nonnull
-  private Object mPayload;
+  private WebhookGetHistoryV1ResponseMPayload mPayload;
 
   public WebhookGetHistoryV1Response() {
   }
@@ -109,21 +109,21 @@ public class WebhookGetHistoryV1Response {
   }
 
 
-  public WebhookGetHistoryV1Response mPayload(@javax.annotation.Nonnull Object mPayload) {
+  public WebhookGetHistoryV1Response mPayload(@javax.annotation.Nonnull WebhookGetHistoryV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
+   * Get mPayload
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public Object getmPayload() {
+  public WebhookGetHistoryV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull Object mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull WebhookGetHistoryV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -222,7 +222,7 @@ public class WebhookGetHistoryV1Response {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // validate the required field `mPayload`
-      Object.validateJsonElement(jsonObj.get("mPayload"));
+      WebhookGetHistoryV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

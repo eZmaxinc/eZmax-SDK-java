@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/department/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DepartmentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_DEPARTMENT = "a_objDepartment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DEPARTMENT)

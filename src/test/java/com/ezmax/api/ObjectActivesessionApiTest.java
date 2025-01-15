@@ -17,6 +17,7 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Request;
 import com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Response;
 import com.ezmax.api.model.ActivesessionGetCurrentV1Response;
+import com.ezmax.api.model.ActivesessionGetCurrentV2Response;
 import com.ezmax.api.model.ActivesessionGetListV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseRedirectSSecretquestionTextX;
@@ -62,6 +63,19 @@ public class ObjectActivesessionApiTest {
     @Test
     public void activesessionGetCurrentV1Test() throws ApiException {
         ActivesessionGetCurrentV1Response response = api.activesessionGetCurrentV1();
+        // TODO: test validations
+    }
+
+    /**
+     * Get Current Activesession
+     *
+     * Retrieve the details about the current activesession
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void activesessionGetCurrentV2Test() throws ApiException {
+        ActivesessionGetCurrentV2Response response = api.activesessionGetCurrentV2();
         // TODO: test validations
     }
 

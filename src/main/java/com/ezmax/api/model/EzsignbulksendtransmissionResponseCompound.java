@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendtransmissionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic CommunicationrecipientsGroup Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T19:58:52.873320463Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomCommunicationrecipientsgroupResponse {
   public static final String SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL = "sCommunicationrecipientsgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL)
