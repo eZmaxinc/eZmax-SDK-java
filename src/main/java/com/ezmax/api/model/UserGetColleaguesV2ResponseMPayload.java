@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/user/{pkiUserID}/getColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserGetColleaguesV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE = "a_objColleague";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE)

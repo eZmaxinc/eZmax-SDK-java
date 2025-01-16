@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomBrandingResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,12 +51,12 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
   @javax.annotation.Nullable
-  private Object objBranding;
+  private CustomBrandingResponse objBranding;
 
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
@@ -70,21 +71,21 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloa
   public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload objBranding(@javax.annotation.Nullable Object objBranding) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayload objBranding(@javax.annotation.Nullable CustomBrandingResponse objBranding) {
     this.objBranding = objBranding;
     return this;
   }
 
   /**
-   * A Custom Branding Object
+   * Get objBranding
    * @return objBranding
    */
   @javax.annotation.Nullable
-  public Object getObjBranding() {
+  public CustomBrandingResponse getObjBranding() {
     return objBranding;
   }
 
-  public void setObjBranding(@javax.annotation.Nullable Object objBranding) {
+  public void setObjBranding(@javax.annotation.Nullable CustomBrandingResponse objBranding) {
     this.objBranding = objBranding;
   }
 
@@ -225,7 +226,7 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1ResponseMPayloa
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `objBranding`
       if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {
-        Object.validateJsonElement(jsonObj.get("objBranding"));
+        CustomBrandingResponse.validateJsonElement(jsonObj.get("objBranding"));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_sEzsigntemplatesignerDescription") == null) {

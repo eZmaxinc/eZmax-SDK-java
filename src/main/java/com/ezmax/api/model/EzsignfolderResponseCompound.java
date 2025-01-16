@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.FieldEEzsignfolderCompletion;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -68,7 +69,7 @@ public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
   @javax.annotation.Nullable
-  private Object objEzsignfoldertype;
+  private CustomEzsignfoldertypeResponse objEzsignfoldertype;
 
   public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
   @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
@@ -236,21 +237,21 @@ public class EzsignfolderResponseCompound {
   }
 
 
-  public EzsignfolderResponseCompound objEzsignfoldertype(@javax.annotation.Nullable Object objEzsignfoldertype) {
+  public EzsignfolderResponseCompound objEzsignfoldertype(@javax.annotation.Nullable CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
     return this;
   }
 
   /**
-   * A Custom Ezsignfoldertype Object
+   * Get objEzsignfoldertype
    * @return objEzsignfoldertype
    */
   @javax.annotation.Nullable
-  public Object getObjEzsignfoldertype() {
+  public CustomEzsignfoldertypeResponse getObjEzsignfoldertype() {
     return objEzsignfoldertype;
   }
 
-  public void setObjEzsignfoldertype(@javax.annotation.Nullable Object objEzsignfoldertype) {
+  public void setObjEzsignfoldertype(@javax.annotation.Nullable CustomEzsignfoldertypeResponse objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
   }
 
@@ -889,7 +890,7 @@ public class EzsignfolderResponseCompound {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `objEzsignfoldertype`
       if (jsonObj.get("objEzsignfoldertype") != null && !jsonObj.get("objEzsignfoldertype").isJsonNull()) {
-        Object.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
+        CustomEzsignfoldertypeResponse.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
       }
       // validate the required field `eEzsignfolderCompletion`
       FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));

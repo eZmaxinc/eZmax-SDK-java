@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomDiscussionconfigurationResponse;
 import com.ezmax.api.model.DiscussionmembershipResponseCompound;
 import com.ezmax.api.model.DiscussionmessageResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -52,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
@@ -87,7 +88,7 @@ public class DiscussionResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION = "objDiscussionconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION)
   @javax.annotation.Nullable
-  private Object objDiscussionconfiguration;
+  private CustomDiscussionconfigurationResponse objDiscussionconfiguration;
 
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP = "a_objDiscussionmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP)
@@ -218,21 +219,21 @@ public class DiscussionResponseCompound {
   }
 
 
-  public DiscussionResponseCompound objDiscussionconfiguration(@javax.annotation.Nullable Object objDiscussionconfiguration) {
+  public DiscussionResponseCompound objDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
     return this;
   }
 
   /**
-   * A Custom Discussionconfiguration Object
+   * Get objDiscussionconfiguration
    * @return objDiscussionconfiguration
    */
   @javax.annotation.Nullable
-  public Object getObjDiscussionconfiguration() {
+  public CustomDiscussionconfigurationResponse getObjDiscussionconfiguration() {
     return objDiscussionconfiguration;
   }
 
-  public void setObjDiscussionconfiguration(@javax.annotation.Nullable Object objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 
@@ -409,7 +410,7 @@ public class DiscussionResponseCompound {
       }
       // validate the optional field `objDiscussionconfiguration`
       if (jsonObj.get("objDiscussionconfiguration") != null && !jsonObj.get("objDiscussionconfiguration").isJsonNull()) {
-        Object.validateJsonElement(jsonObj.get("objDiscussionconfiguration"));
+        CustomDiscussionconfigurationResponse.validateJsonElement(jsonObj.get("objDiscussionconfiguration"));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objDiscussionmembership").isJsonArray()) {

@@ -14,7 +14,7 @@ A Discussion Object
 |**dtDiscussionLastread** | **String** | The date the Discussion was last read |  [optional] |
 |**iDiscussionmessageCount** | **Integer** | The count of Attachment. |  |
 |**iDiscussionmessageCountunread** | **Integer** | The count of Attachment. |  |
-|**objDiscussionconfiguration** | [**Object**](Object.md) | A Custom Discussionconfiguration Object |  [optional] |
+|**objDiscussionconfiguration** | [**CustomDiscussionconfigurationResponse**](CustomDiscussionconfigurationResponse.md) |  |  [optional] |
 |**aObjDiscussionmembership** | [**List&lt;DiscussionmembershipResponseCompound&gt;**](DiscussionmembershipResponseCompound.md) |  |  |
 |**aObjDiscussionmessage** | [**List&lt;DiscussionmessageResponseCompound&gt;**](DiscussionmessageResponseCompound.md) |  |  |
 

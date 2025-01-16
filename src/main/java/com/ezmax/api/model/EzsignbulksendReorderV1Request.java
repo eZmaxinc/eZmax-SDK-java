@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendReorderV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "a_pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)

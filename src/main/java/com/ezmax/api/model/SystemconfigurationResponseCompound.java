@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomBrandingResponse;
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
 import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-15T21:36:57.992386529Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SystemconfigurationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
@@ -139,7 +140,7 @@ public class SystemconfigurationResponseCompound {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
   @javax.annotation.Nullable
-  private Object objBranding;
+  private CustomBrandingResponse objBranding;
 
   public SystemconfigurationResponseCompound() {
   }
@@ -456,21 +457,21 @@ public class SystemconfigurationResponseCompound {
   }
 
 
-  public SystemconfigurationResponseCompound objBranding(@javax.annotation.Nullable Object objBranding) {
+  public SystemconfigurationResponseCompound objBranding(@javax.annotation.Nullable CustomBrandingResponse objBranding) {
     this.objBranding = objBranding;
     return this;
   }
 
   /**
-   * A Custom Branding Object
+   * Get objBranding
    * @return objBranding
    */
   @javax.annotation.Nullable
-  public Object getObjBranding() {
+  public CustomBrandingResponse getObjBranding() {
     return objBranding;
   }
 
-  public void setObjBranding(@javax.annotation.Nullable Object objBranding) {
+  public void setObjBranding(@javax.annotation.Nullable CustomBrandingResponse objBranding) {
     this.objBranding = objBranding;
   }
 
@@ -635,7 +636,7 @@ public class SystemconfigurationResponseCompound {
       }
       // validate the optional field `objBranding`
       if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {
-        Object.validateJsonElement(jsonObj.get("objBranding"));
+        CustomBrandingResponse.validateJsonElement(jsonObj.get("objBranding"));
       }
   }
 
