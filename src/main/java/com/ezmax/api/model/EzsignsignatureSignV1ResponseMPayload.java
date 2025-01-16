@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignatureSignV1ResponseMPayload {
   public static final String SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE = "dtEzsignsignatureDateInFolderTimezone";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE)

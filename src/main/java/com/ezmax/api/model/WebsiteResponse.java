@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Website Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebsiteResponse {
   public static final String SERIALIZED_NAME_PKI_WEBSITE_I_D = "pkiWebsiteID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBSITE_I_D)

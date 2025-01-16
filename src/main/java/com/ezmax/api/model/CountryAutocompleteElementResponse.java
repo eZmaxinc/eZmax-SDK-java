@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Country AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T17:00:54.231192679Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CountryAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COUNTRY_I_D = "pkiCountryID";
   @SerializedName(SERIALIZED_NAME_PKI_COUNTRY_I_D)
