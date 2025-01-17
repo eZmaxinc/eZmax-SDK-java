@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.UsergroupexternalResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,84 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UsergroupexternalResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D = "pkiUsergroupexternalID";
-  @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiUsergroupexternalID;
-
-  public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
-  @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nonnull
-  private String sUsergroupexternalName;
-
-  public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D = "sUsergroupexternalID";
-  @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
-  private String sUsergroupexternalID;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class UsergroupexternalResponseCompound extends UsergroupexternalResponse {
   public UsergroupexternalResponseCompound() {
   }
-
-  public UsergroupexternalResponseCompound pkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
-    this.pkiUsergroupexternalID = pkiUsergroupexternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Usergroupexternal
-   * minimum: 0
-   * maximum: 255
-   * @return pkiUsergroupexternalID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiUsergroupexternalID() {
-    return pkiUsergroupexternalID;
-  }
-
-  public void setPkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
-    this.pkiUsergroupexternalID = pkiUsergroupexternalID;
-  }
-
-
-  public UsergroupexternalResponseCompound sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
-    this.sUsergroupexternalName = sUsergroupexternalName;
-    return this;
-  }
-
-  /**
-   * The name of the Usergroupexternal
-   * @return sUsergroupexternalName
-   */
-  @javax.annotation.Nonnull
-  public String getsUsergroupexternalName() {
-    return sUsergroupexternalName;
-  }
-
-  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
-    this.sUsergroupexternalName = sUsergroupexternalName;
-  }
-
-
-  public UsergroupexternalResponseCompound sUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
-    this.sUsergroupexternalID = sUsergroupexternalID;
-    return this;
-  }
-
-  /**
-   * The id of the Usergroupexternal
-   * @return sUsergroupexternalID
-   */
-  @javax.annotation.Nonnull
-  public String getsUsergroupexternalID() {
-    return sUsergroupexternalID;
-  }
-
-  public void setsUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
-    this.sUsergroupexternalID = sUsergroupexternalID;
-  }
-
 
 
   @Override
@@ -136,24 +63,19 @@ public class UsergroupexternalResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UsergroupexternalResponseCompound usergroupexternalResponseCompound = (UsergroupexternalResponseCompound) o;
-    return Objects.equals(this.pkiUsergroupexternalID, usergroupexternalResponseCompound.pkiUsergroupexternalID) &&
-        Objects.equals(this.sUsergroupexternalName, usergroupexternalResponseCompound.sUsergroupexternalName) &&
-        Objects.equals(this.sUsergroupexternalID, usergroupexternalResponseCompound.sUsergroupexternalID);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupexternalID, sUsergroupexternalName, sUsergroupexternalID);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupexternalResponseCompound {\n");
-    sb.append("    pkiUsergroupexternalID: ").append(toIndentedString(pkiUsergroupexternalID)).append("\n");
-    sb.append("    sUsergroupexternalName: ").append(toIndentedString(sUsergroupexternalName)).append("\n");
-    sb.append("    sUsergroupexternalID: ").append(toIndentedString(sUsergroupexternalID)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -213,13 +135,6 @@ public class UsergroupexternalResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sUsergroupexternalName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupexternalName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupexternalName").toString()));
-      }
-      if (!jsonObj.get("sUsergroupexternalID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupexternalID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupexternalID").toString()));
       }
   }
 

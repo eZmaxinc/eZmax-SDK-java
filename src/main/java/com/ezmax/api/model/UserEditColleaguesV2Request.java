@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /2/object/user/{pkiUserID}/editColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserEditColleaguesV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE = "a_objColleague";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE)

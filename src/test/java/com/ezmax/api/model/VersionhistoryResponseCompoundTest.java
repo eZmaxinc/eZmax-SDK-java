@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.FieldEVersionhistoryType;
 import com.ezmax.api.model.FieldEVersionhistoryUsertype;
 import com.ezmax.api.model.MultilingualVersionhistoryDetail;
+import com.ezmax.api.model.VersionhistoryResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

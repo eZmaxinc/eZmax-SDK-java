@@ -18,6 +18,7 @@ import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserType;
 import com.ezmax.api.model.PhoneRequestV2;
+import com.ezmax.api.model.UserRequestV2;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

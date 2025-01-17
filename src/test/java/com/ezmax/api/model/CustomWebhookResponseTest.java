@@ -17,6 +17,7 @@ import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.WebhookResponseCompound;
 import com.ezmax.api.model.WebhookheaderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

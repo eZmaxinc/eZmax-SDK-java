@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EzsigntemplatesignerRequest;
 import com.ezmax.api.model.FieldEEzsigntemplatesignerMapping;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

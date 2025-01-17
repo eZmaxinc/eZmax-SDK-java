@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.CommonWebhook;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.UserstagedResponse;
 import com.google.gson.TypeAdapter;
@@ -53,18 +54,8 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class WebhookUserstagedUserstagedCreated {
-  public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
-  @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
-  @javax.annotation.Nonnull
-  private CustomWebhookResponse objWebhook;
-
-  public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
-  @javax.annotation.Nonnull
-  private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class WebhookUserstagedUserstagedCreated extends CommonWebhook {
   public static final String SERIALIZED_NAME_OBJ_USERSTAGED = "objUserstaged";
   @SerializedName(SERIALIZED_NAME_OBJ_USERSTAGED)
   @javax.annotation.Nonnull
@@ -72,52 +63,6 @@ public class WebhookUserstagedUserstagedCreated {
 
   public WebhookUserstagedUserstagedCreated() {
   }
-
-  public WebhookUserstagedUserstagedCreated objWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
-    this.objWebhook = objWebhook;
-    return this;
-  }
-
-  /**
-   * Get objWebhook
-   * @return objWebhook
-   */
-  @javax.annotation.Nonnull
-  public CustomWebhookResponse getObjWebhook() {
-    return objWebhook;
-  }
-
-  public void setObjWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
-    this.objWebhook = objWebhook;
-  }
-
-
-  public WebhookUserstagedUserstagedCreated aObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
-    this.aObjAttempt = aObjAttempt;
-    return this;
-  }
-
-  public WebhookUserstagedUserstagedCreated addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
-    if (this.aObjAttempt == null) {
-      this.aObjAttempt = new ArrayList<>();
-    }
-    this.aObjAttempt.add(aObjAttemptItem);
-    return this;
-  }
-
-  /**
-   * An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
-   * @return aObjAttempt
-   */
-  @javax.annotation.Nonnull
-  public List<AttemptResponseCompound> getaObjAttempt() {
-    return aObjAttempt;
-  }
-
-  public void setaObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
-    this.aObjAttempt = aObjAttempt;
-  }
-
 
   public WebhookUserstagedUserstagedCreated objUserstaged(@javax.annotation.Nonnull UserstagedResponse objUserstaged) {
     this.objUserstaged = objUserstaged;
@@ -148,22 +93,20 @@ public class WebhookUserstagedUserstagedCreated {
       return false;
     }
     WebhookUserstagedUserstagedCreated webhookUserstagedUserstagedCreated = (WebhookUserstagedUserstagedCreated) o;
-    return Objects.equals(this.objWebhook, webhookUserstagedUserstagedCreated.objWebhook) &&
-        Objects.equals(this.aObjAttempt, webhookUserstagedUserstagedCreated.aObjAttempt) &&
-        Objects.equals(this.objUserstaged, webhookUserstagedUserstagedCreated.objUserstaged);
+    return Objects.equals(this.objUserstaged, webhookUserstagedUserstagedCreated.objUserstaged) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objWebhook, aObjAttempt, objUserstaged);
+    return Objects.hash(objUserstaged, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookUserstagedUserstagedCreated {\n");
-    sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
-    sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    objUserstaged: ").append(toIndentedString(objUserstaged)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -193,9 +136,9 @@ public class WebhookUserstagedUserstagedCreated {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objUserstaged");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
-    openapiRequiredFields.add("objUserstaged");
   }
 
   /**
@@ -226,18 +169,6 @@ public class WebhookUserstagedUserstagedCreated {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objWebhook`
-      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objAttempt").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
-      }
-
-      JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
-      // validate the required field `a_objAttempt` (array)
-      for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
-      };
       // validate the required field `objUserstaged`
       UserstagedResponse.validateJsonElement(jsonObj.get("objUserstaged"));
   }

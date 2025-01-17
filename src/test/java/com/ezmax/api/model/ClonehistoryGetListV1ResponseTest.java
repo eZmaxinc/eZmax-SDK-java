@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.ClonehistoryGetListV1ResponseMPayload;
+import com.ezmax.api.model.CommonResponseGetList;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayloadGetList;
 import com.google.gson.TypeAdapter;

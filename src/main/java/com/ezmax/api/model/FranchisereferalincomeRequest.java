@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Franchisereferalincome Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class FranchisereferalincomeRequest {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -453,21 +453,6 @@ public class FranchisereferalincomeRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeRequest is not found in the empty JSON string", FranchisereferalincomeRequest.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!FranchisereferalincomeRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FranchisereferalincomeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FranchisereferalincomeRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dFranchisereferalincomeLoan").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
@@ -492,34 +477,6 @@ public class FranchisereferalincomeRequest {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FranchisereferalincomeRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FranchisereferalincomeRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FranchisereferalincomeRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FranchisereferalincomeRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<FranchisereferalincomeRequest>() {
-           @Override
-           public void write(JsonWriter out, FranchisereferalincomeRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public FranchisereferalincomeRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of FranchisereferalincomeRequest given an JSON string

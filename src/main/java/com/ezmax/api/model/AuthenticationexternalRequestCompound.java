@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.AuthenticationexternalRequest;
 import com.ezmax.api.model.FieldEAuthenticationexternalType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,84 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Authenticationexternal Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class AuthenticationexternalRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D = "pkiAuthenticationexternalID";
-  @SerializedName(SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiAuthenticationexternalID;
-
-  public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
-  @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sAuthenticationexternalDescription;
-
-  public static final String SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE = "eAuthenticationexternalType";
-  @SerializedName(SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEAuthenticationexternalType eAuthenticationexternalType;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class AuthenticationexternalRequestCompound extends AuthenticationexternalRequest {
   public AuthenticationexternalRequestCompound() {
   }
-
-  public AuthenticationexternalRequestCompound pkiAuthenticationexternalID(@javax.annotation.Nullable Integer pkiAuthenticationexternalID) {
-    this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Authenticationexternal
-   * minimum: 0
-   * maximum: 255
-   * @return pkiAuthenticationexternalID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiAuthenticationexternalID() {
-    return pkiAuthenticationexternalID;
-  }
-
-  public void setPkiAuthenticationexternalID(@javax.annotation.Nullable Integer pkiAuthenticationexternalID) {
-    this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
-  }
-
-
-  public AuthenticationexternalRequestCompound sAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
-    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Authenticationexternal
-   * @return sAuthenticationexternalDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsAuthenticationexternalDescription() {
-    return sAuthenticationexternalDescription;
-  }
-
-  public void setsAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
-    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
-  }
-
-
-  public AuthenticationexternalRequestCompound eAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
-    this.eAuthenticationexternalType = eAuthenticationexternalType;
-    return this;
-  }
-
-  /**
-   * Get eAuthenticationexternalType
-   * @return eAuthenticationexternalType
-   */
-  @javax.annotation.Nonnull
-  public FieldEAuthenticationexternalType geteAuthenticationexternalType() {
-    return eAuthenticationexternalType;
-  }
-
-  public void seteAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
-    this.eAuthenticationexternalType = eAuthenticationexternalType;
-  }
-
 
 
   @Override
@@ -137,24 +64,19 @@ public class AuthenticationexternalRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AuthenticationexternalRequestCompound authenticationexternalRequestCompound = (AuthenticationexternalRequestCompound) o;
-    return Objects.equals(this.pkiAuthenticationexternalID, authenticationexternalRequestCompound.pkiAuthenticationexternalID) &&
-        Objects.equals(this.sAuthenticationexternalDescription, authenticationexternalRequestCompound.sAuthenticationexternalDescription) &&
-        Objects.equals(this.eAuthenticationexternalType, authenticationexternalRequestCompound.eAuthenticationexternalType);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiAuthenticationexternalID, sAuthenticationexternalDescription, eAuthenticationexternalType);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationexternalRequestCompound {\n");
-    sb.append("    pkiAuthenticationexternalID: ").append(toIndentedString(pkiAuthenticationexternalID)).append("\n");
-    sb.append("    sAuthenticationexternalDescription: ").append(toIndentedString(sAuthenticationexternalDescription)).append("\n");
-    sb.append("    eAuthenticationexternalType: ").append(toIndentedString(eAuthenticationexternalType)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -214,12 +136,6 @@ public class AuthenticationexternalRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
-      }
-      // validate the required field `eAuthenticationexternalType`
-      FieldEAuthenticationexternalType.validateJsonElement(jsonObj.get("eAuthenticationexternalType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

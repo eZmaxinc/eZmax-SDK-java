@@ -8,8 +8,6 @@ Response for PATCH /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

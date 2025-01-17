@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.WebhookRequest;
 import com.ezmax.api.model.WebhookheaderRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

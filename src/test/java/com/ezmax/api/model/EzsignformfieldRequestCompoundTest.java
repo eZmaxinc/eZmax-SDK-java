@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.EnumHorizontalalignment;
 import com.ezmax.api.model.EzsignelementdependencyRequest;
+import com.ezmax.api.model.EzsignformfieldRequest;
 import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
 import com.ezmax.api.model.TextstylestaticRequestCompound;
 import com.google.gson.TypeAdapter;

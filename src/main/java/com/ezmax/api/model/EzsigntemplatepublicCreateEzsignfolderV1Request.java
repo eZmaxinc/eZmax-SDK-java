@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepublic/createEzsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicCreateEzsignfolderV1Request {
   public static final String SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE = "pksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE)

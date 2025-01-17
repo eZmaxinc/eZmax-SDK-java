@@ -8,8 +8,6 @@ Response for GET /1/object/ezdoctemplatedocument/getList
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzdoctemplatedocumentGetListV1ResponseMPayload**](EzdoctemplatedocumentGetListV1ResponseMPayload.md) |  |  |
 
 

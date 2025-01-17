@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
@@ -283,55 +283,12 @@ public class EzsignfoldersignerassociationResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationResponse is not found in the empty JSON string", EzsignfoldersignerassociationResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzsignfoldersignerassociationResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldersignerassociationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsignfoldersignerassociationResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("tEzsignfoldersignerassociationMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfoldersignerassociationMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfoldersignerassociationMessage").toString()));
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzsignfoldersignerassociationResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzsignfoldersignerassociationResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzsignfoldersignerassociationResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfoldersignerassociationResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzsignfoldersignerassociationResponse>() {
-           @Override
-           public void write(JsonWriter out, EzsignfoldersignerassociationResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzsignfoldersignerassociationResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzsignfoldersignerassociationResponse given an JSON string

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
@@ -50,58 +51,10 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatesignerEditObjectV1Response {
-  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
-  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
-  private CommonResponseObjDebugPayload objDebugPayload;
-
-  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
-  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
-  private CommonResponseObjDebug objDebug;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigntemplatesignerEditObjectV1Response extends CommonResponse {
   public EzsigntemplatesignerEditObjectV1Response() {
   }
-
-  public EzsigntemplatesignerEditObjectV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
-    this.objDebugPayload = objDebugPayload;
-    return this;
-  }
-
-  /**
-   * Get objDebugPayload
-   * @return objDebugPayload
-   */
-  @javax.annotation.Nonnull
-  public CommonResponseObjDebugPayload getObjDebugPayload() {
-    return objDebugPayload;
-  }
-
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
-    this.objDebugPayload = objDebugPayload;
-  }
-
-
-  public EzsigntemplatesignerEditObjectV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
-    this.objDebug = objDebug;
-    return this;
-  }
-
-  /**
-   * Get objDebug
-   * @return objDebug
-   */
-  @javax.annotation.Nullable
-  public CommonResponseObjDebug getObjDebug() {
-    return objDebug;
-  }
-
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
-    this.objDebug = objDebug;
-  }
-
 
 
   @Override
@@ -112,22 +65,19 @@ public class EzsigntemplatesignerEditObjectV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigntemplatesignerEditObjectV1Response ezsigntemplatesignerEditObjectV1Response = (EzsigntemplatesignerEditObjectV1Response) o;
-    return Objects.equals(this.objDebugPayload, ezsigntemplatesignerEditObjectV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, ezsigntemplatesignerEditObjectV1Response.objDebug);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatesignerEditObjectV1Response {\n");
-    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
-    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -184,13 +134,6 @@ public class EzsigntemplatesignerEditObjectV1Response {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objDebugPayload`
-      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
-      // validate the optional field `objDebug`
-      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
-        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
   }
 

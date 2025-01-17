@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignannotationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
@@ -425,21 +425,6 @@ public class EzsignannotationResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignannotationResponse is not found in the empty JSON string", EzsignannotationResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzsignannotationResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignannotationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsignannotationResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `eEzsignannotationHorizontalalignment`
       if (jsonObj.get("eEzsignannotationHorizontalalignment") != null && !jsonObj.get("eEzsignannotationHorizontalalignment").isJsonNull()) {
@@ -456,34 +441,6 @@ public class EzsignannotationResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzsignannotationResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzsignannotationResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzsignannotationResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignannotationResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzsignannotationResponse>() {
-           @Override
-           public void write(JsonWriter out, EzsignannotationResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzsignannotationResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzsignannotationResponse given an JSON string

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.DomainResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,38 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DomainResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
-  @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiDomainID;
-
-  public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
-  @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
-  @javax.annotation.Nonnull
-  private String sDomainName;
-
-  public static final String SERIALIZED_NAME_B_DOMAIN_VALIDDKIM = "bDomainValiddkim";
-  @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDDKIM)
-  @javax.annotation.Nonnull
-  private Boolean bDomainValiddkim;
-
-  public static final String SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM = "bDomainValidmailfrom";
-  @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM)
-  @javax.annotation.Nonnull
-  private Boolean bDomainValidmailfrom;
-
-  public static final String SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER = "bDomainValidcustomer";
-  @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER)
-  @javax.annotation.Nonnull
-  private Boolean bDomainValidcustomer;
-
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
-  private CommonAudit objAudit;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class DomainResponseCompound extends DomainResponse {
   public static final String SERIALIZED_NAME_A_OBJ_DNSRECORD = "a_objDnsrecord";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DNSRECORD)
   @javax.annotation.Nonnull
@@ -90,122 +61,6 @@ public class DomainResponseCompound {
 
   public DomainResponseCompound() {
   }
-
-  public DomainResponseCompound pkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
-    this.pkiDomainID = pkiDomainID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Domain
-   * minimum: 0
-   * maximum: 255
-   * @return pkiDomainID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiDomainID() {
-    return pkiDomainID;
-  }
-
-  public void setPkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
-    this.pkiDomainID = pkiDomainID;
-  }
-
-
-  public DomainResponseCompound sDomainName(@javax.annotation.Nonnull String sDomainName) {
-    this.sDomainName = sDomainName;
-    return this;
-  }
-
-  /**
-   * The name of the Domain
-   * @return sDomainName
-   */
-  @javax.annotation.Nonnull
-  public String getsDomainName() {
-    return sDomainName;
-  }
-
-  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
-    this.sDomainName = sDomainName;
-  }
-
-
-  public DomainResponseCompound bDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
-    this.bDomainValiddkim = bDomainValiddkim;
-    return this;
-  }
-
-  /**
-   * Whether the DKIM is valid or not
-   * @return bDomainValiddkim
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbDomainValiddkim() {
-    return bDomainValiddkim;
-  }
-
-  public void setbDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
-    this.bDomainValiddkim = bDomainValiddkim;
-  }
-
-
-  public DomainResponseCompound bDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
-    this.bDomainValidmailfrom = bDomainValidmailfrom;
-    return this;
-  }
-
-  /**
-   * Whether the mail from is valid or not
-   * @return bDomainValidmailfrom
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbDomainValidmailfrom() {
-    return bDomainValidmailfrom;
-  }
-
-  public void setbDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
-    this.bDomainValidmailfrom = bDomainValidmailfrom;
-  }
-
-
-  public DomainResponseCompound bDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
-    this.bDomainValidcustomer = bDomainValidcustomer;
-    return this;
-  }
-
-  /**
-   * Whether the customer has access to it or not
-   * @return bDomainValidcustomer
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbDomainValidcustomer() {
-    return bDomainValidcustomer;
-  }
-
-  public void setbDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
-    this.bDomainValidcustomer = bDomainValidcustomer;
-  }
-
-
-  public DomainResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-    return this;
-  }
-
-  /**
-   * Get objAudit
-   * @return objAudit
-   */
-  @javax.annotation.Nonnull
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-  }
-
 
   public DomainResponseCompound aObjDnsrecord(@javax.annotation.Nonnull List<CustomDnsrecordResponse> aObjDnsrecord) {
     this.aObjDnsrecord = aObjDnsrecord;
@@ -244,30 +99,20 @@ public class DomainResponseCompound {
       return false;
     }
     DomainResponseCompound domainResponseCompound = (DomainResponseCompound) o;
-    return Objects.equals(this.pkiDomainID, domainResponseCompound.pkiDomainID) &&
-        Objects.equals(this.sDomainName, domainResponseCompound.sDomainName) &&
-        Objects.equals(this.bDomainValiddkim, domainResponseCompound.bDomainValiddkim) &&
-        Objects.equals(this.bDomainValidmailfrom, domainResponseCompound.bDomainValidmailfrom) &&
-        Objects.equals(this.bDomainValidcustomer, domainResponseCompound.bDomainValidcustomer) &&
-        Objects.equals(this.objAudit, domainResponseCompound.objAudit) &&
-        Objects.equals(this.aObjDnsrecord, domainResponseCompound.aObjDnsrecord);
+    return Objects.equals(this.aObjDnsrecord, domainResponseCompound.aObjDnsrecord) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiDomainID, sDomainName, bDomainValiddkim, bDomainValidmailfrom, bDomainValidcustomer, objAudit, aObjDnsrecord);
+    return Objects.hash(aObjDnsrecord, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DomainResponseCompound {\n");
-    sb.append("    pkiDomainID: ").append(toIndentedString(pkiDomainID)).append("\n");
-    sb.append("    sDomainName: ").append(toIndentedString(sDomainName)).append("\n");
-    sb.append("    bDomainValiddkim: ").append(toIndentedString(bDomainValiddkim)).append("\n");
-    sb.append("    bDomainValidmailfrom: ").append(toIndentedString(bDomainValidmailfrom)).append("\n");
-    sb.append("    bDomainValidcustomer: ").append(toIndentedString(bDomainValidcustomer)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjDnsrecord: ").append(toIndentedString(aObjDnsrecord)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -301,13 +146,13 @@ public class DomainResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objDnsrecord");
     openapiRequiredFields.add("pkiDomainID");
     openapiRequiredFields.add("sDomainName");
     openapiRequiredFields.add("bDomainValiddkim");
     openapiRequiredFields.add("bDomainValidmailfrom");
     openapiRequiredFields.add("bDomainValidcustomer");
     openapiRequiredFields.add("objAudit");
-    openapiRequiredFields.add("a_objDnsrecord");
   }
 
   /**
@@ -338,11 +183,6 @@ public class DomainResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sDomainName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDomainName").toString()));
-      }
-      // validate the required field `objAudit`
-      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objDnsrecord").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objDnsrecord` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDnsrecord").toString()));

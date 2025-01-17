@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.AttachmentResponse;
 import com.ezmax.api.model.AttachmentResponseCompound;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEAttachmentDocumenttype;

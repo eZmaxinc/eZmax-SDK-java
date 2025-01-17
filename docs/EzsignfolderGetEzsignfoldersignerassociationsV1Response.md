@@ -8,8 +8,6 @@ Response for GET /1/object/ezsignfolder/{pkiEzsignfolder}/getEzsignfoldersignera
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload**](EzsignfolderGetEzsignfoldersignerassociationsV1ResponseMPayload.md) |  |  |
 
 

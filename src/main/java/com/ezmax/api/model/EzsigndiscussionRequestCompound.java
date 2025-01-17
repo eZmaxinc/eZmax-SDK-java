@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.DiscussionRequest;
+import com.ezmax.api.model.EzsigndiscussionRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,161 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndiscussion Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndiscussionRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzsigndiscussionID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigndocumentID;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER = "iEzsigndiscussionPagenumber";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndiscussionPagenumber;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_X = "iEzsigndiscussionX";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_X)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndiscussionX;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y = "iEzsigndiscussionY";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndiscussionY;
-
-  public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
-  @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
-  @javax.annotation.Nonnull
-  private DiscussionRequest objDiscussion;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigndiscussionRequestCompound extends EzsigndiscussionRequest {
   public EzsigndiscussionRequestCompound() {
   }
-
-  public EzsigndiscussionRequestCompound pkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
-    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigndiscussion
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiEzsigndiscussionID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzsigndiscussionID() {
-    return pkiEzsigndiscussionID;
-  }
-
-  public void setPkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
-    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
-  }
-
-
-  public EzsigndiscussionRequestCompound fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigndocument
-   * minimum: 0
-   * @return fkiEzsigndocumentID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigndocumentID() {
-    return fkiEzsigndocumentID;
-  }
-
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-  }
-
-
-  public EzsigndiscussionRequestCompound iEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
-    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
-    return this;
-  }
-
-  /**
-   * The page number in the Ezsigndocument for the Ezsigndiscussion
-   * @return iEzsigndiscussionPagenumber
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndiscussionPagenumber() {
-    return iEzsigndiscussionPagenumber;
-  }
-
-  public void setiEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
-    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
-  }
-
-
-  public EzsigndiscussionRequestCompound iEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
-    this.iEzsigndiscussionX = iEzsigndiscussionX;
-    return this;
-  }
-
-  /**
-   * The x of the Ezsigndiscussion
-   * minimum: 0
-   * maximum: 65535
-   * @return iEzsigndiscussionX
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndiscussionX() {
-    return iEzsigndiscussionX;
-  }
-
-  public void setiEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
-    this.iEzsigndiscussionX = iEzsigndiscussionX;
-  }
-
-
-  public EzsigndiscussionRequestCompound iEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
-    this.iEzsigndiscussionY = iEzsigndiscussionY;
-    return this;
-  }
-
-  /**
-   * The y of the Ezsigndiscussion
-   * minimum: 0
-   * maximum: 65535
-   * @return iEzsigndiscussionY
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndiscussionY() {
-    return iEzsigndiscussionY;
-  }
-
-  public void setiEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
-    this.iEzsigndiscussionY = iEzsigndiscussionY;
-  }
-
-
-  public EzsigndiscussionRequestCompound objDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
-    this.objDiscussion = objDiscussion;
-    return this;
-  }
-
-  /**
-   * Get objDiscussion
-   * @return objDiscussion
-   */
-  @javax.annotation.Nonnull
-  public DiscussionRequest getObjDiscussion() {
-    return objDiscussion;
-  }
-
-  public void setObjDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
-    this.objDiscussion = objDiscussion;
-  }
-
 
 
   @Override
@@ -214,30 +64,19 @@ public class EzsigndiscussionRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigndiscussionRequestCompound ezsigndiscussionRequestCompound = (EzsigndiscussionRequestCompound) o;
-    return Objects.equals(this.pkiEzsigndiscussionID, ezsigndiscussionRequestCompound.pkiEzsigndiscussionID) &&
-        Objects.equals(this.fkiEzsigndocumentID, ezsigndiscussionRequestCompound.fkiEzsigndocumentID) &&
-        Objects.equals(this.iEzsigndiscussionPagenumber, ezsigndiscussionRequestCompound.iEzsigndiscussionPagenumber) &&
-        Objects.equals(this.iEzsigndiscussionX, ezsigndiscussionRequestCompound.iEzsigndiscussionX) &&
-        Objects.equals(this.iEzsigndiscussionY, ezsigndiscussionRequestCompound.iEzsigndiscussionY) &&
-        Objects.equals(this.objDiscussion, ezsigndiscussionRequestCompound.objDiscussion);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndiscussionID, fkiEzsigndocumentID, iEzsigndiscussionPagenumber, iEzsigndiscussionX, iEzsigndiscussionY, objDiscussion);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndiscussionRequestCompound {\n");
-    sb.append("    pkiEzsigndiscussionID: ").append(toIndentedString(pkiEzsigndiscussionID)).append("\n");
-    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
-    sb.append("    iEzsigndiscussionPagenumber: ").append(toIndentedString(iEzsigndiscussionPagenumber)).append("\n");
-    sb.append("    iEzsigndiscussionX: ").append(toIndentedString(iEzsigndiscussionX)).append("\n");
-    sb.append("    iEzsigndiscussionY: ").append(toIndentedString(iEzsigndiscussionY)).append("\n");
-    sb.append("    objDiscussion: ").append(toIndentedString(objDiscussion)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -303,9 +142,6 @@ public class EzsigndiscussionRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objDiscussion`
-      DiscussionRequest.validateJsonElement(jsonObj.get("objDiscussion"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

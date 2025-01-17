@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.BillingentityinternalproductRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,86 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternalproduct Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BillingentityinternalproductRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D = "pkiBillingentityinternalproductID";
-  @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiBillingentityinternalproductID;
-
-  public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzmaxproductID;
-
-  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
-  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiBillingentityexternalID;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class BillingentityinternalproductRequestCompound extends BillingentityinternalproductRequest {
   public BillingentityinternalproductRequestCompound() {
   }
-
-  public BillingentityinternalproductRequestCompound pkiBillingentityinternalproductID(@javax.annotation.Nullable Integer pkiBillingentityinternalproductID) {
-    this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Billingentityinternalproduct
-   * minimum: 0
-   * maximum: 255
-   * @return pkiBillingentityinternalproductID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiBillingentityinternalproductID() {
-    return pkiBillingentityinternalproductID;
-  }
-
-  public void setPkiBillingentityinternalproductID(@javax.annotation.Nullable Integer pkiBillingentityinternalproductID) {
-    this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
-  }
-
-
-  public BillingentityinternalproductRequestCompound fkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
-    this.fkiEzmaxproductID = fkiEzmaxproductID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxproduct
-   * minimum: 1
-   * @return fkiEzmaxproductID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzmaxproductID() {
-    return fkiEzmaxproductID;
-  }
-
-  public void setFkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
-    this.fkiEzmaxproductID = fkiEzmaxproductID;
-  }
-
-
-  public BillingentityinternalproductRequestCompound fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
-    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Billingentityexternal
-   * minimum: 1
-   * @return fkiBillingentityexternalID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiBillingentityexternalID() {
-    return fkiBillingentityexternalID;
-  }
-
-  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
-    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
-  }
-
 
 
   @Override
@@ -138,24 +63,19 @@ public class BillingentityinternalproductRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BillingentityinternalproductRequestCompound billingentityinternalproductRequestCompound = (BillingentityinternalproductRequestCompound) o;
-    return Objects.equals(this.pkiBillingentityinternalproductID, billingentityinternalproductRequestCompound.pkiBillingentityinternalproductID) &&
-        Objects.equals(this.fkiEzmaxproductID, billingentityinternalproductRequestCompound.fkiEzmaxproductID) &&
-        Objects.equals(this.fkiBillingentityexternalID, billingentityinternalproductRequestCompound.fkiBillingentityexternalID);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiBillingentityinternalproductID, fkiEzmaxproductID, fkiBillingentityexternalID);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalproductRequestCompound {\n");
-    sb.append("    pkiBillingentityinternalproductID: ").append(toIndentedString(pkiBillingentityinternalproductID)).append("\n");
-    sb.append("    fkiEzmaxproductID: ").append(toIndentedString(fkiEzmaxproductID)).append("\n");
-    sb.append("    fkiBillingentityexternalID: ").append(toIndentedString(fkiBillingentityexternalID)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,7 +135,6 @@ public class BillingentityinternalproductRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

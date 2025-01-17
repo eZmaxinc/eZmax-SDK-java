@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.BillingentityinternalRequest;
 import com.ezmax.api.model.BillingentityinternalproductRequestCompound;
 import com.ezmax.api.model.MultilingualBillingentityinternalDescription;
 import com.google.gson.TypeAdapter;

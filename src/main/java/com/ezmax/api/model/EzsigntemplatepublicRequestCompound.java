@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsigntemplatepublicRequest;
 import com.ezmax.api.model.FieldEEzsigntemplatepublicLimittype;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,259 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepublic Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatepublicRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D = "pkiEzsigntemplatepublicID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzsigntemplatepublicID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsignfoldertypeID;
-
-  public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
-  @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiUserlogintypeID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzsigntemplateID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzsigntemplatepackageID;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION = "sEzsigntemplatepublicDescription";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sEzsigntemplatepublicDescription;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPUBLIC_ISACTIVE = "bEzsigntemplatepublicIsactive";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPUBLIC_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bEzsigntemplatepublicIsactive;
-
-  public static final String SERIALIZED_NAME_T_EZSIGNTEMPLATEPUBLIC_NOTE = "tEzsigntemplatepublicNote";
-  @SerializedName(SERIALIZED_NAME_T_EZSIGNTEMPLATEPUBLIC_NOTE)
-  @javax.annotation.Nonnull
-  private String tEzsigntemplatepublicNote;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEPUBLIC_LIMITTYPE = "eEzsigntemplatepublicLimittype";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEPUBLIC_LIMITTYPE)
-  @javax.annotation.Nonnull
-  private FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMIT = "iEzsigntemplatepublicLimit";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMIT)
-  @javax.annotation.Nonnull
-  private Integer iEzsigntemplatepublicLimit;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigntemplatepublicRequestCompound extends EzsigntemplatepublicRequest {
   public EzsigntemplatepublicRequestCompound() {
   }
-
-  public EzsigntemplatepublicRequestCompound pkiEzsigntemplatepublicID(@javax.annotation.Nullable Integer pkiEzsigntemplatepublicID) {
-    this.pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepublic
-   * minimum: 0
-   * maximum: 65535
-   * @return pkiEzsigntemplatepublicID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzsigntemplatepublicID() {
-    return pkiEzsigntemplatepublicID;
-  }
-
-  public void setPkiEzsigntemplatepublicID(@javax.annotation.Nullable Integer pkiEzsigntemplatepublicID) {
-    this.pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
-    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignfoldertype.
-   * minimum: 0
-   * maximum: 65535
-   * @return fkiEzsignfoldertypeID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsignfoldertypeID() {
-    return fkiEzsignfoldertypeID;
-  }
-
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
-    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
-    this.fkiUserlogintypeID = fkiUserlogintypeID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won&#39;t have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|     
-   * minimum: 0
-   * @return fkiUserlogintypeID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiUserlogintypeID() {
-    return fkiUserlogintypeID;
-  }
-
-  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
-    this.fkiUserlogintypeID = fkiUserlogintypeID;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound fkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
-    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplate
-   * minimum: 0
-   * @return fkiEzsigntemplateID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzsigntemplateID() {
-    return fkiEzsigntemplateID;
-  }
-
-  public void setFkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
-    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound fkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepackage
-   * minimum: 0
-   * @return fkiEzsigntemplatepackageID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzsigntemplatepackageID() {
-    return fkiEzsigntemplatepackageID;
-  }
-
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound sEzsigntemplatepublicDescription(@javax.annotation.Nonnull String sEzsigntemplatepublicDescription) {
-    this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Ezsigntemplatepublic
-   * @return sEzsigntemplatepublicDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsEzsigntemplatepublicDescription() {
-    return sEzsigntemplatepublicDescription;
-  }
-
-  public void setsEzsigntemplatepublicDescription(@javax.annotation.Nonnull String sEzsigntemplatepublicDescription) {
-    this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound bEzsigntemplatepublicIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepublicIsactive) {
-    this.bEzsigntemplatepublicIsactive = bEzsigntemplatepublicIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the ezsigntemplatepublic is active or not
-   * @return bEzsigntemplatepublicIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzsigntemplatepublicIsactive() {
-    return bEzsigntemplatepublicIsactive;
-  }
-
-  public void setbEzsigntemplatepublicIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepublicIsactive) {
-    this.bEzsigntemplatepublicIsactive = bEzsigntemplatepublicIsactive;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound tEzsigntemplatepublicNote(@javax.annotation.Nonnull String tEzsigntemplatepublicNote) {
-    this.tEzsigntemplatepublicNote = tEzsigntemplatepublicNote;
-    return this;
-  }
-
-  /**
-   * The note of the Ezsigntemplatepublic
-   * @return tEzsigntemplatepublicNote
-   */
-  @javax.annotation.Nonnull
-  public String gettEzsigntemplatepublicNote() {
-    return tEzsigntemplatepublicNote;
-  }
-
-  public void settEzsigntemplatepublicNote(@javax.annotation.Nonnull String tEzsigntemplatepublicNote) {
-    this.tEzsigntemplatepublicNote = tEzsigntemplatepublicNote;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound eEzsigntemplatepublicLimittype(@javax.annotation.Nonnull FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
-    this.eEzsigntemplatepublicLimittype = eEzsigntemplatepublicLimittype;
-    return this;
-  }
-
-  /**
-   * Get eEzsigntemplatepublicLimittype
-   * @return eEzsigntemplatepublicLimittype
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzsigntemplatepublicLimittype geteEzsigntemplatepublicLimittype() {
-    return eEzsigntemplatepublicLimittype;
-  }
-
-  public void seteEzsigntemplatepublicLimittype(@javax.annotation.Nonnull FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
-    this.eEzsigntemplatepublicLimittype = eEzsigntemplatepublicLimittype;
-  }
-
-
-  public EzsigntemplatepublicRequestCompound iEzsigntemplatepublicLimit(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimit) {
-    this.iEzsigntemplatepublicLimit = iEzsigntemplatepublicLimit;
-    return this;
-  }
-
-  /**
-   * The limit of the Ezsigntemplatepublic
-   * minimum: 0
-   * maximum: 65535
-   * @return iEzsigntemplatepublicLimit
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigntemplatepublicLimit() {
-    return iEzsigntemplatepublicLimit;
-  }
-
-  public void setiEzsigntemplatepublicLimit(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimit) {
-    this.iEzsigntemplatepublicLimit = iEzsigntemplatepublicLimit;
-  }
-
 
 
   @Override
@@ -312,38 +64,19 @@ public class EzsigntemplatepublicRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigntemplatepublicRequestCompound ezsigntemplatepublicRequestCompound = (EzsigntemplatepublicRequestCompound) o;
-    return Objects.equals(this.pkiEzsigntemplatepublicID, ezsigntemplatepublicRequestCompound.pkiEzsigntemplatepublicID) &&
-        Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplatepublicRequestCompound.fkiEzsignfoldertypeID) &&
-        Objects.equals(this.fkiUserlogintypeID, ezsigntemplatepublicRequestCompound.fkiUserlogintypeID) &&
-        Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatepublicRequestCompound.fkiEzsigntemplateID) &&
-        Objects.equals(this.fkiEzsigntemplatepackageID, ezsigntemplatepublicRequestCompound.fkiEzsigntemplatepackageID) &&
-        Objects.equals(this.sEzsigntemplatepublicDescription, ezsigntemplatepublicRequestCompound.sEzsigntemplatepublicDescription) &&
-        Objects.equals(this.bEzsigntemplatepublicIsactive, ezsigntemplatepublicRequestCompound.bEzsigntemplatepublicIsactive) &&
-        Objects.equals(this.tEzsigntemplatepublicNote, ezsigntemplatepublicRequestCompound.tEzsigntemplatepublicNote) &&
-        Objects.equals(this.eEzsigntemplatepublicLimittype, ezsigntemplatepublicRequestCompound.eEzsigntemplatepublicLimittype) &&
-        Objects.equals(this.iEzsigntemplatepublicLimit, ezsigntemplatepublicRequestCompound.iEzsigntemplatepublicLimit);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepublicID, fkiEzsignfoldertypeID, fkiUserlogintypeID, fkiEzsigntemplateID, fkiEzsigntemplatepackageID, sEzsigntemplatepublicDescription, bEzsigntemplatepublicIsactive, tEzsigntemplatepublicNote, eEzsigntemplatepublicLimittype, iEzsigntemplatepublicLimit);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepublicRequestCompound {\n");
-    sb.append("    pkiEzsigntemplatepublicID: ").append(toIndentedString(pkiEzsigntemplatepublicID)).append("\n");
-    sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
-    sb.append("    fkiUserlogintypeID: ").append(toIndentedString(fkiUserlogintypeID)).append("\n");
-    sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
-    sb.append("    fkiEzsigntemplatepackageID: ").append(toIndentedString(fkiEzsigntemplatepackageID)).append("\n");
-    sb.append("    sEzsigntemplatepublicDescription: ").append(toIndentedString(sEzsigntemplatepublicDescription)).append("\n");
-    sb.append("    bEzsigntemplatepublicIsactive: ").append(toIndentedString(bEzsigntemplatepublicIsactive)).append("\n");
-    sb.append("    tEzsigntemplatepublicNote: ").append(toIndentedString(tEzsigntemplatepublicNote)).append("\n");
-    sb.append("    eEzsigntemplatepublicLimittype: ").append(toIndentedString(eEzsigntemplatepublicLimittype)).append("\n");
-    sb.append("    iEzsigntemplatepublicLimit: ").append(toIndentedString(iEzsigntemplatepublicLimit)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -415,15 +148,6 @@ public class EzsigntemplatepublicRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sEzsigntemplatepublicDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatepublicDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicDescription").toString()));
-      }
-      if (!jsonObj.get("tEzsigntemplatepublicNote").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tEzsigntemplatepublicNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplatepublicNote").toString()));
-      }
-      // validate the required field `eEzsigntemplatepublicLimittype`
-      FieldEEzsigntemplatepublicLimittype.validateJsonElement(jsonObj.get("eEzsigntemplatepublicLimittype"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

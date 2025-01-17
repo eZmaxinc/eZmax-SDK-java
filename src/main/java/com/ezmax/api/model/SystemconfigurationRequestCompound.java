@@ -19,6 +19,7 @@ import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage2;
 import com.ezmax.api.model.FieldESystemconfigurationNewexternaluseraction;
+import com.ezmax.api.model.SystemconfigurationRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,306 +54,10 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class SystemconfigurationRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
-  @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiSystemconfigurationID;
-
-  public static final String SERIALIZED_NAME_FKI_BRANDING_I_D = "fkiBrandingID";
-  @SerializedName(SERIALIZED_NAME_FKI_BRANDING_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiBrandingID;
-
-  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION = "eSystemconfigurationNewexternaluseraction";
-  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION)
-  @javax.annotation.Nonnull
-  private FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction;
-
-  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1 = "eSystemconfigurationLanguage1";
-  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1)
-  @javax.annotation.Nonnull
-  private FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1;
-
-  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2 = "eSystemconfigurationLanguage2";
-  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2)
-  @javax.annotation.Nonnull
-  private FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2;
-
-  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN = "eSystemconfigurationEzsign";
-  @Deprecated
-  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN)
-  @javax.annotation.Nullable
-  private FieldESystemconfigurationEzsign eSystemconfigurationEzsign;
-
-  public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
-  @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
-  @javax.annotation.Nullable
-  private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
-
-  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
-  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
-  @javax.annotation.Nullable
-  private Boolean bSystemconfigurationEzsignpaidbyoffice;
-
-  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL = "bSystemconfigurationEzsignpersonnal";
-  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL)
-  @javax.annotation.Nonnull
-  private Boolean bSystemconfigurationEzsignpersonnal;
-
-  public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR = "bSystemconfigurationSspr";
-  @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR)
-  @javax.annotation.Nonnull
-  private Boolean bSystemconfigurationSspr;
-
-  public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART = "dtSystemconfigurationReadonlyexpirationstart";
-  @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART)
-  @javax.annotation.Nullable
-  private String dtSystemconfigurationReadonlyexpirationstart;
-
-  public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND = "dtSystemconfigurationReadonlyexpirationend";
-  @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND)
-  @javax.annotation.Nullable
-  private String dtSystemconfigurationReadonlyexpirationend;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class SystemconfigurationRequestCompound extends SystemconfigurationRequest {
   public SystemconfigurationRequestCompound() {
   }
-
-  public SystemconfigurationRequestCompound pkiSystemconfigurationID(@javax.annotation.Nullable Integer pkiSystemconfigurationID) {
-    this.pkiSystemconfigurationID = pkiSystemconfigurationID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Systemconfiguration
-   * minimum: 1
-   * maximum: 1
-   * @return pkiSystemconfigurationID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiSystemconfigurationID() {
-    return pkiSystemconfigurationID;
-  }
-
-  public void setPkiSystemconfigurationID(@javax.annotation.Nullable Integer pkiSystemconfigurationID) {
-    this.pkiSystemconfigurationID = pkiSystemconfigurationID;
-  }
-
-
-  public SystemconfigurationRequestCompound fkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
-    this.fkiBrandingID = fkiBrandingID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Branding
-   * minimum: 0
-   * @return fkiBrandingID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiBrandingID() {
-    return fkiBrandingID;
-  }
-
-  public void setFkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
-    this.fkiBrandingID = fkiBrandingID;
-  }
-
-
-  public SystemconfigurationRequestCompound eSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
-    this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
-    return this;
-  }
-
-  /**
-   * Get eSystemconfigurationNewexternaluseraction
-   * @return eSystemconfigurationNewexternaluseraction
-   */
-  @javax.annotation.Nonnull
-  public FieldESystemconfigurationNewexternaluseraction geteSystemconfigurationNewexternaluseraction() {
-    return eSystemconfigurationNewexternaluseraction;
-  }
-
-  public void seteSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
-    this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
-  }
-
-
-  public SystemconfigurationRequestCompound eSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
-    this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
-    return this;
-  }
-
-  /**
-   * Get eSystemconfigurationLanguage1
-   * @return eSystemconfigurationLanguage1
-   */
-  @javax.annotation.Nonnull
-  public FieldESystemconfigurationLanguage1 geteSystemconfigurationLanguage1() {
-    return eSystemconfigurationLanguage1;
-  }
-
-  public void seteSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
-    this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
-  }
-
-
-  public SystemconfigurationRequestCompound eSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
-    this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
-    return this;
-  }
-
-  /**
-   * Get eSystemconfigurationLanguage2
-   * @return eSystemconfigurationLanguage2
-   */
-  @javax.annotation.Nonnull
-  public FieldESystemconfigurationLanguage2 geteSystemconfigurationLanguage2() {
-    return eSystemconfigurationLanguage2;
-  }
-
-  public void seteSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
-    this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
-  }
-
-
-  @Deprecated
-  public SystemconfigurationRequestCompound eSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
-    this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
-    return this;
-  }
-
-  /**
-   * Get eSystemconfigurationEzsign
-   * @return eSystemconfigurationEzsign
-   * @deprecated
-   */
-  @Deprecated
-  @javax.annotation.Nullable
-  public FieldESystemconfigurationEzsign geteSystemconfigurationEzsign() {
-    return eSystemconfigurationEzsign;
-  }
-
-  @Deprecated
-  public void seteSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
-    this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
-  }
-
-
-  public SystemconfigurationRequestCompound eSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
-    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
-    return this;
-  }
-
-  /**
-   * Get eSystemconfigurationEzsignofficeplan
-   * @return eSystemconfigurationEzsignofficeplan
-   */
-  @javax.annotation.Nullable
-  public FieldESystemconfigurationEzsignofficeplan geteSystemconfigurationEzsignofficeplan() {
-    return eSystemconfigurationEzsignofficeplan;
-  }
-
-  public void seteSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
-    this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
-  }
-
-
-  public SystemconfigurationRequestCompound bSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
-    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
-    return this;
-  }
-
-  /**
-   * Whether if Ezsign is paid by the company or not
-   * @return bSystemconfigurationEzsignpaidbyoffice
-   */
-  @javax.annotation.Nullable
-  public Boolean getbSystemconfigurationEzsignpaidbyoffice() {
-    return bSystemconfigurationEzsignpaidbyoffice;
-  }
-
-  public void setbSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
-    this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
-  }
-
-
-  public SystemconfigurationRequestCompound bSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
-    this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
-    return this;
-  }
-
-  /**
-   * Whether if we allow the creation of personal files in eZsign
-   * @return bSystemconfigurationEzsignpersonnal
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbSystemconfigurationEzsignpersonnal() {
-    return bSystemconfigurationEzsignpersonnal;
-  }
-
-  public void setbSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
-    this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
-  }
-
-
-  public SystemconfigurationRequestCompound bSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
-    this.bSystemconfigurationSspr = bSystemconfigurationSspr;
-    return this;
-  }
-
-  /**
-   * Whether if we allow SSPR
-   * @return bSystemconfigurationSspr
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbSystemconfigurationSspr() {
-    return bSystemconfigurationSspr;
-  }
-
-  public void setbSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
-    this.bSystemconfigurationSspr = bSystemconfigurationSspr;
-  }
-
-
-  public SystemconfigurationRequestCompound dtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
-    this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
-    return this;
-  }
-
-  /**
-   * The start date where the system will be in read only
-   * @return dtSystemconfigurationReadonlyexpirationstart
-   */
-  @javax.annotation.Nullable
-  public String getDtSystemconfigurationReadonlyexpirationstart() {
-    return dtSystemconfigurationReadonlyexpirationstart;
-  }
-
-  public void setDtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
-    this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
-  }
-
-
-  public SystemconfigurationRequestCompound dtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
-    this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
-    return this;
-  }
-
-  /**
-   * The end date where the system will be in read only
-   * @return dtSystemconfigurationReadonlyexpirationend
-   */
-  @javax.annotation.Nullable
-  public String getDtSystemconfigurationReadonlyexpirationend() {
-    return dtSystemconfigurationReadonlyexpirationend;
-  }
-
-  public void setDtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
-    this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
-  }
-
 
 
   @Override
@@ -363,42 +68,19 @@ public class SystemconfigurationRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SystemconfigurationRequestCompound systemconfigurationRequestCompound = (SystemconfigurationRequestCompound) o;
-    return Objects.equals(this.pkiSystemconfigurationID, systemconfigurationRequestCompound.pkiSystemconfigurationID) &&
-        Objects.equals(this.fkiBrandingID, systemconfigurationRequestCompound.fkiBrandingID) &&
-        Objects.equals(this.eSystemconfigurationNewexternaluseraction, systemconfigurationRequestCompound.eSystemconfigurationNewexternaluseraction) &&
-        Objects.equals(this.eSystemconfigurationLanguage1, systemconfigurationRequestCompound.eSystemconfigurationLanguage1) &&
-        Objects.equals(this.eSystemconfigurationLanguage2, systemconfigurationRequestCompound.eSystemconfigurationLanguage2) &&
-        Objects.equals(this.eSystemconfigurationEzsign, systemconfigurationRequestCompound.eSystemconfigurationEzsign) &&
-        Objects.equals(this.eSystemconfigurationEzsignofficeplan, systemconfigurationRequestCompound.eSystemconfigurationEzsignofficeplan) &&
-        Objects.equals(this.bSystemconfigurationEzsignpaidbyoffice, systemconfigurationRequestCompound.bSystemconfigurationEzsignpaidbyoffice) &&
-        Objects.equals(this.bSystemconfigurationEzsignpersonnal, systemconfigurationRequestCompound.bSystemconfigurationEzsignpersonnal) &&
-        Objects.equals(this.bSystemconfigurationSspr, systemconfigurationRequestCompound.bSystemconfigurationSspr) &&
-        Objects.equals(this.dtSystemconfigurationReadonlyexpirationstart, systemconfigurationRequestCompound.dtSystemconfigurationReadonlyexpirationstart) &&
-        Objects.equals(this.dtSystemconfigurationReadonlyexpirationend, systemconfigurationRequestCompound.dtSystemconfigurationReadonlyexpirationend);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSystemconfigurationID, fkiBrandingID, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SystemconfigurationRequestCompound {\n");
-    sb.append("    pkiSystemconfigurationID: ").append(toIndentedString(pkiSystemconfigurationID)).append("\n");
-    sb.append("    fkiBrandingID: ").append(toIndentedString(fkiBrandingID)).append("\n");
-    sb.append("    eSystemconfigurationNewexternaluseraction: ").append(toIndentedString(eSystemconfigurationNewexternaluseraction)).append("\n");
-    sb.append("    eSystemconfigurationLanguage1: ").append(toIndentedString(eSystemconfigurationLanguage1)).append("\n");
-    sb.append("    eSystemconfigurationLanguage2: ").append(toIndentedString(eSystemconfigurationLanguage2)).append("\n");
-    sb.append("    eSystemconfigurationEzsign: ").append(toIndentedString(eSystemconfigurationEzsign)).append("\n");
-    sb.append("    eSystemconfigurationEzsignofficeplan: ").append(toIndentedString(eSystemconfigurationEzsignofficeplan)).append("\n");
-    sb.append("    bSystemconfigurationEzsignpaidbyoffice: ").append(toIndentedString(bSystemconfigurationEzsignpaidbyoffice)).append("\n");
-    sb.append("    bSystemconfigurationEzsignpersonnal: ").append(toIndentedString(bSystemconfigurationEzsignpersonnal)).append("\n");
-    sb.append("    bSystemconfigurationSspr: ").append(toIndentedString(bSystemconfigurationSspr)).append("\n");
-    sb.append("    dtSystemconfigurationReadonlyexpirationstart: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationstart)).append("\n");
-    sb.append("    dtSystemconfigurationReadonlyexpirationend: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationend)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -469,27 +151,6 @@ public class SystemconfigurationRequestCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `eSystemconfigurationNewexternaluseraction`
-      FieldESystemconfigurationNewexternaluseraction.validateJsonElement(jsonObj.get("eSystemconfigurationNewexternaluseraction"));
-      // validate the required field `eSystemconfigurationLanguage1`
-      FieldESystemconfigurationLanguage1.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage1"));
-      // validate the required field `eSystemconfigurationLanguage2`
-      FieldESystemconfigurationLanguage2.validateJsonElement(jsonObj.get("eSystemconfigurationLanguage2"));
-      // validate the optional field `eSystemconfigurationEzsign`
-      if (jsonObj.get("eSystemconfigurationEzsign") != null && !jsonObj.get("eSystemconfigurationEzsign").isJsonNull()) {
-        FieldESystemconfigurationEzsign.validateJsonElement(jsonObj.get("eSystemconfigurationEzsign"));
-      }
-      // validate the optional field `eSystemconfigurationEzsignofficeplan`
-      if (jsonObj.get("eSystemconfigurationEzsignofficeplan") != null && !jsonObj.get("eSystemconfigurationEzsignofficeplan").isJsonNull()) {
-        FieldESystemconfigurationEzsignofficeplan.validateJsonElement(jsonObj.get("eSystemconfigurationEzsignofficeplan"));
-      }
-      if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationstart") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtSystemconfigurationReadonlyexpirationstart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").toString()));
-      }
-      if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationend") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationend").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationend").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtSystemconfigurationReadonlyexpirationend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationend").toString()));
       }
   }
 

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldESignaturePreference;
+import com.ezmax.api.model.SignatureRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,133 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class SignatureRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
-  @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiSignatureID;
-
-  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
-  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiFontID;
-
-  public static final String SERIALIZED_NAME_E_SIGNATURE_PREFERENCE = "eSignaturePreference";
-  @SerializedName(SERIALIZED_NAME_E_SIGNATURE_PREFERENCE)
-  @javax.annotation.Nonnull
-  private FieldESignaturePreference eSignaturePreference;
-
-  public static final String SERIALIZED_NAME_T_SIGNATURE_SVG = "tSignatureSvg";
-  @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVG)
-  @javax.annotation.Nullable
-  private String tSignatureSvg;
-
-  public static final String SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS = "tSignatureSvginitials";
-  @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS)
-  @javax.annotation.Nullable
-  private String tSignatureSvginitials;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class SignatureRequestCompound extends SignatureRequest {
   public SignatureRequestCompound() {
   }
-
-  public SignatureRequestCompound pkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
-    this.pkiSignatureID = pkiSignatureID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Signature
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiSignatureID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiSignatureID() {
-    return pkiSignatureID;
-  }
-
-  public void setPkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
-    this.pkiSignatureID = pkiSignatureID;
-  }
-
-
-  public SignatureRequestCompound fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
-    this.fkiFontID = fkiFontID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Font
-   * minimum: 0
-   * @return fkiFontID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiFontID() {
-    return fkiFontID;
-  }
-
-  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
-    this.fkiFontID = fkiFontID;
-  }
-
-
-  public SignatureRequestCompound eSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
-    this.eSignaturePreference = eSignaturePreference;
-    return this;
-  }
-
-  /**
-   * Get eSignaturePreference
-   * @return eSignaturePreference
-   */
-  @javax.annotation.Nonnull
-  public FieldESignaturePreference geteSignaturePreference() {
-    return eSignaturePreference;
-  }
-
-  public void seteSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
-    this.eSignaturePreference = eSignaturePreference;
-  }
-
-
-  public SignatureRequestCompound tSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
-    this.tSignatureSvg = tSignatureSvg;
-    return this;
-  }
-
-  /**
-   * The svg of the Signature
-   * @return tSignatureSvg
-   */
-  @javax.annotation.Nullable
-  public String gettSignatureSvg() {
-    return tSignatureSvg;
-  }
-
-  public void settSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
-    this.tSignatureSvg = tSignatureSvg;
-  }
-
-
-  public SignatureRequestCompound tSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
-    this.tSignatureSvginitials = tSignatureSvginitials;
-    return this;
-  }
-
-  /**
-   * The svg of the Initials
-   * @return tSignatureSvginitials
-   */
-  @javax.annotation.Nullable
-  public String gettSignatureSvginitials() {
-    return tSignatureSvginitials;
-  }
-
-  public void settSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
-    this.tSignatureSvginitials = tSignatureSvginitials;
-  }
-
 
 
   @Override
@@ -186,28 +64,19 @@ public class SignatureRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignatureRequestCompound signatureRequestCompound = (SignatureRequestCompound) o;
-    return Objects.equals(this.pkiSignatureID, signatureRequestCompound.pkiSignatureID) &&
-        Objects.equals(this.fkiFontID, signatureRequestCompound.fkiFontID) &&
-        Objects.equals(this.eSignaturePreference, signatureRequestCompound.eSignaturePreference) &&
-        Objects.equals(this.tSignatureSvg, signatureRequestCompound.tSignatureSvg) &&
-        Objects.equals(this.tSignatureSvginitials, signatureRequestCompound.tSignatureSvginitials);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSignatureID, fkiFontID, eSignaturePreference, tSignatureSvg, tSignatureSvginitials);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureRequestCompound {\n");
-    sb.append("    pkiSignatureID: ").append(toIndentedString(pkiSignatureID)).append("\n");
-    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
-    sb.append("    eSignaturePreference: ").append(toIndentedString(eSignaturePreference)).append("\n");
-    sb.append("    tSignatureSvg: ").append(toIndentedString(tSignatureSvg)).append("\n");
-    sb.append("    tSignatureSvginitials: ").append(toIndentedString(tSignatureSvginitials)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -268,15 +137,6 @@ public class SignatureRequestCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `eSignaturePreference`
-      FieldESignaturePreference.validateJsonElement(jsonObj.get("eSignaturePreference"));
-      if ((jsonObj.get("tSignatureSvg") != null && !jsonObj.get("tSignatureSvg").isJsonNull()) && !jsonObj.get("tSignatureSvg").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tSignatureSvg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tSignatureSvg").toString()));
-      }
-      if ((jsonObj.get("tSignatureSvginitials") != null && !jsonObj.get("tSignatureSvginitials").isJsonNull()) && !jsonObj.get("tSignatureSvginitials").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tSignatureSvginitials` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tSignatureSvginitials").toString()));
       }
   }
 

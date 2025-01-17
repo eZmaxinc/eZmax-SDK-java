@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.ezmax.api.model.CommunicationSendV1ResponseMPayload;
@@ -51,18 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommunicationSendV1Response {
-  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
-  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
-  private CommonResponseObjDebugPayload objDebugPayload;
-
-  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
-  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
-  private CommonResponseObjDebug objDebug;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CommunicationSendV1Response extends CommonResponse {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
   @javax.annotation.Nonnull
@@ -70,44 +61,6 @@ public class CommunicationSendV1Response {
 
   public CommunicationSendV1Response() {
   }
-
-  public CommunicationSendV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
-    this.objDebugPayload = objDebugPayload;
-    return this;
-  }
-
-  /**
-   * Get objDebugPayload
-   * @return objDebugPayload
-   */
-  @javax.annotation.Nonnull
-  public CommonResponseObjDebugPayload getObjDebugPayload() {
-    return objDebugPayload;
-  }
-
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
-    this.objDebugPayload = objDebugPayload;
-  }
-
-
-  public CommunicationSendV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
-    this.objDebug = objDebug;
-    return this;
-  }
-
-  /**
-   * Get objDebug
-   * @return objDebug
-   */
-  @javax.annotation.Nullable
-  public CommonResponseObjDebug getObjDebug() {
-    return objDebug;
-  }
-
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
-    this.objDebug = objDebug;
-  }
-
 
   public CommunicationSendV1Response mPayload(@javax.annotation.Nonnull CommunicationSendV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
@@ -138,22 +91,20 @@ public class CommunicationSendV1Response {
       return false;
     }
     CommunicationSendV1Response communicationSendV1Response = (CommunicationSendV1Response) o;
-    return Objects.equals(this.objDebugPayload, communicationSendV1Response.objDebugPayload) &&
-        Objects.equals(this.objDebug, communicationSendV1Response.objDebug) &&
-        Objects.equals(this.mPayload, communicationSendV1Response.mPayload);
+    return Objects.equals(this.mPayload, communicationSendV1Response.mPayload) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objDebugPayload, objDebug, mPayload);
+    return Objects.hash(mPayload, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationSendV1Response {\n");
-    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
-    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -183,8 +134,8 @@ public class CommunicationSendV1Response {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objDebugPayload");
     openapiRequiredFields.add("mPayload");
+    openapiRequiredFields.add("objDebugPayload");
   }
 
   /**
@@ -215,12 +166,6 @@ public class CommunicationSendV1Response {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objDebugPayload`
-      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
-      // validate the optional field `objDebug`
-      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
-        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
-      }
       // validate the required field `mPayload`
       CommunicationSendV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsigntemplatepackagesignerResponse;
 import com.ezmax.api.model.FieldEEzsigntemplatepackagesignerMapping;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,281 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatepackagesignerResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "pkiEzsigntemplatepackagesignerID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsigntemplatepackagesignerID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigntemplatepackageID;
-
-  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzdoctemplatedocumentID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUsergroupID;
-
-  public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
-  @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
-  @javax.annotation.Nullable
-  private String sEzdoctemplatedocumentNameX;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGESIGNER_RECEIVECOPY = "bEzsigntemplatepackagesignerReceivecopy";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGESIGNER_RECEIVECOPY)
-  @javax.annotation.Nullable
-  private Boolean bEzsigntemplatepackagesignerReceivecopy;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEPACKAGESIGNER_MAPPING = "eEzsigntemplatepackagesignerMapping";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEPACKAGESIGNER_MAPPING)
-  @javax.annotation.Nullable
-  private FieldEEzsigntemplatepackagesignerMapping eEzsigntemplatepackagesignerMapping = FieldEEzsigntemplatepackagesignerMapping.MANUAL;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGESIGNER_DESCRIPTION = "sEzsigntemplatepackagesignerDescription";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGESIGNER_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sEzsigntemplatepackagesignerDescription;
-
-  public static final String SERIALIZED_NAME_S_USER_NAME = "sUserName";
-  @SerializedName(SERIALIZED_NAME_S_USER_NAME)
-  @javax.annotation.Nullable
-  private String sUserName;
-
-  public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
-  @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
-  @javax.annotation.Nullable
-  private String sUsergroupNameX;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigntemplatepackagesignerResponseCompound extends EzsigntemplatepackagesignerResponse {
   public EzsigntemplatepackagesignerResponseCompound() {
   }
-
-  public EzsigntemplatepackagesignerResponseCompound pkiEzsigntemplatepackagesignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackagesignerID) {
-    this.pkiEzsigntemplatepackagesignerID = pkiEzsigntemplatepackagesignerID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepackagesigner
-   * minimum: 0
-   * @return pkiEzsigntemplatepackagesignerID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsigntemplatepackagesignerID() {
-    return pkiEzsigntemplatepackagesignerID;
-  }
-
-  public void setPkiEzsigntemplatepackagesignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackagesignerID) {
-    this.pkiEzsigntemplatepackagesignerID = pkiEzsigntemplatepackagesignerID;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound fkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepackage
-   * minimum: 0
-   * @return fkiEzsigntemplatepackageID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigntemplatepackageID() {
-    return fkiEzsigntemplatepackageID;
-  }
-
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound fkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
-    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezdoctemplatedocument
-   * minimum: 0
-   * maximum: 65535
-   * @return fkiEzdoctemplatedocumentID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzdoctemplatedocumentID() {
-    return fkiEzdoctemplatedocumentID;
-  }
-
-  public void setFkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
-    this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Usergroup
-   * minimum: 0
-   * maximum: 255
-   * @return fkiUsergroupID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUsergroupID() {
-    return fkiUsergroupID;
-  }
-
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound sEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
-    this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
-    return this;
-  }
-
-  /**
-   * The name of the Ezdoctemplatedocument in the language of the requester
-   * @return sEzdoctemplatedocumentNameX
-   */
-  @javax.annotation.Nullable
-  public String getsEzdoctemplatedocumentNameX() {
-    return sEzdoctemplatedocumentNameX;
-  }
-
-  public void setsEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
-    this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound bEzsigntemplatepackagesignerReceivecopy(@javax.annotation.Nullable Boolean bEzsigntemplatepackagesignerReceivecopy) {
-    this.bEzsigntemplatepackagesignerReceivecopy = bEzsigntemplatepackagesignerReceivecopy;
-    return this;
-  }
-
-  /**
-   * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
-   * @return bEzsigntemplatepackagesignerReceivecopy
-   */
-  @javax.annotation.Nullable
-  public Boolean getbEzsigntemplatepackagesignerReceivecopy() {
-    return bEzsigntemplatepackagesignerReceivecopy;
-  }
-
-  public void setbEzsigntemplatepackagesignerReceivecopy(@javax.annotation.Nullable Boolean bEzsigntemplatepackagesignerReceivecopy) {
-    this.bEzsigntemplatepackagesignerReceivecopy = bEzsigntemplatepackagesignerReceivecopy;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound eEzsigntemplatepackagesignerMapping(@javax.annotation.Nullable FieldEEzsigntemplatepackagesignerMapping eEzsigntemplatepackagesignerMapping) {
-    this.eEzsigntemplatepackagesignerMapping = eEzsigntemplatepackagesignerMapping;
-    return this;
-  }
-
-  /**
-   * Get eEzsigntemplatepackagesignerMapping
-   * @return eEzsigntemplatepackagesignerMapping
-   */
-  @javax.annotation.Nullable
-  public FieldEEzsigntemplatepackagesignerMapping geteEzsigntemplatepackagesignerMapping() {
-    return eEzsigntemplatepackagesignerMapping;
-  }
-
-  public void seteEzsigntemplatepackagesignerMapping(@javax.annotation.Nullable FieldEEzsigntemplatepackagesignerMapping eEzsigntemplatepackagesignerMapping) {
-    this.eEzsigntemplatepackagesignerMapping = eEzsigntemplatepackagesignerMapping;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound sEzsigntemplatepackagesignerDescription(@javax.annotation.Nonnull String sEzsigntemplatepackagesignerDescription) {
-    this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Ezsigntemplatepackagesigner
-   * @return sEzsigntemplatepackagesignerDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsEzsigntemplatepackagesignerDescription() {
-    return sEzsigntemplatepackagesignerDescription;
-  }
-
-  public void setsEzsigntemplatepackagesignerDescription(@javax.annotation.Nonnull String sEzsigntemplatepackagesignerDescription) {
-    this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound sUserName(@javax.annotation.Nullable String sUserName) {
-    this.sUserName = sUserName;
-    return this;
-  }
-
-  /**
-   * The description of the User in the language of the requester
-   * @return sUserName
-   */
-  @javax.annotation.Nullable
-  public String getsUserName() {
-    return sUserName;
-  }
-
-  public void setsUserName(@javax.annotation.Nullable String sUserName) {
-    this.sUserName = sUserName;
-  }
-
-
-  public EzsigntemplatepackagesignerResponseCompound sUsergroupNameX(@javax.annotation.Nullable String sUsergroupNameX) {
-    this.sUsergroupNameX = sUsergroupNameX;
-    return this;
-  }
-
-  /**
-   * The Name of the Usergroup in the language of the requester
-   * @return sUsergroupNameX
-   */
-  @javax.annotation.Nullable
-  public String getsUsergroupNameX() {
-    return sUsergroupNameX;
-  }
-
-  public void setsUsergroupNameX(@javax.annotation.Nullable String sUsergroupNameX) {
-    this.sUsergroupNameX = sUsergroupNameX;
-  }
-
 
 
   @Override
@@ -334,40 +64,19 @@ public class EzsigntemplatepackagesignerResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsigntemplatepackagesignerResponseCompound ezsigntemplatepackagesignerResponseCompound = (EzsigntemplatepackagesignerResponseCompound) o;
-    return Objects.equals(this.pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerResponseCompound.pkiEzsigntemplatepackagesignerID) &&
-        Objects.equals(this.fkiEzsigntemplatepackageID, ezsigntemplatepackagesignerResponseCompound.fkiEzsigntemplatepackageID) &&
-        Objects.equals(this.fkiEzdoctemplatedocumentID, ezsigntemplatepackagesignerResponseCompound.fkiEzdoctemplatedocumentID) &&
-        Objects.equals(this.fkiUserID, ezsigntemplatepackagesignerResponseCompound.fkiUserID) &&
-        Objects.equals(this.fkiUsergroupID, ezsigntemplatepackagesignerResponseCompound.fkiUsergroupID) &&
-        Objects.equals(this.sEzdoctemplatedocumentNameX, ezsigntemplatepackagesignerResponseCompound.sEzdoctemplatedocumentNameX) &&
-        Objects.equals(this.bEzsigntemplatepackagesignerReceivecopy, ezsigntemplatepackagesignerResponseCompound.bEzsigntemplatepackagesignerReceivecopy) &&
-        Objects.equals(this.eEzsigntemplatepackagesignerMapping, ezsigntemplatepackagesignerResponseCompound.eEzsigntemplatepackagesignerMapping) &&
-        Objects.equals(this.sEzsigntemplatepackagesignerDescription, ezsigntemplatepackagesignerResponseCompound.sEzsigntemplatepackagesignerDescription) &&
-        Objects.equals(this.sUserName, ezsigntemplatepackagesignerResponseCompound.sUserName) &&
-        Objects.equals(this.sUsergroupNameX, ezsigntemplatepackagesignerResponseCompound.sUsergroupNameX);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackagesignerID, fkiEzsigntemplatepackageID, fkiEzdoctemplatedocumentID, fkiUserID, fkiUsergroupID, sEzdoctemplatedocumentNameX, bEzsigntemplatepackagesignerReceivecopy, eEzsigntemplatepackagesignerMapping, sEzsigntemplatepackagesignerDescription, sUserName, sUsergroupNameX);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackagesignerResponseCompound {\n");
-    sb.append("    pkiEzsigntemplatepackagesignerID: ").append(toIndentedString(pkiEzsigntemplatepackagesignerID)).append("\n");
-    sb.append("    fkiEzsigntemplatepackageID: ").append(toIndentedString(fkiEzsigntemplatepackageID)).append("\n");
-    sb.append("    fkiEzdoctemplatedocumentID: ").append(toIndentedString(fkiEzdoctemplatedocumentID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
-    sb.append("    sEzdoctemplatedocumentNameX: ").append(toIndentedString(sEzdoctemplatedocumentNameX)).append("\n");
-    sb.append("    bEzsigntemplatepackagesignerReceivecopy: ").append(toIndentedString(bEzsigntemplatepackagesignerReceivecopy)).append("\n");
-    sb.append("    eEzsigntemplatepackagesignerMapping: ").append(toIndentedString(eEzsigntemplatepackagesignerMapping)).append("\n");
-    sb.append("    sEzsigntemplatepackagesignerDescription: ").append(toIndentedString(sEzsigntemplatepackagesignerDescription)).append("\n");
-    sb.append("    sUserName: ").append(toIndentedString(sUserName)).append("\n");
-    sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -435,23 +144,6 @@ public class EzsigntemplatepackagesignerResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("sEzdoctemplatedocumentNameX") != null && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonNull()) && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzdoctemplatedocumentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentNameX").toString()));
-      }
-      // validate the optional field `eEzsigntemplatepackagesignerMapping`
-      if (jsonObj.get("eEzsigntemplatepackagesignerMapping") != null && !jsonObj.get("eEzsigntemplatepackagesignerMapping").isJsonNull()) {
-        FieldEEzsigntemplatepackagesignerMapping.validateJsonElement(jsonObj.get("eEzsigntemplatepackagesignerMapping"));
-      }
-      if (!jsonObj.get("sEzsigntemplatepackagesignerDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatepackagesignerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepackagesignerDescription").toString()));
-      }
-      if ((jsonObj.get("sUserName") != null && !jsonObj.get("sUserName").isJsonNull()) && !jsonObj.get("sUserName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sUserName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserName").toString()));
-      }
-      if ((jsonObj.get("sUsergroupNameX") != null && !jsonObj.get("sUsergroupNameX").isJsonNull()) && !jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
       }
   }
 

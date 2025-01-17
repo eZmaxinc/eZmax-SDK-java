@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Textstylestatic Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class TextstylestaticResponse {
   public static final String SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D = "pkiTextstylestaticID";
   @SerializedName(SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D)
@@ -370,55 +370,12 @@ public class TextstylestaticResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in TextstylestaticResponse is not found in the empty JSON string", TextstylestaticResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!TextstylestaticResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TextstylestaticResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : TextstylestaticResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sFontName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sFontName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFontName").toString()));
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!TextstylestaticResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'TextstylestaticResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<TextstylestaticResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(TextstylestaticResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<TextstylestaticResponse>() {
-           @Override
-           public void write(JsonWriter out, TextstylestaticResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public TextstylestaticResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of TextstylestaticResponse given an JSON string

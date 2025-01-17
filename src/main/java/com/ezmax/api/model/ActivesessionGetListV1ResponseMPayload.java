@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.ActivesessionListElement;
+import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,18 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ActivesessionGetListV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
-  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
-  @javax.annotation.Nonnull
-  private Integer iRowReturned;
-
-  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
-  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
-  @javax.annotation.Nonnull
-  private Integer iRowFiltered;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ActivesessionGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_ACTIVESESSION = "a_objActivesession";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ACTIVESESSION)
   @javax.annotation.Nonnull
@@ -70,44 +61,6 @@ public class ActivesessionGetListV1ResponseMPayload {
 
   public ActivesessionGetListV1ResponseMPayload() {
   }
-
-  public ActivesessionGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
-    this.iRowReturned = iRowReturned;
-    return this;
-  }
-
-  /**
-   * The number of rows returned
-   * @return iRowReturned
-   */
-  @javax.annotation.Nonnull
-  public Integer getiRowReturned() {
-    return iRowReturned;
-  }
-
-  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
-    this.iRowReturned = iRowReturned;
-  }
-
-
-  public ActivesessionGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
-    this.iRowFiltered = iRowFiltered;
-    return this;
-  }
-
-  /**
-   * The number of rows matching your filters (if any) or the total number of rows
-   * @return iRowFiltered
-   */
-  @javax.annotation.Nonnull
-  public Integer getiRowFiltered() {
-    return iRowFiltered;
-  }
-
-  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
-    this.iRowFiltered = iRowFiltered;
-  }
-
 
   public ActivesessionGetListV1ResponseMPayload aObjActivesession(@javax.annotation.Nonnull List<ActivesessionListElement> aObjActivesession) {
     this.aObjActivesession = aObjActivesession;
@@ -146,22 +99,20 @@ public class ActivesessionGetListV1ResponseMPayload {
       return false;
     }
     ActivesessionGetListV1ResponseMPayload activesessionGetListV1ResponseMPayload = (ActivesessionGetListV1ResponseMPayload) o;
-    return Objects.equals(this.iRowReturned, activesessionGetListV1ResponseMPayload.iRowReturned) &&
-        Objects.equals(this.iRowFiltered, activesessionGetListV1ResponseMPayload.iRowFiltered) &&
-        Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession);
+    return Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iRowReturned, iRowFiltered, aObjActivesession);
+    return Objects.hash(aObjActivesession, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetListV1ResponseMPayload {\n");
-    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
-    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjActivesession: ").append(toIndentedString(aObjActivesession)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -191,9 +142,9 @@ public class ActivesessionGetListV1ResponseMPayload {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objActivesession");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
-    openapiRequiredFields.add("a_objActivesession");
   }
 
   /**

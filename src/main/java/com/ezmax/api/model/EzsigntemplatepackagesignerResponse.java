@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagesignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "pkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
@@ -421,21 +421,6 @@ public class EzsigntemplatepackagesignerResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatepackagesignerResponse is not found in the empty JSON string", EzsigntemplatepackagesignerResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzsigntemplatepackagesignerResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatepackagesignerResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsigntemplatepackagesignerResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sEzdoctemplatedocumentNameX") != null && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonNull()) && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzdoctemplatedocumentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentNameX").toString()));
@@ -455,34 +440,6 @@ public class EzsigntemplatepackagesignerResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzsigntemplatepackagesignerResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzsigntemplatepackagesignerResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzsigntemplatepackagesignerResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigntemplatepackagesignerResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzsigntemplatepackagesignerResponse>() {
-           @Override
-           public void write(JsonWriter out, EzsigntemplatepackagesignerResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzsigntemplatepackagesignerResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzsigntemplatepackagesignerResponse given an JSON string

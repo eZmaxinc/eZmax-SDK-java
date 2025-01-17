@@ -8,8 +8,6 @@ Response for DELETE /1/object/discussionmembership/{pkiDiscussionmembershipID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

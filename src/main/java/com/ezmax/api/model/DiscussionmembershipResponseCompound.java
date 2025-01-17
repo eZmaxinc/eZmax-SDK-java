@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.DiscussionmembershipResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,186 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DiscussionmembershipResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D = "pkiDiscussionmembershipID";
-  @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiDiscussionmembershipID;
-
-  public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
-  @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiDiscussionID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUsergroupID;
-
-  public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
-  @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiModulesectionID;
-
-  public static final String SERIALIZED_NAME_S_DISCUSSIONMEMBERSHIP_DESCRIPTION = "sDiscussionmembershipDescription";
-  @SerializedName(SERIALIZED_NAME_S_DISCUSSIONMEMBERSHIP_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sDiscussionmembershipDescription;
-
-  public static final String SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED = "dtDiscussionmembershipJoined";
-  @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED)
-  @javax.annotation.Nonnull
-  private String dtDiscussionmembershipJoined;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class DiscussionmembershipResponseCompound extends DiscussionmembershipResponse {
   public DiscussionmembershipResponseCompound() {
   }
-
-  public DiscussionmembershipResponseCompound pkiDiscussionmembershipID(@javax.annotation.Nonnull Integer pkiDiscussionmembershipID) {
-    this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Discussionmembership
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiDiscussionmembershipID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiDiscussionmembershipID() {
-    return pkiDiscussionmembershipID;
-  }
-
-  public void setPkiDiscussionmembershipID(@javax.annotation.Nonnull Integer pkiDiscussionmembershipID) {
-    this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
-  }
-
-
-  public DiscussionmembershipResponseCompound fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
-    this.fkiDiscussionID = fkiDiscussionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Discussion
-   * minimum: 0
-   * maximum: 16777215
-   * @return fkiDiscussionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiDiscussionID() {
-    return fkiDiscussionID;
-  }
-
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
-    this.fkiDiscussionID = fkiDiscussionID;
-  }
-
-
-  public DiscussionmembershipResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public DiscussionmembershipResponseCompound fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Usergroup
-   * minimum: 0
-   * maximum: 255
-   * @return fkiUsergroupID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUsergroupID() {
-    return fkiUsergroupID;
-  }
-
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-  }
-
-
-  public DiscussionmembershipResponseCompound fkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
-    this.fkiModulesectionID = fkiModulesectionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Modulesection
-   * minimum: 0
-   * @return fkiModulesectionID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiModulesectionID() {
-    return fkiModulesectionID;
-  }
-
-  public void setFkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
-    this.fkiModulesectionID = fkiModulesectionID;
-  }
-
-
-  public DiscussionmembershipResponseCompound sDiscussionmembershipDescription(@javax.annotation.Nonnull String sDiscussionmembershipDescription) {
-    this.sDiscussionmembershipDescription = sDiscussionmembershipDescription;
-    return this;
-  }
-
-  /**
-   * The Description containing the detail of who the Discussionmembership refers to
-   * @return sDiscussionmembershipDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsDiscussionmembershipDescription() {
-    return sDiscussionmembershipDescription;
-  }
-
-  public void setsDiscussionmembershipDescription(@javax.annotation.Nonnull String sDiscussionmembershipDescription) {
-    this.sDiscussionmembershipDescription = sDiscussionmembershipDescription;
-  }
-
-
-  public DiscussionmembershipResponseCompound dtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
-    this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
-    return this;
-  }
-
-  /**
-   * The joined date of the Discussionmembership
-   * @return dtDiscussionmembershipJoined
-   */
-  @javax.annotation.Nonnull
-  public String getDtDiscussionmembershipJoined() {
-    return dtDiscussionmembershipJoined;
-  }
-
-  public void setDtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
-    this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
-  }
-
 
 
   @Override
@@ -238,32 +63,19 @@ public class DiscussionmembershipResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DiscussionmembershipResponseCompound discussionmembershipResponseCompound = (DiscussionmembershipResponseCompound) o;
-    return Objects.equals(this.pkiDiscussionmembershipID, discussionmembershipResponseCompound.pkiDiscussionmembershipID) &&
-        Objects.equals(this.fkiDiscussionID, discussionmembershipResponseCompound.fkiDiscussionID) &&
-        Objects.equals(this.fkiUserID, discussionmembershipResponseCompound.fkiUserID) &&
-        Objects.equals(this.fkiUsergroupID, discussionmembershipResponseCompound.fkiUsergroupID) &&
-        Objects.equals(this.fkiModulesectionID, discussionmembershipResponseCompound.fkiModulesectionID) &&
-        Objects.equals(this.sDiscussionmembershipDescription, discussionmembershipResponseCompound.sDiscussionmembershipDescription) &&
-        Objects.equals(this.dtDiscussionmembershipJoined, discussionmembershipResponseCompound.dtDiscussionmembershipJoined);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiDiscussionmembershipID, fkiDiscussionID, fkiUserID, fkiUsergroupID, fkiModulesectionID, sDiscussionmembershipDescription, dtDiscussionmembershipJoined);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionmembershipResponseCompound {\n");
-    sb.append("    pkiDiscussionmembershipID: ").append(toIndentedString(pkiDiscussionmembershipID)).append("\n");
-    sb.append("    fkiDiscussionID: ").append(toIndentedString(fkiDiscussionID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
-    sb.append("    fkiModulesectionID: ").append(toIndentedString(fkiModulesectionID)).append("\n");
-    sb.append("    sDiscussionmembershipDescription: ").append(toIndentedString(sDiscussionmembershipDescription)).append("\n");
-    sb.append("    dtDiscussionmembershipJoined: ").append(toIndentedString(dtDiscussionmembershipJoined)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -328,13 +140,6 @@ public class DiscussionmembershipResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sDiscussionmembershipDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sDiscussionmembershipDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmembershipDescription").toString()));
-      }
-      if (!jsonObj.get("dtDiscussionmembershipJoined").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtDiscussionmembershipJoined` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionmembershipJoined").toString()));
       }
   }
 

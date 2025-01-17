@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.BrandingResponseV3;
 import com.ezmax.api.model.FieldEBrandingAlignlogo;
 import com.ezmax.api.model.FieldEBrandingLogo;
 import com.ezmax.api.model.MultilingualBrandingDescription;
@@ -51,58 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BrandingResponseCompoundV3 {
-  public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
-  @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiBrandingID;
-
-  public static final String SERIALIZED_NAME_FKI_EMAIL_I_D = "fkiEmailID";
-  @SerializedName(SERIALIZED_NAME_FKI_EMAIL_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEmailID;
-
-  public static final String SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION = "objBrandingDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualBrandingDescription objBrandingDescription;
-
-  public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X = "sBrandingDescriptionX";
-  @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X)
-  @javax.annotation.Nonnull
-  private String sBrandingDescriptionX;
-
-  public static final String SERIALIZED_NAME_S_BRANDING_NAME = "sBrandingName";
-  @SerializedName(SERIALIZED_NAME_S_BRANDING_NAME)
-  @javax.annotation.Nullable
-  private String sBrandingName;
-
-  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
-  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nullable
-  private String sEmailAddress;
-
-  public static final String SERIALIZED_NAME_E_BRANDING_LOGO = "eBrandingLogo";
-  @SerializedName(SERIALIZED_NAME_E_BRANDING_LOGO)
-  @javax.annotation.Nonnull
-  private FieldEBrandingLogo eBrandingLogo;
-
-  public static final String SERIALIZED_NAME_E_BRANDING_ALIGNLOGO = "eBrandingAlignlogo";
-  @SerializedName(SERIALIZED_NAME_E_BRANDING_ALIGNLOGO)
-  @javax.annotation.Nonnull
-  private FieldEBrandingAlignlogo eBrandingAlignlogo;
-
-  public static final String SERIALIZED_NAME_I_BRANDING_COLOR = "iBrandingColor";
-  @SerializedName(SERIALIZED_NAME_I_BRANDING_COLOR)
-  @javax.annotation.Nonnull
-  private Integer iBrandingColor;
-
-  public static final String SERIALIZED_NAME_B_BRANDING_ISACTIVE = "bBrandingIsactive";
-  @SerializedName(SERIALIZED_NAME_B_BRANDING_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bBrandingIsactive;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class BrandingResponseCompoundV3 extends BrandingResponseV3 {
   public static final String SERIALIZED_NAME_S_BRANDING_LOGOURL = "sBrandingLogourl";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_LOGOURL)
   @javax.annotation.Nullable
@@ -120,201 +71,6 @@ public class BrandingResponseCompoundV3 {
 
   public BrandingResponseCompoundV3() {
   }
-
-  public BrandingResponseCompoundV3 pkiBrandingID(@javax.annotation.Nonnull Integer pkiBrandingID) {
-    this.pkiBrandingID = pkiBrandingID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Branding
-   * minimum: 0
-   * @return pkiBrandingID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiBrandingID() {
-    return pkiBrandingID;
-  }
-
-  public void setPkiBrandingID(@javax.annotation.Nonnull Integer pkiBrandingID) {
-    this.pkiBrandingID = pkiBrandingID;
-  }
-
-
-  public BrandingResponseCompoundV3 fkiEmailID(@javax.annotation.Nullable Integer fkiEmailID) {
-    this.fkiEmailID = fkiEmailID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Email
-   * minimum: 1
-   * maximum: 16777215
-   * @return fkiEmailID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEmailID() {
-    return fkiEmailID;
-  }
-
-  public void setFkiEmailID(@javax.annotation.Nullable Integer fkiEmailID) {
-    this.fkiEmailID = fkiEmailID;
-  }
-
-
-  public BrandingResponseCompoundV3 objBrandingDescription(@javax.annotation.Nonnull MultilingualBrandingDescription objBrandingDescription) {
-    this.objBrandingDescription = objBrandingDescription;
-    return this;
-  }
-
-  /**
-   * Get objBrandingDescription
-   * @return objBrandingDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualBrandingDescription getObjBrandingDescription() {
-    return objBrandingDescription;
-  }
-
-  public void setObjBrandingDescription(@javax.annotation.Nonnull MultilingualBrandingDescription objBrandingDescription) {
-    this.objBrandingDescription = objBrandingDescription;
-  }
-
-
-  public BrandingResponseCompoundV3 sBrandingDescriptionX(@javax.annotation.Nonnull String sBrandingDescriptionX) {
-    this.sBrandingDescriptionX = sBrandingDescriptionX;
-    return this;
-  }
-
-  /**
-   * The Description of the Branding in the language of the requester
-   * @return sBrandingDescriptionX
-   */
-  @javax.annotation.Nonnull
-  public String getsBrandingDescriptionX() {
-    return sBrandingDescriptionX;
-  }
-
-  public void setsBrandingDescriptionX(@javax.annotation.Nonnull String sBrandingDescriptionX) {
-    this.sBrandingDescriptionX = sBrandingDescriptionX;
-  }
-
-
-  public BrandingResponseCompoundV3 sBrandingName(@javax.annotation.Nullable String sBrandingName) {
-    this.sBrandingName = sBrandingName;
-    return this;
-  }
-
-  /**
-   * The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
-   * @return sBrandingName
-   */
-  @javax.annotation.Nullable
-  public String getsBrandingName() {
-    return sBrandingName;
-  }
-
-  public void setsBrandingName(@javax.annotation.Nullable String sBrandingName) {
-    this.sBrandingName = sBrandingName;
-  }
-
-
-  public BrandingResponseCompoundV3 sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-    return this;
-  }
-
-  /**
-   * The email address.
-   * @return sEmailAddress
-   */
-  @javax.annotation.Nullable
-  public String getsEmailAddress() {
-    return sEmailAddress;
-  }
-
-  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
-    this.sEmailAddress = sEmailAddress;
-  }
-
-
-  public BrandingResponseCompoundV3 eBrandingLogo(@javax.annotation.Nonnull FieldEBrandingLogo eBrandingLogo) {
-    this.eBrandingLogo = eBrandingLogo;
-    return this;
-  }
-
-  /**
-   * Get eBrandingLogo
-   * @return eBrandingLogo
-   */
-  @javax.annotation.Nonnull
-  public FieldEBrandingLogo geteBrandingLogo() {
-    return eBrandingLogo;
-  }
-
-  public void seteBrandingLogo(@javax.annotation.Nonnull FieldEBrandingLogo eBrandingLogo) {
-    this.eBrandingLogo = eBrandingLogo;
-  }
-
-
-  public BrandingResponseCompoundV3 eBrandingAlignlogo(@javax.annotation.Nonnull FieldEBrandingAlignlogo eBrandingAlignlogo) {
-    this.eBrandingAlignlogo = eBrandingAlignlogo;
-    return this;
-  }
-
-  /**
-   * Get eBrandingAlignlogo
-   * @return eBrandingAlignlogo
-   */
-  @javax.annotation.Nonnull
-  public FieldEBrandingAlignlogo geteBrandingAlignlogo() {
-    return eBrandingAlignlogo;
-  }
-
-  public void seteBrandingAlignlogo(@javax.annotation.Nonnull FieldEBrandingAlignlogo eBrandingAlignlogo) {
-    this.eBrandingAlignlogo = eBrandingAlignlogo;
-  }
-
-
-  public BrandingResponseCompoundV3 iBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
-    this.iBrandingColor = iBrandingColor;
-    return this;
-  }
-
-  /**
-   * The primary color. This is a RGB color converted into integer
-   * minimum: 0
-   * maximum: 16777215
-   * @return iBrandingColor
-   */
-  @javax.annotation.Nonnull
-  public Integer getiBrandingColor() {
-    return iBrandingColor;
-  }
-
-  public void setiBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
-    this.iBrandingColor = iBrandingColor;
-  }
-
-
-  public BrandingResponseCompoundV3 bBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
-    this.bBrandingIsactive = bBrandingIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the Branding is active or not
-   * @return bBrandingIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbBrandingIsactive() {
-    return bBrandingIsactive;
-  }
-
-  public void setbBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
-    this.bBrandingIsactive = bBrandingIsactive;
-  }
-
 
   public BrandingResponseCompoundV3 sBrandingLogourl(@javax.annotation.Nullable String sBrandingLogourl) {
     this.sBrandingLogourl = sBrandingLogourl;
@@ -383,40 +139,22 @@ public class BrandingResponseCompoundV3 {
       return false;
     }
     BrandingResponseCompoundV3 brandingResponseCompoundV3 = (BrandingResponseCompoundV3) o;
-    return Objects.equals(this.pkiBrandingID, brandingResponseCompoundV3.pkiBrandingID) &&
-        Objects.equals(this.fkiEmailID, brandingResponseCompoundV3.fkiEmailID) &&
-        Objects.equals(this.objBrandingDescription, brandingResponseCompoundV3.objBrandingDescription) &&
-        Objects.equals(this.sBrandingDescriptionX, brandingResponseCompoundV3.sBrandingDescriptionX) &&
-        Objects.equals(this.sBrandingName, brandingResponseCompoundV3.sBrandingName) &&
-        Objects.equals(this.sEmailAddress, brandingResponseCompoundV3.sEmailAddress) &&
-        Objects.equals(this.eBrandingLogo, brandingResponseCompoundV3.eBrandingLogo) &&
-        Objects.equals(this.eBrandingAlignlogo, brandingResponseCompoundV3.eBrandingAlignlogo) &&
-        Objects.equals(this.iBrandingColor, brandingResponseCompoundV3.iBrandingColor) &&
-        Objects.equals(this.bBrandingIsactive, brandingResponseCompoundV3.bBrandingIsactive) &&
-        Objects.equals(this.sBrandingLogourl, brandingResponseCompoundV3.sBrandingLogourl) &&
+    return Objects.equals(this.sBrandingLogourl, brandingResponseCompoundV3.sBrandingLogourl) &&
         Objects.equals(this.sBrandingLogoemailurl, brandingResponseCompoundV3.sBrandingLogoemailurl) &&
-        Objects.equals(this.sBrandingLogointerfaceurl, brandingResponseCompoundV3.sBrandingLogointerfaceurl);
+        Objects.equals(this.sBrandingLogointerfaceurl, brandingResponseCompoundV3.sBrandingLogointerfaceurl) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiBrandingID, fkiEmailID, objBrandingDescription, sBrandingDescriptionX, sBrandingName, sEmailAddress, eBrandingLogo, eBrandingAlignlogo, iBrandingColor, bBrandingIsactive, sBrandingLogourl, sBrandingLogoemailurl, sBrandingLogointerfaceurl);
+    return Objects.hash(sBrandingLogourl, sBrandingLogoemailurl, sBrandingLogointerfaceurl, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingResponseCompoundV3 {\n");
-    sb.append("    pkiBrandingID: ").append(toIndentedString(pkiBrandingID)).append("\n");
-    sb.append("    fkiEmailID: ").append(toIndentedString(fkiEmailID)).append("\n");
-    sb.append("    objBrandingDescription: ").append(toIndentedString(objBrandingDescription)).append("\n");
-    sb.append("    sBrandingDescriptionX: ").append(toIndentedString(sBrandingDescriptionX)).append("\n");
-    sb.append("    sBrandingName: ").append(toIndentedString(sBrandingName)).append("\n");
-    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
-    sb.append("    eBrandingLogo: ").append(toIndentedString(eBrandingLogo)).append("\n");
-    sb.append("    eBrandingAlignlogo: ").append(toIndentedString(eBrandingAlignlogo)).append("\n");
-    sb.append("    iBrandingColor: ").append(toIndentedString(iBrandingColor)).append("\n");
-    sb.append("    bBrandingIsactive: ").append(toIndentedString(bBrandingIsactive)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    sBrandingLogourl: ").append(toIndentedString(sBrandingLogourl)).append("\n");
     sb.append("    sBrandingLogoemailurl: ").append(toIndentedString(sBrandingLogoemailurl)).append("\n");
     sb.append("    sBrandingLogointerfaceurl: ").append(toIndentedString(sBrandingLogointerfaceurl)).append("\n");
@@ -495,21 +233,6 @@ public class BrandingResponseCompoundV3 {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objBrandingDescription`
-      MultilingualBrandingDescription.validateJsonElement(jsonObj.get("objBrandingDescription"));
-      if (!jsonObj.get("sBrandingDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sBrandingDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingDescriptionX").toString()));
-      }
-      if ((jsonObj.get("sBrandingName") != null && !jsonObj.get("sBrandingName").isJsonNull()) && !jsonObj.get("sBrandingName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sBrandingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingName").toString()));
-      }
-      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
-      }
-      // validate the required field `eBrandingLogo`
-      FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
-      // validate the required field `eBrandingAlignlogo`
-      FieldEBrandingAlignlogo.validateJsonElement(jsonObj.get("eBrandingAlignlogo"));
       if ((jsonObj.get("sBrandingLogourl") != null && !jsonObj.get("sBrandingLogourl").isJsonNull()) && !jsonObj.get("sBrandingLogourl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBrandingLogourl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogourl").toString()));
       }

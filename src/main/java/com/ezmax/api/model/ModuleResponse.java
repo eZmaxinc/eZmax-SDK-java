@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModuleResponse {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -284,21 +284,6 @@ public class ModuleResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ModuleResponse is not found in the empty JSON string", ModuleResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ModuleResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ModuleResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ModuleResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("eModuleInternalname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eModuleInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eModuleInternalname").toString()));
@@ -308,34 +293,6 @@ public class ModuleResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ModuleResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ModuleResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ModuleResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ModuleResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ModuleResponse>() {
-           @Override
-           public void write(JsonWriter out, ModuleResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ModuleResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of ModuleResponse given an JSON string

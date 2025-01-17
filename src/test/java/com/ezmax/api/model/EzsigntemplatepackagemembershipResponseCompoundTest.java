@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EzsigntemplateResponseCompound;
+import com.ezmax.api.model.EzsigntemplatepackagemembershipResponse;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

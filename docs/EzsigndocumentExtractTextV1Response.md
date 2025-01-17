@@ -8,8 +8,6 @@ Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsigndocumentExtractTextV1ResponseMPayload**](EzsigndocumentExtractTextV1ResponseMPayload.md) |  |  |
 
 

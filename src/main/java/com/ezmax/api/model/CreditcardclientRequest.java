@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CreditcardclientRequest {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
@@ -366,21 +366,6 @@ public class CreditcardclientRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CreditcardclientRequest is not found in the empty JSON string", CreditcardclientRequest.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!CreditcardclientRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreditcardclientRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CreditcardclientRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("fksCreditcardtokenID") != null && !jsonObj.get("fksCreditcardtokenID").isJsonNull()) && !jsonObj.get("fksCreditcardtokenID").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `fksCreditcardtokenID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fksCreditcardtokenID").toString()));
@@ -395,34 +380,6 @@ public class CreditcardclientRequest {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreditcardclientRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreditcardclientRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreditcardclientRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreditcardclientRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreditcardclientRequest>() {
-           @Override
-           public void write(JsonWriter out, CreditcardclientRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreditcardclientRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of CreditcardclientRequest given an JSON string

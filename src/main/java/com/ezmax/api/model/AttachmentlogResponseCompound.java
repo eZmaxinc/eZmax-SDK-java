@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.AttachmentlogResponse;
 import com.ezmax.api.model.FieldEAttachmentlogType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,132 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Attachmentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class AttachmentlogResponseCompound {
-  public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
-  @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiAttachmentID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME = "dtAttachmentlogDatetime";
-  @SerializedName(SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME)
-  @javax.annotation.Nonnull
-  private String dtAttachmentlogDatetime;
-
-  public static final String SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE = "eAttachmentlogType";
-  @SerializedName(SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEAttachmentlogType eAttachmentlogType;
-
-  public static final String SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL = "sAttachmentlogDetail";
-  @SerializedName(SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL)
-  @javax.annotation.Nullable
-  private String sAttachmentlogDetail;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class AttachmentlogResponseCompound extends AttachmentlogResponse {
   public AttachmentlogResponseCompound() {
   }
-
-  public AttachmentlogResponseCompound fkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
-    this.fkiAttachmentID = fkiAttachmentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Attachment.
-   * minimum: 0
-   * @return fkiAttachmentID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiAttachmentID() {
-    return fkiAttachmentID;
-  }
-
-  public void setFkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
-    this.fkiAttachmentID = fkiAttachmentID;
-  }
-
-
-  public AttachmentlogResponseCompound fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public AttachmentlogResponseCompound dtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
-    this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
-    return this;
-  }
-
-  /**
-   * The created date
-   * @return dtAttachmentlogDatetime
-   */
-  @javax.annotation.Nonnull
-  public String getDtAttachmentlogDatetime() {
-    return dtAttachmentlogDatetime;
-  }
-
-  public void setDtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
-    this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
-  }
-
-
-  public AttachmentlogResponseCompound eAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
-    this.eAttachmentlogType = eAttachmentlogType;
-    return this;
-  }
-
-  /**
-   * Get eAttachmentlogType
-   * @return eAttachmentlogType
-   */
-  @javax.annotation.Nonnull
-  public FieldEAttachmentlogType geteAttachmentlogType() {
-    return eAttachmentlogType;
-  }
-
-  public void seteAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
-    this.eAttachmentlogType = eAttachmentlogType;
-  }
-
-
-  public AttachmentlogResponseCompound sAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
-    this.sAttachmentlogDetail = sAttachmentlogDetail;
-    return this;
-  }
-
-  /**
-   * The additionnal detail
-   * @return sAttachmentlogDetail
-   */
-  @javax.annotation.Nullable
-  public String getsAttachmentlogDetail() {
-    return sAttachmentlogDetail;
-  }
-
-  public void setsAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
-    this.sAttachmentlogDetail = sAttachmentlogDetail;
-  }
-
 
 
   @Override
@@ -185,28 +64,19 @@ public class AttachmentlogResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AttachmentlogResponseCompound attachmentlogResponseCompound = (AttachmentlogResponseCompound) o;
-    return Objects.equals(this.fkiAttachmentID, attachmentlogResponseCompound.fkiAttachmentID) &&
-        Objects.equals(this.fkiUserID, attachmentlogResponseCompound.fkiUserID) &&
-        Objects.equals(this.dtAttachmentlogDatetime, attachmentlogResponseCompound.dtAttachmentlogDatetime) &&
-        Objects.equals(this.eAttachmentlogType, attachmentlogResponseCompound.eAttachmentlogType) &&
-        Objects.equals(this.sAttachmentlogDetail, attachmentlogResponseCompound.sAttachmentlogDetail);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAttachmentID, fkiUserID, dtAttachmentlogDatetime, eAttachmentlogType, sAttachmentlogDetail);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentlogResponseCompound {\n");
-    sb.append("    fkiAttachmentID: ").append(toIndentedString(fkiAttachmentID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    dtAttachmentlogDatetime: ").append(toIndentedString(dtAttachmentlogDatetime)).append("\n");
-    sb.append("    eAttachmentlogType: ").append(toIndentedString(eAttachmentlogType)).append("\n");
-    sb.append("    sAttachmentlogDetail: ").append(toIndentedString(sAttachmentlogDetail)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -269,15 +139,6 @@ public class AttachmentlogResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("dtAttachmentlogDatetime").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtAttachmentlogDatetime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAttachmentlogDatetime").toString()));
-      }
-      // validate the required field `eAttachmentlogType`
-      FieldEAttachmentlogType.validateJsonElement(jsonObj.get("eAttachmentlogType"));
-      if ((jsonObj.get("sAttachmentlogDetail") != null && !jsonObj.get("sAttachmentlogDetail").isJsonNull()) && !jsonObj.get("sAttachmentlogDetail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sAttachmentlogDetail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentlogDetail").toString()));
       }
   }
 

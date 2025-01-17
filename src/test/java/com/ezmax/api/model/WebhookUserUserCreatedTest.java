@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.CommonWebhook;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.UserResponse;
 import com.google.gson.TypeAdapter;

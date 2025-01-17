@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BillingentityinternalRequest {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
@@ -170,54 +170,11 @@ public class BillingentityinternalRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in BillingentityinternalRequest is not found in the empty JSON string", BillingentityinternalRequest.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!BillingentityinternalRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityinternalRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : BillingentityinternalRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objBillingentityinternalDescription`
       MultilingualBillingentityinternalDescription.validateJsonElement(jsonObj.get("objBillingentityinternalDescription"));
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!BillingentityinternalRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'BillingentityinternalRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<BillingentityinternalRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(BillingentityinternalRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<BillingentityinternalRequest>() {
-           @Override
-           public void write(JsonWriter out, BillingentityinternalRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public BillingentityinternalRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of BillingentityinternalRequest given an JSON string

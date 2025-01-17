@@ -8,8 +8,6 @@ Response for POST /1/object/usergroup
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**UsergroupCreateObjectV1ResponseMPayload**](UsergroupCreateObjectV1ResponseMPayload.md) |  |  |
 
 

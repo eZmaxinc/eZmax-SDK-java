@@ -17,6 +17,7 @@ import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ComputedEEzsignfolderAccess;
 import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
+import com.ezmax.api.model.EzsignfolderResponseV3;
 import com.ezmax.api.model.FieldEEzsignfolderCompletion;
 import com.ezmax.api.model.FieldEEzsignfolderDocumentdependency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;

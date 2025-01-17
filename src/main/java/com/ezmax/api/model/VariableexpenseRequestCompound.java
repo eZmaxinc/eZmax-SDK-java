@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.FieldEVariableexpenseTaxable;
 import com.ezmax.api.model.MultilingualVariableexpenseDescription;
+import com.ezmax.api.model.VariableexpenseRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,132 +51,10 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class VariableexpenseRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
-  @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiVariableexpenseID;
-
-  public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE = "sVariableexpenseCode";
-  @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE)
-  @javax.annotation.Nonnull
-  private String sVariableexpenseCode;
-
-  public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION = "objVariableexpenseDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualVariableexpenseDescription objVariableexpenseDescription;
-
-  public static final String SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE = "eVariableexpenseTaxable";
-  @SerializedName(SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE)
-  @javax.annotation.Nonnull
-  private FieldEVariableexpenseTaxable eVariableexpenseTaxable;
-
-  public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
-  @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bVariableexpenseIsactive;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class VariableexpenseRequestCompound extends VariableexpenseRequest {
   public VariableexpenseRequestCompound() {
   }
-
-  public VariableexpenseRequestCompound pkiVariableexpenseID(@javax.annotation.Nullable Integer pkiVariableexpenseID) {
-    this.pkiVariableexpenseID = pkiVariableexpenseID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Variableexpense
-   * minimum: 1
-   * maximum: 255
-   * @return pkiVariableexpenseID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiVariableexpenseID() {
-    return pkiVariableexpenseID;
-  }
-
-  public void setPkiVariableexpenseID(@javax.annotation.Nullable Integer pkiVariableexpenseID) {
-    this.pkiVariableexpenseID = pkiVariableexpenseID;
-  }
-
-
-  public VariableexpenseRequestCompound sVariableexpenseCode(@javax.annotation.Nonnull String sVariableexpenseCode) {
-    this.sVariableexpenseCode = sVariableexpenseCode;
-    return this;
-  }
-
-  /**
-   * The code of the Variableexpense
-   * @return sVariableexpenseCode
-   */
-  @javax.annotation.Nonnull
-  public String getsVariableexpenseCode() {
-    return sVariableexpenseCode;
-  }
-
-  public void setsVariableexpenseCode(@javax.annotation.Nonnull String sVariableexpenseCode) {
-    this.sVariableexpenseCode = sVariableexpenseCode;
-  }
-
-
-  public VariableexpenseRequestCompound objVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
-    this.objVariableexpenseDescription = objVariableexpenseDescription;
-    return this;
-  }
-
-  /**
-   * Get objVariableexpenseDescription
-   * @return objVariableexpenseDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualVariableexpenseDescription getObjVariableexpenseDescription() {
-    return objVariableexpenseDescription;
-  }
-
-  public void setObjVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
-    this.objVariableexpenseDescription = objVariableexpenseDescription;
-  }
-
-
-  public VariableexpenseRequestCompound eVariableexpenseTaxable(@javax.annotation.Nonnull FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
-    this.eVariableexpenseTaxable = eVariableexpenseTaxable;
-    return this;
-  }
-
-  /**
-   * Get eVariableexpenseTaxable
-   * @return eVariableexpenseTaxable
-   */
-  @javax.annotation.Nonnull
-  public FieldEVariableexpenseTaxable geteVariableexpenseTaxable() {
-    return eVariableexpenseTaxable;
-  }
-
-  public void seteVariableexpenseTaxable(@javax.annotation.Nonnull FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
-    this.eVariableexpenseTaxable = eVariableexpenseTaxable;
-  }
-
-
-  public VariableexpenseRequestCompound bVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
-    this.bVariableexpenseIsactive = bVariableexpenseIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the variableexpense is active or not
-   * @return bVariableexpenseIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbVariableexpenseIsactive() {
-    return bVariableexpenseIsactive;
-  }
-
-  public void setbVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
-    this.bVariableexpenseIsactive = bVariableexpenseIsactive;
-  }
-
 
 
   @Override
@@ -186,28 +65,19 @@ public class VariableexpenseRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VariableexpenseRequestCompound variableexpenseRequestCompound = (VariableexpenseRequestCompound) o;
-    return Objects.equals(this.pkiVariableexpenseID, variableexpenseRequestCompound.pkiVariableexpenseID) &&
-        Objects.equals(this.sVariableexpenseCode, variableexpenseRequestCompound.sVariableexpenseCode) &&
-        Objects.equals(this.objVariableexpenseDescription, variableexpenseRequestCompound.objVariableexpenseDescription) &&
-        Objects.equals(this.eVariableexpenseTaxable, variableexpenseRequestCompound.eVariableexpenseTaxable) &&
-        Objects.equals(this.bVariableexpenseIsactive, variableexpenseRequestCompound.bVariableexpenseIsactive);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiVariableexpenseID, sVariableexpenseCode, objVariableexpenseDescription, eVariableexpenseTaxable, bVariableexpenseIsactive);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VariableexpenseRequestCompound {\n");
-    sb.append("    pkiVariableexpenseID: ").append(toIndentedString(pkiVariableexpenseID)).append("\n");
-    sb.append("    sVariableexpenseCode: ").append(toIndentedString(sVariableexpenseCode)).append("\n");
-    sb.append("    objVariableexpenseDescription: ").append(toIndentedString(objVariableexpenseDescription)).append("\n");
-    sb.append("    eVariableexpenseTaxable: ").append(toIndentedString(eVariableexpenseTaxable)).append("\n");
-    sb.append("    bVariableexpenseIsactive: ").append(toIndentedString(bVariableexpenseIsactive)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -271,14 +141,6 @@ public class VariableexpenseRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sVariableexpenseCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sVariableexpenseCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sVariableexpenseCode").toString()));
-      }
-      // validate the required field `objVariableexpenseDescription`
-      MultilingualVariableexpenseDescription.validateJsonElement(jsonObj.get("objVariableexpenseDescription"));
-      // validate the required field `eVariableexpenseTaxable`
-      FieldEVariableexpenseTaxable.validateJsonElement(jsonObj.get("eVariableexpenseTaxable"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

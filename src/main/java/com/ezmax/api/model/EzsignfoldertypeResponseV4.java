@@ -61,7 +61,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldertypeResponseV4 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -1939,21 +1939,6 @@ public class EzsignfoldertypeResponseV4 {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldertypeResponseV4 is not found in the empty JSON string", EzsignfoldertypeResponseV4.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzsignfoldertypeResponseV4.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldertypeResponseV4` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsignfoldertypeResponseV4.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzsignfoldertypeName`
       MultilingualEzsignfoldertypeName.validateJsonElement(jsonObj.get("objEzsignfoldertypeName"));
@@ -2054,34 +2039,6 @@ public class EzsignfoldertypeResponseV4 {
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzsignfoldertypeResponseV4.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzsignfoldertypeResponseV4' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzsignfoldertypeResponseV4> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfoldertypeResponseV4.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzsignfoldertypeResponseV4>() {
-           @Override
-           public void write(JsonWriter out, EzsignfoldertypeResponseV4 value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzsignfoldertypeResponseV4 read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzsignfoldertypeResponseV4 given an JSON string

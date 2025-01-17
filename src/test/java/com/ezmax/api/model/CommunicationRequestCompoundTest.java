@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommunicationRequest;
 import com.ezmax.api.model.CommunicationexternalrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationreferenceRequest;

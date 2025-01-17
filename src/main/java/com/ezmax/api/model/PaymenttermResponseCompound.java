@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEPaymenttermType;
 import com.ezmax.api.model.MultilingualPaymenttermDescription;
+import com.ezmax.api.model.PaymenttermResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,180 +52,10 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class PaymenttermResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
-  @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiPaymenttermID;
-
-  public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
-  @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
-  @javax.annotation.Nonnull
-  private String sPaymenttermCode;
-
-  public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
-  @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEPaymenttermType ePaymenttermType;
-
-  public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
-  @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
-  @javax.annotation.Nonnull
-  private Integer iPaymenttermDay;
-
-  public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualPaymenttermDescription objPaymenttermDescription;
-
-  public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
-  @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bPaymenttermIsactive;
-
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
-  private CommonAudit objAudit;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class PaymenttermResponseCompound extends PaymenttermResponse {
   public PaymenttermResponseCompound() {
   }
-
-  public PaymenttermResponseCompound pkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
-    this.pkiPaymenttermID = pkiPaymenttermID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Paymentterm
-   * @return pkiPaymenttermID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiPaymenttermID() {
-    return pkiPaymenttermID;
-  }
-
-  public void setPkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
-    this.pkiPaymenttermID = pkiPaymenttermID;
-  }
-
-
-  public PaymenttermResponseCompound sPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
-    this.sPaymenttermCode = sPaymenttermCode;
-    return this;
-  }
-
-  /**
-   * The code of the Paymentterm
-   * @return sPaymenttermCode
-   */
-  @javax.annotation.Nonnull
-  public String getsPaymenttermCode() {
-    return sPaymenttermCode;
-  }
-
-  public void setsPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
-    this.sPaymenttermCode = sPaymenttermCode;
-  }
-
-
-  public PaymenttermResponseCompound ePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
-    this.ePaymenttermType = ePaymenttermType;
-    return this;
-  }
-
-  /**
-   * Get ePaymenttermType
-   * @return ePaymenttermType
-   */
-  @javax.annotation.Nonnull
-  public FieldEPaymenttermType getePaymenttermType() {
-    return ePaymenttermType;
-  }
-
-  public void setePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
-    this.ePaymenttermType = ePaymenttermType;
-  }
-
-
-  public PaymenttermResponseCompound iPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
-    this.iPaymenttermDay = iPaymenttermDay;
-    return this;
-  }
-
-  /**
-   * The day of the Paymentterm
-   * minimum: 0
-   * maximum: 255
-   * @return iPaymenttermDay
-   */
-  @javax.annotation.Nonnull
-  public Integer getiPaymenttermDay() {
-    return iPaymenttermDay;
-  }
-
-  public void setiPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
-    this.iPaymenttermDay = iPaymenttermDay;
-  }
-
-
-  public PaymenttermResponseCompound objPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
-    this.objPaymenttermDescription = objPaymenttermDescription;
-    return this;
-  }
-
-  /**
-   * Get objPaymenttermDescription
-   * @return objPaymenttermDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualPaymenttermDescription getObjPaymenttermDescription() {
-    return objPaymenttermDescription;
-  }
-
-  public void setObjPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
-    this.objPaymenttermDescription = objPaymenttermDescription;
-  }
-
-
-  public PaymenttermResponseCompound bPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
-    this.bPaymenttermIsactive = bPaymenttermIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the Paymentterm is active or not
-   * @return bPaymenttermIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbPaymenttermIsactive() {
-    return bPaymenttermIsactive;
-  }
-
-  public void setbPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
-    this.bPaymenttermIsactive = bPaymenttermIsactive;
-  }
-
-
-  public PaymenttermResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-    return this;
-  }
-
-  /**
-   * Get objAudit
-   * @return objAudit
-   */
-  @javax.annotation.Nonnull
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-  }
-
 
 
   @Override
@@ -235,32 +66,19 @@ public class PaymenttermResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PaymenttermResponseCompound paymenttermResponseCompound = (PaymenttermResponseCompound) o;
-    return Objects.equals(this.pkiPaymenttermID, paymenttermResponseCompound.pkiPaymenttermID) &&
-        Objects.equals(this.sPaymenttermCode, paymenttermResponseCompound.sPaymenttermCode) &&
-        Objects.equals(this.ePaymenttermType, paymenttermResponseCompound.ePaymenttermType) &&
-        Objects.equals(this.iPaymenttermDay, paymenttermResponseCompound.iPaymenttermDay) &&
-        Objects.equals(this.objPaymenttermDescription, paymenttermResponseCompound.objPaymenttermDescription) &&
-        Objects.equals(this.bPaymenttermIsactive, paymenttermResponseCompound.bPaymenttermIsactive) &&
-        Objects.equals(this.objAudit, paymenttermResponseCompound.objAudit);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiPaymenttermID, sPaymenttermCode, ePaymenttermType, iPaymenttermDay, objPaymenttermDescription, bPaymenttermIsactive, objAudit);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymenttermResponseCompound {\n");
-    sb.append("    pkiPaymenttermID: ").append(toIndentedString(pkiPaymenttermID)).append("\n");
-    sb.append("    sPaymenttermCode: ").append(toIndentedString(sPaymenttermCode)).append("\n");
-    sb.append("    ePaymenttermType: ").append(toIndentedString(ePaymenttermType)).append("\n");
-    sb.append("    iPaymenttermDay: ").append(toIndentedString(iPaymenttermDay)).append("\n");
-    sb.append("    objPaymenttermDescription: ").append(toIndentedString(objPaymenttermDescription)).append("\n");
-    sb.append("    bPaymenttermIsactive: ").append(toIndentedString(bPaymenttermIsactive)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -329,16 +147,6 @@ public class PaymenttermResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
-      }
-      // validate the required field `ePaymenttermType`
-      FieldEPaymenttermType.validateJsonElement(jsonObj.get("ePaymenttermType"));
-      // validate the required field `objPaymenttermDescription`
-      MultilingualPaymenttermDescription.validateJsonElement(jsonObj.get("objPaymenttermDescription"));
-      // validate the required field `objAudit`
-      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

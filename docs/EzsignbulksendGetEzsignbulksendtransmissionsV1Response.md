@@ -8,8 +8,6 @@ Response for GET /1/object/ezsignbulksend/{pkiEzsignbulksend}/getEzsignbulksendt
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload**](EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload.md) |  |  |
 
 

@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic List Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
@@ -169,52 +169,9 @@ public class CommonGetListV1ResponseMPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonGetListV1ResponseMPayload is not found in the empty JSON string", CommonGetListV1ResponseMPayload.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!CommonGetListV1ResponseMPayload.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonGetListV1ResponseMPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CommonGetListV1ResponseMPayload.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CommonGetListV1ResponseMPayload.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CommonGetListV1ResponseMPayload' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CommonGetListV1ResponseMPayload> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CommonGetListV1ResponseMPayload.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CommonGetListV1ResponseMPayload>() {
-           @Override
-           public void write(JsonWriter out, CommonGetListV1ResponseMPayload value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CommonGetListV1ResponseMPayload read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of CommonGetListV1ResponseMPayload given an JSON string

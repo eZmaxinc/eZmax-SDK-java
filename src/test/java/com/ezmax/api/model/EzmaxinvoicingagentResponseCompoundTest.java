@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.EzmaxinvoicingagentResponse;
 import com.ezmax.api.model.FieldEEzmaxinvoicingagentVariationezmax;
 import com.ezmax.api.model.FieldEEzmaxinvoicingagentVariationezsign;
 import com.google.gson.TypeAdapter;

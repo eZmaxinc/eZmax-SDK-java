@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EzmaxinvoicingsummaryinternalResponse;
 import com.ezmax.api.model.EzmaxinvoicingsummaryinternaldetailResponseCompound;
 import com.ezmax.api.model.MultilingualEzmaxinvoicingsummaryinternalDescription;
 import com.google.gson.TypeAdapter;

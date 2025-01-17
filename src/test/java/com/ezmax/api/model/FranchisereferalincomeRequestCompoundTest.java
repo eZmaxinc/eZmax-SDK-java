@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.AddressRequest;
 import com.ezmax.api.model.ContactRequestCompound;
+import com.ezmax.api.model.FranchisereferalincomeRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

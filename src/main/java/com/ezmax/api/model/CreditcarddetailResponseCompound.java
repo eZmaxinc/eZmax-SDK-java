@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CreditcarddetailResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,212 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcarddetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CreditcarddetailResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_CREDITCARDDETAIL_I_D = "pkiCreditcarddetailID";
-  @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDDETAIL_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiCreditcarddetailID;
-
-  public static final String SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D = "fkiCreditcardtypeID";
-  @SerializedName(SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiCreditcardtypeID;
-
-  public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS = "iCreditcarddetailLastdigits";
-  @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS)
-  @javax.annotation.Nonnull
-  private Integer iCreditcarddetailLastdigits;
-
-  public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH = "iCreditcarddetailExpirationmonth";
-  @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH)
-  @javax.annotation.Nonnull
-  private Integer iCreditcarddetailExpirationmonth;
-
-  public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR = "iCreditcarddetailExpirationyear";
-  @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR)
-  @javax.annotation.Nonnull
-  private Integer iCreditcarddetailExpirationyear;
-
-  public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_CIVIC = "sCreditcarddetailCivic";
-  @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_CIVIC)
-  @javax.annotation.Nonnull
-  private String sCreditcarddetailCivic;
-
-  public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_STREET = "sCreditcarddetailStreet";
-  @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_STREET)
-  @javax.annotation.Nonnull
-  private String sCreditcarddetailStreet;
-
-  public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_ZIP = "sCreditcarddetailZip";
-  @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_ZIP)
-  @javax.annotation.Nonnull
-  private String sCreditcarddetailZip;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CreditcarddetailResponseCompound extends CreditcarddetailResponse {
   public CreditcarddetailResponseCompound() {
   }
-
-  public CreditcarddetailResponseCompound pkiCreditcarddetailID(@javax.annotation.Nonnull Integer pkiCreditcarddetailID) {
-    this.pkiCreditcarddetailID = pkiCreditcarddetailID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Creditcarddetail
-   * minimum: 0
-   * maximum: 65535
-   * @return pkiCreditcarddetailID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiCreditcarddetailID() {
-    return pkiCreditcarddetailID;
-  }
-
-  public void setPkiCreditcarddetailID(@javax.annotation.Nonnull Integer pkiCreditcarddetailID) {
-    this.pkiCreditcarddetailID = pkiCreditcarddetailID;
-  }
-
-
-  public CreditcarddetailResponseCompound fkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
-    this.fkiCreditcardtypeID = fkiCreditcardtypeID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Creditcardtype
-   * minimum: 0
-   * maximum: 255
-   * @return fkiCreditcardtypeID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiCreditcardtypeID() {
-    return fkiCreditcardtypeID;
-  }
-
-  public void setFkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
-    this.fkiCreditcardtypeID = fkiCreditcardtypeID;
-  }
-
-
-  public CreditcarddetailResponseCompound iCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
-    this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
-    return this;
-  }
-
-  /**
-   * The last digits of the Creditcarddetail
-   * minimum: 0
-   * maximum: 9999
-   * @return iCreditcarddetailLastdigits
-   */
-  @javax.annotation.Nonnull
-  public Integer getiCreditcarddetailLastdigits() {
-    return iCreditcarddetailLastdigits;
-  }
-
-  public void setiCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
-    this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
-  }
-
-
-  public CreditcarddetailResponseCompound iCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
-    this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
-    return this;
-  }
-
-  /**
-   * The expirationmonth of the Creditcarddetail
-   * minimum: 0
-   * maximum: 12
-   * @return iCreditcarddetailExpirationmonth
-   */
-  @javax.annotation.Nonnull
-  public Integer getiCreditcarddetailExpirationmonth() {
-    return iCreditcarddetailExpirationmonth;
-  }
-
-  public void setiCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
-    this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
-  }
-
-
-  public CreditcarddetailResponseCompound iCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
-    this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
-    return this;
-  }
-
-  /**
-   * The expirationyear of the Creditcarddetail
-   * minimum: 0
-   * maximum: 2200
-   * @return iCreditcarddetailExpirationyear
-   */
-  @javax.annotation.Nonnull
-  public Integer getiCreditcarddetailExpirationyear() {
-    return iCreditcarddetailExpirationyear;
-  }
-
-  public void setiCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
-    this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
-  }
-
-
-  public CreditcarddetailResponseCompound sCreditcarddetailCivic(@javax.annotation.Nonnull String sCreditcarddetailCivic) {
-    this.sCreditcarddetailCivic = sCreditcarddetailCivic;
-    return this;
-  }
-
-  /**
-   * The civic of the Creditcarddetail
-   * @return sCreditcarddetailCivic
-   */
-  @javax.annotation.Nonnull
-  public String getsCreditcarddetailCivic() {
-    return sCreditcarddetailCivic;
-  }
-
-  public void setsCreditcarddetailCivic(@javax.annotation.Nonnull String sCreditcarddetailCivic) {
-    this.sCreditcarddetailCivic = sCreditcarddetailCivic;
-  }
-
-
-  public CreditcarddetailResponseCompound sCreditcarddetailStreet(@javax.annotation.Nonnull String sCreditcarddetailStreet) {
-    this.sCreditcarddetailStreet = sCreditcarddetailStreet;
-    return this;
-  }
-
-  /**
-   * The street of the Creditcarddetail
-   * @return sCreditcarddetailStreet
-   */
-  @javax.annotation.Nonnull
-  public String getsCreditcarddetailStreet() {
-    return sCreditcarddetailStreet;
-  }
-
-  public void setsCreditcarddetailStreet(@javax.annotation.Nonnull String sCreditcarddetailStreet) {
-    this.sCreditcarddetailStreet = sCreditcarddetailStreet;
-  }
-
-
-  public CreditcarddetailResponseCompound sCreditcarddetailZip(@javax.annotation.Nonnull String sCreditcarddetailZip) {
-    this.sCreditcarddetailZip = sCreditcarddetailZip;
-    return this;
-  }
-
-  /**
-   * The zip of the Creditcarddetail
-   * @return sCreditcarddetailZip
-   */
-  @javax.annotation.Nonnull
-  public String getsCreditcarddetailZip() {
-    return sCreditcarddetailZip;
-  }
-
-  public void setsCreditcarddetailZip(@javax.annotation.Nonnull String sCreditcarddetailZip) {
-    this.sCreditcarddetailZip = sCreditcarddetailZip;
-  }
-
 
 
   @Override
@@ -264,34 +63,19 @@ public class CreditcarddetailResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CreditcarddetailResponseCompound creditcarddetailResponseCompound = (CreditcarddetailResponseCompound) o;
-    return Objects.equals(this.pkiCreditcarddetailID, creditcarddetailResponseCompound.pkiCreditcarddetailID) &&
-        Objects.equals(this.fkiCreditcardtypeID, creditcarddetailResponseCompound.fkiCreditcardtypeID) &&
-        Objects.equals(this.iCreditcarddetailLastdigits, creditcarddetailResponseCompound.iCreditcarddetailLastdigits) &&
-        Objects.equals(this.iCreditcarddetailExpirationmonth, creditcarddetailResponseCompound.iCreditcarddetailExpirationmonth) &&
-        Objects.equals(this.iCreditcarddetailExpirationyear, creditcarddetailResponseCompound.iCreditcarddetailExpirationyear) &&
-        Objects.equals(this.sCreditcarddetailCivic, creditcarddetailResponseCompound.sCreditcarddetailCivic) &&
-        Objects.equals(this.sCreditcarddetailStreet, creditcarddetailResponseCompound.sCreditcarddetailStreet) &&
-        Objects.equals(this.sCreditcarddetailZip, creditcarddetailResponseCompound.sCreditcarddetailZip);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCreditcarddetailID, fkiCreditcardtypeID, iCreditcarddetailLastdigits, iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear, sCreditcarddetailCivic, sCreditcarddetailStreet, sCreditcarddetailZip);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcarddetailResponseCompound {\n");
-    sb.append("    pkiCreditcarddetailID: ").append(toIndentedString(pkiCreditcarddetailID)).append("\n");
-    sb.append("    fkiCreditcardtypeID: ").append(toIndentedString(fkiCreditcardtypeID)).append("\n");
-    sb.append("    iCreditcarddetailLastdigits: ").append(toIndentedString(iCreditcarddetailLastdigits)).append("\n");
-    sb.append("    iCreditcarddetailExpirationmonth: ").append(toIndentedString(iCreditcarddetailExpirationmonth)).append("\n");
-    sb.append("    iCreditcarddetailExpirationyear: ").append(toIndentedString(iCreditcarddetailExpirationyear)).append("\n");
-    sb.append("    sCreditcarddetailCivic: ").append(toIndentedString(sCreditcarddetailCivic)).append("\n");
-    sb.append("    sCreditcarddetailStreet: ").append(toIndentedString(sCreditcarddetailStreet)).append("\n");
-    sb.append("    sCreditcarddetailZip: ").append(toIndentedString(sCreditcarddetailZip)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -361,16 +145,6 @@ public class CreditcarddetailResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sCreditcarddetailCivic").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailCivic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailCivic").toString()));
-      }
-      if (!jsonObj.get("sCreditcarddetailStreet").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailStreet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailStreet").toString()));
-      }
-      if (!jsonObj.get("sCreditcarddetailZip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailZip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailZip").toString()));
       }
   }
 

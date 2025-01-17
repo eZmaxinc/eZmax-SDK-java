@@ -8,8 +8,6 @@ Response for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignerm
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignbulksendsignermappingGetObjectV2ResponseMPayload**](EzsignbulksendsignermappingGetObjectV2ResponseMPayload.md) |  |  |
 
 

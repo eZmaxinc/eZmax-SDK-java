@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CustomDropdownElementRequest;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsigntemplateformfieldRequestCompound;
+import com.ezmax.api.model.EzsigntemplateformfieldgroupRequest;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupsignerRequest;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupTooltipposition;

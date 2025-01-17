@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.SignatureResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,109 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class SignatureResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
-  @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiSignatureID;
-
-  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
-  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiFontID;
-
-  public static final String SERIALIZED_NAME_S_SIGNATURE_URL = "sSignatureUrl";
-  @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URL)
-  @javax.annotation.Nullable
-  private String sSignatureUrl;
-
-  public static final String SERIALIZED_NAME_S_SIGNATURE_URLINITIALS = "sSignatureUrlinitials";
-  @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URLINITIALS)
-  @javax.annotation.Nullable
-  private String sSignatureUrlinitials;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class SignatureResponseCompound extends SignatureResponse {
   public SignatureResponseCompound() {
   }
-
-  public SignatureResponseCompound pkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
-    this.pkiSignatureID = pkiSignatureID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Signature
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiSignatureID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiSignatureID() {
-    return pkiSignatureID;
-  }
-
-  public void setPkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
-    this.pkiSignatureID = pkiSignatureID;
-  }
-
-
-  public SignatureResponseCompound fkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
-    this.fkiFontID = fkiFontID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Font
-   * minimum: 0
-   * @return fkiFontID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiFontID() {
-    return fkiFontID;
-  }
-
-  public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
-    this.fkiFontID = fkiFontID;
-  }
-
-
-  public SignatureResponseCompound sSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
-    this.sSignatureUrl = sSignatureUrl;
-    return this;
-  }
-
-  /**
-   * The URL of the SVG file for the Signature
-   * @return sSignatureUrl
-   */
-  @javax.annotation.Nullable
-  public String getsSignatureUrl() {
-    return sSignatureUrl;
-  }
-
-  public void setsSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
-    this.sSignatureUrl = sSignatureUrl;
-  }
-
-
-  public SignatureResponseCompound sSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
-    this.sSignatureUrlinitials = sSignatureUrlinitials;
-    return this;
-  }
-
-  /**
-   * The URL of the SVG file for the Initials
-   * @return sSignatureUrlinitials
-   */
-  @javax.annotation.Nullable
-  public String getsSignatureUrlinitials() {
-    return sSignatureUrlinitials;
-  }
-
-  public void setsSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
-    this.sSignatureUrlinitials = sSignatureUrlinitials;
-  }
-
 
 
   @Override
@@ -161,26 +63,19 @@ public class SignatureResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignatureResponseCompound signatureResponseCompound = (SignatureResponseCompound) o;
-    return Objects.equals(this.pkiSignatureID, signatureResponseCompound.pkiSignatureID) &&
-        Objects.equals(this.fkiFontID, signatureResponseCompound.fkiFontID) &&
-        Objects.equals(this.sSignatureUrl, signatureResponseCompound.sSignatureUrl) &&
-        Objects.equals(this.sSignatureUrlinitials, signatureResponseCompound.sSignatureUrlinitials);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSignatureID, fkiFontID, sSignatureUrl, sSignatureUrlinitials);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureResponseCompound {\n");
-    sb.append("    pkiSignatureID: ").append(toIndentedString(pkiSignatureID)).append("\n");
-    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
-    sb.append("    sSignatureUrl: ").append(toIndentedString(sSignatureUrl)).append("\n");
-    sb.append("    sSignatureUrlinitials: ").append(toIndentedString(sSignatureUrlinitials)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -239,13 +134,6 @@ public class SignatureResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("sSignatureUrl") != null && !jsonObj.get("sSignatureUrl").isJsonNull()) && !jsonObj.get("sSignatureUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sSignatureUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSignatureUrl").toString()));
-      }
-      if ((jsonObj.get("sSignatureUrlinitials") != null && !jsonObj.get("sSignatureUrlinitials").isJsonNull()) && !jsonObj.get("sSignatureUrlinitials").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sSignatureUrlinitials` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSignatureUrlinitials").toString()));
       }
   }
 

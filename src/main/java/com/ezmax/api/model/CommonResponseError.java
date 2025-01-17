@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseError {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -207,21 +207,6 @@ public class CommonResponseError {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseError is not found in the empty JSON string", CommonResponseError.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!CommonResponseError.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseError` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CommonResponseError.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
@@ -234,34 +219,6 @@ public class CommonResponseError {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CommonResponseError.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CommonResponseError' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CommonResponseError> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CommonResponseError.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CommonResponseError>() {
-           @Override
-           public void write(JsonWriter out, CommonResponseError value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CommonResponseError read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of CommonResponseError given an JSON string

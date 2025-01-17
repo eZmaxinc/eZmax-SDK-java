@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
+import com.ezmax.api.model.EzsigndocumentResponse;
 import com.ezmax.api.model.EzsigndocumentdependencyResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
@@ -55,128 +56,8 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndocumentResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsigndocumentID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsignfolderID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D_DECLINEDTOSIGN = "fkiEzsignfoldersignerassociationIDDeclinedtosign";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D_DECLINEDTOSIGN)
-  @javax.annotation.Nullable
-  private Integer fkiEzsignfoldersignerassociationIDDeclinedtosign;
-
-  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
-  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
-  @javax.annotation.Nonnull
-  private String dtEzsigndocumentDuedate;
-
-  public static final String SERIALIZED_NAME_DT_EZSIGNFORM_COMPLETED = "dtEzsignformCompleted";
-  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFORM_COMPLETED)
-  @javax.annotation.Nullable
-  private String dtEzsignformCompleted;
-
-  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
-  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiLanguageID;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
-  @javax.annotation.Nonnull
-  private String sEzsigndocumentName;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEP = "eEzsigndocumentStep";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEP)
-  @javax.annotation.Nonnull
-  private FieldEEzsigndocumentStep eEzsigndocumentStep;
-
-  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_FIRSTSEND = "dtEzsigndocumentFirstsend";
-  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_FIRSTSEND)
-  @javax.annotation.Nullable
-  private String dtEzsigndocumentFirstsend;
-
-  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_LASTSEND = "dtEzsigndocumentLastsend";
-  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_LASTSEND)
-  @javax.annotation.Nullable
-  private String dtEzsigndocumentLastsend;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_ORDER = "iEzsigndocumentOrder";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_ORDER)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentOrder;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_PAGETOTAL = "iEzsigndocumentPagetotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_PAGETOTAL)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentPagetotal;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURESIGNED = "iEzsigndocumentSignaturesigned";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURESIGNED)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentSignaturesigned;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURETOTAL = "iEzsigndocumentSignaturetotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURETOTAL)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentSignaturetotal;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL = "iEzsigndocumentFormfieldtotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentFormfieldtotal;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL = "sEzsigndocumentMD5initial";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL)
-  @javax.annotation.Nullable
-  private String sEzsigndocumentMD5initial;
-
-  public static final String SERIALIZED_NAME_T_EZSIGNDOCUMENT_DECLINEDTOSIGNREASON = "tEzsigndocumentDeclinedtosignreason";
-  @SerializedName(SERIALIZED_NAME_T_EZSIGNDOCUMENT_DECLINEDTOSIGNREASON)
-  @javax.annotation.Nullable
-  private String tEzsigndocumentDeclinedtosignreason;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5SIGNED = "sEzsigndocumentMD5signed";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5SIGNED)
-  @javax.annotation.Nullable
-  private String sEzsigndocumentMD5signed;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_EZSIGNFORM = "bEzsigndocumentEzsignform";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_EZSIGNFORM)
-  @javax.annotation.Nullable
-  private Boolean bEzsigndocumentEzsignform;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigndocumentHassignedsignatures";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES)
-  @javax.annotation.Nullable
-  private Boolean bEzsigndocumentHassignedsignatures;
-
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nullable
-  private CommonAudit objAudit;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID = "sEzsigndocumentExternalid";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
-  @javax.annotation.Nullable
-  private String sEzsigndocumentExternalid;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL = "iEzsigndocumentEzsignsignatureattachmenttotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentEzsignsignatureattachmenttotal;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL = "iEzsigndocumentEzsigndiscussiontotal";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL)
-  @javax.annotation.Nonnull
-  private Integer iEzsigndocumentEzsigndiscussiontotal;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigndocumentResponseCompound extends EzsigndocumentResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE = "eEzsigndocumentSteptype";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE)
   @javax.annotation.Nonnull
@@ -214,473 +95,6 @@ public class EzsigndocumentResponseCompound {
 
   public EzsigndocumentResponseCompound() {
   }
-
-  public EzsigndocumentResponseCompound pkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
-    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigndocument
-   * minimum: 0
-   * @return pkiEzsigndocumentID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsigndocumentID() {
-    return pkiEzsigndocumentID;
-  }
-
-  public void setPkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
-    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
-  }
-
-
-  public EzsigndocumentResponseCompound fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignfolder
-   * minimum: 0
-   * @return fkiEzsignfolderID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsignfolderID() {
-    return fkiEzsignfolderID;
-  }
-
-  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-  }
-
-
-  public EzsigndocumentResponseCompound fkiEzsignfoldersignerassociationIDDeclinedtosign(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
-    this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignfoldersignerassociation
-   * minimum: 0
-   * @return fkiEzsignfoldersignerassociationIDDeclinedtosign
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzsignfoldersignerassociationIDDeclinedtosign() {
-    return fkiEzsignfoldersignerassociationIDDeclinedtosign;
-  }
-
-  public void setFkiEzsignfoldersignerassociationIDDeclinedtosign(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
-    this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
-  }
-
-
-  public EzsigndocumentResponseCompound dtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
-    this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-    return this;
-  }
-
-  /**
-   * The maximum date and time at which the Ezsigndocument can be signed.
-   * @return dtEzsigndocumentDuedate
-   */
-  @javax.annotation.Nonnull
-  public String getDtEzsigndocumentDuedate() {
-    return dtEzsigndocumentDuedate;
-  }
-
-  public void setDtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
-    this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
-  }
-
-
-  public EzsigndocumentResponseCompound dtEzsignformCompleted(@javax.annotation.Nullable String dtEzsignformCompleted) {
-    this.dtEzsignformCompleted = dtEzsignformCompleted;
-    return this;
-  }
-
-  /**
-   * The date and time at which the Ezsignform has been completed.
-   * @return dtEzsignformCompleted
-   */
-  @javax.annotation.Nullable
-  public String getDtEzsignformCompleted() {
-    return dtEzsignformCompleted;
-  }
-
-  public void setDtEzsignformCompleted(@javax.annotation.Nullable String dtEzsignformCompleted) {
-    this.dtEzsignformCompleted = dtEzsignformCompleted;
-  }
-
-
-  public EzsigndocumentResponseCompound fkiLanguageID(@javax.annotation.Nullable Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-   * minimum: 1
-   * maximum: 2
-   * @return fkiLanguageID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiLanguageID() {
-    return fkiLanguageID;
-  }
-
-  public void setFkiLanguageID(@javax.annotation.Nullable Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-  }
-
-
-  public EzsigndocumentResponseCompound sEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
-    this.sEzsigndocumentName = sEzsigndocumentName;
-    return this;
-  }
-
-  /**
-   * The name of the document that will be presented to Ezsignfoldersignerassociations
-   * @return sEzsigndocumentName
-   */
-  @javax.annotation.Nonnull
-  public String getsEzsigndocumentName() {
-    return sEzsigndocumentName;
-  }
-
-  public void setsEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
-    this.sEzsigndocumentName = sEzsigndocumentName;
-  }
-
-
-  public EzsigndocumentResponseCompound eEzsigndocumentStep(@javax.annotation.Nonnull FieldEEzsigndocumentStep eEzsigndocumentStep) {
-    this.eEzsigndocumentStep = eEzsigndocumentStep;
-    return this;
-  }
-
-  /**
-   * Get eEzsigndocumentStep
-   * @return eEzsigndocumentStep
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzsigndocumentStep geteEzsigndocumentStep() {
-    return eEzsigndocumentStep;
-  }
-
-  public void seteEzsigndocumentStep(@javax.annotation.Nonnull FieldEEzsigndocumentStep eEzsigndocumentStep) {
-    this.eEzsigndocumentStep = eEzsigndocumentStep;
-  }
-
-
-  public EzsigndocumentResponseCompound dtEzsigndocumentFirstsend(@javax.annotation.Nullable String dtEzsigndocumentFirstsend) {
-    this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
-    return this;
-  }
-
-  /**
-   * The date and time when the Ezsigndocument was first sent.
-   * @return dtEzsigndocumentFirstsend
-   */
-  @javax.annotation.Nullable
-  public String getDtEzsigndocumentFirstsend() {
-    return dtEzsigndocumentFirstsend;
-  }
-
-  public void setDtEzsigndocumentFirstsend(@javax.annotation.Nullable String dtEzsigndocumentFirstsend) {
-    this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
-  }
-
-
-  public EzsigndocumentResponseCompound dtEzsigndocumentLastsend(@javax.annotation.Nullable String dtEzsigndocumentLastsend) {
-    this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
-    return this;
-  }
-
-  /**
-   * The date and time when the Ezsigndocument was sent the last time.
-   * @return dtEzsigndocumentLastsend
-   */
-  @javax.annotation.Nullable
-  public String getDtEzsigndocumentLastsend() {
-    return dtEzsigndocumentLastsend;
-  }
-
-  public void setDtEzsigndocumentLastsend(@javax.annotation.Nullable String dtEzsigndocumentLastsend) {
-    this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentOrder(@javax.annotation.Nonnull Integer iEzsigndocumentOrder) {
-    this.iEzsigndocumentOrder = iEzsigndocumentOrder;
-    return this;
-  }
-
-  /**
-   * The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
-   * minimum: 1
-   * @return iEzsigndocumentOrder
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentOrder() {
-    return iEzsigndocumentOrder;
-  }
-
-  public void setiEzsigndocumentOrder(@javax.annotation.Nonnull Integer iEzsigndocumentOrder) {
-    this.iEzsigndocumentOrder = iEzsigndocumentOrder;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigndocumentPagetotal) {
-    this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
-    return this;
-  }
-
-  /**
-   * The number of pages in the Ezsigndocument.
-   * minimum: 1
-   * @return iEzsigndocumentPagetotal
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentPagetotal() {
-    return iEzsigndocumentPagetotal;
-  }
-
-  public void setiEzsigndocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigndocumentPagetotal) {
-    this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentSignaturesigned(@javax.annotation.Nonnull Integer iEzsigndocumentSignaturesigned) {
-    this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
-    return this;
-  }
-
-  /**
-   * The number of signatures that were signed in the document.
-   * minimum: 0
-   * @return iEzsigndocumentSignaturesigned
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentSignaturesigned() {
-    return iEzsigndocumentSignaturesigned;
-  }
-
-  public void setiEzsigndocumentSignaturesigned(@javax.annotation.Nonnull Integer iEzsigndocumentSignaturesigned) {
-    this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigndocumentSignaturetotal) {
-    this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
-    return this;
-  }
-
-  /**
-   * The number of total signatures that were requested in the Ezsigndocument.
-   * minimum: 0
-   * @return iEzsigndocumentSignaturetotal
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentSignaturetotal() {
-    return iEzsigndocumentSignaturetotal;
-  }
-
-  public void setiEzsigndocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigndocumentSignaturetotal) {
-    this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentFormfieldtotal(@javax.annotation.Nonnull Integer iEzsigndocumentFormfieldtotal) {
-    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
-    return this;
-  }
-
-  /**
-   * The number of total Ezsignformfield that were requested in the Ezsigndocument.
-   * minimum: 0
-   * @return iEzsigndocumentFormfieldtotal
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentFormfieldtotal() {
-    return iEzsigndocumentFormfieldtotal;
-  }
-
-  public void setiEzsigndocumentFormfieldtotal(@javax.annotation.Nonnull Integer iEzsigndocumentFormfieldtotal) {
-    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
-  }
-
-
-  public EzsigndocumentResponseCompound sEzsigndocumentMD5initial(@javax.annotation.Nullable String sEzsigndocumentMD5initial) {
-    this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
-    return this;
-  }
-
-  /**
-   * MD5 Hash of the initial PDF Document before signatures were applied to it.
-   * @return sEzsigndocumentMD5initial
-   */
-  @javax.annotation.Nullable
-  public String getsEzsigndocumentMD5initial() {
-    return sEzsigndocumentMD5initial;
-  }
-
-  public void setsEzsigndocumentMD5initial(@javax.annotation.Nullable String sEzsigndocumentMD5initial) {
-    this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
-  }
-
-
-  public EzsigndocumentResponseCompound tEzsigndocumentDeclinedtosignreason(@javax.annotation.Nullable String tEzsigndocumentDeclinedtosignreason) {
-    this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
-    return this;
-  }
-
-  /**
-   * A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
-   * @return tEzsigndocumentDeclinedtosignreason
-   */
-  @javax.annotation.Nullable
-  public String gettEzsigndocumentDeclinedtosignreason() {
-    return tEzsigndocumentDeclinedtosignreason;
-  }
-
-  public void settEzsigndocumentDeclinedtosignreason(@javax.annotation.Nullable String tEzsigndocumentDeclinedtosignreason) {
-    this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
-  }
-
-
-  public EzsigndocumentResponseCompound sEzsigndocumentMD5signed(@javax.annotation.Nullable String sEzsigndocumentMD5signed) {
-    this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
-    return this;
-  }
-
-  /**
-   * MD5 Hash of the final PDF Document after all signatures were applied to it.
-   * @return sEzsigndocumentMD5signed
-   */
-  @javax.annotation.Nullable
-  public String getsEzsigndocumentMD5signed() {
-    return sEzsigndocumentMD5signed;
-  }
-
-  public void setsEzsigndocumentMD5signed(@javax.annotation.Nullable String sEzsigndocumentMD5signed) {
-    this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
-  }
-
-
-  public EzsigndocumentResponseCompound bEzsigndocumentEzsignform(@javax.annotation.Nullable Boolean bEzsigndocumentEzsignform) {
-    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
-    return this;
-  }
-
-  /**
-   * If the Ezsigndocument contains an Ezsignform or not
-   * @return bEzsigndocumentEzsignform
-   */
-  @javax.annotation.Nullable
-  public Boolean getbEzsigndocumentEzsignform() {
-    return bEzsigndocumentEzsignform;
-  }
-
-  public void setbEzsigndocumentEzsignform(@javax.annotation.Nullable Boolean bEzsigndocumentEzsignform) {
-    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
-  }
-
-
-  public EzsigndocumentResponseCompound bEzsigndocumentHassignedsignatures(@javax.annotation.Nullable Boolean bEzsigndocumentHassignedsignatures) {
-    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
-    return this;
-  }
-
-  /**
-   * If the Ezsigndocument contains signed signatures (From internal or external sources)
-   * @return bEzsigndocumentHassignedsignatures
-   */
-  @javax.annotation.Nullable
-  public Boolean getbEzsigndocumentHassignedsignatures() {
-    return bEzsigndocumentHassignedsignatures;
-  }
-
-  public void setbEzsigndocumentHassignedsignatures(@javax.annotation.Nullable Boolean bEzsigndocumentHassignedsignatures) {
-    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
-  }
-
-
-  public EzsigndocumentResponseCompound objAudit(@javax.annotation.Nullable CommonAudit objAudit) {
-    this.objAudit = objAudit;
-    return this;
-  }
-
-  /**
-   * Get objAudit
-   * @return objAudit
-   */
-  @javax.annotation.Nullable
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-  public void setObjAudit(@javax.annotation.Nullable CommonAudit objAudit) {
-    this.objAudit = objAudit;
-  }
-
-
-  public EzsigndocumentResponseCompound sEzsigndocumentExternalid(@javax.annotation.Nullable String sEzsigndocumentExternalid) {
-    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
-    return this;
-  }
-
-  /**
-   * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
-   * @return sEzsigndocumentExternalid
-   */
-  @javax.annotation.Nullable
-  public String getsEzsigndocumentExternalid() {
-    return sEzsigndocumentExternalid;
-  }
-
-  public void setsEzsigndocumentExternalid(@javax.annotation.Nullable String sEzsigndocumentExternalid) {
-    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentEzsignsignatureattachmenttotal(@javax.annotation.Nonnull Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
-    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
-    return this;
-  }
-
-  /**
-   * The number of Ezsigndocumentattachment total
-   * minimum: 0
-   * @return iEzsigndocumentEzsignsignatureattachmenttotal
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentEzsignsignatureattachmenttotal() {
-    return iEzsigndocumentEzsignsignatureattachmenttotal;
-  }
-
-  public void setiEzsigndocumentEzsignsignatureattachmenttotal(@javax.annotation.Nonnull Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
-    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
-  }
-
-
-  public EzsigndocumentResponseCompound iEzsigndocumentEzsigndiscussiontotal(@javax.annotation.Nonnull Integer iEzsigndocumentEzsigndiscussiontotal) {
-    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
-    return this;
-  }
-
-  /**
-   * The total number of Ezsigndiscussions
-   * @return iEzsigndocumentEzsigndiscussiontotal
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigndocumentEzsigndiscussiontotal() {
-    return iEzsigndocumentEzsigndiscussiontotal;
-  }
-
-  public void setiEzsigndocumentEzsigndiscussiontotal(@javax.annotation.Nonnull Integer iEzsigndocumentEzsigndiscussiontotal) {
-    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
-  }
-
 
   public EzsigndocumentResponseCompound eEzsigndocumentSteptype(@javax.annotation.Nonnull ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
     this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
@@ -841,72 +255,26 @@ public class EzsigndocumentResponseCompound {
       return false;
     }
     EzsigndocumentResponseCompound ezsigndocumentResponseCompound = (EzsigndocumentResponseCompound) o;
-    return Objects.equals(this.pkiEzsigndocumentID, ezsigndocumentResponseCompound.pkiEzsigndocumentID) &&
-        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentResponseCompound.fkiEzsignfolderID) &&
-        Objects.equals(this.fkiEzsignfoldersignerassociationIDDeclinedtosign, ezsigndocumentResponseCompound.fkiEzsignfoldersignerassociationIDDeclinedtosign) &&
-        Objects.equals(this.dtEzsigndocumentDuedate, ezsigndocumentResponseCompound.dtEzsigndocumentDuedate) &&
-        Objects.equals(this.dtEzsignformCompleted, ezsigndocumentResponseCompound.dtEzsignformCompleted) &&
-        Objects.equals(this.fkiLanguageID, ezsigndocumentResponseCompound.fkiLanguageID) &&
-        Objects.equals(this.sEzsigndocumentName, ezsigndocumentResponseCompound.sEzsigndocumentName) &&
-        Objects.equals(this.eEzsigndocumentStep, ezsigndocumentResponseCompound.eEzsigndocumentStep) &&
-        Objects.equals(this.dtEzsigndocumentFirstsend, ezsigndocumentResponseCompound.dtEzsigndocumentFirstsend) &&
-        Objects.equals(this.dtEzsigndocumentLastsend, ezsigndocumentResponseCompound.dtEzsigndocumentLastsend) &&
-        Objects.equals(this.iEzsigndocumentOrder, ezsigndocumentResponseCompound.iEzsigndocumentOrder) &&
-        Objects.equals(this.iEzsigndocumentPagetotal, ezsigndocumentResponseCompound.iEzsigndocumentPagetotal) &&
-        Objects.equals(this.iEzsigndocumentSignaturesigned, ezsigndocumentResponseCompound.iEzsigndocumentSignaturesigned) &&
-        Objects.equals(this.iEzsigndocumentSignaturetotal, ezsigndocumentResponseCompound.iEzsigndocumentSignaturetotal) &&
-        Objects.equals(this.iEzsigndocumentFormfieldtotal, ezsigndocumentResponseCompound.iEzsigndocumentFormfieldtotal) &&
-        Objects.equals(this.sEzsigndocumentMD5initial, ezsigndocumentResponseCompound.sEzsigndocumentMD5initial) &&
-        Objects.equals(this.tEzsigndocumentDeclinedtosignreason, ezsigndocumentResponseCompound.tEzsigndocumentDeclinedtosignreason) &&
-        Objects.equals(this.sEzsigndocumentMD5signed, ezsigndocumentResponseCompound.sEzsigndocumentMD5signed) &&
-        Objects.equals(this.bEzsigndocumentEzsignform, ezsigndocumentResponseCompound.bEzsigndocumentEzsignform) &&
-        Objects.equals(this.bEzsigndocumentHassignedsignatures, ezsigndocumentResponseCompound.bEzsigndocumentHassignedsignatures) &&
-        Objects.equals(this.objAudit, ezsigndocumentResponseCompound.objAudit) &&
-        Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentResponseCompound.sEzsigndocumentExternalid) &&
-        Objects.equals(this.iEzsigndocumentEzsignsignatureattachmenttotal, ezsigndocumentResponseCompound.iEzsigndocumentEzsignsignatureattachmenttotal) &&
-        Objects.equals(this.iEzsigndocumentEzsigndiscussiontotal, ezsigndocumentResponseCompound.iEzsigndocumentEzsigndiscussiontotal) &&
-        Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentResponseCompound.eEzsigndocumentSteptype) &&
+    return Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentResponseCompound.eEzsigndocumentSteptype) &&
         Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentResponseCompound.iEzsigndocumentStepformtotal) &&
         Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentResponseCompound.iEzsigndocumentStepformcurrent) &&
         Objects.equals(this.iEzsigndocumentStepsignaturetotal, ezsigndocumentResponseCompound.iEzsigndocumentStepsignaturetotal) &&
         Objects.equals(this.iEzsigndocumentStepsignatureCurrent, ezsigndocumentResponseCompound.iEzsigndocumentStepsignatureCurrent) &&
         Objects.equals(this.aObjEzsignfoldersignerassociationstatus, ezsigndocumentResponseCompound.aObjEzsignfoldersignerassociationstatus) &&
-        Objects.equals(this.aObjEzsigndocumentdependency, ezsigndocumentResponseCompound.aObjEzsigndocumentdependency);
+        Objects.equals(this.aObjEzsigndocumentdependency, ezsigndocumentResponseCompound.aObjEzsigndocumentdependency) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus, aObjEzsigndocumentdependency);
+    return Objects.hash(eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus, aObjEzsigndocumentdependency, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentResponseCompound {\n");
-    sb.append("    pkiEzsigndocumentID: ").append(toIndentedString(pkiEzsigndocumentID)).append("\n");
-    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
-    sb.append("    fkiEzsignfoldersignerassociationIDDeclinedtosign: ").append(toIndentedString(fkiEzsignfoldersignerassociationIDDeclinedtosign)).append("\n");
-    sb.append("    dtEzsigndocumentDuedate: ").append(toIndentedString(dtEzsigndocumentDuedate)).append("\n");
-    sb.append("    dtEzsignformCompleted: ").append(toIndentedString(dtEzsignformCompleted)).append("\n");
-    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
-    sb.append("    sEzsigndocumentName: ").append(toIndentedString(sEzsigndocumentName)).append("\n");
-    sb.append("    eEzsigndocumentStep: ").append(toIndentedString(eEzsigndocumentStep)).append("\n");
-    sb.append("    dtEzsigndocumentFirstsend: ").append(toIndentedString(dtEzsigndocumentFirstsend)).append("\n");
-    sb.append("    dtEzsigndocumentLastsend: ").append(toIndentedString(dtEzsigndocumentLastsend)).append("\n");
-    sb.append("    iEzsigndocumentOrder: ").append(toIndentedString(iEzsigndocumentOrder)).append("\n");
-    sb.append("    iEzsigndocumentPagetotal: ").append(toIndentedString(iEzsigndocumentPagetotal)).append("\n");
-    sb.append("    iEzsigndocumentSignaturesigned: ").append(toIndentedString(iEzsigndocumentSignaturesigned)).append("\n");
-    sb.append("    iEzsigndocumentSignaturetotal: ").append(toIndentedString(iEzsigndocumentSignaturetotal)).append("\n");
-    sb.append("    iEzsigndocumentFormfieldtotal: ").append(toIndentedString(iEzsigndocumentFormfieldtotal)).append("\n");
-    sb.append("    sEzsigndocumentMD5initial: ").append(toIndentedString(sEzsigndocumentMD5initial)).append("\n");
-    sb.append("    tEzsigndocumentDeclinedtosignreason: ").append(toIndentedString(tEzsigndocumentDeclinedtosignreason)).append("\n");
-    sb.append("    sEzsigndocumentMD5signed: ").append(toIndentedString(sEzsigndocumentMD5signed)).append("\n");
-    sb.append("    bEzsigndocumentEzsignform: ").append(toIndentedString(bEzsigndocumentEzsignform)).append("\n");
-    sb.append("    bEzsigndocumentHassignedsignatures: ").append(toIndentedString(bEzsigndocumentHassignedsignatures)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
-    sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
-    sb.append("    iEzsigndocumentEzsignsignatureattachmenttotal: ").append(toIndentedString(iEzsigndocumentEzsignsignatureattachmenttotal)).append("\n");
-    sb.append("    iEzsigndocumentEzsigndiscussiontotal: ").append(toIndentedString(iEzsigndocumentEzsigndiscussiontotal)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    eEzsigndocumentSteptype: ").append(toIndentedString(eEzsigndocumentSteptype)).append("\n");
     sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
     sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
@@ -970,6 +338,12 @@ public class EzsigndocumentResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eEzsigndocumentSteptype");
+    openapiRequiredFields.add("iEzsigndocumentStepformtotal");
+    openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
+    openapiRequiredFields.add("iEzsigndocumentStepsignaturetotal");
+    openapiRequiredFields.add("iEzsigndocumentStepsignatureCurrent");
+    openapiRequiredFields.add("a_objEzsignfoldersignerassociationstatus");
     openapiRequiredFields.add("pkiEzsigndocumentID");
     openapiRequiredFields.add("fkiEzsignfolderID");
     openapiRequiredFields.add("dtEzsigndocumentDuedate");
@@ -982,12 +356,6 @@ public class EzsigndocumentResponseCompound {
     openapiRequiredFields.add("iEzsigndocumentFormfieldtotal");
     openapiRequiredFields.add("iEzsigndocumentEzsignsignatureattachmenttotal");
     openapiRequiredFields.add("iEzsigndocumentEzsigndiscussiontotal");
-    openapiRequiredFields.add("eEzsigndocumentSteptype");
-    openapiRequiredFields.add("iEzsigndocumentStepformtotal");
-    openapiRequiredFields.add("iEzsigndocumentStepformcurrent");
-    openapiRequiredFields.add("iEzsigndocumentStepsignaturetotal");
-    openapiRequiredFields.add("iEzsigndocumentStepsignatureCurrent");
-    openapiRequiredFields.add("a_objEzsignfoldersignerassociationstatus");
   }
 
   /**
@@ -1002,55 +370,7 @@ public class EzsigndocumentResponseCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndocumentResponseCompound is not found in the empty JSON string", EzsigndocumentResponseCompound.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzsigndocumentResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndocumentResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzsigndocumentResponseCompound.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
-      }
-      if ((jsonObj.get("dtEzsignformCompleted") != null && !jsonObj.get("dtEzsignformCompleted").isJsonNull()) && !jsonObj.get("dtEzsignformCompleted").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignformCompleted` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignformCompleted").toString()));
-      }
-      if (!jsonObj.get("sEzsigndocumentName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentName").toString()));
-      }
-      // validate the required field `eEzsigndocumentStep`
-      FieldEEzsigndocumentStep.validateJsonElement(jsonObj.get("eEzsigndocumentStep"));
-      if ((jsonObj.get("dtEzsigndocumentFirstsend") != null && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonNull()) && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentFirstsend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentFirstsend").toString()));
-      }
-      if ((jsonObj.get("dtEzsigndocumentLastsend") != null && !jsonObj.get("dtEzsigndocumentLastsend").isJsonNull()) && !jsonObj.get("dtEzsigndocumentLastsend").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentLastsend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentLastsend").toString()));
-      }
-      if ((jsonObj.get("sEzsigndocumentMD5initial") != null && !jsonObj.get("sEzsigndocumentMD5initial").isJsonNull()) && !jsonObj.get("sEzsigndocumentMD5initial").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentMD5initial` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentMD5initial").toString()));
-      }
-      if ((jsonObj.get("tEzsigndocumentDeclinedtosignreason") != null && !jsonObj.get("tEzsigndocumentDeclinedtosignreason").isJsonNull()) && !jsonObj.get("tEzsigndocumentDeclinedtosignreason").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tEzsigndocumentDeclinedtosignreason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigndocumentDeclinedtosignreason").toString()));
-      }
-      if ((jsonObj.get("sEzsigndocumentMD5signed") != null && !jsonObj.get("sEzsigndocumentMD5signed").isJsonNull()) && !jsonObj.get("sEzsigndocumentMD5signed").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentMD5signed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentMD5signed").toString()));
-      }
-      // validate the optional field `objAudit`
-      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
-        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
-      }
-      if ((jsonObj.get("sEzsigndocumentExternalid") != null && !jsonObj.get("sEzsigndocumentExternalid").isJsonNull()) && !jsonObj.get("sEzsigndocumentExternalid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentExternalid").toString()));
-      }
       // validate the required field `eEzsigndocumentSteptype`
       ComputedEEzsigndocumentSteptype.validateJsonElement(jsonObj.get("eEzsigndocumentSteptype"));
       // ensure the json data is an array
@@ -1079,34 +399,6 @@ public class EzsigndocumentResponseCompound {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzsigndocumentResponseCompound.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzsigndocumentResponseCompound' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzsigndocumentResponseCompound> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigndocumentResponseCompound.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzsigndocumentResponseCompound>() {
-           @Override
-           public void write(JsonWriter out, EzsigndocumentResponseCompound value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzsigndocumentResponseCompound read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzsigndocumentResponseCompound given an JSON string

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomDiscussionconfigurationResponse;
+import com.ezmax.api.model.DiscussionResponse;
 import com.ezmax.api.model.DiscussionmembershipResponseCompound;
 import com.ezmax.api.model.DiscussionmessageResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -53,43 +54,8 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DiscussionResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
-  @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiDiscussionID;
-
-  public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
-  @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sDiscussionDescription;
-
-  public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
-  @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
-  @javax.annotation.Nonnull
-  private Boolean bDiscussionClosed;
-
-  public static final String SERIALIZED_NAME_DT_DISCUSSION_LASTREAD = "dtDiscussionLastread";
-  @SerializedName(SERIALIZED_NAME_DT_DISCUSSION_LASTREAD)
-  @javax.annotation.Nullable
-  private String dtDiscussionLastread;
-
-  public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT = "iDiscussionmessageCount";
-  @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT)
-  @javax.annotation.Nonnull
-  private Integer iDiscussionmessageCount;
-
-  public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD = "iDiscussionmessageCountunread";
-  @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD)
-  @javax.annotation.Nonnull
-  private Integer iDiscussionmessageCountunread;
-
-  public static final String SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION = "objDiscussionconfiguration";
-  @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION)
-  @javax.annotation.Nullable
-  private CustomDiscussionconfigurationResponse objDiscussionconfiguration;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class DiscussionResponseCompound extends DiscussionResponse {
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP = "a_objDiscussionmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP)
   @javax.annotation.Nonnull
@@ -102,141 +68,6 @@ public class DiscussionResponseCompound {
 
   public DiscussionResponseCompound() {
   }
-
-  public DiscussionResponseCompound pkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
-    this.pkiDiscussionID = pkiDiscussionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Discussion
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiDiscussionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiDiscussionID() {
-    return pkiDiscussionID;
-  }
-
-  public void setPkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
-    this.pkiDiscussionID = pkiDiscussionID;
-  }
-
-
-  public DiscussionResponseCompound sDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
-    this.sDiscussionDescription = sDiscussionDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Discussion
-   * @return sDiscussionDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsDiscussionDescription() {
-    return sDiscussionDescription;
-  }
-
-  public void setsDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
-    this.sDiscussionDescription = sDiscussionDescription;
-  }
-
-
-  public DiscussionResponseCompound bDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
-    this.bDiscussionClosed = bDiscussionClosed;
-    return this;
-  }
-
-  /**
-   * Whether if it&#39;s an closed
-   * @return bDiscussionClosed
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbDiscussionClosed() {
-    return bDiscussionClosed;
-  }
-
-  public void setbDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
-    this.bDiscussionClosed = bDiscussionClosed;
-  }
-
-
-  public DiscussionResponseCompound dtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
-    this.dtDiscussionLastread = dtDiscussionLastread;
-    return this;
-  }
-
-  /**
-   * The date the Discussion was last read
-   * @return dtDiscussionLastread
-   */
-  @javax.annotation.Nullable
-  public String getDtDiscussionLastread() {
-    return dtDiscussionLastread;
-  }
-
-  public void setDtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
-    this.dtDiscussionLastread = dtDiscussionLastread;
-  }
-
-
-  public DiscussionResponseCompound iDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
-    this.iDiscussionmessageCount = iDiscussionmessageCount;
-    return this;
-  }
-
-  /**
-   * The count of Attachment.
-   * @return iDiscussionmessageCount
-   */
-  @javax.annotation.Nonnull
-  public Integer getiDiscussionmessageCount() {
-    return iDiscussionmessageCount;
-  }
-
-  public void setiDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
-    this.iDiscussionmessageCount = iDiscussionmessageCount;
-  }
-
-
-  public DiscussionResponseCompound iDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
-    this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
-    return this;
-  }
-
-  /**
-   * The count of Attachment.
-   * @return iDiscussionmessageCountunread
-   */
-  @javax.annotation.Nonnull
-  public Integer getiDiscussionmessageCountunread() {
-    return iDiscussionmessageCountunread;
-  }
-
-  public void setiDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
-    this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
-  }
-
-
-  public DiscussionResponseCompound objDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
-    this.objDiscussionconfiguration = objDiscussionconfiguration;
-    return this;
-  }
-
-  /**
-   * Get objDiscussionconfiguration
-   * @return objDiscussionconfiguration
-   */
-  @javax.annotation.Nullable
-  public CustomDiscussionconfigurationResponse getObjDiscussionconfiguration() {
-    return objDiscussionconfiguration;
-  }
-
-  public void setObjDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
-    this.objDiscussionconfiguration = objDiscussionconfiguration;
-  }
-
 
   public DiscussionResponseCompound aObjDiscussionmembership(@javax.annotation.Nonnull List<DiscussionmembershipResponseCompound> aObjDiscussionmembership) {
     this.aObjDiscussionmembership = aObjDiscussionmembership;
@@ -302,33 +133,21 @@ public class DiscussionResponseCompound {
       return false;
     }
     DiscussionResponseCompound discussionResponseCompound = (DiscussionResponseCompound) o;
-    return Objects.equals(this.pkiDiscussionID, discussionResponseCompound.pkiDiscussionID) &&
-        Objects.equals(this.sDiscussionDescription, discussionResponseCompound.sDiscussionDescription) &&
-        Objects.equals(this.bDiscussionClosed, discussionResponseCompound.bDiscussionClosed) &&
-        Objects.equals(this.dtDiscussionLastread, discussionResponseCompound.dtDiscussionLastread) &&
-        Objects.equals(this.iDiscussionmessageCount, discussionResponseCompound.iDiscussionmessageCount) &&
-        Objects.equals(this.iDiscussionmessageCountunread, discussionResponseCompound.iDiscussionmessageCountunread) &&
-        Objects.equals(this.objDiscussionconfiguration, discussionResponseCompound.objDiscussionconfiguration) &&
-        Objects.equals(this.aObjDiscussionmembership, discussionResponseCompound.aObjDiscussionmembership) &&
-        Objects.equals(this.aObjDiscussionmessage, discussionResponseCompound.aObjDiscussionmessage);
+    return Objects.equals(this.aObjDiscussionmembership, discussionResponseCompound.aObjDiscussionmembership) &&
+        Objects.equals(this.aObjDiscussionmessage, discussionResponseCompound.aObjDiscussionmessage) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiDiscussionID, sDiscussionDescription, bDiscussionClosed, dtDiscussionLastread, iDiscussionmessageCount, iDiscussionmessageCountunread, objDiscussionconfiguration, aObjDiscussionmembership, aObjDiscussionmessage);
+    return Objects.hash(aObjDiscussionmembership, aObjDiscussionmessage, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionResponseCompound {\n");
-    sb.append("    pkiDiscussionID: ").append(toIndentedString(pkiDiscussionID)).append("\n");
-    sb.append("    sDiscussionDescription: ").append(toIndentedString(sDiscussionDescription)).append("\n");
-    sb.append("    bDiscussionClosed: ").append(toIndentedString(bDiscussionClosed)).append("\n");
-    sb.append("    dtDiscussionLastread: ").append(toIndentedString(dtDiscussionLastread)).append("\n");
-    sb.append("    iDiscussionmessageCount: ").append(toIndentedString(iDiscussionmessageCount)).append("\n");
-    sb.append("    iDiscussionmessageCountunread: ").append(toIndentedString(iDiscussionmessageCountunread)).append("\n");
-    sb.append("    objDiscussionconfiguration: ").append(toIndentedString(objDiscussionconfiguration)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjDiscussionmembership: ").append(toIndentedString(aObjDiscussionmembership)).append("\n");
     sb.append("    aObjDiscussionmessage: ").append(toIndentedString(aObjDiscussionmessage)).append("\n");
     sb.append("}");
@@ -365,13 +184,13 @@ public class DiscussionResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objDiscussionmembership");
+    openapiRequiredFields.add("a_objDiscussionmessage");
     openapiRequiredFields.add("pkiDiscussionID");
     openapiRequiredFields.add("sDiscussionDescription");
     openapiRequiredFields.add("bDiscussionClosed");
     openapiRequiredFields.add("iDiscussionmessageCount");
     openapiRequiredFields.add("iDiscussionmessageCountunread");
-    openapiRequiredFields.add("a_objDiscussionmembership");
-    openapiRequiredFields.add("a_objDiscussionmessage");
   }
 
   /**
@@ -402,16 +221,6 @@ public class DiscussionResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sDiscussionDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sDiscussionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionDescription").toString()));
-      }
-      if ((jsonObj.get("dtDiscussionLastread") != null && !jsonObj.get("dtDiscussionLastread").isJsonNull()) && !jsonObj.get("dtDiscussionLastread").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtDiscussionLastread` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionLastread").toString()));
-      }
-      // validate the optional field `objDiscussionconfiguration`
-      if (jsonObj.get("objDiscussionconfiguration") != null && !jsonObj.get("objDiscussionconfiguration").isJsonNull()) {
-        CustomDiscussionconfigurationResponse.validateJsonElement(jsonObj.get("objDiscussionconfiguration"));
-      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objDiscussionmembership").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objDiscussionmembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmembership").toString()));

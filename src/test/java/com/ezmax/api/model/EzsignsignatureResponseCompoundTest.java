@@ -18,6 +18,7 @@ import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignelementdependencyResponse;
+import com.ezmax.api.model.EzsignsignatureResponse;
 import com.ezmax.api.model.EzsignsignaturecustomdateResponse;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;

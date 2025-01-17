@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.EzsigntemplatepublicListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

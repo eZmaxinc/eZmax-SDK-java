@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzmaxpricingResponse;
+import com.ezmax.api.model.EzmaxinvoicingResponse;
 import com.ezmax.api.model.EzmaxinvoicingagentResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingcontractResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingsummaryexternalResponseCompound;

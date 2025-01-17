@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.AddressRequest;
+import com.ezmax.api.model.ContactinformationsRequest;
 import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.PhoneRequest;
 import com.ezmax.api.model.WebsiteRequest;

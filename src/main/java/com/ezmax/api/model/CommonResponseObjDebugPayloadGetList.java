@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseFilter;
+import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,33 +54,8 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseObjDebugPayloadGetList {
-  public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
-  @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
-  @javax.annotation.Nonnull
-  private Integer iVersionMin;
-
-  public static final String SERIALIZED_NAME_I_VERSION_MAX = "iVersionMax";
-  @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
-  @javax.annotation.Nonnull
-  private Integer iVersionMax;
-
-  public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
-  @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
-  @javax.annotation.Nonnull
-  private List<Integer> aRequiredPermission = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
-  @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
-  @javax.annotation.Nonnull
-  private Boolean bVersionDeprecated;
-
-  public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
-  @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
-  @javax.annotation.Nonnull
-  private String dtResponseDate;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
   @javax.annotation.Nonnull
@@ -102,109 +78,6 @@ public class CommonResponseObjDebugPayloadGetList {
 
   public CommonResponseObjDebugPayloadGetList() {
   }
-
-  public CommonResponseObjDebugPayloadGetList iVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
-    this.iVersionMin = iVersionMin;
-    return this;
-  }
-
-  /**
-   * The minimum version of the function that can be called
-   * @return iVersionMin
-   */
-  @javax.annotation.Nonnull
-  public Integer getiVersionMin() {
-    return iVersionMin;
-  }
-
-  public void setiVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
-    this.iVersionMin = iVersionMin;
-  }
-
-
-  public CommonResponseObjDebugPayloadGetList iVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
-    this.iVersionMax = iVersionMax;
-    return this;
-  }
-
-  /**
-   * The maximum version of the function that can be called
-   * @return iVersionMax
-   */
-  @javax.annotation.Nonnull
-  public Integer getiVersionMax() {
-    return iVersionMax;
-  }
-
-  public void setiVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
-    this.iVersionMax = iVersionMax;
-  }
-
-
-  public CommonResponseObjDebugPayloadGetList aRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
-    this.aRequiredPermission = aRequiredPermission;
-    return this;
-  }
-
-  public CommonResponseObjDebugPayloadGetList addARequiredPermissionItem(Integer aRequiredPermissionItem) {
-    if (this.aRequiredPermission == null) {
-      this.aRequiredPermission = new ArrayList<>();
-    }
-    this.aRequiredPermission.add(aRequiredPermissionItem);
-    return this;
-  }
-
-  /**
-   * An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.
-   * @return aRequiredPermission
-   */
-  @javax.annotation.Nonnull
-  public List<Integer> getaRequiredPermission() {
-    return aRequiredPermission;
-  }
-
-  public void setaRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
-    this.aRequiredPermission = aRequiredPermission;
-  }
-
-
-  public CommonResponseObjDebugPayloadGetList bVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
-    this.bVersionDeprecated = bVersionDeprecated;
-    return this;
-  }
-
-  /**
-   * Wheter the current route is deprecated or not
-   * @return bVersionDeprecated
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbVersionDeprecated() {
-    return bVersionDeprecated;
-  }
-
-  public void setbVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
-    this.bVersionDeprecated = bVersionDeprecated;
-  }
-
-
-  public CommonResponseObjDebugPayloadGetList dtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
-    this.dtResponseDate = dtResponseDate;
-    return this;
-  }
-
-  /**
-   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
-   * @return dtResponseDate
-   */
-  @javax.annotation.Nonnull
-  public String getDtResponseDate() {
-    return dtResponseDate;
-  }
-
-  public void setDtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
-    this.dtResponseDate = dtResponseDate;
-  }
-
 
   public CommonResponseObjDebugPayloadGetList aFilter(@javax.annotation.Nonnull CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
@@ -303,31 +176,23 @@ public class CommonResponseObjDebugPayloadGetList {
       return false;
     }
     CommonResponseObjDebugPayloadGetList commonResponseObjDebugPayloadGetList = (CommonResponseObjDebugPayloadGetList) o;
-    return Objects.equals(this.iVersionMin, commonResponseObjDebugPayloadGetList.iVersionMin) &&
-        Objects.equals(this.iVersionMax, commonResponseObjDebugPayloadGetList.iVersionMax) &&
-        Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayloadGetList.aRequiredPermission) &&
-        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayloadGetList.bVersionDeprecated) &&
-        Objects.equals(this.dtResponseDate, commonResponseObjDebugPayloadGetList.dtResponseDate) &&
-        Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
+    return Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
         Objects.equals(this.aOrderBy, commonResponseObjDebugPayloadGetList.aOrderBy) &&
         Objects.equals(this.iRowMax, commonResponseObjDebugPayloadGetList.iRowMax) &&
-        Objects.equals(this.iRowOffset, commonResponseObjDebugPayloadGetList.iRowOffset);
+        Objects.equals(this.iRowOffset, commonResponseObjDebugPayloadGetList.iRowOffset) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, dtResponseDate, aFilter, aOrderBy, iRowMax, iRowOffset);
+    return Objects.hash(aFilter, aOrderBy, iRowMax, iRowOffset, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseObjDebugPayloadGetList {\n");
-    sb.append("    iVersionMin: ").append(toIndentedString(iVersionMin)).append("\n");
-    sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
-    sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
-    sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
-    sb.append("    dtResponseDate: ").append(toIndentedString(dtResponseDate)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aFilter: ").append(toIndentedString(aFilter)).append("\n");
     sb.append("    aOrderBy: ").append(toIndentedString(aOrderBy)).append("\n");
     sb.append("    iRowMax: ").append(toIndentedString(iRowMax)).append("\n");
@@ -366,15 +231,15 @@ public class CommonResponseObjDebugPayloadGetList {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_Filter");
+    openapiRequiredFields.add("a_OrderBy");
+    openapiRequiredFields.add("iRowMax");
+    openapiRequiredFields.add("iRowOffset");
     openapiRequiredFields.add("iVersionMin");
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
     openapiRequiredFields.add("bVersionDeprecated");
     openapiRequiredFields.add("dtResponseDate");
-    openapiRequiredFields.add("a_Filter");
-    openapiRequiredFields.add("a_OrderBy");
-    openapiRequiredFields.add("iRowMax");
-    openapiRequiredFields.add("iRowOffset");
   }
 
   /**
@@ -405,15 +270,6 @@ public class CommonResponseObjDebugPayloadGetList {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the required json array is present
-      if (jsonObj.get("a_RequiredPermission") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("a_RequiredPermission").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
-      }
-      if (!jsonObj.get("dtResponseDate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtResponseDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtResponseDate").toString()));
-      }
       // validate the required field `a_Filter`
       CommonResponseFilter.validateJsonElement(jsonObj.get("a_Filter"));
   }

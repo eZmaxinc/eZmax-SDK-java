@@ -18,6 +18,7 @@ import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.WebhookResponseCompound;
 import com.ezmax.api.model.WebhookheaderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -55,103 +56,8 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CustomWebhookResponse {
-  public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
-  @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiWebhookID;
-
-  public static final String SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D = "fkiAuthenticationexternalID";
-  @SerializedName(SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiAuthenticationexternalID;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION = "sWebhookDescription";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sWebhookDescription;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzsignfoldertypeID;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
-  @javax.annotation.Nullable
-  private String sEzsignfoldertypeNameX;
-
-  public static final String SERIALIZED_NAME_E_WEBHOOK_MODULE = "eWebhookModule";
-  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MODULE)
-  @javax.annotation.Nonnull
-  private FieldEWebhookModule eWebhookModule;
-
-  public static final String SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT = "eWebhookEzsignevent";
-  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
-  @javax.annotation.Nullable
-  private FieldEWebhookEzsignevent eWebhookEzsignevent;
-
-  public static final String SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT = "eWebhookManagementevent";
-  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
-  @javax.annotation.Nullable
-  private FieldEWebhookManagementevent eWebhookManagementevent;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
-  @javax.annotation.Nonnull
-  private String sWebhookUrl;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED = "sWebhookEmailfailed";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
-  @javax.annotation.Nonnull
-  private String sWebhookEmailfailed;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_APIKEY = "sWebhookApikey";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_APIKEY)
-  @javax.annotation.Nullable
-  private String sWebhookApikey;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_SECRET = "sWebhookSecret";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_SECRET)
-  @javax.annotation.Nullable
-  private String sWebhookSecret;
-
-  public static final String SERIALIZED_NAME_B_WEBHOOK_ISACTIVE = "bWebhookIsactive";
-  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bWebhookIsactive;
-
-  public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
-  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
-  @javax.annotation.Nonnull
-  private Boolean bWebhookIssigned;
-
-  public static final String SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION = "bWebhookSkipsslvalidation";
-  @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
-  @javax.annotation.Nonnull
-  private Boolean bWebhookSkipsslvalidation;
-
-  public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
-  @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nullable
-  private String sAuthenticationexternalDescription;
-
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
-  private CommonAudit objAudit;
-
-  public static final String SERIALIZED_NAME_S_WEBHOOK_EVENT = "sWebhookEvent";
-  @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EVENT)
-  @javax.annotation.Nullable
-  private String sWebhookEvent;
-
-  public static final String SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER = "a_objWebhookheader";
-  @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER)
-  @javax.annotation.Nullable
-  private List<WebhookheaderResponseCompound> aObjWebhookheader = new ArrayList<>();
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CustomWebhookResponse extends WebhookResponseCompound {
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
   @javax.annotation.Nonnull
@@ -225,379 +131,6 @@ public class CustomWebhookResponse {
   public CustomWebhookResponse() {
   }
 
-  public CustomWebhookResponse pkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
-    this.pkiWebhookID = pkiWebhookID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Webhook
-   * @return pkiWebhookID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiWebhookID() {
-    return pkiWebhookID;
-  }
-
-  public void setPkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
-    this.pkiWebhookID = pkiWebhookID;
-  }
-
-
-  public CustomWebhookResponse fkiAuthenticationexternalID(@javax.annotation.Nullable Integer fkiAuthenticationexternalID) {
-    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Authenticationexternal
-   * minimum: 0
-   * maximum: 255
-   * @return fkiAuthenticationexternalID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiAuthenticationexternalID() {
-    return fkiAuthenticationexternalID;
-  }
-
-  public void setFkiAuthenticationexternalID(@javax.annotation.Nullable Integer fkiAuthenticationexternalID) {
-    this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
-  }
-
-
-  public CustomWebhookResponse sWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
-    this.sWebhookDescription = sWebhookDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Webhook
-   * @return sWebhookDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsWebhookDescription() {
-    return sWebhookDescription;
-  }
-
-  public void setsWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
-    this.sWebhookDescription = sWebhookDescription;
-  }
-
-
-  public CustomWebhookResponse fkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
-    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignfoldertype.
-   * minimum: 0
-   * maximum: 65535
-   * @return fkiEzsignfoldertypeID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzsignfoldertypeID() {
-    return fkiEzsignfoldertypeID;
-  }
-
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
-    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
-  }
-
-
-  public CustomWebhookResponse sEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
-    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-    return this;
-  }
-
-  /**
-   * The name of the Ezsignfoldertype in the language of the requester
-   * @return sEzsignfoldertypeNameX
-   */
-  @javax.annotation.Nullable
-  public String getsEzsignfoldertypeNameX() {
-    return sEzsignfoldertypeNameX;
-  }
-
-  public void setsEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
-    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
-  }
-
-
-  public CustomWebhookResponse eWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
-    this.eWebhookModule = eWebhookModule;
-    return this;
-  }
-
-  /**
-   * Get eWebhookModule
-   * @return eWebhookModule
-   */
-  @javax.annotation.Nonnull
-  public FieldEWebhookModule geteWebhookModule() {
-    return eWebhookModule;
-  }
-
-  public void seteWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
-    this.eWebhookModule = eWebhookModule;
-  }
-
-
-  public CustomWebhookResponse eWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
-    this.eWebhookEzsignevent = eWebhookEzsignevent;
-    return this;
-  }
-
-  /**
-   * Get eWebhookEzsignevent
-   * @return eWebhookEzsignevent
-   */
-  @javax.annotation.Nullable
-  public FieldEWebhookEzsignevent geteWebhookEzsignevent() {
-    return eWebhookEzsignevent;
-  }
-
-  public void seteWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
-    this.eWebhookEzsignevent = eWebhookEzsignevent;
-  }
-
-
-  public CustomWebhookResponse eWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
-    this.eWebhookManagementevent = eWebhookManagementevent;
-    return this;
-  }
-
-  /**
-   * Get eWebhookManagementevent
-   * @return eWebhookManagementevent
-   */
-  @javax.annotation.Nullable
-  public FieldEWebhookManagementevent geteWebhookManagementevent() {
-    return eWebhookManagementevent;
-  }
-
-  public void seteWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
-    this.eWebhookManagementevent = eWebhookManagementevent;
-  }
-
-
-  public CustomWebhookResponse sWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
-    this.sWebhookUrl = sWebhookUrl;
-    return this;
-  }
-
-  /**
-   * The URL of the Webhook callback
-   * @return sWebhookUrl
-   */
-  @javax.annotation.Nonnull
-  public String getsWebhookUrl() {
-    return sWebhookUrl;
-  }
-
-  public void setsWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
-    this.sWebhookUrl = sWebhookUrl;
-  }
-
-
-  public CustomWebhookResponse sWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
-    this.sWebhookEmailfailed = sWebhookEmailfailed;
-    return this;
-  }
-
-  /**
-   * The email that will receive the Webhook in case all attempts fail
-   * @return sWebhookEmailfailed
-   */
-  @javax.annotation.Nonnull
-  public String getsWebhookEmailfailed() {
-    return sWebhookEmailfailed;
-  }
-
-  public void setsWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
-    this.sWebhookEmailfailed = sWebhookEmailfailed;
-  }
-
-
-  public CustomWebhookResponse sWebhookApikey(@javax.annotation.Nullable String sWebhookApikey) {
-    this.sWebhookApikey = sWebhookApikey;
-    return this;
-  }
-
-  /**
-   * The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
-   * @return sWebhookApikey
-   */
-  @javax.annotation.Nullable
-  public String getsWebhookApikey() {
-    return sWebhookApikey;
-  }
-
-  public void setsWebhookApikey(@javax.annotation.Nullable String sWebhookApikey) {
-    this.sWebhookApikey = sWebhookApikey;
-  }
-
-
-  public CustomWebhookResponse sWebhookSecret(@javax.annotation.Nullable String sWebhookSecret) {
-    this.sWebhookSecret = sWebhookSecret;
-    return this;
-  }
-
-  /**
-   * The Secret for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey.
-   * @return sWebhookSecret
-   */
-  @javax.annotation.Nullable
-  public String getsWebhookSecret() {
-    return sWebhookSecret;
-  }
-
-  public void setsWebhookSecret(@javax.annotation.Nullable String sWebhookSecret) {
-    this.sWebhookSecret = sWebhookSecret;
-  }
-
-
-  public CustomWebhookResponse bWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
-    this.bWebhookIsactive = bWebhookIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the Webhook is active or not
-   * @return bWebhookIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbWebhookIsactive() {
-    return bWebhookIsactive;
-  }
-
-  public void setbWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
-    this.bWebhookIsactive = bWebhookIsactive;
-  }
-
-
-  public CustomWebhookResponse bWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
-    this.bWebhookIssigned = bWebhookIssigned;
-    return this;
-  }
-
-  /**
-   * Whether the requests will be signed or not
-   * @return bWebhookIssigned
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbWebhookIssigned() {
-    return bWebhookIssigned;
-  }
-
-  public void setbWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
-    this.bWebhookIssigned = bWebhookIssigned;
-  }
-
-
-  public CustomWebhookResponse bWebhookSkipsslvalidation(@javax.annotation.Nonnull Boolean bWebhookSkipsslvalidation) {
-    this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-    return this;
-  }
-
-  /**
-   * Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use
-   * @return bWebhookSkipsslvalidation
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbWebhookSkipsslvalidation() {
-    return bWebhookSkipsslvalidation;
-  }
-
-  public void setbWebhookSkipsslvalidation(@javax.annotation.Nonnull Boolean bWebhookSkipsslvalidation) {
-    this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
-  }
-
-
-  public CustomWebhookResponse sAuthenticationexternalDescription(@javax.annotation.Nullable String sAuthenticationexternalDescription) {
-    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Authenticationexternal
-   * @return sAuthenticationexternalDescription
-   */
-  @javax.annotation.Nullable
-  public String getsAuthenticationexternalDescription() {
-    return sAuthenticationexternalDescription;
-  }
-
-  public void setsAuthenticationexternalDescription(@javax.annotation.Nullable String sAuthenticationexternalDescription) {
-    this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
-  }
-
-
-  public CustomWebhookResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-    return this;
-  }
-
-  /**
-   * Get objAudit
-   * @return objAudit
-   */
-  @javax.annotation.Nonnull
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-  }
-
-
-  public CustomWebhookResponse sWebhookEvent(@javax.annotation.Nullable String sWebhookEvent) {
-    this.sWebhookEvent = sWebhookEvent;
-    return this;
-  }
-
-  /**
-   * The concatenated string to describe the Webhook event
-   * @return sWebhookEvent
-   */
-  @javax.annotation.Nullable
-  public String getsWebhookEvent() {
-    return sWebhookEvent;
-  }
-
-  public void setsWebhookEvent(@javax.annotation.Nullable String sWebhookEvent) {
-    this.sWebhookEvent = sWebhookEvent;
-  }
-
-
-  public CustomWebhookResponse aObjWebhookheader(@javax.annotation.Nullable List<WebhookheaderResponseCompound> aObjWebhookheader) {
-    this.aObjWebhookheader = aObjWebhookheader;
-    return this;
-  }
-
-  public CustomWebhookResponse addAObjWebhookheaderItem(WebhookheaderResponseCompound aObjWebhookheaderItem) {
-    if (this.aObjWebhookheader == null) {
-      this.aObjWebhookheader = new ArrayList<>();
-    }
-    this.aObjWebhookheader.add(aObjWebhookheaderItem);
-    return this;
-  }
-
-  /**
-   * Get aObjWebhookheader
-   * @return aObjWebhookheader
-   */
-  @javax.annotation.Nullable
-  public List<WebhookheaderResponseCompound> getaObjWebhookheader() {
-    return aObjWebhookheader;
-  }
-
-  public void setaObjWebhookheader(@javax.annotation.Nullable List<WebhookheaderResponseCompound> aObjWebhookheader) {
-    this.aObjWebhookheader = aObjWebhookheader;
-  }
-
-
   public CustomWebhookResponse pksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
@@ -669,58 +202,22 @@ public class CustomWebhookResponse {
       return false;
     }
     CustomWebhookResponse customWebhookResponse = (CustomWebhookResponse) o;
-    return Objects.equals(this.pkiWebhookID, customWebhookResponse.pkiWebhookID) &&
-        Objects.equals(this.fkiAuthenticationexternalID, customWebhookResponse.fkiAuthenticationexternalID) &&
-        Objects.equals(this.sWebhookDescription, customWebhookResponse.sWebhookDescription) &&
-        Objects.equals(this.fkiEzsignfoldertypeID, customWebhookResponse.fkiEzsignfoldertypeID) &&
-        Objects.equals(this.sEzsignfoldertypeNameX, customWebhookResponse.sEzsignfoldertypeNameX) &&
-        Objects.equals(this.eWebhookModule, customWebhookResponse.eWebhookModule) &&
-        Objects.equals(this.eWebhookEzsignevent, customWebhookResponse.eWebhookEzsignevent) &&
-        Objects.equals(this.eWebhookManagementevent, customWebhookResponse.eWebhookManagementevent) &&
-        Objects.equals(this.sWebhookUrl, customWebhookResponse.sWebhookUrl) &&
-        Objects.equals(this.sWebhookEmailfailed, customWebhookResponse.sWebhookEmailfailed) &&
-        Objects.equals(this.sWebhookApikey, customWebhookResponse.sWebhookApikey) &&
-        Objects.equals(this.sWebhookSecret, customWebhookResponse.sWebhookSecret) &&
-        Objects.equals(this.bWebhookIsactive, customWebhookResponse.bWebhookIsactive) &&
-        Objects.equals(this.bWebhookIssigned, customWebhookResponse.bWebhookIssigned) &&
-        Objects.equals(this.bWebhookSkipsslvalidation, customWebhookResponse.bWebhookSkipsslvalidation) &&
-        Objects.equals(this.sAuthenticationexternalDescription, customWebhookResponse.sAuthenticationexternalDescription) &&
-        Objects.equals(this.objAudit, customWebhookResponse.objAudit) &&
-        Objects.equals(this.sWebhookEvent, customWebhookResponse.sWebhookEvent) &&
-        Objects.equals(this.aObjWebhookheader, customWebhookResponse.aObjWebhookheader) &&
-        Objects.equals(this.pksCustomerCode, customWebhookResponse.pksCustomerCode) &&
+    return Objects.equals(this.pksCustomerCode, customWebhookResponse.pksCustomerCode) &&
         Objects.equals(this.bWebhookTest, customWebhookResponse.bWebhookTest) &&
-        Objects.equals(this.eWebhookEmittype, customWebhookResponse.eWebhookEmittype);
+        Objects.equals(this.eWebhookEmittype, customWebhookResponse.eWebhookEmittype) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, fkiAuthenticationexternalID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, sAuthenticationexternalDescription, objAudit, sWebhookEvent, aObjWebhookheader, pksCustomerCode, bWebhookTest, eWebhookEmittype);
+    return Objects.hash(pksCustomerCode, bWebhookTest, eWebhookEmittype, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomWebhookResponse {\n");
-    sb.append("    pkiWebhookID: ").append(toIndentedString(pkiWebhookID)).append("\n");
-    sb.append("    fkiAuthenticationexternalID: ").append(toIndentedString(fkiAuthenticationexternalID)).append("\n");
-    sb.append("    sWebhookDescription: ").append(toIndentedString(sWebhookDescription)).append("\n");
-    sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
-    sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
-    sb.append("    eWebhookModule: ").append(toIndentedString(eWebhookModule)).append("\n");
-    sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
-    sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
-    sb.append("    sWebhookUrl: ").append(toIndentedString(sWebhookUrl)).append("\n");
-    sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
-    sb.append("    sWebhookApikey: ").append(toIndentedString(sWebhookApikey)).append("\n");
-    sb.append("    sWebhookSecret: ").append(toIndentedString(sWebhookSecret)).append("\n");
-    sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
-    sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
-    sb.append("    bWebhookSkipsslvalidation: ").append(toIndentedString(bWebhookSkipsslvalidation)).append("\n");
-    sb.append("    sAuthenticationexternalDescription: ").append(toIndentedString(sAuthenticationexternalDescription)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
-    sb.append("    sWebhookEvent: ").append(toIndentedString(sWebhookEvent)).append("\n");
-    sb.append("    aObjWebhookheader: ").append(toIndentedString(aObjWebhookheader)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
     sb.append("    bWebhookTest: ").append(toIndentedString(bWebhookTest)).append("\n");
     sb.append("    eWebhookEmittype: ").append(toIndentedString(eWebhookEmittype)).append("\n");
@@ -771,6 +268,8 @@ public class CustomWebhookResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("pksCustomerCode");
+    openapiRequiredFields.add("bWebhookTest");
     openapiRequiredFields.add("pkiWebhookID");
     openapiRequiredFields.add("sWebhookDescription");
     openapiRequiredFields.add("eWebhookModule");
@@ -780,8 +279,6 @@ public class CustomWebhookResponse {
     openapiRequiredFields.add("bWebhookIssigned");
     openapiRequiredFields.add("bWebhookSkipsslvalidation");
     openapiRequiredFields.add("objAudit");
-    openapiRequiredFields.add("pksCustomerCode");
-    openapiRequiredFields.add("bWebhookTest");
   }
 
   /**
@@ -812,56 +309,6 @@ public class CustomWebhookResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sWebhookDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookDescription").toString()));
-      }
-      if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
-      }
-      // validate the required field `eWebhookModule`
-      FieldEWebhookModule.validateJsonElement(jsonObj.get("eWebhookModule"));
-      // validate the optional field `eWebhookEzsignevent`
-      if (jsonObj.get("eWebhookEzsignevent") != null && !jsonObj.get("eWebhookEzsignevent").isJsonNull()) {
-        FieldEWebhookEzsignevent.validateJsonElement(jsonObj.get("eWebhookEzsignevent"));
-      }
-      // validate the optional field `eWebhookManagementevent`
-      if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {
-        FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
-      }
-      if (!jsonObj.get("sWebhookUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));
-      }
-      if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
-      }
-      if ((jsonObj.get("sWebhookApikey") != null && !jsonObj.get("sWebhookApikey").isJsonNull()) && !jsonObj.get("sWebhookApikey").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookApikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookApikey").toString()));
-      }
-      if ((jsonObj.get("sWebhookSecret") != null && !jsonObj.get("sWebhookSecret").isJsonNull()) && !jsonObj.get("sWebhookSecret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
-      }
-      if ((jsonObj.get("sAuthenticationexternalDescription") != null && !jsonObj.get("sAuthenticationexternalDescription").isJsonNull()) && !jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
-      }
-      // validate the required field `objAudit`
-      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
-      if ((jsonObj.get("sWebhookEvent") != null && !jsonObj.get("sWebhookEvent").isJsonNull()) && !jsonObj.get("sWebhookEvent").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sWebhookEvent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEvent").toString()));
-      }
-      if (jsonObj.get("a_objWebhookheader") != null && !jsonObj.get("a_objWebhookheader").isJsonNull()) {
-        JsonArray jsonArrayaObjWebhookheader = jsonObj.getAsJsonArray("a_objWebhookheader");
-        if (jsonArrayaObjWebhookheader != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("a_objWebhookheader").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `a_objWebhookheader` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebhookheader").toString()));
-          }
-
-          // validate the optional field `a_objWebhookheader` (array)
-          for (int i = 0; i < jsonArrayaObjWebhookheader.size(); i++) {
-            WebhookheaderResponseCompound.validateJsonElement(jsonArrayaObjWebhookheader.get(i));
-          };
-        }
-      }
       if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
       }

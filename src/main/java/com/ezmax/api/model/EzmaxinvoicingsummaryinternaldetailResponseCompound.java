@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzmaxinvoicingsummaryinternaldetailResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,302 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryinternaldetailID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzmaxinvoicingsummaryinternaldetailID;
-
-  public static final String SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "fkiEzmaxinvoicingsummaryinternalID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzmaxinvoicingsummaryinternalID;
-
-  public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzmaxproductID;
-
-  public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
-  @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
-  @javax.annotation.Nonnull
-  private String sEzmaxproductDescriptionX;
-
-  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
-  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiBillingentityexternalID;
-
-  public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
-  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sBillingentityexternalDescription;
-
-  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_COUNTREAL = "dEzmaxinvoicingsummaryinternaldetailCountreal";
-  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_COUNTREAL)
-  @javax.annotation.Nonnull
-  private String dEzmaxinvoicingsummaryinternaldetailCountreal;
-
-  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_SUBTOTAL = "dEzmaxinvoicingsummaryinternaldetailSubtotal";
-  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_SUBTOTAL)
-  @javax.annotation.Nonnull
-  private String dEzmaxinvoicingsummaryinternaldetailSubtotal;
-
-  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_REBATE = "dEzmaxinvoicingsummaryinternaldetailRebate";
-  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_REBATE)
-  @javax.annotation.Nonnull
-  private String dEzmaxinvoicingsummaryinternaldetailRebate;
-
-  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_TOTAL = "dEzmaxinvoicingsummaryinternaldetailTotal";
-  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYINTERNALDETAIL_TOTAL)
-  @javax.annotation.Nonnull
-  private String dEzmaxinvoicingsummaryinternaldetailTotal;
-
-  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYINTERNALDETAIL_ADJUSTMENT = "bEzmaxinvoicingsummaryinternaldetailAdjustment";
-  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYINTERNALDETAIL_ADJUSTMENT)
-  @javax.annotation.Nonnull
-  private Boolean bEzmaxinvoicingsummaryinternaldetailAdjustment;
-
-  public static final String SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X = "tEzmaxproductHelpX";
-  @SerializedName(SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X)
-  @javax.annotation.Nonnull
-  private String tEzmaxproductHelpX;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzmaxinvoicingsummaryinternaldetailResponseCompound extends EzmaxinvoicingsummaryinternaldetailResponse {
   public EzmaxinvoicingsummaryinternaldetailResponseCompound() {
   }
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound pkiEzmaxinvoicingsummaryinternaldetailID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternaldetailID) {
-    this.pkiEzmaxinvoicingsummaryinternaldetailID = pkiEzmaxinvoicingsummaryinternaldetailID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxinvoicingsummaryinternaldetail
-   * minimum: 0
-   * @return pkiEzmaxinvoicingsummaryinternaldetailID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzmaxinvoicingsummaryinternaldetailID() {
-    return pkiEzmaxinvoicingsummaryinternaldetailID;
-  }
-
-  public void setPkiEzmaxinvoicingsummaryinternaldetailID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternaldetailID) {
-    this.pkiEzmaxinvoicingsummaryinternaldetailID = pkiEzmaxinvoicingsummaryinternaldetailID;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound fkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryinternalID) {
-    this.fkiEzmaxinvoicingsummaryinternalID = fkiEzmaxinvoicingsummaryinternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxinvoicingsummaryinternal
-   * minimum: 0
-   * @return fkiEzmaxinvoicingsummaryinternalID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzmaxinvoicingsummaryinternalID() {
-    return fkiEzmaxinvoicingsummaryinternalID;
-  }
-
-  public void setFkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryinternalID) {
-    this.fkiEzmaxinvoicingsummaryinternalID = fkiEzmaxinvoicingsummaryinternalID;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound fkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
-    this.fkiEzmaxproductID = fkiEzmaxproductID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxproduct
-   * minimum: 1
-   * @return fkiEzmaxproductID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzmaxproductID() {
-    return fkiEzmaxproductID;
-  }
-
-  public void setFkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
-    this.fkiEzmaxproductID = fkiEzmaxproductID;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound sEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
-    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-    return this;
-  }
-
-  /**
-   * The description of the Ezmaxproduct in the language of the requester
-   * @return sEzmaxproductDescriptionX
-   */
-  @javax.annotation.Nonnull
-  public String getsEzmaxproductDescriptionX() {
-    return sEzmaxproductDescriptionX;
-  }
-
-  public void setsEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
-    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
-    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Billingentityexternal
-   * minimum: 1
-   * @return fkiBillingentityexternalID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiBillingentityexternalID() {
-    return fkiBillingentityexternalID;
-  }
-
-  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
-    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound sBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
-    this.sBillingentityexternalDescription = sBillingentityexternalDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Billingentityexternal
-   * @return sBillingentityexternalDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsBillingentityexternalDescription() {
-    return sBillingentityexternalDescription;
-  }
-
-  public void setsBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
-    this.sBillingentityexternalDescription = sBillingentityexternalDescription;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound dEzmaxinvoicingsummaryinternaldetailCountreal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailCountreal) {
-    this.dEzmaxinvoicingsummaryinternaldetailCountreal = dEzmaxinvoicingsummaryinternaldetailCountreal;
-    return this;
-  }
-
-  /**
-   * The count item invoiced for the product
-   * @return dEzmaxinvoicingsummaryinternaldetailCountreal
-   */
-  @javax.annotation.Nonnull
-  public String getdEzmaxinvoicingsummaryinternaldetailCountreal() {
-    return dEzmaxinvoicingsummaryinternaldetailCountreal;
-  }
-
-  public void setdEzmaxinvoicingsummaryinternaldetailCountreal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailCountreal) {
-    this.dEzmaxinvoicingsummaryinternaldetailCountreal = dEzmaxinvoicingsummaryinternaldetailCountreal;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound dEzmaxinvoicingsummaryinternaldetailSubtotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailSubtotal) {
-    this.dEzmaxinvoicingsummaryinternaldetailSubtotal = dEzmaxinvoicingsummaryinternaldetailSubtotal;
-    return this;
-  }
-
-  /**
-   * The subtotal invoiced for the product
-   * @return dEzmaxinvoicingsummaryinternaldetailSubtotal
-   */
-  @javax.annotation.Nonnull
-  public String getdEzmaxinvoicingsummaryinternaldetailSubtotal() {
-    return dEzmaxinvoicingsummaryinternaldetailSubtotal;
-  }
-
-  public void setdEzmaxinvoicingsummaryinternaldetailSubtotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailSubtotal) {
-    this.dEzmaxinvoicingsummaryinternaldetailSubtotal = dEzmaxinvoicingsummaryinternaldetailSubtotal;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound dEzmaxinvoicingsummaryinternaldetailRebate(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailRebate) {
-    this.dEzmaxinvoicingsummaryinternaldetailRebate = dEzmaxinvoicingsummaryinternaldetailRebate;
-    return this;
-  }
-
-  /**
-   * The rebate for the product
-   * @return dEzmaxinvoicingsummaryinternaldetailRebate
-   */
-  @javax.annotation.Nonnull
-  public String getdEzmaxinvoicingsummaryinternaldetailRebate() {
-    return dEzmaxinvoicingsummaryinternaldetailRebate;
-  }
-
-  public void setdEzmaxinvoicingsummaryinternaldetailRebate(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailRebate) {
-    this.dEzmaxinvoicingsummaryinternaldetailRebate = dEzmaxinvoicingsummaryinternaldetailRebate;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound dEzmaxinvoicingsummaryinternaldetailTotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailTotal) {
-    this.dEzmaxinvoicingsummaryinternaldetailTotal = dEzmaxinvoicingsummaryinternaldetailTotal;
-    return this;
-  }
-
-  /**
-   * The total invoiced for the product
-   * @return dEzmaxinvoicingsummaryinternaldetailTotal
-   */
-  @javax.annotation.Nonnull
-  public String getdEzmaxinvoicingsummaryinternaldetailTotal() {
-    return dEzmaxinvoicingsummaryinternaldetailTotal;
-  }
-
-  public void setdEzmaxinvoicingsummaryinternaldetailTotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryinternaldetailTotal) {
-    this.dEzmaxinvoicingsummaryinternaldetailTotal = dEzmaxinvoicingsummaryinternaldetailTotal;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound bEzmaxinvoicingsummaryinternaldetailAdjustment(@javax.annotation.Nonnull Boolean bEzmaxinvoicingsummaryinternaldetailAdjustment) {
-    this.bEzmaxinvoicingsummaryinternaldetailAdjustment = bEzmaxinvoicingsummaryinternaldetailAdjustment;
-    return this;
-  }
-
-  /**
-   * Whether if it&#39;s an adjustment
-   * @return bEzmaxinvoicingsummaryinternaldetailAdjustment
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzmaxinvoicingsummaryinternaldetailAdjustment() {
-    return bEzmaxinvoicingsummaryinternaldetailAdjustment;
-  }
-
-  public void setbEzmaxinvoicingsummaryinternaldetailAdjustment(@javax.annotation.Nonnull Boolean bEzmaxinvoicingsummaryinternaldetailAdjustment) {
-    this.bEzmaxinvoicingsummaryinternaldetailAdjustment = bEzmaxinvoicingsummaryinternaldetailAdjustment;
-  }
-
-
-  public EzmaxinvoicingsummaryinternaldetailResponseCompound tEzmaxproductHelpX(@javax.annotation.Nonnull String tEzmaxproductHelpX) {
-    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
-    return this;
-  }
-
-  /**
-   * The help message of the Ezmaxproduct in the language of the requester
-   * @return tEzmaxproductHelpX
-   */
-  @javax.annotation.Nonnull
-  public String gettEzmaxproductHelpX() {
-    return tEzmaxproductHelpX;
-  }
-
-  public void settEzmaxproductHelpX(@javax.annotation.Nonnull String tEzmaxproductHelpX) {
-    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
-  }
-
 
 
   @Override
@@ -354,42 +63,19 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzmaxinvoicingsummaryinternaldetailResponseCompound ezmaxinvoicingsummaryinternaldetailResponseCompound = (EzmaxinvoicingsummaryinternaldetailResponseCompound) o;
-    return Objects.equals(this.pkiEzmaxinvoicingsummaryinternaldetailID, ezmaxinvoicingsummaryinternaldetailResponseCompound.pkiEzmaxinvoicingsummaryinternaldetailID) &&
-        Objects.equals(this.fkiEzmaxinvoicingsummaryinternalID, ezmaxinvoicingsummaryinternaldetailResponseCompound.fkiEzmaxinvoicingsummaryinternalID) &&
-        Objects.equals(this.fkiEzmaxproductID, ezmaxinvoicingsummaryinternaldetailResponseCompound.fkiEzmaxproductID) &&
-        Objects.equals(this.sEzmaxproductDescriptionX, ezmaxinvoicingsummaryinternaldetailResponseCompound.sEzmaxproductDescriptionX) &&
-        Objects.equals(this.fkiBillingentityexternalID, ezmaxinvoicingsummaryinternaldetailResponseCompound.fkiBillingentityexternalID) &&
-        Objects.equals(this.sBillingentityexternalDescription, ezmaxinvoicingsummaryinternaldetailResponseCompound.sBillingentityexternalDescription) &&
-        Objects.equals(this.dEzmaxinvoicingsummaryinternaldetailCountreal, ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailCountreal) &&
-        Objects.equals(this.dEzmaxinvoicingsummaryinternaldetailSubtotal, ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailSubtotal) &&
-        Objects.equals(this.dEzmaxinvoicingsummaryinternaldetailRebate, ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailRebate) &&
-        Objects.equals(this.dEzmaxinvoicingsummaryinternaldetailTotal, ezmaxinvoicingsummaryinternaldetailResponseCompound.dEzmaxinvoicingsummaryinternaldetailTotal) &&
-        Objects.equals(this.bEzmaxinvoicingsummaryinternaldetailAdjustment, ezmaxinvoicingsummaryinternaldetailResponseCompound.bEzmaxinvoicingsummaryinternaldetailAdjustment) &&
-        Objects.equals(this.tEzmaxproductHelpX, ezmaxinvoicingsummaryinternaldetailResponseCompound.tEzmaxproductHelpX);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzmaxinvoicingsummaryinternaldetailID, fkiEzmaxinvoicingsummaryinternalID, fkiEzmaxproductID, sEzmaxproductDescriptionX, fkiBillingentityexternalID, sBillingentityexternalDescription, dEzmaxinvoicingsummaryinternaldetailCountreal, dEzmaxinvoicingsummaryinternaldetailSubtotal, dEzmaxinvoicingsummaryinternaldetailRebate, dEzmaxinvoicingsummaryinternaldetailTotal, bEzmaxinvoicingsummaryinternaldetailAdjustment, tEzmaxproductHelpX);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingsummaryinternaldetailResponseCompound {\n");
-    sb.append("    pkiEzmaxinvoicingsummaryinternaldetailID: ").append(toIndentedString(pkiEzmaxinvoicingsummaryinternaldetailID)).append("\n");
-    sb.append("    fkiEzmaxinvoicingsummaryinternalID: ").append(toIndentedString(fkiEzmaxinvoicingsummaryinternalID)).append("\n");
-    sb.append("    fkiEzmaxproductID: ").append(toIndentedString(fkiEzmaxproductID)).append("\n");
-    sb.append("    sEzmaxproductDescriptionX: ").append(toIndentedString(sEzmaxproductDescriptionX)).append("\n");
-    sb.append("    fkiBillingentityexternalID: ").append(toIndentedString(fkiBillingentityexternalID)).append("\n");
-    sb.append("    sBillingentityexternalDescription: ").append(toIndentedString(sBillingentityexternalDescription)).append("\n");
-    sb.append("    dEzmaxinvoicingsummaryinternaldetailCountreal: ").append(toIndentedString(dEzmaxinvoicingsummaryinternaldetailCountreal)).append("\n");
-    sb.append("    dEzmaxinvoicingsummaryinternaldetailSubtotal: ").append(toIndentedString(dEzmaxinvoicingsummaryinternaldetailSubtotal)).append("\n");
-    sb.append("    dEzmaxinvoicingsummaryinternaldetailRebate: ").append(toIndentedString(dEzmaxinvoicingsummaryinternaldetailRebate)).append("\n");
-    sb.append("    dEzmaxinvoicingsummaryinternaldetailTotal: ").append(toIndentedString(dEzmaxinvoicingsummaryinternaldetailTotal)).append("\n");
-    sb.append("    bEzmaxinvoicingsummaryinternaldetailAdjustment: ").append(toIndentedString(bEzmaxinvoicingsummaryinternaldetailAdjustment)).append("\n");
-    sb.append("    tEzmaxproductHelpX: ").append(toIndentedString(tEzmaxproductHelpX)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -465,28 +151,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sEzmaxproductDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzmaxproductDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxproductDescriptionX").toString()));
-      }
-      if (!jsonObj.get("sBillingentityexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityexternalDescription").toString()));
-      }
-      if (!jsonObj.get("dEzmaxinvoicingsummaryinternaldetailCountreal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryinternaldetailCountreal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryinternaldetailCountreal").toString()));
-      }
-      if (!jsonObj.get("dEzmaxinvoicingsummaryinternaldetailSubtotal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryinternaldetailSubtotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryinternaldetailSubtotal").toString()));
-      }
-      if (!jsonObj.get("dEzmaxinvoicingsummaryinternaldetailRebate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryinternaldetailRebate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryinternaldetailRebate").toString()));
-      }
-      if (!jsonObj.get("dEzmaxinvoicingsummaryinternaldetailTotal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryinternaldetailTotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryinternaldetailTotal").toString()));
-      }
-      if (!jsonObj.get("tEzmaxproductHelpX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tEzmaxproductHelpX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzmaxproductHelpX").toString()));
       }
   }
 

@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.AuthenticationexternalRequest;
 import com.ezmax.api.model.FieldEAuthenticationexternalType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class VersionhistoryResponse {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
@@ -421,21 +421,6 @@ public class VersionhistoryResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in VersionhistoryResponse is not found in the empty JSON string", VersionhistoryResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!VersionhistoryResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VersionhistoryResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : VersionhistoryResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sModuleNameX") != null && !jsonObj.get("sModuleNameX").isJsonNull()) && !jsonObj.get("sModuleNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
@@ -459,34 +444,6 @@ public class VersionhistoryResponse {
       FieldEVersionhistoryType.validateJsonElement(jsonObj.get("eVersionhistoryType"));
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!VersionhistoryResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'VersionhistoryResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<VersionhistoryResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(VersionhistoryResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<VersionhistoryResponse>() {
-           @Override
-           public void write(JsonWriter out, VersionhistoryResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public VersionhistoryResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of VersionhistoryResponse given an JSON string

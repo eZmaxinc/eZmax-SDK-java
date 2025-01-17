@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CustomNotificationtestgetnotificationtestsResponse;
 import com.ezmax.api.model.MultilingualNotificationsubsectionName;
+import com.ezmax.api.model.NotificationsubsectionResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,33 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CustomNotificationsubsectiongetnotificationtestsResponse {
-  public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
-  @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiNotificationsubsectionID;
-
-  public static final String SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D = "fkiNotificationsectionID";
-  @SerializedName(SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiNotificationsectionID;
-
-  public static final String SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME = "objNotificationsubsectionName";
-  @SerializedName(SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME)
-  @javax.annotation.Nullable
-  private MultilingualNotificationsubsectionName objNotificationsubsectionName;
-
-  public static final String SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X = "sNotificationsectionNameX";
-  @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X)
-  @javax.annotation.Nullable
-  private String sNotificationsectionNameX;
-
-  public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X = "sNotificationsubsectionNameX";
-  @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X)
-  @javax.annotation.Nonnull
-  private String sNotificationsubsectionNameX;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CustomNotificationsubsectiongetnotificationtestsResponse extends NotificationsubsectionResponse {
   public static final String SERIALIZED_NAME_A_OBJ_NOTIFICATIONTEST = "a_objNotificationtest";
   @SerializedName(SERIALIZED_NAME_A_OBJ_NOTIFICATIONTEST)
   @javax.annotation.Nonnull
@@ -86,103 +62,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
 
   public CustomNotificationsubsectiongetnotificationtestsResponse() {
   }
-
-  public CustomNotificationsubsectiongetnotificationtestsResponse pkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
-    this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Notificationsubsection
-   * minimum: 0
-   * @return pkiNotificationsubsectionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiNotificationsubsectionID() {
-    return pkiNotificationsubsectionID;
-  }
-
-  public void setPkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
-    this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
-  }
-
-
-  public CustomNotificationsubsectiongetnotificationtestsResponse fkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
-    this.fkiNotificationsectionID = fkiNotificationsectionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Notificationsection
-   * minimum: 0
-   * @return fkiNotificationsectionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiNotificationsectionID() {
-    return fkiNotificationsectionID;
-  }
-
-  public void setFkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
-    this.fkiNotificationsectionID = fkiNotificationsectionID;
-  }
-
-
-  public CustomNotificationsubsectiongetnotificationtestsResponse objNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
-    this.objNotificationsubsectionName = objNotificationsubsectionName;
-    return this;
-  }
-
-  /**
-   * Get objNotificationsubsectionName
-   * @return objNotificationsubsectionName
-   */
-  @javax.annotation.Nullable
-  public MultilingualNotificationsubsectionName getObjNotificationsubsectionName() {
-    return objNotificationsubsectionName;
-  }
-
-  public void setObjNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
-    this.objNotificationsubsectionName = objNotificationsubsectionName;
-  }
-
-
-  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
-    this.sNotificationsectionNameX = sNotificationsectionNameX;
-    return this;
-  }
-
-  /**
-   * The name of the Notificationsection in the language of the requester
-   * @return sNotificationsectionNameX
-   */
-  @javax.annotation.Nullable
-  public String getsNotificationsectionNameX() {
-    return sNotificationsectionNameX;
-  }
-
-  public void setsNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
-    this.sNotificationsectionNameX = sNotificationsectionNameX;
-  }
-
-
-  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
-    this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
-    return this;
-  }
-
-  /**
-   * The name of the Notificationsubsection in the language of the requester
-   * @return sNotificationsubsectionNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsNotificationsubsectionNameX() {
-    return sNotificationsubsectionNameX;
-  }
-
-  public void setsNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
-    this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
-  }
-
 
   public CustomNotificationsubsectiongetnotificationtestsResponse aObjNotificationtest(@javax.annotation.Nonnull List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
     this.aObjNotificationtest = aObjNotificationtest;
@@ -221,28 +100,20 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
       return false;
     }
     CustomNotificationsubsectiongetnotificationtestsResponse customNotificationsubsectiongetnotificationtestsResponse = (CustomNotificationsubsectiongetnotificationtestsResponse) o;
-    return Objects.equals(this.pkiNotificationsubsectionID, customNotificationsubsectiongetnotificationtestsResponse.pkiNotificationsubsectionID) &&
-        Objects.equals(this.fkiNotificationsectionID, customNotificationsubsectiongetnotificationtestsResponse.fkiNotificationsectionID) &&
-        Objects.equals(this.objNotificationsubsectionName, customNotificationsubsectiongetnotificationtestsResponse.objNotificationsubsectionName) &&
-        Objects.equals(this.sNotificationsectionNameX, customNotificationsubsectiongetnotificationtestsResponse.sNotificationsectionNameX) &&
-        Objects.equals(this.sNotificationsubsectionNameX, customNotificationsubsectiongetnotificationtestsResponse.sNotificationsubsectionNameX) &&
-        Objects.equals(this.aObjNotificationtest, customNotificationsubsectiongetnotificationtestsResponse.aObjNotificationtest);
+    return Objects.equals(this.aObjNotificationtest, customNotificationsubsectiongetnotificationtestsResponse.aObjNotificationtest) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiNotificationsubsectionID, fkiNotificationsectionID, objNotificationsubsectionName, sNotificationsectionNameX, sNotificationsubsectionNameX, aObjNotificationtest);
+    return Objects.hash(aObjNotificationtest, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomNotificationsubsectiongetnotificationtestsResponse {\n");
-    sb.append("    pkiNotificationsubsectionID: ").append(toIndentedString(pkiNotificationsubsectionID)).append("\n");
-    sb.append("    fkiNotificationsectionID: ").append(toIndentedString(fkiNotificationsectionID)).append("\n");
-    sb.append("    objNotificationsubsectionName: ").append(toIndentedString(objNotificationsubsectionName)).append("\n");
-    sb.append("    sNotificationsectionNameX: ").append(toIndentedString(sNotificationsectionNameX)).append("\n");
-    sb.append("    sNotificationsubsectionNameX: ").append(toIndentedString(sNotificationsubsectionNameX)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjNotificationtest: ").append(toIndentedString(aObjNotificationtest)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -275,10 +146,10 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objNotificationtest");
     openapiRequiredFields.add("pkiNotificationsubsectionID");
     openapiRequiredFields.add("fkiNotificationsectionID");
     openapiRequiredFields.add("sNotificationsubsectionNameX");
-    openapiRequiredFields.add("a_objNotificationtest");
   }
 
   /**
@@ -309,16 +180,6 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `objNotificationsubsectionName`
-      if (jsonObj.get("objNotificationsubsectionName") != null && !jsonObj.get("objNotificationsubsectionName").isJsonNull()) {
-        MultilingualNotificationsubsectionName.validateJsonElement(jsonObj.get("objNotificationsubsectionName"));
-      }
-      if ((jsonObj.get("sNotificationsectionNameX") != null && !jsonObj.get("sNotificationsectionNameX").isJsonNull()) && !jsonObj.get("sNotificationsectionNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sNotificationsectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationsectionNameX").toString()));
-      }
-      if (!jsonObj.get("sNotificationsubsectionNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sNotificationsubsectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationsubsectionNameX").toString()));
-      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objNotificationtest").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objNotificationtest` to be an array in the JSON string but got `%s`", jsonObj.get("a_objNotificationtest").toString()));

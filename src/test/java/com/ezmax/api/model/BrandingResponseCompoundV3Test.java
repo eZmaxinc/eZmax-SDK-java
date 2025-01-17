@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.BrandingResponseV3;
 import com.ezmax.api.model.FieldEBrandingAlignlogo;
 import com.ezmax.api.model.FieldEBrandingLogo;
 import com.ezmax.api.model.MultilingualBrandingDescription;

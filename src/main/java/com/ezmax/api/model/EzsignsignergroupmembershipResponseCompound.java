@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsignsignergroupmembershipResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,138 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignsignergroupmembershipResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D = "pkiEzsignsignergroupmembershipID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsignsignergroupmembershipID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D = "fkiEzsignsignergroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsignsignergroupID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzsignsignerID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUsergroupID;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignsignergroupmembershipResponseCompound extends EzsignsignergroupmembershipResponse {
   public EzsignsignergroupmembershipResponseCompound() {
   }
-
-  public EzsignsignergroupmembershipResponseCompound pkiEzsignsignergroupmembershipID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupmembershipID) {
-    this.pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignsignergroupmembership
-   * minimum: 0
-   * maximum: 16777215
-   * @return pkiEzsignsignergroupmembershipID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsignsignergroupmembershipID() {
-    return pkiEzsignsignergroupmembershipID;
-  }
-
-  public void setPkiEzsignsignergroupmembershipID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupmembershipID) {
-    this.pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
-  }
-
-
-  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignergroupID(@javax.annotation.Nonnull Integer fkiEzsignsignergroupID) {
-    this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignsignergroup
-   * minimum: 0
-   * maximum: 65535
-   * @return fkiEzsignsignergroupID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsignsignergroupID() {
-    return fkiEzsignsignergroupID;
-  }
-
-  public void setFkiEzsignsignergroupID(@javax.annotation.Nonnull Integer fkiEzsignsignergroupID) {
-    this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
-  }
-
-
-  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignsigner
-   * minimum: 0
-   * @return fkiEzsignsignerID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzsignsignerID() {
-    return fkiEzsignsignerID;
-  }
-
-  public void setFkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
-    this.fkiEzsignsignerID = fkiEzsignsignerID;
-  }
-
-
-  public EzsignsignergroupmembershipResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public EzsignsignergroupmembershipResponseCompound fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Usergroup
-   * minimum: 0
-   * maximum: 255
-   * @return fkiUsergroupID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUsergroupID() {
-    return fkiUsergroupID;
-  }
-
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
-    this.fkiUsergroupID = fkiUsergroupID;
-  }
-
 
 
   @Override
@@ -190,28 +63,19 @@ public class EzsignsignergroupmembershipResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignsignergroupmembershipResponseCompound ezsignsignergroupmembershipResponseCompound = (EzsignsignergroupmembershipResponseCompound) o;
-    return Objects.equals(this.pkiEzsignsignergroupmembershipID, ezsignsignergroupmembershipResponseCompound.pkiEzsignsignergroupmembershipID) &&
-        Objects.equals(this.fkiEzsignsignergroupID, ezsignsignergroupmembershipResponseCompound.fkiEzsignsignergroupID) &&
-        Objects.equals(this.fkiEzsignsignerID, ezsignsignergroupmembershipResponseCompound.fkiEzsignsignerID) &&
-        Objects.equals(this.fkiUserID, ezsignsignergroupmembershipResponseCompound.fkiUserID) &&
-        Objects.equals(this.fkiUsergroupID, ezsignsignergroupmembershipResponseCompound.fkiUsergroupID);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignergroupmembershipID, fkiEzsignsignergroupID, fkiEzsignsignerID, fkiUserID, fkiUsergroupID);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupmembershipResponseCompound {\n");
-    sb.append("    pkiEzsignsignergroupmembershipID: ").append(toIndentedString(pkiEzsignsignergroupmembershipID)).append("\n");
-    sb.append("    fkiEzsignsignergroupID: ").append(toIndentedString(fkiEzsignsignergroupID)).append("\n");
-    sb.append("    fkiEzsignsignerID: ").append(toIndentedString(fkiEzsignsignerID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -273,7 +137,6 @@ public class EzsignsignergroupmembershipResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

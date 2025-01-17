@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SignatureResponseV3 {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
@@ -257,54 +257,11 @@ public class SignatureResponseV3 {
           throw new IllegalArgumentException(String.format("The required field(s) %s in SignatureResponseV3 is not found in the empty JSON string", SignatureResponseV3.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!SignatureResponseV3.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SignatureResponseV3` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : SignatureResponseV3.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eSignaturePreference`
       FieldESignaturePreference.validateJsonElement(jsonObj.get("eSignaturePreference"));
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!SignatureResponseV3.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'SignatureResponseV3' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<SignatureResponseV3> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(SignatureResponseV3.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<SignatureResponseV3>() {
-           @Override
-           public void write(JsonWriter out, SignatureResponseV3 value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public SignatureResponseV3 read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of SignatureResponseV3 given an JSON string

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EzsigntemplateResponseCompound;
+import com.ezmax.api.model.EzsigntemplatepackagemembershipResponse;
 import com.ezmax.api.model.EzsigntemplatepackagesignermembershipResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,28 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatepackagemembershipResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsigntemplatepackagemembershipID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigntemplatepackageID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigntemplateID;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_ORDER = "iEzsigntemplatepackagemembershipOrder";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_ORDER)
-  @javax.annotation.Nonnull
-  private Integer iEzsigntemplatepackagemembershipOrder;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsigntemplatepackagemembershipResponseCompound extends EzsigntemplatepackagemembershipResponse {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATE = "objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATE)
   @javax.annotation.Nonnull
@@ -86,86 +67,6 @@ public class EzsigntemplatepackagemembershipResponseCompound {
 
   public EzsigntemplatepackagemembershipResponseCompound() {
   }
-
-  public EzsigntemplatepackagemembershipResponseCompound pkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackagemembershipID) {
-    this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepackagemembership
-   * minimum: 0
-   * @return pkiEzsigntemplatepackagemembershipID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsigntemplatepackagemembershipID() {
-    return pkiEzsigntemplatepackagemembershipID;
-  }
-
-  public void setPkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackagemembershipID) {
-    this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
-  }
-
-
-  public EzsigntemplatepackagemembershipResponseCompound fkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplatepackage
-   * minimum: 0
-   * @return fkiEzsigntemplatepackageID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigntemplatepackageID() {
-    return fkiEzsigntemplatepackageID;
-  }
-
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
-    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
-  }
-
-
-  public EzsigntemplatepackagemembershipResponseCompound fkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
-    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplate
-   * minimum: 0
-   * @return fkiEzsigntemplateID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigntemplateID() {
-    return fkiEzsigntemplateID;
-  }
-
-  public void setFkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
-    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
-  }
-
-
-  public EzsigntemplatepackagemembershipResponseCompound iEzsigntemplatepackagemembershipOrder(@javax.annotation.Nonnull Integer iEzsigntemplatepackagemembershipOrder) {
-    this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
-    return this;
-  }
-
-  /**
-   * The order in which the Ezsigntemplate will be imported when using an Ezsigntemplatepackage.
-   * minimum: 1
-   * @return iEzsigntemplatepackagemembershipOrder
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsigntemplatepackagemembershipOrder() {
-    return iEzsigntemplatepackagemembershipOrder;
-  }
-
-  public void setiEzsigntemplatepackagemembershipOrder(@javax.annotation.Nonnull Integer iEzsigntemplatepackagemembershipOrder) {
-    this.iEzsigntemplatepackagemembershipOrder = iEzsigntemplatepackagemembershipOrder;
-  }
-
 
   public EzsigntemplatepackagemembershipResponseCompound objEzsigntemplate(@javax.annotation.Nonnull EzsigntemplateResponseCompound objEzsigntemplate) {
     this.objEzsigntemplate = objEzsigntemplate;
@@ -223,27 +124,21 @@ public class EzsigntemplatepackagemembershipResponseCompound {
       return false;
     }
     EzsigntemplatepackagemembershipResponseCompound ezsigntemplatepackagemembershipResponseCompound = (EzsigntemplatepackagemembershipResponseCompound) o;
-    return Objects.equals(this.pkiEzsigntemplatepackagemembershipID, ezsigntemplatepackagemembershipResponseCompound.pkiEzsigntemplatepackagemembershipID) &&
-        Objects.equals(this.fkiEzsigntemplatepackageID, ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplatepackageID) &&
-        Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatepackagemembershipResponseCompound.fkiEzsigntemplateID) &&
-        Objects.equals(this.iEzsigntemplatepackagemembershipOrder, ezsigntemplatepackagemembershipResponseCompound.iEzsigntemplatepackagemembershipOrder) &&
-        Objects.equals(this.objEzsigntemplate, ezsigntemplatepackagemembershipResponseCompound.objEzsigntemplate) &&
-        Objects.equals(this.aObjEzsigntemplatepackagesignermembership, ezsigntemplatepackagemembershipResponseCompound.aObjEzsigntemplatepackagesignermembership);
+    return Objects.equals(this.objEzsigntemplate, ezsigntemplatepackagemembershipResponseCompound.objEzsigntemplate) &&
+        Objects.equals(this.aObjEzsigntemplatepackagesignermembership, ezsigntemplatepackagemembershipResponseCompound.aObjEzsigntemplatepackagesignermembership) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatepackagemembershipID, fkiEzsigntemplatepackageID, fkiEzsigntemplateID, iEzsigntemplatepackagemembershipOrder, objEzsigntemplate, aObjEzsigntemplatepackagesignermembership);
+    return Objects.hash(objEzsigntemplate, aObjEzsigntemplatepackagesignermembership, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackagemembershipResponseCompound {\n");
-    sb.append("    pkiEzsigntemplatepackagemembershipID: ").append(toIndentedString(pkiEzsigntemplatepackagemembershipID)).append("\n");
-    sb.append("    fkiEzsigntemplatepackageID: ").append(toIndentedString(fkiEzsigntemplatepackageID)).append("\n");
-    sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
-    sb.append("    iEzsigntemplatepackagemembershipOrder: ").append(toIndentedString(iEzsigntemplatepackagemembershipOrder)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    objEzsigntemplate: ").append(toIndentedString(objEzsigntemplate)).append("\n");
     sb.append("    aObjEzsigntemplatepackagesignermembership: ").append(toIndentedString(aObjEzsigntemplatepackagesignermembership)).append("\n");
     sb.append("}");
@@ -277,12 +172,12 @@ public class EzsigntemplatepackagemembershipResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objEzsigntemplate");
+    openapiRequiredFields.add("a_objEzsigntemplatepackagesignermembership");
     openapiRequiredFields.add("pkiEzsigntemplatepackagemembershipID");
     openapiRequiredFields.add("fkiEzsigntemplatepackageID");
     openapiRequiredFields.add("fkiEzsigntemplateID");
     openapiRequiredFields.add("iEzsigntemplatepackagemembershipOrder");
-    openapiRequiredFields.add("objEzsigntemplate");
-    openapiRequiredFields.add("a_objEzsigntemplatepackagesignermembership");
   }
 
   /**

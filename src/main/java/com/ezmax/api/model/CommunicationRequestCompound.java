@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CommunicationRequest;
 import com.ezmax.api.model.CommunicationexternalrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationreferenceRequest;
@@ -57,110 +58,8 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommunicationRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
-  @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiCommunicationID;
-
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
-  @javax.annotation.Nullable
-  private FieldECommunicationImportance eCommunicationImportance;
-
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
-  @javax.annotation.Nonnull
-  private FieldECommunicationType eCommunicationType;
-
-  public static final String SERIALIZED_NAME_OBJ_COMMUNICATIONSENDER = "objCommunicationsender";
-  @SerializedName(SERIALIZED_NAME_OBJ_COMMUNICATIONSENDER)
-  @javax.annotation.Nullable
-  private CustomCommunicationsenderRequest objCommunicationsender;
-
-  public static final String SERIALIZED_NAME_S_COMMUNICATION_SUBJECT = "sCommunicationSubject";
-  @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
-  @javax.annotation.Nullable
-  private String sCommunicationSubject;
-
-  public static final String SERIALIZED_NAME_T_COMMUNICATION_BODY = "tCommunicationBody";
-  @SerializedName(SERIALIZED_NAME_T_COMMUNICATION_BODY)
-  @javax.annotation.Nonnull
-  private String tCommunicationBody;
-
-  public static final String SERIALIZED_NAME_B_COMMUNICATION_PRIVATE = "bCommunicationPrivate";
-  @SerializedName(SERIALIZED_NAME_B_COMMUNICATION_PRIVATE)
-  @javax.annotation.Nonnull
-  private Boolean bCommunicationPrivate;
-
-  /**
-   * How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-   */
-  @JsonAdapter(ECommunicationAttachmenttypeEnum.Adapter.class)
-  public enum ECommunicationAttachmenttypeEnum {
-    ATTACHMENT("Attachment"),
-    
-    URL("Url");
-
-    private String value;
-
-    ECommunicationAttachmenttypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static ECommunicationAttachmenttypeEnum fromValue(String value) {
-      for (ECommunicationAttachmenttypeEnum b : ECommunicationAttachmenttypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<ECommunicationAttachmenttypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final ECommunicationAttachmenttypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public ECommunicationAttachmenttypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return ECommunicationAttachmenttypeEnum.fromValue(value);
-      }
-    }
-
-    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      String value = jsonElement.getAsString();
-      ECommunicationAttachmenttypeEnum.fromValue(value);
-    }
-  }
-
-  public static final String SERIALIZED_NAME_E_COMMUNICATION_ATTACHMENTTYPE = "eCommunicationAttachmenttype";
-  @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_ATTACHMENTTYPE)
-  @javax.annotation.Nullable
-  private ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype;
-
-  public static final String SERIALIZED_NAME_I_COMMUNICATION_ATTACHMENTLINKEXPIRATION = "iCommunicationAttachmentlinkexpiration";
-  @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_ATTACHMENTLINKEXPIRATION)
-  @javax.annotation.Nullable
-  private Integer iCommunicationAttachmentlinkexpiration;
-
-  public static final String SERIALIZED_NAME_B_COMMUNICATION_READRECEIPT = "bCommunicationReadreceipt";
-  @SerializedName(SERIALIZED_NAME_B_COMMUNICATION_READRECEIPT)
-  @javax.annotation.Nullable
-  private Boolean bCommunicationReadreceipt;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CommunicationRequestCompound extends CommunicationRequest {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT = "a_objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONATTACHMENT)
   @javax.annotation.Nonnull
@@ -183,199 +82,6 @@ public class CommunicationRequestCompound {
 
   public CommunicationRequestCompound() {
   }
-
-  public CommunicationRequestCompound pkiCommunicationID(@javax.annotation.Nullable Integer pkiCommunicationID) {
-    this.pkiCommunicationID = pkiCommunicationID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Communication.
-   * minimum: 0
-   * @return pkiCommunicationID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiCommunicationID() {
-    return pkiCommunicationID;
-  }
-
-  public void setPkiCommunicationID(@javax.annotation.Nullable Integer pkiCommunicationID) {
-    this.pkiCommunicationID = pkiCommunicationID;
-  }
-
-
-  public CommunicationRequestCompound eCommunicationImportance(@javax.annotation.Nullable FieldECommunicationImportance eCommunicationImportance) {
-    this.eCommunicationImportance = eCommunicationImportance;
-    return this;
-  }
-
-  /**
-   * Get eCommunicationImportance
-   * @return eCommunicationImportance
-   */
-  @javax.annotation.Nullable
-  public FieldECommunicationImportance geteCommunicationImportance() {
-    return eCommunicationImportance;
-  }
-
-  public void seteCommunicationImportance(@javax.annotation.Nullable FieldECommunicationImportance eCommunicationImportance) {
-    this.eCommunicationImportance = eCommunicationImportance;
-  }
-
-
-  public CommunicationRequestCompound eCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
-    this.eCommunicationType = eCommunicationType;
-    return this;
-  }
-
-  /**
-   * Get eCommunicationType
-   * @return eCommunicationType
-   */
-  @javax.annotation.Nonnull
-  public FieldECommunicationType geteCommunicationType() {
-    return eCommunicationType;
-  }
-
-  public void seteCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
-    this.eCommunicationType = eCommunicationType;
-  }
-
-
-  public CommunicationRequestCompound objCommunicationsender(@javax.annotation.Nullable CustomCommunicationsenderRequest objCommunicationsender) {
-    this.objCommunicationsender = objCommunicationsender;
-    return this;
-  }
-
-  /**
-   * Get objCommunicationsender
-   * @return objCommunicationsender
-   */
-  @javax.annotation.Nullable
-  public CustomCommunicationsenderRequest getObjCommunicationsender() {
-    return objCommunicationsender;
-  }
-
-  public void setObjCommunicationsender(@javax.annotation.Nullable CustomCommunicationsenderRequest objCommunicationsender) {
-    this.objCommunicationsender = objCommunicationsender;
-  }
-
-
-  public CommunicationRequestCompound sCommunicationSubject(@javax.annotation.Nullable String sCommunicationSubject) {
-    this.sCommunicationSubject = sCommunicationSubject;
-    return this;
-  }
-
-  /**
-   * The subject of the Communication
-   * @return sCommunicationSubject
-   */
-  @javax.annotation.Nullable
-  public String getsCommunicationSubject() {
-    return sCommunicationSubject;
-  }
-
-  public void setsCommunicationSubject(@javax.annotation.Nullable String sCommunicationSubject) {
-    this.sCommunicationSubject = sCommunicationSubject;
-  }
-
-
-  public CommunicationRequestCompound tCommunicationBody(@javax.annotation.Nonnull String tCommunicationBody) {
-    this.tCommunicationBody = tCommunicationBody;
-    return this;
-  }
-
-  /**
-   * The Body of the Communication
-   * @return tCommunicationBody
-   */
-  @javax.annotation.Nonnull
-  public String gettCommunicationBody() {
-    return tCommunicationBody;
-  }
-
-  public void settCommunicationBody(@javax.annotation.Nonnull String tCommunicationBody) {
-    this.tCommunicationBody = tCommunicationBody;
-  }
-
-
-  public CommunicationRequestCompound bCommunicationPrivate(@javax.annotation.Nonnull Boolean bCommunicationPrivate) {
-    this.bCommunicationPrivate = bCommunicationPrivate;
-    return this;
-  }
-
-  /**
-   * Whether the Communication is private or not
-   * @return bCommunicationPrivate
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbCommunicationPrivate() {
-    return bCommunicationPrivate;
-  }
-
-  public void setbCommunicationPrivate(@javax.annotation.Nonnull Boolean bCommunicationPrivate) {
-    this.bCommunicationPrivate = bCommunicationPrivate;
-  }
-
-
-  public CommunicationRequestCompound eCommunicationAttachmenttype(@javax.annotation.Nullable ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
-    this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
-    return this;
-  }
-
-  /**
-   * How the attachment should be included in the email.   Only used if eCommunicationType is **Email**
-   * @return eCommunicationAttachmenttype
-   */
-  @javax.annotation.Nullable
-  public ECommunicationAttachmenttypeEnum geteCommunicationAttachmenttype() {
-    return eCommunicationAttachmenttype;
-  }
-
-  public void seteCommunicationAttachmenttype(@javax.annotation.Nullable ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
-    this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
-  }
-
-
-  public CommunicationRequestCompound iCommunicationAttachmentlinkexpiration(@javax.annotation.Nullable Integer iCommunicationAttachmentlinkexpiration) {
-    this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
-    return this;
-  }
-
-  /**
-   * The number of days before the attachment link expired.   Only used if eCommunicationType is **Email** and eCommunicationattachmentType is **Link**
-   * minimum: 1
-   * maximum: 30
-   * @return iCommunicationAttachmentlinkexpiration
-   */
-  @javax.annotation.Nullable
-  public Integer getiCommunicationAttachmentlinkexpiration() {
-    return iCommunicationAttachmentlinkexpiration;
-  }
-
-  public void setiCommunicationAttachmentlinkexpiration(@javax.annotation.Nullable Integer iCommunicationAttachmentlinkexpiration) {
-    this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
-  }
-
-
-  public CommunicationRequestCompound bCommunicationReadreceipt(@javax.annotation.Nullable Boolean bCommunicationReadreceipt) {
-    this.bCommunicationReadreceipt = bCommunicationReadreceipt;
-    return this;
-  }
-
-  /**
-   * Whether we ask for a read receipt or not.
-   * @return bCommunicationReadreceipt
-   */
-  @javax.annotation.Nullable
-  public Boolean getbCommunicationReadreceipt() {
-    return bCommunicationReadreceipt;
-  }
-
-  public void setbCommunicationReadreceipt(@javax.annotation.Nullable Boolean bCommunicationReadreceipt) {
-    this.bCommunicationReadreceipt = bCommunicationReadreceipt;
-  }
-
 
   public CommunicationRequestCompound aObjCommunicationattachment(@javax.annotation.Nonnull List<CustomCommunicationattachmentRequest> aObjCommunicationattachment) {
     this.aObjCommunicationattachment = aObjCommunicationattachment;
@@ -495,41 +201,23 @@ public class CommunicationRequestCompound {
       return false;
     }
     CommunicationRequestCompound communicationRequestCompound = (CommunicationRequestCompound) o;
-    return Objects.equals(this.pkiCommunicationID, communicationRequestCompound.pkiCommunicationID) &&
-        Objects.equals(this.eCommunicationImportance, communicationRequestCompound.eCommunicationImportance) &&
-        Objects.equals(this.eCommunicationType, communicationRequestCompound.eCommunicationType) &&
-        Objects.equals(this.objCommunicationsender, communicationRequestCompound.objCommunicationsender) &&
-        Objects.equals(this.sCommunicationSubject, communicationRequestCompound.sCommunicationSubject) &&
-        Objects.equals(this.tCommunicationBody, communicationRequestCompound.tCommunicationBody) &&
-        Objects.equals(this.bCommunicationPrivate, communicationRequestCompound.bCommunicationPrivate) &&
-        Objects.equals(this.eCommunicationAttachmenttype, communicationRequestCompound.eCommunicationAttachmenttype) &&
-        Objects.equals(this.iCommunicationAttachmentlinkexpiration, communicationRequestCompound.iCommunicationAttachmentlinkexpiration) &&
-        Objects.equals(this.bCommunicationReadreceipt, communicationRequestCompound.bCommunicationReadreceipt) &&
-        Objects.equals(this.aObjCommunicationattachment, communicationRequestCompound.aObjCommunicationattachment) &&
+    return Objects.equals(this.aObjCommunicationattachment, communicationRequestCompound.aObjCommunicationattachment) &&
         Objects.equals(this.aObjCommunicationrecipient, communicationRequestCompound.aObjCommunicationrecipient) &&
         Objects.equals(this.aObjCommunicationreference, communicationRequestCompound.aObjCommunicationreference) &&
-        Objects.equals(this.aObjCommunicationexternalrecipient, communicationRequestCompound.aObjCommunicationexternalrecipient);
+        Objects.equals(this.aObjCommunicationexternalrecipient, communicationRequestCompound.aObjCommunicationexternalrecipient) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationID, eCommunicationImportance, eCommunicationType, objCommunicationsender, sCommunicationSubject, tCommunicationBody, bCommunicationPrivate, eCommunicationAttachmenttype, iCommunicationAttachmentlinkexpiration, bCommunicationReadreceipt, aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationreference, aObjCommunicationexternalrecipient);
+    return Objects.hash(aObjCommunicationattachment, aObjCommunicationrecipient, aObjCommunicationreference, aObjCommunicationexternalrecipient, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationRequestCompound {\n");
-    sb.append("    pkiCommunicationID: ").append(toIndentedString(pkiCommunicationID)).append("\n");
-    sb.append("    eCommunicationImportance: ").append(toIndentedString(eCommunicationImportance)).append("\n");
-    sb.append("    eCommunicationType: ").append(toIndentedString(eCommunicationType)).append("\n");
-    sb.append("    objCommunicationsender: ").append(toIndentedString(objCommunicationsender)).append("\n");
-    sb.append("    sCommunicationSubject: ").append(toIndentedString(sCommunicationSubject)).append("\n");
-    sb.append("    tCommunicationBody: ").append(toIndentedString(tCommunicationBody)).append("\n");
-    sb.append("    bCommunicationPrivate: ").append(toIndentedString(bCommunicationPrivate)).append("\n");
-    sb.append("    eCommunicationAttachmenttype: ").append(toIndentedString(eCommunicationAttachmenttype)).append("\n");
-    sb.append("    iCommunicationAttachmentlinkexpiration: ").append(toIndentedString(iCommunicationAttachmentlinkexpiration)).append("\n");
-    sb.append("    bCommunicationReadreceipt: ").append(toIndentedString(bCommunicationReadreceipt)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjCommunicationattachment: ").append(toIndentedString(aObjCommunicationattachment)).append("\n");
     sb.append("    aObjCommunicationrecipient: ").append(toIndentedString(aObjCommunicationrecipient)).append("\n");
     sb.append("    aObjCommunicationreference: ").append(toIndentedString(aObjCommunicationreference)).append("\n");
@@ -573,13 +261,13 @@ public class CommunicationRequestCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("eCommunicationType");
-    openapiRequiredFields.add("tCommunicationBody");
-    openapiRequiredFields.add("bCommunicationPrivate");
     openapiRequiredFields.add("a_objCommunicationattachment");
     openapiRequiredFields.add("a_objCommunicationrecipient");
     openapiRequiredFields.add("a_objCommunicationreference");
     openapiRequiredFields.add("a_objCommunicationexternalrecipient");
+    openapiRequiredFields.add("eCommunicationType");
+    openapiRequiredFields.add("tCommunicationBody");
+    openapiRequiredFields.add("bCommunicationPrivate");
   }
 
   /**
@@ -610,29 +298,6 @@ public class CommunicationRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `eCommunicationImportance`
-      if (jsonObj.get("eCommunicationImportance") != null && !jsonObj.get("eCommunicationImportance").isJsonNull()) {
-        FieldECommunicationImportance.validateJsonElement(jsonObj.get("eCommunicationImportance"));
-      }
-      // validate the required field `eCommunicationType`
-      FieldECommunicationType.validateJsonElement(jsonObj.get("eCommunicationType"));
-      // validate the optional field `objCommunicationsender`
-      if (jsonObj.get("objCommunicationsender") != null && !jsonObj.get("objCommunicationsender").isJsonNull()) {
-        CustomCommunicationsenderRequest.validateJsonElement(jsonObj.get("objCommunicationsender"));
-      }
-      if ((jsonObj.get("sCommunicationSubject") != null && !jsonObj.get("sCommunicationSubject").isJsonNull()) && !jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
-      }
-      if (!jsonObj.get("tCommunicationBody").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tCommunicationBody` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tCommunicationBody").toString()));
-      }
-      if ((jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) && !jsonObj.get("eCommunicationAttachmenttype").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `eCommunicationAttachmenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationAttachmenttype").toString()));
-      }
-      // validate the optional field `eCommunicationAttachmenttype`
-      if (jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) {
-        ECommunicationAttachmenttypeEnum.validateJsonElement(jsonObj.get("eCommunicationAttachmenttype"));
-      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationattachment").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));

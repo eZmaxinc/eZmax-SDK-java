@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.EzsignbulksendResponse;
 import com.ezmax.api.model.EzsignbulksenddocumentmappingResponseCompound;
 import com.ezmax.api.model.EzsignbulksendsignermappingResponse;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;

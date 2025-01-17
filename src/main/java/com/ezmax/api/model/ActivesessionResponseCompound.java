@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.ActivesessionResponse;
 import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
 import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionEzsign;
@@ -62,103 +63,8 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ActivesessionResponseCompound {
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
-  @javax.annotation.Nonnull
-  private FieldEActivesessionUsertype eActivesessionUsertype;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN = "eActivesessionOrigin";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN)
-  @javax.annotation.Nonnull
-  private FieldEActivesessionOrigin eActivesessionOrigin;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
-  @javax.annotation.Nonnull
-  private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
-
-  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
-  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiLanguageID;
-
-  public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
-  @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
-  @javax.annotation.Nonnull
-  private String sCompanyNameX;
-
-  public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
-  @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
-  @javax.annotation.Nonnull
-  private String sDepartmentNameX;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_DEBUG = "bActivesessionDebug";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_DEBUG)
-  @javax.annotation.Nonnull
-  private Boolean bActivesessionDebug;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN = "bActivesessionIssuperadmin";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN)
-  @javax.annotation.Nonnull
-  private Boolean bActivesessionIssuperadmin;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT = "bActivesessionAttachment";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT)
-  @javax.annotation.Nullable
-  private Boolean bActivesessionAttachment;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_CANAFE = "bActivesessionCanafe";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_CANAFE)
-  @javax.annotation.Nullable
-  private Boolean bActivesessionCanafe;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL = "bActivesessionFinancial";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL)
-  @javax.annotation.Nullable
-  private Boolean bActivesessionFinancial;
-
-  public static final String SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED = "bActivesessionRealestatecompleted";
-  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED)
-  @javax.annotation.Nullable
-  private Boolean bActivesessionRealestatecompleted;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN = "eActivesessionEzsign";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN)
-  @javax.annotation.Nullable
-  private FieldEActivesessionEzsign eActivesessionEzsign;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS = "eActivesessionEzsignaccess";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS)
-  @javax.annotation.Nonnull
-  private FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID = "eActivesessionEzsignprepaid";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID)
-  @javax.annotation.Nullable
-  private FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid;
-
-  public static final String SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS = "eActivesessionRealestateinprogress";
-  @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS)
-  @javax.annotation.Nullable
-  private FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress;
-
-  public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
-  @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
-  @javax.annotation.Nonnull
-  private String pksCustomerCode;
-
-  public static final String SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D = "fkiSystemconfigurationtypeID";
-  @SerializedName(SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiSystemconfigurationtypeID;
-
-  public static final String SERIALIZED_NAME_FKI_SIGNATURE_I_D = "fkiSignatureID";
-  @SerializedName(SERIALIZED_NAME_FKI_SIGNATURE_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiSignatureID;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ActivesessionResponseCompound extends ActivesessionResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNUSER_I_D = "fkiEzsignuserID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNUSER_I_D)
   @javax.annotation.Nullable
@@ -221,372 +127,6 @@ public class ActivesessionResponseCompound {
 
   public ActivesessionResponseCompound() {
   }
-
-  public ActivesessionResponseCompound eActivesessionUsertype(@javax.annotation.Nonnull FieldEActivesessionUsertype eActivesessionUsertype) {
-    this.eActivesessionUsertype = eActivesessionUsertype;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionUsertype
-   * @return eActivesessionUsertype
-   */
-  @javax.annotation.Nonnull
-  public FieldEActivesessionUsertype geteActivesessionUsertype() {
-    return eActivesessionUsertype;
-  }
-
-  public void seteActivesessionUsertype(@javax.annotation.Nonnull FieldEActivesessionUsertype eActivesessionUsertype) {
-    this.eActivesessionUsertype = eActivesessionUsertype;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionOrigin(@javax.annotation.Nonnull FieldEActivesessionOrigin eActivesessionOrigin) {
-    this.eActivesessionOrigin = eActivesessionOrigin;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionOrigin
-   * @return eActivesessionOrigin
-   */
-  @javax.annotation.Nonnull
-  public FieldEActivesessionOrigin geteActivesessionOrigin() {
-    return eActivesessionOrigin;
-  }
-
-  public void seteActivesessionOrigin(@javax.annotation.Nonnull FieldEActivesessionOrigin eActivesessionOrigin) {
-    this.eActivesessionOrigin = eActivesessionOrigin;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionWeekdaystart(@javax.annotation.Nonnull FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
-    this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionWeekdaystart
-   * @return eActivesessionWeekdaystart
-   */
-  @javax.annotation.Nonnull
-  public FieldEActivesessionWeekdaystart geteActivesessionWeekdaystart() {
-    return eActivesessionWeekdaystart;
-  }
-
-  public void seteActivesessionWeekdaystart(@javax.annotation.Nonnull FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
-    this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
-  }
-
-
-  public ActivesessionResponseCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-   * minimum: 1
-   * maximum: 2
-   * @return fkiLanguageID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiLanguageID() {
-    return fkiLanguageID;
-  }
-
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-  }
-
-
-  public ActivesessionResponseCompound sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
-    this.sCompanyNameX = sCompanyNameX;
-    return this;
-  }
-
-  /**
-   * The Name of the Company in the language of the requester
-   * @return sCompanyNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsCompanyNameX() {
-    return sCompanyNameX;
-  }
-
-  public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
-    this.sCompanyNameX = sCompanyNameX;
-  }
-
-
-  public ActivesessionResponseCompound sDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
-    this.sDepartmentNameX = sDepartmentNameX;
-    return this;
-  }
-
-  /**
-   * The Name of the Department in the language of the requester
-   * @return sDepartmentNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsDepartmentNameX() {
-    return sDepartmentNameX;
-  }
-
-  public void setsDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
-    this.sDepartmentNameX = sDepartmentNameX;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionDebug(@javax.annotation.Nonnull Boolean bActivesessionDebug) {
-    this.bActivesessionDebug = bActivesessionDebug;
-    return this;
-  }
-
-  /**
-   * Whether the active session is in debug or not
-   * @return bActivesessionDebug
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbActivesessionDebug() {
-    return bActivesessionDebug;
-  }
-
-  public void setbActivesessionDebug(@javax.annotation.Nonnull Boolean bActivesessionDebug) {
-    this.bActivesessionDebug = bActivesessionDebug;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionIssuperadmin(@javax.annotation.Nonnull Boolean bActivesessionIssuperadmin) {
-    this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
-    return this;
-  }
-
-  /**
-   * Whether the active session is superadmin or not
-   * @return bActivesessionIssuperadmin
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbActivesessionIssuperadmin() {
-    return bActivesessionIssuperadmin;
-  }
-
-  public void setbActivesessionIssuperadmin(@javax.annotation.Nonnull Boolean bActivesessionIssuperadmin) {
-    this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionAttachment(@javax.annotation.Nullable Boolean bActivesessionAttachment) {
-    this.bActivesessionAttachment = bActivesessionAttachment;
-    return this;
-  }
-
-  /**
-   * Can access attachment when we clone a user
-   * @return bActivesessionAttachment
-   */
-  @javax.annotation.Nullable
-  public Boolean getbActivesessionAttachment() {
-    return bActivesessionAttachment;
-  }
-
-  public void setbActivesessionAttachment(@javax.annotation.Nullable Boolean bActivesessionAttachment) {
-    this.bActivesessionAttachment = bActivesessionAttachment;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionCanafe(@javax.annotation.Nullable Boolean bActivesessionCanafe) {
-    this.bActivesessionCanafe = bActivesessionCanafe;
-    return this;
-  }
-
-  /**
-   * Can access canafe when we clone a user
-   * @return bActivesessionCanafe
-   */
-  @javax.annotation.Nullable
-  public Boolean getbActivesessionCanafe() {
-    return bActivesessionCanafe;
-  }
-
-  public void setbActivesessionCanafe(@javax.annotation.Nullable Boolean bActivesessionCanafe) {
-    this.bActivesessionCanafe = bActivesessionCanafe;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionFinancial(@javax.annotation.Nullable Boolean bActivesessionFinancial) {
-    this.bActivesessionFinancial = bActivesessionFinancial;
-    return this;
-  }
-
-  /**
-   * Can access financial element when we clone a user
-   * @return bActivesessionFinancial
-   */
-  @javax.annotation.Nullable
-  public Boolean getbActivesessionFinancial() {
-    return bActivesessionFinancial;
-  }
-
-  public void setbActivesessionFinancial(@javax.annotation.Nullable Boolean bActivesessionFinancial) {
-    this.bActivesessionFinancial = bActivesessionFinancial;
-  }
-
-
-  public ActivesessionResponseCompound bActivesessionRealestatecompleted(@javax.annotation.Nullable Boolean bActivesessionRealestatecompleted) {
-    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
-    return this;
-  }
-
-  /**
-   * Can access closed realestate folders when we clone a user
-   * @return bActivesessionRealestatecompleted
-   */
-  @javax.annotation.Nullable
-  public Boolean getbActivesessionRealestatecompleted() {
-    return bActivesessionRealestatecompleted;
-  }
-
-  public void setbActivesessionRealestatecompleted(@javax.annotation.Nullable Boolean bActivesessionRealestatecompleted) {
-    this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionEzsign(@javax.annotation.Nullable FieldEActivesessionEzsign eActivesessionEzsign) {
-    this.eActivesessionEzsign = eActivesessionEzsign;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionEzsign
-   * @return eActivesessionEzsign
-   */
-  @javax.annotation.Nullable
-  public FieldEActivesessionEzsign geteActivesessionEzsign() {
-    return eActivesessionEzsign;
-  }
-
-  public void seteActivesessionEzsign(@javax.annotation.Nullable FieldEActivesessionEzsign eActivesessionEzsign) {
-    this.eActivesessionEzsign = eActivesessionEzsign;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionEzsignaccess(@javax.annotation.Nonnull FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
-    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionEzsignaccess
-   * @return eActivesessionEzsignaccess
-   */
-  @javax.annotation.Nonnull
-  public FieldEActivesessionEzsignaccess geteActivesessionEzsignaccess() {
-    return eActivesessionEzsignaccess;
-  }
-
-  public void seteActivesessionEzsignaccess(@javax.annotation.Nonnull FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
-    this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionEzsignprepaid(@javax.annotation.Nullable FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
-    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionEzsignprepaid
-   * @return eActivesessionEzsignprepaid
-   */
-  @javax.annotation.Nullable
-  public FieldEActivesessionEzsignprepaid geteActivesessionEzsignprepaid() {
-    return eActivesessionEzsignprepaid;
-  }
-
-  public void seteActivesessionEzsignprepaid(@javax.annotation.Nullable FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
-    this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
-  }
-
-
-  public ActivesessionResponseCompound eActivesessionRealestateinprogress(@javax.annotation.Nullable FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
-    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
-    return this;
-  }
-
-  /**
-   * Get eActivesessionRealestateinprogress
-   * @return eActivesessionRealestateinprogress
-   */
-  @javax.annotation.Nullable
-  public FieldEActivesessionRealestateinprogress geteActivesessionRealestateinprogress() {
-    return eActivesessionRealestateinprogress;
-  }
-
-  public void seteActivesessionRealestateinprogress(@javax.annotation.Nullable FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
-    this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
-  }
-
-
-  public ActivesessionResponseCompound pksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
-    this.pksCustomerCode = pksCustomerCode;
-    return this;
-  }
-
-  /**
-   * The customer code assigned to your account
-   * @return pksCustomerCode
-   */
-  @javax.annotation.Nonnull
-  public String getPksCustomerCode() {
-    return pksCustomerCode;
-  }
-
-  public void setPksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
-    this.pksCustomerCode = pksCustomerCode;
-  }
-
-
-  public ActivesessionResponseCompound fkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
-    this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Systemconfigurationtype
-   * minimum: 1
-   * @return fkiSystemconfigurationtypeID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiSystemconfigurationtypeID() {
-    return fkiSystemconfigurationtypeID;
-  }
-
-  public void setFkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
-    this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
-  }
-
-
-  public ActivesessionResponseCompound fkiSignatureID(@javax.annotation.Nullable Integer fkiSignatureID) {
-    this.fkiSignatureID = fkiSignatureID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Signature
-   * minimum: 0
-   * maximum: 16777215
-   * @return fkiSignatureID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiSignatureID() {
-    return fkiSignatureID;
-  }
-
-  public void setFkiSignatureID(@javax.annotation.Nullable Integer fkiSignatureID) {
-    this.fkiSignatureID = fkiSignatureID;
-  }
-
 
   public ActivesessionResponseCompound fkiEzsignuserID(@javax.annotation.Nullable Integer fkiEzsignuserID) {
     this.fkiEzsignuserID = fkiEzsignuserID;
@@ -844,26 +384,7 @@ public class ActivesessionResponseCompound {
       return false;
     }
     ActivesessionResponseCompound activesessionResponseCompound = (ActivesessionResponseCompound) o;
-    return Objects.equals(this.eActivesessionUsertype, activesessionResponseCompound.eActivesessionUsertype) &&
-        Objects.equals(this.eActivesessionOrigin, activesessionResponseCompound.eActivesessionOrigin) &&
-        Objects.equals(this.eActivesessionWeekdaystart, activesessionResponseCompound.eActivesessionWeekdaystart) &&
-        Objects.equals(this.fkiLanguageID, activesessionResponseCompound.fkiLanguageID) &&
-        Objects.equals(this.sCompanyNameX, activesessionResponseCompound.sCompanyNameX) &&
-        Objects.equals(this.sDepartmentNameX, activesessionResponseCompound.sDepartmentNameX) &&
-        Objects.equals(this.bActivesessionDebug, activesessionResponseCompound.bActivesessionDebug) &&
-        Objects.equals(this.bActivesessionIssuperadmin, activesessionResponseCompound.bActivesessionIssuperadmin) &&
-        Objects.equals(this.bActivesessionAttachment, activesessionResponseCompound.bActivesessionAttachment) &&
-        Objects.equals(this.bActivesessionCanafe, activesessionResponseCompound.bActivesessionCanafe) &&
-        Objects.equals(this.bActivesessionFinancial, activesessionResponseCompound.bActivesessionFinancial) &&
-        Objects.equals(this.bActivesessionRealestatecompleted, activesessionResponseCompound.bActivesessionRealestatecompleted) &&
-        Objects.equals(this.eActivesessionEzsign, activesessionResponseCompound.eActivesessionEzsign) &&
-        Objects.equals(this.eActivesessionEzsignaccess, activesessionResponseCompound.eActivesessionEzsignaccess) &&
-        Objects.equals(this.eActivesessionEzsignprepaid, activesessionResponseCompound.eActivesessionEzsignprepaid) &&
-        Objects.equals(this.eActivesessionRealestateinprogress, activesessionResponseCompound.eActivesessionRealestateinprogress) &&
-        Objects.equals(this.pksCustomerCode, activesessionResponseCompound.pksCustomerCode) &&
-        Objects.equals(this.fkiSystemconfigurationtypeID, activesessionResponseCompound.fkiSystemconfigurationtypeID) &&
-        Objects.equals(this.fkiSignatureID, activesessionResponseCompound.fkiSignatureID) &&
-        Objects.equals(this.fkiEzsignuserID, activesessionResponseCompound.fkiEzsignuserID) &&
+    return Objects.equals(this.fkiEzsignuserID, activesessionResponseCompound.fkiEzsignuserID) &&
         Objects.equals(this.bSystemconfigurationEzsignpaidbyoffice, activesessionResponseCompound.bSystemconfigurationEzsignpaidbyoffice) &&
         Objects.equals(this.eSystemconfigurationEzsignofficeplan, activesessionResponseCompound.eSystemconfigurationEzsignofficeplan) &&
         Objects.equals(this.eUserEzsignaccess, activesessionResponseCompound.eUserEzsignaccess) &&
@@ -874,37 +395,20 @@ public class ActivesessionResponseCompound {
         Objects.equals(this.objUserReal, activesessionResponseCompound.objUserReal) &&
         Objects.equals(this.objUserCloned, activesessionResponseCompound.objUserCloned) &&
         Objects.equals(this.objApikey, activesessionResponseCompound.objApikey) &&
-        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname);
+        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, dtUserEzsignprepaidexpiration, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionResponseCompound {\n");
-    sb.append("    eActivesessionUsertype: ").append(toIndentedString(eActivesessionUsertype)).append("\n");
-    sb.append("    eActivesessionOrigin: ").append(toIndentedString(eActivesessionOrigin)).append("\n");
-    sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
-    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
-    sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
-    sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
-    sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
-    sb.append("    bActivesessionIssuperadmin: ").append(toIndentedString(bActivesessionIssuperadmin)).append("\n");
-    sb.append("    bActivesessionAttachment: ").append(toIndentedString(bActivesessionAttachment)).append("\n");
-    sb.append("    bActivesessionCanafe: ").append(toIndentedString(bActivesessionCanafe)).append("\n");
-    sb.append("    bActivesessionFinancial: ").append(toIndentedString(bActivesessionFinancial)).append("\n");
-    sb.append("    bActivesessionRealestatecompleted: ").append(toIndentedString(bActivesessionRealestatecompleted)).append("\n");
-    sb.append("    eActivesessionEzsign: ").append(toIndentedString(eActivesessionEzsign)).append("\n");
-    sb.append("    eActivesessionEzsignaccess: ").append(toIndentedString(eActivesessionEzsignaccess)).append("\n");
-    sb.append("    eActivesessionEzsignprepaid: ").append(toIndentedString(eActivesessionEzsignprepaid)).append("\n");
-    sb.append("    eActivesessionRealestateinprogress: ").append(toIndentedString(eActivesessionRealestateinprogress)).append("\n");
-    sb.append("    pksCustomerCode: ").append(toIndentedString(pksCustomerCode)).append("\n");
-    sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
-    sb.append("    fkiSignatureID: ").append(toIndentedString(fkiSignatureID)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    fkiEzsignuserID: ").append(toIndentedString(fkiEzsignuserID)).append("\n");
     sb.append("    bSystemconfigurationEzsignpaidbyoffice: ").append(toIndentedString(bSystemconfigurationEzsignpaidbyoffice)).append("\n");
     sb.append("    eSystemconfigurationEzsignofficeplan: ").append(toIndentedString(eSystemconfigurationEzsignofficeplan)).append("\n");
@@ -973,6 +477,10 @@ public class ActivesessionResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eUserEzsignaccess");
+    openapiRequiredFields.add("a_pkiPermissionID");
+    openapiRequiredFields.add("objUserReal");
+    openapiRequiredFields.add("a_eModuleInternalname");
     openapiRequiredFields.add("eActivesessionUsertype");
     openapiRequiredFields.add("eActivesessionOrigin");
     openapiRequiredFields.add("eActivesessionWeekdaystart");
@@ -984,10 +492,6 @@ public class ActivesessionResponseCompound {
     openapiRequiredFields.add("eActivesessionEzsignaccess");
     openapiRequiredFields.add("pksCustomerCode");
     openapiRequiredFields.add("fkiSystemconfigurationtypeID");
-    openapiRequiredFields.add("eUserEzsignaccess");
-    openapiRequiredFields.add("a_pkiPermissionID");
-    openapiRequiredFields.add("objUserReal");
-    openapiRequiredFields.add("a_eModuleInternalname");
   }
 
   /**
@@ -1002,51 +506,7 @@ public class ActivesessionResponseCompound {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ActivesessionResponseCompound is not found in the empty JSON string", ActivesessionResponseCompound.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ActivesessionResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ActivesessionResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ActivesessionResponseCompound.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `eActivesessionUsertype`
-      FieldEActivesessionUsertype.validateJsonElement(jsonObj.get("eActivesessionUsertype"));
-      // validate the required field `eActivesessionOrigin`
-      FieldEActivesessionOrigin.validateJsonElement(jsonObj.get("eActivesessionOrigin"));
-      // validate the required field `eActivesessionWeekdaystart`
-      FieldEActivesessionWeekdaystart.validateJsonElement(jsonObj.get("eActivesessionWeekdaystart"));
-      if (!jsonObj.get("sCompanyNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
-      }
-      if (!jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
-      }
-      // validate the optional field `eActivesessionEzsign`
-      if (jsonObj.get("eActivesessionEzsign") != null && !jsonObj.get("eActivesessionEzsign").isJsonNull()) {
-        FieldEActivesessionEzsign.validateJsonElement(jsonObj.get("eActivesessionEzsign"));
-      }
-      // validate the required field `eActivesessionEzsignaccess`
-      FieldEActivesessionEzsignaccess.validateJsonElement(jsonObj.get("eActivesessionEzsignaccess"));
-      // validate the optional field `eActivesessionEzsignprepaid`
-      if (jsonObj.get("eActivesessionEzsignprepaid") != null && !jsonObj.get("eActivesessionEzsignprepaid").isJsonNull()) {
-        FieldEActivesessionEzsignprepaid.validateJsonElement(jsonObj.get("eActivesessionEzsignprepaid"));
-      }
-      // validate the optional field `eActivesessionRealestateinprogress`
-      if (jsonObj.get("eActivesessionRealestateinprogress") != null && !jsonObj.get("eActivesessionRealestateinprogress").isJsonNull()) {
-        FieldEActivesessionRealestateinprogress.validateJsonElement(jsonObj.get("eActivesessionRealestateinprogress"));
-      }
-      if (!jsonObj.get("pksCustomerCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `pksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksCustomerCode").toString()));
-      }
       // validate the optional field `eSystemconfigurationEzsignofficeplan`
       if (jsonObj.get("eSystemconfigurationEzsignofficeplan") != null && !jsonObj.get("eSystemconfigurationEzsignofficeplan").isJsonNull()) {
         FieldESystemconfigurationEzsignofficeplan.validateJsonElement(jsonObj.get("eSystemconfigurationEzsignofficeplan"));
@@ -1084,34 +544,6 @@ public class ActivesessionResponseCompound {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ActivesessionResponseCompound.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ActivesessionResponseCompound' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ActivesessionResponseCompound> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ActivesessionResponseCompound.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ActivesessionResponseCompound>() {
-           @Override
-           public void write(JsonWriter out, ActivesessionResponseCompound value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ActivesessionResponseCompound read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of ActivesessionResponseCompound given an JSON string

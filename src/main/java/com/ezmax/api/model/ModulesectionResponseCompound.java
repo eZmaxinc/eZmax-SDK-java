@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.ModulesectionResponse;
 import com.ezmax.api.model.PermissionResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,28 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ModulesectionResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
-  @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiModulesectionID;
-
-  public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
-  @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiModuleID;
-
-  public static final String SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME = "sModulesectionInternalname";
-  @SerializedName(SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME)
-  @javax.annotation.Nonnull
-  private String sModulesectionInternalname;
-
-  public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
-  @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
-  @javax.annotation.Nonnull
-  private String sModulesectionNameX;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ModulesectionResponseCompound extends ModulesectionResponse {
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
   @javax.annotation.Nullable
@@ -80,84 +61,6 @@ public class ModulesectionResponseCompound {
 
   public ModulesectionResponseCompound() {
   }
-
-  public ModulesectionResponseCompound pkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
-    this.pkiModulesectionID = pkiModulesectionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Modulesection
-   * minimum: 0
-   * @return pkiModulesectionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiModulesectionID() {
-    return pkiModulesectionID;
-  }
-
-  public void setPkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
-    this.pkiModulesectionID = pkiModulesectionID;
-  }
-
-
-  public ModulesectionResponseCompound fkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
-    this.fkiModuleID = fkiModuleID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Module
-   * minimum: 0
-   * @return fkiModuleID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiModuleID() {
-    return fkiModuleID;
-  }
-
-  public void setFkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
-    this.fkiModuleID = fkiModuleID;
-  }
-
-
-  public ModulesectionResponseCompound sModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
-    this.sModulesectionInternalname = sModulesectionInternalname;
-    return this;
-  }
-
-  /**
-   * The Internal name of the Module section.
-   * @return sModulesectionInternalname
-   */
-  @javax.annotation.Nonnull
-  public String getsModulesectionInternalname() {
-    return sModulesectionInternalname;
-  }
-
-  public void setsModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
-    this.sModulesectionInternalname = sModulesectionInternalname;
-  }
-
-
-  public ModulesectionResponseCompound sModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
-    this.sModulesectionNameX = sModulesectionNameX;
-    return this;
-  }
-
-  /**
-   * The Name of the Modulesection in the language of the requester
-   * @return sModulesectionNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsModulesectionNameX() {
-    return sModulesectionNameX;
-  }
-
-  public void setsModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
-    this.sModulesectionNameX = sModulesectionNameX;
-  }
-
 
   public ModulesectionResponseCompound aObjPermission(@javax.annotation.Nullable List<PermissionResponseCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;
@@ -196,26 +99,20 @@ public class ModulesectionResponseCompound {
       return false;
     }
     ModulesectionResponseCompound modulesectionResponseCompound = (ModulesectionResponseCompound) o;
-    return Objects.equals(this.pkiModulesectionID, modulesectionResponseCompound.pkiModulesectionID) &&
-        Objects.equals(this.fkiModuleID, modulesectionResponseCompound.fkiModuleID) &&
-        Objects.equals(this.sModulesectionInternalname, modulesectionResponseCompound.sModulesectionInternalname) &&
-        Objects.equals(this.sModulesectionNameX, modulesectionResponseCompound.sModulesectionNameX) &&
-        Objects.equals(this.aObjPermission, modulesectionResponseCompound.aObjPermission);
+    return Objects.equals(this.aObjPermission, modulesectionResponseCompound.aObjPermission) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiModulesectionID, fkiModuleID, sModulesectionInternalname, sModulesectionNameX, aObjPermission);
+    return Objects.hash(aObjPermission, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModulesectionResponseCompound {\n");
-    sb.append("    pkiModulesectionID: ").append(toIndentedString(pkiModulesectionID)).append("\n");
-    sb.append("    fkiModuleID: ").append(toIndentedString(fkiModuleID)).append("\n");
-    sb.append("    sModulesectionInternalname: ").append(toIndentedString(sModulesectionInternalname)).append("\n");
-    sb.append("    sModulesectionNameX: ").append(toIndentedString(sModulesectionNameX)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjPermission: ").append(toIndentedString(aObjPermission)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -281,12 +178,6 @@ public class ModulesectionResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sModulesectionInternalname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sModulesectionInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionInternalname").toString()));
-      }
-      if (!jsonObj.get("sModulesectionNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
-      }
       if (jsonObj.get("a_objPermission") != null && !jsonObj.get("a_objPermission").isJsonNull()) {
         JsonArray jsonArrayaObjPermission = jsonObj.getAsJsonArray("a_objPermission");
         if (jsonArrayaObjPermission != null) {

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.ModuleResponse;
 import com.ezmax.api.model.ModulesectionResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,38 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ModuleResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
-  @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiModuleID;
-
-  public static final String SERIALIZED_NAME_FKI_MODULEGROUP_I_D = "fkiModulegroupID";
-  @SerializedName(SERIALIZED_NAME_FKI_MODULEGROUP_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiModulegroupID;
-
-  public static final String SERIALIZED_NAME_E_MODULE_INTERNALNAME = "eModuleInternalname";
-  @SerializedName(SERIALIZED_NAME_E_MODULE_INTERNALNAME)
-  @javax.annotation.Nonnull
-  private String eModuleInternalname;
-
-  public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
-  @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
-  @javax.annotation.Nonnull
-  private String sModuleNameX;
-
-  public static final String SERIALIZED_NAME_B_MODULE_REGISTERED = "bModuleRegistered";
-  @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTERED)
-  @javax.annotation.Nonnull
-  private Boolean bModuleRegistered;
-
-  public static final String SERIALIZED_NAME_B_MODULE_REGISTEREDAPI = "bModuleRegisteredapi";
-  @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTEREDAPI)
-  @javax.annotation.Nonnull
-  private Boolean bModuleRegisteredapi;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ModuleResponseCompound extends ModuleResponse {
   public static final String SERIALIZED_NAME_A_OBJ_MODULESECTION = "a_objModulesection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULESECTION)
   @javax.annotation.Nullable
@@ -90,123 +61,6 @@ public class ModuleResponseCompound {
 
   public ModuleResponseCompound() {
   }
-
-  public ModuleResponseCompound pkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
-    this.pkiModuleID = pkiModuleID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Module
-   * minimum: 0
-   * @return pkiModuleID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiModuleID() {
-    return pkiModuleID;
-  }
-
-  public void setPkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
-    this.pkiModuleID = pkiModuleID;
-  }
-
-
-  public ModuleResponseCompound fkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
-    this.fkiModulegroupID = fkiModulegroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Modulegroup
-   * minimum: 1
-   * maximum: 255
-   * @return fkiModulegroupID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiModulegroupID() {
-    return fkiModulegroupID;
-  }
-
-  public void setFkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
-    this.fkiModulegroupID = fkiModulegroupID;
-  }
-
-
-  public ModuleResponseCompound eModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
-    this.eModuleInternalname = eModuleInternalname;
-    return this;
-  }
-
-  /**
-   * The Internal name of the Module.  This is theoretically an enum field but there are so many possibles values we decided not to list them all.
-   * @return eModuleInternalname
-   */
-  @javax.annotation.Nonnull
-  public String geteModuleInternalname() {
-    return eModuleInternalname;
-  }
-
-  public void seteModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
-    this.eModuleInternalname = eModuleInternalname;
-  }
-
-
-  public ModuleResponseCompound sModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
-    this.sModuleNameX = sModuleNameX;
-    return this;
-  }
-
-  /**
-   * The Name of the Module in the language of the requester
-   * @return sModuleNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsModuleNameX() {
-    return sModuleNameX;
-  }
-
-  public void setsModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
-    this.sModuleNameX = sModuleNameX;
-  }
-
-
-  public ModuleResponseCompound bModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
-    this.bModuleRegistered = bModuleRegistered;
-    return this;
-  }
-
-  /**
-   * Whether the Module is registered or not
-   * @return bModuleRegistered
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbModuleRegistered() {
-    return bModuleRegistered;
-  }
-
-  public void setbModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
-    this.bModuleRegistered = bModuleRegistered;
-  }
-
-
-  public ModuleResponseCompound bModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
-    this.bModuleRegisteredapi = bModuleRegisteredapi;
-    return this;
-  }
-
-  /**
-   * Whether the Module is registered or not for api use
-   * @return bModuleRegisteredapi
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbModuleRegisteredapi() {
-    return bModuleRegisteredapi;
-  }
-
-  public void setbModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
-    this.bModuleRegisteredapi = bModuleRegisteredapi;
-  }
-
 
   public ModuleResponseCompound aObjModulesection(@javax.annotation.Nullable List<ModulesectionResponseCompound> aObjModulesection) {
     this.aObjModulesection = aObjModulesection;
@@ -245,30 +99,20 @@ public class ModuleResponseCompound {
       return false;
     }
     ModuleResponseCompound moduleResponseCompound = (ModuleResponseCompound) o;
-    return Objects.equals(this.pkiModuleID, moduleResponseCompound.pkiModuleID) &&
-        Objects.equals(this.fkiModulegroupID, moduleResponseCompound.fkiModulegroupID) &&
-        Objects.equals(this.eModuleInternalname, moduleResponseCompound.eModuleInternalname) &&
-        Objects.equals(this.sModuleNameX, moduleResponseCompound.sModuleNameX) &&
-        Objects.equals(this.bModuleRegistered, moduleResponseCompound.bModuleRegistered) &&
-        Objects.equals(this.bModuleRegisteredapi, moduleResponseCompound.bModuleRegisteredapi) &&
-        Objects.equals(this.aObjModulesection, moduleResponseCompound.aObjModulesection);
+    return Objects.equals(this.aObjModulesection, moduleResponseCompound.aObjModulesection) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiModuleID, fkiModulegroupID, eModuleInternalname, sModuleNameX, bModuleRegistered, bModuleRegisteredapi, aObjModulesection);
+    return Objects.hash(aObjModulesection, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModuleResponseCompound {\n");
-    sb.append("    pkiModuleID: ").append(toIndentedString(pkiModuleID)).append("\n");
-    sb.append("    fkiModulegroupID: ").append(toIndentedString(fkiModulegroupID)).append("\n");
-    sb.append("    eModuleInternalname: ").append(toIndentedString(eModuleInternalname)).append("\n");
-    sb.append("    sModuleNameX: ").append(toIndentedString(sModuleNameX)).append("\n");
-    sb.append("    bModuleRegistered: ").append(toIndentedString(bModuleRegistered)).append("\n");
-    sb.append("    bModuleRegisteredapi: ").append(toIndentedString(bModuleRegisteredapi)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjModulesection: ").append(toIndentedString(aObjModulesection)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -338,12 +182,6 @@ public class ModuleResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("eModuleInternalname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `eModuleInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eModuleInternalname").toString()));
-      }
-      if (!jsonObj.get("sModuleNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
-      }
       if (jsonObj.get("a_objModulesection") != null && !jsonObj.get("a_objModulesection").isJsonNull()) {
         JsonArray jsonArrayaObjModulesection = jsonObj.getAsJsonArray("a_objModulesection");
         if (jsonArrayaObjModulesection != null) {

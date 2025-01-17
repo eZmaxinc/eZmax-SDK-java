@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
+import com.ezmax.api.model.EzmaxinvoicingagentResponse;
 import com.ezmax.api.model.FieldEEzmaxinvoicingagentVariationezmax;
 import com.ezmax.api.model.FieldEEzmaxinvoicingagentVariationezsign;
 import com.google.gson.TypeAdapter;
@@ -51,108 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingagent Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzmaxinvoicingagentResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D = "pkiEzmaxinvoicingagentID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGAGENT_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzmaxinvoicingagentID;
-
-  public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiEzmaxinvoicingID;
-
-  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
-  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiBillingentityinternalID;
-
-  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
-  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
-  @javax.annotation.Nonnull
-  private String sBillingentityinternalDescriptionX;
-
-  public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
-  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiAgentID;
-
-  public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
-  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiBrokerID;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_SESSION = "iEzmaxinvoicingagentSession";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_SESSION)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentSession;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_CLONED = "iEzmaxinvoicingagentCloned";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_CLONED)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentCloned;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INVOICE = "iEzmaxinvoicingagentInvoice";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INVOICE)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentInvoice;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INSCRIPTION = "iEzmaxinvoicingagentInscription";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INSCRIPTION)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentInscription;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INSCRIPTIONACTIVE = "iEzmaxinvoicingagentInscriptionactive";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_INSCRIPTIONACTIVE)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentInscriptionactive;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_SALE = "iEzmaxinvoicingagentSale";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_SALE)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentSale;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_OTHERINCOME = "iEzmaxinvoicingagentOtherincome";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_OTHERINCOME)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentOtherincome;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_COMMISSIONCALCULATION = "iEzmaxinvoicingagentCommissioncalculation";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_COMMISSIONCALCULATION)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentCommissioncalculation;
-
-  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_EZSIGNDOCUMENT = "iEzmaxinvoicingagentEzsigndocument";
-  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGAGENT_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
-  private Integer iEzmaxinvoicingagentEzsigndocument;
-
-  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_EZSIGNACCOUNT = "bEzmaxinvoicingagentEzsignaccount";
-  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_EZSIGNACCOUNT)
-  @javax.annotation.Nonnull
-  private Boolean bEzmaxinvoicingagentEzsignaccount;
-
-  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_BILLABLEEZMAX = "bEzmaxinvoicingagentBillableezmax";
-  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_BILLABLEEZMAX)
-  @javax.annotation.Nonnull
-  private Boolean bEzmaxinvoicingagentBillableezmax;
-
-  public static final String SERIALIZED_NAME_E_EZMAXINVOICINGAGENT_VARIATIONEZMAX = "eEzmaxinvoicingagentVariationezmax";
-  @SerializedName(SERIALIZED_NAME_E_EZMAXINVOICINGAGENT_VARIATIONEZMAX)
-  @javax.annotation.Nonnull
-  private FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax;
-
-  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_BILLABLEEZSIGN = "bEzmaxinvoicingagentBillableezsign";
-  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGAGENT_BILLABLEEZSIGN)
-  @javax.annotation.Nonnull
-  private Boolean bEzmaxinvoicingagentBillableezsign;
-
-  public static final String SERIALIZED_NAME_E_EZMAXINVOICINGAGENT_VARIATIONEZSIGN = "eEzmaxinvoicingagentVariationezsign";
-  @SerializedName(SERIALIZED_NAME_E_EZMAXINVOICINGAGENT_VARIATIONEZSIGN)
-  @javax.annotation.Nonnull
-  private FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzmaxinvoicingagentResponseCompound extends EzmaxinvoicingagentResponse {
   public static final String SERIALIZED_NAME_OBJ_CONTACT_NAME = "objContactName";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_NAME)
   @javax.annotation.Nonnull
@@ -160,400 +61,6 @@ public class EzmaxinvoicingagentResponseCompound {
 
   public EzmaxinvoicingagentResponseCompound() {
   }
-
-  public EzmaxinvoicingagentResponseCompound pkiEzmaxinvoicingagentID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingagentID) {
-    this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxinvoicingagent
-   * minimum: 0
-   * @return pkiEzmaxinvoicingagentID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzmaxinvoicingagentID() {
-    return pkiEzmaxinvoicingagentID;
-  }
-
-  public void setPkiEzmaxinvoicingagentID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingagentID) {
-    this.pkiEzmaxinvoicingagentID = pkiEzmaxinvoicingagentID;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound fkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
-    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezmaxinvoicing
-   * minimum: 0
-   * @return fkiEzmaxinvoicingID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiEzmaxinvoicingID() {
-    return fkiEzmaxinvoicingID;
-  }
-
-  public void setFkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
-    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound fkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
-    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Billingentityinternal.
-   * minimum: 0
-   * @return fkiBillingentityinternalID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiBillingentityinternalID() {
-    return fkiBillingentityinternalID;
-  }
-
-  public void setFkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
-    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound sBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
-    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-    return this;
-  }
-
-  /**
-   * The description of the Billingentityinternal in the language of the requester
-   * @return sBillingentityinternalDescriptionX
-   */
-  @javax.annotation.Nonnull
-  public String getsBillingentityinternalDescriptionX() {
-    return sBillingentityinternalDescriptionX;
-  }
-
-  public void setsBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
-    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
-    this.fkiAgentID = fkiAgentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Agent.
-   * minimum: 0
-   * @return fkiAgentID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiAgentID() {
-    return fkiAgentID;
-  }
-
-  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
-    this.fkiAgentID = fkiAgentID;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
-    this.fkiBrokerID = fkiBrokerID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Broker.
-   * minimum: 0
-   * @return fkiBrokerID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiBrokerID() {
-    return fkiBrokerID;
-  }
-
-  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
-    this.fkiBrokerID = fkiBrokerID;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentSession(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentSession) {
-    this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
-    return this;
-  }
-
-  /**
-   * The number of sessions
-   * minimum: 0
-   * @return iEzmaxinvoicingagentSession
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentSession() {
-    return iEzmaxinvoicingagentSession;
-  }
-
-  public void setiEzmaxinvoicingagentSession(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentSession) {
-    this.iEzmaxinvoicingagentSession = iEzmaxinvoicingagentSession;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentCloned(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentCloned) {
-    this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
-    return this;
-  }
-
-  /**
-   * The number of times this user was cloned
-   * minimum: 0
-   * @return iEzmaxinvoicingagentCloned
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentCloned() {
-    return iEzmaxinvoicingagentCloned;
-  }
-
-  public void setiEzmaxinvoicingagentCloned(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentCloned) {
-    this.iEzmaxinvoicingagentCloned = iEzmaxinvoicingagentCloned;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInvoice(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInvoice) {
-    this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
-    return this;
-  }
-
-  /**
-   * The number of invoices
-   * minimum: 0
-   * @return iEzmaxinvoicingagentInvoice
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentInvoice() {
-    return iEzmaxinvoicingagentInvoice;
-  }
-
-  public void setiEzmaxinvoicingagentInvoice(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInvoice) {
-    this.iEzmaxinvoicingagentInvoice = iEzmaxinvoicingagentInvoice;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInscription(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInscription) {
-    this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
-    return this;
-  }
-
-  /**
-   * The number of inscriptions
-   * minimum: 0
-   * @return iEzmaxinvoicingagentInscription
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentInscription() {
-    return iEzmaxinvoicingagentInscription;
-  }
-
-  public void setiEzmaxinvoicingagentInscription(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInscription) {
-    this.iEzmaxinvoicingagentInscription = iEzmaxinvoicingagentInscription;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentInscriptionactive(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInscriptionactive) {
-    this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
-    return this;
-  }
-
-  /**
-   * The number of active inscriptions
-   * minimum: 0
-   * @return iEzmaxinvoicingagentInscriptionactive
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentInscriptionactive() {
-    return iEzmaxinvoicingagentInscriptionactive;
-  }
-
-  public void setiEzmaxinvoicingagentInscriptionactive(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentInscriptionactive) {
-    this.iEzmaxinvoicingagentInscriptionactive = iEzmaxinvoicingagentInscriptionactive;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentSale(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentSale) {
-    this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
-    return this;
-  }
-
-  /**
-   * The number of sales
-   * minimum: 0
-   * @return iEzmaxinvoicingagentSale
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentSale() {
-    return iEzmaxinvoicingagentSale;
-  }
-
-  public void setiEzmaxinvoicingagentSale(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentSale) {
-    this.iEzmaxinvoicingagentSale = iEzmaxinvoicingagentSale;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentOtherincome(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentOtherincome) {
-    this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
-    return this;
-  }
-
-  /**
-   * The number of otherincomes
-   * minimum: 0
-   * @return iEzmaxinvoicingagentOtherincome
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentOtherincome() {
-    return iEzmaxinvoicingagentOtherincome;
-  }
-
-  public void setiEzmaxinvoicingagentOtherincome(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentOtherincome) {
-    this.iEzmaxinvoicingagentOtherincome = iEzmaxinvoicingagentOtherincome;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentCommissioncalculation(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentCommissioncalculation) {
-    this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
-    return this;
-  }
-
-  /**
-   * The number of commission calculations
-   * minimum: 0
-   * @return iEzmaxinvoicingagentCommissioncalculation
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentCommissioncalculation() {
-    return iEzmaxinvoicingagentCommissioncalculation;
-  }
-
-  public void setiEzmaxinvoicingagentCommissioncalculation(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentCommissioncalculation) {
-    this.iEzmaxinvoicingagentCommissioncalculation = iEzmaxinvoicingagentCommissioncalculation;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound iEzmaxinvoicingagentEzsigndocument(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentEzsigndocument) {
-    this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
-    return this;
-  }
-
-  /**
-   * The number of ezsign documents
-   * minimum: 0
-   * @return iEzmaxinvoicingagentEzsigndocument
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzmaxinvoicingagentEzsigndocument() {
-    return iEzmaxinvoicingagentEzsigndocument;
-  }
-
-  public void setiEzmaxinvoicingagentEzsigndocument(@javax.annotation.Nonnull Integer iEzmaxinvoicingagentEzsigndocument) {
-    this.iEzmaxinvoicingagentEzsigndocument = iEzmaxinvoicingagentEzsigndocument;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentEzsignaccount(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentEzsignaccount) {
-    this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
-    return this;
-  }
-
-  /**
-   * Whether the agent has an eZsign account
-   * @return bEzmaxinvoicingagentEzsignaccount
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzmaxinvoicingagentEzsignaccount() {
-    return bEzmaxinvoicingagentEzsignaccount;
-  }
-
-  public void setbEzmaxinvoicingagentEzsignaccount(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentEzsignaccount) {
-    this.bEzmaxinvoicingagentEzsignaccount = bEzmaxinvoicingagentEzsignaccount;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentBillableezmax(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentBillableezmax) {
-    this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
-    return this;
-  }
-
-  /**
-   * Whether it is billable for eZmax
-   * @return bEzmaxinvoicingagentBillableezmax
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzmaxinvoicingagentBillableezmax() {
-    return bEzmaxinvoicingagentBillableezmax;
-  }
-
-  public void setbEzmaxinvoicingagentBillableezmax(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentBillableezmax) {
-    this.bEzmaxinvoicingagentBillableezmax = bEzmaxinvoicingagentBillableezmax;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound eEzmaxinvoicingagentVariationezmax(@javax.annotation.Nonnull FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
-    this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
-    return this;
-  }
-
-  /**
-   * Get eEzmaxinvoicingagentVariationezmax
-   * @return eEzmaxinvoicingagentVariationezmax
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzmaxinvoicingagentVariationezmax geteEzmaxinvoicingagentVariationezmax() {
-    return eEzmaxinvoicingagentVariationezmax;
-  }
-
-  public void seteEzmaxinvoicingagentVariationezmax(@javax.annotation.Nonnull FieldEEzmaxinvoicingagentVariationezmax eEzmaxinvoicingagentVariationezmax) {
-    this.eEzmaxinvoicingagentVariationezmax = eEzmaxinvoicingagentVariationezmax;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound bEzmaxinvoicingagentBillableezsign(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentBillableezsign) {
-    this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
-    return this;
-  }
-
-  /**
-   * Whether it is billable for eZsign
-   * @return bEzmaxinvoicingagentBillableezsign
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzmaxinvoicingagentBillableezsign() {
-    return bEzmaxinvoicingagentBillableezsign;
-  }
-
-  public void setbEzmaxinvoicingagentBillableezsign(@javax.annotation.Nonnull Boolean bEzmaxinvoicingagentBillableezsign) {
-    this.bEzmaxinvoicingagentBillableezsign = bEzmaxinvoicingagentBillableezsign;
-  }
-
-
-  public EzmaxinvoicingagentResponseCompound eEzmaxinvoicingagentVariationezsign(@javax.annotation.Nonnull FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
-    this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
-    return this;
-  }
-
-  /**
-   * Get eEzmaxinvoicingagentVariationezsign
-   * @return eEzmaxinvoicingagentVariationezsign
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzmaxinvoicingagentVariationezsign geteEzmaxinvoicingagentVariationezsign() {
-    return eEzmaxinvoicingagentVariationezsign;
-  }
-
-  public void seteEzmaxinvoicingagentVariationezsign(@javax.annotation.Nonnull FieldEEzmaxinvoicingagentVariationezsign eEzmaxinvoicingagentVariationezsign) {
-    this.eEzmaxinvoicingagentVariationezsign = eEzmaxinvoicingagentVariationezsign;
-  }
-
 
   public EzmaxinvoicingagentResponseCompound objContactName(@javax.annotation.Nonnull CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
@@ -584,58 +91,20 @@ public class EzmaxinvoicingagentResponseCompound {
       return false;
     }
     EzmaxinvoicingagentResponseCompound ezmaxinvoicingagentResponseCompound = (EzmaxinvoicingagentResponseCompound) o;
-    return Objects.equals(this.pkiEzmaxinvoicingagentID, ezmaxinvoicingagentResponseCompound.pkiEzmaxinvoicingagentID) &&
-        Objects.equals(this.fkiEzmaxinvoicingID, ezmaxinvoicingagentResponseCompound.fkiEzmaxinvoicingID) &&
-        Objects.equals(this.fkiBillingentityinternalID, ezmaxinvoicingagentResponseCompound.fkiBillingentityinternalID) &&
-        Objects.equals(this.sBillingentityinternalDescriptionX, ezmaxinvoicingagentResponseCompound.sBillingentityinternalDescriptionX) &&
-        Objects.equals(this.fkiAgentID, ezmaxinvoicingagentResponseCompound.fkiAgentID) &&
-        Objects.equals(this.fkiBrokerID, ezmaxinvoicingagentResponseCompound.fkiBrokerID) &&
-        Objects.equals(this.iEzmaxinvoicingagentSession, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentSession) &&
-        Objects.equals(this.iEzmaxinvoicingagentCloned, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentCloned) &&
-        Objects.equals(this.iEzmaxinvoicingagentInvoice, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentInvoice) &&
-        Objects.equals(this.iEzmaxinvoicingagentInscription, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentInscription) &&
-        Objects.equals(this.iEzmaxinvoicingagentInscriptionactive, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentInscriptionactive) &&
-        Objects.equals(this.iEzmaxinvoicingagentSale, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentSale) &&
-        Objects.equals(this.iEzmaxinvoicingagentOtherincome, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentOtherincome) &&
-        Objects.equals(this.iEzmaxinvoicingagentCommissioncalculation, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentCommissioncalculation) &&
-        Objects.equals(this.iEzmaxinvoicingagentEzsigndocument, ezmaxinvoicingagentResponseCompound.iEzmaxinvoicingagentEzsigndocument) &&
-        Objects.equals(this.bEzmaxinvoicingagentEzsignaccount, ezmaxinvoicingagentResponseCompound.bEzmaxinvoicingagentEzsignaccount) &&
-        Objects.equals(this.bEzmaxinvoicingagentBillableezmax, ezmaxinvoicingagentResponseCompound.bEzmaxinvoicingagentBillableezmax) &&
-        Objects.equals(this.eEzmaxinvoicingagentVariationezmax, ezmaxinvoicingagentResponseCompound.eEzmaxinvoicingagentVariationezmax) &&
-        Objects.equals(this.bEzmaxinvoicingagentBillableezsign, ezmaxinvoicingagentResponseCompound.bEzmaxinvoicingagentBillableezsign) &&
-        Objects.equals(this.eEzmaxinvoicingagentVariationezsign, ezmaxinvoicingagentResponseCompound.eEzmaxinvoicingagentVariationezsign) &&
-        Objects.equals(this.objContactName, ezmaxinvoicingagentResponseCompound.objContactName);
+    return Objects.equals(this.objContactName, ezmaxinvoicingagentResponseCompound.objContactName) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzmaxinvoicingagentID, fkiEzmaxinvoicingID, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiAgentID, fkiBrokerID, iEzmaxinvoicingagentSession, iEzmaxinvoicingagentCloned, iEzmaxinvoicingagentInvoice, iEzmaxinvoicingagentInscription, iEzmaxinvoicingagentInscriptionactive, iEzmaxinvoicingagentSale, iEzmaxinvoicingagentOtherincome, iEzmaxinvoicingagentCommissioncalculation, iEzmaxinvoicingagentEzsigndocument, bEzmaxinvoicingagentEzsignaccount, bEzmaxinvoicingagentBillableezmax, eEzmaxinvoicingagentVariationezmax, bEzmaxinvoicingagentBillableezsign, eEzmaxinvoicingagentVariationezsign, objContactName);
+    return Objects.hash(objContactName, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingagentResponseCompound {\n");
-    sb.append("    pkiEzmaxinvoicingagentID: ").append(toIndentedString(pkiEzmaxinvoicingagentID)).append("\n");
-    sb.append("    fkiEzmaxinvoicingID: ").append(toIndentedString(fkiEzmaxinvoicingID)).append("\n");
-    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
-    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
-    sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
-    sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
-    sb.append("    iEzmaxinvoicingagentSession: ").append(toIndentedString(iEzmaxinvoicingagentSession)).append("\n");
-    sb.append("    iEzmaxinvoicingagentCloned: ").append(toIndentedString(iEzmaxinvoicingagentCloned)).append("\n");
-    sb.append("    iEzmaxinvoicingagentInvoice: ").append(toIndentedString(iEzmaxinvoicingagentInvoice)).append("\n");
-    sb.append("    iEzmaxinvoicingagentInscription: ").append(toIndentedString(iEzmaxinvoicingagentInscription)).append("\n");
-    sb.append("    iEzmaxinvoicingagentInscriptionactive: ").append(toIndentedString(iEzmaxinvoicingagentInscriptionactive)).append("\n");
-    sb.append("    iEzmaxinvoicingagentSale: ").append(toIndentedString(iEzmaxinvoicingagentSale)).append("\n");
-    sb.append("    iEzmaxinvoicingagentOtherincome: ").append(toIndentedString(iEzmaxinvoicingagentOtherincome)).append("\n");
-    sb.append("    iEzmaxinvoicingagentCommissioncalculation: ").append(toIndentedString(iEzmaxinvoicingagentCommissioncalculation)).append("\n");
-    sb.append("    iEzmaxinvoicingagentEzsigndocument: ").append(toIndentedString(iEzmaxinvoicingagentEzsigndocument)).append("\n");
-    sb.append("    bEzmaxinvoicingagentEzsignaccount: ").append(toIndentedString(bEzmaxinvoicingagentEzsignaccount)).append("\n");
-    sb.append("    bEzmaxinvoicingagentBillableezmax: ").append(toIndentedString(bEzmaxinvoicingagentBillableezmax)).append("\n");
-    sb.append("    eEzmaxinvoicingagentVariationezmax: ").append(toIndentedString(eEzmaxinvoicingagentVariationezmax)).append("\n");
-    sb.append("    bEzmaxinvoicingagentBillableezsign: ").append(toIndentedString(bEzmaxinvoicingagentBillableezsign)).append("\n");
-    sb.append("    eEzmaxinvoicingagentVariationezsign: ").append(toIndentedString(eEzmaxinvoicingagentVariationezsign)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -683,6 +152,7 @@ public class EzmaxinvoicingagentResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objContactName");
     openapiRequiredFields.add("fkiBillingentityinternalID");
     openapiRequiredFields.add("sBillingentityinternalDescriptionX");
     openapiRequiredFields.add("iEzmaxinvoicingagentSession");
@@ -699,7 +169,6 @@ public class EzmaxinvoicingagentResponseCompound {
     openapiRequiredFields.add("eEzmaxinvoicingagentVariationezmax");
     openapiRequiredFields.add("bEzmaxinvoicingagentBillableezsign");
     openapiRequiredFields.add("eEzmaxinvoicingagentVariationezsign");
-    openapiRequiredFields.add("objContactName");
   }
 
   /**
@@ -730,13 +199,6 @@ public class EzmaxinvoicingagentResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
-      }
-      // validate the required field `eEzmaxinvoicingagentVariationezmax`
-      FieldEEzmaxinvoicingagentVariationezmax.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezmax"));
-      // validate the required field `eEzmaxinvoicingagentVariationezsign`
-      FieldEEzmaxinvoicingagentVariationezsign.validateJsonElement(jsonObj.get("eEzmaxinvoicingagentVariationezsign"));
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
   }

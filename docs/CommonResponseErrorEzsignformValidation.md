@@ -8,9 +8,6 @@ Generic Error Message
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**sErrorMessage** | **String** | The message giving details about the error |  |
-|**eErrorCode** | **FieldEErrorCode** |  |  |
-|**aSErrorMessagedetail** | **List&lt;String&gt;** | More error message detail |  [optional] |
 |**aObjEzsignformfielderror** | [**List&lt;Object&gt;**](Object.md) |  |  |
 
 

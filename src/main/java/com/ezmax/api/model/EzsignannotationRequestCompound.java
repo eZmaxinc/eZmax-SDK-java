@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.EnumHorizontalalignment;
 import com.ezmax.api.model.EnumVerticalalignment;
+import com.ezmax.api.model.EzsignannotationRequest;
 import com.ezmax.api.model.FieldEEzsignannotationType;
 import com.ezmax.api.model.TextstylestaticRequestCompound;
 import com.google.gson.TypeAdapter;
@@ -52,63 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignannotationRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzsignannotationID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigndocumentID;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_HORIZONTALALIGNMENT = "eEzsignannotationHorizontalalignment";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_HORIZONTALALIGNMENT)
-  @javax.annotation.Nullable
-  private EnumHorizontalalignment eEzsignannotationHorizontalalignment;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_VERTICALALIGNMENT = "eEzsignannotationVerticalalignment";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_VERTICALALIGNMENT)
-  @javax.annotation.Nullable
-  private EnumVerticalalignment eEzsignannotationVerticalalignment;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_TYPE = "eEzsignannotationType";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEEzsignannotationType eEzsignannotationType;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_X = "iEzsignannotationX";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_X)
-  @javax.annotation.Nonnull
-  private Integer iEzsignannotationX;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_Y = "iEzsignannotationY";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_Y)
-  @javax.annotation.Nonnull
-  private Integer iEzsignannotationY;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_WIDTH = "iEzsignannotationWidth";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_WIDTH)
-  @javax.annotation.Nullable
-  private Integer iEzsignannotationWidth;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_HEIGHT = "iEzsignannotationHeight";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_HEIGHT)
-  @javax.annotation.Nullable
-  private Integer iEzsignannotationHeight;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNANNOTATION_TEXT = "sEzsignannotationText";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNANNOTATION_TEXT)
-  @javax.annotation.Nullable
-  private String sEzsignannotationText;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
-  @javax.annotation.Nonnull
-  private Integer iEzsignpagePagenumber;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignannotationRequestCompound extends EzsignannotationRequest {
   public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
   @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
   @javax.annotation.Nullable
@@ -116,221 +62,6 @@ public class EzsignannotationRequestCompound {
 
   public EzsignannotationRequestCompound() {
   }
-
-  public EzsignannotationRequestCompound pkiEzsignannotationID(@javax.annotation.Nullable Integer pkiEzsignannotationID) {
-    this.pkiEzsignannotationID = pkiEzsignannotationID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignannotation
-   * @return pkiEzsignannotationID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzsignannotationID() {
-    return pkiEzsignannotationID;
-  }
-
-  public void setPkiEzsignannotationID(@javax.annotation.Nullable Integer pkiEzsignannotationID) {
-    this.pkiEzsignannotationID = pkiEzsignannotationID;
-  }
-
-
-  public EzsignannotationRequestCompound fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigndocument
-   * minimum: 0
-   * @return fkiEzsigndocumentID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigndocumentID() {
-    return fkiEzsigndocumentID;
-  }
-
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-  }
-
-
-  public EzsignannotationRequestCompound eEzsignannotationHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
-    this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
-    return this;
-  }
-
-  /**
-   * Get eEzsignannotationHorizontalalignment
-   * @return eEzsignannotationHorizontalalignment
-   */
-  @javax.annotation.Nullable
-  public EnumHorizontalalignment geteEzsignannotationHorizontalalignment() {
-    return eEzsignannotationHorizontalalignment;
-  }
-
-  public void seteEzsignannotationHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
-    this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
-  }
-
-
-  public EzsignannotationRequestCompound eEzsignannotationVerticalalignment(@javax.annotation.Nullable EnumVerticalalignment eEzsignannotationVerticalalignment) {
-    this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
-    return this;
-  }
-
-  /**
-   * Get eEzsignannotationVerticalalignment
-   * @return eEzsignannotationVerticalalignment
-   */
-  @javax.annotation.Nullable
-  public EnumVerticalalignment geteEzsignannotationVerticalalignment() {
-    return eEzsignannotationVerticalalignment;
-  }
-
-  public void seteEzsignannotationVerticalalignment(@javax.annotation.Nullable EnumVerticalalignment eEzsignannotationVerticalalignment) {
-    this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
-  }
-
-
-  public EzsignannotationRequestCompound eEzsignannotationType(@javax.annotation.Nonnull FieldEEzsignannotationType eEzsignannotationType) {
-    this.eEzsignannotationType = eEzsignannotationType;
-    return this;
-  }
-
-  /**
-   * Get eEzsignannotationType
-   * @return eEzsignannotationType
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzsignannotationType geteEzsignannotationType() {
-    return eEzsignannotationType;
-  }
-
-  public void seteEzsignannotationType(@javax.annotation.Nonnull FieldEEzsignannotationType eEzsignannotationType) {
-    this.eEzsignannotationType = eEzsignannotationType;
-  }
-
-
-  public EzsignannotationRequestCompound iEzsignannotationX(@javax.annotation.Nonnull Integer iEzsignannotationX) {
-    this.iEzsignannotationX = iEzsignannotationX;
-    return this;
-  }
-
-  /**
-   * The X coordinate (Horizontal) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
-   * minimum: 0
-   * @return iEzsignannotationX
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignannotationX() {
-    return iEzsignannotationX;
-  }
-
-  public void setiEzsignannotationX(@javax.annotation.Nonnull Integer iEzsignannotationX) {
-    this.iEzsignannotationX = iEzsignannotationX;
-  }
-
-
-  public EzsignannotationRequestCompound iEzsignannotationY(@javax.annotation.Nonnull Integer iEzsignannotationY) {
-    this.iEzsignannotationY = iEzsignannotationY;
-    return this;
-  }
-
-  /**
-   * The Y coordinate (Vertical) where to put the Ezsignannotation on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignannotation 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
-   * minimum: 0
-   * @return iEzsignannotationY
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignannotationY() {
-    return iEzsignannotationY;
-  }
-
-  public void setiEzsignannotationY(@javax.annotation.Nonnull Integer iEzsignannotationY) {
-    this.iEzsignannotationY = iEzsignannotationY;
-  }
-
-
-  public EzsignannotationRequestCompound iEzsignannotationWidth(@javax.annotation.Nullable Integer iEzsignannotationWidth) {
-    this.iEzsignannotationWidth = iEzsignannotationWidth;
-    return this;
-  }
-
-  /**
-   * The Width of the Ezsignannotation.  Width is calculated at 100dpi (dot per inch). So for example, if you want to have the width of the Ezsignannotation to be 3 inches, you would use \&quot;300\&quot; for the Width.
-   * minimum: 0
-   * @return iEzsignannotationWidth
-   */
-  @javax.annotation.Nullable
-  public Integer getiEzsignannotationWidth() {
-    return iEzsignannotationWidth;
-  }
-
-  public void setiEzsignannotationWidth(@javax.annotation.Nullable Integer iEzsignannotationWidth) {
-    this.iEzsignannotationWidth = iEzsignannotationWidth;
-  }
-
-
-  public EzsignannotationRequestCompound iEzsignannotationHeight(@javax.annotation.Nullable Integer iEzsignannotationHeight) {
-    this.iEzsignannotationHeight = iEzsignannotationHeight;
-    return this;
-  }
-
-  /**
-   * The Height of the Ezsignannotation.  Height is calculated at 100dpi (dot per inch). So for example, if you want to have the height of the Ezsignannotation to be 2 inches, you would use \&quot;200\&quot; for the Height.  This can only be set if eEzsignannotationType is **StrikethroughBlock** or **Text**
-   * minimum: 0
-   * @return iEzsignannotationHeight
-   */
-  @javax.annotation.Nullable
-  public Integer getiEzsignannotationHeight() {
-    return iEzsignannotationHeight;
-  }
-
-  public void setiEzsignannotationHeight(@javax.annotation.Nullable Integer iEzsignannotationHeight) {
-    this.iEzsignannotationHeight = iEzsignannotationHeight;
-  }
-
-
-  public EzsignannotationRequestCompound sEzsignannotationText(@javax.annotation.Nullable String sEzsignannotationText) {
-    this.sEzsignannotationText = sEzsignannotationText;
-    return this;
-  }
-
-  /**
-   * The Text of the Ezsignannotation
-   * @return sEzsignannotationText
-   */
-  @javax.annotation.Nullable
-  public String getsEzsignannotationText() {
-    return sEzsignannotationText;
-  }
-
-  public void setsEzsignannotationText(@javax.annotation.Nullable String sEzsignannotationText) {
-    this.sEzsignannotationText = sEzsignannotationText;
-  }
-
-
-  public EzsignannotationRequestCompound iEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
-    this.iEzsignpagePagenumber = iEzsignpagePagenumber;
-    return this;
-  }
-
-  /**
-   * The page number in the Ezsigndocument
-   * minimum: 1
-   * @return iEzsignpagePagenumber
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignpagePagenumber() {
-    return iEzsignpagePagenumber;
-  }
-
-  public void setiEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
-    this.iEzsignpagePagenumber = iEzsignpagePagenumber;
-  }
-
 
   public EzsignannotationRequestCompound objTextstylestatic(@javax.annotation.Nullable TextstylestaticRequestCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
@@ -361,40 +92,20 @@ public class EzsignannotationRequestCompound {
       return false;
     }
     EzsignannotationRequestCompound ezsignannotationRequestCompound = (EzsignannotationRequestCompound) o;
-    return Objects.equals(this.pkiEzsignannotationID, ezsignannotationRequestCompound.pkiEzsignannotationID) &&
-        Objects.equals(this.fkiEzsigndocumentID, ezsignannotationRequestCompound.fkiEzsigndocumentID) &&
-        Objects.equals(this.eEzsignannotationHorizontalalignment, ezsignannotationRequestCompound.eEzsignannotationHorizontalalignment) &&
-        Objects.equals(this.eEzsignannotationVerticalalignment, ezsignannotationRequestCompound.eEzsignannotationVerticalalignment) &&
-        Objects.equals(this.eEzsignannotationType, ezsignannotationRequestCompound.eEzsignannotationType) &&
-        Objects.equals(this.iEzsignannotationX, ezsignannotationRequestCompound.iEzsignannotationX) &&
-        Objects.equals(this.iEzsignannotationY, ezsignannotationRequestCompound.iEzsignannotationY) &&
-        Objects.equals(this.iEzsignannotationWidth, ezsignannotationRequestCompound.iEzsignannotationWidth) &&
-        Objects.equals(this.iEzsignannotationHeight, ezsignannotationRequestCompound.iEzsignannotationHeight) &&
-        Objects.equals(this.sEzsignannotationText, ezsignannotationRequestCompound.sEzsignannotationText) &&
-        Objects.equals(this.iEzsignpagePagenumber, ezsignannotationRequestCompound.iEzsignpagePagenumber) &&
-        Objects.equals(this.objTextstylestatic, ezsignannotationRequestCompound.objTextstylestatic);
+    return Objects.equals(this.objTextstylestatic, ezsignannotationRequestCompound.objTextstylestatic) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignannotationID, fkiEzsigndocumentID, eEzsignannotationHorizontalalignment, eEzsignannotationVerticalalignment, eEzsignannotationType, iEzsignannotationX, iEzsignannotationY, iEzsignannotationWidth, iEzsignannotationHeight, sEzsignannotationText, iEzsignpagePagenumber, objTextstylestatic);
+    return Objects.hash(objTextstylestatic, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignannotationRequestCompound {\n");
-    sb.append("    pkiEzsignannotationID: ").append(toIndentedString(pkiEzsignannotationID)).append("\n");
-    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
-    sb.append("    eEzsignannotationHorizontalalignment: ").append(toIndentedString(eEzsignannotationHorizontalalignment)).append("\n");
-    sb.append("    eEzsignannotationVerticalalignment: ").append(toIndentedString(eEzsignannotationVerticalalignment)).append("\n");
-    sb.append("    eEzsignannotationType: ").append(toIndentedString(eEzsignannotationType)).append("\n");
-    sb.append("    iEzsignannotationX: ").append(toIndentedString(iEzsignannotationX)).append("\n");
-    sb.append("    iEzsignannotationY: ").append(toIndentedString(iEzsignannotationY)).append("\n");
-    sb.append("    iEzsignannotationWidth: ").append(toIndentedString(iEzsignannotationWidth)).append("\n");
-    sb.append("    iEzsignannotationHeight: ").append(toIndentedString(iEzsignannotationHeight)).append("\n");
-    sb.append("    sEzsignannotationText: ").append(toIndentedString(sEzsignannotationText)).append("\n");
-    sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    objTextstylestatic: ").append(toIndentedString(objTextstylestatic)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -468,19 +179,6 @@ public class EzsignannotationRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `eEzsignannotationHorizontalalignment`
-      if (jsonObj.get("eEzsignannotationHorizontalalignment") != null && !jsonObj.get("eEzsignannotationHorizontalalignment").isJsonNull()) {
-        EnumHorizontalalignment.validateJsonElement(jsonObj.get("eEzsignannotationHorizontalalignment"));
-      }
-      // validate the optional field `eEzsignannotationVerticalalignment`
-      if (jsonObj.get("eEzsignannotationVerticalalignment") != null && !jsonObj.get("eEzsignannotationVerticalalignment").isJsonNull()) {
-        EnumVerticalalignment.validateJsonElement(jsonObj.get("eEzsignannotationVerticalalignment"));
-      }
-      // validate the required field `eEzsignannotationType`
-      FieldEEzsignannotationType.validateJsonElement(jsonObj.get("eEzsignannotationType"));
-      if ((jsonObj.get("sEzsignannotationText") != null && !jsonObj.get("sEzsignannotationText").isJsonNull()) && !jsonObj.get("sEzsignannotationText").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignannotationText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignannotationText").toString()));
-      }
       // validate the optional field `objTextstylestatic`
       if (jsonObj.get("objTextstylestatic") != null && !jsonObj.get("objTextstylestatic").isJsonNull()) {
         TextstylestaticRequestCompound.validateJsonElement(jsonObj.get("objTextstylestatic"));

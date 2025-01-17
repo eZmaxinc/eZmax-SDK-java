@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,23 +52,8 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseErrorSTemporaryFileUrl {
-  public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
-  @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
-  @javax.annotation.Nonnull
-  private String sErrorMessage;
-
-  public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
-  @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
-  @javax.annotation.Nonnull
-  private FieldEErrorCode eErrorCode;
-
-  public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
-  @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
-  @javax.annotation.Nullable
-  private List<String> aSErrorMessagedetail = new ArrayList<>();
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CommonResponseErrorSTemporaryFileUrl extends CommonResponseError {
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
   @javax.annotation.Nullable
@@ -75,71 +61,6 @@ public class CommonResponseErrorSTemporaryFileUrl {
 
   public CommonResponseErrorSTemporaryFileUrl() {
   }
-
-  public CommonResponseErrorSTemporaryFileUrl sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
-    this.sErrorMessage = sErrorMessage;
-    return this;
-  }
-
-  /**
-   * The message giving details about the error
-   * @return sErrorMessage
-   */
-  @javax.annotation.Nonnull
-  public String getsErrorMessage() {
-    return sErrorMessage;
-  }
-
-  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
-    this.sErrorMessage = sErrorMessage;
-  }
-
-
-  public CommonResponseErrorSTemporaryFileUrl eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
-    this.eErrorCode = eErrorCode;
-    return this;
-  }
-
-  /**
-   * Get eErrorCode
-   * @return eErrorCode
-   */
-  @javax.annotation.Nonnull
-  public FieldEErrorCode geteErrorCode() {
-    return eErrorCode;
-  }
-
-  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
-    this.eErrorCode = eErrorCode;
-  }
-
-
-  public CommonResponseErrorSTemporaryFileUrl aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
-    this.aSErrorMessagedetail = aSErrorMessagedetail;
-    return this;
-  }
-
-  public CommonResponseErrorSTemporaryFileUrl addASErrorMessagedetailItem(String aSErrorMessagedetailItem) {
-    if (this.aSErrorMessagedetail == null) {
-      this.aSErrorMessagedetail = new ArrayList<>();
-    }
-    this.aSErrorMessagedetail.add(aSErrorMessagedetailItem);
-    return this;
-  }
-
-  /**
-   * More error message detail
-   * @return aSErrorMessagedetail
-   */
-  @javax.annotation.Nullable
-  public List<String> getaSErrorMessagedetail() {
-    return aSErrorMessagedetail;
-  }
-
-  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
-    this.aSErrorMessagedetail = aSErrorMessagedetail;
-  }
-
 
   public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(@javax.annotation.Nullable String sTemporaryFileUrl) {
     this.sTemporaryFileUrl = sTemporaryFileUrl;
@@ -170,24 +91,20 @@ public class CommonResponseErrorSTemporaryFileUrl {
       return false;
     }
     CommonResponseErrorSTemporaryFileUrl commonResponseErrorSTemporaryFileUrl = (CommonResponseErrorSTemporaryFileUrl) o;
-    return Objects.equals(this.sErrorMessage, commonResponseErrorSTemporaryFileUrl.sErrorMessage) &&
-        Objects.equals(this.eErrorCode, commonResponseErrorSTemporaryFileUrl.eErrorCode) &&
-        Objects.equals(this.aSErrorMessagedetail, commonResponseErrorSTemporaryFileUrl.aSErrorMessagedetail) &&
-        Objects.equals(this.sTemporaryFileUrl, commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl);
+    return Objects.equals(this.sTemporaryFileUrl, commonResponseErrorSTemporaryFileUrl.sTemporaryFileUrl) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sErrorMessage, eErrorCode, aSErrorMessagedetail, sTemporaryFileUrl);
+    return Objects.hash(sTemporaryFileUrl, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorSTemporaryFileUrl {\n");
-    sb.append("    sErrorMessage: ").append(toIndentedString(sErrorMessage)).append("\n");
-    sb.append("    eErrorCode: ").append(toIndentedString(eErrorCode)).append("\n");
-    sb.append("    aSErrorMessagedetail: ").append(toIndentedString(aSErrorMessagedetail)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    sTemporaryFileUrl: ").append(toIndentedString(sTemporaryFileUrl)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -250,15 +167,6 @@ public class CommonResponseErrorSTemporaryFileUrl {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
-      }
-      // validate the required field `eErrorCode`
-      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
-      }
       if ((jsonObj.get("sTemporaryFileUrl") != null && !jsonObj.get("sTemporaryFileUrl").isJsonNull()) && !jsonObj.get("sTemporaryFileUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sTemporaryFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sTemporaryFileUrl").toString()));
       }

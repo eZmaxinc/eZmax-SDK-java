@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.AddressResponse;
+import com.ezmax.api.model.ContactinformationsResponse;
 import com.ezmax.api.model.EmailResponse;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneResponseCompound;

@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxinvoicingsummaryinternaldetailResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryinternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNALDETAIL_I_D)
@@ -451,21 +451,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingsummaryinternaldetailResponse is not found in the empty JSON string", EzmaxinvoicingsummaryinternaldetailResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzmaxinvoicingsummaryinternaldetailResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryinternaldetailResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzmaxinvoicingsummaryinternaldetailResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzmaxproductDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzmaxproductDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxproductDescriptionX").toString()));
@@ -490,34 +475,6 @@ public class EzmaxinvoicingsummaryinternaldetailResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzmaxinvoicingsummaryinternaldetailResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzmaxinvoicingsummaryinternaldetailResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzmaxinvoicingsummaryinternaldetailResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxinvoicingsummaryinternaldetailResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzmaxinvoicingsummaryinternaldetailResponse>() {
-           @Override
-           public void write(JsonWriter out, EzmaxinvoicingsummaryinternaldetailResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzmaxinvoicingsummaryinternaldetailResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzmaxinvoicingsummaryinternaldetailResponse given an JSON string

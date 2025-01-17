@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.FieldENotificationpreferenceStatus;
 import com.ezmax.api.model.MultilingualNotificationtestName;
+import com.ezmax.api.model.NotificationtestResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,33 +51,8 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CustomNotificationtestgetnotificationtestsResponse {
-  public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
-  @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiNotificationtestID;
-
-  public static final String SERIALIZED_NAME_OBJ_NOTIFICATIONTEST_NAME = "objNotificationtestName";
-  @SerializedName(SERIALIZED_NAME_OBJ_NOTIFICATIONTEST_NAME)
-  @javax.annotation.Nonnull
-  private MultilingualNotificationtestName objNotificationtestName;
-
-  public static final String SERIALIZED_NAME_FKI_NOTIFICATIONSUBSECTION_I_D = "fkiNotificationsubsectionID";
-  @SerializedName(SERIALIZED_NAME_FKI_NOTIFICATIONSUBSECTION_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiNotificationsubsectionID;
-
-  public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION = "sNotificationtestFunction";
-  @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION)
-  @javax.annotation.Nonnull
-  private String sNotificationtestFunction;
-
-  public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME_X = "sNotificationtestNameX";
-  @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME_X)
-  @javax.annotation.Nonnull
-  private String sNotificationtestNameX;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class CustomNotificationtestgetnotificationtestsResponse extends NotificationtestResponse {
   public static final String SERIALIZED_NAME_E_NOTIFICATIONPREFERENCE_STATUS = "eNotificationpreferenceStatus";
   @SerializedName(SERIALIZED_NAME_E_NOTIFICATIONPREFERENCE_STATUS)
   @javax.annotation.Nonnull
@@ -89,103 +65,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
 
   public CustomNotificationtestgetnotificationtestsResponse() {
   }
-
-  public CustomNotificationtestgetnotificationtestsResponse pkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
-    this.pkiNotificationtestID = pkiNotificationtestID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Notificationtest
-   * minimum: 0
-   * @return pkiNotificationtestID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiNotificationtestID() {
-    return pkiNotificationtestID;
-  }
-
-  public void setPkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
-    this.pkiNotificationtestID = pkiNotificationtestID;
-  }
-
-
-  public CustomNotificationtestgetnotificationtestsResponse objNotificationtestName(@javax.annotation.Nonnull MultilingualNotificationtestName objNotificationtestName) {
-    this.objNotificationtestName = objNotificationtestName;
-    return this;
-  }
-
-  /**
-   * Get objNotificationtestName
-   * @return objNotificationtestName
-   */
-  @javax.annotation.Nonnull
-  public MultilingualNotificationtestName getObjNotificationtestName() {
-    return objNotificationtestName;
-  }
-
-  public void setObjNotificationtestName(@javax.annotation.Nonnull MultilingualNotificationtestName objNotificationtestName) {
-    this.objNotificationtestName = objNotificationtestName;
-  }
-
-
-  public CustomNotificationtestgetnotificationtestsResponse fkiNotificationsubsectionID(@javax.annotation.Nonnull Integer fkiNotificationsubsectionID) {
-    this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Notificationsubsection
-   * minimum: 0
-   * @return fkiNotificationsubsectionID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiNotificationsubsectionID() {
-    return fkiNotificationsubsectionID;
-  }
-
-  public void setFkiNotificationsubsectionID(@javax.annotation.Nonnull Integer fkiNotificationsubsectionID) {
-    this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
-  }
-
-
-  public CustomNotificationtestgetnotificationtestsResponse sNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
-    this.sNotificationtestFunction = sNotificationtestFunction;
-    return this;
-  }
-
-  /**
-   * The function name of the Notificationtest
-   * @return sNotificationtestFunction
-   */
-  @javax.annotation.Nonnull
-  public String getsNotificationtestFunction() {
-    return sNotificationtestFunction;
-  }
-
-  public void setsNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
-    this.sNotificationtestFunction = sNotificationtestFunction;
-  }
-
-
-  public CustomNotificationtestgetnotificationtestsResponse sNotificationtestNameX(@javax.annotation.Nonnull String sNotificationtestNameX) {
-    this.sNotificationtestNameX = sNotificationtestNameX;
-    return this;
-  }
-
-  /**
-   * The name of the Notificationtest in the language of the requester
-   * @return sNotificationtestNameX
-   */
-  @javax.annotation.Nonnull
-  public String getsNotificationtestNameX() {
-    return sNotificationtestNameX;
-  }
-
-  public void setsNotificationtestNameX(@javax.annotation.Nonnull String sNotificationtestNameX) {
-    this.sNotificationtestNameX = sNotificationtestNameX;
-  }
-
 
   public CustomNotificationtestgetnotificationtestsResponse eNotificationpreferenceStatus(@javax.annotation.Nonnull FieldENotificationpreferenceStatus eNotificationpreferenceStatus) {
     this.eNotificationpreferenceStatus = eNotificationpreferenceStatus;
@@ -235,29 +114,21 @@ public class CustomNotificationtestgetnotificationtestsResponse {
       return false;
     }
     CustomNotificationtestgetnotificationtestsResponse customNotificationtestgetnotificationtestsResponse = (CustomNotificationtestgetnotificationtestsResponse) o;
-    return Objects.equals(this.pkiNotificationtestID, customNotificationtestgetnotificationtestsResponse.pkiNotificationtestID) &&
-        Objects.equals(this.objNotificationtestName, customNotificationtestgetnotificationtestsResponse.objNotificationtestName) &&
-        Objects.equals(this.fkiNotificationsubsectionID, customNotificationtestgetnotificationtestsResponse.fkiNotificationsubsectionID) &&
-        Objects.equals(this.sNotificationtestFunction, customNotificationtestgetnotificationtestsResponse.sNotificationtestFunction) &&
-        Objects.equals(this.sNotificationtestNameX, customNotificationtestgetnotificationtestsResponse.sNotificationtestNameX) &&
-        Objects.equals(this.eNotificationpreferenceStatus, customNotificationtestgetnotificationtestsResponse.eNotificationpreferenceStatus) &&
-        Objects.equals(this.iNotificationtest, customNotificationtestgetnotificationtestsResponse.iNotificationtest);
+    return Objects.equals(this.eNotificationpreferenceStatus, customNotificationtestgetnotificationtestsResponse.eNotificationpreferenceStatus) &&
+        Objects.equals(this.iNotificationtest, customNotificationtestgetnotificationtestsResponse.iNotificationtest) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiNotificationtestID, objNotificationtestName, fkiNotificationsubsectionID, sNotificationtestFunction, sNotificationtestNameX, eNotificationpreferenceStatus, iNotificationtest);
+    return Objects.hash(eNotificationpreferenceStatus, iNotificationtest, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomNotificationtestgetnotificationtestsResponse {\n");
-    sb.append("    pkiNotificationtestID: ").append(toIndentedString(pkiNotificationtestID)).append("\n");
-    sb.append("    objNotificationtestName: ").append(toIndentedString(objNotificationtestName)).append("\n");
-    sb.append("    fkiNotificationsubsectionID: ").append(toIndentedString(fkiNotificationsubsectionID)).append("\n");
-    sb.append("    sNotificationtestFunction: ").append(toIndentedString(sNotificationtestFunction)).append("\n");
-    sb.append("    sNotificationtestNameX: ").append(toIndentedString(sNotificationtestNameX)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    eNotificationpreferenceStatus: ").append(toIndentedString(eNotificationpreferenceStatus)).append("\n");
     sb.append("    iNotificationtest: ").append(toIndentedString(iNotificationtest)).append("\n");
     sb.append("}");
@@ -292,13 +163,13 @@ public class CustomNotificationtestgetnotificationtestsResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("eNotificationpreferenceStatus");
+    openapiRequiredFields.add("iNotificationtest");
     openapiRequiredFields.add("pkiNotificationtestID");
     openapiRequiredFields.add("objNotificationtestName");
     openapiRequiredFields.add("fkiNotificationsubsectionID");
     openapiRequiredFields.add("sNotificationtestFunction");
     openapiRequiredFields.add("sNotificationtestNameX");
-    openapiRequiredFields.add("eNotificationpreferenceStatus");
-    openapiRequiredFields.add("iNotificationtest");
   }
 
   /**
@@ -329,14 +200,6 @@ public class CustomNotificationtestgetnotificationtestsResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objNotificationtestName`
-      MultilingualNotificationtestName.validateJsonElement(jsonObj.get("objNotificationtestName"));
-      if (!jsonObj.get("sNotificationtestFunction").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sNotificationtestFunction` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationtestFunction").toString()));
-      }
-      if (!jsonObj.get("sNotificationtestNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sNotificationtestNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sNotificationtestNameX").toString()));
-      }
       // validate the required field `eNotificationpreferenceStatus`
       FieldENotificationpreferenceStatus.validateJsonElement(jsonObj.get("eNotificationpreferenceStatus"));
   }

@@ -8,8 +8,6 @@ Response for GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmemb
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
-|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignsignergroupmembershipGetObjectV2ResponseMPayload**](EzsignsignergroupmembershipGetObjectV2ResponseMPayload.md) |  |  |
 
 

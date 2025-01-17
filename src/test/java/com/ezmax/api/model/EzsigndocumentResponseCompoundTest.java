@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
+import com.ezmax.api.model.EzsigndocumentResponse;
 import com.ezmax.api.model.EzsigndocumentdependencyResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;

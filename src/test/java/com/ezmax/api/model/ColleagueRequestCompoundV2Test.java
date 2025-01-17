@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.ColleagueRequestV2;
 import com.ezmax.api.model.FieldEColleagueEzsign;
 import com.ezmax.api.model.FieldEColleagueRealestateinprogess;
 import com.google.gson.TypeAdapter;

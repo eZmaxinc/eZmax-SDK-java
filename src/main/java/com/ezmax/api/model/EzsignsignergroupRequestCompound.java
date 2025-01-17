@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsignsignergroupRequest;
 import com.ezmax.api.model.MultilingualEzsignsignergroupDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,85 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroup Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignsignergroupRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzsignsignergroupID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsignfolderID;
-
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION = "objEzsignsignergroupDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignsignergroupRequestCompound extends EzsignsignergroupRequest {
   public EzsignsignergroupRequestCompound() {
   }
-
-  public EzsignsignergroupRequestCompound pkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
-    this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignsignergroup
-   * minimum: 0
-   * maximum: 65535
-   * @return pkiEzsignsignergroupID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzsignsignergroupID() {
-    return pkiEzsignsignergroupID;
-  }
-
-  public void setPkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
-    this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
-  }
-
-
-  public EzsignsignergroupRequestCompound fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignfolder
-   * minimum: 0
-   * @return fkiEzsignfolderID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsignfolderID() {
-    return fkiEzsignfolderID;
-  }
-
-  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
-    this.fkiEzsignfolderID = fkiEzsignfolderID;
-  }
-
-
-  public EzsignsignergroupRequestCompound objEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
-    this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
-    return this;
-  }
-
-  /**
-   * Get objEzsignsignergroupDescription
-   * @return objEzsignsignergroupDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualEzsignsignergroupDescription getObjEzsignsignergroupDescription() {
-    return objEzsignsignergroupDescription;
-  }
-
-  public void setObjEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
-    this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
-  }
-
 
 
   @Override
@@ -138,24 +64,19 @@ public class EzsignsignergroupRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignsignergroupRequestCompound ezsignsignergroupRequestCompound = (EzsignsignergroupRequestCompound) o;
-    return Objects.equals(this.pkiEzsignsignergroupID, ezsignsignergroupRequestCompound.pkiEzsignsignergroupID) &&
-        Objects.equals(this.fkiEzsignfolderID, ezsignsignergroupRequestCompound.fkiEzsignfolderID) &&
-        Objects.equals(this.objEzsignsignergroupDescription, ezsignsignergroupRequestCompound.objEzsignsignergroupDescription);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignergroupID, fkiEzsignfolderID, objEzsignsignergroupDescription);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignergroupRequestCompound {\n");
-    sb.append("    pkiEzsignsignergroupID: ").append(toIndentedString(pkiEzsignsignergroupID)).append("\n");
-    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
-    sb.append("    objEzsignsignergroupDescription: ").append(toIndentedString(objEzsignsignergroupDescription)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,9 +136,6 @@ public class EzsignsignergroupRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objEzsignsignergroupDescription`
-      MultilingualEzsignsignergroupDescription.validateJsonElement(jsonObj.get("objEzsignsignergroupDescription"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

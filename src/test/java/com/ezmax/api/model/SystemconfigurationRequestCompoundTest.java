@@ -18,6 +18,7 @@ import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage1;
 import com.ezmax.api.model.FieldESystemconfigurationLanguage2;
 import com.ezmax.api.model.FieldESystemconfigurationNewexternaluseraction;
+import com.ezmax.api.model.SystemconfigurationRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

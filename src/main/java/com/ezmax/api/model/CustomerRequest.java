@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Customer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomerRequest {
   public static final String SERIALIZED_NAME_PKI_CUSTOMER_I_D = "pkiCustomerID";
   @SerializedName(SERIALIZED_NAME_PKI_CUSTOMER_I_D)
@@ -1585,21 +1585,6 @@ public class CustomerRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomerRequest is not found in the empty JSON string", CustomerRequest.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!CustomerRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CustomerRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CustomerRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCustomerName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCustomerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerName").toString()));
@@ -1640,34 +1625,6 @@ public class CustomerRequest {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CustomerRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CustomerRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CustomerRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CustomerRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CustomerRequest>() {
-           @Override
-           public void write(JsonWriter out, CustomerRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CustomerRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of CustomerRequest given an JSON string

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonWebhook {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -181,21 +181,6 @@ public class CommonWebhook {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonWebhook is not found in the empty JSON string", CommonWebhook.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!CommonWebhook.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonWebhook` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CommonWebhook.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objWebhook`
       CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
@@ -211,34 +196,6 @@ public class CommonWebhook {
       };
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CommonWebhook.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CommonWebhook' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CommonWebhook> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CommonWebhook.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CommonWebhook>() {
-           @Override
-           public void write(JsonWriter out, CommonWebhook value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CommonWebhook read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of CommonWebhook given an JSON string

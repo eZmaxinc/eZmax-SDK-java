@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompound;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
 import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.ezmax.api.model.EzsignsignergroupResponseCompound;

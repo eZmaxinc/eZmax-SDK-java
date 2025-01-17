@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsignbulksendsignermappingResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,109 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksendsignermapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignbulksendsignermappingResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsignbulksendsignermappingID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsignbulksendID;
-
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
-  private Integer fkiUserID;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION = "sEzsignbulksendsignermappingDescription";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private String sEzsignbulksendsignermappingDescription;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignbulksendsignermappingResponseCompound extends EzsignbulksendsignermappingResponse {
   public EzsignbulksendsignermappingResponseCompound() {
   }
-
-  public EzsignbulksendsignermappingResponseCompound pkiEzsignbulksendsignermappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksendsignermappingID) {
-    this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignbulksendsignermapping
-   * minimum: 0
-   * @return pkiEzsignbulksendsignermappingID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsignbulksendsignermappingID() {
-    return pkiEzsignbulksendsignermappingID;
-  }
-
-  public void setPkiEzsignbulksendsignermappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksendsignermappingID) {
-    this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
-  }
-
-
-  public EzsignbulksendsignermappingResponseCompound fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
-    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignbulksend
-   * minimum: 0
-   * @return fkiEzsignbulksendID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsignbulksendID() {
-    return fkiEzsignbulksendID;
-  }
-
-  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
-    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
-  }
-
-
-  public EzsignbulksendsignermappingResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nullable
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
-
-  public EzsignbulksendsignermappingResponseCompound sEzsignbulksendsignermappingDescription(@javax.annotation.Nonnull String sEzsignbulksendsignermappingDescription) {
-    this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
-    return this;
-  }
-
-  /**
-   * The description of the Ezsignbulksendsignermapping
-   * @return sEzsignbulksendsignermappingDescription
-   */
-  @javax.annotation.Nonnull
-  public String getsEzsignbulksendsignermappingDescription() {
-    return sEzsignbulksendsignermappingDescription;
-  }
-
-  public void setsEzsignbulksendsignermappingDescription(@javax.annotation.Nonnull String sEzsignbulksendsignermappingDescription) {
-    this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
-  }
-
 
 
   @Override
@@ -161,26 +63,19 @@ public class EzsignbulksendsignermappingResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignbulksendsignermappingResponseCompound ezsignbulksendsignermappingResponseCompound = (EzsignbulksendsignermappingResponseCompound) o;
-    return Objects.equals(this.pkiEzsignbulksendsignermappingID, ezsignbulksendsignermappingResponseCompound.pkiEzsignbulksendsignermappingID) &&
-        Objects.equals(this.fkiEzsignbulksendID, ezsignbulksendsignermappingResponseCompound.fkiEzsignbulksendID) &&
-        Objects.equals(this.fkiUserID, ezsignbulksendsignermappingResponseCompound.fkiUserID) &&
-        Objects.equals(this.sEzsignbulksendsignermappingDescription, ezsignbulksendsignermappingResponseCompound.sEzsignbulksendsignermappingDescription);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID, fkiUserID, sEzsignbulksendsignermappingDescription);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendsignermappingResponseCompound {\n");
-    sb.append("    pkiEzsignbulksendsignermappingID: ").append(toIndentedString(pkiEzsignbulksendsignermappingID)).append("\n");
-    sb.append("    fkiEzsignbulksendID: ").append(toIndentedString(fkiEzsignbulksendID)).append("\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
-    sb.append("    sEzsignbulksendsignermappingDescription: ").append(toIndentedString(sEzsignbulksendsignermappingDescription)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -241,10 +136,6 @@ public class EzsignbulksendsignermappingResponseCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sEzsignbulksendsignermappingDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendsignermappingDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendsignermappingDescription").toString()));
       }
   }
 

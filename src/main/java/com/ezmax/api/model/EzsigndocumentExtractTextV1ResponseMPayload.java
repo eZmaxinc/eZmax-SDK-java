@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/ExtractText
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentExtractTextV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_TEXT = "sText";
   @SerializedName(SERIALIZED_NAME_S_TEXT)

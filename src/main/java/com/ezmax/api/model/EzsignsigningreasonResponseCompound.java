@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsignsigningreasonResponse;
 import com.ezmax.api.model.MultilingualEzsignsigningreasonDescription;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,84 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigningreason Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignsigningreasonResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D = "pkiEzsignsigningreasonID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsignsigningreasonID;
-
-  public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON_DESCRIPTION = "objEzsignsigningreasonDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE = "bEzsignsigningreasonIsactive";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE)
-  @javax.annotation.Nonnull
-  private Boolean bEzsignsigningreasonIsactive;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignsigningreasonResponseCompound extends EzsignsigningreasonResponse {
   public EzsignsigningreasonResponseCompound() {
   }
-
-  public EzsignsigningreasonResponseCompound pkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
-    this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignsigningreason
-   * minimum: 0
-   * maximum: 255
-   * @return pkiEzsignsigningreasonID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsignsigningreasonID() {
-    return pkiEzsignsigningreasonID;
-  }
-
-  public void setPkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
-    this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
-  }
-
-
-  public EzsignsigningreasonResponseCompound objEzsignsigningreasonDescription(@javax.annotation.Nonnull MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
-    this.objEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
-    return this;
-  }
-
-  /**
-   * Get objEzsignsigningreasonDescription
-   * @return objEzsignsigningreasonDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualEzsignsigningreasonDescription getObjEzsignsigningreasonDescription() {
-    return objEzsignsigningreasonDescription;
-  }
-
-  public void setObjEzsignsigningreasonDescription(@javax.annotation.Nonnull MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
-    this.objEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
-  }
-
-
-  public EzsignsigningreasonResponseCompound bEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
-    this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
-    return this;
-  }
-
-  /**
-   * Whether the ezsignsigningreason is active or not
-   * @return bEzsignsigningreasonIsactive
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzsignsigningreasonIsactive() {
-    return bEzsignsigningreasonIsactive;
-  }
-
-  public void setbEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
-    this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
-  }
-
 
 
   @Override
@@ -137,24 +64,19 @@ public class EzsignsigningreasonResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignsigningreasonResponseCompound ezsignsigningreasonResponseCompound = (EzsignsigningreasonResponseCompound) o;
-    return Objects.equals(this.pkiEzsignsigningreasonID, ezsignsigningreasonResponseCompound.pkiEzsignsigningreasonID) &&
-        Objects.equals(this.objEzsignsigningreasonDescription, ezsignsigningreasonResponseCompound.objEzsignsigningreasonDescription) &&
-        Objects.equals(this.bEzsignsigningreasonIsactive, ezsignsigningreasonResponseCompound.bEzsignsigningreasonIsactive);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsigningreasonID, objEzsignsigningreasonDescription, bEzsignsigningreasonIsactive);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsigningreasonResponseCompound {\n");
-    sb.append("    pkiEzsignsigningreasonID: ").append(toIndentedString(pkiEzsignsigningreasonID)).append("\n");
-    sb.append("    objEzsignsigningreasonDescription: ").append(toIndentedString(objEzsignsigningreasonDescription)).append("\n");
-    sb.append("    bEzsignsigningreasonIsactive: ").append(toIndentedString(bEzsignsigningreasonIsactive)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,9 +137,6 @@ public class EzsignsigningreasonResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objEzsignsigningreasonDescription`
-      MultilingualEzsignsigningreasonDescription.validateJsonElement(jsonObj.get("objEzsignsigningreasonDescription"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

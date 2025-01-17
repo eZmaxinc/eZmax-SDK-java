@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcontract Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxinvoicingcontractResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D = "pkiEzmaxinvoicingcontractID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCONTRACT_I_D)
@@ -369,21 +369,6 @@ public class EzmaxinvoicingcontractResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingcontractResponse is not found in the empty JSON string", EzmaxinvoicingcontractResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzmaxinvoicingcontractResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingcontractResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzmaxinvoicingcontractResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eEzmaxinvoicingcontractPaymenttype`
       FieldEEzmaxinvoicingcontractPaymenttype.validateJsonElement(jsonObj.get("eEzmaxinvoicingcontractPaymenttype"));
@@ -403,34 +388,6 @@ public class EzmaxinvoicingcontractResponse {
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzmaxinvoicingcontractResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzmaxinvoicingcontractResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzmaxinvoicingcontractResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxinvoicingcontractResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzmaxinvoicingcontractResponse>() {
-           @Override
-           public void write(JsonWriter out, EzmaxinvoicingcontractResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzmaxinvoicingcontractResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzmaxinvoicingcontractResponse given an JSON string

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.DomainRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,60 +49,10 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DomainRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
-  @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiDomainID;
-
-  public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
-  @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
-  @javax.annotation.Nonnull
-  private String sDomainName;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class DomainRequestCompound extends DomainRequest {
   public DomainRequestCompound() {
   }
-
-  public DomainRequestCompound pkiDomainID(@javax.annotation.Nullable Integer pkiDomainID) {
-    this.pkiDomainID = pkiDomainID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Domain
-   * minimum: 0
-   * maximum: 255
-   * @return pkiDomainID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiDomainID() {
-    return pkiDomainID;
-  }
-
-  public void setPkiDomainID(@javax.annotation.Nullable Integer pkiDomainID) {
-    this.pkiDomainID = pkiDomainID;
-  }
-
-
-  public DomainRequestCompound sDomainName(@javax.annotation.Nonnull String sDomainName) {
-    this.sDomainName = sDomainName;
-    return this;
-  }
-
-  /**
-   * The name of the Domain
-   * @return sDomainName
-   */
-  @javax.annotation.Nonnull
-  public String getsDomainName() {
-    return sDomainName;
-  }
-
-  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
-    this.sDomainName = sDomainName;
-  }
-
 
 
   @Override
@@ -112,22 +63,19 @@ public class DomainRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DomainRequestCompound domainRequestCompound = (DomainRequestCompound) o;
-    return Objects.equals(this.pkiDomainID, domainRequestCompound.pkiDomainID) &&
-        Objects.equals(this.sDomainName, domainRequestCompound.sDomainName);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiDomainID, sDomainName);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DomainRequestCompound {\n");
-    sb.append("    pkiDomainID: ").append(toIndentedString(pkiDomainID)).append("\n");
-    sb.append("    sDomainName: ").append(toIndentedString(sDomainName)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -184,10 +132,6 @@ public class DomainRequestCompound {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sDomainName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDomainName").toString()));
       }
   }
 

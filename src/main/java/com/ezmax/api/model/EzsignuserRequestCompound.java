@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.ContactRequestCompoundV2;
+import com.ezmax.api.model.EzsignuserRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,85 +50,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignuser Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignuserRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNUSER_I_D = "pkiEzsignuserID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNUSER_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiEzsignuserID;
-
-  public static final String SERIALIZED_NAME_FKI_CONTACT_I_D = "fkiContactID";
-  @SerializedName(SERIALIZED_NAME_FKI_CONTACT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiContactID;
-
-  public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  @javax.annotation.Nonnull
-  private ContactRequestCompoundV2 objContact;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignuserRequestCompound extends EzsignuserRequest {
   public EzsignuserRequestCompound() {
   }
-
-  public EzsignuserRequestCompound pkiEzsignuserID(@javax.annotation.Nullable Integer pkiEzsignuserID) {
-    this.pkiEzsignuserID = pkiEzsignuserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignuser
-   * minimum: 0
-   * maximum: 65535
-   * @return pkiEzsignuserID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiEzsignuserID() {
-    return pkiEzsignuserID;
-  }
-
-  public void setPkiEzsignuserID(@javax.annotation.Nullable Integer pkiEzsignuserID) {
-    this.pkiEzsignuserID = pkiEzsignuserID;
-  }
-
-
-  public EzsignuserRequestCompound fkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
-    this.fkiContactID = fkiContactID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Contact
-   * minimum: 0
-   * @return fkiContactID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiContactID() {
-    return fkiContactID;
-  }
-
-  public void setFkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
-    this.fkiContactID = fkiContactID;
-  }
-
-
-  public EzsignuserRequestCompound objContact(@javax.annotation.Nonnull ContactRequestCompoundV2 objContact) {
-    this.objContact = objContact;
-    return this;
-  }
-
-  /**
-   * Get objContact
-   * @return objContact
-   */
-  @javax.annotation.Nonnull
-  public ContactRequestCompoundV2 getObjContact() {
-    return objContact;
-  }
-
-  public void setObjContact(@javax.annotation.Nonnull ContactRequestCompoundV2 objContact) {
-    this.objContact = objContact;
-  }
-
 
 
   @Override
@@ -138,24 +64,19 @@ public class EzsignuserRequestCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignuserRequestCompound ezsignuserRequestCompound = (EzsignuserRequestCompound) o;
-    return Objects.equals(this.pkiEzsignuserID, ezsignuserRequestCompound.pkiEzsignuserID) &&
-        Objects.equals(this.fkiContactID, ezsignuserRequestCompound.fkiContactID) &&
-        Objects.equals(this.objContact, ezsignuserRequestCompound.objContact);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignuserID, fkiContactID, objContact);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignuserRequestCompound {\n");
-    sb.append("    pkiEzsignuserID: ").append(toIndentedString(pkiEzsignuserID)).append("\n");
-    sb.append("    fkiContactID: ").append(toIndentedString(fkiContactID)).append("\n");
-    sb.append("    objContact: ").append(toIndentedString(objContact)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,9 +136,6 @@ public class EzsignuserRequestCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objContact`
-      ContactRequestCompoundV2.validateJsonElement(jsonObj.get("objContact"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

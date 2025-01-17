@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.ContactRequest;
 import com.ezmax.api.model.ContactinformationsRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -49,38 +50,8 @@ import eZmaxAPI.JSON;
 /**
  * A Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ContactRequestCompound {
-  public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
-  @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiContacttitleID;
-
-  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
-  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiLanguageID;
-
-  public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
-  @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
-  @javax.annotation.Nonnull
-  private String sContactFirstname;
-
-  public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
-  @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
-  @javax.annotation.Nonnull
-  private String sContactLastname;
-
-  public static final String SERIALIZED_NAME_S_CONTACT_COMPANY = "sContactCompany";
-  @SerializedName(SERIALIZED_NAME_S_CONTACT_COMPANY)
-  @javax.annotation.Nonnull
-  private String sContactCompany;
-
-  public static final String SERIALIZED_NAME_DT_CONTACT_BIRTHDATE = "dtContactBirthdate";
-  @SerializedName(SERIALIZED_NAME_DT_CONTACT_BIRTHDATE)
-  @javax.annotation.Nullable
-  private String dtContactBirthdate;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ContactRequestCompound extends ContactRequest {
   public static final String SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS = "objContactinformations";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACTINFORMATIONS)
   @javax.annotation.Nonnull
@@ -88,123 +59,6 @@ public class ContactRequestCompound {
 
   public ContactRequestCompound() {
   }
-
-  public ContactRequestCompound fkiContacttitleID(@javax.annotation.Nonnull Integer fkiContacttitleID) {
-    this.fkiContacttitleID = fkiContacttitleID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Contacttitle.  Valid values:  |Value|Description| |-|-| |1|Ms.| |2|Mr.| |4|(Blank)| |5|Me (For Notaries)|
-   * minimum: 0
-   * @return fkiContacttitleID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiContacttitleID() {
-    return fkiContacttitleID;
-  }
-
-  public void setFkiContacttitleID(@javax.annotation.Nonnull Integer fkiContacttitleID) {
-    this.fkiContacttitleID = fkiContacttitleID;
-  }
-
-
-  public ContactRequestCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
-   * minimum: 1
-   * maximum: 2
-   * @return fkiLanguageID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiLanguageID() {
-    return fkiLanguageID;
-  }
-
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
-    this.fkiLanguageID = fkiLanguageID;
-  }
-
-
-  public ContactRequestCompound sContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
-    this.sContactFirstname = sContactFirstname;
-    return this;
-  }
-
-  /**
-   * The First name of the contact
-   * @return sContactFirstname
-   */
-  @javax.annotation.Nonnull
-  public String getsContactFirstname() {
-    return sContactFirstname;
-  }
-
-  public void setsContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
-    this.sContactFirstname = sContactFirstname;
-  }
-
-
-  public ContactRequestCompound sContactLastname(@javax.annotation.Nonnull String sContactLastname) {
-    this.sContactLastname = sContactLastname;
-    return this;
-  }
-
-  /**
-   * The Last name of the contact
-   * @return sContactLastname
-   */
-  @javax.annotation.Nonnull
-  public String getsContactLastname() {
-    return sContactLastname;
-  }
-
-  public void setsContactLastname(@javax.annotation.Nonnull String sContactLastname) {
-    this.sContactLastname = sContactLastname;
-  }
-
-
-  public ContactRequestCompound sContactCompany(@javax.annotation.Nonnull String sContactCompany) {
-    this.sContactCompany = sContactCompany;
-    return this;
-  }
-
-  /**
-   * The Company name of the contact
-   * @return sContactCompany
-   */
-  @javax.annotation.Nonnull
-  public String getsContactCompany() {
-    return sContactCompany;
-  }
-
-  public void setsContactCompany(@javax.annotation.Nonnull String sContactCompany) {
-    this.sContactCompany = sContactCompany;
-  }
-
-
-  public ContactRequestCompound dtContactBirthdate(@javax.annotation.Nullable String dtContactBirthdate) {
-    this.dtContactBirthdate = dtContactBirthdate;
-    return this;
-  }
-
-  /**
-   * The Birth Date of the contact
-   * @return dtContactBirthdate
-   */
-  @javax.annotation.Nullable
-  public String getDtContactBirthdate() {
-    return dtContactBirthdate;
-  }
-
-  public void setDtContactBirthdate(@javax.annotation.Nullable String dtContactBirthdate) {
-    this.dtContactBirthdate = dtContactBirthdate;
-  }
-
 
   public ContactRequestCompound objContactinformations(@javax.annotation.Nonnull ContactinformationsRequestCompound objContactinformations) {
     this.objContactinformations = objContactinformations;
@@ -235,30 +89,20 @@ public class ContactRequestCompound {
       return false;
     }
     ContactRequestCompound contactRequestCompound = (ContactRequestCompound) o;
-    return Objects.equals(this.fkiContacttitleID, contactRequestCompound.fkiContacttitleID) &&
-        Objects.equals(this.fkiLanguageID, contactRequestCompound.fkiLanguageID) &&
-        Objects.equals(this.sContactFirstname, contactRequestCompound.sContactFirstname) &&
-        Objects.equals(this.sContactLastname, contactRequestCompound.sContactLastname) &&
-        Objects.equals(this.sContactCompany, contactRequestCompound.sContactCompany) &&
-        Objects.equals(this.dtContactBirthdate, contactRequestCompound.dtContactBirthdate) &&
-        Objects.equals(this.objContactinformations, contactRequestCompound.objContactinformations);
+    return Objects.equals(this.objContactinformations, contactRequestCompound.objContactinformations) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiContacttitleID, fkiLanguageID, sContactFirstname, sContactLastname, sContactCompany, dtContactBirthdate, objContactinformations);
+    return Objects.hash(objContactinformations, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactRequestCompound {\n");
-    sb.append("    fkiContacttitleID: ").append(toIndentedString(fkiContacttitleID)).append("\n");
-    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
-    sb.append("    sContactFirstname: ").append(toIndentedString(sContactFirstname)).append("\n");
-    sb.append("    sContactLastname: ").append(toIndentedString(sContactLastname)).append("\n");
-    sb.append("    sContactCompany: ").append(toIndentedString(sContactCompany)).append("\n");
-    sb.append("    dtContactBirthdate: ").append(toIndentedString(dtContactBirthdate)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    objContactinformations: ").append(toIndentedString(objContactinformations)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -292,12 +136,12 @@ public class ContactRequestCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("objContactinformations");
     openapiRequiredFields.add("fkiContacttitleID");
     openapiRequiredFields.add("fkiLanguageID");
     openapiRequiredFields.add("sContactFirstname");
     openapiRequiredFields.add("sContactLastname");
     openapiRequiredFields.add("sContactCompany");
-    openapiRequiredFields.add("objContactinformations");
   }
 
   /**
@@ -328,18 +172,6 @@ public class ContactRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sContactFirstname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sContactFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sContactFirstname").toString()));
-      }
-      if (!jsonObj.get("sContactLastname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sContactLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sContactLastname").toString()));
-      }
-      if (!jsonObj.get("sContactCompany").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sContactCompany` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sContactCompany").toString()));
-      }
-      if ((jsonObj.get("dtContactBirthdate") != null && !jsonObj.get("dtContactBirthdate").isJsonNull()) && !jsonObj.get("dtContactBirthdate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dtContactBirthdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtContactBirthdate").toString()));
-      }
       // validate the required field `objContactinformations`
       ContactinformationsRequestCompound.validateJsonElement(jsonObj.get("objContactinformations"));
   }

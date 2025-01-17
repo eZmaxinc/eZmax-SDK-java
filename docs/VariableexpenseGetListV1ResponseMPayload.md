@@ -8,8 +8,6 @@ Payload for GET /1/object/variableexpense/getList
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**iRowReturned** | **Integer** | The number of rows returned |  |
-|**iRowFiltered** | **Integer** | The number of rows matching your filters (if any) or the total number of rows |  |
 |**aObjVariableexpense** | [**List&lt;VariableexpenseListElement&gt;**](VariableexpenseListElement.md) |  |  |
 
 

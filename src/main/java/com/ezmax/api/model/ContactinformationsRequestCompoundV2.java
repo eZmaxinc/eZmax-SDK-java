@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.AddressRequest;
+import com.ezmax.api.model.ContactinformationsRequestV2;
 import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneRequest;
@@ -55,33 +56,8 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ContactinformationsRequestCompoundV2 {
-  public static final String SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE = "eContactinformationsType";
-  @SerializedName(SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEContactinformationsType eContactinformationsType;
-
-  public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
-  @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
-  @javax.annotation.Nonnull
-  private Integer iAddressDefault;
-
-  public static final String SERIALIZED_NAME_I_PHONE_DEFAULT = "iPhoneDefault";
-  @SerializedName(SERIALIZED_NAME_I_PHONE_DEFAULT)
-  @javax.annotation.Nonnull
-  private Integer iPhoneDefault;
-
-  public static final String SERIALIZED_NAME_I_EMAIL_DEFAULT = "iEmailDefault";
-  @SerializedName(SERIALIZED_NAME_I_EMAIL_DEFAULT)
-  @javax.annotation.Nonnull
-  private Integer iEmailDefault;
-
-  public static final String SERIALIZED_NAME_I_WEBSITE_DEFAULT = "iWebsiteDefault";
-  @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
-  @javax.annotation.Nonnull
-  private Integer iWebsiteDefault;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class ContactinformationsRequestCompoundV2 extends ContactinformationsRequestV2 {
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
   @javax.annotation.Nonnull
@@ -104,101 +80,6 @@ public class ContactinformationsRequestCompoundV2 {
 
   public ContactinformationsRequestCompoundV2() {
   }
-
-  public ContactinformationsRequestCompoundV2 eContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
-    this.eContactinformationsType = eContactinformationsType;
-    return this;
-  }
-
-  /**
-   * Get eContactinformationsType
-   * @return eContactinformationsType
-   */
-  @javax.annotation.Nonnull
-  public FieldEContactinformationsType geteContactinformationsType() {
-    return eContactinformationsType;
-  }
-
-  public void seteContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
-    this.eContactinformationsType = eContactinformationsType;
-  }
-
-
-  public ContactinformationsRequestCompoundV2 iAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
-    this.iAddressDefault = iAddressDefault;
-    return this;
-  }
-
-  /**
-   * The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
-   * @return iAddressDefault
-   */
-  @javax.annotation.Nonnull
-  public Integer getiAddressDefault() {
-    return iAddressDefault;
-  }
-
-  public void setiAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
-    this.iAddressDefault = iAddressDefault;
-  }
-
-
-  public ContactinformationsRequestCompoundV2 iPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
-    this.iPhoneDefault = iPhoneDefault;
-    return this;
-  }
-
-  /**
-   * The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.
-   * @return iPhoneDefault
-   */
-  @javax.annotation.Nonnull
-  public Integer getiPhoneDefault() {
-    return iPhoneDefault;
-  }
-
-  public void setiPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
-    this.iPhoneDefault = iPhoneDefault;
-  }
-
-
-  public ContactinformationsRequestCompoundV2 iEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
-    this.iEmailDefault = iEmailDefault;
-    return this;
-  }
-
-  /**
-   * The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.
-   * @return iEmailDefault
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEmailDefault() {
-    return iEmailDefault;
-  }
-
-  public void setiEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
-    this.iEmailDefault = iEmailDefault;
-  }
-
-
-  public ContactinformationsRequestCompoundV2 iWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
-    this.iWebsiteDefault = iWebsiteDefault;
-    return this;
-  }
-
-  /**
-   * The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
-   * @return iWebsiteDefault
-   */
-  @javax.annotation.Nonnull
-  public Integer getiWebsiteDefault() {
-    return iWebsiteDefault;
-  }
-
-  public void setiWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
-    this.iWebsiteDefault = iWebsiteDefault;
-  }
-
 
   public ContactinformationsRequestCompoundV2 aObjAddress(@javax.annotation.Nonnull List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
@@ -318,31 +199,23 @@ public class ContactinformationsRequestCompoundV2 {
       return false;
     }
     ContactinformationsRequestCompoundV2 contactinformationsRequestCompoundV2 = (ContactinformationsRequestCompoundV2) o;
-    return Objects.equals(this.eContactinformationsType, contactinformationsRequestCompoundV2.eContactinformationsType) &&
-        Objects.equals(this.iAddressDefault, contactinformationsRequestCompoundV2.iAddressDefault) &&
-        Objects.equals(this.iPhoneDefault, contactinformationsRequestCompoundV2.iPhoneDefault) &&
-        Objects.equals(this.iEmailDefault, contactinformationsRequestCompoundV2.iEmailDefault) &&
-        Objects.equals(this.iWebsiteDefault, contactinformationsRequestCompoundV2.iWebsiteDefault) &&
-        Objects.equals(this.aObjAddress, contactinformationsRequestCompoundV2.aObjAddress) &&
+    return Objects.equals(this.aObjAddress, contactinformationsRequestCompoundV2.aObjAddress) &&
         Objects.equals(this.aObjPhone, contactinformationsRequestCompoundV2.aObjPhone) &&
         Objects.equals(this.aObjEmail, contactinformationsRequestCompoundV2.aObjEmail) &&
-        Objects.equals(this.aObjWebsite, contactinformationsRequestCompoundV2.aObjWebsite);
+        Objects.equals(this.aObjWebsite, contactinformationsRequestCompoundV2.aObjWebsite) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eContactinformationsType, iAddressDefault, iPhoneDefault, iEmailDefault, iWebsiteDefault, aObjAddress, aObjPhone, aObjEmail, aObjWebsite);
+    return Objects.hash(aObjAddress, aObjPhone, aObjEmail, aObjWebsite, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsRequestCompoundV2 {\n");
-    sb.append("    eContactinformationsType: ").append(toIndentedString(eContactinformationsType)).append("\n");
-    sb.append("    iAddressDefault: ").append(toIndentedString(iAddressDefault)).append("\n");
-    sb.append("    iPhoneDefault: ").append(toIndentedString(iPhoneDefault)).append("\n");
-    sb.append("    iEmailDefault: ").append(toIndentedString(iEmailDefault)).append("\n");
-    sb.append("    iWebsiteDefault: ").append(toIndentedString(iWebsiteDefault)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjAddress: ").append(toIndentedString(aObjAddress)).append("\n");
     sb.append("    aObjPhone: ").append(toIndentedString(aObjPhone)).append("\n");
     sb.append("    aObjEmail: ").append(toIndentedString(aObjEmail)).append("\n");
@@ -381,15 +254,15 @@ public class ContactinformationsRequestCompoundV2 {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objAddress");
+    openapiRequiredFields.add("a_objPhone");
+    openapiRequiredFields.add("a_objEmail");
+    openapiRequiredFields.add("a_objWebsite");
     openapiRequiredFields.add("eContactinformationsType");
     openapiRequiredFields.add("iAddressDefault");
     openapiRequiredFields.add("iPhoneDefault");
     openapiRequiredFields.add("iEmailDefault");
     openapiRequiredFields.add("iWebsiteDefault");
-    openapiRequiredFields.add("a_objAddress");
-    openapiRequiredFields.add("a_objPhone");
-    openapiRequiredFields.add("a_objEmail");
-    openapiRequiredFields.add("a_objWebsite");
   }
 
   /**
@@ -420,8 +293,6 @@ public class ContactinformationsRequestCompoundV2 {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `eContactinformationsType`
-      FieldEContactinformationsType.validateJsonElement(jsonObj.get("eContactinformationsType"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objAddress").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objAddress` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAddress").toString()));

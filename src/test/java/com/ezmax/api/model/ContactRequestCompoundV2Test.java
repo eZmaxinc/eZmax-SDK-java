@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.ContactRequestV2;
 import com.ezmax.api.model.ContactinformationsRequestCompoundV2;
 import com.ezmax.api.model.FieldEContactType;
 import com.google.gson.TypeAdapter;

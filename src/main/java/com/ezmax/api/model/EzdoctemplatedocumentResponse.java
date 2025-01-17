@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzdoctemplatedocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
@@ -457,21 +457,6 @@ public class EzdoctemplatedocumentResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzdoctemplatedocumentResponse is not found in the empty JSON string", EzdoctemplatedocumentResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!EzdoctemplatedocumentResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzdoctemplatedocumentResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : EzdoctemplatedocumentResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `eEzdoctemplatedocumentPrivacylevel`
       if (jsonObj.get("eEzdoctemplatedocumentPrivacylevel") != null && !jsonObj.get("eEzdoctemplatedocumentPrivacylevel").isJsonNull()) {
@@ -493,34 +478,6 @@ public class EzdoctemplatedocumentResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!EzdoctemplatedocumentResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'EzdoctemplatedocumentResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<EzdoctemplatedocumentResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(EzdoctemplatedocumentResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<EzdoctemplatedocumentResponse>() {
-           @Override
-           public void write(JsonWriter out, EzdoctemplatedocumentResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public EzdoctemplatedocumentResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of EzdoctemplatedocumentResponse given an JSON string

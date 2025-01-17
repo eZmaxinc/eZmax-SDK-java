@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.CustomDropdownElementResponse;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignformfieldResponseCompound;
+import com.ezmax.api.model.EzsignformfieldgroupResponse;
 import com.ezmax.api.model.EzsignformfieldgroupsignerResponse;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
@@ -57,94 +58,8 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignformfieldgroupResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsignformfieldgroupID;
-
-  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigndocumentID;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TYPE = "eEzsignformfieldgroupType";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TYPE)
-  @javax.annotation.Nonnull
-  private FieldEEzsignformfieldgroupType eEzsignformfieldgroupType;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT = "eEzsignformfieldgroupSignerrequirement";
-  @Deprecated
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT)
-  @javax.annotation.Nullable
-  private FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL = "sEzsignformfieldgroupLabel";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL)
-  @javax.annotation.Nonnull
-  private String sEzsignformfieldgroupLabel;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_STEP = "iEzsignformfieldgroupStep";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_STEP)
-  @javax.annotation.Nonnull
-  private Integer iEzsignformfieldgroupStep;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_DEFAULTVALUE = "sEzsignformfieldgroupDefaultvalue";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_DEFAULTVALUE)
-  @javax.annotation.Nullable
-  private String sEzsignformfieldgroupDefaultvalue;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMIN = "iEzsignformfieldgroupFilledmin";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMIN)
-  @javax.annotation.Nonnull
-  private Integer iEzsignformfieldgroupFilledmin;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMAX = "iEzsignformfieldgroupFilledmax";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMAX)
-  @javax.annotation.Nonnull
-  private Integer iEzsignformfieldgroupFilledmax;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_READONLY = "bEzsignformfieldgroupReadonly";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_READONLY)
-  @javax.annotation.Nonnull
-  private Boolean bEzsignformfieldgroupReadonly;
-
-  public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_MAXLENGTH = "iEzsignformfieldgroupMaxlength";
-  @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_MAXLENGTH)
-  @javax.annotation.Nullable
-  private Integer iEzsignformfieldgroupMaxlength;
-
-  public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED = "bEzsignformfieldgroupEncrypted";
-  @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED)
-  @javax.annotation.Nullable
-  private Boolean bEzsignformfieldgroupEncrypted;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION = "eEzsignformfieldgroupTextvalidation";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION)
-  @javax.annotation.Nullable
-  private EnumTextvalidation eEzsignformfieldgroupTextvalidation;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP = "sEzsignformfieldgroupRegexp";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP)
-  @javax.annotation.Nullable
-  private String sEzsignformfieldgroupRegexp;
-
-  public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_TEXTVALIDATIONCUSTOMMESSAGE = "sEzsignformfieldgroupTextvalidationcustommessage";
-  @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_TEXTVALIDATIONCUSTOMMESSAGE)
-  @javax.annotation.Nullable
-  private String sEzsignformfieldgroupTextvalidationcustommessage;
-
-  public static final String SERIALIZED_NAME_T_EZSIGNFORMFIELDGROUP_TOOLTIP = "tEzsignformfieldgroupTooltip";
-  @SerializedName(SERIALIZED_NAME_T_EZSIGNFORMFIELDGROUP_TOOLTIP)
-  @javax.annotation.Nullable
-  private String tEzsignformfieldgroupTooltip;
-
-  public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TOOLTIPPOSITION = "eEzsignformfieldgroupTooltipposition";
-  @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TOOLTIPPOSITION)
-  @javax.annotation.Nullable
-  private FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignformfieldgroupResponseCompound extends EzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD = "a_objEzsignformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD)
   @javax.annotation.Nonnull
@@ -162,340 +77,6 @@ public class EzsignformfieldgroupResponseCompound {
 
   public EzsignformfieldgroupResponseCompound() {
   }
-
-  public EzsignformfieldgroupResponseCompound pkiEzsignformfieldgroupID(@javax.annotation.Nonnull Integer pkiEzsignformfieldgroupID) {
-    this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignformfieldgroup
-   * minimum: 0
-   * @return pkiEzsignformfieldgroupID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsignformfieldgroupID() {
-    return pkiEzsignformfieldgroupID;
-  }
-
-  public void setPkiEzsignformfieldgroupID(@javax.annotation.Nonnull Integer pkiEzsignformfieldgroupID) {
-    this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigndocument
-   * minimum: 0
-   * @return fkiEzsigndocumentID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigndocumentID() {
-    return fkiEzsigndocumentID;
-  }
-
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
-    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound eEzsignformfieldgroupType(@javax.annotation.Nonnull FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
-    this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
-    return this;
-  }
-
-  /**
-   * Get eEzsignformfieldgroupType
-   * @return eEzsignformfieldgroupType
-   */
-  @javax.annotation.Nonnull
-  public FieldEEzsignformfieldgroupType geteEzsignformfieldgroupType() {
-    return eEzsignformfieldgroupType;
-  }
-
-  public void seteEzsignformfieldgroupType(@javax.annotation.Nonnull FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
-    this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
-  }
-
-
-  @Deprecated
-  public EzsignformfieldgroupResponseCompound eEzsignformfieldgroupSignerrequirement(@javax.annotation.Nullable FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
-    this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
-    return this;
-  }
-
-  /**
-   * Get eEzsignformfieldgroupSignerrequirement
-   * @return eEzsignformfieldgroupSignerrequirement
-   * @deprecated
-   */
-  @Deprecated
-  @javax.annotation.Nullable
-  public FieldEEzsignformfieldgroupSignerrequirement geteEzsignformfieldgroupSignerrequirement() {
-    return eEzsignformfieldgroupSignerrequirement;
-  }
-
-  @Deprecated
-  public void seteEzsignformfieldgroupSignerrequirement(@javax.annotation.Nullable FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
-    this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound sEzsignformfieldgroupLabel(@javax.annotation.Nonnull String sEzsignformfieldgroupLabel) {
-    this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
-    return this;
-  }
-
-  /**
-   * The Label for the Ezsignformfieldgroup
-   * @return sEzsignformfieldgroupLabel
-   */
-  @javax.annotation.Nonnull
-  public String getsEzsignformfieldgroupLabel() {
-    return sEzsignformfieldgroupLabel;
-  }
-
-  public void setsEzsignformfieldgroupLabel(@javax.annotation.Nonnull String sEzsignformfieldgroupLabel) {
-    this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound iEzsignformfieldgroupStep(@javax.annotation.Nonnull Integer iEzsignformfieldgroupStep) {
-    this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
-    return this;
-  }
-
-  /**
-   * The step when the Ezsignsigner will be invited to fill the form fields
-   * minimum: 1
-   * @return iEzsignformfieldgroupStep
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignformfieldgroupStep() {
-    return iEzsignformfieldgroupStep;
-  }
-
-  public void setiEzsignformfieldgroupStep(@javax.annotation.Nonnull Integer iEzsignformfieldgroupStep) {
-    this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound sEzsignformfieldgroupDefaultvalue(@javax.annotation.Nullable String sEzsignformfieldgroupDefaultvalue) {
-    this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
-    return this;
-  }
-
-  /**
-   * The default value for the Ezsignformfieldgroup  You can use the codes below and they will be replaced at signature time.    | Code | Description | Example | | ------------------------- | ------------ | ------------ | | {sUserFirstname} | The first name of the contact | John | | {sUserLastname} | The last name of the contact | Doe | | {sUserJobtitle} | The job title | Sales Representative | | {sCompany} | Company name | eZmax Solutions Inc. | | {sEmailAddress} | The email address | email@example.com | | {sPhoneE164} | A phone number in E.164 Format | +15149901516 | | {sPhoneE164Cell} | A phone number in E.164 Format | +15149901516 |
-   * @return sEzsignformfieldgroupDefaultvalue
-   */
-  @javax.annotation.Nullable
-  public String getsEzsignformfieldgroupDefaultvalue() {
-    return sEzsignformfieldgroupDefaultvalue;
-  }
-
-  public void setsEzsignformfieldgroupDefaultvalue(@javax.annotation.Nullable String sEzsignformfieldgroupDefaultvalue) {
-    this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound iEzsignformfieldgroupFilledmin(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmin) {
-    this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
-    return this;
-  }
-
-  /**
-   * The minimum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
-   * minimum: 0
-   * @return iEzsignformfieldgroupFilledmin
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignformfieldgroupFilledmin() {
-    return iEzsignformfieldgroupFilledmin;
-  }
-
-  public void setiEzsignformfieldgroupFilledmin(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmin) {
-    this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound iEzsignformfieldgroupFilledmax(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmax) {
-    this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
-    return this;
-  }
-
-  /**
-   * The maximum number of Ezsignformfield that must be filled in the Ezsignformfieldgroup
-   * minimum: 0
-   * @return iEzsignformfieldgroupFilledmax
-   */
-  @javax.annotation.Nonnull
-  public Integer getiEzsignformfieldgroupFilledmax() {
-    return iEzsignformfieldgroupFilledmax;
-  }
-
-  public void setiEzsignformfieldgroupFilledmax(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmax) {
-    this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound bEzsignformfieldgroupReadonly(@javax.annotation.Nonnull Boolean bEzsignformfieldgroupReadonly) {
-    this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
-    return this;
-  }
-
-  /**
-   * Whether the Ezsignformfieldgroup is read only or not.
-   * @return bEzsignformfieldgroupReadonly
-   */
-  @javax.annotation.Nonnull
-  public Boolean getbEzsignformfieldgroupReadonly() {
-    return bEzsignformfieldgroupReadonly;
-  }
-
-  public void setbEzsignformfieldgroupReadonly(@javax.annotation.Nonnull Boolean bEzsignformfieldgroupReadonly) {
-    this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound iEzsignformfieldgroupMaxlength(@javax.annotation.Nullable Integer iEzsignformfieldgroupMaxlength) {
-    this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
-    return this;
-  }
-
-  /**
-   * The maximum length for the value in the Ezsignformfieldgroup  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-   * minimum: 0
-   * maximum: 65535
-   * @return iEzsignformfieldgroupMaxlength
-   */
-  @javax.annotation.Nullable
-  public Integer getiEzsignformfieldgroupMaxlength() {
-    return iEzsignformfieldgroupMaxlength;
-  }
-
-  public void setiEzsignformfieldgroupMaxlength(@javax.annotation.Nullable Integer iEzsignformfieldgroupMaxlength) {
-    this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound bEzsignformfieldgroupEncrypted(@javax.annotation.Nullable Boolean bEzsignformfieldgroupEncrypted) {
-    this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
-    return this;
-  }
-
-  /**
-   * Whether the Ezsignformfieldgroup is encrypted in the database or not. Encrypted values are not displayed on the Ezsigndocument. This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-   * @return bEzsignformfieldgroupEncrypted
-   */
-  @javax.annotation.Nullable
-  public Boolean getbEzsignformfieldgroupEncrypted() {
-    return bEzsignformfieldgroupEncrypted;
-  }
-
-  public void setbEzsignformfieldgroupEncrypted(@javax.annotation.Nullable Boolean bEzsignformfieldgroupEncrypted) {
-    this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound eEzsignformfieldgroupTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
-    this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
-    return this;
-  }
-
-  /**
-   * Get eEzsignformfieldgroupTextvalidation
-   * @return eEzsignformfieldgroupTextvalidation
-   */
-  @javax.annotation.Nullable
-  public EnumTextvalidation geteEzsignformfieldgroupTextvalidation() {
-    return eEzsignformfieldgroupTextvalidation;
-  }
-
-  public void seteEzsignformfieldgroupTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
-    this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound sEzsignformfieldgroupRegexp(@javax.annotation.Nullable String sEzsignformfieldgroupRegexp) {
-    this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
-    return this;
-  }
-
-  /**
-   * A regular expression to indicate what values are acceptable for the Ezsignformfieldgroup.  This can only be set if eEzsignformfieldgroupType is **Text** or **Textarea**
-   * @return sEzsignformfieldgroupRegexp
-   */
-  @javax.annotation.Nullable
-  public String getsEzsignformfieldgroupRegexp() {
-    return sEzsignformfieldgroupRegexp;
-  }
-
-  public void setsEzsignformfieldgroupRegexp(@javax.annotation.Nullable String sEzsignformfieldgroupRegexp) {
-    this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound sEzsignformfieldgroupTextvalidationcustommessage(@javax.annotation.Nullable String sEzsignformfieldgroupTextvalidationcustommessage) {
-    this.sEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
-    return this;
-  }
-
-  /**
-   * Description of validation rule. Show by signatory.
-   * @return sEzsignformfieldgroupTextvalidationcustommessage
-   */
-  @javax.annotation.Nullable
-  public String getsEzsignformfieldgroupTextvalidationcustommessage() {
-    return sEzsignformfieldgroupTextvalidationcustommessage;
-  }
-
-  public void setsEzsignformfieldgroupTextvalidationcustommessage(@javax.annotation.Nullable String sEzsignformfieldgroupTextvalidationcustommessage) {
-    this.sEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound tEzsignformfieldgroupTooltip(@javax.annotation.Nullable String tEzsignformfieldgroupTooltip) {
-    this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
-    return this;
-  }
-
-  /**
-   * A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup
-   * @return tEzsignformfieldgroupTooltip
-   */
-  @javax.annotation.Nullable
-  public String gettEzsignformfieldgroupTooltip() {
-    return tEzsignformfieldgroupTooltip;
-  }
-
-  public void settEzsignformfieldgroupTooltip(@javax.annotation.Nullable String tEzsignformfieldgroupTooltip) {
-    this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
-  }
-
-
-  public EzsignformfieldgroupResponseCompound eEzsignformfieldgroupTooltipposition(@javax.annotation.Nullable FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
-    this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
-    return this;
-  }
-
-  /**
-   * Get eEzsignformfieldgroupTooltipposition
-   * @return eEzsignformfieldgroupTooltipposition
-   */
-  @javax.annotation.Nullable
-  public FieldEEzsignformfieldgroupTooltipposition geteEzsignformfieldgroupTooltipposition() {
-    return eEzsignformfieldgroupTooltipposition;
-  }
-
-  public void seteEzsignformfieldgroupTooltipposition(@javax.annotation.Nullable FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
-    this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
-  }
-
 
   public EzsignformfieldgroupResponseCompound aObjEzsignformfield(@javax.annotation.Nonnull List<EzsignformfieldResponseCompound> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
@@ -588,54 +169,22 @@ public class EzsignformfieldgroupResponseCompound {
       return false;
     }
     EzsignformfieldgroupResponseCompound ezsignformfieldgroupResponseCompound = (EzsignformfieldgroupResponseCompound) o;
-    return Objects.equals(this.pkiEzsignformfieldgroupID, ezsignformfieldgroupResponseCompound.pkiEzsignformfieldgroupID) &&
-        Objects.equals(this.fkiEzsigndocumentID, ezsignformfieldgroupResponseCompound.fkiEzsigndocumentID) &&
-        Objects.equals(this.eEzsignformfieldgroupType, ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupType) &&
-        Objects.equals(this.eEzsignformfieldgroupSignerrequirement, ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupSignerrequirement) &&
-        Objects.equals(this.sEzsignformfieldgroupLabel, ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupLabel) &&
-        Objects.equals(this.iEzsignformfieldgroupStep, ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupStep) &&
-        Objects.equals(this.sEzsignformfieldgroupDefaultvalue, ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupDefaultvalue) &&
-        Objects.equals(this.iEzsignformfieldgroupFilledmin, ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmin) &&
-        Objects.equals(this.iEzsignformfieldgroupFilledmax, ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupFilledmax) &&
-        Objects.equals(this.bEzsignformfieldgroupReadonly, ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupReadonly) &&
-        Objects.equals(this.iEzsignformfieldgroupMaxlength, ezsignformfieldgroupResponseCompound.iEzsignformfieldgroupMaxlength) &&
-        Objects.equals(this.bEzsignformfieldgroupEncrypted, ezsignformfieldgroupResponseCompound.bEzsignformfieldgroupEncrypted) &&
-        Objects.equals(this.eEzsignformfieldgroupTextvalidation, ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTextvalidation) &&
-        Objects.equals(this.sEzsignformfieldgroupRegexp, ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupRegexp) &&
-        Objects.equals(this.sEzsignformfieldgroupTextvalidationcustommessage, ezsignformfieldgroupResponseCompound.sEzsignformfieldgroupTextvalidationcustommessage) &&
-        Objects.equals(this.tEzsignformfieldgroupTooltip, ezsignformfieldgroupResponseCompound.tEzsignformfieldgroupTooltip) &&
-        Objects.equals(this.eEzsignformfieldgroupTooltipposition, ezsignformfieldgroupResponseCompound.eEzsignformfieldgroupTooltipposition) &&
-        Objects.equals(this.aObjEzsignformfield, ezsignformfieldgroupResponseCompound.aObjEzsignformfield) &&
+    return Objects.equals(this.aObjEzsignformfield, ezsignformfieldgroupResponseCompound.aObjEzsignformfield) &&
         Objects.equals(this.aObjDropdownElement, ezsignformfieldgroupResponseCompound.aObjDropdownElement) &&
-        Objects.equals(this.aObjEzsignformfieldgroupsigner, ezsignformfieldgroupResponseCompound.aObjEzsignformfieldgroupsigner);
+        Objects.equals(this.aObjEzsignformfieldgroupsigner, ezsignformfieldgroupResponseCompound.aObjEzsignformfieldgroupsigner) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignformfieldgroupID, fkiEzsigndocumentID, eEzsignformfieldgroupType, eEzsignformfieldgroupSignerrequirement, sEzsignformfieldgroupLabel, iEzsignformfieldgroupStep, sEzsignformfieldgroupDefaultvalue, iEzsignformfieldgroupFilledmin, iEzsignformfieldgroupFilledmax, bEzsignformfieldgroupReadonly, iEzsignformfieldgroupMaxlength, bEzsignformfieldgroupEncrypted, eEzsignformfieldgroupTextvalidation, sEzsignformfieldgroupRegexp, sEzsignformfieldgroupTextvalidationcustommessage, tEzsignformfieldgroupTooltip, eEzsignformfieldgroupTooltipposition, aObjEzsignformfield, aObjDropdownElement, aObjEzsignformfieldgroupsigner);
+    return Objects.hash(aObjEzsignformfield, aObjDropdownElement, aObjEzsignformfieldgroupsigner, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignformfieldgroupResponseCompound {\n");
-    sb.append("    pkiEzsignformfieldgroupID: ").append(toIndentedString(pkiEzsignformfieldgroupID)).append("\n");
-    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
-    sb.append("    eEzsignformfieldgroupType: ").append(toIndentedString(eEzsignformfieldgroupType)).append("\n");
-    sb.append("    eEzsignformfieldgroupSignerrequirement: ").append(toIndentedString(eEzsignformfieldgroupSignerrequirement)).append("\n");
-    sb.append("    sEzsignformfieldgroupLabel: ").append(toIndentedString(sEzsignformfieldgroupLabel)).append("\n");
-    sb.append("    iEzsignformfieldgroupStep: ").append(toIndentedString(iEzsignformfieldgroupStep)).append("\n");
-    sb.append("    sEzsignformfieldgroupDefaultvalue: ").append(toIndentedString(sEzsignformfieldgroupDefaultvalue)).append("\n");
-    sb.append("    iEzsignformfieldgroupFilledmin: ").append(toIndentedString(iEzsignformfieldgroupFilledmin)).append("\n");
-    sb.append("    iEzsignformfieldgroupFilledmax: ").append(toIndentedString(iEzsignformfieldgroupFilledmax)).append("\n");
-    sb.append("    bEzsignformfieldgroupReadonly: ").append(toIndentedString(bEzsignformfieldgroupReadonly)).append("\n");
-    sb.append("    iEzsignformfieldgroupMaxlength: ").append(toIndentedString(iEzsignformfieldgroupMaxlength)).append("\n");
-    sb.append("    bEzsignformfieldgroupEncrypted: ").append(toIndentedString(bEzsignformfieldgroupEncrypted)).append("\n");
-    sb.append("    eEzsignformfieldgroupTextvalidation: ").append(toIndentedString(eEzsignformfieldgroupTextvalidation)).append("\n");
-    sb.append("    sEzsignformfieldgroupRegexp: ").append(toIndentedString(sEzsignformfieldgroupRegexp)).append("\n");
-    sb.append("    sEzsignformfieldgroupTextvalidationcustommessage: ").append(toIndentedString(sEzsignformfieldgroupTextvalidationcustommessage)).append("\n");
-    sb.append("    tEzsignformfieldgroupTooltip: ").append(toIndentedString(tEzsignformfieldgroupTooltip)).append("\n");
-    sb.append("    eEzsignformfieldgroupTooltipposition: ").append(toIndentedString(eEzsignformfieldgroupTooltipposition)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjEzsignformfield: ").append(toIndentedString(aObjEzsignformfield)).append("\n");
     sb.append("    aObjDropdownElement: ").append(toIndentedString(aObjDropdownElement)).append("\n");
     sb.append("    aObjEzsignformfieldgroupsigner: ").append(toIndentedString(aObjEzsignformfieldgroupsigner)).append("\n");
@@ -684,6 +233,8 @@ public class EzsignformfieldgroupResponseCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("a_objEzsignformfield");
+    openapiRequiredFields.add("a_objEzsignformfieldgroupsigner");
     openapiRequiredFields.add("pkiEzsignformfieldgroupID");
     openapiRequiredFields.add("fkiEzsigndocumentID");
     openapiRequiredFields.add("eEzsignformfieldgroupType");
@@ -692,8 +243,6 @@ public class EzsignformfieldgroupResponseCompound {
     openapiRequiredFields.add("iEzsignformfieldgroupFilledmin");
     openapiRequiredFields.add("iEzsignformfieldgroupFilledmax");
     openapiRequiredFields.add("bEzsignformfieldgroupReadonly");
-    openapiRequiredFields.add("a_objEzsignformfield");
-    openapiRequiredFields.add("a_objEzsignformfieldgroupsigner");
   }
 
   /**
@@ -724,35 +273,6 @@ public class EzsignformfieldgroupResponseCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `eEzsignformfieldgroupType`
-      FieldEEzsignformfieldgroupType.validateJsonElement(jsonObj.get("eEzsignformfieldgroupType"));
-      // validate the optional field `eEzsignformfieldgroupSignerrequirement`
-      if (jsonObj.get("eEzsignformfieldgroupSignerrequirement") != null && !jsonObj.get("eEzsignformfieldgroupSignerrequirement").isJsonNull()) {
-        FieldEEzsignformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldgroupSignerrequirement"));
-      }
-      if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
-      }
-      if ((jsonObj.get("sEzsignformfieldgroupDefaultvalue") != null && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupDefaultvalue").toString()));
-      }
-      // validate the optional field `eEzsignformfieldgroupTextvalidation`
-      if (jsonObj.get("eEzsignformfieldgroupTextvalidation") != null && !jsonObj.get("eEzsignformfieldgroupTextvalidation").isJsonNull()) {
-        EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTextvalidation"));
-      }
-      if ((jsonObj.get("sEzsignformfieldgroupRegexp") != null && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupRegexp").toString()));
-      }
-      if ((jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage") != null && !jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldgroupTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").toString()));
-      }
-      if ((jsonObj.get("tEzsignformfieldgroupTooltip") != null && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonNull()) && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tEzsignformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignformfieldgroupTooltip").toString()));
-      }
-      // validate the optional field `eEzsignformfieldgroupTooltipposition`
-      if (jsonObj.get("eEzsignformfieldgroupTooltipposition") != null && !jsonObj.get("eEzsignformfieldgroupTooltipposition").isJsonNull()) {
-        FieldEEzsignformfieldgroupTooltipposition.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTooltipposition"));
-      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignformfield").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfield` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfield").toString()));

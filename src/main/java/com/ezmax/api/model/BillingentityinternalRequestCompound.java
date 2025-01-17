@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.BillingentityinternalRequest;
 import com.ezmax.api.model.BillingentityinternalproductRequestCompound;
 import com.ezmax.api.model.MultilingualBillingentityinternalDescription;
 import com.google.gson.TypeAdapter;
@@ -52,18 +53,8 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BillingentityinternalRequestCompound {
-  public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
-  @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nullable
-  private Integer pkiBillingentityinternalID;
-
-  public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION = "objBillingentityinternalDescription";
-  @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
-  private MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class BillingentityinternalRequestCompound extends BillingentityinternalRequest {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT = "a_objBillingentityinternalproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT)
   @javax.annotation.Nonnull
@@ -71,45 +62,6 @@ public class BillingentityinternalRequestCompound {
 
   public BillingentityinternalRequestCompound() {
   }
-
-  public BillingentityinternalRequestCompound pkiBillingentityinternalID(@javax.annotation.Nullable Integer pkiBillingentityinternalID) {
-    this.pkiBillingentityinternalID = pkiBillingentityinternalID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Billingentityinternal.
-   * minimum: 0
-   * @return pkiBillingentityinternalID
-   */
-  @javax.annotation.Nullable
-  public Integer getPkiBillingentityinternalID() {
-    return pkiBillingentityinternalID;
-  }
-
-  public void setPkiBillingentityinternalID(@javax.annotation.Nullable Integer pkiBillingentityinternalID) {
-    this.pkiBillingentityinternalID = pkiBillingentityinternalID;
-  }
-
-
-  public BillingentityinternalRequestCompound objBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
-    this.objBillingentityinternalDescription = objBillingentityinternalDescription;
-    return this;
-  }
-
-  /**
-   * Get objBillingentityinternalDescription
-   * @return objBillingentityinternalDescription
-   */
-  @javax.annotation.Nonnull
-  public MultilingualBillingentityinternalDescription getObjBillingentityinternalDescription() {
-    return objBillingentityinternalDescription;
-  }
-
-  public void setObjBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
-    this.objBillingentityinternalDescription = objBillingentityinternalDescription;
-  }
-
 
   public BillingentityinternalRequestCompound aObjBillingentityinternalproduct(@javax.annotation.Nonnull List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
@@ -148,22 +100,20 @@ public class BillingentityinternalRequestCompound {
       return false;
     }
     BillingentityinternalRequestCompound billingentityinternalRequestCompound = (BillingentityinternalRequestCompound) o;
-    return Objects.equals(this.pkiBillingentityinternalID, billingentityinternalRequestCompound.pkiBillingentityinternalID) &&
-        Objects.equals(this.objBillingentityinternalDescription, billingentityinternalRequestCompound.objBillingentityinternalDescription) &&
-        Objects.equals(this.aObjBillingentityinternalproduct, billingentityinternalRequestCompound.aObjBillingentityinternalproduct);
+    return Objects.equals(this.aObjBillingentityinternalproduct, billingentityinternalRequestCompound.aObjBillingentityinternalproduct) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiBillingentityinternalID, objBillingentityinternalDescription, aObjBillingentityinternalproduct);
+    return Objects.hash(aObjBillingentityinternalproduct, super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalRequestCompound {\n");
-    sb.append("    pkiBillingentityinternalID: ").append(toIndentedString(pkiBillingentityinternalID)).append("\n");
-    sb.append("    objBillingentityinternalDescription: ").append(toIndentedString(objBillingentityinternalDescription)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    aObjBillingentityinternalproduct: ").append(toIndentedString(aObjBillingentityinternalproduct)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -193,8 +143,8 @@ public class BillingentityinternalRequestCompound {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objBillingentityinternalDescription");
     openapiRequiredFields.add("a_objBillingentityinternalproduct");
+    openapiRequiredFields.add("objBillingentityinternalDescription");
   }
 
   /**
@@ -225,8 +175,6 @@ public class BillingentityinternalRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objBillingentityinternalDescription`
-      MultilingualBillingentityinternalDescription.validateJsonElement(jsonObj.get("objBillingentityinternalDescription"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objBillingentityinternalproduct").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objBillingentityinternalproduct` to be an array in the JSON string but got `%s`", jsonObj.get("a_objBillingentityinternalproduct").toString()));

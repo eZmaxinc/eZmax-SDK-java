@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ContactResponseCompound;
+import com.ezmax.api.model.EzsignuserResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,109 +51,10 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignuser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignuserResponseCompound {
-  public static final String SERIALIZED_NAME_PKI_EZSIGNUSER_I_D = "pkiEzsignuserID";
-  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNUSER_I_D)
-  @javax.annotation.Nonnull
-  private Integer pkiEzsignuserID;
-
-  public static final String SERIALIZED_NAME_FKI_CONTACT_I_D = "fkiContactID";
-  @SerializedName(SERIALIZED_NAME_FKI_CONTACT_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiContactID;
-
-  public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
-  @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  @javax.annotation.Nonnull
-  private ContactResponseCompound objContact;
-
-  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
-  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
-  private CommonAudit objAudit;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class EzsignuserResponseCompound extends EzsignuserResponse {
   public EzsignuserResponseCompound() {
   }
-
-  public EzsignuserResponseCompound pkiEzsignuserID(@javax.annotation.Nonnull Integer pkiEzsignuserID) {
-    this.pkiEzsignuserID = pkiEzsignuserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsignuser
-   * minimum: 0
-   * maximum: 65535
-   * @return pkiEzsignuserID
-   */
-  @javax.annotation.Nonnull
-  public Integer getPkiEzsignuserID() {
-    return pkiEzsignuserID;
-  }
-
-  public void setPkiEzsignuserID(@javax.annotation.Nonnull Integer pkiEzsignuserID) {
-    this.pkiEzsignuserID = pkiEzsignuserID;
-  }
-
-
-  public EzsignuserResponseCompound fkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
-    this.fkiContactID = fkiContactID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Contact
-   * minimum: 0
-   * @return fkiContactID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiContactID() {
-    return fkiContactID;
-  }
-
-  public void setFkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
-    this.fkiContactID = fkiContactID;
-  }
-
-
-  public EzsignuserResponseCompound objContact(@javax.annotation.Nonnull ContactResponseCompound objContact) {
-    this.objContact = objContact;
-    return this;
-  }
-
-  /**
-   * Get objContact
-   * @return objContact
-   */
-  @javax.annotation.Nonnull
-  public ContactResponseCompound getObjContact() {
-    return objContact;
-  }
-
-  public void setObjContact(@javax.annotation.Nonnull ContactResponseCompound objContact) {
-    this.objContact = objContact;
-  }
-
-
-  public EzsignuserResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-    return this;
-  }
-
-  /**
-   * Get objAudit
-   * @return objAudit
-   */
-  @javax.annotation.Nonnull
-  public CommonAudit getObjAudit() {
-    return objAudit;
-  }
-
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
-    this.objAudit = objAudit;
-  }
-
 
 
   @Override
@@ -163,26 +65,19 @@ public class EzsignuserResponseCompound {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EzsignuserResponseCompound ezsignuserResponseCompound = (EzsignuserResponseCompound) o;
-    return Objects.equals(this.pkiEzsignuserID, ezsignuserResponseCompound.pkiEzsignuserID) &&
-        Objects.equals(this.fkiContactID, ezsignuserResponseCompound.fkiContactID) &&
-        Objects.equals(this.objContact, ezsignuserResponseCompound.objContact) &&
-        Objects.equals(this.objAudit, ezsignuserResponseCompound.objAudit);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignuserID, fkiContactID, objContact, objAudit);
+    return Objects.hash(super.hashCode());
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignuserResponseCompound {\n");
-    sb.append("    pkiEzsignuserID: ").append(toIndentedString(pkiEzsignuserID)).append("\n");
-    sb.append("    fkiContactID: ").append(toIndentedString(fkiContactID)).append("\n");
-    sb.append("    objContact: ").append(toIndentedString(objContact)).append("\n");
-    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -245,11 +140,6 @@ public class EzsignuserResponseCompound {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `objContact`
-      ContactResponseCompound.validateJsonElement(jsonObj.get("objContact"));
-      // validate the required field `objAudit`
-      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

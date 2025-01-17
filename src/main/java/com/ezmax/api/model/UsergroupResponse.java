@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-16T21:39:53.290322577Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
@@ -227,21 +227,6 @@ public class UsergroupResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UsergroupResponse is not found in the empty JSON string", UsergroupResponse.openapiRequiredFields.toString()));
         }
       }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!UsergroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsergroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : UsergroupResponse.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
-        }
-      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objUsergroupName`
       MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
@@ -254,34 +239,6 @@ public class UsergroupResponse {
       }
   }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UsergroupResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UsergroupResponse' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UsergroupResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UsergroupResponse.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<UsergroupResponse>() {
-           @Override
-           public void write(JsonWriter out, UsergroupResponse value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public UsergroupResponse read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
-    }
-  }
 
   /**
    * Create an instance of UsergroupResponse given an JSON string
